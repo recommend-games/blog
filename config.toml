@@ -10,11 +10,12 @@ theme = "beautifulhugo"
 metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
-#disqusShortname = "XXX"
+# disqusShortname = "XXX"
 googleAnalytics = "UA-128891980-1"
 
 [Params]
   subtitle = "Board Game Analyses"
+  mainSections = ["post", "posts"]
   logo = "logo.png"
   favicon = "favicon.ico"
   dateFormat = "January 2, 2006"
@@ -23,38 +24,32 @@ googleAnalytics = "UA-128891980-1"
   comments = true
   # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
   gcse = "013480686921635014344:zokjfkkzyza"
-
-#[[Params.bigimg]]
-#  src = "img/triangle.jpg"
-#  desc = "Triangle"
-#[[Params.bigimg]]
-#  src = "img/sphere.jpg"
-#  desc = "Sphere"
-#[[Params.bigimg]]
-#  src = "img/hexagon.jpg"
-#  desc = "Hexagon"
+  readingTime = true
+  wordCount = true
+  useHLJS = true
+  socialShare = true
+  showRelatedPosts = true
 
 [Author]
-  name = "Markus Shepherd"
-  email = "markus@recommend.games"
-  facebook = "markus.r.shepherd"
-  #googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
-  gitlab = "mshepherd"
-  github = "MarkusShepherd"
-  twitter = "MarkusRShepherd"
-  reddit = "MarkusShepherd"
-  linkedin = "markusschepke"
-  #xing = "username"
-  stackoverflow = "users/2634131/markus-shepherd"
-  #snapchat = "username"
-  instagram = "funny_monkey_42"
-  youtube = "user/MarkusSchepke" # or channel/channelname
-  #soundcloud = "username"
-  #spotify = "username"
-  #bandcamp = "username"
-  #itchio = "username"
-  #keybase = "username"
-
+  name = "Recommend.Games"
+  email = "contact@recommend.games"
+  # facebook = "markus.r.shepherd"
+  # googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
+  gitlab = "recommend.games"
+  github = "recommend-games"
+  twitter = "recommend_games"
+  # reddit = "MarkusShepherd"
+  # linkedin = "markusschepke"
+  # xing = "username"
+  # stackoverflow = "users/2634131/markus-shepherd"
+  # snapchat = "username"
+  # instagram = "funny_monkey_42"
+  # youtube = "user/MarkusSchepke" # or channel/channelname
+  # soundcloud = "username"
+  # spotify = "username"
+  # bandcamp = "username"
+  # itchio = "username"
+  # keybase = "username"
 
 [[menu.main]]
     name = "Blog"
