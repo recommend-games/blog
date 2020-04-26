@@ -3,7 +3,7 @@ contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
 title = "Recommend.Games Blog"
-canonifyurls  = true
+canonifyurls  = false
 
 DefaultContentLanguage = "en"
 theme = "beautifulhugo"
@@ -11,12 +11,12 @@ metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
 #disqusShortname = "XXX"
-#googleAnalytics = "XXX"
+googleAnalytics = "UA-128891980-1"
 
 [Params]
   subtitle = "Board Game Analyses"
-  logo = "img/avatar-icon.png"
-  favicon = "img/favicon.ico"
+  logo = "logo.png"
+  favicon = "favicon.ico"
   dateFormat = "January 2, 2006"
   commit = false
   rss = true
@@ -36,12 +36,12 @@ pygmentCodeFences = true
 [Author]
   name = "Markus Shepherd"
   email = "markus@recommend.games"
-  #facebook = "username"
+  facebook = "markus.r.shepherd"
   #googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
   gitlab = "mshepherd"
   github = "MarkusShepherd"
   twitter = "MarkusRShepherd"
-  #reddit = "username"
+  reddit = "MarkusShepherd"
   linkedin = "markusschepke"
   #xing = "username"
   stackoverflow = "users/2634131/markus-shepherd"
