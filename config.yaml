@@ -1,7 +1,14 @@
 baseurl: https://blog.recommend.games/
+
+archetypeDir: archetypes
+assetDir: assets
 contentdir: content
+dataDir: data
 layoutdir: layouts
 publishdir: public
+staticDir: static
+themesDir: themes
+
 title: Recommend.Games Blog
 canonifyurls: false
 
@@ -10,7 +17,7 @@ theme: beautifulhugo
 metaDataFormat: yaml
 pygmentsUseClasses: true
 pygmentCodeFences: true
-# disqusShortname: XXX
+disqusShortname: recommend-games
 googleAnalytics: UA-128891980-1
 enableRobotsTXT: true
 
