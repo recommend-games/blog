@@ -56,15 +56,18 @@ Author:
 
 menu:
   main:
+    - name: Recommend.Games
+      url: https://recommend.games/#/
+      weight: 10
     - name: Blog
       url: ''
-      weight: 1
+      weight: 20
     - name: About
       url: page/about/
-      weight: 3
+      weight: 30
     - name: Tags
       url: tags
-      weight: 3
+      weight: 40
 
 sitemap:
   changefreq: weekly
