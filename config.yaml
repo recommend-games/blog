@@ -76,9 +76,9 @@ menu:
       url: page/about/
       weight: 20
 
-    - name: Tags
-      url: tags/
-      weight: 30
+    # - name: Tags
+    #   url: tags/
+    #   weight: 30
 
 sitemap:
   changefreq: weekly
