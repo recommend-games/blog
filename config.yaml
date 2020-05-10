@@ -10,7 +10,7 @@ staticDir: static
 themesDir: themes
 
 title: Recommend.Games Blog
-canonifyurls: false
+canonifyurls: true
 
 DefaultContentLanguage: en
 theme: beautifulhugo
@@ -43,10 +43,12 @@ Params:
 Author:
   name: Recommend.Games
   email: contact@recommend.games
+  website: https://recommend.games/
   # facebook: markus.r.shepherd
   # googleplus: +username # or xxxxxxxxxxxxxxxxxxxxx
   gitlab: recommend.games
   github: recommend-games
+  bitbucket: recommend-games
   twitter: recommend_games
   # reddit: MarkusShepherd
   # linkedin: markusschepke
@@ -60,21 +62,23 @@ Author:
   # bandcamp: username
   # itchio: username
   # keybase: username
+  # vk: mshepherd
+  paypal: mschepke
+  kaggle: mshepherd
 
 menu:
   main:
     - name: Recommend.Games
       url: https://recommend.games/#/
       weight: 10
-    - name: Blog
-      url: ''
-      weight: 20
+
     - name: About
       url: page/about/
-      weight: 30
-    - name: Tags
-      url: tags
-      weight: 40
+      weight: 20
+
+    # - name: Tags
+    #   url: tags/
+    #   weight: 30
 
 sitemap:
   changefreq: weekly
