@@ -128,3 +128,4 @@ sitepackages/
 # others
 .~*
 *.bk
+*.ipynb
