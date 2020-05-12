@@ -37,25 +37,23 @@ sdj = sdj.drop(columns="url").join(games, how="left").sort_values("sdj")
 sdj.shape
 
 # %%
-sdj[
-    [
-        "sdj",
-        "name",
-        # "year",
-        # "designer",
-        # "artist",
-        # "publisher",
-        "complexity",
-        "avg_rating",
-        "bayes_rating",
-        "rank",
-        "num_votes",
-        "min_players",
-        "max_players",
-        "min_time",
-        "max_time",
-    ]
+columns = [
+    "name",
+    # "year",
+    # "designer",
+    # "artist",
+    # "publisher",
+    "complexity",
+    "avg_rating",
+    "bayes_rating",
+    "rank",
+    "num_votes",
+    "min_players",
+    "max_players",
+    "min_time",
+    "max_time",
 ]
+sdj[["sdj"] + columns]
 
 # %%
 sns.lineplot(data=sdj, x="sdj", y="bayes_rating")
@@ -65,3 +63,17 @@ sns.lineplot(data=sdj, x="sdj", y="complexity")
 
 # %%
 sns.lineplot(data=sdj, x="sdj", y="max_time")
+
+# %%
+sns.lineplot(data=sdj, x="sdj", y="max_players")
+
+# %%
+games[
+    (games.year >= 2019)
+    & (games.year <= 2020)
+    & (games.max_time <= 60)
+    & (games.complexity <= 2)
+    & (games.max_players >= 3)
+][columns].sort_values("bayes_rating", ascending=False).head(50)
+
+# %%
