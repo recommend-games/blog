@@ -27,6 +27,10 @@ sdj = pd.read_csv("sdj.csv", index_col="bgg_id")
 sdj.shape
 
 # %%
+ksdj = pd.read_csv("ksdj.csv", index_col="bgg_id")
+ksdj.shape
+
+# %%
 with open("../../board-game-data/scraped/bgg_GameItem.jl") as f:
     records = map(json.loads, f)
     games = pd.DataFrame.from_records(records, index="bgg_id")
@@ -35,6 +39,10 @@ games.shape
 # %%
 sdj = sdj.drop(columns="url").join(games, how="left").sort_values("sdj")
 sdj.shape
+
+# %%
+ksdj = ksdj.drop(columns="url").join(games, how="left").sort_values("ksdj")
+ksdj.shape
 
 # %%
 columns = [
@@ -53,7 +61,12 @@ columns = [
     "min_time",
     "max_time",
 ]
+
+# %%
 sdj[["sdj"] + columns]
+
+# %%
+ksdj[["ksdj"] + columns]
 
 # %%
 sns.lineplot(data=sdj, x="sdj", y="bayes_rating")
@@ -75,5 +88,3 @@ games[
     & (games.complexity <= 2)
     & (games.max_players >= 3)
 ][columns].sort_values("bayes_rating", ascending=False).head(50)
-
-# %%
