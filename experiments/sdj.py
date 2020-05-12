@@ -67,6 +67,7 @@ columns = [
     "max_players",
     "min_time",
     "max_time",
+    "min_age",
 ]
 
 # %%
@@ -109,12 +110,20 @@ plt.fill_between(
 plt.fill_between(sdj.sdj, sdj.min_players, sdj.max_players, color="red", alpha=0.5)
 
 # %%
+plt.plot(sdj.sdj, sdj.min_age, "red")
+plt.plot(sdj.sdj, sdj.min_age_rec, color="red", linestyle="dotted")
+plt.plot(ksdj.ksdj, ksdj.min_age_rec, "black")
+plt.plot(ksdj.ksdj, ksdj.min_age_rec, color="black", linestyle="dotted")
+plt.show()
+
+# %%
 games[
     (games.year >= 2019)
     & (games.year <= 2020)
     & (games.max_time <= 60)
     & (games.complexity <= 2)
     & (games.max_players >= 3)
+    & ((games.min_age <= 12) | (games.min_age_rec <= 10))
 ][columns].sort_values("bayes_rating", ascending=False).head(50)
 
 # %%
@@ -125,4 +134,5 @@ games[
     & (games.complexity >= 1.5)
     & (games.complexity <= 3.5)
     & (games.max_players >= 3)
+    & ((games.min_age <= 14) | (games.min_age_rec <= 12))
 ][columns].sort_values("bayes_rating", ascending=False).head(50)
