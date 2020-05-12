@@ -142,3 +142,9 @@ games[
     & (games.max_players >= 3)
     & ((games.min_age <= 14) | (games.min_age_rec <= 12))
 ][columns].sort_values("bayes_rating", ascending=False).head(50)
+
+# %%
+ids_sdj = sdj_all[sdj_all.sdj >= 2011].index
+ids_kdsj = ksdj_all[ksdj_all.ksdj >= 2011].index
+ids_str = ",".join(map(str, sorted(tuple(ids_sdj) + tuple(ids_kdsj))))
+print(ids_str)
