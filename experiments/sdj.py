@@ -39,13 +39,19 @@ with open("../../board-game-data/scraped/bgg_GameItem.jl") as f:
 games.shape
 
 # %%
-sdj = sdj.drop(columns="url").join(games, how="left").sort_values("sdj")
+sdj = (
+    sdj[sdj.winner == 1]
+    .drop(columns=["url", "winner"])
+    .join(games, how="left")
+    .sort_values("sdj")
+)
 sdj.shape
 
 # %%
 ksdj = (
-    ksdj.drop(index=[203416, 203417])  # only keep on Exit game
-    .drop(columns="url")
+    ksdj[ksdj.winner == 1]
+    .drop(index=[203416, 203417])  # only keep one Exit game
+    .drop(columns=["url", "winner"])
     .join(games, how="left")
     .sort_values("ksdj")
 )
