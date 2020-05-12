@@ -25,12 +25,12 @@ import seaborn as sns
 # %load_ext lab_black
 
 # %%
-sdj = pd.read_csv("sdj.csv", index_col="bgg_id")
-sdj.shape
+sdj_all = pd.read_csv("sdj.csv", index_col="bgg_id")
+sdj_all.shape
 
 # %%
-ksdj = pd.read_csv("ksdj.csv", index_col="bgg_id")
-ksdj.shape
+ksdj_all = pd.read_csv("ksdj.csv", index_col="bgg_id")
+ksdj_all.shape
 
 # %%
 with open("../../board-game-data/scraped/bgg_GameItem.jl") as f:
@@ -40,7 +40,7 @@ games.shape
 
 # %%
 sdj = (
-    sdj[sdj.winner == 1]
+    sdj_all[sdj_all.winner == 1]
     .drop(columns=["url", "winner"])
     .join(games, how="left")
     .sort_values("sdj")
@@ -49,7 +49,7 @@ sdj.shape
 
 # %%
 ksdj = (
-    ksdj[ksdj.winner == 1]
+    ksdj_all[ksdj_all.winner == 1]
     .drop(index=[203416, 203417])  # only keep one Exit game
     .drop(columns=["url", "winner"])
     .join(games, how="left")
