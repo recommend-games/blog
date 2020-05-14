@@ -114,7 +114,8 @@ Note that you get essentially the same list when looking at the [Recommend.Games
 
 ### {{% game 263918 %}}Cartographers: A Roll Player Tale{{% /game %}}
 
-![Cartographers: A Roll Player Tale](/img/games/263918.png)
+<!-- ![Cartographers: A Roll Player Tale](/img/games/263918.png) -->
+{{< img src="263918.png" size="x300" alt="Cartographers: A Roll Player Tale" >}}
 
 TODO
 
