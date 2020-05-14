@@ -273,7 +273,7 @@ Games that are highly regarded, but might not meet all criteria
 * too complex
   * {{% game 266810 %}}Paladins of the West Kingdom{{% /game %}}
 * too high age
-  * {{% game 245655 %}}King's dilemma{{% /game %}}
+  * {{% game 245655 %}}King's Dilemma{{% /game %}}
 * too expensive
   * {{% game 253344 %}}Cthulhu: Death May Die{{% /game %}}
 * two player only
