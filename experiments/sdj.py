@@ -128,8 +128,9 @@ games[
     & (games.year <= 2020)
     & (games.max_time <= 60)
     & (games.complexity <= 2)
+    & (games.min_players <= 4)
     & (games.max_players >= 3)
-    & ((games.min_age <= 12) | (games.min_age_rec <= 10))
+    & ((games.min_age <= 14) | (games.min_age_rec <= 12))
 ][columns].sort_values("bayes_rating", ascending=False).head(50)
 
 # %%
@@ -139,6 +140,7 @@ games[
     & (games.max_time <= 120)
     & (games.complexity >= 1.5)
     & (games.complexity <= 3.5)
+    & (games.min_players <= 4)
     & (games.max_players >= 3)
     & ((games.min_age <= 14) | (games.min_age_rec <= 12))
 ][columns].sort_values("bayes_rating", ascending=False).head(50)
