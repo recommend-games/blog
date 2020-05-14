@@ -87,38 +87,53 @@ sdj[["sdj"] + columns]
 ksdj[["ksdj"] + columns]
 
 # %%
-plt.plot(ksdj.ksdj, ksdj.bayes_rating, color=black)
-plt.plot(sdj.sdj, sdj.bayes_rating, color=red)
+plt.plot(ksdj.ksdj, ksdj.bayes_rating, color=black, linewidth=3)
+plt.plot(sdj.sdj, sdj.bayes_rating, color=red, linewidth=3)
+plt.legend(["Kennerspiel", "Spiel"])
 plt.savefig("bayes_rating.svg")
 plt.show()
 
 # %%
-plt.plot(ksdj.ksdj, ksdj.complexity, color=black)
-plt.plot(sdj.sdj, sdj.complexity, color=red)
+plt.plot(ksdj.ksdj, ksdj.complexity, color=black, linewidth=3)
+plt.plot(sdj.sdj, sdj.complexity, color=red, linewidth=3)
+plt.legend(["Kennerspiel", "Spiel"])
 plt.savefig("complexity.svg")
 plt.show()
 
 # %%
-plt.fill_between(ksdj.ksdj, ksdj.min_time, ksdj.max_time, color=black, alpha=0.25)
+plt.fill_between(ksdj.ksdj, ksdj.min_time, ksdj.max_time, color=black, alpha=0.5)
 plt.plot(
-    ksdj.ksdj, (ksdj.min_time + ksdj.max_time) / 2, color=black, linestyle="dashed",
+    ksdj.ksdj,
+    (ksdj.min_time + ksdj.max_time) / 2,
+    color=black,
+    linestyle="dashed",
+    linewidth=3,
 )
-plt.fill_between(sdj.sdj, sdj.min_time, sdj.max_time, color=red, alpha=0.25)
-plt.plot(sdj.sdj, (sdj.min_time + sdj.max_time) / 2, color=red, linestyle="dashed")
+plt.fill_between(sdj.sdj, sdj.min_time, sdj.max_time, color=red, alpha=0.5)
+plt.plot(
+    sdj.sdj,
+    (sdj.min_time + sdj.max_time) / 2,
+    color=red,
+    linestyle="dashed",
+    linewidth=3,
+)
+plt.legend(["Kennerspiel", "Spiel"])
 plt.savefig("time.svg")
 plt.show()
 
 # %%
 plt.fill_between(ksdj.ksdj, ksdj.min_players, ksdj.max_players, color=black, alpha=0.5)
 plt.fill_between(sdj.sdj, sdj.min_players, sdj.max_players, color=red, alpha=0.5)
+plt.legend(["Kennerspiel", "Spiel"])
 plt.savefig("players.svg")
 plt.show()
 
 # %%
-plt.plot(ksdj.ksdj, ksdj.min_age_rec, color=black, linestyle="dotted")
-plt.plot(ksdj.ksdj, ksdj.min_age, color=black)
-plt.plot(sdj.sdj, sdj.min_age_rec, color=red, linestyle="dotted")
-plt.plot(sdj.sdj, sdj.min_age, color=red)
+plt.plot(ksdj.ksdj, ksdj.min_age_rec, color=black, linestyle="dotted", linewidth=3)
+plt.plot(ksdj.ksdj, ksdj.min_age, color=black, linewidth=3)
+plt.plot(sdj.sdj, sdj.min_age_rec, color=red, linestyle="dotted", linewidth=3)
+plt.plot(sdj.sdj, sdj.min_age, color=red, linewidth=3)
+plt.legend(["Kennerspiel (users)", "Kennerspiel (box)", "Spiel (users)", "Spiel (box)"])
 plt.savefig("age.svg")
 plt.show()
 
