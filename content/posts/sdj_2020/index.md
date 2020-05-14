@@ -114,32 +114,31 @@ Note that you get essentially the same list when looking at the [Recommend.Games
 
 ### {{% game 263918 %}}Cartographers: A Roll Player Tale{{% /game %}}
 
-<!-- ![Cartographers: A Roll Player Tale](/img/games/263918.png) -->
-{{< img src="263918.png" size="x300" alt="Cartographers: A Roll Player Tale" >}}
+{{< img src="263918" size="x300" alt="Cartographers: A Roll Player Tale" >}}
 
 TODO
 
 ### {{% game 262543 %}}Wavelength{{% /game %}}
 
-![Wavelength](/img/games/262543.png)
+{{< img src="262543" size="x300" alt="Wavelength" >}}
 
 TODO
 
 ### {{% game 270673 %}}Silver & Gold{{% /game %}}
 
-![Silver & Gold](/img/games/270673.png)
+{{< img src="270673" size="x300" alt="Silver & Gold" >}}
 
 TODO
 
 ### {{% game 264055 %}}Draftosaurus{{% /game %}}
 
-![Draftosaurus](/img/games/264055.jpg)
+{{< img src="264055" size="x300" alt="Draftosaurus" >}}
 
 TODO
 
 ### {{% game 273477 %}}Obscurio{{% /game %}}
 
-![Obscurio](/img/games/273477.jpg)
+{{< img src="273477" size="x300" alt="Obscurio" >}}
 
 TODO
 
@@ -150,31 +149,31 @@ Games [recommended to `s_d_j`](https://recommend.games/#/?complexityMax=2&comple
 
 ### {{% game 284108 %}}Pictures{{% /game %}}
 
-![Pictures](/img/games/284108.jpg)
+{{< img src="284108" size="x300" alt="Pictures" >}}
 
 TODO
 
 ### {{% game 285533 %}}Miyabi{{% /game %}}
 
-![Miyabi](/img/games/285533.jpg)
+{{< img src="285533" size="x300" alt="Miyabi" >}}
 
 TODO
 
 ### {{% game 284435 %}}Nova Luna{{% /game %}}
 
-![Nova Luna](/img/games/284435.jpg)
+{{< img src="284435" size="x300" alt="Nova Luna" >}}
 
 TODO
 
 ### {{% game 283649 %}}Deep Blue{{% /game %}}
 
-![Deep Blue](/img/games/283649.png)
+{{< img src="283649" size="x300" alt="Deep Blue" >}}
 
 TODO
 
 ### {{% game 285894 %}}Noch mal so gut!{{% /game %}}
 
-![Noch mal so gut!](/img/games/285894.jpg)
+{{< img src="285894" size="x300" alt="Noch mal so gut!" >}}
 
 TODO
 
@@ -184,31 +183,31 @@ TODO
 
 ### {{% game 262712 %}}Res Arcana{{% /game %}}
 
-![Res Arcana](/img/games/262712.jpg)
+{{< img src="262712" size="x300" alt="Res Arcana" >}}
 
 TODO
 
 ### {{% game 284083 %}}The Crew: The Quest for Planet Nine{{% /game %}}
 
-![The Crew: The Quest for Planet Nine](/img/games/284083.jpg)
+{{< img src="284083" size="x300" alt="The Crew: The Quest for Planet Nine" >}}
 
 TODO
 
 ### {{% game 265736 %}}Tiny Towns{{% /game %}}
 
-![Tiny Towns](/img/games/265736.jpg)
+{{< img src="265736" size="x300" alt="Tiny Towns" >}}
 
 TODO
 
 ### {{% game 270844 %}}Imperial Settlers: Empires of the North{{% /game %}}
 
-![Imperial Settlers: Empires of the North](/img/games/270844.jpg)
+{{< img src="270844" size="x300" alt="Imperial Settlers: Empires of the North" >}}
 
 TODO
 
 ### {{% game 269144 %}}Hadara{{% /game %}}
 
-![Hadara](/img/games/269144.jpg)
+{{< img src="269144" size="x300" alt="Hadara" >}}
 
 TODO
 
@@ -218,31 +217,31 @@ Games [recommended to `s_d_j`](https://recommend.games/#/?complexityMax=2&comple
 
 ### {{% game 275467 %}}Letter Jam{{% /game %}}
 
-![Letter Jam](/img/games/275467.jpg)
+{{< img src="275467" size="x300" alt="Letter Jam" >}}
 
 TODO
 
 ### {{% game 277597 %}}Fast Sloths{{% /game %}}
 
-![Fast Sloths](/img/games/277597.jpg)
+{{< img src="277597" size="x300" alt="Fast Sloths" >}}
 
 TODO
 
 ### {{% game 287938 %}}Kitchen Rush{{% /game %}}
 
-![Kitchen Rush](/img/games/287938.jpg)
+{{< img src="287938" size="x300" alt="Kitchen Rush" >}}
 
 TODO
 
 ### {{% game 267813 %}}Adventure Games: The Dungeon{{% /game %}} / {{% game 267814 %}}Monochrome Inc.{{% /game %}}
 
-![Adventure Games: The Dungeon](/img/games/267813.jpg)
+{{< img src="267813" size="x300" alt="Adventure Games: The Dungeon" >}}
 
 TODO
 
 ### {{% game 285895 %}}Die Inseln im Nebel{{% /game %}}
 
-![Die Inseln im Nebel](/img/games/285895.jpg)
+{{< img src="285895" size="x300" alt="Die Inseln im Nebel" >}}
 
 TODO
 
