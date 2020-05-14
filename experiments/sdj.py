@@ -116,7 +116,7 @@ plt.show()
 
 # %%
 plt.plot(ksdj.ksdj, ksdj.min_age_rec, color=black, linestyle="dotted")
-plt.plot(ksdj.ksdj, ksdj.min_age_rec, color=black)
+plt.plot(ksdj.ksdj, ksdj.min_age, color=black)
 plt.plot(sdj.sdj, sdj.min_age_rec, color=red, linestyle="dotted")
 plt.plot(sdj.sdj, sdj.min_age, color=red)
 plt.savefig("age.svg")
