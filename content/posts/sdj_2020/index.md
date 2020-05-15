@@ -134,7 +134,7 @@ A roll and write game that can be found on pretty much every list, hence a stron
 
 {{< img src="262543" size="x300" alt="Wavelength" >}}
 
-As a simple and immediate party game, this one is right up the jury's alley when we look at the past years. Some say that a game targeted at large gatherings might be a tough sell while COVID–19 keeps raging, but on the other hand, {{% game 262543 %}}Wavelength{{% /game %}} has proven itself something of a darling for playing via video chat, so I wouldn't discard it.
+As a simple and immediate party game, this one is right up the jury's alley when we look at the past years. Some say that a game targeted at large gatherings might be a tough sell while COVID–19 continues to rage, but on the other hand, {{% game 262543 %}}Wavelength{{% /game %}} has proven itself something of a darling for playing via video chat, so I wouldn't discard it. Interestingly, this is another game where the publisher and the players can't agree on the age: the former recommends the game to player of 14 years and up, while the latter believe it's fine for 8-year-olds!
 
 
 ### {{% game 270673 %}}Silver & Gold{{% /game %}}
@@ -197,6 +197,8 @@ From the same team as {{% game 273477 %}}Obscurio{{% /game %}}, this one might b
 
 Another quick and easy game, in this case also very afforable and portable. Overall this could make it a very welcoming introduction into the wonderful world of board games.
 
+So, those were the ten games that, according to the data, should be the most likely to receive a nomination for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}. Will the jury be this predictable? We will find out soon! For now, let's move on to the connoisseurs' games.
+
 
 # Candidates for {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}}
 
@@ -212,35 +214,35 @@ As for the main award, we find the community's favourites by looking at the [Boa
 
 {{< img src="262712" size="x300" alt="Res Arcana" >}}
 
-TODO
+While fantasy isn't necessarily the jury's favourite theme, it didn't stop them from giving the award to {{% game 127398 %}}Legends of Andor{{% /game %}} in 2013. Reviewers hold {{% game 262712 %}}Res Arcana{{% /game %}} in high regard, so this is one to watch.
 
 
 ### {{% game 284083 %}}The Crew: The Quest for Planet Nine{{% /game %}}
 
 {{< img src="284083" size="x300" alt="The Crew: The Quest for Planet Nine" >}}
 
-TODO
+This cooperative trick-taking game is pretty much on *every* list, but usually for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}. However, its complexity clocks in at at 2.2, well beyond what the jury would generally consider for the main award. I believe most experienced gamers underestimate how difficult the concept of trick-taking is to new players, so this game has much higher chances to win {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}}.
 
 
 ### {{% game 265736 %}}Tiny Towns{{% /game %}}
 
 {{< img src="265736" size="x300" alt="Tiny Towns" >}}
 
-TODO
+Another game that appears to be on everybody's mind. Play time and complexity certainly qualify it for {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}. Bonus: the people on the cover practice exemplary social distancing! [^bartsch]
 
 
 ### {{% game 269144 %}}Hadara{{% /game %}}
 
 {{< img src="269144" size="x300" alt="Hadara" >}}
 
-TODO
+Game studio Hans im Glück sure won their share of {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} awards. Could this be their first {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}?
 
 
 ### {{% game 241724 %}}Villagers{{% /game %}}
 
 {{< img src="241724" size="x300" alt="Villagers" >}}
 
-TODO
+I don't have much to say about this game either, but the fact that Kosmos recently released a German edition won't harm its chances for {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}.
 
 
 ## Recommended to the jury
@@ -252,38 +254,38 @@ Now let's look at games [recommended to the jury](https://recommend.games/#/?com
 
 {{< img src="275467" size="x300" alt="Letter Jam" >}}
 
-TODO
+This is a tricky one. While it's been lauded as an innovative word game, its many rules and details push its complexity into the realm of {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}}, while the word / party game genre clearly belongs with {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} (where it's arguably over-represented).
 
 
 ### {{% game 277597 %}}Fast Sloths{{% /game %}}
 
 {{< img src="277597" size="x300" alt="Fast Sloths" >}}
 
-TODO
+The jury clearly is a fan of designer Friedemann Friese's work as evident but many recommendations, but didn't find a game worthy of the big meeple yet. Could this *pick me up and deliver me* game change their mind?
 
 
 ### {{% game 284435 %}}Nova Luna{{% /game %}}
 
 {{< img src="284435" size="x300" alt="Nova Luna" >}}
 
-TODO
+Uwe Rosenberg is another favourite designer for both the community and the jury. {{% game 31260 %}}Agricola{{% /game %}} kinda won {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}} before it even existed (special award "Complex Game" in 2008), but he's been waiting for a main award ever since. {{% game 284435 %}}Nova Luna{{% /game %}} could be his shot, though abstract games tend to have a hard time with the jury.
 
 
 ### {{% game 287938 %}}Kitchen Rush{{% /game %}}
 
 {{< img src="287938" size="x300" alt="Kitchen Rush" >}}
 
-TODO
+A real time cooperative worker placement game sounds like a winning combination right from the start, so this is another one to watch. However, theme and premise seem to fit better with {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}, but for that it's just too complex.
 
 
 ### {{% game 267813 %}}Adventure Games: The Dungeon{{% /game %}} / {{% game 267814 %}}Monochrome Inc.{{% /game %}}
 
 {{< img src="267813" size="x300" alt="Adventure Games: The Dungeon" >}}
 
-TODO
+Everything about this pair reminds us of the {{% game 203420 %}}Exit{{% /game %}} {{% game 203417 %}}Game{{% /game %}} {{% game 203416 %}}Series{{% /game %}} that won {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} in 2017. Hard to tell if that's to the games' advantage or disadvantage…
 
 
-## Honourable mentions
+# Honourable mentions
 
 Games that are highly regarded, but might not meet all criteria
 
@@ -342,3 +344,4 @@ Games that are highly regarded, but might not meet all criteria
 Latecomer – no chance to show up in the lists!
 
 [^covid]: The jury has [stated](https://kulturgutspiel.de/panorama/corona-trifft-spiel-des-jahres-jury-ist-arbeitsfaehig/) that the COVID–19 pandemic does not alter the schedule for this year's awards. However, they may not be able to thoroughly test some games that were released close to the March deadline, so those might be considered for {{% color "#E30613" %}}***Spiel des Jahres 2021***{{% /color %}} instead.
+[^bartsch]: This joke was stolen from [Udo Bartsch](https://rezensionen-fuer-millionen.blogspot.com/2020/04/tiny-towns.html). It was too good to be omitted!
