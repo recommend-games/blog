@@ -49,7 +49,7 @@ BoardGameGeek quantifies a game's weight or complexity on a scale from 1 (*light
 
 However, recent years have seen a strong trend towards the *very* light games. In fact, since the introduction of {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} in 2011, only 2012's winner {{% game 107529 %}}Kingdom Builder{{% /game %}} exceeded a complexity rating of 2 (*medium light*) – by 0.07 points. Even said {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}, whose first few winners hovered around a weight of 3 (*medium*), is drawn more and more towards the 2 mark.
 
-From this we can conclude the {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}} will have a complexity rating below **2**, whilst the {{% color "#193F4A" %}}***Kennerspiel des Jahres 2020***{{% /color %}} will not exceed 3 in its compexity, or let's say **3.5**, in case the jury wants to go experimental.
+From this we can conclude that the {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}} will have a complexity rating below **2**, whilst the {{% color "#193F4A" %}}***Kennerspiel des Jahres 2020***{{% /color %}} will not exceed 3 in its compexity, or let's say **3.5**, in case the jury wants to go experimental.
 
 
 ## How long can it take?
@@ -60,7 +60,7 @@ In addition to short rules (start quickly), a {{% color "#E30613" %}}***Spiel de
 
 Here, the bands indicate the span of the playing time indicated on the games' boxes, while the dashed lines denotes the mean. Playing times are tricky because publishers *always* lie about them. I suppose they simply don't want to scare away people whose attention spans become ever shorter (thanks for still being with me by the way) with the prospect of sitting through an hour of some ultra nerdy activity. But since everybody lies the same way, we can at least compare games with each other. And again, it becomes obvious how import immediate accessibility is to the jury: The last winner that admitted to having a playing time of more than 45 minutes was 2006's {{% game 21790 %}}Thurn and Taxis{{% /game %}}, and none has exceeded the hour mark since 1999's {{% game 54 %}}Tikal{{% /game %}}.
 
-On the other hand, the jury seems to have no problem with longer playing times for {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}. The sweet spot still seems to be around 60 minutes, but even 90 or 120 minutes on the box do not exclude a game from the connoisseurs' award.
+On the other hand, the jury seems to have no problem with longer playing times for a {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}. The sweet spot still seems to be around 60 minutes, but even 90 or 120 minutes on the box do not exclude a game from the connoisseurs' award.
 
 In conclusion, the {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}} will be playable in under **1 hour**, probably even 45 minutes, whilst the {{% color "#193F4A" %}}***Kennerspiel des Jahres 2020***{{% /color %}} might take up to **2 hours**.
 
@@ -74,7 +74,7 @@ The {{% color "#E30613" %}}***Spiel***{{% /color %}}'s character as a family or 
 
 *Every single winner of either award was playable with 3 and 4 players.* It's just what a typical German family looks like, so there's no way the jury will deviate from this pattern. In fact, there's only two games that were even nominated with a different player count, both pure 2-player-games: {{% game 118048 %}}Targi{{% /game %}} in 2012 and {{% game 12002 %}}Jambo{{% /game %}} in 2005.
 
-Therefore, without a doubt, both {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}} and {{% color "#193F4A" %}}***Kennerspiel des Jahres 2020***{{% /color %}} will have to be playable with **3 and 4 players**.
+Therefore, without a doubt, both {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}} and {{% color "#193F4A" %}}***Kennerspiel des Jahres 2020***{{% /color %}} will have to be playable with **3 and 4 players**. (Of course, it's a bonus if a game *also* works with lower or higher player counts, but 3 and 4 are a **must**.)
 
 
 ## How old do they have to be?
@@ -87,12 +87,12 @@ Here the solid line is what's printed on the box, whilst the dotted line is what
 
 What stands out in this graphic is that {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} winners often have a recommended age of 12+. Notably, 2016's winner {{% game 178900 %}}Codenames{{% /game %}} has 14+ printed on the box, while the community thinks it's fine to play with children from 10 years of age. Unsurprisingly, the more complex {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}} often has a slightly higher age recommendation, although all winners so far stay below the mark of 12 years.
 
-All of this makes it hard to draw a conclusion. {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} winners can typically be played with 8 to 10 year old children, while a {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} can usually be found in the age range from 10 to 12 years. But because of the somewhat erratic age recommendations, we only stipulate a limit of **14 years** for both {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}} and {{% color "#193F4A" %}}***Kennerspiel des Jahres 2020***{{% /color %}}. Still, one can confidently exclude any game that includes adult topics or themes that would put off the younger or older audience.
+All of this makes it hard to draw a conclusion. {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} winners can typically be played with 8 to 10 year old children, while a {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}} can usually be found in the age range from 10 to 12 years. But because of the somewhat erratic age recommendations, we only stipulate a limit of **14 years** for both {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}} and {{% color "#193F4A" %}}***Kennerspiel des Jahres 2020***{{% /color %}}. Still, one can confidently exclude any game that includes adult topics or themes that might put off the younger or older audience.
 
 
 ## Summary of criteria
 
-OK, now we've got an understand what a game needs to look like if it hopes to win the coveted awards. A {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} needs to
+OK, now we've got an understanding of what a game needs to look like if it hopes to win the coveted awards. A {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} needs to
 
 * have a complexity rating of **2** (*medium light*) or less and
 * be playable in under **60 minutes** (better 45 minutes)
@@ -106,9 +106,9 @@ A {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} needs to
 * by (at least) **3 to 4 players**
 * with a minimum age of at most **14 years old** (better yet 12).
 
-Further, we need to talk about a game's release date. It's actually not that easy to exactly pinpoint which games are eligible for the award as the jury generally will consider games that were released between April 2019 and March 2020 *into wider German distribution*. BoardGameGeek keeps record of the year of first release, which could be a limited first print run in a different market. A game that was released years ago in its homecountry might be nominated for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} years later when it hits the German market. This happened with {{% game 219215 %}}Werewords{{% /game %}} which was first released in 2017, but saw a German edition only in early 2019 and was nominated that year. So by simply filtering on the year in the BGG database we might miss some releases, but *c'est la vie*…
+Further, we need to talk about a game's release date. It's actually not that easy to exactly pinpoint which games are eligible for the award as the jury would generally consider games that were released between April 2019 and March 2020[^covid] *into wider German distribution*. BoardGameGeek keeps record of the year of first release, which could be a limited first print run in a different market. A game that was released years ago in its homecountry might be nominated for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} years later when it hits the German market. This happened with {{% game 219215 %}}Werewords{{% /game %}} which was first released in 2017, but saw a German edition only in early 2019 and was nominated that year. So by simply filtering on the year in the BGG database we might miss some releases, but *c'est la vie*…
 
-Without further ado, let's look at this years candidates that meet all those criteria!
+Without further ado, let's find some games that meet all those criteria!
 
 
 # Candidates for {{% color "#E30613" %}}*Spiel des Jahres*{{% /color %}}
@@ -116,9 +116,9 @@ Without further ado, let's look at this years candidates that meet all those cri
 {{< img src="sdj-2020" size="x300" alt="Spiel des Jahres 2020" >}}
 
 
-## What the community would pick for {{% color "#E30613" %}}*Spiel des Jahres*{{% /color %}}
+## Gamers' choices
 
-First, let's look at the games that meet the above criteria released in 2019 and 2020, [sorted by their rating on BoardGameGeek](https://recommend.games/#/?complexityMax=2&complexityMin=1&ordering=bgg&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=2019). When you click on that link, the list you'll see might be very different from what I worked with if some time has passed, so don't be confused if the names you read here are very different. Also, I'll skip any games that are ineligible for one reason or another.
+First, we'll look at games released in 2019 and 2020, [sorted by their rating on BoardGameGeek](https://recommend.games/#/?complexityMax=2&complexityMin=1&ordering=bgg&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=2019). When you click on that link, the list you'll see might be very different from what I worked with if some time has passed, so don't be confused if the names you read here are very different. Also, I'll skip any games that are ineligible for one reason or another.
 
 Note that you get essentially the same list when looking at the [Recommend.Games ratings](https://recommend.games/#/?complexityMax=2&complexityMin=1&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=2019).
 
@@ -158,10 +158,9 @@ TODO
 TODO
 
 
-## What we'd recommend to the jury
+## Recommended to the jury
 
-Games [recommended to `s_d_j`](https://recommend.games/#/?complexityMax=2&complexityMin=1&for=S_d_J&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=20190)
-<!-- [API](https://recommend.games/api/games/recommend/?complexity__gte=1&complexity__lte=2&exclude_clusters=True&exclude_known=True&exclude_owned=True&max_players__gte=3&max_time__gt=0&max_time__lte=60&min_age__gt=0&min_age__lte=14&min_players__lte=3&user=S_d_J&year__gte=2019&year__lte=2020) -->
+Instead of looking at the community at large, we really want to know what games specifically fit the jury's taste. The best way to achieve this is to feed previous winners, special awards, nominees, and recommendations into [Recommend.Games's engine](https://recommend.games/#/?complexityMax=2&complexityMin=1&for=S_d_J&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=2019) and see what falls out of this black box! Note that in the list below I skip those games that we already covered above.
 
 
 ### {{% game 284108 %}}Pictures{{% /game %}}
@@ -178,11 +177,11 @@ TODO
 TODO
 
 
-### {{% game 284435 %}}Nova Luna{{% /game %}}
+<!-- ### {{% game 284435 %}}Nova Luna{{% /game %}}
 
 {{< img src="284435" size="x300" alt="Nova Luna" >}}
 
-TODO; maybe KdJ
+TODO; maybe KdJ -->
 
 
 ### {{% game 283649 %}}Deep Blue{{% /game %}}
@@ -192,11 +191,32 @@ TODO; maybe KdJ
 TODO
 
 
-### {{% game 285894 %}}Noch mal so gut!{{% /game %}}
+<!-- ### {{% game 285894 %}}Noch mal so gut!{{% /game %}}
 
 {{< img src="285894" size="x300" alt="Noch mal so gut!" >}}
 
-TODO; probably not: reimplementation
+TODO; probably not: reimplementation -->
+
+
+### {{% game 263155 %}}One Key{{% /game %}}
+
+{{< img src="263155" size="x300" alt="One Key" >}}
+
+TODO
+
+
+### {{% game 268620 %}}Similo{{% /game %}}
+
+{{< img src="268620" size="x300" alt="Similo" >}}
+
+TODO
+
+
+<!-- ### {{% game  %}}{{% /game %}}
+
+{{< img src="" size="x300" alt="" >}}
+
+TODO -->
 
 
 # Candidates for {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}}
@@ -204,9 +224,9 @@ TODO; probably not: reimplementation
 {{< img src="ksdj-2020" size="x300" alt="Kennerspiel des Jahres 2020" >}}
 
 
-## What the community would pick for {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}}
+## Gamers' choices
 
-[Link](https://recommend.games/#/?complexityMax=3.5&complexityMin=1&ordering=bgg&playTime=120&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=2019)
+[BGG](https://recommend.games/#/?complexityMax=3.5&complexityMin=1.5&ordering=bgg&playTime=120&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=2019) & [R.G](https://recommend.games/#/?complexityMax=3.5&complexityMin=1.5&playTime=120&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=2019)
 
 
 ### {{% game 262712 %}}Res Arcana{{% /game %}}
@@ -244,7 +264,7 @@ TODO; difficult: reimplementation
 TODO
 
 
-## What we'd recommend to the jury
+## Recommended to the jury
 
 Games [recommended to `s_d_j`](https://recommend.games/#/?complexityMax=2&complexityMin=1&for=S_d_J&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=20190)
 
@@ -309,6 +329,14 @@ Games that are highly regarded, but might not meet all criteria
   * {{% game 281259 %}}The Isle of Cats{{% /game %}}
   * {{% game 271324 %}}It's a Wonderful World{{% /game %}}
   * {{% game 257614 %}}Tussie Mussie{{% /game %}}
+  * Terror Below https://boardgamegeek.com/boardgame/270138/terror-below/versions
+  * Noctiluca https://boardgamegeek.com/boardgame/269752/noctiluca/versions
+  * Medium https://boardgamegeek.com/boardgame/242529/medium/versions
+  * Village Pillage https://boardgamegeek.com/boardgame/247342/village-pillage/versions
+  * Quirky Circuits https://boardgamegeek.com/boardgame/274093/quirky-circuits/versions
+* too special
+  * TEAM3 GREEN https://boardgamegeek.com/boardgame/275870/team3-green/versions
+  * TEAM3 PINK https://boardgamegeek.com/boardgame/247694/team3-pink
 * too complex (try different filter)
   * {{% game 266810 %}}Paladins of the West Kingdom{{% /game %}}
   * Maracaibo?
@@ -329,3 +357,5 @@ Games that are highly regarded, but might not meet all criteria
 ## Notes
 
 Latecomer – no chance to show up in the lists!
+
+[^covid]: The jury has [stated](https://kulturgutspiel.de/panorama/corona-trifft-spiel-des-jahres-jury-ist-arbeitsfaehig/) that the COVID–19 pandemic does not alter the schedule for this year's awards. However, they may not be able to thoroughly test some games that were released close to the March deadline, so those might be considered for {{% color "#E30613" %}}***Spiel des Jahres 2021***{{% /color %}} instead.
