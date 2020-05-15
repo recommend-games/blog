@@ -18,9 +18,7 @@ tags:
 
 It's that time of year again when the whole board game scene takes a deep look into their crystal balls: On Monday, May 18, the jury [{{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}](https://www.spiel-des-jahres.com/) will announce the nominees for the game of the year award in Germany. There's a myriad of awards in tabletop gaming, but the *red meeple* is the one everbody is really after. Even international publishers often prioritise releasing their game in Germany before their home country just so it'd be eligible for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}. It is **that** important!
 
-<!-- ![Spiel des Jahres](/img/sdj-2020.png) -->
-
-Consequently, there are many, many, many lists[^todo] floating around the Internet trying to predict this year's nominees. And this is one of them! Most lists are based on the author's experience and taste, but here we try to take a data driven approach: We'll look at the previous winners, try to derive the jury's (implicit or explicit) criteria, and check what current games that meet those criteria have been rated highly.
+Consequently, there are [many](https://brettspielpoesie.de/spiel-des-jahres-2020-prognose-13298/) [lists](https://www.abenteuer-brettspiele.de/brettspiel-empfehlungen/spiel-des-jahres-2020-kennerspiel-des-jahres-2020) [floating](https://spiele.tips/alle-spiel-des-jahres-2020-brettspiele-im-vergleich) [all](https://www.reddit.com/r/boardgames/comments/fyc7xu/what_are_your_predictions_for_spiel_kennerspiel/) [around](https://www.brettspielbar.de/bsb049-einstimmung-spiel-des-jahres-2020/) [the](https://boardgamegeek.com/geeklist/269444/spiel-des-jahres-2020-speculation) [Internet](https://www.boardgameatlas.com/forum/j89cRJl518/what-are-your-spielkennerspiel-des-jahres-2020-predictions) trying to predict this year's nominees. And this is one of them! Most lists are based on the author's experience and taste, but here we try to take a data driven approach: We'll look at the previous winners, try to derive the jury's (implicit or explicit) criteria, and check what current games that meet those criteria have been rated highly.
 
 You'll actually get two for the price of one: since 2011, in addition to the traditional main award {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} that is targeted at casual gamers, there is also the {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} for those who are ready for a (little) more complex game. There's also a third award {{% color "#009FE3" %}}***Kinderspiel des Jahres***{{% /color %}} for children's games, but since the author of these lines doesn't know the first thing about this sector (give it another four or five years), we won't talk further about it.
 
@@ -335,5 +333,3 @@ Games that are highly regarded, but might not meet all criteria
 ## Notes
 
 Latecomer – no chance to show up in the lists!
-
-[^todo]: TODO
