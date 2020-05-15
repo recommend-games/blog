@@ -298,10 +298,22 @@ Games that were release *just* before the deadline last year. They might get a s
 * {{% game 269595 %}}Copenhagen{{% /game %}}
 * {{% game 265683 %}}Second Chance{{% /game %}}
 
+## Late to Germany
+
+Like I said, it's hard to include in our analysis games that were released earlier, but just arrived to Germany. One sticks out though:
+
+* {{% game 199042 %}}Harry Potter: Hogwarts Battle{{% /game %}}
+
+## *Just* outside the criteria
+
+Here I mention some games that didn't make the cut because they are outside one or more of the jury's (hypothetical) criteria.
+
+* {{% game 275870 %}}TEAM3 GREEN{{% /game %}} and {{% game 247694 %}}PINK{{% /game %}}: already received a favourable mention on the jury's website
 
 
-* Filtered to death
-  * {{% game 199042 %}}Harry Potter: Hogwarts Battle{{% /game %}}
+
+
+
 * not widely available in Germany yet:
   * {{% game 274960 %}}Point Salad{{% /game %}}
   * {{% game 269385 %}}The Lord of the Rings: Journeys in Middle-earth{{% /game %}}
@@ -318,14 +330,12 @@ Games that were release *just* before the deadline last year. They might get a s
   * {{% game 281259 %}}The Isle of Cats{{% /game %}}
   * {{% game 271324 %}}It's a Wonderful World{{% /game %}}
   * {{% game 257614 %}}Tussie Mussie{{% /game %}}
-  * Terror Below https://boardgamegeek.com/boardgame/270138/terror-below/versions
-  * Noctiluca https://boardgamegeek.com/boardgame/269752/noctiluca/versions
-  * Medium https://boardgamegeek.com/boardgame/242529/medium/versions
-  * Village Pillage https://boardgamegeek.com/boardgame/247342/village-pillage/versions
-  * Quirky Circuits https://boardgamegeek.com/boardgame/274093/quirky-circuits/versions
+  * {{% game 270138 %}}Terror Below{{% /game %}}
+  * {{% game 269752 %}}Noctiluca{{% /game %}}
+  * {{% game 242529 %}}Medium{{% /game %}}
+  * {{% game 247342 %}}Village Pillage{{% /game %}}
+  * {{% game 274093 %}}Quirky Circuits{{% /game %}}
 * too special
-  * TEAM3 GREEN https://boardgamegeek.com/boardgame/275870/team3-green/versions
-  * TEAM3 PINK https://boardgamegeek.com/boardgame/247694/team3-pink
 * too complex (try different filter)
   * {{% game 266810 %}}Paladins of the West Kingdom{{% /game %}}
   * Maracaibo?
