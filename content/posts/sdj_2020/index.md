@@ -119,6 +119,8 @@ Without further ado, let's look at this years candidates that meet all those cri
 
 # Candidates for {{% color "#E30613" %}}*Spiel des Jahres*{{% /color %}}
 
+{{< img src="sdj-2020" size="x300" alt="Spiel des Jahres 2020" >}}
+
 
 ## What the community would pick for {{% color "#E30613" %}}*Spiel des Jahres*{{% /color %}}
 
@@ -204,6 +206,8 @@ TODO; probably not: reimplementation
 
 
 # Candidates for {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}}
+
+{{< img src="ksdj-2020" size="x300" alt="Kennerspiel des Jahres 2020" >}}
 
 
 ## What the community would pick for {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}}
