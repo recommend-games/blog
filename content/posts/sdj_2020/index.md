@@ -284,16 +284,24 @@ A real time cooperative worker placement game sounds like a winning combination 
 
 Everything about this pair reminds us of the {{% game 203420 %}}Exit{{% /game %}} {{% game 203417 %}}Game{{% /game %}} {{% game 203416 %}}Series{{% /game %}} that won {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} in 2017. Hard to tell if that's to the games' advantage or disadvantage…
 
+This concludes our list of ten candidates for both awards. I'm truly excited to see what we got right and where the jury will surprise us. What games do you think we missed? Let us know and discuss in the comments below!
+
 
 # Honourable mentions
 
-Games that are highly regarded, but might not meet all criteria
+I'll leave you with few games that didn't make it to the lists above for one reason or another, but are still worth keeping an eye on. Some might show up in the recommendations, some in next year's edition. Stay tuned!
+
+## Latecomers
+
+Games that were release *just* before the deadline last year. They might get a second chance (see what I did there?) this year if the year is short on other candidates due to COVID–19.
+
+* {{% game 269595 %}}Copenhagen{{% /game %}}
+* {{% game 265683 %}}Second Chance{{% /game %}}
+
+
 
 * Filtered to death
   * {{% game 199042 %}}Harry Potter: Hogwarts Battle{{% /game %}}
-* last year
-  * {{% game 269595 %}}Copenhagen{{% /game %}}
-  * {{% game 265683 %}}Second Chance{{% /game %}}
 * not widely available in Germany yet:
   * {{% game 274960 %}}Point Salad{{% /game %}}
   * {{% game 269385 %}}The Lord of the Rings: Journeys in Middle-earth{{% /game %}}
