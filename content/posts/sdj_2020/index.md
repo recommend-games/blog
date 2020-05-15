@@ -177,25 +177,11 @@ TODO
 TODO
 
 
-<!-- ### {{% game 284435 %}}Nova Luna{{% /game %}}
-
-{{< img src="284435" size="x300" alt="Nova Luna" >}}
-
-TODO; maybe KdJ -->
-
-
 ### {{% game 283649 %}}Deep Blue{{% /game %}}
 
 {{< img src="283649" size="x300" alt="Deep Blue" >}}
 
 TODO
-
-
-<!-- ### {{% game 285894 %}}Noch mal so gut!{{% /game %}}
-
-{{< img src="285894" size="x300" alt="Noch mal so gut!" >}}
-
-TODO; probably not: reimplementation -->
 
 
 ### {{% game 263155 %}}One Key{{% /game %}}
@@ -212,13 +198,6 @@ TODO
 TODO
 
 
-<!-- ### {{% game  %}}{{% /game %}}
-
-{{< img src="" size="x300" alt="" >}}
-
-TODO -->
-
-
 # Candidates for {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}}
 
 {{< img src="ksdj-2020" size="x300" alt="Kennerspiel des Jahres 2020" >}}
@@ -226,7 +205,7 @@ TODO -->
 
 ## Gamers' choices
 
-[BGG](https://recommend.games/#/?complexityMax=3.5&complexityMin=1.5&ordering=bgg&playTime=120&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=2019) & [R.G](https://recommend.games/#/?complexityMax=3.5&complexityMin=1.5&playTime=120&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=2019)
+As for the main award, we find the community's favourites by looking at the [BoardGameGeek](https://recommend.games/#/?complexityMax=3.5&complexityMin=1.5&ordering=bgg&playTime=120&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=2019) and [Recommend.Games](https://recommend.games/#/?complexityMax=3.5&complexityMin=1.5&playTime=120&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=2019) ratings, which yield similar results.
 
 
 ### {{% game 262712 %}}Res Arcana{{% /game %}}
@@ -250,13 +229,6 @@ TODO
 TODO
 
 
-### {{% game 270844 %}}Imperial Settlers: Empires of the North{{% /game %}}
-
-{{< img src="270844" size="x300" alt="Imperial Settlers: Empires of the North" >}}
-
-TODO; difficult: reimplementation
-
-
 ### {{% game 269144 %}}Hadara{{% /game %}}
 
 {{< img src="269144" size="x300" alt="Hadara" >}}
@@ -264,9 +236,16 @@ TODO; difficult: reimplementation
 TODO
 
 
+### {{% game 241724 %}}Villagers{{% /game %}}
+
+{{< img src="241724" size="x300" alt="Villagers" >}}
+
+TODO
+
+
 ## Recommended to the jury
 
-Games [recommended to `s_d_j`](https://recommend.games/#/?complexityMax=2&complexityMin=1&for=S_d_J&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=20190)
+Now let's look at games [recommended to the jury](https://recommend.games/#/?complexityMax=3.5&complexityMin=1.5&for=S_d_J&playTime=120&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=2019) based on their previous choices, again skipping those that were already mentioned above.
 
 
 ### {{% game 275467 %}}Letter Jam{{% /game %}}
@@ -283,6 +262,13 @@ TODO
 TODO
 
 
+### {{% game 284435 %}}Nova Luna{{% /game %}}
+
+{{< img src="284435" size="x300" alt="Nova Luna" >}}
+
+TODO
+
+
 ### {{% game 287938 %}}Kitchen Rush{{% /game %}}
 
 {{< img src="287938" size="x300" alt="Kitchen Rush" >}}
@@ -293,13 +279,6 @@ TODO
 ### {{% game 267813 %}}Adventure Games: The Dungeon{{% /game %}} / {{% game 267814 %}}Monochrome Inc.{{% /game %}}
 
 {{< img src="267813" size="x300" alt="Adventure Games: The Dungeon" >}}
-
-TODO
-
-
-### {{% game 285895 %}}Die Inseln im Nebel{{% /game %}}
-
-{{< img src="285895" size="x300" alt="Die Inseln im Nebel" >}}
 
 TODO
 
@@ -346,9 +325,13 @@ Games that are highly regarded, but might not meet all criteria
   * {{% game 253344 %}}Cthulhu: Death May Die{{% /game %}}
 * two player only
   * {{% game 274364 %}}Watergate{{% /game %}}
-* Reimplementations of previous winners / nominees
+* Reimplementations
   * {{% game 287954 %}}Azul: Summer Pavilion{{% /game %}}
   * {{% game 269725 %}}Corinth{{% /game %}}
+  * {{% game 270844 %}}Imperial Settlers: Empires of the North{{% /game %}}
+  * {{% game 285894 %}}Noch mal so gut!{{% /game %}}
+* Just outside…
+  * {{% game 285895 %}}Die Inseln im Nebel{{% /game %}}
 * frequently mentioned
   * above lists
   * SdJ website
