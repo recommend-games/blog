@@ -127,35 +127,35 @@ Note that you get essentially the same list when looking at the [Recommend.Games
 
 {{< img src="263918" size="x300" alt="Cartographers: A Roll Player Tale" >}}
 
-TODO; maybe KdJ
+A roll and write game that can be found on pretty much every list, hence a strong candidate for a nomination. However, its complexity is similar to {{% game 244522 %}}That's Pretty Clever{{% /game %}}, so this one might end up on the {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}} list instead.
 
 
 ### {{% game 262543 %}}Wavelength{{% /game %}}
 
 {{< img src="262543" size="x300" alt="Wavelength" >}}
 
-TODO
+As a simple and immediate party game, this one is right up the jury's alley when we look at the past years. Some say that a game targeted at large gatherings might be a tough sell while COVID–19 keeps raging, but on the other hand, {{% game 262543 %}}Wavelength{{% /game %}} has proven itself something of a darling for playing via video chat, so I wouldn't discard it.
 
 
 ### {{% game 270673 %}}Silver & Gold{{% /game %}}
 
 {{< img src="270673" size="x300" alt="Silver & Gold" >}}
 
-TODO
+I don't have much information on this one, but theme, weight, and play time all seem *very* compatible with a {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}.
 
 
 ### {{% game 264055 %}}Draftosaurus{{% /game %}}
 
 {{< img src="264055" size="x300" alt="Draftosaurus" >}}
 
-TODO
+As with {{% game 270673 %}}Silver & Gold{{% /game %}}, this game seems almost designed with {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} in mind. Antoine Bauza certainly has quite a collection of big wooden meeples already!
 
 
 ### {{% game 273477 %}}Obscurio{{% /game %}}
 
 {{< img src="273477" size="x300" alt="Obscurio" >}}
 
-TODO
+This looks very much like {{% game 181304 %}}Mysterium{{% /game %}} with a traitor. Both this twist and it's fairly high complexity make it somewhat of a dark horse in the running.
 
 
 ## Recommended to the jury
