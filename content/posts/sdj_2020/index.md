@@ -20,7 +20,9 @@ It's that time of year again when the whole board game scene takes a deep look i
 
 Consequently, there are [many](https://brettspielpoesie.de/spiel-des-jahres-2020-prognose-13298/) [lists](https://www.abenteuer-brettspiele.de/brettspiel-empfehlungen/spiel-des-jahres-2020-kennerspiel-des-jahres-2020) [floating](https://spiele.tips/alle-spiel-des-jahres-2020-brettspiele-im-vergleich) [all](https://www.reddit.com/r/boardgames/comments/fyc7xu/what_are_your_predictions_for_spiel_kennerspiel/) [around](https://www.brettspielbar.de/bsb049-einstimmung-spiel-des-jahres-2020/) [the](https://boardgamegeek.com/geeklist/269444/spiel-des-jahres-2020-speculation) [Internet](https://www.boardgameatlas.com/forum/j89cRJl518/what-are-your-spielkennerspiel-des-jahres-2020-predictions) trying to predict this year's nominees. And this is one of them! Most lists are based on the author's experience and taste, but here we try to take a data driven approach: We'll look at the previous winners, try to derive the jury's (implicit or explicit) criteria, and check what current games that meet those criteria have been rated highly.
 
-You'll actually get two for the price of one: since 2011, in addition to the traditional main award {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} that is targeted at casual gamers, there is also the {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} for those who are ready for a (little) more complex game. There's also a third award {{% color "#009FE3" %}}***Kinderspiel des Jahres***{{% /color %}} for children's games, but since the author of these lines doesn't know the first thing about this sector (give it another four or five years), we won't talk further about it.
+You'll actually get two for the price of one: since 2011, in addition to the traditional main award {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} that is targeted at casual gamers, there is also the {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} for those who are ready for a (little) more complex game, i.e., "connoisseur gamers". There's also a third award {{% color "#009FE3" %}}***Kinderspiel des Jahres***{{% /color %}} for children's games, but since the author of these lines doesn't know the first thing about this sector (give it another four or five years), we won't talk further about it.
+
+This is a drama in three acts: First, we'll take a look at [previous winners](#analysis-of-past-winners) in order to understand what kind of games the jury likes to honour. Second, we use those criteria to find [candidates for this year's {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}](#candidates-for-span-stylecolor-e30613spiel-des-jahresspan). And lastly, we'll do the same for the [{{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}}](#candidates-for-span-stylecolor-193f4akennerspiel-des-jahresspan). Let's go!
 
 
 # Analysis of past winners
@@ -32,9 +34,7 @@ It's worth recalling what the mission statement of {{% color "#E30613" %}}***Spi
 
 First, there's the question if the community at BoardGameGeek and the jury {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} are aligned at all. After all, the former is full of mostly US-centric hardcore gamers, while the latter is exclusively concerned with casual gamers in Germany. Still, when we look at how the BGG crowd has rated the award winners over the last years, the jury seems to have done a good job:
 
-<!-- {{< figure src="/img/sdj/bayes_rating.svg" caption="Geek ratings for Spiel des Jahres and Kennerspiel des Jahres winners" >}} -->
-![Geek ratings for Spiel des Jahres and Kennerspiel des Jahres winners](/img/sdj/bayes_rating.svg)
-<!-- TODO: add legend to graphic -->
+{{< img src="bayes_rating" alt="Geek ratings for Spiel des Jahres and Kennerspiel des Jahres winners" >}}
 
 While not every single game was a hit with the geeks, many {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} winners score highly, and particularly there's a clear upwards trend visible over the past decade or so. Granted, this is also the case with recent releases in general, but the point remains that German families and American geeks might agree on some games after all.
 
@@ -45,8 +45,7 @@ With that out of the way, let's examine some of our candidates' particular featu
 
 BoardGameGeek quantifies a game's weight or complexity on a scale from 1 (*light*) to 5 (*heavy*). Naturally, the accessibility of a {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} pushes them towards the lighter side, though over the years, the jury selected some more complex games as well:
 
-![Complexity of Spiel des Jahres and Kennerspiel des Jahres winners](/img/sdj/complexity.svg)
-<!-- TODO: add legend to graphic -->
+{{< img src="complexity" alt="Complexity of Spiel des Jahres and Kennerspiel des Jahres winners" >}}
 
 However, recent years have seen a strong trend towards the *very* light games. In fact, since the introduction of {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} in 2011, only 2012's winner {{% game 107529 %}}Kingdom Builder{{% /game %}} exceeded a complexity rating of 2 (*medium light*) – by 0.07 points. Even said {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}, whose first few winners hovered around a weight of 3 (*medium*), is drawn more and more towards the 2 mark.
 
@@ -57,8 +56,7 @@ From this we can conclude the {{% color "#E30613" %}}***Spiel des Jahres 2020***
 
 In addition to short rules (start quickly), a {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} should also have a short playing time (play quickly). Again, the data confirm this perception:
 
-![Playing times of Spiel des Jahres and Kennerspiel des Jahres winners](/img/sdj/time.svg)
-<!-- TODO: add legend to graphic -->
+{{< img src="time" alt="Playing times of Spiel des Jahres and Kennerspiel des Jahres winners" >}}
 
 Here, the bands indicate the span of the playing time indicated on the games' boxes, while the dashed lines denotes the mean. Playing times are tricky because publishers *always* lie about them. I suppose they simply don't want to scare away people whose attention spans become ever shorter (thanks for still being with me by the way) with the prospect of sitting through an hour of some ultra nerdy activity. But since everybody lies the same way, we can at least compare games with each other. And again, it becomes obvious how import immediate accessibility is to the jury: The last winner that admitted to having a playing time of more than 45 minutes was 2006's {{% game 21790 %}}Thurn and Taxis{{% /game %}}, and none has exceeded the hour mark since 1999's {{% game 54 %}}Tikal{{% /game %}}.
 
@@ -71,8 +69,7 @@ In conclusion, the {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color 
 
 The {{% color "#E30613" %}}***Spiel***{{% /color %}}'s character as a family or rather group activity becomes obvious when looking at the supported player counts:
 
-![Player counts of Spiel des Jahres and Kennerspiel des Jahres winners](/img/sdj/players.svg)
-<!-- TODO: add legend to graphic -->
+{{< img src="players" alt="Player counts of Spiel des Jahres and Kennerspiel des Jahres winners" >}}
 <!-- TODO: add recommended counts as well? -->
 
 *Every single winner of either award was playable with 3 and 4 players.* It's just what a typical German family looks like, so there's no way the jury will deviate from this pattern. In fact, there's only two games that were even nominated with a different player count, both pure 2-player-games: {{% game 118048 %}}Targi{{% /game %}} in 2012 and {{% game 12002 %}}Jambo{{% /game %}} in 2005.
@@ -84,8 +81,7 @@ Therefore, without a doubt, both {{% color "#E30613" %}}***Spiel des Jahres 2020
 
 As I mentioned above, a {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} should bring together children with their grandparents, yet, somewhat surprisingly, publishers don't always seem to trust their games with the younger audience:
 
-![Age recommendations of Spiel des Jahres and Kennerspiel des Jahres winners](/img/sdj/age.svg)
-<!-- TODO: add legend to graphic -->
+{{< img src="age" alt="Age recommendations of Spiel des Jahres and Kennerspiel des Jahres winners" >}}
 
 Here the solid line is what's printed on the box, whilst the dotted line is what the community thinks. Similar to playing time, age recommendations are tricky and publishers often have a different opinion on it than players, but usually *in the other direction*. (It's worth noticing though that often there aren't all that many players that "vote" on the age recommendations, so take them with a pinch of salt.)
 
