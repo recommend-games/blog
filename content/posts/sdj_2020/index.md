@@ -116,7 +116,7 @@ Note that you get essentially the same list when looking at the [Recommend.Games
 
 {{< img src="263918" size="x300" alt="Cartographers: A Roll Player Tale" >}}
 
-TODO
+TODO; maybe KdJ
 
 ### {{% game 262543 %}}Wavelength{{% /game %}}
 
@@ -163,7 +163,7 @@ TODO
 
 {{< img src="284435" size="x300" alt="Nova Luna" >}}
 
-TODO
+TODO; maybe KdJ
 
 ### {{% game 283649 %}}Deep Blue{{% /game %}}
 
@@ -175,7 +175,7 @@ TODO
 
 {{< img src="285894" size="x300" alt="Noch mal so gut!" >}}
 
-TODO
+TODO; probably not: reimplementation
 
 ## What the community would pick for {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}}
 
@@ -203,7 +203,7 @@ TODO
 
 {{< img src="270844" size="x300" alt="Imperial Settlers: Empires of the North" >}}
 
-TODO
+TODO; difficult: reimplementation
 
 ### {{% game 269144 %}}Hadara{{% /game %}}
 
@@ -270,8 +270,9 @@ Games that are highly regarded, but might not meet all criteria
   * {{% game 281259 %}}The Isle of Cats{{% /game %}}
   * {{% game 271324 %}}It's a Wonderful World{{% /game %}}
   * {{% game 257614 %}}Tussie Mussie{{% /game %}}
-* too complex
+* too complex (try different filter)
   * {{% game 266810 %}}Paladins of the West Kingdom{{% /game %}}
+  * Maracaibo?
 * too high age
   * {{% game 245655 %}}King's Dilemma{{% /game %}}
 * too expensive
@@ -281,6 +282,9 @@ Games that are highly regarded, but might not meet all criteria
 * Reimplementations of previous winners / nominees
   * {{% game 287954 %}}Azul: Summer Pavilion{{% /game %}}
   * {{% game 269725 %}}Corinth{{% /game %}}
+* frequently mentioned
+  * above lists
+  * SdJ website
 
 ## Notes
 
