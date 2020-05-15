@@ -14,6 +14,8 @@ tags:
   - Germany
 ---
 
+*For the impatient: If you don't care about the data of previous winners and all you're interested in are the candidates for this year's awards, jump [straight to the list](#candidates-for-span-stylecolor-e30613spiel-des-jahresspan)…*
+
 It's that time of year again when the whole board game scene takes a deep look into their crystal balls: On Monday, May 18, the jury [{{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}](https://www.spiel-des-jahres.com/) will announce the nominees for the game of the year award in Germany. There's a myriad of awards in tabletop gaming, but the *red meeple* is the one everbody is really after. Even international publishers often prioritise releasing their game in Germany before their home country just so it'd be eligible for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}. It is **that** important!
 
 <!-- ![Spiel des Jahres](/img/sdj-2020.png) -->
@@ -22,7 +24,11 @@ Consequently, there are many, many, many lists[^todo] floating around the Intern
 
 You'll actually get two for the price of one: since 2011, in addition to the traditional main award {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} that is targeted at casual gamers, there is also the {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} for those who are ready for a (little) more complex game. There's also a third award {{% color "#009FE3" %}}***Kinderspiel des Jahres***{{% /color %}} for children's games, but since the author of these lines doesn't know the first thing about this sector (give it another four or five years), we won't talk further about it.
 
+
+# Analysis of past winners
+
 It's worth recalling what the mission statement of {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} is. The target audience are people that buy maybe one game a year which ends up under the Christmas tree and is meant to be played that very evening with the family. This means a game hoping to decorate itself with the red meeple needs to be accessible in every possible way: affordable price point, short rules, quick play time, yet fun for grandchildren and grandparents alike. Luckily for us, BoardGameGeek quantifies about every aspect of games, so let's look in more details into previous winners and how they scored in those criteria.
+
 
 ## Does the community like {{% color "#E30613" %}}*Spiel des Jahres*{{% /color %}} winners?
 
@@ -36,6 +42,7 @@ While not every single game was a hit with the geeks, many {{% color "#E30613" %
 
 With that out of the way, let's examine some of our candidates' particular features.
 
+
 ## How difficult can it be?
 
 BoardGameGeek quantifies a game's weight or complexity on a scale from 1 (*light*) to 5 (*heavy*). Naturally, the accessibility of a {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} pushes them towards the lighter side, though over the years, the jury selected some more complex games as well:
@@ -46,6 +53,7 @@ BoardGameGeek quantifies a game's weight or complexity on a scale from 1 (*light
 However, recent years have seen a strong trend towards the *very* light games. In fact, since the introduction of {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} in 2011, only 2012's winner {{% game 107529 %}}Kingdom Builder{{% /game %}} exceeded a complexity rating of 2 (*medium light*) – by 0.07 points. Even said {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}, whose first few winners hovered around a weight of 3 (*medium*), is drawn more and more towards the 2 mark.
 
 From this we can conclude the {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}} will have a complexity rating below **2**, whilst the {{% color "#193F4A" %}}***Kennerspiel des Jahres 2020***{{% /color %}} will not exceed 3 in its compexity, or let's say **3.5**, in case the jury wants to go experimental.
+
 
 ## How long can it take?
 
@@ -59,6 +67,7 @@ Here, the bands indicate the span of the playing time indicated on the games' bo
 On the other hand, the jury seems to have no problem with longer playing times for {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}. The sweet spot still seems to be around 60 minutes, but even 90 or 120 minutes on the box do not exclude a game from the connoisseurs' award.
 
 In conclusion, the {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}} will be playable in under **1 hour**, probably even 45 minutes, whilst the {{% color "#193F4A" %}}***Kennerspiel des Jahres 2020***{{% /color %}} might take up to **2 hours**.
+
 
 ## How many players can take part?
 
@@ -86,6 +95,7 @@ What stands out in this graphic is that {{% color "#E30613" %}}***Spiel des Jahr
 
 All of this makes it hard to draw a conclusion. {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} winners can typically be played with 8 to 10 year old children, while a {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} can usually be found in the age range from 10 to 12 years. But because of the somewhat erratic age recommendations, we only stipulate a limit of **14 years** for both {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}} and {{% color "#193F4A" %}}***Kennerspiel des Jahres 2020***{{% /color %}}. Still, one can confidently exclude any game that includes adult topics or themes that would put off the younger or older audience.
 
+
 ## Summary of criteria
 
 OK, now we've got an understand what a game needs to look like if it hopes to win the coveted awards. A {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} needs to
@@ -106,11 +116,16 @@ Further, we need to talk about a game's release date. It's actually not that eas
 
 Without further ado, let's look at this years candidates that meet all those criteria!
 
+
+# Candidates for {{% color "#E30613" %}}*Spiel des Jahres*{{% /color %}}
+
+
 ## What the community would pick for {{% color "#E30613" %}}*Spiel des Jahres*{{% /color %}}
 
 First, let's look at the games that meet the above criteria released in 2019 and 2020, [sorted by their rating on BoardGameGeek](https://recommend.games/#/?complexityMax=2&complexityMin=1&ordering=bgg&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=2019). When you click on that link, the list you'll see might be very different from what I worked with if some time has passed, so don't be confused if the names you read here are very different. Also, I'll skip any games that are ineligible for one reason or another.
 
 Note that you get essentially the same list when looking at the [Recommend.Games ratings](https://recommend.games/#/?complexityMax=2&complexityMin=1&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=2019).
+
 
 ### {{% game 263918 %}}Cartographers: A Roll Player Tale{{% /game %}}
 
@@ -118,11 +133,13 @@ Note that you get essentially the same list when looking at the [Recommend.Games
 
 TODO; maybe KdJ
 
+
 ### {{% game 262543 %}}Wavelength{{% /game %}}
 
 {{< img src="262543" size="x300" alt="Wavelength" >}}
 
 TODO
+
 
 ### {{% game 270673 %}}Silver & Gold{{% /game %}}
 
@@ -130,11 +147,13 @@ TODO
 
 TODO
 
+
 ### {{% game 264055 %}}Draftosaurus{{% /game %}}
 
 {{< img src="264055" size="x300" alt="Draftosaurus" >}}
 
 TODO
+
 
 ### {{% game 273477 %}}Obscurio{{% /game %}}
 
@@ -142,10 +161,12 @@ TODO
 
 TODO
 
+
 ## What we'd recommend to the jury
 
 Games [recommended to `s_d_j`](https://recommend.games/#/?complexityMax=2&complexityMin=1&for=S_d_J&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=20190)
 <!-- [API](https://recommend.games/api/games/recommend/?complexity__gte=1&complexity__lte=2&exclude_clusters=True&exclude_known=True&exclude_owned=True&max_players__gte=3&max_time__gt=0&max_time__lte=60&min_age__gt=0&min_age__lte=14&min_players__lte=3&user=S_d_J&year__gte=2019&year__lte=2020) -->
+
 
 ### {{% game 284108 %}}Pictures{{% /game %}}
 
@@ -153,11 +174,13 @@ Games [recommended to `s_d_j`](https://recommend.games/#/?complexityMax=2&comple
 
 TODO
 
+
 ### {{% game 285533 %}}Miyabi{{% /game %}}
 
 {{< img src="285533" size="x300" alt="Miyabi" >}}
 
 TODO
+
 
 ### {{% game 284435 %}}Nova Luna{{% /game %}}
 
@@ -165,11 +188,13 @@ TODO
 
 TODO; maybe KdJ
 
+
 ### {{% game 283649 %}}Deep Blue{{% /game %}}
 
 {{< img src="283649" size="x300" alt="Deep Blue" >}}
 
 TODO
+
 
 ### {{% game 285894 %}}Noch mal so gut!{{% /game %}}
 
@@ -177,9 +202,14 @@ TODO
 
 TODO; probably not: reimplementation
 
+
+# Candidates for {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}}
+
+
 ## What the community would pick for {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}}
 
 [Link](https://recommend.games/#/?complexityMax=3.5&complexityMin=1&ordering=bgg&playTime=120&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=2019)
+
 
 ### {{% game 262712 %}}Res Arcana{{% /game %}}
 
@@ -187,11 +217,13 @@ TODO; probably not: reimplementation
 
 TODO
 
+
 ### {{% game 284083 %}}The Crew: The Quest for Planet Nine{{% /game %}}
 
 {{< img src="284083" size="x300" alt="The Crew: The Quest for Planet Nine" >}}
 
 TODO
+
 
 ### {{% game 265736 %}}Tiny Towns{{% /game %}}
 
@@ -199,11 +231,13 @@ TODO
 
 TODO
 
+
 ### {{% game 270844 %}}Imperial Settlers: Empires of the North{{% /game %}}
 
 {{< img src="270844" size="x300" alt="Imperial Settlers: Empires of the North" >}}
 
 TODO; difficult: reimplementation
+
 
 ### {{% game 269144 %}}Hadara{{% /game %}}
 
@@ -211,9 +245,11 @@ TODO; difficult: reimplementation
 
 TODO
 
+
 ## What we'd recommend to the jury
 
 Games [recommended to `s_d_j`](https://recommend.games/#/?complexityMax=2&complexityMin=1&for=S_d_J&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&playerCount=3&playerCountType=box&yearMax=2020&yearMin=20190)
+
 
 ### {{% game 275467 %}}Letter Jam{{% /game %}}
 
@@ -221,11 +257,13 @@ Games [recommended to `s_d_j`](https://recommend.games/#/?complexityMax=2&comple
 
 TODO
 
+
 ### {{% game 277597 %}}Fast Sloths{{% /game %}}
 
 {{< img src="277597" size="x300" alt="Fast Sloths" >}}
 
 TODO
+
 
 ### {{% game 287938 %}}Kitchen Rush{{% /game %}}
 
@@ -233,17 +271,20 @@ TODO
 
 TODO
 
+
 ### {{% game 267813 %}}Adventure Games: The Dungeon{{% /game %}} / {{% game 267814 %}}Monochrome Inc.{{% /game %}}
 
 {{< img src="267813" size="x300" alt="Adventure Games: The Dungeon" >}}
 
 TODO
 
+
 ### {{% game 285895 %}}Die Inseln im Nebel{{% /game %}}
 
 {{< img src="285895" size="x300" alt="Die Inseln im Nebel" >}}
 
 TODO
+
 
 ## Honourable mentions
 
@@ -285,6 +326,7 @@ Games that are highly regarded, but might not meet all criteria
 * frequently mentioned
   * above lists
   * SdJ website
+
 
 ## Notes
 
