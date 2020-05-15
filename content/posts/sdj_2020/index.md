@@ -167,35 +167,35 @@ Instead of looking at the community at large, we really want to know what games 
 
 {{< img src="284108" size="x300" alt="Pictures" >}}
 
-TODO
+This game sounds almost like a sandbox full of toys that could engage the whole family. Definitely {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} material!
 
 
 ### {{% game 285533 %}}Miyabi{{% /game %}}
 
 {{< img src="285533" size="x300" alt="Miyabi" >}}
 
-TODO
+I got very little on this one, but Michael Kiesling sure knows how to desing a {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}, so why not?
 
 
 ### {{% game 283649 %}}Deep Blue{{% /game %}}
 
 {{< img src="283649" size="x300" alt="Deep Blue" >}}
 
-TODO
+Publisher Days of Wonders can pride themselves with one of the most iconic winners: {{% game 9209 %}}Ticket to Ride{{% /game %}}. This game could mark their return to the nomination list.
 
 
 ### {{% game 263155 %}}One Key{{% /game %}}
 
 {{< img src="263155" size="x300" alt="One Key" >}}
 
-TODO
+From the same team as {{% game 273477 %}}Obscurio{{% /game %}}, this one might be a little lighter, a little faster, a little more different, i.e., a stronger contender.
 
 
 ### {{% game 268620 %}}Similo{{% /game %}}
 
 {{< img src="268620" size="x300" alt="Similo" >}}
 
-TODO
+Another quick and easy game, in this case also very afforable and portable. Overall this could make it a very welcoming introduction into the wonderful world of board games.
 
 
 # Candidates for {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}}
