@@ -9,7 +9,7 @@ publishdir: public
 staticDir: static
 themesDir: themes
 
-title: Recommend.Games Blog
+title: Data & Games
 canonifyurls: true
 
 DefaultContentLanguage: en
@@ -22,7 +22,7 @@ googleAnalytics: UA-128891980-1
 enableRobotsTXT: true
 
 Params:
-  subtitle: Board Game Analyses
+  subtitle: The Recommend.Games blog on board game analyses
   mainSections:
     - post
     - posts
@@ -39,6 +39,11 @@ Params:
   useHLJS: true
   socialShare: true
   showRelatedPosts: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 
 Author:
   name: Recommend.Games
