@@ -308,7 +308,7 @@ Like I said, it's hard to include in our analysis games that were released earli
 
 Here I mention some games that didn't make the cut because they are outside one or more of the jury's (hypothetical) criteria.
 
-* {{% game 275870 %}}TEAM3 GREEN{{% /game %}} and {{% game 247694 %}}PINK{{% /game %}}: already received a favourable mention on the jury's website
+* {{% game 275870 %}}TEAM3 GREEN{{% /game %}} and {{% game 247694 %}}PINK{{% /game %}}: already received a [favourable mention](https://www.spiel-des-jahres.de/team-3-bauen-mit-perspektivwechsel/) on the jury's website
 
 
 
