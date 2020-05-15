@@ -284,12 +284,13 @@ A real time cooperative worker placement game sounds like a winning combination 
 
 Everything about this pair reminds us of the {{% game 203420 %}}Exit{{% /game %}} {{% game 203417 %}}Game{{% /game %}} {{% game 203416 %}}Series{{% /game %}} that won {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} in 2017. Hard to tell if that's to the games' advantage or disadvantage…
 
-This concludes our list of ten candidates for both awards. I'm truly excited to see what we got right and where the jury will surprise us. What games do you think we missed? Let us know and discuss in the comments below!
+This concludes our list of ten candidates for both awards. I'm truly excited to see what we got right and where the jury will surprise us. What games do you think we missed? Is there a *very* recently released game that might fly under everyone's radar? Let us know and discuss in the comments below!
 
 
 # Honourable mentions
 
 I'll leave you with few games that didn't make it to the lists above for one reason or another, but are still worth keeping an eye on. Some might show up in the recommendations, some in next year's edition. Stay tuned!
+
 
 ## Latecomers
 
@@ -298,68 +299,74 @@ Games that were release *just* before the deadline last year. They might get a s
 * {{% game 269595 %}}Copenhagen{{% /game %}}
 * {{% game 265683 %}}Second Chance{{% /game %}}
 
+
 ## Late to Germany
 
 Like I said, it's hard to include in our analysis games that were released earlier, but just arrived to Germany. One sticks out though:
 
 * {{% game 199042 %}}Harry Potter: Hogwarts Battle{{% /game %}}
 
+
 ## *Just* outside the criteria
 
-Here I mention some games that didn't make the cut because they are outside one or more of the jury's (hypothetical) criteria.
-
-* {{% game 275870 %}}TEAM3 GREEN{{% /game %}} and {{% game 247694 %}}PINK{{% /game %}}: already received a [favourable mention](https://www.spiel-des-jahres.de/team-3-bauen-mit-perspektivwechsel/) on the jury's website
+Here I mention some games that didn't make the cut because they are outside one or more of the jury's (hypothetical) criteria. These might still end up on the recommendation lists.
 
 
+### Too "special"
+
+* {{% game 253344 %}}Cthulhu: Death May Die{{% /game %}}: *very* expensive, plus the horror theme doesn't strike well with the jury
+* {{% game 245655 %}}King's Dilemma{{% /game %}}: 16+ according to the community, just a little too mature
+* {{% game 275870 %}}TEAM3 GREEN{{% /game %}} and {{% game 247694 %}}PINK{{% /game %}}: not quite a general interest game, but already received a [favourable mention](https://www.spiel-des-jahres.de/team-3-bauen-mit-perspektivwechsel/) on the jury's website
 
 
+### Too complex
 
-* not widely available in Germany yet:
-  * {{% game 274960 %}}Point Salad{{% /game %}}
-  * {{% game 269385 %}}The Lord of the Rings: Journeys in Middle-earth{{% /game %}}
-  * {{% game 283864 %}}Trails of Tucana{{% /game %}}
-  * {{% game 266830 %}}Q.E.{{% /game %}}
-  * {{% game 251412 %}}On Tour{{% /game %}}
-  * {{% game 267319 %}}Roam{{% /game %}}
-  * {{% game 271869 %}}Sushi Roll{{% /game %}}
-  * {{% game 285774 %}}Marvel Champions: The Card Game{{% /game %}}
-  * {{% game 264220 %}}Tainted Grail: The Fall of Avalon{{% /game %}}
-  * {{% game 286096 %}}Tapestry{{% /game %}}
-  * {{% game 282524 %}}Horrified{{% /game %}}
-  * {{% game 266524 %}}PARKS{{% /game %}}
-  * {{% game 281259 %}}The Isle of Cats{{% /game %}}
-  * {{% game 271324 %}}It's a Wonderful World{{% /game %}}
-  * {{% game 257614 %}}Tussie Mussie{{% /game %}}
-  * {{% game 270138 %}}Terror Below{{% /game %}}
-  * {{% game 269752 %}}Noctiluca{{% /game %}}
-  * {{% game 242529 %}}Medium{{% /game %}}
-  * {{% game 247342 %}}Village Pillage{{% /game %}}
-  * {{% game 274093 %}}Quirky Circuits{{% /game %}}
-* too special
-* too complex (try different filter)
-  * {{% game 266810 %}}Paladins of the West Kingdom{{% /game %}}
-  * Maracaibo?
-* too high age
-  * {{% game 245655 %}}King's Dilemma{{% /game %}}
-* too expensive
-  * {{% game 253344 %}}Cthulhu: Death May Die{{% /game %}}
-* two player only
-  * {{% game 274364 %}}Watergate{{% /game %}}
-* Reimplementations
-  * {{% game 287954 %}}Azul: Summer Pavilion{{% /game %}}
-  * {{% game 269725 %}}Corinth{{% /game %}}
-  * {{% game 270844 %}}Imperial Settlers: Empires of the North{{% /game %}}
-  * {{% game 285894 %}}Noch mal so gut!{{% /game %}}
-* Just outside…
-  * {{% game 285895 %}}Die Inseln im Nebel{{% /game %}}
-* frequently mentioned
-  * above lists
-  * SdJ website
+* {{% game 276025 %}}Maracaibo{{% /game %}}
+* {{% game 266810 %}}Paladins of the West Kingdom{{% /game %}}
 
 
-## Notes
+### Two player only
 
-Latecomer – no chance to show up in the lists!
+* {{% game 264241 %}}Mandala{{% /game %}}
+* {{% game 244191 %}}Nagaraja{{% /game %}}
+* {{% game 280132 %}}Robin of Locksley{{% /game %}}
+* {{% game 274364 %}}Watergate{{% /game %}}
+
+
+## Comebacks
+
+While the jury has awarded games before that were reimplementations of previously published games (e.g., {{% game 6249 %}}Alhambra{{% /game %}} in 2003), it still feels less likely, particularly when the new version is very close to the previous release, or it has been on the recommendation list already. But then again, the jury does like a surprise…
+
+* {{% game 287954 %}}Azul: Summer Pavilion{{% /game %}} (reimplements {{% game 230802 %}}Azul{{% /game %}})
+* {{% game 269725 %}}Corinth{{% /game %}} (reimplements {{% game 22345 %}}Yspahan{{% /game %}})
+* {{% game 270844 %}}Imperial Settlers: Empires of the North{{% /game %}} (reimplements {{% game 154203 %}}Imperial Settlers{{% /game %}})
+* {{% game 285894 %}}Noch mal so gut!{{% /game %}} (reimplements {{% game 206931 %}}Encore!{{% /game %}})
+
+
+## Too late
+
+There's many games that already stirred quite some interest internationally and can be found on many prediction lists, but that haven't had a German release in time, so won't be eligible this year. It's worth keeping an eye on them for next year though!
+
+* {{% game 282524 %}}Horrified{{% /game %}}
+* {{% game 271324 %}}It's a Wonderful World{{% /game %}}
+* {{% game 269385 %}}The Lord of the Rings: Journeys in Middle-earth{{% /game %}}
+* {{% game 285774 %}}Marvel Champions: The Card Game{{% /game %}}
+* {{% game 242529 %}}Medium{{% /game %}}
+* {{% game 269752 %}}Noctiluca{{% /game %}}
+* {{% game 251412 %}}On Tour{{% /game %}}
+* {{% game 266524 %}}PARKS{{% /game %}}
+* {{% game 274960 %}}Point Salad{{% /game %}}
+* {{% game 266830 %}}Q.E.{{% /game %}}
+* {{% game 274093 %}}Quirky Circuits{{% /game %}}
+* {{% game 267319 %}}Roam{{% /game %}}
+* {{% game 271869 %}}Sushi Roll{{% /game %}}
+* {{% game 264220 %}}Tainted Grail: The Fall of Avalon{{% /game %}}
+* {{% game 286096 %}}Tapestry{{% /game %}}
+* {{% game 270138 %}}Terror Below{{% /game %}}
+* {{% game 283864 %}}Trails of Tucana{{% /game %}}
+* {{% game 281259 %}}The Isle of Cats{{% /game %}}
+* {{% game 257614 %}}Tussie Mussie{{% /game %}}
+* {{% game 247342 %}}Village Pillage{{% /game %}}
 
 [^covid]: The jury has [stated](https://kulturgutspiel.de/panorama/corona-trifft-spiel-des-jahres-jury-ist-arbeitsfaehig/) that the COVID–19 pandemic does not alter the schedule for this year's awards. However, they may not be able to thoroughly test some games that were released close to the March deadline, so those might be considered for {{% color "#E30613" %}}***Spiel des Jahres 2021***{{% /color %}} instead.
 [^bartsch]: This joke was stolen from [Udo Bartsch](https://rezensionen-fuer-millionen.blogspot.com/2020/04/tiny-towns.html). It was too good to be omitted!
