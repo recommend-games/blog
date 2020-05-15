@@ -197,7 +197,15 @@ From the same team as {{% game 273477 %}}Obscurio{{% /game %}}, this one might b
 
 Another quick and easy game, in this case also very afforable and portable. Overall this could make it a very welcoming introduction into the wonderful world of board games.
 
-So, those were the ten games that, according to the data, should be the most likely to receive a nomination for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}. Will the jury be this predictable? We will find out soon! For now, let's move on to the connoisseurs' games.
+## My two cents
+
+I tried to be as objective as possible with the selection above and let the data do the talking. But let me conclude this list with the three games that I personally think have the highest chance of receiving a nomination for {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}}:
+
+* {{% game 284108 %}}Pictures{{% /game %}}
+* {{% game 270673 %}}Silver & Gold{{% /game %}}
+* {{% game 268620 %}}Similo{{% /game %}}
+
+So, those were the ten (plus three) games that, according to the data, should be the most likely to receive a nomination for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}. Will the jury be this predictable? We will find out soon! For now, let's move on to the connoisseurs' games.
 
 
 # Candidates for {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}}
@@ -283,6 +291,16 @@ A real time cooperative worker placement game sounds like a winning combination 
 {{< img src="267813" size="x300" alt="Adventure Games: The Dungeon" >}}
 
 Everything about this pair reminds us of the {{% game 203420 %}}Exit{{% /game %}} {{% game 203417 %}}Game{{% /game %}} {{% game 203416 %}}Series{{% /game %}} that won {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} in 2017. Hard to tell if that's to the games' advantage or disadvantage…
+
+## My two cents
+
+Again, let's wrap this up with my personal daring prediction of the three nominees for {{% color "#193F4A" %}}***Kennerspiel des Jahres 2020***{{% /color %}}:
+
+* {{% game 284083 %}}The Crew: The Quest for Planet Nine{{% /game %}}
+* {{% game 265736 %}}Tiny Towns{{% /game %}}
+* {{% game 284435 %}}Nova Luna{{% /game %}}
+
+To be honest, I think {{% game 263918 %}}Cartographers{{% /game %}} also seems to be a very strong contender, I just cannot decide for which list!
 
 This concludes our list of ten candidates for both awards. I'm truly excited to see what we got right and where the jury will surprise us. What games do you think we missed? Is there a *very* recently released game that might fly under everyone's radar? Let us know and discuss in the comments below!
 
