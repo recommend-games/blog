@@ -1,10 +1,9 @@
 ---
-draft: true
 title: And the Spiel des Jahres 2020 goes to…
 slug: and-the-spiel-des-jahres-2020-goes-to
 author: Markus Shepherd
 type: post
-date: 2020-05-13T07:43:11+03:00
+date: 2020-05-15
 tags:
   - SdJ
   - Spiel des Jahres
@@ -14,7 +13,7 @@ tags:
   - Germany
 ---
 
-***For the impatient***: *If you don't care about the data of previous winners and all you're interested in are the candidates for this year's awards, jump [straight to the list](#candidates-for-span-stylecolor-e30613spiel-des-jahresspan)…*
+***For the impatient***: *If you don't care about the analysis of previous winners and all you're interested in are the candidates for this year's awards, jump [straight to the list](#candidates-for-span-stylecolor-e30613spiel-des-jahresspan)…*
 
 It's that time of year again when the whole board game scene takes a deep look into their crystal balls: On Monday, May 18, the jury [{{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}](https://www.spiel-des-jahres.com/) will announce the nominees for the game of the year award in Germany. There's a myriad of awards in tabletop gaming, but the *red meeple* is the one everbody is really after. Even international publishers often prioritise releasing their game in Germany before their home country just so it'd be eligible for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}. It is **that** important!
 
