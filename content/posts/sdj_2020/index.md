@@ -173,7 +173,7 @@ This game sounds almost like a sandbox full of toys that could engage the whole 
 
 {{< img src="285533" size="x300" alt="Miyabi" >}}
 
-I got very little on this one, but Michael Kiesling sure knows how to desing a {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}, so why not?
+I got very little on this one, but Michael Kiesling sure knows how to design a {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}, so why not?
 
 
 ### {{% game 283649 %}}Deep Blue{{% /game %}}
@@ -235,7 +235,7 @@ This cooperative trick-taking game is pretty much on *every* list, but usually f
 
 {{< img src="265736" size="x300" alt="Tiny Towns" >}}
 
-Another game that appears to be on everybody's mind. Play time and complexity certainly qualify it for {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}. Bonus: the people on the cover practice exemplary social distancing! [^bartsch]
+Another game that appears to be on everybody's mind. Play time and complexity certainly qualify it for {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}. Bonus: the characters on the cover practice exemplary social distancing! [^bartsch]
 
 
 ### {{% game 269144 %}}Hadara{{% /game %}}
@@ -302,6 +302,8 @@ Again, let's wrap this up with my personal daring prediction of the three nomine
 To be honest, I think {{% game 263918 %}}Cartographers{{% /game %}} also seems to be a very strong contender, I just cannot decide for which list!
 
 This concludes our list of ten candidates for both awards. I'm truly excited to see what we got right and where the jury will surprise us. What games do you think we missed? Is there a *very* recently released game that might fly under everyone's radar? Let us know and discuss in the comments below!
+
+*PS*: You can find the notebook I used for the graphs and most of the analysis I did above [on Kaggle](https://www.kaggle.com/mshepherd/spiel-des-jahres-2020-predictions).
 
 
 # Honourable mentions
