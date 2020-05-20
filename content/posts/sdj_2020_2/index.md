@@ -3,7 +3,7 @@ title: And the Spiel des Jahres 2020 goes to… Part 2!
 slug: and-the-spiel-des-jahres-2020-goes-to-part-2
 author: Markus Shepherd
 type: post
-date: 2020-05-19
+date: 2020-05-20
 tags:
   - SdJ
   - Spiel des Jahres
@@ -63,3 +63,10 @@ In addition to the three nominees, there's also six games on the jury's long lis
 * {{% game 241266 %}}Little Town{{% /game %}}: Another latecomer, another game above the medium light complexity. Maybe the jury *does* want to highlight more complex games this year, who knows…
 * {{% game 287938 %}}Kitchen Rush{{% /game %}}: I called this one, but again for the wrong award due to its complexity. I'll admit I was a little surprised to see it on the list in the end as there were some pretty negative reviews by some jury members.
 * {{% game 299169 %}}Spicy{{% /game %}}: What's going on with this game's complexity rating? Is it an *easy to learn, hard to master* situation that makes this a *light* game for two thirds, and a *heavy* game for the other third of the players? Or is it trolling?
+
+
+## How good were the predictions?
+
+Time to compare the predictions with reality! As mentioned, I called two out of three nominations, though one for the wrong award. Depending on how strict you are, this makes for a 50% or even 66% success rate, which I am really proud of, given the jury's infamous unpredictability.
+
+However, when looking at the long list of nominations plus recommendations, I only called four out of its nine titles (two of them on the wrong list). I'll try better next year…
