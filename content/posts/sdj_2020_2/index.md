@@ -53,7 +53,7 @@ This one was on my shortlist, albeit for {{% color "#193F4A" %}}***Kennerspiel**
 The one nominee for the main award I got dead right. Everything about this game looks and feels like a typical {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}. For these reasons and the rather unusual competitors, {{% game 284108 %}}Pictures{{% /game %}} should be an early favourite to take home the coveted red meeple.
 
 
-## Recommendations
+## {{% color "#E30613" %}}*Spiel des Jahres*{{% /color %}} recommendations
 
 In addition to the three nominees, there's also six games on the jury's long list or recommendation list.
 
@@ -70,3 +70,43 @@ In addition to the three nominees, there's also six games on the jury's long lis
 Time to compare the predictions with reality! As mentioned, I called two out of three nominations, though one for the wrong award. Depending on how strict you are, this makes for a 50% or even 66% success rate, which I am really proud of, given the jury's infamous unpredictability.
 
 However, when looking at the long list of nominations plus recommendations, I only called four out of its nine titles (two of them on the wrong list). I'll try better next year…
+
+
+# Nominated for {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}}
+
+{{< img src="ksdj-2020" size="x300" alt="Kennerspiel des Jahres 2020" >}}
+
+Again, there's three nominations, along with three recommendations, so we'll take a look at each of them.
+
+
+## {{% game 263918 %}}Cartographers: A Roll Player Tale{{% /game %}}
+
+{{< img src="263918" size="x300" alt="Cartographers: A Roll Player Tale" >}}
+
+TODO
+
+
+## {{% game 284083 %}}The Crew: The Quest for Planet Nine{{% /game %}}
+
+{{< img src="284083" size="x300" alt="The Crew: The Quest for Planet Nine" >}}
+
+TODO
+
+
+## {{% game 245655 %}}King's Dilemma{{% /game %}}
+
+{{< img src="245655" size="x300" alt="King's Dilemma" >}}
+
+TODO
+
+
+## {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}} recommendations
+
+* {{% game 266810 %}}Paladins of the West Kingdom{{% /game %}}
+* {{% game 262712 %}}Res Arcana{{% /game %}}
+* {{% game 247763 %}}Underwater Cities{{% /game %}}
+
+
+## How good were the predictions?
+
+TODO
