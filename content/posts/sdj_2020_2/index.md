@@ -105,11 +105,15 @@ I'll be honest, I'm probably more excited about this nomination that any other, 
 
 ## {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}} recommendations
 
-* {{% game 266810 %}}Paladins of the West Kingdom{{% /game %}}
-* {{% game 262712 %}}Res Arcana{{% /game %}}
-* {{% game 247763 %}}Underwater Cities{{% /game %}}
+There's three more games that didn't make the cut, but that received a recommendation.
+
+* {{% game 266810 %}}Paladins of the West Kingdom{{% /game %}}: I was confident that this one would receive a recommendation because of [Udo Bartsch's glowing review](https://rezensionen-fuer-millionen.blogspot.com/2020/03/paladine-des-westfrankenreichs.html), but also confident it's too complex for a nomination.
+* {{% game 262712 %}}Res Arcana{{% /game %}}: One of the hottest candidate, no surprise to see it on the list.
+* {{% game 247763 %}}Underwater Cities{{% /game %}}: This one slipped under my radar as a release from the previous year. Also pretty heavy, so a recommendation is the best possible outcome.
 
 
 ## How good were the predictions?
 
-TODO
+I was *pretty* happy about my predictions for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}, I am *very* happy with how the {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} turned out. Of the six title on the long list, I missed only one, and I (pretty much) called all three nominations, even though one on the wrong list, and one for a recommendation, not nomination. Still, this is a good outcome, both for my predictions, and for the hobby gaming in general because I think the jury made a fine selection of games that showcase so much of what games have to offer to new players.
+
+This concludes the discussion of this year's nominations for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} and {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}}. I had a lot of fun with it, and I hope so did you. I'll be back in July with more detailed analyses of the nominees and predictions for the winners!
