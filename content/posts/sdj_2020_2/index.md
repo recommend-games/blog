@@ -14,6 +14,9 @@ tags:
   - My City
   - Nova Luna
   - Pictures
+  - Cartographers
+  - The Crew
+  - King's Dilemma
 ---
 
 With {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}, {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}}, and {{% color "#009FE3" %}}***Kinderspiel des Jahres***{{% /color %}} [nominations out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2020/), it's time to look at the nominees and to check how I did in [my predictions]({{<ref "posts/sdj_2020/index.md">}}).
@@ -83,21 +86,21 @@ Again, there's three nominations, along with three recommendations, so we'll tak
 
 {{< img src="263918" size="x300" alt="Cartographers: A Roll Player Tale" >}}
 
-TODO
+Another correctly called, but incorrectly classified. I very much had {{% game 263918 %}}Cartographers{{% /game %}} as "probably nominated, but dunno what list", so it ended up nominated for {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}. I cannot offer any insights as to why it is a {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}} with a complexity of 1.9, while {{% game 284435 %}}Nova Luna{{% /game %}} at 2.0 and {{% game 295486 %}}My City{{% /game %}} at 2.4 are on the {{% color "#E30613" %}}***Spiel***{{% /color %}} list.
 
 
 ## {{% game 284083 %}}The Crew: The Quest for Planet Nine{{% /game %}}
 
 {{< img src="284083" size="x300" alt="The Crew: The Quest for Planet Nine" >}}
 
-TODO
+While I was confident about the nomination for this one, I had some doubts about the classification as {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}. Its complexity says so, but then again this metric doesn't seem to predict the jury's classification very well. Also, as a campaign game it can ease the player into the game (cf {{% game 295486 %}}My City{{% /game %}}), and traditional trick-taking games are *very* common in Germany, the land of {{% game 6819 %}}Skat{{% /game %}} and {{% game 9364 %}}Doppelkopf{{% /game %}}, so I might have been wrong again. As it stands, {{% game 284083 %}}The Crew{{% /game %}} seems to be the favourite to win {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}}.
 
 
 ## {{% game 245655 %}}King's Dilemma{{% /game %}}
 
 {{< img src="245655" size="x300" alt="King's Dilemma" >}}
 
-TODO
+I'll be honest, I'm probably more excited about this nomination that any other, and the community seems to agree, judging by their reactions. I kinda excluded {{% game 245655 %}}King's Dilemma{{% /game %}} for no good reason other than having a high age recommendation (and even higher when asking the community). It's great to see a more demanding game on the list, but I will say that the jury nominated (relative) heavyweights like {{% game 227789 %}}Heaven & Ale{{% /game %}} and {{% game 167791 %}}Terraforming Mars{{% /game %}} in the past, but didn't give them the award in the end, so I'd think this one will be an *also-ran* as well.
 
 
 ## {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}} recommendations
