@@ -19,7 +19,7 @@ tags:
   - King's Dilemma
 ---
 
-With {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}, {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}}, and {{% color "#009FE3" %}}***Kinderspiel des Jahres***{{% /color %}} [nominations out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2020/), it's time to look at the nominees and to check how I did in [my predictions]({{<ref "posts/sdj_2020/index.md">}}).
+With {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} and {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} [nominations out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2020/) (setting aside the {{% color "#009FE3" %}}***Kinderspiel***{{% /color %}} again), it's time to look at the nominees and to check how I did in [my predictions]({{<ref "posts/sdj_2020/index.md">}}).
 
 
 # Nominated for {{% color "#E30613" %}}*Spiel des Jahres*{{% /color %}}
