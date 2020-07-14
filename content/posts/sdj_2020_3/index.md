@@ -1,5 +1,4 @@
 ---
-draft: true
 title: And the Spiel des Jahres 2020 goes to… Part 3!
 slug: and-the-spiel-des-jahres-2020-goes-to-part-3
 author: Markus Shepherd
