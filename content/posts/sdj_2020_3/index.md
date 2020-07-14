@@ -39,23 +39,29 @@ Back in 2020, we still are no closer to quantifying what games qualify for {{% c
 
 {{< img src="sdj-2020" size="x300" alt="Spiel des Jahres 2020" >}}
 
+I already introduced the nominees in the [previous article]({{<ref "posts/sdj_2020_2/index.md">}}), along with their characteristics and a brief assessment of their respective chances of winning an award, so this will be just a reminder and update where necessary.
+
+
 ## {{% game 295486 %}}My City{{% /game %}}
 
 {{< img src="295486" size="x300" alt="My City" >}}
 
-TODO
+This entry level legacy game designed by Reiner Knizia was the most surprising on the {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} list as its complexity was higher than any of the {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}} nominees at that time. The rating has gone down since (with significantly more votes), but still stays firmly above that magical line of **2**. As mentioned previously, its campaign character works in its favour, allowing players to approach the game step by step.
+
 
 ## {{% game 284435 %}}Nova Luna{{% /game %}}
 
 {{< img src="284435" size="x300" alt="Nova Luna" >}}
 
-TODO
+A fairly abstract puzzle, this one's not typical for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} – but then again, {{% game 230802 %}}Azul{{% /game %}} won not too long ago with a similar proposition.
+
 
 ## {{% game 284108 %}}Pictures{{% /game %}}
 
 {{< img src="284108" size="x300" alt="Pictures" >}}
 
-TODO
+As I stated before, this one *is* the typical {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} and continues to be the one I'd put my money on. But then again, this year clearly has its spotlight on the heavier games, so we might be in for a surprise.
+
 
 # Nominated for {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}}
 
@@ -65,16 +71,18 @@ TODO
 
 {{< img src="263918" size="x300" alt="Cartographers: A Roll Player Tale" >}}
 
-TODO
+Roll and write games have been on the rise for some time, with {{% game 131260 %}}Qwixx{{% /game %}} and {{% game 244522 %}}That's Pretty Clever{{% /game %}} receiving nominations. From what I gather, the buzz around this specimen is not as loud and a win would be a bit of a surprise.
+
 
 ## {{% game 284083 %}}The Crew: The Quest for Planet Nine{{% /game %}}
 
 {{< img src="284083" size="x300" alt="The Crew: The Quest for Planet Nine" >}}
 
-TODO
+This is the game everybody is talking about, both before and after the announcements. Still the high favourite for {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}}.
+
 
 ## {{% game 245655 %}}King's Dilemma{{% /game %}}
 
 {{< img src="245655" size="x300" alt="King's Dilemma" >}}
 
-TODO
+I still think that this is a pretty brave nomination by the jury, and I applaud them for it. But despite being nominated as the *connoiseurs' game*, it still needs to appeal to a broad market. Can you imagine a game about intrigue and backstabbing being played around the Christmas tree?
