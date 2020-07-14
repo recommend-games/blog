@@ -63,6 +63,15 @@ A fairly abstract puzzle, this one's not typical for {{% color "#E30613" %}}***S
 As I stated before, this one *is* the typical {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} and continues to be the one I'd put my money on. But then again, this year clearly has its spotlight on the heavier games, so we might be in for a surprise.
 
 
+## Numbers
+
+| Game                                      | R.G   | BGG   | Avg   | Votes | Recommended |
+|-------------------------------------------|-------|-------|-------|-------|-------------|
+| {{% game 295486 %}}My City{{% /game %}}   | 1.479 | 5.735 | 7.531 | 195   | 7.803       |
+| {{% game 284435 %}}Nova Luna{{% /game %}} | 3.250 | 6.315 | 7.411 | 1175  | 6.882       |
+| {{% game 284108 %}}Pictures{{% /game %}}  | 2.085 | 5.791 | 7.433 | 262   | 6.604       |
+
+
 # Nominated for {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}}
 
 {{< img src="ksdj-2020" size="x300" alt="Kennerspiel des Jahres 2020" >}}
