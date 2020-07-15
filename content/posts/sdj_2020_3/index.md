@@ -63,6 +63,11 @@ A fairly abstract puzzle, this one's not typical for {{% color "#E30613" %}}***S
 As I stated before, this one *is* the typical {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} and continues to be the one I'd put my money on. But then again, this year clearly has its spotlight on the heavier games, so we might be in for a surprise.
 
 
+## Who will win?
+
+I've been crunching the numbers for days now, and – I'm embarrassed to admit – I still have no insight what game might be the frontrunner to win {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}}. The crowd over at BoardGameGeek seems to slightly favour {{% game 284435 %}}Nova Luna{{% /game %}} over {{% game 295486 %}}My City{{% /game %}} with {{% game 284108 %}}Pictures{{% /game %}} further behind. [This poll](https://boardgamegeek.com/thread/2457916/poll-predict-2020-winner-spiel-des-jahres-and-kenn) supports this thesis.
+
+
 ## Numbers
 
 | Game | Votes | [R.G](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5) | [BGG](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5&ordering=bgg) | Avg | [Recommended](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5&for=S_d_J) |
