@@ -66,7 +66,7 @@ As I stated before, this one *is* the typical {{% color "#E30613" %}}***Spiel de
 ## Numbers
 
 | Game | Votes | [R.G](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5) | [BGG](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5&ordering=bgg) | Avg | [Recommended](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5&for=S_d_J) |
-|-------------------------------------------|------|-------|-------|-------|-------|
+|-------------------------------------------|-----:|------:|------:|------:|------:|
 | {{% game 295486 %}}My City{{% /game %}}   | 210  | 1.483 | 5.753 | 7.548 | 7.803 |
 | {{% game 284435 %}}Nova Luna{{% /game %}} | 1175 | 3.337 | 6.315 | 7.412 | 6.882 |
 | {{% game 284108 %}}Pictures{{% /game %}}  | 262  | 2.192 | 5.792 | 7.433 | 6.604 |
