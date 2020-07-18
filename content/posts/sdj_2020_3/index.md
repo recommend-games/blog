@@ -39,42 +39,60 @@ Back in 2020, we still are no closer to quantifying what games qualify for {{% c
 
 {{< img src="sdj-2020" size="x300" alt="Spiel des Jahres 2020" >}}
 
-I already introduced the nominees in the [previous article]({{<ref "posts/sdj_2020_2/index.md">}}), along with their characteristics and a brief assessment of their respective chances of winning an award, so this will be just a reminder and update where necessary.
+I already introduced the nominees in the [previous article]({{<ref "posts/sdj_2020_2/index.md">}}), along with their characteristics and a brief assessment of their respective chances of winning an award, so here I'll focus on the pros and cons why that game might win the red meeple.
 
 
 ## {{% game 295486 %}}My City{{% /game %}}
 
 {{< img src="295486" size="x300" alt="My City" >}}
 
-This entry level legacy game designed by Reiner Knizia was the most surprising on the {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} list as its complexity was higher than any of the {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}} nominees at that time. The rating has gone down since (with significantly more votes), but still stays firmly above that magical line of **2**. As mentioned previously, its campaign character works in its favour, allowing players to approach the game step by step.
+### Pros
+
+* Reiner Knizia is en vogue again.
+* Legacy / campaign format allows players to ease into the experience.
+* Highest average rating on BGG (**7.55**).
+* Has been consistently highly recommended to the [`S_d_J` bot](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5&for=S_d_J)
+
+### Cons
+
+* Still very complex (**2.14**) for a {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}.
+* That's it, really…
 
 
 ## {{% game 284435 %}}Nova Luna{{% /game %}}
 
 {{< img src="284435" size="x300" alt="Nova Luna" >}}
 
-A fairly abstract puzzle, this one's not typical for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} – but then again, {{% game 230802 %}}Azul{{% /game %}} won not too long ago with a similar proposition.
+### Pros
+
+* Uwe Rosenberg has *always* been en vogue.
+* The fan favourite so far with the highest geek rating (**6.34**) and leading in [this poll](https://boardgamegeek.com/thread/2457916/poll-predict-2020-winner-spiel-des-jahres-and-kenn).
+
+### Cons
+
+* Fairly abstract.
+* On the heavy side of {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}.
 
 
 ## {{% game 284108 %}}Pictures{{% /game %}}
 
 {{< img src="284108" size="x300" alt="Pictures" >}}
 
-As I stated before, this one *is* the typical {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} and continues to be the one I'd put my money on. But then again, this year clearly has its spotlight on the heavier games, so we might be in for a surprise.
+### Pros
+
+* Super simple and quick.
+* Typical {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} material.
+* Highly recommended to the [`S_d_J` bot](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5&for=S_d_J) *sometimes* – the recommendations tend to be rather volatile.
+
+### Cons
+
+* With {{% game 254640 %}}Just One{{% /game %}} we had a somewhat similar winner last year.
+* In its simplicity, it might not have the same staying power as the other nominees.
 
 
 ## Who will win?
 
-I've been crunching the numbers for days now, and – I'm embarrassed to admit – I still have no insight what game might be the frontrunner to win {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}}. The crowd over at BoardGameGeek seems to slightly favour {{% game 284435 %}}Nova Luna{{% /game %}} over {{% game 295486 %}}My City{{% /game %}} with {{% game 284108 %}}Pictures{{% /game %}} further behind. [This poll](https://boardgamegeek.com/thread/2457916/poll-predict-2020-winner-spiel-des-jahres-and-kenn) supports this thesis.
-
-
-## Numbers
-
-| Game | Votes | [R.G](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5) | [BGG](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5&ordering=bgg) | Avg | [Recommended](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5&for=S_d_J) |
-|-------------------------------------------|-----:|------:|------:|------:|------:|
-| {{% game 295486 %}}My City{{% /game %}}   | 210  | 1.483 | 5.753 | 7.548 | 7.803 |
-| {{% game 284435 %}}Nova Luna{{% /game %}} | 1175 | 3.337 | 6.315 | 7.412 | 6.882 |
-| {{% game 284108 %}}Pictures{{% /game %}}  | 262  | 2.192 | 5.792 | 7.433 | 6.604 |
+Honestly, the numbers don't yield any clear favourite. If I had to make a guess, I'd still put my money on the quick and simple {{% game 284108 %}}Pictures{{% /game %}} ahead of the legacy game {{% game 295486 %}}My City{{% /game %}}, with the abstract {{% game 284435 %}}Nova Luna{{% /game %}} further behind. But overall, the field really seems open. We'll know more on Monday!
 
 
 # Nominated for {{% color "#193F4A" %}}*Kennerspiel des Jahres*{{% /color %}}
@@ -100,3 +118,12 @@ This is the game everybody is talking about, both before and after the announcem
 {{< img src="245655" size="x300" alt="King's Dilemma" >}}
 
 I still think that this is a pretty brave nomination by the jury, and I applaud them for it. But despite being nominated as the *connoiseurs' game*, it still needs to appeal to a broad market. Can you imagine a game about intrigue and backstabbing being played around the Christmas tree?
+
+
+## Numbers
+
+| Game | Votes | [R.G](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5) | [BGG](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5&ordering=bgg) | Avg | [Recommended](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5&for=S_d_J) |
+|-------------------------------------------|-----:|------:|------:|------:|------:|
+| {{% game 295486 %}}My City{{% /game %}}   | 210  | 1.483 | 5.753 | 7.548 | 7.803 |
+| {{% game 284435 %}}Nova Luna{{% /game %}} | 1175 | 3.337 | 6.315 | 7.412 | 6.882 |
+| {{% game 284108 %}}Pictures{{% /game %}}  | 262  | 2.192 | 5.792 | 7.433 | 6.604 |
