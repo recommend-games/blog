@@ -3,7 +3,7 @@ title: And the Spiel des Jahres 2020 goes to… Part 3!
 slug: and-the-spiel-des-jahres-2020-goes-to-part-3
 author: Markus Shepherd
 type: post
-date: 2020-07-14
+date: 2020-07-18
 tags:
   - SdJ
   - Spiel des Jahres
@@ -21,7 +21,7 @@ tags:
 
 {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} and {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} winners are due to be announced on Monday, July 20. I promised [last time]({{<ref "posts/sdj_2020_2/index.md">}}) I'd be back with more detailed analyses and predictions. So here we go!
 
-Out of hundreds of games published in 2019 and 2020, the jury selected a total fifteen games they recommend, six of which they nominated for the two main awards. But who is the favourite? Who is the dark horse? Let's find out!
+Out of hundreds of games published in 2019 and 2020, the jury selected a total of fifteen games they recommend, six of which they nominated for the two main awards. But who is the favourite? Who is the dark horse? Let's find out!
 
 
 # {{% color "#E30613" %}}*Spiel*{{% /color %}} or {{% color "#193F4A" %}}*Kennerspiel*{{% /color %}}?
@@ -30,7 +30,7 @@ One of the main conclusions of my [original article]({{<ref "posts/sdj_2020/inde
 
 I was wrong.
 
-Out of the six nominees, four could have been nominated for either award. Jury member [Udo Bartsch wrote an interesting article](https://www.spiel-des-jahres.de/rot-oder-anthrazit-spiele-im-grenzbereich/) explaining why the jury decided one way or another. I think the main take away is that BGG's complexity rating is just too crude a measure. To their credit, they admit as much and only make a [half-hearted attempt](https://boardgamegeek.com/wiki/page/Weight) in defining what they even mean by weight or complexity. In essence, the tension lies between how hard it is to *learn* a game vs how hard it is to *master* it. The ancient game of {{% game 188 %}}Go{{% /game %}} provides an excellent example: while the rules are very quickly explained, playing the game *well* easily fills a lifetime. Consequently, the complexity ratings spread over the whole scale from 1 through 5.
+Out of the six nominees, four could have been nominated for either award. Jury member [Udo Bartsch wrote an interesting article](https://www.spiel-des-jahres.de/rot-oder-anthrazit-spiele-im-grenzbereich/) explaining why the jury decided one way or another. I think the main takeaway is that BGG's complexity rating is just too crude a measure. To their credit, they admit as much and only make a [half-hearted attempt](https://boardgamegeek.com/wiki/page/Weight) in defining what they even mean by weight or complexity. In essence, the tension lies between how hard it is to *learn* a game vs how hard it is to *master* it.[^bga] The ancient game of {{% game 188 %}}Go{{% /game %}} provides an excellent example: while the rules are very quickly explained, playing the game *well* easily fills a lifetime. Consequently, the complexity ratings spread over the whole scale from 1 through 5.
 
 Back in 2020, we still are no closer to quantifying what games qualify for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} or {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}. According to Udo Bartsch, it's about the barrier that needs to be taken to immerse oneself in the experience. It's about that *Aha!* moment when the penny finally drops and the game behind all the cardboard shines through. I'm not sure we'll ever find an objective measure for that.
 
@@ -148,6 +148,8 @@ Same procedure, let's assess each game's chances of winning the award!
 
 ## Who will win?
 
-Hands down, {{% game 284083 %}}The Crew{{% /game %}} is the high favourite, and any other outcome would be a big surprise. This game seems to appeal to reviewers, the community, and the wider market alike. {{% game 263918 %}}Cartographers{{% /game %}} just doesn't have the same pull, and {{% game 245655 %}}King's Dilemma{{% /game %}} seems to specific for an award that's supposed to reach hundreds of thousands of German *average* gamers.
+Hands down, {{% game 284083 %}}The Crew{{% /game %}} is the high favourite, and any other outcome would be a big surprise. This game seems to appeal to reviewers, the community, and the wider market alike. {{% game 263918 %}}Cartographers{{% /game %}} just doesn't have the same pull, and {{% game 245655 %}}King's Dilemma{{% /game %}} seems too specific for an award that's supposed to reach hundreds of thousands of German *average* gamers.
 
 I hope you're as excited as I am about Monday's announcements. We'll be back with the final conclusions for {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}}!
+
+[^bga]: This is one of the many things the BoardGameGeek competitor [Board Game Atlas](https://www.boardgameatlas.com/) gets right: they measure both *learning* and *strategy* complexity.
