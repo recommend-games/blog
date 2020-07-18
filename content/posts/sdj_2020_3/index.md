@@ -99,31 +99,55 @@ Honestly, the numbers don't yield any clear favourite. If I had to make a guess,
 
 {{< img src="ksdj-2020" size="x300" alt="Kennerspiel des Jahres 2020" >}}
 
+Same procedure, let's assess each game's chances of winning the award!
+
 ## {{% game 263918 %}}Cartographers: A Roll Player Tale{{% /game %}}
 
 {{< img src="263918" size="x300" alt="Cartographers: A Roll Player Tale" >}}
 
-Roll and write games have been on the rise for some time, with {{% game 131260 %}}Qwixx{{% /game %}} and {{% game 244522 %}}That's Pretty Clever{{% /game %}} receiving nominations. From what I gather, the buzz around this specimen is not as loud and a win would be a bit of a surprise.
+### Pros
+
+* Roll and write games have been on the rise for some time, with {{% game 131260 %}}Qwixx{{% /game %}} and {{% game 244522 %}}That's Pretty Clever{{% /game %}} receiving nominations.
+* The highest rated game in the [Recommend.Games ranking](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5).
+
+### Cons
+
+* It might not have enough meat for a {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}} in the end.
+* While there are lots of positive opinions, none seem to be *excited*.
 
 
 ## {{% game 284083 %}}The Crew: The Quest for Planet Nine{{% /game %}}
 
 {{< img src="284083" size="x300" alt="The Crew: The Quest for Planet Nine" >}}
 
-This is the game everybody is talking about, both before and after the announcements. Still the high favourite for {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}}.
+### Pros
+
+* Already on its way into the BGG top 100 (#124 at the time of writing).
+* Consistently and by far the highest recommendation to the [`S_d_J` bot](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5&for=S_d_J).
+* Runaway leader in [the poll](https://boardgamegeek.com/thread/2457916/poll-predict-2020-winner-spiel-des-jahres-and-kenn) I quoted above.
+
+### Cons
+
+* Too obvious choice?
 
 
 ## {{% game 245655 %}}King's Dilemma{{% /game %}}
 
 {{< img src="245655" size="x300" alt="King's Dilemma" >}}
 
-I still think that this is a pretty brave nomination by the jury, and I applaud them for it. But despite being nominated as the *connoiseurs' game*, it still needs to appeal to a broad market. Can you imagine a game about intrigue and backstabbing being played around the Christmas tree?
+### Pros
+
+* Probably the most innovative game on the list with lots of hype from the community.
+* Highest average rating on BGG (**8.12**).
+
+### Cons
+
+* Can you imagine a game about intrigue and backstabbing being played around the Christmas tree?
+* *Very* lowly ranked in the recommendations for the [`S_d_J` bot](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5&for=S_d_J).
 
 
-## Numbers
+## Who will win?
 
-| Game | Votes | [R.G](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5) | [BGG](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5&ordering=bgg) | Avg | [Recommended](https://recommend.games/#/?yearMin=2019&yearMax=2020&playerCount=3&playerCountType=box&playTime=60&playTimeType=max&playerAge=14&playerAgeType=box&complexityMin=1&complexityMax=2.5&for=S_d_J) |
-|-------------------------------------------|-----:|------:|------:|------:|------:|
-| {{% game 295486 %}}My City{{% /game %}}   | 210  | 1.483 | 5.753 | 7.548 | 7.803 |
-| {{% game 284435 %}}Nova Luna{{% /game %}} | 1175 | 3.337 | 6.315 | 7.412 | 6.882 |
-| {{% game 284108 %}}Pictures{{% /game %}}  | 262  | 2.192 | 5.792 | 7.433 | 6.604 |
+Hands down, {{% game 284083 %}}The Crew{{% /game %}} is the high favourite, and any other outcome would be a big surprise. This game seems to appeal to reviewers, the community, and the wider market alike. {{% game 263918 %}}Cartographers{{% /game %}} just doesn't have the same pull, and {{% game 245655 %}}King's Dilemma{{% /game %}} seems to specific for an award that's supposed to reach hundreds of thousands of German *average* gamers.
+
+I hope you're as excited as I am about Monday's announcements. We'll be back with the final conclusions for {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}}!
