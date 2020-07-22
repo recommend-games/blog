@@ -303,7 +303,7 @@ To be honest, I think {{% game 263918 %}}Cartographers{{% /game %}} also seems t
 
 This concludes our list of ten candidates for both awards. I'm truly excited to see what we got right and where the jury will surprise us. What games do you think we missed? Is there a *very* recently released game that might fly under everyone's radar? Let us know and discuss in the comments below!
 
-*Read [Part 2]({{<ref "posts/sdj_2020_2/index.md">}}) for the actual nominations and how I did with my predictions. Read [Part 3]({{<ref "posts/sdj_2020_3/index.md">}}) for analyses of the nominees and my predictions for the winners.*
+*Read [Part 2]({{<ref "posts/sdj_2020_2/index.md">}}) for the actual nominations and how I did with my predictions. Read [Part 3]({{<ref "posts/sdj_2020_3/index.md">}}) for analyses of the nominees and my predictions for the winners. Read [Part 4]({{<ref "posts/sdj_2020_4/index.md">}}) for the winners and conclusion.*
 
 *PS*: You can find the notebook I used for the graphs and most of the analysis I did above [on Kaggle](https://www.kaggle.com/mshepherd/spiel-des-jahres-2020-predictions).
 

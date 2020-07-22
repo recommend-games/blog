@@ -150,6 +150,6 @@ Same procedure, let's assess each game's chances of winning the award!
 
 Hands down, {{% game 284083 %}}The Crew{{% /game %}} is the high favourite, and any other outcome would be a big surprise. This game seems to appeal to reviewers, the community, and the wider market alike. {{% game 263918 %}}Cartographers{{% /game %}} just doesn't have the same pull, and {{% game 245655 %}}King's Dilemma{{% /game %}} seems too specific for an award that's supposed to reach hundreds of thousands of German *average* gamers.
 
-I hope you're as excited as I am about Monday's announcements. We'll be back with the final conclusions for {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}}!
+I hope you're as excited as I am about Monday's announcements. We'll be back with the [final conclusions]({{<ref "posts/sdj_2020_4/index.md">}}) for {{% color "#E30613" %}}***Spiel des Jahres 2020***{{% /color %}}!
 
 [^bga]: This is one of the many things the BoardGameGeek competitor [Board Game Atlas](https://www.boardgameatlas.com/) gets right: they measure both *learning* and *strategy* complexity.
