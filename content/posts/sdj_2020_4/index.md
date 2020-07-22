@@ -51,3 +51,10 @@ By all accounts, {{% game 284108 %}}Pictures{{% /game %}} seems to fit that desc
 Unlike the winner of the red meeple, virtually everybody agreed that {{% game 284083 %}}The Crew{{% /game %}} will win an award, though not necessarily *which one*. I've discussed at length in the [previous]({{<ref "posts/sdj_2020_2/index.md">}}) [articles]({{<ref "posts/sdj_2020_3/index.md">}}) why I agree with the jury's classification of {{% game 284083 %}}The Crew{{% /game %}} as a {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}.
 
 One last thing to mention is that {{% game 284083 %}}The Crew{{% /game %}}'s predictable win wasn't down to a lack of competition. By all accounts, both {{% game 263918 %}}Cartographers{{% /game %}} and {{% game 245655 %}}King's Dilemma{{% /game %}} are highly regarded and would have deserved the award. As gamers, we can be excited that it's not only the quantity of games being release that's rising, but also the quantity, throughout the spectrum.
+
+
+# Conclusion
+
+The jury explicitly pointed out the quality of this year's games in all of this hobby's facets. When you look back through the different games discussed in this series, I'm sure you'll agree with them, and it'll get you excited for all the games yet to be published.
+
+I certainly had a ton of fun reading reviews, following discussions, crunching numbers, and distilling everything into my predictions. The outcome makes me quite proud and I'm already thinking about next year's awards, so be sure to check back in for {{% color "#E30613" %}}***Spiel des Jahres 2021***{{% /color %}}!
