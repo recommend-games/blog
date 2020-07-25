@@ -50,7 +50,7 @@ By all accounts, {{% game 284108 %}}Pictures{{% /game %}} seems to fit that desc
 
 Unlike the winner of the red meeple, virtually everybody agreed that {{% game 284083 %}}The Crew{{% /game %}} will win an award, though not necessarily *which one*. I've discussed at length in the [previous]({{<ref "posts/sdj_2020_2/index.md">}}) [articles]({{<ref "posts/sdj_2020_3/index.md">}}) why I agree with the jury's classification of {{% game 284083 %}}The Crew{{% /game %}} as a {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}.
 
-One last thing to mention is that {{% game 284083 %}}The Crew{{% /game %}}'s predictable win wasn't down to a lack of competition. By all accounts, both {{% game 263918 %}}Cartographers{{% /game %}} and {{% game 245655 %}}King's Dilemma{{% /game %}} are highly regarded and would have deserved the award. As gamers, we can be excited that it's not only the quantity of games being release that's rising, but also the quantity, throughout the spectrum.
+One last thing to mention is that {{% game 284083 %}}The Crew{{% /game %}}'s predictable win wasn't down to a lack of competition. By all accounts, both {{% game 263918 %}}Cartographers{{% /game %}} and {{% game 245655 %}}King's Dilemma{{% /game %}} are highly regarded and would have deserved the award. As gamers, we can be excited that it's not only the quantity of games being released that's rising, but also the quality, throughout the spectrum.
 
 
 # Conclusion
