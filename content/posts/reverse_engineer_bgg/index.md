@@ -16,7 +16,11 @@ While BGG founder Scott Alden admitted in a recent interview on the excellent [F
 
 Reason enough for me to take a closer look at how the rankings work and some of the maths behind it.
 
-Generally speaking, we want to rank a game higher the better its score is. The first instinct would be to just sum up all the ratings users gave to that particular game, divide by the number of ratings, and rank games from highest to lowest. What I just described would be the *arithmetic mean* (or just *average* if you feel less fancy) of the ratings, which is simple and intuitive, but suffers from a sever defect: A game with a single rating of \\(10\\) would always sit on top of the ranking, well ahead of much beloved games with thousands of votes that inevitably wouldn't be unanimous.
+Generally speaking, we want to rank a game higher the better its score is. The first instinct would be to just sum up all the ratings users gave to that particular game, divide by the number of ratings, and rank games from highest to lowest. What I just described would be the *arithmetic mean* (or just *average* if you feel less fancy) of the ratings, which is simple and intuitive, but suffers from a sever defect: A game with a single rating of \\(10\\) would always sit on top of the ranking, well ahead of much beloved games with thousands of votes that couldn't possibly be all \\(10\\)s.
+
+The easy fix is filtering out games with less than a certain number of ratings, say \\(100\\).
+
+{{% game 261393 %}}Dungeon Universalis{{% /game %}}
 
 # TODO: link to some external resources:
 
