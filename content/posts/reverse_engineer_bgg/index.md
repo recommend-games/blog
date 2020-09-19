@@ -18,7 +18,7 @@ Reason enough for me to take a closer look at how the rankings work and some of 
 
 Generally speaking, we want to rank a game higher the better its score is. The first instinct would be to just sum up all the ratings users gave to that particular game, divide by the number of ratings, and rank games from highest to lowest. What I just described would be the *arithmetic mean* (or just *average* if you feel less fancy) of the ratings, which is simple and intuitive, but suffers from a sever defect: A game with a single rating of \\(10\\) would always sit on top of the ranking, well ahead of much beloved games with thousands of votes that couldn't possibly be all \\(10\\)s.
 
-The easiest fix is filtering out games with less than a certain number of ratings, say \\(100\\). That's a decent enough approach, and yields the following top 5 games at the time of writing:
+The easiest fix is filtering out games with less than a certain number of ratings, say \\(100\\). That's a decent enough approach, and yields the following top 5 games as of the time of writing:
 
 1. {{% game 261393 %}}Dungeon Universalis{{% /game %}}
 2. {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}
@@ -33,6 +33,10 @@ The way both IMDb and BGG chose to tackle this issue is by essentially not trust
 BGG calls this their **geek score**. Mathematically speaking, it is a *Bayesian average*, and calculates as follows:
 
 \\[ \textrm{geek score} = \frac{\textrm{number of ratings} \cdot \textrm{average rating} + \textrm{number of dummies} \cdot \textrm{dummy value}}{\textrm{number of ratings} + \textrm{number of dummies}} \\]
+
+Don't worry too much about the details though – *adding dummy votes* is really all you need to understand.
+
+OK, so that's the concept, but crucially that's not all the details. You still need to choose *how many* dummy votes you want to add and *what value* they should take.
 
 # TODO: link to some external resources:
 
