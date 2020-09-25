@@ -16,13 +16,13 @@ While BGG founder Scott Alden admitted in a recent interview on the excellent [F
 
 Reason enough for me to take a closer look at how the rankings work and some of the maths behind it.
 
-Generally speaking, we want to rank a game higher the better its score is. The first instinct would be to just sum up all the ratings users gave to that particular game, divide by the number of ratings, and rank games from highest to lowest. What I just described would be the *arithmetic mean* (or just *average* if you feel less fancy) of the ratings, which is simple and intuitive, but suffers from a sever defect: A game with a single rating of \\(10\\) would always sit on top of the ranking, well ahead of much beloved games with thousands of votes that couldn't possibly be all \\(10\\)s.
+Generally speaking, we want to rank a game higher the better its score is. The first instinct would be to just sum up all the ratings users gave to that particular game, divide by the number of ratings, and rank games from highest to lowest. What I just described would be the *arithmetic mean* (or just *average* if you feel less fancy) of the ratings, which is simple and intuitive, but suffers from a sever defect: a game with a single rating of \\(10\\) would always sit on top of the ranking, well ahead of much beloved games with thousands of votes that couldn't possibly be all \\(10\\)s.
 
 The easiest fix is filtering out games with less than a certain number of ratings, say \\(100\\). That's a decent enough approach, and yields the following top 5 games as of the time of writing:
 
 1. {{% game 261393 %}}Dungeon Universalis{{% /game %}}
-2. {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}
-3. {{% game 219217 %}}Arena: The Contest{{% /game %}}
+2. {{% game 219217 %}}Arena: The Contest{{% /game %}}
+3. {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}
 4. {{% game 240271 %}}Core Space{{% /game %}}
 5. {{% game 209877 %}}World At War 85: Storming the Gap{{% /game %}}
 
@@ -36,7 +36,9 @@ BGG calls this their **geek score**. Mathematically speaking, it is a *Bayesian 
 
 Don't worry too much about the details though – *adding dummy votes* is really all you need to understand.
 
-OK, so that's the concept, but crucially that's not all the details. You still need to choose *how many* dummy votes you want to add and *what value* they should take.
+OK, so that's the concept, but crucially that's not all the details. You still need to choose *how many* dummy votes you want to add and *what value* they should take. Since People on the Internet™ who disagree with your ranking will try to manipulate it in whatever way they can, sites are usually very cagey about said details. [IMDb used to be more transparent](https://en.wikipedia.org/wiki/IMDb#Rankings), [as was BGG](https://www.boardgamegeek.com/thread/103639/new-game-ranking-system), but now we have to dig a little deeper.[^regular]
+
+Let's start from the easier of the two, the value of the dummy votes. It is commonly chosen to represent some *prior mean*, i.e., some decent estimate of the rating a new game in the database would have. A frequent choice would be to use the average rating across *all* games. It's a fair assumption – without further information about a game, we don't know if it's any better or worse than the average game. However, Scott Alden actually gave away the answer in that interview from the beginning: BGG chose the dummy value to be \\(5.5\\). Their rationale is that ratings range from \\(1\\) through \\(10\\), so \\(5.5\\) is the midpoint. Of course, people tend to rather play and rater much more the games they like, and so the average rating is around \\(7\\). Opting for the lower value here is part of the design of the ranking: it means a new game would enter the ranking rather at the end of the pack. On the other hand, using the mean as the dummy value means a new game is placed more or less in the middle. It is worth mentioning that IMBd does use the mean (or at least used to), but they only ever publish the top 250 movies, and don't care about the crowd behind.
 
 # TODO: link to some external resources:
 
@@ -44,3 +46,4 @@ OK, so that's the concept, but crucially that's not all the details. You still n
 * https://youtu.be/Y1t_0LhpDmU
 
 [^jotl]: {{% game 291457 %}}Jaws of the Lion{{% /game %}} is something of an exception here and will undoubtably shoot into the BGG top 10 very soon. In fact, it might be the only game with the potential to unseat {{% game 174430 %}}Gloomhaven{{% /game %}} as the number 1.
+[^regular]: One feature both IMDb and BGG stress is that they only consider *regular* voters for their rankings. That's the most mysterious part of the system as it's the easiest to manipulate, so we'll just have to take their word for it.
