@@ -40,7 +40,25 @@ OK, so that's the concept, but crucially that's not all the details. You still n
 
 Let's start from the easier of the two, the value of the dummy votes. It is commonly chosen to represent some *prior mean*, i.e., some decent estimate of the rating a new game in the database would have. A frequent choice would be to use the average rating across *all* games. It's a fair assumption – without further information about a game, we don't know if it's any better or worse than the average game. However, Scott Alden actually gave away the answer in that interview from the beginning: BGG chose the dummy value to be \\(5.5\\). Their rationale is that ratings range from \\(1\\) through \\(10\\), so \\(5.5\\) is the midpoint. Of course, people tend to rather play and rate much more the games they like, and so the average rating is around \\(7\\). Opting for the lower value here is part of the design of the ranking: it means a new game would enter the ranking rather at the end of the pack. On the other hand, using the mean as the dummy value means a new game is placed more or less in the middle. It is worth mentioning that IMBd does use the mean (or at least used to), but they only ever publish the top 250 movies, and don't care about the crowd behind.
 
-# TODO: link to some external resources:
+The other value, the *number* of dummy votes, requires more work. Because some of the details and data are unknown, we cannot actually pin down the exact number that BGG is using. Instead, we'll try three different approaches, and compare their results.
+
+# Formula
+
+On the surface, this should be super easy to solve: in the formula above, we know every single value but the number of dummy votes. BGG publishes the number of ratings, their arithmetic mean, and the "geek score" or Bayesian average for every game, and we know that the dummy value is \\(5.5\\). With a little high school algebra we solve the formula for *number of dummies*, and with just the data of a single game we have our answer – end of story. Right?
+
+\\[ \textrm{number of dummies} = \textrm{number of ratings} \cdot \frac{\textrm{average rating} - \textrm{geek score}}{\textrm{geek score} - \textrm{dummy value}} \\]
+
+Unfortunately, not quite. When computing this formula for different games, the results vary *wildly*.
+
+# Trial & error
+
+TODO
+
+# Optimization
+
+TODO
+
+# External resources
 
 * https://www.peterjezik.com/bgg/
 * https://youtu.be/Y1t_0LhpDmU
