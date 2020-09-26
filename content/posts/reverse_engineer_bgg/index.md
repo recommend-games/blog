@@ -60,7 +60,13 @@ And this plot is even cropped, the results vary from \\(-1.4\\) million to \\(+6
 
 # Trial & error
 
-TODO
+Let's take a step back here. What we're really trying to achieve here is not finding the exact formula for that mysterious "geek score", but rather recreate the BGG ranking. That is, we want to find the values in the above formula, such that the resulting ranking matches BGG's ranking as closely as possible. Luckily, statistics has all the tools we need. [Spearman correlation](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient) measures rank correlation – just what we need. This will be \\(1\\) if both rankings sort in exactly the same way, and \\(0\\) if they sort entirely differently. Again, don't worry about the details, just trust the maths.
+
+What we can do now is fairly simply and quickly compute the rankings for different number of dummy ratings, and pick the value with the highest Spearman correlation. Without further ado, here are the results:
+
+{{< img src="num_dummies_corr" alt="TODO" >}}
+
+The best correlation of around \\(0.996\\) is achieved with \\(1489\\) dummy ratings. However, it is worth noticing that the changes in the correlation are very, *very* small throughout the range we examined here (\\(1000\\) to \\(2500\\)), so let's dig still a little deeper.
 
 # Optimization
 
