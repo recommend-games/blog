@@ -44,11 +44,19 @@ The other value, the *number* of dummy votes, requires more work. Because some o
 
 # Formula
 
-On the surface, this should be super easy to solve: in the formula above, we know every single value but the number of dummy votes. BGG publishes the number of ratings, their arithmetic mean, and the "geek score" or Bayesian average for every game, and we know that the dummy value is \\(5.5\\). With a little high school algebra we solve the formula for *number of dummies*, and with just the data of a single game we have our answer – end of story. Right?
+On the surface, this should be super easy to solve: in the formula above, we know every single value but the number of dummy votes. BGG publishes the number of ratings, their arithmetic mean, and the "geek score" or Bayesian average for every game, and we know that the dummy value is \\(5.5\\). With a little high school algebra we solve the formula for *number of dummies*:
 
 \\[ \textrm{number of dummies} = \textrm{number of ratings} \cdot \frac{\textrm{average rating} - \textrm{geek score}}{\textrm{geek score} - \textrm{dummy value}} \\]
 
-Unfortunately, not quite. When computing this formula for different games, the results vary *wildly*.
+Now we should be able to plug in those values for any given game, say {{% game 199478 %}}Flamme Rouge{{% /game %}}, and get the result. With \\(10\\,875\\) ratings that average \\(7.562\\), and a geek score of \\(7.265\\), this yield:
+
+\\[ \textrm{number of dummies} = \textrm{10875} \cdot \frac{\textrm{7.562} - \textrm{7.265}}{\textrm{7.265} - \textrm{5.5}} \\approx 1830. \\]
+
+So, there's about \\(1830\\) dummy ratings, end of story. Right? Unfortunately, not quite. When computing this formula for different games, the results vary *wildly*, as you can see from this histogram over the results for the same calculation with other games:
+
+{{< img src="num_dummies_hist" alt="Histogram over the number of dummy votes calculated by explicit formula" >}}
+
+And this plot is even cropped, the results vary from \\(-1.4\\) million to \\(+660\\) thousand. Still, clearly something is happening around the \\(1500\\) ratings mark, so we are at least getting closer to an answer. If exact calculations won't work, maybe we can approximate the correct value instead?
 
 # Trial & error
 
