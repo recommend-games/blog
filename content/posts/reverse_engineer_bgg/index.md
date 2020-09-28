@@ -38,7 +38,7 @@ Don't worry too much about the details though – *adding dummy votes* is really
 
 OK, so that's the concept, but crucially that's not all the details. You still need to choose *how many* dummy votes you want to add and *what value* they should take. Since People on the Internet™ who disagree with your ranking will try to manipulate it in whatever way they can, sites are usually very cagey about said details. [IMDb used to be more transparent](https://en.wikipedia.org/wiki/IMDb#Rankings), [as was BGG](https://www.boardgamegeek.com/thread/103639/new-game-ranking-system), but now we have to dig a little deeper.
 
-Let's start from the easier of the two, the value of the dummy votes. It is commonly chosen to represent some *prior mean*, i.e., some decent estimate of the rating a new game in the database would have. A frequent choice would be to use the average rating across *all* games. It's a fair assumption – without further information about a game, we don't know if it's any better or worse than the average game. However, Scott Alden actually gave away the answer in that interview from the beginning: BGG chose the dummy value to be \\(5.5\\). Their rationale is that ratings range from \\(1\\) through \\(10\\), so \\(5.5\\) is the midpoint. Of course, people tend to rather play and rate much more the games they like, and so the average rating is around \\(7\\). Opting for the lower value here is part of the design of the ranking: it means a new game would enter the ranking rather at the end of the pack. On the other hand, using the mean as the dummy value means a new game is placed more or less in the middle. It is worth mentioning that IMBd does use the mean (or at least used to), but they only ever publish the top 250 movies, and don't care about the crowd behind.
+Let's start from the easier of the two, the value of the dummy votes. It is commonly chosen to represent some *prior mean*, i.e., some decent estimate of the rating a new game in the database would have. A frequent choice would be to use the average rating across *all* games. It's a fair assumption – without further information about a game, we don't know if it's any better or worse than the average game. However, Scott Alden actually gave away the answer in that interview from the beginning: BGG chose the dummy value to be **\\(5.5\\)**. Their rationale is that ratings range from \\(1\\) through \\(10\\), so \\(5.5\\) is the midpoint. Of course, people tend to rather play and rate much more the games they like, and so the average rating is around \\(7\\). Opting for the lower value here is part of the design of the ranking: it means a new game would enter the ranking rather at the end of the pack. On the other hand, using the mean as the dummy value means a new game is placed more or less in the middle. It is worth mentioning that IMBd does use the mean (or at least used to), but they only ever publish the top 250 movies, and don't care about the crowd behind.
 
 The other value, the *number* of dummy votes, requires more work. Because some of the details and data are unknown, we cannot actually pin down the exact number that BGG is using. Instead, we'll try three different approaches, and compare their results.
 
@@ -58,9 +58,11 @@ So, there's about \\(1830\\) dummy ratings, end of story. Right? Unfortunately, 
 
 And this plot is even cropped, the results vary from \\(-1.4\\) million to \\(+660\\) thousand.
 
+<!-- TODO: add mean and median -->
+
 What's going on, why are the results so inconsistent? The problem is the ranking's *secret sauce*. Both IMDb and BGG stress is that they only consider *regular* voters for their rankings. That's the most mysterious part of the system as it's the easiest to manipulate, so we'll just have to take their word for it. For this investigation it means that the average rating BGG publishes includes all the ratings, but the geek score might *not*.
 
-Still, clearly something is happening around the \\(1500\\) ratings mark, so we are at least getting closer to an answer. If exact calculations won't work, maybe we can approximate the correct value instead?
+Still, clearly something is happening around the **\\(1500\\) ratings** mark, so we are at least getting closer to an answer. If exact calculations won't work, maybe we can approximate the correct value instead?
 
 # Trial & error
 
@@ -70,11 +72,19 @@ What we can do now is fairly simply and quickly compute the rankings for differe
 
 {{< img src="num_dummies_corr" alt="TODO" >}}
 
-The best correlation of around \\(0.996\\) is achieved with \\(1489\\) dummy ratings. However, it is worth noticing that the changes in the correlation are very, *very* small throughout the range we examined here (\\(1000\\) to \\(2500\\)), so let's dig still a little deeper.
+The best correlation of around \\(0.996\\) is achieved with **\\(1489\\) dummy ratings**. However, it is worth noticing that the changes in the correlation are very, *very* small throughout the range we examined here (\\(1000\\) to \\(2500\\)), so let's dig still a little deeper.
 
-# Optimization
+# Optimisation
 
+What we have here at hand is actually a classic optimisation task: a real valued function in one unknown (or two if we allow a variable dummy value as well) which we'd like to maximise. This is a well-studied field, and with just a few lines of code we're up and running.[^notebook]
+
+```python
 TODO
+```
+
+Unsuprisingly, we get almost the same result as above: the best possible correlation is \\(0.996\\) with around **\\(1486\\) dummy ratings**.
+
+But since we made it this far, let's take it one step further. So far, we tried to optimise the correlation in order to recreate BGG's ranking. However, we can also try to recreate the actual *geek scores*. That is, we can look for the number of dummy ratings that will yield the closest to the actual geek score with our calculations. What exactly we mean by "closest" is up to us to define. A common metric is the *mean squared error*.[^root] It's not worth getting into the maths here either, but the general idea is that we want to punish outliers in our estimates more (qudratically so) the further away they lie from the actual datapoint. Long story short, this yields a minimum for around **\\(1630\\) dummy ratings**.
 
 # External resources
 
@@ -82,3 +92,5 @@ TODO
 * https://youtu.be/Y1t_0LhpDmU
 
 [^jotl]: {{% game 291457 %}}Jaws of the Lion{{% /game %}} is something of an exception here and will undoubtably shoot into the BGG top 10 very soon. In fact, it might be the only game with the potential to unseat {{% game 174430 %}}Gloomhaven{{% /game %}} as the number 1.
+[^notebook]: TODO
+[^root]: It's probably even more common to use the *root* mean squared error, but for boring mathematical reasons, it doesn't make a difference when it comes to optimisation. In fact, we could even drop the word *mean* from our metric and still obtain the same optimal point, but then we'd have to implement it ourselves, so there's no point.
