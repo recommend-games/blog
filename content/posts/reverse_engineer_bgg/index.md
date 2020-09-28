@@ -36,7 +36,7 @@ BGG calls this their **geek score**. Mathematically speaking, it is a *Bayesian 
 
 Don't worry too much about the details though – *adding dummy votes* is really all you need to understand.
 
-OK, so that's the concept, but crucially that's not all the details. You still need to choose *how many* dummy votes you want to add and *what value* they should take. Since People on the Internet™ who disagree with your ranking will try to manipulate it in whatever way they can, sites are usually very cagey about said details. [IMDb used to be more transparent](https://en.wikipedia.org/wiki/IMDb#Rankings), [as was BGG](https://www.boardgamegeek.com/thread/103639/new-game-ranking-system), but now we have to dig a little deeper.[^regular]
+OK, so that's the concept, but crucially that's not all the details. You still need to choose *how many* dummy votes you want to add and *what value* they should take. Since People on the Internet™ who disagree with your ranking will try to manipulate it in whatever way they can, sites are usually very cagey about said details. [IMDb used to be more transparent](https://en.wikipedia.org/wiki/IMDb#Rankings), [as was BGG](https://www.boardgamegeek.com/thread/103639/new-game-ranking-system), but now we have to dig a little deeper.
 
 Let's start from the easier of the two, the value of the dummy votes. It is commonly chosen to represent some *prior mean*, i.e., some decent estimate of the rating a new game in the database would have. A frequent choice would be to use the average rating across *all* games. It's a fair assumption – without further information about a game, we don't know if it's any better or worse than the average game. However, Scott Alden actually gave away the answer in that interview from the beginning: BGG chose the dummy value to be \\(5.5\\). Their rationale is that ratings range from \\(1\\) through \\(10\\), so \\(5.5\\) is the midpoint. Of course, people tend to rather play and rate much more the games they like, and so the average rating is around \\(7\\). Opting for the lower value here is part of the design of the ranking: it means a new game would enter the ranking rather at the end of the pack. On the other hand, using the mean as the dummy value means a new game is placed more or less in the middle. It is worth mentioning that IMBd does use the mean (or at least used to), but they only ever publish the top 250 movies, and don't care about the crowd behind.
 
@@ -56,7 +56,11 @@ So, there's about \\(1830\\) dummy ratings, end of story. Right? Unfortunately, 
 
 {{< img src="num_dummies_hist" alt="Histogram over the number of dummy votes calculated by explicit formula" >}}
 
-And this plot is even cropped, the results vary from \\(-1.4\\) million to \\(+660\\) thousand. Still, clearly something is happening around the \\(1500\\) ratings mark, so we are at least getting closer to an answer. If exact calculations won't work, maybe we can approximate the correct value instead?
+And this plot is even cropped, the results vary from \\(-1.4\\) million to \\(+660\\) thousand.
+
+What's going on, why are the results so inconsistent? The problem is the ranking's *secret sauce*. Both IMDb and BGG stress is that they only consider *regular* voters for their rankings. That's the most mysterious part of the system as it's the easiest to manipulate, so we'll just have to take their word for it. For this investigation it means that the average rating BGG publishes includes all the ratings, but the geek score might *not*.
+
+Still, clearly something is happening around the \\(1500\\) ratings mark, so we are at least getting closer to an answer. If exact calculations won't work, maybe we can approximate the correct value instead?
 
 # Trial & error
 
@@ -78,4 +82,3 @@ TODO
 * https://youtu.be/Y1t_0LhpDmU
 
 [^jotl]: {{% game 291457 %}}Jaws of the Lion{{% /game %}} is something of an exception here and will undoubtably shoot into the BGG top 10 very soon. In fact, it might be the only game with the potential to unseat {{% game 174430 %}}Gloomhaven{{% /game %}} as the number 1.
-[^regular]: One feature both IMDb and BGG stress is that they only consider *regular* voters for their rankings. That's the most mysterious part of the system as it's the easiest to manipulate, so we'll just have to take their word for it.
