@@ -10,6 +10,8 @@ tags:
   - ranking
 ---
 
+<!-- TODO TL;DR: Geek score calculated by adding 1500-1600 ratings of 5.5; alternative ratings with different choices. -->
+
 I often describe [BoardGameGeek (BGG)](https://boardgamegeek.com/) as "the [Internet Movie Database (IMDb)](https://www.imdb.com/) for games". Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \\(1\\) (*awful - defies game description*) to \\(10\\) (*outstanding - will always enjoy playing*). These ratings are then used to rank games, with {{% game 174430 %}}Gloomhaven{{% /game %}} occupying the top spot since December 2017.
 
 While BGG founder Scott Alden admitted in a recent interview on the excellent [Five Games For Doomsday](https://fivegamesfordoomsday.com/2020/07/06/scott-alden/) podcast that he doesn't care all that much about the rankings, gamers around the world certainly do. They would discuss heatedly any movement in the rankings, question why games X is up there while game Y is missing, and generally criticise the selection for either having *too many* or *not enough* recent releases.
@@ -85,6 +87,23 @@ TODO
 Unsuprisingly, we get almost the same result as above: the best possible correlation is \\(0.996\\) with around **\\(1486\\) dummy ratings**.
 
 But since we made it this far, let's take it one step further. So far, we tried to optimise the correlation in order to recreate BGG's ranking. However, we can also try to recreate the actual *geek scores*. That is, we can look for the number of dummy ratings that will yield the closest to the actual geek score with our calculations. What exactly we mean by "closest" is up to us to define. A common metric is the *mean squared error*.[^root] It's not worth getting into the maths here either, but the general idea is that we want to punish outliers in our estimates more (qudratically so) the further away they lie from the actual datapoint. Long story short, this yields a minimum for around **\\(1630\\) dummy ratings**.
+
+Let's take one last swing and see what happens if we don't fix the dummy value at \\(5.5\\) but allow that to be variable as well. This is no problem for the optimisation algorithm and yields the following results:
+
+* the best correlation with **\\(1888\\) dummy ratings of \\(5.552\\)**, and
+* the least squared error with **\\(1611\\) dummy ratings of \\(5.494\\)**.
+
+Either of those improvements are hardly noticable (in fact insible after rounding), but they do confirm nicely a dummy value of \\(5.5\\).
+
+# Conclusion
+
+All things consider, we can be confident that BoardGameGeek calculates their rankings by adding around **\\(1500\\) to \\(1600\\) dummy ratings of \\(5.5\\)** to the regular users' ratings. What exactly constitutes a regular user, and what ratings might be discarded due to shilling, remains a well guarded secret though. Note that the number of dummies is pegged to the overall number of ratings, so this is a moving target, and the calculations would change as time passes.
+
+Now I must applaud anybody who actually made it all the way through this pretty dry and technical article. The real reason why I dwelled so much on the ratings, and how they are compressed into the BGG rankings, is to get a feeling of what's going on behind the scenes, what the can express, and what they cannot or even *do not try to* express. Another major take-away is that any of these decisions are choices that need to be made and that come with certain tradeoffs – like them or not.
+
+In this particular case, I have the feeling that both the Cult of the New™ and connoisseurs of classic games are equally unhappy about the BGG top 100, which one should probably consider a compliment.
+
+<!-- TODO alternative rankings with different choices for those values -->
 
 # External resources
 
