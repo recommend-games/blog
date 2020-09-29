@@ -97,7 +97,50 @@ In this particular case, I have the feeling that both the Cult of the New™ and
 
 # Alternative rankings
 
-TODO alternative rankings with different choices for those values
+I'll send you off with some rankings that were obtained by making different choices for the two values that we discussed throughout this article: the number of dummy ratings and their value.
+
+## Using the ratings average as dummy value
+
+\\(7.08245\\)
+
+1. {{% game 174430 %}}Gloomhaven{{% /game %}}
+2. {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}
+3. {{% game 233078 %}}Twilight Imperium (Fourth Edition){{% /game %}}
+4. {{% game 224517 %}}Brass: Birmingham{{% /game %}}
+5. {{% game 55690 %}}Kingdom Death: Monster{{% /game %}}
+6. {{% game 167791 %}}Terraforming Mars{{% /game %}}
+7. {{% game 220308 %}}Gaia Project{{% /game %}}
+8. {{% game 182028 %}}Through the Ages: A New Story of Civilization{{% /game %}}
+9. {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}
+10. {{% game 187645 %}}Star Wars: Rebellion{{% /game %}}
+
+## Using the top 250 number of ratings
+
+\\(11\\,983\\)
+
+1. {{% game 174430 %}}Gloomhaven{{% /game %}}
+2. {{% game 167791 %}}Terraforming Mars{{% /game %}}
+3. {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}
+4. {{% game 169786 %}}Scythe{{% /game %}}
+5. {{% game 12333 %}}Twilight Struggle{{% /game %}}
+6. {{% game 173346 %}}7 Wonders Duel{{% /game %}}
+7. {{% game 3076 %}}Puerto Rico{{% /game %}}
+8. {{% game 84876 %}}The Castles of Burgundy{{% /game %}}
+9. {{% game 31260 %}}Agricola{{% /game %}}
+10. {{% game 120677 %}}Terra Mystica{{% /game %}}
+
+## Combining both!
+
+1. {{% game 174430 %}}Gloomhaven{{% /game %}}
+2. {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}
+3. {{% game 167791 %}}Terraforming Mars{{% /game %}}
+4. {{% game 169786 %}}Scythe{{% /game %}}
+5. {{% game 12333 %}}Twilight Struggle{{% /game %}}
+6. {{% game 182028 %}}Through the Ages: A New Story of Civilization{{% /game %}}
+7. {{% game 224517 %}}Brass: Birmingham{{% /game %}}
+8. {{% game 187645 %}}Star Wars: Rebellion{{% /game %}}
+9. {{% game 193738 %}}Great Western Trail{{% /game %}}
+10. {{% game 173346 %}}7 Wonders Duel{{% /game %}}
 
 # External resources
 
