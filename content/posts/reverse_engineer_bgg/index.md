@@ -10,7 +10,7 @@ tags:
   - ranking
 ---
 
-<!-- TODO TL;DR: Geek score calculated by adding 1500-1600 ratings of 5.5; alternative ratings with different choices. -->
+***TL;DR***: *BoardGameGeek calculates its ranking by adding around **1500-1600 dummy ratings of 5.5** to the regular users' ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some [alternative rankings](#alternative-rankings).*
 
 I often describe [BoardGameGeek (BGG)](https://boardgamegeek.com/) as "the [Internet Movie Database (IMDb)](https://www.imdb.com/) for games". Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \\(1\\) (*awful - defies game description*) to \\(10\\) (*outstanding - will always enjoy playing*). These ratings are then used to rank games, with {{% game 174430 %}}Gloomhaven{{% /game %}} occupying the top spot since December 2017.
 
@@ -103,7 +103,9 @@ Now I must applaud anybody who actually made it all the way through this pretty 
 
 In this particular case, I have the feeling that both the Cult of the New™ and connoisseurs of classic games are equally unhappy about the BGG top 100, which one should probably consider a compliment.
 
-<!-- TODO alternative rankings with different choices for those values -->
+# Alternative rankings
+
+TODO alternative rankings with different choices for those values
 
 # External resources
 
