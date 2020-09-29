@@ -58,9 +58,7 @@ So, there's about \\(1830\\) dummy ratings, end of story. Right? Unfortunately, 
 
 {{< img src="num_dummies_hist" alt="Histogram over the number of dummy votes calculated by explicit formula" >}}
 
-And this plot is even cropped, the results vary from \\(-1.4\\) million to \\(+660\\) thousand.
-
-<!-- TODO: add mean and median -->
+And this plot is even cropped, the results vary from \\(-1.4\\) million to \\(+660\\) thousand, though some \\(90\\%\\) lie within the above range, with a mean of around \\(1450\\) and a median of around \\(1587\\).
 
 What's going on, why are the results so inconsistent? The problem is the ranking's *secret sauce*. Both IMDb and BGG stress is that they only consider *regular* voters for their rankings. That's the most mysterious part of the system as it's the easiest to manipulate, so we'll just have to take their word for it. For this investigation it means that the average rating BGG publishes includes all the ratings, but the geek score might *not*.
 
