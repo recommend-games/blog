@@ -70,7 +70,7 @@ Let's take a step back here. What we're really trying to achieve here is not fin
 
 What we can do now is fairly simply and quickly compute the rankings for different number of dummy ratings, and pick the value with the highest Spearman correlation. Without further ado, here are the results:
 
-{{< img src="num_dummies_corr" alt="TODO" >}}
+{{< img src="num_dummies_corr" alt="Spearman correlation for different number of dummy ratings" >}}
 
 The best correlation of around \\(0.996\\) is achieved with **\\(1489\\) dummy ratings**. However, it is worth noticing that the changes in the correlation are very, *very* small throughout the range we examined here (\\(1000\\) to \\(2500\\)), so let's dig still a little deeper.
 
