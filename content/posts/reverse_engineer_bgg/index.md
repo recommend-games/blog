@@ -76,13 +76,7 @@ The best correlation of around \\(0.996\\) is achieved with **\\(1489\\) dummy r
 
 # Optimisation
 
-What we have here at hand is actually a classic optimisation task: a real valued function in one unknown (or two if we allow a variable dummy value as well) which we'd like to maximise. This is a well-studied field, and with just a few lines of code we're up and running.[^notebook]
-
-```python
-TODO
-```
-
-Unsuprisingly, we get almost the same result as above: the best possible correlation is \\(0.996\\) with around **\\(1486\\) dummy ratings**.
+What we have here at hand is actually a classic optimisation task: a real valued function in one unknown (or two if we allow a variable dummy value as well) which we'd like to maximise. This is a well-studied field, with many fast and simple implementations that provide us the solution in no time. Unsuprisingly, we get almost the same result as above: the best possible correlation is \\(0.996\\) with around **\\(1486\\) dummy ratings**.
 
 But since we made it this far, let's take it one step further. So far, we tried to optimise the correlation in order to recreate BGG's ranking. However, we can also try to recreate the actual *geek scores*. That is, we can look for the number of dummy ratings that will yield the closest to the actual geek score with our calculations. What exactly we mean by "closest" is up to us to define. A common metric is the *mean squared error*.[^root] It's not worth getting into the maths here either, but the general idea is that we want to punish outliers in our estimates more (qudratically so) the further away they lie from the actual datapoint. Long story short, this yields a minimum for around **\\(1630\\) dummy ratings**.
 
@@ -111,5 +105,4 @@ TODO alternative rankings with different choices for those values
 * https://youtu.be/Y1t_0LhpDmU
 
 [^jotl]: {{% game 291457 %}}Jaws of the Lion{{% /game %}} is something of an exception here and will undoubtably shoot into the BGG top 10 very soon. In fact, it might be the only game with the potential to unseat {{% game 174430 %}}Gloomhaven{{% /game %}} as the number 1.
-[^notebook]: TODO
 [^root]: It's probably even more common to use the *root* mean squared error, but for boring mathematical reasons, it doesn't make a difference when it comes to optimisation. In fact, we could even drop the word *mean* from our metric and still obtain the same optimal point, but then we'd have to implement it ourselves, so there's no point.
