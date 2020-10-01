@@ -34,9 +34,9 @@ The way both IMDb and BGG chose to tackle this issue is by essentially not trust
 
 BGG calls this their **geek score**. Mathematically speaking, it is a *Bayesian average*, and calculates as follows:
 
-\\[ \textrm{geek score} = \frac{\textrm{number of ratings} \cdot \textrm{average rating} + \textrm{number of dummies} \cdot \textrm{dummy value}}{\textrm{number of ratings} + \textrm{number of dummies}} \\]
+\\[ \textrm{geek score} = \frac{\textrm{sum of ratings} + \textrm{number of dummies} \cdot \textrm{dummy value}}{\textrm{number of ratings} + \textrm{number of dummies}}, \\]
 
-Don't worry too much about the details though – *adding dummy votes* is really all you need to understand.
+where \\(\textrm{sum of ratings}\\) can be calculated either by, well, summing up all ratings or via \\(\textrm{number of ratings} \cdot \textrm{average rating}\\). Don't worry too much about the details though – *adding dummy votes* is really all you need to understand.
 
 OK, so that's the concept, but crucially that's not all the details. You still need to choose *how many* dummy votes you want to add and *what value* they should take. Since People on the Internet™ who disagree with your ranking will try to manipulate it in whatever way they can, sites are usually very cagey about said details. [IMDb used to be more transparent](https://en.wikipedia.org/wiki/IMDb#Rankings), [as was BGG](https://www.boardgamegeek.com/thread/103639/new-game-ranking-system), but now we have to dig a little deeper.
 
@@ -101,7 +101,7 @@ I'll send you off with some rankings that were obtained by making different choi
 
 ## Using the ratings average as dummy value
 
-\\(7.08245\\)
+I've mentioned before that the average rating across all games is around \\(7\\) – a little[^min-votes] more precisely \\(7.08245\\). What if we chose that as the dummy rating, but left their number at \\(1500\\)? The result should be a ranking that is a little friendlier to newer titles with fewer ratings as their score isn't dragged all the way down to \\(5.5\\) in the beginning.
 
 1. {{% game 174430 %}}Gloomhaven{{% /game %}}
 2. {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}
@@ -114,9 +114,11 @@ I'll send you off with some rankings that were obtained by making different choi
 9. {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}
 10. {{% game 187645 %}}Star Wars: Rebellion{{% /game %}}
 
+Sure enough, the brand new {{% game 291457 %}}Jaws of the Lion{{% /game %}} with less than \\(3000\\) ratings already shows up in the top 10. The other game that sticks out here is {{% game 55690 %}}Kingdom Death: Monster{{% /game %}}. This Kickstarter success story clearly attracted a lot of enthusiasts, but not necessarily the mass.
+
 ## Using the top 250 number of ratings
 
-\\(11\\,983\\)
+Just like IMDb publishes only their top 250 movies, we can consider the same and crank up the number of dummy ratings. A good number seems to be the 250th most rated game on BGG, which has been rated \\(11\\,983\\) times. Using BGG's standard dummy value of \\(5.5\\), we obtain a ranking that is much more skewed towards proven classics:
 
 1. {{% game 174430 %}}Gloomhaven{{% /game %}}
 2. {{% game 167791 %}}Terraforming Mars{{% /game %}}
@@ -129,7 +131,11 @@ I'll send you off with some rankings that were obtained by making different choi
 9. {{% game 31260 %}}Agricola{{% /game %}}
 10. {{% game 120677 %}}Terra Mystica{{% /game %}}
 
+The most recent release on this list is {{% game 174430 %}}Gloomhaven{{% /game %}}, but we also meet again the old BGG #1's, {{% game 3076 %}}Puerto Rico{{% /game %}} and {{% game 31260 %}}Agricola{{% /game %}}.
+
 ## Combining both!
+
+Finally, let's do what IMDb does (or used to do), and add to each game's ratings \\(11\\,983\\) dummy ratings of \\(7.08245\\):
 
 1. {{% game 174430 %}}Gloomhaven{{% /game %}}
 2. {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}
@@ -142,10 +148,8 @@ I'll send you off with some rankings that were obtained by making different choi
 9. {{% game 193738 %}}Great Western Trail{{% /game %}}
 10. {{% game 173346 %}}7 Wonders Duel{{% /game %}}
 
-# External resources
-
-* https://www.peterjezik.com/bgg/
-* https://youtu.be/Y1t_0LhpDmU
+The effects of more, but higher dummy ratings seem to almost cancel each other out. Compared to BGG's actual top 10, only {{% game 233078 %}}Twilight Imperium{{% /game %}} and {{% game 220308 %}}Gaia Project{{% /game %}} are missing, otherwise this ranking looks very familiar. Turns out, BGG did a pretty good job designing its ranking!
 
 [^jotl]: {{% game 291457 %}}Jaws of the Lion{{% /game %}} is something of an exception here and will undoubtably shoot into the BGG top 10 very soon. In fact, it might be the only game with the potential to unseat {{% game 174430 %}}Gloomhaven{{% /game %}} as the number 1.
 [^root]: It's probably even more common to use the *root* mean squared error, but for boring mathematical reasons, it doesn't make a difference when it comes to optimisation. In fact, we could even drop the word *mean* from our metric and still obtain the same optimal point, but then we'd have to implement it ourselves, so there's no point.
+[^min-votes]: Throughout this article I discarded games with less than \\(100\\) ratings, but the effect of this only shows in some negligible decimals.
