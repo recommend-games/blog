@@ -14,13 +14,13 @@ tags:
 
 I often describe [BoardGameGeek (BGG)](https://boardgamegeek.com/) as "the [Internet Movie Database (IMDb)](https://www.imdb.com/) for games". Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from \\(1\\) (*awful - defies game description*) to \\(10\\) (*outstanding - will always enjoy playing*). These ratings are then used to rank games, with {{% game 174430 %}}Gloomhaven{{% /game %}} occupying the top spot since December 2017.
 
-While BGG founder Scott Alden admitted in a recent interview on the excellent [Five Games For Doomsday](https://fivegamesfordoomsday.com/2020/07/06/scott-alden/) podcast that he doesn't care all that much about the rankings, gamers around the world certainly do. They would discuss heatedly any movement in the rankings, question why games X is up there while game Y is missing, and generally criticise the selection for either having *too many* or *not enough* recent releases.
+While BGG founder Scott Alden admitted in a recent interview on the excellent [Five Games For Doomsday](https://fivegamesfordoomsday.com/2020/07/06/scott-alden/) podcast that he doesn't care all that much about the rankings, gamers around the world certainly do. They would discuss heatedly any movement in the rankings, question why games \\(X\\) is up there while game \\(Y\\) is missing, and generally criticise the selection for either having *too many* or *not enough* recent releases.
 
 Reason enough for me to take a closer look at how the rankings work and some of the maths behind it.
 
 Generally speaking, we want to rank a game higher the better its score is. The first instinct would be to just sum up all the ratings users gave to that particular game, divide by the number of ratings, and rank games from highest to lowest. What I just described would be the *arithmetic mean* (or just *average* if you feel less fancy) of the ratings, which is simple and intuitive, but suffers from a sever defect: a game with a single rating of \\(10\\) would always sit on top of the ranking, well ahead of much beloved games with thousands of votes that couldn't possibly be all \\(10\\)s.
 
-The easiest fix is filtering out games with less than a certain number of ratings, say \\(100\\). That's a decent enough approach, and yields the following top 5 games as of the time of writing:
+The easiest fix is filtering out games with less than a certain number of ratings, say \\(100\\).[^min-votes] That's a decent enough approach, and yields the following top 5 games as of the time of writing:
 
 1. {{% game 261393 %}}Dungeon Universalis{{% /game %}}
 2. {{% game 219217 %}}Arena: The Contest{{% /game %}}
@@ -50,40 +50,40 @@ On the surface, this should be super easy to solve: in the formula above, we kno
 
 \\[ \textrm{number of dummies} = \textrm{number of ratings} \cdot \frac{\textrm{average rating} - \textrm{geek score}}{\textrm{geek score} - \textrm{dummy value}} \\]
 
-Now we should be able to plug in those values for any given game, say {{% game 199478 %}}Flamme Rouge{{% /game %}}, and get the result. With \\(10\\,875\\) ratings that average \\(7.562\\), and a geek score of \\(7.265\\), this yield:
+Now we should be able to plug in those values for any given game, say {{% game 199478 %}}Flamme Rouge{{% /game %}}, and get the result. With \\(10\\,936\\) ratings that average \\(7.562\\), and a geek score of \\(7.266\\), this yield:
 
-\\[ \textrm{number of dummies} = \textrm{10875} \cdot \frac{\textrm{7.562} - \textrm{7.265}}{\textrm{7.265} - \textrm{5.5}} \\approx 1830. \\]
+\\[ \textrm{number of dummies} = 10936 \cdot \frac{7.562 - 7.266}{7.266 - 5.5} \\approx 1830. \\]
 
 So, there's about \\(1830\\) dummy ratings, end of story. Right? Unfortunately, not quite. When computing this formula for different games, the results vary *wildly*, as you can see from this histogram over the results for the same calculation with other games:
 
 {{< img src="num_dummies_hist" alt="Histogram over the number of dummy votes calculated by explicit formula" >}}
 
-And this plot is even cropped, the results vary from \\(-1.4\\) million to \\(+660\\) thousand, though some \\(90\\%\\) lie within the above range, with a mean of around \\(1450\\) and a median of around \\(1587\\).
+And this plot is even cropped, the results vary from \\(-1.4\\) million to \\(+810\\) thousand, though some \\(90\\%\\) lie within the above range, with a mean of around \\(1604\\) and a median of around \\(1590\\).
 
 What's going on, why are the results so inconsistent? The problem is the ranking's *secret sauce*. Both IMDb and BGG stress is that they only consider *regular* voters for their rankings. That's the most mysterious part of the system as it's the easiest to manipulate, so we'll just have to take their word for it. For this investigation it means that the average rating BGG publishes includes all the ratings, but the geek score might *not*.
 
-Still, clearly something is happening around the **\\(1500\\) ratings** mark, so we are at least getting closer to an answer. If exact calculations won't work, maybe we can approximate the correct value instead?
+Still, clearly something is happening around the **\\(1600\\) ratings** mark, so we are at least getting closer to an answer. If exact calculations won't work, maybe we can approximate the correct value instead?
 
 # Trial & error
 
-Let's take a step back here. What we're really trying to achieve here is not finding the exact formula for that mysterious "geek score", but rather recreate the BGG ranking. That is, we want to find the values in the above formula, such that the resulting ranking matches BGG's ranking as closely as possible. Luckily, statistics has all the tools we need. [Spearman correlation](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient) measures rank correlation – just what we need. This will be \\(1\\) if both rankings sort in exactly the same way, and \\(0\\) if they sort entirely differently. Again, don't worry about the details, just trust the maths.
+Let's take a step back here. What we're really trying to achieve here is not finding the exact formula for that mysterious "geek score", but rather recreate the BGG ranking. That is, we want to find the values in the above formula, such that the resulting ranking matches BGG's ranking as closely as possible. Luckily, statistics has all the tools we need. [Spearman correlation](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient) measures rank correlation – just what we need. This will be \\(1\\) if both rankings sort in exactly the same way, \\(0\\) if there's no relation, and \\(-1\\) if they sort exactly the opposite way. Again, don't worry about the details, just trust the maths.
 
 What we can do now is fairly simply and quickly compute the rankings for different number of dummy ratings, and pick the value with the highest Spearman correlation. Without further ado, here are the results:
 
 {{< img src="num_dummies_corr" alt="Spearman correlation for different number of dummy ratings" >}}
 
-The best correlation of around \\(0.996\\) is achieved with **\\(1489\\) dummy ratings**. However, it is worth noticing that the changes in the correlation are very, *very* small throughout the range we examined here (\\(1000\\) to \\(2500\\)), so let's dig still a little deeper.
+The best correlation of around \\(0.996\\) is achieved with **\\(1488\\) dummy ratings**. However, it is worth noticing that the changes in the correlation are very, *very* small throughout the range we examined here (\\(1000\\) to \\(2500\\)), so let's dig still a little deeper.
 
 # Optimisation
 
-What we have here at hand is actually a classic optimisation task: a real valued function in one unknown (or two if we allow a variable dummy value as well) which we'd like to maximise. This is a well-studied field, with many fast and simple implementations that provide us the solution in no time. Unsuprisingly, we get almost the same result as above: the best possible correlation is \\(0.996\\) with around **\\(1486\\) dummy ratings**.
+What we have here at hand is actually a classic optimisation task: a real valued function in one unknown (or two if we allow a variable dummy value as well) which we'd like to maximise. This is a well-studied field, with many fast and simple implementations that provide us the solution in no time. Unsuprisingly, we get almost the same result as above: the best possible correlation is \\(0.996\\) with around **\\(1488\\) dummy ratings**.
 
-But since we made it this far, let's take it one step further. So far, we tried to optimise the correlation in order to recreate BGG's ranking. However, we can also try to recreate the actual *geek scores*. That is, we can look for the number of dummy ratings that will yield the closest to the actual geek score with our calculations. What exactly we mean by "closest" is up to us to define. A common metric is the *mean squared error*.[^root] It's not worth getting into the maths here either, but the general idea is that we want to punish outliers in our estimates more (qudratically so) the further away they lie from the actual datapoint. Long story short, this yields a minimum for around **\\(1630\\) dummy ratings**.
+But since we made it this far, let's take it one step further. So far, we tried to optimise the correlation in order to recreate BGG's ranking. However, we can also try to recreate the actual *geek scores*. That is, we can look for the number of dummy ratings that will yield the closest to the actual geek score with our calculations. What exactly we mean by "closest" is up to us to define. A common metric is the *mean squared error*.[^root] It's not worth getting into the maths here either, but the general idea is that we want to punish outliers in our estimates more (qudratically so) the further away they lie from the actual datapoint. Long story short, this yields a minimum for around **\\(1636\\) dummy ratings**.
 
 Let's take one last swing and see what happens if we don't fix the dummy value at \\(5.5\\) but allow that to be variable as well. This is no problem for the optimisation algorithm and yields the following results:
 
-* the best correlation with **\\(1888\\) dummy ratings of \\(5.552\\)**, and
-* the least squared error with **\\(1611\\) dummy ratings of \\(5.494\\)**.
+* the best correlation with **\\(1942\\) dummy ratings of \\(5.554\\)**, and
+* the least squared error with **\\(1616\\) dummy ratings of \\(5.494\\)**.
 
 Either of those improvements are hardly noticable (in fact insible after rounding), but they do confirm nicely a dummy value of \\(5.5\\).
 
@@ -101,7 +101,7 @@ I'll send you off with some rankings that were obtained by making different choi
 
 ## Using the ratings average as dummy value
 
-I've mentioned before that the average rating across all games is around \\(7\\) – a little[^min-votes] more precisely \\(7.08245\\). What if we chose that as the dummy rating, but left their number at \\(1500\\)? The result should be a ranking that is a little friendlier to newer titles with fewer ratings as their score isn't dragged all the way down to \\(5.5\\) in the beginning.
+I've mentioned before that the average rating across all games is around \\(7\\) – a little[^min-votes] more precisely \\(7.08278\\). What if we chose that as the dummy rating, but left their number at \\(1600\\)? The result should be a ranking that is a little friendlier to newer titles with fewer ratings as their score isn't dragged all the way down to \\(5.5\\) in the beginning.
 
 1. {{% game 174430 %}}Gloomhaven{{% /game %}}
 2. {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}
@@ -109,16 +109,16 @@ I've mentioned before that the average rating across all games is around \\(7\\)
 4. {{% game 224517 %}}Brass: Birmingham{{% /game %}}
 5. {{% game 55690 %}}Kingdom Death: Monster{{% /game %}}
 6. {{% game 167791 %}}Terraforming Mars{{% /game %}}
-7. {{% game 220308 %}}Gaia Project{{% /game %}}
-8. {{% game 182028 %}}Through the Ages: A New Story of Civilization{{% /game %}}
-9. {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}
+7. {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}
+8. {{% game 220308 %}}Gaia Project{{% /game %}}
+9. {{% game 182028 %}}Through the Ages: A New Story of Civilization{{% /game %}}
 10. {{% game 187645 %}}Star Wars: Rebellion{{% /game %}}
 
 Sure enough, the brand new {{% game 291457 %}}Jaws of the Lion{{% /game %}} with less than \\(3000\\) ratings already shows up in the top 10. The other game that sticks out here is {{% game 55690 %}}Kingdom Death: Monster{{% /game %}}. This Kickstarter success story clearly attracted a lot of enthusiasts, but not necessarily the mass.
 
 ## Using the top 250 number of ratings
 
-Just like IMDb publishes only their top 250 movies, we can consider the same and crank up the number of dummy ratings. A good number seems to be the 250th most rated game on BGG, which has been rated \\(11\\,983\\) times. Using BGG's standard dummy value of \\(5.5\\), we obtain a ranking that is much more skewed towards proven classics:
+Just like IMDb publishes only their top 250 movies, we can consider the same and crank up the number of dummy ratings. A good number seems to be the 250th most rated game on BGG, which has been rated \\(12\\,014\\) times. Using BGG's standard dummy value of \\(5.5\\), we obtain a ranking that is much more skewed towards proven classics:
 
 1. {{% game 174430 %}}Gloomhaven{{% /game %}}
 2. {{% game 167791 %}}Terraforming Mars{{% /game %}}
@@ -135,21 +135,21 @@ The most recent release on this list is {{% game 174430 %}}Gloomhaven{{% /game %
 
 ## Combining both!
 
-Finally, let's do what IMDb does (or used to do), and add to each game's ratings \\(11\\,983\\) dummy ratings of \\(7.08245\\):
+Finally, let's do what IMDb does (or used to do), and add to each game's ratings \\(12\\,014\\) dummy ratings of \\(7.08278\\):
 
 1. {{% game 174430 %}}Gloomhaven{{% /game %}}
 2. {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}
 3. {{% game 167791 %}}Terraforming Mars{{% /game %}}
 4. {{% game 169786 %}}Scythe{{% /game %}}
 5. {{% game 12333 %}}Twilight Struggle{{% /game %}}
-6. {{% game 182028 %}}Through the Ages: A New Story of Civilization{{% /game %}}
-7. {{% game 224517 %}}Brass: Birmingham{{% /game %}}
+6. {{% game 224517 %}}Brass: Birmingham{{% /game %}}
+7. {{% game 182028 %}}Through the Ages: A New Story of Civilization{{% /game %}}
 8. {{% game 187645 %}}Star Wars: Rebellion{{% /game %}}
 9. {{% game 193738 %}}Great Western Trail{{% /game %}}
 10. {{% game 173346 %}}7 Wonders Duel{{% /game %}}
 
 The effects of more, but higher dummy ratings seem to almost cancel each other out. Compared to BGG's actual top 10, only {{% game 233078 %}}Twilight Imperium{{% /game %}} and {{% game 220308 %}}Gaia Project{{% /game %}} are missing, otherwise this ranking looks very familiar. Turns out, BGG did a pretty good job designing its ranking!
 
+[^min-votes]: Throughout this article I only considered games with at least \\(100\\) ratings, mostly to ensure that the very long tail of games with few ratings won't unduely skew the results. However, most of the calculations would only change in some negligible decimals when including all games.
 [^jotl]: {{% game 291457 %}}Jaws of the Lion{{% /game %}} is something of an exception here and will undoubtably shoot into the BGG top 10 very soon. In fact, it might be the only game with the potential to unseat {{% game 174430 %}}Gloomhaven{{% /game %}} as the number 1.
 [^root]: It's probably even more common to use the *root* mean squared error, but for boring mathematical reasons, it doesn't make a difference when it comes to optimisation. In fact, we could even drop the word *mean* from our metric and still obtain the same optimal point, but then we'd have to implement it ourselves, so there's no point.
-[^min-votes]: Throughout this article I discarded games with less than \\(100\\) ratings, but the effect of this only shows in some negligible decimals.
