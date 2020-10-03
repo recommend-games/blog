@@ -3,11 +3,19 @@ title: Reverse engineering the BoardGameGeek ranking
 slug: reverse-engineering-boardgamegeek-ranking
 author: Markus Shepherd
 type: post
-date: 2020-09-11T00:00:00+03:00
+date: 2020-10-03T08:41:00+03:00
 tags:
   - BoardGameGeek
   - BGG
   - ranking
+  - rating
+  - statistics
+  - Bayesian
+  - geek score
+  - top 100
+  - dummy ratings
+  - highest rated games
+  - alternative rankings
 ---
 
 ***TL;DR***: *BoardGameGeek calculates its ranking by adding around **1500-1600 dummy ratings of 5.5** to the regular users' ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some [alternative rankings](#alternative-rankings).*
