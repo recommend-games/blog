@@ -3,7 +3,7 @@ title: Reverse engineering the BoardGameGeek ranking
 slug: reverse-engineering-boardgamegeek-ranking
 author: Markus Shepherd
 type: post
-date: 2020-10-03T08:41:00+03:00
+date: 2020-10-03T08:42:51+03:00
 tags:
   - BoardGameGeek
   - BGG
@@ -157,6 +157,8 @@ Finally, let's do what IMDb does (or used to do), and add to each game's ratings
 10. {{% game 173346 %}}7 Wonders Duel{{% /game %}}
 
 The effects of more, but higher dummy ratings seem to almost cancel each other out. Compared to BGG's actual top 10, only {{% game 233078 %}}Twilight Imperium{{% /game %}} and {{% game 220308 %}}Gaia Project{{% /game %}} are missing, otherwise this ranking looks very familiar. Turns out, BGG did a pretty good job designing its ranking!
+
+***PS***: You can find the notebook I used to do all the calculations [on Kaggle](https://www.kaggle.com/mshepherd/reverse-engineering-the-boardgamegeek-ranking).
 
 [^min-votes]: Throughout this article I only considered games with at least \\(100\\) ratings, mostly to ensure that the very long tail of games with few ratings won't unduely skew the results. However, most of the calculations would only change in some negligible decimals when including all games.
 [^jotl]: {{% game 291457 %}}Jaws of the Lion{{% /game %}} is something of an exception here and will undoubtably shoot into the BGG top 10 very soon. In fact, it might be the only game with the potential to unseat {{% game 174430 %}}Gloomhaven{{% /game %}} as the number 1.
