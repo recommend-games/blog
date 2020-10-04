@@ -160,6 +160,8 @@ The effects of more, but higher dummy ratings seem to almost cancel each other o
 
 ***PS***: You can find the notebook I used to do all the calculations [on Kaggle](https://www.kaggle.com/mshepherd/reverse-engineering-the-boardgamegeek-ranking).
 
+***PPS***: Turns out that [GoDataDriven did almost the same calculation](https://godatadriven.com/blog/reverse-engineering-boardgamegeek/) three years ago – even with the same title! Back then, they estimated that BGG added \\(725\\) dummy ratings. [Jorge Nieva replicated their analysis](https://www.kaggle.com/jorgenieva/bayes-algorithm) with a more recent dataset, which thankfully yielded a very close match to our result: \\(1594\\) dummy ratings.
+
 [^min-votes]: Throughout this article I only considered games with at least \\(100\\) ratings, mostly to ensure that the very long tail of games with few ratings won't unduely skew the results. However, most of the calculations would only change in some negligible decimals when including all games.
 [^jotl]: {{% game 291457 %}}Jaws of the Lion{{% /game %}} is something of an exception here and will undoubtably shoot into the BGG top 10 very soon. In fact, it might be the only game with the potential to unseat {{% game 174430 %}}Gloomhaven{{% /game %}} as the number 1.
 [^root]: It's probably even more common to use the *root* mean squared error, but for boring mathematical reasons, it doesn't make a difference when it comes to optimisation. In fact, we could even drop the word *mean* from our metric and still obtain the same optimal point, so let's not dwell on this.
