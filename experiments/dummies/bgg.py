@@ -14,7 +14,10 @@
 # ---
 
 # %%
+import csv
 import os.path
+
+from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -34,7 +37,7 @@ def bayes(avg_rating, num_rating, dummy_value, num_dummy):
     )
 
 
-def target_rmse(num_dummy, dummy_value, data):
+def target_mse(num_dummy, dummy_value, data):
     return np.linalg.norm(
         data.bayes_rating
         - bayes(data.avg_rating, data.num_votes, dummy_value, num_dummy)
@@ -43,7 +46,7 @@ def target_rmse(num_dummy, dummy_value, data):
 
 def process_games(games, x0=np.array([1000]), dummy_value=5.5):
     result = minimize(
-        fun=lambda x: target_rmse(
+        fun=lambda x: target_mse(
             num_dummy=x[0],
             dummy_value=dummy_value,
             data=games[
@@ -66,10 +69,13 @@ def process_games(games, x0=np.array([1000]), dummy_value=5.5):
     avg_rating = (games.avg_rating * games.num_votes).sum() / num_votes_total
 
     return {
-        "num_votes_total": num_votes_total,
+        "num_games": len(games),
+        "num_games_ranked": int(games.bayes_rating.notna().sum()),
+        "num_votes_total": int(num_votes_total),
         "avg_rating": avg_rating,
         "num_votes_dummy": result.x[0],
-        "result": result,
+        "min_mse": result.fun,
+        # "result": result,
     }
 
 
@@ -84,30 +90,48 @@ df.drop(
 df.shape
 
 # %%
-process_games(df)
+result = process_games(df)
+result
 
 # %%
 repo = Repo("~/Workspace/board-game-data")
 
+
 # %%
-directory = "scraped"
-file = "bgg_GameItem.csv"
-for commit in repo.iter_commits(paths=os.path.join(directory, file)):
-    blob = commit.tree / directory / file
-    print(
-        'Found <%s> from commit <%s>: "%s" (%s)'
-        % (
-            blob,
-            commit,
-            commit.message.strip(),
-            commit.authored_datetime,
+def process_repo(repo=repo, directory="scraped", file="bgg_GameItem.csv"):
+    for commit in repo.iter_commits(paths=os.path.join(directory, file)):
+        blob = commit.tree / directory / file
+
+        print(
+            'Found <%s> from commit <%s>: "%s" (%s)'
+            % (
+                blob,
+                commit,
+                commit.message.strip(),
+                commit.authored_datetime,
+            )
         )
-    )
-    df = pd.read_csv(blob.data_stream, index_col="bgg_id")
-    df.drop(
-        index=df.index[df.compilation == 1],
-        inplace=True,
-    )
-    print(df.shape)
-    print(process_games(df))
-    break
+
+        df = pd.read_csv(blob.data_stream, index_col="bgg_id")
+        df.drop(
+            index=df.index[df.compilation == 1],
+            inplace=True,
+        )
+
+        result = process_games(df)
+
+        result["commit"] = str(commit)
+        result["datetime"] = str(commit.authored_datetime)
+
+        yield result
+
+
+# %%
+fieldnames = tuple(result.keys()) + ("commit", "datetime")
+out_file = Path() / "result.csv"
+
+# %%
+with out_file.open("w", newline="") as out:
+    writer = csv.DictWriter(out, fieldnames)
+    writer.writeheader()
+    writer.writerows(process_repo())
