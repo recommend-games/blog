@@ -14,10 +14,13 @@
 # ---
 
 # %%
+import os.path
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+from git import Repo
 from scipy.optimize import minimize
 
 # %matplotlib inline
@@ -82,3 +85,29 @@ df.shape
 
 # %%
 process_games(df)
+
+# %%
+repo = Repo("~/Workspace/board-game-data")
+
+# %%
+directory = "scraped"
+file = "bgg_GameItem.csv"
+for commit in repo.iter_commits(paths=os.path.join(directory, file)):
+    blob = commit.tree / directory / file
+    print(
+        'Found <%s> from commit <%s>: "%s" (%s)'
+        % (
+            blob,
+            commit,
+            commit.message.strip(),
+            commit.authored_datetime,
+        )
+    )
+    df = pd.read_csv(blob.data_stream, index_col="bgg_id")
+    df.drop(
+        index=df.index[df.compilation == 1],
+        inplace=True,
+    )
+    print(df.shape)
+    print(process_games(df))
+    break
