@@ -15,7 +15,9 @@
 
 # %%
 import csv
+import logging
 import os.path
+import sys
 
 from pathlib import Path
 
@@ -27,6 +29,14 @@ from git import Repo
 from scipy.optimize import minimize
 
 from utils import dfs_from_repo
+
+LOGGER = logging.getLogger(__name__)
+
+logging.basicConfig(
+    stream=sys.stderr,
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)-8.8s [%(name)s:%(lineno)s] %(message)s",
+)
 
 # %matplotlib inline
 # %load_ext nb_black
@@ -82,12 +92,8 @@ def process_games(games, x0=np.array([1000]), dummy_value=5.5):
 
 
 # %%
-repo = Repo("~/Workspace/board-game-data")
-
-
-# %%
-def process_repo(repo=repo, directory="scraped", file="bgg_GameItem.jl"):
-    for data in dfs_from_repo(repo=repo, directories=directory, files=file):
+def process_repo(repo, directories, files):
+    for data in dfs_from_repo(repo=repo, directories=directories, files=files):
         df = data["data_frame"]
         commit = data["commit"]
         blob = data["blob"]
@@ -102,8 +108,31 @@ def process_repo(repo=repo, directory="scraped", file="bgg_GameItem.jl"):
 
 
 # %%
-rows = process_repo()
-out_file = Path() / "result2.csv"
+def process_repos(repos, directories, files):
+    for repo in repos:
+        LOGGER.info("Processing %s", repo)
+        yield from process_repo(repo=repo, directories=directories, files=files)
+
+
+# %%
+repos = (
+    Repo("~/Workspace/board-game-data"),
+    Repo("~/Recommend.Games/_archived/board-game-data-2020-01"),
+    Repo("~/Recommend.Games/_archived/ludoj"),
+    Repo("~/Recommend.Games/_archived/ludoj-scraper-archived"),
+    Repo("~/Recommend.Games/_archived/ludoj-data-old"),
+    Repo("~/Recommend.Games/_archived/ludoj-data-archived"),
+)
+
+# %%
+rows = process_repos(
+    repos=repos,
+    directories=("scraped", "results"),
+    files=("bgg_GameItem.jl", "bgg_GameItem.csv", "bgg.csv"),
+)
+
+# %%
+out_file = Path() / "result_all.csv"
 first_row = next(rows)
 with out_file.open("w", newline="") as out:
     writer = csv.DictWriter(out, first_row.keys())
