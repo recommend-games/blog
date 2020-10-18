@@ -15,6 +15,7 @@ pandas = "*"
 matplotlib = "*"
 numpy = "*"
 scipy = "*"
+pytility = "*"
 
 [requires]
 python_version = "3.8"
