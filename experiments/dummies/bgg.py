@@ -26,6 +26,8 @@ import pandas as pd
 from git import Repo
 from scipy.optimize import minimize
 
+from utils import dfs_from_repo
+
 # %matplotlib inline
 # %load_ext nb_black
 # %load_ext lab_black
@@ -80,58 +82,31 @@ def process_games(games, x0=np.array([1000]), dummy_value=5.5):
 
 
 # %%
-df = pd.read_csv(
-    "~/Workspace/board-game-data/scraped/bgg_GameItem.csv", index_col="bgg_id"
-)
-df.drop(
-    index=df.index[df.compilation == 1],
-    inplace=True,
-)
-df.shape
-
-# %%
-result = process_games(df)
-result
-
-# %%
 repo = Repo("~/Workspace/board-game-data")
 
 
 # %%
-def process_repo(repo=repo, directory="scraped", file="bgg_GameItem.csv"):
-    for commit in repo.iter_commits(paths=os.path.join(directory, file)):
-        blob = commit.tree / directory / file
-
-        print(
-            'Found <%s> from commit <%s>: "%s" (%s)'
-            % (
-                blob,
-                commit,
-                commit.message.strip(),
-                commit.authored_datetime,
-            )
-        )
-
-        df = pd.read_csv(blob.data_stream, index_col="bgg_id")
-        df.drop(
-            index=df.index[df.compilation == 1],
-            inplace=True,
-        )
+def process_repo(repo=repo, directory="scraped", file="bgg_GameItem.jl"):
+    for data in dfs_from_repo(repo=repo, directories=directory, files=file):
+        df = data["data_frame"]
+        commit = data["commit"]
+        blob = data["blob"]
 
         result = process_games(df)
 
         result["commit"] = str(commit)
+        result["file_name"] = blob.path
         result["datetime"] = str(commit.authored_datetime)
 
         yield result
 
 
 # %%
-fieldnames = tuple(result.keys()) + ("commit", "datetime")
-out_file = Path() / "result.csv"
-
-# %%
+rows = process_repo()
+out_file = Path() / "result2.csv"
+first_row = next(rows)
 with out_file.open("w", newline="") as out:
-    writer = csv.DictWriter(out, fieldnames)
+    writer = csv.DictWriter(out, first_row.keys())
     writer.writeheader()
-    writer.writerows(process_repo())
+    writer.writerow(first_row)
+    writer.writerows(rows)
