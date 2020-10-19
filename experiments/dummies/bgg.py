@@ -98,7 +98,11 @@ def process_repo(repo, directories, files):
         commit = data["commit"]
         blob = data["blob"]
 
-        result = process_games(df)
+        try:
+            result = process_games(df)
+        except Exception:
+            LOGGER.exception("Unable to process <%s>", commit)
+            continue
 
         result["commit"] = str(commit)
         result["file_name"] = blob.path
