@@ -24,6 +24,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+from sklearn.linear_model import LinearRegression
+
 LOGGER = logging.getLogger(__name__)
 SEED = 23
 
@@ -73,3 +75,15 @@ data.min_mse.plot()
 
 # %%
 data.plot(x="num_votes_total", y="num_votes_dummy")
+
+# %%
+model = LinearRegression(fit_intercept=False)
+X = data.num_votes_total.values.reshape(-1, 1)  # need a matrix
+y = data.num_votes_dummy
+model.fit(X, y)
+
+# %%
+model.coef_
+
+# %%
+(data.num_votes_total / 10_000 - data.num_votes_dummy).abs().sum() / len(data)
