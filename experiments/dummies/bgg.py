@@ -123,9 +123,9 @@ repos = (
     Repo("~/Workspace/board-game-data"),
     Repo("~/Recommend.Games/_archived/board-game-data-2020-01"),
     Repo("~/Recommend.Games/_archived/ludoj"),
-    Repo("~/Recommend.Games/_archived/ludoj-scraper-archived"),
     Repo("~/Recommend.Games/_archived/ludoj-data-old"),
     Repo("~/Recommend.Games/_archived/ludoj-data-archived"),
+    Repo("~/Recommend.Games/_archived/ludoj-scraper-archived"),
 )
 
 # %%
@@ -136,7 +136,7 @@ rows = process_repos(
 )
 
 # %%
-out_file = Path() / "result_all.csv"
+out_file = Path() / "results.csv"
 first_row = next(rows)
 with out_file.open("w", newline="") as out:
     writer = csv.DictWriter(out, first_row.keys())
