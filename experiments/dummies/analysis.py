@@ -39,6 +39,7 @@ logging.basicConfig(
 
 # %%
 df = pd.read_csv("results.csv", parse_dates=["datetime"], index_col="datetime")
+df.sort_index(inplace=True)
 df.shape
 
 # %%
@@ -69,3 +70,6 @@ data.num_votes_dummy.plot()
 
 # %%
 data.min_mse.plot()
+
+# %%
+data.plot(x="num_votes_total", y="num_votes_dummy")
