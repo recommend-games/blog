@@ -18,12 +18,14 @@ import logging
 import os.path
 import sys
 
+from datetime import timezone
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+from pytility import parse_date
 from sklearn.linear_model import LinearRegression
 
 LOGGER = logging.getLogger(__name__)
@@ -48,7 +50,9 @@ df.shape
 df.sample(10, random_state=SEED)
 
 # %%
-cutoff = df[df.min_mse > 10].index.max()
+cutoff = df[
+    (df.min_mse > 10) | (df.index < parse_date("2019-07-01", timezone.utc))
+].index.max()
 cutoff
 
 # %%
@@ -74,16 +78,32 @@ data.num_votes_dummy.plot()
 data.min_mse.plot()
 
 # %%
-data.plot(x="num_votes_total", y="num_votes_dummy")
-
-# %%
 model = LinearRegression(fit_intercept=False)
 X = data.num_votes_total.values.reshape(-1, 1)  # need a matrix
 y = data.num_votes_dummy
 model.fit(X, y)
 
 # %%
-model.coef_
+coef = model.coef_[0]
+coef * 10_000
+
+# %%
+x0 = data.num_votes_total.min()
+x1 = data.num_votes_total.max()
+y0 = coef * x0
+y1 = coef * x1
+
+# %%
+data.sort_values("num_votes_total").plot(
+    x="num_votes_total",
+    y="num_votes_dummy",
+    style="k-",
+    linewidth=3,
+    legend=False,
+    xlabel="total ratings",
+    ylabel="dummy ratings",
+)
+plt.plot([x0, x1], [y0, y1], "r--", linewidth=2)
 
 # %%
 (data.num_votes_total / 10_000 - data.num_votes_dummy).abs().sum() / len(data)
