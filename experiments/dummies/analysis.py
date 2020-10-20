@@ -78,6 +78,17 @@ data.num_votes_dummy.plot()
 data.min_mse.plot()
 
 # %%
+data.plot(
+    y=["num_games", "num_votes_total"],
+    label=["games", "ratings"],
+    style=["k-", "r-"],
+    linewidth=3,
+    subplots=True,
+)
+plt.savefig("games.svg")
+plt.show()
+
+# %%
 model = LinearRegression(fit_intercept=False)
 X = data.num_votes_total.values.reshape(-1, 1)  # need a matrix
 y = data.num_votes_dummy
