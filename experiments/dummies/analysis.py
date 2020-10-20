@@ -104,6 +104,8 @@ data.sort_values("num_votes_total").plot(
     ylabel="dummy ratings",
 )
 plt.plot([x0, x1], [y0, y1], "r--", linewidth=2)
+plt.savefig("ratings.svg")
+plt.show()
 
 # %%
 (data.num_votes_total / 10_000 - data.num_votes_dummy).abs().sum() / len(data)
