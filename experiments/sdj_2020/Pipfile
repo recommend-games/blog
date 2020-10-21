@@ -12,7 +12,6 @@ jupytext = "*"
 nb-black = "*"
 pandas = "*"
 matplotlib = "*"
-seaborn = "*"
 
 [requires]
 python_version = "3.8"

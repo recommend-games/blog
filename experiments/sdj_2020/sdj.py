@@ -18,7 +18,6 @@ import json
 
 import matplotlib.pyplot as plt
 import pandas as pd
-import seaborn as sns
 
 # %matplotlib inline
 # %load_ext nb_black
