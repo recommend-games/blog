@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.4.2
+#       jupytext_version: 1.6.0
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -18,7 +18,6 @@ import json
 
 import matplotlib.pyplot as plt
 import pandas as pd
-import seaborn as sns
 
 # %matplotlib inline
 # %load_ext nb_black
@@ -37,7 +36,7 @@ ksdj_all = pd.read_csv("ksdj.csv", index_col="bgg_id")
 ksdj_all.shape
 
 # %%
-with open("../../board-game-data/scraped/bgg_GameItem.jl") as f:
+with open("../../../board-game-data/scraped/bgg_GameItem.jl") as f:
     records = map(json.loads, f)
     games = pd.DataFrame.from_records(records, index="bgg_id")
 games.shape
