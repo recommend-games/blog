@@ -47,35 +47,59 @@ logging.basicConfig(
 # %%
 df = pd.read_csv(
     "/Users/markus/Workspace/board-game-data/scraped/bgg_GameItem.csv",
-    index_col="bgg_id",
 )
 df.shape
 
 # %%
-df_filtered = df[
-    (df.num_votes >= 100)
-    & (df["rank"].notnull())
-    & (df.compilation == 0)
-    & (df.mechanic.notnull())
-]
+df_filtered = (
+    df[
+        (df.num_votes >= 100)
+        & (df["rank"].notnull())
+        & (df.compilation == 0)
+        & (df.mechanic.notnull())
+    ]
+    .reset_index(drop=True)
+    .copy()
+)
 df_filtered.shape
 
 # %%
 df_filtered.mechanic
 
 # %%
-cv = CountVectorizer(binary=True)
+cv = CountVectorizer(binary=True)  # TfidfVectorizer(binary=True)
 mechanics = cv.fit_transform(df_filtered.mechanic)
 mechanics.shape
 
 # %%
-model = umap.UMAP(metric="jaccard", random_state=SEED)
+model = umap.UMAP(metric="jaccard", random_state=SEED)  # metric="hellinger"
 model.fit(mechanics.todense())
 
 # %%
 umap_plot = umap.plot.points(
     model,
-    labels=np.log(df_filtered.num_votes.values),
+    # labels=np.log(df_filtered.num_votes.values),
+    labels=-df_filtered["rank"],
     theme="fire",
     show_legend=False,
 )
+
+# %%
+from bokeh.plotting import show, save, output_notebook, output_file
+from bokeh.resources import INLINE
+
+output_notebook(resources=INLINE)
+
+# %%
+hover_df = df_filtered[
+    ["name", "year", "avg_rating", "num_votes", "bayes_rating", "rank"]
+]
+plot = umap.plot.interactive(
+    model,
+    # labels=np.log(df_filtered.num_votes.values),
+    labels=-df_filtered["rank"],
+    hover_data=hover_df,
+    theme="fire",
+    point_size=5,
+)
+show(plot)
