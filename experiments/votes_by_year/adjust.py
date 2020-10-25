@@ -21,6 +21,7 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 import pandas as pd
+import seaborn as sns
 
 from pytility import parse_date
 
@@ -62,6 +63,7 @@ def df_from_jl(path):
 # %%
 path_csv = Path("bgg_RatingItem.csv").resolve()
 path_jl = Path("../../../board-game-data/scraped/bgg_RatingItem.jl").resolve()
+path_games = Path("../../../board-game-data/scraped/bgg_GameItem.csv").resolve()
 
 # %%
 try:
@@ -95,3 +97,62 @@ plt.plot([now.year - 1, now.year], [by_year[now.year - 1], eoy_adj], "k:", linew
 
 # %%
 plt.savefig("ratings_by_year.svg")
+
+# %%
+games = pd.read_csv(
+    path_games,
+    index_col="bgg_id",
+    dtype={"cooperative": bool, "compilation": bool},
+)
+games.shape
+
+# %%
+games.sample(5, random_state=SEED).T
+
+# %%
+votes_by_year = games.groupby("year").num_votes.agg(["sum", "mean", "median"])
+
+# %%
+votes_by_year[(votes_by_year.index >= 1980) & (votes_by_year.index <= 2020)][
+    "sum"
+].plot(style="k-", linewidth=3)
+
+# %%
+votes_by_year[(votes_by_year.index >= 1980) & (votes_by_year.index <= 2020)][
+    "mean"
+].plot(style="k-", linewidth=3)
+
+# %%
+votes_by_year[(votes_by_year.index >= 1980) & (votes_by_year.index <= 2020)][
+    "median"
+].plot(style="k-", linewidth=3)
+
+# %%
+votes_by_year_ranked = (
+    games[~games.compilation & games["rank"].notnull() & games.bayes_rating.notnull()]
+    .groupby("year")
+    .num_votes.agg(["sum", "mean", "median"])
+)
+
+# %%
+votes_by_year_ranked[
+    (votes_by_year_ranked.index >= 1980) & (votes_by_year_ranked.index <= 2020)
+]["sum"].plot(style="k-", linewidth=3)
+
+# %%
+votes_by_year_ranked[
+    (votes_by_year_ranked.index >= 1980) & (votes_by_year_ranked.index <= 2020)
+]["mean"].plot(style="k-", linewidth=3)
+
+# %%
+votes_by_year_ranked[
+    (votes_by_year_ranked.index >= 1980) & (votes_by_year_ranked.index <= 2020)
+]["median"].plot(style="k-", linewidth=3)
+
+# %%
+sns.violinplot(
+    x="year",
+    y="num_votes",
+    data=games[(games.year >= 1990) & (games.year <= 2000)],
+)
+plt.ylim(0, 1_000)
