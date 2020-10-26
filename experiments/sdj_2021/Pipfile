@@ -12,6 +12,7 @@ jupytext = "*"
 nb-black = "*"
 pandas = "*"
 matplotlib = "*"
+pytility = "*"
 
 [requires]
 python_version = "3.8"
