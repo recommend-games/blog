@@ -19,6 +19,10 @@ import re
 
 from pathlib import Path
 
+import pandas as pd
+import requests
+
+from board_game_recommender import BGGRecommender
 from pytility import arg_to_iter, parse_int
 
 # %load_ext nb_black
@@ -45,6 +49,7 @@ regex = re.compile(r"\{\{%\s*game\s*(\d+)\s*%\}\}([^{]+)\{\{%\s*/game\s*%\}\}")
 # %%
 directory = Path("../../content/posts/").resolve()
 out_path = Path("2020_articles.csv").resolve()
+rec_path = Path("../../../recommend-games-server/data/recommender_bgg/").resolve()
 
 # %%
 paths = directory.glob("sdj*/*.md")
@@ -56,3 +61,47 @@ with out_path.open("w", newline="") as out_file:
     for bgg_id, name, path in games_in_articles(paths):
         comment = f"From article <{path}>"
         writer.writerow((bgg_id, name, comment))
+
+# %%
+rec = BGGRecommender.load(rec_path)
+rec
+
+# %%
+include = pd.read_csv("include.csv", index_col="bgg_id")
+exclude = pd.read_csv("exclude.csv", index_col="bgg_id")
+include.shape, exclude.shape
+
+# %%
+url = "http://localhost:8000/api/games/recommend/"
+params = {
+    "user": "S_d_J",
+    "year__gte": 2020,
+    "year__lte": 2021,
+    "complexity__lte": 2,
+    "max_players__gte": 4,
+    "min_players__lte": 3,
+    "max_time__lte": 60,
+    "min_age__lte": 14,
+    "exclude": ",".join(map(str, exclude.index)),
+}
+
+# %%
+response = requests.get(url, params)
+
+# %%
+candidates = pd.DataFrame.from_records(response.json()["results"], index="bgg_id")
+
+# %%
+candidates[
+    [
+        "name",
+        "year",
+        "num_votes",
+        "avg_rating",
+        "bayes_rating",
+        "bgg_rank",
+        "rec_rating",
+        "rec_rank",
+        "cooperative",
+    ]
+]
