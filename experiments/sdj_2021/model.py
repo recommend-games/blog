@@ -16,7 +16,11 @@
 # %%
 import pandas as pd
 
-from sklearn.feature_extraction.text import CountVectorizer
+from pytility import clear_list
+from sklearn.linear_model import LogisticRegressionCV
+from sklearn.metrics import classification_report
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MultiLabelBinarizer
 
 # %load_ext nb_black
 # %load_ext lab_black
@@ -55,11 +59,30 @@ data = games[games.shortlist | games.alt_candidate].copy()
 data.shape
 
 # %%
-categories = data.game_type.str.cat(data.category, sep=",", na_rep="").str.cat(
-    data.mechanic, sep=",", na_rep=""
+categories = (
+    data.game_type.str.cat(data.category, sep=",", na_rep="")
+    .str.cat(data.mechanic, sep=",", na_rep="")
+    .apply(lambda x: clear_list(x.split(sep=",")) if isinstance(x, str) else [])
 )
 
 # %%
-cv = CountVectorizer(binary=True, min_df=10)
-values = cv.fit_transform(categories.fillna(""))
+mlb = MultiLabelBinarizer()
+values = mlb.fit_transform(categories)
 values.shape
+
+# %%
+X_train, X_test, y_train, y_test = train_test_split(
+    values, data.shortlist, test_size=0.2
+)
+
+# %%
+lr = LogisticRegressionCV(
+    class_weight="balanced", max_iter=100_000, scoring="balanced_accuracy"
+)
+lr.fit(X_train, y_train)
+
+# %%
+y_pred = lr.predict(X_test)
+
+# %%
+print(classification_report(y_test, y_pred))
