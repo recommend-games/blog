@@ -27,20 +27,12 @@ from sklearn.ensemble import (
 )
 from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.gaussian_process.kernels import RBF
-from sklearn.linear_model import (
-    BayesianRidge,
-    ElasticNetCV,
-    GammaRegressor,
-    Huber,
-    LassoLarsCV,
-    LogisticRegressionCV,
-    RidgeClassifierCV,
-)
+from sklearn.linear_model import LogisticRegressionCV, RidgeClassifierCV
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import BernoulliNB, GaussianNB, MultinomialNB
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.neural_network import BernoulliRBM, MLPClassifier
+from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import MultiLabelBinarizer
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier, ExtraTreeClassifier
@@ -133,6 +125,21 @@ models = (
         max_iter=1_000_000,
         scoring="balanced_accuracy",
     ),
+    RidgeClassifierCV(class_weight="balanced"),
+    BernoulliNB(),
+    GaussianNB(),
+    MultinomialNB(),
+    KNeighborsClassifier(),
+    MLPClassifier(
+        hidden_layer_sizes=(
+            200,
+            200,
+        ),
+        max_iter=100_000,
+    ),
+    SVC(),
+    DecisionTreeClassifier(),
+    ExtraTreeClassifier(),
 )
 
 # %%
