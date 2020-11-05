@@ -17,19 +17,33 @@
 import pandas as pd
 
 from pytility import clear_list
-from sklearn.linear_model import LogisticRegressionCV
-from sklearn.neural_network import MLPClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
+from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
+from sklearn.ensemble import (
+    AdaBoostClassifier,
+    BaggingClassifier,
+    GradientBoostingClassifier,
+    IsolationForest,
+    RandomForestClassifier,
+)
 from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.gaussian_process.kernels import RBF
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
+from sklearn.linear_model import (
+    BayesianRidge,
+    ElasticNetCV,
+    GammaRegressor,
+    Huber,
+    LassoLarsCV,
+    LogisticRegressionCV,
+    RidgeClassifierCV,
+)
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import BernoulliNB, GaussianNB, MultinomialNB
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.neural_network import BernoulliRBM, MLPClassifier
 from sklearn.preprocessing import MultiLabelBinarizer
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier, ExtraTreeClassifier
 
 # %load_ext nb_black
 # %load_ext lab_black
@@ -83,9 +97,6 @@ values.shape
 all_data = pd.concat((data, pd.DataFrame(data=values, columns=mlb.classes_)), axis=1)
 
 # %%
-data.columns
-
-# %%
 features = [
     "min_players",
     "max_players",
@@ -109,15 +120,17 @@ X_train, X_test, y_train, y_test = train_test_split(
 X_train.shape, X_test.shape
 
 # %%
-lr = LogisticRegressionCV(
-    class_weight="balanced",
-    max_iter=1_000_000,
-    scoring="balanced_accuracy",
+models = (
+    LogisticRegressionCV(
+        class_weight="balanced",
+        max_iter=1_000_000,
+        scoring="balanced_accuracy",
+    ),
 )
-lr.fit(X_train, y_train)
 
 # %%
-y_pred = lr.predict(X_test)
-
-# %%
-print(classification_report(y_test, y_pred))
+for model in models:
+    model.fit(X_train, y_train)
+    y_pred = model.predict(X_test)
+    print(model)
+    print(classification_report(y_test, y_pred))
