@@ -121,6 +121,13 @@ X_train.shape, X_test.shape
 
 # %%
 models = (
+    QuadraticDiscriminantAnalysis(),
+    AdaBoostClassifier(n_estimators=100),
+    BaggingClassifier(n_estimators=100),
+    GradientBoostingClassifier(n_estimators=100),
+    IsolationForest(n_estimators=100),
+    RandomForestClassifier(n_estimators=100),
+    GaussianProcessClassifier(1.0 * RBF(1.0)),
     LogisticRegressionCV(
         class_weight="balanced",
         max_iter=1_000_000,
