@@ -37,6 +37,8 @@ from sklearn.preprocessing import MultiLabelBinarizer
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier, ExtraTreeClassifier
 
+SEED = 23
+
 # %load_ext nb_black
 # %load_ext lab_black
 
@@ -48,19 +50,28 @@ games = pd.read_csv(
 games.shape
 
 # %%
-nominated = pd.concat(
-    (
-        pd.read_csv("sdj.csv", index_col="bgg_id"),
-        pd.read_csv("ksdj.csv", index_col="bgg_id"),
-    )
+sdj = pd.read_csv(
+    "sdj.csv",
+    dtype={"winner": bool, "nominated": bool, "recommended": bool, "sonderpreis": str},
 )
-nominated.shape
+sdj["award"] = "sdj"
+ksdj = pd.read_csv(
+    "ksdj.csv",
+    dtype={"winner": bool, "nominated": bool, "recommended": bool, "sonderpreis": str},
+)
+ksdj["award"] = "ksdj"
+sdj = pd.concat((sdj, ksdj))
+sdj.shape
 
 # %%
-games["shortlist"] = games.index.isin(nominated.index)
+sdj.sample(10, random_state=SEED)
 
 # %%
-games.shortlist
+games["shortlist"] = games.index.isin(sdj[sdj.winner | sdj.nominated].bgg_id)
+games["longlist"] = games.index.isin(sdj.bgg_id)
+
+# %%
+games.shortlist.sum(), games.longlist.sum()
 
 # %%
 alt_candidates = pd.read_csv("alt_candidates.csv", index_col="bgg_id")
