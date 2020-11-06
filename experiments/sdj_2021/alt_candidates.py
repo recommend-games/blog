@@ -14,6 +14,8 @@
 # ---
 
 # %%
+from itertools import islice
+
 import pandas as pd
 import requests
 
@@ -23,25 +25,35 @@ SEED = 23
 # %load_ext lab_black
 
 # %%
-def sdj_candidates(year):
-    print(f"Processig {year}...")
+def sdj_candidates(year, **params):
     url = "https://recommend.games/api/games/recommend/"
-    params = {
-        "user": "S_d_J",
-        "year__gte": year,
-        "year__lte": year,
-        "exclude_clusters": False,
-        "exclude_known": True,
-        "exclude_owned": False,
-    }
-    response = requests.get(url, params)
-    return pd.DataFrame.from_records(response.json()["results"], index="bgg_id")[
-        ["name", "year"]
-    ]
+    params["year__gte"] = year
+    params["year__lte"] = year
+    params.setdefault("user", "S_d_J")
+    params.setdefault("exclude_clusters", False)
+    params.setdefault("exclude_known", True)
+    params.setdefault("exclude_owned", False)
+    params.setdefault("page", 1)
+
+    while True:
+        print(f"Requesting page {params['page']}")
+        response = requests.get(url, params).json()
+        if not response.get("results"):
+            return
+        yield from response["results"]
+        if not response.get("next"):
+            return
+        params["page"] += 1
+
+
+def sdj_candidates_df(year, num=100, **params):
+    print(f"Processig {year}...")
+    records = islice(sdj_candidates(year, **params), num)
+    return pd.DataFrame.from_records(records, index="bgg_id")[["name", "year"]]
 
 
 # %%
-candidates = pd.concat(sdj_candidates(year).head(25) for year in range(1979, 2019))
+candidates = pd.concat(sdj_candidates_df(year) for year in range(1979, 2019))
 
 # %%
 candidates.sample(10, random_state=SEED)
