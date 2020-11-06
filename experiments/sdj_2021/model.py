@@ -81,7 +81,7 @@ alt_candidates.shape
 games["alt_candidate"] = games.index.isin(alt_candidates.index)
 
 # %%
-data = games[games.shortlist | games.alt_candidate].copy().reset_index()
+data = games[games.longlist | games.alt_candidate].copy().reset_index()
 data.shape
 
 # %%
@@ -116,9 +116,9 @@ features = [
 ] + list(mlb.classes_)
 
 # %%
-in_data = all_data[features + ["shortlist"]].dropna()
+in_data = all_data[features + ["longlist"]].dropna()
 X_train, X_test, y_train, y_test = train_test_split(
-    in_data[features], in_data.shortlist, test_size=0.2
+    in_data[features], in_data.longlist, test_size=0.2
 )
 X_train.shape, X_test.shape
 
