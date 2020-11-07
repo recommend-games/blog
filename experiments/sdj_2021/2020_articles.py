@@ -22,7 +22,6 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-from board_game_recommender import BGGRecommender
 from pytility import arg_to_iter, parse_int
 
 # %load_ext nb_black
@@ -49,7 +48,6 @@ regex = re.compile(r"\{\{%\s*game\s*(\d+)\s*%\}\}([^{]+)\{\{%\s*/game\s*%\}\}")
 # %%
 directory = Path("../../content/posts/").resolve()
 out_path = Path("2020_articles.csv").resolve()
-rec_path = Path("../../../recommend-games-server/data/recommender_bgg/").resolve()
 
 # %%
 paths = directory.glob("sdj*/*.md")
@@ -61,10 +59,6 @@ with out_path.open("w", newline="") as out_file:
     for bgg_id, name, path in games_in_articles(paths):
         comment = f"From article <{path}>"
         writer.writerow((bgg_id, name, comment))
-
-# %%
-rec = BGGRecommender.load(rec_path)
-rec
 
 # %%
 include = pd.read_csv("include.csv", index_col="bgg_id")
@@ -82,6 +76,7 @@ params = {
     "min_players__lte": 3,
     "max_time__lte": 60,
     "min_age__lte": 14,
+    "include": ",".join(map(str, include.index)),
     "exclude": ",".join(map(str, exclude.index)),
 }
 
@@ -90,6 +85,7 @@ response = requests.get(url, params)
 
 # %%
 candidates = pd.DataFrame.from_records(response.json()["results"], index="bgg_id")
+candidates.shape
 
 # %%
 candidates[
