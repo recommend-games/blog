@@ -97,7 +97,7 @@ candidates[
         "bayes_rating",
         "bgg_rank",
         "rec_rating",
-        "rec_rank",
+        "complexity",
         "cooperative",
     ]
 ]
