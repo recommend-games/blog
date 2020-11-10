@@ -9,7 +9,7 @@ publishdir: public
 staticDir: static
 themesDir: themes
 
-title: Data & Games
+title: Analysis Paralysis
 canonifyurls: true
 
 DefaultContentLanguage: en
@@ -22,7 +22,7 @@ googleAnalytics: UA-128891980-1
 enableRobotsTXT: true
 
 Params:
-  subtitle: The Recommend.Games blog on board game analyses
+  subtitle: The Recommend.Games blog where data science meets board games
   mainSections:
     - post
     - posts
