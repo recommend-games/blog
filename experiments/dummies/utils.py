@@ -77,3 +77,9 @@ def dfs_from_repo(repo, directories, files):
                     "blob": blob,
                     "date": commit.authored_datetime,
                 }
+
+
+def bayes(avg_rating, num_rating, dummy_value, num_dummy):
+    return (avg_rating * num_rating + dummy_value * num_dummy) / (
+        num_rating + num_dummy
+    )

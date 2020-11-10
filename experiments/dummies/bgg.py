@@ -28,7 +28,7 @@ import pandas as pd
 from git import Repo
 from scipy.optimize import minimize
 
-from utils import dfs_from_repo
+from utils import bayes, dfs_from_repo
 
 LOGGER = logging.getLogger(__name__)
 
@@ -43,12 +43,6 @@ logging.basicConfig(
 # %load_ext lab_black
 
 # %%
-def bayes(avg_rating, num_rating, dummy_value, num_dummy):
-    return (avg_rating * num_rating + dummy_value * num_dummy) / (
-        num_rating + num_dummy
-    )
-
-
 def target_mse(num_dummy, dummy_value, data):
     return np.linalg.norm(
         data.bayes_rating
