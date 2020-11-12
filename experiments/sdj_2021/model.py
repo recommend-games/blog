@@ -14,9 +14,11 @@
 # ---
 
 # %%
+import json
+
 import pandas as pd
 
-from pytility import clear_list
+from pytility import arg_to_iter, clear_list, parse_int
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from sklearn.ensemble import (
     AdaBoostClassifier,
@@ -41,6 +43,14 @@ SEED = 23
 
 # %load_ext nb_black
 # %load_ext lab_black
+
+# %%
+with open("../categories.json") as file:
+    categories = json.load(file)
+with open("../game_types.json") as file:
+    game_types = json.load(file)
+with open("../mechanics.json") as file:
+    mechanics = json.load(file)
 
 # %%
 games = pd.read_csv(
@@ -84,20 +94,50 @@ games["alt_candidate"] = games.index.isin(alt_candidates.index)
 data = games[games.longlist | games.alt_candidate].copy().reset_index()
 data.shape
 
+
 # %%
-categories = (
+def map_id(id_, categories=categories, game_types=game_types, mechanics=mechanics):
+    id_ = parse_int(id_)
+    if not id_:
+        return None
+    id_ = str(id_)
+    if name := categories.get(id_):
+        return f"Category: {name}"
+    if name := game_types.get(id_):
+        return f"Game type: {name}"
+    if name := mechanics.get(id_):
+        return f"Mechanic: {name}"
+    return id_
+
+
+def map_ids(ids, categories=categories, game_types=game_types, mechanics=mechanics):
+    return list(filter(None, map(map_id, arg_to_iter(ids))))
+
+
+# %%
+concatenated = (
     data.game_type.str.cat(data.category, sep=",", na_rep="")
     .str.cat(data.mechanic, sep=",", na_rep="")
     .apply(lambda x: clear_list(x.split(sep=",")) if isinstance(x, str) else [])
+    .apply(map_ids)
 )
 
 # %%
 mlb = MultiLabelBinarizer()
-values = mlb.fit_transform(categories)
+values = mlb.fit_transform(concatenated)
 values.shape
 
 # %%
-all_data = pd.concat((data, pd.DataFrame(data=values, columns=mlb.classes_)), axis=1)
+values_df = pd.DataFrame(data=values, columns=mlb.classes_)
+values_df.shape
+
+# %%
+threshold = len(values_df) / 100
+values_df.drop(columns=values_df.columns[values_df.sum() < threshold], inplace=True)
+values_df.shape
+
+# %%
+all_data = pd.concat((data, values_df), axis=1)
 
 # %%
 features = [
@@ -113,7 +153,7 @@ features = [
     "max_time",
     "cooperative",
     "complexity",
-] + list(mlb.classes_)
+] + list(values_df.columns)
 
 # %%
 in_data = all_data[features + ["longlist"]].dropna()
@@ -123,19 +163,21 @@ X_train, X_test, y_train, y_test = train_test_split(
 X_train.shape, X_test.shape
 
 # %%
+rf = RandomForestClassifier(n_estimators=100)
+lr = LogisticRegressionCV(
+    class_weight="balanced",
+    max_iter=1_000_000,
+    scoring="balanced_accuracy",
+)
 models = (
     QuadraticDiscriminantAnalysis(),
     AdaBoostClassifier(n_estimators=100),
     BaggingClassifier(n_estimators=100),
     GradientBoostingClassifier(n_estimators=100),
     IsolationForest(n_estimators=100),
-    RandomForestClassifier(n_estimators=100),
+    rf,
     GaussianProcessClassifier(1.0 * RBF(1.0)),
-    LogisticRegressionCV(
-        class_weight="balanced",
-        max_iter=1_000_000,
-        scoring="balanced_accuracy",
-    ),
+    lr,
     RidgeClassifierCV(class_weight="balanced"),
     BernoulliNB(),
     GaussianNB(),
@@ -159,3 +201,11 @@ for model in models:
     y_pred = model.predict(X_test)
     print(model)
     print(classification_report(y_test, y_pred))
+
+# %%
+rf.fit(X_train, y_train)
+sorted(zip(rf.feature_importances_, features), reverse=True)
+
+# %%
+lr.fit(X_train, y_train)
+sorted(zip(lr.coef_[0, :], features), reverse=True)
