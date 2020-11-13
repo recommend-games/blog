@@ -17,6 +17,7 @@ board-game-recommender = "*"
 requests = "*"
 scikit-learn = "*"
 numpy = "*"
+imbalanced-learn = "*"
 
 [requires]
 python_version = "3.8"
