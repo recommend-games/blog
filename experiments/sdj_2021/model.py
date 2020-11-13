@@ -19,6 +19,8 @@ import json
 import pandas as pd
 
 from pytility import arg_to_iter, clear_list, parse_int
+from imblearn.ensemble import BalancedRandomForestClassifier, RUSBoostClassifier
+from imblearn.metrics import classification_report_imbalanced
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from sklearn.ensemble import (
     AdaBoostClassifier,
@@ -163,36 +165,40 @@ X_train, X_test, y_train, y_test = train_test_split(
 X_train.shape, X_test.shape
 
 # %%
-rf = RandomForestClassifier(n_estimators=100)
 lr = LogisticRegressionCV(
     class_weight="balanced",
     max_iter=1_000_000,
     scoring="balanced_accuracy",
 )
+rf = RandomForestClassifier(n_estimators=100)
+brf = BalancedRandomForestClassifier(n_estimators=100)
+rusb = RUSBoostClassifier(n_estimators=200, algorithm="SAMME.R")
 models = (
-    QuadraticDiscriminantAnalysis(),
-    AdaBoostClassifier(n_estimators=100),
-    BaggingClassifier(n_estimators=100),
-    GradientBoostingClassifier(n_estimators=100),
-    IsolationForest(n_estimators=100),
-    rf,
-    GaussianProcessClassifier(1.0 * RBF(1.0)),
     lr,
-    RidgeClassifierCV(class_weight="balanced"),
-    BernoulliNB(),
-    GaussianNB(),
-    MultinomialNB(),
-    KNeighborsClassifier(),
-    MLPClassifier(
-        hidden_layer_sizes=(
-            200,
-            200,
-        ),
-        max_iter=100_000,
-    ),
-    SVC(),
-    DecisionTreeClassifier(),
-    ExtraTreeClassifier(),
+    rf,
+    brf,
+    rusb,
+    # QuadraticDiscriminantAnalysis(),
+    # AdaBoostClassifier(n_estimators=100),
+    # BaggingClassifier(n_estimators=100),
+    # GradientBoostingClassifier(n_estimators=100),
+    # IsolationForest(n_estimators=100),
+    # GaussianProcessClassifier(1.0 * RBF(1.0)),
+    # RidgeClassifierCV(class_weight="balanced"),
+    # BernoulliNB(),
+    # GaussianNB(),
+    # MultinomialNB(),
+    # KNeighborsClassifier(),
+    # MLPClassifier(
+    #    hidden_layer_sizes=(
+    #        200,
+    #        200,
+    #    ),
+    #    max_iter=100_000,
+    # ),
+    # SVC(),
+    # DecisionTreeClassifier(),
+    # ExtraTreeClassifier(),
 )
 
 # %%
@@ -201,11 +207,16 @@ for model in models:
     y_pred = model.predict(X_test)
     print(model)
     print(classification_report(y_test, y_pred))
+    print(classification_report_imbalanced(y_test, y_pred))
 
 # %%
-rf.fit(X_train, y_train)
+sorted(zip(lr.coef_[0, :], features), reverse=True)
+
+# %%
 sorted(zip(rf.feature_importances_, features), reverse=True)
 
 # %%
-lr.fit(X_train, y_train)
-sorted(zip(lr.coef_[0, :], features), reverse=True)
+sorted(zip(brf.feature_importances_, features), reverse=True)
+
+# %%
+sorted(zip(rusb.feature_importances_, features), reverse=True)
