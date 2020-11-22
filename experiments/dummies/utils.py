@@ -8,9 +8,11 @@ import os
 
 from itertools import product
 
+import numpy as np
 import pandas as pd
 
 from pytility import arg_to_iter
+from scipy.optimize import minimize
 
 
 LOGGER = logging.getLogger(__name__)
@@ -83,3 +85,45 @@ def bayes(avg_rating, num_rating, dummy_value, num_dummy):
     return (avg_rating * num_rating + dummy_value * num_dummy) / (
         num_rating + num_dummy
     )
+
+
+def target_mse(num_dummy, dummy_value, data):
+    return np.linalg.norm(
+        data.bayes_rating
+        - bayes(data.avg_rating, data.num_votes, dummy_value, num_dummy)
+    )
+
+
+def process_games(games, x0=np.array([1000]), dummy_value=5.5):
+    result = minimize(
+        fun=lambda x: target_mse(
+            num_dummy=x[0],
+            dummy_value=dummy_value,
+            data=games[
+                games.bayes_rating.notna()
+                & games.avg_rating.notna()
+                & games.num_votes.notna()
+            ],
+        ),
+        x0=x0,
+        method="Nelder-Mead",
+        options={
+            "xatol": 1e-12,
+            "maxiter": 10_000,
+            "maxfev": 10_000,
+            "disp": True,
+        },
+    )
+
+    num_votes_total = games.num_votes.sum()
+    avg_rating = (games.avg_rating * games.num_votes).sum() / num_votes_total
+
+    return {
+        "num_games": len(games),
+        "num_games_ranked": int(games.bayes_rating.notna().sum()),
+        "num_votes_total": int(num_votes_total),
+        "avg_rating": avg_rating,
+        "num_votes_dummy": result.x[0],
+        "min_mse": result.fun,
+        # "result": result,
+    }
