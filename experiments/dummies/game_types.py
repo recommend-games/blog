@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.6.0
+#       jupytext_version: 1.7.1
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -97,3 +97,16 @@ data[column_score] = bayes(
 data[column_rank] = data[column_score].rank(method="min", ascending=False)
 data.sort_values(by=column_rank, inplace=True)
 data[["name", column_score, column_rank, "year", "avg_rating", "num_votes"]].head(10)
+
+# %%
+rankings_path = Path("../../../board-game-data/rankings/bgg/bgg_strategy/").resolve()
+latest_ranking_path = max(rankings_path.glob("*.csv"))
+latest_ranking = pd.read_csv(latest_ranking_path, index_col="bgg_id")
+latest_ranking.shape
+
+# %%
+games.join(
+    other=latest_ranking.rename(columns={"score": "bayes_rating"}),
+    how="outer",
+    rsuffix="_strategy",
+)
