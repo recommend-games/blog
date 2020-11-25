@@ -54,13 +54,23 @@ game_types = {
     "5496": "Thematic",
     "4664": "War Game",
 }
+game_type_suffixes = {
+    "abstract": "Abstract Game",
+    "children": "Children's Game",
+    "customizable": "Customizable",
+    "family": "Family Game",
+    "party": "Party Game",
+    "strategy": "Strategy Game",
+    "thematic": "Thematic",
+    "war": "War Game",
+}
 
 # %%
 df = pd.read_csv(data_path / "scraped" / "bgg_GameItem.csv", index_col="bgg_id")
 df.shape
 
 # %%
-df.sample(5, random_state=SEED)
+df.sample(5, random_state=SEED).T
 
 # %%
 mlb = MultiLabelBinarizer()
@@ -84,23 +94,6 @@ games = df.join(gt_df[list(game_types)].rename(columns=game_types))
 games.shape
 
 # %%
-game_type = "Strategy Game"
-column_score, column_rank = f"{game_type} bayes", f"{game_type} rank"
-data = games[games[game_type] == 1].copy()
-print(len(data))
-total = data.num_votes.sum()
-print(total)
-data[column_score] = bayes(
-    avg_rating=data.avg_rating,
-    num_rating=data.num_votes,
-    dummy_value=5.5,
-    num_dummy=total / 1_000,
-)
-data[column_rank] = data[column_score].rank(method="min", ascending=False)
-data.sort_values(by=column_rank, inplace=True)
-data[["name", column_score, column_rank, "year", "avg_rating", "num_votes"]].head(10)
-
-# %%
 rankings_path = data_path / "rankings" / "bgg"
 game_type_suffixes = []
 for ranking_dir in rankings_path.glob("bgg_*"):
@@ -121,14 +114,42 @@ for ranking_dir in rankings_path.glob("bgg_*"):
 process_games(games)
 
 # %%
+rankings = {}
 for game_type in game_type_suffixes:
-    print(game_type)
-    print(
-        json.dumps(
-            process_games(
-                games[games[f"rank_{game_type}"].notna()],
-                bayes_rating=f"bayes_rating_{game_type}",
-            ),
-            indent=4,
-        )
+    game_type_human = game_type_suffixes[game_type]
+    print(f"{game_type_human} ranking:")
+
+    data = games[games[game_type_suffixes[game_type]] == 1].copy()
+    result = process_games(games=data, bayes_rating=f"bayes_rating_{game_type}")
+
+    bayes_est = bayes(
+        avg_rating=data.avg_rating,
+        num_rating=data.num_votes,
+        dummy_value=5.5,
+        num_dummy=result["num_votes_dummy"],
     )
+    data[f"bayes_rating_{game_type}_est"] = bayes_est
+    data[f"rank_{game_type}_est"] = bayes_est.rank(method="min", ascending=False)
+
+    result["correlation"] = data[f"bayes_rating_{game_type}"].corr(
+        other=bayes_est, method="spearman"
+    )
+
+    print(json.dumps(result, indent=4))
+    print("#" * 80)
+
+    rankings[game_type] = data[data[f"rank_{game_type}"].notna()][
+        [
+            "name",
+            "year",
+            f"bayes_rating_{game_type}",
+            f"bayes_rating_{game_type}_est",
+            f"rank_{game_type}",
+            f"rank_{game_type}_est",
+            "avg_rating",
+            "num_votes",
+        ]
+    ].sort_values(f"rank_{game_type}_est")
+
+# %%
+rankings["strategy"].head(50)
