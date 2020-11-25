@@ -14,6 +14,7 @@
 # ---
 
 # %%
+import json
 import logging
 import sys
 
@@ -23,7 +24,7 @@ import pandas as pd
 
 from sklearn.preprocessing import MultiLabelBinarizer
 
-from utils import bayes
+from utils import bayes, process_games
 
 LOGGER = logging.getLogger(__name__)
 SEED = 23
@@ -39,9 +40,10 @@ logging.basicConfig(
 # %load_ext lab_black
 
 # %%
-path = Path("../../../board-game-data/scraped/bgg_GameItem.csv").resolve()
+data_path = Path("../../../board-game-data").resolve()
 
 # %%
+# TODO load from JSON
 game_types = {
     "4666": "Abstract Game",
     "4665": "Children's Game",
@@ -54,7 +56,7 @@ game_types = {
 }
 
 # %%
-df = pd.read_csv(path, index_col="bgg_id")
+df = pd.read_csv(data_path / "scraped" / "bgg_GameItem.csv", index_col="bgg_id")
 df.shape
 
 # %%
@@ -99,14 +101,34 @@ data.sort_values(by=column_rank, inplace=True)
 data[["name", column_score, column_rank, "year", "avg_rating", "num_votes"]].head(10)
 
 # %%
-rankings_path = Path("../../../board-game-data/rankings/bgg/bgg_strategy/").resolve()
-latest_ranking_path = max(rankings_path.glob("*.csv"))
-latest_ranking = pd.read_csv(latest_ranking_path, index_col="bgg_id")
-latest_ranking.shape
+rankings_path = data_path / "rankings" / "bgg"
+game_type_suffixes = []
+for ranking_dir in rankings_path.glob("bgg_*"):
+    game_type = ranking_dir.stem[4:]
+    game_type_suffixes.append(game_type)
+    latest_ranking_path = max(ranking_dir.glob("*.csv"))
+    print(ranking_dir, game_type, latest_ranking_path.stem)
+    latest_ranking = pd.read_csv(latest_ranking_path, index_col="bgg_id")
+    print(latest_ranking.shape)
+    games = games.join(
+        other=latest_ranking.rename(columns={"score": "bayes_rating"}),
+        how="outer",
+        rsuffix=f"_{game_type}",
+    )
+    print(games.shape)
 
 # %%
-games.join(
-    other=latest_ranking.rename(columns={"score": "bayes_rating"}),
-    how="outer",
-    rsuffix="_strategy",
-)
+process_games(games)
+
+# %%
+for game_type in game_type_suffixes:
+    print(game_type)
+    print(
+        json.dumps(
+            process_games(
+                games[games[f"rank_{game_type}"].notna()],
+                bayes_rating=f"bayes_rating_{game_type}",
+            ),
+            indent=4,
+        )
+    )

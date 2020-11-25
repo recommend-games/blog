@@ -87,23 +87,33 @@ def bayes(avg_rating, num_rating, dummy_value, num_dummy):
     )
 
 
-def target_mse(num_dummy, dummy_value, data):
+def target_mse(num_dummy, dummy_value, bayes_rating, avg_rating, num_votes):
     return np.linalg.norm(
-        data.bayes_rating
-        - bayes(data.avg_rating, data.num_votes, dummy_value, num_dummy)
+        bayes_rating - bayes(avg_rating, num_votes, dummy_value, num_dummy)
     )
 
 
-def process_games(games, x0=np.array([1000]), dummy_value=5.5):
+def process_games(
+    games,
+    x0=np.array([1000]),
+    dummy_value=5.5,
+    bayes_rating="bayes_rating",
+    avg_rating="avg_rating",
+    num_votes="num_votes",
+):
+    data = games[
+        games[bayes_rating].notna()
+        & games[avg_rating].notna()
+        & games[num_votes].notna()
+    ]
+
     result = minimize(
         fun=lambda x: target_mse(
             num_dummy=x[0],
             dummy_value=dummy_value,
-            data=games[
-                games.bayes_rating.notna()
-                & games.avg_rating.notna()
-                & games.num_votes.notna()
-            ],
+            bayes_rating=data[bayes_rating],
+            avg_rating=data[avg_rating],
+            num_votes=data[num_votes],
         ),
         x0=x0,
         method="Nelder-Mead",
@@ -115,15 +125,16 @@ def process_games(games, x0=np.array([1000]), dummy_value=5.5):
         },
     )
 
-    num_votes_total = games.num_votes.sum()
-    avg_rating = (games.avg_rating * games.num_votes).sum() / num_votes_total
+    num_votes_total = games[num_votes].sum()
+    avg_rating = (games[avg_rating] * games[num_votes]).sum() / num_votes_total
 
     return {
         "num_games": len(games),
-        "num_games_ranked": int(games.bayes_rating.notna().sum()),
+        "num_games_ranked": int(games[bayes_rating].notna().sum()),
         "num_votes_total": int(num_votes_total),
         "avg_rating": avg_rating,
         "num_votes_dummy": result.x[0],
         "min_mse": result.fun,
+        "votes_per_dummy": num_votes_total / result.x[0],
         # "result": result,
     }
