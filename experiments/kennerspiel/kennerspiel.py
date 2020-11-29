@@ -53,7 +53,10 @@ games["sdj"] = games.index.isin(
         ]
     )
 )
-games["ksdj"] = games.index.isin(set(ksdj.bgg_id))
+games["ksdj"] = games.index.isin(
+    set(ksdj.bgg_id)
+    | set(sdj.bgg_id[sdj.sonderpreis.isin({"Complex Game", "Game of the Year Plus"})])
+)
 games.sdj.sum(), games.ksdj.sum()
 
 # %%
