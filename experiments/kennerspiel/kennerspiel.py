@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # ---
 # jupyter:
 #   jupytext:
@@ -18,9 +19,14 @@ import json
 
 import numpy as np
 import pandas as pd
+import seaborn as sns
 
+from bokeh.plotting import figure, output_notebook, show
 from sklearn.linear_model import LogisticRegressionCV
 from sklearn.preprocessing import MultiLabelBinarizer
+from sklearn.ensemble import RandomForestClassifier
+
+output_notebook()
 
 # %load_ext nb_black
 # %load_ext lab_black
@@ -39,7 +45,14 @@ games = pd.read_csv(
 sdj.shape, ksdj.shape, games.shape
 
 # %%
-games["sdj"] = games.index.isin(set(sdj.bgg_id[sdj.jahrgang >= 2011]))
+# there was no separate recommendation list for the two awards in 2011
+games["sdj"] = games.index.isin(
+    set(
+        sdj.bgg_id[
+            (sdj.jahrgang > 2011) | ((sdj.jahrgang == 2011) & (sdj.nominated == 1))
+        ]
+    )
+)
 games["ksdj"] = games.index.isin(set(ksdj.bgg_id))
 games.sdj.sum(), games.ksdj.sum()
 
@@ -79,14 +92,64 @@ features = [
 ] + list(mlb.classes_)
 
 # %%
-model = LogisticRegressionCV(class_weight="balanced", max_iter=10_000)
-model.fit(data[features], data.ksdj)
+lr = LogisticRegressionCV(class_weight="balanced", max_iter=10_000)
+lr.fit(data[features], data.ksdj)
 
 # %%
-dict(zip(features, model.coef_[0, :]))
+dict(zip(features, lr.coef_[0, :]))
 
 # %%
-model.score(data[features], data.ksdj)
+lr.score(data[features], data.ksdj)
 
 # %%
 data[features + ["ksdj"]].corr()
+
+# %%
+rfc = RandomForestClassifier(class_weight="balanced", n_jobs=-1)
+rfc.fit(data[features], data.ksdj)
+{
+    feature: importance
+    for importance, feature in sorted(
+        zip(rfc.feature_importances_, features), reverse=True
+    )
+}
+
+# %%
+TOOLS = "hover,crosshair,pan,wheel_zoom,zoom_in,zoom_out,box_zoom,undo,redo,reset,tap,save,box_select,poly_select,lasso_select,"
+
+plot = figure(
+    tools=TOOLS,
+    tooltips=[
+        ("name", "@name"),
+        ("year", "@year"),
+        ("complexity", "@complexity"),
+        ("time", "@min_time–@max_time"),
+    ],
+)
+
+data["colors"] = ["#193F4A" if kennerspiel else "#E30613" for kennerspiel in data.ksdj]
+plot.scatter(
+    source=data,
+    x="complexity",
+    y="max_time",
+    color="colors",
+    # alpha=0.9,
+    size=8,
+)
+show(plot)
+
+# %%
+data[lr.predict(data[features]) != data.ksdj][
+    [
+        "name",
+        "year",
+        "complexity",
+        "min_players",
+        "max_players",
+        "min_time",
+        "max_time",
+        "min_age",
+        "sdj",
+        "ksdj",
+    ]
+]

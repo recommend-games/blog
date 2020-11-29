@@ -17,6 +17,7 @@ numpy = "*"
 scipy = "*"
 pytility = "*"
 scikit-learn = "*"
+bokeh = "*"
 
 [requires]
 python_version = "3.8"
