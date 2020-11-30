@@ -17,6 +17,8 @@
 # %%
 import json
 
+from itertools import combinations
+
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -117,6 +119,26 @@ rfc.fit(data[features], data.ksdj)
     )
 }
 
+
+# %%
+def test_feature_pairs(data=data, features=features, target="ksdj"):
+    for pair in combinations(features, 2):
+        pair = list(pair)  # Pandas column selection requires lists
+        model = LogisticRegressionCV(
+            class_weight="balanced", scoring="f1", max_iter=10_000
+        )
+        model.fit(data[pair], data[target])
+        score = model.score(data[pair], data[target])
+        print(f"{score:.5f}: {pair[0]} & {pair[1]}")
+        yield pair, model, score
+
+
+# %%
+pair, model, score = max(
+    test_feature_pairs(features=set(features) - set(mlb.classes_)), key=lambda x: x[-1]
+)
+print(f"Best score: {score:.5f} for features {pair[0]} & {pair[1]}")
+
 # %%
 TOOLS = "hover,crosshair,pan,wheel_zoom,zoom_in,zoom_out,box_zoom,undo,redo,reset,tap,save,box_select,poly_select,lasso_select,"
 
@@ -133,8 +155,8 @@ plot = figure(
 data["colors"] = ["#193F4A" if kennerspiel else "#E30613" for kennerspiel in data.ksdj]
 plot.scatter(
     source=data,
-    x="complexity",
-    y="max_time",
+    x=pair[0],
+    y=pair[1],
     color="colors",
     # alpha=0.9,
     size=8,
