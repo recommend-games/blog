@@ -40,6 +40,10 @@ output_notebook()
 # %%
 with open("../game_types.json") as file:
     game_types = json.load(file)
+with open("../categories.json") as file:
+    categories = json.load(file)
+with open("../mechanics.json") as file:
+    mechanics = json.load(file)
 game_types
 
 # %%
@@ -70,12 +74,31 @@ data = games[games.sdj | games.ksdj].copy()
 data.shape
 
 # %%
-mlb = MultiLabelBinarizer()
-data[mlb.classes_] = mlb.fit_transform(
-    data.game_type.apply(lambda x: x.split(",") if isinstance(x, str) else []).apply(
-        lambda l: [game_types.get(x) for x in l]
-    )
+all_categories = data.game_type.str.cat(
+    data.mechanic.fillna(""), sep=",", na_rep=""
+).str.cat(data.category.fillna(""), sep=",", na_rep="")
+all_categories = all_categories.apply(
+    lambda x: [c for c in x.split(",") if c] if isinstance(x, str) else []
 )
+
+# %%
+mlb = MultiLabelBinarizer()
+category_values = mlb.fit_transform(all_categories)
+category_df = pd.DataFrame(data=category_values, columns=mlb.classes_, index=data.index)
+category_df.rename(
+    columns={k: f"Game type {v}" for k, v in game_types.items()}, inplace=True
+)
+category_df.rename(
+    columns={k: f"Category {v}" for k, v in categories.items()}, inplace=True
+)
+category_df.rename(
+    columns={k: f"Mechanic {v}" for k, v in mechanics.items()}, inplace=True
+)
+category_df.drop(columns=category_df.columns[category_df.mean() < 0.05], inplace=True)
+category_df.shape
+
+# %%
+data[category_df.columns] = category_df
 data.shape
 
 # %%
@@ -85,7 +108,7 @@ data["complexity"][data.complexity.isna()] = 2
 data.sample(5, random_state=SEED).T
 
 # %%
-features = [
+num_features = [
     "min_players",
     "max_players",
     "min_players_rec",
@@ -98,20 +121,25 @@ features = [
     "max_time",
     "cooperative",
     "complexity",
-] + list(mlb.classes_)
+]
+features = num_features + list(category_df.columns)
 
 # %%
-data[features + ["ksdj"]].corr()
+data[num_features + ["ksdj"]].corr()
 
 # %%
 lr = LogisticRegressionCV(class_weight="balanced", max_iter=10_000, random_state=SEED)
 lr.fit(data[features], data.ksdj)
 
 # %%
+lr.score(data[features], data.ksdj)
+
+# %%
 dict(zip(features, lr.coef_[0, :]))
 
 # %%
-lr.score(data[features], data.ksdj)
+for feature, score in zip(features, np.exp(lr.coef_[0]) - 1):
+    print(f"{score:+10.3%} change in odds ratio for one unit increase in {feature}")
 
 # %%
 data[lr.predict(data[features]) != data.ksdj][
@@ -157,15 +185,16 @@ def test_feature_pairs(data=data, features=features, target="ksdj"):
 
 
 # %%
-pair, model, score = max(
-    test_feature_pairs(features=set(features) - set(mlb.classes_)), key=lambda x: x[-1]
-)
+pair, model, score = max(test_feature_pairs(features=num_features), key=lambda x: x[-1])
 print(f"Best score: {score:.5f} for features {pair[0]} & {pair[1]}")
 
 # %%
-TOOLS = "hover,crosshair,pan,wheel_zoom,zoom_in,zoom_out,box_zoom,undo,redo,reset,tap,save,box_select,poly_select,lasso_select"
+TOOLS = "hover,crosshair,pan,wheel_zoom,zoom_in,zoom_out,box_zoom,reset,save,box_select"
 
 plot = figure(
+    title="Kennerspiel des Jahres",
+    x_axis_label=pair[0],
+    y_axis_label=pair[1],
     tools=TOOLS,
     tooltips=[
         ("name", "@name"),
@@ -182,7 +211,7 @@ data["marker"] = np.where(model.predict(data[pair]) == data.ksdj, "circle", "squ
 plot.scatter(
     source=data,
     x=pair[0],
-    y=jitter(pair[1], 0.5),
+    y=jitter(pair[1], width=0.25, distribution="normal"),
     color="color",
     marker="marker",
     # alpha=0.9,
