@@ -6,18 +6,18 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+bokeh = "*"
 jupyter = "*"
 jupyterlab = "*"
 jupytext = "*"
-nb-black = "*"
-seaborn = "*"
-pandas = "*"
 matplotlib = "*"
+nb-black = "*"
 numpy = "*"
-scipy = "*"
+pandas = "*"
 pytility = "*"
 scikit-learn = "*"
-bokeh = "*"
+scipy = "*"
+seaborn = "*"
 
 [requires]
 python_version = "3.8"
