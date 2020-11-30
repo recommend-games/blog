@@ -21,7 +21,6 @@ from itertools import combinations
 
 import numpy as np
 import pandas as pd
-import seaborn as sns
 
 from bokeh.models import Slope
 from bokeh.plotting import figure, output_notebook, show
