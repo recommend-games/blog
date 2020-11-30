@@ -27,13 +27,15 @@ from bokeh.models import Slope
 from bokeh.plotting import figure, output_notebook, show
 from bokeh.transform import jitter
 from sklearn.linear_model import LogisticRegressionCV
+from sklearn.metrics import classification_report, plot_roc_curve
+from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MultiLabelBinarizer
-from sklearn.ensemble import RandomForestClassifier
 
 SEED = 23
 
 output_notebook()
 
+# %matplotlib inline
 # %load_ext nb_black
 # %load_ext lab_black
 
@@ -94,7 +96,7 @@ category_df.rename(
 category_df.rename(
     columns={k: f"Mechanic {v}" for k, v in mechanics.items()}, inplace=True
 )
-category_df.drop(columns=category_df.columns[category_df.mean() < 0.05], inplace=True)
+category_df.drop(columns=category_df.columns[category_df.mean() < 0.1], inplace=True)
 category_df.shape
 
 # %%
@@ -111,10 +113,10 @@ data.sample(5, random_state=SEED).T
 num_features = [
     "min_players",
     "max_players",
-    "min_players_rec",
-    "max_players_rec",
-    "min_players_best",
-    "max_players_best",
+    # "min_players_rec",
+    # "max_players_rec",
+    # "min_players_best",
+    # "max_players_best",
     "min_age",
     # "min_age_rec",
     "min_time",
@@ -128,11 +130,29 @@ features = num_features + list(category_df.columns)
 data[num_features + ["ksdj"]].corr()
 
 # %%
-lr = LogisticRegressionCV(class_weight="balanced", max_iter=10_000, random_state=SEED)
-lr.fit(data[features], data.ksdj)
+X_train, X_test, y_train, y_test = train_test_split(
+    data[features],
+    data.ksdj,
+    test_size=0.2,
+    random_state=SEED,
+)
+X_train.shape, X_test.shape, y_train.shape, y_test.shape
 
 # %%
-lr.score(data[features], data.ksdj)
+lr = LogisticRegressionCV(
+    class_weight="balanced",
+    scoring="f1",
+    max_iter=10_000,
+    random_state=SEED,
+)
+lr.fit(X_train, y_train)
+
+# %%
+print(classification_report(y_test, lr.predict(X_test)))
+lr.score(X_train, y_train), lr.score(X_test, y_test)
+
+# %%
+plot_roc_curve(lr, X_test, y_test)
 
 # %%
 dict(zip(features, lr.coef_[0, :]))
@@ -156,16 +176,6 @@ data[lr.predict(data[features]) != data.ksdj][
         "ksdj",
     ]
 ]
-
-# %%
-rfc = RandomForestClassifier(class_weight="balanced", n_jobs=-1, random_state=SEED)
-rfc.fit(data[features], data.ksdj)
-{
-    feature: importance
-    for importance, feature in sorted(
-        zip(rfc.feature_importances_, features), reverse=True
-    )
-}
 
 
 # %%
