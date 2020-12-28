@@ -68,8 +68,13 @@ df.bgg_user_rating.hist(bins=10)
 (df.bgg_user_rating >= 8).mean()
 
 # %%
+cutoff = parse_date("2020-12-01T00:00Z")
+recent = df[df.index >= cutoff]
+recent.bgg_user_rating.describe()
+
+# %%
 positive = (
-    df[(df.index >= parse_date("2020-12-21T00:00Z")) & (df.bgg_user_rating > 8)]
+    recent[recent.bgg_user_rating >= recent.bgg_user_rating.quantile(0.75)]
     .groupby("bgg_id")
     .item_id.count()
 )
@@ -77,14 +82,15 @@ positive.sort_values(ascending=False)[:50]
 
 # %%
 negative = (
-    df[(df.index >= parse_date("2020-12-21T00:00Z")) & (df.bgg_user_rating < 6)]
+    recent[recent.bgg_user_rating <= recent.bgg_user_rating.quantile(0.25)]
     .groupby("bgg_id")
     .item_id.count()
 )
 negative.sort_values(ascending=False)[:50]
 
 # %%
-(positive - negative).sort_values(ascending=False)[:50]
+diff = (positive - negative).sort_values(ascending=False)
+diff[:50]
 
 # %% [markdown]
 # **Idea**: Discount that `positive - negative` score by rank according to number of ratings:
@@ -94,3 +100,13 @@ negative.sort_values(ascending=False)[:50]
 # ```
 #
 # That way, games with a lot of ratings will have their value heavily discounted (almost to zero), while games with very few ratings will get the full score.
+
+# %%
+games = pd.read_csv(
+    "../../../board-game-data/scraped/bgg_GameItem.csv", index_col="bgg_id"
+)
+games.shape
+
+# %%
+games["score"] = diff * games.num_votes.rank(pct=True, ascending=False)
+games.sort_values("score", ascending=False)[["name", "year", "score"]][:50]
