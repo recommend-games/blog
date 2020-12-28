@@ -8,7 +8,7 @@ verify_ssl = true
 [packages]
 bokeh = "*"
 jupyter = "*"
-jupyterlab = "<3.0.0"
+jupyterlab = "*"
 jupytext = "*"
 matplotlib = "*"
 nb-black = "*"
