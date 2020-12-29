@@ -156,3 +156,6 @@ for end_date in pd.date_range(
     charts["name"] = games["name"]
     print(charts[:10])
     print()
+
+# %% [markdown]
+# **Idea**: Use exponential decay. For each rating, calculate its weight through its age (e.g., `1` if it's been cast right now, `0.5` if a month ago, `0.25` if two months ago, etc). Then sum weights instead of just counting within window.
