@@ -172,7 +172,7 @@ def decay(
 ):
     anchor = pd.Timestamp(anchor) if anchor is not None else pd.Timestamp.utcnow()
     ages = (anchor - dates).total_seconds()
-    return np.exp(-np.log(2) * ages / halflife)
+    return np.exp2(-ages / halflife)
 
 
 # %%
