@@ -26,6 +26,13 @@ SEED = 23
 # %load_ext lab_black
 
 # %%
+games = pd.read_csv(
+    "../../../board-game-data/scraped/bgg_GameItem.csv", index_col="bgg_id"
+)
+games.shape
+
+
+# %%
 def process_ratings(
     lines, keys=("item_id", "bgg_id", "bgg_user_name", "bgg_user_rating", "updated_at")
 ):
@@ -53,7 +60,7 @@ except Exception:
 df.shape
 
 # %%
-df.sample(25, random_state=SEED)
+df.sample(10, random_state=SEED)
 
 # %%
 weeks = df.resample("W").item_id.count()
@@ -113,10 +120,22 @@ def calculate_charts(
 
 
 # %%
-# %%time
 charts = calculate_charts(df)
+charts["name"] = games["name"]
 print(charts.shape)
 charts[:50]
 
 # %%
-charts[-50:]
+charts[-10:]
+
+# %%
+for end_date in pd.date_range(
+    start=df.index.min().replace(hour=23, minute=59, second=59),
+    end=df.index.max(),
+    freq="M",
+):
+    print(f"Charts as of {end_date.strftime('%Y-%m-%d')}")
+    charts = calculate_charts(ratings=df, end_date=end_date)
+    charts["name"] = games["name"]
+    print(charts[:10])
+    print()
