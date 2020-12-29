@@ -128,35 +128,7 @@ def calculate_charts(
 # %%
 charts = calculate_charts(df)
 charts["name"] = games["name"]
-print(charts.shape)
-charts[:50]
-
-# %%
-charts[-10:]
-
-# %%
-for end_date in pd.date_range(
-    start=parse_date("2020-01-01T23:59:59", tzinfo=timezone.utc),
-    end=now(),
-    freq="M",
-):
-    print(f"Charts as of {end_date.strftime('%Y-%m-%d')}")
-    charts = calculate_charts(ratings=df, end_date=end_date)
-    charts["name"] = games["name"]
-    print(charts[:10])
-    print()
-
-# %%
-for end_date in pd.date_range(
-    start=parse_date("2020-10-01T23:59:59", tzinfo=timezone.utc),
-    end=now(),
-    freq="W",
-):
-    print(f"Charts as of {end_date.strftime('%Y-%m-%d')}")
-    charts = calculate_charts(ratings=df, end_date=end_date, window=timedelta(days=7))
-    charts["name"] = games["name"]
-    print(charts[:10])
-    print()
+charts[:10]
 
 
 # %% [markdown]
@@ -225,5 +197,4 @@ def calculate_decayed_charts(
 # %%
 decayed_charts = calculate_decayed_charts(df)
 decayed_charts["name"] = games["name"]
-print(decayed_charts.shape)
-decayed_charts[:50]
+decayed_charts[:10]
