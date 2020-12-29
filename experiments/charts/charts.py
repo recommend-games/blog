@@ -33,6 +33,11 @@ games.shape
 
 
 # %%
+def now():
+    return datetime.utcnow().replace(tzinfo=timezone.utc)
+
+
+# %%
 def process_ratings(
     lines, keys=("item_id", "bgg_id", "bgg_user_name", "bgg_user_rating", "updated_at")
 ):
@@ -77,7 +82,7 @@ df.bgg_user_rating.hist(bins=10)
 def calculate_charts(
     ratings, end_date=None, window=timedelta(days=30), percentiles=(0.25, 0.75)
 ):
-    end_date = end_date or datetime.utcnow().replace(tzinfo=timezone.utc)
+    end_date = end_date or now()
     start_date = end_date - window
 
     previous_ratings = ratings[ratings.index <= end_date]
@@ -130,12 +135,24 @@ charts[-10:]
 
 # %%
 for end_date in pd.date_range(
-    start=df.index.min().replace(hour=23, minute=59, second=59),
-    end=df.index.max(),
+    start=parse_date("2016-01-01T23:59:59", tzinfo=timezone.utc),
+    end=now(),
     freq="M",
 ):
     print(f"Charts as of {end_date.strftime('%Y-%m-%d')}")
     charts = calculate_charts(ratings=df, end_date=end_date)
+    charts["name"] = games["name"]
+    print(charts[:10])
+    print()
+
+# %%
+for end_date in pd.date_range(
+    start=parse_date("2019-01-01T23:59:59", tzinfo=timezone.utc),
+    end=now(),
+    freq="W",
+):
+    print(f"Charts as of {end_date.strftime('%Y-%m-%d')}")
+    charts = calculate_charts(ratings=df, end_date=end_date, window=timedelta(days=7))
     charts["name"] = games["name"]
     print(charts[:10])
     print()
