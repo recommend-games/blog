@@ -16,6 +16,7 @@
 # %%
 import json
 from datetime import datetime, timedelta, timezone
+import numpy as np
 import pandas as pd
 from pytility import parse_date
 
@@ -135,7 +136,7 @@ charts[-10:]
 
 # %%
 for end_date in pd.date_range(
-    start=parse_date("2016-01-01T23:59:59", tzinfo=timezone.utc),
+    start=parse_date("2020-01-01T23:59:59", tzinfo=timezone.utc),
     end=now(),
     freq="M",
 ):
@@ -147,7 +148,7 @@ for end_date in pd.date_range(
 
 # %%
 for end_date in pd.date_range(
-    start=parse_date("2019-01-01T23:59:59", tzinfo=timezone.utc),
+    start=parse_date("2020-10-01T23:59:59", tzinfo=timezone.utc),
     end=now(),
     freq="W",
 ):
@@ -157,5 +158,72 @@ for end_date in pd.date_range(
     print(charts[:10])
     print()
 
+
 # %% [markdown]
+# # Exponential decay
+#
 # **Idea**: Use exponential decay. For each rating, calculate its weight through its age (e.g., `1` if it's been cast right now, `0.5` if a month ago, `0.25` if two months ago, etc). Then sum weights instead of just counting within window.
+
+# %%
+def decay(
+    dates,
+    anchor=None,
+    halflife=60 * 60 * 24 * 30,  # 30 days
+):
+    anchor = pd.Timestamp(anchor) if anchor is not None else pd.Timestamp.utcnow()
+    ages = (anchor - dates).total_seconds()
+    return np.exp(-np.log(2) * ages / halflife)
+
+
+# %%
+def calculate_decayed_charts(
+    ratings,
+    end_date=None,
+    halflife=60 * 60 * 24 * 30,  # 30 days
+    percentiles=(0.25, 0.75),
+):
+    end_date = end_date or pd.Timestamp.utcnow()
+    pct_lower, pct_upper = percentiles
+
+    ratings = ratings[ratings.index <= end_date]
+    weights = decay(dates=ratings.index, anchor=end_date, halflife=halflife)
+
+    tmp = pd.DataFrame(
+        data={
+            "bgg_id": ratings["bgg_id"],
+            "positive": np.where(
+                ratings["bgg_user_rating"]
+                >= ratings["bgg_user_rating"].quantile(pct_upper),
+                weights,
+                0,
+            ),
+            "negative": np.where(
+                ratings["bgg_user_rating"]
+                <= ratings["bgg_user_rating"].quantile(pct_lower),
+                weights,
+                0,
+            ),
+        }
+    )
+
+    grouped = tmp.groupby("bgg_id").sum()
+    raw_scores = grouped["positive"] - grouped["negative"]
+    games = ratings.groupby("bgg_id")["bgg_user_rating"].count()
+    scores = raw_scores * games.rank(pct=True, ascending=False)
+    scores.dropna(inplace=True)
+
+    ranking = pd.DataFrame(
+        data={
+            "rank": scores.rank(ascending=False, method="min").astype(int),
+            "score": scores,
+        },
+        index=scores.index,
+    )
+    return ranking.sort_values("rank")
+
+
+# %%
+decayed_charts = calculate_decayed_charts(df)
+decayed_charts["name"] = games["name"]
+print(decayed_charts.shape)
+decayed_charts[:50]
