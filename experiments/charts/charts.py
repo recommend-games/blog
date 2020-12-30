@@ -153,7 +153,7 @@ def calculate_charts(
         raw_scores = tmp["positive"] - tmp["negative"]
         del recent_ratings, tmp
 
-    games = previous_ratings.groupby("bgg_id")["bgg_user_rating"].count()
+    games = ratings.groupby("bgg_id")["bgg_user_rating"].count()
     scores = raw_scores * games.rank(pct=True, ascending=False)
     scores.dropna(inplace=True)
 
@@ -181,3 +181,12 @@ charts[:10]
 # # Exponential decay
 #
 # **Idea**: Use exponential decay. For each rating, calculate its weight through its age (e.g., `1` if it's been cast right now, `0.5` if a month ago, `0.25` if two months ago, etc). Then sum weights instead of just counting within window.
+
+# %%
+for year in range(df.index.min().year, df.index.max().year + 1):
+    print(f"Hottest games of the year *{year}*")
+    end_date = datetime(year + 1, 1, 1, tzinfo=timezone.utc)
+    charts = calculate_charts(ratings=df, end_date=end_date, days=365.25)
+    charts["name"] = games["name"]
+    print(charts[:10])
+    print()
