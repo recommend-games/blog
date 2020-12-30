@@ -18,6 +18,7 @@ import json
 from datetime import datetime, timedelta, timezone
 import numpy as np
 import pandas as pd
+import pytz
 from pytility import parse_date
 
 SEED = 23
@@ -185,7 +186,7 @@ charts[:10]
 # %%
 for year in range(df.index.min().year, df.index.max().year + 1):
     print(f"Hottest games of the year *{year}*")
-    end_date = datetime(year + 1, 1, 1, tzinfo=timezone.utc)
+    end_date = datetime(year + 1, 1, 1, tzinfo=pytz.UTC)
     charts = calculate_charts(ratings=df, end_date=end_date, days=365.25)
     charts["name"] = games["name"]
     print(charts[:10])
