@@ -129,4 +129,7 @@ sitepackages/
 # others
 .~*
 *.bk
+*.feather
 *.ipynb
+*.parquet
+*.pickle
