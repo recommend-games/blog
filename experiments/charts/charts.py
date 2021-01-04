@@ -20,6 +20,7 @@ import numpy as np
 import pandas as pd
 import pytz
 from pytility import parse_date
+from snaptime import snap
 
 SEED = 23
 
@@ -54,12 +55,11 @@ def process_ratings(
 
 
 # %%
-# %%time
 try:
-    df = pd.read_feather("charts.feather").set_index('updated_at')
+    df = pd.read_feather("charts.feather").set_index("updated_at")
 except Exception:
     with open(
-        "../../../board-game-scraper/feeds/bgg/RatingItem/2020-12-28T07-00-47-merged.jl"
+        "../../../board-game-scraper/feeds/bgg/RatingItem/2021-01-04T07-24-27-merged.jl"
     ) as file:
         df = pd.DataFrame.from_records(process_ratings(file), index="updated_at")
     df.reset_index().to_feather("charts.feather")
@@ -173,11 +173,6 @@ charts = calculate_charts(df)
 charts["name"] = games["name"]
 charts[:10]
 
-# %%
-charts = calculate_charts(df, decay=True)
-charts["name"] = games["name"]
-charts[:10]
-
 # %% [markdown]
 # # Exponential decay
 #
@@ -191,3 +186,18 @@ for year in range(df.index.min().year, df.index.max().year + 1):
     charts["name"] = games["name"]
     print(charts[:10])
     print()
+
+# %%
+chart_date = snap(
+    pd.Timestamp.utcnow(), "@w5@w1"
+)  # release on Friday the charts of the previous week
+charts = calculate_charts(
+    ratings=df,
+    end_date=chart_date,
+    days=7,
+    percentiles=(0.25, 0.75),
+    decay=False,
+)
+charts["name"] = games["name"]
+print(f"Charts for *{chart_date.strftime('%Y-%m-%d')}*")
+charts[:10]
