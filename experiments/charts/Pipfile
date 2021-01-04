@@ -8,7 +8,7 @@ verify_ssl = true
 [packages]
 bokeh = "*"
 jupyter = "*"
-jupyterlab = "*"
+jupyterlab = "<3.0.0"
 jupytext = "*"
 matplotlib = "*"
 nb-black = "*"
@@ -18,6 +18,7 @@ pytility = "*"
 scikit-learn = "*"
 scipy = "*"
 seaborn = "*"
+snaptime = "*"
 
 [requires]
 python_version = "3.8"
