@@ -22,6 +22,7 @@ from itertools import combinations
 import numpy as np
 import pandas as pd
 
+from bokeh.embed import json_item
 from bokeh.models import Slope
 from bokeh.plotting import figure, output_notebook, show
 from bokeh.transform import jitter
@@ -244,3 +245,7 @@ slope = Slope(
 plot.add_layout(slope)
 
 show(plot)
+
+# %%
+with open("complexity_vs_min_age.json", "w") as out_file:
+    json.dump(json_item(plot), out_file, indent=4)
