@@ -103,7 +103,7 @@ data[category_df.columns] = category_df
 data.shape
 
 # %%
-data["complexity"][data.complexity.isna()] = 2
+data["complexity"].fillna(2, inplace=True)
 
 # %%
 data.sample(5, random_state=SEED).T
