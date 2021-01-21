@@ -15,9 +15,8 @@
 
 # %%
 from itertools import islice
-
+import joblib
 import pandas as pd
-
 from utils import recommend_games
 
 # %load_ext nb_black
@@ -44,7 +43,40 @@ params = {
     "min_age__lte": 16,
 }
 
-for game in islice(recommend_games(**params), 100):
+candidates = list(islice(recommend_games(**params), 1000))
+
+for game in candidates[:10]:
     print(
         f"{game['name'].upper()} by {', '.join(game['designer_name'])} ({game['bgg_id']})"
     )
+
+# %%
+df = pd.DataFrame.from_records(candidates)
+df.shape
+
+# %%
+df.sample(3).T
+
+# %%
+features = [
+    "min_players",
+    "max_players",
+    "min_players_rec",
+    "max_players_rec",
+    "min_players_best",
+    "max_players_best",
+    "min_age",
+    # "min_age_rec",
+    "min_time",
+    "max_time",
+    "cooperative",
+    "complexity",
+]
+
+# %%
+model = joblib.load("lr.joblib")
+model
+
+# %%
+df["sdj_prob"] = model.predict_proba(df[features])[:, 1]
+df.sort_values("sdj_prob", ascending=False)[["name", "year", "bgg_id"]].head(50)
