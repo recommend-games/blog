@@ -16,6 +16,7 @@
 # %%
 import json
 
+import joblib
 import pandas as pd
 
 from pytility import arg_to_iter, clear_list, parse_int
@@ -220,3 +221,6 @@ sorted(zip(brf.feature_importances_, features), reverse=True)
 
 # %%
 sorted(zip(rusb.feature_importances_, features), reverse=True)
+
+# %%
+joblib.dump(lr, "lr.joblib")
