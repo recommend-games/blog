@@ -14,8 +14,11 @@
 # ---
 
 # %%
+from itertools import islice
+
 import pandas as pd
-import requests
+
+from utils import recommend_games
 
 # %load_ext nb_black
 # %load_ext lab_black
@@ -26,7 +29,6 @@ exclude = list(pd.read_csv("exclude.csv").bgg_id)
 len(include), len(exclude)
 
 # %%
-url = "https://recommend.games/api/games/recommend/"
 params = {
     "user": "S_d_J",
     "year__gte": 2020,
@@ -42,9 +44,7 @@ params = {
     "min_age__lte": 16,
 }
 
-response = requests.get(url, params).json()
-results = response["results"]
-for game in results:
+for game in islice(recommend_games(**params), 100):
     print(
         f"{game['name'].upper()} by {', '.join(game['designer_name'])} ({game['bgg_id']})"
     )
