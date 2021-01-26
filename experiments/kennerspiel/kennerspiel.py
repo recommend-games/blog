@@ -110,9 +110,17 @@ data["complexity"].fillna(2, inplace=True)
 data.sample(5, random_state=SEED).T
 
 # %%
+player_count_features = []
+for player_count in range(1, 11):
+    playable = (data.min_players <= player_count) & (data.max_players >= player_count)
+    feature = f"playable_with_{player_count:02d}"
+    data[feature] = playable
+    player_count_features.append(feature)
+
+# %%
 num_features = [
-    "min_players",
-    "max_players",
+    # "min_players",
+    # "max_players",
     # "min_players_rec",
     # "max_players_rec",
     # "min_players_best",
@@ -124,7 +132,7 @@ num_features = [
     "cooperative",
     "complexity",
 ]
-features = num_features + list(category_df.columns)
+features = num_features + list(category_df.columns) + player_count_features
 
 # %%
 data[num_features + ["ksdj"]].corr()
