@@ -3,7 +3,7 @@ title: Reverse engineering the BoardGameGeek ranking – Part 2!
 slug: reverse-engineering-boardgamegeek-ranking-part-2
 author: Markus Shepherd
 type: post
-date: 2020-11-10T00:00:00+03:00
+date: 2021-01-26T00:00:00+02:00
 tags:
   - BoardGameGeek
   - BGG
@@ -15,7 +15,7 @@ tags:
   - top 100
   - dummy ratings
   - highest rated games
-  - alternative rankings
+  - circle of hype
 ---
 
 *This is the second part of a series explaining and analysing the BoardGameGeek rankings. Read the [first part here]({{<ref "posts/reverse_engineer_bgg/index.md">}}).*
@@ -39,3 +39,9 @@ We get a pretty nice straight line – the dashed line in the plot is fitted wit
 This means that for every rating entered into the BGG database, the number of dummy ratings is increased by \\(0.0000997\\). That number might look a bit opaque, but it's actually very easy to interpret once you put the question to its head: How many ratings have to be entered for the number of dummies to increase by \\(1\\)? You get the answer to that by taking the inverse of that factor, which happens to be about \\(10\\,032\\). This number is way to close to \\(10\\,000\\) to be a coincidence! We can conclude the exact formula for the number of dummy ratings:
 
 \\[ \\textrm{number of dummies} = \\frac{\\textrm{total number of ratings}}{10\\,000}. \\]
+
+As of the time of writing, there are \\(17\\,287\\,904\\) ratings (give or take) in the BGG database, so there will be around 1729 dummy ratings of \\(5.5\\) added to the regular ratings.
+
+As the number of BGG users [rises steadily](https://boardgamegeek.com/thread/2585742/happy-21st-birthday-geek), this number of dummy ratings also keeps increasing. This is part of the reason why older games (particularly those with a newer edition) tend to drop in the rankings. When users stop adding new ratings, a game's average rating more or less freezes. But because more and more dummy votes are added, the geek score decreases every time it gets recalculated, and so the older games drop in the rankings, while the latest hotness gets all the fresh votes, and shoots up to the top.
+
+The circle of hype.

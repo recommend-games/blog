@@ -73,6 +73,9 @@ df.shape
 df.sample(5, random_state=SEED).T
 
 # %%
+df.num_votes.sum()
+
+# %%
 mlb = MultiLabelBinarizer()
 values = mlb.fit_transform(
     df.game_type.apply(
