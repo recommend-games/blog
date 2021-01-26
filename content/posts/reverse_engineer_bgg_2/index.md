@@ -3,7 +3,7 @@ title: Reverse engineering the BoardGameGeek ranking – Part 2!
 slug: reverse-engineering-boardgamegeek-ranking-part-2
 author: Markus Shepherd
 type: post
-date: 2021-01-26T00:00:00+02:00
+date: 2021-01-26T22:24:00+02:00
 tags:
   - BoardGameGeek
   - BGG
