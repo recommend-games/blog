@@ -158,6 +158,8 @@ Finally, let's do what IMDb does (or used to do), and add to each game's ratings
 
 The effects of more, but higher dummy ratings seem to almost cancel each other out. Compared to BGG's actual top 10, only {{% game 233078 %}}Twilight Imperium{{% /game %}} and {{% game 220308 %}}Gaia Project{{% /game %}} are missing, otherwise this ranking looks very familiar. Turns out, BGG did a pretty good job designing its ranking!
 
+*Read the [second part here]({{<ref "posts/reverse_engineer_bgg_2/index.md">}}) where we nail down the number of dummy ratings to the dot.*
+
 ***PS***: You can find the notebook I used to do all the calculations [on Kaggle](https://www.kaggle.com/mshepherd/reverse-engineering-the-boardgamegeek-ranking).
 
 ***PPS***: Turns out that [GoDataDriven did almost the same calculation](https://godatadriven.com/blog/reverse-engineering-boardgamegeek/) three years ago – even with the same title! Back then, they estimated that BGG added \\(725\\) dummy ratings. [Jorge Nieva replicated their analysis](https://www.kaggle.com/jorgenieva/bayes-algorithm) with a more recent dataset, which thankfully yielded a very close match to our result: \\(1594\\) dummy ratings.
