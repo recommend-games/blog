@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 
-"""TODO."""
+"""Game utilities."""
 
 import operator
 
 from functools import reduce
+
+import numpy as np
 
 from pytility import arg_to_iter, clear_list, parse_int
 from scipy.sparse import csr_matrix
@@ -38,12 +40,12 @@ def _combine_lists(dataframe):
 
 
 def make_transformer(columns, min_df=0.01):
-    """TODO."""
+    """Game transformer."""
 
     pipeline = make_pipeline(
         FunctionTransformer(_list_dataframe),
         FunctionTransformer(_combine_lists),
-        CountVectorizer(analyzer=set, binary=True, min_df=min_df),
+        CountVectorizer(analyzer=set, min_df=min_df, binary=True, dtype=np.uint8),
         FunctionTransformer(csr_matrix.todense),
     )
 
@@ -51,5 +53,7 @@ def make_transformer(columns, min_df=0.01):
         (pipeline, clear_list(arg_to_iter(columns))),
         remainder="passthrough",
     )
+
+    # TODO turn back into DataFrame with correct column names
 
     return transformer
