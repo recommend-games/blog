@@ -29,7 +29,6 @@ from bokeh.transform import jitter
 from games import transform
 from sklearn.linear_model import LogisticRegressionCV
 from sklearn.metrics import classification_report, plot_roc_curve
-from sklearn.model_selection import train_test_split
 
 pd.options.display.max_columns = 100
 pd.options.display.max_rows = 100
@@ -41,15 +40,6 @@ output_notebook()
 # %matplotlib inline
 # %load_ext nb_black
 # %load_ext lab_black
-
-# %%
-with open("../game_types.json") as file:
-    game_types = json.load(file)
-with open("../categories.json") as file:
-    categories = json.load(file)
-with open("../mechanics.json") as file:
-    mechanics = json.load(file)
-game_types
 
 # %%
 sdj = pd.read_csv("../sdj.csv")
@@ -120,29 +110,20 @@ features
 data[num_features + ["ksdj"]].corr()
 
 # %%
-X_train, X_test, y_train, y_test = train_test_split(
-    data[features],
-    data.ksdj,
-    test_size=0.2,
-    random_state=SEED,
-)
-X_train.shape, X_test.shape, y_train.shape, y_test.shape
-
-# %%
 lr = LogisticRegressionCV(
     class_weight="balanced",
     scoring="f1",
     max_iter=10_000,
     random_state=SEED,
 )
-lr.fit(X_train, y_train)
+lr.fit(data[features], data.ksdj)
 
 # %%
-print(classification_report(y_test, lr.predict(X_test)))
-lr.score(X_train, y_train), lr.score(X_test, y_test)
+print(classification_report(data.ksdj, lr.predict(data[features])))
+lr.score(data[features], data.ksdj)
 
 # %%
-plot_roc_curve(lr, X_test, y_test)
+plot_roc_curve(lr, data[features], data.ksdj)
 
 # %%
 dict(zip(features, lr.coef_[0, :]))
