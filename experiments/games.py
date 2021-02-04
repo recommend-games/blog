@@ -7,6 +7,7 @@ import operator
 from functools import reduce
 
 import numpy as np
+import pandas as pd
 
 from pytility import arg_to_iter, clear_list, parse_int
 from scipy.sparse import csr_matrix
@@ -54,6 +55,31 @@ def make_transformer(columns, min_df=0.01):
         remainder="passthrough",
     )
 
-    # TODO turn back into DataFrame with correct column names
-
     return transformer
+
+
+def matrix_to_dataframe(matrix, transformer, original_columns, index=None):
+    """Take the transformed matrix and turn it back into a dataframe."""
+
+    _, pipeline, old_columns = transformer.transformers_[0]
+    vectorizer = pipeline.named_steps.countvectorizer
+    _, transformed_columns = zip(
+        *sorted((v, k) for k, v in vectorizer.vocabulary_.items())
+    )
+    columns = transformed_columns + tuple(
+        column for column in original_columns if column not in old_columns
+    )
+    return pd.DataFrame(data=matrix, columns=columns, index=index)
+
+
+def transform(data, columns, min_df=0.01):
+    """Transform the data."""
+
+    transformer = make_transformer(columns=columns, min_df=min_df)
+    matrix = transformer.fit_transform(data)
+    return matrix_to_dataframe(
+        matrix=matrix,
+        transformer=transformer,
+        original_columns=data.columns,
+        index=data.index,
+    )
