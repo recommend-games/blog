@@ -69,7 +69,8 @@ def matrix_to_dataframe(matrix, transformer, original_columns, index=None):
     columns = transformed_columns + tuple(
         column for column in original_columns if column not in old_columns
     )
-    return pd.DataFrame(data=matrix, columns=columns, index=index)
+    dataframe = pd.DataFrame(data=matrix, columns=columns, index=index)
+    return dataframe.infer_objects()
 
 
 def transform(data, columns, min_df=0.01):

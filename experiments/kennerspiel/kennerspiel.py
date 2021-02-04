@@ -26,10 +26,13 @@ from bokeh.embed import json_item
 from bokeh.models import Slope
 from bokeh.plotting import figure, output_notebook, show
 from bokeh.transform import jitter
+from games import transform
 from sklearn.linear_model import LogisticRegressionCV
 from sklearn.metrics import classification_report, plot_roc_curve
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import MultiLabelBinarizer
+
+pd.options.display.max_columns = 100
+pd.options.display.max_rows = 100
 
 SEED = 23
 
@@ -76,31 +79,7 @@ data = games[games.sdj | games.ksdj].copy()
 data.shape
 
 # %%
-all_categories = data.game_type.str.cat(
-    data.mechanic.fillna(""), sep=",", na_rep=""
-).str.cat(data.category.fillna(""), sep=",", na_rep="")
-all_categories = all_categories.apply(
-    lambda x: [c for c in x.split(",") if c] if isinstance(x, str) else []
-)
-
-# %%
-mlb = MultiLabelBinarizer()
-category_values = mlb.fit_transform(all_categories)
-category_df = pd.DataFrame(data=category_values, columns=mlb.classes_, index=data.index)
-category_df.rename(
-    columns={k: f"Game type {v}" for k, v in game_types.items()}, inplace=True
-)
-category_df.rename(
-    columns={k: f"Category {v}" for k, v in categories.items()}, inplace=True
-)
-category_df.rename(
-    columns={k: f"Mechanic {v}" for k, v in mechanics.items()}, inplace=True
-)
-category_df.drop(columns=category_df.columns[category_df.mean() < 0.1], inplace=True)
-category_df.shape
-
-# %%
-data[category_df.columns] = category_df
+data = transform(data=data, columns=("game_type", "mechanic", "category"), min_df=0.1)
 data.shape
 
 # %%
@@ -132,7 +111,10 @@ num_features = [
     "cooperative",
     "complexity",
 ]
-features = num_features + list(category_df.columns) + player_count_features
+features = (
+    num_features + [col for col in data.columns if ":" in col] + player_count_features
+)
+features
 
 # %%
 data[num_features + ["ksdj"]].corr()
