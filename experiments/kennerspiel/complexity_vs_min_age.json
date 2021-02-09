@@ -6,13 +6,152 @@
             "references": [
                 {
                     "attributes": {},
-                    "id": "1022",
-                    "type": "CrosshairTool"
+                    "id": "1011",
+                    "type": "LinearScale"
+                },
+                {
+                    "attributes": {
+                        "axis": {
+                            "id": "1013"
+                        },
+                        "ticker": null
+                    },
+                    "id": "1016",
+                    "type": "Grid"
                 },
                 {
                     "attributes": {},
-                    "id": "1018",
-                    "type": "BasicTicker"
+                    "id": "1007",
+                    "type": "DataRange1d"
+                },
+                {
+                    "attributes": {},
+                    "id": "1009",
+                    "type": "LinearScale"
+                },
+                {
+                    "attributes": {},
+                    "id": "1054",
+                    "type": "BasicTickFormatter"
+                },
+                {
+                    "attributes": {},
+                    "id": "1058",
+                    "type": "UnionRenderers"
+                },
+                {
+                    "attributes": {},
+                    "id": "1056",
+                    "type": "BasicTickFormatter"
+                },
+                {
+                    "attributes": {},
+                    "id": "1024",
+                    "type": "WheelZoomTool"
+                },
+                {
+                    "attributes": {
+                        "overlay": {
+                            "id": "1031"
+                        }
+                    },
+                    "id": "1030",
+                    "type": "BoxSelectTool"
+                },
+                {
+                    "attributes": {
+                        "distribution": "normal",
+                        "range": null,
+                        "width": 0.25
+                    },
+                    "id": "1044",
+                    "type": "Jitter"
+                },
+                {
+                    "attributes": {
+                        "source": {
+                            "id": "1045"
+                        }
+                    },
+                    "id": "1050",
+                    "type": "CDSView"
+                },
+                {
+                    "attributes": {
+                        "fill_alpha": {
+                            "value": 0.1
+                        },
+                        "fill_color": {
+                            "field": "color"
+                        },
+                        "line_alpha": {
+                            "value": 0.1
+                        },
+                        "line_color": {
+                            "field": "color"
+                        },
+                        "marker": {
+                            "field": "marker"
+                        },
+                        "size": {
+                            "units": "screen",
+                            "value": 8
+                        },
+                        "x": {
+                            "field": "complexity"
+                        },
+                        "y": {
+                            "field": "min_age",
+                            "transform": {
+                                "id": "1044"
+                            }
+                        }
+                    },
+                    "id": "1048",
+                    "type": "Scatter"
+                },
+                {
+                    "attributes": {},
+                    "id": "1005",
+                    "type": "DataRange1d"
+                },
+                {
+                    "attributes": {
+                        "axis_label": "min_age",
+                        "formatter": {
+                            "id": "1054"
+                        },
+                        "ticker": {
+                            "id": "1018"
+                        }
+                    },
+                    "id": "1017",
+                    "type": "LinearAxis"
+                },
+                {
+                    "attributes": {
+                        "bottom_units": "screen",
+                        "fill_alpha": 0.5,
+                        "fill_color": "lightgrey",
+                        "left_units": "screen",
+                        "level": "overlay",
+                        "line_alpha": 1.0,
+                        "line_color": "black",
+                        "line_dash": [
+                            4,
+                            4
+                        ],
+                        "line_width": 2,
+                        "right_units": "screen",
+                        "top_units": "screen"
+                    },
+                    "id": "1032",
+                    "type": "BoxAnnotation"
+                },
+                {
+                    "attributes": {},
+                    "id": "1028",
+                    "type": "ResetTool"
                 },
                 {
                     "attributes": {},
@@ -26,29 +165,68 @@
                 },
                 {
                     "attributes": {},
-                    "id": "1009",
-                    "type": "LinearScale"
+                    "id": "1018",
+                    "type": "BasicTicker"
                 },
                 {
                     "attributes": {
-                        "axis": {
-                            "id": "1017"
-                        },
-                        "dimension": 1,
-                        "ticker": null
+                        "bottom_units": "screen",
+                        "fill_alpha": 0.5,
+                        "fill_color": "lightgrey",
+                        "left_units": "screen",
+                        "level": "overlay",
+                        "line_alpha": 1.0,
+                        "line_color": "black",
+                        "line_dash": [
+                            4,
+                            4
+                        ],
+                        "line_width": 2,
+                        "right_units": "screen",
+                        "top_units": "screen"
                     },
-                    "id": "1020",
-                    "type": "Grid"
+                    "id": "1031",
+                    "type": "BoxAnnotation"
                 },
                 {
                     "attributes": {},
-                    "id": "1007",
-                    "type": "DataRange1d"
+                    "id": "1057",
+                    "type": "Selection"
                 },
                 {
-                    "attributes": {},
-                    "id": "1024",
-                    "type": "WheelZoomTool"
+                    "attributes": {
+                        "text": "Kennerspiel des Jahres"
+                    },
+                    "id": "1003",
+                    "type": "Title"
+                },
+                {
+                    "attributes": {
+                        "fill_color": {
+                            "field": "color"
+                        },
+                        "line_color": {
+                            "field": "color"
+                        },
+                        "marker": {
+                            "field": "marker"
+                        },
+                        "size": {
+                            "units": "screen",
+                            "value": 8
+                        },
+                        "x": {
+                            "field": "complexity"
+                        },
+                        "y": {
+                            "field": "min_age",
+                            "transform": {
+                                "id": "1044"
+                            }
+                        }
+                    },
+                    "id": "1047",
+                    "type": "Scatter"
                 },
                 {
                     "attributes": {
@@ -107,62 +285,6 @@
                 },
                 {
                     "attributes": {
-                        "fill_alpha": {
-                            "value": 0.1
-                        },
-                        "fill_color": {
-                            "field": "color"
-                        },
-                        "line_alpha": {
-                            "value": 0.1
-                        },
-                        "line_color": {
-                            "field": "color"
-                        },
-                        "marker": {
-                            "field": "marker"
-                        },
-                        "size": {
-                            "units": "screen",
-                            "value": 8
-                        },
-                        "x": {
-                            "field": "complexity"
-                        },
-                        "y": {
-                            "field": "min_age",
-                            "transform": {
-                                "id": "1044"
-                            }
-                        }
-                    },
-                    "id": "1048",
-                    "type": "Scatter"
-                },
-                {
-                    "attributes": {
-                        "axis_label": "min_age",
-                        "formatter": {
-                            "id": "1054"
-                        },
-                        "ticker": {
-                            "id": "1018"
-                        }
-                    },
-                    "id": "1017",
-                    "type": "LinearAxis"
-                },
-                {
-                    "attributes": {
-                        "source": {
-                            "id": "1045"
-                        }
-                    },
-                    "id": "1050",
-                    "type": "CDSView"
-                },
-                {
-                    "attributes": {
                         "data_source": {
                             "id": "1045"
                         },
@@ -184,74 +306,54 @@
                 },
                 {
                     "attributes": {
-                        "overlay": {
-                            "id": "1031"
+                        "below": [
+                            {
+                                "id": "1013"
+                            }
+                        ],
+                        "center": [
+                            {
+                                "id": "1016"
+                            },
+                            {
+                                "id": "1020"
+                            },
+                            {
+                                "id": "1051"
+                            }
+                        ],
+                        "left": [
+                            {
+                                "id": "1017"
+                            }
+                        ],
+                        "renderers": [
+                            {
+                                "id": "1049"
+                            }
+                        ],
+                        "title": {
+                            "id": "1003"
+                        },
+                        "toolbar": {
+                            "id": "1033"
+                        },
+                        "x_range": {
+                            "id": "1005"
+                        },
+                        "x_scale": {
+                            "id": "1009"
+                        },
+                        "y_range": {
+                            "id": "1007"
+                        },
+                        "y_scale": {
+                            "id": "1011"
                         }
                     },
-                    "id": "1030",
-                    "type": "BoxSelectTool"
-                },
-                {
-                    "attributes": {},
-                    "id": "1028",
-                    "type": "ResetTool"
-                },
-                {
-                    "attributes": {
-                        "axis": {
-                            "id": "1013"
-                        },
-                        "ticker": null
-                    },
-                    "id": "1016",
-                    "type": "Grid"
-                },
-                {
-                    "attributes": {},
-                    "id": "1056",
-                    "type": "BasicTickFormatter"
-                },
-                {
-                    "attributes": {},
-                    "id": "1060",
-                    "type": "Selection"
-                },
-                {
-                    "attributes": {},
-                    "id": "1054",
-                    "type": "BasicTickFormatter"
-                },
-                {
-                    "attributes": {
-                        "axis_label": "complexity",
-                        "formatter": {
-                            "id": "1056"
-                        },
-                        "ticker": {
-                            "id": "1014"
-                        }
-                    },
-                    "id": "1013",
-                    "type": "LinearAxis"
-                },
-                {
-                    "attributes": {},
-                    "id": "1011",
-                    "type": "LinearScale"
-                },
-                {
-                    "attributes": {
-                        "distribution": "normal",
-                        "range": null,
-                        "width": 0.25
-                    },
-                    "id": "1044",
-                    "type": "Jitter"
-                },
-                {
-                    "attributes": {},
-                    "id": "1025",
-                    "type": "ZoomInTool"
+                    "id": "1002",
+                    "subtype": "Figure",
+                    "type": "Plot"
                 },
                 {
                     "attributes": {
@@ -281,6 +383,43 @@
                     },
                     "id": "1021",
                     "type": "HoverTool"
+                },
+                {
+                    "attributes": {
+                        "axis_label": "complexity",
+                        "formatter": {
+                            "id": "1056"
+                        },
+                        "ticker": {
+                            "id": "1014"
+                        }
+                    },
+                    "id": "1013",
+                    "type": "LinearAxis"
+                },
+                {
+                    "attributes": {
+                        "overlay": {
+                            "id": "1032"
+                        }
+                    },
+                    "id": "1027",
+                    "type": "BoxZoomTool"
+                },
+                {
+                    "attributes": {},
+                    "id": "1023",
+                    "type": "PanTool"
+                },
+                {
+                    "attributes": {},
+                    "id": "1025",
+                    "type": "ZoomInTool"
+                },
+                {
+                    "attributes": {},
+                    "id": "1022",
+                    "type": "CrosshairTool"
                 },
                 {
                     "attributes": {
@@ -7491,10 +7630,10 @@
                             }
                         },
                         "selected": {
-                            "id": "1060"
+                            "id": "1057"
                         },
                         "selection_policy": {
-                            "id": "1059"
+                            "id": "1058"
                         }
                     },
                     "id": "1045",
@@ -7502,158 +7641,19 @@
                 },
                 {
                     "attributes": {
-                        "below": [
-                            {
-                                "id": "1013"
-                            }
-                        ],
-                        "center": [
-                            {
-                                "id": "1016"
-                            },
-                            {
-                                "id": "1020"
-                            },
-                            {
-                                "id": "1051"
-                            }
-                        ],
-                        "left": [
-                            {
-                                "id": "1017"
-                            }
-                        ],
-                        "renderers": [
-                            {
-                                "id": "1049"
-                            }
-                        ],
-                        "title": {
-                            "id": "1003"
+                        "axis": {
+                            "id": "1017"
                         },
-                        "toolbar": {
-                            "id": "1033"
-                        },
-                        "x_range": {
-                            "id": "1005"
-                        },
-                        "x_scale": {
-                            "id": "1009"
-                        },
-                        "y_range": {
-                            "id": "1007"
-                        },
-                        "y_scale": {
-                            "id": "1011"
-                        }
+                        "dimension": 1,
+                        "ticker": null
                     },
-                    "id": "1002",
-                    "subtype": "Figure",
-                    "type": "Plot"
-                },
-                {
-                    "attributes": {
-                        "text": "Kennerspiel des Jahres"
-                    },
-                    "id": "1003",
-                    "type": "Title"
-                },
-                {
-                    "attributes": {
-                        "fill_color": {
-                            "field": "color"
-                        },
-                        "line_color": {
-                            "field": "color"
-                        },
-                        "marker": {
-                            "field": "marker"
-                        },
-                        "size": {
-                            "units": "screen",
-                            "value": 8
-                        },
-                        "x": {
-                            "field": "complexity"
-                        },
-                        "y": {
-                            "field": "min_age",
-                            "transform": {
-                                "id": "1044"
-                            }
-                        }
-                    },
-                    "id": "1047",
-                    "type": "Scatter"
-                },
-                {
-                    "attributes": {},
-                    "id": "1059",
-                    "type": "UnionRenderers"
+                    "id": "1020",
+                    "type": "Grid"
                 },
                 {
                     "attributes": {},
                     "id": "1014",
                     "type": "BasicTicker"
-                },
-                {
-                    "attributes": {
-                        "bottom_units": "screen",
-                        "fill_alpha": 0.5,
-                        "fill_color": "lightgrey",
-                        "left_units": "screen",
-                        "level": "overlay",
-                        "line_alpha": 1.0,
-                        "line_color": "black",
-                        "line_dash": [
-                            4,
-                            4
-                        ],
-                        "line_width": 2,
-                        "right_units": "screen",
-                        "top_units": "screen"
-                    },
-                    "id": "1032",
-                    "type": "BoxAnnotation"
-                },
-                {
-                    "attributes": {},
-                    "id": "1023",
-                    "type": "PanTool"
-                },
-                {
-                    "attributes": {
-                        "bottom_units": "screen",
-                        "fill_alpha": 0.5,
-                        "fill_color": "lightgrey",
-                        "left_units": "screen",
-                        "level": "overlay",
-                        "line_alpha": 1.0,
-                        "line_color": "black",
-                        "line_dash": [
-                            4,
-                            4
-                        ],
-                        "line_width": 2,
-                        "right_units": "screen",
-                        "top_units": "screen"
-                    },
-                    "id": "1031",
-                    "type": "BoxAnnotation"
-                },
-                {
-                    "attributes": {
-                        "overlay": {
-                            "id": "1032"
-                        }
-                    },
-                    "id": "1027",
-                    "type": "BoxZoomTool"
-                },
-                {
-                    "attributes": {},
-                    "id": "1005",
-                    "type": "DataRange1d"
                 }
             ],
             "root_ids": [

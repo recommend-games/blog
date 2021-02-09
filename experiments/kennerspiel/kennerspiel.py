@@ -21,6 +21,7 @@ from itertools import combinations
 
 import numpy as np
 import pandas as pd
+import requests
 
 from bokeh.embed import json_item
 from bokeh.models import Slope
@@ -30,8 +31,8 @@ from games import transform
 from sklearn.linear_model import LogisticRegressionCV
 from sklearn.metrics import classification_report, plot_roc_curve
 
-pd.options.display.max_columns = 100
-pd.options.display.max_rows = 100
+pd.options.display.max_columns = 150
+pd.options.display.max_rows = 150
 
 SEED = 23
 
@@ -132,8 +133,6 @@ data[lr.predict(data[features]) != data.ksdj][
         "name",
         "year",
         "complexity",
-        # "min_players",
-        # "max_players",
         "min_time",
         "max_time",
         "min_age",
@@ -238,6 +237,55 @@ sdj_data["kennerspiel_prob"] = lr.predict_proba(sdj_data[features])[:, 1]
 
 # %%
 sdj_data[["name", "kennerspiel", "kennerspiel_prob"]].sort_values(
+    "kennerspiel_prob",
+    ascending=False,
+)
+
+# %% [markdown]
+# # Candidates for SdJ 2021
+
+# %%
+url = "https://recommend.games/api/games/recommend/"
+params = {
+    "user": "S_d_J",
+    "year__lte": 2021,
+    "year__gte": 2020,
+    "min_players__lte": 3,
+    "max_players__gte": 4,
+    "max_time__lte": 120,
+    "min_age__lte": 16,
+    "exclude_clusters": False,
+    "exclude_known": True,
+    "exclude_owned": False,
+}
+response = requests.get(url, params)
+
+# %%
+results = response.json()["results"]
+candidates = pd.DataFrame.from_records(results, index="bgg_id")
+candidates.shape
+
+# %%
+candidates = transform(
+    data=candidates,
+    list_columns=("game_type", "mechanic", "category"),
+    min_df=0,
+)
+candidates.shape
+
+# %%
+for feature in features:
+    if feature not in candidates:
+        candidates[feature] = 0
+candidates.fillna(0, inplace=True)
+candidates.shape
+
+# %%
+candidates["kennerspiel"] = lr.predict(candidates[features])
+candidates["kennerspiel_prob"] = lr.predict_proba(candidates[features])[:, 1]
+
+# %%
+candidates[["name", "kennerspiel", "kennerspiel_prob"]].sort_values(
     "kennerspiel_prob",
     ascending=False,
 )
