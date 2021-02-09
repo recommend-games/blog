@@ -69,7 +69,9 @@ data = games[games.sdj | games.ksdj].copy()
 data.shape
 
 # %%
-data = transform(data=data, columns=("game_type", "mechanic", "category"), min_df=0.1)
+data = transform(
+    data=data, list_columns=("game_type", "mechanic", "category"), min_df=0.1
+)
 data.shape
 
 # %%
@@ -77,14 +79,6 @@ data["complexity"].fillna(2, inplace=True)
 
 # %%
 data.sample(5, random_state=SEED).T
-
-# %%
-player_count_features = []
-for player_count in range(1, 11):
-    playable = (data.min_players <= player_count) & (data.max_players >= player_count)
-    feature = f"playable_with_{player_count:02d}"
-    data[feature] = playable
-    player_count_features.append(feature)
 
 # %%
 num_features = [
@@ -101,9 +95,9 @@ num_features = [
     "cooperative",
     "complexity",
 ]
-features = (
-    num_features + [col for col in data.columns if ":" in col] + player_count_features
-)
+features = num_features + [
+    col for col in data.columns if (":" in col) or col.startswith("playable_")
+]
 features
 
 # %%
@@ -138,8 +132,8 @@ data[lr.predict(data[features]) != data.ksdj][
         "name",
         "year",
         "complexity",
-        "min_players",
-        "max_players",
+        # "min_players",
+        # "max_players",
         "min_time",
         "max_time",
         "min_age",
@@ -220,3 +214,30 @@ show(plot)
 # %%
 with open("complexity_vs_min_age.json", "w") as out_file:
     json.dump(json_item(plot), out_file, indent=4)
+
+# %% [markdown]
+# # Old Spiel des Jahres winners
+
+# %%
+sdj_ids = sdj[((sdj.winner == 1) | (sdj.nominated == 1)) & (sdj.jahrgang < 2011)].bgg_id
+sdj_winners = games[games.index.isin(sdj_ids)]
+sdj_winners.shape
+
+# %%
+sdj_data = transform(
+    sdj_winners, list_columns=("game_type", "mechanic", "category"), min_df=0
+)
+for feature in features:
+    if feature not in sdj_data:
+        sdj_data[feature] = 0
+sdj_data.shape
+
+# %%
+sdj_data["kennerspiel"] = lr.predict(sdj_data[features])
+sdj_data["kennerspiel_prob"] = lr.predict_proba(sdj_data[features])[:, 1]
+
+# %%
+sdj_data[["name", "kennerspiel", "kennerspiel_prob"]].sort_values(
+    "kennerspiel_prob",
+    ascending=False,
+)
