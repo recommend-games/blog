@@ -125,7 +125,7 @@ dict(zip(features, lr.coef_[0, :]))
 
 # %%
 for feature, score in zip(features, np.exp(lr.coef_[0]) - 1):
-    print(f"{score:+10.3%} change in odds ratio for one unit increase in {feature}")
+    print(f"{score:+10.3%} change in odds for one unit increase in {feature}")
 
 # %%
 data[lr.predict(data[features]) != data.ksdj][
@@ -165,49 +165,58 @@ print(f"Best score: {score:.5f} for features {pair[0]} & {pair[1]}")
 # %%
 TOOLS = "hover,crosshair,pan,wheel_zoom,zoom_in,zoom_out,box_zoom,reset,save,box_select"
 
-plot = figure(
-    title="Kennerspiel des Jahres",
-    x_axis_label=pair[0],
-    y_axis_label=pair[1],
-    tools=TOOLS,
-    tooltips=[
-        ("name", "@name"),
-        ("year", "@year"),
-        ("complexity", "@complexity"),
-        ("time", "@min_time–@max_time minutes"),
-        ("age", "@min_age+"),
-    ],
-)
 
-data["color"] = ["#193F4A" if kennerspiel else "#E30613" for kennerspiel in data.ksdj]
-data["marker"] = np.where(model.predict(data[pair]) == data.ksdj, "circle", "square")
+def plot_games(data, model, features, **plot_kwargs):
+    plot_kwargs.setdefault("x_axis_label", features[0])
+    plot_kwargs.setdefault("y_axis_label", features[1])
+    plot_kwargs.setdefault("tools", TOOLS)
+    plot_kwargs.setdefault(
+        "tooltips",
+        [
+            ("name", "@name"),
+            ("year", "@year"),
+            ("complexity", "@complexity"),
+            ("time", "@min_time–@max_time minutes"),
+            ("age", "@min_age+"),
+        ],
+    )
 
-plot.scatter(
-    source=data,
-    x=pair[0],
-    y=jitter(pair[1], width=0.25, distribution="normal"),
-    color="color",
-    marker="marker",
-    # alpha=0.9,
-    size=8,
-)
+    plot = figure(**plot_kwargs)
 
-# sigmoid(w*x+b) = 0.5
-# w*x+b = 0
-# w1*x1 + w2*x2 = -b
-# x2 = (-w1*x1-b)/w2
-w1 = model.coef_[0, 0]
-w2 = model.coef_[0, 1]
-b = model.intercept_[0]
-slope = Slope(
-    gradient=-w1 / w2,
-    y_intercept=-b / w2,
-    line_color="black",
-    line_dash="dashed",
-    line_width=2,
-)
-plot.add_layout(slope)
+    data["color"] = [
+        "#193F4A" if kennerspiel else "#E30613" for kennerspiel in data.ksdj
+    ]
+    data["marker"] = np.where(
+        model.predict(data[features]) == data.ksdj, "circle", "square"
+    )
 
+    plot.scatter(
+        source=data,
+        x=features[0],
+        y=jitter(features[1], width=0.25, distribution="normal"),
+        color="color",
+        marker="marker",
+        # alpha=0.9,
+        size=8,
+    )
+
+    w1 = model.coef_[0, 0]
+    w2 = model.coef_[0, 1]
+    b = model.intercept_[0]
+    slope = Slope(
+        gradient=-w1 / w2,
+        y_intercept=-b / w2,
+        line_color="black",
+        line_dash="dashed",
+        line_width=2,
+    )
+    plot.add_layout(slope)
+
+    return plot
+
+
+# %%
+plot = plot_games(data=data, model=model, features=pair, title="Kennerspiel des Jahres")
 show(plot)
 
 # %%
@@ -240,6 +249,17 @@ sdj_data[["name", "kennerspiel", "kennerspiel_prob"]].sort_values(
     "kennerspiel_prob",
     ascending=False,
 )
+
+# %%
+sdj_data["ksdj"] = model.predict(sdj_data[pair])
+plot = plot_games(
+    data=sdj_data, model=model, features=pair, title="Spiel des Jahres before 2011"
+)
+show(plot)
+
+# %%
+with open("complexity_vs_min_age_before_2011.json", "w") as out_file:
+    json.dump(json_item(plot), out_file, indent=4)
 
 # %% [markdown]
 # # Candidates for SdJ 2021
