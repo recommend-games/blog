@@ -2,9 +2,7 @@
 
 """Game utilities."""
 
-import operator
-
-from functools import reduce
+from itertools import chain
 
 import numpy as np
 import pandas as pd
@@ -33,7 +31,7 @@ def _list_dataframe(dataframe):
 
 
 def _concat_lists(iterable):
-    return reduce(operator.add, iterable, [])
+    return list(chain.from_iterable(iterable))
 
 
 def _combine_lists(dataframe):
