@@ -30,6 +30,8 @@ What games do we still get wrong and why?
 
 Apply to old SdJ winners / nominees: which ones would be a Kennerspiel by today's standards?
 
+{{% bokeh "complexity_vs_min_age_before_2011.json" %}}
+
 Shapley values?
 
 Looking ahead to some 2021 candidates
