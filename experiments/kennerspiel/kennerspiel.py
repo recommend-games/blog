@@ -220,6 +220,16 @@ plot = plot_games(data=data, model=model, features=pair, title="Kennerspiel des 
 show(plot)
 
 # %%
+wrong = data[model.predict(data[pair]) != data.ksdj][
+    ["name", "year", "complexity", "min_age", "sdj"]
+].sort_values(["year", "sdj"])
+wrong["name"] = [
+    "{{% game " + str(i) + " %}}" + n + "{{% /game %}}" for i, n in wrong.name.items()
+]
+wrong["complexity"] = wrong["complexity"].apply(lambda c: f"{c:.1f}")
+print(wrong.to_markdown())
+
+# %%
 with open("complexity_vs_min_age.json", "w") as out_file:
     json.dump(json_item(plot), out_file, indent=4)
 

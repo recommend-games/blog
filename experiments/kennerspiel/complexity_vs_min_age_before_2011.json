@@ -61,9 +61,127 @@
                     "type": "SaveTool"
                 },
                 {
+                    "attributes": {
+                        "axis": {
+                            "id": "1144"
+                        },
+                        "ticker": null
+                    },
+                    "id": "1147",
+                    "type": "Grid"
+                },
+                {
+                    "attributes": {},
+                    "id": "1154",
+                    "type": "PanTool"
+                },
+                {
+                    "attributes": {
+                        "axis_label": "min_age",
+                        "formatter": {
+                            "id": "1196"
+                        },
+                        "ticker": {
+                            "id": "1149"
+                        }
+                    },
+                    "id": "1148",
+                    "type": "LinearAxis"
+                },
+                {
+                    "attributes": {
+                        "callback": null,
+                        "tooltips": [
+                            [
+                                "name",
+                                "@name"
+                            ],
+                            [
+                                "year",
+                                "@year"
+                            ],
+                            [
+                                "complexity",
+                                "@complexity"
+                            ],
+                            [
+                                "time",
+                                "@min_time\u2013@max_time minutes"
+                            ],
+                            [
+                                "age",
+                                "@min_age+"
+                            ]
+                        ]
+                    },
+                    "id": "1152",
+                    "type": "HoverTool"
+                },
+                {
+                    "attributes": {},
+                    "id": "1157",
+                    "type": "ZoomOutTool"
+                },
+                {
+                    "attributes": {
+                        "axis": {
+                            "id": "1148"
+                        },
+                        "dimension": 1,
+                        "ticker": null
+                    },
+                    "id": "1151",
+                    "type": "Grid"
+                },
+                {
+                    "attributes": {},
+                    "id": "1142",
+                    "type": "LinearScale"
+                },
+                {
+                    "attributes": {},
+                    "id": "1194",
+                    "type": "BasicTickFormatter"
+                },
+                {
+                    "attributes": {},
+                    "id": "1155",
+                    "type": "WheelZoomTool"
+                },
+                {
+                    "attributes": {
+                        "text": "Spiel des Jahres before 2011"
+                    },
+                    "id": "1134",
+                    "type": "Title"
+                },
+                {
+                    "attributes": {},
+                    "id": "1136",
+                    "type": "DataRange1d"
+                },
+                {
                     "attributes": {},
                     "id": "1138",
                     "type": "DataRange1d"
+                },
+                {
+                    "attributes": {
+                        "overlay": {
+                            "id": "1162"
+                        }
+                    },
+                    "id": "1161",
+                    "type": "BoxSelectTool"
+                },
+                {
+                    "attributes": {
+                        "source": {
+                            "id": "1176"
+                        }
+                    },
+                    "id": "1181",
+                    "type": "CDSView"
                 },
                 {
                     "attributes": {
@@ -101,210 +219,8 @@
                 },
                 {
                     "attributes": {},
-                    "id": "1153",
-                    "type": "CrosshairTool"
-                },
-                {
-                    "attributes": {},
-                    "id": "1136",
-                    "type": "DataRange1d"
-                },
-                {
-                    "attributes": {},
-                    "id": "1155",
-                    "type": "WheelZoomTool"
-                },
-                {
-                    "attributes": {
-                        "bottom_units": "screen",
-                        "fill_alpha": 0.5,
-                        "fill_color": "lightgrey",
-                        "left_units": "screen",
-                        "level": "overlay",
-                        "line_alpha": 1.0,
-                        "line_color": "black",
-                        "line_dash": [
-                            4,
-                            4
-                        ],
-                        "line_width": 2,
-                        "right_units": "screen",
-                        "top_units": "screen"
-                    },
-                    "id": "1162",
-                    "type": "BoxAnnotation"
-                },
-                {
-                    "attributes": {
-                        "axis_label": "complexity",
-                        "formatter": {
-                            "id": "1194"
-                        },
-                        "ticker": {
-                            "id": "1145"
-                        }
-                    },
-                    "id": "1144",
-                    "type": "LinearAxis"
-                },
-                {
-                    "attributes": {},
-                    "id": "1140",
-                    "type": "LinearScale"
-                },
-                {
-                    "attributes": {},
-                    "id": "1157",
-                    "type": "ZoomOutTool"
-                },
-                {
-                    "attributes": {
-                        "overlay": {
-                            "id": "1163"
-                        }
-                    },
-                    "id": "1158",
-                    "type": "BoxZoomTool"
-                },
-                {
-                    "attributes": {},
-                    "id": "1142",
-                    "type": "LinearScale"
-                },
-                {
-                    "attributes": {},
                     "id": "1196",
                     "type": "BasicTickFormatter"
-                },
-                {
-                    "attributes": {},
-                    "id": "1200",
-                    "type": "Selection"
-                },
-                {
-                    "attributes": {
-                        "axis_label": "min_age",
-                        "formatter": {
-                            "id": "1196"
-                        },
-                        "ticker": {
-                            "id": "1149"
-                        }
-                    },
-                    "id": "1148",
-                    "type": "LinearAxis"
-                },
-                {
-                    "attributes": {},
-                    "id": "1159",
-                    "type": "ResetTool"
-                },
-                {
-                    "attributes": {
-                        "source": {
-                            "id": "1176"
-                        }
-                    },
-                    "id": "1181",
-                    "type": "CDSView"
-                },
-                {
-                    "attributes": {
-                        "axis": {
-                            "id": "1144"
-                        },
-                        "ticker": null
-                    },
-                    "id": "1147",
-                    "type": "Grid"
-                },
-                {
-                    "attributes": {
-                        "fill_color": {
-                            "field": "color"
-                        },
-                        "line_color": {
-                            "field": "color"
-                        },
-                        "marker": {
-                            "field": "marker"
-                        },
-                        "size": {
-                            "units": "screen",
-                            "value": 8
-                        },
-                        "x": {
-                            "field": "complexity"
-                        },
-                        "y": {
-                            "field": "min_age",
-                            "transform": {
-                                "id": "1175"
-                            }
-                        }
-                    },
-                    "id": "1178",
-                    "type": "Scatter"
-                },
-                {
-                    "attributes": {
-                        "text": "Spiel des Jahres before 2011"
-                    },
-                    "id": "1134",
-                    "type": "Title"
-                },
-                {
-                    "attributes": {},
-                    "id": "1154",
-                    "type": "PanTool"
-                },
-                {
-                    "attributes": {
-                        "distribution": "normal",
-                        "range": null,
-                        "width": 0.25
-                    },
-                    "id": "1175",
-                    "type": "Jitter"
-                },
-                {
-                    "attributes": {
-                        "overlay": {
-                            "id": "1162"
-                        }
-                    },
-                    "id": "1161",
-                    "type": "BoxSelectTool"
-                },
-                {
-                    "attributes": {},
-                    "id": "1149",
-                    "type": "BasicTicker"
-                },
-                {
-                    "attributes": {},
-                    "id": "1156",
-                    "type": "ZoomInTool"
-                },
-                {
-                    "attributes": {
-                        "bottom_units": "screen",
-                        "fill_alpha": 0.5,
-                        "fill_color": "lightgrey",
-                        "left_units": "screen",
-                        "level": "overlay",
-                        "line_alpha": 1.0,
-                        "line_color": "black",
-                        "line_dash": [
-                            4,
-                            4
-                        ],
-                        "line_width": 2,
-                        "right_units": "screen",
-                        "top_units": "screen"
-                    },
-                    "id": "1163",
-                    "type": "BoxAnnotation"
                 },
                 {
                     "attributes": {
@@ -326,99 +242,6 @@
                     },
                     "id": "1180",
                     "type": "GlyphRenderer"
-                },
-                {
-                    "attributes": {
-                        "axis": {
-                            "id": "1148"
-                        },
-                        "dimension": 1,
-                        "ticker": null
-                    },
-                    "id": "1151",
-                    "type": "Grid"
-                },
-                {
-                    "attributes": {},
-                    "id": "1199",
-                    "type": "UnionRenderers"
-                },
-                {
-                    "attributes": {},
-                    "id": "1194",
-                    "type": "BasicTickFormatter"
-                },
-                {
-                    "attributes": {
-                        "active_drag": "auto",
-                        "active_inspect": "auto",
-                        "active_multi": null,
-                        "active_scroll": "auto",
-                        "active_tap": "auto",
-                        "tools": [
-                            {
-                                "id": "1152"
-                            },
-                            {
-                                "id": "1153"
-                            },
-                            {
-                                "id": "1154"
-                            },
-                            {
-                                "id": "1155"
-                            },
-                            {
-                                "id": "1156"
-                            },
-                            {
-                                "id": "1157"
-                            },
-                            {
-                                "id": "1158"
-                            },
-                            {
-                                "id": "1159"
-                            },
-                            {
-                                "id": "1160"
-                            },
-                            {
-                                "id": "1161"
-                            }
-                        ]
-                    },
-                    "id": "1164",
-                    "type": "Toolbar"
-                },
-                {
-                    "attributes": {
-                        "callback": null,
-                        "tooltips": [
-                            [
-                                "name",
-                                "@name"
-                            ],
-                            [
-                                "year",
-                                "@year"
-                            ],
-                            [
-                                "complexity",
-                                "@complexity"
-                            ],
-                            [
-                                "time",
-                                "@min_time\u2013@max_time minutes"
-                            ],
-                            [
-                                "age",
-                                "@min_age+"
-                            ]
-                        ]
-                    },
-                    "id": "1152",
-                    "type": "HoverTool"
                 },
                 {
                     "attributes": {
@@ -496,7 +319,7 @@
                                 "34863"
                             ],
                             "avg_rating": {
-                                "__ndarray__": "KqkT0ETYGkCRgxJm2p4cQG2tLxLaMhlABD4/jBCeG0DqHAOy11sdQNX/OcyX1xpAq8q+K4J/HEAwwD46dQUfQCnVPh2P2RxA0ZFc/kP6GEC3nEtxVRkaQA5Pr5Rl6BpAG2SSkbPwGEC/8bVnluQZQKuy74rgXxlAYUok0cuIGkASDyibcsUZQH+HokCfCBpAGCE82jhCG0D4wmSqYFQcQBDR6A5iRxtAkdWtnpP+GEBLVG8NbFUZQCwrTUpB1xlAwJXs2AiEGUB3uYjvxKwdQFJhbCHI4RZAJ2vUQzR6GEDJPPIHA88ZQIy+gjRj8R5ARbsKKT/JGUB2w7ZFma0aQPJetTLh9x9AmPViKCf6G0DVITfDDTgaQJf/kH77ehVA5CzsaYcfHEDA7J48LLQdQE+0q5DyMx1ATzv8NVmDHEA7cM6I0n4cQH06HjNQeRlAlGqfjscMHECwA+eMKE0aQL0Yyol29RlAd2fttgsNGkBq3nGKjkQXQJio3hrYShlA8rVnlgRoHEArDmd+NSccQNsWZTbIxBlAw9MrZRkiGUBQ/Bhz11IcQDoLe9rh7xtAk8ZoHVWtG0AvxVVl31UbQCdJ10y+uRpAAwmKH2NuHkDtgVZgyIocQI9Yi08BEBxAavZAKzBEGkAaTMPwEbEZQL7Z5sb0RB5ApwAYz6AhHEBdhZSfVHseQBv1EI3ugBtAZR75g4EHHUApeXWOAVkaQEzD8BExRRxAofgx5q4lHUA=",
+                                "__ndarray__": "KqkT0ETYGkCRgxJm2p4cQG2tLxLaMhlABD4/jBCeG0DqHAOy11sdQNX/OcyX1xpAq8q+K4J/HEBp6J/gYgUfQCnVPh2P2RxA0ZFc/kP6GEC3nEtxVRkaQA5Pr5Rl6BpAG2SSkbPwGEC/8bVnluQZQKuy74rgXxlAYUok0cuIGkASDyibcsUZQH+HokCfCBpAGCE82jhCG0D4wmSqYFQcQBDR6A5iRxtAkdWtnpP+GEBLVG8NbFUZQCwrTUpB1xlAwJXs2AiEGUDNQGX8+6wdQFJhbCHI4RZAJ2vUQzR6GEDJPPIHA88ZQFOu8C4X8R5ARbsKKT/JGUB2w7ZFma0aQNcv2A3b9h9AmPViKCf6G0DVITfDDTgaQJf/kH77ehVA5CzsaYcfHEClMVpHVbMdQE+0q5DyMx1ATzv8NVmDHEA7cM6I0n4cQH06HjNQeRlAlGqfjscMHECwA+eMKE0aQL0Yyol29RlAd2fttgsNGkBq3nGKjkQXQJio3hrYShlA8rVnlgRoHEArDmd+NSccQNsWZTbIxBlAw9MrZRkiGUBQ/Bhz11IcQDoLe9rh7xtAk8ZoHVWtG0AvxVVl31UbQCdJ10y+uRpA6MHdWbttHkDtgVZgyIocQI9Yi08BEBxAavZAKzBEGkAaTMPwEbEZQE0VjErqRB5ApwAYz6AhHEDQ7SWN0XoeQBv1EI3ugBtAZR75g4EHHUApeXWOAVkaQEzD8BExRRxAofgx5q4lHUA=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -504,7 +327,7 @@
                                 ]
                             },
                             "bayes_rating": {
-                                "__ndarray__": "QN6rVib8GUAui4nNx/UbQPs/h/nyohdAK97IPPLnGkAUyy2thqQcQCveyDzyRxhAMLYQ5KBkG0AEbt3NU10eQGgFhqxu9RpAXW3F/rJ7F0DSjEXT2QkZQHJtqBjnrxlAYb68APvIF0DXTL7Z5oYYQAbYR6euXBhAk2+2uTE9GUB/wW7YtogYQOp4zEBlfBlACYUIOIQKGUALzXUaaekbQIQqNXuglRlA3lm77ULzFkDD9Shcj4IXQGiz6nO1NRdAiO/ErBfjGEAHZK93fzwdQFZI+Um1bxZAlDDT9q+MFkBhjh6/tykXQDMzMzMzEx5AADW1bK2vGEDIDFTGv88ZQCodrP9zeB9Aq1s9J71vGUCAt0CC4icZQGhXIeUn9RVAzO7Jw0KtG0D1udqK/UUdQLOTwVHyahxAkst/SL/dGkAYsrrVc9IbQNydtdsuNBdA2ebG9IQFG0CCc0aU9sYYQJ2dDI6SNxlA0a5Cyk+KGEArhxbZzlcWQKeufJbnoRdAN6EQAYfQG0B2N091yA0bQHGPpQ9d0BdAGlHaG3yhF0BiodY07zgbQEf+YOC5NxlAFYxK6gQUGkD9DkWBPrEaQKEt51JcNRlAfqmfNxUJHkDzN6EQAYcbQEMc6+I2OhpAJ6Wg20saF0Az+WabG9MYQNxj6UMX1B1A5jqNtFReGkCvsUtUbw0eQMUWghyU0BpA7lpCPuiZHEDgYkUNpuEYQCZw626eChtATQte9BVEHEA=",
+                                "__ndarray__": "QN6rVib8GUAui4nNx/UbQPs/h/nyohdAK97IPPLnGkAUyy2thqQcQCveyDzyRxhAMLYQ5KBkG0B5cHfWblseQGgFhqxu9RpAXW3F/rJ7F0DSjEXT2QkZQHJtqBjnrxlAYb68APvIF0DXTL7Z5oYYQAbYR6euXBhAk2+2uTE9GUB/wW7YtogYQOp4zEBlfBlACYUIOIQKGUALzXUaaekbQIQqNXuglRlA3lm77ULzFkDD9Shcj4IXQGiz6nO1NRdAiO/ErBfjGEAFTODW3TwdQFZI+Um1bxZAlDDT9q+MFkBhjh6/tykXQI1AvK5fEB5AADW1bK2vGEDIDFTGv88ZQPYQje4gdh9Aq1s9J71vGUCAt0CC4icZQGhXIeUn9RVAzO7Jw0KtG0D4U+Olm0QdQLOTwVHyahxAkst/SL/dGkAYsrrVc9IbQNydtdsuNBdA2ebG9IQFG0CCc0aU9sYYQJ2dDI6SNxlA0a5Cyk+KGEArhxbZzlcWQKeufJbnoRdAN6EQAYfQG0B2N091yA0bQHGPpQ9d0BdAGlHaG3yhF0BiodY07zgbQEf+YOC5NxlAFYxK6gQUGkD9DkWBPrEaQKEt51JcNRlAf/EMGvoHHkDzN6EQAYcbQEMc6+I2OhpAJ6Wg20saF0Az+WabG9MYQG05l+Kq0h1A5jqNtFReGkCyKVd4lwseQMUWghyU0BpA7lpCPuiZHEDgYkUNpuEYQCZw626eChtATQte9BVEHEA=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -4344,7 +4167,7 @@
                                 ]
                             },
                             "complexity": {
-                                "__ndarray__": "gy9MpgpGAUAyVTAqqZMCQPmgZ7Pqc/0/HHxhMlUw9D8Cmggbnl4GQEoMAiuHlgRAxEKtad7xBkA/V1uxv2wIQCsYldQJaARAiBbZzvdT/z8GEhQ/xtz9P/FjzF1LyP4/cRsN4C2Q+j+bVZ+rrdj0P50Rpb3BF/s/Z9Xnaiv2/j/gnBGlvcH3P7Kd76fGS/8/DXGsi9to/z+V1AloImwAQDY8vVKWoQRAPE7RkVx+AUBy+Q/pt6/4P7FQa5p3HANAsAPnjCjt+z8i/fZ14Jz+P/rt68A5I/Q/SS7/If329D/NzMzMzMwEQNv5fmq8dAVA0gDeAgmK8j+GyVTBqKT1Pz0K16NwPQpAsVBrmnecBEBE+u3rwDkAQAAAAAAAAPQ/vHSTGATWAEDV52or9pf9P+CcEaW9wQNAMQisHFpkCUAs1JrmHaf+P4MvTKYKRvo/48eYu5aQAECSXP5D+u38PxB6Nqs+V/0/SgwCK4cW9T+fzarP1Vb0P6W9wRcmUwFAZDvfT40XAkAdyeU/pF8CQJF++zpwzv0/dEaU9gZf+T/sUbgehesCQNIA3gIJivM/ZDvfT42XBEC4HoXrUbj9P/YoXI/C9fU/CRueXilLA0D4U+Olm0QBQC6QoPgx5v0/BcWPMXetAEDhC5OpglH6P09AE2HD0wNAeekmMQis9z/oaiv2l90CQIj029eBc/w//Yf029eB8z/dJAaBlUP2P/rt68A5owBAfPKwUGsaBUA=",
+                                "__ndarray__": "gy9MpgpGAUAyVTAqqZMCQPmgZ7Pqc/0/HHxhMlUw9D8Cmggbnl4GQEoMAiuHlgRAxEKtad7xBkA/V1uxv2wIQCsYldQJaARAiBbZzvdT/z8GEhQ/xtz9P/FjzF1LyP4/cRsN4C2Q+j+bVZ+rrdj0P50Rpb3BF/s/Z9Xnaiv2/j/gnBGlvcH3P7Kd76fGS/8/DXGsi9to/z+V1AloImwAQDY8vVKWoQRAPE7RkVx+AUBy+Q/pt6/4P7FQa5p3HANAsAPnjCjt+z9ApN++Dpz+P/rt68A5I/Q/SS7/If329D/NzMzMzMwEQPYoXI/CdQVA0gDeAgmK8j+GyVTBqKT1Pz0K16NwPQpAsVBrmnecBEBE+u3rwDkAQAAAAAAAAPQ/vHSTGATWAEDzjlN0JJf9P+CcEaW9wQNAMQisHFpkCUAs1JrmHaf+P4MvTKYKRvo/48eYu5aQAECSXP5D+u38PxB6Nqs+V/0/SgwCK4cW9T+fzarP1Vb0P6W9wRcmUwFAZDvfT40XAkAdyeU/pF8CQJF++zpwzv0/dEaU9gZf+T/sUbgehesCQNIA3gIJivM/ZDvfT42XBEC4HoXrUbj9P/YoXI/C9fU/mG4Sg8BKA0D4U+Olm0QBQC6QoPgx5v0/BcWPMXetAEDhC5OpglH6PxZqTfOO0wNAeekmMQis9z9cj8L1KNwCQIj029eBc/w//Yf029eB8z/dJAaBlUP2P/rt68A5owBAfPKwUGsaBUA=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -5224,7 +5047,7 @@
                                 true
                             ],
                             "kennerspiel_prob": {
-                                "__ndarray__": "/KvFWMCRzj/kfqIIXOjvP4E3fKIgDaY/m98oW2dehT8GOPiUvtvuP9t5XiE4qO8/tbYOtZdR7z9/2m9Ruf7vP7fGc5Azx+8/1OJG/G5ruz+TL0X3hyzEP3gzvedz9rQ/v0IkayzFpj9DVXY2zh2cPxOaedaaobE/RY8VHGjCiT8Na/4usHl+P+PnGqwQV7U/8DQMGRm15T8wB/EHfH/uP3p2Qbcsj+8/0P4uHfbd7T9/MaY7ur7PP1oNVlz0Btk/GPm8svlxqz8y+/IMnxG2P2PROSXti3Q/5vCbGjfMZD+f9jzQvorvP4ZE6wZs+u8/nQwtsTXujj/ScKt30VWfP+Z5Dwbq/+8/STiPOqAa7T+yfW+voma3P+Bq1+LT84I/CAB+LZGuzz+X23s3CZi+Px8C2frkPe4/Jez5NyP/7z/2oar6FWWrP8Eymud6I2U/DwU9VxKQ7T+igNiZt065PxnmHnoad6o/aTHtYnT1dj+NGV2YtotqP6CesNEtA8I/YG0ppc6k6D9trzkwmojrP35A665QBJw/ABRTWn3Qmz8/c8RmI9/uP3fOVFvJC7U/dNFrjVBe7D9HZfx2/UytP8Suep0e31Q/TxvSwHkr5j/yxiJFWI3LP3A5ts/He+I/+TwiHbZJwD+oDgYmJgWQP8CacK3a1u8/DZa8/Lr7iD8enyuE4+vrP2P2XuXuAu0/m+hlGedPVz8AwxBpU7ODP+HmqduOEtE/bVt3SqN97j8=",
+                                "__ndarray__": "x6WoEJyRzj9wRVUbaujvP9g4zq0bCaY/bqBC2CRrhT9P2Q4rbdruPwaNIlgSqO8/t16T+zBR7z+jp3uiuf7vP9/xqAMSx+8/QvwceGdluz/H+/q0oiPEPwjB5Dvs9LQ/L/IJmT/Lpj/g64GhORGcPz6XFYbPpbE/yCLqjGLGiT/MQ9SOp35+PwdOmDJ6VrU/Yv/0LAm75T9pI6RB9n/uP3YVeKDfju8/SEwxL1Ld7T9RPuTgx8TPP5kDt6ow99g/xslFBw5bqz/F+YX/+Qy2PzUZHnZwnXQ/a8D37tjKZD9IYHiknIrvP1gO7FNs+u8/KaLhGx7ojj9HtQXeY1mfP28Iownq/+8/KUgAv0wZ7T9OxIxzMFu3P3Mk2luVAYM/cZ0Voye5zz+7DQCfQKa+P74VN3VaPe4/55cmJCL/7z8nmlPlElqrPyQsSyPnJWU/FJ+7Q6OQ7T+5qUiU0lW5P2L+R1Y5jqo/ZeA0NpL1dj/L8LRYHplqPytCp/Kd+sE/HAf7DJ6k6D91GGJZ5IvrP4EsXwy3BJw/S8FdkFvemz9WVNhXAd/uPwRR6DiHErU/Rz0KCQxd7D8z829BtUOtP8aq+5Ov31Q/E7NEWnQs5j95EuxBaHbLPwCmBn/6h+I/9PSAThJHwD+ZIN8AJgeQP+7Lj5jS1u8/xbGbsKP9iD/hGzwRu+nrP+5oJqI6A+0/sNj3sjxfVz9eCtwD76mDPxbVCpqYCtE/JildSKF87j8=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -5304,7 +5127,7 @@
                                 true
                             ],
                             "language_dependency": {
-                                "__ndarray__": "AAAAAAAA8D+Xd8CRoiEAQAAAAAAAAPh/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPh/PDw8PDw8/D9JeKOp82sHQAAAAAAAAPA/AAAAAAAA+H+8u7u7u7v7PwAAAAAAAPA/AAAAAAAA+H98Ce0ltJfwPwAAAAAAAPA/AAAAAAAA+H8AAAAAAAD4f7rooosuuvA/AAAAAAAA+H+0tLS0tDQGQAAAAAAAAPA/AAAAAAAA+H8AAAAAAAD4fwAAAAAAAPh/AAAAAAAA8D8pXI/C9SjwPwAAAAAAAPh/AAAAAAAA+H8AAAAAAAD4f7E5kGiFzRNAAAAAAAAA+H+QBmmQBmnwP7y7u7u7uwVAAAAAAAAA+H8AAAAAAADwPwAAAAAAAPh/PDw8PDw88D+xEzuxEzvxP8s9jbDc0/A/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPh/RHkN5TWUD0AAAAAAAAD4fwAAAAAAAPA/AAAAAAAA+H8AAAAAAAD4fwAAAAAAAPh/AAAAAACg8T8AAAAAAADwPwAAAAAAAPh/AAAAAAAA+H9p8z7FJUPwPwAAAAAAAPh/7mmE5Z5G8D9PCfKUIE/xPwAAAAAAAPA/EiL7kg+QAEAqeDkFL6fwP1VVVVVVVQFAAAAAAAAA+H+8hvIaymvwP+D9IeD9IfA/kiRJkiRJAkB1pnEDo84IQG2yySabbAZAGF100UUX8D8AAAAAAADwPz+C+wjuI/A/Cl5Owcsp8D8=",
+                                "__ndarray__": "AAAAAAAA8D+Xd8CRoiEAQAAAAAAAAPh/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPh/PDw8PDw8/D9JeKOp82sHQAAAAAAAAPA/AAAAAAAA+H+8u7u7u7v7PwAAAAAAAPA/AAAAAAAA+H98Ce0ltJfwPwAAAAAAAPA/AAAAAAAA+H8AAAAAAAD4f7rooosuuvA/AAAAAAAA+H+0tLS0tDQGQAAAAAAAAPA/AAAAAAAA+H8AAAAAAAD4fwAAAAAAAPh/AAAAAAAA8D8p6I2C3ijwPwAAAAAAAPh/AAAAAAAA+H8AAAAAAAD4f7E5kGiFzRNAAAAAAAAA+H+QBmmQBmnwP7y7u7u7uwVAAAAAAAAA+H8AAAAAAADwPwAAAAAAAPh/PDw8PDw88D+xEzuxEzvxP8s9jbDc0/A/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPh/RHkN5TWUD0AAAAAAAAD4fwAAAAAAAPA/AAAAAAAA+H8AAAAAAAD4fwAAAAAAAPh/AAAAAACg8T8AAAAAAADwPwAAAAAAAPh/AAAAAAAA+H9p8z7FJUPwPwAAAAAAAPh/7mmE5Z5G8D9PCfKUIE/xPwAAAAAAAPA/ET744IOPAEAqeDkFL6fwP1VVVVVVVQFAAAAAAAAA+H+8hvIaymvwPzjN1+rZIfA/kiRJkiRJAkB1pnEDo84IQG2yySabbAZAGF100UUX8D8AAAAAAADwPz+C+wjuI/A/Cl5Owcsp8D8=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -10896,7 +10719,7 @@
                                 ]
                             },
                             "min_age_rec": {
-                                "__ndarray__": "PDw8PDw8IEAwTgaRB64gQAAAAAAAAPh/AAAAAAAAIEDlNZTXUN4jQAAAAAAAAPh/MzMzMzMzJEBjcD4G52MnQC+66KKLLiRAAAAAAAAA+H8AAAAAAAAjQAAAAAAAAPh/AAAAAAAA+H8AAAAAAAAZQFVVVVVVVSBAAAAAAAAA+H8zMzMzMzMeQFAHdVAHdSBAAAAAAAAA+H9GF1100eUjQAAAAAAAAPh/AAAAAAAA+H8AAAAAAAD4fwAAAAAAAPh/AAAAAAAAH0Bgg7h58h0fQN7d3d3d3RNAAAAAAAAA+H8AAAAAAAD4f6yqqqqqKitAAAAAAAAA+H+ShSxkIQsfQMJgMBgMBihAAAAAAAAA+H+rqqqqqqojQAAAAAAAAPh/QaIVNgcSIEDCBx988MEfQMZO7MRObCRAAAAAAAAA+H8odmIndmIfQAAAAAAAAPh/5TWU11BeJEAAAAAAAAD4fwrXo3A9CiBAmpmZmZmZGUAAAAAAAAD4fwAAAAAAAPh/Li0tLS2tI0AAAAAAABAjQAAAAAAAAPh/AAAAAAAA+H9VVVVVVZUjQAAAAAAAAPh/AAAAAAAA+H+SJEmSJIkYQN/d3d3d3RdATyLTsN2sI0BjjDHGGGMgQAAAAAAAAPh/AAAAAAAA+H8iIiIiIiIgQJIkSZIkiSNAAAAAAADgH0C85MGAM64jQDaU11BeQyBA0UQTTTTRHkAAAAAAAAD4f9MgDdIgDSBAZCELWchCJEA=",
+                                "__ndarray__": "PDw8PDw8IEAwTgaRB64gQAAAAAAAAPh/AAAAAAAAIEDlNZTXUN4jQAAAAAAAAPh/MzMzMzMzJEBjcD4G52MnQC+66KKLLiRAAAAAAAAA+H8AAAAAAAAjQAAAAAAAAPh/AAAAAAAA+H8AAAAAAAAZQFVVVVVVVSBAAAAAAAAA+H8zMzMzMzMeQFAHdVAHdSBAAAAAAAAA+H9GF1100eUjQAAAAAAAAPh/AAAAAAAA+H8AAAAAAAD4fwAAAAAAAPh/AAAAAAAAH0DO0TdH3xwfQN7d3d3d3RNAAAAAAAAA+H8AAAAAAAD4f43jOI7jOCtAAAAAAAAA+H+ShSxkIQsfQMJgMBgMBihAAAAAAAAA+H+rqqqqqqojQAAAAAAAAPh/QaIVNgcSIEChhDeaOr8fQMZO7MRObCRAAAAAAAAA+H8odmIndmIfQAAAAAAAAPh/5TWU11BeJEAAAAAAAAD4fwrXo3A9CiBAmpmZmZmZGUAAAAAAAAD4fwAAAAAAAPh/Li0tLS2tI0AAAAAAABAjQAAAAAAAAPh/AAAAAAAA+H9VVVVVVZUjQAAAAAAAAPh/AAAAAAAA+H+SJEmSJIkYQN/d3d3d3RdAY7tZnkSmI0BjjDHGGGMgQAAAAAAAAPh/AAAAAAAA+H8iIiIiIiIgQN5+SODthyNAAAAAAADgH0CROUq3r6wjQDaU11BeQyBA0UQTTTTRHkAAAAAAAAD4f9MgDdIgDSBAZCELWchCJEA=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -11000,7 +10823,7 @@
                                 "Fresco"
                             ],
                             "num_votes": {
-                                "__ndarray__": "AAAAAABpv0AAAAAAwJb4QAAAAAAA+JpAAAAAAAB0yEAAAAAAAG3RQAAAAAAAeJVAAAAAAID9wEAAAAAAwOHWQAAAAAAASbBAAAAAAAB4mUAAAAAAAEKzQAAAAAAAM7NAAAAAAAC6o0AAAAAAAPynQAAAAAAA9K1AAAAAAADesEAAAAAAADyqQAAAAAAA1stAAAAAAAAUoUAAAAAAgIXnQAAAAAAAkKpAAAAAAACAiEAAAAAAAPyVQAAAAAAAWIdAAAAAAAB8yUAAAAAAgJn4QAAAAAAAYKNAAAAAAABge0AAAAAAAEiGQAAAAADAmtBAAAAAAABur0AAAAAAAPy9QAAAAABApe5AAAAAAACEoEAAAAAAAP2yQAAAAAAAwFlAAAAAAADS20AAAAAAIFDxQAAAAACAQsxAAAAAAAAEs0AAAAAAgHTOQAAAAAAACItAAAAAAAAKv0AAAAAAAO6nQAAAAAAA275AAAAAAADwpUAAAAAAALCCQAAAAAAA4JhAAAAAAACf0UAAAAAAAPm9QAAAAAAA6JdAAAAAAABQmkAAAAAAADe+QAAAAAAAXJ5AAAAAAADsr0AAAAAAABLLQAAAAAAABqxAAAAAAJCq+EAAAAAAgN/BQAAAAAAAhKxAAAAAAAAogUAAAAAAAPy1QAAAAAAgyOVAAAAAAABGr0AAAAAAEOvyQAAAAACAZcZAAAAAAECL6EAAAAAAABKoQAAAAAAAkbpAAAAAAAABx0A=",
+                                "__ndarray__": "AAAAAABpv0AAAAAAwJb4QAAAAAAA+JpAAAAAAAB0yEAAAAAAAG3RQAAAAAAAeJVAAAAAAID9wEAAAAAAgO/WQAAAAAAASbBAAAAAAAB4mUAAAAAAAEKzQAAAAAAAM7NAAAAAAAC6o0AAAAAAAPynQAAAAAAA9K1AAAAAAADesEAAAAAAADyqQAAAAAAA1stAAAAAAAAUoUAAAAAAgIXnQAAAAAAAkKpAAAAAAACAiEAAAAAAAPyVQAAAAAAAWIdAAAAAAAB8yUAAAAAAYLr4QAAAAAAAYKNAAAAAAABge0AAAAAAAEiGQAAAAABAtdBAAAAAAABur0AAAAAAAPy9QAAAAABgu+5AAAAAAACEoEAAAAAAAP2yQAAAAAAAwFlAAAAAAADS20AAAAAAMGTxQAAAAACAQsxAAAAAAAAEs0AAAAAAgHTOQAAAAAAACItAAAAAAAAKv0AAAAAAAO6nQAAAAAAA275AAAAAAADwpUAAAAAAALCCQAAAAAAA4JhAAAAAAACf0UAAAAAAAPm9QAAAAAAA6JdAAAAAAABQmkAAAAAAADe+QAAAAAAAXJ5AAAAAAADsr0AAAAAAABLLQAAAAAAABqxAAAAAAHDL+EAAAAAAgN/BQAAAAAAAhKxAAAAAAAAogUAAAAAAAPy1QAAAAADA3eVAAAAAAABGr0AAAAAAgP3yQAAAAACAZcZAAAAAAECL6EAAAAAAABKoQAAAAAAAkbpAAAAAAAABx0A=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -11872,7 +11695,7 @@
                                 "47,3475,4335,2366,22"
                             ],
                             "rank": {
-                                "__ndarray__": "AAAAAAAYkEAAAAAAAIB4QAAAAAAAcqZAAAAAAAA4hUAAAAAAAEBwQAAAAAAAlKBAAAAAAABogEAAAAAAAABTQAAAAAAAwIRAAAAAAABWqEAAAAAAAKyXQAAAAAAA7JFAAAAAAAAypUAAAAAAANSdQAAAAAAAEqBAAAAAAADElUAAAAAAALSdQAAAAAAAkJNAAAAAAACkl0AAAAAAABB5QAAAAAAAxJJAAAAAAAC5sEAAAAAAAPqnQAAAAAAAUqxAAAAAAAB4mUAAAAAAAGBmQAAAAAAAULpAAAAAAABVt0AAAAAAABqtQAAAAAAAAFhAAAAAAADMm0AAAAAAACiRQAAAAAAAADtAAAAAAAD4k0AAAAAAAJyWQAAAAAAAZtFAAAAAAAAwfUAAAAAAAGBlQAAAAAAAsHJAAAAAAADAhUAAAAAAAJB6QAAAAAAAgKxAAAAAAAAAhEAAAAAAAMCaQAAAAAAAIJZAAAAAAACsnUAAAAAAAN29QAAAAAAAeqZAAAAAAADAekAAAAAAALiDQAAAAAAA5KRAAAAAAACCpkAAAAAAAPCBQAAAAAAAGJZAAAAAAADAjkAAAAAAAJCHQAAAAAAANJZAAAAAAADAWEAAAAAAADB/QAAAAAAA2IxAAAAAAABArkAAAAAAAECaQAAAAAAAQFtAAAAAAAAwi0AAAAAAAEBYQAAAAAAAOIZAAAAAAAAwcUAAAAAAAJCZQAAAAAAA0INAAAAAAACgdEA=",
+                                "__ndarray__": "AAAAAAAYkEAAAAAAAIB4QAAAAAAAcqZAAAAAAAA4hUAAAAAAAEBwQAAAAAAAlKBAAAAAAABogEAAAAAAAEBTQAAAAAAAwIRAAAAAAABWqEAAAAAAAKyXQAAAAAAA7JFAAAAAAAAypUAAAAAAANSdQAAAAAAAEqBAAAAAAADElUAAAAAAALSdQAAAAAAAkJNAAAAAAACkl0AAAAAAABB5QAAAAAAAxJJAAAAAAAC5sEAAAAAAAPqnQAAAAAAAUqxAAAAAAAB4mUAAAAAAAKBmQAAAAAAAULpAAAAAAABVt0AAAAAAABqtQAAAAAAAAFhAAAAAAADMm0AAAAAAACiRQAAAAAAAADtAAAAAAAD4k0AAAAAAAJyWQAAAAAAAZtFAAAAAAAAwfUAAAAAAAGBlQAAAAAAAsHJAAAAAAADAhUAAAAAAAJB6QAAAAAAAgKxAAAAAAAAAhEAAAAAAAMCaQAAAAAAAIJZAAAAAAACsnUAAAAAAAN29QAAAAAAAeqZAAAAAAADAekAAAAAAALiDQAAAAAAA5KRAAAAAAACCpkAAAAAAAPCBQAAAAAAAGJZAAAAAAADAjkAAAAAAAJCHQAAAAAAANJZAAAAAAADAWEAAAAAAADB/QAAAAAAA2IxAAAAAAABArkAAAAAAAECaQAAAAAAAgFtAAAAAAAAwi0AAAAAAAIBYQAAAAAAAOIZAAAAAAAAwcUAAAAAAAJCZQAAAAAAA0INAAAAAAACgdEA=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -11960,7 +11783,7 @@
                                 ]
                             },
                             "stddev_rating": {
-                                "__ndarray__": "owG8BRIU9D956SYxCKz3P8r9DkWBvvM/Xf5D+u1r9j9gcTjzqznzP37ja88sifM/yjLEsS5u9D9f7/54r1r1P3oZxXJLK/U/1QRR9wFI9T8Ymus00lL1PxPtKqT8JPM/+PwwQng09T+cilQYWwj0P7O1vkhoy/Q/ZHWr56R39D/yRuaRP5j0P5wWvOgrSPQ/J8KGp1dK9T87a7ddaC70P5QT7SqkfPU/z72HS4679z/4U+Olm8T2P/4rK01KwfY/oWez6nO19j8HWoEhq9v0P+azPA/uzvY/R6zFpwCY9T81mIbhI2L1PyzZsRGI1/Y/Nqs+V1ux9D+yLm6jATz1P3qqQ26GG/Y/gZpattYX9D+0VN6OcNrzP7Ebti3K7PY/AJF++zrw8j+iQJ/Ik6T0P5yKVBhbCPU/roGtEiyO9D8d/pqsUQ/zP/K1Z5YEqPM/F30Facai8z9B9nr3x/vzP0c9RKM7iPM/1lbsL7un8z/u68A5I8r2P52dDI6S1/I/EJIFTODW8j+ppE5AE2HzP6J6a2CrhPM/bD6uDRVj8j+BCdy6myfzP0hQ/Bhz1/Q/FLNeDOXE8j9g6udNRaryP8AhVKnZg/M/kQ96Nqs+9T/ZzvdT4yXzPywrTUpBt/M/rYbEPZY+9D/FOH8TCpH1PwFqatla3/M/rYbEPZa+8z9B8WPMXcv2PzP5Zpsb0/I/8l61MuEX9j/nNXaJ6q3zP2oYPiKmxPI/2A3bFmU28j8=",
+                                "__ndarray__": "owG8BRIU9D956SYxCKz3P8r9DkWBvvM/Xf5D+u1r9j9gcTjzqznzP37ja88sifM/yjLEsS5u9D9GIF7XL1j1P3oZxXJLK/U/1QRR9wFI9T8Ymus00lL1PxPtKqT8JPM/+PwwQng09T+cilQYWwj0P7O1vkhoy/Q/ZHWr56R39D/yRuaRP5j0P5wWvOgrSPQ/J8KGp1dK9T87a7ddaC70P5QT7SqkfPU/z72HS4679z/4U+Olm8T2P/4rK01KwfY/oWez6nO19j+ufJbnwd30P+azPA/uzvY/R6zFpwCY9T81mIbhI2L1P7x0kxgE1vY/Nqs+V1ux9D+yLm6jATz1P0VMiSR6GfY/gZpattYX9D+0VN6OcNrzP7Ebti3K7PY/AJF++zrw8j9OC170FaT0P5yKVBhbCPU/roGtEiyO9D8d/pqsUQ/zP/K1Z5YEqPM/F30Facai8z9B9nr3x/vzP0c9RKM7iPM/1lbsL7un8z/u68A5I8r2P52dDI6S1/I/EJIFTODW8j+ppE5AE2HzP6J6a2CrhPM/bD6uDRVj8j+BCdy6myfzP0hQ/Bhz1/Q/FLNeDOXE8j9g6udNRaryP8AhVKnZg/M/IZOMnIU99T/ZzvdT4yXzPywrTUpBt/M/rYbEPZY+9D/FOH8TCpH1Px8RUyKJ3vM/rYbEPZa+8z9CCTNt/8r2PzP5Zpsb0/I/8l61MuEX9j/nNXaJ6q3zP2oYPiKmxPI/2A3bFmU28j8=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -12003,21 +11826,198 @@
                     "type": "ColumnDataSource"
                 },
                 {
+                    "attributes": {
+                        "overlay": {
+                            "id": "1163"
+                        }
+                    },
+                    "id": "1158",
+                    "type": "BoxZoomTool"
+                },
+                {
+                    "attributes": {
+                        "axis_label": "complexity",
+                        "formatter": {
+                            "id": "1194"
+                        },
+                        "ticker": {
+                            "id": "1145"
+                        }
+                    },
+                    "id": "1144",
+                    "type": "LinearAxis"
+                },
+                {
+                    "attributes": {},
+                    "id": "1156",
+                    "type": "ZoomInTool"
+                },
+                {
+                    "attributes": {},
+                    "id": "1199",
+                    "type": "UnionRenderers"
+                },
+                {
+                    "attributes": {
+                        "active_drag": "auto",
+                        "active_inspect": "auto",
+                        "active_multi": null,
+                        "active_scroll": "auto",
+                        "active_tap": "auto",
+                        "tools": [
+                            {
+                                "id": "1152"
+                            },
+                            {
+                                "id": "1153"
+                            },
+                            {
+                                "id": "1154"
+                            },
+                            {
+                                "id": "1155"
+                            },
+                            {
+                                "id": "1156"
+                            },
+                            {
+                                "id": "1157"
+                            },
+                            {
+                                "id": "1158"
+                            },
+                            {
+                                "id": "1159"
+                            },
+                            {
+                                "id": "1160"
+                            },
+                            {
+                                "id": "1161"
+                            }
+                        ]
+                    },
+                    "id": "1164",
+                    "type": "Toolbar"
+                },
+                {
                     "attributes": {},
                     "id": "1145",
                     "type": "BasicTicker"
                 },
                 {
+                    "attributes": {},
+                    "id": "1153",
+                    "type": "CrosshairTool"
+                },
+                {
                     "attributes": {
-                        "gradient": -13.835792310245255,
+                        "gradient": -13.836025797562177,
                         "line_dash": [
                             6
                         ],
                         "line_width": 2,
-                        "y_intercept": 38.35562194259835
+                        "y_intercept": 38.35498484157829
                     },
                     "id": "1182",
                     "type": "Slope"
+                },
+                {
+                    "attributes": {},
+                    "id": "1149",
+                    "type": "BasicTicker"
+                },
+                {
+                    "attributes": {},
+                    "id": "1200",
+                    "type": "Selection"
+                },
+                {
+                    "attributes": {
+                        "bottom_units": "screen",
+                        "fill_alpha": 0.5,
+                        "fill_color": "lightgrey",
+                        "left_units": "screen",
+                        "level": "overlay",
+                        "line_alpha": 1.0,
+                        "line_color": "black",
+                        "line_dash": [
+                            4,
+                            4
+                        ],
+                        "line_width": 2,
+                        "right_units": "screen",
+                        "top_units": "screen"
+                    },
+                    "id": "1163",
+                    "type": "BoxAnnotation"
+                },
+                {
+                    "attributes": {},
+                    "id": "1159",
+                    "type": "ResetTool"
+                },
+                {
+                    "attributes": {
+                        "bottom_units": "screen",
+                        "fill_alpha": 0.5,
+                        "fill_color": "lightgrey",
+                        "left_units": "screen",
+                        "level": "overlay",
+                        "line_alpha": 1.0,
+                        "line_color": "black",
+                        "line_dash": [
+                            4,
+                            4
+                        ],
+                        "line_width": 2,
+                        "right_units": "screen",
+                        "top_units": "screen"
+                    },
+                    "id": "1162",
+                    "type": "BoxAnnotation"
+                },
+                {
+                    "attributes": {
+                        "distribution": "normal",
+                        "range": null,
+                        "width": 0.25
+                    },
+                    "id": "1175",
+                    "type": "Jitter"
+                },
+                {
+                    "attributes": {},
+                    "id": "1140",
+                    "type": "LinearScale"
+                },
+                {
+                    "attributes": {
+                        "fill_color": {
+                            "field": "color"
+                        },
+                        "line_color": {
+                            "field": "color"
+                        },
+                        "marker": {
+                            "field": "marker"
+                        },
+                        "size": {
+                            "units": "screen",
+                            "value": 8
+                        },
+                        "x": {
+                            "field": "complexity"
+                        },
+                        "y": {
+                            "field": "min_age",
+                            "transform": {
+                                "id": "1175"
+                            }
+                        }
+                    },
+                    "id": "1178",
+                    "type": "Scatter"
                 }
             ],
             "root_ids": [
