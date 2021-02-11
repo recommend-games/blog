@@ -7,7 +7,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.7.1
+#       jupytext_version: 1.8.2
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -128,7 +128,17 @@ for feature, score in zip(features, np.exp(lr.coef_[0]) - 1):
     print(f"{score:+10.3%} change in odds for one unit increase in {feature}")
 
 # %%
-data[lr.predict(data[features]) != data.ksdj][
+data["predict"] = lr.predict(data[features])
+data["predict_proba"] = lr.predict_proba(data[features])[:, 1]
+
+# %%
+correct = data.predict == data.ksdj
+print(
+    f"{correct.sum()} out of {len(correct)} classified correctly, that's {correct.mean()*100:.1f}% accurate"
+)
+
+# %%
+data[~correct][
     [
         "name",
         "year",
@@ -136,8 +146,9 @@ data[lr.predict(data[features]) != data.ksdj][
         "min_time",
         "max_time",
         "min_age",
-        "sdj",
         "ksdj",
+        "predict",
+        "predict_proba",
     ]
 ]
 
@@ -221,12 +232,13 @@ show(plot)
 
 # %%
 wrong = data[model.predict(data[pair]) != data.ksdj][
-    ["name", "year", "complexity", "min_age", "sdj"]
+    ["name", "year", "complexity", "min_age", "sdj", "predict", "predict_proba"]
 ].sort_values(["year", "sdj"])
 wrong["name"] = [
     "{{% game " + str(i) + " %}}" + n + "{{% /game %}}" for i, n in wrong.name.items()
 ]
 wrong["complexity"] = wrong["complexity"].apply(lambda c: f"{c:.1f}")
+wrong["confidence"] = wrong["predict_proba"].apply(lambda p: f"{p*100:.1f}%")
 print(wrong.to_markdown())
 
 # %%

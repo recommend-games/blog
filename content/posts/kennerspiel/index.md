@@ -38,14 +38,14 @@ You see the jury's favourites of the past decade lining up from simple (left) to
 However, there is some significant overlap. In particular, a lot of games of either award can be found around the 10 year / complexity 2 (medium light) intersect. I've marked games with squares that fall on the "wrong" side of the line. Some notable outliers are:
 
 | Name                                                                | Year | Complexity | Min age | Award |
-|:--------------------------------------------------------------------|:----:|-----------:|--------:|:------|
-| {{% game 125618 %}}Libertalia{{% /game %}}                          | 2013 |        2.2 |      14 | SdJ   |
-| {{% game 244521 %}}The Quacks of Quedlinburg{{% /game %}}           | 2018 |        1.9 |      10 | KdJ   |
-| {{% game 244522 %}}That's Pretty Clever!{{% /game %}}               | 2018 |        1.9 |       8 | KdJ   |
-| {{% game 263918 %}}Cartographers{{% /game %}}                       | 2020 |        1.9 |      10 | KdJ   |
-| {{% game 284083 %}}The Crew: The Quest for Planet Nine{{% /game %}} | 2020 |        2.0 |      10 | KdJ   |
-| {{% game 295486 %}}My City{{% /game %}}                             | 2020 |        2.1 |      10 | SdJ   |
-| {{% game 223953 %}}Kitchen Rush{{% /game %}}                        | 2020 |        2.2 |      12 | SdJ   |
+|:--------------------------------------------------------------------|:----:|-----------:|--------:|:-----:|
+| {{% game 125618 %}}Libertalia{{% /game %}}                          | 2013 |        2.2 |      14 |  SdJ  |
+| {{% game 244521 %}}The Quacks of Quedlinburg{{% /game %}}           | 2018 |        1.9 |      10 |  KdJ  |
+| {{% game 244522 %}}That's Pretty Clever!{{% /game %}}               | 2018 |        1.9 |       8 |  KdJ  |
+| {{% game 263918 %}}Cartographers{{% /game %}}                       | 2020 |        1.9 |      10 |  KdJ  |
+| {{% game 284083 %}}The Crew: The Quest for Planet Nine{{% /game %}} | 2020 |        2.0 |      10 |  KdJ  |
+| {{% game 295486 %}}My City{{% /game %}}                             | 2020 |        2.1 |      10 |  SdJ  |
+| {{% game 223953 %}}Kitchen Rush{{% /game %}}                        | 2020 |        2.2 |      12 |  SdJ  |
 
 So by all means, 2020 *did* contain a lot of games just on the border of the two awards.
 
@@ -53,7 +53,42 @@ Generally, this works pretty well for such a simple model (a linear function in 
 
 # Can we do better?
 
-We can do better with more features, multinomial logistic regression.
+Complexity and minimum age make a pretty powerful pair, but the only reason I picked two features is because we can nicely visualise everything in 2D. I don't know about you, but my brain can only handle three dimensions – on a good day…
+
+Mathematics to the rescue! Higher dimensions pose no challenge to our old friend, and we can throw as many variables at it as we want. So let's add some more features to our model:
+
+* complexity (weight between 1 and 5),
+* minimum age (between 6 and 16 years),
+* minimum and maximum play time (between 1 minute 🏃 and 3 hours),
+* player count (between 1 and 100 👀 players),
+* cooperative or competitive game,
+* types (e.g., family, strategy, or party game),
+* categories (e.g., card, economic, or medieval game), and
+* mechanics (e.g., hand management, set collection, or worker placement).
+
+Using the same set of games, but incorporating all those values, we can go through the same process that produced the separating line in the plot above (multivariate logistic regression, in case you're curious). This time, that dividing line would rather be a *hyperplane* in high dimensional space, but don't worry about that. In fact, we can do better that just a yes/no classification: We can estimate our *confidence* that a certain game is in fact a {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}.
+
+This model classifies a whooping 150 out of 154 games correctly as either {{% color "#E30613" %}}***Spiel***{{% /color %}} or {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}} – that's 97.4% accurate. 🤯 So much for not being measurable, Mr Bartsch!
+
+So, let's take a look back at our problem games from before and check how much confidence our model has that the respective game is for connoisseurs:
+
+| Name                                                                | Year | Award | Confidence | 🤔 |
+|:--------------------------------------------------------------------|:----:|:-----:|-----------:|:-:|
+| {{% game 125618 %}}Libertalia{{% /game %}}                          | 2013 |  SdJ  |      91.2% | 🤬 |
+| {{% game 244521 %}}The Quacks of Quedlinburg{{% /game %}}           | 2018 |  KdJ  |      65.3% | ✅ |
+| {{% game 244522 %}}That's Pretty Clever!{{% /game %}}               | 2018 |  KdJ  |      51.8% | ✅ |
+| {{% game 263918 %}}Cartographers{{% /game %}}                       | 2020 |  KdJ  |      84.7% | ✅ |
+| {{% game 284083 %}}The Crew: The Quest for Planet Nine{{% /game %}} | 2020 |  KdJ  |      41.7% | 😕 |
+| {{% game 295486 %}}My City{{% /game %}}                             | 2020 |  SdJ  |      36.0% | ✅ |
+| {{% game 223953 %}}Kitchen Rush{{% /game %}}                        | 2020 |  SdJ  |      37.4% | ✅ |
+
+This picture certainly has improved, and we're even classifying games like {{% game 244522 %}}That's Pretty Clever!{{% /game %}} (just about) and {{% game 223953 %}}Kitchen Rush{{% /game %}} right that caused us a lot of headaches before. However, {{% game 284083 %}}The Crew{{% /game %}} still eludes correct classification, and {{% game 125618 %}}Libertalia{{% /game %}} is so far off that I'd argue the jury simply got that one wrong…
+
+"Not so fast!", you might say. "Aren't you simply overfitting here?" Why, yes, you're right. The dataset is so small that there's a high risk of fine tuning the model too much for the data we're seeing. And of course, it's **bad bad bad** to assess you're model's performance on items it was trained on – that's just cheating. So let's test the model on some games it hadn't seen yet!
+
+# What about old games?
+
+{{% bokeh "complexity_vs_min_age_before_2011.json" %}}
 
 # Outline
 
@@ -63,7 +98,6 @@ What games do we still get wrong and why?
 
 Apply to old SdJ winners / nominees: which ones would be a Kennerspiel by today's standards?
 
-{{% bokeh "complexity_vs_min_age_before_2011.json" %}}
 
 Shapley values?
 
