@@ -269,10 +269,18 @@ sdj_data["kennerspiel"] = lr.predict(sdj_data[features])
 sdj_data["kennerspiel_prob"] = lr.predict_proba(sdj_data[features])[:, 1]
 
 # %%
-sdj_data[["name", "kennerspiel", "kennerspiel_prob"]].sort_values(
+old_sdj = sdj_data[["name", "year", "kennerspiel_prob"]].sort_values(
     "kennerspiel_prob",
     ascending=False,
 )
+old_sdj
+
+# %%
+old_sdj["link"] = [
+    "{{% game " + str(i) + " %}}" + n + "{{% /game %}}" for i, n in old_sdj.name.items()
+]
+old_sdj["confidence"] = old_sdj.kennerspiel_prob.apply(lambda c: f"{c*100:.1f}%")
+print(old_sdj.reset_index()[["link", "year", "confidence"]].to_markdown())
 
 # %%
 sdj_data["ksdj"] = model.predict(sdj_data[pair])
