@@ -19,6 +19,7 @@ pytility = "*"
 scikit-learn = "*"
 scipy = "*"
 seaborn = "*"
+shap = "*"
 tabulate = "*"
 
 [dev-packages]
