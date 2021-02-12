@@ -15,9 +15,9 @@ tags:
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.2.3.min.js" ></script>
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-api-2.2.3.min.js" ></script>
 
-Spiel des Jahres 2021 nominations might still be a couple of months away, but I thought now is still a good time to return to one of the harder questions in [my predictions post from last year]({{<ref "posts/sdj_2020/index.md">}}): What exactly makes a game a {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}? By that I don't mean the qualities that earn a game the award, but the distinction between the more casual {{% color "#E30613" %}}***Spiel***{{% /color %}} and the more complex {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}} categories.
+{{% sdj %}}Spiel des Jahres 2021{{% /sdj %}} nominations might still be a couple of months away, but I thought now is still a good time to return to one of the harder questions in [my predictions post from last year]({{<ref "posts/sdj_2020/index.md">}}): What exactly makes a game a {{% kdj %}}Kennerspiel{{% /kdj %}}? By that I don't mean the qualities that earn a game the award, but the distinction between the more casual {{% sdj %}}Spiel{{% /sdj %}} and the more complex {{% kdj %}}Kennerspiel{{% /kdj %}} categories.
 
-This question was particularly pertinent in 2020 when four out of the six nominees for the two adult awards straddled the line between {{% color "#E30613" %}}***Spiel***{{% /color %}} and {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}: {{% game 295486 %}}My City{{% /game %}}, {{% game 284435 %}}Nova Luna{{% /game %}}, {{% game 263918 %}}Cartographers{{% /game %}}, and {{% game 284083 %}}The Crew{{% /game %}} could all have landed in either category. Jury member Udo Bartsch wrote a [very interesting essay](https://www.spiel-des-jahres.de/rot-oder-anthrazit-spiele-im-grenzbereich/) about the very topic of this article, giving some insight into the reasoning behind the jury's decision. Basically, the distinction isn't so much about complexity or depth of play, but *approachability*. How many people can take the hurdles that are in the way before playing a particular game? According to Mr Bartsch, this question doesn't have a simple answer:
+This question was particularly pertinent in 2020 when four out of the six nominees for the two adult awards straddled the line between {{% sdj %}}Spiel{{% /sdj %}} and {{% kdj %}}Kennerspiel{{% /kdj %}}: {{% game 295486 %}}My City{{% /game %}}, {{% game 284435 %}}Nova Luna{{% /game %}}, {{% game 263918 %}}Cartographers{{% /game %}}, and {{% game 284083 %}}The Crew{{% /game %}} could all have landed in either category. Jury member Udo Bartsch wrote a [very interesting essay](https://www.spiel-des-jahres.de/rot-oder-anthrazit-spiele-im-grenzbereich/) about the very topic of this article, giving some insight into the reasoning behind the jury's decision. Basically, the distinction isn't so much about complexity or depth of play, but *approachability*. How many people can take the hurdles that are in the way before playing a particular game? According to Mr Bartsch, this question doesn't have a simple answer:
 
 > Which game is a game for everyone and which is not is unfortunately not recognised by generally applicable, precisely measurable characteristics, but only when playing with as many different people as possible.
 
@@ -25,7 +25,7 @@ Challenge accepted! Who needs humans when we can just deal with data instead? �
 
 # Let's look at the data
 
-Since the introduction of {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} in 2011 there were a total of **90** games on the longlist for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} and **64** games for {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}[^kennerspiel]. It's not a large amount of data to make any inferences on, but we'll try anyways.
+Since the introduction of {{% kdj %}}Kennerspiel des Jahres{{% /kdj %}} in 2011 there were a total of **90** games on the longlist for {{% sdj %}}Spiel des Jahres{{% /sdj %}} and **64** games for {{% kdj %}}Kennerspiel{{% /kdj %}}[^kennerspiel]. It's not a large amount of data to make any inferences on, but we'll try anyways.
 
 The first step is always to familiarise yourself with the task and data at hand. With [BoardGameGeek](https://boardgamegeek.com/) collecting all sorts of data about games, we know features of those jury recommendations like complexity, player age and count, play time, mechanics, themes, …
 
@@ -33,7 +33,7 @@ Why don't we start simple and plot the games by their complexity (also known as 
 
 {{% bokeh "complexity_vs_min_age.json" %}}
 
-You see the jury's favourites of the past decade lining up from simple (left) to complex (right), and from child friendly (bottom) to more mature (top). Unsurprisingly, the red {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} recommendations generally cluster in the bottom left, while the anthracite {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}} games tend towards the top right. The dotted line is the one that best[^logistic] separates {{% color "#E30613" %}}***Spiel***{{% /color %}} from {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}.
+You see the jury's favourites of the past decade lining up from simple (left) to complex (right), and from child friendly (bottom) to more mature (top). Unsurprisingly, the red {{% sdj %}}Spiel des Jahres{{% /sdj %}} recommendations generally cluster in the bottom left, while the anthracite {{% kdj %}}Kennerspiel{{% /kdj %}} games tend towards the top right. The dotted line is the one that best[^logistic] separates {{% sdj %}}Spiel{{% /sdj %}} from {{% kdj %}}Kennerspiel{{% /kdj %}}.
 
 However, there is some significant overlap. In particular, a lot of games of either award can be found around the 10 year / complexity 2 (medium light) intersect. I've marked games with squares that fall on the "wrong" side of the line. Some notable outliers are:
 
@@ -66,9 +66,9 @@ Mathematics to the rescue! Higher dimensions pose no challenge to our old friend
 * categories (e.g., card, economic, or medieval game), and
 * mechanics (e.g., hand management, set collection, or worker placement).
 
-Using the same set of games, but incorporating all those values, we can go through the same process that produced the separating line in the plot above (multivariate logistic regression, in case you're curious). This time, that dividing line would rather be a *hyperplane* in high dimensional space, but don't worry about that. In fact, we can do better that just a yes/no classification: We can estimate our *confidence* that a certain game is in fact a {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}.
+Using the same set of games, but incorporating all those values, we can go through the same process that produced the separating line in the plot above (multivariate logistic regression, in case you're curious). This time, that dividing line would rather be a *hyperplane* in high dimensional space, but don't worry about that. In fact, we can do better that just a yes/no classification: We can estimate our *confidence* that a certain game is in fact a {{% kdj %}}Kennerspiel{{% /kdj %}}.
 
-This model classifies a whooping 150 out of 154 games correctly as either {{% color "#E30613" %}}***Spiel***{{% /color %}} or {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}} – that's 97.4% accurate. 🤯 So much for not being measurable, Mr Bartsch!
+This model classifies a whooping 150 out of 154 games correctly as either {{% sdj %}}Spiel{{% /sdj %}} or {{% kdj %}}Kennerspiel{{% /kdj %}} – that's 97.4% accurate. 🤯 So much for not being measurable, Mr Bartsch!
 
 So, let's take a look back at our problem games from before and check how much confidence our model has that the respective game is for connoisseurs:
 
@@ -103,5 +103,5 @@ Shapley values?
 
 Looking ahead to some 2021 candidates
 
-[^kennerspiel]: In 2011, there was no separate recommendation list for the two awards, so I only included the nominees for 2011. I also added the special award winners {{% game 18602 %}}Caylus{{% /game %}}, {{% game 31260 %}}Agricola{{% /game %}}, {{% game 43528 %}}World Without End{{% /game %}}, and {{% game 221107 %}}Pandemic Legacy: Season 2{{% /game %}} to the {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}} list.
+[^kennerspiel]: In 2011, there was no separate recommendation list for the two awards, so I only included the nominees for 2011. I also added the special award winners {{% game 18602 %}}Caylus{{% /game %}}, {{% game 31260 %}}Agricola{{% /game %}}, {{% game 43528 %}}World Without End{{% /game %}}, and {{% game 221107 %}}Pandemic Legacy: Season 2{{% /game %}} to the {{% kdj %}}Kennerspiel{{% /kdj %}} list.
 [^logistic]: Using logistic regression with F1–score as target metric. Other definitions of "best line" of course might yield different results.
