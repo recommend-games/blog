@@ -66,7 +66,7 @@ def make_transformer(
     list_pipeline = make_pipeline(
         FunctionTransformer(_list_dataframe),
         FunctionTransformer(_combine_lists),
-        CountVectorizer(analyzer=set, min_df=min_df, binary=True, dtype=np.uint8),
+        CountVectorizer(analyzer=set, min_df=min_df, binary=True, dtype=np.bool_),
         FunctionTransformer(csr_matrix.todense),
     )
     playable_transformer = FunctionTransformer(
@@ -87,7 +87,13 @@ def make_transformer(
     return transformer
 
 
-def matrix_to_dataframe(matrix, transformer, original_columns, index=None):
+def matrix_to_dataframe(
+    matrix,
+    transformer,
+    original_columns,
+    index=None,
+    rename=None,
+):
     """Take the transformed matrix and turn it back into a dataframe."""
 
     _, list_pipeline, old_list_columns = transformer.transformers_[0]
@@ -114,6 +120,14 @@ def matrix_to_dataframe(matrix, transformer, original_columns, index=None):
     )
 
     dataframe = pd.DataFrame(data=matrix, columns=columns, index=index)
+
+    if rename is not None:
+        rename_cols = {}
+        for column, values in rename.items():
+            for idx, name in values.items():
+                rename_cols[f"{column}:{idx}"] = f"{column}:{name}"
+        dataframe.rename(columns=rename_cols, inplace=True)
+
     return dataframe.infer_objects()
 
 
@@ -122,6 +136,7 @@ def transform(
     list_columns,
     player_count_columns=("min_players", "max_players"),
     min_df=0.01,
+    rename=None,
 ):
     """Transform the data."""
 
@@ -136,4 +151,5 @@ def transform(
         transformer=transformer,
         original_columns=data.columns,
         index=data.index,
+        rename=rename,
     )
