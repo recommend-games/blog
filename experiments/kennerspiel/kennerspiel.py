@@ -14,6 +14,9 @@
 #     name: python3
 # ---
 
+# %% [markdown]
+# # What makes a Kennerspiel?
+
 # %%
 import json
 
@@ -43,6 +46,9 @@ shap.initjs()
 # %matplotlib inline
 # %load_ext nb_black
 # %load_ext lab_black
+
+# %% [markdown]
+# ## Data
 
 # %%
 sdj = pd.read_csv("../sdj.csv")
@@ -106,54 +112,9 @@ features
 # %%
 data[num_features + ["ksdj"]].corr()
 
-# %%
-lr = LogisticRegressionCV(
-    class_weight="balanced",
-    scoring="f1",
-    max_iter=10_000,
-    random_state=SEED,
-)
-lr.fit(data[features], data.ksdj)
 
-# %%
-print(classification_report(data.ksdj, lr.predict(data[features])))
-lr.score(data[features], data.ksdj)
-
-# %%
-plot_roc_curve(lr, data[features], data.ksdj)
-
-# %%
-dict(zip(features, lr.coef_[0, :]))
-
-# %%
-for feature, score in zip(features, np.exp(lr.coef_[0]) - 1):
-    print(f"{score:+10.3%} change in odds for one unit increase in {feature}")
-
-# %%
-data["predict"] = lr.predict(data[features])
-data["predict_proba"] = lr.predict_proba(data[features])[:, 1]
-
-# %%
-correct = data.predict == data.ksdj
-print(
-    f"{correct.sum()} out of {len(correct)} classified correctly, that's {correct.mean()*100:.1f}% accurate"
-)
-
-# %%
-data[~correct][
-    [
-        "name",
-        "year",
-        "complexity",
-        "min_time",
-        "max_time",
-        "min_age",
-        "ksdj",
-        "predict",
-        "predict_proba",
-    ]
-]
-
+# %% [markdown]
+# ## Simple model in two variables
 
 # %%
 def test_feature_pairs(data=data, features=features, target="ksdj"):
@@ -233,6 +194,61 @@ plot = plot_games(data=data, model=model, features=pair, title="Kennerspiel des 
 show(plot)
 
 # %%
+with open("complexity_vs_min_age.json", "w") as out_file:
+    json.dump(json_item(plot), out_file, indent=4)
+
+# %% [markdown]
+# ## Complex model in many variables
+
+# %%
+lr = LogisticRegressionCV(
+    class_weight="balanced",
+    scoring="f1",
+    max_iter=10_000,
+    random_state=SEED,
+)
+lr.fit(data[features], data.ksdj)
+
+# %%
+print(classification_report(data.ksdj, lr.predict(data[features])))
+lr.score(data[features], data.ksdj)
+
+# %%
+plot_roc_curve(lr, data[features], data.ksdj)
+
+# %%
+dict(zip(features, lr.coef_[0, :]))
+
+# %%
+for feature, score in zip(features, np.exp(lr.coef_[0]) - 1):
+    print(f"{score:+10.3%} change in odds for one unit increase in {feature}")
+
+# %%
+data["predict"] = lr.predict(data[features])
+data["predict_proba"] = lr.predict_proba(data[features])[:, 1]
+
+# %%
+correct = data.predict == data.ksdj
+print(
+    f"{correct.sum()} out of {len(correct)} classified correctly, that's {correct.mean()*100:.1f}% accurate"
+)
+
+# %%
+data[~correct][
+    [
+        "name",
+        "year",
+        "complexity",
+        "min_time",
+        "max_time",
+        "min_age",
+        "ksdj",
+        "predict",
+        "predict_proba",
+    ]
+]
+
+# %%
 wrong = data[model.predict(data[pair]) != data.ksdj][
     ["name", "year", "complexity", "min_age", "sdj", "predict", "predict_proba"]
 ].sort_values(["year", "sdj"])
@@ -243,12 +259,8 @@ wrong["complexity"] = wrong["complexity"].apply(lambda c: f"{c:.1f}")
 wrong["confidence"] = wrong["predict_proba"].apply(lambda p: f"{p*100:.1f}%")
 print(wrong.to_markdown())
 
-# %%
-with open("complexity_vs_min_age.json", "w") as out_file:
-    json.dump(json_item(plot), out_file, indent=4)
-
 # %% [markdown]
-# # Old Spiel des Jahres winners
+# ## Old Spiel des Jahres winners
 
 # %%
 sdj_ids = sdj[((sdj.winner == 1) | (sdj.nominated == 1)) & (sdj.jahrgang < 2011)].bgg_id
@@ -294,7 +306,7 @@ with open("complexity_vs_min_age_before_2011.json", "w") as out_file:
     json.dump(json_item(plot), out_file, indent=4)
 
 # %% [markdown]
-# ## SHAP values
+# ### SHAP values
 
 # %%
 explainer = shap.LinearExplainer(
@@ -329,7 +341,7 @@ shap.force_plot(
 )
 
 # %% [markdown]
-# # Candidates for SdJ 2021
+# ## Candidates for SdJ 2021
 
 # %%
 url = "https://recommend.games/api/games/recommend/"
