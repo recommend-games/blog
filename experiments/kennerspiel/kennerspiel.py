@@ -260,6 +260,42 @@ wrong["confidence"] = wrong["predict_proba"].apply(lambda p: f"{p*100:.1f}%")
 print(wrong.to_markdown())
 
 # %% [markdown]
+# ### SHAP values
+
+# %%
+explainer = shap.LinearExplainer(lr, data[features])
+# feature_perturbation="interventional"
+X_test_array = data[features].values
+shap_values = explainer.shap_values(X_test_array)
+
+# %%
+shap.summary_plot(
+    shap_values.astype(float),
+    X_test_array,
+    feature_names=features,
+    plot_type="bar",
+)
+
+# %%
+ind = -2  # My City
+print(data.name.iloc[ind])
+shap.force_plot(
+    base_value=explainer.expected_value,
+    shap_values=shap_values[ind, :],
+    features=X_test_array[ind, :],
+    feature_names=features,
+    matplotlib=True,
+)
+
+# %%
+shap.force_plot(
+    base_value=explainer.expected_value,
+    shap_values=shap_values,
+    features=X_test_array,
+    feature_names=features,
+)
+
+# %% [markdown]
 # ## Old Spiel des Jahres winners
 
 # %%
@@ -304,41 +340,6 @@ show(plot)
 # %%
 with open("complexity_vs_min_age_before_2011.json", "w") as out_file:
     json.dump(json_item(plot), out_file, indent=4)
-
-# %% [markdown]
-# ### SHAP values
-
-# %%
-explainer = shap.LinearExplainer(
-    lr, data[features]
-)  # feature_perturbation="interventional"
-X_test_array = sdj_data[features].values
-shap_values = explainer.shap_values(X_test_array)
-
-# %%
-shap.summary_plot(
-    shap_values.astype(float),
-    X_test_array,
-    feature_names=features,
-)
-
-# %%
-ind = 1  # Catan
-print(sdj_data.name.iloc[ind])
-shap.force_plot(
-    base_value=explainer.expected_value,
-    shap_values=shap_values[ind, :],
-    features=X_test_array[ind, :],
-    feature_names=features,
-)
-
-# %%
-shap.force_plot(
-    base_value=explainer.expected_value,
-    shap_values=shap_values,
-    features=X_test_array,
-    feature_names=features,
-)
 
 # %% [markdown]
 # ## Candidates for SdJ 2021
