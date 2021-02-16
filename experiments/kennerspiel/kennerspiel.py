@@ -59,6 +59,16 @@ games = pd.read_csv(
 sdj.shape, ksdj.shape, games.shape
 
 # %%
+with open("../game_types.json") as f:
+    game_types = json.load(f)
+with open("../categories.json") as f:
+    categories = json.load(f)
+with open("../mechanics.json") as f:
+    mechanics = json.load(f)
+rename = {"game_type": game_types, "category": categories, "mechanic": mechanics}
+game_types
+
+# %%
 # there was no separate recommendation list for the two awards in 2011
 games["sdj"] = games.index.isin(
     set(
@@ -79,7 +89,10 @@ data.shape
 
 # %%
 data = transform(
-    data=data, list_columns=("game_type", "mechanic", "category"), min_df=0.1
+    data=data,
+    list_columns=("game_type", "mechanic", "category"),
+    min_df=0.1,
+    rename=rename,
 )
 data.shape
 
@@ -305,7 +318,10 @@ sdj_winners.shape
 
 # %%
 sdj_data = transform(
-    sdj_winners, list_columns=("game_type", "mechanic", "category"), min_df=0
+    sdj_winners,
+    list_columns=("game_type", "mechanic", "category"),
+    min_df=0,
+    rename=rename,
 )
 for feature in features:
     if feature not in sdj_data:
