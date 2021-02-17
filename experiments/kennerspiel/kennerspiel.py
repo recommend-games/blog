@@ -22,6 +22,7 @@ import json
 
 from itertools import combinations
 
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import requests
@@ -286,19 +287,34 @@ shap.summary_plot(
     shap_values.astype(float),
     X_test_array,
     feature_names=features,
-    plot_type="bar",
+    plot_type="dot",
+    show=False,
 )
+plt.savefig("shap_summary.svg")
 
 # %%
-ind = -2  # My City
-print(data.name.iloc[ind])
-shap.force_plot(
-    base_value=explainer.expected_value,
-    shap_values=shap_values[ind, :],
-    features=X_test_array[ind, :],
-    feature_names=features,
-    matplotlib=True,
-)
+to_test = [
+    171668,  # The Grizzled
+    244521,  # The Quacks of Quedlinburg
+    244522,  # That's Pretty Clever!
+    284083,  # The Crew
+    295486,  # My City
+    223953,  # Kitchen Rush
+]
+
+# %%
+for bgg_id in to_test:
+    ind = data.index.get_loc(bgg_id)
+    print(f"{data.name.iloc[ind]} ({bgg_id})")
+    shap.force_plot(
+        base_value=explainer.expected_value,
+        shap_values=shap_values[ind, :],
+        features=X_test_array[ind, :],
+        feature_names=features,
+        matplotlib=True,
+        show=False,
+    )
+    plt.savefig(f"shap_{bgg_id}.svg")
 
 # %%
 shap.force_plot(

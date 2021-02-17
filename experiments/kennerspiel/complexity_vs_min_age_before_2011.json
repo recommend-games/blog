@@ -57,32 +57,72 @@
                 },
                 {
                     "attributes": {},
-                    "id": "1149",
-                    "type": "BasicTicker"
+                    "id": "1198",
+                    "type": "Selection"
+                },
+                {
+                    "attributes": {
+                        "bottom_units": "screen",
+                        "fill_alpha": 0.5,
+                        "fill_color": "lightgrey",
+                        "left_units": "screen",
+                        "level": "overlay",
+                        "line_alpha": 1.0,
+                        "line_color": "black",
+                        "line_dash": [
+                            4,
+                            4
+                        ],
+                        "line_width": 2,
+                        "right_units": "screen",
+                        "top_units": "screen"
+                    },
+                    "id": "1163",
+                    "type": "BoxAnnotation"
+                },
+                {
+                    "attributes": {
+                        "source": {
+                            "id": "1176"
+                        }
+                    },
+                    "id": "1181",
+                    "type": "CDSView"
+                },
+                {
+                    "attributes": {
+                        "data_source": {
+                            "id": "1176"
+                        },
+                        "glyph": {
+                            "id": "1178"
+                        },
+                        "hover_glyph": null,
+                        "muted_glyph": null,
+                        "nonselection_glyph": {
+                            "id": "1179"
+                        },
+                        "selection_glyph": null,
+                        "view": {
+                            "id": "1181"
+                        }
+                    },
+                    "id": "1180",
+                    "type": "GlyphRenderer"
                 },
                 {
                     "attributes": {},
-                    "id": "1196",
-                    "type": "BasicTickFormatter"
+                    "id": "1140",
+                    "type": "LinearScale"
                 },
                 {
                     "attributes": {
-                        "text": "Spiel des Jahres before 2011"
+                        "distribution": "normal",
+                        "range": null,
+                        "width": 0.25
                     },
-                    "id": "1134",
-                    "type": "Title"
-                },
-                {
-                    "attributes": {
-                        "gradient": -13.85178587649736,
-                        "line_dash": [
-                            6
-                        ],
-                        "line_width": 2,
-                        "y_intercept": 38.38829239906189
-                    },
-                    "id": "1182",
-                    "type": "Slope"
+                    "id": "1175",
+                    "type": "Jitter"
                 },
                 {
                     "attributes": {
@@ -119,80 +159,32 @@
                     "type": "Scatter"
                 },
                 {
-                    "attributes": {
-                        "bottom_units": "screen",
-                        "fill_alpha": 0.5,
-                        "fill_color": "lightgrey",
-                        "left_units": "screen",
-                        "level": "overlay",
-                        "line_alpha": 1.0,
-                        "line_color": "black",
-                        "line_dash": [
-                            4,
-                            4
-                        ],
-                        "line_width": 2,
-                        "right_units": "screen",
-                        "top_units": "screen"
-                    },
-                    "id": "1162",
-                    "type": "BoxAnnotation"
-                },
-                {
-                    "attributes": {
-                        "data_source": {
-                            "id": "1176"
-                        },
-                        "glyph": {
-                            "id": "1178"
-                        },
-                        "hover_glyph": null,
-                        "muted_glyph": null,
-                        "nonselection_glyph": {
-                            "id": "1179"
-                        },
-                        "selection_glyph": null,
-                        "view": {
-                            "id": "1181"
-                        }
-                    },
-                    "id": "1180",
-                    "type": "GlyphRenderer"
+                    "attributes": {},
+                    "id": "1197",
+                    "type": "UnionRenderers"
                 },
                 {
                     "attributes": {},
-                    "id": "1138",
+                    "id": "1136",
                     "type": "DataRange1d"
                 },
                 {
                     "attributes": {},
-                    "id": "1153",
-                    "type": "CrosshairTool"
+                    "id": "1193",
+                    "type": "BasicTickFormatter"
                 },
                 {
                     "attributes": {
-                        "bottom_units": "screen",
-                        "fill_alpha": 0.5,
-                        "fill_color": "lightgrey",
-                        "left_units": "screen",
-                        "level": "overlay",
-                        "line_alpha": 1.0,
-                        "line_color": "black",
-                        "line_dash": [
-                            4,
-                            4
-                        ],
-                        "line_width": 2,
-                        "right_units": "screen",
-                        "top_units": "screen"
+                        "axis_label": "complexity",
+                        "formatter": {
+                            "id": "1195"
+                        },
+                        "ticker": {
+                            "id": "1145"
+                        }
                     },
-                    "id": "1163",
-                    "type": "BoxAnnotation"
-                },
-                {
-                    "attributes": {},
-                    "id": "1194",
-                    "type": "BasicTickFormatter"
+                    "id": "1144",
+                    "type": "LinearAxis"
                 },
                 {
                     "attributes": {
@@ -270,7 +262,7 @@
                                 "34863"
                             ],
                             "avg_rating": {
-                                "__ndarray__": "KqkT0ETYGkBZF7fRAJ4cQG2tLxLaMhlAAz4/jBCeG0DrHAOy11sdQNb/OcyX1xpArMq+K4J/HEBo6J/gYgUfQCjVPh2P2RxA0ZFc/kP6GEC3nEtxVRkaQA5Pr5Rl6BpAG2SSkbPwGEC/8bVnluQZQKuy74rgXxlAYkok0cuIGkATDyibcsUZQH+HokCfCBpAGCE82jhCG0D4wmSqYFQcQA/R6A5iRxtAkdWtnpP+GEBMVG8NbFUZQCwrTUpB1xlAwJXs2AiEGUDMQGX8+6wdQFJhbCHI4RZAJ2vUQzR6GEDJPPIHA88ZQFOu8C4X8R5ARbsKKT/JGUB2w7ZFma0aQNcv2A3b9h9AmfViKCf6G0DVITfDDTgaQA+0AkNWdxVA5CzsaYcfHEClMVpHVbMdQE60q5DyMx1AbRyxFp+CHEA7cM6I0n4cQH46HjNQeRlAlGqfjscMHECwA+eMKE0aQL0Yyol29RlAd2fttgsNGkBq3nGKjkQXQJeo3hrYShlA8rVnlgRoHEAsDmd+NSccQNsWZTbIxBlAw9MrZRkiGUBQ/Bhz11IcQDkLe9rh7xtAk8ZoHVWtG0AuxVVl31UbQChJ10y+uRpA6MHdWbttHkDtgVZgyIocQI5Yi08BEBxAavZAKzBEGkAbTMPwEbEZQE0VjErqRB5AqAAYz6AhHEDQ7SWN0XoeQBv1EI3ugBtAZB75g4EHHUApeXWOAVkaQEzD8BExRRxAofgx5q4lHUA=",
+                                "__ndarray__": "KqkT0ETYGkBZF7fRAJ4cQG2tLxLaMhlAAz4/jBCeG0DrHAOy11sdQNb/OcyX1xpArMq+K4J/HEBo6J/gYgUfQCjVPh2P2RxA0ZFc/kP6GEC3nEtxVRkaQA5Pr5Rl6BpAG2SSkbPwGEC/8bVnluQZQKuy74rgXxlAYkok0cuIGkATDyibcsUZQH+HokCfCBpAGCE82jhCG0D4wmSqYFQcQA/R6A5iRxtAHvmDgef+GEBMVG8NbFUZQCwrTUpB1xlAwJXs2AiEGUDMQGX8+6wdQI4j1uJT4BZAJ2vUQzR6GEDJPPIHA88ZQFOu8C4X8R5ARbsKKT/JGUB2w7ZFma0aQNcv2A3b9h9AmfViKCf6G0DVITfDDTgaQA+0AkNWdxVA5CzsaYcfHEClMVpHVbMdQE60q5DyMx1AbRyxFp+CHEA7cM6I0n4cQH46HjNQeRlAlGqfjscMHECwA+eMKE0aQL0Yyol29RlAd2fttgsNGkA2sFWCxUEXQJeo3hrYShlA8rVnlgRoHEAsDmd+NSccQNsWZTbIxBlAw9MrZRkiGUBQ/Bhz11IcQDkLe9rh7xtAk8ZoHVWtG0AuxVVl31UbQChJ10y+uRpA6MHdWbttHkDtgVZgyIocQI5Yi08BEBxAavZAKzBEGkAbTMPwEbEZQE0VjErqRB5AqAAYz6AhHEDQ7SWN0XoeQBv1EI3ugBtAZB75g4EHHUApeXWOAVkaQEzD8BExRRxAofgx5q4lHUA=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -278,7 +270,7 @@
                                 ]
                             },
                             "bayes_rating": {
-                                "__ndarray__": "QN6rVib8GUC/SGjLufQbQPs/h/nyohdAK97IPPLnGkAUyy2thqQcQCveyDzyRxhAMbYQ5KBkG0B6cHfWblseQGgFhqxu9RpAXW3F/rJ7F0DSjEXT2QkZQHJtqBjnrxlAYr68APvIF0DXTL7Z5oYYQAbYR6euXBhAk2+2uTE9GUB/wW7YtogYQOp4zEBlfBlACoUIOIQKGUAMzXUaaekbQIQqNXuglRlA3lm77ULzFkDD9Shcj4IXQGiz6nO1NRdAie/ErBfjGEAGTODW3TwdQFZI+Um1bxZAlDDT9q+MFkBhjh6/tykXQI5AvK5fEB5AATW1bK2vGEDIDFTGv88ZQPUQje4gdh9Aq1s9J71vGUCAt0CC4icZQGlXIeUn9RVAzO7Jw0KtG0D4U+Olm0QdQLSTwVHyahxAPlxy3CndGkAYsrrVc9IbQNydtdsuNBdA2ubG9IQFG0CCc0aU9sYYQJ2dDI6SNxlA0a5Cyk+KGEArhxbZzlcWQKeufJbnoRdAOKEQAYfQG0B2N091yA0bQHGPpQ9d0BdAGlHaG3yhF0BiodY07zgbQEj+YOC5NxlAFYxK6gQUGkD+DkWBPrEaQKEt51JcNRlAgPEMGvoHHkD0N6EQAYcbQEMc6+I2OhpAJ6Wg20saF0Az+WabG9MYQG05l+Kq0h1A5zqNtFReGkCzKVd4lwseQMYWghyU0BpA7lpCPuiZHEDhYkUNpuEYQCZw626eChtATgte9BVEHEA=",
+                                "__ndarray__": "QN6rVib8GUC/SGjLufQbQPs/h/nyohdAK97IPPLnGkAUyy2thqQcQCveyDzyRxhAMbYQ5KBkG0B6cHfWblseQGgFhqxu9RpAXW3F/rJ7F0DSjEXT2QkZQHJtqBjnrxlAYr68APvIF0DXTL7Z5oYYQAbYR6euXBhAk2+2uTE9GUB/wW7YtogYQOp4zEBlfBlACoUIOIQKGUAMzXUaaekbQIQqNXuglRlA3lm77ULzFkDD9Shcj4IXQGiz6nO1NRdAie/ErBfjGEAGTODW3TwdQMmwijcybxZAlWBxOPOLFkBhjh6/tykXQI5AvK5fEB5AATW1bK2vGEDIDFTGv88ZQPUQje4gdh9Aq1s9J71vGUCAt0CC4icZQGlXIeUn9RVAzO7Jw0KtG0D4U+Olm0QdQLSTwVHyahxAPlxy3CndGkAYsrrVc9IbQNydtdsuNBdA2ubG9IQFG0CCc0aU9sYYQJ2dDI6SNxlA0a5Cyk+KGEASiNf1C1YWQKeufJbnoRdAOKEQAYfQG0B2N091yA0bQHGPpQ9d0BdAGlHaG3yhF0BiodY07zgbQEj+YOC5NxlAFYxK6gQUGkD+DkWBPrEaQKEt51JcNRlAgPEMGvoHHkD0N6EQAYcbQEMc6+I2OhpAJ6Wg20saF0Az+WabG9MYQG05l+Kq0h1A5zqNtFReGkCzKVd4lwseQMYWghyU0BpA7lpCPuiZHEDhYkUNpuEYQCZw626eChtATgte9BVEHEA=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -4998,7 +4990,7 @@
                                 true
                             ],
                             "kennerspiel_prob": {
-                                "__ndarray__": "bCxNTxl6zj9MhXy/RujvP+cftojuDKY/c3If1jpuhT/W+tFwSNruP0AI0ZuSp+8/QLva3ghR7z8N80s6uP7vP0gwAIjFxu8/+dEmvRReuz/7A7lXmhTEP1fnEzAC9LQ/0cwUSRLTpj+lJt+SyhmcP8xYtCUti7E/NfkGvWjIiT/A9tQ7X5p+PxWi9rceQrU/ak7ooMG95T8q5s5rToHuP+f83V+5ju8/ipqZi+jb7T+E9YAWp5rPP2S1VK5G8dg/eJGyRA9vqz9Jqa2y+Q+2P3Y+9xIBrXQ/mAO95+7WZD/EG0pHhonvP3x/vfdx+u8/b+w5aG/3jj/U3X8AjjqfP/Yvz9Hp/+8/9WIiTzMX7T84ZxVPaly3PwpJeWe98oI/nE/kA4rGzz/eiqFV86K+Pwa7AP7nPO4/k99PfiD/7z8djg5JpmmrP2xF5yzvLWU/sYIpuYCQ7T9WRpQPjlC5PwzG4AaKeKo/4TcBs9r4dj/fn8VRhKtqP0dWQb4U/8E/yA6t8FSj6D9eywfXUobrPxuz7kd/D5w/NQF5+Za8mz+nd+tD4t7uP0KDpCpHDLU/MUFMGsJc7D+/KSu/sDutP1/M5YHi8lQ/mIe8Ibsz5j/X1OkdPXfLPwDp81nWe+I/UUB3i7NFwD978bWcFgmQP0zWKRLE1u8/Yj3wEKD7iD8VC+5w3ejrP1OzZEblAu0/I9K7E9VZVz9aqGyfo7eDP03ZaLxMBNE/xUGjH8p77j8=",
+                                "__ndarray__": "Oj4csTFwzj+L/48HPOjvP5pyUp7AE6Y/TQ5+nlhqhT+mDZSoOtruPzdoKBlSp+8/o3Udy01R7z8r6+Pht/7vP6rwZAejxu8/I19GRNBUuz8yIH5rXhrEPxmKAVQf+LQ/BGc2ldfTpj/oTYJanR6cP8fbwQDThrE/EWekp2PEiT/JoAD3655+PzEOEGSTO7U/zBTNwK+75T+R4tx5D4HuP8Krc57lju8/EzGKHa/b7T/Q4BTJp43PP0gIWBl69dg/T+9Iv55sqz/3ezwTUhG2P6tHtYb0lnQ/G8OirljPZD9V/ZnPZonvP+YDu1Fw+u8/P2y0/RoDjz90zIRraEefP1IilcPp/+8/HzvGEFIV7T8FCrqzzV+3P8Xplsz114I/87p2gku5zz9+LOO975S+P+t9KoA8PO4/o/aq0yD/7z+ND2OwC2urP0M3TcYzKWU/WFvlCNWP7T+DExeq5US5P43oKJ5Qaqo/UNJEIpj4dj9UNRLNQ6tqP78+PZhYAsI/z7lTQHOi6D8gA0kT3IjrP+Ev2qGkDpw/47NdahWzmz9yK/Zhxd7uP9Hz58nOArU/BdUcYX9d7D/h94mGvj2tPwiMAY9m8FQ/bb4RxOQy5j/yDSfYJ3nLP4yGrop9d+I/q9/EsLBJwD91wRm1AAyQP4vgqWrA1u8/inrRZpL1iD8NKKiOxurrP/APdqPYA+0/4CnwusI9Vz9iIJ4y7bmDPybtMDqRBtE/AjrYLoR87j8=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -10774,7 +10766,7 @@
                                 "Fresco"
                             ],
                             "num_votes": {
-                                "__ndarray__": "AAAAAABpv0AAAAAAwKX4QAAAAAAA+JpAAAAAAAB0yEAAAAAAAG3RQAAAAAAAeJVAAAAAAID9wEAAAAAAgO/WQAAAAAAASbBAAAAAAAB4mUAAAAAAAEKzQAAAAAAAM7NAAAAAAAC6o0AAAAAAAPynQAAAAAAA9K1AAAAAAADesEAAAAAAADyqQAAAAAAA1stAAAAAAAAUoUAAAAAAgIXnQAAAAAAAkKpAAAAAAACAiEAAAAAAAPyVQAAAAAAAWIdAAAAAAAB8yUAAAAAAYLr4QAAAAAAAYKNAAAAAAABge0AAAAAAAEiGQAAAAABAtdBAAAAAAABur0AAAAAAAPy9QAAAAABgu+5AAAAAAACEoEAAAAAAAP2yQAAAAAAAAFpAAAAAAADS20AAAAAAMGTxQAAAAACAQsxAAAAAAAAGs0AAAAAAgHTOQAAAAAAACItAAAAAAAAKv0AAAAAAAO6nQAAAAAAA275AAAAAAADwpUAAAAAAALCCQAAAAAAA4JhAAAAAAACf0UAAAAAAAPm9QAAAAAAA6JdAAAAAAABQmkAAAAAAADe+QAAAAAAAXJ5AAAAAAADsr0AAAAAAABLLQAAAAAAABqxAAAAAAHDL+EAAAAAAgN/BQAAAAAAAhKxAAAAAAAAogUAAAAAAAPy1QAAAAADA3eVAAAAAAABGr0AAAAAAgP3yQAAAAACAZcZAAAAAAECL6EAAAAAAABKoQAAAAAAAkbpAAAAAAAABx0A=",
+                                "__ndarray__": "AAAAAABpv0AAAAAAwKX4QAAAAAAA+JpAAAAAAAB0yEAAAAAAAG3RQAAAAAAAeJVAAAAAAID9wEAAAAAAgO/WQAAAAAAASbBAAAAAAAB4mUAAAAAAAEKzQAAAAAAAM7NAAAAAAAC6o0AAAAAAAPynQAAAAAAA9K1AAAAAAADesEAAAAAAADyqQAAAAAAA1stAAAAAAAAUoUAAAAAAgIXnQAAAAAAAkKpAAAAAAACIiEAAAAAAAPyVQAAAAAAAWIdAAAAAAAB8yUAAAAAAYLr4QAAAAAAAbqNAAAAAAABge0AAAAAAAEiGQAAAAABAtdBAAAAAAABur0AAAAAAAPy9QAAAAABgu+5AAAAAAACEoEAAAAAAAP2yQAAAAAAAAFpAAAAAAADS20AAAAAAMGTxQAAAAACAQsxAAAAAAAAGs0AAAAAAgHTOQAAAAAAACItAAAAAAAAKv0AAAAAAAO6nQAAAAAAA275AAAAAAADwpUAAAAAAAMCCQAAAAAAA4JhAAAAAAACf0UAAAAAAAPm9QAAAAAAA6JdAAAAAAABQmkAAAAAAADe+QAAAAAAAXJ5AAAAAAADsr0AAAAAAABLLQAAAAAAABqxAAAAAAHDL+EAAAAAAgN/BQAAAAAAAhKxAAAAAAAAogUAAAAAAAPy1QAAAAADA3eVAAAAAAABGr0AAAAAAgP3yQAAAAACAZcZAAAAAAECL6EAAAAAAABKoQAAAAAAAkbpAAAAAAAABx0A=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -11646,7 +11638,7 @@
                                 "47,3475,4335,2366,22"
                             ],
                             "rank": {
-                                "__ndarray__": "AAAAAAAYkEAAAAAAAJB4QAAAAAAAcqZAAAAAAAA4hUAAAAAAAEBwQAAAAAAAlKBAAAAAAABogEAAAAAAAEBTQAAAAAAAwIRAAAAAAABWqEAAAAAAAKyXQAAAAAAA7JFAAAAAAAAypUAAAAAAANSdQAAAAAAAEqBAAAAAAADElUAAAAAAALSdQAAAAAAAkJNAAAAAAACkl0AAAAAAABB5QAAAAAAAxJJAAAAAAAC5sEAAAAAAAPqnQAAAAAAAUqxAAAAAAAB4mUAAAAAAAKBmQAAAAAAAULpAAAAAAABVt0AAAAAAABqtQAAAAAAAAFhAAAAAAADMm0AAAAAAACiRQAAAAAAAADtAAAAAAAD4k0AAAAAAAJyWQAAAAABAatFAAAAAAAAwfUAAAAAAAGBlQAAAAAAAsHJAAAAAAADAhUAAAAAAAJB6QAAAAAAAgKxAAAAAAAAAhEAAAAAAAMCaQAAAAAAAIJZAAAAAAACsnUAAAAAAAN29QAAAAAAAeqZAAAAAAADAekAAAAAAALiDQAAAAAAA5KRAAAAAAACCpkAAAAAAAPCBQAAAAAAAGJZAAAAAAADAjkAAAAAAAJCHQAAAAAAANJZAAAAAAADAWEAAAAAAADB/QAAAAAAA2IxAAAAAAABArkAAAAAAAECaQAAAAAAAgFtAAAAAAAAwi0AAAAAAAIBYQAAAAAAAOIZAAAAAAAAwcUAAAAAAAJCZQAAAAAAA0INAAAAAAACgdEA=",
+                                "__ndarray__": "AAAAAAAYkEAAAAAAAJB4QAAAAAAAcqZAAAAAAAA4hUAAAAAAAEBwQAAAAAAAlKBAAAAAAABogEAAAAAAAEBTQAAAAAAAwIRAAAAAAABWqEAAAAAAAKyXQAAAAAAA7JFAAAAAAAAypUAAAAAAANSdQAAAAAAAEqBAAAAAAADElUAAAAAAALSdQAAAAAAAkJNAAAAAAACkl0AAAAAAABB5QAAAAAAAxJJAAAAAAADMsEAAAAAAAPqnQAAAAAAAUqxAAAAAAAB4mUAAAAAAAKBmQAAAAAAAZ7pAAAAAAABit0AAAAAAABqtQAAAAAAAAFhAAAAAAADMm0AAAAAAACiRQAAAAAAAADtAAAAAAAD4k0AAAAAAAJyWQAAAAABAatFAAAAAAAAwfUAAAAAAAGBlQAAAAAAAsHJAAAAAAADAhUAAAAAAAJB6QAAAAAAAgKxAAAAAAAAAhEAAAAAAAMCaQAAAAAAAIJZAAAAAAACsnUAAAAAAAEq+QAAAAAAAeqZAAAAAAADAekAAAAAAALiDQAAAAAAA5KRAAAAAAACCpkAAAAAAAPCBQAAAAAAAGJZAAAAAAADAjkAAAAAAAJCHQAAAAAAANJZAAAAAAADAWEAAAAAAADB/QAAAAAAA2IxAAAAAAABArkAAAAAAAECaQAAAAAAAgFtAAAAAAAAwi0AAAAAAAIBYQAAAAAAAOIZAAAAAAAAwcUAAAAAAAJCZQAAAAAAA0INAAAAAAACgdEA=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -11734,7 +11726,7 @@
                                 ]
                             },
                             "stddev_rating": {
-                                "__ndarray__": "owG8BRIU9D92ieqtga33P8r9DkWBvvM/Xf5D+u1r9j9hcTjzqznzP37ja88sifM/yjLEsS5u9D9HIF7XL1j1P3oZxXJLK/U/1QRR9wFI9T8Xmus00lL1PxTtKqT8JPM/+PwwQng09T+cilQYWwj0P7O1vkhoy/Q/ZHWr56R39D/xRuaRP5j0P5wWvOgrSPQ/J8KGp1dK9T88a7ddaC70P5QT7SqkfPU/z72HS4679z/4U+Olm8T2P/4rK01KwfY/oWez6nO19j+vfJbnwd30P+WzPA/uzvY/R6zFpwCY9T81mIbhI2L1P7x0kxgE1vY/Nqs+V1ux9D+yLm6jATz1P0RMiSR6GfY/gJpattYX9D+1VN6OcNrzP6btX1lp0vY/AJF++zrw8j9OC170FaT0P5yKVBhbCPU/V+wvuyeP9D8e/pqsUQ/zP/K1Z5YEqPM/GH0Facai8z9A9nr3x/vzP0c9RKM7iPM/1lbsL7un8z/u68A5I8r2P52dDI6S1/I/EJIFTODW8j+ppE5AE2HzP6J6a2CrhPM/bD6uDRVj8j+BCdy6myfzP0hQ/Bhz1/Q/FLNeDOXE8j9g6udNRaryP8AhVKnZg/M/IZOMnIU99T/ZzvdT4yXzPywrTUpBt/M/rYbEPZY+9D/FOH8TCpH1Px8RUyKJ3vM/rYbEPZa+8z9CCTNt/8r2PzP5Zpsb0/I/8l61MuEX9j/nNXaJ6q3zP2oYPiKmxPI/2A3bFmU28j8=",
+                                "__ndarray__": "owG8BRIU9D92ieqtga33P8r9DkWBvvM/Xf5D+u1r9j9hcTjzqznzP37ja88sifM/yjLEsS5u9D9HIF7XL1j1P3oZxXJLK/U/1QRR9wFI9T8Xmus00lL1PxTtKqT8JPM/+PwwQng09T+cilQYWwj0P7O1vkhoy/Q/ZHWr56R39D/xRuaRP5j0P5wWvOgrSPQ/J8KGp1dK9T88a7ddaC70P5QT7SqkfPU/8iTpmsm39z/4U+Olm8T2P/4rK01KwfY/oWez6nO19j+vfJbnwd30Py0hH/Rs1vY/R6zFpwCY9T81mIbhI2L1P7x0kxgE1vY/Nqs+V1ux9D+yLm6jATz1P0RMiSR6GfY/gJpattYX9D+1VN6OcNrzP6btX1lp0vY/AJF++zrw8j9OC170FaT0P5yKVBhbCPU/V+wvuyeP9D8e/pqsUQ/zP/K1Z5YEqPM/GH0Facai8z9A9nr3x/vzP0c9RKM7iPM/1lbsL7un8z+q1OyBVuD2P52dDI6S1/I/EJIFTODW8j+ppE5AE2HzP6J6a2CrhPM/bD6uDRVj8j+BCdy6myfzP0hQ/Bhz1/Q/FLNeDOXE8j9g6udNRaryP8AhVKnZg/M/IZOMnIU99T/ZzvdT4yXzPywrTUpBt/M/rYbEPZY+9D/FOH8TCpH1Px8RUyKJ3vM/rYbEPZa+8z9CCTNt/8r2PzP5Zpsb0/I/8l61MuEX9j/nNXaJ6q3zP2oYPiKmxPI/2A3bFmU28j8=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -11778,73 +11770,38 @@
                 },
                 {
                     "attributes": {},
-                    "id": "1197",
-                    "type": "UnionRenderers"
-                },
-                {
-                    "attributes": {
-                        "distribution": "normal",
-                        "range": null,
-                        "width": 0.25
-                    },
-                    "id": "1175",
-                    "type": "Jitter"
-                },
-                {
-                    "attributes": {
-                        "overlay": {
-                            "id": "1162"
-                        }
-                    },
-                    "id": "1161",
-                    "type": "BoxSelectTool"
-                },
-                {
-                    "attributes": {},
-                    "id": "1198",
-                    "type": "Selection"
-                },
-                {
-                    "attributes": {},
-                    "id": "1142",
-                    "type": "LinearScale"
-                },
-                {
-                    "attributes": {},
-                    "id": "1136",
-                    "type": "DataRange1d"
-                },
-                {
-                    "attributes": {
-                        "source": {
-                            "id": "1176"
-                        }
-                    },
-                    "id": "1181",
-                    "type": "CDSView"
-                },
-                {
-                    "attributes": {
-                        "axis_label": "min_age",
-                        "formatter": {
-                            "id": "1196"
-                        },
-                        "ticker": {
-                            "id": "1149"
-                        }
-                    },
-                    "id": "1148",
-                    "type": "LinearAxis"
-                },
-                {
-                    "attributes": {},
-                    "id": "1159",
-                    "type": "ResetTool"
+                    "id": "1157",
+                    "type": "ZoomOutTool"
                 },
                 {
                     "attributes": {},
                     "id": "1145",
                     "type": "BasicTicker"
+                },
+                {
+                    "attributes": {
+                        "bottom_units": "screen",
+                        "fill_alpha": 0.5,
+                        "fill_color": "lightgrey",
+                        "left_units": "screen",
+                        "level": "overlay",
+                        "line_alpha": 1.0,
+                        "line_color": "black",
+                        "line_dash": [
+                            4,
+                            4
+                        ],
+                        "line_width": 2,
+                        "right_units": "screen",
+                        "top_units": "screen"
+                    },
+                    "id": "1162",
+                    "type": "BoxAnnotation"
+                },
+                {
+                    "attributes": {},
+                    "id": "1138",
+                    "type": "DataRange1d"
                 },
                 {
                     "attributes": {
@@ -11856,6 +11813,34 @@
                     },
                     "id": "1151",
                     "type": "Grid"
+                },
+                {
+                    "attributes": {
+                        "fill_color": {
+                            "field": "color"
+                        },
+                        "line_color": {
+                            "field": "color"
+                        },
+                        "marker": {
+                            "field": "marker"
+                        },
+                        "size": {
+                            "units": "screen",
+                            "value": 8
+                        },
+                        "x": {
+                            "field": "complexity"
+                        },
+                        "y": {
+                            "field": "min_age",
+                            "transform": {
+                                "id": "1175"
+                            }
+                        }
+                    },
+                    "id": "1178",
+                    "type": "Scatter"
                 },
                 {
                     "attributes": {
@@ -11901,9 +11886,59 @@
                     "type": "Toolbar"
                 },
                 {
+                    "attributes": {
+                        "axis": {
+                            "id": "1144"
+                        },
+                        "ticker": null
+                    },
+                    "id": "1147",
+                    "type": "Grid"
+                },
+                {
+                    "attributes": {
+                        "text": "Spiel des Jahres before 2011"
+                    },
+                    "id": "1134",
+                    "type": "Title"
+                },
+                {
                     "attributes": {},
-                    "id": "1140",
+                    "id": "1142",
                     "type": "LinearScale"
+                },
+                {
+                    "attributes": {
+                        "axis_label": "min_age",
+                        "formatter": {
+                            "id": "1193"
+                        },
+                        "ticker": {
+                            "id": "1149"
+                        }
+                    },
+                    "id": "1148",
+                    "type": "LinearAxis"
+                },
+                {
+                    "attributes": {},
+                    "id": "1195",
+                    "type": "BasicTickFormatter"
+                },
+                {
+                    "attributes": {},
+                    "id": "1149",
+                    "type": "BasicTicker"
+                },
+                {
+                    "attributes": {},
+                    "id": "1153",
+                    "type": "CrosshairTool"
+                },
+                {
+                    "attributes": {},
+                    "id": "1160",
+                    "type": "SaveTool"
                 },
                 {
                     "attributes": {},
@@ -11941,28 +11976,13 @@
                 },
                 {
                     "attributes": {},
+                    "id": "1159",
+                    "type": "ResetTool"
+                },
+                {
+                    "attributes": {},
                     "id": "1154",
                     "type": "PanTool"
-                },
-                {
-                    "attributes": {},
-                    "id": "1156",
-                    "type": "ZoomInTool"
-                },
-                {
-                    "attributes": {},
-                    "id": "1157",
-                    "type": "ZoomOutTool"
-                },
-                {
-                    "attributes": {
-                        "axis": {
-                            "id": "1144"
-                        },
-                        "ticker": null
-                    },
-                    "id": "1147",
-                    "type": "Grid"
                 },
                 {
                     "attributes": {
@@ -11974,50 +11994,30 @@
                     "type": "BoxZoomTool"
                 },
                 {
+                    "attributes": {
+                        "overlay": {
+                            "id": "1162"
+                        }
+                    },
+                    "id": "1161",
+                    "type": "BoxSelectTool"
+                },
+                {
+                    "attributes": {
+                        "gradient": -13.851767703822171,
+                        "line_dash": [
+                            6
+                        ],
+                        "line_width": 2,
+                        "y_intercept": 38.38824722817994
+                    },
+                    "id": "1182",
+                    "type": "Slope"
+                },
+                {
                     "attributes": {},
-                    "id": "1160",
-                    "type": "SaveTool"
-                },
-                {
-                    "attributes": {
-                        "fill_color": {
-                            "field": "color"
-                        },
-                        "line_color": {
-                            "field": "color"
-                        },
-                        "marker": {
-                            "field": "marker"
-                        },
-                        "size": {
-                            "units": "screen",
-                            "value": 8
-                        },
-                        "x": {
-                            "field": "complexity"
-                        },
-                        "y": {
-                            "field": "min_age",
-                            "transform": {
-                                "id": "1175"
-                            }
-                        }
-                    },
-                    "id": "1178",
-                    "type": "Scatter"
-                },
-                {
-                    "attributes": {
-                        "axis_label": "complexity",
-                        "formatter": {
-                            "id": "1194"
-                        },
-                        "ticker": {
-                            "id": "1145"
-                        }
-                    },
-                    "id": "1144",
-                    "type": "LinearAxis"
+                    "id": "1156",
+                    "type": "ZoomInTool"
                 }
             ],
             "root_ids": [

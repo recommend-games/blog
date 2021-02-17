@@ -84,6 +84,10 @@ So, let's take a look back at our problem games from before and check how much c
 
 This picture certainly has improved, and we're even classifying games like {{% game 244522 %}}That's Pretty Clever!{{% /game %}} (just about) and {{% game 223953 %}}Kitchen Rush{{% /game %}} right that caused us a lot of headaches before. However, {{% game 284083 %}}The Crew{{% /game %}} still eludes correct classification, and {{% game 125618 %}}Libertalia{{% /game %}} is so far off that I'd argue the jury simply got that one wrong…
 
+# How does it work?
+
+{{< img src="shap_summary" alt="Summary of feature importance" >}}
+
 "Not so fast!", you might say. "Aren't you simply overfitting here?" Why, yes, you're right. The dataset is so small that there's a high risk of fine tuning the model too much for the data we're seeing. And of course, it's **bad bad bad** to assess you're model's performance on items it was trained on – that's just cheating. So let's test the model on some games it hadn't seen yet!
 
 # What about old games?
