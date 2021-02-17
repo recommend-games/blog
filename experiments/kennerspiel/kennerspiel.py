@@ -288,6 +288,7 @@ shap.summary_plot(
     X_test_array,
     feature_names=features,
     plot_type="dot",
+    max_display=10,
     show=False,
 )
 plt.tight_layout()

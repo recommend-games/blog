@@ -84,11 +84,33 @@ So, let's take a look back at our problem games from before and check how much c
 
 This picture certainly has improved, and we're even classifying games like {{% game 244522 %}}That's Pretty Clever!{{% /game %}} (just about) and {{% game 223953 %}}Kitchen Rush{{% /game %}} right that caused us a lot of headaches before. However, {{% game 284083 %}}The Crew{{% /game %}} still eludes correct classification, and {{% game 125618 %}}Libertalia{{% /game %}} is so far off that I'd argue the jury simply got that one wrong…
 
-# How does it work?
+# But how does the model work?
+
+Our model takes the different features of a game as described above as input, multiplies each with a certain weight it learned by looking at all the games from previous year, sums those values up, and then yields a prediction in the form of a confidence (0–100%) score.
+
+To make things a little more concret, let's look at the ten most important features and how they impact the outcome:
 
 {{< img src="shap_summary" alt="Summary of feature importance" >}}
 
-"Not so fast!", you might say. "Aren't you simply overfitting here?" Why, yes, you're right. The dataset is so small that there's a high risk of fine tuning the model too much for the data we're seeing. And of course, it's **bad bad bad** to assess you're model's performance on items it was trained on – that's just cheating. So let's test the model on some games it hadn't seen yet!
+As you can see, the *complexity* is the most important feature: the higher the value (blue = 1, red = 5), the higher our confidence that the game in question is a {{% kdj %}}Kennerspiel{{% /kdj %}}. This makes a lot of sense. Likewise, the next features are equally intuitive: the higher *play time* and *minimum age* are, the more likely it is we're dealing with a games for experts. And of course, in a way *strategy games* are much more frequently found in the {{% kdj %}}Kennerspiel{{% /kdj %}} column. (Here, red means strategy game, blue means not).
+
+Somewhat more confusing is the player count though. Pay close attention to whether a game is playable with five or six players. Again, red means that game is playable with that head count, while blue means it is not. So a game that is playable with five players is *more* likely to be a {{% kdj %}}Kennerspiel{{% /kdj %}}, while a game for six players is *less* likely. This certainly is a little confusing, and might well be an artifact of our small sample size. Still, there's a system to this madness: whilst the vast majority of games accomodate three and four players, {{% sdj %}}Spiel{{% /sdj %}} candidates often either stop at that count to keep components and costs down, or are for a much larger audience anyways and really shine with six, eight, or even more players. A {{% kdj %}}Kennerspiel{{% /kdj %}} on the other hand can be a little more luxurious, and hence often includes components for a fifth player by default, but their more strategic nature limits the scalability beyond that point.
+
+Lastly, we have some mechanics in the top 10. While it's probably no surprise that solo modes are more common amongst more strategic games, the other mechanics are less intuitive. As it turns out, rolling dice is more prevalent in a {{% kdj %}}Kennerspiel{{% /kdj %}}, whilst hand management and worker placement are indicative of a lighter {{% sdj %}}Spiel{{% /sdj %}}. But of course, all those different features and weights interact with each other in a little more subtle ways and often balance each other out.
+
+Let's make things more concret and visualise how our model scored some of those difficult to classify games above, starting from {{% game 295486 %}}My City{{% /game %}}:
+
+{{< img src="shap_295486" alt="My City force plot" >}}
+
+This so called force plot shows how some values push the score up, while some pull it down. In this case, complexity, strategy, and player count push the score towards {{% kdj %}}Kennerspiel{{% /kdj %}}, while a tile laying game playable in 30 minutes pull it towards {{% sdj %}}Spiel{{% /sdj %}}. In the sum, our model and the jury agree: this game falls on the red side of the line.
+
+{{< img src="shap_244522" alt="That's Pretty Clever! force plot" >}}
+
+We contrast this with {{% game 244522 %}}That's Pretty Clever!{{% /game %}} Again, its play time of 30 minutes with players from 8 years old smell like a lighter game, but soloable dice rolling clearly push the needle (very narrowly) over the line of a {{% kdj %}}Kennerspiel{{% /kdj %}}.
+
+In the end, our evidence is a little thin – even after a decade of {{% kdj %}}Kennerspiel{{% /kdj %}} winners and nominees, the patterns aren't very clear, and of course the jury's fickle opinion might drift over time as well. So while I'm pretty confident in the predictions our model makes, they still need to be taken with a grain of salt.
+
+"Not so fast!", you might say. "Aren't you simply overfitting here?" Why, yes, you're right. The dataset is so small that there's a high risk of fine tuning the model too much for the data we're seeing. And of course, it's **bad bad bad** to assess your model's performance with items it was trained on – that's just cheating. So let's test the model on some games it hadn't seen yet!
 
 # What about old games?
 
