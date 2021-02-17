@@ -290,6 +290,7 @@ shap.summary_plot(
     plot_type="dot",
     show=False,
 )
+plt.tight_layout()
 plt.savefig("shap_summary.svg")
 
 # %%
@@ -305,7 +306,8 @@ to_test = [
 # %%
 for bgg_id in to_test:
     ind = data.index.get_loc(bgg_id)
-    print(f"{data.name.iloc[ind]} ({bgg_id})")
+    name = data.name.iloc[ind]
+    print(f"{name} ({bgg_id})")
     shap.force_plot(
         base_value=explainer.expected_value,
         shap_values=shap_values[ind, :],
@@ -314,6 +316,8 @@ for bgg_id in to_test:
         matplotlib=True,
         show=False,
     )
+    plt.tight_layout()
+    plt.title(name, loc="left", y=1.3, fontdict={"fontsize": 20})
     plt.savefig(f"shap_{bgg_id}.svg")
 
 # %%

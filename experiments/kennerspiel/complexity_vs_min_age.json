@@ -5,11 +5,6 @@
         "roots": {
             "references": [
                 {
-                    "attributes": {},
-                    "id": "1057",
-                    "type": "UnionRenderers"
-                },
-                {
                     "attributes": {
                         "active_drag": "auto",
                         "active_inspect": "auto",
@@ -54,9 +49,33 @@
                 },
                 {
                     "attributes": {
+                        "axis": {
+                            "id": "1013"
+                        },
+                        "ticker": null
+                    },
+                    "id": "1016",
+                    "type": "Grid"
+                },
+                {
+                    "attributes": {},
+                    "id": "1005",
+                    "type": "DataRange1d"
+                },
+                {
+                    "attributes": {
+                        "overlay": {
+                            "id": "1031"
+                        }
+                    },
+                    "id": "1030",
+                    "type": "BoxSelectTool"
+                },
+                {
+                    "attributes": {
                         "axis_label": "min_age",
                         "formatter": {
-                            "id": "1053"
+                            "id": "1056"
                         },
                         "ticker": {
                             "id": "1018"
@@ -66,25 +85,78 @@
                     "type": "LinearAxis"
                 },
                 {
+                    "attributes": {},
+                    "id": "1025",
+                    "type": "ZoomInTool"
+                },
+                {
                     "attributes": {
-                        "axis": {
-                            "id": "1017"
-                        },
-                        "dimension": 1,
-                        "ticker": null
+                        "text": "Kennerspiel des Jahres"
                     },
-                    "id": "1020",
-                    "type": "Grid"
+                    "id": "1003",
+                    "type": "Title"
                 },
                 {
                     "attributes": {},
-                    "id": "1058",
-                    "type": "Selection"
+                    "id": "1028",
+                    "type": "ResetTool"
+                },
+                {
+                    "attributes": {
+                        "gradient": -13.851767703822171,
+                        "line_dash": [
+                            6
+                        ],
+                        "line_width": 2,
+                        "y_intercept": 38.38824722817994
+                    },
+                    "id": "1051",
+                    "type": "Slope"
+                },
+                {
+                    "attributes": {
+                        "data_source": {
+                            "id": "1045"
+                        },
+                        "glyph": {
+                            "id": "1047"
+                        },
+                        "hover_glyph": null,
+                        "muted_glyph": null,
+                        "nonselection_glyph": {
+                            "id": "1048"
+                        },
+                        "selection_glyph": null,
+                        "view": {
+                            "id": "1050"
+                        }
+                    },
+                    "id": "1049",
+                    "type": "GlyphRenderer"
                 },
                 {
                     "attributes": {},
-                    "id": "1029",
-                    "type": "SaveTool"
+                    "id": "1018",
+                    "type": "BasicTicker"
+                },
+                {
+                    "attributes": {},
+                    "id": "1007",
+                    "type": "DataRange1d"
+                },
+                {
+                    "attributes": {},
+                    "id": "1024",
+                    "type": "WheelZoomTool"
+                },
+                {
+                    "attributes": {
+                        "source": {
+                            "id": "1045"
+                        }
+                    },
+                    "id": "1050",
+                    "type": "CDSView"
                 },
                 {
                     "attributes": {
@@ -115,86 +187,19 @@
                     "type": "Scatter"
                 },
                 {
-                    "attributes": {
-                        "overlay": {
-                            "id": "1032"
-                        }
-                    },
-                    "id": "1027",
-                    "type": "BoxZoomTool"
-                },
-                {
-                    "attributes": {
-                        "axis": {
-                            "id": "1013"
-                        },
-                        "ticker": null
-                    },
-                    "id": "1016",
-                    "type": "Grid"
+                    "attributes": {},
+                    "id": "1026",
+                    "type": "ZoomOutTool"
                 },
                 {
                     "attributes": {},
-                    "id": "1028",
-                    "type": "ResetTool"
-                },
-                {
-                    "attributes": {},
-                    "id": "1007",
-                    "type": "DataRange1d"
-                },
-                {
-                    "attributes": {
-                        "data_source": {
-                            "id": "1045"
-                        },
-                        "glyph": {
-                            "id": "1047"
-                        },
-                        "hover_glyph": null,
-                        "muted_glyph": null,
-                        "nonselection_glyph": {
-                            "id": "1048"
-                        },
-                        "selection_glyph": null,
-                        "view": {
-                            "id": "1050"
-                        }
-                    },
-                    "id": "1049",
-                    "type": "GlyphRenderer"
-                },
-                {
-                    "attributes": {},
-                    "id": "1011",
+                    "id": "1009",
                     "type": "LinearScale"
-                },
-                {
-                    "attributes": {},
-                    "id": "1053",
-                    "type": "BasicTickFormatter"
                 },
                 {
                     "attributes": {},
                     "id": "1022",
                     "type": "CrosshairTool"
-                },
-                {
-                    "attributes": {},
-                    "id": "1024",
-                    "type": "WheelZoomTool"
-                },
-                {
-                    "attributes": {
-                        "text": "Kennerspiel des Jahres"
-                    },
-                    "id": "1003",
-                    "type": "Title"
-                },
-                {
-                    "attributes": {},
-                    "id": "1025",
-                    "type": "ZoomInTool"
                 },
                 {
                     "attributes": {
@@ -204,6 +209,11 @@
                     },
                     "id": "1044",
                     "type": "Jitter"
+                },
+                {
+                    "attributes": {},
+                    "id": "1014",
+                    "type": "BasicTicker"
                 },
                 {
                     "attributes": {
@@ -222,64 +232,99 @@
                         "right_units": "screen",
                         "top_units": "screen"
                     },
-                    "id": "1031",
+                    "id": "1032",
                     "type": "BoxAnnotation"
                 },
                 {
-                    "attributes": {},
-                    "id": "1026",
-                    "type": "ZoomOutTool"
-                },
-                {
                     "attributes": {
-                        "source": {
-                            "id": "1045"
-                        }
-                    },
-                    "id": "1050",
-                    "type": "CDSView"
-                },
-                {
-                    "attributes": {},
-                    "id": "1023",
-                    "type": "PanTool"
-                },
-                {
-                    "attributes": {},
-                    "id": "1018",
-                    "type": "BasicTicker"
-                },
-                {
-                    "attributes": {
-                        "gradient": -13.851767703822171,
-                        "line_dash": [
-                            6
+                        "below": [
+                            {
+                                "id": "1013"
+                            }
                         ],
-                        "line_width": 2,
-                        "y_intercept": 38.38824722817994
+                        "center": [
+                            {
+                                "id": "1016"
+                            },
+                            {
+                                "id": "1020"
+                            },
+                            {
+                                "id": "1051"
+                            }
+                        ],
+                        "left": [
+                            {
+                                "id": "1017"
+                            }
+                        ],
+                        "renderers": [
+                            {
+                                "id": "1049"
+                            }
+                        ],
+                        "title": {
+                            "id": "1003"
+                        },
+                        "toolbar": {
+                            "id": "1033"
+                        },
+                        "x_range": {
+                            "id": "1005"
+                        },
+                        "x_scale": {
+                            "id": "1009"
+                        },
+                        "y_range": {
+                            "id": "1007"
+                        },
+                        "y_scale": {
+                            "id": "1011"
+                        }
                     },
-                    "id": "1051",
-                    "type": "Slope"
+                    "id": "1002",
+                    "subtype": "Figure",
+                    "type": "Plot"
                 },
                 {
                     "attributes": {
-                        "overlay": {
-                            "id": "1031"
-                        }
+                        "callback": null,
+                        "tooltips": [
+                            [
+                                "name",
+                                "@name"
+                            ],
+                            [
+                                "year",
+                                "@year"
+                            ],
+                            [
+                                "complexity",
+                                "@complexity"
+                            ],
+                            [
+                                "time",
+                                "@min_time\u2013@max_time minutes"
+                            ],
+                            [
+                                "age",
+                                "@min_age+"
+                            ]
+                        ]
                     },
-                    "id": "1030",
-                    "type": "BoxSelectTool"
+                    "id": "1021",
+                    "type": "HoverTool"
                 },
                 {
                     "attributes": {},
-                    "id": "1055",
+                    "id": "1054",
                     "type": "BasicTickFormatter"
                 },
                 {
                     "attributes": {
                         "axis_label": "complexity",
                         "formatter": {
-                            "id": "1055"
+                            "id": "1054"
                         },
                         "ticker": {
                             "id": "1014"
@@ -323,63 +368,49 @@
                     "type": "Scatter"
                 },
                 {
-                    "attributes": {
-                        "callback": null,
-                        "tooltips": [
-                            [
-                                "name",
-                                "@name"
-                            ],
-                            [
-                                "year",
-                                "@year"
-                            ],
-                            [
-                                "complexity",
-                                "@complexity"
-                            ],
-                            [
-                                "time",
-                                "@min_time\u2013@max_time minutes"
-                            ],
-                            [
-                                "age",
-                                "@min_age+"
-                            ]
-                        ]
-                    },
-                    "id": "1021",
-                    "type": "HoverTool"
-                },
-                {
                     "attributes": {},
-                    "id": "1009",
+                    "id": "1011",
                     "type": "LinearScale"
                 },
                 {
+                    "attributes": {
+                        "overlay": {
+                            "id": "1032"
+                        }
+                    },
+                    "id": "1027",
+                    "type": "BoxZoomTool"
+                },
+                {
                     "attributes": {},
-                    "id": "1005",
-                    "type": "DataRange1d"
+                    "id": "1029",
+                    "type": "SaveTool"
                 },
                 {
                     "attributes": {
-                        "bottom_units": "screen",
-                        "fill_alpha": 0.5,
-                        "fill_color": "lightgrey",
-                        "left_units": "screen",
-                        "level": "overlay",
-                        "line_alpha": 1.0,
-                        "line_color": "black",
-                        "line_dash": [
-                            4,
-                            4
-                        ],
-                        "line_width": 2,
-                        "right_units": "screen",
-                        "top_units": "screen"
+                        "axis": {
+                            "id": "1017"
+                        },
+                        "dimension": 1,
+                        "ticker": null
                     },
-                    "id": "1032",
-                    "type": "BoxAnnotation"
+                    "id": "1020",
+                    "type": "Grid"
+                },
+                {
+                    "attributes": {},
+                    "id": "1058",
+                    "type": "UnionRenderers"
+                },
+                {
+                    "attributes": {},
+                    "id": "1056",
+                    "type": "BasicTickFormatter"
+                },
+                {
+                    "attributes": {},
+                    "id": "1057",
+                    "type": "Selection"
                 },
                 {
                     "attributes": {
@@ -7590,70 +7621,39 @@
                             }
                         },
                         "selected": {
-                            "id": "1058"
+                            "id": "1057"
                         },
                         "selection_policy": {
-                            "id": "1057"
+                            "id": "1058"
                         }
                     },
                     "id": "1045",
                     "type": "ColumnDataSource"
                 },
                 {
-                    "attributes": {
-                        "below": [
-                            {
-                                "id": "1013"
-                            }
-                        ],
-                        "center": [
-                            {
-                                "id": "1016"
-                            },
-                            {
-                                "id": "1020"
-                            },
-                            {
-                                "id": "1051"
-                            }
-                        ],
-                        "left": [
-                            {
-                                "id": "1017"
-                            }
-                        ],
-                        "renderers": [
-                            {
-                                "id": "1049"
-                            }
-                        ],
-                        "title": {
-                            "id": "1003"
-                        },
-                        "toolbar": {
-                            "id": "1033"
-                        },
-                        "x_range": {
-                            "id": "1005"
-                        },
-                        "x_scale": {
-                            "id": "1009"
-                        },
-                        "y_range": {
-                            "id": "1007"
-                        },
-                        "y_scale": {
-                            "id": "1011"
-                        }
-                    },
-                    "id": "1002",
-                    "subtype": "Figure",
-                    "type": "Plot"
+                    "attributes": {},
+                    "id": "1023",
+                    "type": "PanTool"
                 },
                 {
-                    "attributes": {},
-                    "id": "1014",
-                    "type": "BasicTicker"
+                    "attributes": {
+                        "bottom_units": "screen",
+                        "fill_alpha": 0.5,
+                        "fill_color": "lightgrey",
+                        "left_units": "screen",
+                        "level": "overlay",
+                        "line_alpha": 1.0,
+                        "line_color": "black",
+                        "line_dash": [
+                            4,
+                            4
+                        ],
+                        "line_width": 2,
+                        "right_units": "screen",
+                        "top_units": "screen"
+                    },
+                    "id": "1031",
+                    "type": "BoxAnnotation"
                 }
             ],
             "root_ids": [
