@@ -122,40 +122,36 @@ Again, we'll start with the simple model that takes the two input variables *com
 
 We observe a pretty similar spread along those two axes as in the plot above, so apparently the jury covered games of a broad variety already before 2011, but under the single {{% sdj /%}} brand.
 
+Let's dive deeper and check what {{% kdj %}}Kennerspiel{{% /kdj %}} scores our more complex model assigns to some of the more noteworthy {{% sdj / %}} winners and nominees:
+
 | Game                                                                 | Year | Confidence |
 |:---------------------------------------------------------------------|:----:|-----------:|
-| {{% game 3076 %}}Puerto Rico{{% /game %}}                            | 2002 |     100.0% |
 | {{% game 93 %}}El Grande{{% /game %}}                                | 1996 |     100.0% |
 | {{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}}   | 1985 |      99.9% |
 | {{% game 13 %}}Catan{{% /game %}}                                    | 1995 |      99.7% |
-| {{% game 34635 %}}Stone Age{{% /game %}}                             | 2008 |      99.5% |
-| {{% game 88 %}}Torres{{% /game %}}                                   | 2000 |      97.9% |
 | {{% game 54 %}}Tikal{{% /game %}}                                    | 1999 |      96.4% |
-| {{% game 478 %}}Citadels{{% /game %}}                                | 2000 |      95.3% |
-| {{% game 9217 %}}Saint Petersburg{{% /game %}}                       | 2004 |      94.5% |
-| {{% game 37380 %}}Roll Through the Ages: The Bronze Age{{% /game %}} | 2010 |      90.7% |
 | {{% game 36218 %}}Dominion{{% /game %}}                              | 2009 |      87.2% |
 | {{% game 21790 %}}Thurn and Taxis{{% /game %}}                       | 2006 |      77.0% |
 | {{% game 30549 %}}Pandemic{{% /game %}}                              | 2009 |      69.4% |
 | {{% game 6249 %}}Alhambra{{% /game %}}                               | 2003 |      24.8% |
-| {{% game 30869 %}}Thebes{{% /game %}}                                | 2007 |      21.5% |
 | {{% game 9209 %}}Ticket to Ride{{% /game %}}                         | 2004 |      12.0% |
 | {{% game 822 %}}Carcassonne{{% /game %}}                             | 2001 |       8.6% |
-| {{% game 9674 %}}Ingenious{{% /game %}}                              | 2004 |       5.4% |
 | {{% game 39856 %}}Dixit{{% /game %}}                                 | 2010 |       0.1% |
 
-According to our model, 8 out of 32 {{% sdj / %}} winners between 1979 and 2010 should really be considered a {{% kdj %}}Kennerspiel{{% /kdj %}} now.
+<!-- | {{% game 3076 %}}Puerto Rico{{% /game %}}                            | 2002 |     100.0% |
+| {{% game 34635 %}}Stone Age{{% /game %}}                             | 2008 |      99.5% |
+| {{% game 88 %}}Torres{{% /game %}}                                   | 2000 |      97.9% |
+| {{% game 478 %}}Citadels{{% /game %}}                                | 2000 |      95.3% |
+| {{% game 9217 %}}Saint Petersburg{{% /game %}}                       | 2004 |      94.5% |
+| {{% game 37380 %}}Roll Through the Ages: The Bronze Age{{% /game %}} | 2010 |      90.7% |
+| {{% game 30869 %}}Thebes{{% /game %}}                                | 2007 |      21.5% |
+| {{% game 9674 %}}Ingenious{{% /game %}}                              | 2004 |       5.4% | -->
+
+On the one hand, it's weird to see games like {{% game 13 %}}Catan{{% /game %}} and {{% game 30549 %}}Pandemic{{% /game %}} so firmly in the {{% kdj %}}Kennerspiel{{% /kdj %}} column when they are considered some of the quintessential modern gateway games. On the other hand, their complexity clearly does exceed by far what the jury demands of the average gamer. It's also worth observing that {{% game 13 %}}Catan{{% /game %}} did pave the way for some pretty complex games in the second half of the 90s, when the *euro revolution* was in full swing.
+
+Overall, according to our model, **8 out of 32** {{% sdj / %}} winners between 1979 and 2010 should really be considered a {{% kdj %}}Kennerspiel{{% /kdj %}} now.
 
 # Outline
-
-Interpret / highlight some features
-
-What games do we still get wrong and why?
-
-Apply to old SdJ winners / nominees: which ones would be a Kennerspiel by today's standards?
-
-
-Shapley values?
 
 Looking ahead to some 2021 candidates
 
