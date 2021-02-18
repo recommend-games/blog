@@ -378,6 +378,36 @@ show(plot)
 with open("complexity_vs_min_age_before_2011.json", "w") as out_file:
     json.dump(json_item(plot), out_file, indent=4)
 
+# %%
+X_test_array = sdj_data[features].values
+shap_values = explainer.shap_values(X_test_array)
+
+# %%
+to_test = [
+    13,  # Catan
+    21790,  # Thurn and Taxis
+    30549,  # Pandemic
+    6249,  # Alhambra
+    9209,  # Ticket to Ride
+]
+
+# %%
+for bgg_id in to_test:
+    ind = sdj_data.index.get_loc(bgg_id)
+    name = sdj_data.name.iloc[ind]
+    print(f"{name} ({bgg_id})")
+    shap.force_plot(
+        base_value=explainer.expected_value,
+        shap_values=shap_values[ind, :],
+        features=X_test_array[ind, :],
+        feature_names=features,
+        matplotlib=True,
+        show=False,
+    )
+    plt.tight_layout()
+    plt.title(name, loc="left", y=1.3, fontdict={"fontsize": 20})
+    plt.savefig(f"shap_{bgg_id}.svg")
+
 # %% [markdown]
 # ## Candidates for SdJ 2021
 
@@ -391,7 +421,7 @@ params = {
     "max_players__gte": 4,
     "max_time__lte": 120,
     "min_age__lte": 16,
-    "exclude_clusters": False,
+    "exclude_clusters": True,
     "exclude_known": True,
     "exclude_owned": False,
 }
@@ -422,7 +452,15 @@ candidates["kennerspiel"] = lr.predict(candidates[features])
 candidates["kennerspiel_prob"] = lr.predict_proba(candidates[features])[:, 1]
 
 # %%
-candidates[["name", "kennerspiel", "kennerspiel_prob"]].sort_values(
+sdj2021 = candidates[["name", "kennerspiel", "kennerspiel_prob"]].sort_values(
     "kennerspiel_prob",
     ascending=False,
 )
+sdj2021
+
+# %%
+sdj2021["link"] = [
+    "{{% game " + str(i) + " %}}" + n + "{{% /game %}}" for i, n in sdj2021.name.items()
+]
+sdj2021["confidence"] = sdj2021.kennerspiel_prob.apply(lambda c: f"{c*100:.1f}%")
+print(sdj2021.reset_index()[["link", "confidence"]].to_markdown())

@@ -151,6 +151,40 @@ On the one hand, it's weird to see games like {{% game 13 %}}Catan{{% /game %}} 
 
 Overall, according to our model, **8 out of 32** {{% sdj / %}} winners between 1979 and 2010 should really be considered a {{% kdj %}}Kennerspiel{{% /kdj %}} now.
 
+{{< img src="shap_30549" alt="Pandemic force plot" >}}
+
+{{< img src="shap_6249" alt="Alhambra force plot" >}}
+
+# Spiel des Jahres 2021
+
+| Game                                                                        | Confidence |
+|:----------------------------------------------------------------------------|-----------:|
+| {{% game 295945 %}}Exit: The Game – The Cemetery of the Knight{{% /game %}} | 99.8%      |
+| {{% game 282954 %}}Paris{{% /game %}}                                       | 97.9%      |
+| {{% game 318553 %}}Rajas of the Ganges: The Dice Charmers{{% /game %}}      | 80.5%      |
+| {{% game 300531 %}}Paleo{{% /game %}}                                       | 75.2%      |
+| {{% game 293014 %}}Nidavellir{{% /game %}}                                  | 64.9%      |
+| {{% game 300877 %}}New York Zoo{{% /game %}}                                | 62.9%      |
+| {{% game 283155 %}}Calico{{% /game %}}                                      | 61.3%      |
+| {{% game 299963 %}}Der Perfekte Moment{{% /game %}}                         | 45.6%      |
+| {{% game 319107 %}}Sebastian Fitzek Killercruise{{% /game %}}               | 44.4%      |
+| {{% game 300327 %}}The Castles of Tuscany{{% /game %}}                      | 39.3%      |
+| {{% game 313698 %}}Monster Expedition{{% /game %}}                          | 32.4%      |
+| {{% game 274841 %}}Cóatl{{% /game %}}                                       | 30.2%      |
+| {{% game 300001 %}}Renature{{% /game %}}                                    | 17.0%      |
+| {{% game 316407 %}}Allegra{{% /game %}}                                     | 11.5%      |
+| {{% game 270636 %}}My Farm Shop{{% /game %}}                                | 6.9%       |
+| {{% game 296557 %}}Zen Garden{{% /game %}}                                  | 5.1%       |
+| {{% game 297895 %}}Divvy Dice{{% /game %}}                                  | 4.7%       |
+| {{% game 301767 %}}Mysterium Park{{% /game %}}                              | 2.8%       |
+| {{% game 302917 %}}King of 12{{% /game %}}                                  | 2.8%       |
+| {{% game 299172 %}}The Key: Murder at the Oakdale Club{{% /game %}}         | 2.4%       |
+| {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}                      | 1.4%       |
+| {{% game 299171 %}}The Key: Raub in der Cliffrock Villa{{% /game %}}        | 0.9%       |
+| {{% game 319114 %}}Krazy Pix{{% /game %}}                                   | 0.8%       |
+| {{% game 313531 %}}Blätterrauschen{{% /game %}}                             | 0.4%       |
+| {{% game 292506 %}}Bresk!{{% /game %}}                                      | 0.1%       |
+
 # Outline
 
 Looking ahead to some 2021 candidates
