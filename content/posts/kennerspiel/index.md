@@ -3,7 +3,7 @@ title: What makes a Kennerspiel?
 # slug: and-the-spiel-des-jahres-2020-goes-to
 author: Markus Shepherd
 type: post
-date: 2021-02-09T12:00:00+02:00
+date: 2021-02-18T12:00:00+02:00
 tags:
   - Spiel des Jahres
   - Kennerspiel
@@ -120,29 +120,29 @@ Again, we'll start with the simple model that takes the two input variables *com
 
 {{% bokeh "complexity_vs_min_age_before_2011.json" %}}
 
-<!-- TODO adjust year to Jahrgang -->
+We observe a pretty similar spread along those two axes as in the plot above, so apparently the jury covered games of a broad variety already before 2011, but under the single {{% sdj /%}} brand.
 
 | Game                                                                 | Year | Confidence |
 |:---------------------------------------------------------------------|:----:|-----------:|
 | {{% game 3076 %}}Puerto Rico{{% /game %}}                            | 2002 |     100.0% |
-| {{% game 93 %}}El Grande{{% /game %}}                                | 1995 |     100.0% |
-| {{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}}   | 1982 |      99.9% |
+| {{% game 93 %}}El Grande{{% /game %}}                                | 1996 |     100.0% |
+| {{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}}   | 1985 |      99.9% |
 | {{% game 13 %}}Catan{{% /game %}}                                    | 1995 |      99.7% |
 | {{% game 34635 %}}Stone Age{{% /game %}}                             | 2008 |      99.5% |
-| {{% game 88 %}}Torres{{% /game %}}                                   | 1999 |      97.9% |
+| {{% game 88 %}}Torres{{% /game %}}                                   | 2000 |      97.9% |
 | {{% game 54 %}}Tikal{{% /game %}}                                    | 1999 |      96.4% |
 | {{% game 478 %}}Citadels{{% /game %}}                                | 2000 |      95.3% |
 | {{% game 9217 %}}Saint Petersburg{{% /game %}}                       | 2004 |      94.5% |
-| {{% game 37380 %}}Roll Through the Ages: The Bronze Age{{% /game %}} | 2008 |      90.7% |
-| {{% game 36218 %}}Dominion{{% /game %}}                              | 2008 |      87.2% |
+| {{% game 37380 %}}Roll Through the Ages: The Bronze Age{{% /game %}} | 2010 |      90.7% |
+| {{% game 36218 %}}Dominion{{% /game %}}                              | 2009 |      87.2% |
 | {{% game 21790 %}}Thurn and Taxis{{% /game %}}                       | 2006 |      77.0% |
-| {{% game 30549 %}}Pandemic{{% /game %}}                              | 2008 |      69.4% |
+| {{% game 30549 %}}Pandemic{{% /game %}}                              | 2009 |      69.4% |
 | {{% game 6249 %}}Alhambra{{% /game %}}                               | 2003 |      24.8% |
 | {{% game 30869 %}}Thebes{{% /game %}}                                | 2007 |      21.5% |
 | {{% game 9209 %}}Ticket to Ride{{% /game %}}                         | 2004 |      12.0% |
-| {{% game 822 %}}Carcassonne{{% /game %}}                             | 2000 |       8.6% |
+| {{% game 822 %}}Carcassonne{{% /game %}}                             | 2001 |       8.6% |
 | {{% game 9674 %}}Ingenious{{% /game %}}                              | 2004 |       5.4% |
-| {{% game 39856 %}}Dixit{{% /game %}}                                 | 2008 |       0.1% |
+| {{% game 39856 %}}Dixit{{% /game %}}                                 | 2010 |       0.1% |
 
 According to our model, 8 out of 32 {{% sdj / %}} winners between 1979 and 2010 should really be considered a {{% kdj %}}Kennerspiel{{% /kdj %}} now.
 
