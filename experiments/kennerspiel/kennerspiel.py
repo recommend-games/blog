@@ -354,7 +354,9 @@ sdj_data["kennerspiel"] = lr.predict(sdj_data[features])
 sdj_data["kennerspiel_prob"] = lr.predict_proba(sdj_data[features])[:, 1]
 
 # %%
-old_sdj = sdj_data[["name", "year", "kennerspiel_prob"]].sort_values(
+old_sdj = sdj_data[
+    ["name", "year", "complexity", "min_age", "min_time", "kennerspiel_prob"]
+].sort_values(
     "kennerspiel_prob",
     ascending=False,
 )
@@ -385,6 +387,7 @@ shap_values = explainer.shap_values(X_test_array)
 # %%
 to_test = [
     13,  # Catan
+    478,  # Citadels
     21790,  # Thurn and Taxis
     30549,  # Pandemic
     6249,  # Alhambra
@@ -415,8 +418,8 @@ for bgg_id in to_test:
 url = "https://recommend.games/api/games/recommend/"
 params = {
     "user": "S_d_J",
-    "year__lte": 2021,
     "year__gte": 2020,
+    "year__lte": 2021,
     "min_players__lte": 3,
     "max_players__gte": 4,
     "max_time__lte": 120,
@@ -428,7 +431,7 @@ params = {
 response = requests.get(url, params)
 
 # %%
-results = response.json()["results"]
+results = response.json()["results"][:10]
 candidates = pd.DataFrame.from_records(results, index="bgg_id")
 candidates.shape
 

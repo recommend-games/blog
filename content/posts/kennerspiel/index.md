@@ -124,19 +124,19 @@ We observe a pretty similar spread along those two axes as in the plot above, so
 
 Let's dive deeper and check what {{% kdj %}}Kennerspiel{{% /kdj %}} scores our more complex model assigns to some of the more noteworthy {{% sdj / %}} winners and nominees:
 
-| Game                                                                 | Year | Confidence |
-|:---------------------------------------------------------------------|:----:|-----------:|
-| {{% game 93 %}}El Grande{{% /game %}}                                | 1996 |     100.0% |
-| {{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}}   | 1985 |      99.9% |
-| {{% game 13 %}}Catan{{% /game %}}                                    | 1995 |      99.7% |
-| {{% game 54 %}}Tikal{{% /game %}}                                    | 1999 |      96.4% |
-| {{% game 36218 %}}Dominion{{% /game %}}                              | 2009 |      87.2% |
-| {{% game 21790 %}}Thurn and Taxis{{% /game %}}                       | 2006 |      77.0% |
-| {{% game 30549 %}}Pandemic{{% /game %}}                              | 2009 |      69.4% |
-| {{% game 6249 %}}Alhambra{{% /game %}}                               | 2003 |      24.8% |
-| {{% game 9209 %}}Ticket to Ride{{% /game %}}                         | 2004 |      12.0% |
-| {{% game 822 %}}Carcassonne{{% /game %}}                             | 2001 |       8.6% |
-| {{% game 39856 %}}Dixit{{% /game %}}                                 | 2010 |       0.1% |
+| Game                                                                 | Year | Kennerspiel? |
+|:---------------------------------------------------------------------|:----:|-------------:|
+| {{% game 93 %}}El Grande{{% /game %}}                                | 1996 |       100.0% |
+| {{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}}   | 1985 |        99.9% |
+| {{% game 13 %}}Catan{{% /game %}}                                    | 1995 |        99.7% |
+| {{% game 54 %}}Tikal{{% /game %}}                                    | 1999 |        96.4% |
+| {{% game 36218 %}}Dominion{{% /game %}}                              | 2009 |        87.2% |
+| {{% game 21790 %}}Thurn and Taxis{{% /game %}}                       | 2006 |        77.0% |
+| {{% game 30549 %}}Pandemic{{% /game %}}                              | 2009 |        69.4% |
+| {{% game 6249 %}}Alhambra{{% /game %}}                               | 2003 |        24.8% |
+| {{% game 9209 %}}Ticket to Ride{{% /game %}}                         | 2004 |        12.0% |
+| {{% game 822 %}}Carcassonne{{% /game %}}                             | 2001 |         8.6% |
+| {{% game 39856 %}}Dixit{{% /game %}}                                 | 2010 |         0.1% |
 
 <!-- | {{% game 3076 %}}Puerto Rico{{% /game %}}                            | 2002 |     100.0% |
 | {{% game 34635 %}}Stone Age{{% /game %}}                             | 2008 |      99.5% |
@@ -149,45 +149,32 @@ Let's dive deeper and check what {{% kdj %}}Kennerspiel{{% /kdj %}} scores our m
 
 On the one hand, it's weird to see games like {{% game 13 %}}Catan{{% /game %}} and {{% game 30549 %}}Pandemic{{% /game %}} so firmly in the {{% kdj %}}Kennerspiel{{% /kdj %}} column when they are considered some of the quintessential modern gateway games. On the other hand, their complexity clearly does exceed by far what the jury demands of the average gamer these days. It's also worth observing that {{% game 13 %}}Catan{{% /game %}} did pave the way for some pretty complex games in the second half of the 90s, when the *euro revolution* was in full swing.
 
-Overall, according to our model, **8 out of 32** {{% sdj / %}} winners between 1979 and 2010 should really be considered a {{% kdj %}}Kennerspiel{{% /kdj %}} now.
+As far as validating the model goes: I'd agree with every single one of the model's assessments, though I'm a little surprised that {{% game 478 %}}Citadels{{% /game %}} got a score of 95.3%. I see good reasons for putting this one into the {{% kdj %}}Kennerspiel{{% /kdj %}} camp, but would do so with far more uncertainty.
 
-{{< img src="shap_30549" alt="Pandemic force plot" >}}
+Overall, according to our model, **9 out of 32** {{% sdj / %}} winners between 1979 and 2010 should really be considered a {{% kdj %}}Kennerspiel{{% /kdj %}} now. I wonder how many people trusted the red meeple, bought what they thought to be a welcoming game, only to get frustrated by 12 densely filled pages of {{% game 93 %}}El Grande{{% /game %}} rules? Or did people really have much longer attention spans in the pre-smartphone era? We might never know…
 
-{{< img src="shap_6249" alt="Alhambra force plot" >}}
+<!-- {{< img src="shap_30549" alt="Pandemic force plot" >}}
 
-# Spiel des Jahres 2021
+{{< img src="shap_6249" alt="Alhambra force plot" >}} -->
 
-| Game                                                                        | Confidence |
-|:----------------------------------------------------------------------------|-----------:|
-| {{% game 295945 %}}Exit: The Game – The Cemetery of the Knight{{% /game %}} | 99.8%      |
-| {{% game 282954 %}}Paris{{% /game %}}                                       | 97.9%      |
-| {{% game 318553 %}}Rajas of the Ganges: The Dice Charmers{{% /game %}}      | 80.5%      |
-| {{% game 300531 %}}Paleo{{% /game %}}                                       | 75.2%      |
-| {{% game 293014 %}}Nidavellir{{% /game %}}                                  | 64.9%      |
-| {{% game 300877 %}}New York Zoo{{% /game %}}                                | 62.9%      |
-| {{% game 283155 %}}Calico{{% /game %}}                                      | 61.3%      |
-| {{% game 299963 %}}Der Perfekte Moment{{% /game %}}                         | 45.6%      |
-| {{% game 319107 %}}Sebastian Fitzek Killercruise{{% /game %}}               | 44.4%      |
-| {{% game 300327 %}}The Castles of Tuscany{{% /game %}}                      | 39.3%      |
-| {{% game 313698 %}}Monster Expedition{{% /game %}}                          | 32.4%      |
-| {{% game 274841 %}}Cóatl{{% /game %}}                                       | 30.2%      |
-| {{% game 300001 %}}Renature{{% /game %}}                                    | 17.0%      |
-| {{% game 316407 %}}Allegra{{% /game %}}                                     | 11.5%      |
-| {{% game 270636 %}}My Farm Shop{{% /game %}}                                | 6.9%       |
-| {{% game 296557 %}}Zen Garden{{% /game %}}                                  | 5.1%       |
-| {{% game 297895 %}}Divvy Dice{{% /game %}}                                  | 4.7%       |
-| {{% game 301767 %}}Mysterium Park{{% /game %}}                              | 2.8%       |
-| {{% game 302917 %}}King of 12{{% /game %}}                                  | 2.8%       |
-| {{% game 299172 %}}The Key: Murder at the Oakdale Club{{% /game %}}         | 2.4%       |
-| {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}                      | 1.4%       |
-| {{% game 299171 %}}The Key: Raub in der Cliffrock Villa{{% /game %}}        | 0.9%       |
-| {{% game 319114 %}}Krazy Pix{{% /game %}}                                   | 0.8%       |
-| {{% game 313531 %}}Blätterrauschen{{% /game %}}                             | 0.4%       |
-| {{% game 292506 %}}Bresk!{{% /game %}}                                      | 0.1%       |
+# (Kenner-)Spiel des Jahres 2021
 
-# Outline
+I'll send you off with a teaser for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}. I've taken some of the [hottest contenders for the 2021 awards](https://recommend.games/#/?for=S_d_J&yearMin=2020&yearMax=2021&excludeOwned=false&playerCount=4&playerCountType=box&playTime=120&playTimeType=max&playerAge=16&playerAgeType=box) (as of the time of writing), and sort them by their {{% kdj %}}Kennerspiel{{% /kdj %}} score for your convenience.
 
-Looking ahead to some 2021 candidates
+| Game                                                                   | Kennerspiel? |
+|:-----------------------------------------------------------------------|-------------:|
+| {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}           |       100.0% |
+| {{% game 318553 %}}Rajas of the Ganges: The Dice Charmers{{% /game %}} |        80.5% |
+| {{% game 300531 %}}Paleo{{% /game %}}                                  |        77.5% |
+| {{% game 300877 %}}New York Zoo{{% /game %}}                           |        63.0% |
+| {{% game 300327 %}}The Castles of Tuscany{{% /game %}}                 |        39.3% |
+| {{% game 297895 %}}Divvy Dice{{% /game %}}                             |         4.7% |
+| {{% game 301767 %}}Mysterium Park{{% /game %}}                         |         2.8% |
+| {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}                 |         1.4% |
+| {{% game 299171 %}}The Key: Raub in der Cliffrock Villa{{% /game %}}   |         0.9% |
+| {{% game 319114 %}}Krazy Pix{{% /game %}}                              |         0.8% |
+
+I think this makes a pretty interesting early list of six candidates for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}} and four candidates for {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}, don't you think? Stay tuned!
 
 [^kennerspiel]: In 2011, there was no separate recommendation list for the two awards, so I only included the nominees for 2011. I also added the special award winners {{% game 18602 %}}Caylus{{% /game %}}, {{% game 31260 %}}Agricola{{% /game %}}, {{% game 43528 %}}World Without End{{% /game %}}, and {{% game 221107 %}}Pandemic Legacy: Season 2{{% /game %}} to the {{% kdj %}}Kennerspiel{{% /kdj %}} list.
 [^logistic]: Using logistic regression with F1–score as target metric. Other definitions of "best line" of course might yield different results.
