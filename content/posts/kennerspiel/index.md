@@ -147,7 +147,7 @@ Let's dive deeper and check what {{% kdj %}}Kennerspiel{{% /kdj %}} scores our m
 | {{% game 30869 %}}Thebes{{% /game %}}                                | 2007 |      21.5% |
 | {{% game 9674 %}}Ingenious{{% /game %}}                              | 2004 |       5.4% | -->
 
-On the one hand, it's weird to see games like {{% game 13 %}}Catan{{% /game %}} and {{% game 30549 %}}Pandemic{{% /game %}} so firmly in the {{% kdj %}}Kennerspiel{{% /kdj %}} column when they are considered some of the quintessential modern gateway games. On the other hand, their complexity clearly does exceed by far what the jury demands of the average gamer. It's also worth observing that {{% game 13 %}}Catan{{% /game %}} did pave the way for some pretty complex games in the second half of the 90s, when the *euro revolution* was in full swing.
+On the one hand, it's weird to see games like {{% game 13 %}}Catan{{% /game %}} and {{% game 30549 %}}Pandemic{{% /game %}} so firmly in the {{% kdj %}}Kennerspiel{{% /kdj %}} column when they are considered some of the quintessential modern gateway games. On the other hand, their complexity clearly does exceed by far what the jury demands of the average gamer these days. It's also worth observing that {{% game 13 %}}Catan{{% /game %}} did pave the way for some pretty complex games in the second half of the 90s, when the *euro revolution* was in full swing.
 
 Overall, according to our model, **8 out of 32** {{% sdj / %}} winners between 1979 and 2010 should really be considered a {{% kdj %}}Kennerspiel{{% /kdj %}} now.
 
