@@ -73,7 +73,7 @@ Mathematics to the rescue! Higher dimensions pose no challenge to our old friend
 
 Using the same set of games, but incorporating all those values, we can go through the same process that produced the separating line in the plot above (multivariate logistic regression, in case you're curious). This time, that dividing line would rather be a *hyperplane* in high dimensional space, but don't worry about that. In fact, we can do better that just a yes/no classification: We can estimate our *confidence* that a certain game is in fact a {{% kdj %}}Kennerspiel{{% /kdj %}}.
 
-This model classifies a whooping 150 out of 154 games correctly as either {{% sdj %}}Spiel{{% /sdj %}} or {{% kdj %}}Kennerspiel{{% /kdj %}} – that's 97.4% accurate. 🤯 So much for not being measurable, Mr Bartsch!
+This model classifies a whooping **150 out of 154 games** correctly as either {{% sdj %}}Spiel{{% /sdj %}} or {{% kdj %}}Kennerspiel{{% /kdj %}} – that's **97.4%** accurate. 🤯 So much for not being measurable, Mr Bartsch!
 
 So, let's take a look back at our problem games from before and check how much confidence our model has that the respective game is for connoisseurs:
 
@@ -99,7 +99,7 @@ To make things a little more concret, let's look at the ten most important featu
 
 *You can find the [full plot of all features here](shap_summary_full.svg).*
 
-As you can see, the *complexity* is the most important feature: the higher the value (blue = 1, red = 5), the higher our confidence that the game in question is a {{% kdj %}}Kennerspiel{{% /kdj %}}. This makes a lot of sense. Likewise, the next features are equally intuitive: the higher *play time* and *minimum age* are, the more likely it is we're dealing with a games for experts. And of course, in a way *strategy games* are much more frequently found in the {{% kdj %}}Kennerspiel{{% /kdj %}} column. (Here, red means strategy game, blue means not).
+As you can see, the *complexity* is the most important feature: the higher the value (blue = 1, red = 5), the higher our confidence that the game in question is a {{% kdj %}}Kennerspiel{{% /kdj %}}. This makes a lot of sense. Likewise, the next features are equally intuitive: the higher *play time* and *minimum age* are, the more likely it is we're dealing with a games for experts. And of course, in a way *strategy games* are much more frequently found in the {{% kdj %}}Kennerspiel{{% /kdj %}} column. (Here, red means strategy game, blue means not.)
 
 Somewhat more confusing is the player count though. Pay close attention to whether a game is playable with five or six players. Again, red means that game is playable with that head count, while blue means it is not. So a game that is playable with five players is *more* likely to be a {{% kdj %}}Kennerspiel{{% /kdj %}}, while a game for six players is *less* likely. This certainly is a little confusing, and might well be an artifact of our small sample size. Still, there's a system to this madness: whilst the vast majority of games accomodate three and four players, {{% sdj %}}Spiel{{% /sdj %}} candidates often either stop at that count to keep components and costs down, or are for a much larger audience anyways and really shine with six, eight, or even more players. A {{% kdj %}}Kennerspiel{{% /kdj %}} on the other hand can be a little more luxurious, and hence often includes components for a fifth player by default, but their more strategic nature limits the scalability beyond that point.
 
