@@ -295,6 +295,18 @@ plt.tight_layout()
 plt.savefig("shap_summary.svg")
 
 # %%
+shap.summary_plot(
+    shap_values.astype(float),
+    X_test_array,
+    feature_names=features,
+    plot_type="dot",
+    max_display=100,
+    show=False,
+)
+plt.tight_layout()
+plt.savefig("shap_summary_full.svg")
+
+# %%
 to_test = [
     171668,  # The Grizzled
     244521,  # The Quacks of Quedlinburg
