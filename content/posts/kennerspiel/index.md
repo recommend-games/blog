@@ -42,15 +42,15 @@ You see the jury's favourites of the past decade lining up from simple (left) to
 
 However, there is some significant overlap. In particular, a lot of games of either award can be found around the 10 year / complexity 2 (medium light) intersect. I've marked games with squares that fall on the "wrong" side of the line. Some notable outliers are:
 
-| Game                                                      | Year | Complexity | Age | Award | 🤔 |
-|:----------------------------------------------------------|:----:|-----------:|----:|:-----:|:-:|
-| {{% game 125618 %}}Libertalia{{% /game %}}                | 2013 |        2.2 | 14+ |  SdJ  | ❌ |
-| {{% game 244521 %}}The Quacks of Quedlinburg{{% /game %}} | 2018 |        1.9 | 10+ |  KdJ  | ❌ |
-| {{% game 244522 %}}That's Pretty Clever!{{% /game %}}     | 2018 |        1.9 |  8+ |  KdJ  | ❌ |
-| {{% game 263918 %}}Cartographers{{% /game %}}             | 2020 |        1.9 | 10+ |  KdJ  | ❌ |
-| {{% game 284083 %}}The Crew{{% /game %}}                  | 2020 |        2.0 | 10+ |  KdJ  | ❌ |
-| {{% game 295486 %}}My City{{% /game %}}                   | 2020 |        2.1 | 10+ |  SdJ  | ❌ |
-| {{% game 223953 %}}Kitchen Rush{{% /game %}}              | 2020 |        2.2 | 12+ |  SdJ  | ❌ |
+| Game                                                      | Year | Complexity | Age | Award                    | 🤔 |
+|:----------------------------------------------------------|:----:|-----------:|----:|:------------------------:|:-:|
+| {{% game 125618 %}}Libertalia{{% /game %}}                | 2013 |        2.2 | 14+ | {{% sdj %}}S{{% /sdj %}} | ❌ |
+| {{% game 244521 %}}The Quacks of Quedlinburg{{% /game %}} | 2018 |        1.9 | 10+ | {{% kdj %}}K{{% /kdj %}} | ❌ |
+| {{% game 244522 %}}That's Pretty Clever!{{% /game %}}     | 2018 |        1.9 |  8+ | {{% kdj %}}K{{% /kdj %}} | ❌ |
+| {{% game 263918 %}}Cartographers{{% /game %}}             | 2020 |        1.9 | 10+ | {{% kdj %}}K{{% /kdj %}} | ❌ |
+| {{% game 284083 %}}The Crew{{% /game %}}                  | 2020 |        2.0 | 10+ | {{% kdj %}}K{{% /kdj %}} | ❌ |
+| {{% game 295486 %}}My City{{% /game %}}                   | 2020 |        2.1 | 10+ | {{% sdj %}}S{{% /sdj %}} | ❌ |
+| {{% game 223953 %}}Kitchen Rush{{% /game %}}              | 2020 |        2.2 | 12+ | {{% sdj %}}S{{% /sdj %}} | ❌ |
 
 So by all means, 2020 *did* contain a lot of games just on the border of the two awards.
 
@@ -77,15 +77,15 @@ This model classifies a whooping 150 out of 154 games correctly as either {{% sd
 
 So, let's take a look back at our problem games from before and check how much confidence our model has that the respective game is for connoisseurs:
 
-| Game                                                                | Year | Award | Kennerspiel? | 🤔 |
-|:--------------------------------------------------------------------|:----:|:-----:|-------------:|:-:|
-| {{% game 125618 %}}Libertalia{{% /game %}}                          | 2013 |  SdJ  |        91.2% | 🤬 |
-| {{% game 244521 %}}The Quacks of Quedlinburg{{% /game %}}           | 2018 |  KdJ  |        65.3% | ✅ |
-| {{% game 244522 %}}That's Pretty Clever!{{% /game %}}               | 2018 |  KdJ  |        51.8% | ✅ |
-| {{% game 263918 %}}Cartographers{{% /game %}}                       | 2020 |  KdJ  |        84.7% | ✅ |
-| {{% game 284083 %}}The Crew: The Quest for Planet Nine{{% /game %}} | 2020 |  KdJ  |        41.7% | 😕 |
-| {{% game 295486 %}}My City{{% /game %}}                             | 2020 |  SdJ  |        36.0% | ✅ |
-| {{% game 223953 %}}Kitchen Rush{{% /game %}}                        | 2020 |  SdJ  |        37.4% | ✅ |
+| Game                                                                | Year | Award                    | Kennerspiel? | 🤔 |
+|:--------------------------------------------------------------------|:----:|:------------------------:|-------------:|:-:|
+| {{% game 125618 %}}Libertalia{{% /game %}}                          | 2013 | {{% sdj %}}S{{% /sdj %}} |        91.2% | 🤬 |
+| {{% game 244521 %}}The Quacks of Quedlinburg{{% /game %}}           | 2018 | {{% kdj %}}K{{% /kdj %}} |        65.3% | ✅ |
+| {{% game 244522 %}}That's Pretty Clever!{{% /game %}}               | 2018 | {{% kdj %}}K{{% /kdj %}} |        51.8% | ✅ |
+| {{% game 263918 %}}Cartographers{{% /game %}}                       | 2020 | {{% kdj %}}K{{% /kdj %}} |        84.7% | ✅ |
+| {{% game 284083 %}}The Crew: The Quest for Planet Nine{{% /game %}} | 2020 | {{% kdj %}}K{{% /kdj %}} |        41.7% | 😕 |
+| {{% game 295486 %}}My City{{% /game %}}                             | 2020 | {{% sdj %}}S{{% /sdj %}} |        36.0% | ✅ |
+| {{% game 223953 %}}Kitchen Rush{{% /game %}}                        | 2020 | {{% sdj %}}S{{% /sdj %}} |        37.4% | ✅ |
 
 This picture certainly has improved, and we're even classifying games like {{% game 244522 %}}That's Pretty Clever!{{% /game %}} (just about) and {{% game 223953 %}}Kitchen Rush{{% /game %}} right that caused us a lot of headaches before. However, {{% game 284083 %}}The Crew{{% /game %}} still eludes correct classification, and {{% game 125618 %}}Libertalia{{% /game %}} is so far off that I'd argue the jury simply got that one wrong…
 
@@ -156,7 +156,7 @@ On the one hand, it's weird to see games like {{% game 13 %}}Catan{{% /game %}} 
 
 As far as validating the model goes: I'd agree with every single one of the model's assessments, though I'm a little surprised that {{% game 478 %}}Citadels{{% /game %}} got a score of 95.3%. I see good reasons for putting this one into the {{% kdj %}}Kennerspiel{{% /kdj %}} camp, but would do so with far more uncertainty.
 
-Overall, according to our model, **9 out of 32** {{% sdj / %}} winners between 1979 and 2010 should really be considered a {{% kdj %}}Kennerspiel{{% /kdj %}} now. I wonder how many people trusted the red meeple, bought what they thought to be a welcoming game, only to get frustrated by 12 densely filled pages of {{% game 93 %}}El Grande{{% /game %}} rules? Or did people really have much longer attention spans in the pre-smartphone era? We might never know…
+Overall, according to our model, **9 out of 32** {{% sdj / %}} winners between 1979 and 2010 should really be considered a {{% kdj %}}Kennerspiel{{% /kdj %}} now. I wonder how many people trusted the red meeple, bought what they thought to be a welcoming game, only to get frustrated by 12 densely filled A4 pages[^elgrande] of {{% game 93 %}}El Grande{{% /game %}} rules? Or did people really have much longer attention spans in the pre-smartphone era? We might never know…
 
 <!-- {{< img src="shap_30549" alt="Pandemic force plot" >}}
 
@@ -183,3 +183,4 @@ I think this makes a pretty interesting early list of six candidates for {{% sdj
 
 [^kennerspiel]: In 2011, there was no separate recommendation list for the two awards, so I only included the nominees for 2011. I also added the special award winners {{% game 18602 %}}Caylus{{% /game %}}, {{% game 31260 %}}Agricola{{% /game %}}, {{% game 43528 %}}World Without End{{% /game %}}, and {{% game 221107 %}}Pandemic Legacy: Season 2{{% /game %}} to the {{% kdj %}}Kennerspiel{{% /kdj %}} list.
 [^logistic]: Using logistic regression with F1–score as target metric. Other definitions of "best line" of course might yield different results.
+[^elgrande]: Yes, I did pull out my old copy and counted. You're welcome. 🤓
