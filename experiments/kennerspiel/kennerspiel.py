@@ -242,6 +242,24 @@ data["predict"] = lr.predict(data[features])
 data["predict_proba"] = lr.predict_proba(data[features])[:, 1]
 
 # %%
+csv_features = [
+    "name",
+    "year",
+    "complexity",
+    "min_age",
+    "min_time",
+    "max_time",
+    "cooperative",
+    "sdj",
+    "ksdj",
+    "predict",
+    "predict_proba",
+]
+data[csv_features].sort_values("predict_proba", ascending=False).to_csv(
+    "results_post_2011.csv"
+)
+
+# %%
 correct = data.predict == data.ksdj
 print(
     f"{correct.sum()} out of {len(correct)} classified correctly, that's {correct.mean()*100:.1f}% accurate"
@@ -364,6 +382,15 @@ sdj_data.shape
 # %%
 sdj_data["kennerspiel"] = lr.predict(sdj_data[features])
 sdj_data["kennerspiel_prob"] = lr.predict_proba(sdj_data[features])[:, 1]
+
+# %%
+csv_features.remove("sdj")
+csv_features.remove("ksdj")
+sdj_data.rename(
+    columns={"kennerspiel": "predict", "kennerspiel_prob": "predict_proba"}
+)[csv_features].sort_values("predict_proba", ascending=False).to_csv(
+    "results_pre_2011.csv"
+)
 
 # %%
 old_sdj = sdj_data[

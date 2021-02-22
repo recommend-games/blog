@@ -1,9 +1,9 @@
 ---
 title: What makes a Kennerspiel?
-# slug: and-the-spiel-des-jahres-2020-goes-to
+slug: what-makes-kennerspiel
 author: Markus Shepherd
 type: post
-date: 2021-02-19T12:00:00+02:00
+date: 2021-02-22T22:34:57+02:00
 tags:
   - SdJ
   - Spiel des Jahres
@@ -54,22 +54,22 @@ However, there is some significant overlap. In particular, a lot of games of eit
 
 So by all means, 2020 *did* contain a lot of games just on the border of the two awards.
 
-Generally, this works pretty well for such a simple model (a linear function in two variables is really first semester kind of stuff). But some games seem to really push far into the other side, e.g., {{% game 244522 %}}That's Pretty Clever!{{% /game %}} and {{% game 223953 %}}Kitchen Rush{{% /game %}}. Are there some other characteristics of those games that explain the jury's classification?
+Generally, this works pretty well for such a simple model (a linear function in two variables is first semester kind of stuff). But some games seem to really push far into the other side, e.g., {{% game 244522 %}}That's Pretty Clever!{{% /game %}} and {{% game 223953 %}}Kitchen Rush{{% /game %}}. Are there some other characteristics of those games that explain the jury's classification?
 
 # Can we do better?
 
 Complexity and minimum age make a pretty powerful pair, but the only reason I picked two features is because we can nicely visualise everything in 2D. I don't know about you, but my brain can only handle three dimensions – on a good day…
 
-Mathematics to the rescue! Higher dimensions pose no challenge to our old friend, and we can throw as many variables at it as we want. So let's add some more features to our model:
+Mathematics to the rescue! Higher dimensions pose no challenge to our old friend, and we can throw as many variables at it as we want. So let's add some more features to our model:[^caveat]
 
-* complexity (weight between 1 and 5),
-* minimum age (between 6 and 16 years),
-* minimum and maximum play time (between 1 minute 🏃 and 3 hours),
-* player count (between 1 and 100 👀 players),
-* cooperative or competitive game,
-* types (e.g., family, strategy, or party game),
-* categories (e.g., card, economic, or medieval game), and
-* mechanics (e.g., hand management, set collection, or worker placement).
+* *complexity* (weight between 1 and 5),
+* *minimum age* (between 6 and 16 years),
+* *minimum* and *maximum play time* (between 1 minute 🏃 and 3 hours),
+* *player count* (between 1 and 100 👀 players),
+* *cooperative* or *competitive* game,
+* types (e.g., *family*, *strategy*, or *party game*),
+* categories (e.g., *card*, *economic*, or *medieval* game), and
+* mechanics (e.g., *hand management*, *set collection*, or *worker placement*).
 
 Using the same set of games, but incorporating all those values, we can go through the same process that produced the separating line in the plot above (multivariate logistic regression, in case you're curious). This time, that dividing line would rather be a *hyperplane* in high dimensional space, but don't worry about that. In fact, we can do better that just a yes/no classification: We can estimate our *confidence* that a certain game is in fact a {{% kdj %}}Kennerspiel{{% /kdj %}}.
 
@@ -86,6 +86,8 @@ So, let's take a look back at our problem games from before and check how much c
 | {{% game 284083 %}}The Crew: The Quest for Planet Nine{{% /game %}} | 2020 | {{% kdj %}}K{{% /kdj %}} |        41.7% | 😕 |
 | {{% game 295486 %}}My City{{% /game %}}                             | 2020 | {{% sdj %}}S{{% /sdj %}} |        36.0% | ✅ |
 | {{% game 223953 %}}Kitchen Rush{{% /game %}}                        | 2020 | {{% sdj %}}S{{% /sdj %}} |        37.4% | ✅ |
+
+*You can find the [full results list here](results_post_2011.csv).*
 
 This picture certainly has improved, and we're even classifying games like {{% game 244522 %}}That's Pretty Clever!{{% /game %}} (just about) and {{% game 223953 %}}Kitchen Rush{{% /game %}} right that caused us a lot of headaches before. However, {{% game 284083 %}}The Crew{{% /game %}} still eludes correct classification, and {{% game 125618 %}}Libertalia{{% /game %}} is so far off that I'd argue the jury simply got that one wrong…
 
@@ -154,6 +156,8 @@ Let's dive deeper and check what {{% kdj %}}Kennerspiel{{% /kdj %}} scores our m
 | {{% game 30869 %}}Thebes{{% /game %}}                                | 2007 |      21.5% |
 | {{% game 9674 %}}Ingenious{{% /game %}}                              | 2004 |       5.4% | -->
 
+*You can find the [full results list here](results_pre_2011.csv).*
+
 On the one hand, it's weird to see games like {{% game 13 %}}Catan{{% /game %}} and {{% game 30549 %}}Pandemic{{% /game %}} so firmly in the {{% kdj %}}Kennerspiel{{% /kdj %}} column when they are considered some of the quintessential modern gateway games. On the other hand, their complexity clearly does exceed by far what the jury demands of the average gamer these days. It's also worth observing that {{% game 13 %}}Catan{{% /game %}} did pave the way for some pretty complex games in the second half of the 90s, when the *euro revolution* was in full swing.
 
 As far as validating the model goes: I'd agree with every single one of the model's assessments, though I'm a little surprised that {{% game 478 %}}Citadels{{% /game %}} got a score of 95.3%. I see good reasons for putting this one into the {{% kdj %}}Kennerspiel{{% /kdj %}} camp, but would do so with far more uncertainty.
@@ -185,4 +189,5 @@ I think this makes a pretty interesting early list of six candidates for {{% sdj
 
 [^kennerspiel]: In 2011, there was no separate recommendation list for the two awards, so I only included the nominees for 2011. I also added the special award winners {{% game 18602 %}}Caylus{{% /game %}}, {{% game 31260 %}}Agricola{{% /game %}}, {{% game 43528 %}}World Without End{{% /game %}}, and {{% game 221107 %}}Pandemic Legacy: Season 2{{% /game %}} to the {{% kdj %}}Kennerspiel{{% /kdj %}} list.
 [^logistic]: Using logistic regression with F1–score as target metric. Other definitions of "best line" of course might yield different results.
+[^caveat]: It's worth noticing that some of those values can be unreliable. *Complexity* and *game type* depend on user votes which often only a handful of contributors. Even more so, *categories* and *mechanics* are quite wonky taxonomies which are frequently applied inconsistently. Finally, *player count* and *age* as well as *play time* are taken from the publishers who do not hesitate to lie about these things if it helps sell their games.
 [^elgrande]: Yes, I did pull out my old copy and counted. You're welcome. 🤓
