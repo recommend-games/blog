@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[requires]
+python_version = "3.8"
+
+[packages]
+bokeh = "*"
+jedi = "<0.18"
+jupyterlab = "<3.0.0"
+jupytext = "<1.9.0"
+matplotlib = "*"
+nb-black = "*"
+numpy = "*"
+pandas = "*"
+pytility = "*"
+scikit-learn = "*"
+scipy = "*"
+seaborn = "*"
+shap = "*"
+tabulate = "*"
+
+[dev-packages]

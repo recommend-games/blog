@@ -131,5 +131,6 @@ sitepackages/
 *.bk
 *.feather
 *.ipynb
+*.joblib
 *.parquet
 *.pickle
