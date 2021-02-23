@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.6.0
+#       jupytext_version: 1.8.2
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -59,45 +59,3 @@ with out_path.open("w", newline="") as out_file:
     for bgg_id, name, path in games_in_articles(paths):
         comment = f"From article <{path}>"
         writer.writerow((bgg_id, name, comment))
-
-# %%
-include = pd.read_csv("include.csv", index_col="bgg_id")
-exclude = pd.read_csv("exclude.csv", index_col="bgg_id")
-include.shape, exclude.shape
-
-# %%
-url = "http://localhost:8000/api/games/recommend/"
-params = {
-    "user": "S_d_J",
-    "year__gte": 2020,
-    "year__lte": 2021,
-    "complexity__lte": 2,
-    "max_players__gte": 4,
-    "min_players__lte": 3,
-    "max_time__lte": 60,
-    "min_age__lte": 14,
-    "include": ",".join(map(str, include.index)),
-    "exclude": ",".join(map(str, exclude.index)),
-}
-
-# %%
-response = requests.get(url, params)
-
-# %%
-candidates = pd.DataFrame.from_records(response.json()["results"], index="bgg_id")
-candidates.shape
-
-# %%
-candidates[
-    [
-        "name",
-        "year",
-        "num_votes",
-        "avg_rating",
-        "bayes_rating",
-        "bgg_rank",
-        "rec_rating",
-        "complexity",
-        "cooperative",
-    ]
-]
