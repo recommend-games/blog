@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.6.0
+#       jupytext_version: 1.8.2
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -32,14 +32,15 @@ params = {
     "user": "S_d_J",
     "year__gte": 2020,
     "year__lte": 2021,
-    "include": include,
-    "exclude": exclude,
-    "exclude_clusters": False,
-    "exclude_known": False,
+    "include": ",".join(map(str, include)),
+    "exclude": ",".join(map(str, exclude)),
+    "exclude_clusters": True,
+    "exclude_known": True,
     "exclude_owned": False,
-    "complexity__lte": 3.5,
-    "max_players__gte": 3,
-    "max_time__lte": 120,
+    "complexity__lte": 4,
+    "min_players__lte": 3,
+    "max_players__gte": 4,
+    "min_time__lte": 120,
     "min_age__lte": 16,
 }
 
