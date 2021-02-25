@@ -14,6 +14,8 @@
 # ---
 
 # %%
+import json
+
 import joblib
 import pandas as pd
 
@@ -136,3 +138,7 @@ sorted(zip(rusb.feature_importances_, features), reverse=True)
 
 # %%
 joblib.dump(lr, "lr.joblib")
+
+# %%
+with open("features.json", "w") as f:
+    json.dump(features, f, indent=4)

@@ -14,9 +14,11 @@
 # ---
 
 # %%
+import json
 from itertools import islice
 import joblib
 import pandas as pd
+from games import transform
 from utils import recommend_games
 
 # %load_ext nb_black
@@ -59,25 +61,30 @@ df.shape
 df.sample(3).T
 
 # %%
-features = [
-    "min_players",
-    "max_players",
-    "min_players_rec",
-    "max_players_rec",
-    "min_players_best",
-    "max_players_best",
-    "min_age",
-    # "min_age_rec",
-    "min_time",
-    "max_time",
-    "cooperative",
-    "complexity",
-]
+data = transform(
+    data=df,
+    list_columns=("game_type", "category", "mechanic"),
+    min_df=0.00,
+)
+data.shape
+
+# %%
+with open("features.json") as f:
+    features = json.load(f)
+len(features)
+
+# %%
+for feature in features:
+    if feature not in data:
+        print(feature)
+        data[feature] = False
 
 # %%
 model = joblib.load("lr.joblib")
 model
 
 # %%
-df["sdj_prob"] = model.predict_proba(df[features])[:, 1]
-df.sort_values("sdj_prob", ascending=False)[["name", "year", "bgg_id"]].head(50)
+data["sdj_prob"] = model.predict_proba(data[features])[:, 1]
+data.sort_values("sdj_prob", ascending=False)[
+    ["name", "year", "bgg_id", "sdj_prob"]
+].head(50)
