@@ -14,46 +14,21 @@
 # ---
 
 # %%
-import json
-
 import joblib
 import pandas as pd
 
-from pytility import arg_to_iter, clear_list, parse_int
 from imblearn.ensemble import BalancedRandomForestClassifier, RUSBoostClassifier
 from imblearn.metrics import classification_report_imbalanced
-from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
-from sklearn.ensemble import (
-    AdaBoostClassifier,
-    BaggingClassifier,
-    GradientBoostingClassifier,
-    IsolationForest,
-    RandomForestClassifier,
-)
-from sklearn.gaussian_process import GaussianProcessClassifier
-from sklearn.gaussian_process.kernels import RBF
-from sklearn.linear_model import LogisticRegressionCV, RidgeClassifierCV
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegressionCV
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import BernoulliNB, GaussianNB, MultinomialNB
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.neural_network import MLPClassifier
-from sklearn.preprocessing import MultiLabelBinarizer
-from sklearn.svm import SVC
-from sklearn.tree import DecisionTreeClassifier, ExtraTreeClassifier
+from games import transform
 
 SEED = 23
 
 # %load_ext nb_black
 # %load_ext lab_black
-
-# %%
-with open("../categories.json") as file:
-    categories = json.load(file)
-with open("../game_types.json") as file:
-    game_types = json.load(file)
-with open("../mechanics.json") as file:
-    mechanics = json.load(file)
 
 # %%
 games = pd.read_csv(
@@ -97,66 +72,29 @@ games["alt_candidate"] = games.index.isin(alt_candidates.index)
 data = games[games.longlist | games.alt_candidate].copy().reset_index()
 data.shape
 
-
 # %%
-def map_id(id_, categories=categories, game_types=game_types, mechanics=mechanics):
-    id_ = parse_int(id_)
-    if not id_:
-        return None
-    id_ = str(id_)
-    if name := categories.get(id_):
-        return f"Category: {name}"
-    if name := game_types.get(id_):
-        return f"Game type: {name}"
-    if name := mechanics.get(id_):
-        return f"Mechanic: {name}"
-    return id_
-
-
-def map_ids(ids, categories=categories, game_types=game_types, mechanics=mechanics):
-    return list(filter(None, map(map_id, arg_to_iter(ids))))
-
-
-# %%
-concatenated = (
-    data.game_type.str.cat(data.category, sep=",", na_rep="")
-    .str.cat(data.mechanic, sep=",", na_rep="")
-    .apply(lambda x: clear_list(x.split(sep=",")) if isinstance(x, str) else [])
-    .apply(map_ids)
+all_data = transform(
+    data=data,
+    list_columns=("game_type", "category", "mechanic"),
+    min_df=0.01,
 )
+all_data.shape
 
 # %%
-mlb = MultiLabelBinarizer()
-values = mlb.fit_transform(concatenated)
-values.shape
+all_data.sample(3, random_state=SEED).T[-50:]
 
 # %%
-values_df = pd.DataFrame(data=values, columns=mlb.classes_)
-values_df.shape
-
-# %%
-threshold = len(values_df) / 100
-values_df.drop(columns=values_df.columns[values_df.sum() < threshold], inplace=True)
-values_df.shape
-
-# %%
-all_data = pd.concat((data, values_df), axis=1)
-
-# %%
-features = [
-    "min_players",
-    "max_players",
-    "min_players_rec",
-    "max_players_rec",
-    "min_players_best",
-    "max_players_best",
+num_features = [
     "min_age",
-    # "min_age_rec",
     "min_time",
     "max_time",
     "cooperative",
     "complexity",
-] + list(values_df.columns)
+]
+features = num_features + [
+    col for col in all_data.columns if (":" in col) or col.startswith("playable_")
+]
+len(features)
 
 # %%
 in_data = all_data[features + ["longlist"]].dropna()
@@ -174,33 +112,7 @@ lr = LogisticRegressionCV(
 rf = RandomForestClassifier(n_estimators=100)
 brf = BalancedRandomForestClassifier(n_estimators=100)
 rusb = RUSBoostClassifier(n_estimators=200, algorithm="SAMME.R")
-models = (
-    lr,
-    rf,
-    brf,
-    rusb,
-    # QuadraticDiscriminantAnalysis(),
-    # AdaBoostClassifier(n_estimators=100),
-    # BaggingClassifier(n_estimators=100),
-    # GradientBoostingClassifier(n_estimators=100),
-    # IsolationForest(n_estimators=100),
-    # GaussianProcessClassifier(1.0 * RBF(1.0)),
-    # RidgeClassifierCV(class_weight="balanced"),
-    # BernoulliNB(),
-    # GaussianNB(),
-    # MultinomialNB(),
-    # KNeighborsClassifier(),
-    # MLPClassifier(
-    #    hidden_layer_sizes=(
-    #        200,
-    #        200,
-    #    ),
-    #    max_iter=100_000,
-    # ),
-    # SVC(),
-    # DecisionTreeClassifier(),
-    # ExtraTreeClassifier(),
-)
+models = (lr, rf, brf, rusb)
 
 # %%
 for model in models:
