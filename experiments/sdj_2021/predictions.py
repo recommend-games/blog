@@ -18,6 +18,8 @@ import json
 from itertools import islice
 import joblib
 import pandas as pd
+from sklearn.preprocessing import minmax_scale
+from tqdm import tqdm
 from games import transform
 from utils import recommend_games
 
@@ -39,14 +41,14 @@ params = {
     "exclude_clusters": True,
     "exclude_known": True,
     "exclude_owned": False,
-    "complexity__lte": 4,
-    "min_players__lte": 3,
-    "max_players__gte": 4,
-    "min_time__lte": 120,
-    "min_age__lte": 16,
+    # "complexity__lte": 4,
+    # "min_players__lte": 3,
+    # "max_players__gte": 4,
+    # "min_time__lte": 120,
+    # "min_age__lte": 16,
 }
 
-candidates = list(islice(recommend_games(**params), 1000))
+candidates = list(tqdm(recommend_games(**params)))
 
 for game in candidates[:10]:
     print(
@@ -64,7 +66,7 @@ df.sample(3).T
 data = transform(
     data=df,
     list_columns=("game_type", "category", "mechanic"),
-    min_df=0.00,
+    min_df=0,
 )
 data.shape
 
@@ -84,7 +86,27 @@ model = joblib.load("lr.joblib")
 model
 
 # %%
-data["sdj_prob"] = model.predict_proba(data[features])[:, 1]
-data.sort_values("sdj_prob", ascending=False)[
-    ["name", "year", "bgg_id", "sdj_prob"]
-].head(50)
+x = data[features]
+x = x.fillna(x.mean())
+data["sdj_prob"] = model.predict_proba(x)[:, 1]
+results = data[["name", "year", "bgg_id", "rec_rating", "sdj_prob"]].copy()
+results["sdj_score"] = minmax_scale(results["rec_rating"]) * results["sdj_prob"]
+results["sdj_score_add"] = minmax_scale(results["rec_rating"]) + results["sdj_prob"]
+results.shape
+
+# %%
+results.sort_values("sdj_prob", ascending=False)[:10]
+
+# %%
+results.sort_values("rec_rating", ascending=False)[:10]
+
+# %%
+results.sort_values("sdj_score", ascending=False)[:50]
+
+# %%
+results.sort_values("sdj_score_add", ascending=False)[:50]
+
+# %%
+results[["rec_rating", "sdj_prob", "sdj_score", "sdj_score_add"]].corr(
+    method="spearman"
+)

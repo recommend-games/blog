@@ -24,5 +24,6 @@ scipy = "*"
 seaborn = "*"
 shap = "*"
 tabulate = "*"
+tqdm = "*"
 
 [dev-packages]
