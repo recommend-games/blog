@@ -1,99 +1,174 @@
 {
     "target_id": null,
-    "root_id": "1152",
+    "root_id": "1133",
     "doc": {
-        "defs": [
-            {
-                "extends": null,
-                "module": null,
-                "name": "DataModel",
-                "overrides": [],
-                "properties": []
-            }
-        ],
         "roots": {
             "references": [
                 {
                     "attributes": {
                         "below": [
                             {
-                                "id": "1163"
+                                "id": "1144"
                             }
                         ],
                         "center": [
                             {
-                                "id": "1166"
+                                "id": "1147"
                             },
                             {
-                                "id": "1170"
+                                "id": "1151"
                             },
                             {
-                                "id": "1201"
+                                "id": "1182"
                             }
                         ],
                         "left": [
                             {
-                                "id": "1167"
+                                "id": "1148"
                             }
                         ],
                         "renderers": [
                             {
-                                "id": "1199"
+                                "id": "1180"
                             }
                         ],
                         "title": {
-                            "id": "1153"
+                            "id": "1134"
                         },
                         "toolbar": {
-                            "id": "1183"
+                            "id": "1164"
                         },
                         "x_range": {
-                            "id": "1155"
+                            "id": "1136"
                         },
                         "x_scale": {
-                            "id": "1159"
+                            "id": "1140"
                         },
                         "y_range": {
-                            "id": "1157"
+                            "id": "1138"
                         },
                         "y_scale": {
-                            "id": "1161"
+                            "id": "1142"
                         }
                     },
-                    "id": "1152",
+                    "id": "1133",
                     "subtype": "Figure",
                     "type": "Plot"
                 },
                 {
-                    "attributes": {},
-                    "id": "1174",
-                    "type": "WheelZoomTool"
-                },
-                {
                     "attributes": {
-                        "overlay": {
-                            "id": "1181"
-                        }
+                        "active_drag": "auto",
+                        "active_inspect": "auto",
+                        "active_multi": null,
+                        "active_scroll": "auto",
+                        "active_tap": "auto",
+                        "tools": [
+                            {
+                                "id": "1152"
+                            },
+                            {
+                                "id": "1153"
+                            },
+                            {
+                                "id": "1154"
+                            },
+                            {
+                                "id": "1155"
+                            },
+                            {
+                                "id": "1156"
+                            },
+                            {
+                                "id": "1157"
+                            },
+                            {
+                                "id": "1158"
+                            },
+                            {
+                                "id": "1159"
+                            },
+                            {
+                                "id": "1160"
+                            },
+                            {
+                                "id": "1161"
+                            }
+                        ]
                     },
-                    "id": "1180",
-                    "type": "BoxSelectTool"
-                },
-                {
-                    "attributes": {},
-                    "id": "1178",
-                    "type": "ResetTool"
+                    "id": "1164",
+                    "type": "Toolbar"
                 },
                 {
                     "attributes": {
-                        "gradient": -13.916987002726254,
+                        "axis": {
+                            "id": "1144"
+                        },
+                        "ticker": null
+                    },
+                    "id": "1147",
+                    "type": "Grid"
+                },
+                {
+                    "attributes": {},
+                    "id": "1160",
+                    "type": "SaveTool"
+                },
+                {
+                    "attributes": {},
+                    "id": "1200",
+                    "type": "UnionRenderers"
+                },
+                {
+                    "attributes": {},
+                    "id": "1138",
+                    "type": "DataRange1d"
+                },
+                {
+                    "attributes": {},
+                    "id": "1199",
+                    "type": "Selection"
+                },
+                {
+                    "attributes": {},
+                    "id": "1196",
+                    "type": "BasicTickFormatter"
+                },
+                {
+                    "attributes": {
+                        "text": "Spiel des Jahres before 2011"
+                    },
+                    "id": "1134",
+                    "type": "Title"
+                },
+                {
+                    "attributes": {},
+                    "id": "1142",
+                    "type": "LinearScale"
+                },
+                {
+                    "attributes": {},
+                    "id": "1157",
+                    "type": "ZoomOutTool"
+                },
+                {
+                    "attributes": {
+                        "bottom_units": "screen",
+                        "fill_alpha": 0.5,
+                        "fill_color": "lightgrey",
+                        "left_units": "screen",
+                        "level": "overlay",
+                        "line_alpha": 1.0,
+                        "line_color": "black",
                         "line_dash": [
-                            6
+                            4,
+                            4
                         ],
                         "line_width": 2,
-                        "y_intercept": 38.51545167095757
+                        "right_units": "screen",
+                        "top_units": "screen"
                     },
-                    "id": "1201",
-                    "type": "Slope"
+                    "id": "1163",
+                    "type": "BoxAnnotation"
                 },
                 {
                     "attributes": {
@@ -171,7 +246,7 @@
                                 "34863"
                             ],
                             "avg_rating": {
-                                "__ndarray__": "LQlQU8vWGkAi/fZ14JwcQI1iuaXVMBlAIGPuWkKeG0DswDkjSlsdQPa0w1+T1RpA51JcVfZ9HECiemtgqwQfQA6+MJkq2BxA001iEFj5GEDReY1dohoaQIGVQ4ts5xpAw/ARMSXyGEDdJAaBleMZQOj2ksZoXRlA1EhL5e2IGkCE04IXfcUZQEZfQZqxCBpAFZFhFW9EG0BPkq6ZfFMcQIC3QILiRxtAHvmDgef+GECl942vPVMZQCv7rgj+1xlAEyf3OxSFGUAiGt1B7KwdQKxWJvxS3xZAJ2vUQzR6GEDKplzhXc4ZQKsJou4D8B5AD5ccd0rHGUCUMNP2r6waQL7e/fFe9R9AsyRATS37G0ANbJVgcTgaQA+0AkNWdxVAWOcYkL0eHECmm8QgsLIdQIi6D0BqMx1AiqvKviuCHEAgQfFjzH0cQCxlGeJYdxlAW5TZIJMMHEDvj/eqlUkaQKTH72368xlAW7bWFwkNGkA2sFWCxUEXQHoZxXJLSxlAZJKRs7BnHEBnLJrOTiYcQHDOiNLewBlAiGNd3EYjGUBuUWaDTFIcQALxun7B7htAYoTwaOOoG0CiXYWUn1QbQHy45LhTuhpAPx2PGahsHkCyEYjX9YscQJHyk2qfDhxAKLhYUYNJGkDImLuWkK8ZQDEIrBxaRB5AAfbRqSsfHEDuWkI+6HkeQDxmoDL+fRtAhA1Pr5QFHUCbG9MTllgaQDDYDdsWRRxA9S1zuiwmHUA=",
+                                "__ndarray__": "LQlQU8vWGkAi/fZ14JwcQI1iuaXVMBlAIGPuWkKeG0DswDkjSlsdQPa0w1+T1RpA51JcVfZ9HEBo6J/gYgUfQA6+MJkq2BxA001iEFj5GEDReY1dohoaQIGVQ4ts5xpAw/ARMSXyGED2C3bDtuUZQOj2ksZoXRlA1EhL5e2IGkCE04IXfcUZQEZfQZqxCBpAFZFhFW9EG0BPkq6ZfFMcQIC3QILiRxtAHvmDgef+GECl942vPVMZQCv7rgj+1xlAEyf3OxSFGUA/HY8ZqKwdQKxWJvxS3xZAJ2vUQzR6GEDKplzhXc4ZQFOu8C4X8R5AY5y/CYXIGUCUMNP2r6waQC8X8Z2Y9R9AsyRATS37G0ANbJVgcTgaQA+0AkNWdxVAWOcYkL0eHEClMVpHVbMdQIi6D0BqMx1AiqvKviuCHEAgQfFjzH0cQCxlGeJYdxlAW5TZIJMMHEDuPVxy3EkaQKTH72368xlAW7bWFwkNGkA2sFWCxUEXQHoZxXJLSxlAZJKRs7BnHEBnLJrOTiYcQHDOiNLewBlAiGNd3EYjGUBuUWaDTFIcQALxun7B7htAs82N6QmrG0CiXYWUn1QbQHy45LhTuhpA6MHdWbttHkCyEYjX9YscQJHyk2qfDhxAKLhYUYNJGkDImLuWkK8ZQDEIrBxaRB5AqTC2EOQgHEDQ7SWN0XoeQDxmoDL+fRtAhA1Pr5QFHUB+AFKbOFkaQDDYDdsWRRxA9S1zuiwmHUA=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -179,7 +254,7 @@
                                 ]
                             },
                             "bayes_rating": {
-                                "__ndarray__": "XoWUn1T7GUAyychZ2PMbQFg5tMh2nhdA8SkAxjPoGkCHp1fKMqQcQCv2l92TRxhAh78ma9RjG0Be1y/YDVseQNqPFJFh9RpASWjLuRR3F0B8J2a9GAoZQKpDboYbsBlALexph7/GF0Cgppat9YUYQAbYR6euXBhAdmwE4nU9GUB/+zpwzogYQHgoCvSJfBlAs0EmGTkLGUANq3gj8+gbQPW+8bVnlhlA3lm77ULzFkA6WP/nMH8XQGcPtAJDNhdAUAEwnkHjGEDOjekJSzwdQOWbbW5MbxZAlWBxOPOLFkBhjh6/tykXQFdgyOpWDx5AkBSRYRWvGECPwvUoXM8ZQDCBW3fzdB9AHEKVmj1wGUAOT6+UZSgZQGlXIeUn9RVAsI9OXfmsG0BPIy2Vt0MdQLQfKSLDahxAsDic+dXcGkBv9Zz0vtEbQN83vvbMMhdAE9VbA1sFG0BpAG+BBMUYQNi7P96rNhlAfGEyVTCKGEASiNf1C1YWQFa3ek56nxdAje4gdqbQG0BaEqCmlg0bQM9m1edqyxdArKjBNAyfF0B/pIgMqzgbQNY5BmSvNxlAqFfKMsQRGkCpTZzc77AaQH1cGyrGORlAu5unOuQGHkDytWeWBIgbQLSOqiaIOhpAJ6Wg20saF0DfFcH/VtIYQKc/+5Ei0h1A6SYxCKxcGkDtgVZgyAoeQHXN5JttzhpAfzDw3HuYHECp3hrYKuEYQAq/1M+bChtAvyuC/61EHEA=",
+                                "__ndarray__": "XoWUn1T7GUAyychZ2PMbQFg5tMh2nhdA8SkAxjPoGkCHp1fKMqQcQCv2l92TRxhAh78ma9RjG0B6cHfWblseQNqPFJFh9RpASWjLuRR3F0B8J2a9GAoZQKpDboYbsBlALexph7/GF0C6SQwCK4cYQAbYR6euXBhAdmwE4nU9GUB/+zpwzogYQHgoCvSJfBlAs0EmGTkLGUANq3gj8+gbQPW+8bVnlhlA3lm77ULzFkA6WP/nMH8XQGcPtAJDNhdAUAEwnkHjGEDOUx1yMzwdQOWbbW5MbxZAlWBxOPOLFkBhjh6/tykXQI5AvK5fEB5AcjPcgM+vGECPwvUoXM8ZQKG5TiMtdR9AHEKVmj1wGUAOT6+UZSgZQGlXIeUn9RVAsI9OXfmsG0D4U+Olm0QdQLQfKSLDahxAsDic+dXcGkBv9Zz0vtEbQN83vvbMMhdAE9VbA1sFG0CF61G4HsUYQNi7P96rNhlAfGEyVTCKGEASiNf1C1YWQFa3ek56nxdAje4gdqbQG0BaEqCmlg0bQM9m1edqyxdArKjBNAyfF0B/pIgMqzgbQNY5BmSvNxlA3ze+9swSGkCpTZzc77AaQH1cGyrGORlAgPEMGvoHHkDytWeWBIgbQLSOqiaIOhpAJ6Wg20saF0DfFcH/VtIYQKc/+5Ei0h1Ar3yW58FdGkCzKVd4lwseQHXN5JttzhpAfzDw3HuYHEDiBnx+GOEYQAq/1M+bChtAvyuC/61EHEA=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -4019,7 +4094,7 @@
                                 ]
                             },
                             "complexity": {
-                                "__ndarray__": "gy9MpgpGAUBQ/Bhz15ICQPmgZ7Pqc/0/UdobfGEy9D/oaiv2l10GQEoMAiuHlgRAxEKtad7xBkAkKH6MuWsIQCsYldQJaARAhxbZzvdT/z8GEhQ/xtz9P9O84xQdyf4/guLHmLuW+j+bVZ+rrdj0P50Rpb3BF/s/Z9Xnaiv2/j/gnBGlvcH3PyNKe4MvTP8/gSbChqdX/z8/V1uxv2wAQDY8vVKWoQRAPE7RkVx+AUBy+Q/pt6/4P7FQa5p3HANAAwmKH2Pu+z988rBQa5r+P/rt68A5I/Q/SS7/If329D/NzMzMzMwEQO/Jw0KtaQVA0gDeAgmK8j/CFyZTBaP1P1uxv+yePApAsVBrmnecBEBE+u3rwDkAQAAAAAAAAPQ/S8gHPZvVAEAv3SQGgZX9P1XBqKROwANAiIVa07xjCUCdgCbChqf+P4MvTKYKRvo/qvHSTWKQAECSXP5D+u38PxB6Nqs+V/0/SgwCK4cW9T+fzarP1Vb0P6W9wRcmUwFALGUZ4lgXAkAdyeU/pF8CQJF++zpwzv0/dEaU9gZf+T/sUbgehesCQNIA3gIJivM/ZDvfT42XBECad5yiI7n9PwMJih9j7vU/mG4Sg8BKA0D4U+Olm0QBQC6QoPgx5v0/BcWPMXetAEDhC5OpglH6PxZqTfOO0wNAwhcmUwWj9z8Jih9j7toCQIj029eBc/w/Vn2utmJ/8z/dJAaBlUP2P8IXJlMFowBAfPKwUGsaBUA=",
+                                "__ndarray__": "gy9MpgpGAUBQ/Bhz15ICQPmgZ7Pqc/0/UdobfGEy9D/oaiv2l10GQEoMAiuHlgRAxEKtad7xBkA/V1uxv2wIQCsYldQJaARAhxbZzvdT/z8GEhQ/xtz9P9O84xQdyf4/guLHmLuW+j+bVZ+rrdj0P50Rpb3BF/s/Z9Xnaiv2/j/gnBGlvcH3PyNKe4MvTP8/gSbChqdX/z8/V1uxv2wAQDY8vVKWoQRAPE7RkVx+AUBy+Q/pt6/4P7FQa5p3HANAAwmKH2Pu+z+amZmZmZn+P/rt68A5I/Q/SS7/If329D/NzMzMzMwEQPYoXI/CdQVA0gDeAgmK8j/CFyZTBaP1Pz0K16NwPQpAsVBrmnecBEBE+u3rwDkAQAAAAAAAAPQ/S8gHPZvVAEDzjlN0JJf9P1XBqKROwANAiIVa07xjCUCdgCbChqf+P4MvTKYKRvo/qvHSTWKQAECSXP5D+u38PxB6Nqs+V/0/SgwCK4cW9T+fzarP1Vb0P6W9wRcmUwFALGUZ4lgXAkAdyeU/pF8CQJF++zpwzv0/dEaU9gZf+T/sUbgehesCQNIA3gIJivM/ZDvfT42XBECad5yiI7n9PwMJih9j7vU/mG4Sg8BKA0D4U+Olm0QBQC6QoPgx5v0/BcWPMXetAEDhC5OpglH6PxZqTfOO0wNAeekmMQis9z9cj8L1KNwCQIj029eBc/w/Vn2utmJ/8z/dJAaBlUP2P8IXJlMFowBAfPKwUGsaBUA=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -4899,7 +4974,7 @@
                                 true
                             ],
                             "kennerspiel_prob": {
-                                "__ndarray__": "MpwrnuJQzj/8y/+LM+jvP4ibu5XJIKY/B8kR2nWWhT+JwXNWqdXuP1Oi71bnpu8/23o+4mlR7z+4SwzSt/7vPyx0yiYIxu8/6ZItnw42uz8f9/T1Xx/EP3sqOFSADLU/qKp9Pc/ppj8tYq4C0TScPwBIZFBtorE/CIF/7xaoiT8Hx5xcXoN+PwVZ5vr0M7U/kN6lmdmc5T8AIF4c/HzuPyH78mAHj+8/slmfq7jX7T8ir7wOLaPPP+F+CsSg+9g/PYmkOdI2qz+hztBPtym2P2FBoOOBLXQ/4Q2/6inHZD9k+h9Af4nvP7YB/lgo+u8/LUfSHqM/jz8nf0OsNGufP6fJFazp/+8/HEdpjIsV7T8c6zGBb1K3PwDk4RYQjoI/soyKiwOPzz/GOaeA0JK+P3ExnecXOO4/7wBNgCH/7z+v6NjsQTWrP1BzCEZ2H2U/UlADhM+L7T+gDwdCBS+5PyumMwIwj6o/BHQU/fjsdj8eMU/VV7BqP9Ol3m5h/8E/Q0bDZdWe6D8dTNd3l4vrPynC2efkFZw/l0yRT1v1mz/rh3kjB97uP1hOiHI1BLU/L/Gu7l1Z7D8XrmwL+DOtP0W9LpbKzFQ/5APsRXcu5j8MiLvybXHLP0+BzUiTeOI/v969MbpXwD/82NeI7RqQP8wM5mW21u8/+Z5lEsStiD8z2jHP7e3rP+1uFZP9Au0/0IkH+lgrVz+HLluYSZyDP72Ud/H8DdE/c8xWYdJ87j8=",
+                                "__ndarray__": "XWU5uIhIzj/VHrmBOOjvP2KTG+Q8JaY/y+tmTDmAhT8gFDCDudbuP37AHxzlpu8/x5rU6aJQ7z8jNvumt/7vPzPs2LwIxu8/xGngY3Uouz/YbLmMQhfEP+1bB10KAbU/FWTo9wfmpj8BbzRBBRycP9FZkvpsorE/a6ilHWSRiT8reN2NSGl+P1wihNS/J7U/Tq5UfdmY5T8LQMHxWXzuPx+FVMAwju8/bvY3/3HV7T9Kt3IjhqLPP/Rfj+V7+tg/Ymey8w9Dqz9goIdZtRC2PySMnalQJ3Q/YhBL+3++ZD+AXDa2TonvPyl8obFJ+u8/tYDaOVsYjz89O5rf00yfP9QLzsDp/+8/IZc9Yc0T7T9NPIPeIFC3P0S14JuRhYI/kTMp05J8zz+vmHepraq+PyUobqZtOu4//pnc/CD/7z/HmMFpJTyrP1Nfme/mDmU/CqW394SM7T+71yBv9Ce5P7ykRv0Pjqo/98zFWjjSdj+K1wyLTqJqP8WsMxqpA8I/tl0/ulKg6D+lrSnafY3rP4WEjNKkBZw/9thGU0rpmz9lL/Ewat3uP+/JcTBZ97Q/UilBY7lb7D+cZIwN7jytP+LjD4sTy1Q/NO642lEr5j/2A9/A9HHLP2ihpFcrdOI/UyLHGkJQwD/Mdiex3haQP0fKcey71u8/iQMPQjTFiD8DChMVlerrPz5R41yJAu0/eAkxAlIpVz+dlnZkZ5+DPykFfe4/EtE/SSComdt87j8=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -4979,7 +5054,7 @@
                                 true
                             ],
                             "language_dependency": {
-                                "__ndarray__": "AAAAAAAA8D+Xd8CRoiEAQAAAAAAAAPh/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPh/PDw8PDw8/D9KeKOp82sHQAAAAAAAAPA/AAAAAAAA+H+8u7u7u7v7PwAAAAAAAPA/AAAAAAAA+H98Ce0ltJfwPwAAAAAAAPA/AAAAAAAA+H8AAAAAAAD4f7rooosuuvA/AAAAAAAA+H+1tLS0tDQGQAAAAAAAAPA/AAAAAAAA+H8AAAAAAAD4fwAAAAAAAPh/AAAAAAAA8D92jOJcxyjwPwAAAAAAAPh/AAAAAAAA+H8AAAAAAAD4f7E5kGiFzRNAAAAAAAAA+H+QBmmQBmnwP7y7u7u7uwVAAAAAAAAA+H8AAAAAAADwPwAAAAAAAPh/PDw8PDw88D+xEzuxEzvxP8JyTyMs9/A/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPh/RHkN5TWUD0AAAAAAAAD4fwAAAAAAAPA/AAAAAAAA+H8AAAAAAAD4fwAAAAAAAPh/AAAAAACg8T8AAAAAAADwPwAAAAAAAPh/AAAAAAAA+H9p8z7FJUPwPwAAAAAAAPh/7mmE5Z5G8D9PCfKUIE/xPwAAAAAAAPA/k0022WSTAEAqeDkFL6fwP1VVVVVVVQFAAAAAAAAA+H+8hvIaymvwP40eUUG2IfA/kiRJkiRJAkB1pnEDo84IQG2yySabbAZAGF100UUX8D8AAAAAAADwPz+C+wjuI/A/Cl5Owcsp8D8=",
+                                "__ndarray__": "AAAAAAAA8D+Xd8CRoiEAQAAAAAAAAPh/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPh/PDw8PDw8/D9KeKOp82sHQAAAAAAAAPA/AAAAAAAA+H+8u7u7u7v7PwAAAAAAAPA/AAAAAAAA+H98Ce0ltJfwPwAAAAAAAPA/AAAAAAAA+H8AAAAAAAD4f7rooosuuvA/AAAAAAAA+H+1tLS0tDQGQAAAAAAAAPA/AAAAAAAA+H8AAAAAAAD4fwAAAAAAAPh/AAAAAAAA8D8p6I2C3ijwPwAAAAAAAPh/AAAAAAAA+H8AAAAAAAD4f7E5kGiFzRNAAAAAAAAA+H+QBmmQBmnwP7y7u7u7uwVAAAAAAAAA+H8AAAAAAADwPwAAAAAAAPh/PDw8PDw88D+xEzuxEzvxP8JyTyMs9/A/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPh/RHkN5TWUD0AAAAAAAAD4fwAAAAAAAPA/AAAAAAAA+H8AAAAAAAD4fwAAAAAAAPh/AAAAAACg8T8AAAAAAADwPwAAAAAAAPh/AAAAAAAA+H9p8z7FJUPwPwAAAAAAAPh/7mmE5Z5G8D9PCfKUIE/xPwAAAAAAAPA/ED744IOPAEAqeDkFL6fwP1VVVVVVVQFAAAAAAAAA+H+8hvIaymvwP40eUUG2IfA/kiRJkiRJAkB1pnEDo84IQG2yySabbAZAGF100UUX8D8AAAAAAADwPz+C+wjuI/A/Cl5Owcsp8D8=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -10571,7 +10646,7 @@
                                 ]
                             },
                             "min_age_rec": {
-                                "__ndarray__": "PDw8PDw8IECCq2hnSq8gQAAAAAAAAPh/AAAAAAAAIEDlNZTXUN4jQAAAAAAAAPh/MzMzMzMzJEBkcD4G52MnQC+66KKLLiRAAAAAAAAA+H8AAAAAAAAjQAAAAAAAAPh/AAAAAAAA+H8AAAAAAAAZQFVVVVVVVSBAAAAAAAAA+H8zMzMzMzMeQFAHdVAHdSBAAAAAAAAA+H9GF1100eUjQAAAAAAAAPh/AAAAAAAA+H8AAAAAAAD4fwAAAAAAAPh/AAAAAAAAH0DyjGc84xkfQN7d3d3d3RNAAAAAAAAA+H8AAAAAAAD4f47jOI7jOCtAAAAAAAAA+H+RhSxkIQsfQMJgMBgMBihAAAAAAAAA+H+rqqqqqqojQAAAAAAAAPh/QaIVNgcSIECkqfNrD7kfQMVO7MRObCRAAAAAAAAA+H9VVVVVVVUfQAAAAAAAAPh/5TWU11BeJEAAAAAAAAD4fwrXo3A9CiBAmpmZmZmZGUAAAAAAAAD4fwAAAAAAAPh/Li0tLS2tI0AAAAAAABAjQAAAAAAAAPh/AAAAAAAA+H9VVVVVVZUjQAAAAAAAAPh/AAAAAAAA+H+SJEmSJIkYQAAAAAAAABhAV2qlVmqlI0BjjDHGGGMgQAAAAAAAAPh/AAAAAAAA+H8iIiIiIiIgQN5+SODthyNAAAAAAADgH0AuLS0tLa0jQDaU11BeQyBA0UQTTTTRHkAAAAAAAAD4f9IgDdIgDSBAZCELWchCJEA=",
+                                "__ndarray__": "PDw8PDw8IECCq2hnSq8gQAAAAAAAAPh/AAAAAAAAIEDlNZTXUN4jQAAAAAAAAPh/MzMzMzMzJEBkcD4G52MnQC+66KKLLiRAAAAAAAAA+H8AAAAAAAAjQAAAAAAAAPh/AAAAAAAA+H8AAAAAAAAZQFVVVVVVVSBAAAAAAAAA+H8zMzMzMzMeQFAHdVAHdSBAAAAAAAAA+H9GF1100eUjQAAAAAAAAPh/AAAAAAAA+H8AAAAAAAD4fwAAAAAAAPh/AAAAAAAAH0CSOG8kzhsfQN7d3d3d3RNAAAAAAAAA+H8AAAAAAAD4f47jOI7jOCtAAAAAAAAA+H+RhSxkIQsfQMJgMBgMBihAAAAAAAAA+H+rqqqqqqojQAAAAAAAAPh/QaIVNgcSIECghDeaOr8fQMVO7MRObCRAAAAAAAAA+H9VVVVVVVUfQAAAAAAAAPh/5TWU11BeJEAAAAAAAAD4fwrXo3A9CiBAmpmZmZmZGUAAAAAAAAD4fwAAAAAAAPh/Li0tLS2tI0AAAAAAABAjQAAAAAAAAPh/AAAAAAAA+H9VVVVVVZUjQAAAAAAAAPh/AAAAAAAA+H+SJEmSJIkYQAAAAAAAABhAYrtZnkSmI0BjjDHGGGMgQAAAAAAAAPh/AAAAAAAA+H8iIiIiIiIgQN5+SODthyNAAAAAAADgH0CQOUq3r6wjQDaU11BeQyBA0UQTTTTRHkAAAAAAAAD4f9IgDdIgDSBAZCELWchCJEA=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -10674,78 +10749,14 @@
                                 "Finca",
                                 "Fresco"
                             ],
-                            "num_votes": [
-                                8060,
-                                101212,
-                                1729,
-                                12572,
-                                17891,
-                                1375,
-                                8722,
-                                23534,
-                                4173,
-                                1634,
-                                4939,
-                                4929,
-                                2529,
-                                3080,
-                                3837,
-                                4325,
-                                3367,
-                                14291,
-                                2190,
-                                48290,
-                                3405,
-                                785,
-                                1410,
-                                748,
-                                13142,
-                                101721,
-                                2489,
-                                438,
-                                714,
-                                17213,
-                                4033,
-                                7688,
-                                63091,
-                                2118,
-                                4861,
-                                104,
-                                28607,
-                                71539,
-                                14518,
-                                4871,
-                                15617,
-                                869,
-                                7958,
-                                3069,
-                                7917,
-                                2809,
-                                600,
-                                1592,
-                                18091,
-                                7687,
-                                1534,
-                                1686,
-                                7744,
-                                1952,
-                                4094,
-                                13881,
-                                3626,
-                                102075,
-                                9162,
-                                3652,
-                                551,
-                                5644,
-                                44897,
-                                4016,
-                                78035,
-                                11485,
-                                50519,
-                                3085,
-                                6811,
-                                11814
-                            ],
+                            "num_votes": {
+                                "__ndarray__": "AAAAAAB8v0AAAAAAwLX4QAAAAAAABJtAAAAAAACOyEAAAAAAwHjRQAAAAAAAfJVAAAAAAAAJwUAAAAAAgO/WQAAAAAAATbBAAAAAAACImUAAAAAAAEuzQAAAAAAAQbNAAAAAAADCo0AAAAAAAAqoQAAAAAAA+q1AAAAAAADlsEAAAAAAAE6qQAAAAACA6ctAAAAAAAAcoUAAAAAAQJTnQAAAAAAAmqpAAAAAAACIiEAAAAAAAAiWQAAAAAAAYIdAAAAAAACryUAAAAAAsM34QAAAAAAAcqNAAAAAAABge0AAAAAAAFCGQAAAAABAtdBAAAAAAAB8r0AAAAAAAAi+QAAAAABAye5AAAAAAACMoEAAAAAAAP2yQAAAAAAAAFpAAAAAAMDv20AAAAAAMGTxQAAAAAAAW8xAAAAAAAAHs0AAAAAAgIDOQAAAAAAAKItAAAAAAAAWv0AAAAAAAPinQAAAAAAA7b5AAAAAAADypUAAAAAAAMCCQAAAAAAA4JhAAAAAAMCq0UAAAAAAAAe+QAAAAAAA+JdAAAAAAABYmkAAAAAAAEC+QAAAAAAAgJ5AAAAAAADyr0AAAAAAgBzLQAAAAAAAVKxAAAAAAHDL+EAAAAAAAOXBQAAAAAAAiKxAAAAAAAA4gUAAAAAAAAy2QAAAAAAg7OVAAAAAAABSr0AAAAAAgP3yQAAAAACAbsZAAAAAAOCq6EAAAAAAABqoQAAAAAAAm7pAAAAAAAATx0A=",
+                                "dtype": "float64",
+                                "order": "little",
+                                "shape": [
+                                    70
+                                ]
+                            },
                             "playable_with_01": [
                                 false,
                                 false,
@@ -11596,7 +11607,7 @@
                                 "34,3",
                                 "29,267,5657,8845,18852,8291,3218,6756,3,9390,9234,4932,538",
                                 "200,8820,155,6214,8291,3218,5787,87",
-                                "538,3320,4304,157,47848,42032,15889,6784,7162,2366,5657,15605,8820,23382,1391,6275,15983,6214,8291,5812,3218,9325,7992,11107,29085,39,4696,7466,33998,3888,8759,4932,35809,44209,10739",
+                                "538,3320,4304,157,42032,15889,6784,7162,2366,5657,15605,8820,23382,1391,6275,15983,6214,8291,5812,3218,9325,7992,11107,29085,39,4696,7466,33998,3888,8759,4932,35809,44209,10739",
                                 "47,3475,46980,6818,22,7466",
                                 "9,34,5657,3,9234,17786",
                                 "34",
@@ -11611,7 +11622,7 @@
                                 "47,3475,4335,2366,22"
                             ],
                             "rank": {
-                                "__ndarray__": "AAAAAAAskEAAAAAAALB4QAAAAAAApKZAAAAAAABghUAAAAAAAHBwQAAAAAAArKBAAAAAAAB4gEAAAAAAAIBTQAAAAAAA4IRAAAAAAACYqEAAAAAAANSXQAAAAAAA/JFAAAAAAABIpUAAAAAAACCeQAAAAAAALKBAAAAAAADglUAAAAAAANidQAAAAAAArJNAAAAAAADEl0AAAAAAADB5QAAAAAAA1JJAAAAAAADMsEAAAAAAAC6oQAAAAAAAXqxAAAAAAACYmUAAAAAAAKBmQAAAAAAAZ7pAAAAAAABmt0AAAAAAADitQAAAAAAAAFhAAAAAAAAcnEAAAAAAAECRQAAAAAAAADxAAAAAAAAUlEAAAAAAAKyWQAAAAADAeNFAAAAAAABAfUAAAAAAAMBlQAAAAAAA8HJAAAAAAADQhUAAAAAAAKB6QAAAAAAAlqxAAAAAAAAQhEAAAAAAAAibQAAAAAAARJZAAAAAAADInUAAAAAAAEq+QAAAAAAAlKZAAAAAAADAekAAAAAAAMCDQAAAAAAAGKVAAAAAAACapkAAAAAAAACCQAAAAAAANJZAAAAAAAAIj0AAAAAAAJiHQAAAAAAAEJZAAAAAAADAWEAAAAAAAEB/QAAAAAAAAI1AAAAAAABKrkAAAAAAAGiaQAAAAAAAwFtAAAAAAABQi0AAAAAAAIBYQAAAAAAASIZAAAAAAABgcUAAAAAAAMSZQAAAAAAA2INAAAAAAACwdEA=",
+                                "__ndarray__": "AAAAAAAskEAAAAAAALB4QAAAAAAApKZAAAAAAABghUAAAAAAAHBwQAAAAAAArKBAAAAAAAB4gEAAAAAAAEBTQAAAAAAA4IRAAAAAAACYqEAAAAAAANSXQAAAAAAA/JFAAAAAAABIpUAAAAAAAPSdQAAAAAAALKBAAAAAAADglUAAAAAAANidQAAAAAAArJNAAAAAAADEl0AAAAAAADB5QAAAAAAA1JJAAAAAAADMsEAAAAAAAC6oQAAAAAAAXqxAAAAAAACYmUAAAAAAAKBmQAAAAAAAZ7pAAAAAAABmt0AAAAAAADitQAAAAAAAAFhAAAAAAAD0m0AAAAAAAECRQAAAAAAAADxAAAAAAAAUlEAAAAAAAKyWQAAAAACAcdFAAAAAAABAfUAAAAAAAGBlQAAAAAAA8HJAAAAAAADQhUAAAAAAAKB6QAAAAAAAlqxAAAAAAAAQhEAAAAAAAAybQAAAAAAARJZAAAAAAADInUAAAAAAAEq+QAAAAAAAlKZAAAAAAADAekAAAAAAAMCDQAAAAAAAGKVAAAAAAACapkAAAAAAAACCQAAAAAAANJZAAAAAAAAQj0AAAAAAAJiHQAAAAAAAEJZAAAAAAADAWEAAAAAAAEB/QAAAAAAAAI1AAAAAAABKrkAAAAAAAGiaQAAAAAAAwFtAAAAAAAA4i0AAAAAAAIBYQAAAAAAASIZAAAAAAABgcUAAAAAAALiZQAAAAAAA2INAAAAAAACwdEA=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -11699,7 +11710,7 @@
                                 ]
                             },
                             "stddev_rating": {
-                                "__ndarray__": "vRjKiXYV9D8FxY8xd633PzfDDfj8sPM/6glLPKBs9j+YF2AfnTrzP+wX7IZti/M/5nlwd9Zu9D+XxcTm41r1P16iemtgK/U/5/up8dJN9T+MvoI0Y1H1P76HS447JfM/XynLEMc69T+WCb/Uzxv0Pw0a+ie42PQ/Zr0Yyol29D/5Tsx6MZT0Pw7bFmU2SPQ/y5wui4lN9T/+1HjpJjH0P+4IpwUvevU/8iTpmsm39z/ghEIEHML2P5I/GHjuvfY/isiwijey9j+R1a2ek970P3/2I0Vk2PY/R6zFpwCY9T9Y5xiQvV71P5kNMsnI2fY/mUf+YOC59D89CtejcD31P5zhBnx+GPY/NuUK73IR9D8+6Nms+tzzP6btX1lp0vY/aR1VTRD18j9CW86luKr0P4TTghd9BfU/HLYtymyQ9D+c+dUcIBjzP7ivA+eMqPM/paDbSxqj8z/5D+m3rwP0P+rnTUUqjPM/1lbsL7un8z+q1OyBVuD2P4NuL2mM1vI/fsaFAyHZ8j/Du1zEd2LzP1cE/1vJjvM/bCbfbHNj8j+cUIiAQyjzP43uIHam0PQ/RgiPNo7Y8j/9pNqn47HyPwmnBS/6ivM/IqtbPSc99T/edqG5TiPzPxqLprOTwfM/KpFEL6NY9D+YUSy3tJr1P+dSXFX23fM/X5hMFYzK8z9AwcWKGsz2Pzj4wmSq4PI/Az4/jBAe9j/EzhQ6r7HzP41/n3HhwPI/8iTpmsk38j8=",
+                                "__ndarray__": "vRjKiXYV9D8FxY8xd633PzfDDfj8sPM/6glLPKBs9j+YF2AfnTrzP+wX7IZti/M/5nlwd9Zu9D9HIF7XL1j1P16iemtgK/U/5/up8dJN9T+MvoI0Y1H1P76HS447JfM/XynLEMc69T8gRgiPNg70Pw0a+ie42PQ/Zr0Yyol29D/5Tsx6MZT0Pw7bFmU2SPQ/y5wui4lN9T/+1HjpJjH0P+4IpwUvevU/8iTpmsm39z/ghEIEHML2P5I/GHjuvfY/isiwijey9j9Y5xiQvd70P3/2I0Vk2PY/R6zFpwCY9T9Y5xiQvV71P7x0kxgE1vY/cuFASBaw9D89CtejcD31P2HD0ytlGfY/NuUK73IR9D8+6Nms+tzzP6btX1lp0vY/aR1VTRD18j9OC170FaT0P4TTghd9BfU/HLYtymyQ9D+c+dUcIBjzP7ivA+eMqPM/paDbSxqj8z/cgM8PIwT0P+rnTUUqjPM/1lbsL7un8z+q1OyBVuD2P4NuL2mM1vI/fsaFAyHZ8j/Du1zEd2LzP1cE/1vJjvM/bCbfbHNj8j+cUIiAQyjzP43uIHam0PQ/QznRrkLK8j/9pNqn47HyPwmnBS/6ivM/IZOMnIU99T/edqG5TiPzPxqLprOTwfM/KpFEL6NY9D+YUSy3tJr1P+dSXFX23fM/VwkWhzO/8z9CCTNt/8r2Pzj4wmSq4PI/Az4/jBAe9j9Y4gFlU67zP41/n3HhwPI/8iTpmsk38j8=",
                                 "dtype": "float64",
                                 "order": "little",
                                 "shape": [
@@ -11732,146 +11743,42 @@
                             }
                         },
                         "selected": {
-                            "id": "1223"
+                            "id": "1199"
                         },
                         "selection_policy": {
-                            "id": "1222"
-                        }
-                    },
-                    "id": "1195",
-                    "type": "ColumnDataSource"
-                },
-                {
-                    "attributes": {},
-                    "id": "1216",
-                    "type": "BasicTickFormatter"
-                },
-                {
-                    "attributes": {},
-                    "id": "1214",
-                    "type": "AllLabels"
-                },
-                {
-                    "attributes": {},
-                    "id": "1219",
-                    "type": "BasicTickFormatter"
-                },
-                {
-                    "attributes": {},
-                    "id": "1173",
-                    "type": "PanTool"
-                },
-                {
-                    "attributes": {},
-                    "id": "1223",
-                    "type": "Selection"
-                },
-                {
-                    "attributes": {
-                        "active_multi": null,
-                        "tools": [
-                            {
-                                "id": "1171"
-                            },
-                            {
-                                "id": "1172"
-                            },
-                            {
-                                "id": "1173"
-                            },
-                            {
-                                "id": "1174"
-                            },
-                            {
-                                "id": "1175"
-                            },
-                            {
-                                "id": "1176"
-                            },
-                            {
-                                "id": "1177"
-                            },
-                            {
-                                "id": "1178"
-                            },
-                            {
-                                "id": "1179"
-                            },
-                            {
-                                "id": "1180"
-                            }
-                        ]
-                    },
-                    "id": "1183",
-                    "type": "Toolbar"
-                },
-                {
-                    "attributes": {
-                        "bottom_units": "screen",
-                        "fill_alpha": 0.5,
-                        "fill_color": "lightgrey",
-                        "left_units": "screen",
-                        "level": "overlay",
-                        "line_alpha": 1.0,
-                        "line_color": "black",
-                        "line_dash": [
-                            4,
-                            4
-                        ],
-                        "line_width": 2,
-                        "right_units": "screen",
-                        "syncable": false,
-                        "top_units": "screen"
-                    },
-                    "id": "1182",
-                    "type": "BoxAnnotation"
-                },
-                {
-                    "attributes": {},
-                    "id": "1155",
-                    "type": "DataRange1d"
-                },
-                {
-                    "attributes": {},
-                    "id": "1217",
-                    "type": "AllLabels"
-                },
-                {
-                    "attributes": {
-                        "data_source": {
-                            "id": "1195"
-                        },
-                        "glyph": {
-                            "id": "1197"
-                        },
-                        "hover_glyph": null,
-                        "muted_glyph": null,
-                        "nonselection_glyph": {
-                            "id": "1198"
-                        },
-                        "view": {
                             "id": "1200"
                         }
                     },
-                    "id": "1199",
-                    "type": "GlyphRenderer"
-                },
-                {
-                    "attributes": {},
-                    "id": "1179",
-                    "type": "SaveTool"
+                    "id": "1176",
+                    "type": "ColumnDataSource"
                 },
                 {
                     "attributes": {
-                        "text": "Spiel des Jahres before 2011"
+                        "gradient": -13.937513028615141,
+                        "line_dash": [
+                            6
+                        ],
+                        "line_width": 2,
+                        "y_intercept": 38.55828670913054
                     },
-                    "id": "1153",
-                    "type": "Title"
+                    "id": "1182",
+                    "type": "Slope"
+                },
+                {
+                    "attributes": {
+                        "axis": {
+                            "id": "1148"
+                        },
+                        "dimension": 1,
+                        "ticker": null
+                    },
+                    "id": "1151",
+                    "type": "Grid"
                 },
                 {
                     "attributes": {},
-                    "id": "1176",
-                    "type": "ZoomOutTool"
+                    "id": "1159",
+                    "type": "ResetTool"
                 },
                 {
                     "attributes": {
@@ -11899,8 +11806,41 @@
                             ]
                         ]
                     },
-                    "id": "1171",
+                    "id": "1152",
                     "type": "HoverTool"
+                },
+                {
+                    "attributes": {
+                        "fill_color": {
+                            "field": "color"
+                        },
+                        "line_color": {
+                            "field": "color"
+                        },
+                        "marker": {
+                            "field": "marker"
+                        },
+                        "size": {
+                            "units": "screen",
+                            "value": 8
+                        },
+                        "x": {
+                            "field": "complexity"
+                        },
+                        "y": {
+                            "field": "min_age",
+                            "transform": {
+                                "id": "1175"
+                            }
+                        }
+                    },
+                    "id": "1178",
+                    "type": "Scatter"
+                },
+                {
+                    "attributes": {},
+                    "id": "1154",
+                    "type": "PanTool"
                 },
                 {
                     "attributes": {
@@ -11917,11 +11857,76 @@
                         ],
                         "line_width": 2,
                         "right_units": "screen",
-                        "syncable": false,
                         "top_units": "screen"
                     },
-                    "id": "1181",
+                    "id": "1162",
                     "type": "BoxAnnotation"
+                },
+                {
+                    "attributes": {
+                        "axis_label": "min_age",
+                        "formatter": {
+                            "id": "1196"
+                        },
+                        "ticker": {
+                            "id": "1149"
+                        }
+                    },
+                    "id": "1148",
+                    "type": "LinearAxis"
+                },
+                {
+                    "attributes": {},
+                    "id": "1156",
+                    "type": "ZoomInTool"
+                },
+                {
+                    "attributes": {
+                        "axis_label": "complexity",
+                        "formatter": {
+                            "id": "1194"
+                        },
+                        "ticker": {
+                            "id": "1145"
+                        }
+                    },
+                    "id": "1144",
+                    "type": "LinearAxis"
+                },
+                {
+                    "attributes": {},
+                    "id": "1149",
+                    "type": "BasicTicker"
+                },
+                {
+                    "attributes": {
+                        "overlay": {
+                            "id": "1162"
+                        }
+                    },
+                    "id": "1161",
+                    "type": "BoxSelectTool"
+                },
+                {
+                    "attributes": {
+                        "data_source": {
+                            "id": "1176"
+                        },
+                        "glyph": {
+                            "id": "1178"
+                        },
+                        "hover_glyph": null,
+                        "muted_glyph": null,
+                        "nonselection_glyph": {
+                            "id": "1179"
+                        },
+                        "selection_glyph": null,
+                        "view": {
+                            "id": "1181"
+                        }
+                    },
+                    "id": "1180",
+                    "type": "GlyphRenderer"
                 },
                 {
                     "attributes": {
@@ -11929,43 +11934,37 @@
                         "range": null,
                         "width": 0.25
                     },
-                    "id": "1194",
+                    "id": "1175",
                     "type": "Jitter"
                 },
                 {
+                    "attributes": {
+                        "overlay": {
+                            "id": "1163"
+                        }
+                    },
+                    "id": "1158",
+                    "type": "BoxZoomTool"
+                },
+                {
                     "attributes": {},
-                    "id": "1161",
+                    "id": "1145",
+                    "type": "BasicTicker"
+                },
+                {
+                    "attributes": {},
+                    "id": "1194",
+                    "type": "BasicTickFormatter"
+                },
+                {
+                    "attributes": {},
+                    "id": "1136",
+                    "type": "DataRange1d"
+                },
+                {
+                    "attributes": {},
+                    "id": "1140",
                     "type": "LinearScale"
-                },
-                {
-                    "attributes": {
-                        "source": {
-                            "id": "1195"
-                        }
-                    },
-                    "id": "1200",
-                    "type": "CDSView"
-                },
-                {
-                    "attributes": {},
-                    "id": "1172",
-                    "type": "CrosshairTool"
-                },
-                {
-                    "attributes": {
-                        "axis_label": "complexity",
-                        "formatter": {
-                            "id": "1216"
-                        },
-                        "major_label_policy": {
-                            "id": "1214"
-                        },
-                        "ticker": {
-                            "id": "1164"
-                        }
-                    },
-                    "id": "1163",
-                    "type": "LinearAxis"
                 },
                 {
                     "attributes": {
@@ -11985,6 +11984,7 @@
                             "field": "marker"
                         },
                         "size": {
+                            "units": "screen",
                             "value": 8
                         },
                         "x": {
@@ -11993,122 +11993,38 @@
                         "y": {
                             "field": "min_age",
                             "transform": {
-                                "id": "1194"
+                                "id": "1175"
                             }
                         }
                     },
-                    "id": "1198",
+                    "id": "1179",
                     "type": "Scatter"
                 },
                 {
                     "attributes": {},
-                    "id": "1222",
-                    "type": "UnionRenderers"
-                },
-                {
-                    "attributes": {},
-                    "id": "1175",
-                    "type": "ZoomInTool"
+                    "id": "1155",
+                    "type": "WheelZoomTool"
                 },
                 {
                     "attributes": {
-                        "axis": {
-                            "id": "1163"
-                        },
-                        "ticker": null
-                    },
-                    "id": "1166",
-                    "type": "Grid"
-                },
-                {
-                    "attributes": {},
-                    "id": "1164",
-                    "type": "BasicTicker"
-                },
-                {
-                    "attributes": {},
-                    "id": "1159",
-                    "type": "LinearScale"
-                },
-                {
-                    "attributes": {
-                        "overlay": {
-                            "id": "1182"
+                        "source": {
+                            "id": "1176"
                         }
                     },
-                    "id": "1177",
-                    "type": "BoxZoomTool"
-                },
-                {
-                    "attributes": {
-                        "axis": {
-                            "id": "1167"
-                        },
-                        "dimension": 1,
-                        "ticker": null
-                    },
-                    "id": "1170",
-                    "type": "Grid"
-                },
-                {
-                    "attributes": {
-                        "fill_color": {
-                            "field": "color"
-                        },
-                        "line_color": {
-                            "field": "color"
-                        },
-                        "marker": {
-                            "field": "marker"
-                        },
-                        "size": {
-                            "value": 8
-                        },
-                        "x": {
-                            "field": "complexity"
-                        },
-                        "y": {
-                            "field": "min_age",
-                            "transform": {
-                                "id": "1194"
-                            }
-                        }
-                    },
-                    "id": "1197",
-                    "type": "Scatter"
+                    "id": "1181",
+                    "type": "CDSView"
                 },
                 {
                     "attributes": {},
-                    "id": "1168",
-                    "type": "BasicTicker"
-                },
-                {
-                    "attributes": {},
-                    "id": "1157",
-                    "type": "DataRange1d"
-                },
-                {
-                    "attributes": {
-                        "axis_label": "min_age",
-                        "formatter": {
-                            "id": "1219"
-                        },
-                        "major_label_policy": {
-                            "id": "1217"
-                        },
-                        "ticker": {
-                            "id": "1168"
-                        }
-                    },
-                    "id": "1167",
-                    "type": "LinearAxis"
+                    "id": "1153",
+                    "type": "CrosshairTool"
                 }
             ],
             "root_ids": [
-                "1152"
+                "1133"
             ]
         },
         "title": "",
-        "version": "2.3.0"
+        "version": "2.2.3"
     }
 }
