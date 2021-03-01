@@ -32,7 +32,7 @@ from bokeh.embed import json_item
 from bokeh.models import Slope
 from bokeh.plotting import figure, output_notebook, show
 from bokeh.transform import jitter
-from games import transform
+from bg_utils import transform
 from sklearn.linear_model import LogisticRegressionCV
 from sklearn.metrics import classification_report, plot_roc_curve
 
