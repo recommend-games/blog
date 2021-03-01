@@ -18,7 +18,7 @@ from itertools import islice
 
 import pandas as pd
 
-from utils import recommend_games
+from bg_utils import recommend_games
 
 SEED = 23
 
@@ -50,7 +50,8 @@ jahrgang_2021["jahrgang"] = 2021
 
 # %%
 sdj = pd.concat(
-    [pd.read_csv("sdj.csv"), pd.read_csv("ksdj.csv"), jahrgang_2021], ignore_index=True
+    [pd.read_csv("../sdj.csv"), pd.read_csv("../ksdj.csv"), jahrgang_2021],
+    ignore_index=True,
 )
 sdj.sort_values("jahrgang", ascending=False, inplace=True)
 bgg_ids = sdj[

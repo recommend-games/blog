@@ -20,8 +20,7 @@ import joblib
 import pandas as pd
 from sklearn.preprocessing import minmax_scale
 from tqdm import tqdm
-from games import transform
-from utils import recommend_games
+from bg_utils import transform, recommend_games
 
 # %load_ext nb_black
 # %load_ext lab_black

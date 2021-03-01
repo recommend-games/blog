@@ -25,7 +25,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegressionCV
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
-from games import transform
+from bg_utils import transform
 
 SEED = 23
 
@@ -41,12 +41,12 @@ games.shape
 
 # %%
 sdj = pd.read_csv(
-    "sdj.csv",
+    "../sdj.csv",
     dtype={"winner": bool, "nominated": bool, "recommended": bool, "sonderpreis": str},
 )
 sdj["award"] = "sdj"
 ksdj = pd.read_csv(
-    "ksdj.csv",
+    "../ksdj.csv",
     dtype={"winner": bool, "nominated": bool, "recommended": bool, "sonderpreis": str},
 )
 ksdj["award"] = "ksdj"
