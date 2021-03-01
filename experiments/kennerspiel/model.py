@@ -19,7 +19,7 @@ import pandas as pd
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegressionCV
 from sklearn.pipeline import make_pipeline
-from games import make_transformer
+from bg_utils import make_transformer
 
 pd.options.display.max_columns = 100
 pd.options.display.max_rows = 100
