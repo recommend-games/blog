@@ -7,7 +7,7 @@ verify_ssl = true
 python_version = "3.8"
 
 [packages]
-board-game-utils = {git = "https://gitlab.com/recommend.games/board-game-utils.git"}
+board-game-utils = "*"
 bokeh = "*"
 jedi = "<0.18"
 jupyterlab = "<3.0.0"

@@ -8,7 +8,7 @@ python_version = "3.8"
 
 [packages]
 board-game-recommender = "*"
-board-game-utils = {git = "https://gitlab.com/recommend.games/board-game-utils.git"}
+board-game-utils = "*"
 bokeh = "*"
 imbalanced-learn = "*"
 jedi = "<0.18"
