@@ -55,7 +55,7 @@ for game in candidates[:10]:
     )
 
 # %%
-df = pd.DataFrame.from_records(candidates)
+df = pd.DataFrame.from_records(candidates, index="bgg_id")
 df.shape
 
 # %%
@@ -88,24 +88,57 @@ model
 x = data[features]
 x = x.fillna(x.mean())
 data["sdj_prob"] = model.predict_proba(x)[:, 1]
-results = data[["name", "year", "bgg_id", "rec_rating", "sdj_prob"]].copy()
+results = data[["name", "year", "kennerspiel_score", "rec_rating", "sdj_prob"]].copy()
 results["sdj_score"] = minmax_scale(results["rec_rating"]) * results["sdj_prob"]
 results["sdj_score_add"] = minmax_scale(results["rec_rating"]) + results["sdj_prob"]
-results.shape
-
-# %%
-results.sort_values("sdj_prob", ascending=False)[:10]
-
-# %%
-results.sort_values("rec_rating", ascending=False)[:10]
-
-# %%
-results.sort_values("sdj_score", ascending=False)[:50]
-
-# %%
-results.sort_values("sdj_score_add", ascending=False)[:50]
+results["url"] = [
+    f"<a href='https://recommend.games/#/game/{bgg_id}'>{name}</a>"
+    for bgg_id, name in results.name.items()
+]
+sdj = results[results["kennerspiel_score"] < 0.5].copy()
+sdj["name"] = sdj["url"]
+sdj.drop(columns="url", inplace=True)
+kdj = results[results["kennerspiel_score"] >= 0.5].copy()
+kdj["name"] = kdj["url"]
+kdj.drop(columns="url", inplace=True)
+results.shape, sdj.shape, kdj.shape
 
 # %%
 results[["rec_rating", "sdj_prob", "sdj_score", "sdj_score_add"]].corr(
     method="spearman"
 )
+
+# %%
+results.drop(columns="url").sort_values("sdj_score", ascending=False).to_csv(
+    "predictions.csv", header=True
+)
+
+# %% [markdown]
+# # SdJ candidates
+
+# %%
+sdj.sort_values("sdj_prob", ascending=False)[:10].style
+
+# %%
+sdj.sort_values("rec_rating", ascending=False)[:10].style
+
+# %%
+sdj.sort_values("sdj_score", ascending=False)[:50].style
+
+# %%
+sdj.sort_values("sdj_score_add", ascending=False)[:50].style
+
+# %% [markdown]
+# # KdJ candidates
+
+# %%
+kdj.sort_values("sdj_prob", ascending=False)[:10].style
+
+# %%
+kdj.sort_values("rec_rating", ascending=False)[:10].style
+
+# %%
+kdj.sort_values("sdj_score", ascending=False)[:50].style
+
+# %%
+kdj.sort_values("sdj_score_add", ascending=False)[:50].style

@@ -99,11 +99,11 @@ features = num_features + [
 len(features)
 
 # %%
-in_data = all_data[features + ["longlist"]].dropna()
+in_data = all_data[features + ["longlist"]].dropna()  # TODO impute instead of dropping
 X_train, X_test, y_train, y_test = train_test_split(
     in_data[features], in_data.longlist, test_size=0.2
 )
-X_train.shape, X_test.shape
+in_data.shape, X_train.shape, X_test.shape
 
 # %%
 lr = LogisticRegressionCV(
