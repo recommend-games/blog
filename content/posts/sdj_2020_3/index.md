@@ -7,8 +7,11 @@ date: 2020-07-18T10:15:00+03:00
 tags:
   - SdJ
   - Spiel des Jahres
+  - Spiel des Jahres 2020
   - KSdJ
+  - Kennerspiel
   - Kennerspiel des Jahres
+  - Kennerspiel des Jahres 2020
   - Game of the Year
   - Germany
   - My City
@@ -17,6 +20,13 @@ tags:
   - Cartographers
   - The Crew
   - King's Dilemma
+  - Predictions
+  - Spiel des Jahres predictions
+  - Spiel des Jahres 2020 predictions
+  - SdJ predictions
+  - Kennerspiel predictions
+  - Kennerspiel des Jahres predictions
+  - Kennerspiel des Jahres 2020 predictions
 ---
 
 {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} and {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} winners are due to be announced on Monday, July 20. I promised [last time]({{<ref "posts/sdj_2020_2/index.md">}}) I'd be back with more detailed analyses and predictions. So here we go!
