@@ -7,10 +7,20 @@ date: 2020-05-15T15:35:00+03:00
 tags:
   - SdJ
   - Spiel des Jahres
+  - Spiel des Jahres 2020
   - KSdJ
+  - Kennerspiel
   - Kennerspiel des Jahres
+  - Kennerspiel des Jahres 2020
   - Game of the Year
   - Germany
+  - Predictions
+  - Spiel des Jahres predictions
+  - Spiel des Jahres 2020 predictions
+  - SdJ predictions
+  - Kennerspiel predictions
+  - Kennerspiel des Jahres predictions
+  - Kennerspiel des Jahres 2020 predictions
 ---
 
 ***For the impatient***: *If you don't care about the analysis of previous winners and all you're interested in are the candidates for this year's awards, jump [straight to the list](#candidates-for-span-stylecolor-e30613spiel-des-jahresspan)…*
