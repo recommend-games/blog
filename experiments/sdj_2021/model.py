@@ -19,9 +19,7 @@ import json
 import joblib
 import pandas as pd
 
-from imblearn.ensemble import BalancedRandomForestClassifier, RUSBoostClassifier
 from imblearn.metrics import classification_report_imbalanced
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegressionCV
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
@@ -50,95 +48,30 @@ ksdj = pd.read_csv(
     dtype={"winner": bool, "nominated": bool, "recommended": bool, "sonderpreis": str},
 )
 ksdj["award"] = "ksdj"
-sdj = pd.concat((sdj, ksdj))
-sdj.shape
+awards = pd.concat((sdj, ksdj))
+awards.drop_duplicates("bgg_id", inplace=True)
+awards.set_index("bgg_id", inplace=True)
+awards.shape
 
 # %%
-sdj.sample(10, random_state=SEED)
-
-# %%
-games["shortlist"] = games.index.isin(sdj[sdj.winner | sdj.nominated].bgg_id)
-games["longlist"] = games.index.isin(sdj.bgg_id)
-
-# %%
-games.shortlist.sum(), games.longlist.sum()
+games["award"] = awards["award"]
+games["longlist"] = games["award"].notna()
+games.longlist.sum(), games.award.value_counts()
 
 # %%
 alt_candidates = pd.read_csv("alt_candidates.csv", index_col="bgg_id")
-alt_candidates.shape
+games["kennerspiel_score"] = alt_candidates["kennerspiel_score"]
+games["alt_candidate"] = games["kennerspiel_score"].notna()
+alt_candidates.shape, games["alt_candidate"].sum()
 
 # %%
-games["alt_candidate"] = games.index.isin(alt_candidates.index)
+games.sample(3).T
 
 # %%
-data = games[games.longlist | games.alt_candidate].copy().reset_index()
-data.shape
-
-# %%
-all_data = transform(
-    data=data,
-    list_columns=("game_type", "category", "mechanic"),
-    min_df=0.01,
+data_all = games[games.longlist ^ games.alt_candidate]
+sdj_mask = (data_all.award == "sdj") | (
+    data_all.award.isna() & (data_all.kennerspiel_score < 0.5)
 )
-all_data.shape
-
-# %%
-all_data.sample(3, random_state=SEED).T[-50:]
-
-# %%
-num_features = [
-    "min_age",
-    "min_time",
-    "max_time",
-    "cooperative",
-    "complexity",
-]
-features = num_features + [
-    col for col in all_data.columns if (":" in col) or col.startswith("playable_")
-]
-len(features)
-
-# %%
-in_data = all_data[features + ["longlist"]].dropna()  # TODO impute instead of dropping
-X_train, X_test, y_train, y_test = train_test_split(
-    in_data[features], in_data.longlist, test_size=0.2
-)
-in_data.shape, X_train.shape, X_test.shape
-
-# %%
-lr = LogisticRegressionCV(
-    class_weight="balanced",
-    max_iter=1_000_000,
-    scoring="balanced_accuracy",
-)
-rf = RandomForestClassifier(n_estimators=100)
-brf = BalancedRandomForestClassifier(n_estimators=100)
-rusb = RUSBoostClassifier(n_estimators=200, algorithm="SAMME.R")
-models = (lr, rf, brf, rusb)
-
-# %%
-for model in models:
-    model.fit(X_train, y_train)
-    y_pred = model.predict(X_test)
-    print(model)
-    print(classification_report(y_test, y_pred))
-    print(classification_report_imbalanced(y_test, y_pred))
-
-# %%
-sorted(zip(lr.coef_[0, :], features), reverse=True)
-
-# %%
-sorted(zip(rf.feature_importances_, features), reverse=True)
-
-# %%
-sorted(zip(brf.feature_importances_, features), reverse=True)
-
-# %%
-sorted(zip(rusb.feature_importances_, features), reverse=True)
-
-# %%
-joblib.dump(lr, "lr.joblib")
-
-# %%
-with open("features.json", "w") as f:
-    json.dump(features, f, indent=4)
+data_sdj = data_all[sdj_mask].copy()
+data_ksdj = data_all[~sdj_mask].copy()
+data_all.shape, data_sdj.shape, data_ksdj.shape
