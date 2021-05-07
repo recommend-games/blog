@@ -70,31 +70,53 @@ data = transform(
 data.shape
 
 # %%
-with open("features.json") as f:
-    features = json.load(f)
-len(features)
+with open("features_sdj.json") as f:
+    features_sdj = json.load(f)
+with open("features_ksdj.json") as f:
+    features_ksdj = json.load(f)
+len(features_sdj), len(features_ksdj)
 
 # %%
-for feature in features:
+for feature in features_sdj + features_ksdj:
     if feature not in data:
         print(feature)
         data[feature] = False
 
 # %%
-model = joblib.load("lr.joblib")
-model
+model_sdj = joblib.load("lr_sdj.joblib")
+model_sdj
 
 # %%
-x = data[features]
+x = data[features_sdj]
 x = x.fillna(x.mean())
-data["sdj_prob"] = model.predict_proba(x)[:, 1]
-results = data[["name", "year", "kennerspiel_score", "rec_rating", "sdj_prob"]].copy()
-results["sdj_score"] = minmax_scale(results["rec_rating"]) * results["sdj_prob"]
-results["sdj_score_add"] = minmax_scale(results["rec_rating"]) + results["sdj_prob"]
+data["sdj_prob"] = model_sdj.predict_proba(x)[:, 1]
+
+# %%
+model_ksdj = joblib.load("lr_ksdj.joblib")
+model_ksdj
+
+# %%
+x = data[features_ksdj]
+x = x.fillna(x.mean())
+data["ksdj_prob"] = model_ksdj.predict_proba(x)[:, 1]
+
+# %%
+results = data[
+    ["name", "year", "kennerspiel_score", "rec_rating", "sdj_prob", "ksdj_prob"]
+].copy()
 results["url"] = [
     f"<a href='https://recommend.games/#/game/{bgg_id}'>{name}</a>"
     for bgg_id, name in results.name.items()
 ]
+results.shape
+
+# %%
+results["sdj_score"] = minmax_scale(results["rec_rating"]) * results["sdj_prob"]
+results["sdj_score_add"] = minmax_scale(results["rec_rating"]) + results["sdj_prob"]
+results["ksdj_score"] = minmax_scale(results["rec_rating"]) * results["ksdj_prob"]
+results["ksdj_score_add"] = minmax_scale(results["rec_rating"]) + results["ksdj_prob"]
+
+# %%
 sdj = results[results["kennerspiel_score"] < 0.5].copy()
 sdj["name"] = sdj["url"]
 sdj.drop(columns="url", inplace=True)
@@ -104,9 +126,17 @@ kdj.drop(columns="url", inplace=True)
 results.shape, sdj.shape, kdj.shape
 
 # %%
-results[["rec_rating", "sdj_prob", "sdj_score", "sdj_score_add"]].corr(
-    method="spearman"
-)
+results[
+    [
+        "rec_rating",
+        "sdj_prob",
+        "sdj_score",
+        "sdj_score_add",
+        "ksdj_prob",
+        "ksdj_score",
+        "ksdj_score_add",
+    ]
+].corr(method="spearman")
 
 # %%
 results.drop(columns="url").sort_values("sdj_score", ascending=False).to_csv(
@@ -132,13 +162,13 @@ sdj.sort_values("sdj_score_add", ascending=False)[:50].style
 # # KdJ candidates
 
 # %%
-kdj.sort_values("sdj_prob", ascending=False)[:10].style
+kdj.sort_values("ksdj_prob", ascending=False)[:10].style
 
 # %%
 kdj.sort_values("rec_rating", ascending=False)[:10].style
 
 # %%
-kdj.sort_values("sdj_score", ascending=False)[:50].style
+kdj.sort_values("ksdj_score", ascending=False)[:50].style
 
 # %%
-kdj.sort_values("sdj_score_add", ascending=False)[:50].style
+kdj.sort_values("ksdj_score_add", ascending=False)[:50].style
