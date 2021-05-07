@@ -19,10 +19,7 @@ import json
 import joblib
 import pandas as pd
 
-from imblearn.metrics import classification_report_imbalanced
 from sklearn.linear_model import LogisticRegressionCV
-from sklearn.metrics import classification_report
-from sklearn.model_selection import train_test_split
 from bg_utils import transform
 
 SEED = 23
@@ -34,6 +31,7 @@ SEED = 23
 games = pd.read_csv(
     "../../../board-game-data/scraped/bgg_GameItem.csv",
     index_col="bgg_id",
+    low_memory=False,
 )
 games.shape
 
@@ -72,6 +70,52 @@ data_all = games[games.longlist ^ games.alt_candidate]
 sdj_mask = (data_all.award == "sdj") | (
     data_all.award.isna() & (data_all.kennerspiel_score < 0.5)
 )
-data_sdj = data_all[sdj_mask].copy()
-data_ksdj = data_all[~sdj_mask].copy()
+data_sdj = data_all[sdj_mask]
+data_ksdj = data_all[~sdj_mask]
 data_all.shape, data_sdj.shape, data_ksdj.shape
+
+# %%
+NUM_FEATURES = ("min_age", "min_time", "max_time", "cooperative", "complexity")
+
+
+def train_model(data, model=None, target="longlist", num_features=NUM_FEATURES):
+    model = (
+        LogisticRegressionCV(
+            class_weight="balanced",
+            max_iter=1_000_000,
+            scoring="balanced_accuracy",
+        )
+        if model is None
+        else model
+    )
+    transformed = transform(
+        data=data,
+        list_columns=("game_type", "category", "mechanic"),
+        min_df=0.01,
+    )
+
+    features = list(num_features) + [
+        col
+        for col in transformed.columns
+        if (":" in col) or col.startswith("playable_")
+    ]
+    in_data = transformed[features + [target]].dropna()  # TODO impute
+
+    model.fit(in_data[features], in_data[target])
+
+    return model, features
+
+
+# %%
+model_sdj, features_sdj = train_model(data_sdj)
+print(f"Using {len(features_sdj)} features in SdJ model")
+joblib.dump(model_sdj, "lr_sdj.joblib")
+with open("features_sdj.json", "w") as f:
+    json.dump(features_sdj, f, indent=4)
+
+# %%
+model_ksdj, features_ksdj = train_model(data_ksdj)
+print(f"Using {len(features_ksdj)} features in KSdJ model")
+joblib.dump(model_ksdj, "lr_ksdj.joblib")
+with open("features_ksdj.json", "w") as f:
+    json.dump(features_ksdj, f, indent=4)
