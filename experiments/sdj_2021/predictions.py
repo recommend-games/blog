@@ -18,9 +18,11 @@ import json
 from itertools import islice
 import joblib
 import pandas as pd
-from sklearn.preprocessing import minmax_scale
 from tqdm import tqdm
 from bg_utils import transform, recommend_games
+
+pd.options.display.max_columns = 100
+pd.options.display.max_rows = 500
 
 # %load_ext nb_black
 # %load_ext lab_black
@@ -56,6 +58,7 @@ for game in candidates[:10]:
 
 # %%
 df = pd.DataFrame.from_records(candidates, index="bgg_id")
+df["kennerspiel"] = df["kennerspiel_score"] >= 0.5
 df.shape
 
 # %%
@@ -101,20 +104,75 @@ x = x.fillna(x.mean())
 data["ksdj_prob"] = model_ksdj.predict_proba(x)[:, 1]
 
 # %%
+rel_features = [
+    "avg_rating",
+    "bayes_rating",
+    "ksdj_prob",
+    "num_votes",
+    "rec_rating",
+    "sdj_prob",
+]
+rel_columns = [f"{f}_rel" for f in rel_features]
+len(rel_columns)
+
+# %%
+data[rel_columns] = data.groupby("kennerspiel")[rel_features].rank(pct=True)
+data.shape
+
+# %%
+data[~data.kennerspiel][rel_columns].corr()
+
+# %%
+data[data.kennerspiel][rel_columns].corr()
+
+# %%
+data["sdj_score"] = (
+    0.7 * data["rec_rating_rel"]
+    + 0.1 * data["sdj_prob_rel"]
+    + 0.1 * data["bayes_rating_rel"]
+    + 0.1 * data["avg_rating_rel"]
+)
+data["sdj_rank"] = data[~data["kennerspiel"]]["sdj_score"].rank(
+    ascending=False, method="min"
+)
+data["ksdj_score"] = (
+    0.7 * data["rec_rating_rel"]
+    + 0.1 * data["ksdj_prob_rel"]
+    + 0.1 * data["bayes_rating_rel"]
+    + 0.1 * data["avg_rating_rel"]
+)
+data["ksdj_rank"] = data[data["kennerspiel"]]["ksdj_score"].rank(
+    ascending=False, method="min"
+)
+
+# %%
 results = data[
-    ["name", "year", "kennerspiel_score", "rec_rating", "sdj_prob", "ksdj_prob"]
+    [
+        "name",
+        "year",
+        "sdj_score",
+        "sdj_rank",
+        "ksdj_score",
+        "ksdj_rank",
+        "num_votes",
+        "avg_rating",
+        "avg_rating_rel",
+        "bayes_rating",
+        "bayes_rating_rel",
+        "rec_rating",
+        "rec_rating_rel",
+        "sdj_prob",
+        "sdj_prob_rel",
+        "ksdj_prob",
+        "ksdj_prob_rel",
+        "kennerspiel_score",
+    ]
 ].copy()
 results["url"] = [
     f"<a href='https://recommend.games/#/game/{bgg_id}'>{name}</a>"
     for bgg_id, name in results.name.items()
 ]
 results.shape
-
-# %%
-results["sdj_score"] = minmax_scale(results["rec_rating"]) * results["sdj_prob"]
-results["sdj_score_add"] = minmax_scale(results["rec_rating"]) + results["sdj_prob"]
-results["ksdj_score"] = minmax_scale(results["rec_rating"]) * results["ksdj_prob"]
-results["ksdj_score_add"] = minmax_scale(results["rec_rating"]) + results["ksdj_prob"]
 
 # %%
 sdj = results[results["kennerspiel_score"] < 0.5].copy()
@@ -126,20 +184,7 @@ kdj.drop(columns="url", inplace=True)
 results.shape, sdj.shape, kdj.shape
 
 # %%
-results[
-    [
-        "rec_rating",
-        "sdj_prob",
-        "sdj_score",
-        "sdj_score_add",
-        "ksdj_prob",
-        "ksdj_score",
-        "ksdj_score_add",
-    ]
-].corr(method="spearman")
-
-# %%
-results.drop(columns="url").sort_values("sdj_score", ascending=False).to_csv(
+results.drop(columns="url").sort_values(["sdj_rank", "ksdj_rank"]).to_csv(
     "predictions.csv", header=True
 )
 
@@ -147,28 +192,10 @@ results.drop(columns="url").sort_values("sdj_score", ascending=False).to_csv(
 # # SdJ candidates
 
 # %%
-sdj.sort_values("sdj_prob", ascending=False)[:10].style
-
-# %%
-sdj.sort_values("rec_rating", ascending=False)[:10].style
-
-# %%
-sdj.sort_values("sdj_score", ascending=False)[:50].style
-
-# %%
-sdj.sort_values("sdj_score_add", ascending=False)[:50].style
+sdj.sort_values("sdj_score", ascending=False)[:100].style
 
 # %% [markdown]
 # # KdJ candidates
 
 # %%
-kdj.sort_values("ksdj_prob", ascending=False)[:10].style
-
-# %%
-kdj.sort_values("rec_rating", ascending=False)[:10].style
-
-# %%
-kdj.sort_values("ksdj_score", ascending=False)[:50].style
-
-# %%
-kdj.sort_values("ksdj_score_add", ascending=False)[:50].style
+kdj.sort_values("ksdj_score", ascending=False)[:100].style

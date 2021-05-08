@@ -16,12 +16,9 @@
 # %%
 import csv
 import re
-
 from pathlib import Path
-
 import pandas as pd
 import requests
-
 from pytility import arg_to_iter, parse_int
 
 # %load_ext nb_black

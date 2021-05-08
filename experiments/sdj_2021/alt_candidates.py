@@ -15,9 +15,7 @@
 
 # %%
 from itertools import islice
-
 import pandas as pd
-
 from bg_utils import recommend_games
 
 SEED = 23

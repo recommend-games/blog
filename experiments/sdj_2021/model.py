@@ -15,10 +15,8 @@
 
 # %%
 import json
-
 import joblib
 import pandas as pd
-
 from sklearn.linear_model import LogisticRegressionCV
 from bg_utils import transform
 
