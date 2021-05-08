@@ -23,6 +23,7 @@ from bg_utils import transform, recommend_games
 
 pd.options.display.max_columns = 100
 pd.options.display.max_rows = 500
+pd.options.display.float_format = "{:.6g}".format
 
 # %load_ext nb_black
 # %load_ext lab_black
@@ -126,20 +127,27 @@ data[~data.kennerspiel][rel_columns].corr()
 data[data.kennerspiel][rel_columns].corr()
 
 # %%
+prob_rel = 0.05
+bayes_rating_rel = 0.1
+avg_rating_rel = 0.05
+rec_rating_rel = 1 - prob_rel - bayes_rating_rel - avg_rating_rel
+rec_rating_rel, prob_rel, bayes_rating_rel, avg_rating_rel
+
+# %%
 data["sdj_score"] = (
-    0.7 * data["rec_rating_rel"]
-    + 0.1 * data["sdj_prob_rel"]
-    + 0.1 * data["bayes_rating_rel"]
-    + 0.1 * data["avg_rating_rel"]
+    rec_rating_rel * data["rec_rating_rel"]
+    + prob_rel * data["sdj_prob_rel"]
+    + bayes_rating_rel * data["bayes_rating_rel"]
+    + avg_rating_rel * data["avg_rating_rel"]
 )
 data["sdj_rank"] = data[~data["kennerspiel"]]["sdj_score"].rank(
     ascending=False, method="min"
 )
 data["ksdj_score"] = (
-    0.7 * data["rec_rating_rel"]
-    + 0.1 * data["ksdj_prob_rel"]
-    + 0.1 * data["bayes_rating_rel"]
-    + 0.1 * data["avg_rating_rel"]
+    rec_rating_rel * data["rec_rating_rel"]
+    + prob_rel * data["ksdj_prob_rel"]
+    + bayes_rating_rel * data["bayes_rating_rel"]
+    + avg_rating_rel * data["avg_rating_rel"]
 )
 data["ksdj_rank"] = data[data["kennerspiel"]]["ksdj_score"].rank(
     ascending=False, method="min"
@@ -184,9 +192,15 @@ kdj.drop(columns="url", inplace=True)
 results.shape, sdj.shape, kdj.shape
 
 # %%
-results.drop(columns="url").sort_values(["sdj_rank", "ksdj_rank"]).to_csv(
-    "predictions.csv", header=True
+results.drop(columns="url", inplace=True)
+results.sort_values(["sdj_rank", "ksdj_rank"], inplace=True)
+results["sdj_rank"] = results["sdj_rank"].apply(
+    lambda x: str(int(x)) if x and not pd.isna(x) else ""
 )
+results["ksdj_rank"] = results["ksdj_rank"].apply(
+    lambda x: str(int(x)) if x and not pd.isna(x) else ""
+)
+results.to_csv("predictions.csv", header=True)
 
 # %% [markdown]
 # # SdJ candidates
