@@ -184,9 +184,11 @@ results.shape
 
 # %%
 sdj = results[results["kennerspiel_score"] < 0.5].copy()
+sdj["name_raw"] = sdj["name"]
 sdj["name"] = sdj["url"]
 sdj.drop(columns="url", inplace=True)
 kdj = results[results["kennerspiel_score"] >= 0.5].copy()
+kdj["name_raw"] = kdj["name"]
 kdj["name"] = kdj["url"]
 kdj.drop(columns="url", inplace=True)
 results.shape, sdj.shape, kdj.shape
@@ -213,3 +215,29 @@ sdj.sort_values("sdj_score", ascending=False)[:100].style
 
 # %%
 kdj.sort_values("ksdj_score", ascending=False)[:100].style
+
+# %%
+for bgg_id, game in sdj.sort_values("sdj_score", ascending=False)[:12].iterrows():
+    print(
+        f"""
+## {{{{% game {bgg_id} %}}}}{game["name_raw"]}{{{{% /game %}}}}
+
+
+
+{{{{% game {bgg_id} %}}}}{game["name_raw"]}{{{{% /game %}}}}
+"""
+    )
+    '<!-- {{{{< img src="{bgg_id}" size="x300" alt="{game["name_raw"]}" >}}}} -->'
+
+# %%
+for bgg_id, game in kdj.sort_values("ksdj_score", ascending=False)[:12].iterrows():
+    print(
+        f"""
+## {{{{% game {bgg_id} %}}}}{game["name_raw"]}{{{{% /game %}}}}
+
+
+
+{{{{% game {bgg_id} %}}}}{game["name_raw"]}{{{{% /game %}}}}
+"""
+    )
+    '<!-- {{{{< img src="{bgg_id}" size="x300" alt="{game["name_raw"]}" >}}}} -->'
