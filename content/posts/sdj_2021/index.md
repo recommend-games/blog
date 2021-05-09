@@ -1,6 +1,6 @@
 ---
-title: And the Spiel des Jahres 2021 goes to…
-slug: and-the-spiel-des-jahres-2021-goes-to
+title: Spiel des Jahres 2021 predictions
+slug: spiel-des-jahres-2021-predictions
 author: Markus Shepherd
 type: post
 date: 2021-05-09T10:00:00+03:00
