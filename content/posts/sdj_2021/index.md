@@ -45,25 +45,11 @@ tags:
 {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
 
 
-## {{% game 276498 %}}Paris: La Cité de la Lumière{{% /game %}}
+<!-- ## {{% game 276498 %}}Paris: La Cité de la Lumière{{% /game %}}
 
 {{< img src="276498" size="x300" alt="Paris: La Cité de la Lumière" >}}
 
-{{% game 276498 %}}Paris: La Cité de la Lumière{{% /game %}}
-
-
-## {{% game 283864 %}}Trails of Tucana{{% /game %}}
-
-{{< img src="283864" size="x300" alt="Trails of Tucana" >}}
-
-{{% game 283864 %}}Trails of Tucana{{% /game %}}
-
-
-## {{% game 223040 %}}Fantasy Realms{{% /game %}}
-
-{{< img src="223040" size="x300" alt="Fantasy Realms" >}}
-
-{{% game 223040 %}}Fantasy Realms{{% /game %}}
+{{% game 276498 %}}Paris: La Cité de la Lumière{{% /game %}} -->
 
 
 ## {{% game 300327 %}}The Castles of Tuscany{{% /game %}}
@@ -73,11 +59,18 @@ tags:
 {{% game 300327 %}}The Castles of Tuscany{{% /game %}}
 
 
-## {{% game 274960 %}}Point Salad{{% /game %}}
+## {{% game 223040 %}}Fantasy Realms{{% /game %}}
 
-{{< img src="274960" size="x300" alt="Point Salad" >}}
+{{< img src="223040" size="x300" alt="Fantasy Realms" >}}
 
-{{% game 274960 %}}Point Salad{{% /game %}}
+{{% game 223040 %}}Fantasy Realms{{% /game %}}
+
+
+## {{% game 283864 %}}Trails of Tucana{{% /game %}}
+
+{{< img src="283864" size="x300" alt="Trails of Tucana" >}}
+
+{{% game 283864 %}}Trails of Tucana{{% /game %}}
 
 
 ## {{% game 300877 %}}New York Zoo{{% /game %}}
@@ -94,27 +87,32 @@ tags:
 {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
 
 
-## {{% game 300001 %}}Renature{{% /game %}}
+## {{% game 274960 %}}Point Salad{{% /game %}}
 
-{{< img src="300001" size="x300" alt="Renature" >}}
+{{< img src="274960" size="x300" alt="Point Salad" >}}
 
-{{% game 300001 %}}Renature{{% /game %}}
+{{% game 274960 %}}Point Salad{{% /game %}}
 
 
 ## {{% game 256788 %}}Detective Club{{% /game %}}
-
-<!-- TODO this is eleventh, but I think it really has a chance -->
 
 {{< img src="256788" size="x300" alt="Detective Club" >}}
 
 {{% game 256788 %}}Detective Club{{% /game %}}
 
 
-<!-- ## {{% game 309105 %}}Sagani{{% /game %}}
+<!-- ## {{% game 267319 %}}Roam{{% /game %}}
 
-{{< img src="309105" size="x300" alt="Sagani" >}}
+{{< img src="267319" size="x300" alt="Roam" >}}
 
-{{% game 309105 %}}Sagani{{% /game %}} -->
+{{% game 267319 %}}Roam{{% /game %}} -->
+
+
+## {{% game 300001 %}}Renature{{% /game %}}
+
+{{< img src="300001" size="x300" alt="Renature" >}}
+
+{{% game 300001 %}}Renature{{% /game %}}
 
 
 ## My two cents
@@ -159,32 +157,11 @@ tags:
 {{% game 271324 %}}It's a Wonderful World{{% /game %}}
 
 
-## {{% game 300531 %}}Paleo{{% /game %}}
-
-{{< img src="300531" size="x300" alt="Paleo" >}}
-
-{{% game 300531 %}}Paleo{{% /game %}}
-
-
 ## {{% game 283155 %}}Calico{{% /game %}}
 
 {{< img src="283155" size="x300" alt="Calico" >}}
 
 {{% game 283155 %}}Calico{{% /game %}}
-
-
-## {{% game 293014 %}}Nidavellir{{% /game %}}
-
-{{< img src="293014" size="x300" alt="Nidavellir" >}}
-
-{{% game 293014 %}}Nidavellir{{% /game %}}
-
-
-## {{% game 281259 %}}The Isle of Cats{{% /game %}}
-
-{{< img src="281259" size="x300" alt="The Isle of Cats" >}}
-
-{{% game 281259 %}}The Isle of Cats{{% /game %}}
 
 
 ## {{% game 251247 %}}Barrage{{% /game %}}
@@ -194,25 +171,46 @@ tags:
 {{% game 251247 %}}Barrage{{% /game %}}
 
 
-## {{% game 318553 %}}Rajas of the Ganges: The Dice Charmers{{% /game %}}
+## {{% game 293014 %}}Nidavellir{{% /game %}}
 
-{{< img src="318553" size="x300" alt="Rajas of the Ganges: The Dice Charmers" >}}
+{{< img src="293014" size="x300" alt="Nidavellir" >}}
 
-{{% game 318553 %}}Rajas of the Ganges: The Dice Charmers{{% /game %}}
+{{% game 293014 %}}Nidavellir{{% /game %}}
 
 
-<!-- ## {{% game 283317 %}}The 7th Continent: Classic Edition{{% /game %}}
+## {{% game 300531 %}}Paleo{{% /game %}}
+
+{{< img src="300531" size="x300" alt="Paleo" >}}
+
+{{% game 300531 %}}Paleo{{% /game %}}
+
+
+## {{% game 281259 %}}The Isle of Cats{{% /game %}}
+
+{{< img src="281259" size="x300" alt="The Isle of Cats" >}}
+
+{{% game 281259 %}}The Isle of Cats{{% /game %}}
+
+
+## {{% game 283317 %}}The 7th Continent: Classic Edition{{% /game %}}
 
 {{< img src="283317" size="x300" alt="The 7th Continent: Classic Edition" >}}
 
-{{% game 283317 %}}The 7th Continent: Classic Edition{{% /game %}} -->
+{{% game 283317 %}}The 7th Continent: Classic Edition{{% /game %}}
 
 
-<!-- ## {{% game 191189 %}}Aeon's End{{% /game %}}
+<!-- ## {{% game 252153 %}}Tang Garden{{% /game %}}
 
-{{< img src="191189" size="x300" alt="Aeon's End" >}}
+{{< img src="252153" size="x300" alt="Tang Garden" >}}
 
-{{% game 191189 %}}Aeon's End{{% /game %}} -->
+{{% game 252153 %}}Tang Garden{{% /game %}} -->
+
+
+<!-- ## {{% game 318553 %}}Rajas of the Ganges: The Dice Charmers{{% /game %}}
+
+{{< img src="318553" size="x300" alt="Rajas of the Ganges: The Dice Charmers" >}}
+
+{{% game 318553 %}}Rajas of the Ganges: The Dice Charmers{{% /game %}} -->
 
 
 ## My two cents
