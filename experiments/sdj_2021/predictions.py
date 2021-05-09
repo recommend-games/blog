@@ -222,12 +222,11 @@ for bgg_id, game in sdj.sort_values("sdj_score", ascending=False)[:12].iterrows(
         f"""
 ## {{{{% game {bgg_id} %}}}}{game["name_raw"]}{{{{% /game %}}}}
 
-
+{{{{< img src="{bgg_id}" size="x300" alt="{game["name_raw"]}" >}}}}
 
 {{{{% game {bgg_id} %}}}}{game["name_raw"]}{{{{% /game %}}}}
 """
     )
-    '<!-- {{{{< img src="{bgg_id}" size="x300" alt="{game["name_raw"]}" >}}}} -->'
 
 # %%
 for bgg_id, game in kdj.sort_values("ksdj_score", ascending=False)[:12].iterrows():
@@ -235,9 +234,8 @@ for bgg_id, game in kdj.sort_values("ksdj_score", ascending=False)[:12].iterrows
         f"""
 ## {{{{% game {bgg_id} %}}}}{game["name_raw"]}{{{{% /game %}}}}
 
-
+{{{{< img src="{bgg_id}" size="x300" alt="{game["name_raw"]}" >}}}}
 
 {{{{% game {bgg_id} %}}}}{game["name_raw"]}{{{{% /game %}}}}
 """
     )
-    '<!-- {{{{< img src="{bgg_id}" size="x300" alt="{game["name_raw"]}" >}}}} -->'
