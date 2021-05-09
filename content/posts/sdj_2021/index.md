@@ -103,16 +103,25 @@ tags:
 
 ## {{% game 256788 %}}Detective Club{{% /game %}}
 
+<!-- TODO this is eleventh, but I think it really has a chance -->
+
 {{< img src="256788" size="x300" alt="Detective Club" >}}
 
 {{% game 256788 %}}Detective Club{{% /game %}}
 
 
-## {{% game 309105 %}}Sagani{{% /game %}}
+<!-- ## {{% game 309105 %}}Sagani{{% /game %}}
 
 {{< img src="309105" size="x300" alt="Sagani" >}}
 
-{{% game 309105 %}}Sagani{{% /game %}}
+{{% game 309105 %}}Sagani{{% /game %}} -->
+
+
+## My two cents
+
+* {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
+* {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
+* {{% game 300327 %}}The Castles of Tuscany{{% /game %}}
 
 
 # Candidates for {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}
@@ -192,15 +201,22 @@ tags:
 {{% game 318553 %}}Rajas of the Ganges: The Dice Charmers{{% /game %}}
 
 
-## {{% game 283317 %}}The 7th Continent: Classic Edition{{% /game %}}
+<!-- ## {{% game 283317 %}}The 7th Continent: Classic Edition{{% /game %}}
 
 {{< img src="283317" size="x300" alt="The 7th Continent: Classic Edition" >}}
 
-{{% game 283317 %}}The 7th Continent: Classic Edition{{% /game %}}
+{{% game 283317 %}}The 7th Continent: Classic Edition{{% /game %}} -->
 
 
-## {{% game 191189 %}}Aeon's End{{% /game %}}
+<!-- ## {{% game 191189 %}}Aeon's End{{% /game %}}
 
 {{< img src="191189" size="x300" alt="Aeon's End" >}}
 
-{{% game 191189 %}}Aeon's End{{% /game %}}
+{{% game 191189 %}}Aeon's End{{% /game %}} -->
+
+
+## My two cents
+
+* {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}
+* {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
+* {{% game 300531 %}}Paleo{{% /game %}}
