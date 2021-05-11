@@ -64,13 +64,8 @@ alt_candidates.shape, games["alt_candidate"].sum()
 games.sample(3).T
 
 # %%
-data_all = games[games.longlist ^ games.alt_candidate]
-sdj_mask = (data_all.award == "sdj") | (
-    data_all.award.isna() & (data_all.kennerspiel_score < 0.5)
-)
-data_sdj = data_all[sdj_mask]
-data_ksdj = data_all[~sdj_mask]
-data_all.shape, data_sdj.shape, data_ksdj.shape
+data = games[games.longlist ^ games.alt_candidate]
+data.shape
 
 # %%
 NUM_FEATURES = ("min_age", "min_time", "max_time", "cooperative", "complexity")
@@ -105,15 +100,8 @@ def train_model(data, model=None, target="longlist", num_features=NUM_FEATURES):
 
 
 # %%
-model_sdj, features_sdj = train_model(data_sdj)
-print(f"Using {len(features_sdj)} features in SdJ model")
-joblib.dump(model_sdj, "lr_sdj.joblib")
-with open("features_sdj.json", "w") as f:
-    json.dump(features_sdj, f, indent=4)
-
-# %%
-model_ksdj, features_ksdj = train_model(data_ksdj)
-print(f"Using {len(features_ksdj)} features in KSdJ model")
-joblib.dump(model_ksdj, "lr_ksdj.joblib")
-with open("features_ksdj.json", "w") as f:
-    json.dump(features_ksdj, f, indent=4)
+model, features = train_model(data)
+print(f"Using {len(features)} features model")
+joblib.dump(model, "lr.joblib")
+with open("features.json", "w") as f:
+    json.dump(features, f, indent=4)

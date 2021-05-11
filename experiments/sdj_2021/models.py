@@ -36,6 +36,7 @@ SEED = 23
 games = pd.read_csv(
     "../../../board-game-data/scraped/bgg_GameItem.csv",
     index_col="bgg_id",
+    low_memory=False,
 )
 games.shape
 

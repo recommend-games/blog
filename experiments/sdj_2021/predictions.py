@@ -74,41 +74,29 @@ data = transform(
 data.shape
 
 # %%
-with open("features_sdj.json") as f:
-    features_sdj = json.load(f)
-with open("features_ksdj.json") as f:
-    features_ksdj = json.load(f)
-len(features_sdj), len(features_ksdj)
+with open("features.json") as f:
+    features = json.load(f)
+len(features)
 
 # %%
-for feature in features_sdj + features_ksdj:
+for feature in features:
     if feature not in data:
         print(feature)
         data[feature] = False
 
 # %%
-model_sdj = joblib.load("lr_sdj.joblib")
-model_sdj
+model = joblib.load("lr.joblib")
+model
 
 # %%
-x = data[features_sdj]
+x = data[features]
 x = x.fillna(x.mean())
-data["sdj_prob"] = model_sdj.predict_proba(x)[:, 1]
-
-# %%
-model_ksdj = joblib.load("lr_ksdj.joblib")
-model_ksdj
-
-# %%
-x = data[features_ksdj]
-x = x.fillna(x.mean())
-data["ksdj_prob"] = model_ksdj.predict_proba(x)[:, 1]
+data["sdj_prob"] = model.predict_proba(x)[:, 1]
 
 # %%
 rel_features = [
     "avg_rating",
     "bayes_rating",
-    "ksdj_prob",
     "num_votes",
     "rec_rating",
     "sdj_prob",
@@ -127,30 +115,27 @@ data[~data.kennerspiel][rel_columns].corr()
 data[data.kennerspiel][rel_columns].corr()
 
 # %%
-prob_rel = 0.05
-bayes_rating_rel = 0.1
-avg_rating_rel = 0.05
-rec_rating_rel = 1 - prob_rel - bayes_rating_rel - avg_rating_rel
-rec_rating_rel, prob_rel, bayes_rating_rel, avg_rating_rel
+sdj_prob = 0.05
+bayes_rating_rel = 0.025
+avg_rating_rel = 0.025
+rec_rating_rel = 1 - sdj_prob - bayes_rating_rel - avg_rating_rel
+rec_rating_rel, sdj_prob, bayes_rating_rel, avg_rating_rel
 
 # %%
 data["sdj_score"] = (
     rec_rating_rel * data["rec_rating_rel"]
-    + prob_rel * data["sdj_prob_rel"]
+    + sdj_prob * data["sdj_prob"]
     + bayes_rating_rel * data["bayes_rating_rel"]
     + avg_rating_rel * data["avg_rating_rel"]
 )
-data["sdj_rank"] = data[~data["kennerspiel"]]["sdj_score"].rank(
-    ascending=False, method="min"
-)
-data["ksdj_score"] = (
-    rec_rating_rel * data["rec_rating_rel"]
-    + prob_rel * data["ksdj_prob_rel"]
-    + bayes_rating_rel * data["bayes_rating_rel"]
-    + avg_rating_rel * data["avg_rating_rel"]
-)
-data["ksdj_rank"] = data[data["kennerspiel"]]["ksdj_score"].rank(
-    ascending=False, method="min"
+data["sdj_rank"] = (
+    data.groupby("kennerspiel")["sdj_score"]
+    .rank(
+        ascending=False,
+        method="min",
+        na_option="bottom",
+    )
+    .astype(int)
 )
 
 # %%
@@ -160,8 +145,6 @@ results = data[
         "year",
         "sdj_score",
         "sdj_rank",
-        "ksdj_score",
-        "ksdj_rank",
         "num_votes",
         "avg_rating",
         "avg_rating_rel",
@@ -171,8 +154,7 @@ results = data[
         "rec_rating_rel",
         "sdj_prob",
         "sdj_prob_rel",
-        "ksdj_prob",
-        "ksdj_prob_rel",
+        "kennerspiel",
         "kennerspiel_score",
     ]
 ].copy()
@@ -180,14 +162,15 @@ results["url"] = [
     f"<a href='https://recommend.games/#/game/{bgg_id}'>{name}</a>"
     for bgg_id, name in results.name.items()
 ]
+results.sort_values("sdj_score", ascending=False, inplace=True)
 results.shape
 
 # %%
-sdj = results[results["kennerspiel_score"] < 0.5].copy()
+sdj = results[~results["kennerspiel"]].copy()
 sdj["name_raw"] = sdj["name"]
 sdj["name"] = sdj["url"]
 sdj.drop(columns="url", inplace=True)
-kdj = results[results["kennerspiel_score"] >= 0.5].copy()
+kdj = results[results["kennerspiel"]].copy()
 kdj["name_raw"] = kdj["name"]
 kdj["name"] = kdj["url"]
 kdj.drop(columns="url", inplace=True)
@@ -195,29 +178,25 @@ results.shape, sdj.shape, kdj.shape
 
 # %%
 results.drop(columns="url", inplace=True)
-results.sort_values(["sdj_rank", "ksdj_rank"], inplace=True)
-results["sdj_rank"] = results["sdj_rank"].apply(
-    lambda x: str(int(x)) if x and not pd.isna(x) else ""
-)
-results["ksdj_rank"] = results["ksdj_rank"].apply(
-    lambda x: str(int(x)) if x and not pd.isna(x) else ""
-)
+results.sort_values(["kennerspiel", "sdj_rank"], inplace=True)
 results.to_csv("predictions.csv", header=True)
 
 # %% [markdown]
 # # SdJ candidates
 
 # %%
-sdj.sort_values("sdj_score", ascending=False)[:100].style
+sdj[:100].style
 
 # %% [markdown]
 # # KdJ candidates
 
 # %%
-kdj.sort_values("ksdj_score", ascending=False)[:100].style
+kdj[:100].style
 
 # %%
-for bgg_id, game in sdj.sort_values("sdj_score", ascending=False)[:12].iterrows():
+# TODO data for each game: designers, player count, play time, age, complexity, Kennerspiel score
+
+for bgg_id, game in sdj[:12].iterrows():
     print(
         f"""
 ## {{{{% game {bgg_id} %}}}}{game["name_raw"]}{{{{% /game %}}}}
@@ -229,7 +208,7 @@ for bgg_id, game in sdj.sort_values("sdj_score", ascending=False)[:12].iterrows(
     )
 
 # %%
-for bgg_id, game in kdj.sort_values("ksdj_score", ascending=False)[:12].iterrows():
+for bgg_id, game in kdj[:12].iterrows():
     print(
         f"""
 ## {{{{% game {bgg_id} %}}}}{game["name_raw"]}{{{{% /game %}}}}
