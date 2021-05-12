@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # ---
 # jupyter:
 #   jupytext:
@@ -156,8 +157,13 @@ results = data[
         "sdj_prob_rel",
         "kennerspiel",
         "kennerspiel_score",
+        "min_age",
+        "min_time",
+        "max_time",
+        "complexity",
     ]
 ].copy()
+results[["min_players", "max_players"]] = df[["min_players", "max_players"]]
 results["url"] = [
     f"<a href='https://recommend.games/#/game/{bgg_id}'>{name}</a>"
     for bgg_id, name in results.name.items()
@@ -193,28 +199,68 @@ sdj[:100].style
 # %%
 kdj[:100].style
 
+# %% [markdown]
+# # Outputs
+
 # %%
-# TODO data for each game: designers, player count, play time, age, complexity, Kennerspiel score
+sdj.columns
 
-for bgg_id, game in sdj[:12].iterrows():
-    print(
-        f"""
-## {{{{% game {bgg_id} %}}}}{game["name_raw"]}{{{{% /game %}}}}
+# %%
+COMPLEXITIES = (None, "light", "medium light", "medium", "medium heavy", "heavy")
 
-{{{{< img src="{bgg_id}" size="x300" alt="{game["name_raw"]}" >}}}}
 
-{{{{% game {bgg_id} %}}}}{game["name_raw"]}{{{{% /game %}}}}
-"""
+def game_str(game, bgg_id=None):
+    bgg_id = game["bgg_id"] if bgg_id is None else bgg_id
+    name = game.get("name_raw") or game.get("name")
+    min_players = int(min_players) if (min_players := game["min_players"]) else None
+    max_players = int(max_players) if (max_players := game["max_players"]) else None
+    player_count = (
+        f"{min_players:d}–{max_players:d} players"
+        if max_players > min_players
+        else f"{min_players:d} players"
+        if min_players > 1
+        else "Solo game"
     )
+    min_time = int(min_time) if (min_time := game["min_time"]) else None
+    max_time = int(max_time) if (max_time := game["max_time"]) else None
+    play_time = (
+        f"{min_time:d}–{max_time:d} minutes"
+        if max_time > min_time
+        else f"{min_time:d} minutes"
+    )
+    player_age = f"{int(min_age)}+ years" if (min_age := game["min_age"]) else ""
+    complexity = complexity if (complexity := game["complexity"]) else 0
+    complexity_str = f"{COMPLEXITIES[round(complexity)]}" if complexity > 0 else ""
+    kennerspiel_score = (
+        round(100 * kennerspiel_score)
+        if (kennerspiel_score := game["kennerspiel_score"])
+        else None
+    )
+    kennerspiel = (
+        ""
+        if kennerspiel_score is None
+        else f"{{{{% kdj %}}}}{kennerspiel_score}% Kennerspiel{{{{% /kdj %}}}}"
+        if kennerspiel_score >= 50
+        else f"{{{{% sdj %}}}}{100 - kennerspiel_score}% Spiel{{{{% /sdj %}}}}"
+    )
+
+    # TODO data for each game: designers, player count, play time, age, complexity, Kennerspiel score
+
+    return f"""## {{{{% game {bgg_id} %}}}}{name}{{{{% /game %}}}}
+
+*{player_count}, {play_time}, {player_age}, {complexity_str} ({complexity:.1f}), {kennerspiel}*
+
+{{{{< img src="{bgg_id}" size="x300" alt="{name}" >}}}}
+
+{{{{% game {bgg_id} %}}}}{name}{{{{% /game %}}}}"""
+
+
+# %%
+for bgg_id, game in sdj[:12].iterrows():
+    print(game_str(game, bgg_id))
+    print("\n")
 
 # %%
 for bgg_id, game in kdj[:12].iterrows():
-    print(
-        f"""
-## {{{{% game {bgg_id} %}}}}{game["name_raw"]}{{{{% /game %}}}}
-
-{{{{< img src="{bgg_id}" size="x300" alt="{game["name_raw"]}" >}}}}
-
-{{{{% game {bgg_id} %}}}}{game["name_raw"]}{{{{% /game %}}}}
-"""
-    )
+    print(game_str(game, bgg_id))
+    print("\n")
