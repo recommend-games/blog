@@ -239,9 +239,9 @@ def game_str(game, bgg_id=None):
     kennerspiel = (
         ""
         if kennerspiel_score is None
-        else f"{{{{% kdj %}}}}{kennerspiel_score}% Kennerspiel{{{{% /kdj %}}}}"
+        else f"{kennerspiel_score}% {{{{% kdj %}}}}Kennerspiel{{{{% /kdj %}}}}"
         if kennerspiel_score >= 50
-        else f"{{{{% sdj %}}}}{100 - kennerspiel_score}% Spiel{{{{% /sdj %}}}}"
+        else f"{100 - kennerspiel_score}% {{{{% sdj %}}}}Spiel{{{{% /sdj %}}}}"
     )
 
     # TODO data for each game: designers, player count, play time, age, complexity, Kennerspiel score
