@@ -28,6 +28,14 @@ It's our favourite time of the year again: time for {{% sdj / %}} nominations! O
 
 Unlike last year, I won't use hard filters though to distinguish between {{% sdj %}}red{{% /sdj %}} and {{% kdj %}}anthracite{{% /sdj %}} games, but will rely on the **{{% kdj %}}Kennerspiel{{% /sdj %}} score** I developed [a couple of months back]({{<ref "posts/kennerspiel/index.md">}}). This model tries to predict if a game is a {{% kdj %}}Kennerspiel{{% /sdj %}} or not based on some key features, like complexity, play time, age recommendations and game type. The jury's decision this year what list a game belongs to will be the first actual test for that model too, so let's hope it actually made sense! 🤞
 
+Another difference is that I took an entirely algorithmic approach. That is, I do not follow my own taste or gut feeling, but I let the numbers talk. First, I took all eligible games[^eligible] and separated them into two lists: one for {{% sdj / %}} and one for {{% kdj / %}}, depending on their {{% kdj %}}Kennerspiel{{% /sdj %}} score. Then I ranked those games in a couple of different ways, and finally combined those into the final result:
+
+* [recommendations](https://recommend.games/#/?for=S_d_J&yearMin=2020&yearMax=2021&excludeOwned=false&playerCount=4&playerCountType=box&playTime=120&playTimeType=max&playerAge=16&playerAgeType=box) (90%),
+* {{% sdj / %}} probability (5%),
+* average BGG rating (2.5%),
+* geek score (aka [Bayesian average]({{<ref "posts/reverse_engineer_bgg/index.md">}}), 2.5%).
+
+
 # Candidates for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}
 
 <!-- TODO update logo -->
@@ -36,7 +44,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 
 <!-- TODO data for each game: designers, player count, play time, age, complexity, Kennerspiel score -->
 
-## {{% game 266524 %}}PARKS{{% /game %}}
+## #1: {{% game 266524 %}}PARKS{{% /game %}}
 
 *1–5 players, 30–60 minutes, 10+ years, medium light (2.2), 88% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -45,7 +53,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 266524 %}}PARKS{{% /game %}}
 
 
-## {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
+## #2: {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
 
 *1–4 players, 15–45 minutes, 10+ years, light (1.1), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -54,7 +62,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
 
 
-## {{% game 276498 %}}Paris: La Cité de la Lumière{{% /game %}}
+## #3: {{% game 276498 %}}Paris: La Cité de la Lumière{{% /game %}}
 
 *2 players, 30 minutes, 8+ years, medium light (2.1), 96% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -63,7 +71,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 276498 %}}Paris: La Cité de la Lumière{{% /game %}}
 
 
-## {{% game 283864 %}}Trails of Tucana{{% /game %}}
+## #4: {{% game 283864 %}}Trails of Tucana{{% /game %}}
 
 *1–8 players, 15 minutes, 8+ years, light (1.3), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -72,7 +80,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 283864 %}}Trails of Tucana{{% /game %}}
 
 
-## {{% game 223040 %}}Fantasy Realms{{% /game %}}
+## #5: {{% game 223040 %}}Fantasy Realms{{% /game %}}
 
 *3–6 players, 20 minutes, 14+ years, medium light (1.7), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -81,7 +89,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 223040 %}}Fantasy Realms{{% /game %}}
 
 
-## {{% game 274960 %}}Point Salad{{% /game %}}
+## #6: {{% game 274960 %}}Point Salad{{% /game %}}
 
 *2–6 players, 15–30 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -90,7 +98,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 274960 %}}Point Salad{{% /game %}}
 
 
-## {{% game 256788 %}}Detective Club{{% /game %}}
+## #7: {{% game 256788 %}}Detective Club{{% /game %}}
 
 *4–8 players, 45 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -99,7 +107,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 256788 %}}Detective Club{{% /game %}}
 
 
-## {{% game 300877 %}}New York Zoo{{% /game %}}
+## #8: {{% game 300877 %}}New York Zoo{{% /game %}}
 
 *1–5 players, 30–60 minutes, 10+ years, medium light (2.0), 96% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -108,7 +116,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 300877 %}}New York Zoo{{% /game %}}
 
 
-## {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
+## #9: {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
 
 *2–4 players, 60 minutes, 10+ years, medium light (1.7), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -117,7 +125,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
 
 
-## {{% game 295948 %}}Aqualin{{% /game %}}
+## #10: {{% game 295948 %}}Aqualin{{% /game %}}
 
 *2 players, 20 minutes, 10+ years, medium light (1.8), 98% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -126,7 +134,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 295948 %}}Aqualin{{% /game %}}
 
 
-## {{% game 300327 %}}The Castles of Tuscany{{% /game %}}
+## #11: {{% game 300327 %}}The Castles of Tuscany{{% /game %}}
 
 *2–4 players, 45–60 minutes, 10+ years, medium light (2.2), 89% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -135,7 +143,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 300327 %}}The Castles of Tuscany{{% /game %}}
 
 
-## {{% game 299172 %}}The Key: Murder at the Oakdale Club{{% /game %}}
+## #12: {{% game 299172 %}}The Key: Murder at the Oakdale Club{{% /game %}}
 
 *1–4 players, 15–20 minutes, 8+ years, medium light (2.0), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -158,7 +166,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{< img src="ksdj-2021" size="x300" alt="Kennerspiel des Jahres 2021" >}}
 
 
-## {{% game 281259 %}}The Isle of Cats{{% /game %}}
+## #1: {{% game 281259 %}}The Isle of Cats{{% /game %}}
 
 *1–4 players, 60–90 minutes, 8+ years, medium light (2.3), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -167,7 +175,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 281259 %}}The Isle of Cats{{% /game %}}
 
 
-## {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
+## #2: {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
 
 *1–4 players, 30–120 minutes, 12+ years, medium (2.8), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -176,7 +184,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
 
 
-## {{% game 283155 %}}Calico{{% /game %}}
+## #3: {{% game 283155 %}}Calico{{% /game %}}
 
 *1–4 players, 30–45 minutes, 13+ years, medium light (2.2), 62% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -185,7 +193,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 283155 %}}Calico{{% /game %}}
 
 
-## {{% game 224517 %}}Brass: Birmingham{{% /game %}}
+## #4: {{% game 224517 %}}Brass: Birmingham{{% /game %}}
 
 *2–4 players, 60–120 minutes, 14+ years, medium heavy (3.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -194,7 +202,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 224517 %}}Brass: Birmingham{{% /game %}}
 
 
-## {{% game 317311 %}}Switch & Signal{{% /game %}}
+## #5: {{% game 317311 %}}Switch & Signal{{% /game %}}
 
 *2–4 players, 45 minutes, 10+ years, medium light (2.2), 83% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -203,7 +211,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 317311 %}}Switch & Signal{{% /game %}}
 
 
-## {{% game 300531 %}}Paleo{{% /game %}}
+## #6: {{% game 300531 %}}Paleo{{% /game %}}
 
 *1–4 players, 45–60 minutes, 10+ years, medium (2.6), 88% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -212,7 +220,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 300531 %}}Paleo{{% /game %}}
 
 
-## {{% game 293014 %}}Nidavellir{{% /game %}}
+## #7: {{% game 293014 %}}Nidavellir{{% /game %}}
 
 *2–5 players, 30–60 minutes, 10+ years, medium light (2.2), 96% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -221,7 +229,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 293014 %}}Nidavellir{{% /game %}}
 
 
-## {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}
+## #8: {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}
 
 *1–4 players, 30–120 minutes, 14+ years, medium heavy (3.6), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -230,7 +238,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}
 
 
-## {{% game 286096 %}}Tapestry{{% /game %}}
+## #9: {{% game 286096 %}}Tapestry{{% /game %}}
 
 *1–5 players, 90–120 minutes, 12+ years, medium (2.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -239,7 +247,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 286096 %}}Tapestry{{% /game %}}
 
 
-## {{% game 271324 %}}It's a Wonderful World{{% /game %}}
+## #10: {{% game 271324 %}}It's a Wonderful World{{% /game %}}
 
 *1–5 players, 30–60 minutes, 14+ years, medium light (2.3), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -248,7 +256,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 271324 %}}It's a Wonderful World{{% /game %}}
 
 
-## {{% game 283294 %}}Yukon Airways{{% /game %}}
+## #11: {{% game 283294 %}}Yukon Airways{{% /game %}}
 
 *1–4 players, 60–90 minutes, 14+ years, medium (2.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -257,7 +265,7 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 {{% game 283294 %}}Yukon Airways{{% /game %}}
 
 
-## {{% game 282954 %}}Paris{{% /game %}}
+## #12: {{% game 282954 %}}Paris{{% /game %}}
 
 *2–4 players, 90 minutes, 12+ years, medium (2.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -271,3 +279,5 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 * {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
 * {{% game 300531 %}}Paleo{{% /game %}}
 * {{% game 281259 %}}The Isle of Cats{{% /game %}}
+
+[^eligible]: As every year, it's not straightforward to determine what games are eligible for the awards. Generally speaking, it'd be those games release between April 2020 and March 2021 into German retail (though because of COVID–19 hitting in March last year we might see a few latecomers this year). Hence, filtering by BGG release year will exclude games that were released earlier elsewhere, but only recently in Germany, and likewise let some games pass that have not seen a German release in that time window. I did my best to catch what I could, but there's always some that get away.

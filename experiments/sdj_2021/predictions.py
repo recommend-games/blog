@@ -209,8 +209,9 @@ sdj.columns
 COMPLEXITIES = (None, "light", "medium light", "medium", "medium heavy", "heavy")
 
 
-def game_str(game, bgg_id=None):
+def game_str(game, bgg_id=None, position=None):
     bgg_id = game["bgg_id"] if bgg_id is None else bgg_id
+    position_str = f"#{int(position)}: " if position is not None else ""
     name = game.get("name_raw") or game.get("name")
     min_players = int(min_players) if (min_players := game["min_players"]) else None
     max_players = int(max_players) if (max_players := game["max_players"]) else None
@@ -246,7 +247,7 @@ def game_str(game, bgg_id=None):
 
     # TODO data for each game: designers, player count, play time, age, complexity, Kennerspiel score
 
-    return f"""## {{{{% game {bgg_id} %}}}}{name}{{{{% /game %}}}}
+    return f"""## {position_str}{{{{% game {bgg_id} %}}}}{name}{{{{% /game %}}}}
 
 *{player_count}, {play_time}, {player_age}, {complexity_str} ({complexity:.1f}), {kennerspiel}*
 
@@ -256,11 +257,11 @@ def game_str(game, bgg_id=None):
 
 
 # %%
-for bgg_id, game in sdj[:12].iterrows():
-    print(game_str(game, bgg_id))
+for pos, (bgg_id, game) in enumerate(sdj[:12].iterrows()):
+    print(game_str(game, bgg_id, pos + 1))
     print("\n")
 
 # %%
-for bgg_id, game in kdj[:12].iterrows():
-    print(game_str(game, bgg_id))
+for pos, (bgg_id, game) in enumerate(kdj[:12].iterrows()):
+    print(game_str(game, bgg_id, pos + 1))
     print("\n")
