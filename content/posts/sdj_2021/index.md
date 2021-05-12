@@ -30,10 +30,12 @@ Unlike last year, I won't use hard filters though to distinguish between {{% sdj
 
 Another difference is that I took an entirely algorithmic approach. That is, I do not follow my own taste or gut feeling, but I let the numbers talk. First, I took all eligible games[^eligible] and separated them into two lists: one for {{% sdj / %}} and one for {{% kdj / %}}, depending on their {{% kdj %}}Kennerspiel{{% /sdj %}} score. Then I ranked those games in a couple of different ways, and finally combined those into the final result:
 
-* [recommendations](https://recommend.games/#/?for=S_d_J&yearMin=2020&yearMax=2021&excludeOwned=false&playerCount=4&playerCountType=box&playTime=120&playTimeType=max&playerAge=16&playerAgeType=box) (90%),
-* {{% sdj / %}} probability (5%),
-* average BGG rating (2.5%),
-* geek score (aka [Bayesian average]({{<ref "posts/reverse_engineer_bgg/index.md">}}), 2.5%).
+* Sorted by the Recommend.Games [recommendation algorithm](https://recommend.games/#/?for=S_d_J&yearMin=2020&yearMax=2021&excludeOwned=false&playerCount=4&playerCountType=box&playTime=120&playTimeType=max&playerAge=16&playerAgeType=box) (90%). This has proven to be a powerful and reliable method to capture the jury's taste, but it's slow to recommend new games with few ratings.
+* {{% sdj / %}} probability (5%). Similar to the model that calculates the {{% kdj %}}Kennerspiel{{% /sdj %}} score, I've trained a model that tries to predict a game's chances to end up on the jury's longlist. This is particularly designed to unearth candidates with few votes, but it's still rudimentary at this point.
+* Average BoardGameGeek rating (2.5%). Let the gamers speak! In order to give new games a chance, we'll take a look at the simple average rating.
+* Geek score (aka [Bayesian average]({{<ref "posts/reverse_engineer_bgg/index.md">}}), 2.5%). This score starts out at 5.5, and gets closer to the actual average the more ratings come in. It's more reliable, but also strongly favours games that have been around for longer and hence gathered more ratings.
+
+You can find the detailed analysis [here](predictions.py). But without further ado, here are the favourite games to win {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2021{{% /sdj %}}.
 
 
 # Candidates for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}
@@ -153,6 +155,8 @@ Another difference is that I took an entirely algorithmic approach. That is, I d
 
 
 ## My two cents
+
+Alright, that's what the algorithms say. But just like last year, I'd like to let my guts have some say as well. These are the three games I consider having the best shot at ending up on the jury's shortlist:
 
 * {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
 * {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
@@ -279,5 +283,19 @@ Another difference is that I took an entirely algorithmic approach. That is, I d
 * {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
 * {{% game 300531 %}}Paleo{{% /game %}}
 * {{% game 281259 %}}The Isle of Cats{{% /game %}}
+
+
+# Honourable mentions
+
+
+## {{% sdj / %}}
+
+* TODO
+
+
+## {{% kdj / %}}
+
+* TODO
+
 
 [^eligible]: As every year, it's not straightforward to determine what games are eligible for the awards. Generally speaking, it'd be those games release between April 2020 and March 2021 into German retail (though because of COVID–19 hitting in March last year we might see a few latecomers this year). Hence, filtering by BGG release year will exclude games that were released earlier elsewhere, but only recently in Germany, and likewise let some games pass that have not seen a German release in that time window. I did my best to catch what I could, but there's always some that get away.
