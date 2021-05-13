@@ -315,6 +315,7 @@ Last but not least I want to send you off with a couple of games that didn't mak
 * {{% game 298069 %}}Cubitos{{% /game %}}
 * {{% game 311193 %}}Anno 1800{{% /game %}}
 * {{% game 314040 %}}Pandemic Legacy: Season 0{{% /game %}}: The jury has a well-documented love for this series, so it seems unlikely they'll say goodbye silently.
+* {{% game 191189 %}}Aeon's End{{% /game %}}: Another *very* late arrival to Germany. Thematically probably outside the jury's comfort zone, but they do love their deckbuilders and co-ops…
 
 
 [^eligible]: As every year, it's not straightforward to determine what games are eligible for the awards. Generally speaking, it'd be those games release between April 2020 and March 2021 into German retail (though because of COVID–19 hitting in March last year we might see a few latecomers this year). Hence, filtering by BGG release year will exclude games that were released earlier elsewhere, but only recently in Germany, and likewise let some games pass that have not seen a German release in that time window. I did my best to catch what I could, but there's always some that get away.
