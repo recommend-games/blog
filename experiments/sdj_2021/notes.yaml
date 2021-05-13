@@ -48,7 +48,7 @@
   text: '{{% game 283294 %}}Yukon Airways{{% /game %}}'
 283864:
   name: Trails of Tucana
-  text: '{{% game 283864 %}}Trails of Tucana{{% /game %}}'
+  text: "Yet another simple roll/flip'n'write. The jury does appreciate those, so this title definitely has its chance."
 286096:
   name: Tapestry
   text: '{{% game 286096 %}}Tapestry{{% /game %}}'
@@ -63,16 +63,16 @@
   text: '{{% game 297978 %}}Mariposas{{% /game %}}'
 299171:
   name: 'The Key: Theft at Cliffrock Villa'
-  text: '{{% game 299171 %}}The Key: Theft at Cliffrock Villa{{% /game %}}'
+  text: 'One year after his smash hit {{% game 284083 %}}The Crew{{% /game %}}, [Thomas Sing](https://recommend.games/#/?designer=45563) might reach for {{% sdj / %}} this time. A real-time deduction game sure sounds like a winning combo!'
 299172:
   name: 'The Key: Murder at the Oakdale Club'
-  text: '{{% game 299172 %}}The Key: Murder at the Oakdale Club{{% /game %}}'
+  text: 'One year after his smash hit {{% game 284083 %}}The Crew{{% /game %}}, [Thomas Sing](https://recommend.games/#/?designer=45563) might reach for {{% sdj / %}} this time. A real-time deduction game sure sounds like a winning combo!'
 300001:
   name: Renature
   text: '{{% game 300001 %}}Renature{{% /game %}}'
 300327:
   name: The Castles of Tuscany
-  text: "There's no doubt that the jury is a fan of Stefan Feld's work. {{% game 300327 %}}The Castles of Tuscany{{% /game %}} could earn him his first {{% sdj / %}} nomination."
+  text: "There's no doubt that the jury is a fan of [Stefan Feld](https://recommend.games/#/?designer=4958)'s work. {{% game 300327 %}}The Castles of Tuscany{{% /game %}} could earn him his first {{% sdj / %}} nomination."
 300531:
   name: Paleo
   text: '{{% game 300531 %}}Paleo{{% /game %}}'
@@ -81,7 +81,7 @@
   text: '{{% game 300753 %}}Cross Clues{{% /game %}}'
 300877:
   name: New York Zoo
-  text: '{{% game 300877 %}}New York Zoo{{% /game %}}'
+  text: 'Another puzzle game by [Uwe Rosenberg](https://recommend.games/#/?designer=10), this time filled to the brim with cute animals. Who could resist this proposition?'
 301716:
   name: Glasgow
   text: '{{% game 301716 %}}Glasgow{{% /game %}}'
