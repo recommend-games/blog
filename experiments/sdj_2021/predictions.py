@@ -19,8 +19,9 @@ import json
 from itertools import islice
 import joblib
 import pandas as pd
-from tqdm import tqdm
 from bg_utils import transform, recommend_games
+from tqdm import tqdm
+from yaml import safe_load
 
 pd.options.display.max_columns = 100
 pd.options.display.max_rows = 500
@@ -208,8 +209,11 @@ sdj.columns
 # %%
 COMPLEXITIES = (None, "light", "medium light", "medium", "medium heavy", "heavy")
 
+with open("notes.yaml") as f:
+    NOTES = safe_load(f)
 
-def game_str(game, bgg_id=None, position=None):
+
+def game_str(game, bgg_id=None, position=None, notes=NOTES):
     bgg_id = game["bgg_id"] if bgg_id is None else bgg_id
     position_str = f"#{int(position)}: " if position is not None else ""
     name = game.get("name_raw") or game.get("name")
@@ -244,6 +248,11 @@ def game_str(game, bgg_id=None, position=None):
         if kennerspiel_score >= 50
         else f"{100 - kennerspiel_score}% {{{{% sdj %}}}}Spiel{{{{% /sdj %}}}}"
     )
+    text = (
+        note.get("text")
+        if notes and (note := notes.get(bgg_id))
+        else f"{{{{% game {bgg_id} %}}}}{name}{{{{% /game %}}}}"
+    )
 
     # TODO data for each game: designers, player count, play time, age, complexity, Kennerspiel score
 
@@ -253,15 +262,17 @@ def game_str(game, bgg_id=None, position=None):
 
 {{{{< img src="{bgg_id}" size="x300" alt="{name}" >}}}}
 
-{{{{% game {bgg_id} %}}}}{name}{{{{% /game %}}}}"""
+{text}"""
 
 
 # %%
-for pos, (bgg_id, game) in enumerate(sdj[:12].iterrows()):
-    print(game_str(game, bgg_id, pos + 1))
-    print("\n")
+with open("candidates.md", "w") as f:
+    print("# Spiel des Jahres\n\n", file=f)
+    for pos, (bgg_id, game) in enumerate(sdj[:12].iterrows()):
+        print(game_str(game, bgg_id, pos + 1), file=f)
+        print("\n", file=f)
 
-# %%
-for pos, (bgg_id, game) in enumerate(kdj[:12].iterrows()):
-    print(game_str(game, bgg_id, pos + 1))
-    print("\n")
+    print("# Kennerspiel des Jahres\n\n", file=f)
+    for pos, (bgg_id, game) in enumerate(kdj[:12].iterrows()):
+        print(game_str(game, bgg_id, pos + 1), file=f)
+        print("\n", file=f)
