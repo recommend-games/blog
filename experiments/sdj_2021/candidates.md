@@ -7,7 +7,7 @@
 
 {{< img src="318977" size="x300" alt="MicroMacro: Crime City" >}}
 
-Possibly the hottest candidate. {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
+Some games can be played without reading any rules. {{% game 318977 %}}MicroMacro{{% /game %}} goes one step further: You can start playing the game right on the box. This alone makes it a strong contender. I wonder though if the jury will consider a game full of murders and crimes a pleasant pastime for families.
 
 
 ## #2: {{% game 266524 %}}PARKS{{% /game %}}
@@ -16,7 +16,7 @@ Possibly the hottest candidate. {{% game 318977 %}}MicroMacro: Crime City{{% /ga
 
 {{< img src="266524" size="x300" alt="PARKS" >}}
 
-{{% game 266524 %}}PARKS{{% /game %}}
+Something of a latecomer to Germany, the looks and theme of {{% game 266524 %}}PARKS{{% /game %}} are somewhat reminiscent of the previous {{% kdj %}}Kennerspiel{{% /kdj %}} winner {{% game 266192 %}}Wingspan{{% /game %}}. Will this work to its advantage?
 
 
 ## #3: {{% game 276498 %}}Paris: La Cité de la Lumière{{% /game %}}
@@ -25,7 +25,7 @@ Possibly the hottest candidate. {{% game 318977 %}}MicroMacro: Crime City{{% /ga
 
 {{< img src="276498" size="x300" alt="Paris: La Cité de la Lumière" >}}
 
-{{% game 276498 %}}Paris: La Cité de la Lumière{{% /game %}}
+While the algorithm ranks this highly, I still do not see a pure 2-player-game win the main award. A place on the recommendation list on the other hand is always possible.
 
 
 ## #4: {{% game 256788 %}}Detective Club{{% /game %}}
@@ -34,7 +34,7 @@ Possibly the hottest candidate. {{% game 318977 %}}MicroMacro: Crime City{{% /ga
 
 {{< img src="256788" size="x300" alt="Detective Club" >}}
 
-{{% game 256788 %}}Detective Club{{% /game %}}
+Light and social, just like the jury likes their {{% sdj %}}red games{{% /sdj %}}. {{% game 256788 %}}Detective Club{{% /game %}} requires at least four players though, and the jury generally wants three players as well.
 
 
 ## #5: {{% game 223040 %}}Fantasy Realms{{% /game %}}
@@ -43,7 +43,7 @@ Possibly the hottest candidate. {{% game 318977 %}}MicroMacro: Crime City{{% /ga
 
 {{< img src="223040" size="x300" alt="Fantasy Realms" >}}
 
-{{% game 223040 %}}Fantasy Realms{{% /game %}}
+Quite an old game by international standards, but it garnered its share of positive review. A breezy card game might just be what the jury is looking for!
 
 
 ## #6: {{% game 300327 %}}The Castles of Tuscany{{% /game %}}
@@ -52,7 +52,7 @@ Possibly the hottest candidate. {{% game 318977 %}}MicroMacro: Crime City{{% /ga
 
 {{< img src="300327" size="x300" alt="The Castles of Tuscany" >}}
 
-{{% game 300327 %}}The Castles of Tuscany{{% /game %}}
+There's no doubt that the jury is a fan of Stefan Feld's work. {{% game 300327 %}}The Castles of Tuscany{{% /game %}} could earn him his first {{% sdj / %}} nomination.
 
 
 ## #7: {{% game 274960 %}}Point Salad{{% /game %}}
@@ -61,7 +61,7 @@ Possibly the hottest candidate. {{% game 318977 %}}MicroMacro: Crime City{{% /ga
 
 {{< img src="274960" size="x300" alt="Point Salad" >}}
 
-{{% game 274960 %}}Point Salad{{% /game %}}
+By all accounts, this seems to be a light and fun card game that could well be in the jury's wheelhouse. I love the self-ironic title, but will the average gamer get the joke?
 
 
 ## #8: {{% game 283864 %}}Trails of Tucana{{% /game %}}

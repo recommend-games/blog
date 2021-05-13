@@ -204,9 +204,6 @@ kdj[:100].style
 # # Outputs
 
 # %%
-sdj.columns
-
-# %%
 COMPLEXITIES = (None, "light", "medium light", "medium", "medium heavy", "heavy")
 
 with open("notes.yaml") as f:
