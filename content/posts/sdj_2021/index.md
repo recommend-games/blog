@@ -158,7 +158,7 @@ Alright, that's what the algorithms say. But just like last year, I'd like to le
 
 * {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
 * {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
-* {{% game 300327 %}}The Castles of Tuscany{{% /game %}}
+* {{% game 299172 %}}The Key: Murder at the Oakdale Club{{% /game %}}
 
 
 # Candidates for {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}
@@ -174,7 +174,7 @@ Alright, that's what the algorithms say. But just like last year, I'd like to le
 
 {{< img src="281259" size="x300" alt="The Isle of Cats" >}}
 
-{{% game 281259 %}}The Isle of Cats{{% /game %}}
+The Internet loves cats, and, apparently, so does the BGG crowd. Card drafting and tile laying combined with lots of cats – what's there not to like?
 
 
 ## #2: {{% game 283155 %}}Calico{{% /game %}}
@@ -183,7 +183,7 @@ Alright, that's what the algorithms say. But just like last year, I'd like to le
 
 {{< img src="283155" size="x300" alt="Calico" >}}
 
-{{% game 283155 %}}Calico{{% /game %}}
+More cats, more puzzling – I sense a theme here. {{% game 283155 %}}Calico{{% /game %}} is held in high regards as well, even for {{% sdj / %}} by some. It'll be exciting to see if the jury has it on their list, and, if so, on which.
 
 
 ## #3: {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
@@ -192,7 +192,7 @@ Alright, that's what the algorithms say. But just like last year, I'd like to le
 
 {{< img src="312484" size="x300" alt="Lost Ruins of Arnak" >}}
 
-{{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
+This game seems to be on everybody's mind, and even though nobody seems excited by it, the consensus is that {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}} perfectly combines deckbuilding with worker placement.
 
 
 ## #4: {{% game 224517 %}}Brass: Birmingham{{% /game %}}
@@ -201,7 +201,7 @@ Alright, that's what the algorithms say. But just like last year, I'd like to le
 
 {{< img src="224517" size="x300" alt="Brass: Birmingham" >}}
 
-{{% game 224517 %}}Brass: Birmingham{{% /game %}}
+Certainly a fan favourite, it climbed to #3 on BGG before it finally received a German release. It's definitely way too heavy to win {{% kdj %}}Kennerspiel{{% /kdj %}}, but that wouldn't stop the jury from recommending it.
 
 
 ## #5: {{% game 283294 %}}Yukon Airways{{% /game %}}
@@ -210,7 +210,7 @@ Alright, that's what the algorithms say. But just like last year, I'd like to le
 
 {{< img src="283294" size="x300" alt="Yukon Airways" >}}
 
-{{% game 283294 %}}Yukon Airways{{% /game %}}
+The only thing on my mind about this game: Would the jury really award a game about flying after we've been collectively grounded for over a year?
 
 
 ## #6: {{% game 317311 %}}Switch & Signal{{% /game %}}
@@ -219,7 +219,7 @@ Alright, that's what the algorithms say. But just like last year, I'd like to le
 
 {{< img src="317311" size="x300" alt="Switch & Signal" >}}
 
-{{% game 317311 %}}Switch & Signal{{% /game %}}
+Train games have a long tradition in board gaming, but {{% game 317311 %}}Switch & Signal{{% /game %}} is the first one I know of to approach the topic co-operatively. Colour me intrigued.
 
 
 ## #7: {{% game 300531 %}}Paleo{{% /game %}}
@@ -228,7 +228,7 @@ Alright, that's what the algorithms say. But just like last year, I'd like to le
 
 {{< img src="300531" size="x300" alt="Paleo" >}}
 
-{{% game 300531 %}}Paleo{{% /game %}}
+{{% game 300531 %}}Paleo{{% /game %}} already received so much love for the game, and so much criticism for the rule book. The jury is known to exclude games when they just put an undue burden on the players to learn, but in this case the qualities of the game probably win.
 
 
 ## #8: {{% game 281075 %}}Welcome to New Las Vegas{{% /game %}}
@@ -237,7 +237,7 @@ Alright, that's what the algorithms say. But just like last year, I'd like to le
 
 {{< img src="281075" size="x300" alt="Welcome to New Las Vegas" >}}
 
-{{% game 281075 %}}Welcome to New Las Vegas{{% /game %}}
+The jury ignored the original {{% game 233867 %}}Welcome To…{{% /game %}}, but will it notice this more complex version set in Nevada?
 
 
 ## #9: {{% game 286096 %}}Tapestry{{% /game %}}
@@ -246,7 +246,7 @@ Alright, that's what the algorithms say. But just like last year, I'd like to le
 
 {{< img src="286096" size="x300" alt="Tapestry" >}}
 
-{{% game 286096 %}}Tapestry{{% /game %}}
+Stonemaier Games sure knows how to put out beautful products, but I think in the case of {{% game 286096 %}}Tapestry{{% /game %}} the result is just too big and too expensive for a {{% kdj / %}}.
 
 
 ## #10: {{% game 282954 %}}Paris{{% /game %}}
@@ -255,7 +255,7 @@ Alright, that's what the algorithms say. But just like last year, I'd like to le
 
 {{< img src="282954" size="x300" alt="Paris" >}}
 
-{{% game 282954 %}}Paris{{% /game %}}
+The K&K of board gaming show no signs of slowing down, and their latest brain child {{% game 282954 %}}Paris{{% /game %}} has received a lot of love.
 
 
 ## #11: {{% game 304420 %}}Bonfire{{% /game %}}
@@ -280,7 +280,7 @@ Alright, that's what the algorithms say. But just like last year, I'd like to le
 
 * {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
 * {{% game 300531 %}}Paleo{{% /game %}}
-* {{% game 281259 %}}The Isle of Cats{{% /game %}}
+* {{% game 317311 %}}Switch & Signal{{% /game %}}
 
 
 # Honourable mentions

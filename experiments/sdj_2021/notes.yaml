@@ -3,7 +3,7 @@
   text: 'Quite an old game by international standards, but it garnered its share of positive review. A breezy card game might just be what the jury is looking for!'
 224517:
   name: 'Brass: Birmingham'
-  text: '{{% game 224517 %}}Brass: Birmingham{{% /game %}}'
+  text: 'Certainly a fan favourite, it climbed to #3 on BGG before it finally received a German release. It''s definitely way too heavy to win {{% kdj %}}Kennerspiel{{% /kdj %}}, but that wouldn''t stop the jury from recommending it.'
 251247:
   name: Barrage
   text: '{{% game 251247 %}}Barrage{{% /game %}}'
@@ -33,25 +33,25 @@
   text: While the algorithm ranks this highly, I still do not see a pure 2-player-game win the main award. A place on the recommendation list on the other hand is always possible.
 281075:
   name: Welcome to New Las Vegas
-  text: '{{% game 281075 %}}Welcome to New Las Vegas{{% /game %}}'
+  text: 'The jury ignored the original {{% game 233867 %}}Welcome To…{{% /game %}}, but will it notice this more complex version set in Nevada?'
 281259:
   name: The Isle of Cats
-  text: '{{% game 281259 %}}The Isle of Cats{{% /game %}}'
+  text: 'The Internet loves cats, and, apparently, so does the BGG crowd. Card drafting and tile laying combined with lots of cats – what''s there not to like?'
 282954:
   name: Paris
-  text: '{{% game 282954 %}}Paris{{% /game %}}'
+  text: 'The K&K of board gaming show no signs of slowing down, and their latest brain child {{% game 282954 %}}Paris{{% /game %}} has received a lot of love.'
 283155:
   name: Calico
-  text: '{{% game 283155 %}}Calico{{% /game %}}'
+  text: 'More cats, more puzzling – I sense a theme here. {{% game 283155 %}}Calico{{% /game %}} is held in high regards as well, even for {{% sdj / %}} by some. It''ll be exciting to see if the jury has it on their list, and, if so, on which.'
 283294:
   name: Yukon Airways
-  text: '{{% game 283294 %}}Yukon Airways{{% /game %}}'
+  text: 'The only thing on my mind about this game: Would the jury really award a game about flying after we''ve been collectively grounded for over a year?'
 283864:
   name: Trails of Tucana
-  text: "Yet another simple roll/flip'n'write. The jury does appreciate those, so this title definitely has its chance."
+  text: "Yet another simple roll/flip'n'write. It reminds me a lot of last year's {{% game 270673 %}}Silver & Gold{{% /game %}} which I had high hopes for, but was completely ignored by the jury. Might not be the best omen for {{% game 283864 %}}Trails of Tucana{{% /game %}}."
 286096:
   name: Tapestry
-  text: '{{% game 286096 %}}Tapestry{{% /game %}}'
+  text: 'Stonemaier Games sure knows how to put out beautful products, but I think in the case of {{% game 286096 %}}Tapestry{{% /game %}} the result is just too big and too expensive for a {{% kdj / %}}.'
 293014:
   name: Nidavellir
   text: '{{% game 293014 %}}Nidavellir{{% /game %}}'
@@ -75,7 +75,7 @@
   text: "There's no doubt that the jury is a fan of [Stefan Feld](https://recommend.games/#/?designer=4958)'s work. {{% game 300327 %}}The Castles of Tuscany{{% /game %}} could earn him his first {{% sdj / %}} nomination."
 300531:
   name: Paleo
-  text: '{{% game 300531 %}}Paleo{{% /game %}}'
+  text: '{{% game 300531 %}}Paleo{{% /game %}} already received so much love for the game, and so much criticism for the rule book. The jury is known to exclude games when they just put an undue burden on the players to learn, but in this case the qualities of the game probably win.'
 300753:
   name: Cross Clues
   text: '{{% game 300753 %}}Cross Clues{{% /game %}}'
@@ -96,13 +96,13 @@
   text: '{{% game 306680 %}}GOLD{{% /game %}}'
 312484:
   name: Lost Ruins of Arnak
-  text: '{{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}'
+  text: 'This game seems to be on everybody''s mind, and even though nobody seems excited by it, the consensus is that {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}} perfectly combines deckbuilding with worker placement.'
 313531:
   name: "Bl\xE4tterrauschen"
   text: "{{% game 313531 %}}Bl\xE4tterrauschen{{% /game %}}"
 317311:
   name: Switch & Signal
-  text: '{{% game 317311 %}}Switch & Signal{{% /game %}}'
+  text: 'Train games have a long tradition in board gaming, but {{% game 317311 %}}Switch & Signal{{% /game %}} is the first one I know of to approach the topic co-operatively. Colour me intrigued.'
 318553:
   name: 'Rajas of the Ganges: The Dice Charmers'
   text: '{{% game 318553 %}}Rajas of the Ganges: The Dice Charmers{{% /game %}}'
