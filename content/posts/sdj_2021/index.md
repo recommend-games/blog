@@ -95,7 +95,7 @@ Quite an old game by international standards, but it garnered its share of posit
 
 {{< img src="300327" size="x300" alt="The Castles of Tuscany" >}}
 
-There's no doubt that the jury is a fan of Stefan Feld's work. {{% game 300327 %}}The Castles of Tuscany{{% /game %}} could earn him his first {{% sdj / %}} nomination.
+There's no doubt that the jury is a fan of [Stefan Feld](https://recommend.games/#/?designer=4958)'s work. {{% game 300327 %}}The Castles of Tuscany{{% /game %}} could earn him his first {{% sdj / %}} nomination.
 
 
 ## #7: {{% game 274960 %}}Point Salad{{% /game %}}
@@ -113,7 +113,7 @@ By all accounts, this seems to be a light and fun card game that could well be i
 
 {{< img src="283864" size="x300" alt="Trails of Tucana" >}}
 
-{{% game 283864 %}}Trails of Tucana{{% /game %}}
+Yet another simple roll/flip'n'write. The jury does appreciate those, so this title definitely has its chance.
 
 
 ## #9: {{% game 299172 %}}The Key: Murder at the Oakdale Club{{% /game %}}
@@ -122,7 +122,7 @@ By all accounts, this seems to be a light and fun card game that could well be i
 
 {{< img src="299172" size="x300" alt="The Key: Murder at the Oakdale Club" >}}
 
-{{% game 299172 %}}The Key: Murder at the Oakdale Club{{% /game %}}
+One year after his smash hit {{% game 284083 %}}The Crew{{% /game %}}, [Thomas Sing](https://recommend.games/#/?designer=45563) might reach for {{% sdj / %}} this time. A real-time deduction game sure sounds like a winning combo!
 
 
 ## #10: {{% game 300877 %}}New York Zoo{{% /game %}}
@@ -131,25 +131,25 @@ By all accounts, this seems to be a light and fun card game that could well be i
 
 {{< img src="300877" size="x300" alt="New York Zoo" >}}
 
-{{% game 300877 %}}New York Zoo{{% /game %}}
+Another puzzle game by [Uwe Rosenberg](https://recommend.games/#/?designer=10), this time filled to the brim with cute animals. Who could resist this proposition?
 
 
-## #11: {{% game 300753 %}}Cross Clues{{% /game %}}
-
-*2–6 players, 5–10 minutes, 7+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="300753" size="x300" alt="Cross Clues" >}}
-
-{{% game 300753 %}}Cross Clues{{% /game %}}
-
-
-## #12: {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
+## #11: {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
 
 *2–4 players, 60 minutes, 10+ years, medium light (1.7), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="326494" size="x300" alt="The Adventures of Robin Hood" >}}
 
-{{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
+As a very recent release, {{% game 326494 %}}Robin Hood{{% /game %}} doesn't have many ratings yet, so it's hard for the algorithm to pick up. But by all appearances, [Michael Menzel](https://recommend.games/#/?designer=11825) of {{% game 127398 %}}Andor{{% /game %}} fame pulled off another great story game.
+
+
+## #12: {{% game 274841 %}}Cóatl{{% /game %}}
+
+*1–4 players, 30–60 minutes, 10+ years, medium light (2.0), 98% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="274841" size="x300" alt="Cóatl" >}}
+
+{{% game 274841 %}}Cóatl{{% /game %}}
 
 
 ## My two cents

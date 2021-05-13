@@ -118,4 +118,4 @@
     /game %}}'
 326494:
   name: The Adventures of Robin Hood
-  text: '{{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}'
+  text: "As a very recent release, {{% game 326494 %}}Robin Hood{{% /game %}} doesn't have many ratings yet, so it's hard for the algorithm to pick up. But by all appearances, [Michael Menzel](https://recommend.games/#/?designer=11825) of {{% game 127398 %}}Andor{{% /game %}} fame pulled off another great story game."
