@@ -7,21 +7,24 @@ verify_ssl = true
 python_version = "3.8"
 
 [packages]
+board-game-recommender = "*"
 board-game-utils = "*"
 bokeh = "*"
-jedi = "<0.18"
-jupyterlab = "<3.0.0"
-jupytext = "<1.9.0"
+imbalanced-learn = "*"
+jupyterlab = "*"
+jupytext = "*"
 matplotlib = "*"
 nb-black = "*"
 numpy = "*"
 pandas = "*"
 pytility = "*"
+requests = "*"
 scikit-learn = "*"
 scipy = "*"
 seaborn = "*"
 shap = "*"
 tabulate = "*"
+tqdm = "*"
 
 [dev-packages]
 pylint = "*"
