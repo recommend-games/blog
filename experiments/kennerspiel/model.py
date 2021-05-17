@@ -31,10 +31,12 @@ SEED = 23
 # %load_ext lab_black
 
 # %%
-sdj = pd.read_csv("../sdj.csv")
-ksdj = pd.read_csv("../ksdj.csv")
+sdj = pd.read_csv("../sdj.csv", low_memory=False)
+ksdj = pd.read_csv("../ksdj.csv", low_memory=False)
 games = pd.read_csv(
-    "../../../board-game-data/scraped/bgg_GameItem.csv", index_col="bgg_id"
+    "../../../board-game-data/scraped/bgg_GameItem.csv",
+    index_col="bgg_id",
+    low_memory=False,
 )
 sdj.shape, ksdj.shape, games.shape
 
