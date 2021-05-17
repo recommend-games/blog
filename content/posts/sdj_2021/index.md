@@ -24,6 +24,8 @@ tags:
   - Kennerspiel des Jahres 2021 predictions
 ---
 
+{{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
+
 It's our favourite time of the year again: time for {{% sdj / %}} nominations! On Monday, May 17th, the jury will once again announce their longlist (aka recommendations) and shortlist (aka nominations) for {{% sdj / %}}, {{% kdj / %}} and {{% kindersdj %}}Kinderspiel des Jahres 2021{{% /kindersdj %}}. Just like [last year]({{<ref "posts/sdj_2020/index.md">}}), I'll try to produce a list of the most promising games to land on the longlist for {{% sdj %}}Spiel{{% /sdj %}} and {{% kdj %}}Kennerspiel{{% /kdj %}}. (I'll promise to get around to {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} predictions [in a couple of years](https://twitter.com/recommend_games/status/1373396030616694785?s=20).)
 
 Unlike last year, I won't use hard filters though to distinguish between {{% sdj %}}red{{% /sdj %}} and {{% kdj %}}anthracite{{% /sdj %}} games, but will rely on the **{{% kdj %}}Kennerspiel{{% /kdj %}} score** I developed [a couple of months back]({{<ref "posts/kennerspiel/index.md">}}). This model tries to predict if a game is a {{% kdj %}}Kennerspiel{{% /kdj %}} or not based on some key features, like complexity, play time, age recommendations and game type. The jury's decision this year what list a game belongs to will be the first actual test for that model too, so let's hope it actually made sense! 🤞
@@ -40,9 +42,7 @@ You can find the [detailed analysis here](predictions.py) and [complete results 
 
 # Candidates for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}
 
-<!-- TODO update logo -->
-
-{{< img src="sdj-blank" size="x300" alt="Spiel des Jahres 2021" >}}
+{{< img src="sdj-2021" size="x300" alt="Spiel des Jahres 2021" >}}
 
 ## #1: {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
 
@@ -163,9 +163,7 @@ Alright, that's what the algorithms say. But just like last year, I'd like to le
 
 # Candidates for {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}
 
-<!-- TODO update logo -->
-
-{{< img src="ksdj-blank" size="x300" alt="Kennerspiel des Jahres 2021" >}}
+{{< img src="ksdj-2021" size="x300" alt="Kennerspiel des Jahres 2021" >}}
 
 
 ## #1: {{% game 281259 %}}The Isle of Cats{{% /game %}}
