@@ -145,6 +145,8 @@ I'd say this really is a satifying result. [Last year]({{<ref "posts/sdj_2020_2/
 
 ## Shortlist
 
-TODO
+Two out of three for both awards dead on, another game at least predicted for a recommendation – that's not too bad. 🧐 I will not deny that {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}} bothers me though since I hadn't even heard of that before.
 
-All that's left to do is waiting. The jury will announce the winners on July 19, we'll be back shortly before that with the favourites for the two awards. 🤓
+Still, this year's outcome sets quite a high benchmark to exceed next year. I'll take the learnings from this year and hopefully will be able to improve my methods even further. 🤓
+
+All that's left to do is waiting. The jury will announce the winners on July 19, we'll be back shortly before that with the favourites for the two awards. 🏆
