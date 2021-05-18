@@ -78,7 +78,7 @@ Looking at the three nominations it's worth noticing that they are all co-operat
 * {{% game 318195 %}}Biss 20{{% /game %}}: This one was at least #30 on the predictions list. Another light co-operative game, very much in keeping with this year's theme!
 * {{% game 267378 %}}Chakra{{% /game %}}: Completely missed this one – BGG's release year is 2019, but the German edition just came out, so it slipped under my radar.
 * {{% game 274960 %}}Point Salad{{% /game %}}: Sometimes, when I see a game, I get the immediate impression: "This is {{% sdj / %}} material!" {{% game 274960 %}}Point Salad{{% /game %}} was one of these games…
-* {{% game 317311 %}}Switch & Signal{{% /game %}}: I even had this down as a nomination – for {{% kdj / %}}. Another co-operative, of course.
+* {{% game 317311 %}}Switch & Signal{{% /game %}}: I even had this one down as a nomination – for {{% kdj / %}}. Another co-operative, of course.
 * {{% game 322039 %}}The Key: Sabotage at Lucky Llama Land{{% /game %}}: I had its two other cousins on my nominations list who have more ratings and hence are much more visible to the recommender. I'd like to learn the jury's reasoning for picking this game in particular out of a series of three. (And counting?) 🤷
 
 
@@ -93,7 +93,7 @@ Looking at the three nominations it's worth noticing that they are all co-operat
 
 {{< img src="223040" size="x300" alt="Fantasy Realms" >}}
 
-Our algorithm was 100% sure {{% game 223040 %}}Fantasy Realms{{% /game %}} wasn't a {{% kdj %}}Kennerspiel{{% /kdj %}}. 😅 (More on that below.) After publishing my predictions, I read more praise by jury members, and realised how well it suits an award, so in the end it wasn't a surprise to see it nominated – just on this particular list.
+Our algorithm was 100% sure {{% game 223040 %}}Fantasy Realms{{% /game %}} wasn't a {{% kdj %}}Kennerspiel{{% /kdj %}}. 😅 (More on that below.) After publishing my predictions, I read more praise by jury members, and realised how well it suits their criteria, so in the end it wasn't a surprise to see it nominated – just on this particular list.
 
 
 ## {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
@@ -116,7 +116,7 @@ Not to brag, but I called this one [months ago](https://twitter.com/recommend_ga
 
 ## {{% kdj / %}} recommendations
 
-* {{% game 191189 %}}Aeon's End{{% /game %}}: This game has been around for some time and earned itself a strong fanbase, so a recommendation by the jury was a fairly safe bet.
+* {{% game 191189 %}}Aeon's End{{% /game %}}: This game has been around for some time and earned itself a strong fan base, so a recommendation by the jury was a fairly safe bet.
 * {{% game 251247 %}}Barrage{{% /game %}}: Definitely on the *very* heavy side even for a {{% kdj %}}Kennerspiel{{% /kdj %}}, yet [Udo Bartsch's high praises](https://rezensionen-fuer-millionen.blogspot.com/2021/02/wasserkraft.html) left no doubt about a recommendation.
 * {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}: Similar to the previous entry, I had a good feeling about a recommendation, but didn't think it'd be actually considered for the award.
 * {{% game 291859 %}}Riftforce{{% /game %}}: I completely missed this one, as did the algorithm, placing it at position 81. At least it classified it correctly as a {{% kdj %}}Kennerspiel{{% /kdj %}} – with 51% confidence. 😰 The only pure two-player-game on either list, this proves how hard it is for lower player counts, even during a pandemic induced shortage of playmates.
