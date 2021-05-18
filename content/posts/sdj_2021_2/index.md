@@ -59,6 +59,15 @@ tags:
 {{< img src="310448" size="x300" alt="Zombie Teenz Evolution" >}}
 
 
+## {{% sdj / %}} recommendations
+
+* {{% game 318195 %}}Biss 20{{% /game %}}
+* {{% game 267378 %}}Chakra{{% /game %}}
+* {{% game 274960 %}}Point Salad{{% /game %}}
+* {{% game 317311 %}}Switch & Signal{{% /game %}}
+* {{% game 322039 %}}The Key: Sabotage at Lucky Llama Land{{% /game %}}
+
+
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}
 
 {{< img src="ksdj-2021" size="x300" alt="Kennerspiel des Jahres 2021" >}}
@@ -66,20 +75,28 @@ tags:
 
 ## {{% game 223040 %}}Fantasy Realms{{% /game %}}
 
-*3–6 players, 20 minutes, 14+ years, medium light (1.7), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+*3–6 players, 20 minutes, 14+ years, medium light (1.7)*
 
 {{< img src="223040" size="x300" alt="Fantasy Realms" >}}
 
 
 ## {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
 
-*1–4 players, 30–120 minutes, 12+ years, medium (2.8), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–4 players, 30–120 minutes, 12+ years, medium (2.8)*
 
 {{< img src="312484" size="x300" alt="Lost Ruins of Arnak" >}}
 
 
 ## {{% game 300531 %}}Paleo{{% /game %}}
 
-*1–4 players, 45–60 minutes, 10+ years, medium (2.6), 88% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–4 players, 45–60 minutes, 10+ years, medium (2.6)*
 
 {{< img src="300531" size="x300" alt="Paleo" >}}
+
+
+## {{% kdj / %}} recommendations
+
+* {{% game 191189 %}}Aeon's End{{% /game %}}
+* {{% game 251247 %}}Barrage{{% /game %}}
+* {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}
+* {{% game 291859 %}}Riftforce{{% /game %}}
