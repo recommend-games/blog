@@ -13,6 +13,7 @@ tags:
   - Game of the Year
   - Germany
   - Logistic regression
+  - Spiel des Jahres 2021 predictions
 ---
 
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.2.3.min.js" ></script>
