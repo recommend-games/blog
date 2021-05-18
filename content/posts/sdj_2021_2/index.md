@@ -120,3 +120,29 @@ Not to brag, but I called this one [months ago](https://twitter.com/recommend_ga
 * {{% game 251247 %}}Barrage{{% /game %}}: Definitely on the *very* heavy side even for a {{% kdj %}}Kennerspiel{{% /kdj %}}, yet [Udo Bartsch's high praises](https://rezensionen-fuer-millionen.blogspot.com/2021/02/wasserkraft.html) left no doubt about a recommendation.
 * {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}: Similar to the previous entry, I had a good feeling about a recommendation, but didn't think it'd be actually considered for the award.
 * {{% game 291859 %}}Riftforce{{% /game %}}: I completely missed this one, as did the algorithm, placing it at position 81. At least it classified it correctly as a {{% kdj %}}Kennerspiel{{% /kdj %}} – with 51% confidence. 😰 The only pure two-player-game on either list, this proves how hard it is for lower player counts, even during a pandemic induced shortage of playmates.
+
+
+# How good were the predictions?
+
+This really is a drama in three acts: the decision of {{% kdj %}}Kennerspiel{{% /kdj %}} or not, the algorithm picking the longlist, and finally my guts picking the shortlist.
+
+
+## {{% kdj %}}Kennerspiel{{% /kdj %}} score
+
+When I introduced the [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}}) a couple of months ago, I didn't really have a good validation set to evaluate my model against. Now I do!
+
+Out of the fifteen games on the longlist, the algorithm classified thirteen correctly. One was predicted wrong on either side of the line: The model saw {{% game 223040 %}}Fantasy Realms{{% /game %}} as a {{% sdj %}}Spiel{{% /sdj %}} and {{% game 317311 %}}Switch & Signal{{% /game %}} as a {{% kdj %}}Kennerspiel{{% /kdj %}}, but the jury saw it reversed. 87% accuracy is actually pretty decent for such a simple model trained on a small dataset, but it's still a nagging feeling just how far off the score for {{% game 223040 %}}Fantasy Realms{{% /game %}} was.
+
+Anyways, we live and we learn, and the model has already been updated with the jury's latest decisions, so hopefully next year it'll work even better!
+
+
+## Longlist
+
+TODO
+
+
+## Shortlist
+
+TODO
+
+All that's left to do is waiting. The jury will announce the winners on July 19, we'll be back shortly before that with the favourites for the two awards. 🤓
