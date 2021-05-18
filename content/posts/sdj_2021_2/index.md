@@ -3,7 +3,7 @@ title: Spiel des Jahres 2021 nominations
 slug: spiel-des-jahres-2021-nominations
 author: Markus Shepherd
 type: post
-date: 2021-05-18T00:00:00+03:00
+date: 2021-05-18T23:25:00+03:00
 tags:
   - SdJ
   - SdJ 2021
