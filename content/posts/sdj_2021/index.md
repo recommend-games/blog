@@ -278,9 +278,9 @@ The K&K of board gaming show no signs of slowing down, and their latest brain ch
 
 Finally, here are my three top candidates for a spot on the shortlist for {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}:
 
-* {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
-* {{% game 300531 %}}Paleo{{% /game %}}
-* {{% game 317311 %}}Switch & Signal{{% /game %}}
+* **{{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}**
+* **{{% game 300531 %}}Paleo{{% /game %}}**
+* **{{% game 317311 %}}Switch & Signal{{% /game %}}**
 
 Again, I think this is another year of fantastic games, so competition for the awards will be fierce. I'm certainly looking forward to learning if the jury agrees with my (algorithm's) assessment!
 
