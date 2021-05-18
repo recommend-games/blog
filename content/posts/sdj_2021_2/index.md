@@ -32,7 +32,7 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-[Nominations are out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2021/)! The jury selected a total of fifteen games for their longlist, eight for {{% sdj / %}} and seven for {{% kdj / %}}. Out of these games, three games are nominated for each award and can hope to get the coveted meepled added to their covers on July 19.
+[Nominations are out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2021/)! The jury selected a total of fifteen games for their longlist, eight for {{% sdj / %}} and seven for {{% kdj / %}}. Out of these games, three games each are nominated for both awards and can hope to get the coveted meeple added to their covers on July 19.
 
 Let's dive straight into the nominations and recommendations, before we discuss how good (or bad) [my predictions]({{<ref "posts/sdj_2021/index.md">}}) were and if the [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}}) is any good.
 
@@ -47,6 +47,10 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 *1–4 players, 15–45 minutes, 10+ years, light (1.1)*
 
 {{< img src="318977" size="x300" alt="MicroMacro: Crime City" >}}
+
+{{% game 318977 %}}MicroMacro{{% /game %}} was a strong favourite of many pundits, so it is no surprise to see it nominated. The proposition of jumping straight into the game – before even unwrapping the box – is clearly something the jury values highly.
+
+Kudos also to the publisher for timing the [announcement](https://twitter.com/spielwiese/status/1394285352660176898?s=20) of the sequel {{% game 338834 %}}MicroMacro: Full House{{% /game %}} perfectly! Interestingly, the next installment will include a form of content warning that should enable parents to decide if a particular case is suitable for their children. This system might remove the main obstacle for {{% game 318977 %}}MicroMacro{{% /game %}} to claim {{% sdj / %}}
 
 
 ## {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
