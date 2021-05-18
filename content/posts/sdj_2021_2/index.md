@@ -133,12 +133,14 @@ When I introduced the [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/k
 
 Out of the fifteen games on the longlist, the algorithm classified thirteen correctly. One was predicted wrong on either side of the line: The model saw {{% game 223040 %}}Fantasy Realms{{% /game %}} as a {{% sdj %}}Spiel{{% /sdj %}} and {{% game 317311 %}}Switch & Signal{{% /game %}} as a {{% kdj %}}Kennerspiel{{% /kdj %}}, but the jury saw it reversed. 87% accuracy is actually pretty decent for such a simple model trained on a small dataset, but it's still a nagging feeling just how far off the score for {{% game 223040 %}}Fantasy Realms{{% /game %}} was.
 
-Anyways, we live and we learn, and the model has already been updated with the jury's latest decisions, so hopefully next year it'll work even better!
+Anyways, *we live and we learn*, and the model has already been updated with the jury's latest decisions, so hopefully next year it'll work even better!
 
 
 ## Longlist
 
-TODO
+I called eleven out of fifteen overall, with five out of eight for {{% sdj / %}} and six out of seven for {{% kdj / %}}. I reward myself a point for {{% game 322039 %}}The Key: Sabotage at Lucky Llama Land{{% /game %}} as I always treated them as a series. 🔑 Likewise I consider {{% game 191189 %}}Aeon's End{{% /game %}}, {{% game 251247 %}}Barrage{{% /game %}}, and {{% game 291457 %}}Gloomhaven{{% /game %}} as hits. Feel free to disagree.
+
+I'd say this really is a satifying result. [Last year]({{<ref "posts/sdj_2020_2/index.md">}}), I only called nine out of fifteen games on the longlists, so my approach is definitely moving into the right direction.
 
 
 ## Shortlist
