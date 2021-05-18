@@ -32,6 +32,10 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
+[Nominations are out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2021/)! The jury selected a total of fifteen games for their longlist, eight for {{% sdj / %}} and seven for {{% kdj / %}}. Out of these games, three games are nominated for each award and can hope to get the coveted meepled added to their covers on July 19.
+
+Let's dive straight into the nominations and recommendations, before we discuss how good (or bad) [my predictions]({{<ref "posts/sdj_2021/index.md">}}) were and if the [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}}) is any good.
+
 
 # Nominated for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}
 
