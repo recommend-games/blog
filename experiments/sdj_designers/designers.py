@@ -56,6 +56,7 @@ kindersdj["award"] = "kinder"
 awards = pd.concat((sdj, kennersdj, kindersdj))
 awards.drop_duplicates("bgg_id", inplace=True)  # TODO handle dupes better
 awards.set_index("bgg_id", inplace=True)
+awards.drop(index=[203416, 203417], inplace=True)  # Just one Exit game
 awards.shape
 
 # %%
@@ -75,3 +76,60 @@ def parse_ids(value):
 
 designers = games["designer"].apply(parse_ids).explode().dropna().astype(int)
 designers.shape
+
+# %%
+columns = [
+    "name",
+    "year",
+    "award",
+    "winner",
+    "nominated",
+    "recommended",
+    "sonderpreis",
+]
+data = games[columns].dropna(subset=["award"]).join(designers)
+data.shape
+
+# %%
+winner = data[data["winner"]]
+nominated = data[~data["winner"] & data["nominated"]]
+recommended = data[~data["winner"] & (~data["nominated"] & data["recommended"])]
+winner.shape, nominated.shape, recommended.shape
+
+
+# %%
+def count_awards(data, label):
+    count = data.groupby(["designer", "award"]).size().unstack(fill_value=0)
+    count["total"] = count.sum(axis=1)
+    count.columns = pd.MultiIndex.from_product([[label], count.columns])
+    return count
+
+
+# %%
+winner_count = count_awards(winner, "winner")
+nominated_count = count_awards(nominated, "nominated")
+recommended_count = count_awards(recommended, "recommended")
+counts = (
+    winner_count.join(nominated_count, how="outer")
+    .join(recommended_count, how="outer")
+    .fillna(0)
+)
+counts.sort_values(
+    [
+        ("winner", "total"),
+        ("winner", "spiel"),
+        ("winner", "kenner"),
+        ("winner", "kinder"),
+        ("nominated", "total"),
+        ("nominated", "spiel"),
+        ("nominated", "kenner"),
+        ("nominated", "kinder"),
+        ("recommended", "total"),
+        ("recommended", "spiel"),
+        ("recommended", "kenner"),
+        # ("recommended", "kinder"),
+    ],
+    ascending=False,
+    inplace=True,
+)
+counts
