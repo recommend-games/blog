@@ -15,6 +15,7 @@
 
 # %%
 import pandas as pd
+from pytility import arg_to_iter, clear_list, parse_int
 
 SEED = 23
 
@@ -63,3 +64,14 @@ games.shape
 
 # %%
 games.sample(5, random_state=SEED).T
+
+
+# %%
+def parse_ids(value):
+    if isinstance(value, str):
+        return parse_ids(value.split(","))
+    return clear_list(map(parse_int, arg_to_iter(value)))
+
+
+designers = games["designer"].apply(parse_ids).explode().dropna().astype(int)
+designers.shape
