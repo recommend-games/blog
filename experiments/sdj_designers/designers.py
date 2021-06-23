@@ -74,8 +74,8 @@ def parse_ids(value):
     return clear_list(map(parse_int, arg_to_iter(value)))
 
 
-designers = games["designer"].apply(parse_ids).explode().dropna().astype(int)
-designers.shape
+designer_awards = games["designer"].apply(parse_ids).explode().dropna().astype(int)
+designer_awards.shape
 
 # %%
 columns = [
@@ -87,7 +87,7 @@ columns = [
     "recommended",
     "sonderpreis",
 ]
-data = games[columns].dropna(subset=["award"]).join(designers)
+data = games[columns].dropna(subset=["award"]).join(designer_awards)
 data.shape
 
 # %%
