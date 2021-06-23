@@ -141,4 +141,8 @@ counts.sort_values(
     ascending=False,
     inplace=True,
 )
+# TODO add highest rated game as final (?) tie breaker
 counts
+
+# %%
+counts.to_csv("designers.csv", float_format="%d")
