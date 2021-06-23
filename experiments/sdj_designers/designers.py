@@ -91,9 +91,12 @@ data = games[columns].dropna(subset=["award"]).join(designers)
 data.shape
 
 # %%
-winner = data[data["winner"]]
-nominated = data[~data["winner"] & data["nominated"]]
-recommended = data[~data["winner"] & (~data["nominated"] & data["recommended"])]
+winner_mask = data["winner"]
+nominated_mask = ~winner_mask & data["nominated"]
+recommended_mask = ~winner_mask & ~nominated_mask & data["recommended"]
+winner = data[winner_mask]
+nominated = data[nominated_mask]
+recommended = data[recommended_mask]
 winner.shape, nominated.shape, recommended.shape
 
 
@@ -114,20 +117,26 @@ counts = (
     .join(recommended_count, how="outer")
     .fillna(0)
 )
+counts[("all", "total")] = (
+    counts[("winner", "total")]
+    + counts[("nominated", "total")]
+    + counts[("recommended", "total")]
+)
 counts.sort_values(
     [
         ("winner", "total"),
+        ("nominated", "total"),
+        ("recommended", "total"),
         ("winner", "spiel"),
         ("winner", "kenner"),
         ("winner", "kinder"),
-        ("nominated", "total"),
         ("nominated", "spiel"),
         ("nominated", "kenner"),
         ("nominated", "kinder"),
-        ("recommended", "total"),
         ("recommended", "spiel"),
         ("recommended", "kenner"),
         # ("recommended", "kinder"),
+        ("all", "total"),
     ],
     ascending=False,
     inplace=True,
