@@ -35,6 +35,14 @@ games = pd.read_csv(
 games.shape
 
 # %%
+designers = pd.read_csv(
+    "../../../board-game-data/scraped/bgg_Person.csv",
+    index_col="bgg_id",
+    low_memory=False,
+)["name"]
+designers.shape
+
+# %%
 sdj = pd.read_csv(
     "../sdj.csv",
     dtype={"winner": bool, "nominated": bool, "recommended": bool, "sonderpreis": str},
@@ -117,6 +125,7 @@ counts = (
     .join(recommended_count, how="outer")
     .fillna(0)
 )
+counts.insert(0, ("designer", "name"), designers)
 counts[("all", "total")] = (
     counts[("winner", "total")]
     + counts[("nominated", "total")]
