@@ -144,7 +144,7 @@ counts.sort_values(
         ("nominated", "kinder"),
         ("recommended", "spiel"),
         ("recommended", "kenner"),
-        # ("recommended", "kinder"),
+        ("recommended", "kinder"),
         ("all", "total"),
     ],
     ascending=False,
@@ -155,3 +155,19 @@ counts
 
 # %%
 counts.to_csv("designers.csv", float_format="%d")
+
+# %%
+print("| Designer | Spiel | Kennerspiel | Kinderspiel |")
+print("|:---------|:-----:|:-----------:|:-----------:|")
+for bgg_id, row in counts.iterrows():
+    cells = [
+        "",
+        f" [{row[('designer', 'name')]}](https://recommend.games/#/?designer={bgg_id:.0f}) ",
+    ]
+    for award in ("spiel", "kenner", "kinder"):
+        winner = row[("winner", award)]
+        nominated = row[("nominated", award)]
+        recommended = row[("recommended", award)]
+        cells.append(f" {winner:.0f} / {nominated:.0f} / {recommended:.0f} ")
+    cells.append("")
+    print("|".join(cells))
