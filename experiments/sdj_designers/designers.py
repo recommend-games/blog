@@ -20,7 +20,7 @@ from pytility import arg_to_iter, clear_list, parse_int
 SEED = 23
 
 pd.options.display.max_columns = 100
-pd.options.display.max_rows = 500
+pd.options.display.max_rows = 1000
 pd.options.display.float_format = "{:.6g}".format
 
 # %load_ext nb_black
