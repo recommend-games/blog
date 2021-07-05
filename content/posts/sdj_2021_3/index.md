@@ -30,7 +30,11 @@ tags:
   - Paleo
 ---
 
+{{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
+
 Introduction.
+
+https://recommend.games/api/games/recommend/?user=S_d_J&year__gt=2021&year__lt=2020&include=318977,310448,326494,223040,312484,300531
 
 
 # Nominated for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}
