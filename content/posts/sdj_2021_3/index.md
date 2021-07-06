@@ -34,8 +34,7 @@ tags:
 
 Introduction.
 
-https://recommend.games/api/games/recommend/?user=S_d_J&year__gt=2021&year__lt=2020&include=318977,310448,326494,223040,312484,300531
-
+https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=223040&include=300531&include=310448&include=312484&include=318977&include=326494&excludeRated=false
 
 # Nominated for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}
 
