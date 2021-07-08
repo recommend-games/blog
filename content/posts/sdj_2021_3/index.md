@@ -32,13 +32,21 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-Introduction.
+It's time! On Monday, July 19, we will finally know which games won {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}. I really think this is an exciting year with six very strong nominees that all have a lot of arguments going for themselves (and a few against). Even after following the whole year releases very closely, I'm still torn as to who'd be the favourites to win. Algorithms won't be much help here either – the sample is just too small. So I'll have to go with my instincts instead… 🤷
 
-https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=223040&include=300531&include=310448&include=312484&include=318977&include=326494&excludeRated=false
+[Last year]({{<ref "posts/sdj_2020_3/index.md">}}) I manage to call both awards correctly. Quite a bar to clear again.
+
+Let's dive straight into the games!
 
 # Nominated for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}
 
 {{< img src="sdj-2021" size="x300" alt="Spiel des Jahres 2021" >}}
+
+| Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=310448,318977,326494&excludeRated=false) | Average | Bayes |
+|:-----|----:|--------:|------:|
+| {{% game 318977 %}}MicroMacro: Crime City{{% /game %}} | **7.4** | 7.9 | **6.9** |
+| {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}} | 6.9 | **8.2** | 6.0 |
+| {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}} | 1.9 | 8.1 | 5.9 |
 
 
 ## {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
@@ -99,6 +107,12 @@ TODO.
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}
 
 {{< img src="ksdj-2021" size="x300" alt="Kennerspiel des Jahres 2021" >}}
+
+| Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=223040,300531,312484&excludeRated=false) | Average | Bayes |
+|:-----|----:|--------:|------:|
+| {{% game 223040 %}}Fantasy Realms{{% /game %}} | 6.8 | 7.5 | 7.0 |
+| {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}} | **7.1** | **8.1** | **7.6** |
+| {{% game 300531 %}}Paleo{{% /game %}} | 7.0 | 7.9 | 6.8 |
 
 
 ## {{% game 223040 %}}Fantasy Realms{{% /game %}}
