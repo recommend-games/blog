@@ -55,6 +55,11 @@ TODO.
 
 TODO.
 
+Let me take this opportunity to address the "it's not a game, it's a puzzle" faction. First off, even if this were true, the jury clearly wouldn't care: Already in their second year, in 1980, they awarded a special prize for the Rubik's Cube, which undoubtably is a solitaire puzzle. An experience someone who loves games would enjoy? Bring it on…
+
+Still, I'd like to make the argument that this *is*, in fact, a game. The standard version, where the game asks you to answer one question about the case after another, might present itself as a series of puzzles, with no player decisions at all. But I'd urge anyone playing this game to quickly switch to the advanced version. There, players are presented with the crime, but are then left alone to investigate the full story on their own. No guiding hand by the game, no feedback if the investigation is complete. The group needs to *decide* for themselves in what order to investigate the different scenes and when to call it complete. This experience differs crucially from a classic puzzle that gives you unambiguous feedback when it's done.
+
+But then again, it doesn't really matter anyways…
 
 ## {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
 
