@@ -42,12 +42,15 @@ Let's dive straight into the games!
 
 {{< img src="sdj-2021" size="x300" alt="Spiel des Jahres 2021" >}}
 
+Before we go into the individual nominees, let's look at some numbers to see some objective measures for the games – as far as this is possible. What we've got at our disposal are the [recommendations to the `S_d_J` bot](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=310448,318977,326494&excludeRated=false), BoardGameGeek's average rating, and the [Bayesian rating]({{<ref "posts/reverse_engineer_bgg/index.md">}}):
+
 | Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=310448,318977,326494&excludeRated=false) | Average | Bayes |
 |:-----|----:|--------:|------:|
 | {{% game 318977 %}}MicroMacro: Crime City{{% /game %}} | **7.4** | 7.9 | **6.9** |
 | {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}} | 6.9 | **8.2** | 6.0 |
 | {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}} | 1.9 | 8.1 | 5.9 |
 
+Overall, {{% game 318977 %}}MicroMacro{{% /game %}} seems to be favourite, but will it survive our own scrutiny?
 
 ## {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
 
@@ -55,13 +58,11 @@ Let's dive straight into the games!
 
 {{< img src="318977" size="x300" alt="MicroMacro: Crime City" >}}
 
-### Pros
+As has been discussed many times, possibly the greatest strength is the immediacy of this game. Better than no rules required: not even opening the box is required. Genius. Also, the jury emphasises that the winner should be ambassador for the hobby board gaming. {{% game 318977 %}}MicroMacro{{% /game %}} would definitely broaden many people's perception of what a modern board game can be.
 
-TODO.
+But before we get too excited, there are some important caveats. The crime theme might be the most obvious – murder and other quite mature topics might not be everyone's idea of family entertainment. The publisher certainly struggles with this: my edition says 8+ years on the box, later editions seem to say 12+. They also introduced some form of content warning for the successor, so parents can stay clear of cases that might not be suitable for their offspring. Overall, judging by their statements, the jury seems to have little objections to some comic figures being murdered, so this might not be an obstacle to the red meeple after all.
 
-### Cons
-
-TODO.
+The other issue is player count. The box claims that this game is for 1 to 4 players, but the jury "corrected" this in their announcement to 1 to *3* players. Those who played the game know that sometimes two players can be a crowd, so this game wouldn't really be one to be enjoyed by the whole family around the Christmas tree – and candles definitely won't provide enough light to read the details off that giant map… 🕯
 
 Let me take this opportunity to address the "it's not a game, it's a puzzle" faction. First off, even if this were true, the jury clearly wouldn't care: Already in their second year, in 1980, they awarded a special prize for the Rubik's Cube, which undoubtably is a solitaire puzzle. An experience someone who loves games would enjoy? Bring it on…
 
