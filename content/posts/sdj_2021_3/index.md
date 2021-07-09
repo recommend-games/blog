@@ -60,7 +60,7 @@ Overall, {{% game 318977 %}}MicroMacro{{% /game %}} seems to be favourite, but w
 
 As has been discussed many times, possibly the greatest strength is the immediacy of this game. Better than no rules required: not even opening the box is required. Genius. Also, the jury emphasises that the winner should be ambassador for the hobby board gaming. {{% game 318977 %}}MicroMacro{{% /game %}} would definitely broaden many people's perception of what a modern board game can be.
 
-But before we get too excited, there are some important caveats. The crime theme might be the most obvious – murder and other quite mature topics might not be everyone's idea of family entertainment. The publisher certainly struggles with this: my edition says 8+ years on the box, later editions seem to say 12+. They also introduced some form of content warning for the successor, so parents can stay clear of cases that might not be suitable for their offspring. Overall, judging by their statements, the jury seems to have little objections to some comic figures being murdered, so this might not be an obstacle to the red meeple after all.
+But before we get too excited, there are some important caveats. The crime theme might be the most obvious – murder and other quite mature topics might not be everyone's idea of family entertainment. The publisher certainly struggles with this: my edition says 8+ years on the box, later editions seem to say 12+. They also introduced some form of content warning for the successor, so parents can stay clear of cases that might not be suitable for their offspring. Overall, judging by their statements, the jury seems to have little objections to some comic figures being murdered, so this might not be an obstacle to the {{% sdj %}}red meeple{{% /sdj %}} after all.
 
 The other issue is player count. The box claims that this game is for 1 to 4 players, but the jury "corrected" this in their announcement to 1 to *3* players. Those who played the game know that sometimes two players can be a crowd, so this game wouldn't really be one to be enjoyed by the whole family around the Christmas tree – and candles definitely won't provide enough light to read the details off that giant map… 🕯
 
@@ -91,13 +91,9 @@ Further, it appears the designer chose a pretty traditional set of characters. T
 
 {{< img src="310448" size="x300" alt="Zombie Teenz Evolution" >}}
 
-### Pros
+There's no way around it, this is the dark horse amongst the nominations. Neither the core mechanics nor the zombie theme seem terribly exciting for hardcore gamers, but for many people that haven't played dozens of zombie games, this is actually surprisingly appealing. The legacy elements promise an interesting and engaging story, and unlike {{% game 326494 %}}Robin Hood{{% /game %}}, this game has been praised for its diverse cast, including a wheelchair on the cover. I imagine this must mean the world for some kids who feel very empowered by this image.
 
-TODO.
-
-### Cons
-
-TODO.
+The numbers don't look very good for this game, but then again, it had just been released and it doesn't really seem to be targeted at BGG's core demographics. But there is a serious obstacle to winning the main award: both the cartoon artwork and the "teenz" in the title suggest that this is a family game. And while many people will refer to the {{% sdj %}}red award{{% /sdj %}} as the "family game of the year", the jury will go through great length to avoid this term since, again, the {{% sdj / %}} is meant to be for *everyone* and that includes groups without children. Pinning the award on what appears to be a game for a young audience might exclude some loyal fans.
 
 
 ## Who will win?
