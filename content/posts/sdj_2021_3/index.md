@@ -124,13 +124,11 @@ This promises an even closer race – the numbers certainly don't yield any clea
 
 {{< img src="223040" size="x300" alt="Fantasy Realms" >}}
 
-### Pros
+{{% game 223040 %}}Fantasy Realms{{% /game %}} has been around internationally for some time and has garnered a loyal fanbase, though it failed to make a huge impact so far. Winning {{% kdj %}}Kennerspiel{{% /kdj %}} could change that.
 
-TODO.
+It certainly has a lot going for itself. A quick card game with lots of winning combinations to be discovered sounds like something the jury always appreciates, in particular since they clearly lean towards simpler games for both awards. The fast playing time and wide player count could make it the ideal "step up" for those who seeks the next challenge after enjoying a {{% sdj / %}} winner.
 
-### Cons
-
-TODO.
+There is the issue of its bland theme and artwork. It doesn't have to be a negative though, as a generic setting might just mean lots of people will be open to playing a particular game. In this particular case, the artwork does feel pretty old-fashioned, including some of the more problematic tropes of the genre. When drawing in new gamers, appealing artwork is very important, so I really think this game could be a winner with better artwork.
 
 
 ## {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
