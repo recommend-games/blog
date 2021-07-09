@@ -107,11 +107,15 @@ But the other nominees are definitely strong contenders, and any of the potentia
 
 {{< img src="ksdj-2021" size="x300" alt="Kennerspiel des Jahres 2021" >}}
 
+Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspiel{{% /kdj %}} nominees:
+
 | Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=223040,300531,312484&excludeRated=false) | Average | Bayes |
 |:-----|----:|--------:|------:|
-| {{% game 223040 %}}Fantasy Realms{{% /game %}} | 6.8 | 7.5 | 7.0 |
-| {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}} | **7.1** | **8.1** | **7.6** |
-| {{% game 300531 %}}Paleo{{% /game %}} | 7.0 | 7.9 | 6.8 |
+| {{% game 223040 %}}Fantasy Realms{{% /game %}} | 7.0 | 7.5 | 7.0 |
+| {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}} | 7.3 | **8.1** | **7.6** |
+| {{% game 300531 %}}Paleo{{% /game %}} | **7.7** | 7.9 | 6.8 |
+
+This promises an even closer race – the numbers certainly don't yield any clear favourites. 🤷
 
 
 ## {{% game 223040 %}}Fantasy Realms{{% /game %}}
