@@ -36,19 +36,19 @@ It's time! On Monday, July 19, we will finally know which games won {{% sdj / %}
 
 [Last year]({{<ref "posts/sdj_2020_3/index.md">}}) I manage to call both awards correctly. Quite a bar to clear again.
 
-Let's dive straight into the games!
+Let's check out the nominees!
 
 # Nominated for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}
 
 {{< img src="sdj-2021" size="x300" alt="Spiel des Jahres 2021" >}}
 
-Before we go into the individual nominees, let's look at some numbers to see some objective measures for the games – as far as this is possible. What we've got at our disposal are the [recommendations to the `S_d_J` bot](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=310448,318977,326494&excludeRated=false), BoardGameGeek's average rating, and the [Bayesian rating]({{<ref "posts/reverse_engineer_bgg/index.md">}}):
+Before we dive into the individual games, let's look at some numbers to see some objective measures for them – as far as this is possible. What we've got at our disposal are the [recommendations to the `S_d_J` bot](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=223040,300531,310448,312484,318977,326494&excludeRated=false), BoardGameGeek's average rating, and the [Bayesian rating]({{<ref "posts/reverse_engineer_bgg/index.md">}}):
 
 | Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=310448,318977,326494&excludeRated=false) | Average | Bayes |
 |:-----|----:|--------:|------:|
-| {{% game 318977 %}}MicroMacro: Crime City{{% /game %}} | **7.4** | 7.9 | **6.9** |
-| {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}} | 6.9 | **8.2** | 6.0 |
-| {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}} | 1.9 | 8.1 | 5.9 |
+| {{% game 318977 %}}MicroMacro: Crime City{{% /game %}} | **8.0** | 7.9 | **6.9** |
+| {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}} | 7.0 | **8.2** | 6.0 |
+| {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}} | 2.1 | 8.1 | 5.9 |
 
 Overall, {{% game 318977 %}}MicroMacro{{% /game %}} seems to be favourite, but will it survive our own scrutiny?
 
@@ -68,7 +68,7 @@ Let me take this opportunity to address the "it's not a game, it's a puzzle" fac
 
 Still, I'd like to make the argument that this *is*, in fact, a game. The standard version, where the game asks you to answer one question about the case after another, might present itself as a series of puzzles, with no player decisions at all. But I'd urge anyone playing this game to quickly switch to the advanced version. There, players are presented with the crime, but are then left alone to investigate the full story on their own. No guiding hand by the game, no feedback if the investigation is complete. The group needs to *decide* for themselves in what order to investigate the different scenes and when to call it complete. This experience differs crucially from a classic puzzle that gives you unambiguous feedback when it's done.
 
-But then again, it doesn't really matter anyways…
+But then again, it *really* doesn't matter anyways…
 
 ## {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
 
@@ -76,13 +76,13 @@ But then again, it doesn't really matter anyways…
 
 {{< img src="326494" size="x300" alt="The Adventures of Robin Hood" >}}
 
-### Pros
+{{% game 326494 %}}Robin Hood{{% /game %}} has been praised for its narrative experience that perfectly blends art, mechanics and storytelling. The classic tale will draw in many people for their childhood memories. Moving around freely on a game board and opening "advent calendars" along the way just sounds like a lot of fun, and the book looks gorgeous.
 
-TODO.
+Keeping in mind that there is no English edition yet and consequently only very few ratings on BGG, it is actually remarkable how highly our algorithm already rates the game. By all appearances, this is a strong contender.
 
-### Cons
+If there's one drawback, it might be the price point. It retails at around 50€, but will have run its course after a finite number of plays. This might not sit well with the very casual audience the award is aimed at.
 
-TODO.
+Further, it appears the designer chose a pretty traditional set of characters. This might please fans of the original stories, but for my taste I'd appreciated the courage for a more diverse representation in 2021. The jury wants to award a game for *everyone*, so any player should be able to see themselves in the game.
 
 
 ## {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}}
