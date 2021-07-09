@@ -98,7 +98,9 @@ The numbers don't look very good for this game, but then again, it had just been
 
 ## Who will win?
 
-TODO.
+I've been going back and forth on this – as you can tell, there's pros and cons for each of the nominees. In the end though, my money is on **{{% game 318977 %}}MicroMacro: Crime City{{% /game %}}** to win {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}. The immediate access and potential shift in the perception what a game can be is just too enticing to pass.
+
+But the other nominees are definitely strong contenders, and any of the potential outcomes on July 19 wouldn't surprise me. It'll be exciting!
 
 
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}
