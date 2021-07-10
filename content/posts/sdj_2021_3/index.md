@@ -137,13 +137,11 @@ There is the issue of its bland theme and artwork. It doesn't have to be a negat
 
 {{< img src="312484" size="x300" alt="Lost Ruins of Arnak" >}}
 
-### Pros
+{{% game 312484 %}}Arnak{{% /game %}} certainly is a fan favourite (currently #65 on BGG) – choosing this game could make the skeptical crowd on the 'geek very happy. The game does come with a broadly appealing theme, a successful merging of two evergreen mechanics (*deck building* and *worker placement*), and great development work that makes playing the game very intuitive.
 
-TODO.
+It *is* on the pretty heavy side for the award though. There's a lot going on in terms of different tiles, tracks, effects… If a {{% kdj %}}Kennerspiel{{% /kdj %}} is meant to be *one* step up, this game might really be *two* steps.
 
-### Cons
-
-TODO.
+It also seems to draw some lukewarm responses from critics. While the execution of the design is generally praised, it doesn't seem to do anything special. On the other hand, this comes from people who have played hundreds of games and chase that next big innovation, while the {{% kdj %}}Kennerspiel{{% /kdj %}} award is targeted at people who might have never played a worker placement nor deck building game and might really enjoy those mechanics here.
 
 
 ## {{% game 300531 %}}Paleo{{% /game %}}
