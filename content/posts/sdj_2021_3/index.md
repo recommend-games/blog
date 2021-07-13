@@ -58,7 +58,7 @@ Overall, {{% game 318977 %}}MicroMacro{{% /game %}} seems to be favourite, but w
 
 {{< img src="318977" size="x300" alt="MicroMacro: Crime City" >}}
 
-As has been discussed many times, possibly the greatest strength is the immediacy of this game. Better than no rules required: not even opening the box is required. Genius. Also, the jury emphasises that the winner should be ambassador for the hobby board gaming. {{% game 318977 %}}MicroMacro{{% /game %}} would definitely broaden many people's perception of what a modern board game can be.
+As has been discussed many times, possibly the greatest strength is the immediacy of this game. Better than no rules required: not even opening the box is required. Genius. Also, the jury emphasises that the winner should be ambassador for the hobby board gaming. {{% game 318977 %}}MicroMacro{{% /game %}} would definitely broaden many people's perception of what a modern board game can be. On top of that, it also made quite the impression amongst the more hardcore gamers, which shows its universal appeal.
 
 But before we get too excited, there are some important caveats. The crime theme might be the most obvious – murder and other quite mature topics might not be everyone's idea of family entertainment. The publisher certainly struggles with this: my edition says 8+ years on the box, later editions seem to say 12+. They also introduced some form of content warning for the successor, so parents can stay clear of cases that might not be suitable for their offspring. Overall, judging by their statements, the jury seems to have little objections to some comic figures being murdered, so this might not be an obstacle to the {{% sdj %}}red meeple{{% /sdj %}} after all.
 
@@ -66,7 +66,7 @@ The other issue is player count. The box claims that this game is for 1 to 4 pla
 
 Let me take this opportunity to address the "it's not a game, it's a puzzle" faction. First off, even if this were true, the jury clearly wouldn't care: Already in their second year, in 1980, they awarded a special prize for the Rubik's Cube, which undoubtably is a solitaire puzzle. An experience someone who loves games would enjoy? Bring it on…
 
-Still, I'd like to make the argument that this *is*, in fact, a game. The standard version, where the game asks you to answer one question about the case after another, might present itself as a series of puzzles, with no player decisions at all. But I'd urge anyone playing this game to quickly switch to the advanced version. There, players are presented with the crime, but are then left alone to investigate the full story on their own. No guiding hand by the game, no feedback if the investigation is complete. The group needs to *decide* for themselves in what order to investigate the different scenes and when to call it complete. This experience differs crucially from a classic puzzle that gives you unambiguous feedback when it's done.
+Still, I'd like to make the argument that this *is*, in fact, a game. The standard version, where the game asks you to answer one question about the case after another, might present itself as a series of puzzles, with no player decisions to influence the course of the game at all. But I'd urge anyone playing this game to quickly switch to the advanced version. There, players are presented with the crime, but are then left alone to investigate the full story on their own. No guiding hand by the game, no feedback if the investigation is complete. The group needs to *decide* for themselves in what order to investigate the different scenes and when to call it complete. This experience differs crucially from a classic puzzle that gives you unambiguous feedback when it's done.
 
 But then again, it *really* doesn't matter anyways…
 
@@ -91,16 +91,16 @@ Further, it appears the designer chose a pretty traditional set of characters. T
 
 {{< img src="310448" size="x300" alt="Zombie Teenz Evolution" >}}
 
-There's no way around it, this is the dark horse amongst the nominations. Neither the core mechanics nor the zombie theme seem terribly exciting for hardcore gamers, but for many people that haven't played dozens of zombie games, this is actually surprisingly appealing. The legacy elements promise an interesting and engaging story, and unlike {{% game 326494 %}}Robin Hood{{% /game %}}, this game has been praised for its diverse cast, including a wheelchair on the cover. I imagine this must mean the world for some kids who feel very empowered by this image.
+There's no way around it, this is the dark horse amongst the nominations. Neither the core mechanics nor the zombie theme seem terribly exciting for hardcore gamers, but for many people that haven't played dozens of zombie games, this is actually surprisingly appealing. The legacy elements promise an interesting and engaging story, and unlike {{% game 326494 %}}Robin Hood{{% /game %}}, this game has been praised for its diverse cast, including a wheelchair on the cover. I imagine this must mean the world for a lot of kids who feel very empowered by this image.
 
 The numbers don't look very good for this game, but then again, it had just been released and it doesn't really seem to be targeted at BGG's core demographics. But there is a serious obstacle to winning the main award: both the cartoon artwork and the "teenz" in the title suggest that this is a family game. And while many people will refer to the {{% sdj %}}red award{{% /sdj %}} as the "family game of the year", the jury will go through great length to avoid this term since, again, the {{% sdj / %}} is meant to be for *everyone* and that includes groups without children. Pinning the award on what appears to be a game for a young audience might exclude some loyal fans.
 
 
 ## Who will win?
 
-I've been going back and forth on this – as you can tell, there's pros and cons for each of the nominees. In the end though, my money is on **{{% game 318977 %}}MicroMacro: Crime City{{% /game %}}** to win {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}. The immediate access and potential shift in the perception what a game can be is just too enticing to pass.
+I've been going back and forth on this – as you can tell, there's pros and cons for each of the nominees. In the end though, my money is on **{{% game 318977 %}}MicroMacro: Crime City{{% /game %}}** to win {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}, ahead of {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}} on close second, with {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}} in a respectable, but slightly more distant third place. The immediate access of {{% game 318977 %}}MicroMacro{{% /game %}} and potential shift in the perception what a game can be is just too enticing to pass.
 
-But the other nominees are definitely strong contenders, and any of the potential outcomes on July 19 wouldn't surprise me. It'll be exciting!
+Still, any of the potential outcomes on July 19 wouldn't surprise me. It'll be exciting!
 
 
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}
@@ -137,7 +137,7 @@ There is the issue of its bland theme and artwork. It doesn't have to be a negat
 
 {{< img src="312484" size="x300" alt="Lost Ruins of Arnak" >}}
 
-{{% game 312484 %}}Arnak{{% /game %}} certainly is a fan favourite (currently #65 on BGG) – choosing this game could make the skeptical crowd on the 'geek very happy. Probably unsurprisingly, it's also by far the most selected option in the poll. The game does come with a broadly appealing theme, a successful merging of two evergreen mechanics (*deck building* and *worker placement*), and great development work that makes playing the game very intuitive.
+{{% game 312484 %}}Arnak{{% /game %}} certainly is a fan favourite (currently #63 on BGG, and climbing) – choosing this game could make the skeptical crowd on the 'geek very happy. Probably unsurprisingly, it's also by far the most selected option in the poll. The game does come with a broadly appealing theme, a successful merging of two evergreen mechanics (*deck building* and *worker placement*), and great development work that makes playing the game very intuitive.
 
 It *is* on the pretty heavy side for the award though. There's a lot going on in terms of different tiles, tracks, effects… If a {{% kdj %}}Kennerspiel{{% /kdj %}} is meant to be *one* step up, this game might really be *two* steps.
 
@@ -152,7 +152,7 @@ On that note: I've heard there's another Indiana Jones movie in the making – I
 
 {{< img src="300531" size="x300" alt="Paleo" >}}
 
-{{% game 300531 %}}Paleo{{% /game %}} was for me an [early favourite](https://twitter.com/recommend_games/status/1331118405810786311?s=20) and hasn't disappointed so far. While it's not exactly a "fresh" theme, the prehistoric setting hasn't worn out yet, the graphics are clean and inviting, and the mammoth on the cover definitely makes we want to explore more. But maybe most importantly the mechanics are the most innovative amongst the nominees – without leaving less experienced players lost. Every turn offers a quick but always interesting decision. As the {{% sdj %}}Spiel{{% /sdj %}} nominees prove, co-operative games are in higher demand than ever, and this one has the whole table involved from the first to the last card in your deck.
+{{% game 300531 %}}Paleo{{% /game %}} was for me an [early favourite](https://twitter.com/recommend_games/status/1331118405810786311?s=20) and hasn't disappointed so far. While it's not exactly a "fresh" theme, the prehistoric setting hasn't worn out yet, the graphics are clean and inviting and the mammoth on the cover definitely makes we want to explore more. But maybe most importantly the mechanics are the most innovative amongst the nominees – without leaving less experienced players lost. Every turn offers a quick but always interesting decision. As the {{% sdj %}}Spiel{{% /sdj %}} nominees prove, co-operative games are in higher demand than ever, and this one has the whole table involved from the first to the last card in your deck.
 
 As you can tell, I quite enjoyed playing {{% game 300531 %}}Paleo{{% /game %}} and think it's very much worthy of the {{% kdj %}}Kennerspiel{{% /kdj %}} trophy. But it's not just my enthusiasm, the critical response was very positive and might get second time designer Peter Rustemeyer's hopes up.
 
@@ -165,6 +165,6 @@ One last sticking point might be player count. It's well compatible with usual {
 
 ## Who will win?
 
-I'll contradict the BGG crowd and say that {{% game 312484 %}}Arnak{{% /game %}} has the lowest chance of winning {{% kdj %}}Kennerspiel{{% /kdj %}} – despite all its quality there seems to be no "hook" that would draw new players in. On the other hand, judging by the jury's statements, {{% game 223040 %}}Fantasy Realms{{% /game %}} would make a fabulous winner – if it came with a fresher, more appealing look… So, after all my praises, it's no surprise **{{% game 300531 %}}Paleo{{% /game %}}** is my favourite to win {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}. However, I really do believe that all three nominees are very strong and have a good chance of winning.
+I'll contradict the BGG crowd and say that {{% game 312484 %}}Arnak{{% /game %}} has the lowest chance of winning {{% kdj %}}Kennerspiel{{% /kdj %}} – despite all its quality there seems to be no "hook" that would draw new players in. On the other hand, judging by the jury's statements, {{% game 223040 %}}Fantasy Realms{{% /game %}} would make a fabulous winner – if it came with a fresher, more appealing look… So, after all my praises, it's no surprise **{{% game 300531 %}}Paleo{{% /game %}}** is my favourite to win {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}. However, I really do believe that all three nominees are very strong and have a realistic chance of winning.
 
-That's all for now – I feel like I need to apologise since it took me hundreds of words just to express "they're all pretty good…" 🤷 Anyways, all this makes me just more excited for the announcement on July 19. 🤓
+That's all for now – I feel like I need to apologise since it took me over two thousand words just to express "they're all pretty good…" 🤷 Anyways, all this makes me just more excited for the announcement on July 19. 🤓
