@@ -3,7 +3,7 @@ title: Spiel des Jahres 2021 predictions – Part 2!
 slug: spiel-des-jahres-2021-predictions-part-2
 author: Markus Shepherd
 type: post
-date: 2021-07-01T00:00:00+03:00
+date: 2021-07-13T00:00:00+03:00
 tags:
   - SdJ
   - SdJ 2021
@@ -62,7 +62,7 @@ As has been discussed many times, possibly the greatest strength is the immediac
 
 But before we get too excited, there are some important caveats. The crime theme might be the most obvious – murder and other quite mature topics might not be everyone's idea of family entertainment. The publisher certainly struggles with this: my edition says 8+ years on the box, later editions seem to say 12+. They also introduced some form of content warning for the successor, so parents can stay clear of cases that might not be suitable for their offspring. Overall, judging by their statements, the jury seems to have little objections to some comic figures being murdered, so this might not be an obstacle to the {{% sdj %}}red meeple{{% /sdj %}} after all.
 
-The other issue is player count. The box claims that this game is for 1 to 4 players, but the jury "corrected" this in their announcement to 1 to *3* players. Those who played the game know that sometimes two players can be a crowd, so this game wouldn't really be one to be enjoyed by the whole family around the Christmas tree – and candles definitely won't provide enough light to read the details off that giant map… 🕯
+The other issue is player count. The box claims that this game is for 1 to 4 players, but the jury "corrected" this in their announcement to 1 to *3* players. Those who played the game know that sometimes even two players can be a crowd, so this game wouldn't really be one to be enjoyed by the whole family around the Christmas tree – and candles definitely won't provide enough light to read the details off that giant map… 🕯
 
 Let me take this opportunity to address the "it's not a game, it's a puzzle" faction. First off, even if this were true, the jury clearly wouldn't care: Already in their second year, in 1980, they awarded a special prize for the Rubik's Cube, which undoubtably is a solitaire puzzle. An experience someone who loves games would enjoy? Bring it on…
 
@@ -137,7 +137,7 @@ There is the issue of its bland theme and artwork. It doesn't have to be a negat
 
 {{< img src="312484" size="x300" alt="Lost Ruins of Arnak" >}}
 
-{{% game 312484 %}}Arnak{{% /game %}} certainly is a fan favourite (currently #65 on BGG) – choosing this game could make the skeptical crowd on the 'geek very happy. The game does come with a broadly appealing theme, a successful merging of two evergreen mechanics (*deck building* and *worker placement*), and great development work that makes playing the game very intuitive.
+{{% game 312484 %}}Arnak{{% /game %}} certainly is a fan favourite (currently #65 on BGG) – choosing this game could make the skeptical crowd on the 'geek very happy. Probably unsurprisingly, it's also by far the most selected option in the poll. The game does come with a broadly appealing theme, a successful merging of two evergreen mechanics (*deck building* and *worker placement*), and great development work that makes playing the game very intuitive.
 
 It *is* on the pretty heavy side for the award though. There's a lot going on in terms of different tiles, tracks, effects… If a {{% kdj %}}Kennerspiel{{% /kdj %}} is meant to be *one* step up, this game might really be *two* steps.
 
@@ -165,4 +165,6 @@ One last sticking point might be player count. It's well compatible with usual {
 
 ## Who will win?
 
-TODO.
+I'll contradict the BGG crowd and say that {{% game 312484 %}}Arnak{{% /game %}} has the lowest chance of winning {{% kdj %}}Kennerspiel{{% /kdj %}} – despite all its quality there seems to be no "hook" that would draw new players in. On the other hand, judging by the jury's statements, {{% game 223040 %}}Fantasy Realms{{% /game %}} would make a fabulous winner – if it came with a fresher, more appealing look… So, after all my praises, it's no surprise **{{% game 300531 %}}Paleo{{% /game %}}** is my favourite to win {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}. However, I really do believe that all three nominees are very strong and have a good chance of winning.
+
+That's all for now – I feel like I need to apologise since it took me hundreds of words just to express "they're all pretty good…" 🤷 Anyways, all this makes me just more excited for the announcement on July 19. 🤓
