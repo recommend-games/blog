@@ -47,8 +47,8 @@ Before we dive into the individual games, let's look at some numbers to see some
 | Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=310448,318977,326494&excludeRated=false) | Average | Bayes |
 |:-----|----:|--------:|------:|
 | {{% game 318977 %}}MicroMacro: Crime City{{% /game %}} | **8.0** | 7.9 | **6.9** |
-| {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}} | 7.0 | **8.2** | 6.0 |
-| {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}} | 2.1 | 8.1 | 5.9 |
+| {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}} | 7.2 | **8.1** | 6.1 |
+| {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}} | 2.4 | **8.1** | 6.0 |
 
 Overall, {{% game 318977 %}}MicroMacro{{% /game %}} seems to be favourite, but will it survive our own scrutiny?
 
@@ -111,9 +111,9 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 
 | Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=223040,300531,312484&excludeRated=false) | Average | Bayes |
 |:-----|----:|--------:|------:|
-| {{% game 223040 %}}Fantasy Realms{{% /game %}} | 7.0 | 7.5 | 7.0 |
-| {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}} | 7.3 | **8.1** | **7.6** |
-| {{% game 300531 %}}Paleo{{% /game %}} | **7.7** | 7.9 | 6.8 |
+| {{% game 223040 %}}Fantasy Realms{{% /game %}} | 6.8 | 7.5 | 7.0 |
+| {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}} | 7.5 | **8.1** | **7.6** |
+| {{% game 300531 %}}Paleo{{% /game %}} | **7.6** | 7.9 | 6.8 |
 
 This promises an even closer race – the numbers certainly don't yield any clear favourites. 🤷
 
@@ -142,6 +142,8 @@ There is the issue of its bland theme and artwork. It doesn't have to be a negat
 It *is* on the pretty heavy side for the award though. There's a lot going on in terms of different tiles, tracks, effects… If a {{% kdj %}}Kennerspiel{{% /kdj %}} is meant to be *one* step up, this game might really be *two* steps.
 
 It also seems to draw some lukewarm responses from critics. While the execution of the design is generally praised, it doesn't seem to do anything special. On the other hand, this comes from people who have played hundreds of games and chase that next big innovation, while the {{% kdj %}}Kennerspiel{{% /kdj %}} award is targeted at people who might have never played a worker placement nor deck building game and might really enjoy those mechanics here.
+
+On that note: I've heard there's another Indiana Jones movie in the making – I smell a branded version of {{% game 312484 %}}Arnak{{% /game %}} soon… 🤠
 
 
 ## {{% game 300531 %}}Paleo{{% /game %}}
