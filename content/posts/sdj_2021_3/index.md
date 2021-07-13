@@ -42,13 +42,13 @@ Let's check out the nominees!
 
 {{< img src="sdj-2021" size="x300" alt="Spiel des Jahres 2021" >}}
 
-Before we dive into the individual games, let's look at some numbers to see some objective measures for them – as far as this is possible. What we've got at our disposal are the [recommendations to the `S_d_J` bot](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=223040,300531,310448,312484,318977,326494&excludeRated=false), BoardGameGeek's average rating, and the [Bayesian rating]({{<ref "posts/reverse_engineer_bgg/index.md">}}):
+Before we dive into the individual games, let's look at some numbers to see some objective measures for them – as far as this is possible. What we've got at our disposal are the [recommendations to the `S_d_J` bot](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=223040,300531,310448,312484,318977,326494&excludeRated=false), BoardGameGeek's average rating, and the [Bayesian rating]({{<ref "posts/reverse_engineer_bgg/index.md">}}). Additionally, I've created a [poll on BGG](https://boardgamegeek.com/thread/2690216/poll-spiel-des-jahres-2021-kennerspiel-des-jahres) where the geeks could have their say:
 
-| Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=310448,318977,326494&excludeRated=false) | Average | Bayes |
-|:-----|----:|--------:|------:|
-| {{% game 318977 %}}MicroMacro: Crime City{{% /game %}} | **8.0** | 7.9 | **6.9** |
-| {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}} | 7.2 | **8.1** | 6.1 |
-| {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}} | 2.4 | **8.1** | 6.0 |
+| Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=310448,318977,326494&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/2690216/poll-spiel-des-jahres-2021-kennerspiel-des-jahres) |
+|:-----|----:|--------:|------:|------:|
+| {{% game 318977 %}}MicroMacro: Crime City{{% /game %}} | **8.0** | 7.9 | **6.9** | **61%** |
+| {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}} | 7.2 | **8.1** | 6.1 | 32% |
+| {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}} | 2.4 | **8.1** | 6.0 | 7% |
 
 Overall, {{% game 318977 %}}MicroMacro{{% /game %}} seems to be favourite, but will it survive our own scrutiny?
 
@@ -109,11 +109,11 @@ But the other nominees are definitely strong contenders, and any of the potentia
 
 Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspiel{{% /kdj %}} nominees:
 
-| Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=223040,300531,312484&excludeRated=false) | Average | Bayes |
-|:-----|----:|--------:|------:|
-| {{% game 223040 %}}Fantasy Realms{{% /game %}} | 6.8 | 7.5 | 7.0 |
-| {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}} | 7.5 | **8.1** | **7.6** |
-| {{% game 300531 %}}Paleo{{% /game %}} | **7.6** | 7.9 | 6.8 |
+| Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2020&include=223040,300531,312484&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/2690216/poll-spiel-des-jahres-2021-kennerspiel-des-jahres) |
+|:-----|----:|--------:|------:|------:|
+| {{% game 223040 %}}Fantasy Realms{{% /game %}} | 6.8 | 7.5 | 7.0 | 5% |
+| {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}} | 7.5 | **8.1** | **7.6** | **79%** |
+| {{% game 300531 %}}Paleo{{% /game %}} | **7.6** | 7.9 | 6.8 | 16% |
 
 This promises an even closer race – the numbers certainly don't yield any clear favourites. 🤷
 
@@ -152,13 +152,15 @@ On that note: I've heard there's another Indiana Jones movie in the making – I
 
 {{< img src="300531" size="x300" alt="Paleo" >}}
 
-### Pros
+{{% game 300531 %}}Paleo{{% /game %}} was for me an [early favourite](https://twitter.com/recommend_games/status/1331118405810786311?s=20) and hasn't disappointed so far. While it's not exactly a "fresh" theme, the prehistoric setting hasn't worn out yet, the graphics are clean and inviting, and the mammoth on the cover definitely makes we want to explore more. But maybe most importantly the mechanics are the most innovative amongst the nominees – without leaving less experienced players lost. Every turn offers a quick but always interesting decision. As the {{% sdj %}}Spiel{{% /sdj %}} nominees prove, co-operative games are in higher demand than ever, and this one has the whole table involved from the first to the last card in your deck.
 
-TODO.
+As you can tell, I quite enjoyed playing {{% game 300531 %}}Paleo{{% /game %}} and think it's very much worthy of the {{% kdj %}}Kennerspiel{{% /kdj %}} trophy. But it's not just my enthusiasm, the critical response was very positive and might get second time designer Peter Rustemeyer's hopes up.
 
-### Cons
+Before we get ahead of ourselves, let's consider what could get in the way of {{% game 300531 %}}Paleo{{% /game %}}'s victory. First off, the often criticised rule book. The jury is *very* harsh when it comes to judging rule books – rightfully so, as badly written rules are the biggest obstacle in the way of players enjoying a game. But they wouldn't have even *recommended* {{% game 300531 %}}Paleo{{% /game %}} if they thought the rules as printed are too obtuse, so I doubt it's a concern now.
 
-TODO.
+The game is also on the heavier side of what's usually consider for the award, but for me it's about the same complexity as {{% game 266192 %}}Wingspan{{% /game %}} – if anything easier to approach as a co-operative campaign game. Talking of which, the different modules and levels make it feel somewhat finite, but then again the levels are fairly replayable and the jury doesn't seem to mind too much anyways.
+
+One last sticking point might be player count. It's well compatible with usual {{% kdj %}}Kennerspiel{{% /kdj %}} metrics *as printed on the box*, but the rules start by saying that under no circumstances should you try this game for the first time with four players. That first play is really critical for a game that's supposed to reach a wide audience, so this caveat could prove costly.
 
 
 ## Who will win?
