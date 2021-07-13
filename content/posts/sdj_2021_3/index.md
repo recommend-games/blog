@@ -3,7 +3,7 @@ title: Spiel des Jahres 2021 predictions – Part 2!
 slug: spiel-des-jahres-2021-predictions-part-2
 author: Markus Shepherd
 type: post
-date: 2021-07-13T00:00:00+03:00
+date: 2021-07-14T00:00:00+03:00
 tags:
   - SdJ
   - SdJ 2021
