@@ -40,7 +40,7 @@ The cat's out of the bag and the winners [have been announced](https://www.spiel
 
 {{< img src="318977" size="x300" alt="MicroMacro: Crime City" >}}
 
-{{% game 318977 %}}MicroMacro{{% /game %}} was the favourite for many people, [myself included]({{<ref "posts/sdj_2021_3/index.md">}}). From the first day this was announced, it was clear that this game is special. The perfect blend of artwork and gameplay, the immediate access, the whismical characters and storytelling… As I've mentioned before, I believe this game will be a great ambassador for the hobby. A deserving winner.
+{{% game 318977 %}}MicroMacro{{% /game %}} was the favourite for many people, [myself included]({{<ref "posts/sdj_2021_3/index.md">}}). From the first day this was announced, it was clear that this game is special. The perfect blend of artwork and gameplay, the immediate access, the whimsical characters and storytelling… As I've mentioned before, I believe this game will be a great ambassador for the hobby. A deserving winner.
 
 
 # {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}
@@ -61,9 +61,9 @@ Within the geek community, {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}} w
 
 First of all, my humble brag: I did it again – I called both awards correctly. 😌 In the end, they went to the two games I had in mind for months, but it really wasn't as obvious as it appears since all the nominees were exceptionally strong in my opinion.
 
-As I like to point out, I really try to do these predictions "by the numbers", i.e., let data and algorithms speak, not my personal taste. However, in this case, both winners were games that I grabbed and played through as soon as I could get my hands on them. So I feel like I "won" twice this year: not only did I predict both awards correctly, I thoroughly enjoyed playing both winners. And I do believe these games will bring a lot of joy to the people who follow the jury's recommendation and buy them for their families and friends.
+As I like to point out, I really try to do these predictions "by the numbers", i.e., let data and algorithms speak, not my personal taste. However, in this case, both winners were games that I grabbed and played through as soon as I could get my hands on them. So I feel like I "won" twice this year: not only did I predict both awards correctly, I also thoroughly enjoyed playing both winners. And I do believe these games will bring a lot of joy to the people who follow the jury's recommendation and buy them for their families and friends.
 
-So long, we'll see each other again for my {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}} predictions – hopefully Covid–19 will be nothing but a bad memory by then! 🦠
+So long, we'll see each other again for my {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}} predictions – hopefully COVID–19 will be nothing but a bad memory by then! 🦠
 
 
 [^livestream]: It's weird to think that in a way, for the past 18 months or so, we had nothing to do but sit at home, but still I managed to be on the move during both livestreams last year (in a supermarket) and this (on a playground). I wonder what people where thinking of me when I was commenting and cheering into my phone… 🧐
