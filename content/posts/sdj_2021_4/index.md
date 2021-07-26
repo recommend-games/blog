@@ -3,7 +3,7 @@ title: Spiel des Jahres 2021 winners
 slug: spiel-des-jahres-2021-winners
 author: Markus Shepherd
 type: post
-date: 2021-07-26T23:00:00+03:00
+date: 2021-07-27T00:00:00+03:00
 tags:
   - SdJ
   - SdJ 2021
