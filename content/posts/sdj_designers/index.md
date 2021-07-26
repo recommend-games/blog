@@ -85,7 +85,9 @@ tags:
 | [Bruno Sautter](https://recommend.games/#/?designer=51055) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Ludovic Roudy](https://recommend.games/#/?designer=51255) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Christian Stöhr](https://recommend.games/#/?designer=60694) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
+| [Johannes Sich](https://recommend.games/#/?designer=70631) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Daniela Stöhr](https://recommend.games/#/?designer=119515) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
+| [Peter Rustemeyer](https://recommend.games/#/?designer=92425) | 0 / 0 / 0 | 1 / 0 / 0 | 0 / 0 / 0 |
 | [Elizabeth Hargrave](https://recommend.games/#/?designer=111338) | 0 / 0 / 0 | 1 / 0 / 0 | 0 / 0 / 0 |
 | [Carol Wiseley](https://recommend.games/#/?designer=137) | 0 / 0 / 0 | 0 / 0 / 0 | 1 / 0 / 0 |
 | [Martin Arnold](https://recommend.games/#/?designer=259) | 0 / 0 / 0 | 0 / 0 / 0 | 1 / 0 / 0 |
@@ -161,7 +163,6 @@ tags:
 | [Marco Ruskowski](https://recommend.games/#/?designer=34864) | 0 / 1 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Marcel Süßelbeck](https://recommend.games/#/?designer=34866) | 0 / 1 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Masao Suganuma](https://recommend.games/#/?designer=68814) | 0 / 1 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
-| [Johannes Sich](https://recommend.games/#/?designer=70631) | 0 / 1 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Reiner Stockhausen](https://recommend.games/#/?designer=158) | 0 / 0 / 0 | 0 / 1 / 0 | 0 / 0 / 0 |
 | [Rob Daviau](https://recommend.games/#/?designer=442) | 0 / 0 / 0 | 0 / 1 / 0 | 0 / 0 / 0 |
 | [Bruce Glassco](https://recommend.games/#/?designer=3440) | 0 / 0 / 0 | 0 / 1 / 0 | 0 / 0 / 0 |
@@ -177,7 +178,6 @@ tags:
 | [Manuel Rozoy](https://recommend.games/#/?designer=69927) | 0 / 0 / 0 | 0 / 1 / 0 | 0 / 0 / 0 |
 | [Peggy Chassenet](https://recommend.games/#/?designer=87947) | 0 / 0 / 0 | 0 / 1 / 0 | 0 / 0 / 0 |
 | [Hjalmar Hach](https://recommend.games/#/?designer=91211) | 0 / 0 / 0 | 0 / 1 / 0 | 0 / 0 / 0 |
-| [Peter Rustemeyer](https://recommend.games/#/?designer=92425) | 0 / 0 / 0 | 0 / 1 / 0 | 0 / 0 / 0 |
 | [Przemysław Rymer](https://recommend.games/#/?designer=99503) | 0 / 0 / 0 | 0 / 1 / 0 | 0 / 0 / 0 |
 | [Jakub Łapot](https://recommend.games/#/?designer=108405) | 0 / 0 / 0 | 0 / 1 / 0 | 0 / 0 / 0 |
 | [Jordy Adan](https://recommend.games/#/?designer=109218) | 0 / 0 / 0 | 0 / 1 / 0 | 0 / 0 / 0 |
