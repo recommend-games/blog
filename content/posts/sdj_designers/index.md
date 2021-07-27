@@ -3,7 +3,7 @@ title: The best board game designers of all times
 slug: best-board-game-designers
 author: Markus Shepherd
 type: post
-date: 2021-06-26T22:00:00+03:00
+date: 2021-07-27T09:00:00+03:00
 tags:
   - SdJ
   - Spiel des Jahres
