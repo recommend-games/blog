@@ -14,6 +14,7 @@
 # ---
 
 # %%
+from datetime import date
 import pandas as pd
 
 pd.options.display.max_columns = 100
@@ -29,4 +30,16 @@ games = pd.read_csv(
     index_col="bgg_id",
     low_memory=False,
 )
+games.drop(index=games[games["compilation_of"].notna()].index, inplace=True)
+games["cooperative"] = games["cooperative"].fillna(False).astype(bool)
 games.shape
+
+# %%
+games["cooperative"].mean()
+
+# %%
+games[games["cooperative"]].sort_values("year").head(10)
+
+# %%
+years = games.groupby("year")["cooperative"].agg(["size", "sum", "mean"])
+years[(years.index >= 1900) & (years.index <= date.today().year)]
