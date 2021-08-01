@@ -16,10 +16,15 @@
 # %%
 from datetime import date
 import pandas as pd
+from bokeh.plotting import figure, output_notebook, show
 
 pd.options.display.max_columns = 100
 pd.options.display.max_rows = 1000
 pd.options.display.float_format = "{:.6g}".format
+
+output_notebook()
+
+this_year = date.today().year
 
 # %load_ext nb_black
 # %load_ext lab_black
@@ -42,4 +47,57 @@ games[games["cooperative"]].sort_values("year").head(10)
 
 # %%
 years = games.groupby("year")["cooperative"].agg(["size", "sum", "mean"])
-years[(years.index >= 1900) & (years.index <= date.today().year)]
+years["total"] = years["size"]
+years["co-operative"] = years["sum"]
+years["competitive"] = years["total"] - years["co-operative"]
+years[(years.index >= 1900) & (years.index <= this_year)]
+
+# %%
+year_from = 2000
+year_to = this_year
+year_range = [str(year) for year in range(year_from, year_to + 1)]
+year_df = years[(years.index >= year_from) & (years.index <= year_to)]
+
+# %%
+data = {
+    "years": year_range,
+    "co-operative": list(year_df["co-operative"]),
+    "competitive": list(year_df["competitive"]),
+}
+
+p = figure(
+    x_range=year_range,
+    plot_height=250,
+    title="Co-operative games",
+    toolbar_location=None,
+    tools="",
+)
+cat = ["co-operative", "competitive"]
+colors = ["#c9d9d3", "#718dbf"]
+p.vbar_stack(cat, x="years", width=0.9, color=colors, source=data, legend_label=cat)
+p.legend.location = "top_left"
+p.legend.orientation = "horizontal"
+p.xaxis.major_label_orientation = 1
+show(p)
+
+# %%
+data = {
+    "years": year_range,
+    "co-operative": list(year_df["co-operative"] / year_df["total"]),
+    "competitive": list(year_df["competitive"] / year_df["total"]),
+}
+
+p = figure(
+    x_range=year_range,
+    plot_height=250,
+    title="Co-operative games",
+    toolbar_location=None,
+    tools="",
+)
+cat = ["co-operative", "competitive"]
+colors = ["#c9d9d3", "#718dbf"]
+p.vbar_stack(cat, x="years", width=0.9, color=colors, source=data, legend_label=cat)
+p.legend.location = "top_left"
+p.legend.orientation = "horizontal"
+p.xaxis.major_label_orientation = 1
+show(p)
