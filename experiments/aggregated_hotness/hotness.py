@@ -47,12 +47,23 @@ def load_hotness(path, start, end):
 
 
 # %%
-result = pd.concat(
-    objs=load_hotness(
-        path=hot_dir,
-        start=parse_date("2021-08-01T00:00Z"),
-        end=parse_date("2021-10-01T00:00Z"),
-    ),
-    axis=1,
-)
-result.shape
+def compute_scores(path, start, end):
+    result = pd.concat(
+        objs=load_hotness(path=path, start=start, end=end),
+        axis=1,
+    )
+    for bgg_id, ranks in result.T.iteritems():
+        yield bgg_id, np.exp2(1 - ranks.sort_values().head(30)).sum() * 100 / 30
+
+
+# %%
+aggregated_hotness = pd.Series(
+    dict(
+        compute_scores(
+            path=hot_dir,
+            start=parse_date("2021-08-01T00:00Z"),
+            end=parse_date("2021-10-01T00:00Z"),
+        )
+    )
+).sort_values(ascending=False)
+aggregated_hotness.head(50)
