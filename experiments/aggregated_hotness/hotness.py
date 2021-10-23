@@ -40,16 +40,19 @@ def load_hotness(path, start, end):
         key=lambda x: x[0].date(),
     ):
         _, p = max(group)
-        s = pd.read_csv(
-            p,
-            index_col="bgg_id",
-        )["rank"]
-        yield d, s
+        s = pd.read_csv(p, index_col="bgg_id",)[
+            "rank"
+        ].rename(d.isoformat())
+        yield s
 
 
 # %%
-rankings = load_hotness(
-    path=hot_dir,
-    start=parse_date("2021-08-01T00:00Z"),
-    end=parse_date("2021-10-01T00:00Z"),
+result = pd.concat(
+    objs=load_hotness(
+        path=hot_dir,
+        start=parse_date("2021-08-01T00:00Z"),
+        end=parse_date("2021-10-01T00:00Z"),
+    ),
+    axis=1,
 )
+result.shape
