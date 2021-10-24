@@ -36,31 +36,38 @@ def _compute_scores(
     path_dir,
     start_date,
     end_date,
-    top=30,
+    top=None,
 ):
     result = pd.concat(
         objs=load_daily_hotness(
-            path_dir=path_dir, start_date=start_date, end_date=end_date
+            path_dir=path_dir,
+            start_date=start_date,
+            end_date=end_date,
         ),
         axis=1,
     )
-    for bgg_id, ranks in result.T.iteritems():
-        yield bgg_id, np.exp2(1 - ranks.sort_values().head(top)).mean()
+
+    if top:
+        return pd.Series(
+            {
+                bgg_id: np.exp2(1 - ranks.sort_values().head(top)).sum() / top
+                for bgg_id, ranks in result.T.iteritems()
+            }
+        )
+
+    full_scores = 2 ** (1 - result)
+    return full_scores.sum(axis=1) / result.shape[1]
 
 
 def aggregate_hotness(
     path_dir,
     start_date,
     end_date,
-    top=30,
+    top=None,
 ):
-    return pd.Series(
-        dict(
-            _compute_scores(
-                path_dir=path_dir,
-                start_date=start_date,
-                end_date=end_date,
-                top=top,
-            )
-        )
+    return _compute_scores(
+        path_dir=path_dir,
+        start_date=start_date,
+        end_date=end_date,
+        top=top,
     ).sort_values(ascending=False)
