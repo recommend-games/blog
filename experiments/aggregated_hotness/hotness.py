@@ -39,7 +39,7 @@ def load_hotness(path, start, end):
         ),
         key=lambda x: x[0].date(),
     ):
-        _, p = max(group)
+        _, p = min(group)
         s = pd.read_csv(p, index_col="bgg_id",)[
             "rank"
         ].rename(d.isoformat())
