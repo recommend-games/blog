@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "wikipedia"
+version = "0.1.0"
+description = ""
+authors = ["Markus Shepherd <markus@recommend.games>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+black = "^21.10b0"
+jupyterlab = "^3.2.2"
+jupytext = "^1.13.0"
+nb-black = "^1.0.7"
+pandas = "^1.3.4"
+pytility = "^0.3.0"
+pylint = "^2.11.1"
+mypy = "^0.910"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
