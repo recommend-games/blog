@@ -31,6 +31,13 @@ from pytility import arg_to_iter, parse_date
 data_path = Path("../../../board-game-data").resolve()
 bgg_path = data_path / "scraped" / "bgg_GameItem.csv"
 wiki_path = data_path / "scraped" / "wikidata_GameItem.jl"
+stats_path = (
+    Path("../../../board-game-scraper").resolve()
+    / "feeds"
+    / "wiki_stats"
+    / "GameItem"
+    / "2021-11-05-merged.jl"
+)
 
 # %%
 games_path = Path(bgg_path).resolve()
@@ -93,3 +100,64 @@ for bgg_id, wiki_links in links.items():
         print("\n".join(sorted(wiki_links)))
         print(c)
         print()
+
+# %%
+wiki_bgg = pd.DataFrame.from_records(
+    data=((url, bgg_id) for bgg_id, urls in links.items() for url in urls),
+    columns=["wikipedia_url", "bgg_id"],
+    index="wikipedia_url",
+)["bgg_id"]
+wiki_bgg.shape
+
+
+# %%
+def agg_monthly_views(path):
+    path = Path(path).resolve()
+    with path.open() as file:
+        games = map(json.loads, file)
+        for (url, month), group in groupby(
+            games, key=lambda game: (game.get("url"), game.get("published_at")[:7])
+        ):
+            views = sum(game.get("page_views") for game in group)
+            yield url, month, views
+
+
+# %%
+page_views = pd.DataFrame.from_records(
+    data=agg_monthly_views(stats_path),
+    columns=["wikipedia_url", "month", "page_views"],
+    index=["wikipedia_url", "month"],
+).join(wiki_bgg, on="wikipedia_url", how="left")
+page_views.dropna(inplace=True)
+page_views["bgg_id"] = page_views["bgg_id"].astype(int)
+page_views.reset_index(inplace=True)
+page_views.shape
+
+# %%
+by_month = (
+    page_views.groupby(["month", "bgg_id"])["page_views"]
+    .sum()
+    .reset_index()
+    .sort_values(
+        by=["month", "page_views"],
+        ascending=[True, False],
+    )
+)
+by_month["rank"] = (
+    by_month.groupby("month")["page_views"]
+    .rank(method="min", ascending=False)
+    .astype(int)
+)
+
+# %%
+by_month[by_month["month"] == "2021-10"].head(50)
+
+# %%
+out_dir = Path().resolve() / "stats"
+out_dir.mkdir(parents=True, exist_ok=True)
+
+# %%
+for month, group in by_month.groupby("month"):
+    print(month, group.shape)
+    out_path = out_dir / f"{month}.csv"
+    group[["rank", "bgg_id", "page_views"]].to_csv(out_path, index=False)
