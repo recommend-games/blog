@@ -16,7 +16,7 @@
 # %%
 import json
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import datetime, timedelta
 from itertools import groupby
 from pathlib import Path
@@ -52,6 +52,16 @@ def is_wiki_url(url):
     return bool(url and domain_regex.match(url.hostname) and path_regex.match(url.path))
 
 
+def wiki_lang(url):
+    url = urlparse(url)
+    domain_match = domain_regex.match(url.hostname)
+    return (
+        domain_match.group(1).lower()
+        if url and domain_match and domain_match.group(1)
+        else None
+    )
+
+
 # %%
 def load_links(path):
     path = Path(path).resolve()
@@ -74,3 +84,12 @@ len(links)
 
 # %%
 games[~games.index.isin(links)].sort_values("rank").head(50)
+
+# %%
+for bgg_id, wiki_links in links.items():
+    c = Counter(wiki_lang(wiki_link) for wiki_link in wiki_links)
+    if c.most_common(1)[0][1] > 1:
+        print(bgg_id)
+        print("\n".join(sorted(wiki_links)))
+        print(c)
+        print()
