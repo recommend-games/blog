@@ -17,12 +17,11 @@
 import json
 import re
 from collections import Counter, defaultdict
-from datetime import datetime, timedelta
 from itertools import groupby
 from pathlib import Path
 from urllib.parse import urlparse
 import pandas as pd
-from pytility import arg_to_iter, parse_date
+from pytility import arg_to_iter
 
 # %load_ext nb_black
 # %load_ext lab_black
@@ -49,6 +48,8 @@ games = pd.read_csv(
 games.shape
 
 # %%
+# TODO this does not capture simple.wikipedia.org
+# TODO check all Wikipedias
 domain_regex = re.compile(r"^([a-z]{2,3})\.wikipedia\.org$")
 path_regex = re.compile(r"^/wiki/(.+)$")
 
