@@ -36,7 +36,7 @@ stats_path = (
     / "feeds"
     / "wiki_stats"
     / "GameItem"
-    / "2021-11-05-merged.jl"
+    / "2021-11-07-merged.jl"
 )
 
 # %%
@@ -138,6 +138,7 @@ by_month = (
     page_views.groupby(["month", "bgg_id"])["page_views"]
     .sum()
     .reset_index()
+    .join(games["name"], on="bgg_id", how="left")
     .sort_values(
         by=["month", "page_views"],
         ascending=[True, False],
