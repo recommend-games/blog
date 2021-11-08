@@ -111,6 +111,9 @@ wiki_bgg = pd.DataFrame.from_records(
 wiki_bgg["lang"] = wiki_bgg.index.map(wiki_lang)
 wiki_bgg.shape
 
+# %%
+wiki_bgg.to_csv(Path().resolve() / "wiki_bgg_links.csv")
+
 
 # %%
 def agg_monthly_views(path):
