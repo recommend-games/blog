@@ -107,7 +107,8 @@ wiki_bgg = pd.DataFrame.from_records(
     data=((url, bgg_id) for bgg_id, urls in links.items() for url in urls),
     columns=["wikipedia_url", "bgg_id"],
     index="wikipedia_url",
-)["bgg_id"]
+)
+wiki_bgg["lang"] = wiki_bgg.index.map(wiki_lang)
 wiki_bgg.shape
 
 
