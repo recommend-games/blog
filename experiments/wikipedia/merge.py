@@ -32,7 +32,7 @@ logging.basicConfig(
 spark = _spark_session(log_level="WARN")
 
 # %%
-df = merge_data(
+wiki_stats = merge_data(
     in_paths="/Users/markus/Recommend.Games/board-game-scraper/feeds/wiki_stats/GameItem/2021-11-05T11-13-58-riemann.jl",
     keys=("url", "published_at"),
     key_types=("str", "date"),
@@ -51,22 +51,28 @@ wiki_bgg = spark.read.csv(
 ).withColumnRenamed("wikipedia_url", "url")
 
 # %%
-joined = df.join(wiki_bgg, on="url", how="inner")
-
-# %%
-agged = (
-    joined.groupBy("published_at", "bgg_id", "lang")
+agg_lang = (
+    wiki_stats.join(wiki_bgg, on="url", how="inner")
+    .groupBy("published_at", "bgg_id", "lang")
     .sum("page_views")
     .withColumnRenamed("sum(page_views)", "page_views")
+    .cache()
 )
 
 # %%
-pivoted = (
-    agged.groupby("published_at", "bgg_id")
-    .pivot("lang")
+all_views = (
+    agg_lang.groupBy("published_at", "bgg_id")
     .sum("page_views")
-    .sort("published_at", "bgg_id")
+    .withColumnRenamed("sum(page_views)", "_all")
 )
 
 # %%
-pivoted.coalesce(1).write.json("out")
+lang_views = agg_lang.groupBy("published_at", "bgg_id").pivot("lang").sum("page_views")
+
+# %%
+full_df = lang_views.join(all_views, on=["published_at", "bgg_id"], how="inner").sort(
+    "published_at", "bgg_id"
+)
+
+# %%
+full_df.coalesce(1).write.json("out")
