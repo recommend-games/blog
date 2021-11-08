@@ -47,6 +47,7 @@ df = merge_data(
 wiki_bgg = spark.read.csv(
     path="/Users/markus/Recommend.Games/recommend-games-blog/experiments/wikipedia/wiki_bgg_links.csv",
     header=True,
+    inferSchema=True,
 ).withColumnRenamed("wikipedia_url", "url")
 
 # %%
@@ -54,8 +55,18 @@ joined = df.join(wiki_bgg, on="url", how="inner")
 
 # %%
 agged = (
-    joined.groupBy(["published_at", "bgg_id", "lang"])
+    joined.groupBy("published_at", "bgg_id", "lang")
     .sum("page_views")
     .withColumnRenamed("sum(page_views)", "page_views")
-    .sort("published_at", "bgg_id", "lang")
 )
+
+# %%
+pivoted = (
+    agged.groupby("published_at", "bgg_id")
+    .pivot("lang")
+    .sum("page_views")
+    .sort("published_at", "bgg_id")
+)
+
+# %%
+pivoted.coalesce(1).write.json("out")
