@@ -41,8 +41,19 @@ logging.basicConfig(
 spark = _spark_session(log_level="WARN")
 
 # %%
+stats_path = (
+    Path("../../../board-game-scraper").resolve()
+    / "feeds"
+    / "wiki_stats"
+    / "GameItem"
+    / "2021-11-07-merged.jl"
+)
+wiki_bgg_path = Path() / "wiki_bgg_links.csv"
+out_dir = Path().resolve() / "stats" / "raw"
+
+# %%
 wiki_stats = merge_data(
-    in_paths="/Users/markus/Recommend.Games/board-game-scraper/feeds/wiki_stats/GameItem/2021-11-05T11-13-58-riemann.jl",
+    in_paths=stats_path,
     keys=("url", "published_at"),
     key_types=("str", "date"),
     latest="scraped_at",
@@ -54,7 +65,7 @@ wiki_stats = merge_data(
 
 # %%
 wiki_bgg = spark.read.csv(
-    path="/Users/markus/Recommend.Games/recommend-games-blog/experiments/wikipedia/wiki_bgg_links.csv",
+    path=str(wiki_bgg_path),
     header=True,
     inferSchema=True,
 ).withColumnRenamed("wikipedia_url", "url")
@@ -93,8 +104,6 @@ def all_rows(path_dir, glob="part-*"):
 
 
 # %%
-out_dir = Path().resolve() / "stats" / "raw"
-
 with TemporaryDirectory() as temp_dir:
     temp_dir = Path(temp_dir).resolve() / "out"
 
