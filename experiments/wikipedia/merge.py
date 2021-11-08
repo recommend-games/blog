@@ -14,9 +14,18 @@
 # ---
 
 # %%
+import json
 import logging
 import sys
+from datetime import timezone
+from itertools import groupby
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from pytility import parse_date
+from tqdm import tqdm
 from board_game_scraper.merge import merge_data, _spark_session
+
+LOGGER = logging.getLogger(__name__)
 
 # %load_ext nb_black
 # %load_ext lab_black
@@ -74,5 +83,36 @@ full_df = lang_views.join(all_views, on=["published_at", "bgg_id"], how="inner")
     "published_at", "bgg_id"
 )
 
+
 # %%
-full_df.coalesce(1).write.json("out")
+def all_rows(path_dir, glob="part-*"):
+    path_dir = Path(path_dir).resolve()
+    for path_file in sorted(path_dir.glob(glob)):
+        with path_file.open() as lines:
+            yield from map(json.loads, lines)
+
+
+# %%
+out_dir = Path().resolve() / "stats" / "raw"
+
+with TemporaryDirectory() as temp_dir:
+    temp_dir = Path(temp_dir).resolve() / "out"
+
+    full_df.write.json(path=str(temp_dir), ignoreNullFields=True)
+
+    for published_at, group in groupby(
+        tqdm(all_rows(temp_dir)),
+        key=lambda row: row.pop("published_at"),
+    ):
+        published_at = parse_date(published_at, tzinfo=timezone.utc)
+        out_path = (
+            out_dir
+            / published_at.strftime("%Y")
+            / published_at.strftime("%m")
+            / published_at.strftime("%Y%m%d-%H%M%S.jl")
+        )
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        with out_path.open("w") as out_file:
+            for row in group:
+                json.dump(row, out_file)
+                out_file.write("\n")
