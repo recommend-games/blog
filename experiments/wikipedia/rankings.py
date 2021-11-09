@@ -66,9 +66,9 @@ for week, group in groupby(
             for lang in grouped.columns[grouped.columns != "page_views"].sort_values()
         )
     )
-    result.to_csv(
+    result.reset_index().to_csv(
         out_dir / date.strftime("%Y%m%d-%H%M%S.csv"),
         float_format="%.0f",
-        columns=["page_views", "rank"] + lang_columns,
+        columns=["rank", "bgg_id", "page_views"] + lang_columns,
     )
     print(result.shape)
