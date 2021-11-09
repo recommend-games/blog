@@ -16,7 +16,7 @@
 # %%
 import json
 import math
-from datetime import timezone
+from datetime import datetime, timedelta, timezone
 from itertools import groupby
 from pathlib import Path
 import pandas as pd
@@ -44,6 +44,8 @@ for week, group in groupby(
     sorted(raw_dir.rglob("*.jl")),
     key=lambda path: parse_date(path.stem, tzinfo=timezone.utc).strftime("%G-%V"),
 ):
+    date = datetime.strptime(f"{week}-1", "%G-%V-%u") + timedelta(days=7)
+    print(date)
     data = pd.DataFrame.from_records(data=parse_rows(group)).rename(
         columns={"_all": "page_views"}
     )
@@ -65,8 +67,8 @@ for week, group in groupby(
         )
     )
     result.to_csv(
-        out_dir / f"{week}.csv",
+        out_dir / date.strftime("%Y%m%d-%H%M%S.csv"),
         float_format="%.0f",
         columns=["page_views", "rank"] + lang_columns,
     )
-    print(week, result.shape)
+    print(result.shape)
