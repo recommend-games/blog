@@ -49,8 +49,8 @@ games.shape
 
 # %%
 # TODO this does not capture simple.wikipedia.org
-# TODO check all Wikipedias
-domain_regex = re.compile(r"^([a-z]{2,3})\.wikipedia\.org$")
+# TODO check all Wikipedias (https://en.wikipedia.org/wiki/List_of_Wikipedias)
+domain_regex = re.compile(r"^([a-z-]+)\.wikipedia\.org$")
 path_regex = re.compile(r"^/wiki/(.+)$")
 
 
@@ -112,7 +112,10 @@ wiki_bgg["lang"] = wiki_bgg.index.map(wiki_lang)
 wiki_bgg.shape
 
 # %%
-wiki_bgg.to_csv(Path().resolve() / "wiki_bgg_links.csv")
+wiki_bgg.reset_index().sort_values(["bgg_id", "lang", "wikipedia_url"]).to_csv(
+    path_or_buf=Path().resolve() / "wiki_bgg_links.csv",
+    index=False,
+)
 
 
 # %%
