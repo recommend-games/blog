@@ -5,7 +5,7 @@ description = ""
 authors = ["Markus Shepherd <markus@recommend.games>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.8,<3.11"
 black = "^21.10b0"
 jupyterlab = "^3.2.2"
 jupytext = "^1.13.0"
@@ -19,6 +19,8 @@ py4j = "0.10.9"
 tqdm = "^4.62.3"
 bokeh = "^2.4.1"
 jupyter-bokeh = "^3.0.4"
+numpy = "^1.21.4"
+scipy = "^1.7.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
