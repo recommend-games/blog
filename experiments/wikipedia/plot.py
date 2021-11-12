@@ -18,7 +18,7 @@ from datetime import datetime
 from pathlib import Path
 import pandas as pd
 from bokeh.io import output_notebook
-from bokeh.palettes import plasma
+from bokeh.palettes import Colorblind8
 from bokeh.plotting import figure, show
 from pytility import parse_date
 
@@ -66,27 +66,29 @@ p = figure(
     # tools=[HoverTool()],
     tooltips="$name",
     x_range=(dates[-11], dates[-1]),
-    y_range=(top + 0.5, 0.5),
+    y_range=(20.5, 0.5),
     x_axis_type="datetime",
     x_axis_label="Date",
-    y_axis_label="rank",
+    y_axis_label="Rank",
     # sizing_mode="stretch_width",
     height=800,
 )
 # p.y_range.flipped = True
 
-for (bgg_id, row), color in zip(df.head(top * 2).T.items(), plasma(top * 2)):
+for i, (bgg_id, row) in enumerate(df.head(top * 2).T.items()):
+    name = games["name"][bgg_id]
+    color = Colorblind8[i % 8]
     p.line(
         dates,
         row,
-        name=f"{games['name'][bgg_id]}",
+        name=name,
         color=color,
         line_width=2,
     )
     p.circle(
         dates,
         row,
-        name=f"{games['name'][bgg_id]}",
+        name=name,
         color=color,
     )
 
