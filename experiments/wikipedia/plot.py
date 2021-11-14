@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.13.0
+#       jupytext_version: 1.13.1
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -16,11 +16,13 @@
 # %%
 from datetime import datetime
 from pathlib import Path
+import numpy as np
 import pandas as pd
 from bokeh.io import output_notebook
 from bokeh.palettes import Colorblind8
 from bokeh.plotting import figure, show
 from pytility import parse_date
+from scipy.interpolate import CubicSpline
 
 output_notebook()
 
@@ -57,9 +59,30 @@ df.shape
 # %%
 df[df.columns[-10:]].head(10)
 
+
 # %%
-dates = df.columns.map(datetime.fromisoformat)
+def ts_to_epoch(ts, anchor=pd.Timestamp("1970-01-01"), freq="1s"):
+    ts = pd.to_datetime(ts)
+    anchor = pd.Timestamp(ts[0] if anchor is None else anchor)
+    return (ts - anchor) / pd.Timedelta(freq)
+
+
+def epoch_to_ts(epochs, anchor=pd.Timestamp("1970-01-01"), freq="1s"):
+    epochs = pd.Series(epochs).astype(float)
+    anchor = pd.Timestamp(anchor)
+    return epochs * pd.Timedelta(freq) + anchor
+
+
+# %%
 top = 50
+data = df[df.columns[-50:]]
+dates = data.columns.map(datetime.fromisoformat)
+
+anchor = dates[0]
+freq = "1w"
+x = ts_to_epoch(dates, anchor, freq)
+xs = np.arange(x[0] - 0.5, x[-1] + 0.5, 0.1)
+xs_dates = epoch_to_ts(xs, anchor, freq)
 
 p = figure(
     title="Wiki stats",
@@ -75,12 +98,14 @@ p = figure(
 )
 # p.y_range.flipped = True
 
-for i, (bgg_id, row) in enumerate(df.head(top * 2).T.items()):
+for i, (bgg_id, row) in enumerate(data.head(top * 2).T.items()):
     name = games["name"][bgg_id]
     color = Colorblind8[i % 8]
+    cs = CubicSpline(x, row.fillna(101))
+
     p.line(
-        dates,
-        row,
+        xs_dates,
+        cs(xs),
         name=name,
         color=color,
         line_width=2,
