@@ -22,7 +22,7 @@ from bokeh.io import output_notebook
 from bokeh.palettes import Colorblind8
 from bokeh.plotting import figure, show
 from pytility import parse_date
-from scipy.interpolate import CubicSpline
+from scipy.interpolate import PchipInterpolator
 
 output_notebook()
 
@@ -81,7 +81,7 @@ dates = data.columns.map(datetime.fromisoformat)
 anchor = dates[0]
 freq = "1w"
 x = ts_to_epoch(dates, anchor, freq)
-xs = np.arange(x[0] - 0.5, x[-1] + 0.5, 0.1)
+xs = np.arange(x[0] - 0.5, x[-1] + 0.5, 0.05)
 xs_dates = epoch_to_ts(xs, anchor, freq)
 
 p = figure(
@@ -101,7 +101,7 @@ p = figure(
 for i, (bgg_id, row) in enumerate(data.head(top * 2).T.items()):
     name = games["name"][bgg_id]
     color = Colorblind8[i % 8]
-    cs = CubicSpline(x, row.fillna(101))
+    cs = PchipInterpolator(x, row.fillna(101))
 
     p.line(
         xs_dates,
