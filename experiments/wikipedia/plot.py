@@ -127,12 +127,14 @@ for i, (bgg_id, row) in enumerate(data.head(top * 2).T.items()):
         name=name,
         color=color,
         line_width=2,
+        # legend_label=name,
     )
     p.circle(
         dates,
         row,
         name=name,
         color=color,
+        # legend_label=name,
     )
 
 # p.legend.visible = False
