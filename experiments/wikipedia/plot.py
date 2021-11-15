@@ -74,14 +74,15 @@ def epoch_to_ts(epochs, anchor=pd.Timestamp("1970-01-01"), freq="1s"):
 
 
 # %%
-top = 50
+top = 20
 data = df[df.columns[-50:]]
 dates = data.columns.map(datetime.fromisoformat)
 
 anchor = dates[0]
 freq = "1w"
 x = ts_to_epoch(dates, anchor, freq)
-xs = np.arange(x[0] - 0.5, x[-1] + 0.5, 0.05)
+x = pd.Series([x[0] - 1] + list(x) + [x[-1] + 1])
+xs = np.arange(x.iloc[0] + 0.5, x.iloc[-1] - 0.5, 0.05)
 xs_dates = epoch_to_ts(xs, anchor, freq)
 
 p = figure(
@@ -101,7 +102,8 @@ p = figure(
 for i, (bgg_id, row) in enumerate(data.head(top * 2).T.items()):
     name = games["name"][bgg_id]
     color = Colorblind8[i % 8]
-    cs = PchipInterpolator(x, row.fillna(101))
+    y = pd.Series([row[0]] + list(row) + [row[-1]]).fillna(101)
+    cs = PchipInterpolator(x, y)
 
     p.line(
         xs_dates,
