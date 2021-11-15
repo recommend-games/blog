@@ -74,6 +74,15 @@ def epoch_to_ts(epochs, anchor=pd.Timestamp("1970-01-01"), freq="1s"):
 
 
 # %%
+def make_xs(values, interval, num_points=5):
+    points = np.arange(num_points) - (num_points - 1) / 2
+    points /= points.max()
+    points *= interval
+    for value in values:
+        yield from (points + value)
+
+
+# %%
 top = 20
 data = df[df.columns[-50:]]
 dates = data.columns.map(datetime.fromisoformat)
@@ -82,7 +91,9 @@ anchor = dates[0]
 freq = "1w"
 x = ts_to_epoch(dates, anchor, freq)
 x = pd.Series([x[0] - 1] + list(x) + [x[-1] + 1])
-xs = np.arange(x.iloc[0] + 0.5, x.iloc[-1] - 0.5, 0.05)
+xs = pd.Series(
+    make_xs(x, 0.2, 15)
+)  # np.arange(x.iloc[0] + 0.5, x.iloc[-1] - 0.5, 0.05)
 xs_dates = epoch_to_ts(xs, anchor, freq)
 
 p = figure(
