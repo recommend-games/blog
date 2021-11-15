@@ -104,12 +104,13 @@ p = figure(
     x_axis_label="Date",
     y_axis_label="Rank",
     # sizing_mode="stretch_width",
-    height=800,
+    height=600,
 )
 p.add_tools(
     HoverTool(
-        tooltips="$name",
+        tooltips="$name: #$y{0} at $x{%F}",
         # mode="vline",
+        formatters={"$x": "datetime"},
     )
 )
 # p.y_range.flipped = True
