@@ -108,7 +108,7 @@ p = figure(
 )
 p.add_tools(
     HoverTool(
-        tooltips="$name: #$y{0} at $x{%F}",
+        tooltips="<b>$name</b>: #$y{0} at $x{%F}",
         # mode="vline",
         formatters={"$x": "datetime"},
     )
