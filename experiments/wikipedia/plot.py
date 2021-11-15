@@ -19,6 +19,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from bokeh.io import output_notebook
+from bokeh.models import HoverTool
 from bokeh.palettes import Colorblind8
 from bokeh.plotting import figure, show
 from pytility import parse_date
@@ -97,8 +98,6 @@ xs_dates = epoch_to_ts(xs, anchor, freq)
 
 p = figure(
     title="Wiki stats",
-    # tools=[HoverTool()],
-    tooltips="$name",
     x_range=(dates[-11], dates[-1]),
     y_range=(20.5, 0.5),
     x_axis_type="datetime",
@@ -106,6 +105,12 @@ p = figure(
     y_axis_label="Rank",
     # sizing_mode="stretch_width",
     height=800,
+)
+p.add_tools(
+    HoverTool(
+        tooltips="$name",
+        # mode="vline",
+    )
 )
 # p.y_range.flipped = True
 
