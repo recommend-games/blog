@@ -91,9 +91,8 @@ anchor = dates[0]
 freq = "1w"
 x = ts_to_epoch(dates, anchor, freq)
 x = pd.Series([x[0] - 1] + list(x) + [x[-1] + 1])
-xs = pd.Series(
-    make_xs(x, 0.2, 15)
-)  # np.arange(x.iloc[0] + 0.5, x.iloc[-1] - 0.5, 0.05)
+# xs = pd.Series(make_xs(x, 0.2, 15))
+xs = np.arange(x.iloc[0] + 0.8, x.iloc[-1] - 0.8, 0.025)
 xs_dates = epoch_to_ts(xs, anchor, freq)
 
 p = figure(
