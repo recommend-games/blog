@@ -14,10 +14,12 @@
 # ---
 
 # %%
+import json
 from datetime import datetime
 from pathlib import Path
 import numpy as np
 import pandas as pd
+from bokeh.embed import json_item
 from bokeh.io import output_notebook
 from bokeh.models import HoverTool, Label
 from bokeh.palettes import Colorblind8
@@ -161,3 +163,7 @@ for i, (bgg_id, row) in enumerate(data.head(top * 2).T.items()):
 # p.legend.visible = False
 
 show(p)
+
+# %%
+with open("wiki_stats.json", "w") as out_file:
+    json.dump(json_item(p), out_file, indent=4)
