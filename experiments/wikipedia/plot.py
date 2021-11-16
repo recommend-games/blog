@@ -19,7 +19,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from bokeh.io import output_notebook
-from bokeh.models import HoverTool
+from bokeh.models import HoverTool, Label
 from bokeh.palettes import Colorblind8
 from bokeh.plotting import figure, show
 from pytility import parse_date
@@ -74,7 +74,6 @@ def epoch_to_ts(epochs, anchor=pd.Timestamp("1970-01-01"), freq="1s"):
     return epochs * pd.Timedelta(freq) + anchor
 
 
-# %%
 def make_xs(values, interval, num_points=5):
     points = np.arange(num_points) - (num_points - 1) / 2
     points /= points.max()
@@ -135,6 +134,16 @@ for i, (bgg_id, row) in enumerate(data.head(top * 2).T.items()):
         name=name,
         color=color,
         # legend_label=name,
+    )
+    p.add_layout(
+        Label(
+            x=dates[-1],
+            x_offset=12,
+            y=row[-1],
+            y_offset=-8,
+            text=name,
+            text_color=color,
+        )
     )
 
 # p.legend.visible = False
