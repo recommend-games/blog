@@ -137,12 +137,24 @@ for i, (bgg_id, row) in enumerate(data.head(top * 2).T.items()):
     )
     p.add_layout(
         Label(
+            x=dates[0],
+            x_offset=-12,
+            y=row[0],
+            text=name,
+            text_color=color,
+            text_align="right",
+            text_baseline="middle",
+        )
+    )
+    p.add_layout(
+        Label(
             x=dates[-1],
             x_offset=12,
             y=row[-1],
-            y_offset=-8,
             text=name,
             text_color=color,
+            text_align="left",
+            text_baseline="middle",
         )
     )
 
