@@ -2,7 +2,7 @@
 name = "kennerspiel"
 version = "0.1.0"
 description = "Kennerspiel scores"
-authors = ["Markus Schepke <markus.schepke@wolt.com>"]
+authors = ["Markus Shepherd <markus@recommend.games>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
