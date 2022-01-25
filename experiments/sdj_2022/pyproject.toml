@@ -9,7 +9,6 @@ license = "MIT"
 python = ">=3.8,<3.9"
 
 black = "^21.12b0"
-board-game-recommender = "\u001b[A\u001b[B"
 board-game-utils = "^0.1.1"
 ipython = "^8.0.1"
 jupyterlab = "^3.2.8"
