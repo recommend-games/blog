@@ -31,8 +31,8 @@ pd.options.display.float_format = "{:.6g}".format
 # %load_ext lab_black
 
 # %%
-include = []  # list(pd.read_csv("include.csv").bgg_id)
-exclude = []  # list(pd.read_csv("exclude.csv").bgg_id)
+include = list(pd.read_csv("include.csv").bgg_id)
+exclude = list(pd.read_csv("exclude.csv").bgg_id)
 len(include), len(exclude)
 
 # %%
@@ -45,14 +45,9 @@ params = {
     "exclude_clusters": True,
     "exclude_known": True,
     "exclude_owned": False,
-    # "complexity__lte": 4,
-    # "min_players__lte": 3,
-    # "max_players__gte": 4,
-    # "min_time__lte": 120,
-    # "min_age__lte": 16,
 }
 
-candidates = list(tqdm(recommend_games(**params)))
+candidates = list(tqdm(recommend_games(max_results=None, **params)))
 
 for game in candidates[:10]:
     print(
@@ -230,7 +225,11 @@ def game_str(game, bgg_id=None, position=None, notes=NOTES):
         if max_time > min_time
         else f"{min_time:d} minutes"
     )
-    player_age = f"{int(min_age)}+ years" if (min_age := game["min_age"]) else ""
+    player_age = (
+        f"{int(min_age)}+ years"
+        if (min_age := game["min_age"]) and pd.notna(min_age)
+        else ""
+    )
     complexity = complexity if (complexity := game["complexity"]) else 0
     complexity_str = f"{COMPLEXITIES[round(complexity)]}" if complexity > 0 else ""
     kennerspiel_score = (
