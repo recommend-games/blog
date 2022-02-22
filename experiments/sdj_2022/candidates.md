@@ -46,13 +46,13 @@
 {{% game 330038 %}}Llamaland{{% /game %}}
 
 
-## #6: {{% game 314503 %}}Codex Naturalis{{% /game %}}
+## #6: {{% game 305761 %}}Whale Riders{{% /game %}}
 
-*2–4 players, 20–30 minutes, 7+ years, medium light (1.8), 99% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–6 players, 30–45 minutes, 8+ years, medium light (2.0), 96% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="314503" size="x300" alt="Codex Naturalis" >}}
+{{< img src="305761" size="x300" alt="Whale Riders" >}}
 
-{{% game 314503 %}}Codex Naturalis{{% /game %}}
+{{% game 305761 %}}Whale Riders{{% /game %}}
 
 
 ## #7: {{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
@@ -64,7 +64,16 @@
 {{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
 
 
-## #8: {{% game 339484 %}}Savannah Park{{% /game %}}
+## #8: {{% game 328479 %}}Living Forest{{% /game %}}
+
+*2–4 players, 40 minutes, 8+ years, medium light (2.2), 56% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="328479" size="x300" alt="Living Forest" >}}
+
+{{% game 328479 %}}Living Forest{{% /game %}}
+
+
+## #9: {{% game 339484 %}}Savannah Park{{% /game %}}
 
 *1–4 players, 20–40 minutes, 8+ years, medium light (1.6), 95% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -73,16 +82,16 @@
 {{% game 339484 %}}Savannah Park{{% /game %}}
 
 
-## #9: {{% game 305761 %}}Whale Riders{{% /game %}}
+## #10: {{% game 314503 %}}Codex Naturalis{{% /game %}}
 
-*2–6 players, 30–45 minutes, 8+ years, medium light (2.0), 96% {{% sdj %}}Spiel{{% /sdj %}}*
+*1–4 players, 20–30 minutes, 7+ years, medium light (1.8), 98% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="305761" size="x300" alt="Whale Riders" >}}
+{{< img src="314503" size="x300" alt="Codex Naturalis" >}}
 
-{{% game 305761 %}}Whale Riders{{% /game %}}
+{{% game 314503 %}}Codex Naturalis{{% /game %}}
 
 
-## #10: {{% game 325698 %}}Juicy Fruits{{% /game %}}
+## #11: {{% game 325698 %}}Juicy Fruits{{% /game %}}
 
 *1–4 players, 20–50 minutes, 8+ years, medium light (2.0), 88% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -91,22 +100,13 @@
 {{% game 325698 %}}Juicy Fruits{{% /game %}}
 
 
-## #11: {{% game 340455 %}}King of the Valley{{% /game %}}
+## #12: {{% game 306173 %}}Lisbon Tram 28{{% /game %}}
 
-*2–4 players, 40–60 minutes, 10+ years, medium light (2.4), 60% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–4 players, 45–60 minutes, 8+ years, medium light (1.9), 96% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="340455" size="x300" alt="King of the Valley" >}}
+{{< img src="306173" size="x300" alt="Lisbon Tram 28" >}}
 
-{{% game 340455 %}}King of the Valley{{% /game %}}
-
-
-## #12: {{% game 326112 %}}Das perfekte Wort{{% /game %}}
-
-*1–6 players, 15 minutes, 12+ years, medium light (1.5), 87% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="326112" size="x300" alt="Das perfekte Wort" >}}
-
-{{% game 326112 %}}Das perfekte Wort{{% /game %}}
+{{% game 306173 %}}Lisbon Tram 28{{% /game %}}
 
 
 # Kennerspiel des Jahres
@@ -121,13 +121,13 @@
 {{% game 246784 %}}Cryptid{{% /game %}}
 
 
-## #2: {{% game 290236 %}}Canvas{{% /game %}}
+## #2: {{% game 304783 %}}Hadrian's Wall{{% /game %}}
 
-*1–5 players, 30 minutes, 14+ years, medium light (1.6), 88% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–6 players, 30–60 minutes, 12+ years, medium (3.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="290236" size="x300" alt="Canvas" >}}
+{{< img src="304783" size="x300" alt="Hadrian's Wall" >}}
 
-{{% game 290236 %}}Canvas{{% /game %}}
+{{% game 304783 %}}Hadrian's Wall{{% /game %}}
 
 
 ## #3: {{% game 342942 %}}Ark Nova{{% /game %}}
@@ -139,7 +139,16 @@
 {{% game 342942 %}}Ark Nova{{% /game %}}
 
 
-## #4: {{% game 318560 %}}Witchstone{{% /game %}}
+## #4: {{% game 290236 %}}Canvas{{% /game %}}
+
+*1–5 players, 30 minutes, 14+ years, medium light (1.6), 88% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="290236" size="x300" alt="Canvas" >}}
+
+{{% game 290236 %}}Canvas{{% /game %}}
+
+
+## #5: {{% game 318560 %}}Witchstone{{% /game %}}
 
 *2–4 players, 60–90 minutes, 12+ years, medium (2.7), 99% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -148,22 +157,13 @@
 {{% game 318560 %}}Witchstone{{% /game %}}
 
 
-## #5: {{% game 314491 %}}Meadow{{% /game %}}
+## #6: {{% game 314491 %}}Meadow{{% /game %}}
 
 *1–4 players, 60–90 minutes, 10+ years, medium light (2.2), 92% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="314491" size="x300" alt="Meadow" >}}
 
 {{% game 314491 %}}Meadow{{% /game %}}
-
-
-## #6: {{% game 304783 %}}Hadrian's Wall{{% /game %}}
-
-*1–6 players, 30–60 minutes, 12+ years, medium (3.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="304783" size="x300" alt="Hadrian's Wall" >}}
-
-{{% game 304783 %}}Hadrian's Wall{{% /game %}}
 
 
 ## #7: {{% game 310873 %}}Carnegie{{% /game %}}
@@ -193,22 +193,22 @@
 {{% game 302098 %}}Chronicles of Crime: 1900{{% /game %}}
 
 
-## #10: {{% game 337690 %}}Escape Room: The Game – Puzzle Adventures: Secret of The Scientist{{% /game %}}
+## #10: {{% game 299684 %}}Khôra: Rise of an Empire{{% /game %}}
+
+*2–4 players, 75 minutes, 14+ years, medium (2.8), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="299684" size="x300" alt="Khôra: Rise of an Empire" >}}
+
+{{% game 299684 %}}Khôra: Rise of an Empire{{% /game %}}
+
+
+## #11: {{% game 337690 %}}Escape Room: The Game – Puzzle Adventures: Secret of The Scientist{{% /game %}}
 
 *1–2 players, 150 minutes, 16+ years, medium light (1.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="337690" size="x300" alt="Escape Room: The Game – Puzzle Adventures: Secret of The Scientist" >}}
 
 {{% game 337690 %}}Escape Room: The Game – Puzzle Adventures: Secret of The Scientist{{% /game %}}
-
-
-## #11: {{% game 350736 %}}Voyages{{% /game %}}
-
-*1–100 players, 20–30 minutes, , medium light (1.9), 82% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="350736" size="x300" alt="Voyages" >}}
-
-{{% game 350736 %}}Voyages{{% /game %}}
 
 
 ## #12: {{% game 318084 %}}Furnace{{% /game %}}
