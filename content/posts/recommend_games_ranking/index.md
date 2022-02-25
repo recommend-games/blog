@@ -22,3 +22,6 @@ Recommendations are based on a technique known as collaborative filtering. Basic
 So, why change this and create a new ranking? There's a number of problems with the old ranking. For one, it's really swingy. Seriously, just take a look at the [history](https://recommend.games/#/history/fac):
 
 [{{< img src="history_crop" size="x300" alt="Ancient history" >}}](history_full.png)
+
+https://gitlab.com/recommend.games/board-game-recommender/-/issues/38
+https://github.com/apple/turicreate/blob/30eced4508bf86c4c59a1fef96bd0b23363db283/src/toolkits/recsys/models/itemcf.cpp#L194
