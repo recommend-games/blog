@@ -31,5 +31,16 @@ Instead, I wanted to create a new ranking which I can at least explain. So here 
 
 That sounds simple and intuitive, but, as the saying goes, the devil is in the details. For starters, there are over 100,000 games in the BoardGameGeek database, and [over 400,000 users](https://twitter.com/recommend_games/status/1498184269402980355) with at least one rated game. Calculating *all recommendations* for *all users* would therefore mean over 40 billion user–game pairs. That's a lot. 😅 But really, we don't care if a game is the 1,000th, 10,000th or 100,000th highest rated game. Instead, we only recommend the top 100 games for each user. The highest game on that list receives 100 points, the next 99, and so on, until the 100th game receives a single point from that user. All other games will be awarded 0 points. The we can simply average those points across all users, and voilà, those scores become the R.G rankings. 🤩
 
+… Except that's still not the whole story. I wasn't happy about the idea of a user who 15 years ago left a single rating being equally important as someone who played and rated hundreds of board games over two decades of BGG history. That's why I tried to model the "trust" we should put in different users' ratings. The idea here would be that we should trust a user's rating more if two things are true:
+
+* They are a regular contributor to BGG, i.e., rate, log plays etc at least once a month over a long period of time.
+* They should rate games with a reasonable distribution, i.e., on a nice bell curve.
+
+For the first point we count each calendar month that the user was active on BGG (e.g., rated a game, logged a play, updated their collection). Then we take the logarithm (base 2) of that number – this means the score will rise quite rapidly in the first year of BGG activity, but then flatten out quite quickly. The goal is not to treat newcomers too harshly. Note that \\(\log_2 1 = 0\\), so new users with only one month of activity will start with zero trust and consequently not be considered in the rankings calculations.
+
+The second point is a little trickier. Mathematically speaking, we want to assess how closely a user's ratings follow a normal distribution. There are a couple of neat statistical tests that do that, the one that's considered best is the [Shapiro–Wilk test](https://en.wikipedia.org/wiki/Shapiro%E2%80%93Wilk_test). What we care about is a number between 0 and 1 that somehow measures how much a user's rating distribution resembles a bell. Take, for instance, Tom Vasel's ratings. He clearly users a nice spread for his ratings:
+
+{{< img src="tomvasel" size="x300" alt="Tom Vasel's ratings" >}}
+
 [^stochastic]: In case you're curious: The reason why the recommendations are so swingy is because they aren't precisely calculated, but merely approximated by an algorithm called [stochastic gradient descent](https://recommend.games/#/faq#the-1-game-keeps-changing-cant-you-make-up-your-mind), which is inherently non-deterministic.
 [^smoothed]: And this is even a smoothed version of the rankings: It uses the average score of one week to determine the ranking in that plot.
