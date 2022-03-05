@@ -23,8 +23,7 @@ So, why change this and create a new ranking? There's a number of problems with 
 
 [{{< img src="history_crop" size="x300" alt="Ancient history" >}}](history_full.png)
 
-https://gitlab.com/recommend.games/board-game-recommender/-/issues/38
-https://github.com/apple/turicreate/blob/30eced4508bf86c4c59a1fef96bd0b23363db283/src/toolkits/recsys/models/itemcf.cpp#L194
+Maybe more importantly, the exact algorithm to determine those recommendations for new users is extremely obscure. There's been a [long-standing ticket](https://gitlab.com/recommend.games/board-game-recommender/-/issues/38) to find out what's going on. The answer isn't documented anywhere, but you can find it somewhere in [these lines of code](https://github.com/apple/turicreate/blob/30eced4508bf86c4c59a1fef96bd0b23363db283/src/toolkits/recsys/models/itemcf.cpp#L194). Let me know if you can make sense of them, I've simply given up at some point.
 
 [^stochastic]: In case you're curious: The reason why the recommendations are so swingy is because they aren't precisely calculated, but merely approximated by an algorithm called [stochastic gradient descent](https://recommend.games/#/faq#the-1-game-keeps-changing-cant-you-make-up-your-mind), which is inherently non-deterministic.
 [^smoothed]: And this is even a smoothed version of the rankings: It uses the average score of one week to determine the ranking in that plot.
