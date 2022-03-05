@@ -42,5 +42,35 @@ The second point is a little trickier. Mathematically speaking, we want to asses
 
 {{< img src="tomvasel" size="x300" alt="Tom Vasel's ratings" >}}
 
+If on the other hand a user only ever rates games with a 10, never any other score, their factor would be 0, and again, they wouldn't take part in the R.G rankings calculations.
+
+So, long story short, we have those two factors that are supposed to describe how much we can trust a user's ratings. We can now multiply them with each other, and the higher the score, the higher will be our trust in their ratings, and consequently, the more weight their "vote" will have when calculating the R.G ranking. But before we got there, what users *do* we trust the most? Many of the highest scores actually belong to pretty random users, so I'm not comfortable exposing them here, but it's interesting to compare some of the "celebrities" in the hobby (and yours truly):
+
+|    bgg_user_name    |       trust        |  rank  |
+|:-------------------:|-------------------:|-------:|
+|    w eric martin    | 7.3757623059412065 |   21   |
+|      engelstein     | 7.227097020759851  |   77   |
+|       tomvasel      | 7.009196280501789  |  311   |
+|        aldie        | 6.544203898142164  |  1885  |
+|    jameystegmaier   | 6.343327925731987  |  3211  |
+|      jonpurkis      | 6.295583835577709  |  3628  |
+|      bohnanzar      | 5.8475915773208955 |  8798  |
+|   markus shepherd   | 5.452849953473498  | 16181  |
+|        quinns       |  5.42065509053484  | 16925  |
+|     matthiasmai     | 4.489247857378577  | 46287  |
+|     phelddagrif     | 3.981026376056779  | 67790  |
+|     cephalofair     | 3.833117202933614  | 74801  |
+|       elizharg      | 3.155649456087472  | 107995 |
+
 [^stochastic]: In case you're curious: The reason why the recommendations are so swingy is because they aren't precisely calculated, but merely approximated by an algorithm called [stochastic gradient descent](https://recommend.games/#/faq#the-1-game-keeps-changing-cant-you-make-up-your-mind), which is inherently non-deterministic.
 [^smoothed]: And this is even a smoothed version of the rankings: It uses the average score of one week to determine the ranking in that plot.
+
+<!--
+from board_game_recommender.trust import user_trust
+trust = user_trust(ratings='../board-game-data/scraped/bgg_RatingItem.jl', min_ratings=10)
+trust = trust.sort('trust', ascending=False)
+trust['rank'] = range(len(trust))
+trust['rank'] += 1
+trust.print_rows(1000)
+trust[s.is_in(['w eric martin', 'tomvasel', 'jonpurkis', 'quinns', 'markus shepherd', 'bohnanzar', 'aldie', 'bruno des montagnes', 'cephalofair', 'donaldx', 'elizharg', 'engelstein', 'eric lang', 'faidutti', 'frog1', 'jameystegmaier', 'matthiasmai', 'mleacock', 'nopunincluded', 'phelddagrif', 'robdaviau', 'toinito', 'vlaada'])].print_rows(100)
+ -->
