@@ -46,31 +46,21 @@ If on the other hand a user only ever rates games with a 10, never any other sco
 
 So, long story short, we have those two factors that are supposed to describe how much we can trust a user's ratings. We can now multiply them with each other, and the higher the score, the higher will be our trust in their ratings, and consequently, the more weight their "vote" will have when calculating the R.G ranking. But before we got there, what users *do* we trust the most? Many of the highest scores actually belong to pretty random users, so I'm not comfortable exposing them here, but it's interesting to compare some of the "celebrities" in the hobby (and yours truly):
 
-|    bgg_user_name    |       trust        |  rank  |
-|:-------------------:|-------------------:|-------:|
-|    w eric martin    | 7.3757623059412065 |   21   |
-|      engelstein     | 7.227097020759851  |   77   |
-|       tomvasel      | 7.009196280501789  |  311   |
-|        aldie        | 6.544203898142164  |  1885  |
-|    jameystegmaier   | 6.343327925731987  |  3211  |
-|      jonpurkis      | 6.295583835577709  |  3628  |
-|      bohnanzar      | 5.8475915773208955 |  8798  |
-|   markus shepherd   | 5.452849953473498  | 16181  |
-|        quinns       |  5.42065509053484  | 16925  |
-|     matthiasmai     | 4.489247857378577  | 46287  |
-|     phelddagrif     | 3.981026376056779  | 67790  |
-|     cephalofair     | 3.833117202933614  | 74801  |
-|       elizharg      | 3.155649456087472  | 107995 |
+|                                      User                                     |  Rank  | Trust |
+|:-----------------------------------------------------------------------------:|-------:|------:|
+|       [W Eric Martin](https://boardgamegeek.com/user/w%20eric%20martin)       |   21   | 7.376 |
+|            [Engelstein](https://boardgamegeek.com/user/engelstein)            |   77   | 7.227 |
+|              [Tomvasel](https://boardgamegeek.com/user/tomvasel)              |  312   | 7.009 |
+|                 [Aldie](https://boardgamegeek.com/user/aldie)                 |  1889  | 6.544 |
+|        [Jameystegmaier](https://boardgamegeek.com/user/jameystegmaier)        |  3213  | 6.343 |
+|             [Jonpurkis](https://boardgamegeek.com/user/jonpurkis)             |  3628  | 6.296 |
+|             [Bohnanzar](https://boardgamegeek.com/user/bohnanzar)             |  8801  | 5.848 |
+|      [Markus Shepherd](https://boardgamegeek.com/user/markus%20shepherd)      | 16207  | 5.453 |
+|                [Quinns](https://boardgamegeek.com/user/quinns)                | 16958  | 5.421 |
+|           [Matthiasmai](https://boardgamegeek.com/user/matthiasmai)           | 46390  | 4.489 |
+|           [Phelddagrif](https://boardgamegeek.com/user/phelddagrif)           | 67960  | 3.981 |
+|           [Cephalofair](https://boardgamegeek.com/user/cephalofair)           | 75010  | 3.833 |
+|              [Elizharg](https://boardgamegeek.com/user/elizharg)              | 108248 | 3.156 |
 
 [^stochastic]: In case you're curious: The reason why the recommendations are so swingy is because they aren't precisely calculated, but merely approximated by an algorithm called [stochastic gradient descent](https://recommend.games/#/faq#the-1-game-keeps-changing-cant-you-make-up-your-mind), which is inherently non-deterministic.
 [^smoothed]: And this is even a smoothed version of the rankings: It uses the average score of one week to determine the ranking in that plot.
-
-<!--
-from board_game_recommender.trust import user_trust
-trust = user_trust(ratings='../board-game-data/scraped/bgg_RatingItem.jl', min_ratings=10)
-trust = trust.sort('trust', ascending=False)
-trust['rank'] = range(len(trust))
-trust['rank'] += 1
-trust.print_rows(1000)
-trust[s.is_in(['w eric martin', 'tomvasel', 'jonpurkis', 'quinns', 'markus shepherd', 'bohnanzar', 'aldie', 'bruno des montagnes', 'cephalofair', 'donaldx', 'elizharg', 'engelstein', 'eric lang', 'faidutti', 'frog1', 'jameystegmaier', 'matthiasmai', 'mleacock', 'nopunincluded', 'phelddagrif', 'robdaviau', 'toinito', 'vlaada'])].print_rows(100)
- -->

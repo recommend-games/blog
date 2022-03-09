@@ -14,6 +14,7 @@
 # ---
 
 # %%
+from urllib.parse import quote
 from board_game_recommender.trust import user_trust
 
 # %load_ext nb_black
@@ -28,11 +29,17 @@ trust.shape
 
 # %%
 trust = trust.sort("trust", ascending=False)
-trust["rank"] = range(len(trust))
-trust["rank"] += 1
 
 # %%
-trust.print_rows(1000)
+trust["User"] = trust["bgg_user_name"].apply(
+    lambda u: f"[{u.title()}](https://boardgamegeek.com/user/{quote(u)})"
+)
+trust["Rank"] = range(len(trust))
+trust["Rank"] += 1
+trust["Trust"] = trust["trust"].apply("{:.3f}".format)
+
+# %%
+trust.print_rows(100)
 
 # %%
 celebrities = [
@@ -60,4 +67,11 @@ celebrities = [
     "toinito",
     "vlaada",
 ]
-trust[trust["bgg_user_name"].is_in(celebrities)].print_rows(len(celebrities))
+len(celebrities)
+
+# %%
+trust[trust["bgg_user_name"].is_in(celebrities)]["User", "Rank", "Trust"].print_rows(
+    num_rows=len(celebrities),
+    max_column_width=100,
+    max_row_width=1000,
+)
