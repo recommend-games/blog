@@ -31,7 +31,7 @@ Instead, I wanted to create a new ranking which I can at least explain. So here 
 
 That sounds simple and intuitive, but, as the saying goes, the devil is in the details. For starters, there are over 100,000 games in the BoardGameGeek database, and [over 400,000 users](https://twitter.com/recommend_games/status/1498184269402980355) with at least one rated game. Calculating *all recommendations* for *all users* would therefore mean over 40 billion user–game pairs. That's a lot. 😅 But really, we don't care if a game is the 1,000th, 10,000th or 100,000th highest rated game. Instead, we only recommend the top 100 games for each user. The highest game on that list receives 100 points, the next 99, and so on, until the 100th game receives a single point from that user. All other games will be awarded 0 points. The we can simply average those points across all users, and voilà, those scores become the R.G rankings. 🤩
 
-… Except that's still not the whole story. I wasn't happy about the idea of a user who 15 years ago left a single rating being equally important as someone who played and rated hundreds of board games over two decades of BGG history. That's why I tried to model the "trust" we should put in different users' ratings. The idea here would be that we should trust a user's rating more if two things are true:
+… Except that's still not the whole story. I wasn't happy about the idea of a user who fifteen years ago left a single rating being equally important as someone who played and rated hundreds of board games over two decades of BGG history. That's why I tried to model the "trust" we should put in different users' ratings. The idea here would be that we should trust a user's rating more if two things are true:
 
 * They are a regular contributor to BGG, i.e., rate, log plays etc at least once a month over a long period of time.
 * They should rate games with a reasonable distribution, i.e., on a nice bell curve.
@@ -44,7 +44,9 @@ The second point is a little trickier. Mathematically speaking, we want to asses
 
 If on the other hand a user only ever rates games with a 10, never any other score, their factor would be 0, and again, they wouldn't take part in the R.G rankings calculations.
 
-So, long story short, we have those two factors that are supposed to describe how much we can trust a user's ratings. We can now multiply them with each other, and the higher the score, the higher will be our trust in their ratings, and consequently, the more weight their "vote" will have when calculating the R.G ranking. But before we got there, what users *do* we trust the most? Many of the highest scores actually belong to pretty random users, so I'm not comfortable exposing them here, but it's interesting to compare some of the "celebrities" in the hobby (and yours truly):
+So, long story short, we have those two factors that are supposed to describe how much we can trust a user's ratings. We can now multiply them with each other, and the higher the score, the higher will be our trust in their ratings, and consequently, the more weight their "vote" will have when calculating the R.G ranking.
+
+But before we go there, what users *do* we trust the most? Many of the highest scores actually belong to pretty random users, so I'm not comfortable exposing them here, but it's interesting to compare some of the "celebrities" in the hobby (and yours truly):
 
 |                                      User                                     |  Rank  | Trust |
 |:-----------------------------------------------------------------------------:|-------:|------:|
@@ -61,6 +63,8 @@ So, long story short, we have those two factors that are supposed to describe ho
 |           [Phelddagrif](https://boardgamegeek.com/user/phelddagrif)           | 67960  | 3.981 |
 |           [Cephalofair](https://boardgamegeek.com/user/cephalofair)           | 75010  | 3.833 |
 |              [Elizharg](https://boardgamegeek.com/user/elizharg)              | 108248 | 3.156 |
+
+My opinions on board games having more weight than Quintin Smith's sure feels good. 🧐
 
 [^stochastic]: In case you're curious: The reason why the recommendations are so swingy is because they aren't precisely calculated, but merely approximated by an algorithm called [stochastic gradient descent](https://recommend.games/#/faq#the-1-game-keeps-changing-cant-you-make-up-your-mind), which is inherently non-deterministic.
 [^smoothed]: And this is even a smoothed version of the rankings: It uses the average score of one week to determine the ranking in that plot.
