@@ -62,12 +62,15 @@ points.rename(columns={"response": "bgg_id"}, inplace=True)
 points.shape
 
 # %%
-daily = (
-    points.groupby("bgg_id")
-    .resample("D")
-    .points.sum()
-    .swaplevel()
-    .reset_index()
-    .sort_values(["timestamp", "points", "bgg_id"], ascending=[True, False, True])
+daily = points.groupby("bgg_id").resample("D").points.sum().reset_index()
+daily["date"] = daily.timestamp.dt.date
+daily.drop(columns="timestamp", inplace=True)
+daily.sort_values(
+    by=["date", "points", "bgg_id"],
+    ascending=[True, False, True],
+    inplace=True,
 )
 daily.shape
+
+# %%
+daily.sample(10)
