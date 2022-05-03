@@ -74,3 +74,28 @@ daily.shape
 
 # %%
 daily.sample(10)
+
+
+# %%
+def process_days(daily, weight_today=0.5):
+    yesterday = None
+
+    for date, data in daily.groupby("date"):
+        today = pd.Series(index=data.bgg_id, data=data.points)
+
+        if yesterday is None:
+            yield date, today.rank(method="min", ascending=False)
+            yesterday = today
+
+        else:
+            temp = pd.DataFrame({"yesterday": yesterday, "today": today})
+            temp.fillna(value=0, inplace=True)
+            values = (1 - weight_today) * temp.yesterday + weight_today * temp.today
+            yield date, values.rank(method="min", ascending=False)
+            yesterday = values
+
+
+# %%
+for date, p in process_days(daily):
+    print(date)
+    print(p.sort_values()[:5])
