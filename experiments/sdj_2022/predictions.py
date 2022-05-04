@@ -88,7 +88,7 @@ model
 # %%
 x = data[features]
 x = x.fillna(x.mean())
-data["sdj_prob"] = model.predict_proba(x)[:, 1]
+data["sdj_prob"] = model.predict_proba(x.values)[:, 1]
 
 # %%
 rel_features = [
