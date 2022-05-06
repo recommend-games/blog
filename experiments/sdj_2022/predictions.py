@@ -88,7 +88,7 @@ model
 # %%
 x = data[features]
 x = x.fillna(x.mean())
-data["sdj_prob"] = model.predict_proba(x.values)[:, 1]
+data["sdj_prob"] = model.predict_proba(x)[:, 1]
 
 # %%
 rel_features = [
@@ -112,9 +112,9 @@ data[~data.kennerspiel][rel_columns].corr()
 data[data.kennerspiel][rel_columns].corr()
 
 # %%
-sdj_prob = 0.05
-bayes_rating_rel = 0.025
-avg_rating_rel = 0.025
+sdj_prob = 0
+bayes_rating_rel = 0.05
+avg_rating_rel = 0.0
 rec_rating_rel = 1 - sdj_prob - bayes_rating_rel - avg_rating_rel
 rec_rating_rel, sdj_prob, bayes_rating_rel, avg_rating_rel
 
