@@ -17,6 +17,7 @@
 # %%
 import json
 from itertools import islice
+from pathlib import Path
 import joblib
 import pandas as pd
 from bg_utils import transform, recommend_games
@@ -34,6 +35,16 @@ pd.options.display.float_format = "{:.6g}".format
 include = list(pd.read_csv("include.csv").bgg_id)
 exclude = list(pd.read_csv("exclude.csv").bgg_id)
 len(include), len(exclude)
+
+# %%
+r_g_rankings_dir = (
+    Path() / ".." / ".." / ".." / "board-game-data" / "rankings" / "bgg" / "r_g"
+).resolve()
+r_g_rankings = pd.read_csv(
+    max(r_g_rankings_dir.rglob("*.csv")),
+    index_col="bgg_id",
+)
+r_g_rankings.shape
 
 # %%
 params = {
@@ -57,6 +68,7 @@ for game in candidates[:10]:
 # %%
 df = pd.DataFrame.from_records(candidates, index="bgg_id")
 df["kennerspiel"] = df["kennerspiel_score"] >= 0.5
+df = df.join(r_g_rankings["score"].rename("r_g_score"))
 df.shape
 
 # %%
@@ -97,6 +109,7 @@ rel_features = [
     "num_votes",
     "rec_rating",
     "sdj_prob",
+    "r_g_score",
 ]
 rel_columns = [f"{f}_rel" for f in rel_features]
 len(rel_columns)
@@ -115,8 +128,9 @@ data[data.kennerspiel][rel_columns].corr()
 sdj_prob = 0.01
 bayes_rating_rel = 0.01
 avg_rating_rel = 0.0
-rec_rating_rel = 1 - sdj_prob - bayes_rating_rel - avg_rating_rel
-rec_rating_rel, sdj_prob, bayes_rating_rel, avg_rating_rel
+r_g_score_rel = 0.05
+rec_rating_rel = 1 - sdj_prob - bayes_rating_rel - avg_rating_rel - r_g_score_rel
+rec_rating_rel, sdj_prob, bayes_rating_rel, avg_rating_rel, r_g_score_rel
 
 # %%
 data["sdj_score"] = (
@@ -124,6 +138,7 @@ data["sdj_score"] = (
     + sdj_prob * data["sdj_prob"]
     + bayes_rating_rel * data["bayes_rating_rel"]
     + avg_rating_rel * data["avg_rating_rel"]
+    + r_g_score_rel * data["r_g_score_rel"]
 )
 data["sdj_rank"] = (
     data.groupby("kennerspiel")["sdj_score"]
@@ -151,6 +166,8 @@ results = data[
         "rec_rating_rel",
         "sdj_prob",
         "sdj_prob_rel",
+        "r_g_score",
+        "r_g_score_rel",
         "kennerspiel",
         "kennerspiel_score",
         "min_age",
