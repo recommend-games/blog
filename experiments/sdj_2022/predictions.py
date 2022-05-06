@@ -112,8 +112,8 @@ data[~data.kennerspiel][rel_columns].corr()
 data[data.kennerspiel][rel_columns].corr()
 
 # %%
-sdj_prob = 0
-bayes_rating_rel = 0.05
+sdj_prob = 0.01
+bayes_rating_rel = 0.01
 avg_rating_rel = 0.0
 rec_rating_rel = 1 - sdj_prob - bayes_rating_rel - avg_rating_rel
 rec_rating_rel, sdj_prob, bayes_rating_rel, avg_rating_rel
