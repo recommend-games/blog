@@ -61,7 +61,7 @@ params = {
     "exclude_owned": False,
 }
 
-max_results = 100
+max_results = None
 candidates = list(tqdm(recommend_games(max_results=max_results, **params)))
 
 for game in candidates[:10]:
@@ -105,6 +105,7 @@ model
 x = data[features]
 x = x.fillna(x.mean())
 data["sdj_prob"] = model.predict_proba(x)[:, 1]
+data.shape
 
 # %%
 rank_features = [
@@ -143,10 +144,10 @@ sdj_score_weights = {
     "num_votes_rank": 0,
     "num_votes_scale_max": 0,
     "r_g_score": 0,
-    "r_g_score_rank": 2,
+    "r_g_score_rank": 1,
     "rec_rating": 0,
-    "rec_rating_rank": 15,
-    "rec_rating_scale_max": 0,
+    "rec_rating_rank": 2,
+    "rec_rating_scale_max": 2,
     "sdj_prob": 2,
     "sdj_prob_rank": 0,
 }

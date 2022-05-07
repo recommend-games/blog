@@ -10,22 +10,22 @@
 {{% game 329839 %}}So Clover!{{% /game %}}
 
 
-## #2: {{% game 300905 %}}Top Ten{{% /game %}}
-
-*4–9 players, 30 minutes, 14+ years, light (1.1), 98% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="300905" size="x300" alt="Top Ten" >}}
-
-{{% game 300905 %}}Top Ten{{% /game %}}
-
-
-## #3: {{% game 300753 %}}Cross Clues{{% /game %}}
+## #2: {{% game 300753 %}}Cross Clues{{% /game %}}
 
 *2–6 players, 5–10 minutes, 7+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="300753" size="x300" alt="Cross Clues" >}}
 
 {{% game 300753 %}}Cross Clues{{% /game %}}
+
+
+## #3: {{% game 300905 %}}Top Ten{{% /game %}}
+
+*4–9 players, 30 minutes, 14+ years, light (1.1), 98% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="300905" size="x300" alt="Top Ten" >}}
+
+{{% game 300905 %}}Top Ten{{% /game %}}
 
 
 ## #4: {{% game 314503 %}}Codex Naturalis{{% /game %}}
@@ -46,7 +46,16 @@
 {{% game 339484 %}}Savannah Park{{% /game %}}
 
 
-## #6: {{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
+## #6: {{% game 260180 %}}Project L{{% /game %}}
+
+*1–4 players, 20–40 minutes, 8+ years, medium light (1.5), 99% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="260180" size="x300" alt="Project L" >}}
+
+{{% game 260180 %}}Project L{{% /game %}}
+
+
+## #7: {{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
 
 *2–5 players, 30 minutes, 8+ years, light (1.1), 97% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -55,7 +64,16 @@
 {{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
 
 
-## #7: {{% game 330174 %}}Explorers{{% /game %}}
+## #8: {{% game 328859 %}}Hula-Hoo!{{% /game %}}
+
+*2–6 players, 10–20 minutes, 8+ years, medium light (2.0), 95% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="328859" size="x300" alt="Hula-Hoo!" >}}
+
+{{% game 328859 %}}Hula-Hoo!{{% /game %}}
+
+
+## #9: {{% game 330174 %}}Explorers{{% /game %}}
 
 *1–4 players, 20 minutes, 8+ years, medium light (1.8), 98% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -64,31 +82,13 @@
 {{% game 330174 %}}Explorers{{% /game %}}
 
 
-## #8: {{% game 338628 %}}TRAILS{{% /game %}}
+## #10: {{% game 338628 %}}TRAILS{{% /game %}}
 
 *2–4 players, 20–40 minutes, 10+ years, medium light (1.8), 93% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="338628" size="x300" alt="TRAILS" >}}
 
 {{% game 338628 %}}TRAILS{{% /game %}}
-
-
-## #9: {{% game 330038 %}}Llamaland{{% /game %}}
-
-*2–4 players, 45 minutes, 10+ years, medium light (2.0), 80% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="330038" size="x300" alt="Llamaland" >}}
-
-{{% game 330038 %}}Llamaland{{% /game %}}
-
-
-## #10: {{% game 260180 %}}Project L{{% /game %}}
-
-*1–4 players, 20–40 minutes, 8+ years, medium light (1.5), 99% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="260180" size="x300" alt="Project L" >}}
-
-{{% game 260180 %}}Project L{{% /game %}}
 
 
 ## #11: {{% game 303672 %}}Trek 12: Himalaya{{% /game %}}
@@ -100,28 +100,19 @@
 {{% game 303672 %}}Trek 12: Himalaya{{% /game %}}
 
 
-## #12: {{% game 306173 %}}Lisbon Tram 28{{% /game %}}
+## #12: {{% game 330038 %}}Llamaland{{% /game %}}
 
-*2–4 players, 45–60 minutes, 8+ years, medium light (2.1), 93% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–4 players, 45 minutes, 10+ years, medium light (2.0), 80% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="306173" size="x300" alt="Lisbon Tram 28" >}}
+{{< img src="330038" size="x300" alt="Llamaland" >}}
 
-{{% game 306173 %}}Lisbon Tram 28{{% /game %}}
+{{% game 330038 %}}Llamaland{{% /game %}}
 
 
 # Kennerspiel des Jahres
 
 
-## #1: {{% game 295947 %}}Cascadia{{% /game %}}
-
-*1–4 players, 30–45 minutes, 10+ years, medium light (1.9), 54% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="295947" size="x300" alt="Cascadia" >}}
-
-{{% game 295947 %}}Cascadia{{% /game %}}
-
-
-## #2: {{% game 246784 %}}Cryptid{{% /game %}}
+## #1: {{% game 246784 %}}Cryptid{{% /game %}}
 
 *3–5 players, 30–50 minutes, 10+ years, medium light (2.2), 74% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -130,25 +121,16 @@
 {{% game 246784 %}}Cryptid{{% /game %}}
 
 
-## #3: {{% game 290236 %}}Canvas{{% /game %}}
+## #2: {{% game 295947 %}}Cascadia{{% /game %}}
 
-*1–5 players, 30 minutes, 14+ years, medium light (1.7), 87% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–4 players, 30–45 minutes, 10+ years, medium light (1.9), 54% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="290236" size="x300" alt="Canvas" >}}
+{{< img src="295947" size="x300" alt="Cascadia" >}}
 
-{{% game 290236 %}}Canvas{{% /game %}}
-
-
-## #4: {{% game 306881 %}}Railroad Ink Challenge: Lush Green Edition{{% /game %}}
-
-*1–4 players, 15–30 minutes, 8+ years, medium light (2.2), 60% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="306881" size="x300" alt="Railroad Ink Challenge: Lush Green Edition" >}}
-
-{{% game 306881 %}}Railroad Ink Challenge: Lush Green Edition{{% /game %}}
+{{% game 295947 %}}Cascadia{{% /game %}}
 
 
-## #5: {{% game 314491 %}}Meadow{{% /game %}}
+## #3: {{% game 314491 %}}Meadow{{% /game %}}
 
 *1–4 players, 60–90 minutes, 10+ years, medium light (2.2), 97% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -157,13 +139,31 @@
 {{% game 314491 %}}Meadow{{% /game %}}
 
 
-## #6: {{% game 296912 %}}Fort{{% /game %}}
+## #4: {{% game 290236 %}}Canvas{{% /game %}}
 
-*2–4 players, 20–40 minutes, 10+ years, medium light (2.4), 62% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–5 players, 30 minutes, 14+ years, medium light (1.7), 87% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="296912" size="x300" alt="Fort" >}}
+{{< img src="290236" size="x300" alt="Canvas" >}}
 
-{{% game 296912 %}}Fort{{% /game %}}
+{{% game 290236 %}}Canvas{{% /game %}}
+
+
+## #5: {{% game 342942 %}}Ark Nova{{% /game %}}
+
+*1–4 players, 90–150 minutes, 14+ years, medium heavy (3.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="342942" size="x300" alt="Ark Nova" >}}
+
+{{% game 342942 %}}Ark Nova{{% /game %}}
+
+
+## #6: {{% game 316554 %}}Dune: Imperium{{% /game %}}
+
+*1–4 players, 60–120 minutes, 14+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="316554" size="x300" alt="Dune: Imperium" >}}
+
+{{% game 316554 %}}Dune: Imperium{{% /game %}}
 
 
 ## #7: {{% game 227224 %}}The Red Cathedral{{% /game %}}
@@ -175,13 +175,13 @@
 {{% game 227224 %}}The Red Cathedral{{% /game %}}
 
 
-## #8: {{% game 316554 %}}Dune: Imperium{{% /game %}}
+## #8: {{% game 296912 %}}Fort{{% /game %}}
 
-*1–4 players, 60–120 minutes, 14+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*2–4 players, 20–40 minutes, 10+ years, medium light (2.4), 62% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="316554" size="x300" alt="Dune: Imperium" >}}
+{{< img src="296912" size="x300" alt="Fort" >}}
 
-{{% game 316554 %}}Dune: Imperium{{% /game %}}
+{{% game 296912 %}}Fort{{% /game %}}
 
 
 ## #9: {{% game 339789 %}}Welcome to the Moon{{% /game %}}
@@ -193,30 +193,30 @@
 {{% game 339789 %}}Welcome to the Moon{{% /game %}}
 
 
-## #10: {{% game 342942 %}}Ark Nova{{% /game %}}
+## #10: {{% game 304783 %}}Hadrian's Wall{{% /game %}}
 
-*1–4 players, 90–150 minutes, 14+ years, medium heavy (3.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–6 players, 30–60 minutes, 12+ years, medium (3.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="342942" size="x300" alt="Ark Nova" >}}
+{{< img src="304783" size="x300" alt="Hadrian's Wall" >}}
 
-{{% game 342942 %}}Ark Nova{{% /game %}}
-
-
-## #11: {{% game 308765 %}}Praga Caput Regni{{% /game %}}
-
-*1–4 players, 45–150 minutes, 12+ years, medium heavy (3.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="308765" size="x300" alt="Praga Caput Regni" >}}
-
-{{% game 308765 %}}Praga Caput Regni{{% /game %}}
+{{% game 304783 %}}Hadrian's Wall{{% /game %}}
 
 
-## #12: {{% game 318560 %}}Witchstone{{% /game %}}
+## #11: {{% game 318560 %}}Witchstone{{% /game %}}
 
 *2–4 players, 60–90 minutes, 12+ years, medium (2.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="318560" size="x300" alt="Witchstone" >}}
 
 {{% game 318560 %}}Witchstone{{% /game %}}
+
+
+## #12: {{% game 308765 %}}Praga Caput Regni{{% /game %}}
+
+*1–4 players, 45–150 minutes, 12+ years, medium heavy (3.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="308765" size="x300" alt="Praga Caput Regni" >}}
+
+{{% game 308765 %}}Praga Caput Regni{{% /game %}}
 
 
