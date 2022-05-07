@@ -16,7 +16,9 @@
 
 # %%
 import json
+from functools import reduce
 from itertools import islice
+from operator import add
 from pathlib import Path
 import joblib
 import pandas as pd
@@ -121,27 +123,18 @@ data[rank_columns] = data.groupby("kennerspiel")[rank_features].rank(pct=True)
 data.shape
 
 # %%
-data[~data.kennerspiel][rank_columns].corr()
+sdj_score_weights = {
+    "sdj_prob": 2,
+    "bayes_rating_rank": 1,
+    "avg_rating_rank": 0,
+    "r_g_score_rank": 1,
+    "rec_rating_rank": 36,
+}
 
 # %%
-data[data.kennerspiel][rank_columns].corr()
-
-# %%
-sdj_prob = 0.05
-bayes_rating_rank = 0.025
-avg_rating_rank = 0.0
-r_g_score_rank = 0.025
-rec_rating_rank = 1 - bayes_rating_rank - avg_rating_rank - r_g_score_rank - sdj_prob
-rec_rating_rank, sdj_prob, bayes_rating_rank, avg_rating_rank, r_g_score_rank
-
-# %%
-data["sdj_score"] = (
-    rec_rating_rank * data["rec_rating_rank"]
-    + sdj_prob * data["sdj_prob"]
-    + bayes_rating_rank * data["bayes_rating_rank"]
-    + avg_rating_rank * data["avg_rating_rank"]
-    + r_g_score_rank * data["r_g_score_rank"]
-)
+data["sdj_score"] = reduce(
+    add, (weight * data[column] for column, weight in sdj_score_weights.items())
+) / sum(sdj_score_weights.values())
 data["sdj_rank"] = (
     data.groupby("kennerspiel")["sdj_score"]
     .rank(
