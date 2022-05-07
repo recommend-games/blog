@@ -40,10 +40,11 @@ len(include), len(exclude)
 r_g_rankings_dir = (
     Path() / ".." / ".." / ".." / "board-game-data" / "rankings" / "bgg" / "r_g"
 ).resolve()
-r_g_rankings = pd.read_csv(
-    max(r_g_rankings_dir.rglob("*.csv")),
-    index_col="bgg_id",
-)
+r_g_rankings_file = max(r_g_rankings_dir.rglob("*.csv"))
+r_g_rankings_file
+
+# %%
+r_g_rankings = pd.read_csv(r_g_rankings_file, index_col="bgg_id")
 r_g_rankings.shape
 
 # %%
