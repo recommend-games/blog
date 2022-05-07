@@ -143,9 +143,9 @@ sdj_score_weights = {
     "num_votes_rank": 0,
     "num_votes_scale_max": 0,
     "r_g_score": 0,
-    "r_g_score_rank": 1,
+    "r_g_score_rank": 2,
     "rec_rating": 0,
-    "rec_rating_rank": 8,
+    "rec_rating_rank": 15,
     "rec_rating_scale_max": 0,
     "sdj_prob": 2,
     "sdj_prob_rank": 0,
@@ -154,7 +154,7 @@ sdj_score_weights = {
 # %%
 print("Calculate SdJ scores according to these weights:")
 total_weight = sum(sdj_score_weights.values())
-for column, weight in sorted(sdj_score_weights.items(), key=lambda x: -x[1]):
+for column, weight in sorted(sdj_score_weights.items(), key=lambda x: (-x[1], x[0])):
     if weight > 0:
         print(f"{100 * weight / total_weight:4.1f}%: {column}")
 
