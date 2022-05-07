@@ -59,7 +59,8 @@ params = {
     "exclude_owned": False,
 }
 
-candidates = list(tqdm(recommend_games(max_results=None, **params)))
+max_results = 100
+candidates = list(tqdm(recommend_games(max_results=max_results, **params)))
 
 for game in candidates[:10]:
     print(
@@ -104,7 +105,7 @@ x = x.fillna(x.mean())
 data["sdj_prob"] = model.predict_proba(x)[:, 1]
 
 # %%
-rel_features = [
+rank_features = [
     "avg_rating",
     "bayes_rating",
     "num_votes",
@@ -112,34 +113,34 @@ rel_features = [
     "sdj_prob",
     "r_g_score",
 ]
-rel_columns = [f"{f}_rel" for f in rel_features]
-len(rel_columns)
+rank_columns = [f"{f}_rank" for f in rank_features]
+len(rank_columns)
 
 # %%
-data[rel_columns] = data.groupby("kennerspiel")[rel_features].rank(pct=True)
+data[rank_columns] = data.groupby("kennerspiel")[rank_features].rank(pct=True)
 data.shape
 
 # %%
-data[~data.kennerspiel][rel_columns].corr()
+data[~data.kennerspiel][rank_columns].corr()
 
 # %%
-data[data.kennerspiel][rel_columns].corr()
+data[data.kennerspiel][rank_columns].corr()
 
 # %%
 sdj_prob = 0.05
-bayes_rating_rel = 0.025
-avg_rating_rel = 0.0
-r_g_score_rel = 0.025
-rec_rating_rel = 1 - bayes_rating_rel - avg_rating_rel - r_g_score_rel - sdj_prob
-rec_rating_rel, sdj_prob, bayes_rating_rel, avg_rating_rel, r_g_score_rel
+bayes_rating_rank = 0.025
+avg_rating_rank = 0.0
+r_g_score_rank = 0.025
+rec_rating_rank = 1 - bayes_rating_rank - avg_rating_rank - r_g_score_rank - sdj_prob
+rec_rating_rank, sdj_prob, bayes_rating_rank, avg_rating_rank, r_g_score_rank
 
 # %%
 data["sdj_score"] = (
-    rec_rating_rel * data["rec_rating_rel"]
+    rec_rating_rank * data["rec_rating_rank"]
     + sdj_prob * data["sdj_prob"]
-    + bayes_rating_rel * data["bayes_rating_rel"]
-    + avg_rating_rel * data["avg_rating_rel"]
-    + r_g_score_rel * data["r_g_score_rel"]
+    + bayes_rating_rank * data["bayes_rating_rank"]
+    + avg_rating_rank * data["avg_rating_rank"]
+    + r_g_score_rank * data["r_g_score_rank"]
 )
 data["sdj_rank"] = (
     data.groupby("kennerspiel")["sdj_score"]
@@ -160,15 +161,15 @@ results = data[
         "sdj_rank",
         "num_votes",
         "avg_rating",
-        "avg_rating_rel",
+        "avg_rating_rank",
         "bayes_rating",
-        "bayes_rating_rel",
+        "bayes_rating_rank",
         "rec_rating",
-        "rec_rating_rel",
+        "rec_rating_rank",
         "sdj_prob",
-        "sdj_prob_rel",
+        "sdj_prob_rank",
         "r_g_score",
-        "r_g_score_rel",
+        "r_g_score_rank",
         "kennerspiel",
         "kennerspiel_score",
         "min_age",
