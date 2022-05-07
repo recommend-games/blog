@@ -116,25 +116,53 @@ rank_features = [
     "r_g_score",
 ]
 rank_columns = [f"{f}_rank" for f in rank_features]
-len(rank_columns)
-
-# %%
 data[rank_columns] = data.groupby("kennerspiel")[rank_features].rank(pct=True)
 data.shape
 
 # %%
+scale_max_features = ["num_votes", "rec_rating"]
+scale_max_columns = [f"{f}_scale_max" for f in scale_max_features]
+data[scale_max_columns] = data[scale_max_features] / data[scale_max_features].max()
+data.shape
+
+# %%
+scale_10_features = ["avg_rating", "bayes_rating"]
+scale_10_columns = [f"{f}_scale_10" for f in scale_10_features]
+data[scale_10_columns] = data[scale_10_features] / 10
+data.shape
+
+# %%
 sdj_score_weights = {
-    "sdj_prob": 2,
-    "bayes_rating_rank": 1,
+    "avg_rating": 0,
     "avg_rating_rank": 0,
+    "avg_rating_scale_10": 0,
+    "bayes_rating": 0,
+    "bayes_rating_rank": 0,
+    "bayes_rating_scale_10": 1,
+    "num_votes": 0,
+    "num_votes_rank": 0,
+    "num_votes_scale_max": 0,
+    "r_g_score": 0,
     "r_g_score_rank": 1,
-    "rec_rating_rank": 36,
+    "rec_rating": 0,
+    "rec_rating_rank": 8,
+    "rec_rating_scale_max": 0,
+    "sdj_prob": 2,
+    "sdj_prob_rank": 0,
 }
 
 # %%
-data["sdj_score"] = reduce(
-    add, (weight * data[column] for column, weight in sdj_score_weights.items())
-) / sum(sdj_score_weights.values())
+print("Calculate SdJ scores according to these weights:")
+total_weight = sum(sdj_score_weights.values())
+for column, weight in sorted(sdj_score_weights.items(), key=lambda x: -x[1]):
+    if weight > 0:
+        print(f"{100 * weight / total_weight:4.1f}%: {column}")
+
+# %%
+data["sdj_score"] = (
+    reduce(add, (weight * data[column] for column, weight in sdj_score_weights.items()))
+    / total_weight
+)
 data["sdj_rank"] = (
     data.groupby("kennerspiel")["sdj_score"]
     .rank(
@@ -144,6 +172,7 @@ data["sdj_rank"] = (
     )
     .astype(int)
 )
+data.shape
 
 # %%
 results = data[
