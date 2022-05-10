@@ -24,7 +24,7 @@ import joblib
 import pandas as pd
 from bg_utils import transform, recommend_games
 from tqdm import tqdm
-from yaml import safe_load
+from yaml import safe_dump, safe_load
 
 pd.options.display.max_columns = 100
 pd.options.display.max_rows = 500
@@ -241,9 +241,27 @@ kdj[:100].style
 # # Outputs
 
 # %%
+notes_file = Path("notes.yaml").resolve()
+
+if not notes_file.exists():
+    num = 50
+    top_candidates = pd.concat((sdj[:num], kdj[:num]))
+
+    dummy_notes = {
+        bgg_id: {
+            "name": game.name_raw,
+            "text": f"{{{{% game {bgg_id} %}}}}{game.name_raw}{{{{% /game %}}}}",
+        }
+        for bgg_id, game in top_candidates.iterrows()
+    }
+
+    with notes_file.open("w", encoding="utf-8") as f:
+        safe_dump(dummy_notes, f)
+
+# %%
 COMPLEXITIES = (None, "light", "medium light", "medium", "medium heavy", "heavy")
 
-with open("notes.yaml") as f:
+with notes_file.open(encoding="utf-8") as f:
     NOTES = safe_load(f)
 
 

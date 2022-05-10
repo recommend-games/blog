@@ -1,1 +1,302 @@
-{}
+227224:
+  name: The Red Cathedral
+  text: '{{% game 227224 %}}The Red Cathedral{{% /game %}}'
+238799:
+  name: Messina 1347
+  text: '{{% game 238799 %}}Messina 1347{{% /game %}}'
+246784:
+  name: Cryptid
+  text: '{{% game 246784 %}}Cryptid{{% /game %}}'
+252752:
+  name: 'Genotype: A Mendelian Genetics Game'
+  text: '{{% game 252752 %}}Genotype: A Mendelian Genetics Game{{% /game %}}'
+260180:
+  name: Project L
+  text: '{{% game 260180 %}}Project L{{% /game %}}'
+262477:
+  name: Mercado de Lisboa
+  text: '{{% game 262477 %}}Mercado de Lisboa{{% /game %}}'
+275044:
+  name: Glow
+  text: '{{% game 275044 %}}Glow{{% /game %}}'
+277700:
+  name: Merchants Cove
+  text: '{{% game 277700 %}}Merchants Cove{{% /game %}}'
+285192:
+  name: Destinies
+  text: '{{% game 285192 %}}Destinies{{% /game %}}'
+285774:
+  name: 'Marvel Champions: The Card Game'
+  text: '{{% game 285774 %}}Marvel Champions: The Card Game{{% /game %}}'
+286537:
+  name: 'Burgle Bros 2: The Casino Capers'
+  text: '{{% game 286537 %}}Burgle Bros 2: The Casino Capers{{% /game %}}'
+290236:
+  name: Canvas
+  text: '{{% game 290236 %}}Canvas{{% /game %}}'
+291453:
+  name: SCOUT
+  text: '{{% game 291453 %}}SCOUT{{% /game %}}'
+295374:
+  name: 'Long Shot: The Dice Game'
+  text: '{{% game 295374 %}}Long Shot: The Dice Game{{% /game %}}'
+295607:
+  name: Canopy
+  text: '{{% game 295607 %}}Canopy{{% /game %}}'
+295947:
+  name: Cascadia
+  text: '{{% game 295947 %}}Cascadia{{% /game %}}'
+296043:
+  name: Four Gardens
+  text: '{{% game 296043 %}}Four Gardens{{% /game %}}'
+296912:
+  name: Fort
+  text: '{{% game 296912 %}}Fort{{% /game %}}'
+297129:
+  name: Jekyll vs. Hyde
+  text: '{{% game 297129 %}}Jekyll vs. Hyde{{% /game %}}'
+298102:
+  name: 'Roll Camera!: The Filmmaking Board Game'
+  text: '{{% game 298102 %}}Roll Camera!: The Filmmaking Board Game{{% /game %}}'
+299684:
+  name: "Kh\xF4ra: Rise of an Empire"
+  text: "{{% game 299684 %}}Kh\xF4ra: Rise of an Empire{{% /game %}}"
+300148:
+  name: Spy Connection
+  text: '{{% game 300148 %}}Spy Connection{{% /game %}}'
+300305:
+  name: Nanga Parbat
+  text: '{{% game 300305 %}}Nanga Parbat{{% /game %}}'
+300753:
+  name: Cross Clues
+  text: '{{% game 300753 %}}Cross Clues{{% /game %}}'
+300905:
+  name: Top Ten
+  text: '{{% game 300905 %}}Top Ten{{% /game %}}'
+301257:
+  name: Maglev Metro
+  text: '{{% game 301257 %}}Maglev Metro{{% /game %}}'
+302098:
+  name: 'Chronicles of Crime: 1900'
+  text: '{{% game 302098 %}}Chronicles of Crime: 1900{{% /game %}}'
+303672:
+  name: 'Trek 12: Himalaya'
+  text: '{{% game 303672 %}}Trek 12: Himalaya{{% /game %}}'
+304051:
+  name: Creature Comforts
+  text: '{{% game 304051 %}}Creature Comforts{{% /game %}}'
+304324:
+  name: Dive
+  text: '{{% game 304324 %}}Dive{{% /game %}}'
+304783:
+  name: Hadrian's Wall
+  text: '{{% game 304783 %}}Hadrian''s Wall{{% /game %}}'
+305682:
+  name: Rolling Realms
+  text: '{{% game 305682 %}}Rolling Realms{{% /game %}}'
+306169:
+  name: MATCH 5
+  text: '{{% game 306169 %}}MATCH 5{{% /game %}}'
+306173:
+  name: Lisbon Tram 28
+  text: '{{% game 306173 %}}Lisbon Tram 28{{% /game %}}'
+308765:
+  name: Praga Caput Regni
+  text: '{{% game 308765 %}}Praga Caput Regni{{% /game %}}'
+309430:
+  name: Tiny Epic Pirates
+  text: '{{% game 309430 %}}Tiny Epic Pirates{{% /game %}}'
+310873:
+  name: Carnegie
+  text: '{{% game 310873 %}}Carnegie{{% /game %}}'
+314491:
+  name: Meadow
+  text: '{{% game 314491 %}}Meadow{{% /game %}}'
+314503:
+  name: Codex Naturalis
+  text: '{{% game 314503 %}}Codex Naturalis{{% /game %}}'
+316554:
+  name: 'Dune: Imperium'
+  text: '{{% game 316554 %}}Dune: Imperium{{% /game %}}'
+317504:
+  name: Mandala Stones
+  text: '{{% game 317504 %}}Mandala Stones{{% /game %}}'
+318359:
+  name: 'Groundhog Day: The Game'
+  text: '{{% game 318359 %}}Groundhog Day: The Game{{% /game %}}'
+318556:
+  name: Tucano
+  text: '{{% game 318556 %}}Tucano{{% /game %}}'
+318560:
+  name: Witchstone
+  text: '{{% game 318560 %}}Witchstone{{% /game %}}'
+319135:
+  name: 'Nightmare Horror Adventures: Welcome to Crafton Mansion'
+  text: '{{% game 319135 %}}Nightmare Horror Adventures: Welcome to Crafton Mansion{{%
+    /game %}}'
+319793:
+  name: Happy City
+  text: '{{% game 319793 %}}Happy City{{% /game %}}'
+322195:
+  name: Kokopelli
+  text: '{{% game 322195 %}}Kokopelli{{% /game %}}'
+322421:
+  name: Aqua Garden
+  text: '{{% game 322421 %}}Aqua Garden{{% /game %}}'
+322622:
+  name: Floriferous
+  text: '{{% game 322622 %}}Floriferous{{% /game %}}'
+324884:
+  name: Monster 12
+  text: '{{% game 324884 %}}Monster 12{{% /game %}}'
+325698:
+  name: Juicy Fruits
+  text: '{{% game 325698 %}}Juicy Fruits{{% /game %}}'
+327831:
+  name: 'Lost Cities: Roll & Write'
+  text: '{{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}'
+328479:
+  name: Living Forest
+  text: '{{% game 328479 %}}Living Forest{{% /game %}}'
+328859:
+  name: Hula-Hoo!
+  text: '{{% game 328859 %}}Hula-Hoo!{{% /game %}}'
+329450:
+  name: Equinox
+  text: '{{% game 329450 %}}Equinox{{% /game %}}'
+329465:
+  name: Red Rising
+  text: '{{% game 329465 %}}Red Rising{{% /game %}}'
+329529:
+  name: 'Magellan: Elcano'
+  text: '{{% game 329529 %}}Magellan: Elcano{{% /game %}}'
+329839:
+  name: So Clover!
+  text: '{{% game 329839 %}}So Clover!{{% /game %}}'
+330036:
+  name: Great Plains
+  text: '{{% game 330036 %}}Great Plains{{% /game %}}'
+330038:
+  name: Llamaland
+  text: '{{% game 330038 %}}Llamaland{{% /game %}}'
+330174:
+  name: Explorers
+  text: '{{% game 330174 %}}Explorers{{% /game %}}'
+330532:
+  name: Hashi
+  text: '{{% game 330532 %}}Hashi{{% /game %}}'
+330538:
+  name: All on 1 Card
+  text: '{{% game 330538 %}}All on 1 Card{{% /game %}}'
+330995:
+  name: Dogs Alone
+  text: '{{% game 330995 %}}Dogs Alone{{% /game %}}'
+331056:
+  name: Mozzaroller
+  text: '{{% game 331056 %}}Mozzaroller{{% /game %}}'
+331059:
+  name: Last Message
+  text: '{{% game 331059 %}}Last Message{{% /game %}}'
+331571:
+  name: My Gold Mine
+  text: '{{% game 331571 %}}My Gold Mine{{% /game %}}'
+331635:
+  name: Kameloot
+  text: '{{% game 331635 %}}Kameloot{{% /game %}}'
+331647:
+  name: Mazescape Labyrinthos
+  text: '{{% game 331647 %}}Mazescape Labyrinthos{{% /game %}}'
+331652:
+  name: Mazescape Ariadne
+  text: '{{% game 331652 %}}Mazescape Ariadne{{% /game %}}'
+332317:
+  name: Blaze
+  text: '{{% game 332317 %}}Blaze{{% /game %}}'
+333539:
+  name: The Siege of Runedar
+  text: '{{% game 333539 %}}The Siege of Runedar{{% /game %}}'
+335275:
+  name: Whirling Witchcraft
+  text: '{{% game 335275 %}}Whirling Witchcraft{{% /game %}}'
+337690:
+  name: "Escape Room: The Game \u2013 Puzzle Adventures: Secret of The Scientist"
+  text: "{{% game 337690 %}}Escape Room: The Game \u2013 Puzzle Adventures: Secret\
+    \ of The Scientist{{% /game %}}"
+338628:
+  name: TRAILS
+  text: '{{% game 338628 %}}TRAILS{{% /game %}}'
+339484:
+  name: Savannah Park
+  text: '{{% game 339484 %}}Savannah Park{{% /game %}}'
+339614:
+  name: 'Shinkansen: Zero Kei'
+  text: '{{% game 339614 %}}Shinkansen: Zero Kei{{% /game %}}'
+339789:
+  name: Welcome to the Moon
+  text: '{{% game 339789 %}}Welcome to the Moon{{% /game %}}'
+339958:
+  name: Gutenberg
+  text: '{{% game 339958 %}}Gutenberg{{% /game %}}'
+340455:
+  name: King of the Valley
+  text: '{{% game 340455 %}}King of the Valley{{% /game %}}'
+340677:
+  name: Bad Company
+  text: '{{% game 340677 %}}Bad Company{{% /game %}}'
+340773:
+  name: Elixir Mixer
+  text: '{{% game 340773 %}}Elixir Mixer{{% /game %}}'
+340790:
+  name: 1923 Cotton Club
+  text: '{{% game 340790 %}}1923 Cotton Club{{% /game %}}'
+341048:
+  name: Free Ride
+  text: '{{% game 341048 %}}Free Ride{{% /game %}}'
+341416:
+  name: High Score
+  text: '{{% game 341416 %}}High Score{{% /game %}}'
+341510:
+  name: Rainbow
+  text: '{{% game 341510 %}}Rainbow{{% /game %}}'
+342542:
+  name: Less Is More
+  text: '{{% game 342542 %}}Less Is More{{% /game %}}'
+342547:
+  name: 'Mystery Games: Der verfluchte Geburtstag'
+  text: '{{% game 342547 %}}Mystery Games: Der verfluchte Geburtstag{{% /game %}}'
+342927:
+  name: Fire & Stone
+  text: '{{% game 342927 %}}Fire & Stone{{% /game %}}'
+342942:
+  name: Ark Nova
+  text: '{{% game 342942 %}}Ark Nova{{% /game %}}'
+344408:
+  name: Full Throttle!
+  text: '{{% game 344408 %}}Full Throttle!{{% /game %}}'
+345036:
+  name: Qwixx Longo
+  text: '{{% game 345036 %}}Qwixx Longo{{% /game %}}'
+346482:
+  name: Voll verplant
+  text: '{{% game 346482 %}}Voll verplant{{% /game %}}'
+346501:
+  name: Mille Fiori
+  text: '{{% game 346501 %}}Mille Fiori{{% /game %}}'
+346995:
+  name: Kings & Creatures
+  text: '{{% game 346995 %}}Kings & Creatures{{% /game %}}'
+347703:
+  name: First Rat
+  text: '{{% game 347703 %}}First Rat{{% /game %}}'
+348870:
+  name: Heckmeck am Karteneck
+  text: '{{% game 348870 %}}Heckmeck am Karteneck{{% /game %}}'
+349131:
+  name: Splitter
+  text: '{{% game 349131 %}}Splitter{{% /game %}}'
+349463:
+  name: Dungeons, Dice & Danger
+  text: '{{% game 349463 %}}Dungeons, Dice & Danger{{% /game %}}'
+356996:
+  name: The Border
+  text: '{{% game 356996 %}}The Border{{% /game %}}'
