@@ -172,7 +172,7 @@
   text: '{{% game 329529 %}}Magellan: Elcano{{% /game %}}'
 329839:
   name: So Clover!
-  text: 'Another cooperative word–association game by publisher Repos Production, in many ways reminiscent of {{ sdj / }} winner {{% game 254640 %}}Just One{{% /game %}}. The jury generally doesn''t mind repeating themselves, so {{% game 329839 %}}So Clover!{{% /game %}} is definitely in the running.'
+  text: 'Another cooperative word–association game by publisher Repos Production, in many ways reminiscent of {{% sdj / %}} winner {{% game 254640 %}}Just One{{% /game %}}. The jury generally doesn''t mind repeating themselves, so {{% game 329839 %}}So Clover!{{% /game %}} is definitely in the running.'
 330036:
   name: Great Plains
   text: '{{% game 330036 %}}Great Plains{{% /game %}}'

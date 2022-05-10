@@ -16,7 +16,7 @@ This is an interesting one: While the jury completely ignored the original {{% g
 
 {{< img src="329839" size="x300" alt="So Clover!" >}}
 
-Another cooperative word–association game by publisher Repos Production, in many ways reminiscent of {{ sdj / }} winner {{% game 254640 %}}Just One{{% /game %}}. The jury generally doesn't mind repeating themselves, so {{% game 329839 %}}So Clover!{{% /game %}} is definitely in the running.
+Another cooperative word–association game by publisher Repos Production, in many ways reminiscent of {{% sdj / %}} winner {{% game 254640 %}}Just One{{% /game %}}. The jury generally doesn't mind repeating themselves, so {{% game 329839 %}}So Clover!{{% /game %}} is definitely in the running.
 
 
 ## #3: {{% game 300753 %}}Cross Clues{{% /game %}}
