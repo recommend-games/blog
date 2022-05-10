@@ -7,7 +7,7 @@
 
 {{< img src="327831" size="x300" alt="Lost Cities: Roll & Write" >}}
 
-{{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
+This is an interesting one: While the jury completely ignored the original {{% game 50 %}}Lost Cities{{% /game %}} (now considered a classic), it did pin the main award on {{% game 34585 %}}Keltis{{% /game %}} (essentially the board game version). Will they come back to the same system for the {{% game 327831 %}}Roll & Write{{% /game %}} version?
 
 
 ## #2: {{% game 329839 %}}So Clover!{{% /game %}}
@@ -16,7 +16,7 @@
 
 {{< img src="329839" size="x300" alt="So Clover!" >}}
 
-{{% game 329839 %}}So Clover!{{% /game %}}
+Another cooperative word–association game by publisher Repos Production, in many ways reminiscent of {{ sdj / }} winner {{% game 254640 %}}Just One{{% /game %}}. The jury generally doesn't mind repeating themselves, so {{% game 329839 %}}So Clover!{{% /game %}} is definitely in the running.
 
 
 ## #3: {{% game 300753 %}}Cross Clues{{% /game %}}

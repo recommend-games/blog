@@ -154,7 +154,7 @@
   text: '{{% game 325698 %}}Juicy Fruits{{% /game %}}'
 327831:
   name: 'Lost Cities: Roll & Write'
-  text: '{{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}'
+  text: 'This is an interesting one: While the jury completely ignored the original {{% game 50 %}}Lost Cities{{% /game %}} (now considered a classic), it did pin the main award on {{% game 34585 %}}Keltis{{% /game %}} (essentially the board game version). Will they come back to the same system for the {{% game 327831 %}}Roll & Write{{% /game %}} version?'
 328479:
   name: Living Forest
   text: '{{% game 328479 %}}Living Forest{{% /game %}}'
@@ -172,7 +172,7 @@
   text: '{{% game 329529 %}}Magellan: Elcano{{% /game %}}'
 329839:
   name: So Clover!
-  text: '{{% game 329839 %}}So Clover!{{% /game %}}'
+  text: 'Another cooperative word–association game by publisher Repos Production, in many ways reminiscent of {{ sdj / }} winner {{% game 254640 %}}Just One{{% /game %}}. The jury generally doesn''t mind repeating themselves, so {{% game 329839 %}}So Clover!{{% /game %}} is definitely in the running.'
 330036:
   name: Great Plains
   text: '{{% game 330036 %}}Great Plains{{% /game %}}'
