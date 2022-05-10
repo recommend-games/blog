@@ -211,12 +211,12 @@ Another cooperative word–association game by publisher Repos Production, in ma
 {{% game 308765 %}}Praga Caput Regni{{% /game %}}
 
 
-## #12: {{% game 339789 %}}Welcome to the Moon{{% /game %}}
+## #12: {{% game 318560 %}}Witchstone{{% /game %}}
 
-*1–6 players, 25–30 minutes, 10+ years, medium light (2.4), 67% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*2–4 players, 60–90 minutes, 12+ years, medium (2.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="339789" size="x300" alt="Welcome to the Moon" >}}
+{{< img src="318560" size="x300" alt="Witchstone" >}}
 
-{{% game 339789 %}}Welcome to the Moon{{% /game %}}
+{{% game 318560 %}}Witchstone{{% /game %}}
 
 
