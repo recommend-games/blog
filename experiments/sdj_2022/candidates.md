@@ -1,16 +1,7 @@
 # Spiel des Jahres
 
 
-## #1: {{% game 329839 %}}So Clover!{{% /game %}}
-
-*3–6 players, 30 minutes, 10+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="329839" size="x300" alt="So Clover!" >}}
-
-{{% game 329839 %}}So Clover!{{% /game %}}
-
-
-## #2: {{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
+## #1: {{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
 
 *2–5 players, 30 minutes, 8+ years, light (1.1), 97% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -19,25 +10,16 @@
 {{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
 
 
-## #3: {{% game 330174 %}}Explorers{{% /game %}}
+## #2: {{% game 329839 %}}So Clover!{{% /game %}}
 
-*1–4 players, 20 minutes, 8+ years, medium light (1.8), 98% {{% sdj %}}Spiel{{% /sdj %}}*
+*3–6 players, 30 minutes, 10+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="330174" size="x300" alt="Explorers" >}}
+{{< img src="329839" size="x300" alt="So Clover!" >}}
 
-{{% game 330174 %}}Explorers{{% /game %}}
-
-
-## #4: {{% game 314503 %}}Codex Naturalis{{% /game %}}
-
-*1–4 players, 20–30 minutes, 7+ years, medium light (1.8), 98% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="314503" size="x300" alt="Codex Naturalis" >}}
-
-{{% game 314503 %}}Codex Naturalis{{% /game %}}
+{{% game 329839 %}}So Clover!{{% /game %}}
 
 
-## #5: {{% game 300753 %}}Cross Clues{{% /game %}}
+## #3: {{% game 300753 %}}Cross Clues{{% /game %}}
 
 *2–6 players, 5–10 minutes, 7+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -46,7 +28,16 @@
 {{% game 300753 %}}Cross Clues{{% /game %}}
 
 
-## #6: {{% game 339484 %}}Savannah Park{{% /game %}}
+## #4: {{% game 338628 %}}TRAILS{{% /game %}}
+
+*2–4 players, 20–40 minutes, 10+ years, medium light (1.8), 93% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="338628" size="x300" alt="TRAILS" >}}
+
+{{% game 338628 %}}TRAILS{{% /game %}}
+
+
+## #5: {{% game 339484 %}}Savannah Park{{% /game %}}
 
 *1–4 players, 20–40 minutes, 8+ years, medium light (1.7), 95% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -55,34 +46,7 @@
 {{% game 339484 %}}Savannah Park{{% /game %}}
 
 
-## #7: {{% game 331635 %}}Kameloot{{% /game %}}
-
-*3–6 players, 20–25 minutes, 8+ years, light (1.3), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="331635" size="x300" alt="Kameloot" >}}
-
-{{% game 331635 %}}Kameloot{{% /game %}}
-
-
-## #8: {{% game 346995 %}}Kings & Creatures{{% /game %}}
-
-*2–6 players, 30 minutes, 10+ years,  (nan), 87% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="346995" size="x300" alt="Kings & Creatures" >}}
-
-{{% game 346995 %}}Kings & Creatures{{% /game %}}
-
-
-## #9: {{% game 300905 %}}Top Ten{{% /game %}}
-
-*4–9 players, 30 minutes, 14+ years, light (1.1), 98% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="300905" size="x300" alt="Top Ten" >}}
-
-{{% game 300905 %}}Top Ten{{% /game %}}
-
-
-## #10: {{% game 260180 %}}Project L{{% /game %}}
+## #6: {{% game 260180 %}}Project L{{% /game %}}
 
 *1–4 players, 20–40 minutes, 8+ years, medium light (1.5), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -91,22 +55,58 @@
 {{% game 260180 %}}Project L{{% /game %}}
 
 
-## #11: {{% game 297129 %}}Jekyll vs. Hyde{{% /game %}}
+## #7: {{% game 328859 %}}Hula-Hoo!{{% /game %}}
 
-*2 players, 30 minutes, 8+ years, medium light (1.8), 95% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–6 players, 10–20 minutes, 8+ years, medium light (2.0), 95% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="297129" size="x300" alt="Jekyll vs. Hyde" >}}
+{{< img src="328859" size="x300" alt="Hula-Hoo!" >}}
 
-{{% game 297129 %}}Jekyll vs. Hyde{{% /game %}}
+{{% game 328859 %}}Hula-Hoo!{{% /game %}}
 
 
-## #12: {{% game 330038 %}}Llamaland{{% /game %}}
+## #8: {{% game 330174 %}}Explorers{{% /game %}}
+
+*1–4 players, 20 minutes, 8+ years, medium light (1.8), 98% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="330174" size="x300" alt="Explorers" >}}
+
+{{% game 330174 %}}Explorers{{% /game %}}
+
+
+## #9: {{% game 314503 %}}Codex Naturalis{{% /game %}}
+
+*1–4 players, 20–30 minutes, 7+ years, medium light (1.8), 98% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="314503" size="x300" alt="Codex Naturalis" >}}
+
+{{% game 314503 %}}Codex Naturalis{{% /game %}}
+
+
+## #10: {{% game 300905 %}}Top Ten{{% /game %}}
+
+*4–9 players, 30 minutes, 14+ years, light (1.1), 98% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="300905" size="x300" alt="Top Ten" >}}
+
+{{% game 300905 %}}Top Ten{{% /game %}}
+
+
+## #11: {{% game 330038 %}}Llamaland{{% /game %}}
 
 *2–4 players, 45 minutes, 10+ years, medium light (2.0), 80% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="330038" size="x300" alt="Llamaland" >}}
 
 {{% game 330038 %}}Llamaland{{% /game %}}
+
+
+## #12: {{% game 306173 %}}Lisbon Tram 28{{% /game %}}
+
+*2–4 players, 45–60 minutes, 8+ years, medium light (2.1), 93% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="306173" size="x300" alt="Lisbon Tram 28" >}}
+
+{{% game 306173 %}}Lisbon Tram 28{{% /game %}}
 
 
 # Kennerspiel des Jahres
@@ -148,22 +148,22 @@
 {{% game 316554 %}}Dune: Imperium{{% /game %}}
 
 
-## #5: {{% game 342942 %}}Ark Nova{{% /game %}}
-
-*1–4 players, 90–150 minutes, 14+ years, medium heavy (3.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="342942" size="x300" alt="Ark Nova" >}}
-
-{{% game 342942 %}}Ark Nova{{% /game %}}
-
-
-## #6: {{% game 290236 %}}Canvas{{% /game %}}
+## #5: {{% game 290236 %}}Canvas{{% /game %}}
 
 *1–5 players, 30 minutes, 14+ years, medium light (1.7), 88% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="290236" size="x300" alt="Canvas" >}}
 
 {{% game 290236 %}}Canvas{{% /game %}}
+
+
+## #6: {{% game 342942 %}}Ark Nova{{% /game %}}
+
+*1–4 players, 90–150 minutes, 14+ years, medium heavy (3.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="342942" size="x300" alt="Ark Nova" >}}
+
+{{% game 342942 %}}Ark Nova{{% /game %}}
 
 
 ## #7: {{% game 227224 %}}The Red Cathedral{{% /game %}}
@@ -175,13 +175,13 @@
 {{% game 227224 %}}The Red Cathedral{{% /game %}}
 
 
-## #8: {{% game 296912 %}}Fort{{% /game %}}
+## #8: {{% game 304783 %}}Hadrian's Wall{{% /game %}}
 
-*2–4 players, 20–40 minutes, 10+ years, medium light (2.4), 62% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–6 players, 30–60 minutes, 12+ years, medium (3.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="296912" size="x300" alt="Fort" >}}
+{{< img src="304783" size="x300" alt="Hadrian's Wall" >}}
 
-{{% game 296912 %}}Fort{{% /game %}}
+{{% game 304783 %}}Hadrian's Wall{{% /game %}}
 
 
 ## #9: {{% game 328479 %}}Living Forest{{% /game %}}
@@ -193,13 +193,13 @@
 {{% game 328479 %}}Living Forest{{% /game %}}
 
 
-## #10: {{% game 339789 %}}Welcome to the Moon{{% /game %}}
+## #10: {{% game 296043 %}}Four Gardens{{% /game %}}
 
-*1–6 players, 25–30 minutes, 10+ years, medium light (2.4), 67% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*2–4 players, 45 minutes, 10+ years, medium light (2.4), 57% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="339789" size="x300" alt="Welcome to the Moon" >}}
+{{< img src="296043" size="x300" alt="Four Gardens" >}}
 
-{{% game 339789 %}}Welcome to the Moon{{% /game %}}
+{{% game 296043 %}}Four Gardens{{% /game %}}
 
 
 ## #11: {{% game 308765 %}}Praga Caput Regni{{% /game %}}
@@ -211,12 +211,12 @@
 {{% game 308765 %}}Praga Caput Regni{{% /game %}}
 
 
-## #12: {{% game 318560 %}}Witchstone{{% /game %}}
+## #12: {{% game 339789 %}}Welcome to the Moon{{% /game %}}
 
-*2–4 players, 60–90 minutes, 12+ years, medium (2.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–6 players, 25–30 minutes, 10+ years, medium light (2.4), 67% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="318560" size="x300" alt="Witchstone" >}}
+{{< img src="339789" size="x300" alt="Welcome to the Moon" >}}
 
-{{% game 318560 %}}Witchstone{{% /game %}}
+{{% game 339789 %}}Welcome to the Moon{{% /game %}}
 
 
