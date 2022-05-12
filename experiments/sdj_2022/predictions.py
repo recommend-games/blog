@@ -56,8 +56,8 @@ params = {
     "year__lte": 2022,
     "include": ",".join(map(str, include)),
     "exclude": ",".join(map(str, exclude)),
-    "exclude_clusters": True,
-    "exclude_known": True,
+    "exclude_clusters": False,
+    "exclude_known": False,
     "exclude_owned": False,
 }
 
