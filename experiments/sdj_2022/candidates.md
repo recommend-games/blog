@@ -7,7 +7,7 @@
 
 {{< img src="346703" size="x300" alt="7 Wonders: Architects" >}}
 
-{{% game 346703 %}}7 Wonders: Architects{{% /game %}}
+The little sibling of the inaugural {{% kdj / %}} winner already won the 2022 As d'Or, the French equivalent of {{% sdj / %}}, so this is definitely one to watch.
 
 
 ## #2: {{% game 329839 %}}So Clover!{{% /game %}}
@@ -19,7 +19,16 @@
 Another cooperative word–association game by publisher Repos Production, in many ways reminiscent of {{% sdj / %}} winner {{% game 254640 %}}Just One{{% /game %}}. The jury generally doesn't mind repeating themselves, so {{% game 329839 %}}So Clover!{{% /game %}} is definitely in the running.
 
 
-## #3: {{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
+## #3: {{% game 300905 %}}Top Ten{{% /game %}}
+
+*4–9 players, 30 minutes, 14+ years, light (1.1), 98% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="300905" size="x300" alt="Top Ten" >}}
+
+Another cooperative party game, light and with an immediate hook – exactly what the jury is looking for.
+
+
+## #4: {{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
 
 *2–5 players, 30 minutes, 8+ years, light (1.1), 97% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -28,22 +37,13 @@ Another cooperative word–association game by publisher Repos Production, in ma
 This is an interesting one: While the jury completely ignored the original {{% game 50 %}}Lost Cities{{% /game %}} (now considered a classic), it did pin the main award on {{% game 34585 %}}Keltis{{% /game %}} (essentially the board game version). Will they come back to the same system for the {{% game 327831 %}}Roll & Write{{% /game %}} version?
 
 
-## #4: {{% game 300905 %}}Top Ten{{% /game %}}
-
-*4–9 players, 30 minutes, 14+ years, light (1.1), 98% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="300905" size="x300" alt="Top Ten" >}}
-
-{{% game 300905 %}}Top Ten{{% /game %}}
-
-
 ## #5: {{% game 300753 %}}Cross Clues{{% /game %}}
 
 *2–6 players, 5–10 minutes, 7+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="300753" size="x300" alt="Cross Clues" >}}
 
-{{% game 300753 %}}Cross Clues{{% /game %}}
+…and another cooperative word–association party game… I sense a pattern! 😅 Does {{% game 300753 %}}Cross Clues{{% /game %}} have what it takes to set itself apart from its competitors?
 
 
 ## #6: {{% game 339484 %}}Savannah Park{{% /game %}}
@@ -52,7 +52,7 @@ This is an interesting one: While the jury completely ignored the original {{% g
 
 {{< img src="339484" size="x300" alt="Savannah Park" >}}
 
-{{% game 339484 %}}Savannah Park{{% /game %}}
+{{% game 339484 %}}Savannah Park{{% /game %}} by Kramer & Kiesling follows another trend in 2022: animals. Can this one stand out?
 
 
 ## #7: {{% game 303672 %}}Trek 12: Himalaya{{% /game %}}
@@ -61,7 +61,7 @@ This is an interesting one: While the jury completely ignored the original {{% g
 
 {{< img src="303672" size="x300" alt="Trek 12: Himalaya" >}}
 
-{{% game 303672 %}}Trek 12: Himalaya{{% /game %}}
+Roll & write games have garned many nominations and recommendations, but never the main award. {{% game 303672 %}}Trek 12{{% /game %}} could change that.
 
 
 ## #8: {{% game 314503 %}}Codex Naturalis{{% /game %}}
@@ -73,22 +73,22 @@ This is an interesting one: While the jury completely ignored the original {{% g
 {{% game 314503 %}}Codex Naturalis{{% /game %}}
 
 
-## #9: {{% game 260180 %}}Project L{{% /game %}}
-
-*1–4 players, 20–40 minutes, 8+ years, medium light (1.5), 99% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="260180" size="x300" alt="Project L" >}}
-
-{{% game 260180 %}}Project L{{% /game %}}
-
-
-## #10: {{% game 338628 %}}TRAILS{{% /game %}}
+## #9: {{% game 338628 %}}TRAILS{{% /game %}}
 
 *2–4 players, 20–40 minutes, 10+ years, medium light (1.8), 93% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="338628" size="x300" alt="TRAILS" >}}
 
 {{% game 338628 %}}TRAILS{{% /game %}}
+
+
+## #10: {{% game 260180 %}}Project L{{% /game %}}
+
+*1–4 players, 20–40 minutes, 8+ years, medium light (1.5), 99% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="260180" size="x300" alt="Project L" >}}
+
+{{% game 260180 %}}Project L{{% /game %}}
 
 
 ## #11: {{% game 330174 %}}Explorers{{% /game %}}
@@ -184,13 +184,13 @@ This is an interesting one: While the jury completely ignored the original {{% g
 {{% game 328871 %}}Terraforming Mars: Ares Expedition{{% /game %}}
 
 
-## #9: {{% game 315767 %}}Cartographers Heroes{{% /game %}}
+## #9: {{% game 285774 %}}Marvel Champions: The Card Game{{% /game %}}
 
-*1–100 players, 30–45 minutes, 10+ years, medium light (2.2), 92% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–4 players, 45–90 minutes, 14+ years, medium (2.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="315767" size="x300" alt="Cartographers Heroes" >}}
+{{< img src="285774" size="x300" alt="Marvel Champions: The Card Game" >}}
 
-{{% game 315767 %}}Cartographers Heroes{{% /game %}}
+{{% game 285774 %}}Marvel Champions: The Card Game{{% /game %}}
 
 
 ## #10: {{% game 296912 %}}Fort{{% /game %}}
@@ -202,21 +202,21 @@ This is an interesting one: While the jury completely ignored the original {{% g
 {{% game 296912 %}}Fort{{% /game %}}
 
 
-## #11: {{% game 285774 %}}Marvel Champions: The Card Game{{% /game %}}
+## #11: {{% game 318560 %}}Witchstone{{% /game %}}
 
-*1–4 players, 45–90 minutes, 14+ years, medium (2.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*2–4 players, 60–90 minutes, 12+ years, medium (2.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="285774" size="x300" alt="Marvel Champions: The Card Game" >}}
+{{< img src="318560" size="x300" alt="Witchstone" >}}
 
-{{% game 285774 %}}Marvel Champions: The Card Game{{% /game %}}
+{{% game 318560 %}}Witchstone{{% /game %}}
 
 
-## #12: {{% game 304783 %}}Hadrian's Wall{{% /game %}}
+## #12: {{% game 328479 %}}Living Forest{{% /game %}}
 
-*1–6 players, 30–60 minutes, 12+ years, medium (3.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–4 players, 40 minutes, 10+ years, medium light (2.2), 77% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="304783" size="x300" alt="Hadrian's Wall" >}}
+{{< img src="328479" size="x300" alt="Living Forest" >}}
 
-{{% game 304783 %}}Hadrian's Wall{{% /game %}}
+{{% game 328479 %}}Living Forest{{% /game %}}
 
 

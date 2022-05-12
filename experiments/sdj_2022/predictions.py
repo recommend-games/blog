@@ -61,7 +61,7 @@ params = {
     "exclude_owned": False,
 }
 
-max_results = None
+max_results = 1000
 candidates = list(tqdm(recommend_games(max_results=max_results, **params)))
 
 for game in candidates[:10]:

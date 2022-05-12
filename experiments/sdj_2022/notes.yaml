@@ -69,10 +69,10 @@
   text: '{{% game 300305 %}}Nanga Parbat{{% /game %}}'
 300753:
   name: Cross Clues
-  text: '{{% game 300753 %}}Cross Clues{{% /game %}}'
+  text: '…and another cooperative word–association party game… I sense a pattern! 😅 Does {{% game 300753 %}}Cross Clues{{% /game %}} have what it takes to set itself apart from its competitors?'
 300905:
   name: Top Ten
-  text: '{{% game 300905 %}}Top Ten{{% /game %}}'
+  text: 'Another cooperative party game, light and with an immediate hook – exactly what the jury is looking for.'
 301257:
   name: Maglev Metro
   text: '{{% game 301257 %}}Maglev Metro{{% /game %}}'
@@ -81,7 +81,7 @@
   text: '{{% game 302098 %}}Chronicles of Crime: 1900{{% /game %}}'
 303672:
   name: 'Trek 12: Himalaya'
-  text: '{{% game 303672 %}}Trek 12: Himalaya{{% /game %}}'
+  text: 'Roll & write games have garned many nominations and recommendations, but never the main award. {{% game 303672 %}}Trek 12{{% /game %}} could change that.'
 304051:
   name: Creature Comforts
   text: '{{% game 304051 %}}Creature Comforts{{% /game %}}'
@@ -227,7 +227,7 @@
   text: '{{% game 338628 %}}TRAILS{{% /game %}}'
 339484:
   name: Savannah Park
-  text: '{{% game 339484 %}}Savannah Park{{% /game %}}'
+  text: '{{% game 339484 %}}Savannah Park{{% /game %}} by Kramer & Kiesling follows another trend in 2022: animals. Can this one stand out?'
 339614:
   name: 'Shinkansen: Zero Kei'
   text: '{{% game 339614 %}}Shinkansen: Zero Kei{{% /game %}}'
@@ -282,6 +282,9 @@
 346501:
   name: Mille Fiori
   text: '{{% game 346501 %}}Mille Fiori{{% /game %}}'
+346703:
+  name: '7 Wonders: Architects'
+  text: 'The little sibling of the inaugural {{% kdj / %}} winner already won the 2022 As d''Or, the French equivalent of {{% sdj / %}}, so this is definitely one to watch.'
 346995:
   name: Kings & Creatures
   text: '{{% game 346995 %}}Kings & Creatures{{% /game %}}'
