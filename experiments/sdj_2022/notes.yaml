@@ -1,6 +1,6 @@
 227224:
   name: The Red Cathedral
-  text: '{{% game 227224 %}}The Red Cathedral{{% /game %}}'
+  text: 'Another game that was available internationally and has recently seen a German release from Kosmos, who certainly know how to win awards with their games.'
 238799:
   name: Messina 1347
   text: '{{% game 238799 %}}Messina 1347{{% /game %}}'
@@ -33,7 +33,7 @@
   text: '{{% game 286537 %}}Burgle Bros 2: The Casino Capers{{% /game %}}'
 290236:
   name: Canvas
-  text: '{{% game 290236 %}}Canvas{{% /game %}}'
+  text: '{{% game 290236 %}}Canvas{{% /game %}} definitely has some stunning artwork, though the critical response to the gameplay was rather lackluster…'
 291453:
   name: SCOUT
   text: '{{% game 291453 %}}SCOUT{{% /game %}}'
@@ -45,7 +45,7 @@
   text: '{{% game 295607 %}}Canopy{{% /game %}}'
 295947:
   name: Cascadia
-  text: '{{% game 295947 %}}Cascadia{{% /game %}}'
+  text: '{{% game 295947 %}}Cascadia{{% /game %}} is another international favourite that was met with positive reviews, though most find it soothing rather than exciting.'
 296043:
   name: Four Gardens
   text: '{{% game 296043 %}}Four Gardens{{% /game %}}'
@@ -117,7 +117,7 @@
   text: '{{% game 314503 %}}Codex Naturalis{{% /game %}}'
 316554:
   name: 'Dune: Imperium'
-  text: '{{% game 316554 %}}Dune: Imperium{{% /game %}}'
+  text: '{{% game 316554 %}}Dune: Imperium{{% /game %}} is another game that shot up the BGG rankings (currently at #16). My feeling is that games with a strong franchise generally are somewhat outside the jury''s scope, but this game might be the exception to the rule since the reviews were really strong.'
 317504:
   name: Mandala Stones
   text: '{{% game 317504 %}}Mandala Stones{{% /game %}}'
@@ -157,7 +157,7 @@
   text: 'This is an interesting one: While the jury completely ignored the original {{% game 50 %}}Lost Cities{{% /game %}} (now considered a classic), it did pin the main award on {{% game 34585 %}}Keltis{{% /game %}} (essentially the board game version). Will they come back to the same system for the {{% game 327831 %}}Roll & Write{{% /game %}} version?'
 328479:
   name: Living Forest
-  text: '{{% game 328479 %}}Living Forest{{% /game %}}'
+  text: '{{% game 328479 %}}Living Forest{{% /game %}} is definitely the latest {{% kdj %}}Kennerspiel{{% /kdj %}} hotness. It got quite recently released and hasn''t received a lot of ratings yet, but is definitely on the jury''s radar.'
 328859:
   name: Hula-Hoo!
   text: '{{% game 328859 %}}Hula-Hoo!{{% /game %}}'
@@ -269,7 +269,7 @@
   text: '{{% game 342927 %}}Fire & Stone{{% /game %}}'
 342942:
   name: Ark Nova
-  text: '{{% game 342942 %}}Ark Nova{{% /game %}}'
+  text: '{{% game 342942 %}}Ark Nova{{% /game %}} is *the* heavy eurogame of the season and has a good shot at a spot on the longlist. It''s way too heavy for a nomination though.'
 344408:
   name: Full Throttle!
   text: '{{% game 344408 %}}Full Throttle!{{% /game %}}'

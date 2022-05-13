@@ -127,7 +127,7 @@ A bit of a latecomer to Germany, {{% game 246784 %}}Cryptid{{% /game %}} already
 
 {{< img src="295947" size="x300" alt="Cascadia" >}}
 
-{{% game 295947 %}}Cascadia{{% /game %}}
+{{% game 295947 %}}Cascadia{{% /game %}} is another international favourite that was met with positive reviews, though most find it soothing rather than exciting.
 
 
 ## #3: {{% game 342942 %}}Ark Nova{{% /game %}}
@@ -136,7 +136,7 @@ A bit of a latecomer to Germany, {{% game 246784 %}}Cryptid{{% /game %}} already
 
 {{< img src="342942" size="x300" alt="Ark Nova" >}}
 
-{{% game 342942 %}}Ark Nova{{% /game %}}
+{{% game 342942 %}}Ark Nova{{% /game %}} is *the* heavy eurogame of the season and has a good shot at a spot on the longlist. It's way too heavy for a nomination though.
 
 
 ## #4: {{% game 314491 %}}Meadow{{% /game %}}
@@ -163,7 +163,7 @@ A bit of a latecomer to Germany, {{% game 246784 %}}Cryptid{{% /game %}} already
 
 {{< img src="316554" size="x300" alt="Dune: Imperium" >}}
 
-{{% game 316554 %}}Dune: Imperium{{% /game %}}
+{{% game 316554 %}}Dune: Imperium{{% /game %}} is another game that shot up the BGG rankings (currently at #16). My feeling is that games with a strong franchise generally are somewhat outside the jury's scope, but this game might be the exception to the rule since the reviews were really strong.
 
 
 ## #7: {{% game 227224 %}}The Red Cathedral{{% /game %}}
@@ -172,7 +172,7 @@ A bit of a latecomer to Germany, {{% game 246784 %}}Cryptid{{% /game %}} already
 
 {{< img src="227224" size="x300" alt="The Red Cathedral" >}}
 
-{{% game 227224 %}}The Red Cathedral{{% /game %}}
+Another game that was available internationally and has recently seen a German release from Kosmos, who certainly know how to win awards with their games.
 
 
 ## #8: {{% game 290236 %}}Canvas{{% /game %}}
@@ -181,7 +181,7 @@ A bit of a latecomer to Germany, {{% game 246784 %}}Cryptid{{% /game %}} already
 
 {{< img src="290236" size="x300" alt="Canvas" >}}
 
-{{% game 290236 %}}Canvas{{% /game %}}
+{{% game 290236 %}}Canvas{{% /game %}} definitely has some stunning artwork, though the critical response to the gameplay was rather lackluster…
 
 
 ## #9: {{% game 318560 %}}Witchstone{{% /game %}}
@@ -208,7 +208,7 @@ A bit of a latecomer to Germany, {{% game 246784 %}}Cryptid{{% /game %}} already
 
 {{< img src="328479" size="x300" alt="Living Forest" >}}
 
-{{% game 328479 %}}Living Forest{{% /game %}}
+{{% game 328479 %}}Living Forest{{% /game %}} is definitely the latest {{% kdj %}}Kennerspiel{{% /kdj %}} hotness. It got quite recently released and hasn't received a lot of ratings yet, but is definitely on the jury's radar.
 
 
 ## #12: {{% game 346501 %}}Mille Fiori{{% /game %}}
