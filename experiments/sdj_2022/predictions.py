@@ -62,7 +62,12 @@ params = {
 }
 
 max_results = 1000
-candidates = list(tqdm(recommend_games(max_results=max_results, **params)))
+candidates = list(
+    tqdm(
+        iterable=recommend_games(max_results=max_results, **params),
+        total=max_results,
+    )
+)
 
 for game in candidates[:10]:
     print(

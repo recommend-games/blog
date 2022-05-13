@@ -91,22 +91,22 @@ Roll & write games have garned many nominations and recommendations, but never t
 {{% game 260180 %}}Project L{{% /game %}}
 
 
-## #11: {{% game 330174 %}}Explorers{{% /game %}}
-
-*1–4 players, 20 minutes, 8+ years, medium light (1.8), 98% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="330174" size="x300" alt="Explorers" >}}
-
-{{% game 330174 %}}Explorers{{% /game %}}
-
-
-## #12: {{% game 330038 %}}Llamaland{{% /game %}}
+## #11: {{% game 330038 %}}Llamaland{{% /game %}}
 
 *2–4 players, 45 minutes, 10+ years, medium light (2.0), 80% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="330038" size="x300" alt="Llamaland" >}}
 
 {{% game 330038 %}}Llamaland{{% /game %}}
+
+
+## #12: {{% game 330174 %}}Explorers{{% /game %}}
+
+*1–4 players, 20 minutes, 8+ years, medium light (1.8), 98% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="330174" size="x300" alt="Explorers" >}}
+
+{{% game 330174 %}}Explorers{{% /game %}}
 
 
 # Kennerspiel des Jahres
