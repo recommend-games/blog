@@ -141,7 +141,7 @@ data.shape
 sdj_score_weights = {
     "avg_rating": 0,
     "avg_rating_rank": 0,
-    "avg_rating_scale_10": 0,
+    "avg_rating_scale_10": 5,
     "bayes_rating": 0,
     "bayes_rating_rank": 0,
     "bayes_rating_scale_10": 5,
@@ -149,7 +149,7 @@ sdj_score_weights = {
     "num_votes_rank": 0,
     "num_votes_scale_max": 0,
     "r_g_score": 0,
-    "r_g_score_rank": 10,
+    "r_g_score_rank": 5,
     "rec_rating": 0,
     "rec_rating_rank": 50,
     "rec_rating_scale_max": 25,

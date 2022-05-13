@@ -6,7 +6,7 @@
   text: '{{% game 238799 %}}Messina 1347{{% /game %}}'
 246784:
   name: Cryptid
-  text: '{{% game 246784 %}}Cryptid{{% /game %}}'
+  text: 'A bit of a latecomer to Germany, {{% game 246784 %}}Cryptid{{% /game %}} already gathered a lot of momentum internationally and hence is an easy recommendation for our algorithm.'
 252752:
   name: 'Genotype: A Mendelian Genetics Game'
   text: '{{% game 252752 %}}Genotype: A Mendelian Genetics Game{{% /game %}}'
@@ -81,7 +81,7 @@
   text: '{{% game 302098 %}}Chronicles of Crime: 1900{{% /game %}}'
 303672:
   name: 'Trek 12: Himalaya'
-  text: 'Roll & write games have garned many nominations and recommendations, but never the main award. {{% game 303672 %}}Trek 12{{% /game %}} could change that.'
+  text: 'Roll & write games have garnered many nominations and recommendations, but never the main award. {{% game 303672 %}}Trek 12{{% /game %}} could change that.'
 304051:
   name: Creature Comforts
   text: '{{% game 304051 %}}Creature Comforts{{% /game %}}'
