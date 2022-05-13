@@ -1,34 +1,7 @@
 # Spiel des Jahres
 
 
-## #1: {{% game 346703 %}}7 Wonders: Architects{{% /game %}}
-
-*2–7 players, 25 minutes, 8+ years, light (1.4), 99% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="346703" size="x300" alt="7 Wonders: Architects" >}}
-
-The little sibling of the inaugural {{% kdj / %}} winner already won the 2022 As d'Or, the French equivalent of {{% sdj / %}}, so this is definitely one to watch.
-
-
-## #2: {{% game 329839 %}}So Clover!{{% /game %}}
-
-*3–6 players, 30 minutes, 10+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="329839" size="x300" alt="So Clover!" >}}
-
-Another cooperative word–association game by publisher Repos Production, in many ways reminiscent of {{% sdj / %}} winner {{% game 254640 %}}Just One{{% /game %}}. The jury generally doesn't mind repeating themselves, so {{% game 329839 %}}So Clover!{{% /game %}} is definitely in the running.
-
-
-## #3: {{% game 300905 %}}Top Ten{{% /game %}}
-
-*4–9 players, 30 minutes, 14+ years, light (1.1), 98% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="300905" size="x300" alt="Top Ten" >}}
-
-Another cooperative party game, light and with an immediate hook – exactly what the jury is looking for.
-
-
-## #4: {{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
+## #1: {{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
 
 *2–5 players, 30 minutes, 8+ years, light (1.1), 97% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -37,16 +10,34 @@ Another cooperative party game, light and with an immediate hook – exactly wha
 This is an interesting one: While the jury completely ignored the original {{% game 50 %}}Lost Cities{{% /game %}} (now considered a classic), it did pin the main award on {{% game 34585 %}}Keltis{{% /game %}} (essentially the board game version). Will they come back to the same system for the {{% game 327831 %}}Roll & Write{{% /game %}} version?
 
 
-## #5: {{% game 300753 %}}Cross Clues{{% /game %}}
+## #2: {{% game 300905 %}}Top Ten{{% /game %}}
 
-*2–6 players, 5–10 minutes, 7+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+*4–9 players, 30 minutes, 14+ years, light (1.1), 98% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="300753" size="x300" alt="Cross Clues" >}}
+{{< img src="300905" size="x300" alt="Top Ten" >}}
 
-…and another cooperative word–association party game… I sense a pattern! 😅 Does {{% game 300753 %}}Cross Clues{{% /game %}} have what it takes to set itself apart from its competitors?
+Another cooperative party game, light and with an immediate hook – exactly what the jury is looking for.
 
 
-## #6: {{% game 339484 %}}Savannah Park{{% /game %}}
+## #3: {{% game 346703 %}}7 Wonders: Architects{{% /game %}}
+
+*2–7 players, 25 minutes, 8+ years, light (1.4), 99% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="346703" size="x300" alt="7 Wonders: Architects" >}}
+
+The little sibling of the inaugural {{% kdj / %}} winner already won the 2022 As d'Or, the French equivalent of {{% sdj / %}}, so this is definitely one to watch.
+
+
+## #4: {{% game 329839 %}}So Clover!{{% /game %}}
+
+*3–6 players, 30 minutes, 10+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="329839" size="x300" alt="So Clover!" >}}
+
+Another cooperative word–association game by publisher Repos Production, in many ways reminiscent of {{% sdj / %}} winner {{% game 254640 %}}Just One{{% /game %}}. The jury generally doesn't mind repeating themselves, so {{% game 329839 %}}So Clover!{{% /game %}} is definitely in the running.
+
+
+## #5: {{% game 339484 %}}Savannah Park{{% /game %}}
 
 *1–4 players, 20–40 minutes, 8+ years, medium light (1.7), 95% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -55,7 +46,7 @@ This is an interesting one: While the jury completely ignored the original {{% g
 {{% game 339484 %}}Savannah Park{{% /game %}} by Kramer & Kiesling follows another trend in 2022: animals. Can this one stand out?
 
 
-## #7: {{% game 303672 %}}Trek 12: Himalaya{{% /game %}}
+## #6: {{% game 303672 %}}Trek 12: Himalaya{{% /game %}}
 
 *1–50 players, 15–30 minutes, 8+ years, light (1.4), 89% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -64,16 +55,16 @@ This is an interesting one: While the jury completely ignored the original {{% g
 Roll & write games have garned many nominations and recommendations, but never the main award. {{% game 303672 %}}Trek 12{{% /game %}} could change that.
 
 
-## #8: {{% game 314503 %}}Codex Naturalis{{% /game %}}
+## #7: {{% game 300753 %}}Cross Clues{{% /game %}}
 
-*1–4 players, 20–30 minutes, 7+ years, medium light (1.8), 98% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–6 players, 5–10 minutes, 7+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="314503" size="x300" alt="Codex Naturalis" >}}
+{{< img src="300753" size="x300" alt="Cross Clues" >}}
 
-{{% game 314503 %}}Codex Naturalis{{% /game %}}
+…and another cooperative word–association party game… I sense a pattern! 😅 Does {{% game 300753 %}}Cross Clues{{% /game %}} have what it takes to set itself apart from its competitors?
 
 
-## #9: {{% game 338628 %}}TRAILS{{% /game %}}
+## #8: {{% game 338628 %}}TRAILS{{% /game %}}
 
 *2–4 players, 20–40 minutes, 10+ years, medium light (1.8), 93% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -82,22 +73,31 @@ Roll & write games have garned many nominations and recommendations, but never t
 {{% game 338628 %}}TRAILS{{% /game %}}
 
 
-## #10: {{% game 260180 %}}Project L{{% /game %}}
+## #9: {{% game 314503 %}}Codex Naturalis{{% /game %}}
 
-*1–4 players, 20–40 minutes, 8+ years, medium light (1.5), 99% {{% sdj %}}Spiel{{% /sdj %}}*
+*1–4 players, 20–30 minutes, 7+ years, medium light (1.8), 98% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="260180" size="x300" alt="Project L" >}}
+{{< img src="314503" size="x300" alt="Codex Naturalis" >}}
 
-{{% game 260180 %}}Project L{{% /game %}}
+{{% game 314503 %}}Codex Naturalis{{% /game %}}
 
 
-## #11: {{% game 330038 %}}Llamaland{{% /game %}}
+## #10: {{% game 330038 %}}Llamaland{{% /game %}}
 
 *2–4 players, 45 minutes, 10+ years, medium light (2.0), 80% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="330038" size="x300" alt="Llamaland" >}}
 
 {{% game 330038 %}}Llamaland{{% /game %}}
+
+
+## #11: {{% game 346995 %}}Kings & Creatures{{% /game %}}
+
+*2–6 players, 30 minutes, 10+ years,  (nan), 87% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="346995" size="x300" alt="Kings & Creatures" >}}
+
+{{% game 346995 %}}Kings & Creatures{{% /game %}}
 
 
 ## #12: {{% game 330174 %}}Explorers{{% /game %}}
@@ -157,22 +157,22 @@ Roll & write games have garned many nominations and recommendations, but never t
 {{% game 316554 %}}Dune: Imperium{{% /game %}}
 
 
-## #6: {{% game 290236 %}}Canvas{{% /game %}}
-
-*1–5 players, 30 minutes, 14+ years, medium light (1.7), 88% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="290236" size="x300" alt="Canvas" >}}
-
-{{% game 290236 %}}Canvas{{% /game %}}
-
-
-## #7: {{% game 227224 %}}The Red Cathedral{{% /game %}}
+## #6: {{% game 227224 %}}The Red Cathedral{{% /game %}}
 
 *1–4 players, 80 minutes, 10+ years, medium (2.8), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="227224" size="x300" alt="The Red Cathedral" >}}
 
 {{% game 227224 %}}The Red Cathedral{{% /game %}}
+
+
+## #7: {{% game 290236 %}}Canvas{{% /game %}}
+
+*1–5 players, 30 minutes, 14+ years, medium light (1.7), 88% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="290236" size="x300" alt="Canvas" >}}
+
+{{% game 290236 %}}Canvas{{% /game %}}
 
 
 ## #8: {{% game 328871 %}}Terraforming Mars: Ares Expedition{{% /game %}}
@@ -184,25 +184,7 @@ Roll & write games have garned many nominations and recommendations, but never t
 {{% game 328871 %}}Terraforming Mars: Ares Expedition{{% /game %}}
 
 
-## #9: {{% game 285774 %}}Marvel Champions: The Card Game{{% /game %}}
-
-*1–4 players, 45–90 minutes, 14+ years, medium (2.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="285774" size="x300" alt="Marvel Champions: The Card Game" >}}
-
-{{% game 285774 %}}Marvel Champions: The Card Game{{% /game %}}
-
-
-## #10: {{% game 296912 %}}Fort{{% /game %}}
-
-*2–4 players, 20–40 minutes, 10+ years, medium light (2.4), 62% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="296912" size="x300" alt="Fort" >}}
-
-{{% game 296912 %}}Fort{{% /game %}}
-
-
-## #11: {{% game 318560 %}}Witchstone{{% /game %}}
+## #9: {{% game 318560 %}}Witchstone{{% /game %}}
 
 *2–4 players, 60–90 minutes, 12+ years, medium (2.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -211,12 +193,30 @@ Roll & write games have garned many nominations and recommendations, but never t
 {{% game 318560 %}}Witchstone{{% /game %}}
 
 
-## #12: {{% game 328479 %}}Living Forest{{% /game %}}
+## #10: {{% game 328479 %}}Living Forest{{% /game %}}
 
 *1–4 players, 40 minutes, 10+ years, medium light (2.2), 77% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="328479" size="x300" alt="Living Forest" >}}
 
 {{% game 328479 %}}Living Forest{{% /game %}}
+
+
+## #11: {{% game 296912 %}}Fort{{% /game %}}
+
+*2–4 players, 20–40 minutes, 10+ years, medium light (2.4), 62% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="296912" size="x300" alt="Fort" >}}
+
+{{% game 296912 %}}Fort{{% /game %}}
+
+
+## #12: {{% game 285774 %}}Marvel Champions: The Card Game{{% /game %}}
+
+*1–4 players, 45–90 minutes, 14+ years, medium (2.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="285774" size="x300" alt="Marvel Champions: The Card Game" >}}
+
+{{% game 285774 %}}Marvel Champions: The Card Game{{% /game %}}
 
 
