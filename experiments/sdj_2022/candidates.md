@@ -10,22 +10,22 @@
 The little sibling of the inaugural {{% kdj / %}} winner already won the 2022 As d'Or, the French equivalent of {{% sdj / %}}, so this is definitely one to watch.
 
 
-## #2: {{% game 300753 %}}Cross Clues{{% /game %}}
-
-*2–6 players, 5–10 minutes, 7+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="300753" size="x300" alt="Cross Clues" >}}
-
-…and another cooperative word–association party game… I sense a pattern! 😅 Does {{% game 300753 %}}Cross Clues{{% /game %}} have what it takes to set itself apart from its competitors?
-
-
-## #3: {{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
+## #2: {{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
 
 *2–5 players, 30 minutes, 8+ years, light (1.1), 97% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="327831" size="x300" alt="Lost Cities: Roll & Write" >}}
 
 This is an interesting one: While the jury completely ignored the original {{% game 50 %}}Lost Cities{{% /game %}} (now considered a classic), it did pin the main award on {{% game 34585 %}}Keltis{{% /game %}} (essentially the board game version). Will they come back to the same system for the {{% game 327831 %}}Roll & Write{{% /game %}} version?
+
+
+## #3: {{% game 300753 %}}Cross Clues{{% /game %}}
+
+*2–6 players, 5–10 minutes, 7+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="300753" size="x300" alt="Cross Clues" >}}
+
+…and another cooperative word–association party game… I sense a pattern! 😅 Does {{% game 300753 %}}Cross Clues{{% /game %}} have what it takes to set itself apart from its competitors?
 
 
 ## #4: {{% game 329839 %}}So Clover!{{% /game %}}
@@ -46,7 +46,16 @@ Another cooperative word–association game by publisher Repos Production, in ma
 Another cooperative party game, light and with an immediate hook – exactly what the jury is looking for.
 
 
-## #6: {{% game 339484 %}}Savannah Park{{% /game %}}
+## #6: {{% game 346995 %}}Kings & Creatures{{% /game %}}
+
+*2–6 players, 30 minutes, 10+ years,  (nan), 87% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="346995" size="x300" alt="Kings & Creatures" >}}
+
+{{% game 346995 %}}Kings & Creatures{{% /game %}}
+
+
+## #7: {{% game 339484 %}}Savannah Park{{% /game %}}
 
 *1–4 players, 20–40 minutes, 8+ years, medium light (1.7), 95% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -55,22 +64,13 @@ Another cooperative party game, light and with an immediate hook – exactly wha
 {{% game 339484 %}}Savannah Park{{% /game %}} by Kramer & Kiesling follows another trend in 2022: animals. Can this one stand out?
 
 
-## #7: {{% game 260180 %}}Project L{{% /game %}}
+## #8: {{% game 260180 %}}Project L{{% /game %}}
 
 *1–4 players, 20–40 minutes, 8+ years, medium light (1.5), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="260180" size="x300" alt="Project L" >}}
 
 {{% game 260180 %}}Project L{{% /game %}}
-
-
-## #8: {{% game 346995 %}}Kings & Creatures{{% /game %}}
-
-*2–6 players, 30 minutes, 10+ years,  (nan), 87% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="346995" size="x300" alt="Kings & Creatures" >}}
-
-{{% game 346995 %}}Kings & Creatures{{% /game %}}
 
 
 ## #9: {{% game 328859 %}}Hula-Hoo!{{% /game %}}
@@ -139,22 +139,22 @@ A bit of a latecomer to Germany, {{% game 246784 %}}Cryptid{{% /game %}} already
 {{% game 279537 %}}The Search for Planet X{{% /game %}}
 
 
-## #4: {{% game 314491 %}}Meadow{{% /game %}}
-
-*1–4 players, 60–90 minutes, 10+ years, medium light (2.2), 97% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="314491" size="x300" alt="Meadow" >}}
-
-{{% game 314491 %}}Meadow{{% /game %}}
-
-
-## #5: {{% game 342942 %}}Ark Nova{{% /game %}}
+## #4: {{% game 342942 %}}Ark Nova{{% /game %}}
 
 *1–4 players, 90–150 minutes, 14+ years, medium heavy (3.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="342942" size="x300" alt="Ark Nova" >}}
 
 {{% game 342942 %}}Ark Nova{{% /game %}} is *the* heavy eurogame of the season and has a good shot at a spot on the longlist. It's way too heavy for a nomination though.
+
+
+## #5: {{% game 314491 %}}Meadow{{% /game %}}
+
+*1–4 players, 60–90 minutes, 10+ years, medium light (2.2), 97% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="314491" size="x300" alt="Meadow" >}}
+
+{{% game 314491 %}}Meadow{{% /game %}}
 
 
 ## #6: {{% game 227224 %}}The Red Cathedral{{% /game %}}
@@ -166,22 +166,22 @@ A bit of a latecomer to Germany, {{% game 246784 %}}Cryptid{{% /game %}} already
 Another game that was available internationally and has recently seen a German release from Kosmos, who certainly know how to win awards with their games.
 
 
-## #7: {{% game 316554 %}}Dune: Imperium{{% /game %}}
-
-*1–4 players, 60–120 minutes, 14+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="316554" size="x300" alt="Dune: Imperium" >}}
-
-{{% game 316554 %}}Dune: Imperium{{% /game %}} is another game that shot up the BGG rankings (currently at #16). My feeling is that games with a strong franchise generally are somewhat outside the jury's scope, but this game might be the exception to the rule since the reviews were really strong.
-
-
-## #8: {{% game 290236 %}}Canvas{{% /game %}}
+## #7: {{% game 290236 %}}Canvas{{% /game %}}
 
 *1–5 players, 30 minutes, 14+ years, medium light (1.7), 88% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="290236" size="x300" alt="Canvas" >}}
 
 {{% game 290236 %}}Canvas{{% /game %}} definitely has some stunning artwork, though the critical response to the gameplay was rather lackluster…
+
+
+## #8: {{% game 316554 %}}Dune: Imperium{{% /game %}}
+
+*1–4 players, 60–120 minutes, 14+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="316554" size="x300" alt="Dune: Imperium" >}}
+
+{{% game 316554 %}}Dune: Imperium{{% /game %}} is another game that shot up the BGG rankings (currently at #16). My feeling is that games with a strong franchise generally are somewhat outside the jury's scope, but this game might be the exception to the rule since the reviews were really strong.
 
 
 ## #9: {{% game 318560 %}}Witchstone{{% /game %}}
@@ -202,21 +202,21 @@ Another game that was available internationally and has recently seen a German r
 {{% game 347703 %}}First Rat{{% /game %}}
 
 
-## #11: {{% game 308765 %}}Praga Caput Regni{{% /game %}}
+## #11: {{% game 296043 %}}Four Gardens{{% /game %}}
+
+*2–4 players, 45 minutes, 10+ years, medium light (2.4), 57% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="296043" size="x300" alt="Four Gardens" >}}
+
+{{% game 296043 %}}Four Gardens{{% /game %}}
+
+
+## #12: {{% game 308765 %}}Praga Caput Regni{{% /game %}}
 
 *1–4 players, 45–150 minutes, 12+ years, medium heavy (3.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="308765" size="x300" alt="Praga Caput Regni" >}}
 
 {{% game 308765 %}}Praga Caput Regni{{% /game %}}
-
-
-## #12: {{% game 296912 %}}Fort{{% /game %}}
-
-*2–4 players, 20–40 minutes, 10+ years, medium light (2.4), 62% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="296912" size="x300" alt="Fort" >}}
-
-{{% game 296912 %}}Fort{{% /game %}}
 
 
