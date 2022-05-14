@@ -64,22 +64,22 @@ Another cooperative party game, light and with an immediate hook – exactly wha
 {{% game 260180 %}}Project L{{% /game %}}
 
 
-## #8: {{% game 328859 %}}Hula-Hoo!{{% /game %}}
-
-*2–6 players, 10–20 minutes, 8+ years, medium light (2.0), 95% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="328859" size="x300" alt="Hula-Hoo!" >}}
-
-{{% game 328859 %}}Hula-Hoo!{{% /game %}}
-
-
-## #9: {{% game 346995 %}}Kings & Creatures{{% /game %}}
+## #8: {{% game 346995 %}}Kings & Creatures{{% /game %}}
 
 *2–6 players, 30 minutes, 10+ years,  (nan), 87% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="346995" size="x300" alt="Kings & Creatures" >}}
 
 {{% game 346995 %}}Kings & Creatures{{% /game %}}
+
+
+## #9: {{% game 328859 %}}Hula-Hoo!{{% /game %}}
+
+*2–6 players, 10–20 minutes, 8+ years, medium light (2.0), 95% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="328859" size="x300" alt="Hula-Hoo!" >}}
+
+{{% game 328859 %}}Hula-Hoo!{{% /game %}}
 
 
 ## #10: {{% game 330174 %}}Explorers{{% /game %}}
