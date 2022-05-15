@@ -249,14 +249,7 @@ Same procedure as for {{% sdj / %}}, here are my three top picks for {{% kdj / %
 
 # Honourable mentions
 
-TODO
+This is always the section where I squeeze in a few more title in order to increase my chance of covering the whole list. There's plenty of more strong games, but I'll restrict myself to two additional candidates for {{% sdj / %}} that the algorithm just wouldn't quite pick up:
 
-
-## {{% sdj / %}}
-
-* TODO
-
-
-## {{% kdj / %}}
-
-* TODO
+* {{% game 346482 %}}Voll verplant{{% /game %}} (internationally known as {{% game 248861 %}}Metro X{{% /game %}}): A simple to learn, yet very difficult to master flip & write subway building game.
+* {{% game 291453 %}}SCOUT{{% /game %}}: A highly celebrated ladder–climbing game from highly celebrated publisher Oink Games.
