@@ -136,7 +136,11 @@ There's been many cute and/or ugly animal themed light games by Jacques Zeimet t
 
 ## My two cents
 
-TODO
+Alrighty, so these were the top ten candidates for a recommendation as determined by our algorithm. As always, I'll add my personal best guess for the three nominees:
+
+* {{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
+* {{% game 329839 %}}So Clover!{{% /game %}}
+* {{% game 300905 %}}Top Ten{{% /game %}}
 
 
 # Candidates for {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}
@@ -236,7 +240,11 @@ Friedemann Friese's venture into the train game genre. It's been a while since t
 
 ## My two cents
 
-TODO
+Same procedure as for {{% sdj / %}}, here are my three top picks for {{% kdj / %}} nomination:
+
+* {{% game 295947 %}}Cascadia{{% /game %}}
+* {{% game 316554 %}}Dune: Imperium{{% /game %}}
+* {{% game 328479 %}}Living Forest{{% /game %}}
 
 
 # Honourable mentions
