@@ -22,6 +22,9 @@
 277700:
   name: Merchants Cove
   text: '{{% game 277700 %}}Merchants Cove{{% /game %}}'
+279537:
+  name: The Search for Planet X
+  text: 'Just like {{% game 246784 %}}Cryptid{{% /game %}}, {{% game 279537 %}}The Search for Planet X{{% /game %}} is a deduction game that gained a lot of recognition internationally and now could receive its share of fame in Germany.'
 285192:
   name: Destinies
   text: '{{% game 285192 %}}Destinies{{% /game %}}'
@@ -111,13 +114,13 @@
   text: '{{% game 310873 %}}Carnegie{{% /game %}}'
 314491:
   name: Meadow
-  text: '{{% game 314491 %}}Meadow{{% /game %}}'
+  text: 'Another non–controversial game with a soothing animal theme. I don''t have more to say about {{% game 314491 %}}Meadow{{% /game %}}.'
 314503:
   name: Codex Naturalis
   text: '{{% game 314503 %}}Codex Naturalis{{% /game %}}'
 316554:
   name: 'Dune: Imperium'
-  text: '{{% game 316554 %}}Dune: Imperium{{% /game %}} is another game that shot up the BGG rankings (currently at #16). My feeling is that games with a strong franchise generally are somewhat outside the jury''s scope, but this game might be the exception to the rule since the reviews were really strong.'
+  text: 'My feeling is that games with a strong franchise generally are somewhat outside the jury''s scope: While strongly drawing in the enthusiastic fan base, it leaves the majority of the audience rather distance. {{% game 316554 %}}Dune: Imperium{{% /game %}} might just be the exception to the rule since the reviews were really strong.'
 317504:
   name: Mandala Stones
   text: '{{% game 317504 %}}Mandala Stones{{% /game %}}'
@@ -181,7 +184,7 @@
   text: '{{% game 330038 %}}Llamaland{{% /game %}}'
 330174:
   name: Explorers
-  text: '{{% game 330174 %}}Explorers{{% /game %}}'
+  text: 'Phil Walker-Harding has built an impressive portfolio of award winning games over the past year, so {{% game 330174 %}}Explorers{{% /game %}} could be his next shot at winning {{% sdj / %}}.'
 330532:
   name: Hashi
   text: '{{% game 330532 %}}Hashi{{% /game %}}'
@@ -251,7 +254,7 @@
   text: '{{% game 340790 %}}1923 Cotton Club{{% /game %}}'
 341048:
   name: Free Ride
-  text: '{{% game 341048 %}}Free Ride{{% /game %}}'
+  text: 'Friedemann Friese''s venture into the train game genre. It''s been a while since the jury was really excited by one of his creations.'
 341416:
   name: High Score
   text: '{{% game 341416 %}}High Score{{% /game %}}'

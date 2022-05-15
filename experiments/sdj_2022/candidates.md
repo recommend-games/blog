@@ -7,7 +7,7 @@
 
 {{< img src="355483" size="x300" alt="Die wandelnden Türme" >}}
 
-{{% game 355483 %}}Die wandelnden Türme{{% /game %}}
+Well, this is something of a surprise prediction since {{% game 355483 %}}Die wandelnden Türme{{% /game %}} doesn't even have an English title yet and only a handful of ratings on BGG. There must be something about this game if the algorithm could still pick it up amongst the crowd.
 
 
 ## #2: {{% game 329839 %}}So Clover!{{% /game %}}
@@ -16,7 +16,7 @@
 
 {{< img src="329839" size="x300" alt="So Clover!" >}}
 
-Another cooperative word–association game by publisher Repos Production, in many ways reminiscent of {{% sdj / %}} winner {{% game 254640 %}}Just One{{% /game %}}. The jury generally doesn't mind repeating themselves, so {{% game 329839 %}}So Clover!{{% /game %}} is definitely in the running.
+A cooperative word–association game by publisher Repos Production, in many ways reminiscent of {{% sdj / %}} winner {{% game 254640 %}}Just One{{% /game %}}. The jury generally doesn't mind repeating themselves, so {{% game 329839 %}}So Clover!{{% /game %}} is definitely in the running.
 
 
 ## #3: {{% game 300905 %}}Top Ten{{% /game %}}
@@ -52,7 +52,7 @@ This is an interesting one: While the jury completely ignored the original {{% g
 
 {{< img src="342927" size="x300" alt="Fire & Stone" >}}
 
-{{% game 342927 %}}Fire & Stone{{% /game %}}
+The latest game by "Mr. {{% game 822 %}}Carcassonne{{% /game %}}", so this fact alone makes {{% game 342927 %}}Fire & Stone{{% /game %}} an intersting game to watch.
 
 
 ## #7: {{% game 330174 %}}Explorers{{% /game %}}
@@ -61,7 +61,7 @@ This is an interesting one: While the jury completely ignored the original {{% g
 
 {{< img src="330174" size="x300" alt="Explorers" >}}
 
-{{% game 330174 %}}Explorers{{% /game %}}
+Phil Walker-Harding has built an impressive portfolio of award winning games over the past year, so {{% game 330174 %}}Explorers{{% /game %}} could be his next shot at winning {{% sdj / %}}.
 
 
 ## #8: {{% game 346703 %}}7 Wonders: Architects{{% /game %}}
@@ -79,7 +79,7 @@ The little sibling of the inaugural {{% kdj / %}} winner already won the 2022 As
 
 {{< img src="328859" size="x300" alt="Hula-Hoo!" >}}
 
-{{% game 328859 %}}Hula-Hoo!{{% /game %}}
+There's been many cute and/or ugly animal themed light games by Jacques Zeimet that were often well received by the jury, so {{% game 328859 %}}Hula-Hoo!{{% /game %}} could be the next in that line.
 
 
 ## #10: {{% game 338628 %}}TRAILS{{% /game %}}
@@ -88,7 +88,7 @@ The little sibling of the inaugural {{% kdj / %}} winner already won the 2022 As
 
 {{< img src="338628" size="x300" alt="TRAILS" >}}
 
-{{% game 338628 %}}TRAILS{{% /game %}}
+{{% game 266524 %}}PARKS{{% /game %}} wasn't as well received in Germany as it was internationally, so maybe its successor {{% game 338628 %}}TRAILS{{% /game %}} will fare better.
 
 
 ## #11: {{% game 339484 %}}Savannah Park{{% /game %}}
@@ -145,7 +145,7 @@ A bit of a latecomer to Germany, {{% game 246784 %}}Cryptid{{% /game %}} already
 
 {{< img src="279537" size="x300" alt="The Search for Planet X" >}}
 
-{{% game 279537 %}}The Search for Planet X{{% /game %}}
+Just like {{% game 246784 %}}Cryptid{{% /game %}}, {{% game 279537 %}}The Search for Planet X{{% /game %}} is a deduction game that gained a lot of recognition internationally and now could receive its share of fame in Germany.
 
 
 ## #5: {{% game 314491 %}}Meadow{{% /game %}}
@@ -154,7 +154,7 @@ A bit of a latecomer to Germany, {{% game 246784 %}}Cryptid{{% /game %}} already
 
 {{< img src="314491" size="x300" alt="Meadow" >}}
 
-{{% game 314491 %}}Meadow{{% /game %}}
+Another non–controversial game with a soothing animal theme. I don't have more to say about {{% game 314491 %}}Meadow{{% /game %}}.
 
 
 ## #6: {{% game 316554 %}}Dune: Imperium{{% /game %}}
@@ -163,7 +163,7 @@ A bit of a latecomer to Germany, {{% game 246784 %}}Cryptid{{% /game %}} already
 
 {{< img src="316554" size="x300" alt="Dune: Imperium" >}}
 
-{{% game 316554 %}}Dune: Imperium{{% /game %}} is another game that shot up the BGG rankings (currently at #16). My feeling is that games with a strong franchise generally are somewhat outside the jury's scope, but this game might be the exception to the rule since the reviews were really strong.
+My feeling is that games with a strong franchise generally are somewhat outside the jury's scope: While strongly drawing in the enthusiastic fan base, it leaves the majority of the audience rather distance. {{% game 316554 %}}Dune: Imperium{{% /game %}} might just be the exception to the rule since the reviews were really strong.
 
 
 ## #7: {{% game 227224 %}}The Red Cathedral{{% /game %}}
@@ -190,7 +190,7 @@ Another game that was available internationally and has recently seen a German r
 
 {{< img src="341048" size="x300" alt="Free Ride" >}}
 
-{{% game 341048 %}}Free Ride{{% /game %}}
+Friedemann Friese's venture into the train game genre. It's been a while since the jury was really excited by one of his creations.
 
 
 ## #10: {{% game 328479 %}}Living Forest{{% /game %}}
