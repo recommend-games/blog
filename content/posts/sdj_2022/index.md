@@ -253,3 +253,13 @@ This is always the section where I squeeze in a few more title in order to incre
 
 * {{% game 346482 %}}Voll verplant{{% /game %}} (internationally known as {{% game 248861 %}}Metro X{{% /game %}}): A simple to learn, yet very difficult to master flip & write subway building game.
 * {{% game 291453 %}}SCOUT{{% /game %}}: A highly celebrated ladder–climbing game from highly celebrated publisher Oink Games.
+
+
+# Conclusion
+
+Looking through the list of games, there's two trends I see:
+
+1. Games arriving late to Germany. More so than in previous years, there's plenty of titles with release date 2020 or earlier in the BGG database which have become only available in the past 12 months to the German market. Of course, there's a bias towards these games in the algorithm since they received more ratings than brand new titles, but there might also be some release delays due to the ongoing effects of COVID–19.
+2. Nature. Maybe this is the legacy of smash hit {{% game 266192 %}}Wingspan{{% /game %}} or maybe it's people looking for comfort. But there are definitely *a lot* of animals, plants, parks, etc, on the covers of this list.
+
+Will the jury agree and follow my predictions? We'll see on Monday, May 23. I can't wait! 🤩
