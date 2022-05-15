@@ -52,7 +52,7 @@ This is an interesting one: While the jury completely ignored the original {{% g
 
 {{< img src="342927" size="x300" alt="Fire & Stone" >}}
 
-The latest game by "Mr. {{% game 822 %}}Carcassonne{{% /game %}}", so this fact alone makes {{% game 342927 %}}Fire & Stone{{% /game %}} an intersting game to watch.
+The latest game by "Mr. {{% game 822 %}}Carcassonne{{% /game %}}", so this fact alone makes {{% game 342927 %}}Fire & Stone{{% /game %}} an interesting game to watch.
 
 
 ## #7: {{% game 330174 %}}Explorers{{% /game %}}
@@ -61,7 +61,7 @@ The latest game by "Mr. {{% game 822 %}}Carcassonne{{% /game %}}", so this fact 
 
 {{< img src="330174" size="x300" alt="Explorers" >}}
 
-Phil Walker-Harding has built an impressive portfolio of award winning games over the past year, so {{% game 330174 %}}Explorers{{% /game %}} could be his next shot at winning {{% sdj / %}}.
+Phil Walker-Harding has built an impressive portfolio of award winning games over the past years, so {{% game 330174 %}}Explorers{{% /game %}} could be his next shot at winning {{% sdj / %}}.
 
 
 ## #8: {{% game 346703 %}}7 Wonders: Architects{{% /game %}}
@@ -127,7 +127,7 @@ A bit of a latecomer to Germany, {{% game 246784 %}}Cryptid{{% /game %}} already
 
 {{< img src="295947" size="x300" alt="Cascadia" >}}
 
-{{% game 295947 %}}Cascadia{{% /game %}} is another international favourite that was met with positive reviews, though most find it soothing rather than exciting.
+{{% game 295947 %}}Cascadia{{% /game %}} is another international favourite that was met with positive reviews, though most find it soothing rather than exciting. Also, it seems to be just on the border between the two awards, so could end up on either list.
 
 
 ## #3: {{% game 342942 %}}Ark Nova{{% /game %}}
@@ -199,7 +199,7 @@ Friedemann Friese's venture into the train game genre. It's been a while since t
 
 {{< img src="328479" size="x300" alt="Living Forest" >}}
 
-{{% game 328479 %}}Living Forest{{% /game %}} is definitely the latest {{% kdj %}}Kennerspiel{{% /kdj %}} hotness. It got quite recently released and hasn't received a lot of ratings yet, but is definitely on the jury's radar.
+{{% game 328479 %}}Living Forest{{% /game %}} is the latest {{% kdj %}}Kennerspiel{{% /kdj %}} hotness. It got quite recently released and hasn't received a lot of ratings yet, but is definitely on the jury's radar.
 
 
 ## #11: {{% game 318560 %}}Witchstone{{% /game %}}

@@ -48,7 +48,7 @@
   text: '{{% game 295607 %}}Canopy{{% /game %}}'
 295947:
   name: Cascadia
-  text: '{{% game 295947 %}}Cascadia{{% /game %}} is another international favourite that was met with positive reviews, though most find it soothing rather than exciting.'
+  text: '{{% game 295947 %}}Cascadia{{% /game %}} is another international favourite that was met with positive reviews, though most find it soothing rather than exciting. Also, it seems to be just on the border between the two awards, so could end up on either list.'
 296043:
   name: Four Gardens
   text: '{{% game 296043 %}}Four Gardens{{% /game %}}'
@@ -160,7 +160,7 @@
   text: 'This is an interesting one: While the jury completely ignored the original {{% game 50 %}}Lost Cities{{% /game %}} (now considered a classic), it did pin the main award on {{% game 34585 %}}Keltis{{% /game %}} (essentially the board game version). Will they come back to the same system for the {{% game 327831 %}}Roll & Write{{% /game %}} version?'
 328479:
   name: Living Forest
-  text: '{{% game 328479 %}}Living Forest{{% /game %}} is definitely the latest {{% kdj %}}Kennerspiel{{% /kdj %}} hotness. It got quite recently released and hasn''t received a lot of ratings yet, but is definitely on the jury''s radar.'
+  text: '{{% game 328479 %}}Living Forest{{% /game %}} is the latest {{% kdj %}}Kennerspiel{{% /kdj %}} hotness. It got quite recently released and hasn''t received a lot of ratings yet, but is definitely on the jury''s radar.'
 328859:
   name: Hula-Hoo!
   text: 'There''s been many cute and/or ugly animal themed light games by Jacques Zeimet that were often well received by the jury, so {{% game 328859 %}}Hula-Hoo!{{% /game %}} could be the next in that line.'
@@ -184,7 +184,7 @@
   text: '{{% game 330038 %}}Llamaland{{% /game %}}'
 330174:
   name: Explorers
-  text: 'Phil Walker-Harding has built an impressive portfolio of award winning games over the past year, so {{% game 330174 %}}Explorers{{% /game %}} could be his next shot at winning {{% sdj / %}}.'
+  text: 'Phil Walker-Harding has built an impressive portfolio of award winning games over the past years, so {{% game 330174 %}}Explorers{{% /game %}} could be his next shot at winning {{% sdj / %}}.'
 330532:
   name: Hashi
   text: '{{% game 330532 %}}Hashi{{% /game %}}'
@@ -269,7 +269,7 @@
   text: '{{% game 342547 %}}Mystery Games: Der verfluchte Geburtstag{{% /game %}}'
 342927:
   name: Fire & Stone
-  text: 'The latest game by "Mr. {{% game 822 %}}Carcassonne{{% /game %}}", so this fact alone makes {{% game 342927 %}}Fire & Stone{{% /game %}} an intersting game to watch.'
+  text: 'The latest game by "Mr. {{% game 822 %}}Carcassonne{{% /game %}}", so this fact alone makes {{% game 342927 %}}Fire & Stone{{% /game %}} an interesting game to watch.'
 342942:
   name: Ark Nova
   text: '{{% game 342942 %}}Ark Nova{{% /game %}} is *the* heavy eurogame of the season and has a good shot at a spot on the longlist. It''s way too heavy for a nomination though.'
