@@ -160,7 +160,7 @@
   text: '{{% game 328479 %}}Living Forest{{% /game %}} is definitely the latest {{% kdj %}}Kennerspiel{{% /kdj %}} hotness. It got quite recently released and hasn''t received a lot of ratings yet, but is definitely on the jury''s radar.'
 328859:
   name: Hula-Hoo!
-  text: '{{% game 328859 %}}Hula-Hoo!{{% /game %}}'
+  text: 'There''s been many cute and/or ugly animal themed light games by Jacques Zeimet that were often well received by the jury, so {{% game 328859 %}}Hula-Hoo!{{% /game %}} could be the next in that line.'
 329450:
   name: Equinox
   text: '{{% game 329450 %}}Equinox{{% /game %}}'
@@ -172,7 +172,7 @@
   text: '{{% game 329529 %}}Magellan: Elcano{{% /game %}}'
 329839:
   name: So Clover!
-  text: 'Another cooperative word–association game by publisher Repos Production, in many ways reminiscent of {{% sdj / %}} winner {{% game 254640 %}}Just One{{% /game %}}. The jury generally doesn''t mind repeating themselves, so {{% game 329839 %}}So Clover!{{% /game %}} is definitely in the running.'
+  text: 'A cooperative word–association game by publisher Repos Production, in many ways reminiscent of {{% sdj / %}} winner {{% game 254640 %}}Just One{{% /game %}}. The jury generally doesn''t mind repeating themselves, so {{% game 329839 %}}So Clover!{{% /game %}} is definitely in the running.'
 330036:
   name: Great Plains
   text: '{{% game 330036 %}}Great Plains{{% /game %}}'
@@ -224,7 +224,7 @@
     \ of The Scientist{{% /game %}}"
 338628:
   name: TRAILS
-  text: '{{% game 338628 %}}TRAILS{{% /game %}}'
+  text: '{{% game 266524 %}}PARKS{{% /game %}} wasn''t as well received in Germany as it was internationally, so maybe its successor {{% game 338628 %}}TRAILS{{% /game %}} will fare better.'
 339484:
   name: Savannah Park
   text: '{{% game 339484 %}}Savannah Park{{% /game %}} by Kramer & Kiesling follows another trend in 2022: animals. Can this one stand out?'
@@ -266,7 +266,7 @@
   text: '{{% game 342547 %}}Mystery Games: Der verfluchte Geburtstag{{% /game %}}'
 342927:
   name: Fire & Stone
-  text: '{{% game 342927 %}}Fire & Stone{{% /game %}}'
+  text: 'The latest game by "Mr. {{% game 822 %}}Carcassonne{{% /game %}}", so this fact alone makes {{% game 342927 %}}Fire & Stone{{% /game %}} an intersting game to watch.'
 342942:
   name: Ark Nova
   text: '{{% game 342942 %}}Ark Nova{{% /game %}} is *the* heavy eurogame of the season and has a good shot at a spot on the longlist. It''s way too heavy for a nomination though.'
@@ -300,6 +300,9 @@
 349463:
   name: Dungeons, Dice & Danger
   text: '{{% game 349463 %}}Dungeons, Dice & Danger{{% /game %}}'
+355483:
+  name: Die wandelnden Türme
+  text: 'Well, this is something of a surprise prediction since {{% game 355483 %}}Die wandelnden Türme{{% /game %}} doesn''t even have an English title yet and only a handful of ratings on BGG. There must be something about this game if the algorithm could still pick it up amongst the crowd.'
 356996:
   name: The Border
   text: '{{% game 356996 %}}The Border{{% /game %}}'
