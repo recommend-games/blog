@@ -3,7 +3,7 @@ title: Spiel des Jahres 2022 predictions
 slug: spiel-des-jahres-2022-predictions
 author: Markus Shepherd
 type: post
-date: 2022-05-10T22:30:00+03:00
+date: 2022-05-16T18:30:00+03:00
 tags:
   - SdJ
   - SdJ 2022
@@ -249,7 +249,7 @@ Same procedure as for {{% sdj / %}}, here are my three top picks for {{% kdj / %
 
 # Honourable mentions
 
-This is always the section where I squeeze in a few more title in order to increase my chance of covering the whole list. There's plenty of more strong games, but I'll restrict myself to two additional candidates for {{% sdj / %}} that the algorithm just wouldn't quite pick up:
+This is always the section where I squeeze in a few more title in order to increase my chance of covering the whole list. There's plenty of strong games I could mention, but I'll restrict myself to two additional candidates for {{% sdj / %}} that the algorithm just wouldn't quite pick up:
 
 * {{% game 346482 %}}Voll verplant{{% /game %}} (internationally known as {{% game 248861 %}}Metro X{{% /game %}}): A simple to learn, yet very difficult to master flip & write subway building game.
 * {{% game 291453 %}}SCOUT{{% /game %}}: A highly celebrated ladder–climbing game from highly celebrated publisher Oink Games.
