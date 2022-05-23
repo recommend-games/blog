@@ -125,14 +125,14 @@ This really is a drama in three acts: the decision of {{% kdj %}}Kennerspiel{{% 
 
 ## {{% kdj %}}Kennerspiel{{% /kdj %}} score
 
-TODO
+14/15 correct
 
 
 ## Longlist
 
-TODO
+5/9 and 4/6 correct
 
 
 ## Shortlist
 
-TODO
+4/6 correct
