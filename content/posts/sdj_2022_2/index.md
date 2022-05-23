@@ -71,7 +71,12 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 
 ## {{% sdj / %}} recommendations
 
-* TODO
+* {{% game 346703 %}}7 Wonders: Architects{{% /game %}}
+* {{% game 342207 %}}echoes: The Dancer{{% /game %}}
+* {{% game 303669 %}}Magic Rabbit{{% /game %}}
+* {{% game 331571 %}}My Gold Mine{{% /game %}}
+* {{% game 329839 %}}So Clover!{{% /game %}}
+* {{% game 303672 %}}Trek 12: Himalaya{{% /game %}}
 
 
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}
@@ -108,7 +113,9 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 
 ## {{% kdj / %}} recommendations
 
-* TODO
+* {{% game 342942 %}}Ark Nova{{% /game %}}
+* {{% game 299684 %}}Khôra: Rise of an Empire{{% /game %}}
+* {{% game 318560 %}}Witchstone{{% /game %}}
 
 
 # How good were the predictions?
