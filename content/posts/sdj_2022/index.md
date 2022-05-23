@@ -41,7 +41,7 @@ You can find the [detailed analysis here](predictions.py) and [complete results 
 
 # Candidates for {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}}
 
-{{< img src="sdj-blank" size="x300" alt="Spiel des Jahres 2022" >}}
+{{< img src="sdj-2022" size="x300" alt="Spiel des Jahres 2022" >}}
 
 
 ## #1: {{% game 355483 %}}Die wandelnden Türme{{% /game %}}
@@ -145,7 +145,7 @@ Alrighty, so these were the top ten candidates for a recommendation as determine
 
 # Candidates for {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}
 
-{{< img src="ksdj-blank" size="x300" alt="Kennerspiel des Jahres 2022" >}}
+{{< img src="ksdj-2022" size="x300" alt="Kennerspiel des Jahres 2022" >}}
 
 
 ## #1: {{% game 246784 %}}Cryptid{{% /game %}}
