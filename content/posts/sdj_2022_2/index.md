@@ -113,9 +113,9 @@ Following the enthusiastic reviews by jury members, anything but a nomination fo
 
 ## {{% kdj / %}} recommendations
 
-* {{% game 342942 %}}Ark Nova{{% /game %}}
-* {{% game 299684 %}}Khôra: Rise of an Empire{{% /game %}}
-* {{% game 318560 %}}Witchstone{{% /game %}}
+* {{% game 342942 %}}Ark Nova{{% /game %}}: As expected, this heavyweight got the "{{% game 251247 %}}Barrage{{% /game %}}" treatment – a place in the longlist, but the jury made it clear that this game is outside the scope of a {{% kdj %}}Kennerspiel{{% /kdj %}}.
+* {{% game 299684 %}}Khôra: Rise of an Empire{{% /game %}}: While frequently mentioned by other pundits, our algorithm only gave it outsider chances at #38. The theme seems quite bland, but that never stopped the jury before.
+* {{% game 318560 %}}Witchstone{{% /game %}}: At #11 on the predictions list, I'm going to call this one a *really* near miss. It's been on many other lists too, so no surprise it got recommended by the jury.
 
 
 # How good were the predictions?
