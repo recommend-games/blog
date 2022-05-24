@@ -32,7 +32,7 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-[Nominations are out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2022/)! The jury selected a total of fifteen games for their longlist, nine for {{% sdj / %}} and six for {{% kdj / %}}. Out of these games, three games each are nominated for both awards and can hope to get the coveted meeple added to their covers on July 16.
+[Nominations are out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2022/)! The jury selected a total of fifteen games for their longlist, nine for {{% sdj / %}} and six for {{% kdj / %}}. Out of these games, three games each are nominated for the two awards and can hope to get the coveted meeple added to their covers on July 16.
 
 Let's dive straight into the nominations and recommendations, before we discuss how good (or bad) [my predictions]({{<ref "posts/sdj_2022/index.md">}}) were and if the agreed with our [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}}).
 
@@ -90,7 +90,7 @@ While not entirely new in its core concept, the jury's reviews of {{% game 30090
 
 {{< img src="246784" size="x300" alt="Cryptid" >}}
 
-{{% game 246784 %}}Cryptid{{% /game %}}
+{{% game 246784 %}}Cryptid{{% /game %}} was the #1 candidate for the algorithm, so the nomination does not come as a surprise from that perspective, though deduction games haven't received that much recognition by the jury lately.
 
 
 ## {{% game 316554 %}}Dune: Imperium{{% /game %}}
@@ -99,7 +99,7 @@ While not entirely new in its core concept, the jury's reviews of {{% game 30090
 
 {{< img src="316554" size="x300" alt="Dune: Imperium" >}}
 
-{{% game 316554 %}}Dune: Imperium{{% /game %}}
+The possibility of a nomination for {{% game 316554 %}}Dune: Imperium{{% /game %}} was heavily discussed beforehand, but less because of the actual game and more about the question if the jury would give recognition to a game with a strong franchise. Indeed, this hasn't really happened since {{% game 823 %}}The Lord of the Rings{{% /game %}} more than two decades ago, so this alone speaks volumes to the quality of this game.
 
 
 ## {{% game 328479 %}}Living Forest{{% /game %}}
@@ -108,7 +108,7 @@ While not entirely new in its core concept, the jury's reviews of {{% game 30090
 
 {{< img src="328479" size="x300" alt="Living Forest" >}}
 
-{{% game 328479 %}}Living Forest{{% /game %}}
+Following the enthusiastic reviews by jury members, anything but a nomination for {{% game 328479 %}}Living Forest{{% /game %}} would have been a surprise. As it stands, these praises also make it the early favourite to win {{% kdj / %}}, but there's still plenty of time until the final decision in July.
 
 
 ## {{% kdj / %}} recommendations
