@@ -3,7 +3,7 @@ title: Spiel des Jahres 2022 nominations
 slug: spiel-des-jahres-2022-nominations
 author: Markus Shepherd
 type: post
-date: 2022-05-23T22:00:00+03:00
+date: 2022-05-24T17:00:00+03:00
 tags:
   - SdJ
   - SdJ 2021
@@ -125,14 +125,16 @@ This really is a drama in three acts: the decision of {{% kdj %}}Kennerspiel{{% 
 
 ## {{% kdj %}}Kennerspiel{{% /kdj %}} score
 
-14/15 correct
+Out of fifteen games on both longlists, our algorithm classified fourteen in agreement with the jury – that's 93% accurate. Only {{% game 295947 %}}Cascadia{{% /game %}} was marked incorrectly as a {{% kdj %}}Kennerspiel{{% /kdj %}}, but its score was merely 53%. So really, the algorithm considered this as a coin toss, as did most commentators, so I'd say that's a pretty good result for the {{% kdj %}}Kennerspiel{{% /kdj %}} score.
 
 
 ## Longlist
 
-5/9 and 4/6 correct
+Overall, I called nine out of fifteen games on the longlist correctly, which matches the result of [two years ago]({{<ref "posts/sdj_2020_2/index.md">}}) and is two short of [last year]({{<ref "posts/sdj_2021_2/index.md">}}). Five out of nine correct for {{% sdj %}}Spiel{{% /sdj %}} (four if you don't count {{% game 295947 %}}Cascadia{{% /game %}} on the wrong list, or even only three since {{% game 291453 %}}SCOUT{{% /game %}} didn't come out of the algorithm) and four out of six for {{% kdj %}}Kennerspiel{{% /kdj %}} is a fine result, but clearly this year was less predictable than last.
 
 
 ## Shortlist
 
-4/6 correct
+Just like the past two years, I predicted four out of six nominations correctly in total – I think 67% accurate is a result to celebrate. Even if you don't count {{% game 295947 %}}Cascadia{{% /game %}}, 50% is still pretty good and I'm glad it worked out fine – when I saw the longlist with its numerous surprises, I was afraid I'd be way off this year. 😅
+
+That's it for now, we'll be back in July with a little more in-depth analyses on the six nominees and their chances of winning an award.
