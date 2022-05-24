@@ -48,7 +48,7 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 
 {{< img src="295947" size="x300" alt="Cascadia" >}}
 
-{{% game 295947 %}}Cascadia{{% /game %}}
+It's probably safe to say this was the most mentioned game for a nomination. The question wasn't so much *if* {{% game 295947 %}}Cascadia{{% /game %}} would be nominated, but *where*: our algorithm classified it as a {{% kdj %}}Kennerspiel{{% /kdj %}} (just about, more on this below), but the jury put it on the {{% sdj %}}Spiel{{% /sdj %}} list in the end. The game has been discussed now so much that many consider it the favourite for the win, but I think the competion is very strong.
 
 
 ## {{% game 291453 %}}SCOUT{{% /game %}}
@@ -57,7 +57,7 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 
 {{< img src="291453" size="x300" alt="SCOUT" >}}
 
-{{% game 291453 %}}SCOUT{{% /game %}}
+{{% game 291453 %}}SCOUT{{% /game %}} was one of the game I really had to mention because there were some strong reviews, but the algorithm didn't quite pick it up. (It was #39 on my [predictions list](predictions.csv).) Availability seems very patchy and a significant number of commentators could have seen it on the {{% kdj %}}Kennerspiel{{% /kdj %}} list instead, so this getting nominated is still a bit of a surprise in the end.
 
 
 ## {{% game 300905 %}}Top Ten{{% /game %}}
@@ -66,7 +66,7 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 
 {{< img src="300905" size="x300" alt="Top Ten" >}}
 
-{{% game 300905 %}}Top Ten{{% /game %}}
+While not entirely new in its core concept, the jury's reviews of {{% game 300905 %}}Top Ten{{% /game %}} were so strong that I was the most certain about this one being nominated. There's plenty of people who seem unhappy about the prospect of "yet another party game" winning {{% sdj / %}}, but I'm sure the jury has a much better insights into what the market craves for than anybody else.
 
 
 ## {{% sdj / %}} recommendations
