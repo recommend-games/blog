@@ -71,12 +71,12 @@ While not entirely new in its core concept, the jury's reviews of {{% game 30090
 
 ## {{% sdj / %}} recommendations
 
-* {{% game 346703 %}}7 Wonders: Architects{{% /game %}}
-* {{% game 342207 %}}echoes: The Dancer{{% /game %}}
-* {{% game 303669 %}}Magic Rabbit{{% /game %}}
-* {{% game 331571 %}}My Gold Mine{{% /game %}}
-* {{% game 329839 %}}So Clover!{{% /game %}}
-* {{% game 303672 %}}Trek 12: Himalaya{{% /game %}}
+* {{% game 346703 %}}7 Wonders: Architects{{% /game %}}: One of the more expected recommendations. A crowd pleaser without being very exciting or new either.
+* {{% game 342207 %}}echoes: The Dancer{{% /game %}}: I've definitely had this series on my radar (if you pardon the pun), but the algorithm put {{% game 342210 %}}echoes: The Cocktail{{% /game %}} as the highest bet on #46. By the way: this recommendation "proves" that the jury doesn't shy away from app assisted games. They care much more about spreading board gaming to wider circles than gatekeeping "the pure lore".
+* {{% game 303669 %}}Magic Rabbit{{% /game %}}: Every year, the jury has some surprises in store, and this is definitely one of them. According to BGG, it was first released in 2020, and the lack of mentioning it elsewhere meant that our algorithm completely missed it. 🤷 A super quick co-operative deduction game does sound like an intriguing proposition though.
+* {{% game 331571 %}}My Gold Mine{{% /game %}}: The other big surprise on the list. It seems on the border to {{% kindersdj %}}Kinderspiel{{% /kindersdj %}}, which might partially explain why the algorithm placed it only at #49.
+* {{% game 329839 %}}So Clover!{{% /game %}}: I even saw this as a candidate for a nomination, so the recommendation is well expected.
+* {{% game 303672 %}}Trek 12: Himalaya{{% /game %}}: At #15 on the predictions, I'd call this a near miss. The jury has given the spotlight to many roll & write games over the year, and it appears this one offers enough new ideas to the genre for a recommendation.
 
 
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}
