@@ -6,22 +6,22 @@ type: post
 date: 2022-05-24T17:00:00+03:00
 tags:
   - SdJ
-  - SdJ 2021
+  - SdJ 2022
   - Spiel des Jahres
-  - Spiel des Jahres 2021
+  - Spiel des Jahres 2022
   - KSdJ
   - Kennerspiel
   - Kennerspiel des Jahres
-  - Kennerspiel des Jahres 2021
+  - Kennerspiel des Jahres 2022
   - Game of the Year
   - Germany
   - Predictions
   - Spiel des Jahres nominations
-  - Spiel des Jahres 2021 nominations
+  - Spiel des Jahres 2022 nominations
   - SdJ nominations
   - Kennerspiel nominations
   - Kennerspiel des Jahres nominations
-  - Kennerspiel des Jahres 2021 nominations
+  - Kennerspiel des Jahres 2022 nominations
   - The Adventures of Robin Hood
   - 'MicroMacro: Crime City'
   - Zombie Teenz Evolution
