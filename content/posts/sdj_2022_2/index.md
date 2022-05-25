@@ -22,12 +22,12 @@ tags:
   - Kennerspiel nominations
   - Kennerspiel des Jahres nominations
   - Kennerspiel des Jahres 2022 nominations
-  - The Adventures of Robin Hood
-  - 'MicroMacro: Crime City'
-  - Zombie Teenz Evolution
-  - Fantasy Realms
-  - Lost Ruins of Arnak
-  - Paleo
+  - Cascadia
+  - SCOUT
+  - Top Ten
+  - Cryptid
+  - 'Dune: Imperium'
+  - Living Forest
 ---
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
