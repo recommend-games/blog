@@ -39,7 +39,11 @@ Intro
 
 {{< img src="sdj-2022" size="x300" alt="Spiel des Jahres 2022" >}}
 
-Analysis
+| Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2022&yearMax=2021&include=291453,295947,300905&excludeRated=false) | Average | Bayes |
+|:---|---:|---:|---:|
+| {{% game 295947 %}}Cascadia{{% /game %}} | **8.2** | **8.0** | **7.6** |
+| {{% game 291453 %}}SCOUT{{% /game %}} | 6.8 | 7.7 | 6.5 |
+| {{% game 300905 %}}Top Ten{{% /game %}} | 7.6 | 7.6 | 6.2 |
 
 
 ## {{% game 295947 %}}Cascadia{{% /game %}}
@@ -78,7 +82,11 @@ TODO
 
 {{< img src="ksdj-2022" size="x300" alt="Kennerspiel des Jahres 2022" >}}
 
-Analysis
+| Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2022&yearMax=2021&include=246784,316554,328479&excludeRated=false) | Average | Bayes |
+|:---|---:|---:|---:|
+| {{% game 246784 %}}Cryptid{{% /game %}} | **8.3** | 7.5 | 7.2 |
+| {{% game 316554 %}}Dune: Imperium{{% /game %}} | 6.9 | **8.3** | **8.0** |
+| {{% game 328479 %}}Living Forest{{% /game %}} | 7.1 | 7.4 | 6.3 |
 
 
 ## {{% game 246784 %}}Cryptid{{% /game %}}
