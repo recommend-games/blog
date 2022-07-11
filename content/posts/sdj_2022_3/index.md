@@ -84,7 +84,11 @@ Still, I would consider this to be the dark horse in this year's race, though it
 
 {{< img src="300905" size="x300" alt="Top Ten" >}}
 
-TODO
+{{% game 300905 %}}Top Ten{{% /game %}} was the nominee that filled the "not another party game" square in the annual {{% sdj / %}} bullshit bingo. I got the impression most geeks saw this as another variation of {{% game 262543 %}}Wavelength{{% /game %}} and glanced over it. But when reading through the [reviews](https://www.spiel-des-jahres.de/kritikenrundschau-top-ten/), they're full of testimonies of joy and laughter. What better motivation to get people to the table?
+
+Of course, there are always caveats. Maybe most importantly, a game like this requires the group to come together and bring the game alive with their creativity. That's not to everyone's liking, but the fact that the people around the table matter more than the mechanics is still a plus in my book.
+
+The other, more formal, concern is that this would be the first {{% sdj / %}} that doesn't (claim to) work for three players. I've stipulated [years ago]({{<ref "posts/sdj_2020/index.md">}}) that a {{% sdj / %}} must work for three and four players, full stop. But the jury stated that {{% game 318977 %}}MicroMacro{{% /game %}} doesn't work for four players, and claiming games like {{% game 178900 %}}Codenames{{% /game %}} and {{% game 254640 %}}Just One{{% /game %}} can be played with three players is just a lie publishers habitually print on boxes. This didn't stop the jury then and it won't stop them now.
 
 
 ## Who will win?
