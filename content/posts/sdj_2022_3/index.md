@@ -93,7 +93,7 @@ The other, more formal, concern is that this would be the first {{% sdj / %}} th
 
 ## Who will win?
 
-TODO
+I guess you don't need to read between the lines above, my favourite for {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}} is {{% game 300905 %}}Top Ten{{% /game %}}. It just fits best in line with past winners: approachable, quick, fun – the best games of the three to bring all kinds of people together around the table. By all means, {{% game 295947 %}}Cascadia{{% /game %}} and {{% game 291453 %}}SCOUT{{% /game %}} seem strong games that definitely have their fans, but my feeling tells me that {{% game 300905 %}}Top Ten{{% /game %}} is the kind of game the jury is after.
 
 
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}
