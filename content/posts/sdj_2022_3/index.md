@@ -71,7 +71,11 @@ When you think of {{% sdj / %}} as an ambassador for the hobby board gaming, I d
 
 {{< img src="291453" size="x300" alt="SCOUT" >}}
 
-TODO
+As soon as the nomination for {{% game 291453 %}}SCOUT{{% /game %}} was announced, the jokes started to come in where on the tiny box the publisher would even put the {{% sdj %}}red meeple{{% /sdj %}}. There certainly was a time when a small box card game would have been considered without chances of winning {{% sdj / %}}, but {{% game 98778 %}}Hanabi{{% /game %}} proved that this certainly isn't the case anymore.
+
+Card games do have some advantages: they're cheap, portable and don't intimidate anyone. But all accounts, {{% game 291453 %}}SCOUT{{% /game %}} also has some very clever mechanisms going for itself.
+
+Still, I would consider this to be the dark horse in this year's race, though it would be a great service to the hobby if the jury showcased this gem from Japan to the Western markets.
 
 
 ## {{% game 300905 %}}Top Ten{{% /game %}}
