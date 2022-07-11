@@ -56,7 +56,13 @@ No doubt, the numbers are in favour of {{% game 295947 %}}Cascadia{{% /game %}}.
 
 {{< img src="295947" size="x300" alt="Cascadia" >}}
 
-TODO
+As mentioned, {{% game 295947 %}}Cascadia{{% /game %}} was high on everybody's list [from the beginning]({{<ref "posts/sdj_2022/index.md">}}). This tile-laying game of creating landscapes filled with animals certainly hit a nerve with the geek community: it's currently ranked #68 overall on BGG and [#1 in abstract games](https://boardgamegeek.com/abstracts/browse/boardgame?sort=rank&rankobjecttype=family&rankobjectid=4666).
+
+Despite these high praises and the strong numbers, I feel like there are a lot of caveats here. First, our {{% kdj %}}Kennerspiel{{% /kdj %}} score was a little undecided as to what award it should be nominted in, so that speaks for a {{% sdj %}}Spiel{{% /sdj %}} on the heavier side. Not a negative per se, but the jury did favour very light games over the past years for the family award. Also that classification as an abstract game isn't particularly favourable: it exposes the fact that the setting is nothing but an excuse to draw cute animals on the tiles.
+
+None of this matters if the gameplay was an overwhelming experience. But when reading through the [jury's reviews](https://www.spiel-des-jahres.de/kritikenrundschau-cascadia-wo-fuchs-und-lachs-sich-gute-nacht-sagen/), the tone isn't exactly enthusiastic. While everybody seems to have a good time, {{% game 295947 %}}Cascadia{{% /game %}} doesn't leave a lasting impression.
+
+When you think of {{% sdj / %}} as an ambassador for the hobby board gaming, I don't think {{% game 295947 %}}Cascadia{{% /game %}} is the best game for this job. Overall, it might be a fun, clever puzzle, but it also has a slightly dry and geeky aura to it that might fail to pull in new players.
 
 
 ## {{% game 291453 %}}SCOUT{{% /game %}}
@@ -94,7 +100,7 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 | {{% game 316554 %}}Dune: Imperium{{% /game %}} | 7.1 | **8.3** | **8.0** | **52.7%** |
 | {{% game 328479 %}}Living Forest{{% /game %}} | 7.1 | 7.4 | 6.3 | 20.3% |
 
-The recommendation algorithm picks {{% game 246784 %}}Cryptid{{% /game %}} as its favourite, whilst the geeks choose {{% game 316554 %}}Dune: Imperium{{% /game %}}. Or maybe {{% game 328479 %}}Living Forest{{% /game %}} will surprise everyone in the end?
+The recommendation algorithm picks {{% game 246784 %}}Cryptid{{% /game %}} as its favourite, whilst the geeks choose {{% game 316554 %}}Dune: Imperium{{% /game %}}. Or maybe {{% game 328479 %}}Living Forest{{% /game %}} will surprise everyone in the end? Let's take a look at the candidates!
 
 
 ## {{% game 246784 %}}Cryptid{{% /game %}}
