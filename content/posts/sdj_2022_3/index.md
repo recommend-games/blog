@@ -43,9 +43,9 @@ Before we dive into the individual games, let's look at some numbers to see some
 
 | Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2022&yearMax=2021&include=291453,295947,300905&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/2897042/poll-spiel-des-jahres-2022-kennerspiel-des-jahres) |
 |:---|---:|---:|---:|---:|
-| {{% game 295947 %}}Cascadia{{% /game %}} | **8.3** | **8.0** | **7.6** | **76.0%** |
-| {{% game 291453 %}}SCOUT{{% /game %}} | 6.9 | 7.7 | 6.5 | 14.7% |
-| {{% game 300905 %}}Top Ten{{% /game %}} | 7.2 | 7.6 | 6.2 | 9.3% |
+| {{% game 295947 %}}Cascadia{{% /game %}} | **8.1** | **8.0** | **7.6** | **77.8%** |
+| {{% game 291453 %}}SCOUT{{% /game %}} | 6.9 | 7.7 | 6.5 | 13.6% |
+| {{% game 300905 %}}Top Ten{{% /game %}} | 7.2 | 7.6 | 6.2 | 8.6% |
 
 No doubt, the numbers are in favour of {{% game 295947 %}}Cascadia{{% /game %}}. But will the jury agree? Let's look at the nominees in a little more detail.
 
@@ -104,9 +104,9 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 
 | Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2022&yearMax=2021&include=246784,316554,328479&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/2897042/poll-spiel-des-jahres-2022-kennerspiel-des-jahres) |
 |:---|---:|---:|---:|---:|
-| {{% game 246784 %}}Cryptid{{% /game %}} | **8.4** | 7.5 | 7.2 | 27.0% |
-| {{% game 316554 %}}Dune: Imperium{{% /game %}} | 7.1 | **8.3** | **8.0** | **52.7%** |
-| {{% game 328479 %}}Living Forest{{% /game %}} | 7.1 | 7.4 | 6.3 | 20.3% |
+| {{% game 246784 %}}Cryptid{{% /game %}} | **8.6** | 7.5 | 7.2 | 25.0% |
+| {{% game 316554 %}}Dune: Imperium{{% /game %}} | 6.9 | **8.3** | **8.0** | **52.5%** |
+| {{% game 328479 %}}Living Forest{{% /game %}} | 7.3 | 7.4 | 6.3 | 22.5% |
 
 The recommendation algorithm picks {{% game 246784 %}}Cryptid{{% /game %}} as its favourite, whilst the geeks choose {{% game 316554 %}}Dune: Imperium{{% /game %}}. Or maybe {{% game 328479 %}}Living Forest{{% /game %}} will surprise everyone in the end? Let's take a look at the candidates!
 
