@@ -145,7 +145,13 @@ In the end what we have is a fairly complex game with lots of high praises that 
 
 {{< img src="328479" size="x300" alt="Living Forest" >}}
 
-TODO
+{{% game 328479 %}}Living Forest{{% /game %}} has received wider distribution only quite recently, so hasn't gathered too many ratings and is hence not strongly represented in the recommendations yet. But the jury has given almost unanimously [high praises](https://www.spiel-des-jahres.de/living-forest-waldgeister-gegen-waldbrand/), so don't make the mistake of overlooking this one.
+
+The mixture of deck building and push-your-luck isn't particularly new – it's the same receipe behind {{% kdj %}}Kennerspiel des Jahres 2018{{% /kdj %}} winner {{% game 244521 %}}The Quacks of Quedlinburg{{% /game %}}. But {{% game 328479 %}}Living Forest{{% /game %}} still manages to create its very distinct spin on those ingredients and adds a pleasant dose of player interaction on top of that.
+
+I've heard many experienced games being somewhat lukewarm on {{% game 328479 %}}Living Forest{{% /game %}} after a game or two. I obviously don't want to deny them their opinions, but I believe some of them aren't quite open to the wonderful journey that the game takes you on as you explore the {{% game 328479 %}}Living Forest{{% /game %}} deeper and deeper. During the first game, you might just be happy to draw some cards and build some trees. Then you discover the synergies and create a more efficient engine. Finally, you realise how ever decision you make affects the other players and become fiercely competitive.
+
+I've played dozens of games on [Board Game Arena](https://boardgamearena.com/gamepanel?game=livingforest) and I'm still looking forward to many more!
 
 
 ## Who will win?
