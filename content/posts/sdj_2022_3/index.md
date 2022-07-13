@@ -117,7 +117,13 @@ The recommendation algorithm picks {{% game 246784 %}}Cryptid{{% /game %}} as it
 
 {{< img src="246784" size="x300" alt="Cryptid" >}}
 
-TODO
+This still is an interesting nomination to me. Logical deduction games haven't received much attention by the jury in the past, so it's quite nice they highlight this genre as well. It's still a tough sale for the general audience: essentially, you're trying to solve a very cerebral puzzle, and there's plenty of people who don't particularly enjoy that kind of pastime.
+
+But even within the genre, I have some reservations about {{% game 246784 %}}Cryptid{{% /game %}}: I've played it twice, and both times someone at the table understood their clue wrong, which meant the game just completely fell apart. It feels in a way "irresponsible" to "unleash" this game to a wide audience that often will play fast and loose with the rules.
+
+Finally, in the very same genre we've also had {{% game 279537 %}}The Search for Planet X{{% /game %}} released in Germany recently which I consider to be the stronger game.
+
+Don't get me wrong, I actually quite like deduction games and {{% game 246784 %}}Cryptid{{% /game %}} in particular. Lots of people do – there's a lot of positive ratings of this relatively old game, so the strong performance for the recommendation algorithm is partially explained by that.
 
 
 ## {{% game 316554 %}}Dune: Imperium{{% /game %}}
