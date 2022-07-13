@@ -132,7 +132,11 @@ Don't get me wrong, I actually quite like deduction games and {{% game 246784 %}
 
 {{< img src="316554" size="x300" alt="Dune: Imperium" >}}
 
-TODO
+There have been much discussions beforehand if the jury would nominate a franchise game. They obviously did, and to paraphrase the jury's chairman Harald Schrapers, they simply don't care about these things, only if the game is fun. Many people will agree that {{% game 316554 %}}Dune: Imperium{{% /game %}} is – it us currently ranked as the #15 best game of all times on BGG.
+
+Does this make it the favourite to win {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}? Not necessarily. For starters, it is pretty complex for an award that's meant to take gamers one (and only one!) step further than the typical {{% sdj %}}Spiel{{% /sdj %}}. There's also some consideration if this combination of deck building and worker placement is too similar to last year's nominee {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}. I don't think the jury cares - they might've, if {{% game 312484 %}}Arnak{{% /game %}} had actually won.
+
+In the end what we have is a fairly complex game with lots of high praises that might be just out of reach for the main award.
 
 
 ## {{% game 328479 %}}Living Forest{{% /game %}}
