@@ -156,4 +156,6 @@ I've played dozens of games on [Board Game Arena](https://boardgamearena.com/gam
 
 ## Who will win?
 
-TODO
+Again, I think it's pretty clear from the above that my money is on {{% game 328479 %}}Living Forest{{% /game %}} to win {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}. It just hits the sweet spot of a fairly approachable game that offers enough challenges for those who are ready for a bit deeper experience. {{% game 246784 %}}Cryptid{{% /game %}} and {{% game 316554 %}}Dune: Imperium{{% /game %}} are clearly very strong games in their own right, but both the jury's and my own enthusiasm quite clearly point towards {{% game 328479 %}}Living Forest{{% /game %}}.
+
+So it appears that for both awards I picked the nominee the community considers the least likely. We'll know more on July 16. This award ceremony will actually mark the first time it's being held on a Saturday evening and I have the immense honour to be in Berlin for the event. Needless to say, I'm very excited about this. Follow me on [Twitter](https://twitter.com/MarkusRShepherd) for some live coverage! 😎
