@@ -3,7 +3,7 @@ title: Spiel des Jahres 2022 predictions – Part 2!
 slug: spiel-des-jahres-2022-predictions-part-2
 author: Markus Shepherd
 type: post
-date: 2022-07-09T00:00:00+03:00
+date: 2022-07-14T00:00:00+03:00
 tags:
   - SdJ
   - SdJ 2022
@@ -32,7 +32,9 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-Intro
+The waiting is finally coming to an end! On Saturday, July 16, the jury will announce the winners of {{% sdj %}}Spiel des Jahres{{% /sdj %}} and {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}. We're blessed with another year of very strong games and I'm certainly very excited to learn what games will win the two awards.
+
+I'm proud to say that I've called both awards correctly for [two]({{<ref "posts/sdj_2020_3/index.md">}}) [years]({{<ref "posts/sdj_2021_3/index.md">}}) running, so there is a bit of pressure to keep up the streak. 😅 So without further ado, let's look at the nominees.
 
 
 # Nominated for {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}}
