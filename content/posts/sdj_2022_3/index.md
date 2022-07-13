@@ -90,7 +90,7 @@ Still, I would consider this to be the dark horse in this year's race, though it
 
 Of course, there are always caveats. Maybe most importantly, a game like this requires the group to come together and bring the game alive with their creativity. That's not to everyone's liking, but the fact that the people around the table matter more than the mechanics is still a plus in my book.
 
-The other, more formal, concern is that this would be the first {{% sdj / %}} that doesn't (claim to) work for three players. I've stipulated [years ago]({{<ref "posts/sdj_2020/index.md">}}) that a {{% sdj / %}} must work for three and four players, full stop. But the jury stated that {{% game 318977 %}}MicroMacro{{% /game %}} doesn't work for four players, and claiming games like {{% game 178900 %}}Codenames{{% /game %}} and {{% game 254640 %}}Just One{{% /game %}} can be played with three players is just a lie publishers habitually print on boxes. This didn't stop the jury then and it won't stop them now.
+The other, more formal, concern is that this would be the first {{% sdj / %}} that doesn't (claim to) work for three players. I've stipulated [years ago]({{<ref "posts/sdj_2020/index.md">}}) that a {{% sdj / %}} must work for three and four players, full stop. But the jury stated that {{% game 318977 %}}MicroMacro{{% /game %}} doesn't work for four players, and claiming games like {{% game 178900 %}}Codenames{{% /game %}} and {{% game 254640 %}}Just One{{% /game %}} can be played with three players is just a lie publishers habitually print on boxes. This didn't stop the jury then and it shouldn't stop them now.
 
 
 ## Who will win?
@@ -134,7 +134,7 @@ Don't get me wrong, I actually quite like deduction games and {{% game 246784 %}
 
 {{< img src="316554" size="x300" alt="Dune: Imperium" >}}
 
-There have been much discussions beforehand if the jury would nominate a franchise game. They obviously did, and to paraphrase the jury's chairman Harald Schrapers, they simply don't care about these things, only if the game is fun. Many people will agree that {{% game 316554 %}}Dune: Imperium{{% /game %}} is – it us currently ranked as the #15 best game of all times on BGG.
+There have been much discussions beforehand if the jury would nominate a franchise game. They obviously did, and to paraphrase the jury's chairman Harald Schrapers, they simply don't care about these things, only if the game is fun. Many people will agree that {{% game 316554 %}}Dune: Imperium{{% /game %}} is – it's currently ranked as the 15th best game of all times on BGG.
 
 Does this make it the favourite to win {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}? Not necessarily. For starters, it is pretty complex for an award that's meant to take gamers one (and only one!) step further than the typical {{% sdj %}}Spiel{{% /sdj %}}. There's also some consideration if this combination of deck building and worker placement is too similar to last year's nominee {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}. I don't think the jury cares - they might've, if {{% game 312484 %}}Arnak{{% /game %}} had actually won.
 
