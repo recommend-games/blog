@@ -42,7 +42,7 @@ TODO
 
 {{< img src="295947" size="x300" alt="Cascadia" >}}
 
-TODO
+In the end, it was the favourite that won {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}}. It's the first award I called wrong in three years – still not a bad quota I guess. 🤷 Somewhat ironically, {{% game 295947 %}}Cascadia{{% /game %}} remains the only game of the six nominees I haven't played yet, but after playing {{% game 291453 %}}SCOUT{{% /game %}} and {{% game 300905 %}}Top Ten{{% /game %}}, I do see how those games might not be for everyone. On the other hand, the positivity towards {{% game 295947 %}}Cascadia{{% /game %}} was overwhelming – it's rare to see the 'geek crowd being so enthusiastic about the jury's decision. All in all, it appears {{% game 295947 %}}Cascadia{{% /game %}} will make a great ambassador for the hobby board gaming.
 
 
 # {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}
