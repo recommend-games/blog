@@ -56,7 +56,7 @@ In the end, it was the favourite that won {{% sdj %}}Spiel des Jahres 2022{{% /s
 
 {{< img src="328479" size="x300" alt="Living Forest" >}}
 
-TODO
+This award I got right, and as you could read from my [previous post]({{<ref "posts/sdj_2022_3/index.md">}}), I very much agree with this decision. Similar to the {{% sdj %}}red award{{% /sdj %}}, I could see good reasons why the other {{% kdj %}}Kennerspiel{{% /kdj %}} nominees {{% game 246784 %}}Cryptid{{% /game %}} and {{% game 316554 %}}Dune: Imperium{{% /game %}} have a bit narrower audiences, but I think {{% game 328479 %}}Living Forest{{% /game %}} hits the sweetspot of a games that's "one step up" from a {{% sdj %}}Spiel{{% /sdj %}} whilst still remaining fairly accessible. I'm certain many many people will enjoy planting those trees and extinguishing those forest fires as much as I do.
 
 
 # Conclusion
