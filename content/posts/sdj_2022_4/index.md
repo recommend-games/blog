@@ -28,7 +28,7 @@ tags:
 
 The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/cascadia-ist-das-spiel-des-jahres-2022/)! As mentioned before, this year was the first time the ceremony was held on a Saturday evening and I had the immense pleasure of attending it live. In case you missed my very proffesional live coverage on Twitter, here's a [summary](https://twitter.com/MarkusRShepherd/status/1553060952559452160?s=20&t=cr68YeOuUltbs57V050Umg) of the event.
 
-But without further ado, here's the winners of {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}!
+But without further ado, here are the winners of {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}!
 
 
 # {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}}
@@ -61,4 +61,8 @@ This award I got right, and as you could read from my [previous post]({{<ref "po
 
 # Conclusion
 
-TODO
+I feel like I say this every year, but I think we've had another very strong year with six excellent nominees that also were very different from each other. I blame the uniform strength on my first wrong call since I started these predictions. 😉
+
+Attending the award ceremony will make this a very special year for me, and I hope I'll soon find the time to write a little article about my experience in Berlin.
+
+As always, this has been great fun and I hope to be back with my predictions for {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}!
