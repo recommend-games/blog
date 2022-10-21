@@ -18,7 +18,7 @@ metaDataFormat: yaml
 pygmentsUseClasses: true
 pygmentCodeFences: true
 disqusShortname: recommend-games
-googleAnalytics: UA-128891980-1
+# googleAnalytics: UA-128891980-1
 enableRobotsTXT: true
 
 Params:
@@ -33,7 +33,7 @@ Params:
   rss: true
   comments: true
   # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
-  gcse: 013480686921635014344:zokjfkkzyza
+  # gcse: 013480686921635014344:zokjfkkzyza
   readingTime: true
   wordCount: true
   useHLJS: true
