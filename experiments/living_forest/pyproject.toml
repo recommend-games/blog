@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "living-forest"
+version = "0.1.0"
+description = "Living Forest pricing"
+authors = ["Markus Shepherd <markus@recommend.games>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "~3.10"
+
+board-game-utils = "*"
+numpy = "*"
+pandas = "*"
+pytility = "*"
+scikit-learn = "*"
+scipy = "*"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+nb-black = "*"
+jupyterlab = "*"
+jupytext = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+target-version = ["py310"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+disallow_any_unimported = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+strict_equality = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_return_any = true
+check_untyped_defs = true
+show_error_codes = true
