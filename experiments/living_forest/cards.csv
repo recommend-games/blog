@@ -1,0 +1,24 @@
+name,stage,white,sun,water,plant,spiral,lotus,price
+Spider,1,-1,2,0,4,0,0,1
+Armadillo,1,0,2,0,1,0,0,3
+Squirrel,1,0,1,0,2,0,0,5
+Wolf,1,0,0,0,0,2,0,5
+Hedgehog,1,0,3,0,0,0,0,3
+Raccoon,1,0,2,1,0,0,0,3
+Bat,1,0,-1,0,3,0,0,5
+Turtle,1,0,1,2,0,0,0,5
+Beaver,1,0,0,1,1,0,0,2
+Parrot,1,0,3,0,-1,0,1,4
+Toucan,1,1,-2,-1,0,0,0,4
+Taily dog,1,0,4,0,0,0,0,5
+Orangutan,1,1,0,0,-2,0,0,5
+Butterfly,1,1,-3,0,0,0,0,5
+Hippopotamus,1,-1,1,4,1,0,0,2
+Owl,1,-1,1,1,0,3,0,2
+Ibex,1,0,0,0,0,0,2,5
+Flamingo,1,0,0,2,0,0,0,3
+Crow,1,0,1,0,0,1,0,2
+Horse,1,0,-1,0,0,2,0,3
+Olm,1,0,0,1,-1,1,1,4
+Caterpillar,1,0,0,0,2,0,0,3
+Meerkat,1,0,1,-1,2,0,0,2
