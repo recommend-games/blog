@@ -17,7 +17,7 @@ theme: beautifulhugo
 metaDataFormat: yaml
 pygmentsUseClasses: true
 pygmentCodeFences: true
-disqusShortname: recommend-games
+# disqusShortname: recommend-games
 # googleAnalytics: UA-128891980-1
 enableRobotsTXT: true
 
