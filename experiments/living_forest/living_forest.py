@@ -25,6 +25,7 @@ pd.options.display.max_rows = 150
 
 # %%
 data = pd.read_csv("cards.csv", index_col="name")
+data["flames"] = data["stage"] + 1
 data.shape
 
 # %%
@@ -32,11 +33,12 @@ data.sample(10)
 
 # %%
 elements = ["white", "sun", "water", "plant", "spiral", "lotus"]
+X = data[elements]
+y = data["price"]
+X.shape, y.shape
 
 # %%
 model = LinearRegression(fit_intercept=True)
-X = data[elements]
-y = data["price"]
 model.fit(X, y)
 
 # %%
