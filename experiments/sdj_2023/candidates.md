@@ -1,70 +1,16 @@
 # Spiel des Jahres
 
 
-## #1: {{% game 329839 %}}So Clover!{{% /game %}}
+## #1: {{% game 266830 %}}QE{{% /game %}}
 
-*3–6 players, 30 minutes, 10+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+*3–5 players, 45 minutes, 8+ years, medium light (1.6), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="329839" size="x300" alt="So Clover!" >}}
+{{< img src="266830" size="x300" alt="QE" >}}
 
-{{% game 329839 %}}So Clover!{{% /game %}}
-
-
-## #2: {{% game 346703 %}}7 Wonders: Architects{{% /game %}}
-
-*2–7 players, 25 minutes, 8+ years, light (1.4), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="346703" size="x300" alt="7 Wonders: Architects" >}}
-
-{{% game 346703 %}}7 Wonders: Architects{{% /game %}}
+{{% game 266830 %}}QE{{% /game %}}
 
 
-## #3: {{% game 300905 %}}Top Ten{{% /game %}}
-
-*4–9 players, 30 minutes, 14+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="300905" size="x300" alt="Top Ten" >}}
-
-{{% game 300905 %}}Top Ten{{% /game %}}
-
-
-## #4: {{% game 291453 %}}SCOUT{{% /game %}}
-
-*2–5 players, 15 minutes, 9+ years, light (1.3), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="291453" size="x300" alt="SCOUT" >}}
-
-{{% game 291453 %}}SCOUT{{% /game %}}
-
-
-## #5: {{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
-
-*2–5 players, 30 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="327831" size="x300" alt="Lost Cities: Roll & Write" >}}
-
-{{% game 327831 %}}Lost Cities: Roll & Write{{% /game %}}
-
-
-## #6: {{% game 300753 %}}Cross Clues{{% /game %}}
-
-*2–6 players, 5–10 minutes, 7+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="300753" size="x300" alt="Cross Clues" >}}
-
-{{% game 300753 %}}Cross Clues{{% /game %}}
-
-
-## #7: {{% game 329845 %}}Stella: Dixit Universe{{% /game %}}
-
-*3–6 players, 30 minutes, 8+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="329845" size="x300" alt="Stella: Dixit Universe" >}}
-
-{{% game 329845 %}}Stella: Dixit Universe{{% /game %}}
-
-
-## #8: {{% game 355483 %}}Die wandelnden Türme{{% /game %}}
+## #2: {{% game 355483 %}}Die wandelnden Türme{{% /game %}}
 
 *2–6 players, 30 minutes, 8+ years, medium light (1.7), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -73,34 +19,25 @@
 {{% game 355483 %}}Die wandelnden Türme{{% /game %}}
 
 
-## #9: {{% game 295947 %}}Cascadia{{% /game %}}
+## #3: {{% game 353150 %}}FYFE{{% /game %}}
 
-*1–4 players, 30–45 minutes, 10+ years, medium light (1.8), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–5 players, 30–45 minutes, 10+ years, medium light (2.1), 98% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="295947" size="x300" alt="Cascadia" >}}
+{{< img src="353150" size="x300" alt="FYFE" >}}
 
-{{% game 295947 %}}Cascadia{{% /game %}}
-
-
-## #10: {{% game 346482 %}}Voll verplant{{% /game %}}
-
-*1–6 players, 20 minutes, 8+ years, medium light (1.7), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="346482" size="x300" alt="Voll verplant" >}}
-
-{{% game 346482 %}}Voll verplant{{% /game %}}
+{{% game 353150 %}}FYFE{{% /game %}}
 
 
-## #11: {{% game 248861 %}}Metro X{{% /game %}}
+## #4: {{% game 356033 %}}Libertalia: Winds of Galecrest{{% /game %}}
 
-*1–6 players, 20 minutes, 8+ years, medium light (1.8), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+*1–6 players, 45–60 minutes, 14+ years, medium light (2.1), 86% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="248861" size="x300" alt="Metro X" >}}
+{{< img src="356033" size="x300" alt="Libertalia: Winds of Galecrest" >}}
 
-{{% game 248861 %}}Metro X{{% /game %}}
+{{% game 356033 %}}Libertalia: Winds of Galecrest{{% /game %}}
 
 
-## #12: {{% game 351605 %}}Bohnanza: 25th Anniversary Edition{{% /game %}}
+## #5: {{% game 351605 %}}Bohnanza: 25th Anniversary Edition{{% /game %}}
 
 *2–7 players, 45 minutes, 10+ years, medium light (1.6), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -109,114 +46,177 @@
 {{% game 351605 %}}Bohnanza: 25th Anniversary Edition{{% /game %}}
 
 
+## #6: {{% game 354729 %}}Wonder Woods{{% /game %}}
+
+*2–5 players, 20–25 minutes, 8+ years, light (1.3), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="354729" size="x300" alt="Wonder Woods" >}}
+
+{{% game 354729 %}}Wonder Woods{{% /game %}}
+
+
+## #7: {{% game 367220 %}}Sea Salt & Paper{{% /game %}}
+
+*2–4 players, 30–45 minutes, 8+ years, light (1.4), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="367220" size="x300" alt="Sea Salt & Paper" >}}
+
+{{% game 367220 %}}Sea Salt & Paper{{% /game %}}
+
+
+## #8: {{% game 324914 %}}Inside Job{{% /game %}}
+
+*3–5 players, 20–30 minutes, 10+ years, medium light (1.8), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="324914" size="x300" alt="Inside Job" >}}
+
+{{% game 324914 %}}Inside Job{{% /game %}}
+
+
+## #9: {{% game 351476 %}}My City: Roll & Write{{% /game %}}
+
+*1–6 players, 30 minutes, 10+ years, medium light (1.6), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="351476" size="x300" alt="My City: Roll & Write" >}}
+
+{{% game 351476 %}}My City: Roll & Write{{% /game %}}
+
+
+## #10: {{% game 364766 %}}MicroMacro: Crime City – All In{{% /game %}}
+
+*1–4 players, 15–45 minutes, 12+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="364766" size="x300" alt="MicroMacro: Crime City – All In" >}}
+
+{{% game 364766 %}}MicroMacro: Crime City – All In{{% /game %}}
+
+
+## #11: {{% game 341496 %}}Caesar's Empire{{% /game %}}
+
+*2–5 players, 30–60 minutes, 10+ years, light (1.5), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="341496" size="x300" alt="Caesar's Empire" >}}
+
+{{% game 341496 %}}Caesar's Empire{{% /game %}}
+
+
+## #12: {{% game 353545 %}}Next Station: London{{% /game %}}
+
+*1–4 players, 25–30 minutes, 8+ years, light (1.3), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="353545" size="x300" alt="Next Station: London" >}}
+
+{{% game 353545 %}}Next Station: London{{% /game %}}
+
+
 # Kennerspiel des Jahres
 
 
-## #1: {{% game 246784 %}}Cryptid{{% /game %}}
-
-*3–5 players, 30–50 minutes, 10+ years, medium light (2.3), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="246784" size="x300" alt="Cryptid" >}}
-
-{{% game 246784 %}}Cryptid{{% /game %}}
-
-
-## #2: {{% game 342942 %}}Ark Nova{{% /game %}}
-
-*1–4 players, 90–150 minutes, 14+ years, medium heavy (3.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="342942" size="x300" alt="Ark Nova" >}}
-
-{{% game 342942 %}}Ark Nova{{% /game %}}
-
-
-## #3: {{% game 279537 %}}The Search for Planet X{{% /game %}}
-
-*1–4 players, 60 minutes, 13+ years, medium light (2.3), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="279537" size="x300" alt="The Search for Planet X" >}}
-
-{{% game 279537 %}}The Search for Planet X{{% /game %}}
-
-
-## #4: {{% game 314491 %}}Meadow{{% /game %}}
-
-*1–4 players, 60–90 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="314491" size="x300" alt="Meadow" >}}
-
-{{% game 314491 %}}Meadow{{% /game %}}
-
-
-## #5: {{% game 341048 %}}Free Ride{{% /game %}}
-
-*1–5 players, 50–90 minutes, 10+ years, medium (2.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="341048" size="x300" alt="Free Ride" >}}
-
-{{% game 341048 %}}Free Ride{{% /game %}}
-
-
-## #6: {{% game 296043 %}}Four Gardens{{% /game %}}
-
-*2–4 players, 45 minutes, 10+ years, medium light (2.4), 87% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="296043" size="x300" alt="Four Gardens" >}}
-
-{{% game 296043 %}}Four Gardens{{% /game %}}
-
-
-## #7: {{% game 316554 %}}Dune: Imperium{{% /game %}}
-
-*1–4 players, 60–120 minutes, 14+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="316554" size="x300" alt="Dune: Imperium" >}}
-
-{{% game 316554 %}}Dune: Imperium{{% /game %}}
-
-
-## #8: {{% game 317985 %}}Beyond the Sun{{% /game %}}
-
-*2–4 players, 60–120 minutes, 14+ years, medium (3.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="317985" size="x300" alt="Beyond the Sun" >}}
-
-{{% game 317985 %}}Beyond the Sun{{% /game %}}
-
-
-## #9: {{% game 227224 %}}The Red Cathedral{{% /game %}}
-
-*1–4 players, 80 minutes, 10+ years, medium (2.8), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="227224" size="x300" alt="The Red Cathedral" >}}
-
-{{% game 227224 %}}The Red Cathedral{{% /game %}}
-
-
-## #10: {{% game 296912 %}}Fort{{% /game %}}
-
-*2–4 players, 20–40 minutes, 10+ years, medium light (2.4), 95% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="296912" size="x300" alt="Fort" >}}
-
-{{% game 296912 %}}Fort{{% /game %}}
-
-
-## #11: {{% game 328479 %}}Living Forest{{% /game %}}
-
-*1–4 players, 40 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="328479" size="x300" alt="Living Forest" >}}
-
-{{% game 328479 %}}Living Forest{{% /game %}}
-
-
-## #12: {{% game 336986 %}}Flamecraft{{% /game %}}
+## #1: {{% game 336986 %}}Flamecraft{{% /game %}}
 
 *1–5 players, 60 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="336986" size="x300" alt="Flamecraft" >}}
 
 {{% game 336986 %}}Flamecraft{{% /game %}}
+
+
+## #2: {{% game 275215 %}}Namiji{{% /game %}}
+
+*2–5 players, 30–45 minutes, 8+ years, medium light (1.8), 72% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="275215" size="x300" alt="Namiji" >}}
+
+{{% game 275215 %}}Namiji{{% /game %}}
+
+
+## #3: {{% game 309728 %}}Pessoa{{% /game %}}
+
+*1–4 players, 45–75 minutes, 10+ years, medium (2.6), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="309728" size="x300" alt="Pessoa" >}}
+
+{{% game 309728 %}}Pessoa{{% /game %}}
+
+
+## #4: {{% game 304051 %}}Creature Comforts{{% /game %}}
+
+*1–5 players, 45 minutes, 8+ years, medium light (2.3), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="304051" size="x300" alt="Creature Comforts" >}}
+
+{{% game 304051 %}}Creature Comforts{{% /game %}}
+
+
+## #5: {{% game 345972 %}}Cat in the Box: Deluxe Edition{{% /game %}}
+
+*2–5 players, 20–40 minutes, 13+ years, medium light (1.8), 90% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="345972" size="x300" alt="Cat in the Box: Deluxe Edition" >}}
+
+{{% game 345972 %}}Cat in the Box: Deluxe Edition{{% /game %}}
+
+
+## #6: {{% game 366162 %}}Clever 4Ever{{% /game %}}
+
+*1–4 players, 30 minutes, 14+ years, medium light (2.5), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="366162" size="x300" alt="Clever 4Ever" >}}
+
+{{% game 366162 %}}Clever 4Ever{{% /game %}}
+
+
+## #7: {{% game 347703 %}}First Rat{{% /game %}}
+
+*1–5 players, 30–75 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="347703" size="x300" alt="First Rat" >}}
+
+{{% game 347703 %}}First Rat{{% /game %}}
+
+
+## #8: {{% game 364008 %}}Maudit Mot Dit{{% /game %}}
+
+*3–8 players, 30 minutes, 12+ years, medium light (2.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="364008" size="x300" alt="Maudit Mot Dit" >}}
+
+{{% game 364008 %}}Maudit Mot Dit{{% /game %}}
+
+
+## #9: {{% game 367295 %}}Powerline{{% /game %}}
+
+*1–6 players, 45 minutes, 8+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="367295" size="x300" alt="Powerline" >}}
+
+{{% game 367295 %}}Powerline{{% /game %}}
+
+
+## #10: {{% game 349463 %}}Dungeons, Dice & Danger{{% /game %}}
+
+*1–4 players, 45–60 minutes, 12+ years, medium light (2.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="349463" size="x300" alt="Dungeons, Dice & Danger" >}}
+
+{{% game 349463 %}}Dungeons, Dice & Danger{{% /game %}}
+
+
+## #11: {{% game 356314 %}}Exit: The Game – Advent Calendar: The Silent Storm{{% /game %}}
+
+*1–4 players, 45–800 minutes, 10+ years, medium light (2.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="356314" size="x300" alt="Exit: The Game – Advent Calendar: The Silent Storm" >}}
+
+{{% game 356314 %}}Exit: The Game – Advent Calendar: The Silent Storm{{% /game %}}
+
+
+## #12: {{% game 329939 %}}Keystone: North America{{% /game %}}
+
+*1–4 players, 40–90 minutes, 10+ years, medium light (2.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="329939" size="x300" alt="Keystone: North America" >}}
+
+{{% game 329939 %}}Keystone: North America{{% /game %}}
 
 
