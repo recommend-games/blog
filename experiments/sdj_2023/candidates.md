@@ -130,7 +130,16 @@
 {{% game 275215 %}}Namiji{{% /game %}}
 
 
-## #3: {{% game 309728 %}}Pessoa{{% /game %}}
+## #3: {{% game 335275 %}}Whirling Witchcraft{{% /game %}}
+
+*2–5 players, 15–30 minutes, 14+ years, medium light (1.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="335275" size="x300" alt="Whirling Witchcraft" >}}
+
+{{% game 335275 %}}Whirling Witchcraft{{% /game %}}
+
+
+## #4: {{% game 309728 %}}Pessoa{{% /game %}}
 
 *1–4 players, 45–75 minutes, 10+ years, medium (2.6), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -139,7 +148,7 @@
 {{% game 309728 %}}Pessoa{{% /game %}}
 
 
-## #4: {{% game 304051 %}}Creature Comforts{{% /game %}}
+## #5: {{% game 304051 %}}Creature Comforts{{% /game %}}
 
 *1–5 players, 45 minutes, 8+ years, medium light (2.3), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -148,7 +157,7 @@
 {{% game 304051 %}}Creature Comforts{{% /game %}}
 
 
-## #5: {{% game 345972 %}}Cat in the Box: Deluxe Edition{{% /game %}}
+## #6: {{% game 345972 %}}Cat in the Box: Deluxe Edition{{% /game %}}
 
 *2–5 players, 20–40 minutes, 13+ years, medium light (1.8), 90% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -157,7 +166,7 @@
 {{% game 345972 %}}Cat in the Box: Deluxe Edition{{% /game %}}
 
 
-## #6: {{% game 366162 %}}Clever 4Ever{{% /game %}}
+## #7: {{% game 366162 %}}Clever 4Ever{{% /game %}}
 
 *1–4 players, 30 minutes, 14+ years, medium light (2.5), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -166,7 +175,7 @@
 {{% game 366162 %}}Clever 4Ever{{% /game %}}
 
 
-## #7: {{% game 347703 %}}First Rat{{% /game %}}
+## #8: {{% game 347703 %}}First Rat{{% /game %}}
 
 *1–5 players, 30–75 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -175,7 +184,7 @@
 {{% game 347703 %}}First Rat{{% /game %}}
 
 
-## #8: {{% game 364008 %}}Maudit Mot Dit{{% /game %}}
+## #9: {{% game 364008 %}}Maudit Mot Dit{{% /game %}}
 
 *3–8 players, 30 minutes, 12+ years, medium light (2.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -184,22 +193,13 @@
 {{% game 364008 %}}Maudit Mot Dit{{% /game %}}
 
 
-## #9: {{% game 367295 %}}Powerline{{% /game %}}
+## #10: {{% game 367295 %}}Powerline{{% /game %}}
 
 *1–6 players, 45 minutes, 8+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="367295" size="x300" alt="Powerline" >}}
 
 {{% game 367295 %}}Powerline{{% /game %}}
-
-
-## #10: {{% game 349463 %}}Dungeons, Dice & Danger{{% /game %}}
-
-*1–4 players, 45–60 minutes, 12+ years, medium light (2.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="349463" size="x300" alt="Dungeons, Dice & Danger" >}}
-
-{{% game 349463 %}}Dungeons, Dice & Danger{{% /game %}}
 
 
 ## #11: {{% game 356314 %}}Exit: The Game – Advent Calendar: The Silent Storm{{% /game %}}

@@ -79,6 +79,9 @@
 334632:
   name: Citytrip Antwerpen
   text: '{{% game 334632 %}}Citytrip Antwerpen{{% /game %}}'
+335275:
+  name: Whirling Witchcraft
+  text: '{{% game 335275 %}}Whirling Witchcraft{{% /game %}}'
 335427:
   name: 'Wild: Serengeti'
   text: '{{% game 335427 %}}Wild: Serengeti{{% /game %}}'
@@ -131,9 +134,6 @@
 348581:
   name: Beetle to the Bubble
   text: '{{% game 348581 %}}Beetle to the Bubble{{% /game %}}'
-349463:
-  name: Dungeons, Dice & Danger
-  text: '{{% game 349463 %}}Dungeons, Dice & Danger{{% /game %}}'
 350933:
   name: The Guild of Merchant Explorers
   text: '{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}'
