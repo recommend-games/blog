@@ -23,6 +23,7 @@ from pathlib import Path
 import joblib
 import pandas as pd
 from bg_utils import transform, recommend_games
+from pytility import clear_list
 from tqdm import tqdm
 from yaml import safe_dump, safe_load
 
@@ -34,8 +35,8 @@ pd.options.display.float_format = "{:.6g}".format
 # %load_ext lab_black
 
 # %%
-include = list(pd.read_csv("include.csv").bgg_id)
-exclude = list(pd.read_csv("exclude.csv").bgg_id)
+include = clear_list(pd.read_csv("include.csv").bgg_id)
+exclude = clear_list(pd.read_csv("exclude.csv").bgg_id)
 len(include), len(exclude)
 
 # %%
