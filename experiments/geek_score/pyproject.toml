@@ -8,6 +8,13 @@ packages = [{include = "geek_score"}]
 
 [tool.poetry.dependencies]
 python = "~3.10"
+numpy = "^1.24.1"
+scipy = "^1.10.0"
+pandas = "^1.5.2"
+scikit-learn = "^1.2.0"
+tqdm = "^4.64.1"
+matplotlib = "^3.6.3"
+seaborn = "^0.12.2"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.12.0"
