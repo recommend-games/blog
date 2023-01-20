@@ -46,7 +46,16 @@
 {{% game 353150 %}}FYFE{{% /game %}}
 
 
-## #6: {{% game 353545 %}}Next Station: London{{% /game %}}
+## #6: {{% game 341530 %}}Super Mega Lucky Box{{% /game %}}
+
+*1–6 players, 20 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="341530" size="x300" alt="Super Mega Lucky Box" >}}
+
+{{% game 341530 %}}Super Mega Lucky Box{{% /game %}}
+
+
+## #7: {{% game 353545 %}}Next Station: London{{% /game %}}
 
 *1–4 players, 25–30 minutes, 8+ years, light (1.3), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -55,7 +64,7 @@
 {{% game 353545 %}}Next Station: London{{% /game %}}
 
 
-## #7: {{% game 357563 %}}Akropolis{{% /game %}}
+## #8: {{% game 357563 %}}Akropolis{{% /game %}}
 
 *2–4 players, 20–30 minutes, 8+ years, medium light (1.7), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -64,7 +73,16 @@
 {{% game 357563 %}}Akropolis{{% /game %}}
 
 
-## #8: {{% game 364073 %}}Splendor Duel{{% /game %}}
+## #9: {{% game 298635 %}}Alice's Garden{{% /game %}}
+
+*1–4 players, 30–45 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="298635" size="x300" alt="Alice's Garden" >}}
+
+{{% game 298635 %}}Alice's Garden{{% /game %}}
+
+
+## #10: {{% game 364073 %}}Splendor Duel{{% /game %}}
 
 *2 players, 30 minutes, 10+ years, medium light (2.0), 64% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -73,7 +91,7 @@
 {{% game 364073 %}}Splendor Duel{{% /game %}}
 
 
-## #9: {{% game 356996 %}}The Border{{% /game %}}
+## #11: {{% game 356996 %}}The Border{{% /game %}}
 
 *2–4 players, 30 minutes, 8+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -82,31 +100,13 @@
 {{% game 356996 %}}The Border{{% /game %}}
 
 
-## #10: {{% game 347013 %}}Get on Board: New York & London{{% /game %}}
+## #12: {{% game 347013 %}}Get on Board: New York & London{{% /game %}}
 
 *2–5 players, 30 minutes, 8+ years, medium light (1.9), 97% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="347013" size="x300" alt="Get on Board: New York & London" >}}
 
 {{% game 347013 %}}Get on Board: New York & London{{% /game %}}
-
-
-## #11: {{% game 359970 %}}Challengers!{{% /game %}}
-
-*1–8 players, 45 minutes, 8+ years, medium light (1.8), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="359970" size="x300" alt="Challengers!" >}}
-
-{{% game 359970 %}}Challengers!{{% /game %}}
-
-
-## #12: {{% game 357465 %}}Dice Cup{{% /game %}}
-
-*2–6 players, 15–20 minutes, 8+ years, medium light (2.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="357465" size="x300" alt="Dice Cup" >}}
-
-{{% game 357465 %}}Dice Cup{{% /game %}}
 
 
 # Kennerspiel des Jahres
@@ -121,7 +121,16 @@
 {{% game 345972 %}}Cat in the Box: Deluxe Edition{{% /game %}}
 
 
-## #2: {{% game 336986 %}}Flamecraft{{% /game %}}
+## #2: {{% game 177478 %}}IKI{{% /game %}}
+
+*2–4 players, 60–90 minutes, 14+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="177478" size="x300" alt="IKI" >}}
+
+{{% game 177478 %}}IKI{{% /game %}}
+
+
+## #3: {{% game 336986 %}}Flamecraft{{% /game %}}
 
 *1–5 players, 60 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -130,7 +139,7 @@
 {{% game 336986 %}}Flamecraft{{% /game %}}
 
 
-## #3: {{% game 356123 %}}Turing Machine{{% /game %}}
+## #4: {{% game 356123 %}}Turing Machine{{% /game %}}
 
 *1–4 players, 20 minutes, 14+ years, medium light (2.5), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -139,7 +148,7 @@
 {{% game 356123 %}}Turing Machine{{% /game %}}
 
 
-## #4: {{% game 347703 %}}First Rat{{% /game %}}
+## #5: {{% game 347703 %}}First Rat{{% /game %}}
 
 *1–5 players, 30–75 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -148,7 +157,7 @@
 {{% game 347703 %}}First Rat{{% /game %}}
 
 
-## #5: {{% game 351913 %}}Tiletum{{% /game %}}
+## #6: {{% game 351913 %}}Tiletum{{% /game %}}
 
 *1–4 players, 60–100 minutes, 14+ years, medium (3.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -157,7 +166,7 @@
 {{% game 351913 %}}Tiletum{{% /game %}}
 
 
-## #6: {{% game 275215 %}}Namiji{{% /game %}}
+## #7: {{% game 275215 %}}Namiji{{% /game %}}
 
 *2–5 players, 30–45 minutes, 8+ years, medium light (1.8), 83% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -166,7 +175,7 @@
 {{% game 275215 %}}Namiji{{% /game %}}
 
 
-## #7: {{% game 329939 %}}Keystone: North America{{% /game %}}
+## #8: {{% game 329939 %}}Keystone: North America{{% /game %}}
 
 *1–4 players, 40–90 minutes, 10+ years, medium light (2.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -175,7 +184,16 @@
 {{% game 329939 %}}Keystone: North America{{% /game %}}
 
 
-## #8: {{% game 335275 %}}Whirling Witchcraft{{% /game %}}
+## #9: {{% game 339906 %}}The Hunger{{% /game %}}
+
+*2–6 players, 60 minutes, 12+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="339906" size="x300" alt="The Hunger" >}}
+
+{{% game 339906 %}}The Hunger{{% /game %}}
+
+
+## #10: {{% game 335275 %}}Whirling Witchcraft{{% /game %}}
 
 *2–5 players, 15–30 minutes, 14+ years, medium light (1.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -184,7 +202,7 @@
 {{% game 335275 %}}Whirling Witchcraft{{% /game %}}
 
 
-## #9: {{% game 295374 %}}Long Shot: The Dice Game{{% /game %}}
+## #11: {{% game 295374 %}}Long Shot: The Dice Game{{% /game %}}
 
 *1–8 players, 25 minutes, 14+ years, medium light (1.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -193,30 +211,12 @@
 {{% game 295374 %}}Long Shot: The Dice Game{{% /game %}}
 
 
-## #10: {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
+## #12: {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
 
 *1–4 players, 45 minutes, 14+ years, medium light (2.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="350933" size="x300" alt="The Guild of Merchant Explorers" >}}
 
 {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
-
-
-## #11: {{% game 344508 %}}Insecta: The Ladies of Entomology{{% /game %}}
-
-*2–4 players, 45–60 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="344508" size="x300" alt="Insecta: The Ladies of Entomology" >}}
-
-{{% game 344508 %}}Insecta: The Ladies of Entomology{{% /game %}}
-
-
-## #12: {{% game 357271 %}}San Francisco{{% /game %}}
-
-*2–4 players, 45–60 minutes, 12+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="357271" size="x300" alt="San Francisco" >}}
-
-{{% game 357271 %}}San Francisco{{% /game %}}
 
 

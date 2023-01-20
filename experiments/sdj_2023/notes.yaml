@@ -1,6 +1,6 @@
-227935:
-  name: Wonderland's War
-  text: '{{% game 227935 %}}Wonderland''s War{{% /game %}}'
+177478:
+  name: IKI
+  text: '{{% game 177478 %}}IKI{{% /game %}}'
 253759:
   name: Paint the Roses
   text: '{{% game 253759 %}}Paint the Roses{{% /game %}}'
@@ -25,9 +25,15 @@
 292914:
   name: Fika
   text: '{{% game 292914 %}}Fika{{% /game %}}'
+293835:
+  name: "Oltr\xE9\xE9"
+  text: "{{% game 293835 %}}Oltr\xE9\xE9{{% /game %}}"
 295374:
   name: 'Long Shot: The Dice Game'
   text: '{{% game 295374 %}}Long Shot: The Dice Game{{% /game %}}'
+298635:
+  name: Alice's Garden
+  text: '{{% game 298635 %}}Alice''s Garden{{% /game %}}'
 309728:
   name: Pessoa
   text: '{{% game 309728 %}}Pessoa{{% /game %}}'
@@ -37,15 +43,9 @@
 319078:
   name: ScandalOh!
   text: '{{% game 319078 %}}ScandalOh!{{% /game %}}'
-320718:
-  name: Hidden Leaders
-  text: '{{% game 320718 %}}Hidden Leaders{{% /game %}}'
 322564:
   name: Fjords
   text: '{{% game 322564 %}}Fjords{{% /game %}}'
-322589:
-  name: Zapotec
-  text: '{{% game 322589 %}}Zapotec{{% /game %}}'
 324914:
   name: Inside Job
   text: '{{% game 324914 %}}Inside Job{{% /game %}}'
@@ -91,12 +91,21 @@
 339302:
   name: Winterhaven Woods
   text: '{{% game 339302 %}}Winterhaven Woods{{% /game %}}'
-340813:
-  name: Heckin Hounds
-  text: '{{% game 340813 %}}Heckin Hounds{{% /game %}}'
+339906:
+  name: The Hunger
+  text: '{{% game 339906 %}}The Hunger{{% /game %}}'
+340348:
+  name: Hot & Cold
+  text: '{{% game 340348 %}}Hot & Cold{{% /game %}}'
+341245:
+  name: Garden Nation
+  text: '{{% game 341245 %}}Garden Nation{{% /game %}}'
 341519:
   name: The Light in the Mist
   text: '{{% game 341519 %}}The Light in the Mist{{% /game %}}'
+341530:
+  name: Super Mega Lucky Box
+  text: '{{% game 341530 %}}Super Mega Lucky Box{{% /game %}}'
 342810:
   name: Marrakesh
   text: '{{% game 342810 %}}Marrakesh{{% /game %}}'
@@ -127,9 +136,6 @@
 348450:
   name: Lacrimosa
   text: '{{% game 348450 %}}Lacrimosa{{% /game %}}'
-348503:
-  name: 80 Days
-  text: '{{% game 348503 %}}80 Days{{% /game %}}'
 348581:
   name: Beetle to the Bubble
   text: '{{% game 348581 %}}Beetle to the Bubble{{% /game %}}'
@@ -142,9 +148,6 @@
 351913:
   name: Tiletum
   text: '{{% game 351913 %}}Tiletum{{% /game %}}'
-352695:
-  name: Oranienburger Kanal
-  text: '{{% game 352695 %}}Oranienburger Kanal{{% /game %}}'
 353150:
   name: FYFE
   text: '{{% game 353150 %}}FYFE{{% /game %}}'
@@ -157,9 +160,6 @@
 353545:
   name: 'Next Station: London'
   text: '{{% game 353545 %}}Next Station: London{{% /game %}}'
-353546:
-  name: Museum Suspects
-  text: '{{% game 353546 %}}Museum Suspects{{% /game %}}'
 354425:
   name: Distant Suns
   text: '{{% game 354425 %}}Distant Suns{{% /game %}}'
