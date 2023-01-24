@@ -57,7 +57,15 @@ data.shape
 data.sample(10, random_state=23)
 
 # %%
-bgg_id = 13  # Catan
+sum_votes = data.groupby("timestamp")["num_votes"].sum()
+sum_votes.shape
+
+# %%
+sum_votes.plot()  # TODO filter out incomplete rankings
+
+# %%
+# bgg_id = 13  # Catan
+bgg_id = 295770  # Frosthaven
 data_game = data.xs(bgg_id, level=1)
 data_game.shape
 
@@ -65,7 +73,10 @@ data_game.shape
 data_game["num_votes"].plot()
 
 # %%
-data_game["avg_rating"].plot()
+(data_game["num_votes"] / sum_votes).plot()
 
 # %%
-data_game["bayes_rating"].plot()
+data_game["avg_rating"].plot(ylim=(0, 10))
+
+# %%
+data_game["bayes_rating"].plot(ylim=(0, 10))
