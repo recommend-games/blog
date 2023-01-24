@@ -57,4 +57,15 @@ data.shape
 data.sample(10, random_state=23)
 
 # %%
-data.xs(295770, level=1)["num_votes"].plot()
+bgg_id = 13  # Catan
+data_game = data.xs(bgg_id, level=1)
+data_game.shape
+
+# %%
+data_game["num_votes"].plot()
+
+# %%
+data_game["avg_rating"].plot()
+
+# %%
+data_game["bayes_rating"].plot()
