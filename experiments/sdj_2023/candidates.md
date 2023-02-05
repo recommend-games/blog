@@ -10,7 +10,16 @@
 {{% game 324914 %}}Inside Job{{% /game %}}
 
 
-## #2: {{% game 266830 %}}QE{{% /game %}}
+## #2: {{% game 364073 %}}Splendor Duel{{% /game %}}
+
+*2 players, 30 minutes, 10+ years, medium light (1.9), 96% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="364073" size="x300" alt="Splendor Duel" >}}
+
+{{% game 364073 %}}Splendor Duel{{% /game %}}
+
+
+## #3: {{% game 266830 %}}QE{{% /game %}}
 
 *3–5 players, 45 minutes, 8+ years, medium light (1.6), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -19,70 +28,16 @@
 {{% game 266830 %}}QE{{% /game %}}
 
 
-## #3: {{% game 353150 %}}FYFE{{% /game %}}
+## #4: {{% game 354729 %}}Wonder Woods{{% /game %}}
 
-*2–5 players, 30–45 minutes, 10+ years, medium light (2.1), 94% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–5 players, 20–25 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="353150" size="x300" alt="FYFE" >}}
+{{< img src="354729" size="x300" alt="Wonder Woods" >}}
 
-{{% game 353150 %}}FYFE{{% /game %}}
-
-
-## #4: {{% game 341530 %}}Super Mega Lucky Box{{% /game %}}
-
-*1–6 players, 20 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="341530" size="x300" alt="Super Mega Lucky Box" >}}
-
-{{% game 341530 %}}Super Mega Lucky Box{{% /game %}}
+{{% game 354729 %}}Wonder Woods{{% /game %}}
 
 
-## #5: {{% game 364579 %}}Joomo{{% /game %}}
-
-*2–6 players, 25–45 minutes, 8+ years, medium light (1.8), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="364579" size="x300" alt="Joomo" >}}
-
-{{% game 364579 %}}Joomo{{% /game %}}
-
-
-## #6: {{% game 325011 %}}Citytrip Brugge{{% /game %}}
-
-*1–6 players, 20–45 minutes, 8+ years, medium light (2.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="325011" size="x300" alt="Citytrip Brugge" >}}
-
-{{% game 325011 %}}Citytrip Brugge{{% /game %}}
-
-
-## #7: {{% game 367220 %}}Sea Salt & Paper{{% /game %}}
-
-*2–4 players, 30–45 minutes, 8+ years, light (1.4), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="367220" size="x300" alt="Sea Salt & Paper" >}}
-
-{{% game 367220 %}}Sea Salt & Paper{{% /game %}}
-
-
-## #8: {{% game 353152 %}}Framework{{% /game %}}
-
-*1–4 players, 30 minutes, 8+ years, medium light (1.9), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="353152" size="x300" alt="Framework" >}}
-
-{{% game 353152 %}}Framework{{% /game %}}
-
-
-## #9: {{% game 366456 %}}My Shelfie{{% /game %}}
-
-*2–4 players, 30 minutes, 8+ years, light (1.4), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="366456" size="x300" alt="My Shelfie" >}}
-
-{{% game 366456 %}}My Shelfie{{% /game %}}
-
-
-## #10: {{% game 353545 %}}Next Station: London{{% /game %}}
+## #5: {{% game 353545 %}}Next Station: London{{% /game %}}
 
 *1–4 players, 25–30 minutes, 8+ years, light (1.3), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -91,16 +46,7 @@
 {{% game 353545 %}}Next Station: London{{% /game %}}
 
 
-## #11: {{% game 298635 %}}Alice's Garden{{% /game %}}
-
-*1–4 players, 30–45 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="298635" size="x300" alt="Alice's Garden" >}}
-
-{{% game 298635 %}}Alice's Garden{{% /game %}}
-
-
-## #12: {{% game 367047 %}}Caldera Park{{% /game %}}
+## #6: {{% game 367047 %}}Caldera Park{{% /game %}}
 
 *1–4 players, 30–40 minutes, 10+ years, medium light (2.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -109,10 +55,73 @@
 {{% game 367047 %}}Caldera Park{{% /game %}}
 
 
+## #7: {{% game 357563 %}}Akropolis{{% /game %}}
+
+*2–4 players, 20–30 minutes, 8+ years, medium light (1.7), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="357563" size="x300" alt="Akropolis" >}}
+
+{{% game 357563 %}}Akropolis{{% /game %}}
+
+
+## #8: {{% game 359970 %}}Challengers!{{% /game %}}
+
+*1–8 players, 45 minutes, 8+ years, medium light (1.8), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="359970" size="x300" alt="Challengers!" >}}
+
+{{% game 359970 %}}Challengers!{{% /game %}}
+
+
+## #9: {{% game 325011 %}}Citytrip Brugge{{% /game %}}
+
+*1–6 players, 20–45 minutes, 8+ years, medium light (2.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="325011" size="x300" alt="Citytrip Brugge" >}}
+
+{{% game 325011 %}}Citytrip Brugge{{% /game %}}
+
+
+## #10: {{% game 366456 %}}My Shelfie{{% /game %}}
+
+*2–4 players, 30 minutes, 8+ years, light (1.4), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="366456" size="x300" alt="My Shelfie" >}}
+
+{{% game 366456 %}}My Shelfie{{% /game %}}
+
+
+## #11: {{% game 341530 %}}Super Mega Lucky Box{{% /game %}}
+
+*1–6 players, 20 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="341530" size="x300" alt="Super Mega Lucky Box" >}}
+
+{{% game 341530 %}}Super Mega Lucky Box{{% /game %}}
+
+
+## #12: {{% game 356996 %}}The Border{{% /game %}}
+
+*2–4 players, 30 minutes, 8+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="356996" size="x300" alt="The Border" >}}
+
+{{% game 356996 %}}The Border{{% /game %}}
+
+
 # Kennerspiel des Jahres
 
 
-## #1: {{% game 336986 %}}Flamecraft{{% /game %}}
+## #1: {{% game 177478 %}}IKI{{% /game %}}
+
+*2–4 players, 60–90 minutes, 14+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="177478" size="x300" alt="IKI" >}}
+
+{{% game 177478 %}}IKI{{% /game %}}
+
+
+## #2: {{% game 336986 %}}Flamecraft{{% /game %}}
 
 *1–5 players, 60 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -121,7 +130,7 @@
 {{% game 336986 %}}Flamecraft{{% /game %}}
 
 
-## #2: {{% game 275215 %}}Namiji{{% /game %}}
+## #3: {{% game 275215 %}}Namiji{{% /game %}}
 
 *2–5 players, 30–45 minutes, 8+ years, medium light (1.8), 83% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -130,7 +139,7 @@
 {{% game 275215 %}}Namiji{{% /game %}}
 
 
-## #3: {{% game 347703 %}}First Rat{{% /game %}}
+## #4: {{% game 347703 %}}First Rat{{% /game %}}
 
 *1–5 players, 30–75 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -139,22 +148,13 @@
 {{% game 347703 %}}First Rat{{% /game %}}
 
 
-## #4: {{% game 364186 %}}Terra Nova{{% /game %}}
+## #5: {{% game 339906 %}}The Hunger{{% /game %}}
 
-*2–4 players, 60–90 minutes, 12+ years, medium (2.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*2–6 players, 60 minutes, 12+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="364186" size="x300" alt="Terra Nova" >}}
+{{< img src="339906" size="x300" alt="The Hunger" >}}
 
-{{% game 364186 %}}Terra Nova{{% /game %}}
-
-
-## #5: {{% game 177478 %}}IKI{{% /game %}}
-
-*2–4 players, 60–90 minutes, 14+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="177478" size="x300" alt="IKI" >}}
-
-{{% game 177478 %}}IKI{{% /game %}}
+{{% game 339906 %}}The Hunger{{% /game %}}
 
 
 ## #6: {{% game 328565 %}}Caper: Europe{{% /game %}}
@@ -166,25 +166,16 @@
 {{% game 328565 %}}Caper: Europe{{% /game %}}
 
 
-## #7: {{% game 342810 %}}Marrakesh{{% /game %}}
+## #7: {{% game 310873 %}}Carnegie{{% /game %}}
 
-*2–4 players, 120 minutes, 14+ years, medium (3.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–4 players, 90–120 minutes, 12+ years, medium heavy (3.8), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="342810" size="x300" alt="Marrakesh" >}}
+{{< img src="310873" size="x300" alt="Carnegie" >}}
 
-{{% game 342810 %}}Marrakesh{{% /game %}}
-
-
-## #8: {{% game 348070 %}}The Palaces of Carrara (Second Edition){{% /game %}}
-
-*2–4 players, 60–90 minutes, 10+ years, medium (2.8), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="348070" size="x300" alt="The Palaces of Carrara (Second Edition)" >}}
-
-{{% game 348070 %}}The Palaces of Carrara (Second Edition){{% /game %}}
+{{% game 310873 %}}Carnegie{{% /game %}}
 
 
-## #9: {{% game 364488 %}}Queensland{{% /game %}}
+## #8: {{% game 364488 %}}Queensland{{% /game %}}
 
 *1–4 players, 45 minutes, 10+ years, medium light (2.5), 98% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -193,30 +184,39 @@
 {{% game 364488 %}}Queensland{{% /game %}}
 
 
-## #10: {{% game 335427 %}}Wild: Serengeti{{% /game %}}
+## #9: {{% game 351913 %}}Tiletum{{% /game %}}
 
-*1–4 players, 45–120 minutes, 14+ years, medium (2.6), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–4 players, 60–100 minutes, 14+ years, medium (3.3), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="335427" size="x300" alt="Wild: Serengeti" >}}
+{{< img src="351913" size="x300" alt="Tiletum" >}}
 
-{{% game 335427 %}}Wild: Serengeti{{% /game %}}
-
-
-## #11: {{% game 332772 %}}Revive{{% /game %}}
-
-*1–4 players, 90–120 minutes, 14+ years, medium (3.4), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="332772" size="x300" alt="Revive" >}}
-
-{{% game 332772 %}}Revive{{% /game %}}
+{{% game 351913 %}}Tiletum{{% /game %}}
 
 
-## #12: {{% game 310873 %}}Carnegie{{% /game %}}
+## #10: {{% game 292914 %}}Fika{{% /game %}}
 
-*1–4 players, 90–120 minutes, 12+ years, medium heavy (3.8), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*2 players, 20 minutes, 10+ years, medium light (2.5), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="310873" size="x300" alt="Carnegie" >}}
+{{< img src="292914" size="x300" alt="Fika" >}}
 
-{{% game 310873 %}}Carnegie{{% /game %}}
+{{% game 292914 %}}Fika{{% /game %}}
+
+
+## #11: {{% game 364008 %}}Maudit Mot Dit{{% /game %}}
+
+*3–8 players, 30 minutes, 12+ years, medium light (2.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="364008" size="x300" alt="Maudit Mot Dit" >}}
+
+{{% game 364008 %}}Maudit Mot Dit{{% /game %}}
+
+
+## #12: {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
+
+*1–4 players, 45 minutes, 14+ years, medium light (2.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="350933" size="x300" alt="The Guild of Merchant Explorers" >}}
+
+{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
 
 

@@ -37,7 +37,7 @@ def sdj_candidates(year, **params):
 
 
 def sdj_candidates_df(year, num=100, **params):
-    print(f"Processig {year}...")
+    print(f"Processig {year}…")
     records = islice(sdj_candidates(year=year, **params), num)
     return pd.DataFrame.from_records(records, index="bgg_id")[
         [
