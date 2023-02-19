@@ -1428,6 +1428,18 @@ files = [
 ]
 
 [[package]]
+name = "more-itertools"
+version = "9.0.0"
+description = "More routines for operating on iterables, beyond itertools"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "more-itertools-9.0.0.tar.gz", hash = "sha256:5a6257e40878ef0520b1803990e3e22303a41b5714006c32a3fd8304b26ea1ab"},
+    {file = "more_itertools-9.0.0-py3-none-any.whl", hash = "sha256:250e83d7e81d0c87ca6bd942e6aeab8cc9daa6096d12c5308f3f92fa5e5c1f41"},
+]
+
+[[package]]
 name = "mypy"
 version = "0.991"
 description = "Optional static typing for Python"
@@ -2791,4 +2803,4 @@ test = ["websockets"]
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.10"
-content-hash = "cd69d05d911c766a77752d68bbb7f3a685fe76655aaa8692e4a1a8c76a643840"
+content-hash = "b32f6cc7fd5e987e31961909e070ede5e2cc2bc747b0074bcb8b00a268158ccc"
