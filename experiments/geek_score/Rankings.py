@@ -50,13 +50,14 @@ def parse_ranking_file(file):
 
 # %%
 rankings = pd.DataFrame.from_records(
-    data=map(parse_ranking_file, rankings_path.glob("*.csv")), index="timestamp",
+    data=map(parse_ranking_file, rankings_path.glob("*.csv")),
+    index="timestamp",
 )
 rankings.sort_index(inplace=True)
 rankings.shape
 
 # %%
-rankings.drop(df[df["rank"] != 1].index, inplace=True)
+rankings.drop(rankings[rankings["rank"] != 1].index, inplace=True)
 rankings.drop(columns="rank", inplace=True)
 rankings.shape
 
@@ -66,7 +67,7 @@ sorted(rankings.bgg_id.unique())
 # %%
 total = defaultdict(int)
 
-for bgg_id, group in groupby(df.itertuples(), key=lambda x: x.bgg_id):
+for bgg_id, group in groupby(rankings.itertuples(), key=lambda x: x.bgg_id):
     name = games.loc[bgg_id]["name"]
     timestamps = (row.Index for row in group)
     begin = first(timestamps)
