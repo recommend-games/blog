@@ -15,6 +15,7 @@
 
 # %%
 import pandas as pd
+import requests
 from collections import defaultdict
 from datetime import datetime, timezone
 from itertools import groupby
@@ -30,8 +31,7 @@ pd.options.display.max_rows = 150
 # %%
 data_path = (Path(".") / ".." / ".." / ".." / "board-game-data").resolve()
 games_path = (data_path / "scraped" / "bgg_GameItem.csv").resolve()
-rankings_path = (data_path / "rankings" / "bgg" / "bgg").resolve()
-data_path, games_path, rankings_path
+data_path, games_path
 
 # %%
 games = pd.read_csv(games_path, index_col="bgg_id")
@@ -39,37 +39,34 @@ games.shape
 
 
 # %%
-def parse_ranking_file(file):
-    df = pd.read_csv(file, nrows=1)
-    df["timestamp"] = datetime.strptime(
-        file.stem,
-        "%Y%m%d-%H%M%S",
-    ).replace(tzinfo=timezone.utc)
-    return df.iloc[0]
+def fetch_rankings(bgg_id):
+    url = f"https://api.geekdo.com/api/historicalrankgraph?objectid={bgg_id}&objecttype=thing&rankobjectid=1"
+    response = requests.get(url)
+    data = response.json()["data"]
+    for row in data:
+        rank = row[1]
+        if rank != 1:
+            continue
+        date = datetime.fromtimestamp(row[0] / 1000, tz=timezone.utc)
+        yield date
 
 
 # %%
-rankings = pd.DataFrame.from_records(
-    data=map(parse_ranking_file, rankings_path.glob("*.csv")),
-    index="timestamp",
-)
-rankings.sort_index(inplace=True)
-rankings.shape
+top_games = [3076, 12333, 31260, 161936, 174430, 224517]
 
 # %%
-rankings.drop(rankings[rankings["rank"] != 1].index, inplace=True)
-rankings.drop(columns="rank", inplace=True)
-rankings.shape
-
-# %%
-sorted(rankings.bgg_id.unique())
+top = {}
+for bgg_id in top_games:
+    rankings = fetch_rankings(bgg_id)
+    for date in rankings:
+        top[date] = bgg_id
 
 # %%
 total = defaultdict(int)
 
-for bgg_id, group in groupby(rankings.itertuples(), key=lambda x: x.bgg_id):
+for bgg_id, group in groupby(sorted(top.items()), key=lambda x: x[1]):
     name = games.loc[bgg_id]["name"]
-    timestamps = (row.Index for row in group)
+    timestamps = (x[0] for x in group)
     begin = first(timestamps)
     end = last(timestamps, default=begin)
     diff = end - begin
