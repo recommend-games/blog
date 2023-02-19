@@ -55,22 +55,22 @@
 {{% game 367220 %}}Sea Salt & Paper{{% /game %}}
 
 
-## #7: {{% game 341530 %}}Super Mega Lucky Box{{% /game %}}
-
-*1–6 players, 20 minutes, 8+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="341530" size="x300" alt="Super Mega Lucky Box" >}}
-
-{{% game 341530 %}}Super Mega Lucky Box{{% /game %}}
-
-
-## #8: {{% game 366456 %}}My Shelfie{{% /game %}}
+## #7: {{% game 366456 %}}My Shelfie{{% /game %}}
 
 *2–4 players, 30 minutes, 8+ years, light (1.4), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="366456" size="x300" alt="My Shelfie" >}}
 
 {{% game 366456 %}}My Shelfie{{% /game %}}
+
+
+## #8: {{% game 341530 %}}Super Mega Lucky Box{{% /game %}}
+
+*1–6 players, 20 minutes, 8+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="341530" size="x300" alt="Super Mega Lucky Box" >}}
+
+{{% game 341530 %}}Super Mega Lucky Box{{% /game %}}
 
 
 ## #9: {{% game 356742 %}}KuZOOkA{{% /game %}}
