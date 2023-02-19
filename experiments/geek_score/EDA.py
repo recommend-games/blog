@@ -65,7 +65,16 @@ sum_votes.plot()  # TODO filter out incomplete rankings
 
 # %%
 # bgg_id = 13  # Catan
+# bgg_id = 25613  # Through the Ages: A Story of Civilization
+# bgg_id = 161936  # Pandemic Legacy: Season 1
+# bgg_id = 174430  # Gloomhaven
+# bgg_id = 182028  # Through the Ages: A New Story of Civilization
+# bgg_id = 224517  # Brass: Birmingham
 bgg_id = 295770  # Frosthaven
+# bgg_id = 342942  # Ark Nova
+bgg_id
+
+# %%
 data_game = data.xs(bgg_id, level=1)
 data_game.shape
 
@@ -73,7 +82,7 @@ data_game.shape
 data_game["num_votes"].plot()
 
 # %%
-(data_game["num_votes"] / sum_votes).plot()
+(data_game["num_votes"] * 10_000 / sum_votes).plot()
 
 # %%
 data_game["avg_rating"].plot(ylim=(0, 10))
