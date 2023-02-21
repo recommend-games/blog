@@ -51,22 +51,30 @@ def fetch_rankings(bgg_id):
         yield date
 
 
-# %%
-top_games = [3076, 12333, 31260, 161936, 174430, 224517]
+def fetch_all_rankings(bgg_ids):
+    for bgg_id in bgg_ids:
+        rankings = fetch_rankings(bgg_id)
+        for timestamp in rankings:
+            yield bgg_id, timestamp
+
 
 # %%
-top = {}
-for bgg_id in top_games:
-    rankings = fetch_rankings(bgg_id)
-    for date in rankings:
-        top[date] = bgg_id
+top_games = [3076, 12333, 31260, 161936, 174430, 224517]
+rankings = pd.DataFrame.from_records(
+    data=fetch_all_rankings(top_games),
+    columns=("bgg_id", "timestamp"),
+    index="timestamp",
+)
+rankings.sort_index(inplace=True)
+rankings.shape
 
 # %%
 total = defaultdict(int)
+cleaned = rankings.resample("D").last().fillna(method="ffill")
 
-for bgg_id, group in groupby(sorted(top.items()), key=lambda x: x[1]):
+for bgg_id, group in groupby(cleaned.itertuples(), key=lambda x: x.bgg_id):
     name = games.loc[bgg_id]["name"]
-    timestamps = (x[0] for x in group)
+    timestamps = (row.Index for row in group)
     begin = first(timestamps)
     end = last(timestamps, default=begin)
     diff = end - begin
