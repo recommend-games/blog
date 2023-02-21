@@ -14,12 +14,14 @@
 # ---
 
 # %%
+import csv
 import pandas as pd
 from collections import defaultdict
 from datetime import datetime, timezone
 from itertools import groupby
 from more_itertools import first, last
 from pathlib import Path
+from pytility import parse_int
 
 pd.options.display.max_columns = 150
 pd.options.display.max_rows = 150
@@ -40,25 +42,32 @@ games.shape
 
 # %%
 def parse_ranking_file(file):
-    df = pd.read_csv(file, nrows=1)
-    df["timestamp"] = datetime.strptime(
+    with file.open(encoding="utf-8") as file_obj:
+        row = first(csv.DictReader(file_obj), default=None)
+    if row is None:
+        return None
+    bgg_id = parse_int(row.get("bgg_id"))
+    rank = parse_int(row.get("rank"))
+    if not bgg_id or rank != 1:
+        return None
+    timestamp = datetime.strptime(
         file.stem,
         "%Y%m%d-%H%M%S",
     ).replace(tzinfo=timezone.utc)
-    return df.iloc[0]
+    return bgg_id, timestamp
 
 
 # %%
 rankings = pd.DataFrame.from_records(
-    data=map(parse_ranking_file, rankings_path.glob("*.csv")),
+    data=(
+        row
+        for file in rankings_path.glob("*.csv")
+        if (row := parse_ranking_file(file)) is not None
+    ),
+    columns=("bgg_id", "timestamp"),
     index="timestamp",
 )
 rankings.sort_index(inplace=True)
-rankings.shape
-
-# %%
-rankings.drop(rankings[rankings["rank"] != 1].index, inplace=True)
-rankings.drop(columns="rank", inplace=True)
 rankings.shape
 
 # %%
@@ -66,8 +75,9 @@ sorted(rankings.bgg_id.unique())
 
 # %%
 total = defaultdict(int)
+cleaned = rankings.resample("D").last().fillna(method="ffill")
 
-for bgg_id, group in groupby(rankings.itertuples(), key=lambda x: x.bgg_id):
+for bgg_id, group in groupby(cleaned.itertuples(), key=lambda x: x.bgg_id):
     name = games.loc[bgg_id]["name"]
     timestamps = (row.Index for row in group)
     begin = first(timestamps)
