@@ -1,30 +1,21 @@
 177478:
   name: IKI
   text: '{{% game 177478 %}}IKI{{% /game %}}'
-227935:
-  name: Wonderland's War
-  text: '{{% game 227935 %}}Wonderland''s War{{% /game %}}'
-253759:
-  name: Paint the Roses
-  text: '{{% game 253759 %}}Paint the Roses{{% /game %}}'
 258779:
   name: Planet Unknown
   text: '{{% game 258779 %}}Planet Unknown{{% /game %}}'
 266830:
   name: QE
   text: '{{% game 266830 %}}QE{{% /game %}}'
-267979:
-  name: Tiwanaku
-  text: '{{% game 267979 %}}Tiwanaku{{% /game %}}'
 271601:
   name: Feed the Kraken
   text: '{{% game 271601 %}}Feed the Kraken{{% /game %}}'
 275215:
   name: Namiji
   text: '{{% game 275215 %}}Namiji{{% /game %}}'
-284189:
-  name: Foundations of Rome
-  text: '{{% game 284189 %}}Foundations of Rome{{% /game %}}'
+276086:
+  name: 'Hamlet: The Village Building Game'
+  text: '{{% game 276086 %}}Hamlet: The Village Building Game{{% /game %}}'
 291845:
   name: Three Sisters
   text: '{{% game 291845 %}}Three Sisters{{% /game %}}'
@@ -40,9 +31,6 @@
 298635:
   name: Alice's Garden
   text: '{{% game 298635 %}}Alice''s Garden{{% /game %}}'
-300217:
-  name: Merchants of the Dark Road
-  text: '{{% game 300217 %}}Merchants of the Dark Road{{% /game %}}'
 305096:
   name: 'Endless Winter: Paleoamericans'
   text: '{{% game 305096 %}}Endless Winter: Paleoamericans{{% /game %}}'
@@ -76,6 +64,9 @@
 331401:
   name: Dog Park
   text: '{{% game 331401 %}}Dog Park{{% /game %}}'
+332853:
+  name: Dom Pierre
+  text: '{{% game 332853 %}}Dom Pierre{{% /game %}}'
 334065:
   name: Verdant
   text: '{{% game 334065 %}}Verdant{{% /game %}}'
@@ -121,6 +112,9 @@
 344508:
   name: 'Insecta: The Ladies of Entomology'
   text: '{{% game 344508 %}}Insecta: The Ladies of Entomology{{% /game %}}'
+344554:
+  name: "D\xE9corum"
+  text: "{{% game 344554 %}}D\xE9corum{{% /game %}}"
 346645:
   name: New York City
   text: '{{% game 346645 %}}New York City{{% /game %}}'
@@ -130,9 +124,12 @@
 347703:
   name: First Rat
   text: '{{% game 347703 %}}First Rat{{% /game %}}'
-348450:
-  name: Lacrimosa
-  text: '{{% game 348450 %}}Lacrimosa{{% /game %}}'
+348070:
+  name: The Palaces of Carrara (Second Edition)
+  text: '{{% game 348070 %}}The Palaces of Carrara (Second Edition){{% /game %}}'
+348096:
+  name: Kites
+  text: '{{% game 348096 %}}Kites{{% /game %}}'
 348503:
   name: 80 Days
   text: '{{% game 348503 %}}80 Days{{% /game %}}'
@@ -142,6 +139,9 @@
 350933:
   name: The Guild of Merchant Explorers
   text: '{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}'
+351040:
+  name: Ready Set Bet
+  text: '{{% game 351040 %}}Ready Set Bet{{% /game %}}'
 351765:
   name: Der Abenteuer Club
   text: '{{% game 351765 %}}Der Abenteuer Club{{% /game %}}'
@@ -160,18 +160,18 @@
 353288:
   name: Trekking Through History
   text: '{{% game 353288 %}}Trekking Through History{{% /game %}}'
+353304:
+  name: First Empires
+  text: '{{% game 353304 %}}First Empires{{% /game %}}'
 353545:
   name: 'Next Station: London'
   text: '{{% game 353545 %}}Next Station: London{{% /game %}}'
-354258:
-  name: Aetherya
-  text: '{{% game 354258 %}}Aetherya{{% /game %}}'
+353546:
+  name: Museum Suspects
+  text: '{{% game 353546 %}}Museum Suspects{{% /game %}}'
 354273:
   name: Old London Bridge
   text: '{{% game 354273 %}}Old London Bridge{{% /game %}}'
-354425:
-  name: Distant Suns
-  text: '{{% game 354425 %}}Distant Suns{{% /game %}}'
 354729:
   name: Wonder Woods
   text: '{{% game 354729 %}}Wonder Woods{{% /game %}}'
@@ -184,6 +184,9 @@
 356996:
   name: The Border
   text: '{{% game 356996 %}}The Border{{% /game %}}'
+357258:
+  name: "D\xE9ole"
+  text: "{{% game 357258 %}}D\xE9ole{{% /game %}}"
 357271:
   name: San Francisco
   text: '{{% game 357271 %}}San Francisco{{% /game %}}'
@@ -193,18 +196,15 @@
 357563:
   name: Akropolis
   text: '{{% game 357563 %}}Akropolis{{% /game %}}'
-359238:
-  name: Zwergendorf
-  text: '{{% game 359238 %}}Zwergendorf{{% /game %}}'
+358085:
+  name: Village Rails
+  text: '{{% game 358085 %}}Village Rails{{% /game %}}'
+358816:
+  name: Rear Window
+  text: '{{% game 358816 %}}Rear Window{{% /game %}}'
 359398:
   name: Hunch!
   text: '{{% game 359398 %}}Hunch!{{% /game %}}'
-359406:
-  name: 'Ecosystem: Coral Reef'
-  text: '{{% game 359406 %}}Ecosystem: Coral Reef{{% /game %}}'
-359857:
-  name: Winter
-  text: '{{% game 359857 %}}Winter{{% /game %}}'
 359970:
   name: Challengers!
   text: '{{% game 359970 %}}Challengers!{{% /game %}}'
@@ -217,12 +217,15 @@
 361279:
   name: Maui
   text: '{{% game 361279 %}}Maui{{% /game %}}'
+361905:
+  name: Lofoten
+  text: '{{% game 361905 %}}Lofoten{{% /game %}}'
 362452:
   name: Atiwa
   text: '{{% game 362452 %}}Atiwa{{% /game %}}'
-362860:
-  name: Dice Hunters of Therion
-  text: '{{% game 362860 %}}Dice Hunters of Therion{{% /game %}}'
+363039:
+  name: 13 Words
+  text: '{{% game 363039 %}}13 Words{{% /game %}}'
 363351:
   name: Helsinki
   text: '{{% game 363351 %}}Helsinki{{% /game %}}'
@@ -250,19 +253,12 @@
 364579:
   name: Joomo
   text: '{{% game 364579 %}}Joomo{{% /game %}}'
-364641:
-  name: "Joan of Arc: Orl\xE9ans Draw & Write"
-  text: "{{% game 364641 %}}Joan of Arc: Orl\xE9ans Draw & Write{{% /game %}}"
 365103:
   name: Voll auf die 18
   text: '{{% game 365103 %}}Voll auf die 18{{% /game %}}'
 365702:
   name: 'Saboteur: The Dark Cave'
   text: '{{% game 365702 %}}Saboteur: The Dark Cave{{% /game %}}'
-366318:
-  name: "EXIT: The Game \u2013 The Disappearance of Sherlock Holmes"
-  text: "{{% game 366318 %}}EXIT: The Game \u2013 The Disappearance of Sherlock Holmes{{%\
-    \ /game %}}"
 366456:
   name: My Shelfie
   text: '{{% game 366456 %}}My Shelfie{{% /game %}}'
@@ -281,21 +277,24 @@
 367992:
   name: Swindler
   text: '{{% game 367992 %}}Swindler{{% /game %}}'
-368103:
-  name: Sauscharf
-  text: '{{% game 368103 %}}Sauscharf{{% /game %}}'
-368109:
-  name: Armadillo
-  text: '{{% game 368109 %}}Armadillo{{% /game %}}'
+368854:
+  name: Crossing Oceans
+  text: '{{% game 368854 %}}Crossing Oceans{{% /game %}}'
 369410:
   name: "ChronoCops: Einsteins Relativit\xE4tskrise"
   text: "{{% game 369410 %}}ChronoCops: Einsteins Relativit\xE4tskrise{{% /game %}}"
 369880:
   name: Beer & Bread
   text: '{{% game 369880 %}}Beer & Bread{{% /game %}}'
+370164:
+  name: Fun Facts
+  text: '{{% game 370164 %}}Fun Facts{{% /game %}}'
 370566:
   name: Triggs
   text: '{{% game 370566 %}}Triggs{{% /game %}}'
 370591:
   name: 'Dorfromantik: The Board Game'
   text: '{{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}'
+375651:
+  name: That's Not a Hat
+  text: '{{% game 375651 %}}That''s Not a Hat{{% /game %}}'
