@@ -1,6 +1,9 @@
 177478:
   name: IKI
   text: '{{% game 177478 %}}IKI{{% /game %}}'
+227935:
+  name: Wonderland's War
+  text: '{{% game 227935 %}}Wonderland''s War{{% /game %}}'
 258779:
   name: Planet Unknown
   text: '{{% game 258779 %}}Planet Unknown{{% /game %}}'
@@ -13,9 +16,9 @@
 275215:
   name: Namiji
   text: '{{% game 275215 %}}Namiji{{% /game %}}'
-276086:
-  name: 'Hamlet: The Village Building Game'
-  text: '{{% game 276086 %}}Hamlet: The Village Building Game{{% /game %}}'
+281474:
+  name: Lands of Galzyr
+  text: '{{% game 281474 %}}Lands of Galzyr{{% /game %}}'
 291845:
   name: Three Sisters
   text: '{{% game 291845 %}}Three Sisters{{% /game %}}'
@@ -31,12 +34,18 @@
 298635:
   name: Alice's Garden
   text: '{{% game 298635 %}}Alice''s Garden{{% /game %}}'
+301019:
+  name: 'Museum: Pictura'
+  text: '{{% game 301019 %}}Museum: Pictura{{% /game %}}'
 305096:
   name: 'Endless Winter: Paleoamericans'
   text: '{{% game 305096 %}}Endless Winter: Paleoamericans{{% /game %}}'
 309728:
   name: Pessoa
   text: '{{% game 309728 %}}Pessoa{{% /game %}}'
+310100:
+  name: 'Nemesis: Lockdown'
+  text: '{{% game 310100 %}}Nemesis: Lockdown{{% /game %}}'
 310873:
   name: Carnegie
   text: '{{% game 310873 %}}Carnegie{{% /game %}}'
@@ -64,18 +73,12 @@
 331401:
   name: Dog Park
   text: '{{% game 331401 %}}Dog Park{{% /game %}}'
-332853:
-  name: Dom Pierre
-  text: '{{% game 332853 %}}Dom Pierre{{% /game %}}'
 334065:
   name: Verdant
   text: '{{% game 334065 %}}Verdant{{% /game %}}'
 334599:
   name: Violet and the Grumpy Nisse
   text: '{{% game 334599 %}}Violet and the Grumpy Nisse{{% /game %}}'
-334632:
-  name: Citytrip Antwerpen
-  text: '{{% game 334632 %}}Citytrip Antwerpen{{% /game %}}'
 335275:
   name: Whirling Witchcraft
   text: '{{% game 335275 %}}Whirling Witchcraft{{% /game %}}'
@@ -94,6 +97,9 @@
 339906:
   name: The Hunger
   text: '{{% game 339906 %}}The Hunger{{% /game %}}'
+340348:
+  name: Hot & Cold
+  text: '{{% game 340348 %}}Hot & Cold{{% /game %}}'
 341245:
   name: Garden Nation
   text: '{{% game 341245 %}}Garden Nation{{% /game %}}'
@@ -106,42 +112,30 @@
 342046:
   name: Phraya
   text: '{{% game 342046 %}}Phraya{{% /game %}}'
-342810:
-  name: Marrakesh
-  text: '{{% game 342810 %}}Marrakesh{{% /game %}}'
 344508:
   name: 'Insecta: The Ladies of Entomology'
   text: '{{% game 344508 %}}Insecta: The Ladies of Entomology{{% /game %}}'
-344554:
-  name: "D\xE9corum"
-  text: "{{% game 344554 %}}D\xE9corum{{% /game %}}"
-346645:
-  name: New York City
-  text: '{{% game 346645 %}}New York City{{% /game %}}'
+346702:
+  name: The Vandermist Dossier
+  text: '{{% game 346702 %}}The Vandermist Dossier{{% /game %}}'
 347013:
   name: 'Get on Board: New York & London'
   text: '{{% game 347013 %}}Get on Board: New York & London{{% /game %}}'
 347703:
   name: First Rat
   text: '{{% game 347703 %}}First Rat{{% /game %}}'
-348070:
-  name: The Palaces of Carrara (Second Edition)
-  text: '{{% game 348070 %}}The Palaces of Carrara (Second Edition){{% /game %}}'
 348096:
   name: Kites
   text: '{{% game 348096 %}}Kites{{% /game %}}'
+348450:
+  name: Lacrimosa
+  text: '{{% game 348450 %}}Lacrimosa{{% /game %}}'
 348503:
   name: 80 Days
   text: '{{% game 348503 %}}80 Days{{% /game %}}'
-348581:
-  name: Beetle to the Bubble
-  text: '{{% game 348581 %}}Beetle to the Bubble{{% /game %}}'
 350933:
   name: The Guild of Merchant Explorers
   text: '{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}'
-351040:
-  name: Ready Set Bet
-  text: '{{% game 351040 %}}Ready Set Bet{{% /game %}}'
 351765:
   name: Der Abenteuer Club
   text: '{{% game 351765 %}}Der Abenteuer Club{{% /game %}}'
@@ -163,12 +157,12 @@
 353304:
   name: First Empires
   text: '{{% game 353304 %}}First Empires{{% /game %}}'
+353543:
+  name: Lost Seas
+  text: '{{% game 353543 %}}Lost Seas{{% /game %}}'
 353545:
   name: 'Next Station: London'
   text: '{{% game 353545 %}}Next Station: London{{% /game %}}'
-353546:
-  name: Museum Suspects
-  text: '{{% game 353546 %}}Museum Suspects{{% /game %}}'
 354273:
   name: Old London Bridge
   text: '{{% game 354273 %}}Old London Bridge{{% /game %}}'
@@ -178,33 +172,33 @@
 355093:
   name: Woodcraft
   text: '{{% game 355093 %}}Woodcraft{{% /game %}}'
+355881:
+  name: Cubosaurs
+  text: '{{% game 355881 %}}Cubosaurs{{% /game %}}'
 356742:
   name: KuZOOkA
   text: '{{% game 356742 %}}KuZOOkA{{% /game %}}'
 356996:
   name: The Border
   text: '{{% game 356996 %}}The Border{{% /game %}}'
-357258:
-  name: "D\xE9ole"
-  text: "{{% game 357258 %}}D\xE9ole{{% /game %}}"
 357271:
   name: San Francisco
   text: '{{% game 357271 %}}San Francisco{{% /game %}}'
-357465:
-  name: Dice Cup
-  text: '{{% game 357465 %}}Dice Cup{{% /game %}}'
 357563:
   name: Akropolis
   text: '{{% game 357563 %}}Akropolis{{% /game %}}'
 358085:
   name: Village Rails
   text: '{{% game 358085 %}}Village Rails{{% /game %}}'
+358790:
+  name: Farm Club
+  text: '{{% game 358790 %}}Farm Club{{% /game %}}'
 358816:
   name: Rear Window
   text: '{{% game 358816 %}}Rear Window{{% /game %}}'
-359398:
-  name: Hunch!
-  text: '{{% game 359398 %}}Hunch!{{% /game %}}'
+359406:
+  name: 'Ecosystem: Coral Reef'
+  text: '{{% game 359406 %}}Ecosystem: Coral Reef{{% /game %}}'
 359970:
   name: Challengers!
   text: '{{% game 359970 %}}Challengers!{{% /game %}}'
@@ -214,9 +208,6 @@
 360617:
   name: Findorff
   text: '{{% game 360617 %}}Findorff{{% /game %}}'
-361279:
-  name: Maui
-  text: '{{% game 361279 %}}Maui{{% /game %}}'
 361905:
   name: Lofoten
   text: '{{% game 361905 %}}Lofoten{{% /game %}}'
@@ -226,18 +217,12 @@
 363039:
   name: 13 Words
   text: '{{% game 363039 %}}13 Words{{% /game %}}'
-363351:
-  name: Helsinki
-  text: '{{% game 363351 %}}Helsinki{{% /game %}}'
 363369:
   name: Starship Captains
   text: '{{% game 363369 %}}Starship Captains{{% /game %}}'
 363481:
   name: Fancy Feathers
   text: '{{% game 363481 %}}Fancy Feathers{{% /game %}}'
-363699:
-  name: Finding Atlantis
-  text: '{{% game 363699 %}}Finding Atlantis{{% /game %}}'
 364008:
   name: Maudit Mot Dit
   text: '{{% game 364008 %}}Maudit Mot Dit{{% /game %}}'
@@ -256,15 +241,22 @@
 365103:
   name: Voll auf die 18
   text: '{{% game 365103 %}}Voll auf die 18{{% /game %}}'
-365702:
-  name: 'Saboteur: The Dark Cave'
-  text: '{{% game 365702 %}}Saboteur: The Dark Cave{{% /game %}}'
+366318:
+  name: "EXIT: The Game \u2013 The Disappearance of Sherlock Holmes"
+  text: "{{% game 366318 %}}EXIT: The Game \u2013 The Disappearance of Sherlock Holmes{{%\
+    \ /game %}}"
 366456:
   name: My Shelfie
   text: '{{% game 366456 %}}My Shelfie{{% /game %}}'
+366753:
+  name: 'Disney Villains: The Card Game'
+  text: '{{% game 366753 %}}Disney Villains: The Card Game{{% /game %}}'
 367047:
   name: Caldera Park
   text: '{{% game 367047 %}}Caldera Park{{% /game %}}'
+367206:
+  name: 'Mysterium Kids: Captain Echo''s Treasure'
+  text: '{{% game 367206 %}}Mysterium Kids: Captain Echo''s Treasure{{% /game %}}'
 367220:
   name: Sea Salt & Paper
   text: '{{% game 367220 %}}Sea Salt & Paper{{% /game %}}'
@@ -277,6 +269,9 @@
 367992:
   name: Swindler
   text: '{{% game 367992 %}}Swindler{{% /game %}}'
+368109:
+  name: Armadillo
+  text: '{{% game 368109 %}}Armadillo{{% /game %}}'
 368854:
   name: Crossing Oceans
   text: '{{% game 368854 %}}Crossing Oceans{{% /game %}}'
@@ -289,12 +284,18 @@
 370164:
   name: Fun Facts
   text: '{{% game 370164 %}}Fun Facts{{% /game %}}'
-370566:
-  name: Triggs
-  text: '{{% game 370566 %}}Triggs{{% /game %}}'
+370166:
+  name: 'echoes: Die Violine'
+  text: '{{% game 370166 %}}echoes: Die Violine{{% /game %}}'
+370235:
+  name: Left Right Dilemma
+  text: '{{% game 370235 %}}Left Right Dilemma{{% /game %}}'
 370591:
   name: 'Dorfromantik: The Board Game'
   text: '{{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}'
-375651:
-  name: That's Not a Hat
-  text: '{{% game 375651 %}}That''s Not a Hat{{% /game %}}'
+370913:
+  name: 'Star Wars: The Clone Wars'
+  text: '{{% game 370913 %}}Star Wars: The Clone Wars{{% /game %}}'
+371140:
+  name: 'Ticket to Ride: Northern Lights'
+  text: '{{% game 371140 %}}Ticket to Ride: Northern Lights{{% /game %}}'
