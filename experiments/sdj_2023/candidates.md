@@ -1,13 +1,13 @@
 # Spiel des Jahres
 
 
-## #1: {{% game 325011 %}}Citytrip Brugge{{% /game %}}
+## #1: {{% game 266830 %}}QE{{% /game %}}
 
-*1–6 players, 20–45 minutes, 8+ years, medium light (2.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+*3–5 players, 45 minutes, 8+ years, medium light (1.6), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="325011" size="x300" alt="Citytrip Brugge" >}}
+{{< img src="266830" size="x300" alt="QE" >}}
 
-{{% game 325011 %}}Citytrip Brugge{{% /game %}}
+{{% game 266830 %}}QE{{% /game %}}
 
 
 ## #2: {{% game 324914 %}}Inside Job{{% /game %}}
@@ -28,13 +28,13 @@
 {{% game 364073 %}}Splendor Duel{{% /game %}}
 
 
-## #4: {{% game 357563 %}}Akropolis{{% /game %}}
+## #4: {{% game 354729 %}}Wonder Woods{{% /game %}}
 
-*2–4 players, 20–30 minutes, 8+ years, medium light (1.7), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–5 players, 20–25 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="357563" size="x300" alt="Akropolis" >}}
+{{< img src="354729" size="x300" alt="Wonder Woods" >}}
 
-{{% game 357563 %}}Akropolis{{% /game %}}
+{{% game 354729 %}}Wonder Woods{{% /game %}}
 
 
 ## #5: {{% game 353545 %}}Next Station: London{{% /game %}}
@@ -46,52 +46,34 @@
 {{% game 353545 %}}Next Station: London{{% /game %}}
 
 
-## #6: {{% game 356742 %}}KuZOOkA{{% /game %}}
+## #6: {{% game 357563 %}}Akropolis{{% /game %}}
 
-*2–6 players, 30–45 minutes, 8+ years, medium light (2.0), 98% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–4 players, 20–30 minutes, 8+ years, medium light (1.7), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="356742" size="x300" alt="KuZOOkA" >}}
+{{< img src="357563" size="x300" alt="Akropolis" >}}
 
-{{% game 356742 %}}KuZOOkA{{% /game %}}
-
-
-## #7: {{% game 266830 %}}QE{{% /game %}}
-
-*3–5 players, 45 minutes, 8+ years, medium light (1.6), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="266830" size="x300" alt="QE" >}}
-
-{{% game 266830 %}}QE{{% /game %}}
+{{% game 357563 %}}Akropolis{{% /game %}}
 
 
-## #8: {{% game 367047 %}}Caldera Park{{% /game %}}
+## #7: {{% game 318243 %}}HITSTER{{% /game %}}
 
-*1–4 players, 30–40 minutes, 10+ years, medium light (2.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–10 players, 30 minutes, 16+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="367047" size="x300" alt="Caldera Park" >}}
+{{< img src="318243" size="x300" alt="HITSTER" >}}
 
-{{% game 367047 %}}Caldera Park{{% /game %}}
-
-
-## #9: {{% game 354729 %}}Wonder Woods{{% /game %}}
-
-*2–5 players, 20–25 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="354729" size="x300" alt="Wonder Woods" >}}
-
-{{% game 354729 %}}Wonder Woods{{% /game %}}
+{{% game 318243 %}}HITSTER{{% /game %}}
 
 
-## #10: {{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}
+## #8: {{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}
 
-*1–6 players, 30–60 minutes, 8+ years, medium light (1.6), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+*1–6 players, 30–60 minutes, 8+ years, medium light (1.7), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="370591" size="x300" alt="Dorfromantik: The Board Game" >}}
 
 {{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}
 
 
-## #11: {{% game 356996 %}}The Border{{% /game %}}
+## #9: {{% game 356996 %}}The Border{{% /game %}}
 
 *2–4 players, 30 minutes, 8+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -100,13 +82,31 @@
 {{% game 356996 %}}The Border{{% /game %}}
 
 
-## #12: {{% game 318243 %}}HITSTER{{% /game %}}
+## #10: {{% game 353150 %}}FYFE{{% /game %}}
 
-*2–10 players, 30 minutes, 16+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–5 players, 30–45 minutes, 10+ years, medium light (2.1), 95% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="318243" size="x300" alt="HITSTER" >}}
+{{< img src="353150" size="x300" alt="FYFE" >}}
 
-{{% game 318243 %}}HITSTER{{% /game %}}
+{{% game 353150 %}}FYFE{{% /game %}}
+
+
+## #11: {{% game 325011 %}}Citytrip Brugge{{% /game %}}
+
+*1–6 players, 20–45 minutes, 8+ years, medium light (2.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="325011" size="x300" alt="Citytrip Brugge" >}}
+
+{{% game 325011 %}}Citytrip Brugge{{% /game %}}
+
+
+## #12: {{% game 258779 %}}Planet Unknown{{% /game %}}
+
+*1–6 players, 60–80 minutes, 10+ years, medium light (2.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="258779" size="x300" alt="Planet Unknown" >}}
+
+{{% game 258779 %}}Planet Unknown{{% /game %}}
 
 
 # Kennerspiel des Jahres
@@ -121,25 +121,7 @@
 {{% game 177478 %}}IKI{{% /game %}}
 
 
-## #2: {{% game 347703 %}}First Rat{{% /game %}}
-
-*1–5 players, 30–75 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="347703" size="x300" alt="First Rat" >}}
-
-{{% game 347703 %}}First Rat{{% /game %}}
-
-
-## #3: {{% game 364186 %}}Terra Nova{{% /game %}}
-
-*2–4 players, 60–90 minutes, 12+ years, medium (2.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="364186" size="x300" alt="Terra Nova" >}}
-
-{{% game 364186 %}}Terra Nova{{% /game %}}
-
-
-## #4: {{% game 336986 %}}Flamecraft{{% /game %}}
+## #2: {{% game 336986 %}}Flamecraft{{% /game %}}
 
 *1–5 players, 60 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -148,61 +130,25 @@
 {{% game 336986 %}}Flamecraft{{% /game %}}
 
 
-## #5: {{% game 351913 %}}Tiletum{{% /game %}}
+## #3: {{% game 347703 %}}First Rat{{% /game %}}
 
-*1–4 players, 60–100 minutes, 14+ years, medium (3.3), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–5 players, 30–75 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="351913" size="x300" alt="Tiletum" >}}
+{{< img src="347703" size="x300" alt="First Rat" >}}
 
-{{% game 351913 %}}Tiletum{{% /game %}}
-
-
-## #6: {{% game 271601 %}}Feed the Kraken{{% /game %}}
-
-*5–11 players, 45–90 minutes, 12+ years, medium light (2.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="271601" size="x300" alt="Feed the Kraken" >}}
-
-{{% game 271601 %}}Feed the Kraken{{% /game %}}
+{{% game 347703 %}}First Rat{{% /game %}}
 
 
-## #7: {{% game 293835 %}}Oltréé{{% /game %}}
+## #4: {{% game 364186 %}}Terra Nova{{% /game %}}
 
-*2–4 players, 60–120 minutes, 8+ years, medium light (2.4), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*2–4 players, 60–90 minutes, 12+ years, medium (2.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="293835" size="x300" alt="Oltréé" >}}
+{{< img src="364186" size="x300" alt="Terra Nova" >}}
 
-{{% game 293835 %}}Oltréé{{% /game %}}
-
-
-## #8: {{% game 357271 %}}San Francisco{{% /game %}}
-
-*2–4 players, 45–60 minutes, 12+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="357271" size="x300" alt="San Francisco" >}}
-
-{{% game 357271 %}}San Francisco{{% /game %}}
+{{% game 364186 %}}Terra Nova{{% /game %}}
 
 
-## #9: {{% game 339906 %}}The Hunger{{% /game %}}
-
-*2–6 players, 60 minutes, 12+ years, medium light (2.3), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="339906" size="x300" alt="The Hunger" >}}
-
-{{% game 339906 %}}The Hunger{{% /game %}}
-
-
-## #10: {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
-
-*1–4 players, 45 minutes, 14+ years, medium light (2.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="350933" size="x300" alt="The Guild of Merchant Explorers" >}}
-
-{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
-
-
-## #11: {{% game 275215 %}}Namiji{{% /game %}}
+## #5: {{% game 275215 %}}Namiji{{% /game %}}
 
 *2–5 players, 30–45 minutes, 8+ years, medium light (1.8), 52% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -211,12 +157,66 @@
 {{% game 275215 %}}Namiji{{% /game %}}
 
 
-## #12: {{% game 360206 %}}Discordia{{% /game %}}
+## #6: {{% game 295374 %}}Long Shot: The Dice Game{{% /game %}}
 
-*1–4 players, 60–90 minutes, 12+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–8 players, 25 minutes, 14+ years, medium light (1.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="360206" size="x300" alt="Discordia" >}}
+{{< img src="295374" size="x300" alt="Long Shot: The Dice Game" >}}
 
-{{% game 360206 %}}Discordia{{% /game %}}
+{{% game 295374 %}}Long Shot: The Dice Game{{% /game %}}
+
+
+## #7: {{% game 339906 %}}The Hunger{{% /game %}}
+
+*2–6 players, 60 minutes, 12+ years, medium light (2.3), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="339906" size="x300" alt="The Hunger" >}}
+
+{{% game 339906 %}}The Hunger{{% /game %}}
+
+
+## #8: {{% game 328565 %}}Caper: Europe{{% /game %}}
+
+*2 players, 25–35 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="328565" size="x300" alt="Caper: Europe" >}}
+
+{{% game 328565 %}}Caper: Europe{{% /game %}}
+
+
+## #9: {{% game 281474 %}}Lands of Galzyr{{% /game %}}
+
+*1–4 players, 60–150 minutes, 14+ years, medium light (1.5), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="281474" size="x300" alt="Lands of Galzyr" >}}
+
+{{% game 281474 %}}Lands of Galzyr{{% /game %}}
+
+
+## #10: {{% game 271601 %}}Feed the Kraken{{% /game %}}
+
+*5–11 players, 45–90 minutes, 12+ years, medium light (2.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="271601" size="x300" alt="Feed the Kraken" >}}
+
+{{% game 271601 %}}Feed the Kraken{{% /game %}}
+
+
+## #11: {{% game 364488 %}}Queensland{{% /game %}}
+
+*1–4 players, 45 minutes, 10+ years, medium light (2.5), 98% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="364488" size="x300" alt="Queensland" >}}
+
+{{% game 364488 %}}Queensland{{% /game %}}
+
+
+## #12: {{% game 275463 %}}Cactus Town{{% /game %}}
+
+*2–4 players, 20–60 minutes, 8+ years, medium light (2.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="275463" size="x300" alt="Cactus Town" >}}
+
+{{% game 275463 %}}Cactus Town{{% /game %}}
 
 
