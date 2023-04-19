@@ -19,6 +19,9 @@
 275215:
   name: Namiji
   text: '{{% game 275215 %}}Namiji{{% /game %}}'
+275463:
+  name: Cactus Town
+  text: '{{% game 275463 %}}Cactus Town{{% /game %}}'
 281474:
   name: Lands of Galzyr
   text: '{{% game 281474 %}}Lands of Galzyr{{% /game %}}'
@@ -31,9 +34,9 @@
 293835:
   name: "Oltr\xE9\xE9"
   text: "{{% game 293835 %}}Oltr\xE9\xE9{{% /game %}}"
-295374:
-  name: 'Long Shot: The Dice Game'
-  text: '{{% game 295374 %}}Long Shot: The Dice Game{{% /game %}}'
+297658:
+  name: '[kosmopoli:t]'
+  text: '{{% game 297658 %}}[kosmopoli:t]{{% /game %}}'
 298635:
   name: Alice's Garden
   text: '{{% game 298635 %}}Alice''s Garden{{% /game %}}'
@@ -58,12 +61,6 @@
 324914:
   name: Inside Job
   text: '{{% game 324914 %}}Inside Job{{% /game %}}'
-325011:
-  name: Citytrip Brugge
-  text: '{{% game 325011 %}}Citytrip Brugge{{% /game %}}'
-328565:
-  name: 'Caper: Europe'
-  text: '{{% game 328565 %}}Caper: Europe{{% /game %}}'
 329939:
   name: 'Keystone: North America'
   text: '{{% game 329939 %}}Keystone: North America{{% /game %}}'
@@ -91,6 +88,9 @@
 338957:
   name: 'Caesar!: Seize Rome in 20 Minutes!'
   text: '{{% game 338957 %}}Caesar!: Seize Rome in 20 Minutes!{{% /game %}}'
+339302:
+  name: Winterhaven Woods
+  text: '{{% game 339302 %}}Winterhaven Woods{{% /game %}}'
 339906:
   name: The Hunger
   text: '{{% game 339906 %}}The Hunger{{% /game %}}'
@@ -109,12 +109,12 @@
 342046:
   name: Phraya
   text: '{{% game 342046 %}}Phraya{{% /game %}}'
-344508:
-  name: 'Insecta: The Ladies of Entomology'
-  text: '{{% game 344508 %}}Insecta: The Ladies of Entomology{{% /game %}}'
 344554:
   name: "D\xE9corum"
   text: "{{% game 344554 %}}D\xE9corum{{% /game %}}"
+346702:
+  name: The Vandermist Dossier
+  text: '{{% game 346702 %}}The Vandermist Dossier{{% /game %}}'
 347013:
   name: 'Get on Board: New York & London'
   text: '{{% game 347013 %}}Get on Board: New York & London{{% /game %}}'
@@ -127,9 +127,15 @@
 348096:
   name: Kites
   text: '{{% game 348096 %}}Kites{{% /game %}}'
+348450:
+  name: Lacrimosa
+  text: '{{% game 348450 %}}Lacrimosa{{% /game %}}'
 350933:
   name: The Guild of Merchant Explorers
   text: '{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}'
+351040:
+  name: Ready Set Bet
+  text: '{{% game 351040 %}}Ready Set Bet{{% /game %}}'
 351765:
   name: Der Abenteuer Club
   text: '{{% game 351765 %}}Der Abenteuer Club{{% /game %}}'
@@ -154,6 +160,9 @@
 354258:
   name: Aetherya
   text: '{{% game 354258 %}}Aetherya{{% /game %}}'
+354425:
+  name: Distant Suns
+  text: '{{% game 354425 %}}Distant Suns{{% /game %}}'
 354729:
   name: Wonder Woods
   text: '{{% game 354729 %}}Wonder Woods{{% /game %}}'
@@ -175,6 +184,9 @@
 356997:
   name: Exacto
   text: '{{% game 356997 %}}Exacto{{% /game %}}'
+357258:
+  name: "D\xE9ole"
+  text: "{{% game 357258 %}}D\xE9ole{{% /game %}}"
 357271:
   name: San Francisco
   text: '{{% game 357271 %}}San Francisco{{% /game %}}'
@@ -184,6 +196,9 @@
 357563:
   name: Akropolis
   text: '{{% game 357563 %}}Akropolis{{% /game %}}'
+358085:
+  name: Village Rails
+  text: '{{% game 358085 %}}Village Rails{{% /game %}}'
 359406:
   name: 'Ecosystem: Coral Reef'
   text: '{{% game 359406 %}}Ecosystem: Coral Reef{{% /game %}}'
@@ -223,12 +238,6 @@
 363699:
   name: Finding Atlantis
   text: '{{% game 363699 %}}Finding Atlantis{{% /game %}}'
-364008:
-  name: Maudit Mot Dit
-  text: '{{% game 364008 %}}Maudit Mot Dit{{% /game %}}'
-364073:
-  name: Splendor Duel
-  text: '{{% game 364073 %}}Splendor Duel{{% /game %}}'
 364186:
   name: Terra Nova
   text: '{{% game 364186 %}}Terra Nova{{% /game %}}'
@@ -238,15 +247,9 @@
 364579:
   name: Joomo
   text: '{{% game 364579 %}}Joomo{{% /game %}}'
-365702:
-  name: 'Saboteur: The Dark Cave'
-  text: '{{% game 365702 %}}Saboteur: The Dark Cave{{% /game %}}'
 365840:
   name: Festival
   text: '{{% game 365840 %}}Festival{{% /game %}}'
-366456:
-  name: My Shelfie
-  text: '{{% game 366456 %}}My Shelfie{{% /game %}}'
 366753:
   name: 'Disney Villains: The Card Game'
   text: '{{% game 366753 %}}Disney Villains: The Card Game{{% /game %}}'
@@ -292,9 +295,6 @@
 370591:
   name: 'Dorfromantik: The Board Game'
   text: '{{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}'
-371140:
-  name: 'Ticket to Ride: Northern Lights'
-  text: '{{% game 371140 %}}Ticket to Ride: Northern Lights{{% /game %}}'
 375651:
   name: That's Not a Hat
   text: '{{% game 375651 %}}That''s Not a Hat{{% /game %}}'
