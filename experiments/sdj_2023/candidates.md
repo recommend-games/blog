@@ -37,7 +37,16 @@
 {{% game 353545 %}}Next Station: London{{% /game %}}
 
 
-## #5: {{% game 357563 %}}Akropolis{{% /game %}}
+## #5: {{% game 364073 %}}Splendor Duel{{% /game %}}
+
+*2 players, 30 minutes, 10+ years, medium light (2.0), 93% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="364073" size="x300" alt="Splendor Duel" >}}
+
+{{% game 364073 %}}Splendor Duel{{% /game %}}
+
+
+## #6: {{% game 357563 %}}Akropolis{{% /game %}}
 
 *2–4 players, 20–30 minutes, 8+ years, medium light (1.8), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -46,7 +55,7 @@
 {{% game 357563 %}}Akropolis{{% /game %}}
 
 
-## #6: {{% game 356996 %}}The Border{{% /game %}}
+## #7: {{% game 356996 %}}The Border{{% /game %}}
 
 *2–4 players, 30 minutes, 8+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -55,7 +64,7 @@
 {{% game 356996 %}}The Border{{% /game %}}
 
 
-## #7: {{% game 341530 %}}Super Mega Lucky Box{{% /game %}}
+## #8: {{% game 341530 %}}Super Mega Lucky Box{{% /game %}}
 
 *1–6 players, 20 minutes, 8+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -64,7 +73,7 @@
 {{% game 341530 %}}Super Mega Lucky Box{{% /game %}}
 
 
-## #8: {{% game 354729 %}}Wonder Woods{{% /game %}}
+## #9: {{% game 354729 %}}Wonder Woods{{% /game %}}
 
 *2–5 players, 20–25 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -73,7 +82,7 @@
 {{% game 354729 %}}Wonder Woods{{% /game %}}
 
 
-## #9: {{% game 297658 %}}[kosmopoli:t]{{% /game %}}
+## #10: {{% game 297658 %}}[kosmopoli:t]{{% /game %}}
 
 *4–8 players, 6 minutes, 10+ years, light (1.3), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -82,7 +91,7 @@
 {{% game 297658 %}}[kosmopoli:t]{{% /game %}}
 
 
-## #10: {{% game 367047 %}}Caldera Park{{% /game %}}
+## #11: {{% game 367047 %}}Caldera Park{{% /game %}}
 
 *1–4 players, 30–40 minutes, 10+ years, medium light (2.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -91,22 +100,13 @@
 {{% game 367047 %}}Caldera Park{{% /game %}}
 
 
-## #11: {{% game 356742 %}}KuZOOkA{{% /game %}}
+## #12: {{% game 356742 %}}KuZOOkA{{% /game %}}
 
 *2–6 players, 30–45 minutes, 8+ years, medium light (2.0), 98% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="356742" size="x300" alt="KuZOOkA" >}}
 
 {{% game 356742 %}}KuZOOkA{{% /game %}}
-
-
-## #12: {{% game 358816 %}}Rear Window{{% /game %}}
-
-*3–5 players, 40 minutes, 13+ years, medium light (1.5), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="358816" size="x300" alt="Rear Window" >}}
-
-{{% game 358816 %}}Rear Window{{% /game %}}
 
 
 # Kennerspiel des Jahres
@@ -193,16 +193,7 @@
 {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
 
 
-## #10: {{% game 344554 %}}Décorum{{% /game %}}
-
-*2–4 players, 30–45 minutes, 13+ years, medium light (1.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="344554" size="x300" alt="Décorum" >}}
-
-{{% game 344554 %}}Décorum{{% /game %}}
-
-
-## #11: {{% game 362452 %}}Atiwa{{% /game %}}
+## #10: {{% game 362452 %}}Atiwa{{% /game %}}
 
 *1–4 players, 30–120 minutes, 12+ years, medium (2.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -211,12 +202,21 @@
 {{% game 362452 %}}Atiwa{{% /game %}}
 
 
-## #12: {{% game 356312 %}}EXIT: Das Spiel + Puzzle – Das Gold der Piraten{{% /game %}}
+## #11: {{% game 351913 %}}Tiletum{{% /game %}}
 
-*1–4 players, 120–180 minutes, 12+ years, medium heavy (4.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–4 players, 60–100 minutes, 14+ years, medium (3.4), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="356312" size="x300" alt="EXIT: Das Spiel + Puzzle – Das Gold der Piraten" >}}
+{{< img src="351913" size="x300" alt="Tiletum" >}}
 
-{{% game 356312 %}}EXIT: Das Spiel + Puzzle – Das Gold der Piraten{{% /game %}}
+{{% game 351913 %}}Tiletum{{% /game %}}
+
+
+## #12: {{% game 362965 %}}Kunterpunkt: Das wuselige Würfelspiel{{% /game %}}
+
+*1–6 players, 30–40 minutes, 9+ years, medium light (2.3), 81% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="362965" size="x300" alt="Kunterpunkt: Das wuselige Würfelspiel" >}}
+
+{{% game 362965 %}}Kunterpunkt: Das wuselige Würfelspiel{{% /game %}}
 
 

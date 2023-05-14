@@ -13,6 +13,9 @@
 255360:
   name: Bargain Basement Bathysphere
   text: '{{% game 255360 %}}Bargain Basement Bathysphere{{% /game %}}'
+256680:
+  name: Return to Dark Tower
+  text: '{{% game 256680 %}}Return to Dark Tower{{% /game %}}'
 258779:
   name: Planet Unknown
   text: '{{% game 258779 %}}Planet Unknown{{% /game %}}'
@@ -52,9 +55,6 @@
 318243:
   name: HITSTER
   text: '{{% game 318243 %}}HITSTER{{% /game %}}'
-318546:
-  name: CoraQuest
-  text: '{{% game 318546 %}}CoraQuest{{% /game %}}'
 324914:
   name: Inside Job
   text: '{{% game 324914 %}}Inside Job{{% /game %}}'
@@ -79,6 +79,9 @@
 335275:
   name: Whirling Witchcraft
   text: '{{% game 335275 %}}Whirling Witchcraft{{% /game %}}'
+335427:
+  name: 'Wild: Serengeti'
+  text: '{{% game 335427 %}}Wild: Serengeti{{% /game %}}'
 336986:
   name: Flamecraft
   text: '{{% game 336986 %}}Flamecraft{{% /game %}}'
@@ -91,15 +94,12 @@
 338957:
   name: 'Caesar!: Seize Rome in 20 Minutes!'
   text: '{{% game 338957 %}}Caesar!: Seize Rome in 20 Minutes!{{% /game %}}'
-340348:
-  name: Hot & Cold
-  text: '{{% game 340348 %}}Hot & Cold{{% /game %}}'
+339906:
+  name: The Hunger
+  text: '{{% game 339906 %}}The Hunger{{% /game %}}'
 341530:
   name: Super Mega Lucky Box
   text: '{{% game 341530 %}}Super Mega Lucky Box{{% /game %}}'
-344554:
-  name: "D\xE9corum"
-  text: "{{% game 344554 %}}D\xE9corum{{% /game %}}"
 346702:
   name: The Vandermist Dossier
   text: '{{% game 346702 %}}The Vandermist Dossier{{% /game %}}'
@@ -154,10 +154,6 @@
 355093:
   name: Woodcraft
   text: '{{% game 355093 %}}Woodcraft{{% /game %}}'
-356312:
-  name: "EXIT: Das Spiel + Puzzle \u2013 Das Gold der Piraten"
-  text: "{{% game 356312 %}}EXIT: Das Spiel + Puzzle \u2013 Das Gold der Piraten{{%\
-    \ /game %}}"
 356742:
   name: KuZOOkA
   text: '{{% game 356742 %}}KuZOOkA{{% /game %}}'
@@ -185,9 +181,6 @@
 358504:
   name: 'Betrayal at House on the Hill: 3rd Edition'
   text: '{{% game 358504 %}}Betrayal at House on the Hill: 3rd Edition{{% /game %}}'
-358790:
-  name: Farm Club
-  text: '{{% game 358790 %}}Farm Club{{% /game %}}'
 358816:
   name: Rear Window
   text: '{{% game 358816 %}}Rear Window{{% /game %}}'
@@ -209,24 +202,33 @@
 361212:
   name: Town 66
   text: '{{% game 361212 %}}Town 66{{% /game %}}'
+361639:
+  name: 'Deckscape: In Wonderland'
+  text: '{{% game 361639 %}}Deckscape: In Wonderland{{% /game %}}'
 362452:
   name: Atiwa
   text: '{{% game 362452 %}}Atiwa{{% /game %}}'
 362965:
   name: "Kunterpunkt: Das wuselige W\xFCrfelspiel"
   text: "{{% game 362965 %}}Kunterpunkt: Das wuselige W\xFCrfelspiel{{% /game %}}"
-363039:
-  name: 13 Words
-  text: '{{% game 363039 %}}13 Words{{% /game %}}'
 363183:
   name: Tokaido Duo
   text: '{{% game 363183 %}}Tokaido Duo{{% /game %}}'
+363307:
+  name: Evergreen
+  text: '{{% game 363307 %}}Evergreen{{% /game %}}'
 363369:
   name: Starship Captains
   text: '{{% game 363369 %}}Starship Captains{{% /game %}}'
 363481:
   name: Fancy Feathers
   text: '{{% game 363481 %}}Fancy Feathers{{% /game %}}'
+363699:
+  name: Finding Atlantis
+  text: '{{% game 363699 %}}Finding Atlantis{{% /game %}}'
+364073:
+  name: Splendor Duel
+  text: '{{% game 364073 %}}Splendor Duel{{% /game %}}'
 364186:
   name: Terra Nova
   text: '{{% game 364186 %}}Terra Nova{{% /game %}}'
@@ -245,10 +247,6 @@
 366067:
   name: Disc Cover
   text: '{{% game 366067 %}}Disc Cover{{% /game %}}'
-366318:
-  name: "EXIT: The Game \u2013 The Disappearance of Sherlock Holmes"
-  text: "{{% game 366318 %}}EXIT: The Game \u2013 The Disappearance of Sherlock Holmes{{%\
-    \ /game %}}"
 366753:
   name: 'Disney Villains: The Card Game'
   text: '{{% game 366753 %}}Disney Villains: The Card Game{{% /game %}}'
@@ -264,6 +262,9 @@
 367662:
   name: Applejack
   text: '{{% game 367662 %}}Applejack{{% /game %}}'
+368109:
+  name: Armadillo
+  text: '{{% game 368109 %}}Armadillo{{% /game %}}'
 368954:
   name: Council of Shadows
   text: '{{% game 368954 %}}Council of Shadows{{% /game %}}'
@@ -282,9 +283,6 @@
 370166:
   name: 'echoes: Die Violine'
   text: '{{% game 370166 %}}echoes: Die Violine{{% /game %}}'
-370235:
-  name: Left Right Dilemma
-  text: '{{% game 370235 %}}Left Right Dilemma{{% /game %}}'
 370566:
   name: Triggs
   text: '{{% game 370566 %}}Triggs{{% /game %}}'
