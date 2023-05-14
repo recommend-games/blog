@@ -218,6 +218,9 @@
 363039:
   name: 13 Words
   text: '{{% game 363039 %}}13 Words{{% /game %}}'
+363183:
+  name: Tokaido Duo
+  text: '{{% game 363183 %}}Tokaido Duo{{% /game %}}'
 363369:
   name: Starship Captains
   text: '{{% game 363369 %}}Starship Captains{{% /game %}}'
@@ -261,9 +264,6 @@
 367662:
   name: Applejack
   text: '{{% game 367662 %}}Applejack{{% /game %}}'
-368109:
-  name: Armadillo
-  text: '{{% game 368109 %}}Armadillo{{% /game %}}'
 368954:
   name: Council of Shadows
   text: '{{% game 368954 %}}Council of Shadows{{% /game %}}'

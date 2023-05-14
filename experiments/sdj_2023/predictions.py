@@ -124,7 +124,12 @@ rank_features = [
     "r_g_score",
 ]
 rank_columns = [f"{f}_rank" for f in rank_features]
-data[rank_columns] = data.groupby("kennerspiel")[rank_features].rank(pct=True)
+data[rank_columns] = data.groupby("kennerspiel")[rank_features].rank(
+    method="max",
+    na_option="top",
+    ascending=True,
+    pct=True,
+)
 data.shape
 
 # %%
