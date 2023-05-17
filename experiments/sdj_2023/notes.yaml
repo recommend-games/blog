@@ -4,9 +4,6 @@
 227935:
   name: Wonderland's War
   text: '{{% game 227935 %}}Wonderland''s War{{% /game %}}'
-240980:
-  name: Blood on the Clocktower
-  text: '{{% game 240980 %}}Blood on the Clocktower{{% /game %}}'
 253759:
   name: Paint the Roses
   text: '{{% game 253759 %}}Paint the Roses{{% /game %}}'
@@ -25,6 +22,9 @@
 271601:
   name: Feed the Kraken
   text: '{{% game 271601 %}}Feed the Kraken{{% /game %}}'
+275215:
+  name: Namiji
+  text: '{{% game 275215 %}}Namiji{{% /game %}}'
 291845:
   name: Three Sisters
   text: '{{% game 291845 %}}Three Sisters{{% /game %}}'
@@ -67,9 +67,9 @@
 332853:
   name: Dom Pierre
   text: '{{% game 332853 %}}Dom Pierre{{% /game %}}'
-334065:
-  name: Verdant
-  text: '{{% game 334065 %}}Verdant{{% /game %}}'
+333372:
+  name: 'Cellulose: A Plant Cell Biology Game'
+  text: '{{% game 333372 %}}Cellulose: A Plant Cell Biology Game{{% /game %}}'
 334599:
   name: Violet and the Grumpy Nisse
   text: '{{% game 334599 %}}Violet and the Grumpy Nisse{{% /game %}}'
@@ -97,6 +97,15 @@
 339906:
   name: The Hunger
   text: '{{% game 339906 %}}The Hunger{{% /game %}}'
+340348:
+  name: Hot & Cold
+  text: '{{% game 340348 %}}Hot & Cold{{% /game %}}'
+341245:
+  name: Garden Nation
+  text: '{{% game 341245 %}}Garden Nation{{% /game %}}'
+341519:
+  name: The Light in the Mist
+  text: '{{% game 341519 %}}The Light in the Mist{{% /game %}}'
 341530:
   name: Super Mega Lucky Box
   text: '{{% game 341530 %}}Super Mega Lucky Box{{% /game %}}'
@@ -106,12 +115,12 @@
 347013:
   name: 'Get on Board: New York & London'
   text: '{{% game 347013 %}}Get on Board: New York & London{{% /game %}}'
-347527:
-  name: Turning Tides
-  text: '{{% game 347527 %}}Turning Tides{{% /game %}}'
 347703:
   name: First Rat
   text: '{{% game 347703 %}}First Rat{{% /game %}}'
+348070:
+  name: The Palaces of Carrara (Second Edition)
+  text: '{{% game 348070 %}}The Palaces of Carrara (Second Edition){{% /game %}}'
 348096:
   name: Kites
   text: '{{% game 348096 %}}Kites{{% /game %}}'
@@ -124,6 +133,9 @@
 348581:
   name: Beetle to the Bubble
   text: '{{% game 348581 %}}Beetle to the Bubble{{% /game %}}'
+350184:
+  name: Earth
+  text: '{{% game 350184 %}}Earth{{% /game %}}'
 350933:
   name: The Guild of Merchant Explorers
   text: '{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}'
@@ -133,6 +145,9 @@
 351913:
   name: Tiletum
   text: '{{% game 351913 %}}Tiletum{{% /game %}}'
+351956:
+  name: Crop Circles
+  text: '{{% game 351956 %}}Crop Circles{{% /game %}}'
 353150:
   name: FYFE
   text: '{{% game 353150 %}}FYFE{{% /game %}}'
@@ -154,6 +169,9 @@
 355093:
   name: Woodcraft
   text: '{{% game 355093 %}}Woodcraft{{% /game %}}'
+355881:
+  name: Cubosaurs
+  text: '{{% game 355881 %}}Cubosaurs{{% /game %}}'
 356742:
   name: KuZOOkA
   text: '{{% game 356742 %}}KuZOOkA{{% /game %}}'
@@ -178,15 +196,12 @@
 358085:
   name: Village Rails
   text: '{{% game 358085 %}}Village Rails{{% /game %}}'
-358504:
-  name: 'Betrayal at House on the Hill: 3rd Edition'
-  text: '{{% game 358504 %}}Betrayal at House on the Hill: 3rd Edition{{% /game %}}'
+358690:
+  name: MANTIS
+  text: '{{% game 358690 %}}MANTIS{{% /game %}}'
 358816:
   name: Rear Window
   text: '{{% game 358816 %}}Rear Window{{% /game %}}'
-359318:
-  name: Foxy
-  text: '{{% game 359318 %}}Foxy{{% /game %}}'
 359406:
   name: 'Ecosystem: Coral Reef'
   text: '{{% game 359406 %}}Ecosystem: Coral Reef{{% /game %}}'
@@ -202,9 +217,9 @@
 361212:
   name: Town 66
   text: '{{% game 361212 %}}Town 66{{% /game %}}'
-361639:
-  name: 'Deckscape: In Wonderland'
-  text: '{{% game 361639 %}}Deckscape: In Wonderland{{% /game %}}'
+361905:
+  name: Lofoten
+  text: '{{% game 361905 %}}Lofoten{{% /game %}}'
 362452:
   name: Atiwa
   text: '{{% game 362452 %}}Atiwa{{% /game %}}'
@@ -214,18 +229,12 @@
 363183:
   name: Tokaido Duo
   text: '{{% game 363183 %}}Tokaido Duo{{% /game %}}'
-363307:
-  name: Evergreen
-  text: '{{% game 363307 %}}Evergreen{{% /game %}}'
 363369:
   name: Starship Captains
   text: '{{% game 363369 %}}Starship Captains{{% /game %}}'
 363481:
   name: Fancy Feathers
   text: '{{% game 363481 %}}Fancy Feathers{{% /game %}}'
-363699:
-  name: Finding Atlantis
-  text: '{{% game 363699 %}}Finding Atlantis{{% /game %}}'
 364073:
   name: Splendor Duel
   text: '{{% game 364073 %}}Splendor Duel{{% /game %}}'
@@ -241,18 +250,9 @@
 365103:
   name: Voll auf die 18
   text: '{{% game 365103 %}}Voll auf die 18{{% /game %}}'
-365717:
-  name: 'Clank!: Catacombs'
-  text: '{{% game 365717 %}}Clank!: Catacombs{{% /game %}}'
-366067:
-  name: Disc Cover
-  text: '{{% game 366067 %}}Disc Cover{{% /game %}}'
 366753:
   name: 'Disney Villains: The Card Game'
   text: '{{% game 366753 %}}Disney Villains: The Card Game{{% /game %}}'
-366756:
-  name: AEOLOS
-  text: '{{% game 366756 %}}AEOLOS{{% /game %}}'
 367047:
   name: Caldera Park
   text: '{{% game 367047 %}}Caldera Park{{% /game %}}'
@@ -262,9 +262,9 @@
 367662:
   name: Applejack
   text: '{{% game 367662 %}}Applejack{{% /game %}}'
-368109:
-  name: Armadillo
-  text: '{{% game 368109 %}}Armadillo{{% /game %}}'
+368465:
+  name: Qawale
+  text: '{{% game 368465 %}}Qawale{{% /game %}}'
 368954:
   name: Council of Shadows
   text: '{{% game 368954 %}}Council of Shadows{{% /game %}}'
@@ -283,15 +283,15 @@
 370166:
   name: 'echoes: Die Violine'
   text: '{{% game 370166 %}}echoes: Die Violine{{% /game %}}'
+370235:
+  name: Left Right Dilemma
+  text: '{{% game 370235 %}}Left Right Dilemma{{% /game %}}'
 370566:
   name: Triggs
   text: '{{% game 370566 %}}Triggs{{% /game %}}'
 370591:
   name: 'Dorfromantik: The Board Game'
   text: '{{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}'
-370913:
-  name: 'Star Wars: The Clone Wars'
-  text: '{{% game 370913 %}}Star Wars: The Clone Wars{{% /game %}}'
 375651:
   name: That's Not a Hat
   text: '{{% game 375651 %}}That''s Not a Hat{{% /game %}}'

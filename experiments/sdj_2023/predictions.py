@@ -150,7 +150,7 @@ sdj_score_weights = {
     "avg_rating_rank": 0,
     "avg_rating_scale_10": 5,
     "bayes_rating": 0,
-    "bayes_rating_rank": 5,
+    "bayes_rating_rank": 0,
     "bayes_rating_scale_10": 5,
     "num_votes": 0,
     "num_votes_rank": 0,
@@ -160,7 +160,7 @@ sdj_score_weights = {
     "rec_rating": 0,
     "rec_rating_rank": 50,
     "rec_rating_scale_max": 25,
-    "sdj_prob": 0,
+    "sdj_prob": 5,
     "sdj_prob_rank": 0,
 }
 
