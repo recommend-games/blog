@@ -91,16 +91,7 @@
 {{% game 354729 %}}Wonder Woods{{% /game %}}
 
 
-## #11: {{% game 324914 %}}Inside Job{{% /game %}}
-
-*2–5 players, 20–30 minutes, 10+ years, medium light (1.7), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="324914" size="x300" alt="Inside Job" >}}
-
-{{% game 324914 %}}Inside Job{{% /game %}}
-
-
-## #12: {{% game 258779 %}}Planet Unknown{{% /game %}}
+## #11: {{% game 258779 %}}Planet Unknown{{% /game %}}
 
 *1–6 players, 60–80 minutes, 10+ years, medium light (2.2), 93% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -109,19 +100,19 @@
 {{% game 258779 %}}Planet Unknown{{% /game %}}
 
 
+## #12: {{% game 324914 %}}Inside Job{{% /game %}}
+
+*2–5 players, 20–30 minutes, 10+ years, medium light (1.7), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="324914" size="x300" alt="Inside Job" >}}
+
+{{% game 324914 %}}Inside Job{{% /game %}}
+
+
 # Kennerspiel des Jahres
 
 
-## #1: {{% game 347703 %}}First Rat{{% /game %}}
-
-*1–5 players, 30–75 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="347703" size="x300" alt="First Rat" >}}
-
-{{% game 347703 %}}First Rat{{% /game %}}
-
-
-## #2: {{% game 335275 %}}Whirling Witchcraft{{% /game %}}
+## #1: {{% game 335275 %}}Whirling Witchcraft{{% /game %}}
 
 *2–5 players, 15–30 minutes, 14+ years, medium light (1.8), 98% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -130,7 +121,7 @@
 {{% game 335275 %}}Whirling Witchcraft{{% /game %}}
 
 
-## #3: {{% game 177478 %}}IKI{{% /game %}}
+## #2: {{% game 177478 %}}IKI{{% /game %}}
 
 *2–4 players, 60–90 minutes, 14+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -139,7 +130,7 @@
 {{% game 177478 %}}IKI{{% /game %}}
 
 
-## #4: {{% game 336986 %}}Flamecraft{{% /game %}}
+## #3: {{% game 336986 %}}Flamecraft{{% /game %}}
 
 *1–5 players, 60 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -148,7 +139,7 @@
 {{% game 336986 %}}Flamecraft{{% /game %}}
 
 
-## #5: {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
+## #4: {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
 
 *1–4 players, 45 minutes, 14+ years, medium light (2.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -157,7 +148,7 @@
 {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
 
 
-## #6: {{% game 364186 %}}Terra Nova{{% /game %}}
+## #5: {{% game 364186 %}}Terra Nova{{% /game %}}
 
 *2–4 players, 60–90 minutes, 12+ years, medium (2.8), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -166,7 +157,7 @@
 {{% game 364186 %}}Terra Nova{{% /game %}}
 
 
-## #7: {{% game 369880 %}}Beer & Bread{{% /game %}}
+## #6: {{% game 369880 %}}Beer & Bread{{% /game %}}
 
 *2 players, 30–45 minutes, 10+ years, medium light (2.4), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -175,7 +166,7 @@
 {{% game 369880 %}}Beer & Bread{{% /game %}}
 
 
-## #8: {{% game 351913 %}}Tiletum{{% /game %}}
+## #7: {{% game 351913 %}}Tiletum{{% /game %}}
 
 *1–4 players, 60–100 minutes, 14+ years, medium (3.4), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -184,25 +175,16 @@
 {{% game 351913 %}}Tiletum{{% /game %}}
 
 
-## #9: {{% game 253759 %}}Paint the Roses{{% /game %}}
+## #8: {{% game 338957 %}}Caesar!: Seize Rome in 20 Minutes!{{% /game %}}
 
-*2–5 players, 50–70 minutes, 11+ years, medium light (2.5), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–2 players, 20 minutes, 14+ years, medium light (2.0), 64% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="253759" size="x300" alt="Paint the Roses" >}}
+{{< img src="338957" size="x300" alt="Caesar!: Seize Rome in 20 Minutes!" >}}
 
-{{% game 253759 %}}Paint the Roses{{% /game %}}
-
-
-## #10: {{% game 357271 %}}San Francisco{{% /game %}}
-
-*2–4 players, 45–60 minutes, 12+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="357271" size="x300" alt="San Francisco" >}}
-
-{{% game 357271 %}}San Francisco{{% /game %}}
+{{% game 338957 %}}Caesar!: Seize Rome in 20 Minutes!{{% /game %}}
 
 
-## #11: {{% game 339906 %}}The Hunger{{% /game %}}
+## #9: {{% game 339906 %}}The Hunger{{% /game %}}
 
 *2–6 players, 60 minutes, 12+ years, medium light (2.3), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -211,12 +193,30 @@
 {{% game 339906 %}}The Hunger{{% /game %}}
 
 
-## #12: {{% game 338957 %}}Caesar!: Seize Rome in 20 Minutes!{{% /game %}}
+## #10: {{% game 362452 %}}Atiwa{{% /game %}}
 
-*1–2 players, 20 minutes, 14+ years, medium light (2.0), 64% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–4 players, 30–120 minutes, 12+ years, medium (2.7), 99% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="338957" size="x300" alt="Caesar!: Seize Rome in 20 Minutes!" >}}
+{{< img src="362452" size="x300" alt="Atiwa" >}}
 
-{{% game 338957 %}}Caesar!: Seize Rome in 20 Minutes!{{% /game %}}
+{{% game 362452 %}}Atiwa{{% /game %}}
+
+
+## #11: {{% game 310873 %}}Carnegie{{% /game %}}
+
+*1–4 players, 90–120 minutes, 12+ years, medium heavy (3.8), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="310873" size="x300" alt="Carnegie" >}}
+
+{{% game 310873 %}}Carnegie{{% /game %}}
+
+
+## #12: {{% game 271601 %}}Feed the Kraken{{% /game %}}
+
+*5–11 players, 45–90 minutes, 12+ years, medium light (2.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="271601" size="x300" alt="Feed the Kraken" >}}
+
+{{% game 271601 %}}Feed the Kraken{{% /game %}}
 
 
