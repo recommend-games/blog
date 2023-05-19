@@ -1,18 +1,18 @@
 177478:
   name: IKI
-  text: '{{% game 177478 %}}IKI{{% /game %}}'
+  text: 'Hire artisans, set them up in the market and acquire prestige in feudal Japan.'
 258779:
   name: Planet Unknown
   text: '{{% game 258779 %}}Planet Unknown{{% /game %}}'
 266830:
   name: QE
-  text: '{{% game 266830 %}}QE{{% /game %}}'
+  text: 'Bid ANYTHING to bail out companies, but just don’t bid the MOST!'
 267979:
   name: Tiwanaku
   text: '{{% game 267979 %}}Tiwanaku{{% /game %}}'
 271601:
   name: Feed the Kraken
-  text: '{{% game 271601 %}}Feed the Kraken{{% /game %}}'
+  text: 'Social deduction - Loyal sailors, ruthless pirates, crazy cultists and… The Kraken!'
 275215:
   name: Namiji
   text: '{{% game 275215 %}}Namiji{{% /game %}}'
@@ -27,13 +27,13 @@
   text: '{{% game 292914 %}}Fika{{% /game %}}'
 293835:
   name: "Oltr\xE9\xE9"
-  text: "{{% game 293835 %}}Oltr\xE9\xE9{{% /game %}}"
+  text: "Rangers help local communities and defend their Kingdom in order to restore hope."
 295895:
   name: Distilled
   text: '{{% game 295895 %}}Distilled{{% /game %}}'
 297658:
   name: '[kosmopoli:t]'
-  text: '{{% game 297658 %}}[kosmopoli:t]{{% /game %}}'
+  text: 'Cooperative Kitchen Work serving client from all over the world.'
 298635:
   name: Alice's Garden
   text: '{{% game 298635 %}}Alice''s Garden{{% /game %}}'
@@ -69,7 +69,7 @@
   text: '{{% game 322589 %}}Zapotec{{% /game %}}'
 324914:
   name: Inside Job
-  text: '{{% game 324914 %}}Inside Job{{% /game %}}'
+  text: 'Agents work together to complete missions and gather intel but who''s "The Insider"?'
 329939:
   name: 'Keystone: North America'
   text: '{{% game 329939 %}}Keystone: North America{{% /game %}}'
@@ -87,13 +87,13 @@
   text: '{{% game 333372 %}}Cellulose: A Plant Cell Biology Game{{% /game %}}'
 335275:
   name: Whirling Witchcraft
-  text: '{{% game 335275 %}}Whirling Witchcraft{{% /game %}}'
+  text: 'Use your recipes to generate ingredients and overflow your opponent''s cauldron.'
 335427:
   name: 'Wild: Serengeti'
   text: '{{% game 335427 %}}Wild: Serengeti{{% /game %}}'
 336986:
   name: Flamecraft
-  text: '{{% game 336986 %}}Flamecraft{{% /game %}}'
+  text: 'In a magical realm a village awakes, and artisan dragons make coffee and cakes!'
 337787:
   name: Summer Camp
   text: '{{% game 337787 %}}Summer Camp{{% /game %}}'
@@ -102,7 +102,7 @@
   text: '{{% game 338957 %}}Caesar!: Seize Rome in 20 Minutes!{{% /game %}}'
 339906:
   name: The Hunger
-  text: '{{% game 339906 %}}The Hunger{{% /game %}}'
+  text: 'As a vampire, you want to hunt humans, but you must return home before sunrise…'
 340348:
   name: Hot & Cold
   text: '{{% game 340348 %}}Hot & Cold{{% /game %}}'
@@ -138,7 +138,7 @@
   text: '{{% game 351526 %}}Encyclopedia{{% /game %}}'
 351913:
   name: Tiletum
-  text: '{{% game 351913 %}}Tiletum{{% /game %}}'
+  text: 'Use dice for resources and actions to gain riches in the Renaissance.'
 353150:
   name: FYFE
   text: '{{% game 353150 %}}FYFE{{% /game %}}'
@@ -150,7 +150,7 @@
   text: '{{% game 353543 %}}Lost Seas{{% /game %}}'
 353545:
   name: 'Next Station: London'
-  text: '{{% game 353545 %}}Next Station: London{{% /game %}}'
+  text: 'Draw tube lines to cross the Thames and connect London.'
 353546:
   name: Museum Suspects
   text: '{{% game 353546 %}}Museum Suspects{{% /game %}}'
@@ -162,7 +162,7 @@
   text: '{{% game 354328 %}}Overbooking{{% /game %}}'
 354729:
   name: Wonder Woods
-  text: '{{% game 354729 %}}Wonder Woods{{% /game %}}'
+  text: 'Use bluff and deduction in order to find the best mushroom spots.'
 355093:
   name: Woodcraft
   text: '{{% game 355093 %}}Woodcraft{{% /game %}}'
@@ -177,7 +177,7 @@
   text: '{{% game 355888 %}}Orichalcum{{% /game %}}'
 356742:
   name: KuZOOkA
-  text: '{{% game 356742 %}}KuZOOkA{{% /game %}}'
+  text: 'Discover the most promising escape option and break out of the zoo.'
 356996:
   name: The Border
   text: '{{% game 356996 %}}The Border{{% /game %}}'
@@ -189,7 +189,7 @@
   text: "{{% game 357258 %}}D\xE9ole{{% /game %}}"
 357563:
   name: Akropolis
-  text: '{{% game 357563 %}}Akropolis{{% /game %}}'
+  text: 'Build your Greek city on multiple levels to keep your districts perfectly placed.'
 358790:
   name: Farm Club
   text: '{{% game 358790 %}}Farm Club{{% /game %}}'
@@ -216,7 +216,7 @@
   text: '{{% game 361905 %}}Lofoten{{% /game %}}'
 362452:
   name: Atiwa
-  text: '{{% game 362452 %}}Atiwa{{% /game %}}'
+  text: 'Choose your actions carefully as you balance the needs of the community and nature.'
 362860:
   name: Dice Hunters of Therion
   text: '{{% game 362860 %}}Dice Hunters of Therion{{% /game %}}'
@@ -243,10 +243,10 @@
   text: '{{% game 364011 %}}Great Western Trail: Argentina{{% /game %}}'
 364073:
   name: Splendor Duel
-  text: '{{% game 364073 %}}Splendor Duel{{% /game %}}'
+  text: 'Renaissance merchants go head to head to please nobility.'
 364186:
   name: Terra Nova
-  text: '{{% game 364186 %}}Terra Nova{{% /game %}}'
+  text: 'Control one of ten asymmetric factions in a streamlined version of Terra Mystica.'
 364556:
   name: Precognition
   text: '{{% game 364556 %}}Precognition{{% /game %}}'
@@ -261,7 +261,7 @@
   text: '{{% game 366756 %}}AEOLOS{{% /game %}}'
 367047:
   name: Caldera Park
-  text: '{{% game 367047 %}}Caldera Park{{% /game %}}'
+  text: 'Take care of animals in your park by forming big herds and avoiding bad weather.'
 367206:
   name: 'Mysterium Kids: Captain Echo''s Treasure'
   text: '{{% game 367206 %}}Mysterium Kids: Captain Echo''s Treasure{{% /game %}}'
@@ -279,13 +279,13 @@
   text: "{{% game 369410 %}}ChronoCops: Einsteins Relativit\xE4tskrise{{% /game %}}"
 369880:
   name: Beer & Bread
-  text: '{{% game 369880 %}}Beer & Bread{{% /game %}}'
+  text: 'Two villages face off in the traditions of brewing beer and baking bread.'
 370164:
   name: Fun Facts
   text: '{{% game 370164 %}}Fun Facts{{% /game %}}'
 370591:
   name: 'Dorfromantik: The Board Game'
-  text: '{{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}'
+  text: 'Experience the peaceful and relaxed atmosphere of the video game on your table.'
 372811:
   name: BIKIDO
   text: '{{% game 372811 %}}BIKIDO{{% /game %}}'

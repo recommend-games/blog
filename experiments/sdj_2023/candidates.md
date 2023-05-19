@@ -7,7 +7,7 @@
 
 {{< img src="353545" size="x300" alt="Next Station: London" >}}
 
-{{% game 353545 %}}Next Station: London{{% /game %}}
+Draw tube lines to cross the Thames and connect London.
 
 
 ## #2: {{% game 364073 %}}Splendor Duel{{% /game %}}
@@ -16,7 +16,7 @@
 
 {{< img src="364073" size="x300" alt="Splendor Duel" >}}
 
-{{% game 364073 %}}Splendor Duel{{% /game %}}
+Renaissance merchants go head to head to please nobility.
 
 
 ## #3: {{% game 354729 %}}Wonder Woods{{% /game %}}
@@ -25,7 +25,7 @@
 
 {{< img src="354729" size="x300" alt="Wonder Woods" >}}
 
-{{% game 354729 %}}Wonder Woods{{% /game %}}
+Use bluff and deduction in order to find the best mushroom spots.
 
 
 ## #4: {{% game 297658 %}}[kosmopoli:t]{{% /game %}}
@@ -34,7 +34,7 @@
 
 {{< img src="297658" size="x300" alt="[kosmopoli:t]" >}}
 
-{{% game 297658 %}}[kosmopoli:t]{{% /game %}}
+Cooperative Kitchen Work serving client from all over the world.
 
 
 ## #5: {{% game 357563 %}}Akropolis{{% /game %}}
@@ -43,7 +43,7 @@
 
 {{< img src="357563" size="x300" alt="Akropolis" >}}
 
-{{% game 357563 %}}Akropolis{{% /game %}}
+Build your Greek city on multiple levels to keep your districts perfectly placed.
 
 
 ## #6: {{% game 356742 %}}KuZOOkA{{% /game %}}
@@ -52,7 +52,7 @@
 
 {{< img src="356742" size="x300" alt="KuZOOkA" >}}
 
-{{% game 356742 %}}KuZOOkA{{% /game %}}
+Discover the most promising escape option and break out of the zoo.
 
 
 ## #7: {{% game 367047 %}}Caldera Park{{% /game %}}
@@ -61,7 +61,7 @@
 
 {{< img src="367047" size="x300" alt="Caldera Park" >}}
 
-{{% game 367047 %}}Caldera Park{{% /game %}}
+Take care of animals in your park by forming big herds and avoiding bad weather.
 
 
 ## #8: {{% game 324914 %}}Inside Job{{% /game %}}
@@ -70,7 +70,7 @@
 
 {{< img src="324914" size="x300" alt="Inside Job" >}}
 
-{{% game 324914 %}}Inside Job{{% /game %}}
+Agents work together to complete missions and gather intel but who's "The Insider"?
 
 
 ## #9: {{% game 266830 %}}QE{{% /game %}}
@@ -79,7 +79,7 @@
 
 {{< img src="266830" size="x300" alt="QE" >}}
 
-{{% game 266830 %}}QE{{% /game %}}
+Bid ANYTHING to bail out companies, but just don’t bid the MOST!
 
 
 ## #10: {{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}
@@ -88,7 +88,7 @@
 
 {{< img src="370591" size="x300" alt="Dorfromantik: The Board Game" >}}
 
-{{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}
+Experience the peaceful and relaxed atmosphere of the video game on your table.
 
 
 ## #11: {{% game 298635 %}}Alice's Garden{{% /game %}}
@@ -118,7 +118,7 @@
 
 {{< img src="364186" size="x300" alt="Terra Nova" >}}
 
-{{% game 364186 %}}Terra Nova{{% /game %}}
+Control one of ten asymmetric factions in a streamlined version of Terra Mystica.
 
 
 ## #2: {{% game 177478 %}}IKI{{% /game %}}
@@ -127,7 +127,7 @@
 
 {{< img src="177478" size="x300" alt="IKI" >}}
 
-{{% game 177478 %}}IKI{{% /game %}}
+Hire artisans, set them up in the market and acquire prestige in feudal Japan.
 
 
 ## #3: {{% game 336986 %}}Flamecraft{{% /game %}}
@@ -136,7 +136,7 @@
 
 {{< img src="336986" size="x300" alt="Flamecraft" >}}
 
-{{% game 336986 %}}Flamecraft{{% /game %}}
+In a magical realm a village awakes, and artisan dragons make coffee and cakes!
 
 
 ## #4: {{% game 362452 %}}Atiwa{{% /game %}}
@@ -145,7 +145,7 @@
 
 {{< img src="362452" size="x300" alt="Atiwa" >}}
 
-{{% game 362452 %}}Atiwa{{% /game %}}
+Choose your actions carefully as you balance the needs of the community and nature.
 
 
 ## #5: {{% game 351913 %}}Tiletum{{% /game %}}
@@ -154,7 +154,7 @@
 
 {{< img src="351913" size="x300" alt="Tiletum" >}}
 
-{{% game 351913 %}}Tiletum{{% /game %}}
+Use dice for resources and actions to gain riches in the Renaissance.
 
 
 ## #6: {{% game 369880 %}}Beer & Bread{{% /game %}}
@@ -163,7 +163,7 @@
 
 {{< img src="369880" size="x300" alt="Beer & Bread" >}}
 
-{{% game 369880 %}}Beer & Bread{{% /game %}}
+Two villages face off in the traditions of brewing beer and baking bread.
 
 
 ## #7: {{% game 335275 %}}Whirling Witchcraft{{% /game %}}
@@ -172,7 +172,7 @@
 
 {{< img src="335275" size="x300" alt="Whirling Witchcraft" >}}
 
-{{% game 335275 %}}Whirling Witchcraft{{% /game %}}
+Use your recipes to generate ingredients and overflow your opponent's cauldron.
 
 
 ## #8: {{% game 339906 %}}The Hunger{{% /game %}}
@@ -181,7 +181,7 @@
 
 {{< img src="339906" size="x300" alt="The Hunger" >}}
 
-{{% game 339906 %}}The Hunger{{% /game %}}
+As a vampire, you want to hunt humans, but you must return home before sunrise…
 
 
 ## #9: {{% game 293835 %}}Oltréé{{% /game %}}
@@ -190,7 +190,7 @@
 
 {{< img src="293835" size="x300" alt="Oltréé" >}}
 
-{{% game 293835 %}}Oltréé{{% /game %}}
+Rangers help local communities and defend their Kingdom in order to restore hope.
 
 
 ## #10: {{% game 271601 %}}Feed the Kraken{{% /game %}}
@@ -199,7 +199,7 @@
 
 {{< img src="271601" size="x300" alt="Feed the Kraken" >}}
 
-{{% game 271601 %}}Feed the Kraken{{% /game %}}
+Social deduction - Loyal sailors, ruthless pirates, crazy cultists and… The Kraken!
 
 
 ## #11: {{% game 363369 %}}Starship Captains{{% /game %}}
