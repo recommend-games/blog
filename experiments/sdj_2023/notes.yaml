@@ -1,15 +1,6 @@
 177478:
   name: IKI
   text: '{{% game 177478 %}}IKI{{% /game %}}'
-255360:
-  name: Bargain Basement Bathysphere
-  text: '{{% game 255360 %}}Bargain Basement Bathysphere{{% /game %}}'
-256513:
-  name: Animal Kingdoms
-  text: '{{% game 256513 %}}Animal Kingdoms{{% /game %}}'
-256680:
-  name: Return to Dark Tower
-  text: '{{% game 256680 %}}Return to Dark Tower{{% /game %}}'
 258779:
   name: Planet Unknown
   text: '{{% game 258779 %}}Planet Unknown{{% /game %}}'
@@ -31,12 +22,12 @@
 291845:
   name: Three Sisters
   text: '{{% game 291845 %}}Three Sisters{{% /game %}}'
+292914:
+  name: Fika
+  text: '{{% game 292914 %}}Fika{{% /game %}}'
 293835:
   name: "Oltr\xE9\xE9"
   text: "{{% game 293835 %}}Oltr\xE9\xE9{{% /game %}}"
-294702:
-  name: Tenpenny Parks
-  text: '{{% game 294702 %}}Tenpenny Parks{{% /game %}}'
 295895:
   name: Distilled
   text: '{{% game 295895 %}}Distilled{{% /game %}}'
@@ -61,6 +52,9 @@
 310873:
   name: Carnegie
   text: '{{% game 310873 %}}Carnegie{{% /game %}}'
+312722:
+  name: Hercules
+  text: '{{% game 312722 %}}Hercules{{% /game %}}'
 318243:
   name: HITSTER
   text: '{{% game 318243 %}}HITSTER{{% /game %}}'
@@ -76,24 +70,18 @@
 324914:
   name: Inside Job
   text: '{{% game 324914 %}}Inside Job{{% /game %}}'
-328866:
-  name: My Father's Work
-  text: '{{% game 328866 %}}My Father''s Work{{% /game %}}'
-329551:
-  name: 'Mosaic: A Story of Civilization'
-  text: '{{% game 329551 %}}Mosaic: A Story of Civilization{{% /game %}}'
 329939:
   name: 'Keystone: North America'
   text: '{{% game 329939 %}}Keystone: North America{{% /game %}}'
-330592:
-  name: Phantom Ink
-  text: '{{% game 330592 %}}Phantom Ink{{% /game %}}'
 331401:
   name: Dog Park
   text: '{{% game 331401 %}}Dog Park{{% /game %}}'
 332772:
   name: Revive
   text: '{{% game 332772 %}}Revive{{% /game %}}'
+332853:
+  name: Dom Pierre
+  text: '{{% game 332853 %}}Dom Pierre{{% /game %}}'
 333372:
   name: 'Cellulose: A Plant Cell Biology Game'
   text: '{{% game 333372 %}}Cellulose: A Plant Cell Biology Game{{% /game %}}'
@@ -121,9 +109,6 @@
 341245:
   name: Garden Nation
   text: '{{% game 341245 %}}Garden Nation{{% /game %}}'
-341496:
-  name: Caesar's Empire
-  text: '{{% game 341496 %}}Caesar''s Empire{{% /game %}}'
 341519:
   name: The Light in the Mist
   text: '{{% game 341519 %}}The Light in the Mist{{% /game %}}'
@@ -148,12 +133,6 @@
 350316:
   name: Wayfarers of the South Tigris
   text: '{{% game 350316 %}}Wayfarers of the South Tigris{{% /game %}}'
-350933:
-  name: The Guild of Merchant Explorers
-  text: '{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}'
-351040:
-  name: Ready Set Bet
-  text: '{{% game 351040 %}}Ready Set Bet{{% /game %}}'
 351526:
   name: Encyclopedia
   text: '{{% game 351526 %}}Encyclopedia{{% /game %}}'
@@ -178,6 +157,9 @@
 354273:
   name: Old London Bridge
   text: '{{% game 354273 %}}Old London Bridge{{% /game %}}'
+354328:
+  name: Overbooking
+  text: '{{% game 354328 %}}Overbooking{{% /game %}}'
 354729:
   name: Wonder Woods
   text: '{{% game 354729 %}}Wonder Woods{{% /game %}}'
@@ -199,12 +181,18 @@
 356996:
   name: The Border
   text: '{{% game 356996 %}}The Border{{% /game %}}'
+356997:
+  name: Exacto
+  text: '{{% game 356997 %}}Exacto{{% /game %}}'
+357258:
+  name: "D\xE9ole"
+  text: "{{% game 357258 %}}D\xE9ole{{% /game %}}"
 357563:
   name: Akropolis
   text: '{{% game 357563 %}}Akropolis{{% /game %}}'
-358085:
-  name: Village Rails
-  text: '{{% game 358085 %}}Village Rails{{% /game %}}'
+358790:
+  name: Farm Club
+  text: '{{% game 358790 %}}Farm Club{{% /game %}}'
 359406:
   name: 'Ecosystem: Coral Reef'
   text: '{{% game 359406 %}}Ecosystem: Coral Reef{{% /game %}}'
@@ -223,9 +211,6 @@
 361279:
   name: Maui
   text: '{{% game 361279 %}}Maui{{% /game %}}'
-361545:
-  name: Twilight Inscription
-  text: '{{% game 361545 %}}Twilight Inscription{{% /game %}}'
 361905:
   name: Lofoten
   text: '{{% game 361905 %}}Lofoten{{% /game %}}'
@@ -244,12 +229,15 @@
 363307:
   name: Evergreen
   text: '{{% game 363307 %}}Evergreen{{% /game %}}'
+363351:
+  name: Helsinki
+  text: '{{% game 363351 %}}Helsinki{{% /game %}}'
 363369:
   name: Starship Captains
   text: '{{% game 363369 %}}Starship Captains{{% /game %}}'
-363481:
-  name: Fancy Feathers
-  text: '{{% game 363481 %}}Fancy Feathers{{% /game %}}'
+363489:
+  name: 'Sherlock: Zimmer 208'
+  text: '{{% game 363489 %}}Sherlock: Zimmer 208{{% /game %}}'
 364011:
   name: 'Great Western Trail: Argentina'
   text: '{{% game 364011 %}}Great Western Trail: Argentina{{% /game %}}'
@@ -259,6 +247,9 @@
 364186:
   name: Terra Nova
   text: '{{% game 364186 %}}Terra Nova{{% /game %}}'
+364556:
+  name: Precognition
+  text: '{{% game 364556 %}}Precognition{{% /game %}}'
 364579:
   name: Joomo
   text: '{{% game 364579 %}}Joomo{{% /game %}}'
@@ -271,15 +262,15 @@
 367047:
   name: Caldera Park
   text: '{{% game 367047 %}}Caldera Park{{% /game %}}'
+367206:
+  name: 'Mysterium Kids: Captain Echo''s Treasure'
+  text: '{{% game 367206 %}}Mysterium Kids: Captain Echo''s Treasure{{% /game %}}'
 367220:
   name: Sea Salt & Paper
   text: '{{% game 367220 %}}Sea Salt & Paper{{% /game %}}'
 367662:
   name: Applejack
   text: '{{% game 367662 %}}Applejack{{% /game %}}'
-367992:
-  name: Swindler
-  text: '{{% game 367992 %}}Swindler{{% /game %}}'
 368854:
   name: Crossing Oceans
   text: '{{% game 368854 %}}Crossing Oceans{{% /game %}}'
@@ -295,6 +286,15 @@
 370591:
   name: 'Dorfromantik: The Board Game'
   text: '{{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}'
+372811:
+  name: BIKIDO
+  text: '{{% game 372811 %}}BIKIDO{{% /game %}}'
 375651:
   name: That's Not a Hat
   text: '{{% game 375651 %}}That''s Not a Hat{{% /game %}}'
+379037:
+  name: 'Istanbul: Choose & Write'
+  text: '{{% game 379037 %}}Istanbul: Choose & Write{{% /game %}}'
+379153:
+  name: Pacifica
+  text: '{{% game 379153 %}}Pacifica{{% /game %}}'
