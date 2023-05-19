@@ -55,6 +55,10 @@ params = {
     "user": "S_d_J",
     "year__gte": 2022,
     "year__lte": 2023,
+    "num_votes__gte": 1,
+    "avg_rating__gte": 1.0,
+    "bayes_rating__gte": 1.0,
+    "kennerspiel_score__gte": 0.0,
     "include": ",".join(map(str, include)),
     "exclude": ",".join(map(str, exclude)),
     "exclude_clusters": False,
@@ -63,7 +67,7 @@ params = {
     "base_url": "https://recommend.games",
 }
 
-max_results = 2500
+max_results = 10_000
 candidates = list(
     tqdm(
         iterable=recommend_games(max_results=max_results, **params),
@@ -79,11 +83,19 @@ for game in candidates[:10]:
 # %%
 df = pd.DataFrame.from_records(candidates, index="bgg_id")
 df["kennerspiel"] = df["kennerspiel_score"] >= 0.5
-df = df.join(r_g_rankings["score"].rename("r_g_score"))
+df = df.join(r_g_rankings["score"].rename("r_g_score"), how="inner")
+df.dropna(
+    subset=[
+        "num_votes",
+        "avg_rating",
+        "bayes_rating",
+        "rec_rating",
+        "kennerspiel_score",
+        "r_g_score",
+    ],
+    inplace=True,
+)
 df.shape
-
-# %%
-df.sample(3).T
 
 # %%
 data = transform(
@@ -147,7 +159,7 @@ data.shape
 # %%
 sdj_score_weights = {
     "avg_rating": 0,
-    "avg_rating_rank": 1,
+    "avg_rating_rank": 0,
     "avg_rating_scale_10": 0,
     "bayes_rating": 0,
     "bayes_rating_rank": 1,
@@ -159,8 +171,8 @@ sdj_score_weights = {
     "r_g_score_rank": 1,
     "rec_rating": 0,
     "rec_rating_rank": 8,
-    "rec_rating_scale_max": 4,
-    "sdj_prob": 1,
+    "rec_rating_scale_max": 2,
+    "sdj_prob": 0,
     "sdj_prob_rank": 0,
 }
 
