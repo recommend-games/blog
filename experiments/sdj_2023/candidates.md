@@ -172,7 +172,7 @@ Two villages face off in the traditions of brewing beer and baking bread.
 
 {{< img src="350933" size="x300" alt="The Guild of Merchant Explorers" >}}
 
-{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
+Explore strange lands, establish trade routes, and search for treasure.
 
 
 ## #8: {{% game 335275 %}}Whirling Witchcraft{{% /game %}}

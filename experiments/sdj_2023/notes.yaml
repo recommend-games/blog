@@ -133,6 +133,9 @@
 350316:
   name: Wayfarers of the South Tigris
   text: '{{% game 350316 %}}Wayfarers of the South Tigris{{% /game %}}'
+350933:
+  name: The Guild of Merchant Explorers
+  text: 'Explore strange lands, establish trade routes, and search for treasure.'
 351526:
   name: Encyclopedia
   text: '{{% game 351526 %}}Encyclopedia{{% /game %}}'
