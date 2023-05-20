@@ -171,7 +171,7 @@ sdj_score_weights = {
     "r_g_score_rank": 0,
     "rec_rating": 0,
     "rec_rating_rank": 1,
-    "rec_rating_scale_max": 1,
+    "rec_rating_scale_max": 0,
     "sdj_prob": 0,
     "sdj_prob_rank": 0,
 }
