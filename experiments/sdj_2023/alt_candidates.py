@@ -73,7 +73,7 @@ candidates = pd.concat(
         year=year,
         exclude=exclude,
         num=250,
-        base_url="https://recommend.games",
+        base_url="http://localhost:9999",
     )
     for year in range(1979, 2022)
 )

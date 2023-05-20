@@ -64,7 +64,7 @@ params = {
     "exclude_clusters": False,
     "exclude_known": False,
     "exclude_owned": False,
-    "base_url": "https://recommend.games",
+    "base_url": "http://localhost:9999",
 }
 
 max_results = 10_000
