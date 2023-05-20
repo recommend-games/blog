@@ -251,7 +251,11 @@ Lastly, let me squeeze in a few more titles in order to increase my chance of co
 
 # Conclusion
 
-TODO
+As you can tell from the somewhat uncommon way I picked the predictions for the shortlist, I feel like there are much fewer "obvious" candidates than in previous year – in particular for {{% kdj %}}Kennerspiel{{% /kdj %}}, which is weird, since that's usually the award where us board game nerds are much more up-to-date.
+
+So even more than in previous years, I'll be excited to hear what the jury has decided for us.
+
+Finally, let's not forget {{% kindersdj / %}}. I'm really curious about that one – but from a regular customer's perspective, since I really appreciate the guidance to new games I can try with my kids. 👨‍👩‍👧‍👧
 
 
 [^eligible]: As every year, it's not straightforward to determine what games are eligible for the awards. Generally speaking, it'd be those games release between April 2022 and March 2023 into German retail. Hence, filtering by BGG release year will exclude games that were released earlier elsewhere, but only recently in Germany, and likewise let some games pass that have not seen a German release in that time window. I did my best to catch what I could, but there's always some that get away.
