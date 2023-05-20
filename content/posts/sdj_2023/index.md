@@ -134,13 +134,6 @@ Bid ANYTHING to bail out companies, but just don’t bid the MOST!
 Experience the peaceful and relaxed atmosphere of the video game on your table.
 
 
-## My two cents
-
-Alrighty, so these were the top ten candidates for a recommendation as determined by our algorithm. As always, I'll add my personal best guess for the three nominees:
-
-* TODO
-
-
 # Candidates for {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
 
 {{< img src="ksdj-2022" size="x300" alt="Kennerspiel des Jahres 2023" >}}
@@ -200,7 +193,16 @@ Use dice for resources and actions to gain riches in the Renaissance.
 Two villages face off in the traditions of brewing beer and baking bread.
 
 
-## #7: {{% game 335275 %}}Whirling Witchcraft{{% /game %}}
+## #7: {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
+
+*1–4 players, 45 minutes, 14+ years, medium light (2.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="350933" size="x300" alt="The Guild of Merchant Explorers" >}}
+
+Explore strange lands, establish trade routes, and search for treasure.
+
+
+## #8: {{% game 335275 %}}Whirling Witchcraft{{% /game %}}
 
 *2–5 players, 15–30 minutes, 14+ years, medium light (1.8), 98% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -209,7 +211,7 @@ Two villages face off in the traditions of brewing beer and baking bread.
 Use your recipes to generate ingredients and overflow your opponent's cauldron.
 
 
-## #8: {{% game 339906 %}}The Hunger{{% /game %}}
+## #9: {{% game 339906 %}}The Hunger{{% /game %}}
 
 *2–6 players, 60 minutes, 12+ years, medium light (2.3), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -218,7 +220,7 @@ Use your recipes to generate ingredients and overflow your opponent's cauldron.
 As a vampire, you want to hunt humans, but you must return home before sunrise…
 
 
-## #9: {{% game 293835 %}}Oltréé{{% /game %}}
+## #10: {{% game 293835 %}}Oltréé{{% /game %}}
 
 *2–4 players, 60–120 minutes, 8+ years, medium light (2.4), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -227,20 +229,9 @@ As a vampire, you want to hunt humans, but you must return home before sunrise�
 Rangers help local communities and defend their Kingdom in order to restore hope.
 
 
-## #10: {{% game 271601 %}}Feed the Kraken{{% /game %}}
+# My two cents
 
-*5–11 players, 45–90 minutes, 12+ years, medium light (2.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="271601" size="x300" alt="Feed the Kraken" >}}
-
-Social deduction - Loyal sailors, ruthless pirates, crazy cultists and… The Kraken!
-
-
-## My two cents
-
-Same procedure as for {{% sdj / %}}, here are my three top picks for {{% kdj / %}} nomination:
-
-* TODO
+TODO
 
 
 # Honourable mentions
