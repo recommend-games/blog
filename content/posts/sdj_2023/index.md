@@ -3,7 +3,7 @@ title: Spiel des Jahres 2023 predictions
 slug: spiel-des-jahres-2023-predictions
 author: Markus Shepherd
 type: post
-date: 2023-05-19T00:00:00+03:00
+date: 2023-05-20T22:00:00+03:00
 tags:
   - SdJ
   - SdJ 2023
@@ -253,7 +253,7 @@ Lastly, let me squeeze in a few more titles in order to increase my chance of co
 
 As you can tell from the somewhat uncommon way I picked the predictions for the shortlist, I feel like there are much fewer "obvious" candidates than in previous year – in particular for {{% kdj %}}Kennerspiel{{% /kdj %}}, which is weird, since that's usually the award where us board game nerds are much more up-to-date.
 
-So even more than in previous years, I'll be excited to hear what the jury has decided for us.
+So even more than in previous years, I'll be excited to hear what the jury will surprise us with.
 
 Finally, let's not forget {{% kindersdj / %}}. I'm really curious about that one – but from a regular customer's perspective, since I really appreciate the guidance to new games I can try with my kids. 👨‍👩‍👧‍👧
 
