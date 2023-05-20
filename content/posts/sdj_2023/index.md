@@ -26,17 +26,9 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-{{% sdj %}}Spiel des Jahres 2023{{% /sdj %}} is around the corner! (Has it really been a year already since we last spoke with each other? 😅) We're blessed with another strong year full of wonderful games that all compete for the most prestigious awards in board gaming. As in [the]({{<ref "posts/sdj_2020/index.md">}}) [previous]({{<ref "posts/sdj_2021/index.md">}}) [years]({{<ref "posts/sdj_2022/index.md">}}), I'll try to predict what games have the best shot at ending up on the longlist (aka *recommendations*) and the shortlist (aka *nominations*) when the jury announces their picks on May 22nd.
+{{% sdj %}}Spiel des Jahres 2023{{% /sdj %}} is around the corner! As in [the]({{<ref "posts/sdj_2020/index.md">}}) [previous]({{<ref "posts/sdj_2021/index.md">}}) [years]({{<ref "posts/sdj_2022/index.md">}}), I'll try to predict what games have the best shot at ending up on the longlist (aka *recommendations*) and the shortlist (aka *nominations*) when the jury announces their picks on May 22nd.
 
-Even more so than in previous years, I didn't have much time (thanks, kids 👨‍👩‍👧‍👧), so I've mostly used the same algorithmic approach as last year. First, I took all eligible[^eligible] games and separated them into two lists: one for {{% sdj / %}} and one for {{% kdj / %}}, depending on their [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}}).[^kennerspiel] Then I ranked those games in a couple of different ways, and finally combined those into the final result:
-
-* Recommend.Games [recommendation algorithm](https://recommend.games/#/?for=S_d_J&yearMin=2021&yearMax=2022&excludeOwned=false&playerCount=4&playerCountType=box&playTime=120&playTimeType=max&playerAge=16&playerAgeType=box) (50% ranking, 25% score). This has proven to be a powerful and reliable method to capture the jury's taste, but it's slow to recommend new games with few ratings.
-* {{% sdj / %}} probability (10%). Similar to the model that calculates the {{% kdj %}}Kennerspiel{{% /kdj %}} score, I've trained a model that tries to predict a game's chances to end up on the jury's longlist. This is particularly designed to unearth candidates with few votes, but it's still rudimentary at this point.
-* Average BoardGameGeek rating (5%). Let the gamers speak! In order to give new games a chance, we'll take a look at the simple average rating.
-* Geek score (aka [Bayesian average]({{<ref "posts/reverse_engineer_bgg/index.md">}}), 5%). This score starts out at 5.5, and gets closer to the actual average the more ratings come in. It's more reliable, but also strongly favours games that have been around for longer and hence gathered more ratings.
-* Recommend.Games ranking (5%). We introduced a new default ranking on R.G a couple of months ago, which seems to pick up new games shooting up the hotness a little faster than on BGG, so let's give it a shot as part of these predictions. 🤓
-
-You can find the [detailed analysis here](predictions.py) and [complete results here](predictions.csv). But without further ado, here are the favourite games to win {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}.
+As every year, I'll let the algorithms speak. The predictions for the longlist come directly from the [recommendendations](https://recommend.games/#/?for=S_d_J&excludeRated=false&yearMin=2022&yearMax=2023) out of all eligible[^eligible] games. Our very own [Kennerspiel score]({{<ref "posts/kennerspiel/index.md">}}) is then used to sort those into their respective list of the top 10 contenders for either award. You can find the [detailed analysis here](predictions.py) and [complete results here](predictions.csv). But without further ado, here are the favourite games to win {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}.
 
 
 # Candidates for {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}
@@ -247,4 +239,3 @@ TODO
 
 
 [^eligible]: As every year, it's not straightforward to determine what games are eligible for the awards. Generally speaking, it'd be those games release between April 2022 and March 2023 into German retail. Hence, filtering by BGG release year will exclude games that were released earlier elsewhere, but only recently in Germany, and likewise let some games pass that have not seen a German release in that time window. I did my best to catch what I could, but there's always some that get away.
-[^kennerspiel]: I'll trust the algorithm and the scores it outputs blindly. As every year, it'll be an interesting validation of the Kennerspiel score to see whether the jury agrees or not.
