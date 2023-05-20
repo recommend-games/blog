@@ -223,7 +223,21 @@ Rangers help local communities and defend their Kingdom in order to restore hope
 
 # My two cents
 
-TODO
+This is where I usually take the algorithmic predictions for the longlists and pick three games each that I think the jury will nominate. But this year, I'll proceed a little different – because I don't agree with the algorithms all that much… 🙈 So I'll go pretty freestyle with my predictions for the nominees, both with picks from outside the algorithm's top 10 and contradicting the Kennerspiel score. 😅
+
+
+## My predictions for nominees for {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}
+
+* {{% game 359970 %}}Challengers!{{% /game %}}
+* {{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}
+* {{% game 356742 %}}KuZOOkA{{% /game %}}
+
+
+## My predictions for nominees for {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
+
+* {{% game 368954 %}}Council of Shadows{{% /game %}}
+* {{% game 258779 %}}Planet Unknown{{% /game %}}
+* {{% game 266830 %}}QE{{% /game %}}
 
 
 # Honourable mentions
