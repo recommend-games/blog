@@ -242,9 +242,11 @@ This is where I usually take the algorithmic predictions for the longlists and p
 
 # Honourable mentions
 
-This is always the section where I squeeze in a few more title in order to increase my chance of covering the whole list. There's plenty of strong games I could mention, but I'll restrict myself to two additional candidates for {{% sdj / %}} that the algorithm just wouldn't quite pick up:
+Lastly, let me squeeze in a few more titles in order to increase my chance of covering the whole list. Since I've already turned my back on my own algorithms, let me just throw out a few more title I think it might have missed… 😉
 
-* TODO
+* {{% game 271601 %}}Feed the Kraken{{% /game %}}
+* {{% game 318243 %}}HITSTER{{% /game %}}
+* {{% game 341530 %}}Super Mega Lucky Box{{% /game %}}
 
 
 # Conclusion
