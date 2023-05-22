@@ -33,7 +33,7 @@ As every year, I'll let the algorithms speak. The predictions for the longlist c
 
 # Candidates for {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}
 
-{{< img src="sdj-2022" size="x300" alt="Spiel des Jahres 2023" >}}
+{{< img src="sdj-2023" size="x300" alt="Spiel des Jahres 2023" >}}
 
 
 ## #1: {{% game 353545 %}}Next Station: London{{% /game %}}
@@ -128,7 +128,7 @@ Experience the peaceful and relaxed atmosphere of the video game on your table.
 
 # Candidates for {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
 
-{{< img src="ksdj-2022" size="x300" alt="Kennerspiel des Jahres 2023" >}}
+{{< img src="ksdj-2023" size="x300" alt="Kennerspiel des Jahres 2023" >}}
 
 
 ## #1: {{% game 364186 %}}Terra Nova{{% /game %}}
