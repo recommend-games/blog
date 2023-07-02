@@ -129,6 +129,6 @@ This one's pretty bad… 😅 The algorithm predicted a mere six out of fifteen 
 
 ## Shortlist
 
-TODO.
+It's not getting any better. This year, I only called three out of six nominations correctly – one of them for the wrong award. Two out of those predictions were "manual overrides" because the algorithm didn't pick up those games at all. Overall, the weakest year so far for my predictions, it appears I need to adjust the algorithms a little bit.
 
 That's it for now, we'll be back soon with a little more in-depth analyses on the six nominees and their chances of winning an award.
