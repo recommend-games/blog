@@ -65,13 +65,13 @@ This was the #1 prediction, so the nomination is a logical consequence, even tho
 
 ## {{% sdj / %}} recommendations
 
-* {{% game 357563 %}}Akropolis{{% /game %}}: TODO
-* {{% game 318243 %}}HITSTER{{% /game %}}: TODO
-* {{% game 356742 %}}KuZOOkA{{% /game %}}: TODO
-* {{% game 358690 %}}MANTIS{{% /game %}}: TODO
-* {{% game 266830 %}}QE{{% /game %}}: TODO
-* {{% game 367220 %}}Sea Salt & Paper{{% /game %}}: TODO
-* {{% game 375651 %}}That's Not a Hat{{% /game %}}: TODO
+* {{% game 357563 %}}Akropolis{{% /game %}}: Having won the As d'Or and being placed #5 by the algorithm, "just" a recommendation is almost disappointing… 😉
+* {{% game 318243 %}}HITSTER{{% /game %}}: Only #18 by the algorithm, but I squeezed it in as an honourable mention. This could've been a strong contender for {{% sdj / %}}, but it works best with a paid Spotify subscription, which really hampered its chances for a nomination.
+* {{% game 356742 %}}KuZOOkA{{% /game %}}: I've even had this down for a nomination, so a recommendation was expected in the end.
+* {{% game 358690 %}}MANTIS{{% /game %}}: This year's obligatory jury suprise, just #173 prediction according to algorithm. Another simple card game by the {{% game 172225 %}}Exploding Kittens{{% /game %}} publishers.
+* {{% game 266830 %}}QE{{% /game %}}: For me this was a candidate for a {{% kdj %}}Kennerspiel{{% /kdj %}} nomination – in the end, the algorithm was right, predicting a place on the longlist for {{% sdj / %}}.
+* {{% game 367220 %}}Sea Salt & Paper{{% /game %}}: At #17 of the predictions a near miss. Another fairly simple card game that was on many commentators' lists.
+* {{% game 375651 %}}That's Not a Hat{{% /game %}}: As mentioned with {{% game 370164 %}}Fun Facts{{% /game %}}, this was another much discussed game. At #20, the algorithm actually gave it the better odds.
 
 
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
