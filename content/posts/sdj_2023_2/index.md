@@ -3,7 +3,7 @@ title: Spiel des Jahres 2023 nominations
 slug: spiel-des-jahres-2023-nominations
 author: Markus Shepherd
 type: post
-date: 2023-07-02T23:00:00+03:00
+date: 2023-07-02T23:20:42+03:00
 tags:
   - SdJ
   - SdJ 2023
