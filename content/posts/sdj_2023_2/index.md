@@ -85,7 +85,7 @@ This was the #1 prediction, so the nomination is a logical consequence, even tho
 
 {{< img src="359970" size="x300" alt="Challengers!" >}}
 
-Capture the flag and hold onto it to win the tournament!
+{{% game 359970 %}}Challengers!{{% /game %}} was definitely one of the jury members' darling and couldn't possibly be absent from any predictions list. The algorithm put it on #16, I saw it amongst the nominations – for {{% sdj / %}}… We'll have more things to discuss on this topic in the follow-up predictions article.
 
 
 ## {{% game 177478 %}}IKI{{% /game %}}
@@ -94,7 +94,7 @@ Capture the flag and hold onto it to win the tournament!
 
 {{< img src="177478" size="x300" alt="IKI" >}}
 
-Hire artisans, set them up in the market and acquire prestige in feudal Japan.
+Even though the algorithm placed it #2 amongst the predictions, this game feels a bit like an underdog, partially because it was originally released in 2015, but didn't receive much attention until its got a second edition. Now it's nominated for the most prestigious award in board gaming!
 
 
 ## {{% game 258779 %}}Planet Unknown{{% /game %}}
@@ -103,7 +103,7 @@ Hire artisans, set them up in the market and acquire prestige in feudal Japan.
 
 {{< img src="258779" size="x300" alt="Planet Unknown" >}}
 
-Develop and colonize your planet with oddly shaped tiles served on a rotating tray.
+The only {{% kdj %}}Kennerspiel{{% /kdj %}} nomination I got dead-on right, even though the algorithm placed it only on #21 – again for the wrong award…
 
 
 ## {{% kdj / %}} recommendations
