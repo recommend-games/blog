@@ -124,7 +124,7 @@ Of the fifteen games on the two longlists, the [algorithm]({{<ref "posts/kenners
 
 ## Longlist
 
-TODO.
+This one's pretty bad… 😅 The algorithm predicted a mere six out of fifteen games (40%) correctly. I can at least claim for myself that I predicted or mentioned honourably a further four games, bumping the accuracy to 67%, which is somewhat in line with previous years.
 
 
 ## Shortlist
