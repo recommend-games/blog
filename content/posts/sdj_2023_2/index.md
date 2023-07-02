@@ -108,8 +108,8 @@ The only {{% kdj %}}Kennerspiel{{% /kdj %}} nomination I got dead-on right, even
 
 ## {{% kdj / %}} recommendations
 
-* {{% game 368954 %}}Council of Shadows{{% /game %}}: TODO
-* {{% game 345584 %}}Mindbug: First Contact{{% /game %}}: TODO
+* {{% game 368954 %}}Council of Shadows{{% /game %}}: I even thought a nomination was possible, even though the algorithm placed it only #82. In the end probably a bit too heavy for a nomination.
+* {{% game 345584 %}}Mindbug: First Contact{{% /game %}}: Jury surprises, part 2. This one the algorithm had only as prediction #101. I can't say I've heard much else about the game otherwise either, though it has a very famous name amongst its design team…
 
 
 # How good were the predictions?
