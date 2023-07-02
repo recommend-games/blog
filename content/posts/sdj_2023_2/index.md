@@ -3,7 +3,7 @@ title: Spiel des Jahres 2023 nominations
 slug: spiel-des-jahres-2023-nominations
 author: Markus Shepherd
 type: post
-date: 2023-07-02T21:00:00+03:00
+date: 2023-07-02T23:00:00+03:00
 tags:
   - SdJ
   - SdJ 2023
@@ -119,7 +119,7 @@ This really is a drama in three acts: the decision of {{% kdj %}}Kennerspiel{{% 
 
 ## {{% kdj %}}Kennerspiel{{% /kdj %}} score
 
-Of the fifteen games on the two longlists, the [algorithm]({{<ref "posts/kennerspiel/index.md">}}) classified two wrong – both nominated for {{% kdj / %}}: {{% game 359970 %}}Challengers!{{% /game %}} and {{% game 258779 %}}Planet Unknown{{% /game %}}. The former was sorted as the lightest amongst the connoiseur games as presented by the jury, so at least that seems like a near miss, even though the algorithm was 100% convinced it should be on the {{% sdj / %}} list. 🙈 Still, overall 87% correct ain't too bad.
+Of the fifteen games on the two longlists, the [algorithm]({{<ref "posts/kennerspiel/index.md">}}) classified two wrong – both nominated for {{% kdj / %}}: {{% game 359970 %}}Challengers!{{% /game %}} and {{% game 258779 %}}Planet Unknown{{% /game %}}. The former was sorted as the lightest amongst the connoisseur games as presented by the jury, so at least that seems like a near miss, even though the algorithm was 100% convinced it should be on the {{% sdj / %}} list. 🙈 Still, overall 87% correct ain't too bad.
 
 
 ## Longlist
