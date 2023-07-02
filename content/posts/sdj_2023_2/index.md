@@ -42,7 +42,7 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 
 {{< img src="370591" size="x300" alt="Dorfromantik: The Board Game" >}}
 
-Experience the peaceful and relaxed atmosphere of the video game on your table.
+Probably the strongest contender for a nomination beforehand. No surprises here…
 
 
 ## {{% game 370164 %}}Fun Facts{{% /game %}}
@@ -51,7 +51,7 @@ Experience the peaceful and relaxed atmosphere of the video game on your table.
 
 {{< img src="370164" size="x300" alt="Fun Facts" >}}
 
-Where do you rank compared to everyone else at the table?
+Together with {{% game 375651 %}}That's Not a Hat{{% /game %}}, designer Kasper Lapp had two entries with quite some buzz, though the algorithm wouldn't pick it up and placed {{% game 370164 %}}Fun Facts{{% /game %}} on #36 of the predictions.
 
 
 ## {{% game 353545 %}}Next Station: London{{% /game %}}
@@ -60,7 +60,7 @@ Where do you rank compared to everyone else at the table?
 
 {{< img src="353545" size="x300" alt="Next Station: London" >}}
 
-Draw tube lines to cross the Thames and connect London.
+This was the #1 prediction, so the nomination is a logical consequence, even though I didn't see it being nominated.
 
 
 ## {{% sdj / %}} recommendations
