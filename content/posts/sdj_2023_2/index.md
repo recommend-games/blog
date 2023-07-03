@@ -112,6 +112,22 @@ The only {{% kdj %}}Kennerspiel{{% /kdj %}} nomination I got dead-on right, even
 * {{% game 345584 %}}Mindbug: First Contact{{% /game %}}: Jury surprises, part 2. This one the algorithm had only as prediction #101. I can't say I've heard much else about the game otherwise either, though it has a very famous name amongst its design team…
 
 
+# {{% kdj %}}Special Awards 2023{{% /kdj %}}
+
+{{< img src="sonderpreis-2023" size="x300" alt="Special Awards 2023" >}}
+
+
+## {{% game 350636 %}}Unlock!: Game Adventures{{% /game %}}
+
+*1–5 players, 30–60 minutes, 10+ years, medium light (2.4), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="350636" size="x300" alt="Unlock!: Game Adventures" >}}
+
+The jury also awarded two special awards this year, the first in five years and the first ever for a {{% kindersdj %}}Kinderspiel{{% /kindersdj %}}. This honour goes to the Unlock! series in general, and to their latest installment in particular, which lifts the concept on a wonderful meta level by choosing the three popular games {{% game 181304 %}}Mysterium{{% /game %}}, {{% game 9209 %}}Ticket to Ride{{% /game %}} and {{% game 30549 %}}Pandemic{{% /game %}} as background stories.
+
+At this point in the history of {{% sdj / %}} it is almost a running gag that {{% game 30549 %}}Pandemic{{% /game %}} designer Matt Leacock has never won the main award. He was nominated three times with various {{% game 30549 %}}Pandemic{{% /game %}} variants and received said last special award for {{% game 221107 %}}Pandemic Legacy: Season 2{{% /game %}}. Now his game inspired another special award winner – but still no main award. Maybe the jury waits for Season 13 for that?
+
+
 # How good were the predictions?
 
 This really is a drama in three acts: the decision of {{% kdj %}}Kennerspiel{{% /kdj %}} or not, the algorithm picking the longlist, and finally my guts picking the shortlist.
