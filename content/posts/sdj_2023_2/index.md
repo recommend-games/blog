@@ -112,6 +112,20 @@ The only {{% kdj %}}Kennerspiel{{% /kdj %}} nomination I got dead-on right, even
 * {{% game 345584 %}}Mindbug: First Contact{{% /game %}}: Jury surprises, part 2. This one the algorithm had only as prediction #101. I can't say I've heard much else about the game otherwise either, though it has a very famous name amongst its design team…
 
 
+# {{% kdj %}}Special Awards 2023{{% /kdj %}}
+
+{{< img src="sonderpreis-2023" size="x300" alt="Special Awards 2023" >}}
+
+
+## {{% game 350636 %}}Unlock!: Game Adventures{{% /game %}}
+
+*1–5 players, 30–60 minutes, 10+ years, medium light (2.4), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="350636" size="x300" alt="Unlock!: Game Adventures" >}}
+
+Solve puzzles to escape the worse in these board game themed scenarios.
+
+
 # How good were the predictions?
 
 This really is a drama in three acts: the decision of {{% kdj %}}Kennerspiel{{% /kdj %}} or not, the algorithm picking the longlist, and finally my guts picking the shortlist.
