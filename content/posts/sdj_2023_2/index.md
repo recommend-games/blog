@@ -22,6 +22,13 @@ tags:
   - Kennerspiel nominations
   - Kennerspiel des Jahres nominations
   - Kennerspiel des Jahres 2023 nominations
+  - Dorfromantik
+  - Fun Facts
+  - 'Next Station: London'
+  - 'Challengers!'
+  - IKI
+  - Planet Unknown
+  - 'Unlock!'
 ---
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
