@@ -92,7 +92,7 @@ This was the #1 prediction, so the nomination is a logical consequence, even tho
 
 {{< img src="359970" size="x300" alt="Challengers!" >}}
 
-{{% game 359970 %}}Challengers!{{% /game %}} was definitely one of the jury members' darling and couldn't possibly be absent from any predictions list. The algorithm put it on #16, I saw it amongst the nominations – for {{% sdj / %}}… We'll have more things to discuss on this topic in the follow-up predictions article.
+{{% game 359970 %}}Challengers!{{% /game %}} was definitely one of the jury members' darlings and couldn't possibly be absent from any predictions list. The algorithm put it on #16, I saw it amongst the nominations – for {{% sdj / %}}… We'll have more things to discuss on this topic in the follow-up predictions article.
 
 
 ## {{% game 177478 %}}IKI{{% /game %}}
