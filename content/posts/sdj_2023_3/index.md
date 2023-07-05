@@ -41,9 +41,9 @@ The waiting is finally coming to an end! On Sunday, July 16, the jury will annou
 
 {{< img src="sdj-2023" size="x300" alt="Spiel des Jahres 2023" >}}
 
-Before we dive into the individual games, let's look at some numbers to see some objective measures for them – as far as this is possible. What we've got at our disposal are the [recommendations to the `S_d_J` bot](https://recommend.games/#/?for=S_d_J&yearMin=2023&yearMax=2022&include=177478,258779,353545,359970,370164,370591&excludeRated=false), BoardGameGeek's average rating and the [Bayesian rating]({{<ref "posts/reverse_engineer_bgg/index.md">}}). Additionally, I've created a [poll on BGG](TODO) where the geeks could have their say:
+Before we dive into the individual games, let's look at some numbers to see some objective measures for them – as far as this is possible. What we've got at our disposal are the [recommendations to the `S_d_J` bot](https://recommend.games/#/?for=S_d_J&yearMin=2023&yearMax=2022&include=177478,258779,353545,359970,370164,370591&excludeRated=false), BoardGameGeek's average rating and the [Bayesian rating]({{<ref "posts/reverse_engineer_bgg/index.md">}}). Additionally, I've created a [poll on BGG](https://boardgamegeek.com/thread/3112389/poll-spiel-des-jahres-2023-kennerspiel-des-jahres) where the geeks could have their say:
 
-| Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2023&yearMax=2021&include=353545,370164,370591&excludeRated=false) | Average | Bayes | [Poll](TODO) |
+| Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2023&yearMax=2021&include=353545,370164,370591&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3112389/poll-spiel-des-jahres-2023-kennerspiel-des-jahres) |
 |:---|---:|---:|---:|---:|
 | {{% game 370591 %}}Dorfromantik{{% /game %}} | TODO | TODO | TODO | TODO |
 | {{% game 370164 %}}Fun Facts{{% /game %}} | TODO | TODO | TODO | TODO |
@@ -90,7 +90,7 @@ TODO.
 
 Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspiel{{% /kdj %}} nominees:
 
-| Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2023&yearMax=2022&include=177478,258779,359970&excludeRated=false) | Average | Bayes | [Poll](TODO) |
+| Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2023&yearMax=2022&include=177478,258779,359970&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3112389/poll-spiel-des-jahres-2023-kennerspiel-des-jahres) |
 |:---|---:|---:|---:|---:|
 | {{% game 359970 %}}Challengers!{{% /game %}} | TODO | TODO | TODO | TODO |
 | {{% game 177478 %}}IKI{{% /game %}} | TODO | TODO | TODO | TODO |
