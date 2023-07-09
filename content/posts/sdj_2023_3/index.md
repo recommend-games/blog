@@ -71,7 +71,9 @@ But hidden in there is also my biggest concern: for me, {{% game 370591 %}}Dorfr
 
 {{< img src="370164" size="x300" alt="Fun Facts" >}}
 
-TODO.
+The pitch of a party game that allows you to get to know your group, but in a controlled and gentle manner, seems to be a perfect match for a {{% sdj / %}}. Of course, there isn't "enough game" to it for the 'geek crowd, so don't be fooled by the numbers above. The jury definitely has a fondness for very direct games that mostly play above the table: in the interactions between the players.
+
+Still, I was a little surprised by the nomination. Whilst the reviews were by and large very positive, the game seems to work best with players you already somewhat know. In a fairly random group, the game can fall flat since you have no reference points to go on about when comparing one player's answer to another one's. A {{% sdj / %}} should work for anybody, so that caveat seems significant to me and puts {{% game 370164 %}}Fun Facts{{% /game %}} at quite a disadvantage in the competition for the red meeple.
 
 
 ## {{% game 353545 %}}Next Station: London{{% /game %}}
