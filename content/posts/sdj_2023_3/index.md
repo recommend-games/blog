@@ -92,9 +92,9 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 
 | Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2023&yearMax=2022&include=177478,258779,359970&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3112389/poll-spiel-des-jahres-2023-kennerspiel-des-jahres) |
 |:---|---:|---:|---:|---:|
-| {{% game 359970 %}}Challengers!{{% /game %}} | TODO | TODO | TODO | TODO |
-| {{% game 177478 %}}IKI{{% /game %}} | TODO | TODO | TODO | TODO |
-| {{% game 258779 %}}Planet Unknown{{% /game %}} | TODO | TODO | TODO | TODO |
+| {{% game 359970 %}}Challengers!{{% /game %}} | 6.4 | 7.2 | 6.3 | 29.8% |
+| {{% game 177478 %}}IKI{{% /game %}} | 6.6 | 7.7 | 6.9 | 14.9% |
+| {{% game 258779 %}}Planet Unknown{{% /game %}} | **6.7** | **8.0** | **7.2** | **55.3%** |
 
 TODO.
 
