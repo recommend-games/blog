@@ -34,7 +34,7 @@ tags:
 
 The waiting is finally coming to an end! On Sunday, July 16, the jury will announce the winners of {{% sdj %}}Spiel des Jahres{{% /sdj %}} and {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}. We're blessed with another year of very strong games and I'm certainly very excited to learn what games will win the two awards.
 
-<!-- I'm proud to say that I've called both awards correctly for [two]({{<ref "posts/sdj_2020_3/index.md">}}) [years]({{<ref "posts/sdj_2021_3/index.md">}}) running, so there is a bit of pressure to keep up the streak. 😅 So without further ado, let's look at the nominees. -->
+After [two]({{<ref "posts/sdj_2020_3/index.md">}}) [years]({{<ref "posts/sdj_2021_3/index.md">}}) of calling both winners correctly, I've missed the {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}} winner {{% game 295947 %}}Cascadia{{% /game %}} [last year]({{<ref "posts/sdj_2022_3/index.md">}}), so I hope I'll do better this year. 😎
 
 
 # Nominated for {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}
@@ -49,7 +49,7 @@ Before we dive into the individual games, let's look at some numbers to see some
 | {{% game 370164 %}}Fun Facts{{% /game %}} | 6.2 | 7.0 | 6.0 | 13.0% |
 | {{% game 353545 %}}Next Station{{% /game %}} | **7.5** | 7.5 | **6.5** | 17.4% |
 
-TODO.
+This looks like a head-to-head between {{% game 370591 %}}Dorfromantik{{% /game %}} and {{% game 353545 %}}Next Station: London{{% /game %}}. Or could this be an underdog win for {{% game 370164 %}}Fun Facts{{% /game %}}? Let's take a closer look at the nominees.
 
 
 ## {{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}
