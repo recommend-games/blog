@@ -58,7 +58,11 @@ This looks like a head-to-head between {{% game 370591 %}}Dorfromantik{{% /game 
 
 {{< img src="370591" size="x300" alt="Dorfromantik: The Board Game" >}}
 
-TODO.
+There's a lot of buzz going on around this video game adaptation that the jury describes as a "feel-good-game". It sure feels soothing how the landscape evolves over the course of the game, while presenting an interesting challenge to score as many points as possible. The campaign mode with its unlockable content offers some fresh challenges every time and provides a great excuse to come back to the game again and again.
+
+I definitely had a lovely time playing through the campaign for eleven straight evenings. I even found myself looking forward to incorporating that new tile I just unlocked into my strategy for the next game and chase a new highscore. Sure, for the last game or two it did feel like I was mostly going through the motions just to tick off the last boxes, but on the other hand: what was the last game you played for eleven days in a row?
+
+But hidden in there is also my biggest concern: for me, {{% game 370591 %}}Dorfromantik{{% /game %}} is essentially a solo game. Of course, you can discuss with your group where to place a tile, but that's true for *any* solo game – by that logic, they're all just "co-operative games you can play on your own".
 
 
 ## {{% game 370164 %}}Fun Facts{{% /game %}}
