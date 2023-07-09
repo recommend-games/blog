@@ -45,9 +45,9 @@ Before we dive into the individual games, let's look at some numbers to see some
 
 | Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2023&yearMax=2021&include=353545,370164,370591&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3112389/poll-spiel-des-jahres-2023-kennerspiel-des-jahres) |
 |:---|---:|---:|---:|---:|
-| {{% game 370591 %}}Dorfromantik{{% /game %}} | TODO | TODO | TODO | TODO |
-| {{% game 370164 %}}Fun Facts{{% /game %}} | TODO | TODO | TODO | TODO |
-| {{% game 353545 %}}Next Station{{% /game %}} | TODO | TODO | TODO | TODO |
+| {{% game 370591 %}}Dorfromantik{{% /game %}} | 7.0 | **7.8** | 6.5 | **69.6%** |
+| {{% game 370164 %}}Fun Facts{{% /game %}} | 6.2 | 7.0 | 6.0 | 13.0% |
+| {{% game 353545 %}}Next Station{{% /game %}} | **7.5** | 7.5 | **6.5** | 17.4% |
 
 TODO.
 
