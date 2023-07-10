@@ -34,6 +34,8 @@ tags:
 
 The waiting is finally coming to an end! On Sunday, July 16, the jury will announce the winners of {{% sdj %}}Spiel des Jahres{{% /sdj %}} and {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}. We're blessed with another year of very strong games and I'm certainly very excited to learn what games will win the two awards.
 
+<!-- TODO Is this really a strong year? 🙃 -->
+
 After [two]({{<ref "posts/sdj_2020_3/index.md">}}) [years]({{<ref "posts/sdj_2021_3/index.md">}}) of calling both winners correctly, I've missed the {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}} winner {{% game 295947 %}}Cascadia{{% /game %}} [last year]({{<ref "posts/sdj_2022_3/index.md">}}), so I hope I'll do better this year. 😎
 
 
@@ -95,7 +97,12 @@ Again, not a bad game by any stretch, I just don't see it as {{% sdj / %}} mater
 
 ## Who will win?
 
-TODO.
+Alright, I guess it doesn't come as a surprise that I don't think {{% game 353545 %}}Next Station: London{{% /game %}} will win (or at least I hope it won't). As I already said, {{% game 370164 %}}Fun Facts{{% /game %}} is in some respects the perfect {{% sdj / %}}, still my money is on {{% game 370591 %}}Dorfromantik{{% /game %}}. It has a couple of things going for itself:
+
+1. The jury clearly disagrees with my assessment of it being a solo (only) game, so that doesn't seem to be an obstacle.
+2. Bring video gamers into board gaming.
+3. Something else?
+4. Some similarity to {{% game 295947 %}}Cascadia{{% /game %}}, pro or con?
 
 
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
