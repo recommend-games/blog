@@ -117,7 +117,7 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 | {{% game 177478 %}}IKI{{% /game %}} | 6.6 | 7.7 | 6.9 | 14.9% |
 | {{% game 258779 %}}Planet Unknown{{% /game %}} | **6.7** | **8.0** | **7.2** | **55.3%** |
 
-TODO.
+The numbers clearly favour {{% game 258779 %}}Planet Unknown{{% /game %}} to win {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}. Will the jury agree with the wisdom of the crowd?
 
 
 ## {{% game 359970 %}}Challengers!{{% /game %}}
