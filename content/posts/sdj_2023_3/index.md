@@ -84,7 +84,7 @@ Still, I was a little surprised by the nomination. Whilst the reviews were by an
 
 {{< img src="353545" size="x300" alt="Next Station: London" >}}
 
-By my count, this is the forth "random'n'write" game to be nominated for either award over the past decade, and to be honest, I'm not sure what this particular variant adds to the genre. I do find it very elegant how the fact that every players draws a different underground line every round breaks the symmetry such that everybody's tube map will look different despite following the same cards. But as far as the actual game play goes, I found the very similar {{% game 346482 %}}Voll Verplant{{% /game %}} to be the more intriguing puzzle. My final grump is that a winning map looks nothing like an actual underground map: the scoring incentivises players to zig-zag through quarters and back and forth across the river, and that's just not how an efficient public transport is designed.
+By my count, this is the forth "random'n'write" game to be nominated for either award over the past decade, and to be honest, I'm not sure what this particular variant adds to the genre. I do find it very elegant how the fact that every players draws a different underground line every round breaks the symmetry such that everybody's tube map will look different despite following the same cards. But as far as the actual gameplay goes, I found the very similar {{% game 346482 %}}Voll Verplant{{% /game %}} to be the more intriguing puzzle. My final grump is that a winning map looks nothing like an actual underground map: the scoring incentivises players to zig-zag through quarters and back and forth across the river, and that's just not how an efficient public transport is designed.
 
 This is not to say {{% game 353545 %}}Next Station: London{{% /game %}} wouldn't be a fine game and a deserving nominee, but I'd be fairly disappointed if it did win the award that puts it in line with such giants as {{% game 13 %}}CATAN{{% /game %}} and {{% game 822 %}}Carcassonne{{% /game %}}.
 
@@ -141,7 +141,11 @@ Of course, there's a lot of luck and randomness involved, but this is a game tha
 
 {{< img src="177478" size="x300" alt="IKI" >}}
 
-TODO.
+This is the second edition of a game that itself re-implements {{% game 164878 %}}Edo Craftsman Story{{% /game %}}, a game that is almost a decade old. In a time that's dominated by the cult of the new and where a second print run is the exception, it's nice to see so much appreciation for a game past its initial hype cycle.
+
+I haven't played {{% game 177478 %}}IKI{{% /game %}} yet, so don't have much to say about the gameplay. The jury points out how the mechanics actually capture the spirit of being a trader in Japan at the time, which sounds like an intriguing proposition.
+
+The last thing I'll have to say is that the complexity seems on the upper end of what the jury would consider for a {{% kdj %}}Kennerspiel{{% /kdj %}}. Not out of the question, but it does make a win for {{% game 177478 %}}IKI{{% /game %}} less likely.
 
 
 ## {{% game 258779 %}}Planet Unknown{{% /game %}}
