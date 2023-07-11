@@ -126,7 +126,13 @@ The numbers clearly favour {{% game 258779 %}}Planet Unknown{{% /game %}} to win
 
 {{< img src="359970" size="x300" alt="Challengers!" >}}
 
-TODO.
+This one was a bit of a surprise to the algorithm, but not because it was nominated, but on what list. It had a 0% {{% kdj %}}Kennerspiel{{% /kdj %}} score, and unlike some other decisions by the algorithm, in this case I agreed with its classification. The cartoonish appearance and the lack of player agency during large portions of the game seem much better suited for a {{% sdj %}}Spiel{{% /sdj %}} than a {{% kdj %}}Kennerspiel{{% /kdj %}}. And indeed, when presenting the longlist in ascending order of difficulty, the jury mentioned {{% game 359970 %}}Challengers!{{% /game %}} as the simplest amongst the {{% kdj %}}Kennerspiel{{% /kdj %}} recommendations, i.e., the one that would have been most likely to leap over to the other award. Having played this game now with more players, I do see where the jury is coming from: there's a lot of details going on that aren't intuitive on first playthrough. What's worse: In the usual setting, where one player explains the rules to the rest of the group, you might have up to three head-to-head battles with new players left to their own devices and being confused what's the difference between "gaining the flag", "in flag possession" and "on flag loss".
+
+So, while I do think that this game plays out like a {{% sdj %}}Spiel{{% /sdj %}} for skilled players, it presents the barriers of entry like a {{% kdj %}}Kennerspiel{{% /kdj %}} for casual players, and that's what matters most for the classification of the award type.
+
+But once that barrier is cleared, I think this is quite an exceptional game, certainly in the sense that there isn't really anything like it out there. The jury mentions that this is a {{% kdj %}}Kennerspiel{{% /kdj %}} that creates a party game atmosphere, and I think once you buy into the mindset and let go of control of your team, it's really entertaining to come up with interesting combos, just to see your team completely fail to execute your brilliant strategy on the pitch.
+
+Of course, there's a lot of luck and randomness involved, but this is a game that plays out so quickly that it's not a bug but a feature. There really are a lot of clever little design decisions in there which make this game sing. I'm certainly already excited to see how {{% game 390340 %}}Challengers! 2{{% /game %}} will stir up the formula.
 
 
 ## {{% game 177478 %}}IKI{{% /game %}}
