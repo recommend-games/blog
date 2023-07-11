@@ -154,7 +154,9 @@ The last thing I'll have to say is that the complexity seems on the upper end of
 
 {{< img src="258779" size="x300" alt="Planet Unknown" >}}
 
-TODO.
+Another game I haven't played, but the buzz is quite strong. The combination of tile laying and tech tree seems fresh enough. Opinions are split on the central carousel that determines what tiles are available to each player every round – both if it was necessary to blow up the price of the game like this and whether calling it the Lazy S.U.S.A.N. space station is a clever pun or a little trite.
+
+By all means, the reviews are strong and both weight and length seem to hit the sweet spot of a {{% kdj %}}Kennerspiel{{% /kdj %}}, so {{% game 258779 %}}Planet Unknown{{% /game %}} is definitely a strong contender.
 
 
 ## Who will win?
