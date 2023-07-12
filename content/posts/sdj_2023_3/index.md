@@ -161,4 +161,6 @@ By all means, the reviews are strong and both weight and length seem to hit the 
 
 ## Who will win?
 
-TODO.
+I think it's clear that all three nominees are very strong and have a realistic chance of winning – none of them would be a big surprise. But in the end I'll go with the title that had the strongest reviews and was the frontrunner right from the start: {{% game 359970 %}}Challengers!{{% /game %}} It's the most unusual game amongst the nominees (which isn't necessarily something the jury cares about, see the very safe picks from last year), but I think in many respects it can push the public's perception of what a board game can be and do, which *is* something the jury cares about deeply.
+
+Let's see if this bet-against-the-odds will pay off for me. We'll be wiser on Sunday! I hope you're as excited as I am. 😎
