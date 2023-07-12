@@ -103,7 +103,7 @@ Alright, I guess it doesn't come as a surprise that I don't think {{% game 35354
 
 1. The jury clearly disagrees with my assessment of it being a solo (only) game, so that doesn't seem to be an obstacle.
 2. Maybe being a solo game isn't all that bad? Maybe it's time to highlight this part of the hobby? But then again, Harald Schrapers, chair of the jury, wrote a whole editorial on how he's "totally not interested" in solo gaming (spielbox 2019/7).
-3. From a social aspect, maybe the strongest draw could be the promise of bringing video gamers into the analogue tabletop world. As an ambassador for the hobby, this could be the most valuable assets of them all.
+3. From a social aspect, maybe the strongest draw could be the promise of bringing video gamers into the analogue tabletop world. As an ambassador for the hobby, this could be the most valuable asset of them all.
 
 
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
