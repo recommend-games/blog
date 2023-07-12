@@ -66,6 +66,8 @@ I definitely had a lovely time playing through the campaign for eleven straight 
 
 But hidden in there is also my biggest concern: for me, {{% game 370591 %}}Dorfromantik{{% /game %}} is essentially a solo game. Of course, you can discuss with your group where to place a tile, but that's true for *any* solo game – by that logic, they're all just "co-operative games you can play on your own".
 
+Only one question remains: Will the jury award {{% sdj / %}} to another comforting hex-tile-laying game one year after {{% game 295947 %}}Cascadia{{% /game %}}? They always claim that they don't concern themselves with such considerations, and the two games do play out quite differently. Still, the award is meant as an ambassador for the board gaming hobby, so highlighting the breadth of what a game could be beyond plopping hexes on the table again can't be entirely dismissed.
+
 
 ## {{% game 370164 %}}Fun Facts{{% /game %}}
 
@@ -103,6 +105,7 @@ Alright, I guess it doesn't come as a surprise that I don't think {{% game 35354
 2. Bring video gamers into board gaming.
 3. Something else?
 4. Some similarity to {{% game 295947 %}}Cascadia{{% /game %}}, pro or con?
+5. Maybe being a solo game isn't all that bad? Maybe it's time to highlight this part of the hobby? But then again, Harald Schrapers described his attitude towards solo games as "wouldn't come to his mind", so that seems unlikely motivation.
 
 
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
