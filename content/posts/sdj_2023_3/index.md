@@ -60,11 +60,11 @@ This looks like a head-to-head between {{% game 370591 %}}Dorfromantik{{% /game 
 
 There's a lot of buzz going on around this video game adaptation that the jury describes as a "feel-good-game". It sure feels soothing how the landscape evolves over the course of the game, while presenting an interesting challenge to score as many points as possible. The campaign mode with its unlockable content offers some fresh challenges every time and provides a great excuse to come back to the game again and again.
 
-I definitely had a lovely time playing through the campaign for eleven straight evenings. I even found myself looking forward to incorporating that new tile I just unlocked into my strategy for the next game and chase a new highscore. Sure, for the last game or two it did feel like I was mostly going through the motions just to tick off the last boxes, but on the other hand: what was the last game you played for eleven days in a row?
+I definitely had a lovely time playing through the campaign for eleven straight evenings. I even found myself looking forward to incorporating that new tile I just unlocked into my strategy for the next game and chase a new highscore. Sure, for the last game or two it did feel like I was mostly going through the motions just to tick off the last few boxes, but on the other hand: what was the last game you played for eleven days in a row?
 
 But hidden in there is also my biggest concern: for me, {{% game 370591 %}}Dorfromantik{{% /game %}} is essentially a solo game. Of course, you can discuss with your group where to place a tile, but that's true for *any* solo game – by that logic, they're all just "co-operative games you can play on your own".
 
-Only one question remains: Will the jury award {{% sdj / %}} to another comforting hex-tile-laying game one year after {{% game 295947 %}}Cascadia{{% /game %}}? They always claim that they don't concern themselves with such considerations, and the two games do play out quite differently. Still, the award is meant as an ambassador for the board gaming hobby, so highlighting the breadth of what a game could be beyond plopping hexes on the table again can't be entirely dismissed.
+One final question remains: Will the jury award {{% sdj / %}} to another comforting hex-tile-laying game one year after {{% game 295947 %}}Cascadia{{% /game %}}? They always claim that they don't concern themselves with such considerations, and the two games do play out quite differently. Still, the award is meant as an ambassador for the board gaming hobby, so highlighting the breadth of what a game could be beyond plopping hexes on the table yet again can't be entirely dismissed.
 
 
 ## {{% game 370164 %}}Fun Facts{{% /game %}}
@@ -75,7 +75,7 @@ Only one question remains: Will the jury award {{% sdj / %}} to another comforti
 
 The pitch of a party game that allows you to get to know your group, but in a controlled and gentle manner, seems to be a perfect match for a {{% sdj / %}}. Of course, there isn't "enough game" to it for the 'geek crowd, so don't be fooled by the numbers above. The jury definitely has a fondness for very direct games that mostly play above the table: in the interactions between the players.
 
-Still, I was a little surprised by the nomination. Whilst the reviews were by and large very positive, the game seems to work best with players you already somewhat know. In a fairly random group, the game can fall flat since you have no reference points to go on about when comparing one player's answer to another one's. A {{% sdj / %}} should work for anybody, so that caveat seems significant to me and puts {{% game 370164 %}}Fun Facts{{% /game %}} at quite a disadvantage in the competition for the red meeple.
+Still, I was a little surprised by the nomination. Whilst the reviews were by and large very positive, the game seems to work best with players you already somewhat know. In a fairly random group, the game can fall flat since you have no reference points to go on about when comparing one player's answer to another one's. A {{% sdj / %}} should work for anybody, so that caveat seems significant to me and puts {{% game 370164 %}}Fun Facts{{% /game %}} at some disadvantage in the competition for the red meeple.
 
 
 ## {{% game 353545 %}}Next Station: London{{% /game %}}
@@ -90,14 +90,14 @@ This is not to say {{% game 353545 %}}Next Station: London{{% /game %}} wouldn't
 
 OK, one more complaint, then I'll shut up: I had a hard time learning the game from the rule book, and I've played over 600 different games. How would this fair with the average gamer?
 
-Also, there's zero interaction between players. (Yeah, I lied, I wasn't done.) Like, not even a race for completing an objective first or anything. Why would the jury shout from the roof that games are a cultural good worth promoting and then put the spotlight on a game that has players silently ignore each other for half an hour whilst drawing terrible tube maps?
+Also, there's zero interaction between players. (Yeah, I lied, I wasn't done.) Like, not even a race for completing an objective first or anything. Why would the jury shout from the roof that games are a cultural and social good worth studying and promoting, just to put the spotlight on a game that has players silently ignore each other for half an hour whilst drawing the least efficient tube maps possible?
 
 Again, not a bad game by any stretch, I just don't see it as {{% sdj / %}} material.
 
 
 ## Who will win?
 
-Alright, I guess it doesn't come as a surprise that I don't think {{% game 353545 %}}Next Station: London{{% /game %}} will win (or at least I hope it won't). As I already said, {{% game 370164 %}}Fun Facts{{% /game %}} is in some respects the perfect {{% sdj / %}}, still my money is on {{% game 370591 %}}Dorfromantik{{% /game %}}. It has a couple of things going for itself:
+Alright, I guess it doesn't come as a surprise that I don't think {{% game 353545 %}}Next Station: London{{% /game %}} will (or rather: should) win. As I already said, {{% game 370164 %}}Fun Facts{{% /game %}} is in some respects the perfect {{% sdj / %}}, still my money is on {{% game 370591 %}}Dorfromantik{{% /game %}}. It has a couple of things going for itself:
 
 1. The jury clearly disagrees with my assessment of it being a solo (only) game, so that doesn't seem to be an obstacle.
 2. Maybe being a solo game isn't all that bad? Maybe it's time to highlight this part of the hobby? But then again, Harald Schrapers, chair of the jury, wrote a whole editorial on how he's "totally not interested" in solo gaming (spielbox 2019/7).
@@ -125,13 +125,13 @@ The numbers clearly favour {{% game 258779 %}}Planet Unknown{{% /game %}} to win
 
 {{< img src="359970" size="x300" alt="Challengers!" >}}
 
-This one was a bit of a surprise to the algorithm, but not because it was nominated, but on what list. It had a 0% {{% kdj %}}Kennerspiel{{% /kdj %}} score, and unlike some other decisions by the algorithm, in this case I agreed with its classification. The cartoonish appearance and the lack of player agency during large portions of the game seem much better suited for a {{% sdj %}}Spiel{{% /sdj %}} than a {{% kdj %}}Kennerspiel{{% /kdj %}}. And indeed, when presenting the longlist in ascending order of difficulty, the jury mentioned {{% game 359970 %}}Challengers!{{% /game %}} as the simplest amongst the {{% kdj %}}Kennerspiel{{% /kdj %}} recommendations, i.e., the one that would have been most likely to leap over to the other award. Having played this game now with more players, I do see where the jury is coming from: there's a lot of details going on that aren't intuitive on first playthrough. What's worse: In the usual setting, where one player explains the rules to the rest of the group, you might have up to three head-to-head battles with new players left to their own devices and being confused what's the difference between "gaining the flag", "in flag possession" and "on flag loss".
+This one was a bit of a surprise to the algorithm, but not because it was nominated, but on what list. It had a 0% {{% kdj %}}Kennerspiel{{% /kdj %}} score, and unlike some other decisions by the algorithm, in this case I agreed with its classification. The cartoonish appearance and the lack of player agency during large portions of the game seem much better suited for a {{% sdj %}}Spiel{{% /sdj %}} than a {{% kdj %}}Kennerspiel{{% /kdj %}}. And indeed, when presenting the longlist in ascending order of difficulty, the jury mentioned {{% game 359970 %}}Challengers!{{% /game %}} as the simplest amongst the {{% kdj %}}Kennerspiel{{% /kdj %}} recommendations, i.e., the one that would have been most likely to leap over to the other award. Having played this game now with more players, I do see where the jury is coming from: there's a lot of details going on that aren't intuitive on first playthrough. What's worse: In the usual setting, where one player explains the rules to the rest of the group, you might have up to three head-to-head battles with new players left entirely to their own devices and being confused what's the difference between "gaining the flag", "in flag possession" and "on flag loss".
 
 So, while I do think that this game plays out like a {{% sdj %}}Spiel{{% /sdj %}} for skilled players, it presents the barriers of entry like a {{% kdj %}}Kennerspiel{{% /kdj %}} for casual players, and that's what matters most for the classification of the award type.
 
 But once that barrier is cleared, I think this is quite an exceptional game, certainly in the sense that there isn't really anything like it out there. The jury mentions that this is a {{% kdj %}}Kennerspiel{{% /kdj %}} that creates a party game atmosphere, and I think once you buy into the mindset and let go of control of your team, it's really entertaining to come up with interesting combos, just to see your team completely fail to execute your brilliant strategy on the pitch.
 
-Of course, there's a lot of luck and randomness involved, but this is a game that plays out so quickly that it's not a bug but a feature. There really are a lot of clever little design decisions in there which make this game sing. I'm certainly already excited to see how {{% game 390340 %}}Challengers! 2{{% /game %}} will stir up the formula.
+Of course, there's a lot of luck and randomness involved, which can lead to frustrating moments, but this is a game that plays out so quickly that it's not a bug but a feature. There really are a lot of clever little design decisions in there which make this game sing. I'm certainly already excited to see how {{% game 390340 %}}Challengers! 2{{% /game %}} will stir up the formula.
 
 
 ## {{% game 177478 %}}IKI{{% /game %}}
@@ -160,6 +160,6 @@ By all means, the reviews are strong and both weight and length seem to hit the 
 
 ## Who will win?
 
-I think it's clear that all three nominees are very strong and have a realistic chance of winning – none of them would be a big surprise. But in the end I'll go with the title that had the strongest reviews and was the frontrunner right from the start: {{% game 359970 %}}Challengers!{{% /game %}} It's the most unusual game amongst the nominees (which isn't necessarily something the jury cares about, see the very safe picks from last year), but I think in many respects it can push the public's perception of what a board game can be and do, which *is* something the jury cares about deeply.
+I think it's clear that all three nominees are very strong and have a realistic chance of winning – none of them would be a big surprise. But in the end I'll go with the title that had the strongest reviews and was the frontrunner right from the start: {{% game 359970 %}}Challengers!{{% /game %}} It's the most unusual game amongst the nominees (which isn't necessarily something the jury cares about, see the very safe picks from last year), but I think in many respects it can push the public's perception of what a board game can be and do, which *is* something the jury cares about deeply. (At least I interpret their choises this way… 😉)
 
 Let's see if this bet-against-the-odds will pay off for me. We'll be wiser on Sunday! I hope you're as excited as I am. 😎
