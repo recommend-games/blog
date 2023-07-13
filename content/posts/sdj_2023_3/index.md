@@ -34,8 +34,6 @@ tags:
 
 The waiting is finally coming to an end! On Sunday, July 16, the jury will announce the winners of {{% sdj %}}Spiel des Jahres{{% /sdj %}} and {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}. We're blessed with another year of very strong games and I'm certainly very excited to learn what games will win the two awards.
 
-<!-- TODO Is this really a strong year? 🙃 -->
-
 After [two]({{<ref "posts/sdj_2020_3/index.md">}}) [years]({{<ref "posts/sdj_2021_3/index.md">}}) of calling both winners correctly, I've missed the {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}} winner {{% game 295947 %}}Cascadia{{% /game %}} [last year]({{<ref "posts/sdj_2022_3/index.md">}}), so I hope I'll do better this year. 😎
 
 
@@ -86,11 +84,11 @@ Still, I was a little surprised by the nomination. Whilst the reviews were by an
 
 {{< img src="353545" size="x300" alt="Next Station: London" >}}
 
-By my count, this is the forth "random'n'write" game to be nominated for either award over the past decade, and to be honest, I'm not sure what this particular variant adds to the genre. I do find it very elegant how the fact that every players draws a different underground line every round breaks the symmetry such that everybody's tube map will look different despite following the same cards. But as far as the actual gameplay goes, I found the very similar {{% game 346482 %}}Voll Verplant{{% /game %}} to be the more intriguing puzzle. My final grump is that a winning map looks nothing like an actual underground map: the scoring incentivises players to zig-zag through quarters and back and forth across the river, and that's just not how an efficient public transport is designed.
+By my count, this is the forth "random'n'write" game to be nominated for either award over the past decade, and to be honest, I'm not sure what this particular variant adds to the genre. I do find it very elegant how the fact that every players draws a different underground line every round breaks the symmetry such that everybody's tube map will look different despite following the same cards. But as far as the actual gameplay goes, I found the very similar {{% game 346482 %}}Voll Verplant{{% /game %}} to be the more intriguing puzzle. My final grump is that a winning map looks nothing like an actual underground map: the scoring incentivises players to zig-zag through quarters and back and forth across the river, and that's just not how an efficient public transport system is designed.
 
 This is not to say {{% game 353545 %}}Next Station: London{{% /game %}} wouldn't be a fine game and a deserving nominee, but I'd be fairly disappointed if it did win the award that puts it in line with such giants as {{% game 13 %}}CATAN{{% /game %}} and {{% game 822 %}}Carcassonne{{% /game %}}.
 
-OK, one more complaint, then I'll shut up: I had a hard time learning the game from the rule book, and I've played over 600 games. How would this fair with the average gamer?
+OK, one more complaint, then I'll shut up: I had a hard time learning the game from the rule book, and I've played over 600 different games. How would this fair with the average gamer?
 
 Also, there's zero interaction between players. (Yeah, I lied, I wasn't done.) Like, not even a race for completing an objective first or anything. Why would the jury shout from the roof that games are a cultural good worth promoting and then put the spotlight on a game that has players silently ignore each other for half an hour whilst drawing terrible tube maps?
 
