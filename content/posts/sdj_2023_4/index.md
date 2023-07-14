@@ -1,0 +1,76 @@
+---
+title: Spiel des Jahres 2023 winners
+slug: spiel-des-jahres-2023-winners
+author: Markus Shepherd
+type: post
+date: 2023-07-14T17:00:00+03:00
+tags:
+  - SdJ
+  - SdJ 2023
+  - Spiel des Jahres
+  - Spiel des Jahres 2023
+  - KSdJ
+  - Kennerspiel
+  - Kennerspiel des Jahres
+  - Kennerspiel des Jahres 2023
+  - Winners
+  - Game of the Year
+  - Germany
+  - Dorfromantik
+  - Fun Facts
+  - 'Next Station: London'
+  - 'Challengers!'
+  - IKI
+  - Planet Unknown
+---
+
+{{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
+
+The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/TODO/)!
+
+<!-- As mentioned before, this year was the first time the ceremony was held on a Saturday evening and I had the immense pleasure of attending it in person. In case you missed my very profesional live coverage on Twitter, here's a [summary](https://twitter.com/MarkusRShepherd/status/1553060952559452160?s=20&t=cr68YeOuUltbs57V050Umg) of the event. -->
+
+But without further ado, here are the winners of {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}!
+
+
+# {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}
+
+{{< img src="sdj-2023" size="x300" alt="Spiel des Jahres 2023" >}}
+
+
+## TBD
+
+*TBD players, TBD minutes, TBD+ years, TBD (TBD)*
+
+TODO
+
+
+# {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
+
+{{< img src="ksdj-2023" size="x300" alt="Kennerspiel des Jahres 2023" >}}
+
+
+## TBD
+
+*TBD players, TBD minutes, TBD+ years, TBD (TBD)*
+
+TODO
+
+
+# {{% kdj %}}Special Awards 2023{{% /kdj %}}
+
+{{< img src="sonderpreis-2023" size="x300" alt="Special Awards 2023" >}}
+
+
+## {{% game 350636 %}}Unlock!: Game Adventures{{% /game %}}
+
+*1–5 players, 30–60 minutes, 10+ years, medium light (2.4)*
+
+{{< img src="350636" size="x300" alt="Unlock!: Game Adventures" >}}
+
+TODO
+
+
+# Conclusion
+
+TODO
