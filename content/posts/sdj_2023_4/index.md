@@ -17,16 +17,13 @@ tags:
   - Game of the Year
   - Germany
   - Dorfromantik
-  - Fun Facts
-  - 'Next Station: London'
   - 'Challengers!'
-  - IKI
-  - Planet Unknown
+  - 'Unlock!'
 ---
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/TODO/)!
+The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/en/spiel-des-jahres-2023-dorfromantik/)!
 
 <!-- As mentioned before, this year was the first time the ceremony was held on a Saturday evening and I had the immense pleasure of attending it in person. In case you missed my very profesional live coverage on Twitter, here's a [summary](https://twitter.com/MarkusRShepherd/status/1553060952559452160?s=20&t=cr68YeOuUltbs57V050Umg) of the event. -->
 
@@ -38,9 +35,11 @@ But without further ado, here are the winners of {{% sdj / %}} and {{% kdj %}}Ke
 {{< img src="sdj-2023" size="x300" alt="Spiel des Jahres 2023" >}}
 
 
-## TBD
+## {{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}
 
-*TBD players, TBD minutes, TBD+ years, TBD (TBD)*
+*1–6 players, 30–60 minutes, 8+ years, medium light (1.7)*
+
+{{< img src="370591" size="x300" alt="Dorfromantik: The Board Game" >}}
 
 TODO
 
@@ -50,9 +49,11 @@ TODO
 {{< img src="ksdj-2023" size="x300" alt="Kennerspiel des Jahres 2023" >}}
 
 
-## TBD
+## {{% game 359970 %}}Challengers!{{% /game %}}
 
-*TBD players, TBD minutes, TBD+ years, TBD (TBD)*
+*1–8 players, 45 minutes, 8+ years, medium light (1.8)*
+
+{{< img src="359970" size="x300" alt="Challengers!" >}}
 
 TODO
 
