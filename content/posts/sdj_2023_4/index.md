@@ -41,7 +41,9 @@ But without further ado, here are the winners of {{% sdj / %}} and {{% kdj %}}Ke
 
 {{< img src="370591" size="x300" alt="Dorfromantik: The Board Game" >}}
 
-TODO
+In the end, the main award went to what most observers (myself included) considered the favourite. I guess I should be happy the jury didn't pick {{% game 353545 %}}Next Station: London{{% /game %}}, so I don't have to stop being {{% sdj / %}}'s fanboy. 😅
+
+Maybe we can continue the co-op vs solo game discussion some other time, but for now I really do think this is a very pleasing puzzle, whether on your own or with friends, and it'll make a great ambassador for the hobby, maybe even pull in a video gamer or two. I don't think it'll knock anybody off their socks or redefine their expectations of board gaming, but they'll have a good time, and that's what matters most.
 
 
 # {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
