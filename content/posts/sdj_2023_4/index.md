@@ -57,7 +57,11 @@ Maybe we can continue the co-op vs solo game discussion some other time, but for
 
 {{< img src="359970" size="x300" alt="Challengers!" >}}
 
-TODO
+Just as with {{% sdj / %}}, most people's first guess won {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}. This decision was somewhat controversial nonetheless: not so much because of the game's qualities, but because of the colour of the award. Some people went full on gatekeeper because the jury called {{% game 359970 %}}Challengers!{{% /game %}} a "connoisseur game" – just read through the comment section of [this BGG news article](https://boardgamegeek.com/blogpost/150093/dorfromantik-board-game-wins-2023-spiel-des-jahres) 🍿.
+
+It is worth noticing that this year's {{% sdj %}}Spiel{{% /sdj %}} and {{% kdj / %}} are only separated by 0.1 on BGG's complexity scale (1.7 and 1.8 respectively, at the time of writing). And I certainly have been considering {{% game 359970 %}}Challengers!{{% /game %}} a candidate for {{% sdj / %}} as well. But one also needs to trust the jury in their judgement here who don't blindly follow BGG's data and apply some algorithm (trust me, [I've tried]({{<ref "posts/kennerspiel/index.md">}}) 😅), but actually watch a wide spectrum of people play the games and hence understand the difficulty they can present. I highly doubt the 28 people who voted {{% game 359970 %}}Challengers!{{% /game %}} to be a "light" game (complexity: 1) ever tried to explain the game to casual gamers and then leave them to fight their battles alone.
+
+In the end, we're left with a winner that's not quite like any other game out there and hence *could* push people's expectations of board games today. {{% game 359970 %}}Challengers!{{% /game %}} doesn't have the same strategic depth as the other nominees, but if there were no skills involved, how come I fail this consistently with my decks after dozens of games on [Board Game Arena](https://boardgamearena.com/gamepanel?game=challengers)? 😉
 
 
 # {{% kdj %}}Special Awards 2023{{% /kdj %}}
