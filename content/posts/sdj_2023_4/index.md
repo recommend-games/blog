@@ -80,4 +80,6 @@ Let's not forget the special award for {{% game 350636 %}}Unlock!: Game Adventur
 
 # Conclusion
 
-TODO
+If you had asked me in winter about my guess for {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}, I would've said it'll be a battle between {{% game 370591 %}}Dorfromantik{{% /game %}} and {{% game 359970 %}}Challengers!{{% /game %}} (with a slight advantage for the latter), but I wouldn't have a clue about {{% kdj %}}Kennerspiel{{% /kdj %}}. Because it didn't come head to head between the two favourites, I can now claim that I called both awards correctly again, bringing my total to seven out of eight over the past four years.
+
+As always, it's been a lot of fun, and I'm already looking forward to another year of gaming and predictions. With a little luck, I'll be live at the ceremony in Berlin next July again. 🤞
