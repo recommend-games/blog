@@ -3,7 +3,7 @@ title: Spiel des Jahres 2023 winners
 slug: spiel-des-jahres-2023-winners
 author: Markus Shepherd
 type: post
-date: 2023-07-31T16:00:00+03:00
+date: 2023-07-31T16:25:13+03:00
 tags:
   - SdJ
   - SdJ 2023
