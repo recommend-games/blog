@@ -75,7 +75,7 @@ In the end, we're left with a winner that's not quite like any other game out th
 
 {{< img src="350636" size="x300" alt="Unlock!: Game Adventures" >}}
 
-TODO
+Let's not forget the special award for {{% game 350636 %}}Unlock!: Game Adventures{{% /game %}} as well as {{% game 327056 %}}Unlock! Kids: Detective Stories{{% /game %}}, and to some extent the whole Unlock! line. I've personally been a big fan of their games for a long time and agree with the jury's sentiment that the entries have become even better over time. Let's hope that this rare honour will encourage them to keep it up – and maybe become a little faster in bringing new cases from France out into the rest of the world.
 
 
 # Conclusion
