@@ -13,4 +13,4 @@ tags:
   - Collection
 ---
 
-TODO
+The [hiatus]({{<ref "posts/hiatus/index.md">}}) is over!
