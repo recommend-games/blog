@@ -42,16 +42,23 @@ dfs = (
         pl.lit(datetime.strptime(f.stem, date_format)).alias("timestamp"),
         pl.all(),
     )
-    for f in sorted(rankings_dir.glob("2023-09-*.csv"))
+    for f in sorted(rankings_dir.glob("2023-*.csv"))
 )
 
 # %%
 df = (
     pl.concat(dfs, how="diagonal")
+    .lazy()
     .group_by_dynamic("timestamp", every="1d")
     .agg(pl.exclude("timestamp").last())
+    .interpolate()
+    .select("timestamp", pl.exclude("timestamp"))
+    .collect()
 )
 df.shape
 
 # %%
-df
+df.head(10)
+
+# %%
+df.write_csv("num_ratings.csv")
