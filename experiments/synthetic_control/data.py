@@ -42,7 +42,7 @@ dfs = (
         pl.lit(datetime.strptime(f.stem, date_format)).alias("timestamp"),
         pl.all(),
     )
-    for f in sorted(rankings_dir.glob("2023-*.csv"))
+    for f in sorted(rankings_dir.glob("*.csv"))
 )
 
 # %%
