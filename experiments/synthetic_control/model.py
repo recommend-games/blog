@@ -23,6 +23,7 @@ import numpy as np
 import polars as pl
 import seaborn as sns
 from matplotlib import pyplot as plt
+from scipy.optimize import fmin_slsqp
 from sklearn.linear_model import LinearRegression
 
 jupyter_black.load()
@@ -110,8 +111,8 @@ weights_lr = LinearRegression(fit_intercept=False).fit(X_train, y_train).coef_
 weights_lr.round(3)
 
 # %%
-y_pred = np.concatenate((X_train.dot(weights_lr), X_test.dot(weights_lr)))
-y_pred.shape
+y_pred_lr = np.concatenate((X_train.dot(weights_lr), X_test.dot(weights_lr)))
+y_pred_lr.shape
 
 # %%
 ax = plt.subplot(1, 1, 1)
@@ -124,7 +125,64 @@ sns.lineplot(
 )
 sns.lineplot(
     x=data["timestamp"],
-    y=y_pred,
+    y=y_pred_lr,
+    ax=ax,
+    label="Synthetic Control",
+    color="red",
+)
+plt.vlines(
+    x=date_review,
+    ymin=data[str(bgg_id)].min(),
+    ymax=data[str(bgg_id)].max(),
+    linestyle=":",
+    lw=2,
+    label="SU&SD video",
+)
+ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
+plt.xlabel(None)
+plt.ylabel("Num ratings")
+plt.title(None)
+plt.legend()
+plt.show()
+
+
+# %%
+def get_weights(X, y):
+    def loss_weights(W):
+        return np.sqrt(np.mean((y - X.dot(W)) ** 2))
+
+    w_start = np.ones(X.shape[1]) / X.shape[1]
+
+    return fmin_slsqp(
+        loss_weights,
+        w_start,
+        f_eqcons=lambda x: np.sum(x) - 1,
+        bounds=[(0.0, 1.0)] * len(w_start),
+        disp=False,
+    )
+
+
+# %%
+weights_slsqp = get_weights(X_train, y_train)
+print("Sum:", weights_slsqp.sum())
+np.round(weights_slsqp, 3)
+
+# %%
+y_pred_slsqp = np.concatenate((X_train.dot(weights_slsqp), X_test.dot(weights_slsqp)))
+y_pred_slsqp.shape
+
+# %%
+ax = plt.subplot(1, 1, 1)
+sns.lineplot(
+    data=data,
+    x="timestamp",
+    y=str(bgg_id),
+    ax=ax,
+    label=bgg_name,
+)
+sns.lineplot(
+    x=data["timestamp"],
+    y=y_pred_slsqp,
     ax=ax,
     label="Synthetic Control",
     color="red",
