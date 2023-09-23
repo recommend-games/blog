@@ -32,9 +32,9 @@ sns.set_style("dark")
 warnings.filterwarnings("ignore")
 
 # %%
-bgg_id = 331571  # My Gold Mine
-bgg_name = "My Gold Mine"
-date_review = date(2023, 7, 19)
+bgg_id = 311031  # Five Three Five
+bgg_name = "Five Three Five"
+date_review = date(2023, 8, 23)
 days_before = 90
 days_after = 60
 
