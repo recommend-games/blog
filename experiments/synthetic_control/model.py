@@ -32,16 +32,17 @@ sns.set_style("dark")
 warnings.filterwarnings("ignore")
 
 # %%
-bgg_id = 811  # Rummikub
-bgg_name = "Rummikub"
-date_review = date(2023, 1, 26)
-days_before = 60
-days_after = 30
+bgg_id = 331571  # My Gold Mine
+bgg_name = "My Gold Mine"
+date_review = date(2023, 7, 19)
+days_before = 90
+days_after = 60
 
 # %%
 data = (
     pl.scan_csv("num_ratings.csv")
     .select(pl.col("timestamp").str.to_datetime(), pl.exclude("timestamp").cast(int))
+    .filter(pl.col(str(bgg_id)).is_not_null())
     .filter(
         pl.col("timestamp").is_between(
             date_review - timedelta(days=days_before),
@@ -89,7 +90,7 @@ candidates = [
 ]
 control_ids = np.random.choice(
     a=candidates,
-    size=min(100, len(candidates)),
+    size=min(1000, len(candidates)),
     replace=False,
 )
 len(candidates), len(control_ids)
