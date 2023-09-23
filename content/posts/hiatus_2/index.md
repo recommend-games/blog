@@ -22,3 +22,5 @@ But fear not! We've brought back collection items for users who really want to u
 *How does it work?* When you request your recommendations from Recommend.Games as usual by typing your BoardGameGeek user name into the engine, but we don't find your collection in the database, you'll see a prompt that allows you to submit a request to have your collection added:
 
 {{< img src="collection_request" alt="Prompt to submit a collection request" >}}
+
+Click on the link and follow the instructions. This will submit a request to add collection items for one or more users to the database. Once this is approved, your collection will be added to the database the next time it is updated (this might take up to a week or more), so please be a little patient. After that, you can enjoy the full Recommend.Games experience! 🤩
