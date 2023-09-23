@@ -11,6 +11,7 @@ tags:
   - Recommend.Games
   - Internal
   - Collection
+  - Donations
 ---
 
 The [hiatus]({{<ref "posts/hiatus/index.md">}}) is over! Already since April 2023 the recommendation engine at Recommend.Games has been back online, albeit with reduced functionality. In order to cut down serving costs, I made the recommendation model much more lightweight (this deserves its own article) and removed rarely used features as well as a bunch of bloat from the database.
