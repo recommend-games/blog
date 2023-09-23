@@ -50,7 +50,7 @@ df = (
     pl.concat(dfs, how="diagonal")
     .lazy()
     .group_by_dynamic("timestamp", every="1d")
-    .agg(pl.exclude("timestamp").last())
+    .agg(pl.exclude("timestamp").max())
     .interpolate()
     .select("timestamp", pl.exclude("timestamp"))
     .collect()
