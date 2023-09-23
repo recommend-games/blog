@@ -39,6 +39,14 @@ days_before = 90
 days_after = 60
 
 # %%
+max_control_games = 100
+
+# %%
+plot_dir = (Path(".") / "plots").resolve()
+plot_dir.mkdir(parents=True, exist_ok=True)
+plot_dir
+
+# %%
 data = (
     pl.scan_csv("num_ratings.csv")
     .select(pl.col("timestamp").str.to_datetime(), pl.exclude("timestamp").cast(int))
@@ -78,6 +86,7 @@ plt.xlabel(None)
 plt.ylabel("Num ratings")
 plt.title(None)
 plt.legend()
+plt.savefig(plot_dir / f"{bgg_id}_num_ratings.png")
 plt.show()
 
 # %%
@@ -90,7 +99,7 @@ candidates = [
 ]
 control_ids = np.random.choice(
     a=candidates,
-    size=min(1000, len(candidates)),
+    size=min(max_control_games, len(candidates)),
     replace=False,
 )
 len(candidates), len(control_ids)
@@ -147,6 +156,7 @@ plt.xlabel(None)
 plt.ylabel("Num ratings")
 plt.title(None)
 plt.legend()
+plt.savefig(plot_dir / f"{bgg_id}_synthetic_control_lr.png")
 plt.show()
 
 
@@ -204,4 +214,5 @@ plt.xlabel(None)
 plt.ylabel("Num ratings")
 plt.title(None)
 plt.legend()
+plt.savefig(plot_dir / f"{bgg_id}_synthetic_control_slsqp.png")
 plt.show()
