@@ -32,9 +32,9 @@ sns.set_style("dark")
 warnings.filterwarnings("ignore")
 
 # %%
-bgg_id = 311031  # Five Three Five
-bgg_name = "Five Three Five"
-date_review = date(2023, 8, 23)
+bgg_id = 811  # Rummikub
+bgg_name = "Rummikub"
+date_review = date(2023, 1, 26)
 days_before = 60
 days_after = 30
 
@@ -80,16 +80,19 @@ plt.legend()
 plt.show()
 
 # %%
+num_ratings_first = data[str(bgg_id)][0]
+candidates = [
+    s.name
+    for s in data.select(pl.exclude("timestamp", str(bgg_id)))
+    if s.null_count() == 0
+    and 0.5 * num_ratings_first <= s[0] <= 1.5 * num_ratings_first
+]
 control_ids = np.random.choice(
-    a=[
-        s.name
-        for s in data.select(pl.exclude("timestamp", str(bgg_id)))
-        if s.null_count() == 0
-    ],
-    size=100,
+    a=candidates,
+    size=min(100, len(candidates)),
     replace=False,
 )
-len(control_ids)
+len(candidates), len(control_ids)
 
 # %%
 data_train_test = data.with_columns(
