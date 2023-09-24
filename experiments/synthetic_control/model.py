@@ -39,18 +39,96 @@ class GameData:
     bgg_id: int
     name: str
     date_review: date | datetime
-    days_before: int = 90
-    days_after: int = 60
+    days_before: int = 60
+    days_after: int = 30
     max_control_games: int = 100
 
 
 # %%
-game = GameData(
-    bgg_id=311031,
-    name="Five Three Five",
-    date_review=date(2023, 8, 23),
-    max_control_games=1000,
-)
+games = [
+    GameData(
+        bgg_id=354568,
+        name="Amun-Re",
+        date_review=date(2023, 9, 22),
+    ),
+    GameData(
+        bgg_id=11,
+        name="Bohnanza",
+        date_review=date(2023, 9, 14),
+    ),
+    GameData(
+        bgg_id=311031,
+        name="Five Three Five",
+        date_review=date(2023, 8, 23),
+    ),
+    GameData(
+        bgg_id=298383,
+        name="Golem",
+        date_review=date(2023, 8, 17),
+    ),
+    GameData(
+        bgg_id=386937,
+        name="Lacuna",
+        date_review=date(2023, 8, 3),
+    ),
+    GameData(
+        bgg_id=331571,
+        name="My Gold Mine",
+        date_review=date(2023, 7, 19),
+    ),
+    GameData(
+        bgg_id=367771,
+        name="Stomp the Plank",
+        date_review=date(2023, 7, 6),
+    ),
+    GameData(
+        bgg_id=177478,
+        name="IKI",
+        date_review=date(2023, 6, 29),
+    ),
+    GameData(
+        bgg_id=362944,
+        name="War of the Ring: The Card Game",
+        date_review=date(2023, 6, 15),
+    ),
+    GameData(
+        bgg_id=281549,
+        name="Beast",
+        date_review=date(2023, 6, 9),
+    ),
+    GameData(
+        bgg_id=276086,
+        name="Hamlet",
+        date_review=date(2023, 5, 25),
+    ),
+    GameData(
+        bgg_id=267609,
+        name="Guards of Atlantis II",
+        date_review=date(2023, 5, 18),
+    ),
+    GameData(
+        bgg_id=295770,
+        name="Frosthaven",
+        date_review=date(2023, 5, 11),
+    ),
+    GameData(
+        bgg_id=350205,
+        name="Horseless Carriage",
+        date_review=date(2023, 2, 9),
+    ),
+    GameData(
+        bgg_id=811,
+        name="Rummikub",
+        date_review=date(2023, 1, 26),
+    ),
+    GameData(
+        bgg_id=366013,
+        name="Heat: Pedal to the Metal",
+        date_review=date(2022, 12, 22),
+        max_control_games=300,
+    ),
+]
+game = games[-1]
 game
 
 # %%
@@ -102,21 +180,6 @@ plt.savefig(plot_dir / f"{game.bgg_id}_num_ratings.png")
 plt.show()
 
 # %%
-num_ratings_first = data[str(game.bgg_id)][0]
-candidates = [
-    s.name
-    for s in data.select(pl.exclude("timestamp", str(game.bgg_id)))
-    if s.null_count() == 0
-    and 0.5 * num_ratings_first <= s[0] <= 1.5 * num_ratings_first
-]
-control_ids = np.random.choice(
-    a=candidates,
-    size=min(game.max_control_games, len(candidates)),
-    replace=False,
-)
-len(candidates), len(control_ids)
-
-# %%
 data_train_test = data.with_columns(
     pl.when(pl.col("timestamp") < game.date_review)
     .then(pl.lit("train"))
@@ -124,12 +187,30 @@ data_train_test = data.with_columns(
     .alias("train_test")
 ).partition_by("train_test", as_dict=True)
 data_train = data_train_test["train"].sort("timestamp")
+data_test = data_train_test["test"].sort("timestamp")
+data_train.shape, data_test.shape
+
+# %%
+num_ratings_last = data_train[str(game.bgg_id)][-1]
+candidates = [
+    s
+    for s in data_train.select(pl.exclude("train_test", "timestamp", str(game.bgg_id)))
+    if s.null_count() == 0 and 0.5 * num_ratings_last <= s[-1] <= 1.5 * num_ratings_last
+]
+# weights = np.array([1 - abs(1 - s[0] / num_ratings_first) for s in candidates])
+control_ids = np.random.choice(
+    a=[s.name for s in candidates],
+    size=min(game.max_control_games, len(candidates)),
+    replace=False,
+)
+len(candidates), len(control_ids)
+
+# %%
 X_train = data_train.select(*control_ids).to_numpy()
 y_train = data_train.select(str(game.bgg_id)).to_numpy().reshape(-1)
-data_test = data_train_test["test"].sort("timestamp")
 X_test = data_test.select(*control_ids).to_numpy()
 y_test = data_test.select(str(game.bgg_id)).to_numpy().reshape(-1)
-data_train.shape, X_train.shape, y_train.shape, data_test.shape, X_test.shape, y_test.shape
+X_train.shape, y_train.shape, X_test.shape, y_test.shape
 
 # %%
 weights_lr = LinearRegression(fit_intercept=False).fit(X_train, y_train).coef_
