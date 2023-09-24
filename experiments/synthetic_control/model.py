@@ -13,6 +13,9 @@
 #     name: python3
 # ---
 
+# %% [markdown]
+# # Synthetic Control
+
 # %%
 import warnings
 from dataclasses import dataclass
@@ -32,6 +35,9 @@ np.set_printoptions(suppress=True)
 sns.set_style("dark")
 warnings.filterwarnings("ignore")
 
+
+# %% [markdown]
+# ## The Games
 
 # %%
 @dataclass(frozen=True, kw_only=True)
@@ -136,6 +142,9 @@ plot_dir = (Path(".") / "plots").resolve()
 plot_dir.mkdir(parents=True, exist_ok=True)
 plot_dir
 
+# %% [markdown]
+# ## The Data
+
 # %%
 data = (
     pl.scan_csv("num_ratings.csv")
@@ -213,6 +222,9 @@ X_test = data_test.select(*control_ids).to_numpy()
 y_test = data_test.select(str(game.bgg_id)).to_numpy().reshape(-1)
 X_train.shape, y_train.shape, X_test.shape, y_test.shape
 
+# %% [markdown]
+# ## Linear Regression
+
 # %%
 weights_lr = LinearRegression(fit_intercept=False).fit(X_train, y_train).coef_
 weights_lr.round(3)
@@ -253,6 +265,9 @@ plt.legend()
 plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_lr.png")
 plt.show()
 
+
+# %% [markdown]
+# ## Convex combination
 
 # %%
 def get_weights(X, y):
