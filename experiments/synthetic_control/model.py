@@ -47,7 +47,7 @@ class GameData:
     date_review: date | datetime
     days_before: int = 60
     days_after: int = 30
-    max_control_games: int = 100
+    max_control_games: int = 300
 
 
 # %%
@@ -131,10 +131,9 @@ games = [
         bgg_id=366013,
         name="Heat: Pedal to the Metal",
         date_review=date(2022, 12, 22),
-        max_control_games=300,
     ),
 ]
-game = games[5]
+game = games[2]
 game
 
 # %%
