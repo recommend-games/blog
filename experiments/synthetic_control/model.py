@@ -134,7 +134,7 @@ games = [
         max_control_games=300,
     ),
 ]
-game = games[-1]
+game = games[5]
 game
 
 # %%
@@ -332,6 +332,13 @@ def get_weights(X, y):
 weights_slsqp = get_weights(X_train, y_train)
 print("Sum:", weights_slsqp.sum())
 np.round(weights_slsqp, 3)
+
+# %%
+{
+    bgg_id: weight
+    for bgg_id, weight in zip(control_ids, weights_slsqp)
+    if weight >= 0.001
+}
 
 # %%
 y_pred_slsqp = np.concatenate((X_train.dot(weights_slsqp), X_test.dot(weights_slsqp)))
