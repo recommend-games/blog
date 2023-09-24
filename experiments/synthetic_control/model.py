@@ -195,13 +195,14 @@ num_ratings_last = data_train[str(game.bgg_id)][-1]
 candidates = [
     s
     for s in data_train.select(pl.exclude("train_test", "timestamp", str(game.bgg_id)))
-    if s.null_count() == 0 and 0.5 * num_ratings_last <= s[-1] <= 1.5 * num_ratings_last
+    if s.null_count() == 0 and 0 < s[-1] < 2 * num_ratings_last
 ]
-# weights = np.array([1 - abs(1 - s[0] / num_ratings_first) for s in candidates])
+weights = np.array([1 - abs(1 - s[-1] / num_ratings_last) for s in candidates])
 control_ids = np.random.choice(
     a=[s.name for s in candidates],
     size=min(game.max_control_games, len(candidates)),
     replace=False,
+    p=weights / weights.sum(),
 )
 len(candidates), len(control_ids)
 
