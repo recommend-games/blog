@@ -28,7 +28,7 @@ import polars as pl
 import seaborn as sns
 from matplotlib import pyplot as plt
 from scipy.optimize import fmin_slsqp
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression, Ridge
 
 jupyter_black.load()
 np.set_printoptions(suppress=True)
@@ -263,6 +263,49 @@ plt.ylabel("Num ratings")
 plt.title(None)
 plt.legend()
 plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_lr.png")
+plt.show()
+
+# %% [markdown]
+# ## Ridge Regression
+
+# %%
+weights_ridge = Ridge(fit_intercept=False, alpha=100.0).fit(X_train, y_train).coef_
+weights_ridge.round(3)
+
+# %%
+y_pred_ridge = np.concatenate((X_train.dot(weights_ridge), X_test.dot(weights_ridge)))
+y_pred_ridge.shape
+
+# %%
+ax = plt.subplot(1, 1, 1)
+sns.lineplot(
+    data=data,
+    x="timestamp",
+    y=str(game.bgg_id),
+    ax=ax,
+    label=game.name,
+)
+sns.lineplot(
+    x=data["timestamp"],
+    y=y_pred_ridge,
+    ax=ax,
+    label="Synthetic Control",
+    color="red",
+)
+plt.vlines(
+    x=game.date_review,
+    ymin=data[str(game.bgg_id)].min(),
+    ymax=data[str(game.bgg_id)].max(),
+    linestyle=":",
+    lw=2,
+    label="SU&SD video",
+)
+ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
+plt.xlabel(None)
+plt.ylabel("Num ratings")
+plt.title(None)
+plt.legend()
+plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_ridge.png")
 plt.show()
 
 
