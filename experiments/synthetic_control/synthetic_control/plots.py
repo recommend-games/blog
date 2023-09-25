@@ -52,3 +52,47 @@ def plot_ratings(data, game, y_pred=None, ax=None):
     ax.legend()
 
     return ax
+
+
+def plot_effect(data, game, y_pred, ax=None):
+    if ax is None:
+        _, ax = plt.subplots()
+
+    effect = data[str(game.bgg_id)] - y_pred
+
+    ax.hlines(
+        y=0,
+        xmin=data["timestamp"].min(),
+        xmax=data["timestamp"].max(),
+        label=None,
+        color="purple",
+        lw=2,
+    )
+
+    sns.lineplot(
+        x=data["timestamp"],
+        y=effect,
+        label="SU&SD effect",
+        color="crimson",
+        lw=3,
+        ax=ax,
+    )
+
+    plt.vlines(
+        x=game.date_review,
+        ymin=effect.min(),
+        ymax=effect.max(),
+        label="SU&SD video",
+        linestyle=":",
+        color="purple",
+        lw=2,
+    )
+
+    ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
+
+    ax.set_xlabel(None)
+    ax.set_ylabel("Additional Ratings")
+    ax.set_title(None)
+    ax.legend()
+
+    return ax

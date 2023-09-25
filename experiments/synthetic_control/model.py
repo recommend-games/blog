@@ -21,19 +21,18 @@
 
 # %%
 import warnings
-from datetime import date, datetime, timedelta
+from datetime import timedelta
 from pathlib import Path
 
 import jupyter_black
 import numpy as np
 import polars as pl
-import seaborn as sns
 from matplotlib import pyplot as plt
 from scipy.optimize import fmin_slsqp
 from sklearn.linear_model import LinearRegression, Ridge
 
 from synthetic_control.data import REVIEWS
-from synthetic_control.plots import plot_ratings
+from synthetic_control.plots import plot_effect, plot_ratings
 
 jupyter_black.load()
 np.set_printoptions(suppress=True)
@@ -123,7 +122,7 @@ y_pred_lr.shape
 # %%
 ax = plot_ratings(data, game, y_pred_lr)
 plt.tight_layout()
-plt.savefig(plot_dir / f"{game.bgg_id}_num_ratings.png")
+plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_lr.png")
 plt.show()
 
 # %% [markdown]
@@ -138,42 +137,13 @@ y_pred_ridge = np.concatenate((X_train.dot(weights_ridge), X_test.dot(weights_ri
 y_pred_ridge.shape
 
 # %%
-ax = plot_ratings(data, game, y_pred_ridge)
+plot_ratings(data, game, y_pred_ridge)
 plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_ridge.png")
 plt.show()
 
 # %%
-ax = plt.subplot(1, 1, 1)
-effect_ridge = data[str(game.bgg_id)] - y_pred_ridge
-plt.hlines(
-    y=0,
-    xmin=data["timestamp"].min(),
-    xmax=data["timestamp"].max(),
-    lw=2,
-    label=None,
-)
-sns.lineplot(
-    x=data["timestamp"],
-    y=effect_ridge,
-    ax=ax,
-    label="SU&SD effect",
-    color="red",
-    lw=3,
-)
-plt.vlines(
-    x=game.date_review,
-    ymin=effect_ridge.min(),
-    ymax=effect_ridge.max(),
-    linestyle=":",
-    lw=2,
-    label="SU&SD video",
-)
-ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
-plt.xlabel(None)
-plt.ylabel("Additional ratings")
-plt.title(None)
-plt.legend()
+plot_effect(data, game, y_pred_ridge)
 plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_ridge.png")
 plt.show()
@@ -215,42 +185,13 @@ y_pred_slsqp = np.concatenate((X_train.dot(weights_slsqp), X_test.dot(weights_sl
 y_pred_slsqp.shape
 
 # %%
-ax = plot_ratings(data, game, y_pred_slsqp)
+plot_ratings(data, game, y_pred_slsqp)
 plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_slsqp.png")
 plt.show()
 
 # %%
-ax = plt.subplot(1, 1, 1)
-effect_slsqp = data[str(game.bgg_id)] - y_pred_slsqp
-plt.hlines(
-    y=0,
-    xmin=data["timestamp"].min(),
-    xmax=data["timestamp"].max(),
-    lw=2,
-    label=None,
-)
-sns.lineplot(
-    x=data["timestamp"],
-    y=effect_slsqp,
-    ax=ax,
-    label="SU&SD effect",
-    color="red",
-    lw=3,
-)
-plt.vlines(
-    x=game.date_review,
-    ymin=effect_slsqp.min(),
-    ymax=effect_slsqp.max(),
-    linestyle=":",
-    lw=2,
-    label="SU&SD video",
-)
-ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
-plt.xlabel(None)
-plt.ylabel("Additional ratings")
-plt.title(None)
-plt.legend()
+plot_effect(data, game, y_pred_slsqp)
 plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_slsqp.png")
 plt.show()
