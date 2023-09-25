@@ -19,6 +19,7 @@ from pathlib import Path
 
 import jupyter_black
 import polars as pl
+from tqdm import tqdm
 
 jupyter_black.load()
 
@@ -30,6 +31,7 @@ rankings_dir = Path().resolve().parent.parent.parent / "bgg-ranking-historicals"
 rankings_dir
 
 # %%
+files = sorted(rankings_dir.glob("*.csv"))
 dfs = (
     pl.scan_csv(f)
     .select(
@@ -42,12 +44,12 @@ dfs = (
         pl.lit(datetime.strptime(f.stem, date_format)).alias("timestamp"),
         pl.all(),
     )
-    for f in sorted(rankings_dir.glob("*.csv"))
+    for f in files
 )
 
 # %%
 df = (
-    pl.concat(dfs, how="diagonal")
+    pl.concat(tqdm(dfs, total=len(files)), how="diagonal")
     .lazy()
     .group_by_dynamic("timestamp", every="1d")
     .agg(pl.exclude("timestamp").max())
