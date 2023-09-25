@@ -33,10 +33,10 @@ from scipy.optimize import fmin_slsqp
 from sklearn.linear_model import LinearRegression, Ridge
 
 from synthetic_control.data import REVIEWS
+from synthetic_control.plots import plot_ratings
 
 jupyter_black.load()
 np.set_printoptions(suppress=True)
-sns.set_style("dark")
 warnings.filterwarnings("ignore")
 
 # %%
@@ -70,28 +70,7 @@ data.shape
 data.head(10)
 
 # %%
-ax = plt.subplot(1, 1, 1)
-sns.lineplot(
-    data=data,
-    x="timestamp",
-    y=str(game.bgg_id),
-    ax=ax,
-    label=game.name,
-    lw=3,
-)
-plt.vlines(
-    x=game.date_review,
-    ymin=data[str(game.bgg_id)].min(),
-    ymax=data[str(game.bgg_id)].max(),
-    linestyle=":",
-    lw=2,
-    label="SU&SD video",
-)
-ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
-plt.xlabel(None)
-plt.ylabel("Num ratings")
-plt.title(None)
-plt.legend()
+ax = plot_ratings(data, game)
 plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_num_ratings.png")
 plt.show()
@@ -142,38 +121,9 @@ y_pred_lr = np.concatenate((X_train.dot(weights_lr), X_test.dot(weights_lr)))
 y_pred_lr.shape
 
 # %%
-ax = plt.subplot(1, 1, 1)
-sns.lineplot(
-    data=data,
-    x="timestamp",
-    y=str(game.bgg_id),
-    ax=ax,
-    label=game.name,
-    lw=3,
-)
-sns.lineplot(
-    x=data["timestamp"],
-    y=y_pred_lr,
-    ax=ax,
-    label="Synthetic Control",
-    color="red",
-    lw=3,
-)
-plt.vlines(
-    x=game.date_review,
-    ymin=data[str(game.bgg_id)].min(),
-    ymax=data[str(game.bgg_id)].max(),
-    linestyle=":",
-    lw=2,
-    label="SU&SD video",
-)
-ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
-plt.xlabel(None)
-plt.ylabel("Num ratings")
-plt.title(None)
-plt.legend()
+ax = plot_ratings(data, game, y_pred_lr)
 plt.tight_layout()
-plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_lr.png")
+plt.savefig(plot_dir / f"{game.bgg_id}_num_ratings.png")
 plt.show()
 
 # %% [markdown]
@@ -188,36 +138,7 @@ y_pred_ridge = np.concatenate((X_train.dot(weights_ridge), X_test.dot(weights_ri
 y_pred_ridge.shape
 
 # %%
-ax = plt.subplot(1, 1, 1)
-sns.lineplot(
-    data=data,
-    x="timestamp",
-    y=str(game.bgg_id),
-    ax=ax,
-    label=game.name,
-    lw=3,
-)
-sns.lineplot(
-    x=data["timestamp"],
-    y=y_pred_ridge,
-    ax=ax,
-    label="Synthetic Control",
-    color="red",
-    lw=3,
-)
-plt.vlines(
-    x=game.date_review,
-    ymin=data[str(game.bgg_id)].min(),
-    ymax=data[str(game.bgg_id)].max(),
-    linestyle=":",
-    lw=2,
-    label="SU&SD video",
-)
-ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
-plt.xlabel(None)
-plt.ylabel("Num ratings")
-plt.title(None)
-plt.legend()
+ax = plot_ratings(data, game, y_pred_ridge)
 plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_ridge.png")
 plt.show()
@@ -294,36 +215,7 @@ y_pred_slsqp = np.concatenate((X_train.dot(weights_slsqp), X_test.dot(weights_sl
 y_pred_slsqp.shape
 
 # %%
-ax = plt.subplot(1, 1, 1)
-sns.lineplot(
-    data=data,
-    x="timestamp",
-    y=str(game.bgg_id),
-    ax=ax,
-    label=game.name,
-    lw=3,
-)
-sns.lineplot(
-    x=data["timestamp"],
-    y=y_pred_slsqp,
-    ax=ax,
-    label="Synthetic Control",
-    color="red",
-    lw=3,
-)
-plt.vlines(
-    x=game.date_review,
-    ymin=data[str(game.bgg_id)].min(),
-    ymax=data[str(game.bgg_id)].max(),
-    linestyle=":",
-    lw=2,
-    label="SU&SD video",
-)
-ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
-plt.xlabel(None)
-plt.ylabel("Num ratings")
-plt.title(None)
-plt.legend()
+ax = plot_ratings(data, game, y_pred_slsqp)
 plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_slsqp.png")
 plt.show()
