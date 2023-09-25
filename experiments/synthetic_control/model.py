@@ -28,10 +28,9 @@ import jupyter_black
 import numpy as np
 import polars as pl
 from matplotlib import pyplot as plt
-from scipy.optimize import fmin_slsqp
-from sklearn.linear_model import LinearRegression, Ridge
 
 from synthetic_control.data import REVIEWS
+from synthetic_control.models import weights_and_predictions
 from synthetic_control.plots import plot_effect, plot_ratings
 
 jupyter_black.load()
@@ -112,11 +111,7 @@ X_train.shape, y_train.shape, X_test.shape, y_test.shape
 # ## Linear Regression
 
 # %%
-weights_lr = LinearRegression(fit_intercept=False).fit(X_train, y_train).coef_
-weights_lr.round(3)
-
-# %%
-y_pred_lr = np.concatenate((X_train.dot(weights_lr), X_test.dot(weights_lr)))
+_, y_pred_lr = weights_and_predictions("linear", X_train, y_train, X_test)
 y_pred_lr.shape
 
 # %%
@@ -129,11 +124,7 @@ plt.show()
 # ## Ridge Regression
 
 # %%
-weights_ridge = Ridge(fit_intercept=False, alpha=100.0).fit(X_train, y_train).coef_
-weights_ridge.round(3)
-
-# %%
-y_pred_ridge = np.concatenate((X_train.dot(weights_ridge), X_test.dot(weights_ridge)))
+_, y_pred_ridge = weights_and_predictions("ridge", X_train, y_train, X_test)
 y_pred_ridge.shape
 
 # %%
@@ -148,30 +139,12 @@ plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_ridge.png")
 plt.show()
 
-
 # %% [markdown]
 # ## Convex combination
 
 # %%
-def get_weights(X, y):
-    def loss_weights(W):
-        return np.sqrt(np.mean((y - X.dot(W)) ** 2))
-
-    w_start = np.ones(X.shape[1]) / X.shape[1]
-
-    return fmin_slsqp(
-        loss_weights,
-        w_start,
-        f_eqcons=lambda x: np.sum(x) - 1,
-        bounds=[(0.0, 1.0)] * len(w_start),
-        disp=False,
-    )
-
-
-# %%
-weights_slsqp = get_weights(X_train, y_train)
-print("Sum:", weights_slsqp.sum())
-np.round(weights_slsqp, 3)
+weights_slsqp, y_pred_slsqp = weights_and_predictions("slsqp", X_train, y_train, X_test)
+weights_slsqp.shape, y_pred_slsqp.shape
 
 # %%
 {
@@ -179,10 +152,6 @@ np.round(weights_slsqp, 3)
     for bgg_id, weight in zip(control_ids, weights_slsqp)
     if weight >= 0.001
 }
-
-# %%
-y_pred_slsqp = np.concatenate((X_train.dot(weights_slsqp), X_test.dot(weights_slsqp)))
-y_pred_slsqp.shape
 
 # %%
 plot_ratings(data, game, y_pred_slsqp)
