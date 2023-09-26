@@ -63,4 +63,6 @@ df.shape
 df.head(10)
 
 # %%
-df.write_csv("num_ratings.csv")
+df.select(*sorted(df.select(pl.exclude("timestamp")).columns, key=int)).write_csv(
+    "num_ratings.csv"
+)
