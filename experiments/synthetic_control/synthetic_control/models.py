@@ -26,6 +26,25 @@ def train_test_split(
     )
 
 
+def sample_control_group(
+    data: pl.DataFrame,
+    game: GameData,
+) -> np.ndarray:
+    num_ratings_last = data[str(game.bgg_id)][-1]
+    candidates = [
+        s
+        for s in data.select(pl.exclude("train_test", "timestamp", str(game.bgg_id)))
+        if s.null_count() == 0 and 0 < s[-1] < 2 * num_ratings_last
+    ]
+    weights = np.array([1 - abs(1 - s[-1] / num_ratings_last) for s in candidates])
+    return np.random.choice(
+        a=[s.name for s in candidates],
+        size=min(game.max_control_games, len(candidates)),
+        replace=False,
+        p=weights / weights.sum(),
+    )
+
+
 def train_weights_lr(
     X_train: np.ndarray,
     y_train: np.ndarray,

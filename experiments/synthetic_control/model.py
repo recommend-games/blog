@@ -30,7 +30,7 @@ import polars as pl
 from matplotlib import pyplot as plt
 
 from synthetic_control.data import REVIEWS
-from synthetic_control.models import train_test_split, weights_and_predictions
+from synthetic_control.models import sample_control_group, train_test_split, weights_and_predictions
 from synthetic_control.plots import plot_effect, plot_ratings
 
 jupyter_black.load()
@@ -78,20 +78,8 @@ data_train, data_test = train_test_split(data, game)
 data_train.shape, data_test.shape
 
 # %%
-num_ratings_last = data_train[str(game.bgg_id)][-1]
-candidates = [
-    s
-    for s in data_train.select(pl.exclude("train_test", "timestamp", str(game.bgg_id)))
-    if s.null_count() == 0 and 0 < s[-1] < 2 * num_ratings_last
-]
-weights = np.array([1 - abs(1 - s[-1] / num_ratings_last) for s in candidates])
-control_ids = np.random.choice(
-    a=[s.name for s in candidates],
-    size=min(game.max_control_games, len(candidates)),
-    replace=False,
-    p=weights / weights.sum(),
-)
-len(candidates), len(control_ids)
+control_ids = sample_control_group(data_train, game)
+len(control_ids)
 
 # %%
 X_train = data_train.select(*control_ids).to_numpy()
