@@ -1,12 +1,23 @@
 import math
+from typing import Optional
 
+import numpy as np
+import polars as pl
 import seaborn as sns
 from matplotlib import pyplot as plt
+from matplotlib.axes import Axes
+
+from synthetic_control.data import GameData
 
 sns.set_style("dark")
 
 
-def plot_ratings(data, game, y_pred=None, ax=None):
+def plot_ratings(
+    data: pl.DataFrame,
+    game: GameData,
+    y_pred: Optional[np.ndarray] = None,
+    ax: Optional[Axes] = None,
+) -> Axes:
     if ax is None:
         _, ax = plt.subplots()
 
@@ -54,7 +65,12 @@ def plot_ratings(data, game, y_pred=None, ax=None):
     return ax
 
 
-def plot_effect(data, game, y_pred, ax=None):
+def plot_effect(
+    data: pl.DataFrame,
+    game: GameData,
+    y_pred: np.ndarray,
+    ax: Optional[Axes] = None,
+) -> Axes:
     if ax is None:
         _, ax = plt.subplots()
 
