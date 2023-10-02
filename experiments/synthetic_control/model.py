@@ -28,11 +28,13 @@ from pathlib import Path
 import jupyter_black
 import numpy as np
 import polars as pl
+import seaborn as sns
+from joblib import Parallel, delayed
 from matplotlib import pyplot as plt
 
 from synthetic_control.data import REVIEWS
 from synthetic_control.models import (
-sample_control_and_predict,
+    sample_control_and_predict,
     sample_control_group,
     train_test_split,
     weights_and_predictions,
@@ -185,18 +187,22 @@ plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_slsqp.png")
 plt.show()
 
+
 # %% [markdown]
 # ## Fisher's Exact Test
 
 # %%
-for bgg_id in np.random.choice(control_ids, 10, replace=False):
-    bgg_id = int(bgg_id)
+def process_control(
+    bgg_id,
+    original_game=game,
+    data_train=data_train,
+    data_test=data_test,
+):
     control_game = replace(
-        game,
+        original_game,
         bgg_id=bgg_id,
         name=game_name(bgg_id),
     )
-    print(control_game)
 
     y_pred_train_control, y_pred_test_control = sample_control_and_predict(
         "slsqp",
@@ -204,10 +210,47 @@ for bgg_id in np.random.choice(control_ids, 10, replace=False):
         data_train,
         data_test,
     )
-    y_pred_control = np.concatenate((y_pred_train_control, y_pred_test_control))
-    plot_effect(data, control_game, y_pred_control)
-    plt.tight_layout()
-    plt.show()
 
     effect_train = data_train[str(control_game.bgg_id)] - y_pred_train_control
-    print(np.sqrt((effect_train**2).mean()))
+    effect_test = data_test[str(control_game.bgg_id)] - y_pred_test_control
+    train_error = np.sqrt((effect_train**2).mean())
+
+    return (
+        control_game,
+        y_pred_train_control,
+        y_pred_test_control,
+        effect_train,
+        effect_test,
+        train_error,
+    )
+
+
+# %%
+parallel_fn = delayed(process_control)
+jobs = (
+    parallel_fn(bgg_id)
+    for bgg_id in np.random.choice(
+        control_ids,
+        min(128, len(control_ids)),
+        replace=False,
+    )
+)
+control_game_results = Parallel(n_jobs=8)(jobs)
+
+# %%
+_, ax = plt.subplots()
+for _, _, _, effect_train, effect_test, _ in control_game_results:
+    effect = np.concatenate((effect_train, effect_test))
+    sns.lineplot(
+        x=data["timestamp"],
+        y=effect,
+        label=None,
+        color="pink",
+        lw=2,
+        alpha=0.4,
+        ax=ax,
+    )
+plot_effect(data, game, y_pred_slsqp, ax=ax)
+plt.tight_layout()
+plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_slsqp_fisher.png")
+plt.show()
