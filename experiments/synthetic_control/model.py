@@ -59,6 +59,12 @@ game_data = pl.read_csv(
 )
 game_data.shape
 
+
+# %%
+def game_name(bgg_id, base_data=game_data):
+    return base_data.filter(pl.col("bgg_id") == int(bgg_id))["name"][0]
+
+
 # %% [markdown]
 # ## The Data
 
@@ -159,11 +165,13 @@ y_pred_slsqp = np.concatenate((y_pred_train_slsqp, y_pred_test_slsqp))
 weights_slsqp.shape, y_pred_slsqp.shape
 
 # %%
-{
-    bgg_id: weight
-    for bgg_id, weight in zip(control_ids, weights_slsqp)
-    if weight >= 0.001
-}
+print(
+    "\n+ ".join(
+        f"{weight:.3} * <{game_name(bgg_id)} ({bgg_id})>"
+        for weight, bgg_id in sorted(zip(weights_slsqp, control_ids), reverse=True)
+        if weight >= 0.001
+    )
+)
 
 # %%
 plot_ratings(data, game, y_pred_slsqp)
@@ -186,7 +194,7 @@ for bgg_id in np.random.choice(control_ids, 10, replace=False):
     control_game = replace(
         game,
         bgg_id=bgg_id,
-        name=game_data.filter(pl.col("bgg_id") == bgg_id)["name"][0],
+        name=game_name(bgg_id),
     )
     print(control_game)
 
