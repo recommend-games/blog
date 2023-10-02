@@ -30,7 +30,7 @@ import polars as pl
 from matplotlib import pyplot as plt
 
 from synthetic_control.data import REVIEWS
-from synthetic_control.models import weights_and_predictions
+from synthetic_control.models import train_test_split, weights_and_predictions
 from synthetic_control.plots import plot_effect, plot_ratings
 
 jupyter_black.load()
@@ -74,14 +74,7 @@ plt.savefig(plot_dir / f"{game.bgg_id}_num_ratings.png")
 plt.show()
 
 # %%
-data_train_test = data.with_columns(
-    pl.when(pl.col("timestamp") < game.date_review)
-    .then(pl.lit("train"))
-    .otherwise(pl.lit("test"))
-    .alias("train_test")
-).partition_by("train_test", as_dict=True)
-data_train = data_train_test["train"].sort("timestamp")
-data_test = data_train_test["test"].sort("timestamp")
+data_train, data_test = train_test_split(data, game)
 data_train.shape, data_test.shape
 
 # %%
