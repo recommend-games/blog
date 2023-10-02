@@ -239,7 +239,10 @@ control_game_results = Parallel(n_jobs=8)(jobs)
 
 # %%
 _, ax = plt.subplots()
-for _, _, _, effect_train, effect_test, _ in control_game_results:
+for control_game, _, _, effect_train, effect_test, train_error in control_game_results:
+    if train_error > 3:
+        print(f"Ignore <{control_game.name}> with RMSE of {train_error:.3f}")
+        continue
     effect = np.concatenate((effect_train, effect_test))
     sns.lineplot(
         x=data["timestamp"],
