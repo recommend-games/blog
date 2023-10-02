@@ -1,4 +1,5 @@
 from typing import Optional
+
 import numpy as np
 import polars as pl
 from scipy.optimize import fmin_slsqp
