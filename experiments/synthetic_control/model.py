@@ -21,6 +21,7 @@
 
 # %%
 import warnings
+from dataclasses import replace
 from datetime import timedelta
 from pathlib import Path
 
@@ -30,7 +31,12 @@ import polars as pl
 from matplotlib import pyplot as plt
 
 from synthetic_control.data import REVIEWS
-from synthetic_control.models import sample_control_group, train_test_split, weights_and_predictions
+from synthetic_control.models import (
+sample_control_and_predict,
+    sample_control_group,
+    train_test_split,
+    weights_and_predictions,
+)
 from synthetic_control.plots import plot_effect, plot_ratings
 
 jupyter_black.load()
@@ -45,6 +51,13 @@ game
 plot_dir = (Path(".") / "plots").resolve()
 plot_dir.mkdir(parents=True, exist_ok=True)
 plot_dir
+
+# %%
+game_data = pl.read_csv(
+    "../../../board-game-data/scraped/bgg_GameItem.csv",
+    columns=["bgg_id", "name"],
+)
+game_data.shape
 
 # %% [markdown]
 # ## The Data
@@ -92,7 +105,13 @@ X_train.shape, y_train.shape, X_test.shape, y_test.shape
 # ## Linear Regression
 
 # %%
-_, y_pred_lr = weights_and_predictions("linear", X_train, y_train, X_test)
+_, y_pred_train_lr, y_pred_test_lr = weights_and_predictions(
+    "linear",
+    X_train,
+    y_train,
+    X_test,
+)
+y_pred_lr = np.concatenate((y_pred_train_lr, y_pred_test_lr))
 y_pred_lr.shape
 
 # %%
@@ -105,7 +124,13 @@ plt.show()
 # ## Ridge Regression
 
 # %%
-_, y_pred_ridge = weights_and_predictions("ridge", X_train, y_train, X_test)
+_, y_pred_train_ridge, y_pred_test_ridge = weights_and_predictions(
+    "ridge",
+    X_train,
+    y_train,
+    X_test,
+)
+y_pred_ridge = np.concatenate((y_pred_train_ridge, y_pred_test_ridge))
 y_pred_ridge.shape
 
 # %%
@@ -124,7 +149,13 @@ plt.show()
 # ## Convex combination
 
 # %%
-weights_slsqp, y_pred_slsqp = weights_and_predictions("slsqp", X_train, y_train, X_test)
+weights_slsqp, y_pred_train_slsqp, y_pred_test_slsqp = weights_and_predictions(
+    "slsqp",
+    X_train,
+    y_train,
+    X_test,
+)
+y_pred_slsqp = np.concatenate((y_pred_train_slsqp, y_pred_test_slsqp))
 weights_slsqp.shape, y_pred_slsqp.shape
 
 # %%
@@ -145,3 +176,30 @@ plot_effect(data, game, y_pred_slsqp)
 plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_slsqp.png")
 plt.show()
+
+# %% [markdown]
+# ## Fisher's Exact Test
+
+# %%
+for bgg_id in np.random.choice(control_ids, 10, replace=False):
+    bgg_id = int(bgg_id)
+    control_game = replace(
+        game,
+        bgg_id=bgg_id,
+        name=game_data.filter(pl.col("bgg_id") == bgg_id)["name"][0],
+    )
+    print(control_game)
+
+    y_pred_train_control, y_pred_test_control = sample_control_and_predict(
+        "slsqp",
+        control_game,
+        data_train,
+        data_test,
+    )
+    y_pred_control = np.concatenate((y_pred_train_control, y_pred_test_control))
+    plot_effect(data, control_game, y_pred_control)
+    plt.tight_layout()
+    plt.show()
+
+    effect_train = data_train[str(control_game.bgg_id)] - y_pred_train_control
+    print(np.sqrt((effect_train**2).mean()))

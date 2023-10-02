@@ -76,7 +76,7 @@ def weights_and_predictions(
     X_train: np.ndarray,
     y_train: np.ndarray,
     X_test: np.ndarray,
-) -> tuple[np.ndarray, np.ndarray]:
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     if model == "linear":
         weights = train_weights_lr(
             X_train,
@@ -94,6 +94,26 @@ def weights_and_predictions(
     else:
         raise ValueError(f"Unknown model: {model}")
 
-    pred = np.concatenate((X_train.dot(weights), X_test.dot(weights)))
+    return weights, X_train.dot(weights), X_test.dot(weights)
 
-    return weights, pred
+
+def sample_control_and_predict(
+    model: str,
+    game: GameData,
+    data_train: pl.DataFrame,
+    data_test: pl.DataFrame,
+) -> tuple[np.ndarray, np.ndarray]:
+    control_ids = sample_control_group(data_train, game)
+
+    X_train = data_train.select(*control_ids).to_numpy()
+    y_train = data_train[str(game.bgg_id)].to_numpy()
+    X_test = data_test.select(*control_ids).to_numpy()
+
+    _, y_pred_train, y_pred_test = weights_and_predictions(
+        model,
+        X_train,
+        y_train,
+        X_test,
+    )
+
+    return y_pred_train, y_pred_test
