@@ -235,7 +235,7 @@ jobs = (
         replace=False,
     )
 )
-control_game_results = Parallel(n_jobs=8)(jobs)
+control_game_results = Parallel(n_jobs=-1, return_as="generator")(jobs)
 
 # %%
 _, ax = plt.subplots()
@@ -244,6 +244,7 @@ for control_game, _, _, effect_train, effect_test, train_error in control_game_r
         print(f"Ignore <{control_game.name}> with RMSE of {train_error:.3f}")
         continue
     effect = np.concatenate((effect_train, effect_test))
+    # TODO count smaller and larger effects
     sns.lineplot(
         x=data["timestamp"],
         y=effect,
