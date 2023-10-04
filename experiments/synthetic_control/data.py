@@ -17,11 +17,14 @@
 from datetime import datetime
 from pathlib import Path
 
-import jupyter_black
 import polars as pl
 from tqdm import tqdm
 
-jupyter_black.load()
+try:
+    import jupyter_black
+    jupyter_black.load()
+except:
+    pass
 
 # %%
 date_format = "%Y-%m-%dT%H-%M-%S"
