@@ -73,7 +73,10 @@ def game_name(bgg_id, base_data=game_data):
 # %%
 data = (
     pl.scan_csv("num_ratings.csv")
-    .select(pl.col("timestamp").str.to_datetime(), pl.exclude("timestamp").cast(int))
+    .select(
+        pl.col("day").str.to_datetime().alias("timestamp"),
+        pl.exclude("day").cast(int),
+    )
     .filter(pl.col(str(game.bgg_id)).is_not_null())
     .filter(
         pl.col("timestamp").is_between(
