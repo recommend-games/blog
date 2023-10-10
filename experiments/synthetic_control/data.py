@@ -14,7 +14,6 @@
 # ---
 
 # %%
-from datetime import datetime
 from pathlib import Path
 
 import polars as pl
@@ -27,38 +26,31 @@ except:
     pass
 
 # %%
-date_format = "%Y-%m-%dT%H-%M-%S"
-
-# %%
 rankings_dir = Path().resolve().parent.parent.parent / "bgg-ranking-historicals"
 rankings_dir
 
 # %%
-files = sorted(rankings_dir.glob("*.csv"))
+files = list(rankings_dir.glob("*.csv"))
 dfs = (
-    pl.scan_csv(f)
-    .select(
-        pl.col("ID").cast(str).alias("bgg_id"),
+    pl.scan_csv(f).select(
+        pl.col("ID").alias("bgg_id"),
         pl.col("Users rated").alias("num_ratings"),
-    )
-    .collect()
-    .transpose(column_names="bgg_id")
-    .select(
-        pl.lit(datetime.strptime(f.stem, date_format)).alias("timestamp"),
-        pl.all(),
+        pl.lit(f.stem[:10]).alias("day"),
     )
     for f in files
 )
 
 # %%
 df = (
-    pl.concat(tqdm(dfs, total=len(files)), how="diagonal")
-    .lazy()
-    .group_by_dynamic("timestamp", every="1d")
-    .agg(pl.exclude("timestamp").max())
-    .interpolate()
-    .select("timestamp", pl.exclude("timestamp"))
+    pl.concat(tqdm(dfs, total=len(files)))
     .collect()
+    .pivot(
+        values="num_ratings",
+        index="day",
+        columns="bgg_id",
+        aggregate_function="max",
+    )
+    .sort("day")
 )
 df.shape
 
@@ -67,6 +59,6 @@ df.head(10)
 
 # %%
 df.select(
-    "timestamp",
-    *sorted(df.select(pl.exclude("timestamp")).columns, key=int),
+    "day",
+    *sorted(df.select(pl.exclude("day")).columns, key=int),
 ).write_csv("num_ratings.csv")
