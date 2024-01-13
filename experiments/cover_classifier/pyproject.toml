@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "cover-classifier"
+version = "0.1.0"
+description = "Classify the types of board games by their covers"
+authors = ["Markus Shepherd <markus@recommend.games>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.11"
+
+jupyter-black = "*"
+jupyterlab = "*"
+jupytext = "*"
+matplotlib = "*"
+numpy = "*"
+pillow = "*"
+polars = "*"
+scipy = "*"
+seaborn = "*"
+torch = "*"
+torchvision = "*"
+tqdm = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
