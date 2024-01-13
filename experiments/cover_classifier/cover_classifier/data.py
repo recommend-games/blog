@@ -1,3 +1,5 @@
+"""Board game dataset."""
+
 import json
 import logging
 from pathlib import Path
@@ -7,8 +9,7 @@ import polars as pl
 from PIL import Image
 from sklearn.preprocessing import MultiLabelBinarizer
 import torch
-from torch.utils.data import Dataset, DataLoader
-from torchvision import transforms
+from torch.utils.data import Dataset
 
 LOGGER = logging.getLogger(__name__)
 
@@ -34,15 +35,19 @@ class BoardGameDataset(Dataset):
         self.transform = transform
 
     def read_types_file(self, types_file: str | Path) -> MultiLabelBinarizer:
+        """Read types from file."""
+
         types_file = Path(types_file).resolve()
         LOGGER.info("Reading types from file <%s>", types_file)
         types = pl.read_csv(types_file)["name"].to_list()
         return MultiLabelBinarizer(classes=types).fit([])
 
     def read_games_file(self, games_file: Union[str, Path]) -> pl.DataFrame:
+        """Read games from file."""
+
         games_file = Path(games_file).resolve()
         LOGGER.info("Reading games from file <%s>", games_file)
-        with games_file.open() as file:
+        with games_file.open(encoding="utf-8") as file:
             games = (self._parse_game(json.loads(line)) for line in file)
             return pl.DataFrame(
                 data=filter(None, games),
@@ -77,30 +82,3 @@ class BoardGameDataset(Dataset):
             image = self.transform(image)
 
         return image, labels
-
-
-# # Example usage:
-# csv_file_path = "path/to/your/csv/file.csv"
-# image_root_dir = "path/to/your/image/directory"
-
-# # Define the data transformation
-# transform = transforms.Compose(
-#     [
-#         transforms.Resize((224, 224)),
-#         transforms.ToTensor(),
-#     ]
-# )
-
-# # Create an instance of your custom dataset
-# board_game_dataset = BoardGameDataset(
-#     csv_file=csv_file_path, root_dir=image_root_dir, transform=transform
-# )
-
-# # Create a DataLoader to iterate over your dataset
-# batch_size = 32
-# data_loader = DataLoader(board_game_dataset, batch_size=batch_size, shuffle=True)
-
-# # Example of accessing data in the DataLoader
-# for inputs, labels in data_loader:
-#     # Your training/validation loop here
-#     pass

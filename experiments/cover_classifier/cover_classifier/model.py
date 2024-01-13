@@ -1,3 +1,5 @@
+"""Train a model to classify board game covers."""
+
 from pathlib import Path
 from torch import nn
 from torch import optim
@@ -7,7 +9,9 @@ from torchvision.models import resnet50, ResNet50_Weights
 from cover_classifier.data import BoardGameDataset
 
 
-def train(data_dir: str | Path, images_dir: str | Path):
+def train(data_dir: str | Path, images_dir: str | Path) -> nn.Module:
+    """Train a model to classify board game covers."""
+
     weights = ResNet50_Weights.DEFAULT
     model = resnet50(weights=weights)
 
@@ -30,9 +34,12 @@ def train(data_dir: str | Path, images_dir: str | Path):
 
     num_epochs = 10
     for epoch in range(num_epochs):
+        print(f"Epoch {epoch+1}/{num_epochs}")
         for inputs, labels in dataloader:
             optimizer.zero_grad()
             outputs = model(inputs)
             loss = criterion(outputs, labels.int())
             loss.backward()
             optimizer.step()
+
+    return model
