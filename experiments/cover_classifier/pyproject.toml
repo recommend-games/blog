@@ -26,6 +26,20 @@ torch = "*"
 torchvision = "*"
 tqdm = "*"
 
+[tool.poetry.group.dev.dependencies]
+types-jmespath = "*"
+types-pillow = "*"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+python_version = "3.11"
+
+[[tool.mypy.overrides]]
+module = [
+    "sklearn",
+    "torchvision"
+]
+ignore_missing_imports = true
