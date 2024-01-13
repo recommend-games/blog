@@ -1,8 +1,10 @@
 """Train the cover classifier model."""
 
 import logging
-from pathlib import Path
 import sys
+from pathlib import Path
+
+import torch
 
 from cover_classifier.model import train
 
@@ -18,9 +20,17 @@ def main():
         stream=sys.stdout,
     )
 
+    device = torch.device(
+        "cuda"
+        if torch.cuda.is_available()
+        else "mps"
+        if torch.backends.mps.is_available()
+        else "cpu"
+    )
     train(
         data_dir=BASE_DIR.parent / "board-game-data",
         images_dir=BASE_DIR.parent / "board-game-scraper" / "images",
+        device=device,
     )
 
 

@@ -8,7 +8,7 @@ from torch import nn
 from torch import optim
 from torch.nn import functional as F
 from torch.utils.data import DataLoader, random_split
-from torchvision.models import resnet50, ResNet50_Weights
+from torchvision.models import resnet50, ResNet, ResNet50_Weights
 
 from tqdm import tqdm
 
@@ -22,6 +22,7 @@ def train(
     images_dir: str | Path,
     test_size: float = 0.01,
     batch_size: int = 128,
+    device: str | torch.device = torch.device("cpu"),
 ) -> nn.Module:
     """Train a model to classify board game covers."""
 
@@ -33,7 +34,9 @@ def train(
     assert 0 < test_size < 1, f"Test size must be between 0 and 1: {test_size}"
 
     weights = ResNet50_Weights.DEFAULT
-    model = resnet50(weights=weights)
+    model: ResNet = resnet50(weights=weights)
+
+    LOGGER.info("Training model on %s", device)
 
     dataset = BoardGameDataset(
         games_file=data_dir / "scraped" / "bgg_GameItem.jl",
@@ -62,19 +65,20 @@ def train(
 
     num_classes = len(dataset.classes)
     model.fc = nn.Linear(model.fc.in_features, num_classes)
+    model.to(device)
 
     criterion = nn.BCEWithLogitsLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
     num_epochs = 10
     for epoch in range(num_epochs):
-        print(f"Epoch {epoch+1}/{num_epochs}")
+        print(f"Epoch {epoch+1:>3d}/{num_epochs:>3d}")
 
         model.train()
         for images, labels in tqdm(train_dataloader):
             optimizer.zero_grad()
-            outputs = model(images)
-            loss = criterion(outputs, labels.float())
+            outputs = model(images.to(device))
+            loss = criterion(outputs, labels.float().to(device))
             loss.backward()
             optimizer.step()
 
@@ -82,15 +86,15 @@ def train(
         with torch.no_grad():
             losses = torch.tensor(
                 [
-                    criterion(model(inputs), labels.float())
+                    criterion(model(inputs.to(device)), labels.float().to(device))
                     for inputs, labels in tqdm(test_dataloader)
                 ]
             )
-            print(f"Loss: {losses.mean().item():>7.4f} ± {losses.std().item():>7.4f}")
+            print(f"Loss: {losses.mean().item():>7.4f}")
 
             images, labels = next(iter(test_dataloader))
-            output = F.sigmoid(model(images[:3, ...]))
-            print(labels[:3, ...], output)
+            output = F.sigmoid(model(images[:3, ...].to(device)))
+            print(labels[:3, ...].to(device), output)
 
         # TODO save model
 

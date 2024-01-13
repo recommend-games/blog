@@ -2,7 +2,6 @@
 
 import json
 import logging
-from itertools import islice
 from pathlib import Path
 from typing import Any, Callable, Union
 import jmespath
@@ -29,6 +28,7 @@ class BoardGameDataset(Dataset):
         types_file: str | Path,
         image_root_dir: str | Path,
         transform: Callable | None = None,
+        require_any_type: bool = False,
     ):
         image_root_dir = Path(image_root_dir).resolve()
         self.types_mlb = self.read_types_file(types_file)
@@ -38,6 +38,7 @@ class BoardGameDataset(Dataset):
         LOGGER.info("Game types: %s", self.classes)
 
         self.transform = transform
+        self.require_any_type = require_any_type
         self.images, self.labels = self.read_games_file(games_file, image_root_dir)
         assert len(self.images) == len(self.labels)
         LOGGER.info("Loaded %d games and images in total", len(self.labels))
@@ -61,8 +62,7 @@ class BoardGameDataset(Dataset):
         LOGGER.info("Reading games from file <%s>", games_file)
         with games_file.open(encoding="utf-8") as file:
             games = (
-                self._parse_game(json.loads(line), image_dir)
-                for line in tqdm(islice(file, 10_000))
+                self._parse_game(json.loads(line), image_dir) for line in tqdm(file)
             )
             images, labels = zip(*filter(None, games))
             return images, labels
@@ -83,7 +83,7 @@ class BoardGameDataset(Dataset):
             t for s in game_types_raw if (t := s.split(":")[0]) in self.classes_set
         ]
         game_types = self.types_mlb.transform([game_type_labels])[0]
-        if not any(game_types):
+        if self.require_any_type and not any(game_types):
             LOGGER.debug("No valid game types for game <%s>", bgg_id)
             return None
 
