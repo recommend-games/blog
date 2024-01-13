@@ -2,6 +2,7 @@
 
 import json
 import logging
+from itertools import islice
 from pathlib import Path
 from typing import Any, Callable, Union
 import jmespath
@@ -31,10 +32,15 @@ class BoardGameDataset(Dataset):
     ):
         image_root_dir = Path(image_root_dir).resolve()
         self.types_mlb = self.read_types_file(types_file)
+
         self.classes = self.types_mlb.classes
         self.classes_set = frozenset(self.classes)
-        self.game_data = self.read_games_file(games_file, image_root_dir)
+        LOGGER.info("Game types: %s", self.classes)
+
         self.transform = transform
+        self.images, self.labels = self.read_games_file(games_file, image_root_dir)
+        assert len(self.images) == len(self.labels)
+        LOGGER.info("Loaded %d games and images in total", len(self.labels))
 
     def read_types_file(self, types_file: str | Path) -> MultiLabelBinarizer:
         """Read types from file."""
@@ -48,31 +54,37 @@ class BoardGameDataset(Dataset):
         self,
         games_file: Union[str, Path],
         image_dir: Path,
-    ) -> pl.DataFrame:
+    ) -> tuple[tuple[torch.Tensor, ...], tuple[torch.Tensor, ...]]:
         """Read games from file."""
 
         games_file = Path(games_file).resolve()
         LOGGER.info("Reading games from file <%s>", games_file)
         with games_file.open(encoding="utf-8") as file:
             games = (
-                self._parse_game(json.loads(line), image_dir) for line in tqdm(file)
+                self._parse_game(json.loads(line), image_dir)
+                for line in tqdm(islice(file, 10_000))
             )
-            return pl.DataFrame(
-                data=filter(None, games),
-                schema=["bgg_id", "image_path", "types"],
-                orient="row",
-            )
+            images, labels = zip(*filter(None, games))
+            return images, labels
 
     def _parse_game(
         self,
         game: dict[str, Any],
         image_dir: Path,
-    ) -> tuple[int, str, list[int]] | None:
+    ) -> tuple[torch.Tensor, torch.Tensor] | None:
         bgg_id: int | None = self.JMESPATH_BGG_ID.search(game)
         image_path_str: str | None = self.JMESPATH_IMAGE_PATH.search(game)
         game_types_raw: list[str] | None = self.JMESPATH_GAME_TYPES.search(game)
 
         if not bgg_id or not image_path_str or not game_types_raw:
+            return None
+
+        game_type_labels = [
+            t for s in game_types_raw if (t := s.split(":")[0]) in self.classes_set
+        ]
+        game_types = self.types_mlb.transform([game_type_labels])[0]
+        if not any(game_types):
+            LOGGER.debug("No valid game types for game <%s>", bgg_id)
             return None
 
         image_path = Path(image_dir / image_path_str).resolve()
@@ -84,29 +96,18 @@ class BoardGameDataset(Dataset):
             )
             return None
 
-        game_type_labels = [
-            t for s in game_types_raw if (t := s.split(":")[0]) in self.classes_set
-        ]
-        game_types = self.types_mlb.transform([game_type_labels])[0]
-        if not any(game_types):
-            LOGGER.debug("No valid game types for game <%s>", bgg_id)
-            return None
+        image = self._read_and_transform_image(str(image_path))
 
-        return bgg_id, str(image_path), game_types
+        return image, torch.from_numpy(game_types)
 
-    def __len__(self) -> int:
-        return len(self.game_data)
-
-    def __getitem__(self, idx: int) -> tuple[torch.Tensor, torch.Tensor]:
-        image_path = self.game_data[idx, "image_path"]
+    def _read_and_transform_image(self, image_path: str) -> torch.Tensor:
         image = read_image(image_path)
-
-        labels = torch.tensor(
-            self.game_data[idx, "types"],
-            dtype=torch.bool,
-        )
-
         if self.transform:
             image = self.transform(image)
+        return image
 
-        return image, labels
+    def __len__(self) -> int:
+        return len(self.labels)
+
+    def __getitem__(self, idx: int) -> tuple[torch.Tensor, torch.Tensor]:
+        return self.images[idx], self.labels[idx]

@@ -6,6 +6,7 @@ from pathlib import Path
 import torch
 from torch import nn
 from torch import optim
+from torch.nn import functional as F
 from torch.utils.data import DataLoader, random_split
 from torchvision.models import resnet50, ResNet50_Weights
 
@@ -40,15 +41,24 @@ def train(
         image_root_dir=images_dir,
         transform=weights.transforms(),
     )
-    LOGGER.info("Loaded %d games and images in total", len(dataset))
     train_dataset, test_dataset = random_split(dataset, (1 - test_size, test_size))
     LOGGER.info(
         "Split into %d training and %d test samples",
         len(train_dataset),
         len(test_dataset),
     )
-    train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-    test_dataloader = DataLoader(test_dataset, batch_size=batch_size, shuffle=True)
+    train_dataloader = DataLoader(
+        train_dataset,
+        batch_size=batch_size,
+        shuffle=True,
+        # num_workers=8,
+    )
+    test_dataloader = DataLoader(
+        test_dataset,
+        batch_size=batch_size,
+        shuffle=True,
+        # num_workers=8,
+    )
 
     num_classes = len(dataset.classes)
     model.fc = nn.Linear(model.fc.in_features, num_classes)
@@ -61,9 +71,9 @@ def train(
         print(f"Epoch {epoch+1}/{num_epochs}")
 
         model.train()
-        for inputs, labels in tqdm(train_dataloader):
+        for images, labels in tqdm(train_dataloader):
             optimizer.zero_grad()
-            outputs = model(inputs)
+            outputs = model(images)
             loss = criterion(outputs, labels.float())
             loss.backward()
             optimizer.step()
@@ -77,6 +87,10 @@ def train(
                 ]
             )
             print(f"Loss: {losses.mean().item():>7.4f} ± {losses.std().item():>7.4f}")
+
+            images, labels = next(iter(test_dataloader))
+            output = F.sigmoid(model(images[:3, ...]))
+            print(labels[:3, ...], output)
 
         # TODO save model
 
