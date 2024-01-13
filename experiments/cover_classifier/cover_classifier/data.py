@@ -10,6 +10,7 @@ from sklearn.preprocessing import MultiLabelBinarizer
 import torch
 from torch.utils.data import Dataset
 from torchvision.io import read_image
+from tqdm import tqdm
 
 LOGGER = logging.getLogger(__name__)
 
@@ -31,6 +32,7 @@ class BoardGameDataset(Dataset):
         image_root_dir = Path(image_root_dir).resolve()
         self.types_mlb = self.read_types_file(types_file)
         self.classes = self.types_mlb.classes
+        self.classes_set = frozenset(self.classes)
         self.game_data = self.read_games_file(games_file, image_root_dir)
         self.transform = transform
 
@@ -52,29 +54,44 @@ class BoardGameDataset(Dataset):
         games_file = Path(games_file).resolve()
         LOGGER.info("Reading games from file <%s>", games_file)
         with games_file.open(encoding="utf-8") as file:
-            games = (self._parse_game(json.loads(line), image_dir) for line in file)
+            games = (
+                self._parse_game(json.loads(line), image_dir) for line in tqdm(file)
+            )
             return pl.DataFrame(
                 data=filter(None, games),
                 schema=["bgg_id", "image_path", "types"],
                 orient="row",
             )
 
-    def _parse_game(self, game: dict[str, Any], image_dir: Path) -> tuple | None:
-        bgg_id: str = self.JMESPATH_BGG_ID.search(game)
-        image_path = self.JMESPATH_IMAGE_PATH.search(game)
-        game_types = self.JMESPATH_GAME_TYPES.search(game)
+    def _parse_game(
+        self,
+        game: dict[str, Any],
+        image_dir: Path,
+    ) -> tuple[int, str, list[int]] | None:
+        bgg_id: int | None = self.JMESPATH_BGG_ID.search(game)
+        image_path_str: str | None = self.JMESPATH_IMAGE_PATH.search(game)
+        game_types_raw: list[str] | None = self.JMESPATH_GAME_TYPES.search(game)
 
-        if not bgg_id or not image_path or not game_types:
+        if not bgg_id or not image_path_str or not game_types_raw:
             return None
 
-        image_path = Path(image_dir / image_path).resolve()
+        image_path = Path(image_dir / image_path_str).resolve()
         if not image_path.exists():
-            LOGGER.warning("Image file <%s> does not exist", image_path)
+            LOGGER.debug(
+                "Image file <%s> for game <%s> does not exist",
+                image_path,
+                bgg_id,
+            )
             return None
 
-        game_types = self.types_mlb.transform([[t.split(":")[0] for t in game_types]])[
-            0
+        game_type_labels = [
+            t for s in game_types_raw if (t := s.split(":")[0]) in self.classes_set
         ]
+        game_types = self.types_mlb.transform([game_type_labels])[0]
+        if not any(game_types):
+            LOGGER.debug("No valid game types for game <%s>", bgg_id)
+            return None
+
         return bgg_id, str(image_path), game_types
 
     def __len__(self) -> int:

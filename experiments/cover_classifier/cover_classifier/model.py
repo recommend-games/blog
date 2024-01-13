@@ -1,5 +1,6 @@
 """Train a model to classify board game covers."""
 
+import logging
 from pathlib import Path
 
 import torch
@@ -12,11 +13,13 @@ from tqdm import tqdm
 
 from cover_classifier.data import BoardGameDataset
 
+LOGGER = logging.getLogger(__name__)
+
 
 def train(
     data_dir: str | Path,
     images_dir: str | Path,
-    test_size: float = 0.1,
+    test_size: float = 0.01,
     batch_size: int = 128,
 ) -> nn.Module:
     """Train a model to classify board game covers."""
@@ -37,7 +40,13 @@ def train(
         image_root_dir=images_dir,
         transform=weights.transforms(),
     )
+    LOGGER.info("Loaded %d games and images in total", len(dataset))
     train_dataset, test_dataset = random_split(dataset, (1 - test_size, test_size))
+    LOGGER.info(
+        "Split into %d training and %d test samples",
+        len(train_dataset),
+        len(test_dataset),
+    )
     train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     test_dataloader = DataLoader(test_dataset, batch_size=batch_size, shuffle=True)
 
@@ -58,7 +67,6 @@ def train(
             loss = criterion(outputs, labels.float())
             loss.backward()
             optimizer.step()
-            break
 
         model.eval()
         with torch.no_grad():
@@ -68,7 +76,7 @@ def train(
                     for inputs, labels in tqdm(test_dataloader)
                 ]
             )
-            print(f"Loss: {losses.mean().item():>7.4f} +/- {losses.std().item():>7.4f}")
+            print(f"Loss: {losses.mean().item():>7.4f} ± {losses.std().item():>7.4f}")
 
         # TODO save model
 
