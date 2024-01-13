@@ -3246,6 +3246,17 @@ files = [
 ]
 
 [[package]]
+name = "types-pillow"
+version = "10.2.0.20240111"
+description = "Typing stubs for Pillow"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "types-Pillow-10.2.0.20240111.tar.gz", hash = "sha256:e8d359bfdc5a149a3c90a7e153cb2d0750ddf7fc3508a20dfadabd8a9435e354"},
+    {file = "types_Pillow-10.2.0.20240111-py3-none-any.whl", hash = "sha256:1f4243b30c143b56b0646626f052e4269123e550f9096cdfb5fbd999daee7dbb"},
+]
+
+[[package]]
 name = "types-python-dateutil"
 version = "2.8.19.20240106"
 description = "Typing stubs for python-dateutil"
@@ -3254,6 +3265,17 @@ python-versions = ">=3.8"
 files = [
     {file = "types-python-dateutil-2.8.19.20240106.tar.gz", hash = "sha256:1f8db221c3b98e6ca02ea83a58371b22c374f42ae5bbdf186db9c9a76581459f"},
     {file = "types_python_dateutil-2.8.19.20240106-py3-none-any.whl", hash = "sha256:efbbdc54590d0f16152fa103c9879c7d4a00e82078f6e2cf01769042165acaa2"},
+]
+
+[[package]]
+name = "types-tqdm"
+version = "4.66.0.20240106"
+description = "Typing stubs for tqdm"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "types-tqdm-4.66.0.20240106.tar.gz", hash = "sha256:7acf4aade5bad3ded76eb829783f9961b1c2187948eaa6dd1ae8644dff95a938"},
+    {file = "types_tqdm-4.66.0.20240106-py3-none-any.whl", hash = "sha256:7459b0f441b969735685645a5d8480f7912b10d05ab45f99a2db8a8e45cb550b"},
 ]
 
 [[package]]
@@ -3364,4 +3386,4 @@ test = ["websockets"]
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.11"
-content-hash = "bbb4b217d49341616a52b37bb068d96ba40f8344a71c142362f8c88638e043f7"
+content-hash = "8c5f2c2146005b487d7787a66e4d9ec1218e64fc6da525efb0ed41020062b43a"

@@ -27,6 +27,8 @@ tqdm = "*"
 
 [tool.poetry.group.dev.dependencies]
 types-jmespath = "*"
+types-pillow = "*"
+types-tqdm = "*"
 
 [build-system]
 requires = ["poetry-core"]
