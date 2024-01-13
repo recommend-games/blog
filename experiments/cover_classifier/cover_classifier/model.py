@@ -22,7 +22,7 @@ def train(data_dir: str | Path, images_dir: str | Path) -> nn.Module:
         games_file=data_dir / "scraped" / "bgg_GameItem.jl",
         types_file=data_dir / "scraped" / "bgg_GameType.csv",
         image_root_dir=images_dir,
-        transform=weights.transforms,
+        transform=weights.transforms(),
     )
     dataloader = DataLoader(dataset, batch_size=64, shuffle=True)
 
@@ -38,8 +38,9 @@ def train(data_dir: str | Path, images_dir: str | Path) -> nn.Module:
         for inputs, labels in dataloader:
             optimizer.zero_grad()
             outputs = model(inputs)
-            loss = criterion(outputs, labels.int())
+            loss = criterion(outputs, labels.float())
             loss.backward()
             optimizer.step()
+            print(f"Loss: {loss.item():>7.4f}")
 
     return model
