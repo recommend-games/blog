@@ -16,7 +16,6 @@ jupytext = "*"
 matplotlib = "*"
 mypy = "*"
 numpy = "*"
-pillow = "*"
 polars = "*"
 pylint = "*"
 scikit-learn = "*"
@@ -28,7 +27,6 @@ tqdm = "*"
 
 [tool.poetry.group.dev.dependencies]
 types-jmespath = "*"
-types-pillow = "*"
 
 [build-system]
 requires = ["poetry-core"]

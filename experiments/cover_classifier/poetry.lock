@@ -3246,17 +3246,6 @@ files = [
 ]
 
 [[package]]
-name = "types-pillow"
-version = "10.2.0.20240111"
-description = "Typing stubs for Pillow"
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "types-Pillow-10.2.0.20240111.tar.gz", hash = "sha256:e8d359bfdc5a149a3c90a7e153cb2d0750ddf7fc3508a20dfadabd8a9435e354"},
-    {file = "types_Pillow-10.2.0.20240111-py3-none-any.whl", hash = "sha256:1f4243b30c143b56b0646626f052e4269123e550f9096cdfb5fbd999daee7dbb"},
-]
-
-[[package]]
 name = "types-python-dateutil"
 version = "2.8.19.20240106"
 description = "Typing stubs for python-dateutil"
@@ -3375,4 +3364,4 @@ test = ["websockets"]
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.11"
-content-hash = "2622811cc84dbd69df61948447532c2e4f5193fef2081cd4885c5ee86549c631"
+content-hash = "bbb4b217d49341616a52b37bb068d96ba40f8344a71c142362f8c88638e043f7"
