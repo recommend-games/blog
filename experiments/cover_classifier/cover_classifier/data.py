@@ -28,6 +28,7 @@ class BoardGameDataset(Dataset):
         transform: Callable | None = None,
     ):
         self.types_mlb = self.read_types_file(types_file)
+        self.classes = self.types_mlb.classes
         self.game_data = self.read_games_file(games_file)
         self.image_root_dir = Path(image_root_dir).resolve()
         self.transform = transform
