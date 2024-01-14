@@ -90,7 +90,6 @@ def train(
             loss = criterion(outputs, labels.float().to(device))
             loss.backward()
             optimizer.step()
-            break
 
         model.eval()
         with torch.no_grad():
