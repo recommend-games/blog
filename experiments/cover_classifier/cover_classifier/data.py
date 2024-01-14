@@ -40,9 +40,12 @@ class BoardGameDataset(Dataset):
 
         self.transform = transform
         self.require_any_type = require_any_type
-        self.images, self.labels = self.read_games_file(games_file, image_root_dir)
-        assert len(self.images) == len(self.labels)
-        LOGGER.info("Loaded %d games and images in total", len(self.labels))
+        self.bgg_ids, self.images, self.labels = self.read_games_file(
+            games_file,
+            image_root_dir,
+        )
+        assert len(self.bgg_ids) == len(self.images) == len(self.labels)
+        LOGGER.info("Loaded %d games and images in total", len(self.bgg_ids))
 
     def read_types_file(self, types_file: str | Path) -> MultiLabelBinarizer:
         """Read types from file."""
@@ -56,7 +59,7 @@ class BoardGameDataset(Dataset):
         self,
         games_file: Union[str, Path],
         image_dir: Path,
-    ) -> tuple[tuple[torch.Tensor, ...], tuple[torch.Tensor, ...]]:
+    ) -> tuple[tuple[int, ...], tuple[torch.Tensor, ...], tuple[torch.Tensor, ...]]:
         """Read games from file."""
 
         games_file = Path(games_file).resolve()
@@ -66,14 +69,14 @@ class BoardGameDataset(Dataset):
                 self._parse_game(json.loads(line), image_dir)
                 for line in tqdm(islice(file, 1000))
             )
-            images, labels = zip(*filter(None, games))
-            return images, labels
+            bgg_ids, images, labels = zip(*filter(None, games))
+            return bgg_ids, images, labels
 
     def _parse_game(
         self,
         game: dict[str, Any],
         image_dir: Path,
-    ) -> tuple[torch.Tensor, torch.Tensor] | None:
+    ) -> tuple[int, torch.Tensor, torch.Tensor] | None:
         bgg_id: int | None = self.JMESPATH_BGG_ID.search(game)
         image_path_str: str | None = self.JMESPATH_IMAGE_PATH.search(game)
         game_types_raw: list[str] | None = self.JMESPATH_GAME_TYPES.search(game)
@@ -100,7 +103,7 @@ class BoardGameDataset(Dataset):
 
         image = self._read_and_transform_image(str(image_path))
 
-        return image, torch.from_numpy(game_types)
+        return bgg_id, image, torch.from_numpy(game_types)
 
     def _read_and_transform_image(self, image_path: str) -> torch.Tensor:
         image = read_image(image_path)
@@ -109,7 +112,7 @@ class BoardGameDataset(Dataset):
         return image
 
     def __len__(self) -> int:
-        return len(self.labels)
+        return len(self.bgg_ids)
 
-    def __getitem__(self, idx: int) -> tuple[torch.Tensor, torch.Tensor]:
-        return self.images[idx], self.labels[idx]
+    def __getitem__(self, idx: int) -> tuple[torch.Tensor, torch.Tensor, int]:
+        return self.images[idx], self.labels[idx], self.bgg_ids[idx]

@@ -78,12 +78,13 @@ def train(
     criterion = nn.BCEWithLogitsLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
+    # TODO: Let Lightning handle training loop
     num_epochs = 10
     for epoch in range(num_epochs):
         print(f"Epoch {epoch+1:>3d}/{num_epochs:>3d}")
 
         model.train()
-        for images, labels in tqdm(train_dataloader):
+        for images, labels, _ in tqdm(train_dataloader):
             optimizer.zero_grad()
             outputs = model(images.to(device))
             loss = criterion(outputs, labels.float().to(device))
@@ -96,14 +97,15 @@ def train(
             losses = torch.tensor(
                 [
                     criterion(model(inputs.to(device)), labels.float().to(device))
-                    for inputs, labels in tqdm(test_dataloader)
+                    for inputs, labels, _ in tqdm(test_dataloader)
                 ]
             )
             print(f"Loss: {losses.mean().item():>7.4f}")
 
-            images, labels = next(iter(test_dataloader))
+            images, labels, bgg_ids = next(iter(test_dataloader))
             output = F.sigmoid(model(images[:3, ...].to(device)))
-            print(labels[:3, ...].to(device), output)
+            print(dataset.types_mlb.inverse_transform(labels[:3, ...]))
+            print(bgg_ids[:3], "\n", labels[:3, ...], "\n", output)
 
         if model_path:
             torch.save(model.state_dict(), model_path)
