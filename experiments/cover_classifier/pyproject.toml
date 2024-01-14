@@ -39,7 +39,7 @@ python_version = "3.11"
 
 [[tool.mypy.overrides]]
 module = [
-    "sklearn",
-    "torchvision"
+    "sklearn.*",
+    "torchvision.*",
 ]
 ignore_missing_imports = true
