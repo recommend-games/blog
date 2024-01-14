@@ -29,6 +29,7 @@ class BoardGameDataset(Dataset):
         types_file: str | Path,
         image_root_dir: str | Path,
         transform: Callable | None = None,
+        max_samples: int | None = None,
         require_any_type: bool = False,
         device: str | torch.device | None = None,
     ):
@@ -45,6 +46,7 @@ class BoardGameDataset(Dataset):
         self.bgg_ids, self.images, self.labels = self.read_games_file(
             games_file,
             image_root_dir,
+            max_samples,
         )
         if device:
             self.bgg_ids = self.bgg_ids.to(device=device)
@@ -66,15 +68,16 @@ class BoardGameDataset(Dataset):
         self,
         games_file: Union[str, Path],
         image_dir: Path,
+        max_samples: int | None = None,
     ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
         """Read games from file."""
 
         games_file = Path(games_file).resolve()
         LOGGER.info("Reading games from file <%s>", games_file)
         with games_file.open(encoding="utf-8") as file:
+            lines = islice(file, max_samples) if max_samples else file
             games = (
-                self._parse_game(json.loads(line), image_dir)
-                for line in tqdm(islice(file, 1_000_000))
+                self._parse_game(json.loads(line), image_dir) for line in tqdm(lines)
             )
             bgg_ids, images, labels = zip(*filter(None, games))
         bgg_ids_tensor = torch.tensor(bgg_ids, dtype=torch.int32)
