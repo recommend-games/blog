@@ -36,6 +36,7 @@ def main():
         images_dir=BASE_DIR.parent / "board-game-scraper" / "images",
         device=device,
         model_path=model_path,
+        resume=True,
     )
 
 

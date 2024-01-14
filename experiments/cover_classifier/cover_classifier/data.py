@@ -1,5 +1,6 @@
 """Board game dataset."""
 
+from itertools import islice
 import json
 import logging
 from pathlib import Path
@@ -62,7 +63,8 @@ class BoardGameDataset(Dataset):
         LOGGER.info("Reading games from file <%s>", games_file)
         with games_file.open(encoding="utf-8") as file:
             games = (
-                self._parse_game(json.loads(line), image_dir) for line in tqdm(file)
+                self._parse_game(json.loads(line), image_dir)
+                for line in tqdm(islice(file, 1000))
             )
             images, labels = zip(*filter(None, games))
             return images, labels

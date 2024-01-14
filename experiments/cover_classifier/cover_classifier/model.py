@@ -65,13 +65,12 @@ def train(
         # num_workers=8,
     )
 
+    model.fc = nn.Linear(model.fc.in_features, num_classes)
     model_path = Path(model_path).resolve() if model_path else None
 
     if resume and model_path and model_path.exists():
         LOGGER.info("Resuming training from %s", model_path)
         model.load_state_dict(torch.load(model_path))
-    else:
-        model.fc = nn.Linear(model.fc.in_features, num_classes)
 
     LOGGER.info("Training model on %s", device)
     model.to(device)
@@ -90,6 +89,7 @@ def train(
             loss = criterion(outputs, labels.float().to(device))
             loss.backward()
             optimizer.step()
+            break
 
         model.eval()
         with torch.no_grad():
