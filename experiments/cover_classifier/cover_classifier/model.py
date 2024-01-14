@@ -101,13 +101,31 @@ def train(
                 ]
             )
             print(f"Loss: {losses.mean().item():>7.4f}")
-
-            images, labels, bgg_ids = next(iter(test_dataloader))
-            output = F.sigmoid(model(images[:3, ...].to(device)))
-            print(dataset.types_mlb.inverse_transform(labels[:3, ...]))
-            print(bgg_ids[:3], "\n", labels[:3, ...], "\n", output)
+            print_game_results(model, test_dataloader, dataset.classes, max_results=3)
 
         if model_path:
             torch.save(model.state_dict(), model_path)
 
     return model
+
+
+@torch.no_grad()
+def print_game_results(model, dataloader, classes, max_results: int | None = None):
+    """Print results for a batch of games."""
+    image_batch, label_batch, bgg_id_batch = next(iter(dataloader))
+    if max_results:
+        image_batch, label_batch, bgg_id_batch = (
+            image_batch[:max_results],
+            label_batch[:max_results],
+            bgg_id_batch[:max_results],
+        )
+    device = next(model.parameters()).device
+    model.eval()
+    prediction_batch = F.sigmoid(model(image_batch.to(device)))
+    for bgg_id, labels, predictions in zip(bgg_id_batch, label_batch, prediction_batch):
+        print(f"https://boardgamegeek.com/boardgame/{bgg_id.item()}")
+        for pred, label, class_ in sorted(
+            zip(predictions, labels, classes),
+            reverse=True,
+        ):
+            print(f"\t{class_:15}: {pred:>6.1%} ({label})")
