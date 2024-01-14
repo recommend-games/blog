@@ -43,8 +43,10 @@ def train(
         types_file=data_dir / "scraped" / "bgg_GameType.csv",
         image_root_dir=images_dir,
         transform=weights.transforms(),
+        require_any_type=False,
     )
     num_classes = len(dataset.classes)
+    # TODO: games without any type should be in a holdout set meant for human review
 
     train_dataset, test_dataset = random_split(dataset, (1 - test_size, test_size))
     LOGGER.info(

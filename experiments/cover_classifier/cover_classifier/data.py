@@ -67,7 +67,7 @@ class BoardGameDataset(Dataset):
         with games_file.open(encoding="utf-8") as file:
             games = (
                 self._parse_game(json.loads(line), image_dir)
-                for line in tqdm(islice(file, 10_000))
+                for line in tqdm(islice(file, 1_000_000))
             )
             bgg_ids, images, labels = zip(*filter(None, games))
             return bgg_ids, images, labels
@@ -81,11 +81,13 @@ class BoardGameDataset(Dataset):
         image_path_str: str | None = self.JMESPATH_IMAGE_PATH.search(game)
         game_types_raw: list[str] | None = self.JMESPATH_GAME_TYPES.search(game)
 
-        if not bgg_id or not image_path_str or not game_types_raw:
+        if not bgg_id or not image_path_str:
             return None
 
         game_type_labels = [
-            t for s in game_types_raw if (t := s.split(":")[0]) in self.classes_set
+            t
+            for s in game_types_raw or ()
+            if (t := s.split(":")[0]) in self.classes_set
         ]
         game_types = self.types_mlb.transform([game_type_labels])[0]
         if self.require_any_type and not any(game_types):
