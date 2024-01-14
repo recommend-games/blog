@@ -27,10 +27,15 @@ def main():
         if torch.backends.mps.is_available()
         else "cpu"
     )
+
+    model_path = Path().resolve() / "models" / "cover_classifier.pt"
+    model_path.parent.mkdir(parents=True, exist_ok=True)
+
     train(
         data_dir=BASE_DIR.parent / "board-game-data",
         images_dir=BASE_DIR.parent / "board-game-scraper" / "images",
         device=device,
+        model_path=model_path,
     )
 
 

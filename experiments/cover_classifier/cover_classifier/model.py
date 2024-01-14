@@ -23,6 +23,8 @@ def train(
     test_size: float = 0.01,
     batch_size: int = 128,
     device: str | torch.device = torch.device("cpu"),
+    model_path: str | Path | None = None,
+    resume: bool = False,
 ) -> nn.Module:
     """Train a model to classify board game covers."""
 
@@ -36,14 +38,14 @@ def train(
     weights = ResNet50_Weights.DEFAULT
     model: ResNet = resnet50(weights=weights)
 
-    LOGGER.info("Training model on %s", device)
-
     dataset = BoardGameDataset(
         games_file=data_dir / "scraped" / "bgg_GameItem.jl",
         types_file=data_dir / "scraped" / "bgg_GameType.csv",
         image_root_dir=images_dir,
         transform=weights.transforms(),
     )
+    num_classes = len(dataset.classes)
+
     train_dataset, test_dataset = random_split(dataset, (1 - test_size, test_size))
     LOGGER.info(
         "Split into %d training and %d test samples",
@@ -63,8 +65,15 @@ def train(
         # num_workers=8,
     )
 
-    num_classes = len(dataset.classes)
-    model.fc = nn.Linear(model.fc.in_features, num_classes)
+    model_path = Path(model_path).resolve() if model_path else None
+
+    if resume and model_path and model_path.exists():
+        LOGGER.info("Resuming training from %s", model_path)
+        model.load_state_dict(torch.load(model_path))
+    else:
+        model.fc = nn.Linear(model.fc.in_features, num_classes)
+
+    LOGGER.info("Training model on %s", device)
     model.to(device)
 
     criterion = nn.BCEWithLogitsLoss()
@@ -96,6 +105,7 @@ def train(
             output = F.sigmoid(model(images[:3, ...].to(device)))
             print(labels[:3, ...].to(device), output)
 
-        # TODO save model
+        if model_path:
+            torch.save(model.state_dict(), model_path)
 
     return model
