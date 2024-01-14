@@ -130,5 +130,5 @@ def print_game_results(model, dataloader, classes, max_results: int | None = Non
             zip(predictions, labels, classes),
             reverse=True,
         ):
-            error = round(pred) != label
+            error = round(pred.item()) != label.item()
             print(f"\t{class_:15}: {pred:>6.1%} ({label} {'❌' if error else '✅'})")
