@@ -43,7 +43,8 @@ def train(
         types_file=data_dir / "scraped" / "bgg_GameType.csv",
         image_root_dir=images_dir,
         transform=weights.transforms(),
-        require_any_type=False,
+        require_any_type=True,
+        device=device,
     )
     num_classes = len(dataset.classes)
     # TODO: games without any type should be in a holdout set meant for human review
@@ -88,8 +89,8 @@ def train(
         model.train()
         for images, labels, _ in tqdm(train_dataloader):
             optimizer.zero_grad()
-            outputs = model(images.to(device))
-            loss = criterion(outputs, labels.float().to(device))
+            outputs = model(images)
+            loss = criterion(outputs, labels.float())
             loss.backward()
             optimizer.step()
 
@@ -97,7 +98,7 @@ def train(
         with torch.no_grad():
             losses = torch.tensor(
                 [
-                    criterion(model(inputs.to(device)), labels.float().to(device))
+                    criterion(model(inputs), labels.float())
                     for inputs, labels, _ in tqdm(test_dataloader)
                 ]
             )
@@ -120,9 +121,8 @@ def print_game_results(model, dataloader, classes, max_results: int | None = Non
             label_batch[:max_results],
             bgg_id_batch[:max_results],
         )
-    device = next(model.parameters()).device
     model.eval()
-    prediction_batch = F.sigmoid(model(image_batch.to(device)))
+    prediction_batch = F.sigmoid(model(image_batch))
     for bgg_id, labels, predictions in zip(bgg_id_batch, label_batch, prediction_batch):
         print(f"https://boardgamegeek.com/boardgame/{bgg_id.item()}")
         for pred, label, class_ in sorted(

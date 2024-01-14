@@ -30,6 +30,7 @@ class BoardGameDataset(Dataset):
         image_root_dir: str | Path,
         transform: Callable | None = None,
         require_any_type: bool = False,
+        device: str | torch.device | None = None,
     ):
         image_root_dir = Path(image_root_dir).resolve()
         self.types_mlb = self.read_types_file(types_file)
@@ -40,10 +41,16 @@ class BoardGameDataset(Dataset):
 
         self.transform = transform
         self.require_any_type = require_any_type
+
         self.bgg_ids, self.images, self.labels = self.read_games_file(
             games_file,
             image_root_dir,
         )
+        if device:
+            self.bgg_ids = self.bgg_ids.to(device=device)
+            self.images = self.images.to(device=device)
+            self.labels = self.labels.to(device=device)
+
         assert len(self.bgg_ids) == len(self.images) == len(self.labels)
         LOGGER.info("Loaded %d games and images in total", len(self.bgg_ids))
 
@@ -59,7 +66,7 @@ class BoardGameDataset(Dataset):
         self,
         games_file: Union[str, Path],
         image_dir: Path,
-    ) -> tuple[tuple[int, ...], tuple[torch.Tensor, ...], tuple[torch.Tensor, ...]]:
+    ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
         """Read games from file."""
 
         games_file = Path(games_file).resolve()
@@ -70,7 +77,10 @@ class BoardGameDataset(Dataset):
                 for line in tqdm(islice(file, 1_000_000))
             )
             bgg_ids, images, labels = zip(*filter(None, games))
-            return bgg_ids, images, labels
+        bgg_ids_tensor = torch.tensor(bgg_ids, dtype=torch.int32)
+        images_tensor = torch.stack(images)
+        labels_tensor = torch.stack(labels)
+        return bgg_ids_tensor, images_tensor, labels_tensor
 
     def _parse_game(
         self,
@@ -116,5 +126,5 @@ class BoardGameDataset(Dataset):
     def __len__(self) -> int:
         return len(self.bgg_ids)
 
-    def __getitem__(self, idx: int) -> tuple[torch.Tensor, torch.Tensor, int]:
+    def __getitem__(self, idx: int) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
         return self.images[idx], self.labels[idx], self.bgg_ids[idx]
