@@ -67,7 +67,7 @@ class BoardGameDataset(Dataset):
         with games_file.open(encoding="utf-8") as file:
             games = (
                 self._parse_game(json.loads(line), image_dir)
-                for line in tqdm(islice(file, 1_000_000))
+                for line in tqdm(islice(file, 1_000))
             )
             bgg_ids, images, labels = zip(*filter(None, games))
             return bgg_ids, images, labels
