@@ -23,6 +23,7 @@ scikit-learn = "*"
 scipy = "*"
 seaborn = "*"
 torch = "*"
+torchmetrics = "*"
 torchvision = "*"
 tqdm = "*"
 
