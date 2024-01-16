@@ -118,7 +118,7 @@ class BoardGameDataset(Dataset):
             return None
 
         if random.random() > 0.15:
-            # randomly skip 15% of images
+            # randomly skip 85% of images
             return None
 
         image = self._read_and_transform_image(str(image_path))
