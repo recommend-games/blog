@@ -22,6 +22,7 @@ def train(
     images_dir: str | Path,
     test_size: float = 0.01,
     batch_size: int = 128,
+    num_epochs: int = 10,
     device: str | torch.device = torch.device("cpu"),
     model_path: str | Path | None = None,
     resume: bool = False,
@@ -44,7 +45,7 @@ def train(
         image_root_dir=images_dir,
         transform=weights.transforms(),
         require_any_type=True,
-        max_samples=10_000,
+        max_samples=1_000_000,
         device=device,
     )
     num_classes = len(dataset.classes)
@@ -83,7 +84,6 @@ def train(
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
     # TODO: Let Lightning handle training loop
-    num_epochs = 10
     for epoch in range(num_epochs):
         print(f"Epoch {epoch+1:>3d}/{num_epochs:>3d}")
 

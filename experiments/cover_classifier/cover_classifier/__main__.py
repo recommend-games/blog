@@ -31,13 +31,19 @@ def main():
     model_path = Path().resolve() / "models" / "cover_classifier.pt"
     model_path.parent.mkdir(parents=True, exist_ok=True)
 
-    train(
-        data_dir=BASE_DIR.parent / "board-game-data",
-        images_dir=BASE_DIR.parent / "board-game-scraper" / "images",
-        device=device,
-        model_path=model_path,
-        resume=True,
-    )
+    training_runs = 10
+
+    for i in range(training_runs):
+        print(f"Training run {i+1} of {training_runs}")
+        train(
+            data_dir=BASE_DIR.parent / "board-game-data",
+            images_dir=BASE_DIR.parent / "board-game-scraper" / "images",
+            batch_size=32,
+            num_epochs=10,
+            device=device,
+            model_path=model_path,
+            resume=True,
+        )
 
 
 if __name__ == "__main__":

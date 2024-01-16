@@ -4,6 +4,7 @@ from itertools import islice
 import json
 import logging
 from pathlib import Path
+import random
 from typing import Any, Callable, Union
 import jmespath
 import polars as pl
@@ -114,6 +115,10 @@ class BoardGameDataset(Dataset):
                 image_path,
                 bgg_id,
             )
+            return None
+
+        if random.random() > 0.15:
+            # randomly skip 15% of images
             return None
 
         image = self._read_and_transform_image(str(image_path))
