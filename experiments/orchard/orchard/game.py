@@ -28,17 +28,21 @@ class OrchardGame:
 
     def game_round(self) -> None:
         """Play one round of the game."""
+
         die = self.gen.integers(0, self.die_faces)
         LOGGER.debug("Rolled a %d", die)
+
         if die < self.num_trees:  # Regular fruit
             if self.fruits[die] > 0:
                 LOGGER.debug("Picked a fruit from tree %d", die)
                 self.fruits[die] -= 1
+
         elif die == self.num_trees:  # Basket
             max_fruits = np.argmax(self.fruits)
             LOGGER.debug("Chose a fruit from tree %d", max_fruits)
             assert self.fruits[max_fruits] > 0, "Game was already won!"
             self.fruits[max_fruits] -= 1
+
         else:  # Raven
             assert self.raven > 0, "Game was already lost!"
             self.raven -= 1
@@ -46,14 +50,21 @@ class OrchardGame:
 
     def run_game(self) -> tuple[bool, int]:
         """Run a single game."""
+
         for game_round in itertools.count():
-            if np.max(self.fruits) <= 0:
+            assert np.all(self.fruits >= 0), "Negative fruits!"
+            assert self.raven >= 0, "Negative raven!"
+
+            if np.max(self.fruits) == 0:
                 LOGGER.debug("Game won after %d rounds", game_round)
                 return True, game_round  # Game won
-            if self.raven <= 0:
+
+            if self.raven == 0:
                 LOGGER.debug("Game lost after %d rounds", game_round)
                 return False, game_round  # Game lost
+
             self.game_round()
+
         return False, 0  # Never reached
 
     def run_games(self, num_games: int) -> Generator[tuple[bool, int], None, None]:
