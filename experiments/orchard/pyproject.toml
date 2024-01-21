@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "orchard"
+version = "0.1.0"
+description = "(First) Orchard implementation"
+authors = ["Markus Shepherd <markus@recommend.games>"]
+
+[tool.poetry.dependencies]
+python = "3.12.*"
+
+black = "*"
+jupyter-black = "*"
+jupyterlab = "*"
+jupytext = "*"
+matplotlib = "*"
+mypy = "*"
+numpy = "*"
+pylint = "*"
+scipy = "*"
+seaborn = "*"
+tqdm = "*"
+
+[tool.poetry.group.dev.dependencies]
+types-tqdm = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+python_version = "3.11"
