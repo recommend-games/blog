@@ -8,6 +8,7 @@ authors = ["Markus Shepherd <markus@recommend.games>"]
 python = "3.12.*"
 
 black = "*"
+isort = "*"
 jupyter-black = "*"
 jupyterlab = "*"
 jupytext = "*"
@@ -22,9 +23,15 @@ tqdm = "*"
 [tool.poetry.group.dev.dependencies]
 types-tqdm = "*"
 
+[tool.black]
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.12"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.mypy]
-python_version = "3.11"
