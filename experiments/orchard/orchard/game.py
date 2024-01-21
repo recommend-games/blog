@@ -86,6 +86,15 @@ class OrchardGame:
 
     def run_games(self, num_games: int, progress_bar: bool = True) -> pl.DataFrame:
         """Run multiple games."""
+
+        LOGGER.info(
+            "Running %d games with %d trees, %d fruits per tree and %d raven steps",
+            num_games,
+            self.num_trees,
+            self.fruits_per_tree,
+            self.raven_steps,
+        )
+
         games = self._run_games(num_games)
         games_wrapped = tqdm(games, total=num_games) if progress_bar else games
         wins, rounds = zip(*games_wrapped)

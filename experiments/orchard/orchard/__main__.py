@@ -21,6 +21,38 @@ def parse_args():
     )
 
     parser.add_argument(
+        "--num-trees",
+        "-t",
+        type=int,
+        default=4,
+        help="Number of trees.",
+    )
+
+    parser.add_argument(
+        "--fruits-per-tree",
+        "-f",
+        type=int,
+        default=4,
+        help="Number of fruits per tree.",
+    )
+
+    parser.add_argument(
+        "--raven-steps",
+        "-r",
+        type=int,
+        default=6,
+        help="Number of steps the raven takes.",
+    )
+
+    parser.add_argument(
+        "--seed",
+        "-s",
+        type=int,
+        default=None,
+        help="Random seed.",
+    )
+
+    parser.add_argument(
         "--verbose",
         "-v",
         action="count",
@@ -42,7 +74,13 @@ def main():
         stream=sys.stdout,
     )
 
-    game = OrchardGame()
+    game = OrchardGame(
+        num_trees=args.num_trees,
+        fruits_per_tree=args.fruits_per_tree,
+        raven_steps=args.raven_steps,
+        random_seed=args.seed,
+    )
+
     full, wins, losses = game.analyse_games(args.num_games)
 
     print(f"Number of games: {args.num_games}")
