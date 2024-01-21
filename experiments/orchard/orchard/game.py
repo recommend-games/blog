@@ -14,12 +14,22 @@ LOGGER = logging.getLogger(__name__)
 class OrchardGame:
     """Orchard game implementation."""
 
-    def __init__(self) -> None:
-        self.gen = np.random.default_rng()
-        self.num_trees = 4
-        self.fruits_per_tree = 4
-        self.die_faces = self.num_trees + 2
-        self.raven_steps = 6
+    def __init__(
+        self,
+        *,
+        num_trees: int = 4,
+        fruits_per_tree: int = 4,
+        raven_steps: int = 6,
+        random_seed: int | None = None,
+    ) -> None:
+        self.num_trees = num_trees
+        self.fruits_per_tree = fruits_per_tree
+        self.raven_steps = raven_steps
+
+        self.die_faces = num_trees + 2
+
+        self.gen = np.random.default_rng(random_seed)
+
         self.reset()
 
     def reset(self) -> None:
