@@ -1,5 +1,6 @@
 import itertools
 import logging
+from typing import Generator
 
 import numpy as np
 
@@ -42,3 +43,12 @@ class OrchardGame:
                 return False, game_round  # Game lost
             self.game_round()
         return False, 0  # Never reached
+
+    def run_games(self, num_games: int) -> Generator[tuple[bool, int], None, None]:
+        for _ in range(num_games):
+            self.reset()
+            yield self.run_game()
+
+    def analyse_games(self, num_games: int) -> tuple[float, float]:
+        games = np.array(list(self.run_games(num_games)))
+        return np.mean(games[:, 0]), np.mean(games[:, 1])
