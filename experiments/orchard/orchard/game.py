@@ -5,6 +5,7 @@ import logging
 from typing import Generator
 
 import numpy as np
+from tqdm import tqdm
 
 LOGGER = logging.getLogger(__name__)
 
@@ -59,5 +60,8 @@ class OrchardGame:
 
     def analyse_games(self, num_games: int) -> tuple[float, float]:
         """Analyse multiple games."""
-        games = np.array(list(self.run_games(num_games)))
+        games = np.array(
+            list(tqdm(self.run_games(num_games), total=num_games)),
+            np.int32,
+        )
         return np.mean(games[:, 0]), np.mean(games[:, 1])
