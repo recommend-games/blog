@@ -5,6 +5,7 @@ import logging
 from typing import Generator
 
 import numpy as np
+import polars as pl
 from tqdm import tqdm
 
 LOGGER = logging.getLogger(__name__)
@@ -67,16 +68,34 @@ class OrchardGame:
 
         return False, 0  # Never reached
 
-    def run_games(self, num_games: int) -> Generator[tuple[bool, int], None, None]:
+    def _run_games(self, num_games: int) -> Generator[tuple[bool, int], None, None]:
         """Run multiple games."""
         for _ in range(num_games):
             self.reset()
             yield self.run_game()
 
-    def analyse_games(self, num_games: int) -> tuple[float, float]:
+    def run_games(self, num_games: int, progress_bar: bool = True) -> pl.DataFrame:
+        """Run multiple games."""
+        games = self._run_games(num_games)
+        games_wrapped = tqdm(games, total=num_games) if progress_bar else games
+        wins, rounds = zip(*games_wrapped)
+        return pl.DataFrame(data={"win": wins, "round_length": rounds})
+
+    def analyse_games(
+        self,
+        num_games: int,
+        progress_bar: bool = True,
+    ) -> tuple[pl.DataFrame, pl.DataFrame, pl.DataFrame]:
         """Analyse multiple games."""
-        games = np.array(
-            list(tqdm(self.run_games(num_games), total=num_games)),
-            np.int32,
+
+        results = self.run_games(num_games, progress_bar)
+
+        full = results.cast(pl.Int64).describe()
+        wins = results.filter(pl.col("win")).select(pl.col("round_length")).describe()
+        losses = (
+            results.filter(pl.col("win").not_())
+            .select(pl.col("round_length"))
+            .describe()
         )
-        return np.mean(games[:, 0]), np.mean(games[:, 1])
+
+        return full, wins, losses

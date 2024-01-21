@@ -43,11 +43,18 @@ def main():
     )
 
     game = OrchardGame()
-    mean_win, mean_rounds = game.analyse_games(args.num_games)
+    full, wins, losses = game.analyse_games(args.num_games)
 
     print(f"Number of games: {args.num_games}")
-    print(f"Win rate: {mean_win:.2%}")
-    print(f"Mean game length: {mean_rounds:.2f}")
+
+    print("Full results:")
+    print(full)
+
+    print("Round lengths of wins:")
+    print(wins)
+
+    print("Round lengths of losses:")
+    print(losses)
 
 
 if __name__ == "__main__":
