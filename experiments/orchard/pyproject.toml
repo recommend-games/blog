@@ -15,7 +15,7 @@ jupytext = "*"
 matplotlib = "*"
 mypy = "*"
 numpy = "*"
-polars = "*"
+polars = {version = "*", extras = ["pandas"]}
 pylint = "*"
 scipy = "*"
 seaborn = "*"
