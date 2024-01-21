@@ -26,6 +26,9 @@ game = OrchardGame()
 results = game.run_games(1_000_000)
 
 # %%
+results.cast(pl.Int64).describe()
+
+# %%
 data = results.select(
     pl.when(pl.col("win"))
     .then(pl.lit("Win"))
