@@ -1,3 +1,5 @@
+"""Orchard game implementation."""
+
 import itertools
 import logging
 from typing import Generator
@@ -8,6 +10,8 @@ LOGGER = logging.getLogger(__name__)
 
 
 class OrchardGame:
+    """Orchard game implementation."""
+
     def __init__(self) -> None:
         self.gen = np.random.default_rng()
         self.num_trees = 4
@@ -17,10 +21,12 @@ class OrchardGame:
         self.reset()
 
     def reset(self) -> None:
+        """Reset the game."""
         self.fruits = np.ones(self.num_trees, np.int8) * self.fruits_per_tree
         self.raven = self.raven_steps
 
     def game_round(self) -> None:
+        """Play one round of the game."""
         die = self.gen.integers(0, self.die_faces)
         if die < self.num_trees:  # Regular fruit
             if self.fruits[die] > 0:
@@ -34,6 +40,7 @@ class OrchardGame:
             self.raven -= 1
 
     def run_game(self) -> tuple[bool, int]:
+        """Run a single game."""
         for game_round in itertools.count():
             if np.min(self.fruits) <= 0:
                 LOGGER.debug("Game won after %d rounds", game_round)
@@ -45,10 +52,12 @@ class OrchardGame:
         return False, 0  # Never reached
 
     def run_games(self, num_games: int) -> Generator[tuple[bool, int], None, None]:
+        """Run multiple games."""
         for _ in range(num_games):
             self.reset()
             yield self.run_game()
 
     def analyse_games(self, num_games: int) -> tuple[float, float]:
+        """Analyse multiple games."""
         games = np.array(list(self.run_games(num_games)))
         return np.mean(games[:, 0]), np.mean(games[:, 1])
