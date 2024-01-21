@@ -1,10 +1,18 @@
 """Main entry point for the Orchard experiment."""
 
+import logging
+import sys
 from orchard.game import OrchardGame
 
 
 def main():
     """Run the experiment."""
+
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(message)s",
+        stream=sys.stdout,
+    )
 
     game = OrchardGame()
     num_games = 100_000
