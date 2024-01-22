@@ -2,6 +2,7 @@
 
 import itertools
 import logging
+from dataclasses import dataclass
 from typing import Generator
 
 import numpy as np
@@ -11,24 +12,28 @@ from tqdm import tqdm
 LOGGER = logging.getLogger(__name__)
 
 
+@dataclass
+class OrchardGameConfig:
+    """Orchard game configuration."""
+
+    num_trees: int = 4
+    fruits_per_tree: int = 4
+    fruits_per_basket_roll: int = 1
+    raven_steps: int = 6
+
+
 class OrchardGame:
     """Orchard game implementation."""
 
     def __init__(
         self,
+        config: OrchardGameConfig,
         *,
-        num_trees: int = 4,
-        fruits_per_tree: int = 4,
-        fruits_per_basket_roll: int = 1,
-        raven_steps: int = 6,
         random_seed: int | None = None,
     ) -> None:
-        self.num_trees = num_trees
-        self.fruits_per_tree = fruits_per_tree
-        self.fruits_per_basket_roll = fruits_per_basket_roll
-        self.raven_steps = raven_steps
+        self.config = config
 
-        self.die_faces = num_trees + 2
+        self.die_faces = config.num_trees + 2
 
         self.gen = np.random.default_rng(random_seed)
 
@@ -36,8 +41,10 @@ class OrchardGame:
 
     def reset(self) -> None:
         """Reset the game."""
-        self.fruits = np.ones(self.num_trees, np.int8) * self.fruits_per_tree
-        self.raven = self.raven_steps
+        self.fruits = (
+            np.ones(self.config.num_trees, np.int8) * self.config.fruits_per_tree
+        )
+        self.raven = self.config.raven_steps
 
     def game_round(self) -> None:
         """Play one round of the game."""
@@ -45,14 +52,14 @@ class OrchardGame:
         die = self.gen.integers(0, self.die_faces)
         LOGGER.debug("Rolled a %d", die)
 
-        if die < self.num_trees:  # Regular fruit
+        if die < self.config.num_trees:  # Regular fruit
             if self.fruits[die] > 0:
                 LOGGER.debug("Picked a fruit from tree %d", die)
                 self.fruits[die] -= 1
 
-        elif die == self.num_trees:  # Basket
+        elif die == self.config.num_trees:  # Basket
             assert np.max(self.fruits) > 0, "Game was already won!"
-            for _ in range(self.fruits_per_basket_roll):
+            for _ in range(self.config.fruits_per_basket_roll):
                 max_fruits = np.argmax(self.fruits)
                 if self.fruits[max_fruits] == 0:
                     LOGGER.debug("No fruits left on tree %d", max_fruits)
@@ -96,9 +103,9 @@ class OrchardGame:
         LOGGER.info(
             "Running %d games with %d trees, %d fruits per tree and %d raven steps",
             num_games,
-            self.num_trees,
-            self.fruits_per_tree,
-            self.raven_steps,
+            self.config.num_trees,
+            self.config.fruits_per_tree,
+            self.config.raven_steps,
         )
 
         games = self._run_games(num_games)

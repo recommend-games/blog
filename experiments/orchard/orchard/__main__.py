@@ -4,7 +4,7 @@ import argparse
 import logging
 import sys
 
-from orchard.game import OrchardGame
+from orchard.game import OrchardGame, OrchardGameConfig
 
 
 def parse_args():
@@ -82,13 +82,14 @@ def main():
         stream=sys.stdout,
     )
 
-    game = OrchardGame(
+    config = OrchardGameConfig(
         num_trees=args.num_trees,
         fruits_per_tree=args.fruits_per_tree,
         fruits_per_basket_roll=args.fruits_per_basket_roll,
         raven_steps=args.raven_steps,
-        random_seed=args.seed,
     )
+
+    game = OrchardGame(config=config, random_seed=args.seed)
 
     full, wins, losses = game.analyse_games(args.num_games)
 
