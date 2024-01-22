@@ -20,6 +20,7 @@ import polars as pl
 import jupyter_black
 import seaborn as sns
 from matplotlib import pyplot as plt
+from matplotlib import ticker
 from orchard.game import OrchardGame, OrchardGameConfig
 
 jupyter_black.load()
@@ -128,4 +129,36 @@ sns.histplot(
 plt.title("First Orchard (2009)")
 plt.tight_layout()
 plt.savefig(save_dir / "game_length_first.png")
+plt.show()
+
+# %% [markdown]
+# ## Alternative raven steps
+
+# %%
+win_rates = [0.0]
+for raven_steps in range(1, 11):
+    print(raven_steps)
+    config_alt = OrchardGameConfig(
+        num_trees=4,
+        fruits_per_tree=4,
+        fruits_per_basket_roll=1,
+        raven_steps=raven_steps,
+    )
+    results_alt = OrchardGame.run_games(
+        config=config_alt,
+        num_games=num_games,
+        random_seed=random_seed,
+    )
+    win_rate = results_alt["win"].mean()
+    print(f"{win_rate:>8.3%}")
+    win_rates.append(win_rate)
+
+# %%
+sns.barplot(x=range(1, 11), y=win_rates[1:])
+plt.title("First Orchard (2009)")
+plt.xlabel("Raven steps")
+plt.ylabel("Win rate")
+plt.tight_layout()
+plt.gca().yaxis.set_major_formatter(ticker.PercentFormatter(xmax=1))
+plt.savefig(save_dir / "win_rates_first.png")
 plt.show()
