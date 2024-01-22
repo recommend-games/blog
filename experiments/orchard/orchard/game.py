@@ -19,9 +19,9 @@ class OrchardGameConfig:
     """Orchard game configuration."""
 
     num_trees: int = 4
-    fruits_per_tree: int = 4
-    fruits_per_basket_roll: int = 1
-    raven_steps: int = 6
+    fruits_per_tree: int = 10
+    fruits_per_basket_roll: int = 2
+    raven_steps: int = 9
 
 
 class OrchardGame:

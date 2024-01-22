@@ -32,7 +32,7 @@ def parse_args():
         "--fruits-per-tree",
         "-f",
         type=int,
-        default=4,
+        default=10,
         help="Number of fruits per tree.",
     )
 
@@ -40,7 +40,7 @@ def parse_args():
         "--fruits-per-basket-roll",
         "-b",
         type=int,
-        default=1,
+        default=2,
         help="Number of fruits picked per basket roll.",
     )
 
@@ -48,7 +48,7 @@ def parse_args():
         "--raven-steps",
         "-r",
         type=int,
-        default=6,
+        default=9,
         help="Number of steps the raven takes.",
     )
 
