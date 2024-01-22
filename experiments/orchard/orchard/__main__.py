@@ -89,9 +89,11 @@ def main():
         raven_steps=args.raven_steps,
     )
 
-    game = OrchardGame(config=config, random_seed=args.seed)
-
-    full, wins, losses = game.analyse_games(args.num_games)
+    full, wins, losses = OrchardGame.analyse_games(
+        config=config,
+        num_games=args.num_games,
+        random_seed=args.seed,
+    )
 
     print(f"Number of games: {args.num_games}")
 

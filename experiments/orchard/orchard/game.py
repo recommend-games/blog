@@ -32,11 +32,8 @@ class OrchardGame:
         random_seed: int | None = None,
     ) -> None:
         self.config = config
-
         self.die_faces = config.num_trees + 2
-
         self.gen = np.random.default_rng(random_seed)
-
         self.reset()
 
     def reset(self) -> None:
@@ -91,38 +88,66 @@ class OrchardGame:
 
         return False, 0  # Never reached
 
-    def _run_games(self, num_games: int) -> Generator[tuple[bool, int], None, None]:
+    @classmethod
+    def _run_games(
+        cls,
+        config: OrchardGameConfig,
+        num_games: int,
+        *,
+        random_seed: int | None = None,
+    ) -> Generator[tuple[bool, int], None, None]:
         """Run multiple games."""
         for _ in range(num_games):
-            self.reset()
-            yield self.run_game()
+            game = cls(config=config, random_seed=random_seed)
+            yield game.run_game()
 
-    def run_games(self, num_games: int, progress_bar: bool = True) -> pl.DataFrame:
+    @classmethod
+    def run_games(
+        cls,
+        config: OrchardGameConfig,
+        num_games: int,
+        *,
+        random_seed: int | None = None,
+        progress_bar: bool = True,
+    ) -> pl.DataFrame:
         """Run multiple games."""
 
         LOGGER.info(
             "Running %d games with %d trees, %d fruits per tree, "
             + "%d fruits picked per basket roll and %d raven steps",
             num_games,
-            self.config.num_trees,
-            self.config.fruits_per_tree,
-            self.config.fruits_per_basket_roll,
-            self.config.raven_steps,
+            config.num_trees,
+            config.fruits_per_tree,
+            config.fruits_per_basket_roll,
+            config.raven_steps,
         )
 
-        games = self._run_games(num_games)
+        games = cls._run_games(
+            config=config,
+            num_games=num_games,
+            random_seed=random_seed,
+        )
         games_wrapped = tqdm(games, total=num_games) if progress_bar else games
         wins, rounds = zip(*games_wrapped)
         return pl.DataFrame(data={"win": wins, "round_length": rounds})
 
+    @classmethod
     def analyse_games(
-        self,
+        cls,
+        config: OrchardGameConfig,
         num_games: int,
+        *,
+        random_seed: int | None = None,
         progress_bar: bool = True,
     ) -> tuple[pl.DataFrame, pl.DataFrame, pl.DataFrame]:
         """Analyse multiple games."""
 
-        results = self.run_games(num_games, progress_bar)
+        results = cls.run_games(
+            config=config,
+            num_games=num_games,
+            random_seed=random_seed,
+            progress_bar=progress_bar,
+        )
 
         full = results.cast(pl.Int64).describe()
         wins = results.filter(pl.col("win")).select(pl.col("round_length")).describe()
