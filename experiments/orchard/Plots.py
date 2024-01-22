@@ -32,8 +32,10 @@ save_dir = Path().resolve() / "plots"
 save_dir.mkdir(parents=True, exist_ok=True)
 num_games, save_dir
 
+# %% [markdown]
+# # Original Orchard (1986)
+
 # %%
-# Original Orchard (1986)
 config_original = OrchardGameConfig(
     num_trees=4,
     fruits_per_tree=10,
@@ -79,8 +81,10 @@ plt.tight_layout()
 plt.savefig(save_dir / "game_length_original.png")
 plt.show()
 
+# %% [markdown]
+# # First Orchard (2009)
+
 # %%
-# First Orchard (2009)
 config_first = OrchardGameConfig(
     num_trees=4,
     fruits_per_tree=4,
