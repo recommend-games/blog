@@ -27,49 +27,48 @@ warnings.filterwarnings("ignore")
 
 # %%
 num_games = 100_000
+random_seed = 42
 save_dir = Path().resolve() / "plots"
 save_dir.mkdir(parents=True, exist_ok=True)
 num_games, save_dir
 
 # %%
 # Original Orchard (1986)
-config = OrchardGameConfig(
+config_original = OrchardGameConfig(
     num_trees=4,
     fruits_per_tree=10,
     fruits_per_basket_roll=2,
     raven_steps=9,
 )
-# First Orchard (2009)
-# config = OrchardGameConfig(
-#     num_trees=4,
-#     fruits_per_tree=4,
-#     fruits_per_basket_roll=1,
-#     raven_steps=6,
-# )
-config
+config_original
 
 # %%
-results = OrchardGame.run_games(config=config, num_games=num_games)
-results.shape
+results_original = OrchardGame.run_games(
+    config=config_original,
+    num_games=num_games,
+    random_seed=random_seed,
+)
+results_original.shape
 
 # %%
-results.cast(pl.Int64).describe()
+results_original.cast(pl.Int64).describe()
 
 # %%
-data = results.select(
+data_original = results_original.select(
     pl.when(pl.col("win"))
     .then(pl.lit("Win"))
     .otherwise(pl.lit("Loss"))
     .alias("Outcome"),
     pl.col("round_length").alias("Game length"),
 )
-data.shape
+data_original.shape
 
 # %%
 sns.histplot(
-    data=data,
+    data=data_original,
     x="Game length",
     hue="Outcome",
+    hue_order=("Win", "Loss"),
     stat="proportion",
     discrete=True,
     common_norm=True,
@@ -78,4 +77,51 @@ sns.histplot(
 plt.title("Orchard (1986)")
 plt.tight_layout()
 plt.savefig(save_dir / "game_length_original.png")
+plt.show()
+
+# %%
+# First Orchard (2009)
+config_first = OrchardGameConfig(
+    num_trees=4,
+    fruits_per_tree=4,
+    fruits_per_basket_roll=1,
+    raven_steps=6,
+)
+config_first
+
+# %%
+results_first = OrchardGame.run_games(
+    config=config_first,
+    num_games=num_games,
+    random_seed=random_seed,
+)
+results_first.shape
+
+# %%
+results_first.cast(pl.Int64).describe()
+
+# %%
+data_first = results_first.select(
+    pl.when(pl.col("win"))
+    .then(pl.lit("Win"))
+    .otherwise(pl.lit("Loss"))
+    .alias("Outcome"),
+    pl.col("round_length").alias("Game length"),
+)
+data_first.shape
+
+# %%
+sns.histplot(
+    data=data_first,
+    x="Game length",
+    hue="Outcome",
+    hue_order=("Win", "Loss"),
+    stat="proportion",
+    discrete=True,
+    common_norm=True,
+    multiple="stack",
+)
+plt.title("First Orchard (2009)")
+plt.tight_layout()
+plt.savefig(save_dir / "game_length_first.png")
 plt.show()
