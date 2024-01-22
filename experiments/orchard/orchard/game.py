@@ -93,11 +93,12 @@ class OrchardGame:
     @classmethod
     def _run_game_wrapper(
         cls,
-        _,  # Dummy argument
+        num_game: int,
         *,
         config: OrchardGameConfig,
         random_seed: int | None,
     ) -> tuple[bool, int]:
+        random_seed = random_seed + num_game if random_seed is not None else None
         game = cls(config=config, random_seed=random_seed)
         return game.run_game()
 
