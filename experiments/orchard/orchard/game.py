@@ -1,5 +1,7 @@
 """Orchard game implementation."""
 
+import concurrent.futures
+import functools
 import itertools
 import logging
 from dataclasses import dataclass
@@ -89,6 +91,16 @@ class OrchardGame:
         return False, 0  # Never reached
 
     @classmethod
+    def _run_game_wrapper(
+        cls,
+        _,  # Dummy argument
+        *,
+        config: OrchardGameConfig,
+        random_seed: int | None,
+    ) -> tuple[bool, int]:
+        return cls(config=config, random_seed=random_seed).run_game()
+
+    @classmethod
     def _run_games(
         cls,
         config: OrchardGameConfig,
@@ -97,9 +109,16 @@ class OrchardGame:
         random_seed: int | None = None,
     ) -> Generator[tuple[bool, int], None, None]:
         """Run multiple games."""
-        for _ in range(num_games):
-            game = cls(config=config, random_seed=random_seed)
-            yield game.run_game()
+        with concurrent.futures.ProcessPoolExecutor() as executor:
+            game_results = executor.map(
+                functools.partial(
+                    cls._run_game_wrapper,
+                    config=config,
+                    random_seed=random_seed,
+                ),
+                range(num_games),
+            )
+            yield from game_results
 
     @classmethod
     def run_games(
