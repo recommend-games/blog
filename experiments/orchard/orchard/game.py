@@ -14,7 +14,7 @@ from tqdm import tqdm
 LOGGER = logging.getLogger(__name__)
 
 
-@dataclass
+@dataclass(frozen=True, kw_only=True)
 class OrchardGameConfig:
     """Orchard game configuration."""
 

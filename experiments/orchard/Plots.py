@@ -17,13 +17,30 @@
 import polars as pl
 import jupyter_black
 import seaborn as sns
-from orchard.game import OrchardGame
+from orchard.game import OrchardGame, OrchardGameConfig
 
 jupyter_black.load()
 
 # %%
-game = OrchardGame()
-results = game.run_games(1_000_000)
+# Original Orchard (1986)
+config = OrchardGameConfig(
+    num_trees=4,
+    fruits_per_tree=10,
+    fruits_per_basket_roll=2,
+    raven_steps=9,
+)
+# First Orchard (2009)
+# config = OrchardGameConfig(
+#     num_trees=4,
+#     fruits_per_tree=4,
+#     fruits_per_basket_roll=1,
+#     raven_steps=6,
+# )
+config
+
+# %%
+results = OrchardGame.run_games(config=config, num_games=100_000, random_seed=42)
+results.shape
 
 # %%
 results.cast(pl.Int64).describe()
@@ -47,4 +64,5 @@ sns.histplot(
     discrete=True,
     common_norm=True,
     multiple="stack",
+    # element="step",
 )
