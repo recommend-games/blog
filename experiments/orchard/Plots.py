@@ -14,12 +14,14 @@
 # ---
 
 # %%
+import warnings
 import polars as pl
 import jupyter_black
 import seaborn as sns
 from orchard.game import OrchardGame, OrchardGameConfig
 
 jupyter_black.load()
+warnings.filterwarnings("ignore")
 
 # %%
 # Original Orchard (1986)
