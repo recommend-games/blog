@@ -7,28 +7,23 @@ authors = ["Markus Shepherd <markus@recommend.games>"]
 [tool.poetry.dependencies]
 python = "3.12.*"
 
-black = "*"
-isort = "*"
-jupyter-black = "*"
-jupyterlab = "*"
-jupytext = "*"
 matplotlib = "*"
-mypy = "*"
 numpy = "*"
 polars = {version = "*", extras = ["pandas"]}
-pylint = "*"
 scipy = "*"
 seaborn = "*"
 tqdm = "*"
 
 [tool.poetry.group.dev.dependencies]
+jupyter-black = "*"
+jupyterlab = "*"
+jupytext = "*"
+mypy = "*"
+ruff = "*"
 types-tqdm = "*"
 
-[tool.black]
-target-version = ["py312"]
-
-[tool.isort]
-profile = "black"
+[tool.ruff]
+target-version = "py312"
 
 [tool.mypy]
 python_version = "3.12"
