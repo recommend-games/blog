@@ -88,7 +88,7 @@ class OrchardGame:
 
             self.game_round()
 
-        return False, 0  # Never reached
+        raise RuntimeError("Unreachable code reached!")
 
     @classmethod
     def _run_game_wrapper(
@@ -98,7 +98,8 @@ class OrchardGame:
         config: OrchardGameConfig,
         random_seed: int | None,
     ) -> tuple[bool, int]:
-        return cls(config=config, random_seed=random_seed).run_game()
+        game = cls(config=config, random_seed=random_seed)
+        return game.run_game()
 
     @classmethod
     def _run_games(
