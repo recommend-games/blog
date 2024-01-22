@@ -37,6 +37,14 @@ def parse_args():
     )
 
     parser.add_argument(
+        "--fruits-per-basket-roll",
+        "-b",
+        type=int,
+        default=1,
+        help="Number of fruits picked per basket roll.",
+    )
+
+    parser.add_argument(
         "--raven-steps",
         "-r",
         type=int,
@@ -77,6 +85,7 @@ def main():
     game = OrchardGame(
         num_trees=args.num_trees,
         fruits_per_tree=args.fruits_per_tree,
+        fruits_per_basket_roll=args.fruits_per_basket_roll,
         raven_steps=args.raven_steps,
         random_seed=args.seed,
     )
