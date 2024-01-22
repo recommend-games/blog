@@ -19,11 +19,13 @@ class OrchardGame:
         *,
         num_trees: int = 4,
         fruits_per_tree: int = 4,
+        fruits_per_basket_roll: int = 1,
         raven_steps: int = 6,
         random_seed: int | None = None,
     ) -> None:
         self.num_trees = num_trees
         self.fruits_per_tree = fruits_per_tree
+        self.fruits_per_basket_roll = fruits_per_basket_roll
         self.raven_steps = raven_steps
 
         self.die_faces = num_trees + 2
@@ -49,10 +51,14 @@ class OrchardGame:
                 self.fruits[die] -= 1
 
         elif die == self.num_trees:  # Basket
-            max_fruits = np.argmax(self.fruits)
-            LOGGER.debug("Chose a fruit from tree %d", max_fruits)
-            assert self.fruits[max_fruits] > 0, "Game was already won!"
-            self.fruits[max_fruits] -= 1
+            assert np.max(self.fruits) > 0, "Game was already won!"
+            for _ in range(self.fruits_per_basket_roll):
+                max_fruits = np.argmax(self.fruits)
+                if self.fruits[max_fruits] == 0:
+                    LOGGER.debug("No fruits left on tree %d", max_fruits)
+                    break
+                LOGGER.debug("Chose a fruit from tree %d", max_fruits)
+                self.fruits[max_fruits] -= 1
 
         else:  # Raven
             assert self.raven > 0, "Game was already lost!"
