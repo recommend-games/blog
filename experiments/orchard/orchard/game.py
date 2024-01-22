@@ -101,10 +101,12 @@ class OrchardGame:
         """Run multiple games."""
 
         LOGGER.info(
-            "Running %d games with %d trees, %d fruits per tree and %d raven steps",
+            "Running %d games with %d trees, %d fruits per tree, "
+            + "%d fruits picked per basket roll and %d raven steps",
             num_games,
             self.config.num_trees,
             self.config.fruits_per_tree,
+            self.config.fruits_per_basket_roll,
             self.config.raven_steps,
         )
 
