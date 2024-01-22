@@ -15,13 +15,21 @@
 
 # %%
 import warnings
+from pathlib import Path
 import polars as pl
 import jupyter_black
 import seaborn as sns
+from matplotlib import pyplot as plt
 from orchard.game import OrchardGame, OrchardGameConfig
 
 jupyter_black.load()
 warnings.filterwarnings("ignore")
+
+# %%
+num_games = 100_000
+save_dir = Path().resolve() / "plots"
+save_dir.mkdir(parents=True, exist_ok=True)
+num_games, save_dir
 
 # %%
 # Original Orchard (1986)
@@ -41,7 +49,7 @@ config = OrchardGameConfig(
 config
 
 # %%
-results = OrchardGame.run_games(config=config, num_games=100_000, random_seed=42)
+results = OrchardGame.run_games(config=config, num_games=num_games)
 results.shape
 
 # %%
@@ -66,5 +74,8 @@ sns.histplot(
     discrete=True,
     common_norm=True,
     multiple="stack",
-    # element="step",
 )
+plt.title("Orchard (1986)")
+plt.tight_layout()
+plt.savefig(save_dir / "game_length_original.png")
+plt.show()
