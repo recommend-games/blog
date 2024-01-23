@@ -27,7 +27,7 @@ What makes for a pretty dull game (by adult standards, of course) actually makes
 
 In order to determine the win rate, we can just simulate a series of die rolls and check if their outcome means we win or lose the game. Repeat this process thousands of times and we get a pretty good estimate of the win rate. So without further ado, here's the win rate for Orchard:
 
-It's **68.282%**. You're going to win just over two thirds of your games of {{% game 5770 %}}Orchard{{% /game %}}.
+It's **68.3%**. You're going to win just over two thirds of your games of {{% game 5770 %}}Orchard{{% /game %}}.
 
 Is this particularly high or low? It's actually a really tough challenge in game design to calibrate the win rate of a co-operative game. If you ask people how often they should win a co-operative game for it to be interesting and challenging, they might say something like 50–50, but in reality people simply don't like losing and would probably be frustrated to play a game where they lose half the time. With that in mind, a game the children will lose 32% of the time seems like a desaster in the making. 😅
 
@@ -41,14 +41,20 @@ So the average game last for about 40 rounds, with a standard deviation of about
 
 Luckily, there's a version for even smaller children called {{% game 41302 %}}First Orchard{{% /game %}}. Mechanically, it's almost equivalent except for a few hyperparameter: there's only 4 of each fruit instead of 10, you only get to pick one fruit on a basket roll and you lose the game after 6 raven rolls,[^raven] but that's it. How do these changes affect the win rate?
 
-The answer is **76.835%**. Expect to win 3 out of 4 games of {{% game 41302 %}}First Orchard{{% /game %}}.
+The answer is **76.8%**. Expect to win 3 out of 4 games of {{% game 41302 %}}First Orchard{{% /game %}}.
 
 When playing with toddler who rarely have the emotional maturity to handle losing, this seems like a much better win rate. Reducing the number of fruits also cuts the game length in half, much more accomodating for the attention span of a toddler:
 
 {{< img src="game_length_first" alt="Histogram over the lengths of games of First Orchard" >}}
 
-TODO
+Obviously, the win rate will be affected by chosing any of those parameters, but the length of the raven path would probably be the easiest lever to pull if we wanted to make {{% game 41302 %}}First Orchard{{% /game %}} as hard as its big sibling. Here's the win rate for different lengths of the raven path:
 
 {{< img src="win_rates_first" alt="Win rates for First Orchard with different lengths of the raven path" >}}
+
+Reducing the path by just one step drops the win rate to 63%, i.e., even below that of {{% game 5770 %}}Orchard{{% /game %}}, another step reducting would lower it below 50%. For the sake of the peace in our household, I'm glad they've found the space in the box for the extra steps. 😅
+
+<!-- TODO probably another image, maybe of our kids? -->
+
+I'll leave you with one final thought: as an obsessive data collector, I have logged 68 games of {{% game 41302 %}}First Orchard{{% /game %}}, 47 of which we've won, i.e., we have a win rate of 69.1%. Our sample isn't big enough for this difference to be significant (or is it? I'm not going to crunch the numbers now 🤷), but anyways there's plenty of factors that influence our win rate IRL: my children will rather pick their favourite colour when given a choice than follow the optimal strategy, there was an extra apple in our box (and children emphatically cannot stand leftover components – publishers, take note and stop putting variants in children's games 😉), their die rolling is far from random, etc. Also, I don't think we ever really lost a game of {{% game 41302 %}}First Orchard{{% /game %}}: when the raven reaches the orchard, my older daughter will just say that the raven flies off to its nest. 🐦‍⬛ Toddlers… 🤷
 
 [^raven]: The raven path in {{% game 41302 %}}First Orchard{{% /game %}} actually has 5 steps, but you start off path and lose when the raven steps off the path into the orchard, i.e., after 6 raven rolls.
