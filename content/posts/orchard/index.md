@@ -37,8 +37,18 @@ A by-product of the simulation is that we can also look at the distribution of g
 
 So the average game last for about 40 rounds, with a standard deviation of about 5.4, i.e., quite a lot of spread. The shortest possible game would be losing after rolling 9 ravens in a row – the probability of that is \\( 6^{-9} \approx 0.00001\\% \\) or 1 in 10 million games. The shortest possible win would mean rolling the basket 20 times in a row (basket rolls allow you to pick two fruits at once) – which happens in 1 in 3,656,158,440,062,976 games. In theory, the game could go on forever if you keep rolling fruits you've already emptied, but honestly, already 40 die rolls without any decisions feels long enough for my taste – in particular when you have to watch a toddler at the same time. 👶
 
+<!-- TODO first orchard cover -->
+
+Luckily, there's a version for even smaller children called {{% game 41302 %}}First Orchard{{% /game %}}. Mechanically, it's almost equivalent except for a few hyperparameter: there's only 4 of each fruit instead of 10, you only get to pick one fruit on a basket roll and you lose the game after 6 raven rolls,[^raven] but that's it. How do these changes affect the win rate?
+
+The answer is **76.835%**. Expect to win 3 out of 4 games of {{% game 41302 %}}First Orchard{{% /game %}}.
+
+When playing with toddler who rarely have the emotional maturity to handle losing, this seems like a much better win rate. Reducing the number of fruits also cuts the game length in half, much more accomodating for the attention span of a toddler:
+
 {{< img src="game_length_first" alt="Histogram over the lengths of games of First Orchard" >}}
 
 TODO
 
 {{< img src="win_rates_first" alt="Win rates for First Orchard with different lengths of the raven path" >}}
+
+[^raven]: The raven path in {{% game 41302 %}}First Orchard{{% /game %}} actually has 5 steps, but you start off path and lose when the raven steps off the path into the orchard, i.e., after 6 raven rolls.
