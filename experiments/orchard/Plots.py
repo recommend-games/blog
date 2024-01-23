@@ -78,7 +78,7 @@ sns.histplot(
     multiple="stack",
 )
 plt.title("Orchard (1986)")
-plt.tight_layout()
+# plt.tight_layout()
 plt.savefig(save_dir / "game_length_original.png")
 plt.show()
 
@@ -127,7 +127,7 @@ sns.histplot(
     multiple="stack",
 )
 plt.title("First Orchard (2009)")
-plt.tight_layout()
+# plt.tight_layout()
 plt.savefig(save_dir / "game_length_first.png")
 plt.show()
 
@@ -158,7 +158,7 @@ sns.barplot(x=range(1, 11), y=win_rates[1:])
 plt.title("First Orchard (2009)")
 plt.xlabel("Raven steps")
 plt.ylabel("Win rate")
-plt.tight_layout()
+# plt.tight_layout()
 plt.gca().yaxis.set_major_formatter(ticker.PercentFormatter(xmax=1))
 plt.savefig(save_dir / "win_rates_first.png")
 plt.show()
