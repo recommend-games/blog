@@ -25,11 +25,17 @@ What makes for a pretty dull game (by adult standards, of course) actually makes
 
 <!-- TODO another image -->
 
-In order to determine the win rate, we can just simulate a series of die rolls and check if their outcome means we win or lose the game. Repeat this process thousands of time and we get a pretty good estimate of the win rate.
+In order to determine the win rate, we can just simulate a series of die rolls and check if their outcome means we win or lose the game. Repeat this process thousands of times and we get a pretty good estimate of the win rate. So without further ado, here's the win rate for Orchard:
+
+It's **68.282%**. You're going to win just over two thirds of your games of {{% game 5770 %}}Orchard{{% /game %}}.
+
+Is this particularly high or low? It's actually a really tough challenge in game design to calibrate the win rate of a co-operative game. If you ask people how often they should win a co-operative game for it to be interesting and challenging, they might say something like 50–50, but in reality people simply don't like losing and would probably be frustrated to play a game where they lose half the time. With that in mind, a game the children will lose 32% of the time seems like a desaster in the making. 😅
+
+A by-product of the simulation is that we can also look at the distribution of game lengths. Here's a histogram of the lengths of games of Orchard:
 
 {{< img src="game_length_original" alt="Histogram over the lengths of games of Orchard" >}}
 
-TODO
+So the average game last for about 40 rounds, with a standard deviation of about 5.4, i.e., quite a lot of spread. The shortest possible game would be losing after rolling 9 ravens in a row – the probability of that is \\( 6^{-9} \approx 0.00001\\% \\) or 1 in 10 million games. The shortest possible win would mean rolling the basket 20 times in a row (basket rolls allow you to pick two fruits at once) – which happens in 1 in 3,656,158,440,062,976 games. In theory, the game could go on forever if you keep rolling fruits you've already emptied, but honestly, already 40 die rolls without any decisions feels long enough for my taste – in particular when you have to watch a toddler at the same time. 👶
 
 {{< img src="game_length_first" alt="Histogram over the lengths of games of First Orchard" >}}
 
