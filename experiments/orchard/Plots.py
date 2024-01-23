@@ -80,6 +80,7 @@ sns.histplot(
 plt.title("Orchard (1986)")
 # plt.tight_layout()
 plt.savefig(save_dir / "game_length_original.png")
+plt.savefig(save_dir / "game_length_original.svg")
 plt.show()
 
 # %% [markdown]
@@ -129,6 +130,7 @@ sns.histplot(
 plt.title("First Orchard (2009)")
 # plt.tight_layout()
 plt.savefig(save_dir / "game_length_first.png")
+plt.savefig(save_dir / "game_length_first.svg")
 plt.show()
 
 # %% [markdown]
@@ -161,4 +163,5 @@ plt.ylabel("Win rate")
 # plt.tight_layout()
 plt.gca().yaxis.set_major_formatter(ticker.PercentFormatter(xmax=1))
 plt.savefig(save_dir / "win_rates_first.png")
+plt.savefig(save_dir / "win_rates_first.svg")
 plt.show()
