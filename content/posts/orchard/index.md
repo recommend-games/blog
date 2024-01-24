@@ -3,7 +3,7 @@ title: "Child's play: How hard is Orchard?"
 slug: orchard
 author: Markus Shepherd
 type: post
-date: 2024-01-24T21:00:00+02:00
+date: 2024-01-24T21:41:00+02:00
 tags:
   - Orchard
   - First Orchard
@@ -56,5 +56,7 @@ Reducing the path by just one step drops the win rate to 63%, i.e., even below t
 {{< img src="first_orchard_detail" alt="Detail shot of First Orchard" size="600x" >}}
 
 I'll leave you with one final thought: as an obsessive data collector, I have logged 68 games of {{% game 41302 %}}First Orchard{{% /game %}}, 47 of which we've won, i.e., we have a win rate of 69.1%. Our sample isn't big enough for this difference to be significant (or is it? I'm not going to crunch the numbers now 🤷), but anyways there's plenty of factors that influence our win rate IRL: my children will rather pick their favourite colour when given a choice than follow the optimal strategy, there was an extra apple in our box (and children emphatically cannot stand leftover components – publishers, take note and stop putting variants in children's games 😉), their die rolling is far from random, etc. Also, I don't think we ever really lost a game of {{% game 41302 %}}First Orchard{{% /game %}}: when the raven reaches the orchard, my older daughter will just say that the raven flies off to its nest. 🐦‍⬛ Toddlers… 🤷
+
+*PS*: You can find the code for the simulations [here](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/orchard).
 
 [^raven]: The raven path in {{% game 41302 %}}First Orchard{{% /game %}} actually has 5 steps, but you start off path and lose when the raven steps off the path into the orchard, i.e., after 6 raven rolls.
