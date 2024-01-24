@@ -3,7 +3,7 @@ title: "Child's play: How hard is Orchard?"
 slug: orchard
 author: Markus Shepherd
 type: post
-date: 2024-01-23T21:00:00+02:00
+date: 2024-01-24T21:00:00+02:00
 tags:
   - Orchard
   - First Orchard
@@ -25,13 +25,13 @@ What makes for a pretty dull game (by adult standards, of course) actually makes
 
 {{< img src="orchard_in_orchard" alt="Orchard in an orchard" size="600x" >}}
 
-In order to determine the win rate, we can just simulate a series of die rolls and check if their outcome means we win or lose the game. Repeat this process thousands of times and we get a pretty good estimate of the win rate. So without further ado, here's the win rate for Orchard:
+In order to determine the win rate, we can just simulate a series of die rolls and check if their outcome means we win or lose the game. Repeat this process thousands of times and we get a pretty good estimate of the win rate. So without further ado, here's the win rate for {{% game 5770 %}}Orchard{{% /game %}}:
 
 It's **68.3%**. You're going to win just over two thirds of your games of {{% game 5770 %}}Orchard{{% /game %}}.
 
 Is this particularly high or low? It's actually a really tough challenge in game design to calibrate the win rate of a co-operative game. If you ask people how often they should win a co-operative game for it to be interesting and challenging, they might say something like 50–50, but in reality people simply don't like losing and would probably be frustrated to play a game where they lose half the time. With that in mind, a game the children will lose 32% of the time seems like a desaster in the making. 😅
 
-A by-product of the simulation is that we can also look at the distribution of game lengths. Here's a histogram of the lengths of games of Orchard:
+A by-product of the simulation is that we can also look at the distribution of game lengths. Here's a histogram of the lengths of games of {{% game 5770 %}}Orchard{{% /game %}}:
 
 {{< img src="game_length_original" alt="Histogram over the lengths of games of Orchard" >}}
 
@@ -43,7 +43,7 @@ Luckily, there's a version for even smaller children called {{% game 41302 %}}Fi
 
 The answer is **76.8%**. Expect to win 3 out of 4 games of {{% game 41302 %}}First Orchard{{% /game %}}.
 
-When playing with toddler who rarely have the emotional maturity to handle losing, this seems like a much better win rate. Reducing the number of fruits also cuts the game length in half, much more accomodating for the attention span of a toddler:
+When playing with toddlers who rarely have the emotional maturity to handle losing, this seems like a much better win rate. Reducing the number of fruits also cuts the game length in half, much more accomodating for the attention span of a toddler:
 
 {{< img src="game_length_first" alt="Histogram over the lengths of games of First Orchard" >}}
 
