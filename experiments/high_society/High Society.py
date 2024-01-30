@@ -20,6 +20,7 @@
 import jupyter_black
 import numpy as np
 import seaborn as sns
+from collections import defaultdict
 from scipy.stats import hypergeom
 
 jupyter_black.load()
@@ -28,6 +29,8 @@ jupyter_black.load()
 num_cards = 16
 num_dark = 4
 num_games = 1_000_000
+possible_lengths = np.arange(num_dark - 1, num_cards)
+
 random_seed = None
 rng = np.random.default_rng(seed=random_seed)
 
@@ -40,10 +43,11 @@ games[:, :num_dark] = True
 games = rng.permuted(games, axis=1, out=games)
 
 # %%
-lengths = np.sum(np.cumsum(games, axis=1) < num_dark, axis=1)
-print(lengths.mean(), lengths.std())
-game_length, game_length_count = np.unique(lengths, return_counts=True)
-dict(zip(game_length, game_length_count / num_games))
+lengths_simulations = np.sum(np.cumsum(games, axis=1) < num_dark, axis=1)
+print(lengths_simulations.mean(), lengths_simulations.std())
+unique_lengths, length_counts = np.unique(lengths_simulations, return_counts=True)
+actual_lengths = defaultdict(float, zip(unique_lengths, length_counts / num_games))
+{num_rounds: actual_lengths[num_rounds] for num_rounds in possible_lengths}
 
 # %% [markdown]
 # ## Hypergeometric distribution
@@ -55,8 +59,8 @@ cum_probs = hypergeom.pmf(
     num_dark,
     np.arange(num_dark - 1, num_cards + 1),
 )
-probs = cum_probs[1:] - cum_probs[:-1]
-dict(zip(np.arange(num_dark - 1, num_cards), probs))
+probs_hgd = cum_probs[1:] - cum_probs[:-1]
+dict(zip(possible_lengths, probs_hgd))
 
 
 # %% [markdown]
@@ -78,10 +82,8 @@ def probability(
 
 
 # %%
-probs_formula = np.array(
-    [probability(num_rounds) for num_rounds in np.arange(num_dark - 1, num_cards)]
-)
-dict(zip(np.arange(num_dark - 1, num_cards), probs_formula))
+probs_formula = np.array([probability(num_rounds) for num_rounds in possible_lengths])
+dict(zip(possible_lengths, probs_formula))
 
 # %%
-sns.barplot(x=np.arange(num_dark - 1, num_cards), y=probs_formula)
+sns.barplot(x=possible_lengths, y=probs_formula)
