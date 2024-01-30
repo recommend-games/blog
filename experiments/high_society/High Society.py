@@ -21,6 +21,8 @@ import jupyter_black
 import numpy as np
 import seaborn as sns
 from collections import defaultdict
+from matplotlib import pyplot as plt
+from matplotlib import ticker
 from scipy.stats import hypergeom
 
 jupyter_black.load()
@@ -87,3 +89,9 @@ dict(zip(possible_lengths, probs_formula))
 
 # %%
 sns.barplot(x=possible_lengths, y=probs_formula)
+plt.title("High Society")
+plt.xlabel("Game length")
+plt.gca().yaxis.set_major_formatter(ticker.PercentFormatter(xmax=1))
+plt.savefig("game_lengths.png")
+plt.savefig("game_lengths.svg")
+plt.show()
