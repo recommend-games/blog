@@ -13,6 +13,9 @@
 #     name: python3
 # ---
 
+# %% [markdown]
+# # High Society
+
 # %%
 import jupyter_black
 import numpy as np
@@ -26,9 +29,10 @@ num_cards = 16
 num_dark = 4
 num_games = 1_000_000
 random_seed = None
-
-# %%
 rng = np.random.default_rng(seed=random_seed)
+
+# %% [markdown]
+# ## Simulation
 
 # %%
 games = np.zeros((num_games, num_cards), dtype=bool)
@@ -41,6 +45,9 @@ print(lengths.mean(), lengths.std())
 game_length, game_length_count = np.unique(lengths, return_counts=True)
 dict(zip(game_length, game_length_count / num_games))
 
+# %% [markdown]
+# ## Hypergeometric distribution
+
 # %%
 cum_probs = hypergeom.pmf(
     num_dark,
@@ -51,6 +58,9 @@ cum_probs = hypergeom.pmf(
 probs = cum_probs[1:] - cum_probs[:-1]
 dict(zip(np.arange(num_dark - 1, num_cards), probs))
 
+
+# %% [markdown]
+# ## Exact formula
 
 # %%
 def probability(
