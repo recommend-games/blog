@@ -49,7 +49,29 @@ cum_probs = hypergeom.pmf(
     np.arange(num_dark - 1, num_cards + 1),
 )
 probs = cum_probs[1:] - cum_probs[:-1]
-dict(zip(game_length, probs))
+dict(zip(np.arange(num_dark - 1, num_cards), probs))
+
 
 # %%
-sns.barplot(x=np.arange(num_dark - 1, num_cards), y=probs)
+def probability(
+    num_rounds: int,
+    num_cards: int = num_cards,
+    num_dark: int = num_dark,
+) -> float:
+    if num_rounds < num_dark - 1 or num_rounds >= num_cards:
+        return 0.0
+    return (
+        num_dark
+        * np.arange(num_rounds - num_dark + 2, num_rounds + 1).prod()
+        / np.arange(num_cards - num_dark + 1, num_cards + 1).prod()
+    )
+
+
+# %%
+probs_formula = np.array(
+    [probability(num_rounds) for num_rounds in np.arange(num_dark - 1, num_cards)]
+)
+dict(zip(np.arange(num_dark - 1, num_cards), probs_formula))
+
+# %%
+sns.barplot(x=np.arange(num_dark - 1, num_cards), y=probs_formula)
