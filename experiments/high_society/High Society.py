@@ -23,7 +23,7 @@ import seaborn as sns
 from collections import defaultdict
 from matplotlib import pyplot as plt
 from matplotlib import ticker
-from scipy.stats import hypergeom
+from scipy.stats import hypergeom, nhypergeom
 
 jupyter_black.load()
 
@@ -86,6 +86,21 @@ def probability(
 # %%
 probs_formula = np.array([probability(num_rounds) for num_rounds in possible_lengths])
 dict(zip(possible_lengths, probs_formula))
+
+# %% [markdown]
+# ## Negative hypergeometric distribution
+
+# %%
+probs_nhgd = nhypergeom.pmf(
+    possible_lengths - 3,
+    num_cards,
+    num_cards - num_dark,
+    num_dark,
+)
+dict(zip(possible_lengths, probs_nhgd))
+
+# %% [markdown]
+# ## Plot
 
 # %%
 sns.barplot(x=possible_lengths, y=probs_formula)
