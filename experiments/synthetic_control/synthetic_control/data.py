@@ -14,6 +14,41 @@ class GameData:
 
 REVIEWS = (
     GameData(
+        bgg_id=332686,
+        name="John Company: Second Edition",
+        date_review=date(2023, 11, 28),
+    ),
+    GameData(
+        bgg_id=330592,
+        name="Phantom Ink",
+        date_review=date(2023, 10, 26),
+    ),
+    GameData(
+        bgg_id=368061,
+        name="Zoo Vadis",
+        date_review=date(2023, 10, 19),
+    ),
+    GameData(
+        bgg_id=358386,
+        name="Moon",
+        date_review=date(2023, 10, 12),
+    ),
+    GameData(
+        bgg_id=358386,
+        name="Moon",
+        date_review=date(2023, 10, 12),
+    ),
+    GameData(
+        bgg_id=351538,
+        name="Bamboo",
+        date_review=date(2023, 10, 5),
+    ),
+    GameData(
+        bgg_id=350184,
+        name="Earth",
+        date_review=date(2023, 9, 28),
+    ),
+    GameData(
         bgg_id=354568,
         name="Amun-Re",
         date_review=date(2023, 9, 22),
