@@ -41,7 +41,7 @@ dfs = (
 )
 
 # %%
-df = (
+pivoted = (
     pl.concat(tqdm(dfs, total=len(files)))
     .collect()
     .pivot(
@@ -50,15 +50,24 @@ df = (
         columns="bgg_id",
         aggregate_function="max",
     )
-    .sort("day")
 )
-df.shape
+pivoted.shape
 
 # %%
-df.head(10)
+pivoted.head(10)
 
 # %%
-df.select(
-    "day",
-    *sorted(df.select(pl.exclude("day")).columns, key=int),
-).write_csv("num_ratings.csv")
+game_columns = sorted(pivoted.select(pl.exclude("day")).columns, key=int)
+df = (
+    pivoted.lazy()
+    .sort("day")
+    .select(
+        "day",
+        pl.col(*game_columns)
+        .interpolate()
+        .fill_null(strategy="forward")
+        .cast(pl.Int64),
+    )
+    .collect()
+    .write_csv("num_ratings.csv")
+)
