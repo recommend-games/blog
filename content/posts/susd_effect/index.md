@@ -10,23 +10,6 @@ tags:
   - Synthetic Control
 ---
 
-* Introduce SU&SD
-* Mention the effect they have on board game sales
-* Mention previous attempts at quantifying the effect
-* John Company video
-* Plot number of ratings before and after the video
-* Can we attribute the increase to the video?
-  * After all, it was pre-Xmas time, maybe people were just buying more games
-* Enter Synthetic Control
-* Explain briefly what it is and how it works
-* Link to articles
-* Synthetic Control with convex combination
-* Print the weights
-* Plot the results, both absolute and relative
-* Is it significant? Fisher's exact test
-* Other games absolute plot – maybe some with Ridge regression
-* Conclusion
-
 [Shut Up & Sit Down](https://www.shutupandsitdown.com/) (SU&SD) is arguably the largest (at over 400k subscribers) and most influential [YouTube channel](https://www.youtube.com/@shutupandsitdown) in board gaming. A video with a glowing recommendation by them can lead to a game sell out overnight. Or at least that's how the anecdotes go. There's been [previous attempts](https://www.reddit.com/r/boardgames/comments/ngqoow/i_tried_to_quantify_the_shut_up_sit_down_effect/) at quantifying the effect, but over here at Recommend.Games is where board games and data science meet, so obviously, we have to dig a little deeper.
 
 Their recent review of {{% game 332686 %}}John Company{{% /game %}} is an interesting case study:
@@ -43,4 +26,13 @@ So how can we know that it really was the SU&SD video that drew the extra attent
 
 Enter [synthetic control](https://en.wikipedia.org/wiki/Synthetic_control_method). As said, we don't have a control world that wasn't exposed to the video – so instead we synthesise one! At first, this might sound more like alchemy than science, but the basic idea is really quite simple: we look at the number of ratings up to the day of the video and compare those to other, similar games over the time period. Because {{% game 332686 %}}John Company{{% /game %}} got the SU&SD treatment, but the other games didn't, we can reason that the same weighting of the other games' ratings should give us a good estimate of what would have happened to {{% game 332686 %}}John Company{{% /game %}} if it hadn't been for the video.
 
+<!-- Explain the convex combination and print resulting weights -->
+<!-- Plot synthetic control, both absolute and relative -->
+<!-- Note: cannot exclude the possibility of a different "intervention", e.g., KS opened or fulfilled, some other review or social media mention, etc. -->
+<!-- Is it significant? Fisher's exact test -->
+<!-- Link to articles with further details and code with actual implementation -->
+<!-- Other games, maybe include ridge regression too -->
+
 [^num_ratings]: We use the number of ratings as a coarse proxy for interest. It's far from perfect, but it has the advantage of representing both positive and negative attention – and it's readily available from [this repository](https://github.com/beefsack/bgg-ranking-historicals).
+
+<!-- Redo analysis with other source? Maybe number of collection items based on RatingItem.updated_at? -->
