@@ -197,6 +197,16 @@ plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_slsqp.png")
 plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_slsqp.svg")
 plt.show()
 
+# %%
+ratings_train = data_train[str(game.bgg_id)][-1]
+ratings_test = data_test[str(game.bgg_id)][-1]
+susd_effect = ratings_test - y_pred_slsqp[-1]
+new_ratings = ratings_test - ratings_train
+pct_new_ratings = susd_effect / new_ratings
+print(
+    f"SU&SD effect: additional {int(susd_effect)} ratings, {pct_new_ratings:.1%} of all new ratings"
+)
+
 
 # %% [markdown]
 # ## Fisher's Exact Test
@@ -244,7 +254,6 @@ control_bgg_ids = np.random.choice(
 control_game_results = (process_control(bgg_id) for bgg_id in control_bgg_ids)
 
 # %%
-susd_effect = data[str(game.bgg_id)][-1] - y_pred_slsqp[-1]
 larger_effect = 0
 smaller_effect = 0
 
@@ -282,3 +291,7 @@ plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_slsqp_fisher.png")
 plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_slsqp_fisher.svg")
 plt.show()
+
+# %%
+# TODO: Generate plots for all games. Use SLSQP where it has small (TBD) RMSE, else ridge regression.
+# Print report of precise SU&SD effect.
