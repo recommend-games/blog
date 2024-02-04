@@ -15,7 +15,7 @@ class GameData:
 REVIEWS = (
     GameData(
         bgg_id=332686,
-        name="John Company: Second Edition",
+        name="John Company",
         date_review=date(2023, 11, 28),
     ),
     GameData(

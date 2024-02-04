@@ -29,8 +29,8 @@ import jupyter_black
 import numpy as np
 import polars as pl
 import seaborn as sns
-from joblib import Parallel, delayed
 from matplotlib import pyplot as plt
+from tqdm import tqdm
 
 from synthetic_control.data import REVIEWS
 from synthetic_control.models import (
@@ -47,6 +47,7 @@ warnings.filterwarnings("ignore")
 
 # %%
 game = REVIEWS[0]
+game = replace(game, days_before=90, days_after=60)
 game
 
 # %%
@@ -95,6 +96,7 @@ data.head(10)
 ax = plot_ratings(data, game)
 plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_num_ratings.png")
+plt.savefig(plot_dir / f"{game.bgg_id}_num_ratings.svg")
 plt.show()
 
 # %%
@@ -129,6 +131,7 @@ y_pred_lr.shape
 ax = plot_ratings(data, game, y_pred_lr)
 plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_lr.png")
+plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_lr.svg")
 plt.show()
 
 # %% [markdown]
@@ -148,12 +151,14 @@ y_pred_ridge.shape
 plot_ratings(data, game, y_pred_ridge)
 plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_ridge.png")
+plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_ridge.svg")
 plt.show()
 
 # %%
 plot_effect(data, game, y_pred_ridge)
 plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_ridge.png")
+plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_ridge.svg")
 plt.show()
 
 # %% [markdown]
@@ -182,12 +187,14 @@ print(
 plot_ratings(data, game, y_pred_slsqp)
 plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_slsqp.png")
+plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_slsqp.svg")
 plt.show()
 
 # %%
 plot_effect(data, game, y_pred_slsqp)
 plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_slsqp.png")
+plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_slsqp.svg")
 plt.show()
 
 
@@ -229,25 +236,33 @@ def process_control(
 
 
 # %%
-parallel_fn = delayed(process_control)
-jobs = (
-    parallel_fn(bgg_id)
-    for bgg_id in np.random.choice(
-        control_ids,
-        min(128, len(control_ids)),
-        replace=False,
-    )
+control_bgg_ids = np.random.choice(
+    control_ids,
+    min(128, len(control_ids)),
+    replace=False,
 )
-control_game_results = Parallel(n_jobs=-1, return_as="generator")(jobs)
+control_game_results = (process_control(bgg_id) for bgg_id in control_bgg_ids)
 
 # %%
+susd_effect = data[str(game.bgg_id)][-1] - y_pred_slsqp[-1]
+larger_effect = 0
+smaller_effect = 0
+
 _, ax = plt.subplots()
-for control_game, _, _, effect_train, effect_test, train_error in control_game_results:
+for control_game, _, _, effect_train, effect_test, train_error in tqdm(
+    control_game_results,
+    total=len(control_bgg_ids),
+):
     if train_error > 3:
         print(f"Ignore <{control_game.name}> with RMSE of {train_error:.3f}")
         continue
+
     effect = np.concatenate((effect_train, effect_test))
-    # TODO count smaller and larger effects
+    if effect_test[-1] >= susd_effect:
+        larger_effect += 1
+    else:
+        smaller_effect += 1
+
     sns.lineplot(
         x=data["timestamp"],
         y=effect,
@@ -257,7 +272,13 @@ for control_game, _, _, effect_train, effect_test, train_error in control_game_r
         alpha=0.4,
         ax=ax,
     )
+
+total_control = smaller_effect + larger_effect
+print(
+    f"{larger_effect} out of {total_control} ({larger_effect / total_control:.1%}) have a larger effect"
+)
 plot_effect(data, game, y_pred_slsqp, ax=ax)
 plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_slsqp_fisher.png")
+plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_slsqp_fisher.svg")
 plt.show()
