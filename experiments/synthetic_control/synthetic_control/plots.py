@@ -1,4 +1,7 @@
+import logging
 import math
+import os
+from datetime import timedelta
 from typing import Optional
 
 import numpy as np
@@ -8,8 +11,15 @@ from matplotlib import pyplot as plt
 from matplotlib.axes import Axes
 
 from synthetic_control.data import GameData
+from synthetic_control.models import (
+    sample_control_group,
+    train_test_split,
+    weights_and_predictions,
+)
 
 sns.set_style("dark")
+
+LOGGER = logging.getLogger(__name__)
 
 
 def plot_ratings(
@@ -112,3 +122,92 @@ def plot_effect(
     ax.legend()
 
     return ax
+
+
+def process_game(
+    rating_data: pl.DataFrame | pl.LazyFrame,
+    game: GameData,
+    plot_dir: Optional[os.PathLike] = None,
+    threshold_rmse_slsqp: float = 3.0,
+) -> None:
+    data = (
+        rating_data.lazy()
+        .select(
+            pl.col("day").str.to_datetime().alias("timestamp"),
+            pl.exclude("day").cast(int),
+        )
+        .filter(pl.col(str(game.bgg_id)).is_not_null())
+        .filter(
+            pl.col("timestamp").is_between(
+                game.date_review - timedelta(days=game.days_before),
+                game.date_review + timedelta(days=game.days_after),
+            )
+        )
+        .collect()
+    )
+    print(data.shape)
+
+    data_train, data_test = train_test_split(data, game)
+    print(data_train.shape, data_test.shape)
+
+    control_ids = sample_control_group(data_train, game)
+    print(control_ids.shape)
+
+    X_train = data_train.select(*control_ids).to_numpy()
+    y_train = data_train.select(str(game.bgg_id)).to_numpy().reshape(-1)
+    X_test = data_test.select(*control_ids).to_numpy()
+    y_test = data_test.select(str(game.bgg_id)).to_numpy().reshape(-1)
+    print(X_train.shape, y_train.shape, X_test.shape, y_test.shape)
+
+    weights, y_pred_train, y_pred_test = weights_and_predictions(
+        model="slsqp",
+        X_train=X_train,
+        y_train=y_train,
+        X_test=X_test,
+    )
+
+    effect_train = y_train - y_pred_train
+    train_error = np.sqrt((effect_train**2).mean())
+
+    if train_error > threshold_rmse_slsqp:
+        LOGGER.info(
+            "RMSE for train data is %.3f, using ridge regression instead", train_error
+        )
+        weights, y_pred_train, y_pred_test = weights_and_predictions(
+            model="ridge",
+            X_train=X_train,
+            y_train=y_train,
+            X_test=X_test,
+        )
+        method = "ridge"
+    else:
+        method = "slsqp"
+
+    y_pred = np.concatenate((y_pred_train, y_pred_test))
+    print(weights.shape, y_pred.shape)
+    # TODO: Calculate RMSE. If it's above a certain threshold, use ridge regression instead
+
+    print(
+        "\n+ ".join(
+            f"{weight:.3} * <{bgg_id}>"
+            for weight, bgg_id in sorted(zip(weights, control_ids), reverse=True)
+            if abs(weight) >= 0.001
+        )
+    )
+
+    ratings_train = y_train[-1]
+    ratings_test = y_test[-1]
+    susd_effect = ratings_test - y_pred[-1]
+    new_ratings = ratings_test - ratings_train
+    pct_new_ratings = susd_effect / new_ratings
+    print(
+        f"SU&SD effect: additional {int(susd_effect)} ratings, {pct_new_ratings:.1%} of all new ratings"
+    )
+
+    if plot_dir is None:
+        return
+
+    plot_ratings(data, game, y_pred)
+    plt.tight_layout()
+    plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_slsqp.svg")
+    plt.close()
