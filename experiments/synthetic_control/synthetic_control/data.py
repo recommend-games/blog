@@ -34,11 +34,6 @@ REVIEWS = (
         date_review=date(2023, 10, 12),
     ),
     GameData(
-        bgg_id=358386,
-        name="Moon",
-        date_review=date(2023, 10, 12),
-    ),
-    GameData(
         bgg_id=351538,
         name="Bamboo",
         date_review=date(2023, 10, 5),

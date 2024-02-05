@@ -128,7 +128,7 @@ def process_game(
     rating_data: pl.DataFrame | pl.LazyFrame,
     game: GameData,
     plot_dir: Optional[os.PathLike] = None,
-    threshold_rmse_slsqp: float = 3.0,
+    threshold_rmse_slsqp: float = 0.05,
 ) -> None:
     data = (
         rating_data.lazy()
@@ -145,19 +145,15 @@ def process_game(
         )
         .collect()
     )
-    print(data.shape)
 
     data_train, data_test = train_test_split(data, game)
-    print(data_train.shape, data_test.shape)
 
     control_ids = sample_control_group(data_train, game)
-    print(control_ids.shape)
 
     X_train = data_train.select(*control_ids).to_numpy()
     y_train = data_train.select(str(game.bgg_id)).to_numpy().reshape(-1)
     X_test = data_test.select(*control_ids).to_numpy()
     y_test = data_test.select(str(game.bgg_id)).to_numpy().reshape(-1)
-    print(X_train.shape, y_train.shape, X_test.shape, y_test.shape)
 
     weights, y_pred_train, y_pred_test = weights_and_predictions(
         model="slsqp",
@@ -167,11 +163,13 @@ def process_game(
     )
 
     effect_train = y_train - y_pred_train
-    train_error = np.sqrt((effect_train**2).mean())
+    train_error = np.sqrt((effect_train**2).mean()) / len(effect_train)
+    # TODO: Adjust train_error depending on y_train.mean()
 
     if train_error > threshold_rmse_slsqp:
         LOGGER.info(
-            "RMSE for train data is %.3f, using ridge regression instead", train_error
+            "RMSE for train data is %.3f, using ridge regression instead",
+            train_error,
         )
         weights, y_pred_train, y_pred_test = weights_and_predictions(
             model="ridge",
@@ -184,8 +182,6 @@ def process_game(
         method = "slsqp"
 
     y_pred = np.concatenate((y_pred_train, y_pred_test))
-    print(weights.shape, y_pred.shape)
-    # TODO: Calculate RMSE. If it's above a certain threshold, use ridge regression instead
 
     print(
         "\n+ ".join(
@@ -209,5 +205,5 @@ def process_game(
 
     plot_ratings(data, game, y_pred)
     plt.tight_layout()
-    plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control_slsqp.svg")
+    plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control.svg")
     plt.close()
