@@ -69,5 +69,6 @@ df = (
         .cast(pl.Int64),
     )
     .collect()
-    .write_csv("num_ratings.csv")
 )
+df.write_csv("num_ratings.csv")
+df.shape
