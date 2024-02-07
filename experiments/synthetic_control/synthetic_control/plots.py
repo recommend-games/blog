@@ -26,6 +26,8 @@ def plot_ratings(
     data: pl.DataFrame,
     game: GameData,
     y_pred: Optional[np.ndarray] = None,
+    *,
+    y_label: str = "Num Ratings",
     ax: Optional[Axes] = None,
 ) -> Axes:
     if ax is None:
@@ -68,7 +70,7 @@ def plot_ratings(
 
     ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
     ax.set_xlabel(None)
-    ax.set_ylabel("Num Ratings")
+    ax.set_ylabel(y_label)
     ax.set_title(None)
     ax.legend()
 
@@ -79,6 +81,8 @@ def plot_effect(
     data: pl.DataFrame,
     game: GameData,
     y_pred: np.ndarray,
+    *,
+    y_label: str = "Additional Ratings",
     ax: Optional[Axes] = None,
 ) -> Axes:
     if ax is None:
@@ -117,7 +121,7 @@ def plot_effect(
     ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
 
     ax.set_xlabel(None)
-    ax.set_ylabel("Additional Ratings")
+    ax.set_ylabel(y_label)
     ax.set_title(None)
     ax.legend()
 
@@ -129,6 +133,7 @@ def process_game(
     game: GameData,
     plot_dir: Optional[os.PathLike] = None,
     threshold_rmse_slsqp: float = 0.05,
+    y_label: str = "Num Ratings",
 ) -> None:
     data = (
         rating_data.lazy()
@@ -203,7 +208,7 @@ def process_game(
     if plot_dir is None:
         return
 
-    plot_ratings(data, game, y_pred)
+    plot_ratings(data, game, y_pred, y_label=y_label)
     plt.tight_layout()
     plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control.svg")
     plt.close()

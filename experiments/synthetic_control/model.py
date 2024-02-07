@@ -76,7 +76,7 @@ def game_name(bgg_id, base_data=game_data):
 
 # %%
 data = (
-    pl.scan_csv("num_ratings.csv")
+    pl.scan_csv("num_collections.csv")
     .select(
         pl.col("day").str.to_datetime().alias("timestamp"),
         pl.exclude("day").cast(int),
