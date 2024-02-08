@@ -8,19 +8,27 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "3.12.*"
 
-black = "*"
-isort = "*"
-jupyter-black = "*"
-jupyterlab = "*"
-jupytext = "*"
 matplotlib = "*"
-mypy = "*"
 numpy = "*"
-polars = "*"
+polars = {version = "*", extras = ["pandas"]}
 scikit-learn = "*"
 scipy = "*"
 seaborn = "*"
 tqdm = "*"
+
+[tool.poetry.group.dev.dependencies]
+jupyter-black = "*"
+jupyterlab = "*"
+jupytext = "*"
+mypy = "*"
+ruff = "*"
+types-tqdm = "*"
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
 
 [build-system]
 requires = ["poetry-core"]
