@@ -111,7 +111,7 @@ def _main():
     LOGGER.info("Saving results to <%s>", results_path)
 
     results = []
-    main_seed = args.random_seed or int(time.time())
+    main_seed = args.random_seed or time.time_ns()
 
     for random_seed, game in enumerate(REVIEWS, start=main_seed):
         game = replace(

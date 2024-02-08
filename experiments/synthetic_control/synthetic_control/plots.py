@@ -133,7 +133,7 @@ def process_game(
     game: GameData,
     *,
     plot_dir: Optional[os.PathLike] = None,
-    threshold_rmse_slsqp: float = 0.05,
+    threshold_rmse_slsqp: float = 0.03,
     y_label: str = "Num Ratings",
     rng: np.random.Generator | None = None,
 ) -> GameResult:

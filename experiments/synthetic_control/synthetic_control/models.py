@@ -80,12 +80,7 @@ def weights_and_predictions(
     X_train: np.ndarray,
     y_train: np.ndarray,
     X_test: np.ndarray,
-    *,
-    rng: np.random.Generator | None = None,
 ) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
-    # TODO: Use rng for training
-    rng = np.random.default_rng() if rng is None else rng
-
     if model == "linear":
         weights = train_weights_lr(
             X_train,
