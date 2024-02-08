@@ -201,9 +201,6 @@ def process_game(
     susd_effect = ratings_test - y_pred[-1]
     new_ratings = ratings_test - ratings_train
     pct_new_ratings = susd_effect / new_ratings
-    print(
-        f"SU&SD effect: additional {int(susd_effect)} ratings, {pct_new_ratings:.1%} of all new ratings"
-    )
 
     if plot_dir is None:
         plot_path = None

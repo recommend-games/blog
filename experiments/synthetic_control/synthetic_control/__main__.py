@@ -68,8 +68,6 @@ def arg_parse():
 
 
 def _default(obj):
-    print(obj)
-    print(type(obj))
     if isinstance(obj, (date, datetime)):
         return obj.isoformat()
     if isinstance(obj, Path):
