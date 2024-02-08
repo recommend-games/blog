@@ -294,21 +294,3 @@ plt.tight_layout()
 plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_slsqp_fisher.png")
 plt.savefig(plot_dir / f"{game.bgg_id}_susd_effect_slsqp_fisher.svg")
 plt.show()
-
-# %% [markdown]
-# ## TODO
-#
-# * Generate plots for all games
-#     * Use SLSQP where it has small (TBD) RMSE, else ridge regression.
-#     * Print report of precise SU&SD effect.
-# * Output: for each game the synthetic control plot as SVG and the following data:
-#     * Game ID,
-#     * name,
-#     * video date,
-#     * num ratings before video,
-#     * num ratings 60 days later,
-#     * num ratings predicted by synthetic control,
-#     * SU&SD effect (diff of previous two)
-#     * % of new ratings
-#     * SC method (SLSQP or ridge)
-#     * Path to plot
