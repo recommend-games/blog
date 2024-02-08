@@ -1,0 +1,420 @@
+[
+    {
+        "game_data": {
+            "bgg_id": 332686,
+            "name": "John Company",
+            "date_review": "2023-11-28",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 8774,
+        "new_ratings": 441,
+        "new_ratings_predicted": 253,
+        "susd_effect": 187,
+        "susd_effect_rel": 0.4250486868407933,
+        "nrmse_slsqp": 0.0007177476926371808,
+        "method": "slsqp",
+        "model": "0.367 * <355093>\n+ 0.356 * <256788>\n+ 0.124 * <281526>\n+ 0.0911 * <350064>\n+ 0.0411 * <367220>\n+ 0.0201 * <396989>",
+        "plot_path": "332686_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 330592,
+            "name": "Phantom Ink",
+            "date_review": "2023-10-26",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 2537,
+        "new_ratings": 279,
+        "new_ratings_predicted": 219,
+        "susd_effect": 59,
+        "susd_effect_rel": 0.21442156799544773,
+        "nrmse_slsqp": 0.003644300748872414,
+        "method": "slsqp",
+        "model": "0.73 * <357726>\n+ 0.227 * <386937>\n+ 0.0388 * <368676>\n+ 0.00481 * <380439>",
+        "plot_path": "330592_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 368061,
+            "name": "Zoo Vadis",
+            "date_review": "2023-10-19",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 2630,
+        "new_ratings": 1388,
+        "new_ratings_predicted": 430,
+        "susd_effect": 957,
+        "susd_effect_rel": 0.6894929258369941,
+        "nrmse_slsqp": 0.019990937853819307,
+        "method": "slsqp",
+        "model": "0.478 * <351476>\n+ 0.268 * <383459>\n+ 0.192 * <368017>\n+ 0.062 * <355997>",
+        "plot_path": "368061_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 358386,
+            "name": "Moon",
+            "date_review": "2023-10-12",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 1966,
+        "new_ratings": 723,
+        "new_ratings_predicted": 748,
+        "susd_effect": -25,
+        "susd_effect_rel": -0.03532919605150832,
+        "nrmse_slsqp": 0.06873622131633045,
+        "method": "ridge",
+        "model": "1.74 * <346950>\n+ 1.73 * <157653>\n+ 1.42 * <306637>\n+ 1.42 * <300521>\n+ 1.39 * <206509>\n+ 1.23 * <379005>\n+ 1.21 * <341245>\n+ 1.18 * <285157>\n+ -1.17 * <84159>\n+ -1.31 * <368749>",
+        "plot_path": "358386_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 351538,
+            "name": "Bamboo",
+            "date_review": "2023-10-05",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 2892,
+        "new_ratings": 575,
+        "new_ratings_predicted": 359,
+        "susd_effect": 215,
+        "susd_effect_rel": 0.3748557374657139,
+        "nrmse_slsqp": 0.0019499122289112802,
+        "method": "slsqp",
+        "model": "0.368 * <334590>\n+ 0.153 * <225244>\n+ 0.134 * <352593>\n+ 0.0985 * <312318>\n+ 0.0878 * <372631>\n+ 0.078 * <387514>\n+ 0.0493 * <348325>\n+ 0.0174 * <294702>\n+ 0.0146 * <328124>",
+        "plot_path": "351538_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 350184,
+            "name": "Earth",
+            "date_review": "2023-09-28",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 20209,
+        "new_ratings": 2501,
+        "new_ratings_predicted": 3294,
+        "susd_effect": -793,
+        "susd_effect_rel": -0.3171090808455836,
+        "nrmse_slsqp": 0.5899404299898005,
+        "method": "ridge",
+        "model": "0.705 * <329670>\n+ 0.685 * <371535>\n+ 0.647 * <328871>\n+ 0.543 * <367498>\n+ 0.517 * <320718>\n+ 0.51 * <234487>\n+ -0.498 * <70149>\n+ -0.512 * <297129>\n+ -0.519 * <377068>\n+ -0.582 * <169124>",
+        "plot_path": "350184_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 354568,
+            "name": "Amun-Re",
+            "date_review": "2023-09-22",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 1502,
+        "new_ratings": 403,
+        "new_ratings_predicted": 96,
+        "susd_effect": 306,
+        "susd_effect_rel": 0.7599496450338346,
+        "nrmse_slsqp": 0.02650508437062584,
+        "method": "slsqp",
+        "model": "0.522 * <358690>\n+ 0.478 * <356230>",
+        "plot_path": "354568_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 11,
+            "name": "Bohnanza",
+            "date_review": "2023-09-14",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 66468,
+        "new_ratings": 1007,
+        "new_ratings_predicted": 872,
+        "susd_effect": 134,
+        "susd_effect_rel": 0.13371981100299254,
+        "nrmse_slsqp": 0.7436814491911283,
+        "method": "ridge",
+        "model": "0.233 * <2655>\n+ 0.2 * <3076>\n+ 0.191 * <39463>\n+ 0.169 * <256999>\n+ 0.167 * <28143>\n+ 0.167 * <306735>\n+ 0.125 * <2921>\n+ 0.124 * <257518>\n+ -0.121 * <24310>\n+ -0.187 * <73439>",
+        "plot_path": "11_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 311031,
+            "name": "Five Three Five",
+            "date_review": "2023-08-23",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 656,
+        "new_ratings": 298,
+        "new_ratings_predicted": 213,
+        "susd_effect": 84,
+        "susd_effect_rel": 0.28390461308745535,
+        "nrmse_slsqp": 0.00802859813161777,
+        "method": "slsqp",
+        "model": "0.378 * <370566>\n+ 0.22 * <359406>\n+ 0.216 * <28609>\n+ 0.136 * <338093>\n+ 0.0489 * <355997>",
+        "plot_path": "311031_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 298383,
+            "name": "Golem",
+            "date_review": "2023-08-17",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 9512,
+        "new_ratings": 559,
+        "new_ratings_predicted": 498,
+        "susd_effect": 60,
+        "susd_effect_rel": 0.10897204804183756,
+        "nrmse_slsqp": 0.0003230908797815313,
+        "method": "slsqp",
+        "model": "0.37 * <191925>\n+ 0.171 * <325494>\n+ 0.151 * <238799>\n+ 0.0953 * <252929>\n+ 0.0562 * <329465>\n+ 0.0544 * <193214>\n+ 0.0337 * <319910>\n+ 0.028 * <336382>\n+ 0.0242 * <379078>\n+ 0.00825 * <366495>",
+        "plot_path": "298383_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 386937,
+            "name": "Lacuna",
+            "date_review": "2023-08-03",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 340,
+        "new_ratings": 807,
+        "new_ratings_predicted": 328,
+        "susd_effect": 478,
+        "susd_effect_rel": 0.5935554785706889,
+        "nrmse_slsqp": 0.5203423223950101,
+        "method": "ridge",
+        "model": "1.22 * <369765>\n+ 1.1 * <371410>\n+ 1.09 * <366910>\n+ 1.09 * <358050>\n+ 0.981 * <177477>\n+ 0.917 * <367575>\n+ 0.898 * <358607>\n+ 0.881 * <298271>\n+ 0.864 * <368852>\n+ -1.02 * <334137>",
+        "plot_path": "386937_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 331571,
+            "name": "My Gold Mine",
+            "date_review": "2023-07-19",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 1156,
+        "new_ratings": 755,
+        "new_ratings_predicted": 75,
+        "susd_effect": 679,
+        "susd_effect_rel": 0.8995447359091281,
+        "nrmse_slsqp": 0.0009709011897571006,
+        "method": "slsqp",
+        "model": "0.395 * <297531>\n+ 0.165 * <306676>\n+ 0.136 * <353152>\n+ 0.0689 * <308416>\n+ 0.0608 * <340541>\n+ 0.0578 * <96345>\n+ 0.0436 * <342343>\n+ 0.0317 * <329669>\n+ 0.0236 * <337255>\n+ 0.0173 * <329084>",
+        "plot_path": "331571_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 367771,
+            "name": "Stomp the Plank",
+            "date_review": "2023-07-06",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 169,
+        "new_ratings": 372,
+        "new_ratings_predicted": 228,
+        "susd_effect": 143,
+        "susd_effect_rel": 0.38586701166066495,
+        "nrmse_slsqp": 0.020649475001130204,
+        "method": "slsqp",
+        "model": "0.409 * <362976>\n+ 0.356 * <14354>\n+ 0.084 * <336597>\n+ 0.0833 * <21702>\n+ 0.0674 * <367527>",
+        "plot_path": "367771_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 177478,
+            "name": "IKI",
+            "date_review": "2023-06-29",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 9944,
+        "new_ratings": 1124,
+        "new_ratings_predicted": 1053,
+        "susd_effect": 70,
+        "susd_effect_rel": 0.06290737237934074,
+        "nrmse_slsqp": 0.0010430987866918602,
+        "method": "slsqp",
+        "model": "0.47 * <241724>\n+ 0.423 * <370591>\n+ 0.0424 * <325889>\n+ 0.0271 * <189932>\n+ 0.0135 * <370913>\n+ 0.0105 * <355483>\n+ 0.00658 * <284189>\n+ 0.00508 * <331106>\n+ 0.00132 * <346703>",
+        "plot_path": "177478_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 362944,
+            "name": "War of the Ring: The Card Game",
+            "date_review": "2023-06-15",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 5739,
+        "new_ratings": 1556,
+        "new_ratings_predicted": 1087,
+        "susd_effect": 468,
+        "susd_effect_rel": 0.30090641210981595,
+        "nrmse_slsqp": 0.012987742335099908,
+        "method": "slsqp",
+        "model": "0.587 * <263895>\n+ 0.413 * <364073>",
+        "plot_path": "362944_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 281549,
+            "name": "Beast",
+            "date_review": "2023-06-09",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 4874,
+        "new_ratings": 1647,
+        "new_ratings_predicted": 2005,
+        "susd_effect": -358,
+        "susd_effect_rel": -0.2174273145889713,
+        "nrmse_slsqp": 0.14168248262006844,
+        "method": "ridge",
+        "model": "1.43 * <341416>\n+ 1.38 * <364994>\n+ 1.31 * <188547>\n+ 1.22 * <196496>\n+ 1.2 * <272993>\n+ 1.12 * <299249>\n+ -1.11 * <253618>\n+ -1.11 * <137031>\n+ -1.12 * <670>\n+ -1.27 * <252752>",
+        "plot_path": "281549_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 276086,
+            "name": "Hamlet",
+            "date_review": "2023-05-25",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 5070,
+        "new_ratings": 1083,
+        "new_ratings_predicted": 379,
+        "susd_effect": 703,
+        "susd_effect_rel": 0.6494351293905544,
+        "nrmse_slsqp": 0.004857106297867747,
+        "method": "slsqp",
+        "model": "0.288 * <148729>\n+ 0.241 * <334829>\n+ 0.174 * <281474>\n+ 0.154 * <368173>\n+ 0.1 * <339958>\n+ 0.0438 * <362944>",
+        "plot_path": "276086_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 267609,
+            "name": "Guards of Atlantis II",
+            "date_review": "2023-05-18",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 2383,
+        "new_ratings": 442,
+        "new_ratings_predicted": 526,
+        "susd_effect": -84,
+        "susd_effect_rel": -0.19045248777846882,
+        "nrmse_slsqp": 0.006464942940290816,
+        "method": "slsqp",
+        "model": "0.532 * <367966>\n+ 0.26 * <337787>\n+ 0.191 * <363307>\n+ 0.0171 * <3800>",
+        "plot_path": "267609_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 295770,
+            "name": "Frosthaven",
+            "date_review": "2023-05-11",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 15136,
+        "new_ratings": 2122,
+        "new_ratings_predicted": 2643,
+        "susd_effect": -521,
+        "susd_effect_rel": -0.24556466816879816,
+        "nrmse_slsqp": 0.5760941136173462,
+        "method": "ridge",
+        "model": "0.703 * <360896>\n+ 0.643 * <351526>\n+ 0.532 * <351913>\n+ 0.515 * <316412>\n+ 0.481 * <256916>\n+ 0.48 * <356033>\n+ 0.426 * <366748>\n+ -0.5 * <275467>\n+ -0.531 * <271321>\n+ -0.55 * <284742>",
+        "plot_path": "295770_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 350205,
+            "name": "Horseless Carriage",
+            "date_review": "2023-02-09",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 1386,
+        "new_ratings": 1444,
+        "new_ratings_predicted": 570,
+        "susd_effect": 873,
+        "susd_effect_rel": 0.6050458707677907,
+        "nrmse_slsqp": 0.0955087441571687,
+        "method": "ridge",
+        "model": "1.47 * <362121>\n+ 1.31 * <165186>\n+ 1.15 * <220827>\n+ 1.08 * <3097>\n+ 1.02 * <163277>\n+ 1.01 * <255363>\n+ 0.993 * <361777>\n+ -1.15 * <136558>\n+ -1.26 * <344341>\n+ -1.38 * <333372>",
+        "plot_path": "350205_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 811,
+            "name": "Rummikub",
+            "date_review": "2023-01-26",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 26492,
+        "new_ratings": 792,
+        "new_ratings_predicted": 813,
+        "susd_effect": -21,
+        "susd_effect_rel": -0.02655669183666925,
+        "nrmse_slsqp": 0.6776287762010095,
+        "method": "ridge",
+        "model": "0.203 * <230200>\n+ 0.185 * <102680>\n+ 0.173 * <301767>\n+ 0.165 * <148319>\n+ 0.163 * <163602>\n+ 0.149 * <153>\n+ 0.145 * <1406>\n+ -0.155 * <119432>\n+ -0.183 * <72321>\n+ -0.2 * <213893>",
+        "plot_path": "811_synthetic_control.svg"
+    },
+    {
+        "game_data": {
+            "bgg_id": 366013,
+            "name": "Heat: Pedal to the Metal",
+            "date_review": "2022-12-22",
+            "days_before": 90,
+            "days_after": 60,
+            "max_control_games": 300
+        },
+        "num_ratings_before_review": 4431,
+        "new_ratings": 6665,
+        "new_ratings_predicted": 4630,
+        "susd_effect": 2034,
+        "susd_effect_rel": 0.30520888212418923,
+        "nrmse_slsqp": 0.4302341550999245,
+        "method": "ridge",
+        "model": "3.07 * <322589>\n+ 2.99 * <296577>\n+ 2.18 * <330608>\n+ 2.14 * <185104>\n+ 2.08 * <98229>\n+ 2.07 * <159492>\n+ -2.17 * <253106>\n+ -2.2 * <987>\n+ -2.31 * <319910>\n+ -2.69 * <255363>",
+        "plot_path": "366013_synthetic_control.svg"
+    }
+]
