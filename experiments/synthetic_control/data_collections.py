@@ -101,5 +101,5 @@ df = pivoted.lazy().select(
 if min_date:
     df = df.filter(pl.col("day") >= min_date)
 df = df.collect()
-df.write_csv("num_collections.csv")
+df.write_csv("./data/num_collections.csv")
 df.shape

@@ -70,5 +70,5 @@ df = (
     )
     .collect()
 )
-df.write_csv("num_ratings.csv")
+df.write_csv("./data/num_ratings.csv")
 df.shape
