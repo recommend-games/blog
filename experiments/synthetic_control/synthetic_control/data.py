@@ -1,3 +1,4 @@
+import os
 from dataclasses import dataclass
 from datetime import date, datetime
 
@@ -137,4 +138,4 @@ class GameResult:
     nrmse_slsqp: float
     method: str
     model: str
-    plot_path: str | None
+    plot_path: os.PathLike | None

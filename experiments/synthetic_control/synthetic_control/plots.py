@@ -217,12 +217,12 @@ def process_game(
     return GameResult(
         game_data=game,
         num_ratings_before_review=ratings_train,
-        new_ratings=new_ratings,
-        new_ratings_predicted=y_pred[-1] - ratings_train,
-        susd_effect=susd_effect,
+        new_ratings=int(new_ratings),
+        new_ratings_predicted=int(y_pred[-1] - ratings_train),
+        susd_effect=int(susd_effect),
         susd_effect_rel=pct_new_ratings,
         nrmse_slsqp=train_error,
         method=method,
         model=model_str,
-        plot_path=str(plot_path) if plot_path else None,
+        plot_path=plot_path,
     )
