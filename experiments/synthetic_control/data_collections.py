@@ -14,10 +14,13 @@
 # ---
 
 # %%
+from datetime import date
 from pathlib import Path
 import polars as pl
+
 try:
     import jupyter_black
+
     jupyter_black.load()
 except:
     pass
@@ -30,6 +33,10 @@ rankings_file = (
     / "bgg_RatingItem.jl"
 )
 rankings_file
+
+# %%
+max_games = 50_000
+min_date = date(2021, 1, 1)
 
 # %%
 schema = {
@@ -65,25 +72,34 @@ pivoted = collection_counts.pivot(
     values="num_collections",
     index="day",
     columns="bgg_id",
-)
+).sort("day")
 pivoted.shape
 
 # %%
 pivoted.head(10)
 
 # %%
-game_columns = sorted(pivoted.select(pl.exclude("day")).columns, key=int)
-df = (
-    pivoted.lazy()
-    .sort("day")
-    .select(
-        "day",
-        pl.col(*game_columns)
-        .interpolate()
-        .fill_null(strategy="forward")
-        .cast(pl.Int64),
+top_games = (
+    pivoted.select(pl.exclude("day").max())
+    .transpose(
+        include_header=True,
+        header_name="bgg_id",
+        column_names=("max_count",),
     )
-    .collect()
+    .cast(pl.Int32)
+    .sort("max_count", descending=True)["bgg_id"][:max_games]
+    .sort()
+    .cast(pl.String)
 )
+len(top_games)
+
+# %%
+df = pivoted.lazy().select(
+    "day",
+    pl.col(*top_games).interpolate().fill_null(strategy="forward").cast(pl.Int64),
+)
+if min_date:
+    df = df.filter(pl.col("day") >= min_date)
+df = df.collect()
 df.write_csv("num_collections.csv")
 df.shape
