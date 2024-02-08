@@ -6,6 +6,7 @@ import sys
 from dataclasses import replace
 from datetime import date, datetime
 from pathlib import Path
+import time
 
 import numpy as np
 import polars as pl
@@ -110,8 +111,9 @@ def _main():
     LOGGER.info("Saving results to <%s>", results_path)
 
     results = []
+    main_seed = args.random_seed or int(time.time())
 
-    for game in REVIEWS:
+    for random_seed, game in enumerate(REVIEWS, start=main_seed):
         game = replace(
             game,
             days_before=args.days_before,
@@ -125,6 +127,7 @@ def _main():
             plot_dir=plot_dir,
             threshold_rmse_slsqp=args.threshold_rmse_slsqp,
             y_label="Num Collections" if args.mode == "collections" else "Num Ratings",
+            rng=np.random.default_rng(random_seed),
         )
         relative_plot_path = Path(result.plot_path).relative_to(
             results_path.parent,

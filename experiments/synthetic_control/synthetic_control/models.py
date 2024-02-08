@@ -29,7 +29,11 @@ def train_test_split(
 def sample_control_group(
     data: pl.DataFrame,
     game: GameData,
+    *,
+    rng: np.random.Generator | None = None,
 ) -> np.ndarray:
+    rng = np.random.default_rng() if rng is None else rng
+
     num_ratings_last = data[str(game.bgg_id)][-1]
     candidates = [
         s
@@ -37,12 +41,12 @@ def sample_control_group(
         if s.null_count() == 0 and 0 < s[-1] < 2 * num_ratings_last
     ]
     weights = np.array([1 - abs(1 - s[-1] / num_ratings_last) for s in candidates])
-    return np.random.choice(
+    return rng.choice(
         a=[s.name for s in candidates],
         size=min(game.max_control_games, len(candidates)),
         replace=False,
         p=weights / weights.sum(),
-    )
+    )  # type: ignore
 
 
 def train_weights_lr(
@@ -76,7 +80,12 @@ def weights_and_predictions(
     X_train: np.ndarray,
     y_train: np.ndarray,
     X_test: np.ndarray,
+    *,
+    rng: np.random.Generator | None = None,
 ) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    # TODO: Use rng for training
+    rng = np.random.default_rng() if rng is None else rng
+
     if model == "linear":
         weights = train_weights_lr(
             X_train,
@@ -102,8 +111,16 @@ def sample_control_and_predict(
     game: GameData,
     data_train: pl.DataFrame,
     data_test: pl.DataFrame,
+    *,
+    rng: np.random.Generator | None = None,
 ) -> tuple[np.ndarray, np.ndarray]:
-    control_ids = sample_control_group(data_train, game)
+    rng = np.random.default_rng() if rng is None else rng
+
+    control_ids = sample_control_group(
+        data=data_train,
+        game=game,
+        rng=rng,
+    )
 
     X_train = data_train.select(*control_ids).to_numpy()
     y_train = data_train[str(game.bgg_id)].to_numpy()

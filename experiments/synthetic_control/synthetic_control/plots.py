@@ -131,10 +131,14 @@ def plot_effect(
 def process_game(
     rating_data: pl.DataFrame | pl.LazyFrame,
     game: GameData,
+    *,
     plot_dir: Optional[os.PathLike] = None,
     threshold_rmse_slsqp: float = 0.05,
     y_label: str = "Num Ratings",
+    rng: np.random.Generator | None = None,
 ) -> GameResult:
+    rng = np.random.default_rng() if rng is None else rng
+
     data = (
         rating_data.lazy()
         .select(
@@ -151,9 +155,16 @@ def process_game(
         .collect()
     )
 
-    data_train, data_test = train_test_split(data, game)
+    data_train, data_test = train_test_split(
+        data=data,
+        game=game,
+    )
 
-    control_ids = sample_control_group(data_train, game)
+    control_ids = sample_control_group(
+        data=data_train,
+        game=game,
+        rng=rng,
+    )
 
     X_train = data_train.select(*control_ids).to_numpy()
     y_train = data_train.select(str(game.bgg_id)).to_numpy().reshape(-1)
