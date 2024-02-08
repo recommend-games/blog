@@ -547,6 +547,20 @@ docs = ["ipython", "matplotlib", "numpydoc", "sphinx"]
 tests = ["pytest", "pytest-cov", "pytest-xdist"]
 
 [[package]]
+name = "data-science-types"
+version = "0.2.23"
+description = "Type stubs for Python machine learning libraries"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "data-science-types-0.2.23.tar.gz", hash = "sha256:8096b9a35a8a187bf9a122b4707c97de841d810744690ee2a4ac30c6462e0d16"},
+    {file = "data_science_types-0.2.23-py3-none-any.whl", hash = "sha256:bca319abc0e53a0316f9fcb887937e942477cb9e5fc63c8581e0b0438903b977"},
+]
+
+[package.extras]
+dev = ["black", "flake8", "flake8-pyi", "matplotlib", "mypy (==0.770)", "numpy", "pandas", "pytest"]
+
+[[package]]
 name = "debugpy"
 version = "1.8.0"
 description = "An implementation of the Debug Adapter Protocol for Python"
@@ -1825,6 +1839,21 @@ test = ["hypothesis (>=6.46.1)", "pytest (>=7.3.2)", "pytest-xdist (>=2.2.0)"]
 xml = ["lxml (>=4.9.2)"]
 
 [[package]]
+name = "pandas-stubs"
+version = "2.1.4.231227"
+description = "Type annotations for pandas"
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "pandas_stubs-2.1.4.231227-py3-none-any.whl", hash = "sha256:211fc23e6ae87073bdf41dbf362c4a4d85e1e3477cb078dbac3da6c7fdaefba8"},
+    {file = "pandas_stubs-2.1.4.231227.tar.gz", hash = "sha256:3ea29ef001e9e44985f5ebde02d4413f94891ef6ec7e5056fb07d125be796c23"},
+]
+
+[package.dependencies]
+numpy = {version = ">=1.26.0", markers = "python_version < \"3.13\""}
+types-pytz = ">=2022.1.1"
+
+[[package]]
 name = "pandocfilters"
 version = "1.5.1"
 description = "Utilities for writing pandoc filters in python"
@@ -2950,6 +2979,33 @@ files = [
 ]
 
 [[package]]
+name = "types-pytz"
+version = "2024.1.0.20240203"
+description = "Typing stubs for pytz"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "types-pytz-2024.1.0.20240203.tar.gz", hash = "sha256:c93751ee20dfc6e054a0148f8f5227b9a00b79c90a4d3c9f464711a73179c89e"},
+    {file = "types_pytz-2024.1.0.20240203-py3-none-any.whl", hash = "sha256:9679eef0365db3af91ef7722c199dbb75ee5c1b67e3c4dd7bfbeb1b8a71c21a3"},
+]
+
+[[package]]
+name = "types-seaborn"
+version = "0.13.2.20240205"
+description = "Typing stubs for seaborn"
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "types-seaborn-0.13.2.20240205.tar.gz", hash = "sha256:2a49fc24d5e3ab8c2dd91617dd68865e9136b8256f329c2ae416eab60d84304e"},
+    {file = "types_seaborn-0.13.2.20240205-py3-none-any.whl", hash = "sha256:61c6487553534c90eaaebb538cc12d130cae907bec97b5f172cfe5744db42d50"},
+]
+
+[package.dependencies]
+matplotlib = ">=3.8"
+numpy = ">=1.20"
+pandas-stubs = "*"
+
+[[package]]
 name = "types-tqdm"
 version = "4.66.0.20240106"
 description = "Typing stubs for tqdm"
@@ -3069,4 +3125,4 @@ test = ["websockets"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.12.*"
-content-hash = "2651f650b46e9d6a924d5351aa132597a07d34a764174ea479dfd5c69b00fc8d"
+content-hash = "a0db378c320d71e82d4f86da2ca05ebaa7fb1787a4f4ea55901d0a6f1091b528"

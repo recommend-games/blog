@@ -17,11 +17,14 @@ seaborn = "*"
 tqdm = "*"
 
 [tool.poetry.group.dev.dependencies]
+data-science-types = "*"
 jupyter-black = "*"
 jupyterlab = "*"
 jupytext = "*"
 mypy = "*"
+pandas-stubs = "*"
 ruff = "*"
+types-seaborn = "*"
 types-tqdm = "*"
 
 [tool.ruff]
@@ -29,6 +32,13 @@ target-version = "py312"
 
 [tool.mypy]
 python_version = "3.12"
+
+[[tool.mypy.overrides]]
+module = [
+    "scipy.*",
+    "sklearn.*",
+]
+ignore_missing_imports = true
 
 [build-system]
 requires = ["poetry-core"]
