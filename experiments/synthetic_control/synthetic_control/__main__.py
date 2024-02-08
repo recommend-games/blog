@@ -1,9 +1,13 @@
 import argparse
+import dataclasses
+import json
 import logging
 import sys
 from dataclasses import replace
+from datetime import date, datetime
 from pathlib import Path
 
+import numpy as np
 import polars as pl
 
 from synthetic_control.data import REVIEWS
@@ -24,7 +28,7 @@ def arg_parse():
     parser.add_argument(
         "--data-dir",
         type=str,
-        default=".",
+        default="./data",
         help="Directory to read the data from",
     )
     parser.add_argument(
@@ -46,7 +50,13 @@ def arg_parse():
     parser.add_argument(
         "--plot-dir",
         type=str,
-        default="./effect_plots",
+        default="./results",
+    )
+    parser.add_argument(
+        "--results-path",
+        type=str,
+        default="./results/results.json",
+        help="Path to save the results to",
     )
     parser.add_argument(
         "--verbose",
@@ -55,6 +65,18 @@ def arg_parse():
         help="Verbosity level (repeat for more verbosity)",
     )
     return parser.parse_args()
+
+
+def _default(obj):
+    print(obj)
+    print(type(obj))
+    if isinstance(obj, (date, datetime)):
+        return obj.isoformat()
+    if isinstance(obj, Path):
+        return str(obj)
+    if isinstance(obj, np.int_):
+        return int(obj)
+    raise TypeError("Type not serializable")
 
 
 def main():
@@ -78,6 +100,11 @@ def main():
     plot_dir = Path(args.plot_dir).resolve()
     plot_dir.mkdir(parents=True, exist_ok=True)
 
+    results_path = Path(args.results_path).resolve()
+    results_path.parent.mkdir(parents=True, exist_ok=True)
+
+    results = []
+
     for game in REVIEWS:
         game = replace(
             game,
@@ -86,12 +113,26 @@ def main():
         )
         print(game)
 
-        process_game(
+        result = process_game(
             rating_data=data,
             game=game,
             plot_dir=plot_dir,
             threshold_rmse_slsqp=args.threshold_rmse_slsqp,
             y_label="Num Collections" if args.mode == "collections" else "Num Ratings",
+        )
+        relative_plot_path = Path(result.plot_path).relative_to(
+            results_path.parent,
+            walk_up=True,
+        )
+        results.append(replace(result, plot_path=relative_plot_path))
+
+    results_dict = [dataclasses.asdict(result) for result in results]
+    with results_path.open("w") as file:
+        json.dump(
+            results_dict,
+            file,
+            indent=4,
+            default=_default,
         )
 
 
