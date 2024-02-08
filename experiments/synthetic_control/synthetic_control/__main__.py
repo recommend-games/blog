@@ -40,7 +40,8 @@ def arg_parse():
     parser.add_argument(
         "--threshold-rmse-slsqp",
         type=float,
-        default=0.05,
+        default=0.03,
+        help="Threshold of normalised RMSE to use SLSQP model, else use ridge regression",
     )
     parser.add_argument(
         "--plot-dir",

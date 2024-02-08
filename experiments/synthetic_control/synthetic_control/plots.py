@@ -168,8 +168,7 @@ def process_game(
     )
 
     effect_train = y_train - y_pred_train
-    train_error = np.sqrt((effect_train**2).mean()) / len(effect_train)
-    # TODO: Adjust train_error depending on y_train.mean()
+    train_error = np.sqrt((effect_train**2).mean()) / y_train.mean()
 
     if train_error > threshold_rmse_slsqp:
         LOGGER.info(
@@ -191,7 +190,10 @@ def process_game(
     print(
         "\n+ ".join(
             f"{weight:.3} * <{bgg_id}>"
-            for weight, bgg_id in sorted(zip(weights, control_ids), reverse=True)
+            for weight, bgg_id in sorted(
+                sorted(zip(weights, control_ids), key=lambda x: -abs(x[0]))[:10],
+                reverse=True,
+            )
             if abs(weight) >= 0.001
         )
     )
