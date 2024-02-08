@@ -16,7 +16,7 @@ from synthetic_control.plots import process_game
 LOGGER = logging.getLogger(__name__)
 
 
-def arg_parse():
+def _arg_parse():
     parser = argparse.ArgumentParser(description="Synthetic Control")
     parser.add_argument(
         "--mode",
@@ -24,6 +24,11 @@ def arg_parse():
         choices=("collections", "ratings"),
         default="collections",
         help="Mode to run the experiment in",
+    )
+    parser.add_argument(
+        "--random-seed",
+        type=int,
+        help="Random seed for reproducibility",
     )
     parser.add_argument(
         "--data-dir",
@@ -77,8 +82,8 @@ def _default(obj):
     raise TypeError("Type not serializable")
 
 
-def main():
-    args = arg_parse()
+def _main():
+    args = _arg_parse()
 
     logging.basicConfig(
         level=logging.DEBUG if args.verbose > 0 else logging.INFO,
@@ -93,13 +98,16 @@ def main():
         "num_collections.csv" if args.mode == "collections" else "num_ratings.csv"
     )
     data_path = data_dir / data_file
+    LOGGER.info("Reading data from <%s>", data_path)
     data = pl.scan_csv(data_path)
 
     plot_dir = Path(args.plot_dir).resolve()
     plot_dir.mkdir(parents=True, exist_ok=True)
+    LOGGER.info("Saving plots to <%s>", plot_dir)
 
     results_path = Path(args.results_path).resolve()
     results_path.parent.mkdir(parents=True, exist_ok=True)
+    LOGGER.info("Saving results to <%s>", results_path)
 
     results = []
 
@@ -109,7 +117,7 @@ def main():
             days_before=args.days_before,
             days_after=args.days_after,
         )
-        print(game)
+        LOGGER.info("Processing game %s", game)
 
         result = process_game(
             rating_data=data,
@@ -124,6 +132,7 @@ def main():
         )
         results.append(replace(result, plot_path=relative_plot_path))
 
+    LOGGER.info("Saving results for %d games to <%s>", len(results), results_path)
     results_dict = [dataclasses.asdict(result) for result in results]
     with results_path.open("w") as file:
         json.dump(
@@ -135,4 +144,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    _main()
