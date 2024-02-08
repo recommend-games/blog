@@ -124,3 +124,17 @@ REVIEWS = (
         date_review=date(2022, 12, 22),
     ),
 )
+
+
+@dataclass(frozen=True, kw_only=True)
+class GameResult:
+    game_data: GameData
+    num_ratings_before_review: int
+    new_ratings: int
+    new_ratings_predicted: int
+    susd_effect: int
+    susd_effect_rel: float
+    nrmse_slsqp: float
+    method: str
+    model: str
+    plot_path: str | None

@@ -10,7 +10,7 @@ import seaborn as sns
 from matplotlib import pyplot as plt
 from matplotlib.axes import Axes
 
-from synthetic_control.data import GameData
+from synthetic_control.data import GameData, GameResult
 from synthetic_control.models import (
     sample_control_group,
     train_test_split,
@@ -134,7 +134,7 @@ def process_game(
     plot_dir: Optional[os.PathLike] = None,
     threshold_rmse_slsqp: float = 0.05,
     y_label: str = "Num Ratings",
-) -> None:
+) -> GameResult:
     data = (
         rating_data.lazy()
         .select(
@@ -187,15 +187,13 @@ def process_game(
 
     y_pred = np.concatenate((y_pred_train, y_pred_test))
 
-    print(
-        "\n+ ".join(
-            f"{weight:.3} * <{bgg_id}>"
-            for weight, bgg_id in sorted(
-                sorted(zip(weights, control_ids), key=lambda x: -abs(x[0]))[:10],
-                reverse=True,
-            )
-            if abs(weight) >= 0.001
+    model_str = "\n+ ".join(
+        f"{weight:.3} * <{bgg_id}>"
+        for weight, bgg_id in sorted(
+            sorted(zip(weights, control_ids), key=lambda x: -abs(x[0]))[:10],
+            reverse=True,
         )
+        if abs(weight) >= 0.001
     )
 
     ratings_train = y_train[-1]
@@ -208,9 +206,23 @@ def process_game(
     )
 
     if plot_dir is None:
-        return
+        plot_path = None
+    else:
+        plot_path = plot_dir / f"{game.bgg_id}_synthetic_control.svg"
+        plot_ratings(data, game, y_pred, y_label=y_label)
+        plt.tight_layout()
+        plt.savefig(plot_path)
+        plt.close()
 
-    plot_ratings(data, game, y_pred, y_label=y_label)
-    plt.tight_layout()
-    plt.savefig(plot_dir / f"{game.bgg_id}_synthetic_control.svg")
-    plt.close()
+    return GameResult(
+        game_data=game,
+        num_ratings_before_review=ratings_train,
+        new_ratings=new_ratings,
+        new_ratings_predicted=y_pred[-1] - ratings_train,
+        susd_effect=susd_effect,
+        susd_effect_rel=pct_new_ratings,
+        nrmse_slsqp=train_error,
+        method=method,
+        model=model_str,
+        plot_path=str(plot_path) if plot_path else None,
+    )
