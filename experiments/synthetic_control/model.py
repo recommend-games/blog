@@ -76,7 +76,7 @@ def game_name(bgg_id, base_data=game_data):
 
 # %%
 data = (
-    pl.scan_csv("num_collections.csv")
+    pl.scan_csv("./data/num_collections.csv")
     .select(
         pl.col("day").str.to_datetime().alias("timestamp"),
         pl.exclude("day").cast(int),
@@ -236,7 +236,9 @@ def process_control(
 
     effect_train = data_train[str(control_game.bgg_id)] - y_pred_train_control
     effect_test = data_test[str(control_game.bgg_id)] - y_pred_test_control
-    train_error = np.sqrt((effect_train**2).mean())
+    train_error = (
+        np.sqrt((effect_train**2).mean()) / data_train[str(control_game.bgg_id)].mean()
+    )
 
     return (
         control_game,
@@ -265,7 +267,7 @@ for control_game, _, _, effect_train, effect_test, train_error in tqdm(
     control_game_results,
     total=len(control_bgg_ids),
 ):
-    if train_error > 3:
+    if train_error > 0.03:
         print(f"Ignore <{control_game.name}> with RMSE of {train_error:.3f}")
         continue
 
