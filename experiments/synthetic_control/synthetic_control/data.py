@@ -112,3 +112,29 @@ def process_collection_counts(
     collection_counts = collection_counts.collect()
 
     return collection_counts
+
+
+def _main():
+    rankings_dir = Path().resolve().parent.parent.parent / "bgg-ranking-historicals"
+    rankings_counts = process_rankings_counts(
+        rankings_dir=rankings_dir,
+        progress_bar=True,
+    )
+    rankings_counts.write_csv("./data/num_ratings.csv")
+
+    ratings_file = (
+        Path().resolve().parent.parent.parent
+        / "board-game-data"
+        / "scraped"
+        / "bgg_RatingItem.jl"
+    )
+    collection_counts = process_collection_counts(
+        ratings_file=ratings_file,
+        max_games=50_000,
+        min_date=date(2021, 1, 1),
+    )
+    collection_counts.write_csv("./data/num_collections.csv")
+
+
+if __name__ == "__main__":
+    _main()
