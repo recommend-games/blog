@@ -2,11 +2,15 @@ from datetime import date
 import logging
 import os
 from pathlib import Path
+import sys
 from typing import Iterable
 import polars as pl
 from tqdm import tqdm
+import argparse
 
 LOGGER = logging.getLogger(__name__)
+PROJECT_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = PROJECT_DIR.parent.parent
 
 
 def process_rankings_counts(
@@ -151,31 +155,89 @@ def process_collection_counts(
     return result
 
 
+def _parse_args():
+    parser = argparse.ArgumentParser(
+        description="Process rankings and collection counts",
+    )
+    parser.add_argument(
+        "--rankings-dir",
+        type=Path,
+        default=BASE_DIR.parent / "bgg-ranking-historicals",
+        help="Directory containing the rankings files",
+    )
+    parser.add_argument(
+        "--ratings-file",
+        type=Path,
+        default=BASE_DIR.parent / "board-game-data" / "scraped" / "bgg_RatingItem.jl",
+        help="File containing the ratings data",
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=PROJECT_DIR / "data",
+        help="Directory to save the results to",
+    )
+    parser.add_argument(
+        "--max-games",
+        type=int,
+        help="Maximum number of games to process",
+    )
+    parser.add_argument(
+        "--min-date",
+        type=date.fromisoformat,
+        help="Minimum date to process",
+    )
+    parser.add_argument(
+        "--progress-bar",
+        action="store_true",
+        help="Show a progress bar",
+    )
+    parser.add_argument(
+        "--verbose",
+        action="count",
+        default=0,
+        help="Verbosity level (repeat for more verbosity)",
+    )
+    return parser.parse_args()
+
+
 def _main():
-    max_games = 50_000
-    min_date = date(2021, 1, 1)
+    args = _parse_args()
+    logging.basicConfig(
+        level=logging.DEBUG if args.verbose > 0 else logging.INFO,
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        stream=sys.stdout,
+    )
+    LOGGER.info(args)
 
-    rankings_dir = Path().resolve().parent.parent.parent / "bgg-ranking-historicals"
-    rankings_counts = process_rankings_counts(
-        rankings_dir=rankings_dir,
-        max_games=max_games,
-        min_date=min_date,
-        progress_bar=True,
-    )
-    rankings_counts.write_csv("./data/num_ratings.csv")
+    output_dir = Path(args.output_dir).resolve()
+    output_dir.mkdir(parents=True, exist_ok=True)
+    LOGGER.info("Saving results to <%s>", output_dir)
 
-    ratings_file = (
-        Path().resolve().parent.parent.parent
-        / "board-game-data"
-        / "scraped"
-        / "bgg_RatingItem.jl"
-    )
-    collection_counts = process_collection_counts(
-        ratings_file=ratings_file,
-        max_games=max_games,
-        min_date=min_date,
-    )
-    collection_counts.write_csv("./data/num_collections.csv")
+    rankings_dir = Path(args.rankings_dir).resolve()
+    if rankings_dir.is_dir():
+        rankings_counts = process_rankings_counts(
+            rankings_dir=rankings_dir,
+            max_games=args.max_games,
+            min_date=args.min_date,
+            progress_bar=args.progress_bar,
+        )
+        rankings_file = output_dir / "num_ratings.csv"
+        LOGGER.info("Saving rankings counts to <%s>", rankings_file)
+        rankings_counts.write_csv(rankings_file)
+
+    ratings_file = Path(args.ratings_file).resolve()
+    if ratings_file.is_file():
+        collection_counts = process_collection_counts(
+            ratings_file=ratings_file,
+            max_games=args.max_games,
+            min_date=args.min_date,
+        )
+        collection_file = output_dir / "num_collections.csv"
+        LOGGER.info("Saving collection counts to <%s>", collection_file)
+        collection_counts.write_csv(collection_file)
+
+    LOGGER.info("Done.")
 
 
 if __name__ == "__main__":
