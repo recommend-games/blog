@@ -1,15 +1,69 @@
 from datetime import date
+import os
 from pathlib import Path
 import polars as pl
+from tqdm import tqdm
+
+
+def process_rankings_counts(
+    rankings_dir: os.PathLike,
+    progress_bar: bool = False,
+) -> pl.DataFrame:
+    """Process the rankings counts from the rankings files."""
+
+    rankings_dir = Path(rankings_dir).resolve()
+
+    files = list(rankings_dir.glob("*.csv"))
+    rankings_dfs = (
+        pl.scan_csv(file).select(
+            pl.col("ID").alias("bgg_id"),
+            pl.col("Users rated").alias("num_ratings"),
+            pl.lit(file.stem[:10]).alias("day"),
+        )
+        for file in files
+    )
+
+    if progress_bar:
+        rankings_dfs = tqdm(rankings_dfs, total=len(files))
+
+    pivoted = (
+        pl.concat(rankings_dfs)
+        .collect()
+        .pivot(
+            values="num_ratings",
+            index="day",
+            columns="bgg_id",
+            aggregate_function="max",
+        )
+    )
+
+    game_columns = sorted(pivoted.select(pl.exclude("day")).columns, key=int)
+
+    rankings_counts = (
+        pivoted.lazy()
+        .sort("day")
+        .select(
+            "day",
+            pl.col(*game_columns)
+            .interpolate()
+            .fill_null(strategy="forward")
+            .cast(pl.Int64),
+        )
+        .collect()
+    )
+
+    return rankings_counts
 
 
 def process_collection_counts(
-    ratings_file: Path,
+    ratings_file: os.PathLike,
     *,
     max_games: int | None = None,
     min_date: date | None = None,
 ) -> pl.DataFrame:
     """Process the collection counts from the ratings file."""
+
+    ratings_file = Path(ratings_file).resolve()
 
     schema = {
         "bgg_id": pl.Int64,
