@@ -3,16 +3,16 @@ import dataclasses
 import json
 import logging
 import sys
+import time
 from dataclasses import replace
 from datetime import date, datetime
 from pathlib import Path
-import time
 
 import numpy as np
 import polars as pl
 
-from synthetic_control.data import REVIEWS
 from synthetic_control.plots import process_game
+from synthetic_control.reviews import REVIEWS
 
 LOGGER = logging.getLogger(__name__)
 

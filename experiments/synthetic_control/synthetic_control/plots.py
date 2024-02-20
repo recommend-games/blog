@@ -10,12 +10,12 @@ import seaborn as sns
 from matplotlib import pyplot as plt
 from matplotlib.axes import Axes
 
-from synthetic_control.data import GameData, GameResult
 from synthetic_control.models import (
     sample_control_group,
     train_test_split,
     weights_and_predictions,
 )
+from synthetic_control.reviews import GameData, GameResult
 
 sns.set_style("dark")
 

@@ -32,7 +32,6 @@ import seaborn as sns
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 
-from synthetic_control.data import REVIEWS
 from synthetic_control.models import (
     sample_control_and_predict,
     sample_control_group,
@@ -40,6 +39,7 @@ from synthetic_control.models import (
     weights_and_predictions,
 )
 from synthetic_control.plots import plot_effect, plot_ratings
+from synthetic_control.reviews import REVIEWS
 
 jupyter_black.load()
 np.set_printoptions(suppress=True)
