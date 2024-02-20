@@ -6,7 +6,7 @@ from scipy.optimize import fmin_slsqp
 from sklearn.base import BaseEstimator
 from sklearn.linear_model import LinearRegression, Ridge
 
-from synthetic_control.data import GameData
+from synthetic_control.reviews import GameData
 
 
 def train_test_split(
