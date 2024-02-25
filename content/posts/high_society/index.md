@@ -101,7 +101,13 @@ This is a nice closed form, but it's *a)* tedious to calculate as those factoria
 
 ## Pedestrian, but insightful formula
 
-TODO
+Did you notice above how \\(P(X = 15) = 25\\%\\) is such a nice round number? Maybe it's worth calculating this value in yet another way. So, what does it mean for the game to go over the full length? It means that the very last card has to be a dark one. What's the probability of this happening? Well, 4 out of 16 cards are dark, so there's a 1 in 4 chance of the last card being dark.
+
+Similarly, we can check why \\(P(X = 14) = 20\\%\\). This means the penultimate card will have to be the 4th dark card, i.e., the last card has to be light. In other words,
+
+\\[ P(X = 14) = \frac{12}{16} \cdot \frac{4}{15} = \frac{1}{5} = 20\\%. \\]
+
+Once I started to examine this pattern, a lightbulb went on in my head. We need to flip the deck over! 💡
 
 
 ## Negative hypergeometric distribution
