@@ -75,10 +75,25 @@ If you prefer the visual representation, here's a histogram of the game lengths:
 
 {{< img src="game_lengths" alt="Histogram of game lengths" >}}
 
-As promised, very short games are extremely rare, but long games are in fact the most common. This isn't necessarily what I would have expected when starting to think about this problem. I think there's a pretty good intuition for why this is the case, but it's instructive to develop the exact formulae first.
+As promised, very short games are extremely rare, but long games are in fact the most common. This isn't necessarily what I would have expected when starting to think about this problem. I think there's a pretty good intuition for why this is the case, but it's instructive to examine the distribution from a more theoretic point of view first.
 
+
+## Hypergeometric distribution
+
+If you've done your statistics 101, you've indubitably come across questions about poker hands, e.g., how likely is it to get a flush when drawing five cards out of a standard deck of 52? The answer to this question is given by the hypergeometric distribution, which is the distribution of the number of successes in a sequence of $n$ draws without replacement from a finite population of size $N$ containing exactly $K$ successes. The probability mass function of the hypergeometric distribution is given by
+
+$$
+P(X = k) = \frac{{K \choose k} {N - K \choose n - k}}{{N \choose n}}.
+$$
+
+Now we can frame the game length question in terms of the hypergeometric distribution. With its help, we can easily calculate the probability that the four dark cards are drawn among the first $n$ cards. This is *almost* what we want – it really describes the cumulative probability, i.e., the probability of a game lasting at most $n$ rounds.
 
 ## Exact formula, the pedestrian way
+
+TODO
+
+
+## Negative hypergeometric distribution
 
 TODO
 
