@@ -75,6 +75,8 @@ If you prefer the visual representation, here's a histogram of the game lengths:
 
 {{< img src="game_lengths" alt="Histogram of game lengths" >}}
 
+As promised, very short games are extremely rare, but long games are in fact the most likely. This isn't necessarily what I would have expected when starting to think about this problem. I think there's a pretty good intuition for why this is the case, but it's instructive to develop the exact formulae first.
+
 * Explain the game
 * Relate to Orchard, but explain difference (actual strategy and very meaningful decisions)
 * How long is a game? (Why should we care?)
