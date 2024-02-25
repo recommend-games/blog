@@ -11,6 +11,7 @@ tags:
   - Child's play
   - Children's games
   - Win rates
+  - Game length
 ---
 
 {{% game 5770 %}}Orchard{{% /game %}} is a beloved children's game classic which is so old – it's as old as myself. 👴 As one might expect from a children's game, it's really simple: roll a die, pick a fruit of the corresponding color, and put it in the basket. If you roll the raven, the raven moves one step closer to the orchard. If you manage to pick all the fruit before the raven reaches the orchard, you win together. If the raven reaches the orchard first, you lose.
