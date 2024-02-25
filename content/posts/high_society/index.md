@@ -80,13 +80,20 @@ As promised, very short games are extremely rare, but long games are in fact the
 
 ## Hypergeometric distribution
 
-If you've done your statistics 101, you've indubitably come across questions about poker hands, e.g., how likely is it to get a flush when drawing five cards out of a standard deck of 52? The answer to this question is given by the hypergeometric distribution, which is the distribution of the number of successes in a sequence of $n$ draws without replacement from a finite population of size $N$ containing exactly $K$ successes. The probability mass function of the hypergeometric distribution is given by
+If you've done your statistics 101, you've indubitably come across questions about poker hands, e.g., how likely is it to get a flush when drawing five cards out of a standard deck of 52? The answer to this question can be calculated using the hypergeometric distribution. If you find the name intimidating, wait till you see the formula:
 
-$$
-P(X = k) = \frac{{K \choose k} {N - K \choose n - k}}{{N \choose n}}.
-$$
+\\[ p(N, K, n; k) = \frac{{K \choose k} {N - K \choose n - k}}{{N \choose n}}. \\]
 
-Now we can frame the game length question in terms of the hypergeometric distribution. With its help, we can easily calculate the probability that the four dark cards are drawn among the first $n$ cards. This is *almost* what we want – it really describes the cumulative probability, i.e., the probability of a game lasting at most $n$ rounds.
+So let's take this step by step. Applied to our situation, we have a total of \\(N\\) cards, \\(K\\) of which are "successes", i.e., the dark ones. In the standard application of the hypergeometric distribution, we'd draw a fixed number of \\(n\\) cards and want to know the probability that exactly \\(k\\) of them are dark. Our problem however is a little different: we need to fix \\(k = 4\\) dark cards to be drawn and want to know the probability that this happens within the first \\(n\\) draws. This is *almost* what we want – it describes the probability that the game last *less* than \\(n\\). Let \\(X\\) be the random variable that describes the game length. Then what we just said can be expressed as
+
+\\[ P(X \lt n) = p(16, 4, n; 4) = \frac{{4 \choose 4} {16 - 4 \choose n - 4}}{{16 \choose n}} = \frac{{12 \choose n - 4}}{{16 \choose n}}. \\]
+
+Now, it's easy to recover the probability is that the game lasts *exactly* \\(n\\) rounds:
+
+\\[ P(X = n) = P(X \lt n) - P(X \lt n - 1) = \frac{{12 \choose n - 4}}{{16 \choose n}} - \frac{{12 \choose n - 5}}{{16 \choose n - 1}}, \\]
+
+where \\(n \ge 4\\).
+
 
 ## Exact formula, the pedestrian way
 
