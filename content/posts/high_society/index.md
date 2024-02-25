@@ -90,9 +90,9 @@ So let's take this step by step. Applied to our situation, we have a total of \\
 
 Now, it's easy to recover the probability is that the game lasts *exactly* \\(n\\) rounds:
 
-\\[ P(X = n) = P(X \lt n) - P(X \lt n - 1) = \frac{{12 \choose n - 4}}{{16 \choose n}} - \frac{{12 \choose n - 5}}{{16 \choose n - 1}}, \\]
+\\[ P(X = n) = P(X \lt n + 1) - P(X \lt n) = \frac{{12 \choose n - 3}}{{16 \choose n + 1}} - \frac{{12 \choose n - 4}}{{16 \choose n}}, \\]
 
-where \\(n \ge 4\\).
+where \\(n \ge 4\\) to make sure the binomial coefficients are defined (I'll leave \\(P(X = 3)\\) as an exercise to the reader).
 
 
 ## Exact formula, the pedestrian way
