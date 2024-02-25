@@ -20,16 +20,16 @@ The general concept is quite simple: the players are members of said "high socie
 
 Here's the twist though: The player with the least money at the end of the game is disqualified (that poor bastard can no longer be accepted as a member of this exclusive club!), so the players are trying to get the most points while also keeping enough money to stay in the game. This provides agonising decisions every turn – as well as a biting satire of the upper class.
 
-One interesting detail is the way the game ends. There's a total of 16 cards to be autioned off in the deck. Four of these cards have a dark background. As soon as the fourth dark card is revealed, the game ends immediately. (That last card isn't sold anymore.) This looming end adds extra tension to the game as players need to take gambles towards the end of the game and try to guess how many more chances they'll get to bid.
+One interesting detail is the way the game ends. There's a total of 16 cards to be autioned off in the deck. 4 of these cards have a dark background. As soon as the 4th dark card is revealed, the game ends immediately. (That last card isn't sold anymore.) This looming end adds extra tension to the game as players need to take gambles towards the end of the game and try to guess how many more chances they'll get to bid.
 
-This is where the maths comes in. While the strategy is way too deep to be easily analysed, modelling the game length is pretty straightforward and we'll do so in a couple of different ways. We'll start with a simple simulation to understand what's going on. Then we'll develop exact formulae, which will culminate in meeting your new best friend: the negative hypergeometric distribution.
+This is where the maths comes in. While the strategy is way too deep to be easily analysed (and involves some interesting meta in pricing the cards), modelling the game length is pretty straightforward and we'll do so in a couple of different ways. We'll start with a simple simulation to understand what's going on. Then we'll develop exact formulae, which will culminate in meeting your new best friend: the negative hypergeometric distribution.
 
-Let's settle one important convention first though: In everything that follows, I'll only count the cards that are actually auctioned off. The last card is never auctioned off, so it doesn't count towards the game length. So the shortest possible game is three rounds long: this happens if all four dark cards are on top of the deck (very unlikely). The longest possible game on the other hand is 15 rounds long: this happens if the card at the bottom of the deck is dark and hence the 15 cards above it will be autioned off (actually pretty likely, as we shall see).
+Let's settle one important convention first though: In everything that follows, I'll only count the cards that are actually auctioned off. The last card is never auctioned off, so it doesn't count towards the game length. So the shortest possible game is 3 rounds long: this happens if all 4 dark cards are on top of the deck (very unlikely). The longest possible game on the other hand is 15 rounds long: this happens if the card at the bottom of the deck is dark and hence the 15 cards above it will be autioned off (actually pretty likely, as we shall see).
 
 
 ## Simulation
 
-It's really simple to simulate this situation. Just create a bunch of (virtual) decks of 16 cards each, colour four of them dark, then shuffle them. Now we just need to count where in each of the decks the fourth dark card is. If our sample was big enough, this gives us a really good approximation of the distribution of game lengths.
+It's really simple to simulate this situation. Just create a bunch of (virtual) decks of 16 cards each, colour 4 of them dark, then shuffle them. Now we just need to count where in each of the decks the 4th dark card is. If our sample was big enough, this gives us a really good approximation of the distribution of game lengths.
 
 If you know a little bit of Python and the ubiquitous `numpy` library, you can do this in just a few lines of code, so I thought, I'd walk you through it. If you don't care about coding, just skip ahead to the results. (Be warned that formulae are coming up next though, so the code might be the relaxing bit.)
 
@@ -80,11 +80,11 @@ As promised, very short games are extremely rare, but long games are in fact the
 
 ## Hypergeometric distribution
 
-If you've done your statistics 101, you've indubitably come across questions about poker hands, e.g., how likely is it to get a flush when drawing five cards out of a standard deck of 52? The answer to this question can be calculated using the hypergeometric distribution. If you find the name intimidating, wait till you see the formula:
+If you've done your statistics 101, you've indubitably come across questions about poker hands. E.g., how likely is it to get a flush when drawing 5 cards out of a standard deck of 52? The answer to this question can be calculated using the hypergeometric distribution. If you find the name intimidating, wait till you see the formula:
 
 \\[ p(N, K, n; k) = \frac{{K \choose k} {N - K \choose n - k}}{{N \choose n}}. \\]
 
-So let's take this step by step. Applied to our situation, we have a total of \\(N\\) cards, \\(K\\) of which are "successes", i.e., the dark ones. In the standard application of the hypergeometric distribution, we'd draw a fixed number of \\(n\\) cards and want to know the probability that exactly \\(k\\) of them are dark. Our problem however is a little different: we need to fix \\(k = 4\\) dark cards to be drawn and want to know the probability that this happens within the first \\(n\\) draws. This is *almost* what we want – it describes the probability that the game lasts *less* than \\(n\\) rounds. Let \\(X\\) be the random variable that describes the game length. Then what we just said can be expressed as
+So let's take this step by step. Applied to our situation, we have a total of \\(N = 16\\) cards, \\(K = 4\\) of which are "successes", i.e., the dark ones. In the standard application of the hypergeometric distribution, we'd draw a fixed number of \\(n\\) cards and want to know the probability that exactly \\(k\\) of them are dark. Our problem however is a little different: we need to fix \\(k = 4\\) dark cards to be drawn and want to know the probability that this happens within the first \\(n\\) draws. This is *almost* what we want – it describes the probability that the game lasts *less* than \\(n\\) rounds. Let \\(X\\) be the random variable that describes the game length. Then what we just said can be expressed as
 
 \\[ P(X \lt n) = p(16, 4, n; 4) = \frac{{4 \choose 4} {16 - 4 \choose n - 4}}{{16 \choose n}} = \frac{{12 \choose n - 4}}{{16 \choose n}}. \\]
 
