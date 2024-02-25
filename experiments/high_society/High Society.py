@@ -33,7 +33,7 @@ num_dark = 4
 num_games = 1_000_000
 possible_lengths = np.arange(num_dark - 1, num_cards)
 
-random_seed = None
+random_seed = 13
 rng = np.random.default_rng(seed=random_seed)
 
 # %% [markdown]
@@ -50,6 +50,11 @@ print(lengths_simulations.mean(), lengths_simulations.std())
 unique_lengths, length_counts = np.unique(lengths_simulations, return_counts=True)
 actual_lengths = defaultdict(float, zip(unique_lengths, length_counts / num_games))
 {num_rounds: actual_lengths[num_rounds] for num_rounds in possible_lengths}
+
+# %%
+for num_rounds in possible_lengths:
+    num_rounds: actual_lengths[num_rounds]
+    print(f"|{num_rounds}|{actual_lengths[num_rounds]:.1%}|")
 
 # %% [markdown]
 # ## Hypergeometric distribution

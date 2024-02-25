@@ -26,6 +26,61 @@ This is where the maths comes in. While the strategy is way too deep to be easil
 
 Let's settle one important convention first though: In everything that follows, I'll only count the cards that are actually auctioned off. The last card is never auctioned off, so it doesn't count towards the game length. So the shortest possible game is three rounds long: this happens if all four dark cards are on top of the deck (very unlikely). The longest possible game on the other hand is 15 rounds long: this happens if the card at the bottom of the deck is dark and hence the 15 cards above it will be autioned off (actually pretty likely, as we shall see).
 
+
+## Simulation
+
+It's really simple to simulate this situation. Just create a bunch of (virtual) decks of 16 cards each, colour four of them dark, then shuffle them. Now we just need to count where in each of the decks the fourth dark card is. If our sample was big enough, this gives us a really good approximation of the distribution of game lengths.
+
+If you know a little bit of Python and the ubiquitous `numpy` library, you can do this in just a few lines of code, so I thought, I'd walk you through it. If you don't care about coding, just skip ahead to the results. (Be warned that formulae are coming up next though, so the code might be the relaxing bit.)
+
+```python
+import numpy as np
+
+# Set up the parameters
+num_cards = 16
+num_dark = 4
+num_games = 1_000_000
+rng = np.random.default_rng(seed=13)
+
+# Create the decks: num_games rows, num_cards columns
+games = np.zeros((num_games, num_cards), dtype=bool)
+# Colour the last four columns in each row dark
+games[:, :num_dark] = True
+# Shuffle each row individually
+games = rng.permuted(games, axis=1, out=games)
+
+# Count the game lengths: in each row, sum the number of dark cards revealed so far.
+# Every column where this cumulative sum is less than the number of dark cards is a round of the game.
+game_lengths = np.sum(np.cumsum(games, axis=1) < num_dark, axis=1)
+# Mean and standard deviation of the game lengths
+print(game_lengths.mean(), game_lengths.std())
+# Histogram the game lengths
+unique_lengths, length_counts = np.unique(game_lengths, return_counts=True)
+print(dict(zip(unique_lengths, length_counts / num_games)))
+```
+
+Don't worry if you can't follow the code immediately, I'll admit to playing a bit of code golf there. The important part are the result anyways, which should look something like this: the mean game length is **12.6 rounds** with a **standard deviation of 2.3**. This is the full distribution of game lengths:
+
+|Length|Probability|
+|---:|---:|
+|3|0.1%|
+|4|0.2%|
+|5|0.5%|
+|6|1.1%|
+|7|1.9%|
+|8|3.1%|
+|9|4.6%|
+|10|6.6%|
+|11|9.1%|
+|12|12.1%|
+|13|15.8%|
+|14|20.0%|
+|15|25.0%|
+
+If you prefer the visual representation, here's a histogram of the game lengths:
+
+{{< img src="game_lengths" alt="Histogram of game lengths" >}}
+
 * Explain the game
 * Relate to Orchard, but explain difference (actual strategy and very meaningful decisions)
 * How long is a game? (Why should we care?)
