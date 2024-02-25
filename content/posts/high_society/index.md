@@ -84,7 +84,7 @@ If you've done your statistics 101, you've indubitably come across questions abo
 
 \\[ p(N, K, n; k) = \frac{{K \choose k} {N - K \choose n - k}}{{N \choose n}}. \\]
 
-So let's take this step by step. Applied to our situation, we have a total of \\(N\\) cards, \\(K\\) of which are "successes", i.e., the dark ones. In the standard application of the hypergeometric distribution, we'd draw a fixed number of \\(n\\) cards and want to know the probability that exactly \\(k\\) of them are dark. Our problem however is a little different: we need to fix \\(k = 4\\) dark cards to be drawn and want to know the probability that this happens within the first \\(n\\) draws. This is *almost* what we want – it describes the probability that the game last *less* than \\(n\\). Let \\(X\\) be the random variable that describes the game length. Then what we just said can be expressed as
+So let's take this step by step. Applied to our situation, we have a total of \\(N\\) cards, \\(K\\) of which are "successes", i.e., the dark ones. In the standard application of the hypergeometric distribution, we'd draw a fixed number of \\(n\\) cards and want to know the probability that exactly \\(k\\) of them are dark. Our problem however is a little different: we need to fix \\(k = 4\\) dark cards to be drawn and want to know the probability that this happens within the first \\(n\\) draws. This is *almost* what we want – it describes the probability that the game lasts *less* than \\(n\\) rounds. Let \\(X\\) be the random variable that describes the game length. Then what we just said can be expressed as
 
 \\[ P(X \lt n) = p(16, 4, n; 4) = \frac{{4 \choose 4} {16 - 4 \choose n - 4}}{{16 \choose n}} = \frac{{12 \choose n - 4}}{{16 \choose n}}. \\]
 
@@ -92,10 +92,14 @@ Now, it's easy to recover the probability is that the game lasts *exactly* \\(n\
 
 \\[ P(X = n) = P(X \lt n + 1) - P(X \lt n) = \frac{{12 \choose n - 3}}{{16 \choose n + 1}} - \frac{{12 \choose n - 4}}{{16 \choose n}}, \\]
 
-where \\(n \ge 4\\) to make sure the binomial coefficients are defined (I'll leave \\(P(X = 3)\\) as an exercise to the reader).
+where \\(n \ge 4\\) to make sure the binomial coefficients are defined (I'll leave \\(P(X = 3)\\) as an exercise to the reader). If you're bored, you can flex your algebraic muscles and simplify this expression:
+
+\\[ P(X = n) = \frac{12! \cdot n! \cdot 4}{(n - 3)! \cdot 16!}. \\]
+
+This is a nice closed form, but it's *a)* tedious to calculate as those factorials really do blow up and *b)* not particularly insightful. Can we do better?
 
 
-## Exact formula, the pedestrian way
+## Pedestrian, but insightful formula
 
 TODO
 

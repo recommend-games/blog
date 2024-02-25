@@ -23,6 +23,7 @@ import seaborn as sns
 from collections import defaultdict
 from matplotlib import pyplot as plt
 from matplotlib import ticker
+from scipy.special import factorial
 from scipy.stats import hypergeom, nhypergeom
 
 jupyter_black.load()
@@ -91,6 +92,33 @@ def probability(
 # %%
 probs_formula = np.array([probability(num_rounds) for num_rounds in possible_lengths])
 dict(zip(possible_lengths, probs_formula))
+
+
+# %% [markdown]
+# ## Exact formula with factorials
+
+# %%
+def probability_factorial(
+    num_rounds: int,
+    num_cards: int = num_cards,
+    num_dark: int = num_dark,
+) -> float:
+    if num_rounds < num_dark - 1 or num_rounds >= num_cards:
+        return 0.0
+    return (
+        factorial(num_cards - num_dark)
+        * factorial(num_rounds)
+        * num_dark
+        / factorial(num_rounds - 3)
+        / factorial(num_cards)
+    )
+
+
+# %%
+probs_factorial_formula = np.array(
+    [probability_factorial(num_rounds) for num_rounds in possible_lengths]
+)
+dict(zip(possible_lengths, probs_factorial_formula))
 
 # %% [markdown]
 # ## Negative hypergeometric distribution
