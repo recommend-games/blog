@@ -117,6 +117,10 @@ And in general:
 
 \\[ P(X = n) = \frac{4}{n+1} \cdot \prod_{k=n-2}^{12} \frac{k}{k+4}. \\]
 
+Again, if you feel bored, you can express this product in terms of the same factorials as above. But the big advantage of this formulation is that it's pretty transparent what's going on.
+
+So, are we finally done? Not quite, there's still another way of arriving at the same result, which is a bit more elegant and general.
+
 
 ## Negative hypergeometric distribution
 
