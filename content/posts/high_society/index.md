@@ -61,21 +61,15 @@ print(dict(zip(unique_lengths, length_counts / num_games)))
 
 Don't worry if you can't follow the code immediately, I'll admit to playing a bit of code golf there. The important part are the result anyways, which should look something like this: the mean game length is **12.6 rounds** with a **standard deviation of 2.3**. This is the full distribution of game lengths:
 
-|Length|Probability|
-|---:|---:|
-|3|0.1%|
-|4|0.2%|
-|5|0.5%|
-|6|1.1%|
-|7|1.9%|
-|8|3.1%|
-|9|4.6%|
-|10|6.6%|
-|11|9.1%|
-|12|12.1%|
-|13|15.8%|
-|14|20.0%|
-|15|25.0%|
+|Length|Probability||Length|Probability|
+|---:|---:|-|---:|---:|
+|3|0.1%||10|6.6%|
+|4|0.2%||11|9.1%|
+|5|0.5%||12|12.1%|
+|6|1.1%||13|15.8%|
+|7|1.9%||14|20.0%|
+|8|3.1%||15|25.0%|
+|9|4.6%||||
 
 If you prefer the visual representation, here's a histogram of the game lengths:
 
