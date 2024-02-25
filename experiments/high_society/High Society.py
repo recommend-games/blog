@@ -95,6 +95,29 @@ dict(zip(possible_lengths, probs_formula))
 
 
 # %% [markdown]
+# ## Exact formula (alt)
+
+# %%
+def probability_alt(
+    num_rounds: int,
+    num_cards: int = num_cards,
+    num_dark: int = num_dark,
+) -> float:
+    if num_rounds < num_dark - 1 or num_rounds >= num_cards:
+        return 0.0
+    arr = np.arange(num_rounds - 2, num_cards - num_dark + 1)
+    prod = (arr / (arr + num_dark)).prod()
+    return prod * num_dark / (num_rounds + 1)
+
+
+# %%
+probs_alt_formula = np.array(
+    [probability_alt(num_rounds) for num_rounds in possible_lengths]
+)
+dict(zip(possible_lengths, probs_alt_formula))
+
+
+# %% [markdown]
 # ## Exact formula with factorials
 
 # %%

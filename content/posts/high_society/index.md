@@ -96,6 +96,8 @@ where \\(n \ge 4\\) to make sure the binomial coefficients are defined (I'll lea
 
 \\[ P(X = n) = \frac{12! \cdot n! \cdot 4}{(n - 3)! \cdot 16!}. \\]
 
+<!-- TODO: Simplify further to polynomial. -->
+
 This is a nice closed form, but it's *a)* tedious to calculate as those factorials really do blow up and *b)* not particularly insightful. Can we do better?
 
 
@@ -107,7 +109,13 @@ Similarly, we can check why \\(P(X = 14) = 20\\%\\). This means the penultimate 
 
 \\[ P(X = 14) = \frac{12}{16} \cdot \frac{4}{15} = \frac{1}{5} = 20\\%. \\]
 
-Once I started to examine this pattern, a lightbulb went on in my head. We need to flip the deck over! 💡
+Once I started to examine this pattern, a lightbulb went on in my head. We need to flip the deck over! 💡 Now, we're no longer asking where the 4th dark card is in the pile, but rather how many light cards are in a row at the bottom of it. This is pretty straightforward to write down, e.g., for the next probability in line:
+
+\\[ P(X = 13) = \frac{12}{16} \cdot \frac{11}{15} \cdot \frac{4}{14} = \frac{11}{70} \approx 15.7\\%. \\]
+
+And in general:
+
+\\[ P(X = n) = \frac{4}{n+1} \cdot \prod_{k=n-2}^{12} \frac{k}{k+4}. \\]
 
 
 ## Negative hypergeometric distribution
