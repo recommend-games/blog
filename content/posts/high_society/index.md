@@ -145,6 +145,10 @@ which we can further simplify to
 
 so thankfully, this checks out. 😌
 
+Now, you might think it's quite redundant to derive the same result over and over, but I find it immensely satisfying to obtain the same formula in 3 different ways – and have them verified by simulation. Probability theory can be very tricky and plausible calculations can go wrong in unexpected ways. This article could've just been a single paragraph if we had immediately given away the answer with the negative hypergeometric distribution, but I honestly wouldn't have trusted the results just like that.
+
+<!-- TODO: Why are the probabilities monotonic? -->
+<!-- What's the intuition behind long games? Distribution of gaps. -->
 
 ## Outline
 
