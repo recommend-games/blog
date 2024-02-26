@@ -137,9 +137,14 @@ The probability mass function of the negative hypergeometric distribution is giv
 
 where \\(N = 16\\) is the total number of cards, \\(K = 12\\) is the number of *light* cards amongst them, \\(r = 4\\) is the number of dark cards (which will end the experiment / game), and \\(k\\) is the number of light cards drawn. Again, let \\(X\\) be the random variable that describes the game length. Then the probability that the game lasts \\(n\\) rounds is
 
-\\[ P(X = n) = p_{NHG}(16, 12, 4; n - 3) = \frac{{n - 3 + 4 - 1 \choose n - 3} {16 - 4 - n + 3 \choose 12 - n + 3}}{16 \choose 12} = \frac{{n \choose n - 3}}{16 \choose 12} = \frac{n!}{(n-3)! \cdot 3!} \cdot \frac{12! \cdot 4!}{16!} = \frac{12! \cdot n! \cdot 4}{(n - 3)! \cdot 16!}, \\]
+\\[ P(X = n) = p_{NHG}(16, 12, 4; n - 3) = \frac{{n - 3 + 4 - 1 \choose n - 3} {16 - 4 - n + 3 \choose 12 - n + 3}}{16 \choose 12} = \frac{{n \choose n - 3}}{16 \choose 12}, \\]
 
-which thankfully checks. 😌
+which we can further simplify to
+
+\\[ P(X = n) = \frac{n!}{(n-3)! \cdot 3!} \cdot \frac{12! \cdot 4!}{16!} = \frac{12! \cdot n! \cdot 4}{(n - 3)! \cdot 16!}, \\]
+
+so thankfully, this checks out. 😌
+
 
 ## Outline
 
