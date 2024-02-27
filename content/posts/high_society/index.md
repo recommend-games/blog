@@ -3,7 +3,7 @@ title: "How long is a game of High Society?"
 slug: high-society
 author: Markus Shepherd
 type: post
-date: 2024-02-25T15:00:00+02:00
+date: 2024-02-27T22:33:00+02:00
 tags:
   - High Society
   - Reiner Knizia
