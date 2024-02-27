@@ -154,3 +154,5 @@ Now, you might think it's quite redundant to derive the same result over and ove
 <!-- TODO: What's the intuition behind long games? -->
 
 One final question remains: Did Reiner Knizia crunch the numbers when he designed the game? I can't tell for sure, but he does hold a PhD in mathematics, so he would certainly have carefully considered the impact of the game length on the balance and gaming experience. When it comes to the "fun" in games, theory doesn't matter and play testing is king, but calculations like these will provide a shortcut in the design process. Simulations are usually the fastest and most robust way to model a game, but calculations can lead you down really fun rabbit holes – I speak from experience… 🐇
+
+*PS*: You can find the code for the simulation etc [here](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/high_society).
