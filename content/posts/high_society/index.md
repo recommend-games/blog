@@ -17,7 +17,7 @@ tags:
 
 {{% game 220 %}}High Society{{% /game %}} is a classic bidding game by classic designer [Dr Reiner Knizia](https://recommend.games/#/?designer=2), most recently released by [Osprey Games](https://www.ospreypublishing.com/uk/osprey-games/) with a wonderfully classic look:
 
-{{< img src="high_society_cover" alt="Cover of Orchard" size="600x" >}}
+{{< img src="high_society_cover" alt="Cover of High Society" size="600x" >}}
 
 The general concept is quite simple: the players are members of said "high society" and are trying to outdo each other in showing off their wealth. The game is played over a series of rounds, and in each round, a card is revealed from a deck of 16 cards. The players then take turns bidding on the card, and the player who wins the bid gets the card. The cards are worth points, and the player with the most points at the end of the game wins.
 
@@ -99,8 +99,6 @@ where \\(n \ge 4\\) to make sure the binomial coefficients are defined (I'll lea
 
 \\[ P(X = n) = \frac{12! \cdot n! \cdot 4}{(n - 3)! \cdot 16!}. \\]
 
-<!-- TODO: Simplify further to polynomial. -->
-
 This is a nice closed form, but it's *a)* tedious to calculate as those factorials really do blow up and *b)* not particularly insightful. Can we do better?
 
 
@@ -121,6 +119,8 @@ And in general:
 \\[ P(X = n) = \frac{4}{n+1} \cdot \prod_{k=n-2}^{12} \frac{k}{k+4}. \\]
 
 Again, if you feel bored, you can express this product in terms of the same factorials as above. But the big advantage of this formulation is that it's pretty transparent what's going on.
+
+<!-- TODO: Let's carry out those algebraic steps. -->
 
 So, are we finally done? Not quite, there's still another way of arriving at the same result, which is a bit more elegant and general.
 
@@ -147,20 +147,4 @@ so thankfully, this checks out. 😌
 
 Now, you might think it's quite redundant to derive the same result over and over, but I find it immensely satisfying to obtain the same formula in 3 different ways – and have them verified by simulation. Probability theory can be very tricky and plausible calculations can go wrong in unexpected ways. This article could've just been a single paragraph if we had immediately given away the answer with the negative hypergeometric distribution, but I honestly wouldn't have trusted the results just like that.
 
-<!-- TODO: Why are the probabilities monotonic? -->
-<!-- What's the intuition behind long games? Distribution of gaps. -->
-
-## Outline
-
-* Explain the game
-* Relate to Orchard, but explain difference (actual strategy and very meaningful decisions)
-* How long is a game? (Why should we care?)
-* Simulation
-* Work backwards, probability of full length, then one card left, etc.
-* Exact formula, pedestrian
-* Hypergeometric distribution
-* Negative hypergeometric distribution
-* Are the probabilities always monotonic? Why? Intuition?
-* Did Dr Knizia do this calculation? Why did he make the choices he did?
-* What if there were different number of cards?
-* Conclusion
+One final question remains: Did Reiner Knizia crunch the numbers when he designed the game? I can't tell for sure, but he does hold a PhD in mathematics, so he would certainly have carefully considered the impact of the game length on the balance and gaming experience. When it comes to the "fun" in games, theory doesn't matter and play testing is king, but calculations like these will provide a shortcut in the design process. Simulations are usually the fastest and most robust way to model a game, but calculations can lead you down really fun rabbit holes – I speak from experience… 🐇
