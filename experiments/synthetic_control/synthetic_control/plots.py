@@ -2,6 +2,7 @@ import logging
 import math
 import os
 from datetime import timedelta
+from pathlib import Path
 from typing import Optional
 
 import numpy as np
@@ -214,12 +215,21 @@ def process_game(
     pct_new_ratings = susd_effect / new_ratings
 
     if plot_dir is None:
-        plot_path = None
+        plot_path_ratings = None
+        plot_path_synthetic_control = None
     else:
-        plot_path = plot_dir / f"{game.bgg_id}_synthetic_control.svg"
+        plot_dir = Path(plot_dir).resolve()
+
+        plot_path_ratings = plot_dir / f"{game.bgg_id}_ratings.svg"
+        plot_ratings(data, game, y_label=y_label)
+        plt.tight_layout()
+        plt.savefig(plot_path_ratings)
+        plt.close()
+
+        plot_path_synthetic_control = plot_dir / f"{game.bgg_id}_synthetic_control.svg"
         plot_ratings(data, game, y_pred, y_label=y_label)
         plt.tight_layout()
-        plt.savefig(plot_path)
+        plt.savefig(plot_path_synthetic_control)
         plt.close()
 
     return GameResult(
@@ -232,5 +242,6 @@ def process_game(
         nrmse_slsqp=train_error,
         method=method,
         model=model_str,
-        plot_path=plot_path,
+        plot_path_ratings=plot_path_ratings,
+        plot_path_synthetic_control=plot_path_synthetic_control,
     )

@@ -129,11 +129,23 @@ def _main():
             y_label="Num Collections" if args.mode == "collections" else "Num Ratings",
             rng=np.random.default_rng(random_seed),
         )
-        relative_plot_path = Path(result.plot_path).relative_to(
+        relative_plot_path_ratings = Path(result.plot_path_ratings).relative_to(
             results_path.parent,
             walk_up=True,
         )
-        results.append(replace(result, plot_path=relative_plot_path))
+        relative_plot_path_synthetic_control = Path(
+            result.plot_path_synthetic_control
+        ).relative_to(
+            results_path.parent,
+            walk_up=True,
+        )
+        results.append(
+            replace(
+                result,
+                plot_path_ratings=relative_plot_path_ratings,
+                plot_path_synthetic_control=relative_plot_path_synthetic_control,
+            )
+        )
 
     LOGGER.info("Saving results for %d games to <%s>", len(results), results_path)
     results_dict = [dataclasses.asdict(result) for result in results]

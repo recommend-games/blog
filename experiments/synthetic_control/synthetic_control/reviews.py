@@ -138,4 +138,5 @@ class GameResult:
     nrmse_slsqp: float
     method: str
     model: str
-    plot_path: os.PathLike | None
+    plot_path_ratings: os.PathLike | None
+    plot_path_synthetic_control: os.PathLike | None
