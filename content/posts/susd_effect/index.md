@@ -18,7 +18,7 @@ Their recent review of {{% game 332686 %}}John Company{{% /game %}} is an intere
 
 The game was by no means a hidden gem before: designer Cole Wehrle has two games in the BoardGameGeek (BGG) top 50 with {{% game 237182 %}}Root{{% /game %}} and {{% game 256960 %}}Pax Pamir{{% /game %}}, the latter being released by his own publishing house Wehrlegig Games as well. So it's fair to say that {{% game 332686 %}}John Company{{% /game %}} already had a lot of eyes on it. Still, when we look at the number of ratings[^num_ratings] on BGG, it's hard to deny the apparent increase in the slope after the video was released:
 
-<!-- TODO: Plot number of ratings before and after the video -->
+{{< img src="332686_ratings" alt="Number of ratings of John Company before and after the SU&SD review" >}}
 
 One might simply draw a line through the number of ratings before the video and extrapolate it to the present, then call the difference to the actual number of ratings the "Shut Up & Sit Down effect". But if you're reading this blog, your mind is probably of the kind that immediately goes: "Hang on, how do we know the increase is actually because of SU&SD and not because of some other unrelated reason?" The problem is that we don't have a "control world": one that has never been exposed to the video, but is otherwise identical to ours. These kinds of counterfactual questions are what keeps business analysts up at night (luckily that's not me, so writing blog posts like this one keeps me up instead 😅).
 
