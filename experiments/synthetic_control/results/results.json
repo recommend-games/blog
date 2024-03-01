@@ -16,7 +16,8 @@
         "nrmse_slsqp": 0.000738592305197918,
         "method": "slsqp",
         "model": "0.36 * <284760>\n+ 0.175 * <358386>\n+ 0.119 * <345972>\n+ 0.0995 * <281474>\n+ 0.0894 * <305682>\n+ 0.0665 * <355224>\n+ 0.0647 * <355433>\n+ 0.0253 * <379078>",
-        "plot_path": "332686_synthetic_control.svg"
+        "plot_path_ratings": "332686_ratings.svg",
+        "plot_path_synthetic_control": "332686_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -35,7 +36,8 @@
         "nrmse_slsqp": 0.005621879767627451,
         "method": "slsqp",
         "model": "0.492 * <336131>\n+ 0.265 * <319793>\n+ 0.123 * <368061>\n+ 0.086 * <17449>\n+ 0.034 * <391137>",
-        "plot_path": "330592_synthetic_control.svg"
+        "plot_path_ratings": "330592_ratings.svg",
+        "plot_path_synthetic_control": "330592_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -54,7 +56,8 @@
         "nrmse_slsqp": 0.04774278740258781,
         "method": "ridge",
         "model": "1.92 * <263155>\n+ 1.45 * <259061>\n+ 1.07 * <318183>\n+ 1.05 * <331979>\n+ 0.98 * <267314>\n+ 0.901 * <378367>\n+ -0.973 * <367379>\n+ -0.983 * <38713>\n+ -1.1 * <386166>\n+ -1.17 * <302840>",
-        "plot_path": "368061_synthetic_control.svg"
+        "plot_path_ratings": "368061_ratings.svg",
+        "plot_path_synthetic_control": "368061_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -73,7 +76,8 @@
         "nrmse_slsqp": 0.0751825097827581,
         "method": "ridge",
         "model": "2.01 * <299371>\n+ 1.67 * <368039>\n+ 1.3 * <347311>\n+ 1.24 * <275974>\n+ 1.16 * <312512>\n+ 1.08 * <283790>\n+ 1.03 * <314577>\n+ 1.02 * <199182>\n+ 0.948 * <295260>\n+ -1.16 * <377969>",
-        "plot_path": "358386_synthetic_control.svg"
+        "plot_path_ratings": "358386_ratings.svg",
+        "plot_path_synthetic_control": "358386_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -92,7 +96,8 @@
         "nrmse_slsqp": 0.019514962162922214,
         "method": "slsqp",
         "model": "0.705 * <355433>\n+ 0.295 * <377061>",
-        "plot_path": "351538_synthetic_control.svg"
+        "plot_path_ratings": "351538_ratings.svg",
+        "plot_path_synthetic_control": "351538_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -111,7 +116,8 @@
         "nrmse_slsqp": 0.5650483441680196,
         "method": "ridge",
         "model": "0.628 * <298065>\n+ 0.616 * <350713>\n+ 0.46 * <311193>\n+ 0.436 * <244115>\n+ 0.427 * <47>\n+ 0.427 * <248125>\n+ -0.421 * <183231>\n+ -0.465 * <224821>\n+ -0.52 * <373105>\n+ -0.623 * <169124>",
-        "plot_path": "350184_synthetic_control.svg"
+        "plot_path_ratings": "350184_ratings.svg",
+        "plot_path_synthetic_control": "350184_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -130,7 +136,8 @@
         "nrmse_slsqp": 0.011902323604293068,
         "method": "slsqp",
         "model": "0.591 * <375651>\n+ 0.36 * <331363>\n+ 0.028 * <377716>\n+ 0.0209 * <367086>",
-        "plot_path": "354568_synthetic_control.svg"
+        "plot_path_ratings": "354568_ratings.svg",
+        "plot_path_synthetic_control": "354568_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -149,7 +156,8 @@
         "nrmse_slsqp": 0.7081425295919186,
         "method": "ridge",
         "model": "0.176 * <256960>\n+ 0.168 * <39463>\n+ 0.158 * <306735>\n+ 0.152 * <2655>\n+ 0.147 * <300531>\n+ 0.128 * <241266>\n+ -0.127 * <172>\n+ -0.143 * <175914>\n+ -0.147 * <244992>\n+ -0.163 * <323612>",
-        "plot_path": "11_synthetic_control.svg"
+        "plot_path_ratings": "11_ratings.svg",
+        "plot_path_synthetic_control": "11_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -168,7 +176,8 @@
         "nrmse_slsqp": 0.004672210688176302,
         "method": "slsqp",
         "model": "0.458 * <378848>\n+ 0.265 * <339924>\n+ 0.133 * <287952>\n+ 0.123 * <293875>\n+ 0.0208 * <352263>",
-        "plot_path": "311031_synthetic_control.svg"
+        "plot_path_ratings": "311031_ratings.svg",
+        "plot_path_synthetic_control": "311031_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -187,7 +196,8 @@
         "nrmse_slsqp": 0.00034139296729586123,
         "method": "slsqp",
         "model": "0.236 * <323612>\n+ 0.149 * <343562>\n+ 0.148 * <265256>\n+ 0.116 * <244536>\n+ 0.0919 * <356033>\n+ 0.0701 * <297978>\n+ 0.0673 * <345868>\n+ 0.0589 * <277699>\n+ 0.0396 * <350316>\n+ 0.00981 * <181960>",
-        "plot_path": "298383_synthetic_control.svg"
+        "plot_path_ratings": "298383_ratings.svg",
+        "plot_path_synthetic_control": "298383_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -206,7 +216,8 @@
         "nrmse_slsqp": 0.4868670241925228,
         "method": "ridge",
         "model": "1.36 * <352135>\n+ 1.32 * <346677>\n+ 0.987 * <383087>\n+ 0.788 * <325433>\n+ 0.762 * <360242>\n+ 0.612 * <6918>\n+ -0.57 * <241805>\n+ -0.585 * <300731>\n+ -0.607 * <312738>\n+ -0.677 * <360332>",
-        "plot_path": "386937_synthetic_control.svg"
+        "plot_path_ratings": "386937_ratings.svg",
+        "plot_path_synthetic_control": "386937_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -225,7 +236,8 @@
         "nrmse_slsqp": 0.0008589099078675251,
         "method": "slsqp",
         "model": "0.443 * <291155>\n+ 0.0973 * <367490>\n+ 0.0841 * <3218>\n+ 0.0738 * <284118>\n+ 0.0585 * <231618>\n+ 0.0482 * <297531>\n+ 0.0454 * <232216>\n+ 0.0411 * <163056>\n+ 0.0375 * <289601>\n+ 0.0298 * <292811>",
-        "plot_path": "331571_synthetic_control.svg"
+        "plot_path_ratings": "331571_ratings.svg",
+        "plot_path_synthetic_control": "331571_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -244,7 +256,8 @@
         "nrmse_slsqp": 0.02723667666299792,
         "method": "slsqp",
         "model": "0.392 * <379935>\n+ 0.308 * <368519>\n+ 0.244 * <365727>\n+ 0.0557 * <5858>",
-        "plot_path": "367771_synthetic_control.svg"
+        "plot_path_ratings": "367771_ratings.svg",
+        "plot_path_synthetic_control": "367771_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -263,7 +276,8 @@
         "nrmse_slsqp": 0.006527474173504763,
         "method": "slsqp",
         "model": "0.446 * <318184>\n+ 0.251 * <370164>\n+ 0.225 * <364073>\n+ 0.0786 * <369880>",
-        "plot_path": "177478_synthetic_control.svg"
+        "plot_path_ratings": "177478_ratings.svg",
+        "plot_path_synthetic_control": "177478_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -282,7 +296,8 @@
         "nrmse_slsqp": 0.008189628047845095,
         "method": "slsqp",
         "model": "0.562 * <329551>\n+ 0.22 * <299702>\n+ 0.143 * <374173>\n+ 0.0694 * <354934>\n+ 0.00564 * <338067>",
-        "plot_path": "362944_synthetic_control.svg"
+        "plot_path_ratings": "362944_ratings.svg",
+        "plot_path_synthetic_control": "362944_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -301,7 +316,8 @@
         "nrmse_slsqp": 0.11468157557218492,
         "method": "ridge",
         "model": "1.34 * <374200>\n+ 1.13 * <324090>\n+ 0.867 * <330036>\n+ 0.688 * <241491>\n+ 0.668 * <199793>\n+ -0.745 * <358661>\n+ -0.911 * <299963>\n+ -0.933 * <202977>\n+ -1.05 * <267319>\n+ -1.06 * <189067>",
-        "plot_path": "281549_synthetic_control.svg"
+        "plot_path_ratings": "281549_ratings.svg",
+        "plot_path_synthetic_control": "281549_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -320,7 +336,8 @@
         "nrmse_slsqp": 0.004416066765610429,
         "method": "slsqp",
         "model": "0.53 * <346501>\n+ 0.254 * <227072>\n+ 0.216 * <312959>",
-        "plot_path": "276086_synthetic_control.svg"
+        "plot_path_ratings": "276086_ratings.svg",
+        "plot_path_synthetic_control": "276086_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -339,7 +356,8 @@
         "nrmse_slsqp": 0.023619851416011802,
         "method": "slsqp",
         "model": "0.509 * <358246>\n+ 0.416 * <368058>\n+ 0.0749 * <344277>",
-        "plot_path": "267609_synthetic_control.svg"
+        "plot_path_ratings": "267609_ratings.svg",
+        "plot_path_synthetic_control": "267609_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -358,7 +376,8 @@
         "nrmse_slsqp": 0.589015482177222,
         "method": "ridge",
         "model": "0.741 * <47>\n+ 0.68 * <274638>\n+ 0.671 * <284378>\n+ 0.598 * <214484>\n+ 0.597 * <102435>\n+ 0.582 * <295785>\n+ -0.57 * <193214>\n+ -0.726 * <294612>\n+ -0.924 * <198830>\n+ -0.966 * <195314>",
-        "plot_path": "295770_synthetic_control.svg"
+        "plot_path_ratings": "295770_ratings.svg",
+        "plot_path_synthetic_control": "295770_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -377,7 +396,8 @@
         "nrmse_slsqp": 0.06094857381900089,
         "method": "ridge",
         "model": "0.971 * <300192>\n+ 0.839 * <197455>\n+ 0.691 * <176262>\n+ 0.553 * <227029>\n+ 0.509 * <321641>\n+ 0.496 * <195456>\n+ -0.546 * <337255>\n+ -0.645 * <298309>\n+ -0.695 * <331259>\n+ -0.724 * <266504>",
-        "plot_path": "350205_synthetic_control.svg"
+        "plot_path_ratings": "350205_ratings.svg",
+        "plot_path_synthetic_control": "350205_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -396,7 +416,8 @@
         "nrmse_slsqp": 0.0005571841180224977,
         "method": "slsqp",
         "model": "0.725 * <63268>\n+ 0.26 * <74>\n+ 0.0153 * <25613>",
-        "plot_path": "811_synthetic_control.svg"
+        "plot_path_ratings": "811_ratings.svg",
+        "plot_path_synthetic_control": "811_synthetic_control.svg"
     },
     {
         "game_data": {
@@ -415,6 +436,7 @@
         "nrmse_slsqp": 0.44909272350101237,
         "method": "ridge",
         "model": "2.16 * <346742>\n+ 1.74 * <353288>\n+ 1.65 * <296345>\n+ 1.41 * <129736>\n+ 1.37 * <283934>\n+ 1.33 * <302520>\n+ 1.15 * <310448>\n+ -1.19 * <296237>\n+ -1.55 * <142325>\n+ -2.01 * <229713>",
-        "plot_path": "366013_synthetic_control.svg"
+        "plot_path_ratings": "366013_ratings.svg",
+        "plot_path_synthetic_control": "366013_synthetic_control.svg"
     }
 ]
