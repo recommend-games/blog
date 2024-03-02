@@ -4,6 +4,7 @@ import os
 from datetime import timedelta
 from pathlib import Path
 from typing import Optional
+import warnings
 
 import numpy as np
 import polars as pl
@@ -69,7 +70,9 @@ def plot_ratings(
         lw=2,
     )
 
-    ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
     ax.set_xlabel(None)
     ax.set_ylabel(y_label)
     ax.set_title(None)
