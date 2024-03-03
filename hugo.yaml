@@ -15,10 +15,6 @@ canonifyurls: true
 DefaultContentLanguage: en
 theme: beautifulhugo
 metaDataFormat: yaml
-pygmentsUseClasses: true
-pygmentCodeFences: true
-# disqusShortname: recommend-games
-# googleAnalytics: UA-128891980-1
 enableRobotsTXT: true
 
 Params:
@@ -31,9 +27,7 @@ Params:
   dateFormat: January 2, 2006
   commit: false
   rss: true
-  comments: true
-  # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
-  # gcse: 013480686921635014344:zokjfkkzyza
+  comments: false
   readingTime: true
   wordCount: true
   useHLJS: true
@@ -49,26 +43,13 @@ Author:
   name: Recommend.Games
   email: contact@recommend.games
   website: https://recommend.games/
-  # facebook: markus.r.shepherd
-  # googleplus: +username # or xxxxxxxxxxxxxxxxxxxxx
   gitlab: recommend.games
   github: recommend-games
-  # bitbucket: recommend-games
   twitter: recommend_games
   mastodon: 'tabletop.social/@markus'
-  # reddit: MarkusShepherd
-  # linkedin: markusschepke
-  # xing: username
-  # stackoverflow: users/2634131/markus-shepherd
-  # snapchat: username
-  # instagram: funny_monkey_42
-  # youtube: user/MarkusSchepke # or channel/channelname
-  # soundcloud: username
-  # spotify: username
-  # bandcamp: username
-  # itchio: username
-  # keybase: username
-  # vk: mshepherd
+  linkedin: markusschepke
+  stackoverflow: users/2634131/markus-shepherd
+  youtube: user/MarkusSchepke
   paypal: mschepke
   kaggle: mshepherd
 
@@ -81,10 +62,6 @@ menu:
     - name: About
       url: page/about/
       weight: 20
-
-    # - name: Tags
-    #   url: tags/
-    #   weight: 30
 
 sitemap:
   changefreq: daily
