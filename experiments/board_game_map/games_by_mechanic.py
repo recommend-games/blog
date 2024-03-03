@@ -46,7 +46,7 @@ logging.basicConfig(
 
 # %%
 df = pd.read_csv(
-    "/Users/markus/Workspace/board-game-data/scraped/bgg_GameItem.csv",
+    "/Users/markus/Recommend.Games/board-game-data/scraped/bgg_GameItem.csv",
 )
 df.shape
 
@@ -55,7 +55,7 @@ df_filtered = (
     df[
         (df.num_votes >= 100)
         & (df["rank"].notnull())
-        & (df.compilation == 0)
+        & (df.compilation != 1)
         & (df.mechanic.notnull())
     ]
     .reset_index(drop=True)
