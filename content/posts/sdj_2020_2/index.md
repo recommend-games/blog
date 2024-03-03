@@ -7,8 +7,11 @@ date: 2020-05-21T18:31:00+03:00
 tags:
   - SdJ
   - Spiel des Jahres
+  - Spiel des Jahres 2020
   - KSdJ
+  - Kennerspiel
   - Kennerspiel des Jahres
+  - Kennerspiel des Jahres 2020
   - Game of the Year
   - Germany
   - My City
@@ -35,7 +38,7 @@ As every year, the jury nominated three games for the main award, one of which w
 
 First off, congratulation to Reiner Knizia for the third {{% color "#E30613" %}}***Spiel***{{% /color %}} nomination in four years! Looks like he shows no sign of slowing down…
 
-This title completely slipped under my radar. Not like it wasn't on my mind (sure, *anyone* can claim that), but its complexity is rated at 2.44, *heavier than any of the three {{% color "#193F4A" %}}**Kennerspiel**{{% /color %}} nominees*. Grated, there aren't all that many votes for many of the nominees yet (9 in this particular case), but even with wider opinions, it seems unlikely to end up under the magical mark of 2 I drew as a hard line for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}.
+This title completely slipped under my radar. Not like it wasn't on my mind (sure, *anyone* can claim that), but its complexity is rated at 2.44, *heavier than any of the three {{% color "#193F4A" %}}**Kennerspiel**{{% /color %}} nominees*. Granted, there aren't all that many votes for many of the nominees yet (9 in this particular case), but even with wider opinions, it seems unlikely to end up under the magical mark of 2 I drew as a hard line for {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}}.
 
 Of course, the jury just doesn't take to BoardGameGeek to classify a game for either {{% color "#E30613" %}}***Spiel***{{% /color %}} or {{% color "#193F4A" %}}***Kennerspiel***{{% /color %}}, but of course draws their own conclusions. Still, it's a notable outlier. How come?
 

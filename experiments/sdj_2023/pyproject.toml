@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "sdj_2023"
+version = "0.1.0"
+description = "Spiel des Jahres 2023 predictions"
+authors = ["Markus Shepherd <markus@recommend.games>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "~3.10"
+
+black = "*"
+board-game-utils = "*"
+jupyterlab = "*"
+jupytext = "*"
+libclang = "<12.0.0"
+matplotlib = "*"
+mypy = "*"
+nb-black = "*"
+numpy = "*"
+pandas = "*"
+pylint = "*"
+pytility = "*"
+scikit-learn = "*"
+scipy = "*"
+seaborn = "*"
+tabulate = "*"
+tqdm = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

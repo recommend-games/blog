@@ -7,8 +7,11 @@ date: 2020-07-22T14:42:00+03:00
 tags:
   - SdJ
   - Spiel des Jahres
+  - Spiel des Jahres 2020
   - KSdJ
+  - Kennerspiel
   - Kennerspiel des Jahres
+  - Kennerspiel des Jahres 2020
   - Game of the Year
   - Germany
   - My City
