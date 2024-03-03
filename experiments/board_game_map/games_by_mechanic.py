@@ -27,12 +27,17 @@ import pandas as pd
 import umap
 import umap.plot
 
+from bokeh.plotting import show, save, output_notebook, output_file
+from bokeh.resources import INLINE
 from pytility import parse_date
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.linear_model import LinearRegression
 
 LOGGER = logging.getLogger(__name__)
 SEED = 23
+BASE_DIR = Path().resolve().parent.parent
+
+output_notebook(resources=INLINE)
 
 logging.basicConfig(
     stream=sys.stderr,
@@ -45,9 +50,8 @@ logging.basicConfig(
 # %load_ext lab_black
 
 # %%
-df = pd.read_csv(
-    "/Users/markus/Recommend.Games/board-game-data/scraped/bgg_GameItem.csv",
-)
+games_file = BASE_DIR.parent / "board-game-data" / "scraped" / "bgg_GameItem.csv"
+df = pd.read_csv(games_file)
 df.shape
 
 # %%
@@ -73,7 +77,7 @@ mechanics.shape
 
 # %%
 model = umap.UMAP(metric="jaccard", random_state=SEED)  # metric="hellinger"
-model.fit(mechanics.todense())
+model.fit(mechanics.toarray())
 
 # %%
 umap_plot = umap.plot.points(
@@ -83,12 +87,6 @@ umap_plot = umap.plot.points(
     theme="fire",
     show_legend=False,
 )
-
-# %%
-from bokeh.plotting import show, save, output_notebook, output_file
-from bokeh.resources import INLINE
-
-output_notebook(resources=INLINE)
 
 # %%
 hover_df = df_filtered[
