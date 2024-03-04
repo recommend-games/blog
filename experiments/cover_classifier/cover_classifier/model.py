@@ -182,18 +182,26 @@ def train(
         shuffle=False,
     )
 
+    # TODO: Load model from best checkpoint if it exists
+
     model = CoverClassifier(num_classes=num_classes, weights=weights)
 
     trainer = L.Trainer(
         max_epochs=num_epochs,
         default_root_dir=Path(model_dir).resolve() if model_dir else None,
     )
+
+    # TODO: Checkpoints, early stopping, logger, tune learning rate etc.
+
     trainer.fit(
         model=model,
         train_dataloaders=train_dataloader,
         val_dataloaders=val_dataloader,
     )
+
     trainer.test(model, dataloaders=test_dataloader)
+
+    # TODO: Link best checkpoint
 
     print_game_results(model, test_dataloader, dataset.classes, max_results=3)
 
