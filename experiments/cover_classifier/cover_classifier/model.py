@@ -179,6 +179,7 @@ def train(
     #         torch.save(model.state_dict(), model_path)
 
     trainer = L.Trainer(
+        max_epochs=num_epochs,
         default_root_dir=Path(model_dir).resolve() if model_dir else None,
     )
     trainer.fit(
