@@ -20,14 +20,6 @@ def main():
         stream=sys.stdout,
     )
 
-    # device = torch.device(
-    #     "cuda"
-    #     if torch.cuda.is_available()
-    #     else "mps"
-    #     if torch.backends.mps.is_available()
-    #     else "cpu"
-    # )
-
     model_path = Path().resolve() / "models" / "cover_classifier.pt"
     model_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -36,7 +28,6 @@ def main():
         images_dir=BASE_DIR.parent / "board-game-scraper" / "images",
         batch_size=32,
         num_epochs=100,
-        # device=device,
         # model_path=model_path,
         model_dir=model_path.parent,
         # resume=True,

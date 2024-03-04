@@ -32,7 +32,6 @@ class BoardGameDataset(Dataset):
         transform: Callable | None = None,
         max_samples: int | None = None,
         require_any_type: bool = False,
-        device: str | torch.device | None = None,
     ):
         image_root_dir = Path(image_root_dir).resolve()
         self.types_mlb = self.read_types_file(types_file)
@@ -49,10 +48,6 @@ class BoardGameDataset(Dataset):
             image_root_dir,
             max_samples,
         )
-        if device:
-            self.bgg_ids = self.bgg_ids.to(device=device)
-            self.images = self.images.to(device=device)
-            self.labels = self.labels.to(device=device)
 
         assert len(self.bgg_ids) == len(self.images) == len(self.labels)
         LOGGER.info("Loaded %d games and images in total", len(self.bgg_ids))

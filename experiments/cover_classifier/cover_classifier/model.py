@@ -22,57 +22,98 @@ LOGGER = logging.getLogger(__name__)
 class CoverClassifier(L.LightningModule):
     """Lightning module for cover classification."""
 
-    def __init__(self, num_classes: int, weights: ResNet50_Weights):
+    def __init__(
+        self,
+        *,
+        num_classes: int,
+        weights: ResNet50_Weights,
+        learning_rate: float = 1e-3,
+    ):
         super().__init__()
-        self.model: ResNet = resnet50(weights=weights)
-        self.model.fc = nn.Linear(self.model.fc.in_features, num_classes)
-        self.criterion = nn.BCEWithLogitsLoss()
-        # self.accuracy = M.Accuracy(task="multilabel", num_labels=num_classes)
-        # self.f1 = M.F1Score(task="multilabel", num_labels=num_classes)
+
+        self.res_net: ResNet = resnet50(weights=weights)
+        res_net_out_features = self.res_net.fc.in_features
+        self.res_net.fc = nn.Identity()
+        # freeze resnet layers
+        self.res_net.requires_grad_(False)
+
+        self.layers = nn.Sequential(
+            nn.Linear(res_net_out_features, 512),
+            nn.ReLU(),
+            nn.Linear(512, 256),
+            nn.ReLU(),
+            nn.Linear(256, 128),
+            nn.ReLU(),
+            nn.Linear(128, 64),
+            nn.ReLU(),
+            nn.Linear(64, num_classes),
+        )
+
+        self.loss_fn = nn.BCEWithLogitsLoss()
+
+        self.learning_rate = learning_rate
+
+        self.train_accuracy = M.MultilabelAccuracy(num_labels=num_classes)
+        self.train_f1 = M.MultilabelF1Score(num_labels=num_classes)
+
+        self.val_accuracy = M.MultilabelAccuracy(num_labels=num_classes)
+        self.val_f1 = M.MultilabelF1Score(num_labels=num_classes)
+
+        self.test_accuracy = M.MultilabelAccuracy(num_labels=num_classes)
+        self.test_f1 = M.MultilabelF1Score(num_labels=num_classes)
+
         self.save_hyperparameters()
 
     def forward(self, x):
-        return self.model(x)
+        return self.layers(self.res_net(x))
 
-    def training_step(self, batch, batch_idx):
+    def training_step(self, batch, batch_idx=0, dataloader_idx=0):
         images, labels, _ = batch
         outputs = self(images)
-        loss = self.criterion(outputs, labels.float())
+
+        loss = self.loss_fn(outputs, labels.float())
         self.log("train_loss", loss)
+
+        self.train_accuracy(outputs, labels)
+        self.log("train_accuracy", self.train_accuracy, prog_bar=True)
+
+        self.train_f1(outputs, labels)
+        self.log("train_f1", self.train_f1)
+
         return loss
 
-    def validation_step(self, batch, batch_idx):
+    def validation_step(self, batch, batch_idx=0, dataloader_idx=0):
         images, labels, _ = batch
         outputs = self(images)
-        loss = self.criterion(outputs, labels.float())
+
+        loss = self.loss_fn(outputs, labels.float())
         self.log("val_loss", loss)
-        # self.accuracy(outputs, labels)
-        # self.f1(outputs, labels)
+
+        self.val_accuracy(outputs, labels)
+        self.log("val_accuracy", self.val_accuracy)
+
+        self.val_f1(outputs, labels)
+        self.log("val_f1", self.val_f1)
+
         return loss
 
-    def test_step(self, batch, batch_idx):
+    def test_step(self, batch, batch_idx=0, dataloader_idx=0):
         images, labels, _ = batch
         outputs = self(images)
-        loss = self.criterion(outputs, labels.float())
+
+        loss = self.loss_fn(outputs, labels.float())
         self.log("test_loss", loss)
-        # self.accuracy(outputs, labels)
-        # self.f1(outputs, labels)
+
+        self.test_accuracy(outputs, labels)
+        self.log("test_accuracy", self.test_accuracy)
+
+        self.test_f1(outputs, labels)
+        self.log("test_f1", self.test_f1)
+
         return loss
 
     def configure_optimizers(self):
-        return optim.Adam(self.parameters(), lr=1e-3)
-
-    # def training_epoch_end(self, outputs):
-    #     self.log("train_acc", self.accuracy.compute())
-    #     self.log("train_f1", self.f1.compute())
-
-    # def validation_epoch_end(self, outputs):
-    #     self.log("val_acc", self.accuracy.compute())
-    #     self.log("val_f1", self.f1.compute())
-
-    # def test_epoch_end(self, outputs):
-    #     self.log("test_acc", self.accuracy.compute())
-    #     self.log("test_f1", self.f1.compute())
+        return optim.Adam(self.parameters(), lr=self.learning_rate)
 
 
 def train(
@@ -82,7 +123,6 @@ def train(
     val_size: float = 0.05,
     batch_size: int = 128,
     num_epochs: int = 10,
-    # device: str | torch.device = torch.device("cpu"),
     model_dir: str | Path | None = None,
     # resume: bool = False,
 ) -> nn.Module:
@@ -108,7 +148,6 @@ def train(
         transform=weights.transforms(),
         require_any_type=True,
         max_samples=1_000_000,
-        # device=device,
     )
     num_classes = len(dataset.classes)
     # TODO: games without any type should be in a holdout set meant for human review
@@ -130,15 +169,15 @@ def train(
     test_dataloader = DataLoader(
         test_dataset,
         batch_size=batch_size,
-        shuffle=True,
+        shuffle=False,
     )
     val_dataloader = DataLoader(
         val_dataset,
         batch_size=batch_size,
-        shuffle=True,
+        shuffle=False,
     )
 
-    model = CoverClassifier(num_classes, weights)
+    model = CoverClassifier(num_classes=num_classes, weights=weights)
     # model_path = Path(model_path).resolve() if model_path else None
 
     # if resume and model_path and model_path.exists():
