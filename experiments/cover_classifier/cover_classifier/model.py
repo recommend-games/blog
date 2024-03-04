@@ -130,7 +130,6 @@ def train(
     batch_size: int = 128,
     num_epochs: int = 10,
     model_dir: str | Path | None = None,
-    # resume: bool = False,
 ) -> nn.Module:
     """Train a model to classify board game covers."""
 
@@ -184,44 +183,6 @@ def train(
     )
 
     model = CoverClassifier(num_classes=num_classes, weights=weights)
-    # model_path = Path(model_path).resolve() if model_path else None
-
-    # if resume and model_path and model_path.exists():
-    #     LOGGER.info("Resuming training from %s", model_path)
-    #     model.load_state_dict(torch.load(model_path))
-
-    # LOGGER.info("Training model on %s", device)
-    # model.to(device)
-
-    # criterion = nn.BCEWithLogitsLoss()
-    # optimizer = optim.Adam(model.parameters(), lr=0.001)
-
-    # TODO: Let Lightning handle training loop
-    # num_epochs = 10
-    # for epoch in range(num_epochs):
-    #     print(f"Epoch {epoch+1:>3d}/{num_epochs:>3d}")
-
-    #     model.train()
-    #     for images, labels, _ in tqdm(train_dataloader):
-    #         optimizer.zero_grad()
-    #         outputs = model(images.to(device))
-    #         loss = criterion(outputs, labels.float().to(device))
-    #         loss.backward()
-    #         optimizer.step()
-
-    #     model.eval()
-    #     with torch.no_grad():
-    #         losses = torch.tensor(
-    #             [
-    #                 criterion(model(inputs.to(device)), labels.float().to(device))
-    #                 for inputs, labels, _ in tqdm(test_dataloader)
-    #             ]
-    #         )
-    #         print(f"Loss: {losses.mean().item():>7.4f}")
-    #         print_game_results(model, test_dataloader, dataset.classes, max_results=3)
-
-    #     if model_path:
-    #         torch.save(model.state_dict(), model_path)
 
     trainer = L.Trainer(
         max_epochs=num_epochs,
@@ -233,6 +194,8 @@ def train(
         val_dataloaders=val_dataloader,
     )
     trainer.test(model, dataloaders=test_dataloader)
+
+    print_game_results(model, test_dataloader, dataset.classes, max_results=3)
 
     return model
 

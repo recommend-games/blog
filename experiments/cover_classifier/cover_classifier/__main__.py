@@ -27,10 +27,8 @@ def main():
         data_dir=BASE_DIR.parent / "board-game-data",
         images_dir=BASE_DIR.parent / "board-game-scraper" / "images",
         batch_size=32,
-        num_epochs=100,
-        # model_path=model_path,
+        num_epochs=10,
         model_dir=model_path.parent,
-        # resume=True,
     )
 
 
