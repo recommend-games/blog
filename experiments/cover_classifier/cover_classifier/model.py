@@ -53,14 +53,14 @@ class CoverClassifier(L.LightningModule):
 
         self.learning_rate = learning_rate
 
-        self.train_accuracy = M.MultilabelAccuracy(num_labels=num_classes)
-        self.train_f1 = M.MultilabelF1Score(num_labels=num_classes)
+        self.train_accuracy = M.Accuracy(task="multilabel", num_labels=num_classes)
+        self.train_f1 = M.F1Score(task="multilabel", num_labels=num_classes)
 
-        self.val_accuracy = M.MultilabelAccuracy(num_labels=num_classes)
-        self.val_f1 = M.MultilabelF1Score(num_labels=num_classes)
+        self.val_accuracy = M.Accuracy(task="multilabel", num_labels=num_classes)
+        self.val_f1 = M.F1Score(task="multilabel", num_labels=num_classes)
 
-        self.test_accuracy = M.MultilabelAccuracy(num_labels=num_classes)
-        self.test_f1 = M.MultilabelF1Score(num_labels=num_classes)
+        self.test_accuracy = M.Accuracy(task="multilabel", num_labels=num_classes)
+        self.test_f1 = M.F1Score(task="multilabel", num_labels=num_classes)
 
         self.save_hyperparameters()
 
@@ -69,10 +69,12 @@ class CoverClassifier(L.LightningModule):
 
     def training_step(self, batch, batch_idx=0, dataloader_idx=0):
         images, labels, _ = batch
-        outputs = self(images)
+        logits = self(images)
 
-        loss = self.loss_fn(outputs, labels.float())
+        loss = self.loss_fn(logits, labels.float())
         self.log("train_loss", loss)
+
+        outputs = F.sigmoid(logits)
 
         self.train_accuracy(outputs, labels)
         self.log("train_accuracy", self.train_accuracy, prog_bar=True)
@@ -84,10 +86,12 @@ class CoverClassifier(L.LightningModule):
 
     def validation_step(self, batch, batch_idx=0, dataloader_idx=0):
         images, labels, _ = batch
-        outputs = self(images)
+        logits = self(images)
 
-        loss = self.loss_fn(outputs, labels.float())
+        loss = self.loss_fn(logits, labels.float())
         self.log("val_loss", loss)
+
+        outputs = F.sigmoid(logits)
 
         self.val_accuracy(outputs, labels)
         self.log("val_accuracy", self.val_accuracy)
@@ -99,10 +103,12 @@ class CoverClassifier(L.LightningModule):
 
     def test_step(self, batch, batch_idx=0, dataloader_idx=0):
         images, labels, _ = batch
-        outputs = self(images)
+        logits = self(images)
 
-        loss = self.loss_fn(outputs, labels.float())
+        loss = self.loss_fn(logits, labels.float())
         self.log("test_loss", loss)
+
+        outputs = F.sigmoid(logits)
 
         self.test_accuracy(outputs, labels)
         self.log("test_accuracy", self.test_accuracy)
