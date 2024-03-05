@@ -4,7 +4,7 @@ import logging
 import sys
 from pathlib import Path
 
-from cover_classifier.model import train
+from cover_classifier.training import train
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR = PROJECT_DIR.parent.parent
