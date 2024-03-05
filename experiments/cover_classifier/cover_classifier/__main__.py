@@ -4,11 +4,10 @@ import logging
 import sys
 from pathlib import Path
 
-import torch
-
 from cover_classifier.model import train
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+PROJECT_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = PROJECT_DIR.parent.parent
 
 
 def main():
@@ -20,15 +19,17 @@ def main():
         stream=sys.stdout,
     )
 
-    model_path = Path().resolve() / "models" / "cover_classifier.pt"
-    model_path.parent.mkdir(parents=True, exist_ok=True)
+    save_dir = PROJECT_DIR / "models"
+    model_path = save_dir / "cover_classifier.ckpt"
 
     train(
         data_dir=BASE_DIR.parent / "board-game-data",
         images_dir=BASE_DIR.parent / "board-game-scraper" / "images",
-        batch_size=32,
+        batch_size=128,
         num_epochs=10,
-        save_dir=model_path.parent,
+        save_dir=save_dir,
+        model_path=model_path,
+        fast_dev_run=False,
     )
 
 

@@ -1,19 +1,16 @@
 """Train a model to classify board game covers."""
 
 import logging
-from pathlib import Path
 import shutil
+from pathlib import Path
 
 import lightning
 import torch
 import torchmetrics
-from torch import nn
-from torch import optim
+from torch import nn, optim
 from torch.nn import functional as F
 from torch.utils.data import DataLoader, random_split
-from torchvision.models import resnet50, ResNet, ResNet50_Weights
-
-# from tqdm import tqdm
+from torchvision.models import ResNet, ResNet50_Weights, resnet50
 
 from cover_classifier.data import BoardGameDataset
 

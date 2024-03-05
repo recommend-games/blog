@@ -1,15 +1,16 @@
 """Board game dataset."""
 
-from itertools import islice
 import json
 import logging
-from pathlib import Path
 import random
+from itertools import islice
+from pathlib import Path
 from typing import Any, Callable, Union
+
 import jmespath
 import polars as pl
-from sklearn.preprocessing import MultiLabelBinarizer
 import torch
+from sklearn.preprocessing import MultiLabelBinarizer
 from torch.utils.data import Dataset
 from torchvision.io import read_image
 from tqdm import tqdm
