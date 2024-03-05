@@ -3,14 +3,14 @@
 import logging
 from pathlib import Path
 
-import lightning as L
+import lightning
 import torch
+import torchmetrics
 from torch import nn
 from torch import optim
 from torch.nn import functional as F
 from torch.utils.data import DataLoader, random_split
 from torchvision.models import resnet50, ResNet, ResNet50_Weights
-import torchmetrics as M
 
 # from tqdm import tqdm
 
@@ -19,7 +19,7 @@ from cover_classifier.data import BoardGameDataset
 LOGGER = logging.getLogger(__name__)
 
 
-class CoverClassifier(L.LightningModule):
+class CoverClassifier(lightning.LightningModule):
     """Lightning module for cover classification."""
 
     def __init__(
@@ -53,14 +53,32 @@ class CoverClassifier(L.LightningModule):
 
         self.learning_rate = learning_rate
 
-        self.train_accuracy = M.Accuracy(task="multilabel", num_labels=num_classes)
-        self.train_f1 = M.F1Score(task="multilabel", num_labels=num_classes)
+        self.train_accuracy = torchmetrics.Accuracy(
+            task="multilabel",
+            num_labels=num_classes,
+        )
+        self.train_f1 = torchmetrics.F1Score(
+            task="multilabel",
+            num_labels=num_classes,
+        )
 
-        self.val_accuracy = M.Accuracy(task="multilabel", num_labels=num_classes)
-        self.val_f1 = M.F1Score(task="multilabel", num_labels=num_classes)
+        self.val_accuracy = torchmetrics.Accuracy(
+            task="multilabel",
+            num_labels=num_classes,
+        )
+        self.val_f1 = torchmetrics.F1Score(
+            task="multilabel",
+            num_labels=num_classes,
+        )
 
-        self.test_accuracy = M.Accuracy(task="multilabel", num_labels=num_classes)
-        self.test_f1 = M.F1Score(task="multilabel", num_labels=num_classes)
+        self.test_accuracy = torchmetrics.Accuracy(
+            task="multilabel",
+            num_labels=num_classes,
+        )
+        self.test_f1 = torchmetrics.F1Score(
+            task="multilabel",
+            num_labels=num_classes,
+        )
 
         self.save_hyperparameters()
 
@@ -186,7 +204,7 @@ def train(
 
     model = CoverClassifier(num_classes=num_classes, weights=weights)
 
-    trainer = L.Trainer(
+    trainer = lightning.Trainer(
         max_epochs=num_epochs,
         default_root_dir=Path(model_dir).resolve() if model_dir else None,
     )
