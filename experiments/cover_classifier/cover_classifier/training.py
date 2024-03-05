@@ -1,3 +1,5 @@
+"""Train a model to classify board game covers."""
+
 import logging
 import shutil
 from pathlib import Path
@@ -111,13 +113,15 @@ def train(
         verbose=True,
     )
 
-    csv_logger = lightning.pytorch.loggers.csv_logs.CSVLogger(
-        save_dir=save_dir,
+    loggers = (
+        [lightning.pytorch.loggers.csv_logs.CSVLogger(save_dir=save_dir)]
+        if save_dir
+        else []
     )
 
     trainer = lightning.Trainer(
         max_epochs=num_epochs,
-        logger=[csv_logger],
+        logger=loggers,
         callbacks=[checkpoint_callback, early_stopping_callback],
         default_root_dir=save_dir,
         fast_dev_run=fast_dev_run,
