@@ -2,6 +2,7 @@
 
 import logging
 from pathlib import Path
+import shutil
 
 import lightning
 import torch
@@ -148,14 +149,16 @@ def train(
     val_size: float = 0.05,
     batch_size: int = 128,
     num_epochs: int = 10,
-    model_dir: str | Path | None = None,
+    save_dir: str | Path | None = None,
+    model_path: str | Path | None = None,
     fast_dev_run: bool = False,
 ) -> nn.Module:
     """Train a model to classify board game covers."""
 
     data_dir = Path(data_dir).resolve()
     images_dir = Path(images_dir).resolve()
-    model_dir = Path(model_dir).resolve() if model_dir else None
+    save_dir = Path(save_dir).resolve() if save_dir else None
+    model_path = Path(model_path).resolve() if model_path else None
 
     assert data_dir.is_dir(), f"Data directory does not exist: {data_dir}"
     assert images_dir.is_dir(), f"Images directory does not exist: {images_dir}"
@@ -164,6 +167,11 @@ def train(
     assert (
         0 < test_size + val_size < 1
     ), f"Test and validation sizes must sum to less than 1: {test_size + val_size}"
+
+    if save_dir:
+        save_dir.mkdir(parents=True, exist_ok=True)
+    if model_path:
+        model_path.parent.mkdir(parents=True, exist_ok=True)
 
     weights = ResNet50_Weights.DEFAULT
 
@@ -204,11 +212,15 @@ def train(
         shuffle=False,
     )
 
-    # TODO: Load model from best checkpoint if it exists
-
-    model = CoverClassifier(num_classes=num_classes, weights=weights)
-
-    # TODO: Checkpoints, early stopping, logger, tune learning rate etc.
+    if model_path:
+        LOGGER.info("Resuming model training from %s", model_path)
+        model = CoverClassifier.load_from_checkpoint(model_path)
+        assert model.hparams.num_classes == num_classes, (
+            f"Model classes ({model.hparams.num_classes}) do not match "
+            f"dataset classes ({num_classes})"
+        )
+    else:
+        model = CoverClassifier(num_classes=num_classes, weights=weights)
 
     checkpoint_callback = lightning.pytorch.callbacks.model_checkpoint.ModelCheckpoint(
         monitor="val_loss",
@@ -226,14 +238,14 @@ def train(
     )
 
     csv_logger = lightning.pytorch.loggers.csv_logs.CSVLogger(
-        save_dir=model_dir,
+        save_dir=save_dir,
     )
 
     trainer = lightning.Trainer(
         max_epochs=num_epochs,
         logger=[csv_logger],
         callbacks=[checkpoint_callback, early_stopping_callback],
-        default_root_dir=model_dir,
+        default_root_dir=save_dir,
         fast_dev_run=fast_dev_run,
     )
 
@@ -243,9 +255,15 @@ def train(
         val_dataloaders=val_dataloader,
     )
 
-    trainer.test(model, dataloaders=test_dataloader)
+    trainer.test(
+        model=model,
+        dataloaders=test_dataloader,
+    )
 
-    # TODO: Link best checkpoint
+    if model_path:
+        best_model_path = Path(checkpoint_callback.best_model_path).resolve()
+        LOGGER.info("Copying best model from <%s> to <%s>", best_model_path, model_path)
+        shutil.copyfile(src=best_model_path, dst=model_path)
 
     print_game_results(model, test_dataloader, dataset.classes, max_results=3)
 
