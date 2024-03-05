@@ -57,7 +57,6 @@ def train(
         image_root_dir=images_dir,
         transform=weights.transforms(),
         require_any_type=True,
-        max_samples=1_000_000,
     )
     num_classes = len(dataset.classes)
     # TODO: games without any type should be in a holdout set meant for human review
