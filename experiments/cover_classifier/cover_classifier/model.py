@@ -141,6 +141,7 @@ class CoverClassifier(lightning.LightningModule):
 
 
 def train(
+    *,
     data_dir: str | Path,
     images_dir: str | Path,
     test_size: float = 0.05,
@@ -148,11 +149,13 @@ def train(
     batch_size: int = 128,
     num_epochs: int = 10,
     model_dir: str | Path | None = None,
+    fast_dev_run: bool = False,
 ) -> nn.Module:
     """Train a model to classify board game covers."""
 
     data_dir = Path(data_dir).resolve()
     images_dir = Path(images_dir).resolve()
+    model_dir = Path(model_dir).resolve() if model_dir else None
 
     assert data_dir.is_dir(), f"Data directory does not exist: {data_dir}"
     assert images_dir.is_dir(), f"Images directory does not exist: {images_dir}"
@@ -205,12 +208,34 @@ def train(
 
     model = CoverClassifier(num_classes=num_classes, weights=weights)
 
-    trainer = lightning.Trainer(
-        max_epochs=num_epochs,
-        default_root_dir=Path(model_dir).resolve() if model_dir else None,
+    # TODO: Checkpoints, early stopping, logger, tune learning rate etc.
+
+    checkpoint_callback = lightning.pytorch.callbacks.model_checkpoint.ModelCheckpoint(
+        monitor="val_loss",
+        mode="min",
+        save_top_k=3,
+        save_last=True,
     )
 
-    # TODO: Checkpoints, early stopping, logger, tune learning rate etc.
+    early_stopping_callback = lightning.pytorch.callbacks.early_stopping.EarlyStopping(
+        monitor="val_loss",
+        mode="min",
+        min_delta=0.0,
+        patience=5,
+        verbose=True,
+    )
+
+    csv_logger = lightning.pytorch.loggers.csv_logs.CSVLogger(
+        save_dir=model_dir,
+    )
+
+    trainer = lightning.Trainer(
+        max_epochs=num_epochs,
+        logger=[csv_logger],
+        callbacks=[checkpoint_callback, early_stopping_callback],
+        default_root_dir=model_dir,
+        fast_dev_run=fast_dev_run,
+    )
 
     trainer.fit(
         model=model,
