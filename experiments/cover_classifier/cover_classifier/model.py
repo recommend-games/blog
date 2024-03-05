@@ -209,7 +209,7 @@ def train(
         shuffle=False,
     )
 
-    if model_path:
+    if model_path and model_path.exists():
         LOGGER.info("Resuming model training from %s", model_path)
         model = CoverClassifier.load_from_checkpoint(model_path)
         assert model.hparams.num_classes == num_classes, (
