@@ -176,7 +176,8 @@ def train(
     # TODO: games without any type should be in a holdout set meant for human review
 
     train_dataset, test_dataset, val_dataset = random_split(
-        dataset, (1 - test_size - val_size, test_size, val_size)
+        dataset=dataset,
+        lengths=(1 - test_size - val_size, test_size, val_size),
     )
     LOGGER.info(
         "Split into %d training, %d test and %d validation samples",
