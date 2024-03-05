@@ -14,12 +14,14 @@ LOGGER = logging.getLogger(__name__)
 class CoverClassifier(lightning.LightningModule):
     """Lightning module for cover classification."""
 
+    # Will be tuned later automatically
+    learning_rate: float = 1e-3
+
     def __init__(
         self,
         *,
         num_classes: int,
         weights: ResNet50_Weights,
-        learning_rate: float = 1e-3,
     ):
         super().__init__()
 
@@ -42,8 +44,6 @@ class CoverClassifier(lightning.LightningModule):
         )
 
         self.loss_fn = nn.BCEWithLogitsLoss()
-
-        self.learning_rate = learning_rate
 
         self.train_accuracy = torchmetrics.Accuracy(
             task="multilabel",

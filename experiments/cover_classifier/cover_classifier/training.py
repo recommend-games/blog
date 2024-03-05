@@ -126,6 +126,15 @@ def train(
         fast_dev_run=fast_dev_run,
     )
 
+    tuner = lightning.pytorch.tuner.tuning.Tuner(trainer=trainer)
+    tuner.lr_find(
+        model=model,
+        train_dataloaders=train_dataloader,
+        max_lr=0.1,
+        num_training=100,
+    )
+    LOGGER.info("Using learning rate: %f", model.learning_rate)
+
     trainer.fit(
         model=model,
         train_dataloaders=train_dataloader,
