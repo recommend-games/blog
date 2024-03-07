@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "g-index"
+version = "0.1.0"
+description = "G-Index from BGG plays"
+authors = ["Markus Shepherd <markus@recommend.games>"]
+
+[tool.poetry.dependencies]
+python = "3.12.*"
+
+matplotlib = "*"
+numpy = "*"
+polars = {version = "*", extras = ["pandas"]}
+pyarrow = "==15.0.0"
+scipy = "*"
+seaborn = "*"
+tqdm = "*"
+
+[tool.poetry.group.dev.dependencies]
+jupyter-black = "*"
+jupyterlab = "*"
+jupytext = "*"
+mypy = "*"
+ruff = "*"
+types-tqdm = "*"
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
