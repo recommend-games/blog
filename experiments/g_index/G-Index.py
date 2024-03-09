@@ -60,4 +60,4 @@ result = (
 result.head(10)
 
 # %%
-result.filter(pl.col("g_index") >= 10).write_csv("g_index.csv")
+result.filter(pl.col("g_index") >= 10).write_csv("games.csv")
