@@ -37,6 +37,9 @@ play_counts = (
     .filter(pl.col("bgg_user_play_count") > 0)
 )
 
+# %% [markdown]
+# ## Games
+
 # %%
 game_counts = (
     play_counts.select(
@@ -65,3 +68,30 @@ game_result.head(10)
 
 # %%
 game_result.filter(pl.col("ghi") >= 10).write_csv("games.csv")
+
+# %% [markdown]
+# ## Players
+
+# %%
+player_result = (
+    play_counts.select(
+        "bgg_user_name",
+        "bgg_user_play_count",
+        pl.col("bgg_user_play_count")
+        .rank("ordinal", descending=True)
+        .over("bgg_user_name")
+        .alias("rank"),
+    )
+    .filter(pl.col("bgg_user_play_count") >= pl.col("rank"))
+    .group_by("bgg_user_name")
+    .agg(pl.col("rank").max().alias("h_index"))
+    .sort("h_index", descending=True)
+    .select(pl.col("h_index").rank("min", descending=True).alias("rank"), pl.all())
+    .collect()
+)
+
+# %%
+player_result.head(10)
+
+# %%
+player_result.filter(pl.col("h_index") >= 10).write_csv("players.csv")
