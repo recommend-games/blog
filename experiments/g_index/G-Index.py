@@ -24,12 +24,22 @@ DATA_DIR = BASE_DIR.parent / "board-game-data"
 jupyter_black.load()
 
 # %%
-g_index = (
+game_data = pl.scan_ndjson(DATA_DIR / "scraped" / "bgg_GameItem.jl").select(
+    "bgg_id",
+    "name",
+)
+
+# %%
+play_counts = (
     pl.scan_ndjson(DATA_DIR / "scraped" / "bgg_RatingItem.jl")
     .select("bgg_id", "bgg_user_name", "bgg_user_play_count")
     .drop_nulls()
     .filter(pl.col("bgg_user_play_count") > 0)
-    .select(
+)
+
+# %%
+game_counts = (
+    play_counts.select(
         "bgg_id",
         "bgg_user_play_count",
         pl.col("bgg_user_play_count")
@@ -39,25 +49,19 @@ g_index = (
     )
     .filter(pl.col("bgg_user_play_count") >= pl.col("rank"))
     .group_by("bgg_id")
-    .agg(pl.col("rank").max().alias("g_index"))
+    .agg(pl.col("rank").max().alias("ghi"))
 )
 
 # %%
-games = pl.scan_ndjson(DATA_DIR / "scraped" / "bgg_GameItem.jl").select(
-    "bgg_id",
-    "name",
-)
-
-# %%
-result = (
-    games.join(g_index, on="bgg_id", how="inner")
-    .sort("g_index", descending=True)
-    .select(pl.col("g_index").rank("min", descending=True).alias("rank"), pl.all())
+game_result = (
+    game_data.join(game_counts, on="bgg_id", how="inner")
+    .sort("ghi", descending=True)
+    .select(pl.col("ghi").rank("min", descending=True).alias("rank"), pl.all())
     .collect()
 )
 
 # %%
-result.head(10)
+game_result.head(10)
 
 # %%
-result.filter(pl.col("g_index") >= 10).write_csv("games.csv")
+game_result.filter(pl.col("ghi") >= 10).write_csv("games.csv")
