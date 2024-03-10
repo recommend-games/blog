@@ -95,3 +95,33 @@ player_result.head(10)
 
 # %%
 player_result.filter(pl.col("h_index") >= 10).write_csv("players.csv")
+
+# %%
+player_g_indexes = (
+    play_counts.sort(
+        ["bgg_user_name", "bgg_user_play_count"],
+        descending=[False, True],
+    )
+    .with_columns(
+        pl.col("bgg_user_play_count")
+        .cum_sum()
+        .over("bgg_user_name")
+        .alias("bgg_user_play_count_cum_sum"),
+        pl.col("bgg_user_play_count")
+        .rank("ordinal", descending=True)
+        .over("bgg_user_name")
+        .alias("rank"),
+    )
+    .filter(pl.col("bgg_user_play_count_cum_sum") >= pl.col("rank") ** 2)
+    .group_by("bgg_user_name")
+    .agg(pl.col("rank").max().alias("g_index"))
+    .sort(["g_index", "bgg_user_name"], descending=[True, False])
+    .select(pl.col("g_index").rank("min", descending=True).alias("rank"), pl.all())
+    .collect()
+)
+
+# %%
+player_g_indexes.head(10)
+
+# %%
+player_g_indexes.filter(pl.col("g_index") >= 10).write_csv("players_g_index.csv")
