@@ -74,35 +74,13 @@ game_result.filter(pl.col("ghi") >= 10).write_csv("games.csv")
 
 # %%
 player_result = (
-    play_counts.select(
-        "bgg_user_name",
-        "bgg_user_play_count",
-        pl.col("bgg_user_play_count")
-        .rank("ordinal", descending=True)
-        .over("bgg_user_name")
-        .alias("rank"),
-    )
-    .filter(pl.col("bgg_user_play_count") >= pl.col("rank"))
-    .group_by("bgg_user_name")
-    .agg(pl.col("rank").max().alias("h_index"))
-    .sort("h_index", descending=True)
-    .select(pl.col("h_index").rank("min", descending=True).alias("rank"), pl.all())
-    .collect()
-)
-
-# %%
-player_result.head(10)
-
-# %%
-player_result.filter(pl.col("h_index") >= 10).write_csv("players.csv")
-
-# %%
-player_g_indexes = (
     play_counts.sort(
         ["bgg_user_name", "bgg_user_play_count"],
         descending=[False, True],
     )
-    .with_columns(
+    .select(
+        pl.col("bgg_user_name"),
+        pl.col("bgg_user_play_count"),
         pl.col("bgg_user_play_count")
         .cum_sum()
         .over("bgg_user_name")
@@ -112,16 +90,33 @@ player_g_indexes = (
         .over("bgg_user_name")
         .alias("rank"),
     )
-    .filter(pl.col("bgg_user_play_count_cum_sum") >= pl.col("rank") ** 2)
+    .with_columns(
+        pl.when(pl.col("rank") <= pl.col("bgg_user_play_count"))
+        .then(pl.col("rank"))
+        .alias("h_index_rank"),
+        pl.when(pl.col("rank") ** 2 <= pl.col("bgg_user_play_count_cum_sum"))
+        .then(pl.col("rank"))
+        .alias("g_index_rank"),
+    )
     .group_by("bgg_user_name")
-    .agg(pl.col("rank").max().alias("g_index"))
-    .sort(["g_index", "bgg_user_name"], descending=[True, False])
-    .select(pl.col("g_index").rank("min", descending=True).alias("rank"), pl.all())
+    .agg(
+        pl.col("h_index_rank").max().alias("h_index"),
+        pl.col("g_index_rank").max().alias("g_index"),
+    )
+    .sort(["h_index", "g_index", "bgg_user_name"], descending=[True, True, False])
+    .select(
+        pl.col("h_index").rank("min", descending=True).alias("rank_h_index"),
+        pl.col("h_index"),
+        pl.col("g_index").rank("min", descending=True).alias("rank_g_index"),
+        pl.col("g_index"),
+        pl.col("bgg_user_name"),
+    )
     .collect()
 )
+player_result.shape
 
 # %%
-player_g_indexes.head(10)
+player_result.head(10)
 
 # %%
-player_g_indexes.filter(pl.col("g_index") >= 10).write_csv("players_g_index.csv")
+player_result.filter(pl.col("h_index") >= 10).write_csv("players.csv")
