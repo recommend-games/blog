@@ -42,25 +42,16 @@ play_counts = (
 # ## Games
 
 # %%
-game_counts = (
-    play_counts.select(
-        "bgg_id",
-        "bgg_user_play_count",
-        pl.col("bgg_user_play_count")
-        .rank("ordinal", descending=True)
-        .over("bgg_id")
-        .alias("rank"),
-    )
-    .filter(pl.col("bgg_user_play_count") >= pl.col("rank"))
-    .group_by("bgg_id")
-    .agg(pl.col("rank").max().alias("ghi"))
+game_indexes = h_and_g_index(
+    counts=play_counts,
+    count_col="bgg_user_play_count",
+    target_col="bgg_id",
 )
 
 # %%
 game_result = (
-    game_data.join(game_counts, on="bgg_id", how="inner")
-    .sort("ghi", descending=True)
-    .select(pl.col("ghi").rank("min", descending=True).alias("rank"), pl.all())
+    game_data.join(game_indexes, on="bgg_id", how="inner")
+    .sort(["h_index", "g_index", "bgg_id"], descending=[True, True, False])
     .collect()
 )
 
@@ -68,7 +59,7 @@ game_result = (
 game_result.head(10)
 
 # %%
-game_result.filter(pl.col("ghi") >= 10).write_csv("games.csv")
+game_result.filter(pl.col("h_index") >= 10).write_csv("games.csv")
 
 # %% [markdown]
 # ## Players
@@ -78,7 +69,7 @@ player_result = h_and_g_index(
     counts=play_counts,
     count_col="bgg_user_play_count",
     target_col="bgg_user_name",
-)
+).collect()
 player_result.shape
 
 # %%

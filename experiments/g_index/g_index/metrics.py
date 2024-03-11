@@ -7,7 +7,7 @@ def h_and_g_index(
     counts: pl.DataFrame | pl.LazyFrame,
     count_col: str,
     target_col: str,
-) -> pl.DataFrame:
+) -> pl.LazyFrame:
     """Calculate h-index and g-index."""
 
     return (
@@ -46,5 +46,4 @@ def h_and_g_index(
             pl.col("g_index"),
             pl.col(target_col),
         )
-        .collect()
     )
