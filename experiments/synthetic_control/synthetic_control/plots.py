@@ -202,13 +202,15 @@ def process_game(
 
     y_pred = np.concatenate((y_pred_train, y_pred_test))
 
+    important_weights = sorted(
+        sorted(zip(weights, control_ids), key=lambda x: -abs(x[0]))[:10],
+        reverse=True,
+    )
+    model = {
+        bgg_id: weight for weight, bgg_id in important_weights if abs(weight) >= 0.001
+    }
     model_str = "\n+ ".join(
-        f"{weight:.3} * <{bgg_id}>"
-        for weight, bgg_id in sorted(
-            sorted(zip(weights, control_ids), key=lambda x: -abs(x[0]))[:10],
-            reverse=True,
-        )
-        if abs(weight) >= 0.001
+        f"{weight:.3} * <{bgg_id}>" for bgg_id, weight in model.items()
     )
 
     ratings_train = y_train[-1]
@@ -244,7 +246,8 @@ def process_game(
         susd_effect_rel=pct_new_ratings,
         nrmse_slsqp=train_error,
         method=method,
-        model=model_str,
+        model=model,
+        model_str=model_str,
         plot_path_ratings=plot_path_ratings,
         plot_path_synthetic_control=plot_path_synthetic_control,
     )

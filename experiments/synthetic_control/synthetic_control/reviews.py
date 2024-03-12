@@ -137,6 +137,7 @@ class GameResult:
     susd_effect_rel: float
     nrmse_slsqp: float
     method: str
-    model: str
+    model: dict[int, float]
+    model_str: str
     plot_path_ratings: os.PathLike | None
     plot_path_synthetic_control: os.PathLike | None
