@@ -26,6 +26,14 @@ So how can we know that it really was the SU&SD video that drew the extra attent
 
 Enter [synthetic control](https://en.wikipedia.org/wiki/Synthetic_control_method). As said, we don't have a control world that wasn't exposed to the video – so instead we synthesise one! At first, this might sound more like alchemy than science, but the basic idea is really quite simple: we look at the number of ratings up to the day of the video and compare those to other, similar games over the time period. Because {{% game 332686 %}}John Company{{% /game %}} got the SU&SD treatment, but the other games didn't, we can reason that the same weighting of the other games' ratings should give us a good estimate of what would have happened to {{% game 332686 %}}John Company{{% /game %}} if it hadn't been for the video.
 
+Line A  
+Line B
+Line C
+
+* A
+* B
+* C
+
 <!-- Explain the convex combination and print resulting weights -->
 <!-- Plot synthetic control, both absolute and relative -->
 <!-- Note: cannot exclude the possibility of a different "intervention", e.g., KS opened or fulfilled, some other review or social media mention, etc. -->
