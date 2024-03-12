@@ -39,7 +39,7 @@ def markdown_function(
     game_names = dict(zip(game_names_df["bgg_id"], game_names_df["name"]))
 
     model_strs = (
-        f"* {v:+6.1%} ⋅ {{{{% game {k} %}}}}{game_names[k]}{{{{% /game %}}}}"
+        f"* \\\\({'+' if v > 0 else '-'} {abs(100 * v):.1f}\\\\%\\\\) * {{{{% game {k} %}}}}{game_names[k]}{{{{% /game %}}}}"
         for k, v in game_model.items()
     )
 
