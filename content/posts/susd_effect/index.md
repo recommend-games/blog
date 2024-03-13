@@ -42,6 +42,53 @@ It's worth stressing one thing: during training, the model only gets to see the 
 
 So, it looks as though our synthetic {{% game 332686 %}}John Company{{% /game %}} would have continued to steadily gather attention, just without that bump in the days after the video's release. In the sixty days after the video, our synthetic {{% game 332686 %}}John Company{{% /game %}} received 498 new ratings, while the real one got 662. So it looks like the **SU&SD effect added about 164 ratings** to the game, which is **roughly a quarter** of all new ratings in that period. The absolute numbers might not sound impressive for a video with over 300'000 views, but keep in mind that only a fraction of board game enthusiasts are active on BGG. Further, in an industry where a couple of thousand copies sold is considered a success, a couple of hundred additional ratings is nothing to sneeze at. Of course, whether this kind of activity on BGG translates to actual sales is a different question entirely.
 
+---
+
+Obviously, this was just one video and one game. Can we see a similar effect in other games that SU&SD has covered? Let's check the same plot for some other videos.
+
+{{< img src="330592_synthetic_control" alt="Number of ratings of Phantom Ink before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="368061_synthetic_control" alt="Number of ratings of Zoo Vadis before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="358386_synthetic_control" alt="Number of ratings of Moon before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="351538_synthetic_control" alt="Number of ratings of Bamboo before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="350184_synthetic_control" alt="Number of ratings of Earth before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="354568_synthetic_control" alt="Number of ratings of Amun-Re before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="11_synthetic_control" alt="Number of ratings of Bohnanza before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="311031_synthetic_control" alt="Number of ratings of Five Three Five before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="298383_synthetic_control" alt="Number of ratings of Golem before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="386937_synthetic_control" alt="Number of ratings of Lacuna before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="331571_synthetic_control" alt="Number of ratings of My Gold Mine before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="367771_synthetic_control" alt="Number of ratings of Stomp the Plank before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="177478_synthetic_control" alt="Number of ratings of IKI before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="362944_synthetic_control" alt="Number of ratings of War of the Ring: The Card Game before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="281549_synthetic_control" alt="Number of ratings of Beast before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="276086_synthetic_control" alt="Number of ratings of Hamlet before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="267609_synthetic_control" alt="Number of ratings of Guards of Atlantis II before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="295770_synthetic_control" alt="Number of ratings of Frosthaven before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="350205_synthetic_control" alt="Number of ratings of Horseless Carriage before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="811_synthetic_control" alt="Number of ratings of Rummikub before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{< img src="366013_synthetic_control" alt="Number of ratings of Heat: Pedal to the Metal before and after the SU&SD review, compared to the synthetic control" >}}
+
+
 <!-- Explain the convex combination and print resulting weights -->
 <!-- Plot synthetic control, both absolute and relative -->
 <!-- Note: cannot exclude the possibility of a different "intervention", e.g., KS opened or fulfilled, some other review or social media mention, etc. -->
@@ -50,5 +97,4 @@ So, it looks as though our synthetic {{% game 332686 %}}John Company{{% /game %}
 <!-- Other games, maybe include ridge regression too -->
 
 [^num_ratings]: We use the number of ratings as a coarse proxy for interest. It's far from perfect, but it has the advantage of representing both positive and negative attention – and it's readily available from [this repository](https://github.com/beefsack/bgg-ranking-historicals).
-
-<!-- Redo analysis with other source? Maybe number of collection items based on RatingItem.updated_at? -->
+<!-- TODO: Explain actual data source (collection items) better. -->
