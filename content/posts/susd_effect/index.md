@@ -88,13 +88,11 @@ Obviously, this was just one video and one game. Can we see a similar effect in 
 
 {{< img src="366013_synthetic_control" alt="Number of ratings of Heat: Pedal to the Metal before and after the SU&SD review, compared to the synthetic control" >}}
 
+<!-- TODO: Pick a couple of representative plots, e.g., unknown and boosted, known and moderate effect, no or negative effect. -->
+<!-- TODO: Result table for all (?) videos, conclusion about typical SU&SD effect. -->
 
-<!-- Explain the convex combination and print resulting weights -->
-<!-- Plot synthetic control, both absolute and relative -->
 <!-- Note: cannot exclude the possibility of a different "intervention", e.g., KS opened or fulfilled, some other review or social media mention, etc. -->
-<!-- Is it significant? Fisher's exact test -->
 <!-- Link to articles with further details and code with actual implementation -->
-<!-- Other games, maybe include ridge regression too -->
 
 [^num_ratings]: We use the number of ratings as a coarse proxy for interest. It's far from perfect, but it has the advantage of representing both positive and negative attention – and it's readily available from [this repository](https://github.com/beefsack/bgg-ranking-historicals).
 <!-- TODO: Explain actual data source (collection items) better. -->
