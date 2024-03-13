@@ -40,6 +40,8 @@ It's worth stressing one thing: during training, the model only gets to see the 
 
 {{< img src="332686_synthetic_control" alt="Number of ratings of John Company before and after the SU&SD review, compared to the synthetic control" >}}
 
+So, it looks as though our synthetic {{% game 332686 %}}John Company{{% /game %}} would have continued to steadily gather attention, just without that bump in the days after the video's release. In the sixty days after the video, our synthetic {{% game 332686 %}}John Company{{% /game %}} received 498 new ratings, while the real one got 662. So it looks like the **SU&SD effect added about 164 ratings** to the game, which is **roughly a quarter** of all new ratings in that period. The absolute numbers might not sound impressive for a video with over 300'000 views, but keep in mind that only a fraction of board game enthusiasts are active on BGG. Further, in an industry where a couple of thousand copies sold is considered a success, a couple of hundred additional ratings is nothing to sneeze at. Of course, whether this kind of activity on BGG translates to actual sales is a different question entirely.
+
 <!-- Explain the convex combination and print resulting weights -->
 <!-- Plot synthetic control, both absolute and relative -->
 <!-- Note: cannot exclude the possibility of a different "intervention", e.g., KS opened or fulfilled, some other review or social media mention, etc. -->
