@@ -93,12 +93,19 @@ The number for {{% game 331571 %}}My Gold Mine{{% /game %}} is even close to 90%
 
 ### No (or negative) effect 🫤
 
+Interest in a game doesn't skyrocket in all cases after a SU&SD video, sometimes it seems to make hardly a difference – and some coverage might actually harm a game, even though SU&SD rarely releases truely negative reviews.
+
+{{% game 298383 %}}Golem{{% /game %}}'s reception was definitely rather lackluster, and consequently ratings have gone up a little, but not dramatically:
+
 {{< img src="298383_synthetic_control" alt="Number of ratings of Golem before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{% game 354568 %}}Amun-Re{{% /game %}} (another [Knizia classic]({{<ref "posts/high_society/index.md">}})) saw a bit of a typical SU&SD bump, but by end of the 60 day period we examined here, the effect had completely evaporated:
 
 {{< img src="354568_synthetic_control" alt="Number of ratings of Amun-Re before and after the SU&SD review, compared to the synthetic control" >}}
 
-{{< img src="295770_synthetic_control" alt="Number of ratings of Frosthaven before and after the SU&SD review, compared to the synthetic control" >}}
+SU&SD's video about {{% game 295770 %}}Frosthaven{{% /game %}} might have actually harmed that game…? 🤷 The site has been a vocal fan of the series, so the more plausible explanation for declining interest is probably rather saturation:
 
+{{< img src="295770_synthetic_control" alt="Number of ratings of Frosthaven before and after the SU&SD review, compared to the synthetic control" >}}
 
 <!-- TODO: Pick a couple of representative plots, e.g., unknown and boosted, known and moderate effect, no or negative effect. -->
 <!-- TODO: Result table for all (?) videos, conclusion about typical SU&SD effect. -->
