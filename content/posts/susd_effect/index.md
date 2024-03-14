@@ -78,9 +78,15 @@ Coverage of {{% game 276086 %}}Hamlet{{% /game %}} clearly led to a similar bump
 
 ### Supercharged 🚀
 
+Some games, in particular hidden gems, really thrive under the spotlight SU&SD shines on them. {{% game 311031 %}}Five Three Five{{% /game %}} is one such example. Over 70% of the new ratings after the review can be attributed to its review:
+
 {{< img src="311031_synthetic_control" alt="Number of ratings of Five Three Five before and after the SU&SD review, compared to the synthetic control" >}}
 
+The number for {{% game 331571 %}}My Gold Mine{{% /game %}} is even close to 90%. This game was recommended by the [Spiel des Jahres]({{<ref "posts/sdj_2022_2/index.md">}}) jury, so hardly unknown, but clearly it needed SU&SD to introduce it to the English speaking world:
+
 {{< img src="331571_synthetic_control" alt="Number of ratings of My Gold Mine before and after the SU&SD review, compared to the synthetic control" >}}
+
+{{% game 367771 %}}Stomp the Plank{{% /game %}} is a children's game, a genre the BGG crowd generally ignores. Consequently, there was a steep incline in interest right after the review was published. It's interesting though that the model predicts a significant increase even without the video, so the SU&SD effect here is only about 33%:
 
 {{< img src="367771_synthetic_control" alt="Number of ratings of Stomp the Plank before and after the SU&SD review, compared to the synthetic control" >}}
 
