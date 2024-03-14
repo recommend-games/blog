@@ -65,24 +65,12 @@ Obviously, this was just one video and one game. Can we see a similar effect in 
 
 {{< img src="330592_synthetic_control" alt="Number of ratings of Phantom Ink before and after the SU&SD review, compared to the synthetic control" >}}
 
-{{< img src="358386_synthetic_control" alt="Number of ratings of Moon before and after the SU&SD review, compared to the synthetic control" >}}
-
 {{< img src="351538_synthetic_control" alt="Number of ratings of Bamboo before and after the SU&SD review, compared to the synthetic control" >}}
-
-{{< img src="11_synthetic_control" alt="Number of ratings of Bohnanza before and after the SU&SD review, compared to the synthetic control" >}}
-
-{{< img src="362944_synthetic_control" alt="Number of ratings of War of the Ring: The Card Game before and after the SU&SD review, compared to the synthetic control" >}}
 
 {{< img src="276086_synthetic_control" alt="Number of ratings of Hamlet before and after the SU&SD review, compared to the synthetic control" >}}
 
-{{< img src="350205_synthetic_control" alt="Number of ratings of Horseless Carriage before and after the SU&SD review, compared to the synthetic control" >}}
-
-{{< img src="366013_synthetic_control" alt="Number of ratings of Heat: Pedal to the Metal before and after the SU&SD review, compared to the synthetic control" >}}
-
 
 ### Supercharged
-
-{{< img src="368061_synthetic_control" alt="Number of ratings of Zoo Vadis before and after the SU&SD review, compared to the synthetic control" >}}
 
 {{< img src="311031_synthetic_control" alt="Number of ratings of Five Three Five before and after the SU&SD review, compared to the synthetic control" >}}
 
@@ -93,17 +81,11 @@ Obviously, this was just one video and one game. Can we see a similar effect in 
 
 ### No (or negative) effect
 
-{{< img src="350184_synthetic_control" alt="Number of ratings of Earth before and after the SU&SD review, compared to the synthetic control" >}}
+{{< img src="298383_synthetic_control" alt="Number of ratings of Golem before and after the SU&SD review, compared to the synthetic control" >}}
 
 {{< img src="354568_synthetic_control" alt="Number of ratings of Amun-Re before and after the SU&SD review, compared to the synthetic control" >}}
 
-{{< img src="298383_synthetic_control" alt="Number of ratings of Golem before and after the SU&SD review, compared to the synthetic control" >}}
-
-{{< img src="281549_synthetic_control" alt="Number of ratings of Beast before and after the SU&SD review, compared to the synthetic control" >}}
-
 {{< img src="295770_synthetic_control" alt="Number of ratings of Frosthaven before and after the SU&SD review, compared to the synthetic control" >}}
-
-{{< img src="811_synthetic_control" alt="Number of ratings of Rummikub before and after the SU&SD review, compared to the synthetic control" >}}
 
 
 <!-- TODO: Pick a couple of representative plots, e.g., unknown and boosted, known and moderate effect, no or negative effect. -->
