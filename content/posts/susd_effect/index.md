@@ -107,6 +107,38 @@ SU&SD's video about {{% game 295770 %}}Frosthaven{{% /game %}} might have actual
 
 {{< img src="295770_synthetic_control" alt="Number of ratings of Frosthaven before and after the SU&SD review, compared to the synthetic control" >}}
 
+
+### Full results
+
+Here's an overview over most of the videos SU&SD has released in 2023 and the impact they had on the games they covered:
+
+| Game | Review date | SU&SD effect | Plot |
+| :--- | :---------: | -----------: | :--: |
+| {{% game 332686 %}}John Company{{% /game %}} | 2023-11-28 | **+24.6%** | [[link]](332686_synthetic_control.svg) |
+| {{% game 330592 %}}Phantom Ink{{% /game %}} | 2023-10-26 | **+43.5%** | [[link]](330592_synthetic_control.svg) |
+| {{% game 368061 %}}Zoo Vadis{{% /game %}} | 2023-10-19 | **+64.9%** | [[link]](368061_synthetic_control.svg) |
+| {{% game 358386 %}}Moon{{% /game %}} | 2023-10-12 | **+69.2%** | [[link]](358386_synthetic_control.svg) |
+| {{% game 351538 %}}Bamboo{{% /game %}} | 2023-10-05 | **+50.3%** | [[link]](351538_synthetic_control.svg) |
+| {{% game 350184 %}}Earth{{% /game %}} | 2023-09-28 | **-19.0%** | [[link]](350184_synthetic_control.svg) |
+| {{% game 354568 %}}Amun-Re{{% /game %}} | 2023-09-22 | **+1.7%** | [[link]](354568_synthetic_control.svg) |
+| {{% game 11 %}}Bohnanza{{% /game %}} | 2023-09-14 | **+20.9%** | [[link]](11_synthetic_control.svg) |
+| {{% game 311031 %}}Five Three Five{{% /game %}} | 2023-08-23 | **+71.6%** | [[link]](311031_synthetic_control.svg) |
+| {{% game 298383 %}}Golem{{% /game %}} | 2023-08-17 | **+12.8%** | [[link]](298383_synthetic_control.svg) |
+| {{% game 386937 %}}Lacuna{{% /game %}} | 2023-08-03 | **+104.7%** | [[link]](386937_synthetic_control.svg) |
+| {{% game 331571 %}}My Gold Mine{{% /game %}} | 2023-07-19 | **+89.6%** | [[link]](331571_synthetic_control.svg) |
+| {{% game 367771 %}}Stomp the Plank{{% /game %}} | 2023-07-06 | **+33.2%** | [[link]](367771_synthetic_control.svg) |
+| {{% game 177478 %}}IKI{{% /game %}} | 2023-06-29 | **+32.5%** | [[link]](177478_synthetic_control.svg) |
+| {{% game 362944 %}}War of the Ring: The Card Game{{% /game %}} | 2023-06-15 | **+25.4%** | [[link]](362944_synthetic_control.svg) |
+| {{% game 281549 %}}Beast{{% /game %}} | 2023-06-09 | **-18.6%** | [[link]](281549_synthetic_control.svg) |
+| {{% game 276086 %}}Hamlet{{% /game %}} | 2023-05-25 | **+66.8%** | [[link]](276086_synthetic_control.svg) |
+| {{% game 267609 %}}Guards of Atlantis II{{% /game %}} | 2023-05-18 | **+52.7%** | [[link]](267609_synthetic_control.svg) |
+| {{% game 295770 %}}Frosthaven{{% /game %}} | 2023-05-11 | **-30.4%** | [[link]](295770_synthetic_control.svg) |
+| {{% game 350205 %}}Horseless Carriage{{% /game %}} | 2023-02-09 | **+35.2%** | [[link]](350205_synthetic_control.svg) |
+| {{% game 811 %}}Rummikub{{% /game %}} | 2023-01-26 | **-6.1%** | [[link]](811_synthetic_control.svg) |
+| {{% game 366013 %}}Heat: Pedal to the Metal{{% /game %}} | 2022-12-22 | **+19.1%** | [[link]](366013_synthetic_control.svg) |
+
+Even more detailed results can be found [here](results.json).
+
 <!-- TODO: Pick a couple of representative plots, e.g., unknown and boosted, known and moderate effect, no or negative effect. -->
 <!-- TODO: Result table for all (?) videos, conclusion about typical SU&SD effect. -->
 
