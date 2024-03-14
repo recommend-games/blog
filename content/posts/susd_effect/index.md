@@ -61,16 +61,22 @@ So, it looks as though our synthetic {{% game 332686 %}}John Company{{% /game %}
 Obviously, this was just one video and one game. Can we see a similar effect in other games that SU&SD has covered? Let's check the same plot for some other videos.
 
 
-### Modest increase
+### Noticeable increase 📈
+
+Most games covered by SU&SD will see a clearly visible uplift in interest, such as {{% game 330592 %}}Phantom Ink{{% /game %}}. The model predicted interest to somewhat fizzle out, but the video introduced more players to the game:
 
 {{< img src="330592_synthetic_control" alt="Number of ratings of Phantom Ink before and after the SU&SD review, compared to the synthetic control" >}}
 
+The {{% game 351538 %}}Bamboo{{% /game %}} review produced a clear bump in interest, which then continued rather in parallel of the synthetic version after a couple of days:
+
 {{< img src="351538_synthetic_control" alt="Number of ratings of Bamboo before and after the SU&SD review, compared to the synthetic control" >}}
+
+Coverage of {{% game 276086 %}}Hamlet{{% /game %}} clearly led to a similar bump right after the review, but interest continue to rise afterwards:
 
 {{< img src="276086_synthetic_control" alt="Number of ratings of Hamlet before and after the SU&SD review, compared to the synthetic control" >}}
 
 
-### Supercharged
+### Supercharged 🚀
 
 {{< img src="311031_synthetic_control" alt="Number of ratings of Five Three Five before and after the SU&SD review, compared to the synthetic control" >}}
 
@@ -79,7 +85,7 @@ Obviously, this was just one video and one game. Can we see a similar effect in 
 {{< img src="367771_synthetic_control" alt="Number of ratings of Stomp the Plank before and after the SU&SD review, compared to the synthetic control" >}}
 
 
-### No (or negative) effect
+### No (or negative) effect 🫤
 
 {{< img src="298383_synthetic_control" alt="Number of ratings of Golem before and after the SU&SD review, compared to the synthetic control" >}}
 
