@@ -28,13 +28,14 @@ Enter [synthetic control](https://en.wikipedia.org/wiki/Synthetic_control_method
 
 Concretely, we'll look at all the games on BGG and sample 300 of them that are most similar to {{% game 332686 %}}John Company{{% /game %}} in terms of the number of ratings before the video. We then try to find a convex combination of these games that best approximates the number of ratings of {{% game 332686 %}}John Company{{% /game %}} before the video. If this all sounds like gibberish, don't worry, just take my word for it that the algorithm spits out this model:
 
-> \\(+30.7\\%\\) * {{% game 356033 %}}Libertalia: Winds of Galecrest{{% /game %}}  
-> \\(+20.9\\%\\) * {{% game 362986 %}}Tribes of the Wind{{% /game %}}  
-> \\(+18.3\\%\\) * {{% game 340041 %}}Kingdomino Origins{{% /game %}}  
-> \\(+12.3\\%\\) * {{% game 383206 %}}Freelancers: A Crossroads Game{{% /game %}}  
-> \\(+8.2\\%\\) * {{% game 332772 %}}Revive{{% /game %}}  
-> \\(+5.5\\%\\) * {{% game 315767 %}}Cartographers Heroes{{% /game %}}  
-> \\(+4.2\\%\\) * {{% game 318182 %}}Imperium: Legends{{% /game %}}
+> **Synthetic {{% game 332686 %}}John Company{{% /game %}} =**  
+> +30.7% * {{% game 356033 %}}Libertalia: Winds of Galecrest{{% /game %}}  
+> +20.9% * {{% game 362986 %}}Tribes of the Wind{{% /game %}}  
+> +18.3% * {{% game 340041 %}}Kingdomino Origins{{% /game %}}  
+> +12.3% * {{% game 383206 %}}Freelancers: A Crossroads Game{{% /game %}}  
+> +8.2% * {{% game 332772 %}}Revive{{% /game %}}  
+> +5.5% * {{% game 315767 %}}Cartographers Heroes{{% /game %}}  
+> +4.2% * {{% game 318182 %}}Imperium: Legends{{% /game %}}
 
 It's worth stressing one thing: during training, the model only gets to see the number of ratings up to the review date. The idea is that the weighted sum of the ratings of those games are a "synthetic" version of {{% game 332686 %}}John Company{{% /game %}}. Since those games did not receive the SU&SD treatment, this synthetic gives a glimpse into a world, where that video was never made. Without further ado, this is what the fake ratings look like compared to the real ones:
 
