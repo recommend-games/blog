@@ -155,7 +155,7 @@ Here's an overview over most of the videos SU&SD has released in 2023 and the im
 Even more detailed results can be found [here](results.json).
 
 
-## Conclusion: the real Shut Up & Sit Down effect
+## Conclusion: the Shut Up & Sit Down effect is real
 
 According to synthetic control, in the weeks after a SU&SD video is published, 20% to 60% of the new ratings can be attributed to that review, in extreme cases up to 90%. In other words, **for some games interest increases tenfold**. It's hard to deny, SU&SD exercises a great deal of influence over the hobby – and finally we got some numbers to back up the anecdotes. They've worked over a decade on sharing the love for board games to a broader audience, and it's clear that they've been successful in doing so.
 
