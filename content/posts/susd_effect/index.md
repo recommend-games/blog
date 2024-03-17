@@ -163,6 +163,8 @@ As powerful as this method is, let's not forget some caveats: First off, we cann
 
 Second, let's not forget not all interest is good interest. We considered the number of new ratings, but we didn't at all take into account if they were *positive* ratings. A review might well be devastating, which leads to large number of interest being detected by this method, but it'd probably be unwanted attention and actually harm sales. Our model wouldn't know the difference.
 
+The review of {{% game 332686 %}}John Company{{% /game %}} is actually a good example of this complexity: the video was by no means just a glowing "must buy" hype fest, but rather a 48 minute video essay full of nuiances that probably contained as many praises for the design as caveats why this game might not be for everyone – or in fact most people. (If you, for some reason, spend your time reading this article but haven't watched the video it's about, do yourself a favour and watch it now. It's really excellent.) So much of the activity on BGG following the review might well have been "thanks, but not for me" – it's hard to tell.
+
 Still, after spending a lot of time looking at the data, I'm convinced that the SU&SD effect is real. And it's a good thing, too: the hobby needs more people to play and enjoy games, and SU&SD is doing a great job at that. 🎲👍
 
 
