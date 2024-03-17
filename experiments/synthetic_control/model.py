@@ -270,7 +270,7 @@ for control_game, _, _, effect_train, effect_test, train_error in tqdm(
     control_game_results,
     total=len(control_bgg_ids),
 ):
-    if train_error > 0.03:
+    if train_error > 0.01:
         print(f"Ignore <{control_game.name}> with RMSE of {train_error:.3f}")
         continue
 
