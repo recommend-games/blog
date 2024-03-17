@@ -161,7 +161,7 @@ According to synthetic control, in the weeks after a SU&SD video is published, 2
 
 As powerful as this method is, let's not forget some caveats: First off, we cannot exclude the possibility of some other "intervention" that might have caused the increase in interest. Maybe the video conincided with a crowdfunding campaign or some other "influencer" mentioning the game on their feed. We did our best to work out that some significant "treatment" happened on the day of the review, but we can't be sure it's SU&SD.
 
-Second, let's not forget all interest is good interest. We consider the number of new ratings, but we didn't at all take into account if they were *positive* ratings. A review might well be devastating, which leads to large number of interest being detected by this method, but it'd probably be unwanted attention.
+Second, let's not forget not all interest is good interest. We considered the number of new ratings, but we didn't at all take into account if they were *positive* ratings. A review might well be devastating, which leads to large number of interest being detected by this method, but it'd probably be unwanted attention and actually harm sales. Our model wouldn't know the difference.
 
 Still, after spending a lot of time looking at the data, I'm convinced that the SU&SD effect is real. And it's a good thing, too: the hobby needs more people to play and enjoy games, and SU&SD is doing a great job at that. 🎲👍
 
