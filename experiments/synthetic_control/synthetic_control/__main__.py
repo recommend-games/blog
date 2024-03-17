@@ -126,7 +126,7 @@ def _main():
             game=game,
             plot_dir=plot_dir,
             threshold_rmse_slsqp=args.threshold_rmse_slsqp,
-            y_label="Num Collections" if args.mode == "collections" else "Num Ratings",
+            # y_label="Num Collections" if args.mode == "collections" else "Num Ratings",
             rng=np.random.default_rng(random_seed),
         )
         relative_plot_path_ratings = Path(result.plot_path_ratings).relative_to(
