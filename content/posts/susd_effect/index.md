@@ -61,6 +61,12 @@ Another way to visualise this effect is when we plot the difference between the 
 
 Because the synthetic version is meant to approximate the number of ratings of the real numbers until the review is published, the plot dances around 0 in the left hand side. Right after the review, we see a steep incline for about a week, which then flattens out. This is the SU&SD effect in action.
 
+You might still not be quite convinced that this is an isolated effect for {{% game 332686 %}}John Company{{% /game %}}. How do we know that other games didn't see a similar, if not bigger effect? Is this observation in any way significant? One way to approach an answer is called [Fisher's exact test](https://en.wikipedia.org/wiki/Fisher's_exact_test). Applied to our situation, we can simply pretend that other games got the same treatment and see if a similar synthetic control model shows the same effect. In practice, we sample around 120 games with a similar number of ratings as {{% game 332686 %}}John Company{{% /game %}}, calculate the same synthetic control model for each of them, and then compare the difference between the real and synthetic number of ratings after the review. A picture is worth a thousand words, so let's look at the result plot:
+
+{{< img src="332686_susd_effect_fisher" alt="Fisher's exact test of the SU&SD effect for John Company" >}}
+
+The strong line is the same as the one in the previous plot, but the faint lines are the differences for the other games. Again, all the lines on the left meander around 0, while they stray to different positive or negative values after the review. That kind of spread is typical for random observations without actual underlying cause. It's clear that {{% game 332686 %}}John Company{{% /game %}} really received an exceptional amount of attention after the SU&SD review.
+
 The absolute numbers might not sound impressive for a video with over 300'000 views, but keep in mind that only a fraction of board game enthusiasts are active on BGG. Further, in an industry where a couple of thousand copies sold is considered a success, a couple of hundred additional ratings is nothing to sneeze at. Of course, whether this kind of activity on BGG translates to actual sales is a different question entirely.
 
 
