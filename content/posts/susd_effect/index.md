@@ -157,7 +157,7 @@ Even more detailed results can be found [here](results.json).
 
 ## Conclusion: the real Shut Up & Sit Down effect
 
-According to synthetic control, in the weeks after a SU&SD video is published, 20% to 60% of the new ratings can be attributed to that review, in extreme cases up to 90%. In other words, **for some games interest increases tenfold**. It's hard to deny, SU&SD exercises a great influence over the hobby – and finally we got some numbers to back up the anecdotes. They've worked over a decade on sharing the love for board games to a broader audience, and it's clear that they've been successful in doing so.
+According to synthetic control, in the weeks after a SU&SD video is published, 20% to 60% of the new ratings can be attributed to that review, in extreme cases up to 90%. In other words, **for some games interest increases tenfold**. It's hard to deny, SU&SD exercises a great deal of influence over the hobby – and finally we got some numbers to back up the anecdotes. They've worked over a decade on sharing the love for board games to a broader audience, and it's clear that they've been successful in doing so.
 
 As powerful as this method is, let's not forget some caveats: First off, we cannot exclude the possibility of some other "intervention" that might have caused the increase in interest. Maybe the video conincided with a crowdfunding campaign or some other "influencer" mentioning the game on their feed. We did our best to work out that some significant "treatment" happened on the day of the review, but we can't be sure it's SU&SD.
 
@@ -165,7 +165,15 @@ Second, let's not forget not all interest is good interest. We considered the nu
 
 Still, after spending a lot of time looking at the data, I'm convinced that the SU&SD effect is real. And it's a good thing, too: the hobby needs more people to play and enjoy games, and SU&SD is doing a great job at that. 🎲👍
 
-<!-- Link to articles with further details and code with actual implementation -->
+
+## Postscriptum: the technical details
+
+I've cut a great deal of details about the data and the method from this article as I wanted to focus on the outcome and not get bogged down in how we got there. If you want to learn more about synthetic control, I highly recommend the [corresponding chapter](https://matheusfacure.github.io/python-causality-handbook/15-Synthetic-Control.html) of [Causal Inference for the Brave and True](https://matheusfacure.github.io/python-causality-handbook/index.html), which directly inspired the method and plots of this article. If this can't convince you that synthetic control, maybe the [Washington Post](https://www.washingtonpost.com/news/wonk/wp/2015/10/30/how-to-measure-things-in-a-world-of-competing-claims/) can.
+
+If you want to verify the model and run the code yourself, as always you can find everything from [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/synthetic_control).
+
+Finally, let me conclude by saying that I've spent a lot of time on this article (probably much more than I should have 😅), so I hope you enjoyed it and learned something interesting. If you did, please consider sharing it with your friends or on social media. It's a great way to support the blog and help it grow. 🙏
+
 
 [^num_ratings]: We use the number of ratings as a coarse proxy for interest. It's far from perfect, but it has the advantage of representing both positive and negative attention – and it's readily available from [this repository](https://github.com/beefsack/bgg-ranking-historicals).
 <!-- TODO: Explain actual data source (collection items) better. -->
