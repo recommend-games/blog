@@ -36,6 +36,8 @@ So how can we know that it really was the SU&SD video that drew the extra attent
 
 ## Synthetic Control
 
+<!-- TODO: Add link to synthetic control article -->
+
 Enter [synthetic control](https://en.wikipedia.org/wiki/Synthetic_control_method). As said, we don't have a control world that wasn't exposed to the video – so instead we synthesise one! At first, this might sound more like alchemy than science, but the basic idea is really quite simple: we look at the number of ratings up to the day of the video and compare those to other, similar games over the time period. Because {{% game 332686 %}}John Company{{% /game %}} got the SU&SD treatment, but the other games didn't, we can reason that the same weighting of the other games' ratings should give us a good estimate of what would have happened to {{% game 332686 %}}John Company{{% /game %}} if it hadn't been for the video.
 
 Concretely, we'll look at all the games on BGG and sample 300 of them that are most similar to {{% game 332686 %}}John Company{{% /game %}} in terms of the number of ratings before the video. We then try to find a convex combination of these games that best approximates the number of ratings of {{% game 332686 %}}John Company{{% /game %}} before the video. If this all sounds like gibberish, don't worry, just take my word for it that the algorithm spits out this model:
@@ -138,7 +140,6 @@ Here's an overview over most of the videos SU&SD has released in 2023 and the im
 | {{% game 11 %}}Bohnanza{{% /game %}} | 2023-09-14 | **+20.9%** | [[link]](11_synthetic_control.svg) |
 | {{% game 311031 %}}Five Three Five{{% /game %}} | 2023-08-23 | **+71.6%** | [[link]](311031_synthetic_control.svg) |
 | {{% game 298383 %}}Golem{{% /game %}} | 2023-08-17 | **+12.8%** | [[link]](298383_synthetic_control.svg) |
-| {{% game 386937 %}}Lacuna{{% /game %}} | 2023-08-03 | **+104.7%** | [[link]](386937_synthetic_control.svg) |
 | {{% game 331571 %}}My Gold Mine{{% /game %}} | 2023-07-19 | **+89.6%** | [[link]](331571_synthetic_control.svg) |
 | {{% game 367771 %}}Stomp the Plank{{% /game %}} | 2023-07-06 | **+33.2%** | [[link]](367771_synthetic_control.svg) |
 | {{% game 177478 %}}IKI{{% /game %}} | 2023-06-29 | **+32.5%** | [[link]](177478_synthetic_control.svg) |
@@ -153,10 +154,17 @@ Here's an overview over most of the videos SU&SD has released in 2023 and the im
 
 Even more detailed results can be found [here](results.json).
 
-<!-- TODO: Pick a couple of representative plots, e.g., unknown and boosted, known and moderate effect, no or negative effect. -->
-<!-- TODO: Result table for all (?) videos, conclusion about typical SU&SD effect. -->
 
-<!-- Note: cannot exclude the possibility of a different "intervention", e.g., KS opened or fulfilled, some other review or social media mention, etc. -->
+## Conclusion: the real Shut Up & Sit Down effect
+
+According to synthetic control, in the weeks after a SU&SD video is published, 20% to 60% of the new ratings can be attributed to that review, in extreme cases up to 90%. In other words, **for some games interest increases tenfold**. It's hard to deny, SU&SD exercises a great influence over the hobby – and finally we got some numbers to back up the anecdotes. They've worked over a decade on sharing the love for board games to a broader audience, and it's clear that they've been successful in doing so.
+
+As powerful as this method is, let's not forget some caveats: First off, we cannot exclude the possibility of some other "intervention" that might have caused the increase in interest. Maybe the video conincided with a crowdfunding campaign or some other "influencer" mentioning the game on their feed. We did our best to work out that some significant "treatment" happened on the day of the review, but we can't be sure it's SU&SD.
+
+Second, let's not forget all interest is good interest. We consider the number of new ratings, but we didn't at all take into account if they were *positive* ratings. A review might well be devastating, which leads to large number of interest being detected by this method, but it'd probably be unwanted attention.
+
+Still, after spending a lot of time looking at the data, I'm convinced that the SU&SD effect is real. And it's a good thing, too: the hobby needs more people to play and enjoy games, and SU&SD is doing a great job at that. 🎲👍
+
 <!-- Link to articles with further details and code with actual implementation -->
 
 [^num_ratings]: We use the number of ratings as a coarse proxy for interest. It's far from perfect, but it has the advantage of representing both positive and negative attention – and it's readily available from [this repository](https://github.com/beefsack/bgg-ranking-historicals).
