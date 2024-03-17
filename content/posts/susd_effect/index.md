@@ -172,7 +172,7 @@ I've cut a great deal of details about the data and the method from this article
 
 If you want to verify the model and run the code yourself, as always you can find everything from [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/synthetic_control).
 
-Finally, let me conclude by saying that I've spent a lot of time on this article (probably much more than I should have 😅), so I hope you enjoyed it and learned something interesting. If you did, please consider sharing it with your friends or on social media. It's a great way to support the blog and help it grow. 🙏
+Finally, let me conclude by saying that I've spent a lot of time on this article (probably much more than I should have 😅), so I hope you enjoyed it and learned something interesting. I know I did. 🤓 If you did too, please consider sharing it with your friends, on social media or wherever the cool kids hang out these days. It's a great way to support the blog and help it grow. 🙏
 
 
 [^num_ratings]: We use the number of ratings as a coarse proxy for interest. It's far from perfect, but it has the advantage of representing both positive and negative attention – and it's readily available from [this repository](https://github.com/beefsack/bgg-ranking-historicals).
