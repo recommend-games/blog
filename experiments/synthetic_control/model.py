@@ -46,7 +46,8 @@ np.set_printoptions(suppress=True)
 warnings.filterwarnings("ignore")
 
 # %%
-# TODO: Use numpy random number generator with seed everywhere.
+random_seed = 11
+rng = np.random.default_rng(random_seed)
 
 # %%
 game = REVIEWS[0]
@@ -107,7 +108,7 @@ data_train, data_test = train_test_split(data, game)
 data_train.shape, data_test.shape
 
 # %%
-control_ids = sample_control_group(data_train, game)
+control_ids = sample_control_group(data_train, game, rng=rng)
 len(control_ids)
 
 # %%
@@ -220,6 +221,7 @@ def process_control(
     original_game=game,
     data_train=data_train,
     data_test=data_test,
+    rng=rng,
 ):
     control_game = replace(
         original_game,
@@ -232,6 +234,7 @@ def process_control(
         control_game,
         data_train,
         data_test,
+        rng=rng,
     )
 
     effect_train = data_train[str(control_game.bgg_id)] - y_pred_train_control
@@ -251,7 +254,7 @@ def process_control(
 
 
 # %%
-control_bgg_ids = np.random.choice(
+control_bgg_ids = rng.choice(
     control_ids,
     min(128, len(control_ids)),
     replace=False,
