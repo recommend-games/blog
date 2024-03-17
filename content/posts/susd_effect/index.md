@@ -4,7 +4,7 @@ subtitle: "Using synthetic control to make up our own counterfactual world"
 slug: susd-effect
 author: Markus Shepherd
 type: post
-date: 2024-03-17T21:36:00+02:00
+date: 2024-03-17T21:37:46+02:00
 tags:
   - Shut Up & Sit Down
   - SU&SD
