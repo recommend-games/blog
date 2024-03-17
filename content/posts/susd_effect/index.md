@@ -16,7 +16,7 @@ tags:
 
 ## Shut Up & Sit Down
 
-[Shut Up & Sit Down](https://www.shutupandsitdown.com/) (SU&SD) is arguably the largest (at over 400k subscribers) and most influential [YouTube channel](https://www.youtube.com/@shutupandsitdown) in board gaming. A video with a glowing recommendation by them can lead to a game sell out overnight. Or at least that's how the anecdotes go. There's been [previous attempts](https://www.reddit.com/r/boardgames/comments/ngqoow/i_tried_to_quantify_the_shut_up_sit_down_effect/) at quantifying the effect, but over here at Recommend.Games is where board games and data science meet, so obviously, we have to dig a little deeper.
+[Shut Up & Sit Down](https://www.shutupandsitdown.com/) (SU&SD) is arguably the largest (at over 400k subscribers) and most influential [YouTube channel](https://www.youtube.com/@shutupandsitdown) in board gaming. A video with a glowing recommendation by them can lead to a game sell out overnight. Or at least that's how the anecdotes go. There's been [previous attempts](https://www.reddit.com/r/boardgames/comments/ngqoow/i_tried_to_quantify_the_shut_up_sit_down_effect/) at quantifying the effect, but over here at [Recommend.Games](https://recommend.games/#/) is where board games and data science meet, so obviously, we have to dig a little deeper.
 
 
 ## John Company
@@ -178,5 +178,5 @@ Finally, let me conclude by saying that I've spent a lot of time on this article
 
 
 [^recent]: I've been working on this article for a very long time, OK? When I started writing it, the video was pretty recent. 😅
-[^num_ratings]: Those numbers are actually the number of all "collection items" on BGG, which include ratings, owned and pre-ordered games, wishlists, logged plays and more. For the sake of simplicity, I just refer to "ratings" throughout. This number is obviously just a coarse proxy for interest (positive or negative), but at least it's a number we can measure and have readily available thanks to the scraping I do for Recommend.Games. Also note that the values are somewhat approximate since I don't have all the freshest data at all times. Approximations upon approximations to synthesise a counterfactual world – but it's the best we've got. 🤷
+[^num_ratings]: Those numbers are actually the number of all "collection items" on BGG, which include ratings, owned and pre-ordered games, wishlists, logged plays and more. For the sake of simplicity, I just refer to "ratings" throughout. This number is obviously just a coarse proxy for interest (positive or negative), but at least it's a number we can measure and have readily available thanks to the scraping I do for [Recommend.Games](https://recommend.games/#/). Also note that the values are somewhat approximate since I don't have all the freshest data at all times. Approximations upon approximations to synthesise a counterfactual world – but it's the best we've got. 🤷
 [^slsqp]: [Sequential Least Squares Programming](https://docs.scipy.org/doc/scipy/reference/optimize.minimize-slsqp.html) (SLSQP). I'm glad you asked. 🤓
