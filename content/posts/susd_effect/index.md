@@ -21,7 +21,7 @@ tags:
 
 ## John Company
 
-Their recent review of {{% game 332686 %}}John Company{{% /game %}} is an interesting case study:
+Their recent[^recent] review of {{% game 332686 %}}John Company{{% /game %}} is an interesting case study:
 
 {{< youtube id="ykrqCX2_mhU" >}}
 
@@ -35,8 +35,6 @@ So how can we know that it really was the SU&SD video that drew the extra attent
 
 
 ## Synthetic Control
-
-<!-- TODO: Add link to synthetic control article -->
 
 Enter [synthetic control](https://en.wikipedia.org/wiki/Synthetic_control_method). As said, we don't have a control world that wasn't exposed to the video – so instead we synthesise one! At first, this might sound more like alchemy than science, but the basic idea is really quite simple: we look at the number of ratings up to the day of the video and compare those to other, similar games over the time period. Because {{% game 332686 %}}John Company{{% /game %}} got the SU&SD treatment, but the other games didn't, we can reason that the same weighting of the other games' ratings should give us a good estimate of what would have happened to {{% game 332686 %}}John Company{{% /game %}} if it hadn't been for the video.
 
@@ -177,5 +175,5 @@ If you want to verify the model and run the code yourself, as always you can fin
 Finally, let me conclude by saying that I've spent a lot of time on this article (probably much more than I should have 😅), so I hope you enjoyed it and learned something interesting. I know I did. 🤓 If you did too, please consider sharing it with your friends, on social media or wherever the cool kids hang out these days. It's a great way to support the blog and help it grow. 🙏
 
 
-[^num_ratings]: We use the number of ratings as a coarse proxy for interest. It's far from perfect, but it has the advantage of representing both positive and negative attention – and it's readily available from [this repository](https://github.com/beefsack/bgg-ranking-historicals).
-<!-- TODO: Explain actual data source (collection items) better. -->
+[^recent]: I've been working on this article for a very long time, OK? When I started writing it, the video was pretty recent. 😅
+[^num_ratings]: Those numbers are actually the number of all "collection items" on BGG, which include ratings, owned and pre-ordered games, wishlists, logged plays and more. For the sake of simplicity, I just refer to "ratings" throughout. This number is obviously just a coarse proxy for interest (positive or negative), but at least it's a number we can measure and have readily available thanks to the scraping I do for Recommend.Games. Also note that the values are somewhat approximate since I don't have all the freshest data at all times. Approximations upon approximations to synthesise a counterfactual world – but it's the best we've got. 🤷
