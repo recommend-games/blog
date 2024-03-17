@@ -53,7 +53,15 @@ It's worth stressing one thing: during training, the model only gets to see the 
 
 {{< img src="332686_synthetic_control" alt="Number of ratings of John Company before and after the SU&SD review, compared to the synthetic control" >}}
 
-So, it looks as though our synthetic {{% game 332686 %}}John Company{{% /game %}} would have continued to steadily gather attention, just without that bump in the days after the video's release. In the sixty days after the video, our synthetic {{% game 332686 %}}John Company{{% /game %}} received 498 new ratings, while the real one got 662. So it looks like the **SU&SD effect added about 164 ratings** to the game, which is **roughly a quarter** of all new ratings in that period. The absolute numbers might not sound impressive for a video with over 300'000 views, but keep in mind that only a fraction of board game enthusiasts are active on BGG. Further, in an industry where a couple of thousand copies sold is considered a success, a couple of hundred additional ratings is nothing to sneeze at. Of course, whether this kind of activity on BGG translates to actual sales is a different question entirely.
+So, it looks as though our synthetic {{% game 332686 %}}John Company{{% /game %}} would have continued to steadily gather attention, just without that bump in the days after the video's release. In the sixty days after the video, our synthetic {{% game 332686 %}}John Company{{% /game %}} received 498 new ratings, while the real one got 662. So it looks like the **SU&SD effect added about 164 ratings** to the game, which is **roughly a quarter** of all new ratings in that period.
+
+Another way to visualise this effect is when we plot the difference between the real and the synthetic {{% game 332686 %}}John Company{{% /game %}}:
+
+{{< img src="332686_susd_effect" alt="Difference between the number of ratings of John Company and the synthetic control before and after the SU&SD review: the SU&SD effect" >}}
+
+Because the synthetic version is meant to approximate the number of ratings of the real numbers until the review is published, the plot dances around 0 in the left hand side. Right after the review, we see a steep incline for about a week, which then flattens out. This is the SU&SD effect in action.
+
+The absolute numbers might not sound impressive for a video with over 300'000 views, but keep in mind that only a fraction of board game enthusiasts are active on BGG. Further, in an industry where a couple of thousand copies sold is considered a success, a couple of hundred additional ratings is nothing to sneeze at. Of course, whether this kind of activity on BGG translates to actual sales is a different question entirely.
 
 
 ## What about the other videos?
