@@ -27,7 +27,7 @@ rankings_dir
 
 
 # %%
-def scan_rankings(path, date_fmt="%Y-%m-%dT%H-%M-%S"):
+def scan_rankings(path, *, date_fmt="%Y-%m-%dT%H-%M-%S"):
     pub_date = datetime.strptime(path.stem, date_fmt)
     return (
         pl.scan_csv(path)
@@ -39,9 +39,19 @@ def scan_rankings(path, date_fmt="%Y-%m-%dT%H-%M-%S"):
     )
 
 
+def scan_all_rankings(rankings_dir, glob="*.csv", *, date_fmt="%Y-%m-%dT%H-%M-%S"):
+    curr_length = 0
+    for path in sorted(rankings_dir.glob(glob)):
+        df = scan_rankings(path, date_fmt=date_fmt)
+        length = df.select(pl.len()).collect().item()
+        if length < curr_length * 0.99:
+            continue
+        curr_length = length
+        yield df
+
+
 # %%
-paths = sorted(rankings_dir.glob("*.csv"))
-dfs = map(scan_rankings, paths)
+dfs = scan_all_rankings(rankings_dir)
 all_rankings = pl.concat(dfs, how="vertical", parallel=True)
 
 # %%
