@@ -1,0 +1,46 @@
+# ---
+# jupyter:
+#   jupytext:
+#     formats: ipynb,py:percent
+#     text_representation:
+#       extension: .py
+#       format_name: percent
+#       format_version: '1.3'
+#       jupytext_version: 1.16.1
+#   kernelspec:
+#     display_name: Python 3 (ipykernel)
+#     language: python
+#     name: python3
+# ---
+
+# %%
+import jupyter_black
+import polars as pl
+import seaborn as sns
+from matplotlib import pyplot as plt
+
+jupyter_black.load()
+sns.set_style("dark")
+
+# %%
+gini = pl.read_csv("gini.csv", dtypes={"date": pl.Date})
+gini.shape
+
+# %%
+gini
+
+# %%
+_, ax = plt.subplots()
+sns.lineplot(
+    x=gini["date"],
+    y=gini["gini"],
+    label="Gini coefficient",
+    color="purple",
+    lw=3,
+    ax=ax,
+)
+ax.set_xlabel(None)
+ax.set_ylabel(None)
+plt.tight_layout()
+plt.savefig("gini.svg")
+plt.show()

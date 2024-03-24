@@ -16,8 +16,8 @@
 # %%
 from datetime import datetime
 from pathlib import Path
-import polars as pl
 import jupyter_black
+import polars as pl
 
 jupyter_black.load()
 
