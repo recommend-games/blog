@@ -27,7 +27,10 @@ gini = pl.read_csv("gini.csv", dtypes={"date": pl.Date})
 gini.shape
 
 # %%
-gini
+gini.head()
+
+# %%
+gini.tail()
 
 # %%
 _, ax = plt.subplots()
