@@ -6,9 +6,9 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.6.0
+#       jupytext_version: 1.15.2
 #   kernelspec:
-#     display_name: Python 3
+#     display_name: Python 3 (ipykernel)
 #     language: python
 #     name: python3
 # ---
@@ -21,6 +21,7 @@ import sys
 from datetime import timezone
 from pathlib import Path
 
+import jupyter_black
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -33,6 +34,8 @@ from pytility import parse_date
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.linear_model import LinearRegression
 
+jupyter_black.load()
+
 LOGGER = logging.getLogger(__name__)
 SEED = 23
 BASE_DIR = Path().resolve().parent.parent
@@ -44,10 +47,6 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)-8.8s [%(name)s:%(lineno)s] %(message)s",
 )
-
-# %matplotlib inline
-# %load_ext nb_black
-# %load_ext lab_black
 
 # %%
 games_file = BASE_DIR.parent / "board-game-data" / "scraped" / "bgg_GameItem.csv"
