@@ -19,8 +19,10 @@ from functools import reduce
 from operator import or_
 
 import jupyter_black
+import numpy as np
 import polars as pl
 import polars.selectors as cs
+from board_game_recommender.light import LightGamesRecommender
 
 jupyter_black.load()
 
@@ -51,3 +53,14 @@ game_types.shape
 
 # %%
 game_types.select(pl.col("game_type").value_counts(sort=True))
+
+# %%
+recommender = LightGamesRecommender.from_npz("data/recommender_light.npz")
+
+# %%
+idxs = np.array([recommender.items_indexes[bgg_id] for bgg_id in game_types["bgg_id"]])
+idxs.shape, (idxs < 0).sum()
+
+# %%
+latent_vectors = recommender.items_factors[:, idxs].T
+latent_vectors.shape
