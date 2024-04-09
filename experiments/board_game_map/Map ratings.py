@@ -89,7 +89,7 @@ latent_vectors.shape
 # ### t-SNE
 
 # %%
-embedding = TSNE(
+tsne_embedding = TSNE(
     n_components=2,
     perplexity=30,
     early_exaggeration=12,
@@ -99,23 +99,28 @@ embedding = TSNE(
 )
 
 # %%
-latent_vectors_embedded = embedding.fit_transform(latent_vectors)
-latent_vectors_embedded.shape
+latent_vectors_tsne_embedded = tsne_embedding.fit_transform(latent_vectors)
+latent_vectors_tsne_embedded.shape
 
 # %%
 sns.scatterplot(
-    x=latent_vectors_embedded[:, 0],
-    y=latent_vectors_embedded[:, 1],
+    x=latent_vectors_tsne_embedded[:, 0],
+    y=latent_vectors_tsne_embedded[:, 1],
     hue=game_types["game_type"],
 )
 plt.axis("off")
+plt.title("t-SNE")
 plt.legend(title="Game type", bbox_to_anchor=(1, 0.5), loc="center left")
+plt.tight_layout()
+plt.savefig("plots/ratings_tsne.svg")
+plt.savefig("plots/ratings_tsne.png")
+plt.show()
 
 # %% [markdown]
 # ### UMAP
 
 # %%
-embedding = umap.UMAP(
+umap_embedding = umap.UMAP(
     init="spectral",
     learning_rate=1.0,
     local_connectivity=1.0,
@@ -128,17 +133,23 @@ embedding = umap.UMAP(
     negative_sample_rate=5,
     output_metric="euclidean",
     output_metric_kwds=None,
+    random_state=13,
 )
 
 # %%
-latent_vectors_embedded = embedding.fit_transform(latent_vectors)
-latent_vectors_embedded.shape
+latent_vectors_umap_embedded = umap_embedding.fit_transform(latent_vectors)
+latent_vectors_umap_embedded.shape
 
 # %%
 sns.scatterplot(
-    x=latent_vectors_embedded[:, 0],
-    y=latent_vectors_embedded[:, 1],
+    x=latent_vectors_umap_embedded[:, 0],
+    y=latent_vectors_umap_embedded[:, 1],
     hue=game_types["game_type"],
 )
 plt.axis("off")
+plt.title("UMAP")
 plt.legend(title="Game type", bbox_to_anchor=(1, 0.5), loc="center left")
+plt.tight_layout()
+plt.savefig("plots/ratings_umap.svg")
+plt.savefig("plots/ratings_umap.png")
+plt.show()
