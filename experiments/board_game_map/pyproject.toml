@@ -5,15 +5,13 @@ description = "Board game embeddings and maps"
 authors = ["Markus Shepherd <markus@recommend.games>"]
 
 [tool.poetry.dependencies]
-python = "3.8.*"
+python = "3.12.*"
 
-board-game-recommender = {version = "*", extras = ["light"]}
 bokeh = "*"
 matplotlib = "*"
 numpy = "*"
 pandas = "*"
 polars = {version = "*", extras = ["pandas"]}
-pytility = "*"
 scikit-learn = "*"
 scipy = "*"
 seaborn = "*"
@@ -29,10 +27,10 @@ ruff = "*"
 types-tqdm = "*"
 
 [tool.ruff]
-target-version = "py38"
+target-version = "py312"
 
 [tool.mypy]
-python_version = "3.8"
+python_version = "3.12"
 
 [build-system]
 requires = ["poetry-core"]
