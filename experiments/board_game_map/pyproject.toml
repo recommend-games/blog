@@ -7,9 +7,12 @@ authors = ["Markus Shepherd <markus@recommend.games>"]
 [tool.poetry.dependencies]
 python = "3.8.*"
 
+bokeh = "*"
 matplotlib = "*"
 numpy = "*"
+pandas = "*"
 polars = {version = "*", extras = ["pandas"]}
+scikit-learn = "*"
 scipy = "*"
 seaborn = "*"
 tqdm = "*"
