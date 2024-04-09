@@ -24,6 +24,7 @@ import numpy as np
 import polars as pl
 import polars.selectors as cs
 import seaborn as sns
+import umap
 from sklearn.manifold import TSNE
 
 jupyter_black.load()
@@ -51,7 +52,7 @@ game_types = (
     .select(
         bgg_id="id",
         name="name",
-        game_type=pl.concat_list(columns).list.arg_min().map_dict(columns_map),
+        game_type=pl.concat_list(columns).list.arg_min().replace(columns_map),
     )
 )
 game_types.shape
@@ -94,6 +95,36 @@ embedding = TSNE(
     metric="cosine",
     init="pca",
     learning_rate="auto",
+)
+
+# %%
+latent_vectors_embedded = embedding.fit_transform(latent_vectors)
+latent_vectors_embedded.shape
+
+# %%
+sns.scatterplot(
+    x=latent_vectors_embedded[:, 0],
+    y=latent_vectors_embedded[:, 1],
+    hue=game_types["game_type"],
+)
+
+# %% [markdown]
+# ### UMAP
+
+# %%
+embedding = umap.UMAP(
+    init="spectral",
+    learning_rate=1.0,
+    local_connectivity=1.0,
+    low_memory=False,
+    metric="cosine",
+    min_dist=0.1,
+    n_components=2,
+    n_epochs=None,
+    n_neighbors=15,
+    negative_sample_rate=5,
+    output_metric="euclidean",
+    output_metric_kwds=None,
 )
 
 # %%
