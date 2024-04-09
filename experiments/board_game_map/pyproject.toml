@@ -21,6 +21,7 @@ umap-learn = {extras = ["plot"], version = "*"}
 
 [tool.poetry.group.dev.dependencies]
 jupyter-black = "*"
+jupyter-bokeh = "*"
 jupyterlab = "*"
 jupytext = "*"
 mypy = "*"
