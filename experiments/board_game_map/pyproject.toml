@@ -18,6 +18,7 @@ scikit-learn = "*"
 scipy = "*"
 seaborn = "*"
 tqdm = "*"
+umap-learn = {extras = ["plot"], version = "*"}
 
 [tool.poetry.group.dev.dependencies]
 jupyter-black = "*"
