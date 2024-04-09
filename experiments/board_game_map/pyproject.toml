@@ -7,11 +7,13 @@ authors = ["Markus Shepherd <markus@recommend.games>"]
 [tool.poetry.dependencies]
 python = "3.8.*"
 
+board-game-recommender = {version = "*", extras = ["light"]}
 bokeh = "*"
 matplotlib = "*"
 numpy = "*"
 pandas = "*"
 polars = {version = "*", extras = ["pandas"]}
+pytility = "*"
 scikit-learn = "*"
 scipy = "*"
 seaborn = "*"

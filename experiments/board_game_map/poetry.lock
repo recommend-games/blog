@@ -265,6 +265,27 @@ webencodings = "*"
 css = ["tinycss2 (>=1.1.0,<1.2)"]
 
 [[package]]
+name = "board-game-recommender"
+version = "3.6.0"
+description = "Board games recommender engine"
+optional = false
+python-versions = ">=3.7.0,<3.9.0"
+files = [
+    {file = "board-game-recommender-3.6.0.tar.gz", hash = "sha256:c7e60a3d51334adf5915e8032a6e945436b87be2c189a45851580bea9fad7806"},
+    {file = "board_game_recommender-3.6.0-py2.py3-none-any.whl", hash = "sha256:262e736e6f7a6b3e4cfb32f41235be398196b7248de1d70aae2195c41a668977"},
+]
+
+[package.dependencies]
+numpy = "*"
+pandas = {version = "*", optional = true, markers = "extra == \"light\""}
+
+[package.extras]
+evaluation = ["polars", "scikit-learn"]
+full = ["pytility", "turicreate"]
+light = ["pandas"]
+trust = ["scipy"]
+
+[[package]]
 name = "bokeh"
 version = "2.4.3"
 description = "Interactive plots and applications in the browser from Python"
@@ -2199,6 +2220,20 @@ files = [
 ]
 
 [[package]]
+name = "pytility"
+version = "0.3.0"
+description = "A lean collection of Python utilities"
+optional = false
+python-versions = ">=3.6.0"
+files = [
+    {file = "pytility-0.3.0-py2.py3-none-any.whl", hash = "sha256:3792f994a2d84acf3531aaf5ac6f71dea43afbdc2fd5b17d2ba9f027e33fadc2"},
+    {file = "pytility-0.3.0.tar.gz", hash = "sha256:dc1b1f6f23c3d5ad2128ae21aff8cdc2f6117c486af6b2148ec2691d20dbfe92"},
+]
+
+[package.extras]
+dates = ["python-dateutil"]
+
+[[package]]
 name = "pytz"
 version = "2024.1"
 description = "World timezone definitions, modern and historical"
@@ -3008,4 +3043,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "3.8.*"
-content-hash = "c810744f441b0152acd4a2ea113ed54b103cb7661dfa75904c03d3724854e243"
+content-hash = "186461781d32f5a4b269e1500c6ca6b5ef3392d7a2f566cd7e017e75008f8c5e"
