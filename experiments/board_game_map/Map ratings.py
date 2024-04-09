@@ -14,6 +14,7 @@
 # ---
 
 # %%
+import json
 import math
 from collections import defaultdict
 from functools import reduce
@@ -25,10 +26,15 @@ import polars as pl
 import polars.selectors as cs
 import seaborn as sns
 import umap
+from bokeh.embed import json_item
+from bokeh.io import output_notebook
+from bokeh.plotting import figure, show
+from bokeh.transform import jitter
 from matplotlib import pyplot as plt
 from sklearn.manifold import TSNE
 
 jupyter_black.load()
+output_notebook()
 
 # %% [markdown]
 # ## Game types
@@ -53,6 +59,7 @@ game_types = (
     .select(
         bgg_id="id",
         name="name",
+        num_ratings="usersrated",
         game_type=pl.concat_list(columns).list.arg_min().replace(columns_map),
     )
 )
@@ -77,6 +84,7 @@ items_indexes = defaultdict(
 # %%
 idxs = np.array([items_indexes[bgg_id] for bgg_id in game_types["bgg_id"]])
 idxs.shape, (idxs < 0).sum()
+# TODO: Filter out idx -1
 
 # %%
 latent_vectors = items_factors[:, idxs].T
@@ -153,3 +161,41 @@ plt.tight_layout()
 plt.savefig("plots/ratings_umap.svg")
 plt.savefig("plots/ratings_umap.png")
 plt.show()
+
+# %%
+source = game_types.clone().with_columns(
+    x=latent_vectors_umap_embedded[:, 0],
+    y=latent_vectors_umap_embedded[:, 1],
+    size=pl.col("num_ratings").log(10) * 2 + 1,
+    color=pl.col("game_type").replace(
+        old=list(columns_map.values()),
+        new=sns.color_palette("bright", len(columns_map)).as_hex(),
+        default=None,
+    ),
+)
+source.shape
+
+# %%
+TOOLS = "hover,crosshair,pan,wheel_zoom,zoom_in,zoom_out,box_zoom,reset,save,box_select"
+plot = figure(
+    title="UMAP",
+    tools=TOOLS,
+    tooltips=[
+        ("Name", "@name"),
+        ("ID", "@bgg_id"),
+        ("Type", "@game_type"),
+        ("Num ratings", "@num_ratings"),
+    ],
+)
+plot.scatter(
+    x=jitter("x", width=0.2, distribution="normal"),
+    y=jitter("y", width=0.2, distribution="normal"),
+    size="size",
+    source=source.to_pandas(),
+    color="color",
+)
+show(plot)
+
+# %%
+with open("plots/ratings_umap.json", "w") as f:
+    json.dump(json_item(plot), f, indent=4)
