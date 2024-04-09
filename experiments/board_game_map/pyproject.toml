@@ -8,6 +8,7 @@ authors = ["Markus Shepherd <markus@recommend.games>"]
 python = "3.12.*"
 
 bokeh = "*"
+dask = {version = "*", extras = ["dataframe"]}
 matplotlib = "*"
 numpy = "*"
 pandas = "*"
