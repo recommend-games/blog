@@ -25,6 +25,7 @@ import polars as pl
 import polars.selectors as cs
 import seaborn as sns
 import umap
+from matplotlib import pyplot as plt
 from sklearn.manifold import TSNE
 
 jupyter_black.load()
@@ -107,6 +108,8 @@ sns.scatterplot(
     y=latent_vectors_embedded[:, 1],
     hue=game_types["game_type"],
 )
+plt.axis("off")
+plt.legend(title="Game type", bbox_to_anchor=(1, 0.5), loc="center left")
 
 # %% [markdown]
 # ### UMAP
@@ -137,3 +140,5 @@ sns.scatterplot(
     y=latent_vectors_embedded[:, 1],
     hue=game_types["game_type"],
 )
+plt.axis("off")
+plt.legend(title="Game type", bbox_to_anchor=(1, 0.5), loc="center left")
