@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.15.2
+#       jupytext_version: 1.16.1
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -15,6 +15,7 @@
 
 # %%
 import math
+from collections import defaultdict
 from functools import reduce
 from operator import or_
 
@@ -22,9 +23,13 @@ import jupyter_black
 import numpy as np
 import polars as pl
 import polars.selectors as cs
-from board_game_recommender.light import LightGamesRecommender
+import seaborn as sns
+from sklearn.manifold import TSNE
 
 jupyter_black.load()
+
+# %% [markdown]
+# ## Game types
 
 # %%
 rankings = pl.read_csv("data/boardgames_ranks.csv")
@@ -54,13 +59,50 @@ game_types.shape
 # %%
 game_types.select(pl.col("game_type").value_counts(sort=True))
 
-# %%
-recommender = LightGamesRecommender.from_npz("data/recommender_light.npz")
+# %% [markdown]
+# ## Latent vectors
 
 # %%
-idxs = np.array([recommender.items_indexes[bgg_id] for bgg_id in game_types["bgg_id"]])
+with open("data/recommender_light.npz", "rb") as f:
+    files = np.load(file=f)
+    items_labels = files["items_labels"]
+    items_factors = files["items_factors"]
+items_indexes = defaultdict(
+    lambda: -1,
+    zip(items_labels, range(len(items_labels))),
+)
+
+# %%
+idxs = np.array([items_indexes[bgg_id] for bgg_id in game_types["bgg_id"]])
 idxs.shape, (idxs < 0).sum()
 
 # %%
-latent_vectors = recommender.items_factors[:, idxs].T
+latent_vectors = items_factors[:, idxs].T
 latent_vectors.shape
+
+# %% [markdown]
+# ## Embeddings
+
+# %% [markdown]
+# ### t-SNE
+
+# %%
+embedding = TSNE(
+    n_components=2,
+    perplexity=30,
+    early_exaggeration=12,
+    metric="cosine",
+    init="pca",
+    learning_rate="auto",
+)
+
+# %%
+latent_vectors_embedded = embedding.fit_transform(latent_vectors)
+latent_vectors_embedded.shape
+
+# %%
+sns.scatterplot(
+    x=latent_vectors_embedded[:, 0],
+    y=latent_vectors_embedded[:, 1],
+    hue=game_types["game_type"],
+)
