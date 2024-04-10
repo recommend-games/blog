@@ -21,7 +21,8 @@ import umap
 from bokeh.embed import json_item
 from bokeh.io import output_notebook
 from bokeh.plotting import show
-from sklearn.manifold import TSNE
+from sklearn.decomposition import FactorAnalysis, FastICA, PCA
+from sklearn.manifold import Isomap, LocallyLinearEmbedding, SpectralEmbedding, TSNE
 from board_game_map.data import load_latent_vectors,process_game_data
 from board_game_map.plots import plot_embedding
 
@@ -116,3 +117,139 @@ show(plot_umap)
 # %%
 with open("plots/ratings_umap.json", "w") as f:
     json.dump(json_item(plot_umap), f, indent=4)
+
+# %% [markdown]
+# ### Isomap
+
+# %%
+isomap_embedding = Isomap(n_components=2, metric="cosine")
+
+# %%
+latent_vectors_isomap_embedded = isomap_embedding.fit_transform(latent_vectors)
+latent_vectors_isomap_embedded.shape
+
+# %%
+plot_isomap = plot_embedding(
+    data=game_types,
+    latent_vectors=latent_vectors_isomap_embedded,
+    title="Isomap",
+)
+show(plot_isomap)
+
+# %%
+with open("plots/ratings_isomap.json", "w") as f:
+    json.dump(json_item(plot_isomap), f, indent=4)
+
+# %% [markdown]
+# ### Spectral embedding
+
+# %%
+spectral_embedding = SpectralEmbedding(n_components=2)
+
+# %%
+latent_vectors_spectral_embedded = spectral_embedding.fit_transform(latent_vectors)
+latent_vectors_spectral_embedded.shape
+
+# %%
+plot_spectral = plot_embedding(
+    data=game_types,
+    latent_vectors=latent_vectors_spectral_embedded,
+    title="Spectral embedding",
+)
+show(plot_spectral)
+
+# %%
+with open("plots/ratings_spectral.json", "w") as f:
+    json.dump(json_item(plot_spectral), f, indent=4)
+
+# %% [markdown]
+# ### Locally linear embedding
+
+# %%
+locally_linear_embedding = LocallyLinearEmbedding(n_components=2)
+
+# %%
+latent_vectors_locally_linearly_embedded = locally_linear_embedding.fit_transform(
+    latent_vectors,
+)
+latent_vectors_locally_linearly_embedded.shape
+
+# %%
+plot_locally_linear = plot_embedding(
+    data=game_types,
+    latent_vectors=latent_vectors_locally_linearly_embedded,
+    title="Locally linear embedding",
+)
+show(plot_locally_linear)
+
+# %%
+with open("plots/ratings_locally_linear.json", "w") as f:
+    json.dump(json_item(plot_locally_linear), f, indent=4)
+
+# %% [markdown]
+# ### PCA
+
+# %%
+pca_embedding = PCA(n_components=2)
+
+# %%
+latent_vectors_pca_embedded = pca_embedding.fit_transform(latent_vectors)
+latent_vectors_pca_embedded.shape
+
+# %%
+plot_pca = plot_embedding(
+    data=game_types,
+    latent_vectors=latent_vectors_pca_embedded,
+    title="PCA",
+)
+show(plot_pca)
+
+# %%
+with open("plots/ratings_pca.json", "w") as f:
+    json.dump(json_item(plot_pca), f, indent=4)
+
+# %% [markdown]
+# ### FastICA
+
+# %%
+fastica_embedding = FastICA(n_components=2)
+
+# %%
+latent_vectors_fastica_embedded = fastica_embedding.fit_transform(latent_vectors)
+latent_vectors_fastica_embedded.shape
+
+# %%
+plot_fastica = plot_embedding(
+    data=game_types,
+    latent_vectors=latent_vectors_fastica_embedded,
+    title="FastICA",
+)
+show(plot_fastica)
+
+# %%
+with open("plots/ratings_fastica.json", "w") as f:
+    json.dump(json_item(plot_fastica), f, indent=4)
+
+# %% [markdown]
+# ### Factor analysis
+
+# %%
+factor_analysis_embedding = FactorAnalysis(n_components=2)
+
+# %%
+latent_vectors_factor_analysis_embedded = factor_analysis_embedding.fit_transform(
+    latent_vectors,
+)
+latent_vectors_factor_analysis_embedded.shape
+
+# %%
+plot_factor_analysis = plot_embedding(
+    data=game_types,
+    latent_vectors=latent_vectors_factor_analysis_embedded,
+    title="Factor analysis",
+)
+show(plot_factor_analysis)
+
+# %%
+with open("plots/ratings_factor_analysis.json", "w") as f:
+    json.dump(json_item(plot_factor_analysis), f, indent=4)
