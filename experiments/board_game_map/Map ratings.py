@@ -115,7 +115,7 @@ plot_tsne = plot_embedding(
     latent_vectors=latent_vectors_tsne_embedded,
     title="t-SNE",
 )
-# show(plot_tsne)
+show(plot_tsne)
 
 # %%
 with open("plots/ratings_tsne.json", "w") as f:
@@ -138,7 +138,7 @@ umap_embedding = umap.UMAP(
     negative_sample_rate=5,
     output_metric="euclidean",
     output_metric_kwds=None,
-    random_state=13,
+    random_state=None,
 )
 
 # %%
@@ -151,7 +151,7 @@ plot_umap = plot_embedding(
     latent_vectors=latent_vectors_umap_embedded,
     title="UMAP",
 )
-# show(plot_umap)
+show(plot_umap)
 
 # %%
 with open("plots/ratings_umap.json", "w") as f:

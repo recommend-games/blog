@@ -21,12 +21,12 @@ def plot_embedding(
 
     game_types = data["game_type"].unique().sort()
 
-    source = data.with_columns(
-        x=latent_vectors[:, 0].tolist(),
-        y=latent_vectors[:, 1].tolist(),
+    source = data.clone().with_columns(
+        x=latent_vectors[:, 0],
+        y=latent_vectors[:, 1],
         size=pl.col("num_ratings").log(10) * 2 + 1,
         color=pl.col("game_type").replace(
-            old=game_types,
+            old=list(game_types),
             new=sns.color_palette("bright", len(game_types)).as_hex(),
             default=None,
         ),
