@@ -30,7 +30,6 @@ from bokeh.embed import json_item
 from bokeh.io import output_notebook
 from bokeh.plotting import figure, show
 from bokeh.transform import jitter
-from matplotlib import pyplot as plt
 from sklearn.manifold import TSNE
 
 jupyter_black.load()
@@ -111,20 +110,6 @@ latent_vectors_tsne_embedded = tsne_embedding.fit_transform(latent_vectors)
 latent_vectors_tsne_embedded.shape
 
 # %%
-sns.scatterplot(
-    x=latent_vectors_tsne_embedded[:, 0],
-    y=latent_vectors_tsne_embedded[:, 1],
-    hue=game_types["game_type"],
-)
-plt.axis("off")
-plt.title("t-SNE")
-plt.legend(title="Game type", bbox_to_anchor=(1, 0.5), loc="center left")
-plt.tight_layout()
-plt.savefig("plots/ratings_tsne.svg")
-plt.savefig("plots/ratings_tsne.png")
-plt.show()
-
-# %%
 source_tsne = game_types.clone().with_columns(
     x=latent_vectors_tsne_embedded[:, 0],
     y=latent_vectors_tsne_embedded[:, 1],
@@ -138,7 +123,7 @@ source_tsne = game_types.clone().with_columns(
 source_tsne.shape
 
 # %%
-TOOLS = "hover,crosshair,pan,wheel_zoom,zoom_in,zoom_out,box_zoom,reset,save,box_select"
+TOOLS = "hover,pan,wheel_zoom,zoom_in,zoom_out,box_zoom,reset,save,box_select"
 plot_tsne = figure(
     title="t-SNE",
     tools=TOOLS,
@@ -157,6 +142,8 @@ plot_tsne.scatter(
     color="color",
     alpha=0.5,
 )
+plot_tsne.axis.visible = False
+plot_tsne.grid.visible = False
 show(plot_tsne)
 
 # %%
@@ -188,20 +175,6 @@ latent_vectors_umap_embedded = umap_embedding.fit_transform(latent_vectors)
 latent_vectors_umap_embedded.shape
 
 # %%
-sns.scatterplot(
-    x=latent_vectors_umap_embedded[:, 0],
-    y=latent_vectors_umap_embedded[:, 1],
-    hue=game_types["game_type"],
-)
-plt.axis("off")
-plt.title("UMAP")
-plt.legend(title="Game type", bbox_to_anchor=(1, 0.5), loc="center left")
-plt.tight_layout()
-plt.savefig("plots/ratings_umap.svg")
-plt.savefig("plots/ratings_umap.png")
-plt.show()
-
-# %%
 source_umap = game_types.clone().with_columns(
     x=latent_vectors_umap_embedded[:, 0],
     y=latent_vectors_umap_embedded[:, 1],
@@ -215,7 +188,6 @@ source_umap = game_types.clone().with_columns(
 source_umap.shape
 
 # %%
-TOOLS = "hover,crosshair,pan,wheel_zoom,zoom_in,zoom_out,box_zoom,reset,save,box_select"
 plot_umap = figure(
     title="UMAP",
     tools=TOOLS,
@@ -234,6 +206,8 @@ plot_umap.scatter(
     color="color",
     alpha=0.5,
 )
+plot_umap.axis.visible = False
+plot_umap.grid.visible = False
 show(plot_umap)
 
 # %%
