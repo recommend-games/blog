@@ -24,13 +24,13 @@ import jupyter_black
 import numpy as np
 import polars as pl
 import polars.selectors as cs
-import seaborn as sns
 import umap
 from bokeh.embed import json_item
 from bokeh.io import output_notebook
-from bokeh.plotting import figure, show
-from bokeh.transform import jitter
+from bokeh.plotting import show
 from sklearn.manifold import TSNE
+
+from board_game_map.plots import plot_embedding
 
 jupyter_black.load()
 output_notebook()
@@ -110,41 +110,12 @@ latent_vectors_tsne_embedded = tsne_embedding.fit_transform(latent_vectors)
 latent_vectors_tsne_embedded.shape
 
 # %%
-source_tsne = game_types.clone().with_columns(
-    x=latent_vectors_tsne_embedded[:, 0],
-    y=latent_vectors_tsne_embedded[:, 1],
-    size=pl.col("num_ratings").log(10) * 2 + 1,
-    color=pl.col("game_type").replace(
-        old=list(columns_map.values()),
-        new=sns.color_palette("bright", len(columns_map)).as_hex(),
-        default=None,
-    ),
-)
-source_tsne.shape
-
-# %%
-TOOLS = "hover,pan,wheel_zoom,zoom_in,zoom_out,box_zoom,reset,save,box_select"
-plot_tsne = figure(
+plot_tsne = plot_embedding(
+    data=game_types,
+    latent_vectors=latent_vectors_tsne_embedded,
     title="t-SNE",
-    tools=TOOLS,
-    tooltips=[
-        ("Name", "@name"),
-        ("ID", "@bgg_id"),
-        ("Type", "@game_type"),
-        ("Num ratings", "@num_ratings"),
-    ],
 )
-plot_tsne.scatter(
-    x=jitter("x", width=0.25, distribution="normal"),
-    y=jitter("y", width=0.25, distribution="normal"),
-    size="size",
-    source=source_tsne.to_pandas(),
-    color="color",
-    alpha=0.5,
-)
-plot_tsne.axis.visible = False
-plot_tsne.grid.visible = False
-show(plot_tsne)
+# show(plot_tsne)
 
 # %%
 with open("plots/ratings_tsne.json", "w") as f:
@@ -175,40 +146,12 @@ latent_vectors_umap_embedded = umap_embedding.fit_transform(latent_vectors)
 latent_vectors_umap_embedded.shape
 
 # %%
-source_umap = game_types.clone().with_columns(
-    x=latent_vectors_umap_embedded[:, 0],
-    y=latent_vectors_umap_embedded[:, 1],
-    size=pl.col("num_ratings").log(10) * 2 + 1,
-    color=pl.col("game_type").replace(
-        old=list(columns_map.values()),
-        new=sns.color_palette("bright", len(columns_map)).as_hex(),
-        default=None,
-    ),
-)
-source_umap.shape
-
-# %%
-plot_umap = figure(
+plot_umap = plot_embedding(
+    data=game_types,
+    latent_vectors=latent_vectors_umap_embedded,
     title="UMAP",
-    tools=TOOLS,
-    tooltips=[
-        ("Name", "@name"),
-        ("ID", "@bgg_id"),
-        ("Type", "@game_type"),
-        ("Num ratings", "@num_ratings"),
-    ],
 )
-plot_umap.scatter(
-    x=jitter("x", width=0.25, distribution="normal"),
-    y=jitter("y", width=0.25, distribution="normal"),
-    size="size",
-    source=source_umap.to_pandas(),
-    color="color",
-    alpha=0.5,
-)
-plot_umap.axis.visible = False
-plot_umap.grid.visible = False
-show(plot_umap)
+# show(plot_umap)
 
 # %%
 with open("plots/ratings_umap.json", "w") as f:
