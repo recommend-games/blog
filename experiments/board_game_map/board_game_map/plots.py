@@ -1,6 +1,7 @@
 import numpy as np
 import polars as pl
 import seaborn as sns
+from bokeh.models import ColumnDataSource
 from bokeh.plotting import figure
 from bokeh.transform import jitter
 
@@ -22,8 +23,8 @@ def plot_embedding(
     game_types = data["game_type"].unique().sort()
 
     source = data.clone().with_columns(
-        x=latent_vectors[:, 0],
-        y=latent_vectors[:, 1],
+        x=pl.Series("x", latent_vectors[:, 0]),
+        y=pl.Series("y", latent_vectors[:, 1]),
         size=pl.col("num_ratings").log(10) * 2 + 1,
         color=pl.col("game_type").replace(
             old=list(game_types),
@@ -47,7 +48,7 @@ def plot_embedding(
         x=jitter("x", width=0.25, distribution="normal"),
         y=jitter("y", width=0.25, distribution="normal"),
         size="size",
-        source=source.to_pandas(),
+        source=ColumnDataSource(source.to_pandas()),
         color="color",
         alpha=0.5,
     )
