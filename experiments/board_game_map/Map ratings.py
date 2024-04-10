@@ -15,18 +15,14 @@
 
 # %%
 import json
-from collections import defaultdict
-
 import jupyter_black
-import numpy as np
 import polars as pl
 import umap
 from bokeh.embed import json_item
 from bokeh.io import output_notebook
 from bokeh.plotting import show
 from sklearn.manifold import TSNE
-
-from board_game_map.data import process_game_data
+from board_game_map.data import load_latent_vectors,process_game_data
 from board_game_map.plots import plot_embedding
 
 jupyter_black.load()
@@ -50,22 +46,7 @@ game_types.select(pl.col("game_type").value_counts(sort=True))
 # ## Latent vectors
 
 # %%
-with open("data/recommender_light.npz", "rb") as f:
-    files = np.load(file=f)
-    items_labels = files["items_labels"]
-    items_factors = files["items_factors"]
-items_indexes = defaultdict(
-    lambda: -1,
-    zip(items_labels, range(len(items_labels))),
-)
-
-# %%
-idxs = np.array([items_indexes[bgg_id] for bgg_id in game_types["bgg_id"]])
-idxs.shape, (idxs < 0).sum()
-# TODO: Filter out idx -1
-
-# %%
-latent_vectors = items_factors[:, idxs].T
+latent_vectors = load_latent_vectors("data/recommender_light.npz", game_types["bgg_id"])
 latent_vectors.shape
 
 # %% [markdown]
