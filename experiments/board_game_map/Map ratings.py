@@ -124,6 +124,45 @@ plt.savefig("plots/ratings_tsne.svg")
 plt.savefig("plots/ratings_tsne.png")
 plt.show()
 
+# %%
+source_tsne = game_types.clone().with_columns(
+    x=latent_vectors_tsne_embedded[:, 0],
+    y=latent_vectors_tsne_embedded[:, 1],
+    size=pl.col("num_ratings").log(10) * 2 + 1,
+    color=pl.col("game_type").replace(
+        old=list(columns_map.values()),
+        new=sns.color_palette("bright", len(columns_map)).as_hex(),
+        default=None,
+    ),
+)
+source_tsne.shape
+
+# %%
+TOOLS = "hover,crosshair,pan,wheel_zoom,zoom_in,zoom_out,box_zoom,reset,save,box_select"
+plot_tsne = figure(
+    title="t-SNE",
+    tools=TOOLS,
+    tooltips=[
+        ("Name", "@name"),
+        ("ID", "@bgg_id"),
+        ("Type", "@game_type"),
+        ("Num ratings", "@num_ratings"),
+    ],
+)
+plot_tsne.scatter(
+    x=jitter("x", width=0.25, distribution="normal"),
+    y=jitter("y", width=0.25, distribution="normal"),
+    size="size",
+    source=source_tsne.to_pandas(),
+    color="color",
+    alpha=0.5,
+)
+show(plot_tsne)
+
+# %%
+with open("plots/ratings_tsne.json", "w") as f:
+    json.dump(json_item(plot_tsne), f, indent=4)
+
 # %% [markdown]
 # ### UMAP
 
@@ -163,7 +202,7 @@ plt.savefig("plots/ratings_umap.png")
 plt.show()
 
 # %%
-source = game_types.clone().with_columns(
+source_umap = game_types.clone().with_columns(
     x=latent_vectors_umap_embedded[:, 0],
     y=latent_vectors_umap_embedded[:, 1],
     size=pl.col("num_ratings").log(10) * 2 + 1,
@@ -173,11 +212,11 @@ source = game_types.clone().with_columns(
         default=None,
     ),
 )
-source.shape
+source_umap.shape
 
 # %%
 TOOLS = "hover,crosshair,pan,wheel_zoom,zoom_in,zoom_out,box_zoom,reset,save,box_select"
-plot = figure(
+plot_umap = figure(
     title="UMAP",
     tools=TOOLS,
     tooltips=[
@@ -187,15 +226,16 @@ plot = figure(
         ("Num ratings", "@num_ratings"),
     ],
 )
-plot.scatter(
-    x=jitter("x", width=0.2, distribution="normal"),
-    y=jitter("y", width=0.2, distribution="normal"),
+plot_umap.scatter(
+    x=jitter("x", width=0.25, distribution="normal"),
+    y=jitter("y", width=0.25, distribution="normal"),
     size="size",
-    source=source.to_pandas(),
+    source=source_umap.to_pandas(),
     color="color",
+    alpha=0.5,
 )
-show(plot)
+show(plot_umap)
 
 # %%
 with open("plots/ratings_umap.json", "w") as f:
-    json.dump(json_item(plot), f, indent=4)
+    json.dump(json_item(plot_umap), f, indent=4)
