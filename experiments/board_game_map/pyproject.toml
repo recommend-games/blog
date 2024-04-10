@@ -26,6 +26,7 @@ jupyterlab = "*"
 jupytext = "*"
 mypy = "*"
 ruff = "*"
+types-seaborn = "*"
 types-tqdm = "*"
 
 [tool.ruff]
