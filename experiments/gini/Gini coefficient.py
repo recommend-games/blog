@@ -18,37 +18,13 @@ from datetime import datetime
 from pathlib import Path
 import jupyter_black
 import polars as pl
+from gini.data import scan_all_rankings
 
 jupyter_black.load()
 
 # %%
 rankings_dir = Path("../../../bgg-ranking-historicals").resolve()
 rankings_dir
-
-
-# %%
-def scan_rankings(path, *, date_fmt="%Y-%m-%dT%H-%M-%S"):
-    pub_date = datetime.strptime(path.stem, date_fmt)
-    return (
-        pl.scan_csv(path)
-        .select(
-            pl.col("ID").alias("bgg_id"),
-            pl.col("Users rated").alias("num_ratings"),
-        )
-        .with_columns(pl.lit(pub_date).alias("date"))
-    )
-
-
-def scan_all_rankings(rankings_dir, glob="*.csv", *, date_fmt="%Y-%m-%dT%H-%M-%S"):
-    curr_length = 0
-    for path in sorted(rankings_dir.glob(glob)):
-        df = scan_rankings(path, date_fmt=date_fmt)
-        length = df.select(pl.len()).collect().item()
-        if length < curr_length * 0.99:
-            continue
-        curr_length = length
-        yield df
-
 
 # %%
 dfs = scan_all_rankings(rankings_dir)
