@@ -47,28 +47,23 @@ For this, we change the point of view slightly. Instead of looking at the absolu
 The thin 45° line is the (hypothetical) perfectly equal distribution, where every game has exactly the same number of ratings; the thick curve is the actual cumulative distribution of ratings. The area between the two lines is (essentially) the Gini coefficient, which – as you can see – is **0.836** in our case. A perfectly equal distribution of ratings (every game has the same number of ratings) would have a Gini coefficient of 0, while a perfectly unequal distribution (one game would have *all* the ratings, whilst all others have none) would have a Gini coefficient of 1. So 0.836 is really high, meaning a *very* unequal distribution of ratings. This shouldn't come as a surprise to anyone following the glut of new games coming out every year, with only a few of them getting the lion's share of attention, whilst most of the rest languish in obscurity. Has this phenomenon changed over the years though? 🤔
 
 
+## Historical perspective
+
+To answer that question, we can look at how the Gini coefficient has changed over time. Here's how it has evolved since late 2016:
+
+{{< img src="gini_coefficient_over_time" alt="The Gini coefficient of BoardGameGeek ratings over time" >}}
+
+So, we started out this period with a little over 0.8 and have been steadily creeping up to over 0.835 today. This increase of inequality on a very high level is an interesting observation – and somewhat worrying. For comparison: The most unequal country in the world is considered to be South Africa 🇿🇦, with a Gini coefficient of 0.62. The US 🇺🇸 has a Gini coefficient of 0.39, Finland 🇫🇮 0.27 and Slowakia 🇸🇰 0.21, the lowest value in the world.
+
+Obviously, those values don't compare directly, but they serve as a reminder of just how unequal the baseline in 2016 was, and the situation has intensified since then. So, why is that?
+
+Maybe it's worth pausing for a moment to consider if this inequality is actually bad – or if it could even be a good thing. One should remember that the easiest way (arguably the only one) to achieve perfect equality is by assigning everyone the exact same value: zero. Put another way: while the *share* of attention captured by the top games of the hobby has increased, this doesn't necessarily mean this attention has been taken away from the rest of the games.️ Overall, interest in modern games has been growing, so even the long tail of games should receive more attention overall when measured in absolute terms. A rising tide lifts all boats, at least that's what those on the steering wheels tell those toiling in the engine rooms. 🚢
+
+
 ### Outline
 
-- Introduction:
-    - Link back to SU&SD article: using number of ratings as proxy for attention (note about the actual data?)
-    - How are the number of ratings distributed?
-    - Plot of the distribution (not cumulative)
-- Gini coefficient:
-    - Change PoV to cumulative distribution, i.e., share of all ratings / "attention"
-    - Compare perfect equality and perfect inequality
-    - Define Gini coefficient
-    - What's the value today?
-    - Compare to Gini coefficient in actual income inequality?
-- Historical perspective:
-    - How has the Gini coefficient changed over the years?
-    - Plot of the Gini coefficient over time
 - Conclusion:
     - Where could this increased inequality come from?
     - What does this mean for the board game industry?
     - What does this mean for the board game community?
     - PS: mention inspiration for this article
-
-
-### Plots
-
-{{< img src="gini_coefficient_over_time" alt="The Gini coefficient of BoardGameGeek ratings over time" >}}
