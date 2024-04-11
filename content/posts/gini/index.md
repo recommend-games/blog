@@ -31,3 +31,9 @@ Outline:
     - Where could this increased inequality come from?
     - What does this mean for the board game industry?
     - What does this mean for the board game community?
+
+{{< img src="num_ratings" alt="The distribution of the number of ratings on BoardGameGeek, from fewest to most ratings per game" >}}
+
+{{< img src="gini_coefficient" alt="The share of the total ratings and the Gini coefficient of BoardGameGeek ratings" >}}
+
+{{< img src="gini_coefficient_over_time" alt="The Gini coefficient of BoardGameGeek ratings over time" >}}
