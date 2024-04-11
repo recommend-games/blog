@@ -67,3 +67,4 @@ Maybe it's worth pausing for a moment to consider if this inequality is actually
     - What does this mean for the board game industry?
     - What does this mean for the board game community?
     - PS: mention inspiration for this article
+    - Note about the overall number of ratings, which – as you recall – is pegged to the number of dummy ratings for the geek score
