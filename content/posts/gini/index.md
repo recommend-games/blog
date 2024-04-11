@@ -36,6 +36,17 @@ Fun fact: there are three absolute classic games that have been competing for th
 It is clear that the attention of the board game world is concentrated on *very* few games. Can we quantify this inequality in attention? Why, I'm glad you asked! 🧐
 
 
+## The Gini coefficient
+
+Enter the [Gini coefficient](https://en.wikipedia.org/wiki/Gini_coefficient). This measure is commonly used to quantify income inequality, but it can be applied to any distribution of values. In our case, we can use it to measure the inequality in the distribution of ratings on BGG.
+
+For this, we change the point of view slightly. Instead of looking at the absolute number of ratings, we ask the question: What share of all ratings do the top X% of games have? This is the cumulative distribution of ratings, and it looks like this:
+
+{{< img src="gini_coefficient" alt="The share of the total ratings and the Gini coefficient of BoardGameGeek ratings" >}}
+
+The thin 45° line is the (hypothetical) perfectly equal distribution, where every game has exactly the same number of ratings; the thick curve is the actual cumulative distribution of ratings. The area between the two lines is (essentially) the Gini coefficient, which – as you can see – is **0.836** in our case. A perfectly equal distribution of ratings (every game has the same number of ratings) would have a Gini coefficient of 0, while a perfectly unequal distribution (one game would have *all* the ratings, whilst all others have none) would have a Gini coefficient of 1. So 0.836 is really high, meaning a *very* unequal distribution of ratings. This shouldn't come as a surprise to anyone following the glut of new games coming out every year, with only a few of them getting the lion's share of attention, whilst most of the rest languish in obscurity. Has this phenomenon changed over the years though? 🤔
+
+
 ### Outline
 
 - Introduction:
@@ -59,7 +70,5 @@ It is clear that the attention of the board game world is concentrated on *very*
 
 
 ### Plots
-
-{{< img src="gini_coefficient" alt="The share of the total ratings and the Gini coefficient of BoardGameGeek ratings" >}}
 
 {{< img src="gini_coefficient_over_time" alt="The Gini coefficient of BoardGameGeek ratings over time" >}}
