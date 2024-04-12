@@ -42,11 +42,11 @@ Can we somehow quantify this inequality more precisely? Why, I'm glad you asked!
 
 Enter the [Gini coefficient](https://en.wikipedia.org/wiki/Gini_coefficient). This measure is commonly used to quantify income inequality, but it can be applied to any distribution of values. In our case, we can use it to measure the inequality in the distribution of ratings on BGG.
 
-For this, we change the point of view slightly. Instead of looking at the absolute number of ratings, we ask the question: What share of all ratings do the top X% of games have? This is the cumulative distribution of ratings, and it looks like this:
+For this, we dive deeper into the question: What share of all ratings do the top X% of games have? This is the cumulative distribution of ratings, and it looks like this:
 
 {{< img src="gini_coefficient" alt="The share of the total ratings and the Gini coefficient of BoardGameGeek ratings" >}}
 
-The thin 45° line is the (hypothetical) perfectly equal distribution, where every game has exactly the same number of ratings; the thick curve is the actual cumulative distribution of ratings. The area between the two lines is (essentially) the Gini coefficient, which – as you can see – is **0.836** in our case. A perfectly equal distribution of ratings (every game has the same number of ratings) would have a Gini coefficient of 0, while a perfectly unequal distribution (one game would have *all* the ratings, whilst all others have none) would have a Gini coefficient of 1. So 0.836 is really high, meaning a *very* unequal distribution of ratings. This shouldn't come as a surprise to anyone following the glut of new games coming out every year, with only a few of them getting the lion's share of attention, whilst most of the rest languish in obscurity. Has this phenomenon changed over the years though? 🤔
+The thin 45° line is the (hypothetical) perfectly equal distribution, where every game has exactly the same number of ratings; the thick curve is the actual cumulative distribution of ratings. The area between the two lines is (essentially[^gini-coefficient]) the Gini coefficient, which – as you can see – is **0.836** in our case. A perfectly equal distribution of ratings (every game has the same number of ratings) would have a Gini coefficient of 0, while a perfectly unequal distribution (one game would have *all* the ratings, whilst all others have none) would have a Gini coefficient of 1. So 0.836 is really high, meaning a *very* unequal distribution of ratings. This shouldn't come as a surprise to anyone following the glut of new games coming out every year, with only a few of them getting the lion's share of attention, whilst most of the rest languish in obscurity. Has this phenomenon changed over the years though? 🤔
 
 
 ## Historical perspective
@@ -64,7 +64,6 @@ Maybe it's worth pausing for a moment to consider if this inequality is actually
 
 ### Outline
 
-- What % of share do the top 1% of games have?
 - How many games are released each year? Does the increase correlate to the increase in the Gini coefficient?
 - Do we see the same phenomenon if we look at different slices of data? E.g., by year.
 - Conclusion:
@@ -72,6 +71,7 @@ Maybe it's worth pausing for a moment to consider if this inequality is actually
     - What does this mean for the board game industry?
     - What does this mean for the board game community?
     - PS: mention inspiration for this article
-    - Note about the overall number of ratings, which – as you recall – is pegged to the number of dummy ratings for the geek score
+
 
 [^dummy-votes]: Remember that the number dummy ratings added to [calculate the geek score]({{<ref "posts/reverse_engineer_bgg/index.md">}}), which is used for the BGG rankings, is pegged to the total number of ratings. Since there's one dummy rating for every 10,000 ratings, the current number of dummy ratings is somewhere around 2435. When we [last checked in]({{<ref "posts/reverse_engineer_bgg_2/index.md">}}) around three years ago, that number was around 1729 dummies. Quite the growth indeed.
+[^gini-coefficient]: The Gini coefficient is actually twice the area between the two lines. The line of equality cuts the unit square in half, so the area of perfect inequality would be 0.5. For the coefficient to be between 0 and 1, we double that area to get the final value.
