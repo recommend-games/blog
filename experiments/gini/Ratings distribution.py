@@ -47,9 +47,24 @@ num_ratings.shape
 num_ratings.tail()
 
 # %%
+num_games = len(num_ratings)
+sum_ratings = num_ratings.sum()
+linear = np.linspace(0, 1, num_games)
+share = num_ratings.cum_sum() / sum_ratings
+gini_coefficient = 2 * (linear - share).mean()
+share_1pct = 1 - share[int(num_games * 0.99)]
+bottom_1pct = (share <= 0.01).mean()
+
+print(f"Total number of ranked games: {num_games:,d}")
+print(f"Total number of ratings: {sum_ratings:,d}")
+print(f"Overall Gini coefficient: {gini_coefficient:.3f}")
+print(f"Share of the top 1% ({num_games*.01:.0f} games): {share_1pct:.1%}")
+print(f"The bottom {bottom_1pct:.1%} games account for 1% of all ratings")
+
+# %%
 _, ax = plt.subplots(figsize=(6, 6))
 sns.lineplot(
-    x=range(len(num_ratings)),
+    x=range(num_games),
     y=num_ratings,
     color="purple",
     lw=3,
@@ -65,10 +80,6 @@ plt.show()
 
 # %%
 _, ax = plt.subplots(figsize=(6, 6))
-linear = np.linspace(0, 1, len(num_ratings))
-share = num_ratings.cum_sum() / num_ratings.sum()
-gini_coefficient = 2 * (linear - share).mean()
-
 ax.fill_between(x=linear, y1=share, y2=linear, color="thistle")
 sns.lineplot(
     x=linear,
@@ -84,7 +95,6 @@ sns.lineplot(
     lw=3,
     ax=ax,
 )
-
 ax.set_title("Share of ratings & Gini coefficient")
 ax.set_ylabel(None)
 ax.text(

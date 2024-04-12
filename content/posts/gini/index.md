@@ -1,7 +1,7 @@
 ---
 title: "Has board game rating inequality increased over the years?"
 subtitle: "Applying the Gini coefficient to BoardGameGeek ratings"
-# slug: gini
+slug: rating-inequality-gini-coefficient
 author: Markus Shepherd
 type: post
 date: 2024-04-11T20:00:00+03:00
@@ -29,11 +29,13 @@ With that out of the way, what do we see in the plot? It's clear that the vast m
 
 Fun fact: there are three absolute classic games that have been competing for the distinction of most-rated game on BGG for years now. As of the time of writing, the current standings are:
 
-1. {{% game 13 %}}CATAN{{% /game %}}: 126,425 ratings
-2. {{% game 822 %}}Carcassonne{{% /game %}}: 125,831 ratings
-3. {{% game 30549 %}}Pandemic{{% /game %}}: 124,575 ratings
+1. {{% game 13 %}}CATAN{{% /game %}}: 126,448 ratings
+2. {{% game 822 %}}Carcassonne{{% /game %}}: 125,850 ratings
+3. {{% game 30549 %}}Pandemic{{% /game %}}: 124,584 ratings
 
-It is clear that the attention of the board game world is concentrated on *very* few games. Can we quantify this inequality in attention? Why, I'm glad you asked! 🧐
+So, obviously the attention of the board game world is concentrated on *very* few games. The 26,168 ranked games share a total of 24,353,222 ratings[^dummy-votes] between them. The top 1%, the 262 games with the most ratings, account for 35.5% of those ratings. Conversely, the bottom 23.2%, the 6,071 games with the fewest ratings, account for only 1% of the ratings.
+
+Can we somehow quantify this inequality more precisely? Why, I'm glad you asked! 🧐
 
 
 ## The Gini coefficient
@@ -62,9 +64,14 @@ Maybe it's worth pausing for a moment to consider if this inequality is actually
 
 ### Outline
 
+- What % of share do the top 1% of games have?
+- How many games are released each year? Does the increase correlate to the increase in the Gini coefficient?
+- Do we see the same phenomenon if we look at different slices of data? E.g., by year.
 - Conclusion:
     - Where could this increased inequality come from?
     - What does this mean for the board game industry?
     - What does this mean for the board game community?
     - PS: mention inspiration for this article
     - Note about the overall number of ratings, which – as you recall – is pegged to the number of dummy ratings for the geek score
+
+[^dummy-votes]: Remember that the number dummy ratings added to [calculate the geek score]({{<ref "posts/reverse_engineer_bgg/index.md">}}), which is used for the BGG rankings, is pegged to the total number of ratings. Since there's one dummy rating for every 10,000 ratings, the current number of dummy ratings is somewhere around 2435. When we [last checked in]({{<ref "posts/reverse_engineer_bgg_2/index.md">}}) around three years ago, that number was around 1729 dummies. Quite the growth indeed.
