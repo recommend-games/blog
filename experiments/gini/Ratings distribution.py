@@ -111,20 +111,46 @@ plt.show()
 # %%
 year_from = 1990
 year_to = 2022
-_, ax = plt.subplots(figsize=(6, 4))
-sns.histplot(
-    df.filter(pl.col("year").is_between(year_from, year_to))["year"],
-    bins=year_to - year_from + 1,
-    color="purple",
+years = np.arange(year_from, year_to + 1)
+df_filtered = df.filter(pl.col("year").is_between(year_from, year_to))
+gini_coefficients = np.array(
+    [
+        gini_report(df_filtered.filter(pl.col("year") == year)["num_ratings"])[-1]
+        for year in years
+    ]
 )
-ax.set_title("Number of games released")
+yearly_data = (
+    df_filtered.group_by("year")
+    .agg(pl.max("num_ratings"), pl.len().alias("num_games"))
+    .sort("year")
+    .with_columns(pl.col("num_ratings") / pl.max("num_ratings"))
+)
+games_per_year = yearly_data["num_games"]
+rel_max_ratings = yearly_data["num_ratings"]
+
+# %%
+_, ax1 = plt.subplots(figsize=(6, 4))
+ax2 = ax1.twinx()
+
+sns.histplot(
+    df_filtered["year"],
+    discrete=True,
+    color="thistle",
+    ax=ax1,
+)
+ax1.set_ylabel("Number of games released")
+
+sns.scatterplot(
+    x=years,
+    y=gini_coefficients,
+    color="purple",
+    size=rel_max_ratings,
+    legend=None,
+    ax=ax2,
+)
+ax2.set_ylabel("Gini coefficient")
+
 plt.tight_layout()
 plt.savefig(plot_dir / "games_per_year.png")
 plt.savefig(plot_dir / "games_per_year.svg")
 plt.show()
-
-# %%
-for year in range(year_from, year_to + 1):
-    print(f"*** Games released in {year} ***")
-    gini_report(df.filter(pl.col("year") == year)["num_ratings"], print_report=True)
-    print()
