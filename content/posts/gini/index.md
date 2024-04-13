@@ -75,3 +75,5 @@ Maybe it's worth pausing for a moment to consider if this inequality is actually
 
 [^dummy-votes]: Remember that the number dummy ratings added to [calculate the geek score]({{<ref "posts/reverse_engineer_bgg/index.md">}}), which is used for the BGG rankings, is pegged to the total number of ratings. Since there's one dummy rating for every 10,000 ratings, the current number of dummy ratings is somewhere around 2435. When we [last checked in]({{<ref "posts/reverse_engineer_bgg_2/index.md">}}) around three years ago, that number was around 1729 dummies. Quite the growth indeed.
 [^gini-coefficient]: The Gini coefficient is actually twice the area between the two lines. The line of equality cuts the unit square in half, so the area of perfect inequality would be 0.5. For the coefficient to be between 0 and 1, we double that area to get the final value.
+
+{{< img src="games_per_year" alt="The number of games released each year between 2000 and 2023" >}}
