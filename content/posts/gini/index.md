@@ -55,7 +55,7 @@ To answer that question, we can look at how the Gini coefficient has changed ove
 
 {{< img src="gini_coefficient_over_time" alt="The Gini coefficient of BoardGameGeek ratings over time" >}}
 
-So, we started out this period with a little over 0.8 and have been steadily creeping up to over 0.835 today. This increase of inequality on a very high level is an interesting observation – and somewhat worrying. For comparison: The most unequal country in the world is considered to be South Africa 🇿🇦, with a Gini coefficient of 0.62. The US 🇺🇸 has a Gini coefficient of 0.39, Finland 🇫🇮 0.27 and Slowakia 🇸🇰 0.21, the lowest value in the world.
+So, we started out this period with a little over 0.8 and have been steadily creeping up to over 0.835 today. This increase of inequality on a very high level is an interesting observation – and somewhat worrying. For comparison: The most unequal country in the world is considered to be South Africa 🇿🇦, with a Gini coefficient of 0.63. The US 🇺🇸 has a Gini coefficient of 0.40, Finland 🇫🇮 0.27 and Slowakia 🇸🇰 0.23, the lowest value in the world.[^wikipedia]
 
 Obviously, those values don't compare directly, but they serve as a reminder of just how unequal the baseline in 2016 was, and the situation has intensified since then. So, why is that?
 
@@ -75,5 +75,6 @@ Maybe it's worth pausing for a moment to consider if this inequality is actually
 
 [^dummy-votes]: Remember that the number dummy ratings added to [calculate the geek score]({{<ref "posts/reverse_engineer_bgg/index.md">}}), which is used for the BGG rankings, is pegged to the total number of ratings. Since there's one dummy rating for every 10,000 ratings, the current number of dummy ratings is somewhere around 2435. When we [last checked in]({{<ref "posts/reverse_engineer_bgg_2/index.md">}}) around three years ago, that number was around 1729 dummies. Quite the growth indeed.
 [^gini-coefficient]: The Gini coefficient is actually twice the area between the two lines. The line of equality cuts the unit square in half, so the area of perfect inequality would be 0.5. For the coefficient to be between 0 and 1, we double that area to get the final value.
+[^wikipedia]: [List of countries by income equality](https://en.wikipedia.org/wiki/List_of_countries_by_income_equality)
 
 {{< img src="games_per_year" alt="The number of games released each year between 2000 and 2023" >}}
