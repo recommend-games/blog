@@ -55,7 +55,7 @@ num_ratings = df["num_ratings"]
 num_ratings.shape
 
 # %%
-num_games, linear, share, gini_coefficient = gini_report(num_ratings)
+num_games, linear, share, gini_coefficient = gini_report(num_ratings, print_report=True)
 
 # %%
 _, ax = plt.subplots(figsize=(6, 4))
@@ -122,3 +122,9 @@ plt.tight_layout()
 plt.savefig(plot_dir / "games_per_year.png")
 plt.savefig(plot_dir / "games_per_year.svg")
 plt.show()
+
+# %%
+for year in range(year_from, year_to + 1):
+    print(f"*** Games released in {year} ***")
+    gini_report(df.filter(pl.col("year") == year)["num_ratings"], print_report=True)
+    print()
