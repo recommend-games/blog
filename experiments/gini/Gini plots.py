@@ -39,7 +39,7 @@ gini.head()
 gini.tail()
 
 # %%
-_, ax = plt.subplots(figsize=(6, 6))
+_, ax = plt.subplots(figsize=(6, 4))
 sns.lineplot(
     x=gini["date"],
     y=gini["gini"],

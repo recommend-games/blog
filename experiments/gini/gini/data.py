@@ -7,14 +7,21 @@ import polars as pl
 def scan_rankings(
     path: Path,
     *,
+    additional_columns: dict[str, str] | None = None,
     date_fmt: str = "%Y-%m-%dT%H-%M-%S",
 ) -> pl.LazyFrame:
+    column_aliases = (
+        [pl.col(name).alias(alias) for name, alias in additional_columns.items()]
+        if additional_columns
+        else []
+    )
     pub_date = datetime.strptime(path.stem, date_fmt)
     return (
         pl.scan_csv(path)
         .select(
             pl.col("ID").alias("bgg_id"),
             pl.col("Users rated").alias("num_ratings"),
+            *column_aliases,
         )
         .with_columns(pl.lit(pub_date).alias("date"))
     )

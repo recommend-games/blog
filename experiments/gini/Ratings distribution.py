@@ -17,6 +17,7 @@
 from pathlib import Path
 import jupyter_black
 import numpy as np
+import polars as pl
 import seaborn as sns
 from matplotlib import pyplot as plt
 from gini.data import scan_rankings
@@ -35,16 +36,22 @@ latest_file = max(rankings_dir.glob("*.csv"))
 latest_file
 
 # %%
-num_ratings = (
-    scan_rankings(latest_file)
-    .select("num_ratings")
+df = (
+    scan_rankings(
+        latest_file,
+        additional_columns={"Year": "year"},
+    )
     .sort("num_ratings")
-    .collect()["num_ratings"]
+    .collect()
 )
-num_ratings.shape
+df.shape
 
 # %%
-num_ratings.tail()
+df.tail(5)
+
+# %%
+num_ratings = df["num_ratings"]
+num_ratings.shape
 
 # %%
 num_games = len(num_ratings)
@@ -62,7 +69,7 @@ print(f"Share of the top 1% ({num_games*.01:.0f} games): {share_1pct:.1%}")
 print(f"The bottom {bottom_1pct:.1%} games account for 1% of all ratings")
 
 # %%
-_, ax = plt.subplots(figsize=(6, 6))
+_, ax = plt.subplots(figsize=(6, 4))
 sns.lineplot(
     x=range(num_games),
     y=num_ratings,
@@ -110,4 +117,19 @@ ax.text(
 plt.tight_layout()
 plt.savefig(plot_dir / "gini_coefficient.png")
 plt.savefig(plot_dir / "gini_coefficient.svg")
+plt.show()
+
+# %%
+year_from = 2000
+year_to = 2023
+_, ax = plt.subplots(figsize=(6, 4))
+sns.histplot(
+    df.filter(pl.col("year").is_between(year_from, year_to))["year"],
+    bins=year_to - year_from + 1,
+    color="purple",
+)
+ax.set_title("Number of games released")
+plt.tight_layout()
+plt.savefig(plot_dir / "games_per_year.png")
+plt.savefig(plot_dir / "games_per_year.svg")
 plt.show()
