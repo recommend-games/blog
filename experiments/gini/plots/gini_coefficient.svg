@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2024-04-13T22:05:41.130840</dc:date>
+    <dc:date>2024-04-13T22:16:43.592542</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -336,7 +336,7 @@ z
    </g>
    <g id="PolyCollection_1">
     <defs>
-     <path id="md041ea8416" d="M 49.452273 -45.09017 
+     <path id="m2dd2e0beb4" d="M 49.452273 -45.09017 
 L 49.452273 -45.090594 
 L 49.465801 -45.091018 
 L 49.47933 -45.091442 
@@ -52683,8 +52683,8 @@ L 49.452273 -45.09017
 z
 " style="stroke: #d8bfd8"/>
     </defs>
-    <g clip-path="url(#pddbc8e62ad)">
-     <use xlink:href="#md041ea8416" x="0" y="432" style="fill: #d8bfd8; stroke: #d8bfd8"/>
+    <g clip-path="url(#p6bfc70fdd4)">
+     <use xlink:href="#m2dd2e0beb4" x="0" y="432" style="fill: #d8bfd8; stroke: #d8bfd8"/>
     </g>
    </g>
    <g id="PolyCollection_2"/>
@@ -52692,7 +52692,7 @@ z
    <g id="line2d_1">
     <path d="M 49.452273 386.90983 
 L 403.497727 42.70642 
-" clip-path="url(#pddbc8e62ad)" style="fill: none; stroke: #800080; stroke-linecap: round"/>
+" clip-path="url(#p6bfc70fdd4)" style="fill: none; stroke: #800080; stroke-linecap: round"/>
    </g>
    <g id="line2d_2">
     <path d="M 49.452273 386.909406 
@@ -52753,7 +52753,7 @@ L 403.186568 70.49116
 L 403.484199 44.493547 
 L 403.497727 42.70642 
 L 403.497727 42.70642 
-" clip-path="url(#pddbc8e62ad)" style="fill: none; stroke: #800080; stroke-width: 3; stroke-linecap: round"/>
+" clip-path="url(#p6bfc70fdd4)" style="fill: none; stroke: #800080; stroke-width: 3; stroke-linecap: round"/>
    </g>
    <g id="patch_3">
     <path d="M 31.75 404.12 
@@ -53306,7 +53306,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="pddbc8e62ad">
+  <clipPath id="p6bfc70fdd4">
    <rect x="31.75" y="25.49625" width="389.45" height="378.62375"/>
   </clipPath>
  </defs>
