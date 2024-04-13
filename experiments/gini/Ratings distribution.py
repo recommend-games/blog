@@ -89,8 +89,8 @@ plt.show()
 _, ax = plt.subplots(figsize=(6, 6))
 ax.fill_between(x=linear, y1=share, y2=linear, color="thistle")
 sns.lineplot(
-    x=linear,
-    y=linear,
+    x=(0, 1),
+    y=(0, 1),
     color="purple",
     lw=1,
     ax=ax,
