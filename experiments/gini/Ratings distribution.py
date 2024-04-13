@@ -123,10 +123,16 @@ yearly_data = (
     df_filtered.group_by("year")
     .agg(pl.max("num_ratings"), pl.len().alias("num_games"))
     .sort("year")
-    .with_columns(pl.col("num_ratings") / pl.max("num_ratings"))
+    .with_columns(
+        pl.col("num_ratings") / pl.max("num_ratings"),
+        pl.Series("gini", gini_coefficients),
+    )
 )
 games_per_year = yearly_data["num_games"]
 rel_max_ratings = yearly_data["num_ratings"]
+
+# %%
+yearly_data.tail(10)
 
 # %%
 _, ax1 = plt.subplots(figsize=(6, 4))

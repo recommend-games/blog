@@ -61,6 +61,16 @@ Obviously, those values don't compare directly, but they serve as a reminder of 
 
 Maybe it's worth pausing for a moment to consider if this inequality is actually bad – or if it could even be a good thing. One should remember that the easiest way (arguably the only one) to achieve perfect equality is by assigning everyone the exact same value: zero. Put another way: while the *share* of attention captured by the top games of the hobby has increased, this doesn't necessarily mean this attention has been taken away from the rest of the games.️ Overall, interest in modern games has been growing, so even the long tail of games should receive more attention overall when measured in absolute terms. A rising tide lifts all boats, at least that's what those on the steering wheels tell those toiling in the engine rooms. 🚢
 
+Back to the search for reasons for this increased inequality: One obvious factor is the number of new games being released each year. Let's take a look at this plot:
+
+{{< img src="games_per_year" alt="The number of games released each year between 1990 and 2022" >}}
+
+So, there's a lot to unpack here. Start from the bars in the background: they count the number of games released each year from 1990 to 2022. Just look at the growth from 2013 through 2019 in particular – that's probably the influence of crowdfunding. The abrupt drop in 2020 is, of course, due to COVID–19. Interestingly, the number of releases haven't picked up since and 2019 remains the record year.
+
+The dots are the Gini coefficient just for that cohort, i.e., those dots measure how unequal the ratings are distributed among the games released in that year. The higher up a dot is, the more a year is dominated by a few games – or just a single one. {{% game 13 %}}CATAN{{% /game %}}, the most rated game on BGG (see above), single-handedly makes the 1995 cohort the most unequal year in the dataset. The sizes of the dots represent the most popular game of that year, so 1995, 2000 and 2008 get the biggest dots. Unsurprisingly, games with an uber-popular game (big dot) tend to have a higher Gini coefficient (high up on the y-axis).
+
+But there something else going on: whilst the number of releases have been skyrocketing since 2013, the Gini coefficients of the years since 2016 have been falling noticibly, indicating less concentration of the ratings on just a few games. Games released in 2022 form the first cohort with a Gini coefficient below 0.75 since the 90s.
+
 
 ### Outline
 
@@ -76,5 +86,3 @@ Maybe it's worth pausing for a moment to consider if this inequality is actually
 [^dummy-votes]: Remember that the number dummy ratings added to [calculate the geek score]({{<ref "posts/reverse_engineer_bgg/index.md">}}), which is used for the BGG rankings, is pegged to the total number of ratings. Since there's one dummy rating for every 10,000 ratings, the current number of dummy ratings is somewhere around 2435. When we [last checked in]({{<ref "posts/reverse_engineer_bgg_2/index.md">}}) around three years ago, that number was around 1729 dummies. Quite the growth indeed.
 [^gini-coefficient]: The Gini coefficient is actually twice the area between the two lines. The line of equality cuts the unit square in half, so the area of perfect inequality would be 0.5. For the coefficient to be between 0 and 1, we double that area to get the final value.
 [^wikipedia]: [List of countries by income equality](https://en.wikipedia.org/wiki/List_of_countries_by_income_equality)
-
-{{< img src="games_per_year" alt="The number of games released each year between 2000 and 2023" >}}
