@@ -120,8 +120,8 @@ plt.savefig(plot_dir / "gini_coefficient.svg")
 plt.show()
 
 # %%
-year_from = 2000
-year_to = 2023
+year_from = 1990
+year_to = 2022
 _, ax = plt.subplots(figsize=(6, 4))
 sns.histplot(
     df.filter(pl.col("year").is_between(year_from, year_to))["year"],
