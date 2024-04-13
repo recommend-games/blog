@@ -20,6 +20,7 @@ import numpy as np
 import polars as pl
 import seaborn as sns
 from matplotlib import pyplot as plt
+from gini import gini_report
 from gini.data import scan_rankings
 
 jupyter_black.load()
@@ -52,26 +53,6 @@ df.tail(5)
 # %%
 num_ratings = df["num_ratings"]
 num_ratings.shape
-
-
-# %%
-def gini_report(num_ratings):
-    num_games = len(num_ratings)
-    sum_ratings = num_ratings.sum()
-    linear = np.linspace(0, 1, num_games)
-    share = num_ratings.cum_sum() / sum_ratings
-    gini_coefficient = 2 * (linear - share).mean()
-    share_1pct = 1 - share[int(num_games * 0.99)]
-    bottom_1pct = (share <= 0.01).mean()
-
-    print(f"Total number of ranked games: {num_games:,d}")
-    print(f"Total number of ratings: {sum_ratings:,d}")
-    print(f"Overall Gini coefficient: {gini_coefficient:.3f}")
-    print(f"Share of the top 1% ({num_games*.01:.0f} games): {share_1pct:.1%}")
-    print(f"The bottom {bottom_1pct:.1%} games account for 1% of all ratings")
-
-    return num_games, linear, share, gini_coefficient
-
 
 # %%
 num_games, linear, share, gini_coefficient = gini_report(num_ratings)
