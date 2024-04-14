@@ -15,7 +15,7 @@ tags:
 
 ## The number of ratings per game
 
-Perhaps one of the more controversial choices of the [Shut Up & Sit Down Effect]({{<ref "posts/susd_effect/index.md">}}) article was using the number of ratings on BoardGameGeek (BGG) as proxy for "attention" to a game. So let's double down on that! 😈
+Perhaps one of the most controversial choices of the [Shut Up & Sit Down Effect]({{<ref "posts/susd_effect/index.md">}}) article was using the number of ratings[^ratings] on BoardGameGeek (BGG) as proxy for "attention" to a game. So let's double down on that! 😈
 
 If lots of ratings mean a lots of eyes on a game, we can ask questions like: What games get all the attention? Do few games steal the spotlight? Or is the attention spread out evenly?
 
@@ -76,6 +76,7 @@ You might deduce that I don't fully buy into this narrative. The continuing incr
 *PS: I was inspired to write this article by Bluesky user [Nick Sherefkin](https://bsky.app/profile/slngshot-dvnngrod.bsky.social/post/3knwg4sgd2k2g). If you have some insteresting questions about board games and data, why don't you reach out to me on one of the channels linked below? Maybe I'll answer them in the next blog post.*
 
 
+[^ratings]: It's worth emphasising that the SU&SD Effect article didn't just use the number of ratings, but the number of collection items, which also include owned games, wishlists and more. This article strictly focuses on the number of ratings.
 [^dummy-votes]: Remember that the number dummy ratings added to [calculate the geek score]({{<ref "posts/reverse_engineer_bgg/index.md">}}), which is used for the BGG rankings, is pegged to the total number of ratings. Since there's one dummy rating for every 10,000 ratings, the current number of dummy ratings is somewhere around 2435. When we [last checked in]({{<ref "posts/reverse_engineer_bgg_2/index.md">}}) around three years ago, that number was around 1729 dummies. Quite the growth indeed.
 [^gini-coefficient]: The Gini coefficient is actually twice the area between the two lines. The line of equality cuts the unit square in half, so the area of perfect inequality would be 0.5. For the coefficient to be between 0 and 1, we double that area to get the final value.
 [^wikipedia]: [List of countries by income equality](https://en.wikipedia.org/wiki/List_of_countries_by_income_equality)
