@@ -71,18 +71,9 @@ So how come that rating inequality is still rising? This might have to do with p
 
 Maybe it's worth pausing for a moment to consider if this inequality is actually bad – or if it could even be a good thing. One should remember that the easiest way (arguably the only one) to achieve perfect equality is by assigning everyone the exact same value: zero. Put another way: while the *share* of attention captured by the top games of the hobby has increased, this doesn't necessarily mean this attention has been taken away from the rest of the games.️ Overall, interest in modern games has been growing, so even the long tail of games should receive more attention overall when measured in absolute terms. A rising tide lifts all boats, at least that's what those on the steering wheels tell those toiling in the engine rooms. 🚢
 
-You might deduce that I don't fully buy into this narrative. The continuing increase of the Gini coefficient, the focus on blockbuster title, the ongoing consolidation of the hobby board game publishers (although Asmodee has noticably slowed down as their parent company did some [stupid capitalist things](https://www.dicebreaker.com/companies/asmodee/news/asmodee-embracer-earnings-2023-saudi-arabia-deal)) – all of these are signs of a Marvelisation of the board game industry. ️Have we reached the end of this industry being run by boutique publishers? Will it all be nature kitsch, anthropomorphic animals or billion dollar licenses from here on out? I have no doubt that quirky and sometimes downright weird games will continue to be made, some of which will tackle difficult topics or push the boundaries of what a game can be. But I'm afraid those will be more and more pushed to the fringes of the hobby, while the mainstream will be dominated by the same old, same old.
+You might deduce that I don't fully buy into this narrative. The continuing increase of the Gini coefficient, the focus on blockbuster title, the ongoing consolidation of the hobby board game publishers (although Asmodee has noticably slowed down after [their owners got too greedy](https://www.dicebreaker.com/companies/asmodee/news/asmodee-embracer-earnings-2023-saudi-arabia-deal)) – all of these are signs of a Marvelisation of the board game industry. ️Have we reached the end of this industry being run by boutique publishers? Will it all be nature kitsch, anthropomorphic animals or billion dollar licenses from here on out? I have no doubt that quirky and sometimes downright weird games will continue to be made, some of which will tackle difficult topics or push the boundaries of what a game can be. But I'm afraid those will be more and more pushed to the fringes of the hobby, while the mainstream will be dominated by the same old, same old.
 
-
-### Outline
-
-- How many games are released each year? Does the increase correlate to the increase in the Gini coefficient?
-- Do we see the same phenomenon if we look at different slices of data? E.g., by year.
-- Conclusion:
-    - Where could this increased inequality come from?
-    - What does this mean for the board game industry?
-    - What does this mean for the board game community?
-    - PS: mention inspiration for this article
+*PS: I was inspired to write this article by Bluesky user [Nick Sherefkin](https://bsky.app/profile/slngshot-dvnngrod.bsky.social/post/3knwg4sgd2k2g). If you have some insteresting questions about board games and data, why don't you reach out to me on one of the channels linked below? Maybe I'll answer them in the next blog post.*
 
 
 [^dummy-votes]: Remember that the number dummy ratings added to [calculate the geek score]({{<ref "posts/reverse_engineer_bgg/index.md">}}), which is used for the BGG rankings, is pegged to the total number of ratings. Since there's one dummy rating for every 10,000 ratings, the current number of dummy ratings is somewhere around 2435. When we [last checked in]({{<ref "posts/reverse_engineer_bgg_2/index.md">}}) around three years ago, that number was around 1729 dummies. Quite the growth indeed.
