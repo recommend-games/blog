@@ -3,7 +3,6 @@ name = "sdj_2024"
 version = "0.1.0"
 description = "Spiel des Jahres 2024 predictions"
 authors = ["Markus Shepherd <markus@recommend.games>"]
-license = "MIT"
 
 [tool.poetry.dependencies]
 python = "3.12.*"
