@@ -71,6 +71,8 @@ The dots are the Gini coefficient just for that cohort, i.e., those dots measure
 
 But there something else going on: whilst the number of releases have been skyrocketing since 2013, the Gini coefficients of the years since 2016 have been falling noticibly, indicating less concentration of the ratings on just a few games. Games released in 2022 form the first cohort with a Gini coefficient below 0.75 since the 90s.
 
+So how come that rating inequality is still rising? This might have to do with publishers' increased focus on evergreens – flagship titles and lines that have proven to be consistently popular. Most publishers will rather release new expansions for and versions of a successful game than take a risk on a new one. So while new releases get slightly more evenly distributed attention, much of the overall attention (and marketing budget) is still drawn to select few games. Publishers and designers certainly complain that it's increasingly harder for new games to get noticed and even get a second printrun, and the data seems to support those complaints.
+
 
 ### Outline
 
