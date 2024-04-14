@@ -4,12 +4,13 @@ subtitle: "Applying the Gini coefficient to BoardGameGeek ratings"
 slug: rating-inequality-gini-coefficient
 author: Markus Shepherd
 type: post
-date: 2024-04-11T20:00:00+03:00
+date: 2024-04-14T18:17:00+03:00
 tags:
   - BoardGameGeek
   - Ratings
   - Gini coefficient
   - Inequality
+  - Asmodee
 ---
 
 
@@ -17,7 +18,7 @@ tags:
 
 Perhaps one of the most controversial choices of the [Shut Up & Sit Down Effect]({{<ref "posts/susd_effect/index.md">}}) article was using the number of ratings[^ratings] on BoardGameGeek (BGG) as proxy for "attention" to a game. So let's double down on that! 😈
 
-If lots of ratings mean a lots of eyes on a game, we can ask questions like: What games get all the attention? Do few games steal the spotlight? Or is the attention spread out evenly?
+If lots of ratings mean a lots of eyes on a game, we can ask questions like: What games get most of the attention? Do few games steal the spotlight? Or is the attention spread out evenly?
 
 The answer is pretty clear if we sort the games by their number of ratings and plot them from fewest to most:
 
@@ -35,7 +36,7 @@ Fun fact: there are three absolute classic games that have been competing for th
 
 So, obviously the attention of the board game world is concentrated on *very* few games. The 26,168 ranked games share a total of 24,353,222 ratings[^dummy-votes] between them. The top 1%, the 262 games with the most ratings, account for 35.5% of those ratings. Conversely, the bottom 23.2%, the 6,071 games with the fewest ratings, account for only 1% of the ratings.
 
-Can we somehow quantify this inequality more precisely? Why, I'm glad you asked! 🧐
+Can we somehow quantify this inequality more precisely? Why yes, I'm glad you asked! 🧐
 
 
 ## The Gini coefficient
