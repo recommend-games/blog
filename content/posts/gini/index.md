@@ -4,7 +4,7 @@ subtitle: "Applying the Gini coefficient to BoardGameGeek ratings"
 slug: rating-inequality-gini-coefficient
 author: Markus Shepherd
 type: post
-date: 2024-04-14T18:17:00+03:00
+date: 2024-04-14T18:20:45+03:00
 tags:
   - BoardGameGeek
   - Ratings
@@ -75,6 +75,8 @@ Maybe it's worth pausing for a moment to consider if this inequality is actually
 You might deduce that I don't fully buy into this narrative. The continuing increase of the Gini coefficient, the focus on blockbuster title, the ongoing consolidation of the hobby board game publishers (although Asmodee has noticably slowed down after [their owners got too greedy](https://www.dicebreaker.com/companies/asmodee/news/asmodee-embracer-earnings-2023-saudi-arabia-deal)) – all of these are signs of a Marvelisation of the board game industry. ️Have we reached the end of this industry being run by boutique publishers? Will it all be nature kitsch, anthropomorphic animals or billion dollar licenses from here on out? I have no doubt that quirky and sometimes downright weird games will continue to be made, some of which will tackle difficult topics or push the boundaries of what a game can be. But I'm afraid those will be more and more pushed to the fringes of the hobby, while the mainstream will be dominated by the same old, same old.
 
 *PS: I was inspired to write this article by Bluesky user [Nick Sherefkin](https://bsky.app/profile/slngshot-dvnngrod.bsky.social/post/3knwg4sgd2k2g). If you have some insteresting questions about board games and data, why don't you reach out to me on one of the channels linked below? Maybe I'll answer them in the next blog post.*
+
+*PPS: As always, the complete code for this analysis can be found from [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/gini).*
 
 
 [^ratings]: It's worth emphasising that the SU&SD Effect article didn't just use the number of ratings, but the number of collection items, which also include owned games, wishlists and more. This article strictly focuses on the number of ratings.
