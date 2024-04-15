@@ -4,9 +4,31 @@ subtitle: "Reinforcement learning part 1: Introduction"
 slug: board-games-reinforcement-learning-playground
 author: Markus Shepherd
 type: post
-date: 2024-04-15T00:00:00+03:00
+date: 2024-04-15T21:00:00+03:00
 tags:
   - Reinforcement Learning
+  - AlphaGo
 ---
 
-TODO.
+I've been wanting to learn about reinforcement learning (RL), the area of machine learning behind the breakthrough that was [AlphaGo](https://en.wikipedia.org/wiki/AlphaGo), for a long time. It feels closer to actual "artificial intelligence" (AI) than any of the currently overhyped technologies because it's about smart decision making. I thought documenting my progress in learning about RL on this blog would be a natural fit.
+
+Usually, one would start any series about RL by chewing through a whole bunch of definitions: Markov decision processes, states, actions, rewards, discount factors, returns, policies, value functions – that sort of stuff. A typical course on RL wants to provide you with a wide set of tools to solve a variety of different problems that fall under the RL framework. While this makes sense for a graduate course which wants to interest you in research in the field, it can be overwhelming and frustrating for someone who's just thinking: AlphaGo was such an impressive achievement, I would really like to understand how it works.
+
+On the other end of the spectrum there are courses that promise you to train your first RL agents in 10 minutes, only to then import a bunch of libraries and call a bunch of algorithms that you can't possibly understand. This might be quite impressive, but you won't be able to apply what you've learned to new problems.
+
+So, instead I'd like to go through some of the major RL algorithms and apply them to the most interesting examples one could imagine: board games. There's a couple of reasons why I think board games are a great playground for RL:
+
+- *They're fun.* This is not a trivial matter: motivation is key to learning. The prospect of learning a great strategy for your favourite game is a much better motivator than making a robotic arm pick up machine parts – at least to me.
+- *They're simple.* Many board games have only a handful of actions available at any given time, all of which have important ramifications. In RL parlace, they have a pretty small action space.
+- *They're still challenging.* Even simple games can have a large number of possible board positions; for a game like Go that number exceeds \\(10^{170}\\). Those board positions are what we call the state space in RL.
+- *They're finite.* Even a game like Monopoly, which can feel like it goes on forever, will eventually end. This means we're dealing with we call finite episodes, so we don't have to worry about infinite horizons.
+- *They have a simple built-in reward: win or lose.* One of the strength of RL is that it can learn optimal long term behaviour from short term rewards. In order to formalise this, you usually need to sum up rewards from individual actions over time and discount them by an appropriate, which then leads to returns. In board games, there's really only one reward at the very end: win or lose. So that's your return for this episode (i.e., game): 1 if you win, 0 if you lose.
+- *They're easy to simulate.* We can have our agent play as many imaginary games as we want, with little costs beyond computation time. (Training AlphaGo still cost millions of dollar, so don't underestimate that either.) Some RL problems need to learn from real world experience, e.g., robotics, which can be expensive and dangerous to collect, so there's a whole field of research on how to learn from simulated experience. We don't need to concern ourselves with that, so can pretty much skip all of what's called model based RL.
+- *Their solutions are easy to interpret.* Much of RL is about learning value functions, which tell you the expected return from a given state. As mentioned, the return of a board game is simply 1 if you win, 0 if you lose. So the value function of a board game is simply the probability of winning from a given state. This is a very intuitive and easy to interpret quantity.
+- Also: *they really are great fun!*
+
+If you've never heard of those fundamental RL concepts I mentioned above, don't worry. You'll get used to them in due time, even if we don't formally define them all.
+
+My hope is that by single-mindedly focusing on board games, we can get a good understanding of the major RL algorithms and how they work, without getting lost in dozens of different variations, all of which are important and have their relevance, but only for a certainly class of problems. By restricting that class to board games, we can cut a big chunk out of a typical RL course and still learn a lot of the basic principles.
+
+We'll start with the simplest possible game: Tic Tac Toe.
