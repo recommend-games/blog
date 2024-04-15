@@ -32,3 +32,19 @@ If you've never heard of those fundamental RL concepts I mentioned above, don't 
 My hope is that by single-mindedly focusing on board games, we can get a good understanding of the major RL algorithms and how they work, without getting lost in dozens of different variations, all of which are important and have their relevance, but only for a certainly class of problems. By restricting that class to board games, we can cut a big chunk out of a typical RL course and still learn a lot of the basic principles.
 
 We'll start with the simplest possible game: Tic Tac Toe.
+
+
+## TODO
+
+Define some of the fundamental terms in board game context:
+
+- State
+- Action
+- Reward / return
+- Episode
+- Agent
+- Policy
+- Value function
+- Markov decision process (Markov property)
+
+Mention Sutton & Barto as the standard textbook for RL.
