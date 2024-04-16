@@ -19,9 +19,9 @@ def process_game_data(rankings_data: pl.DataFrame) -> pl.DataFrame:
         .with_columns(cs.ends_with("_rank") / cs.ends_with("_rank").max())
         .fill_null(math.inf)
         .select(
-            bgg_id="id",
+            bgg_id=pl.col("id").cast(pl.Int64),
             name="name",
-            num_ratings="usersrated",
+            num_ratings=pl.col("usersrated").cast(pl.Int64),
             game_type=pl.concat_list(rank_columns).list.arg_min().replace(columns_map),
         )
     )
