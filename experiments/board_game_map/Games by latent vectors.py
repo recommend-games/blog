@@ -15,6 +15,7 @@
 
 # %%
 import json
+from pathlib import Path
 import jupyter_black
 import polars as pl
 import umap
@@ -23,17 +24,23 @@ from bokeh.io import output_notebook
 from bokeh.plotting import show
 from sklearn.decomposition import FactorAnalysis, FastICA, PCA
 from sklearn.manifold import Isomap, LocallyLinearEmbedding, SpectralEmbedding, TSNE
-from board_game_map.data import load_latent_vectors,process_game_data
+from board_game_map.data import load_latent_vectors, process_game_data
 from board_game_map.plots import plot_embedding
 
 jupyter_black.load()
 output_notebook()
 
+# %%
+data_dir = (Path(".") / "data").resolve()
+plot_dir = (Path(".") / "plots" / "games_by_latent_vectors").resolve()
+plot_dir.mkdir(parents=True, exist_ok=True)
+data_dir, plot_dir
+
 # %% [markdown]
 # ## Game types
 
 # %%
-rankings = pl.read_csv("data/boardgames_ranks.csv")
+rankings = pl.read_csv(data_dir / "boardgames_ranks.csv")
 rankings.shape
 
 # %%
@@ -47,7 +54,10 @@ game_types.select(pl.col("game_type").value_counts(sort=True))
 # ## Latent vectors
 
 # %%
-latent_vectors = load_latent_vectors("data/recommender_light.npz", game_types["bgg_id"])
+latent_vectors = load_latent_vectors(
+    data_dir / "recommender_light.npz",
+    game_types["bgg_id"],
+)
 latent_vectors.shape
 
 # %% [markdown]
@@ -79,7 +89,7 @@ plot_tsne = plot_embedding(
 show(plot_tsne)
 
 # %%
-with open("plots/ratings_tsne.json", "w") as f:
+with (plot_dir / "tsne.json").open("w") as f:
     json.dump(json_item(plot_tsne), f, indent=4)
 
 # %% [markdown]
@@ -115,7 +125,7 @@ plot_umap = plot_embedding(
 show(plot_umap)
 
 # %%
-with open("plots/ratings_umap.json", "w") as f:
+with (plot_dir / "umap.json").open("w") as f:
     json.dump(json_item(plot_umap), f, indent=4)
 
 # %% [markdown]
@@ -137,7 +147,7 @@ plot_isomap = plot_embedding(
 show(plot_isomap)
 
 # %%
-with open("plots/ratings_isomap.json", "w") as f:
+with (plot_dir / "isomap.json").open("w") as f:
     json.dump(json_item(plot_isomap), f, indent=4)
 
 # %% [markdown]
@@ -159,7 +169,7 @@ plot_spectral = plot_embedding(
 show(plot_spectral)
 
 # %%
-with open("plots/ratings_spectral.json", "w") as f:
+with (plot_dir / "spectral.json").open("w") as f:
     json.dump(json_item(plot_spectral), f, indent=4)
 
 # %% [markdown]
@@ -183,7 +193,7 @@ plot_locally_linear = plot_embedding(
 show(plot_locally_linear)
 
 # %%
-with open("plots/ratings_locally_linear.json", "w") as f:
+with (plot_dir / "locally_linear.json").open("w") as f:
     json.dump(json_item(plot_locally_linear), f, indent=4)
 
 # %% [markdown]
@@ -205,7 +215,7 @@ plot_pca = plot_embedding(
 show(plot_pca)
 
 # %%
-with open("plots/ratings_pca.json", "w") as f:
+with (plot_dir / "pca.json").open("w") as f:
     json.dump(json_item(plot_pca), f, indent=4)
 
 # %% [markdown]
@@ -227,7 +237,7 @@ plot_fastica = plot_embedding(
 show(plot_fastica)
 
 # %%
-with open("plots/ratings_fastica.json", "w") as f:
+with (plot_dir / "fastica.json").open("w") as f:
     json.dump(json_item(plot_fastica), f, indent=4)
 
 # %% [markdown]
@@ -251,5 +261,5 @@ plot_factor_analysis = plot_embedding(
 show(plot_factor_analysis)
 
 # %%
-with open("plots/ratings_factor_analysis.json", "w") as f:
+with (plot_dir / "factor_analysis.json").open("w") as f:
     json.dump(json_item(plot_factor_analysis), f, indent=4)
