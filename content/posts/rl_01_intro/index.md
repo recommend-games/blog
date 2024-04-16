@@ -27,14 +27,10 @@ So, instead I'd like to go through some of the major RL algorithms and apply the
 - *Their solutions are easy to interpret.* Much of RL is about learning value functions, which tell you the expected return from a given state. As mentioned, the return of a board game is simply 1 if you win, 0 if you lose. So the value function of a board game is simply the probability of winning from a given state. This is a very intuitive and easy to interpret quantity.
 - Also: *they really are great fun!*
 
-If you've never heard of those fundamental RL concepts I mentioned above, don't worry. You'll get used to them in due time, even if we don't formally define them all.
-
-My hope is that by single-mindedly focusing on board games, we can get a good understanding of the major RL algorithms and how they work, without getting lost in dozens of different variations, all of which are important and have their relevance, but only for a certainly class of problems. By restricting that class to board games, we can cut a big chunk out of a typical RL course and still learn a lot of the basic principles.
-
-Let's keep this reference at hand which explains some of the fundamental terms in the context of board games:
+If you've never heard of those fundamental RL concepts I mentioned above, don't worry. You'll get used to them in due time; for now, let's keep this reference at hand which explains some of the fundamental terms in the context of board games:
 
 |Concept|Symbol|Explanation|
-|---|---|---|
+|:------|:----:|:----------|
 |State|\\(s\\)|The full description of the current state of the game. This could be the positions of the stones in Go, or the way the cards are distributed amongst the players in Poker, including the order of the cards in the draw pile.|
 |Observation|\\(o\\)|The information the player has about the current state of the game. In a game of perfect information like Go, there really is no difference between state and observation, but in games with hidden information, like Poker, the observation is only a partial description of the state.|
 |Action|\\(a\\)|The possible moves a player can make in the current state, e.g., the free (and legal) board positions in Go or *bet*, *call*, *fold* etc in Poker.|
@@ -42,26 +38,14 @@ Let's keep this reference at hand which explains some of the fundamental terms i
 |Return|\\(G\\)|The sum of rewards from the current state onwards. In board games, this is usually 1 if the player wins the game, 0 if they lose.|
 |Episode||A single complete game. Note that I mentioned before board game episodes are always finite, but this might not actually be the case if players take random actions that do not advance the game, so some extra care might need to be taken for episodes to not grow indefinitely.|
 |Agent||The player whose behaviour (determined by the policy \\(\pi\\)) we want to optimise.|
-|Policy|\\(\pi(s)\\) or \\(\pi(a\|s)\\)|The strategy the agent uses to choose actions. This can be a deterministic policy, i.e., a function that maps every state to the action to be taken, or a stochastic policy, i.e., a probability distribution over actions for every state.|
-|State value function|\\(V(s)\\)|The expected return from a given state. In board games, this is the probability of winning from a given state.|
-|State-action value function|\\(Q(s, a)\\)|The expected return from taking action \\(a\\) in state \\(s\\) and then following the policy \\(\pi\\). In board games, this is the probability of winning from a given state and taking a given action.|
+|Policy|\\(\pi(s)\\) or \\(\pi(a\|s)\\)|The strategy the agent uses to choose actions. This can be a *deterministic policy*, i.e., a function that maps every state to the action to be taken, or a *stochastic policy*, i.e., a probability distribution over actions for every state.|
+|State value function|\\(v_\pi(s)\\)|The expected return from a given state. In board games, this is the probability of winning from a given state. Note that this depends on the policy \\(\pi\\) we're following.|
+|State-action value function|\\(q_\pi(s, a)\\)|The expected return from taking action \\(a\\) in state \\(s\\) and then following the policy \\(\pi\\). In board games, this is the probability of winning from a given state and taking a given action.|
 |Markov decision process (MDP)||A game is a series of interesting decisions, so a decision process is really just a game. The Markov property states that the future is independent of the past given the present. In board games, this is often violated in two ways: First, it's usually only true for *states*, not for *observations*, and many games have hidden information. Second, humans. While theory might tell that optimal play does not depend on how we arrived at the current state, humans do tend to hold grudges and might very much care about past behaviour.|
-|Environment||In the classical RL framework, it's the environment that presents the agent with the current state and possible actions, as well as the reward for that action and the next state. So in our context, this is the game – and the other players, since their decisions will influence the state of the game until it's our turn again. RL that tries to learn the dynamics of the environment is called model based, and I've mentioned before that we generally don't have to worry about that, though one can try to model the opponent behaviour, but this often relies on assumptions about the opponent and hence might not generalise well.|
+|Environment||In the classical RL framework, it's the environment that presents the agent with the current state and possible actions, as well as the reward for that action and the next state. So in our context, this is the game – and the other players, since their decisions will influence the state of the game until it's our turn again. RL that tries to learn the dynamics of the environment is called *model based*, and I've mentioned before that we generally don't have to worry about that, though one can try to model the opponent behaviour, but this often relies on assumptions about the opponent and hence might not generalise well.|
+
+Please remember that none of these are formal definitions, but rather a way to understand the concepts in the context of board games. If you want to dive deeper into RL, I can recommend the standard textbook by Richard S. Sutton & Andrew G. Barto, which is freely available online: [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/the-book.html). I'll add references to the relevant chapters in that book as we go along. More details on the topics of this article are covered in chapters 1 and 3.
+
+Alrighty, that's a lot to digest… My hope is that by single-mindedly focusing on board games, we can get a good understanding of the major RL algorithms and how they work, without getting lost in dozens of different variations, all of which are important and have their relevance, but only for a certainly class of problems. By restricting that class to board games, we can cut a big chunk out of a typical RL course and still learn a lot of the basic principles.
 
 We'll start with the simplest possible game: Tic Tac Toe.
-
-
-## TODO
-
-Define some of the fundamental terms in board game context:
-
-- State
-- Action
-- Reward / return
-- Episode
-- Agent
-- Policy
-- Value function
-- Markov decision process (Markov property)
-
-Mention Sutton & Barto as the standard textbook for RL.
