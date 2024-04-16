@@ -62,6 +62,7 @@ games_data = (
     pl.scan_csv(games_file)
     .select("bgg_id", "mechanic")
     .drop_nulls()
+    .filter(pl.col("mechanic").str.contains(","))
     .join(game_types.lazy(), on="bgg_id", how="inner")
     .collect()
 )
