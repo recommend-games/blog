@@ -108,9 +108,15 @@ columns = [
     "nominated",
     "recommended",
     "sonderpreis",
+    "bayes_rating",
 ]
 data = games[columns].dropna(subset=["award"]).join(designer_awards)
 data.shape
+
+# %%
+best_rating = data.groupby("designer").agg({"bayes_rating": "max"})
+best_rating.columns = pd.MultiIndex.from_arrays([["all"], ["rating"]])
+best_rating.shape
 
 # %%
 winner_mask = data["winner"]
@@ -143,6 +149,7 @@ counts = (
     winner_count.join(nominated_count, how="outer")
     .join(recommended_count, how="outer")
     .join(sonderpreis_count, how="outer")
+    .join(best_rating, how="left")
     .fillna(0)
 )
 counts.insert(0, ("designer", "name"), designers)
@@ -171,12 +178,16 @@ counts.sort_values(
         ("recommended", "kenner"),
         ("recommended", "kinder"),
         ("all", "total"),
+        ("all", "rating"),
     ],
     ascending=False,
     inplace=True,
 )
-# TODO add highest rated game as final (?) tie breaker
+counts.drop(columns=("all", "rating"), inplace=True)
 counts.shape
+
+# %%
+counts.head(10)
 
 # %%
 counts.to_csv("designers.csv", float_format="%d")

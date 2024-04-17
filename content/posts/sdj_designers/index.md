@@ -84,19 +84,19 @@ tags:
 | [Kirsten Becker](https://recommend.games/#/?designer=3432) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 2 / 0 |
 | [Reinhard Staupe](https://recommend.games/#/?designer=12) | 0 / 0 / 7 | 0 / 0 / 0 | 0 / 1 / 2 |
 | [Friedemann Friese](https://recommend.games/#/?designer=141) | 0 / 1 / 3 | 0 / 0 / 1 | 0 / 0 / 0 |
-| [Aaron Weissblum](https://recommend.games/#/?designer=235) | 0 / 1 / 3 | 0 / 0 / 0 | 0 / 0 / 0 |
-| [Wolfgang Panning](https://recommend.games/#/?designer=249) | 0 / 1 / 3 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Sébastien Pauchon](https://recommend.games/#/?designer=6736) | 0 / 1 / 3 | 0 / 0 / 0 | 0 / 0 / 0 |
+| [Wolfgang Panning](https://recommend.games/#/?designer=249) | 0 / 1 / 3 | 0 / 0 / 0 | 0 / 0 / 0 |
+| [Aaron Weissblum](https://recommend.games/#/?designer=235) | 0 / 1 / 3 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Oliver Igelhaut](https://recommend.games/#/?designer=961) | 0 / 0 / 1 | 0 / 0 / 0 | 0 / 1 / 2 |
 | [Karl-Heinz Schmiel](https://recommend.games/#/?designer=1) | 0 / 1 / 2 | 0 / 0 / 0 | 0 / 0 / 0 |
-| [Franz-Benno Delonge](https://recommend.games/#/?designer=57) | 0 / 1 / 2 | 0 / 0 / 0 | 0 / 0 / 0 |
-| [Dominique Ehrhard](https://recommend.games/#/?designer=79) | 0 / 1 / 2 | 0 / 0 / 0 | 0 / 0 / 0 |
-| [Corné van Moorsel](https://recommend.games/#/?designer=124) | 0 / 1 / 2 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Bruno Faidutti](https://recommend.games/#/?designer=125) | 0 / 1 / 2 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Phil Walker-Harding](https://recommend.games/#/?designer=8347) | 0 / 1 / 2 | 0 / 0 / 0 | 0 / 0 / 0 |
+| [Corné van Moorsel](https://recommend.games/#/?designer=124) | 0 / 1 / 2 | 0 / 0 / 0 | 0 / 0 / 0 |
+| [Dominique Ehrhard](https://recommend.games/#/?designer=79) | 0 / 1 / 2 | 0 / 0 / 0 | 0 / 0 / 0 |
+| [Franz-Benno Delonge](https://recommend.games/#/?designer=57) | 0 / 1 / 2 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Shem Phillips](https://recommend.games/#/?designer=12547) | 0 / 0 / 0 | 0 / 1 / 2 | 0 / 0 / 0 |
-| [Hajo Bücken](https://recommend.games/#/?designer=816) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 1 / 0 |
 | [Corentin Lebrat](https://recommend.games/#/?designer=60151) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 1 / 0 |
+| [Hajo Bücken](https://recommend.games/#/?designer=816) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 1 / 0 |
 | [Markus Nikisch](https://recommend.games/#/?designer=748) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 1 / 2 |
 | [Kris Burm](https://recommend.games/#/?designer=244) | 0 / 0 / 6 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Haim Shafir](https://recommend.games/#/?designer=1210) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 6 |
@@ -106,10 +106,10 @@ tags:
 | [Simone Luciani](https://recommend.games/#/?designer=35418) | 0 / 0 / 0 | 0 / 0 / 4 | 0 / 0 / 0 |
 | [Gunter Baars](https://recommend.games/#/?designer=491) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 4 |
 | [Eric Solomon](https://recommend.games/#/?designer=104) | 0 / 0 / 3 | 0 / 0 / 0 | 0 / 0 / 0 |
+| [Théo Rivière](https://recommend.games/#/?designer=72628) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 0 / 1 |
+| [Ludovic Maublanc](https://recommend.games/#/?designer=4337) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 0 / 1 |
 | [Uwe Rapp](https://recommend.games/#/?designer=4307) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 0 / 1 |
 | [Bernhard Lach](https://recommend.games/#/?designer=4308) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 0 / 1 |
-| [Ludovic Maublanc](https://recommend.games/#/?designer=4337) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 0 / 1 |
-| [Théo Rivière](https://recommend.games/#/?designer=72628) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 0 / 1 |
 
 
 ## Other questions
