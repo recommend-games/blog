@@ -564,3 +564,10 @@ tags:
 | [Florian Biege](https://recommend.games/#/?designer=112154) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 1 |
 | [Seven Towns](https://recommend.games/#/?designer=113670) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 1 |
 | [Laurent Toulouse](https://recommend.games/#/?designer=130860) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 1 |
+
+
+## Other questions
+
+- How many different designers have won/nom/rec SdJ/KedJ/KidJ/any?
+- How many designers have won/nom/rec with more than one game?
+- How many designers have won/nom/rec in more than one category?
