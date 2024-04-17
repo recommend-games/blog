@@ -114,13 +114,16 @@ data.shape
 
 # %%
 winner_mask = data["winner"]
-nominated_mask = ~winner_mask & data["nominated"]
-recommended_mask = ~winner_mask & ~nominated_mask & data["recommended"]
+sonderpreis_mask = ~winner_mask & (data["sonderpreis"].str.len() > 0)
+nominated_mask = ~winner_mask & ~sonderpreis_mask & data["nominated"]
+recommended_mask = (
+    ~winner_mask & ~sonderpreis_mask & ~nominated_mask & data["recommended"]
+)
 winner = data[winner_mask]
+sonderpreis = data[sonderpreis_mask]
 nominated = data[nominated_mask]
 recommended = data[recommended_mask]
-# TODO add special awards
-winner.shape, nominated.shape, recommended.shape
+winner.shape, sonderpreis.shape, nominated.shape, recommended.shape
 
 
 # %%
@@ -135,9 +138,11 @@ def count_awards(data, label):
 winner_count = count_awards(winner, "winner")
 nominated_count = count_awards(nominated, "nominated")
 recommended_count = count_awards(recommended, "recommended")
+sonderpreis_count = count_awards(sonderpreis, "sonderpreis")
 counts = (
     winner_count.join(nominated_count, how="outer")
     .join(recommended_count, how="outer")
+    .join(sonderpreis_count, how="outer")
     .fillna(0)
 )
 counts.insert(0, ("designer", "name"), designers)
@@ -145,15 +150,20 @@ counts[("all", "total")] = (
     counts[("winner", "total")]
     + counts[("nominated", "total")]
     + counts[("recommended", "total")]
+    + counts[("sonderpreis", "total")]
 )
 counts.sort_values(
     [
         ("winner", "total"),
+        ("sonderpreis", "total"),
         ("nominated", "total"),
         ("recommended", "total"),
         ("winner", "spiel"),
         ("winner", "kenner"),
         ("winner", "kinder"),
+        ("sonderpreis", "spiel"),
+        ("sonderpreis", "kenner"),
+        ("sonderpreis", "kinder"),
         ("nominated", "spiel"),
         ("nominated", "kenner"),
         ("nominated", "kinder"),
@@ -173,7 +183,12 @@ counts.to_csv("designers.csv", float_format="%d")
 
 # %%
 criterion = (counts["all", "total"] >= 3) | (
-    (counts["winner", "total"] + counts["nominated", "total"]) >= 2
+    (
+        counts["winner", "total"]
+        + counts["sonderpreis", "total"]
+        + counts["nominated", "total"]
+    )
+    >= 2
 )
 criterion.sum()
 
@@ -187,8 +202,12 @@ for bgg_id, row in counts[criterion].iterrows():
     ]
     for award in ("spiel", "kenner", "kinder"):
         winner = row[("winner", award)]
+        sonderpreis = row[("sonderpreis", award)]
+        sonderpreis_str = f" ({sonderpreis:.0f})" if sonderpreis > 0 else ""
         nominated = row[("nominated", award)]
         recommended = row[("recommended", award)]
-        cells.append(f" {winner:.0f} / {nominated:.0f} / {recommended:.0f} ")
+        cells.append(
+            f" {winner:.0f}{sonderpreis_str} / {nominated:.0f} / {recommended:.0f} "
+        )
     cells.append("")
     print("|".join(cells))
