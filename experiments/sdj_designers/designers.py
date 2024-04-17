@@ -27,12 +27,12 @@ pd.options.display.max_rows = 1000
 pd.options.display.float_format = "{:.6g}".format
 
 # %%
-games = pd.read_csv(
+game_data = pd.read_csv(
     "../../../board-game-data/scraped/bgg_GameItem.csv",
     index_col="bgg_id",
     low_memory=False,
 )
-games.shape
+game_data.shape
 
 # %%
 designers = pd.read_csv(
@@ -62,9 +62,18 @@ kindersdj = pd.read_csv(
 kindersdj["award"] = "kinder"
 
 awards = pd.concat((sdj, kennersdj, kindersdj))
-# TODO handle dupes better
-awards.drop_duplicates("bgg_id", inplace=True)
-awards.set_index("bgg_id", inplace=True)
+awards = awards.groupby("bgg_id").agg(
+    {
+        "jahrgang": "max",
+        "winner": "max",
+        "nominated": "max",
+        "recommended": "max",
+        "sonderpreis": lambda group: ", ".join(
+            sorted(set(s for s in group if isinstance(s, str)))
+        ),
+        "award": lambda group: ", ".join(sorted(set(group))),
+    }
+)
 # Just one Exit and Sherlock game
 awards.drop(
     index=[203416, 203417, 247436, 250779],
@@ -73,7 +82,7 @@ awards.drop(
 awards.shape
 
 # %%
-games = games.join(awards)
+games = game_data.join(awards)
 games.shape
 
 # %%

@@ -16,16 +16,16 @@ tags:
 
 | Designer | Spiel | Kennerspiel | Kinderspiel |
 |:---------|:-----:|:-----------:|:-----------:|
-| [Wolfgang Kramer](https://recommend.games/#/?designer=7) | 4 / 4 / 13 | 0 / 1 / 0 | 1 / 2 / 3 |
+| [Wolfgang Kramer](https://recommend.games/#/?designer=7) | 5 / 4 / 12 | 0 / 1 / 0 | 1 / 2 / 3 |
 | [Klaus Teuber](https://recommend.games/#/?designer=11) | 4 / 0 / 3 | 0 / 0 / 0 | 0 / 1 / 1 |
 | [Michael Kiesling](https://recommend.games/#/?designer=42) | 3 / 3 / 4 | 0 / 2 / 0 | 0 / 0 / 0 |
 | [Inka Brand](https://recommend.games/#/?designer=6940) | 0 / 0 / 2 | 2 / 0 / 0 | 1 / 2 / 0 |
 | [Markus Brand](https://recommend.games/#/?designer=6941) | 0 / 0 / 2 | 2 / 0 / 0 | 1 / 2 / 0 |
+| [Alex Randolph](https://recommend.games/#/?designer=24) | 1 / 0 / 11 | 0 / 0 / 0 | 2 / 1 / 0 |
 | [Reiner Knizia](https://recommend.games/#/?designer=2) | 1 / 6 / 17 | 0 / 0 / 1 | 1 / 4 / 5 |
 | [Heinz Meister](https://recommend.games/#/?designer=256) | 0 / 1 / 2 | 0 / 0 / 0 | 2 / 3 / 5 |
 | [Alan R. Moon](https://recommend.games/#/?designer=9) | 2 / 2 / 5 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Manfred Ludwig](https://recommend.games/#/?designer=500) | 0 / 0 / 1 | 0 / 0 / 0 | 2 / 2 / 1 |
-| [Alex Randolph](https://recommend.games/#/?designer=24) | 0 / 0 / 12 | 0 / 0 / 0 | 2 / 1 / 0 |
 | [Antoine Bauza](https://recommend.games/#/?designer=9714) | 1 / 0 / 2 | 1 / 0 / 1 | 0 / 1 / 0 |
 | [Andreas Seyfarth](https://recommend.games/#/?designer=117) | 2 / 1 / 1 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Klaus Zoch](https://recommend.games/#/?designer=267) | 0 / 1 / 1 | 0 / 0 / 0 | 2 / 0 / 0 |
@@ -47,6 +47,7 @@ tags:
 | [Michael Menzel](https://recommend.games/#/?designer=11825) | 0 / 1 / 0 | 1 / 0 / 0 | 0 / 0 / 0 |
 | [Urtis Šulinskas](https://recommend.games/#/?designer=111626) | 0 / 0 / 0 | 0 / 0 / 0 | 1 / 1 / 0 |
 | [Michael Schacht](https://recommend.games/#/?designer=86) | 1 / 0 / 8 | 0 / 0 / 0 | 0 / 0 / 1 |
+| [Sid Sackson](https://recommend.games/#/?designer=4) | 1 / 0 / 7 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Rudi Hoffmann](https://recommend.games/#/?designer=154) | 1 / 0 / 6 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Günter Burkhardt](https://recommend.games/#/?designer=173) | 0 / 0 / 5 | 0 / 0 / 0 | 1 / 0 / 1 |
 | [(Uncredited)](https://recommend.games/#/?designer=3) | 0 / 0 / 2 | 0 / 0 / 0 | 1 / 0 / 4 |
@@ -69,6 +70,8 @@ tags:
 | [Werner Hodel](https://recommend.games/#/?designer=130) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [David Parlett](https://recommend.games/#/?designer=166) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Rob Bontenbal](https://recommend.games/#/?designer=210) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
+| [David G. Watts](https://recommend.games/#/?designer=250) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
+| [Michel Matschoss](https://recommend.games/#/?designer=432) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Ephraim Hertzano](https://recommend.games/#/?designer=634) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Bill Payne](https://recommend.games/#/?designer=1056) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Gary Grady](https://recommend.games/#/?designer=1219) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
@@ -218,7 +221,6 @@ tags:
 | [Daniel Skjold Pedersen](https://recommend.games/#/?designer=80521) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 1 / 0 |
 | [Michael Kallauch](https://recommend.games/#/?designer=106414) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 1 / 0 |
 | [Sara Zarian](https://recommend.games/#/?designer=113106) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 1 / 0 |
-| [Sid Sackson](https://recommend.games/#/?designer=4) | 0 / 0 / 8 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Kris Burm](https://recommend.games/#/?designer=244) | 0 / 0 / 6 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Reinhold Wittig](https://recommend.games/#/?designer=94) | 0 / 0 / 5 | 0 / 0 / 0 | 0 / 0 / 1 |
 | [Haim Shafir](https://recommend.games/#/?designer=1210) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 6 |
@@ -298,7 +300,6 @@ tags:
 | [Frederick A. Herschler](https://recommend.games/#/?designer=218) | 0 / 0 / 1 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Philippe des Pallières](https://recommend.games/#/?designer=219) | 0 / 0 / 1 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Ron Dubren](https://recommend.games/#/?designer=245) | 0 / 0 / 1 | 0 / 0 / 0 | 0 / 0 / 0 |
-| [David G. Watts](https://recommend.games/#/?designer=250) | 0 / 0 / 1 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Gerd Fenchel](https://recommend.games/#/?designer=264) | 0 / 0 / 1 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Michael Gray](https://recommend.games/#/?designer=287) | 0 / 0 / 1 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Serge Laget](https://recommend.games/#/?designer=295) | 0 / 0 / 1 | 0 / 0 / 0 | 0 / 0 / 0 |
@@ -310,7 +311,6 @@ tags:
 | [Richard K Morgan](https://recommend.games/#/?designer=397) | 0 / 0 / 1 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Werner Falkhof](https://recommend.games/#/?designer=425) | 0 / 0 / 1 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Herbert Schützdeller](https://recommend.games/#/?designer=430) | 0 / 0 / 1 | 0 / 0 / 0 | 0 / 0 / 0 |
-| [Michel Matschoss](https://recommend.games/#/?designer=432) | 0 / 0 / 1 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Hagen Dorgathen](https://recommend.games/#/?designer=455) | 0 / 0 / 1 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [H. Jean Vanaise](https://recommend.games/#/?designer=488) | 0 / 0 / 1 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Kurt Feyerabend](https://recommend.games/#/?designer=511) | 0 / 0 / 1 | 0 / 0 / 0 | 0 / 0 / 0 |
