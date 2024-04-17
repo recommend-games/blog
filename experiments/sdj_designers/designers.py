@@ -6,25 +6,25 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.11.1
+#       jupytext_version: 1.16.1
 #   kernelspec:
-#     display_name: Python 3
+#     display_name: Python 3 (ipykernel)
 #     language: python
 #     name: python3
 # ---
 
 # %%
+import jupyter_black
 import pandas as pd
 from pytility import arg_to_iter, clear_list, parse_int
+
+jupyter_black.load()
 
 SEED = 23
 
 pd.options.display.max_columns = 100
 pd.options.display.max_rows = 1000
 pd.options.display.float_format = "{:.6g}".format
-
-# %load_ext nb_black
-# %load_ext lab_black
 
 # %%
 games = pd.read_csv(
