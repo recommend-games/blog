@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "high-society"
+version = "0.1.0"
+description = "High Society simulations"
+authors = ["Markus Shepherd <markus@recommend.games>"]
+
+[tool.poetry.dependencies]
+python = "3.12.*"
+
+matplotlib = "*"
+numpy = "*"
+scipy = "*"
+seaborn = "*"
+tqdm = "*"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+jupyter-black = "*"
+jupyterlab = "*"
+jupytext = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
