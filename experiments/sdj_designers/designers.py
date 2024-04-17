@@ -64,7 +64,11 @@ kindersdj["award"] = "kinder"
 awards = pd.concat((sdj, kennersdj, kindersdj))
 awards.drop_duplicates("bgg_id", inplace=True)  # TODO handle dupes better
 awards.set_index("bgg_id", inplace=True)
-awards.drop(index=[203416, 203417], inplace=True)  # Just one Exit game
+# Just one Exit and Sherlock game
+awards.drop(
+    index=[203416, 203417, 247436, 250779],
+    inplace=True,
+)
 awards.shape
 
 # %%

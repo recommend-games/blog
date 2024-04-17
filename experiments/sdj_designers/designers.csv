@@ -1,16 +1,16 @@
 ,designer,winner,winner,winner,winner,nominated,nominated,nominated,nominated,recommended,recommended,recommended,recommended,all
 award,name,kenner,kinder,spiel,total,kenner,kinder,spiel,total,kenner,kinder,spiel,total,total
 designer,,,,,,,,,,,,,,
-7,Wolfgang Kramer,0,1,5,6,1,2,4,7,0,3,12,15,28
+7,Wolfgang Kramer,0,1,4,5,1,2,4,7,0,3,13,16,28
 11,Klaus Teuber,0,0,4,4,0,1,0,1,0,1,3,4,9
 42,Michael Kiesling,0,0,3,3,2,0,3,5,0,0,4,4,12
 6940,Inka Brand,2,1,0,3,0,2,0,2,0,0,2,2,7
 6941,Markus Brand,2,1,0,3,0,2,0,2,0,0,2,2,7
-24,Alex Randolph,0,2,1,3,0,1,0,1,0,0,11,11,15
 2,Reiner Knizia,0,1,1,2,0,4,6,10,1,5,17,23,35
 256,Heinz Meister,0,2,0,2,0,3,1,4,0,5,2,7,13
 9,Alan R. Moon,0,0,2,2,0,0,2,2,0,0,5,5,9
 500,Manfred Ludwig,0,2,0,2,0,2,0,2,0,1,1,2,6
+24,Alex Randolph,0,2,0,2,0,1,0,1,0,0,12,12,15
 9714,Antoine Bauza,1,0,1,2,0,1,0,1,1,0,2,3,6
 117,Andreas Seyfarth,0,0,2,2,0,0,1,1,0,0,1,1,4
 267,Klaus Zoch,0,2,0,2,0,0,1,1,0,0,1,1,4
@@ -32,7 +32,6 @@ designer,,,,,,,,,,,,,,
 11825,Michael Menzel,1,0,0,1,0,0,1,1,0,0,0,0,2
 111626,Urtis Šulinskas,0,1,0,1,0,1,0,1,0,0,0,0,2
 86,Michael Schacht,0,0,1,1,0,0,0,0,0,1,8,9,10
-4,Sid Sackson,0,0,1,1,0,0,0,0,0,0,7,7,8
 154,Rudi Hoffmann,0,0,1,1,0,0,0,0,0,0,6,6,7
 173,Günter Burkhardt,0,1,0,1,0,0,0,0,0,1,5,6,7
 3,(Uncredited),0,1,0,1,0,0,0,0,0,4,2,6,7
@@ -55,8 +54,6 @@ designer,,,,,,,,,,,,,,
 130,Werner Hodel,0,0,1,1,0,0,0,0,0,0,0,0,1
 166,David Parlett,0,0,1,1,0,0,0,0,0,0,0,0,1
 210,Rob Bontenbal,0,0,1,1,0,0,0,0,0,0,0,0,1
-250,David G. Watts,0,0,1,1,0,0,0,0,0,0,0,0,1
-432,Michel Matschoss,0,0,1,1,0,0,0,0,0,0,0,0,1
 634,Ephraim Hertzano,0,0,1,1,0,0,0,0,0,0,0,0,1
 1056,Bill Payne,0,0,1,1,0,0,0,0,0,0,0,0,1
 1219,Gary Grady,0,0,1,1,0,0,0,0,0,0,0,0,1
@@ -206,6 +203,7 @@ designer,,,,,,,,,,,,,,
 80521,Daniel Skjold Pedersen,0,0,0,0,0,1,0,1,0,0,0,0,1
 106414,Michael Kallauch,0,0,0,0,0,1,0,1,0,0,0,0,1
 113106,Sara Zarian,0,0,0,0,0,1,0,1,0,0,0,0,1
+4,Sid Sackson,0,0,0,0,0,0,0,0,0,0,8,8,8
 244,Kris Burm,0,0,0,0,0,0,0,0,0,0,6,6,6
 94,Reinhold Wittig,0,0,0,0,0,0,0,0,0,1,5,6,6
 1210,Haim Shafir,0,0,0,0,0,0,0,0,0,6,0,6,6
@@ -217,9 +215,6 @@ designer,,,,,,,,,,,,,,
 491,Gunter Baars,0,0,0,0,0,0,0,0,0,4,0,4,4
 104,Eric Solomon,0,0,0,0,0,0,0,0,0,0,3,3,3
 233,Johann Rüttinger,0,0,0,0,0,0,0,0,0,0,3,3,3
-69099,Francisco Gallego Arredondo,0,0,0,0,0,0,0,0,0,0,3,3,3
-108574,Josep Izquierdo Sánchez,0,0,0,0,0,0,0,0,0,0,3,3,3
-108743,Martí Lucas Feliu,0,0,0,0,0,0,0,0,0,0,3,3,3
 4307,Uwe Rapp,0,0,0,0,0,0,0,0,0,1,2,3,3
 4308,Bernhard Lach,0,0,0,0,0,0,0,0,0,1,2,3,3
 4337,Ludovic Maublanc,0,0,0,0,0,0,0,0,0,1,2,3,3
@@ -288,6 +283,7 @@ designer,,,,,,,,,,,,,,
 218,Frederick A. Herschler,0,0,0,0,0,0,0,0,0,0,1,1,1
 219,Philippe des Pallières,0,0,0,0,0,0,0,0,0,0,1,1,1
 245,Ron Dubren,0,0,0,0,0,0,0,0,0,0,1,1,1
+250,David G. Watts,0,0,0,0,0,0,0,0,0,0,1,1,1
 264,Gerd Fenchel,0,0,0,0,0,0,0,0,0,0,1,1,1
 287,Michael Gray,0,0,0,0,0,0,0,0,0,0,1,1,1
 295,Serge Laget,0,0,0,0,0,0,0,0,0,0,1,1,1
@@ -299,6 +295,7 @@ designer,,,,,,,,,,,,,,
 397,Richard K Morgan,0,0,0,0,0,0,0,0,0,0,1,1,1
 425,Werner Falkhof,0,0,0,0,0,0,0,0,0,0,1,1,1
 430,Herbert Schützdeller,0,0,0,0,0,0,0,0,0,0,1,1,1
+432,Michel Matschoss,0,0,0,0,0,0,0,0,0,0,1,1,1
 455,Hagen Dorgathen,0,0,0,0,0,0,0,0,0,0,1,1,1
 488,H. Jean Vanaise,0,0,0,0,0,0,0,0,0,0,1,1,1
 511,Kurt Feyerabend,0,0,0,0,0,0,0,0,0,0,1,1,1
@@ -402,6 +399,7 @@ designer,,,,,,,,,,,,,,
 60012,Patrick Zuidhof,0,0,0,0,0,0,0,0,0,0,1,1,1
 61330,Emerson Matsuuchi,0,0,0,0,0,0,0,0,0,0,1,1,1
 67071,David Thompson (I),0,0,0,0,0,0,0,0,0,0,1,1,1
+69099,Francisco Gallego Arredondo,0,0,0,0,0,0,0,0,0,0,1,1,1
 69462,Akihisa Okui,0,0,0,0,0,0,0,0,0,0,1,1,1
 72460,Justin Kemppainen,0,0,0,0,0,0,0,0,0,0,1,1,1
 74723,Robert Witter,0,0,0,0,0,0,0,0,0,0,1,1,1
@@ -415,6 +413,8 @@ designer,,,,,,,,,,,,,,
 85851,Connor Reid,0,0,0,0,0,0,0,0,0,0,1,1,1
 90042,Daniel Fehr,0,0,0,0,0,0,0,0,0,0,1,1,1
 108002,Dave Neale,0,0,0,0,0,0,0,0,0,0,1,1,1
+108574,Josep Izquierdo Sánchez,0,0,0,0,0,0,0,0,0,0,1,1,1
+108743,Martí Lucas Feliu,0,0,0,0,0,0,0,0,0,0,1,1,1
 111158,Dr. Hans Joachim Höh,0,0,0,0,0,0,0,0,0,0,1,1,1
 111159,Christof Schilling,0,0,0,0,0,0,0,0,0,0,1,1,1
 111439,Győri Zoltán Gábor,0,0,0,0,0,0,0,0,0,0,1,1,1
