@@ -172,11 +172,15 @@ counts.shape
 counts.to_csv("designers.csv", float_format="%d")
 
 # %%
+criterion = (counts["all", "total"] >= 3) | (
+    (counts["winner", "total"] + counts["nominated", "total"]) >= 2
+)
+criterion.sum()
+
+# %%
 print("| Designer | Spiel | Kennerspiel | Kinderspiel |")
 print("|:---------|:-----:|:-----------:|:-----------:|")
-for bgg_id, row in counts[
-    (counts["winner", "total"] > 0) | (counts["all", "total"] > 1)
-].iterrows():
+for bgg_id, row in counts[criterion].iterrows():
     cells = [
         "",
         f" [{row[('designer', 'name')]}](https://recommend.games/#/?designer={bgg_id:.0f}) ",
