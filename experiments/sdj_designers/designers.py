@@ -192,33 +192,39 @@ counts.head(10)
 # %%
 counts.to_csv("designers.csv", float_format="%d")
 
-# %%
-criterion = (counts["all", "total"] >= 3) | (
-    (
-        counts["winner", "total"]
-        + counts["sonderpreis", "total"]
-        + counts["nominated", "total"]
-    )
-    >= 2
-)
-criterion.sum()
 
 # %%
-print("| Designer | Spiel | Kennerspiel | Kinderspiel |")
-print("|:---------|:-----:|:-----------:|:-----------:|")
-for bgg_id, row in counts[criterion].iterrows():
-    cells = [
-        "",
-        f" [{row[('designer', 'name')]}](https://recommend.games/#/?designer={bgg_id:.0f}) ",
-    ]
-    for award in ("spiel", "kenner", "kinder"):
-        winner = row[("winner", award)]
-        sonderpreis = row[("sonderpreis", award)]
-        sonderpreis_str = f" ({sonderpreis:.0f})" if sonderpreis > 0 else ""
-        nominated = row[("nominated", award)]
-        recommended = row[("recommended", award)]
-        cells.append(
-            f" {winner:.0f}{sonderpreis_str} / {nominated:.0f} / {recommended:.0f} "
+def designer_table(counts):
+    criterion = (counts["all", "total"] >= 3) | (
+        (
+            counts["winner", "total"]
+            + counts["sonderpreis", "total"]
+            + counts["nominated", "total"]
         )
-    cells.append("")
-    print("|".join(cells))
+        >= 2
+    )
+    result = "| Designer | Spiel | Kennerspiel | Kinderspiel |\n"
+    result += "|:---------|:-----:|:-----------:|:-----------:|\n"
+    for bgg_id, row in counts[criterion].iterrows():
+        cells = [
+            "",
+            f" [{row[('designer', 'name')]}](https://recommend.games/#/?designer={bgg_id:.0f}) ",
+        ]
+        for award in ("spiel", "kenner", "kinder"):
+            winner = row[("winner", award)]
+            sonderpreis = row[("sonderpreis", award)]
+            sonderpreis_str = f" ({sonderpreis:.0f})" if sonderpreis > 0 else ""
+            nominated = row[("nominated", award)]
+            recommended = row[("recommended", award)]
+            cells.append(
+                f" {winner:.0f}{sonderpreis_str} / {nominated:.0f} / {recommended:.0f} "
+            )
+        cells.append("")
+        result += "|".join(cells)
+        result += "\n"
+    return result
+
+
+# %%
+with open("table.md", "w") as f:
+    f.write(designer_table(counts))
