@@ -166,7 +166,7 @@ counts.sort_values(
     inplace=True,
 )
 # TODO add highest rated game as final (?) tie breaker
-counts
+counts.shape
 
 # %%
 counts.to_csv("designers.csv", float_format="%d")
@@ -174,7 +174,9 @@ counts.to_csv("designers.csv", float_format="%d")
 # %%
 print("| Designer | Spiel | Kennerspiel | Kinderspiel |")
 print("|:---------|:-----:|:-----------:|:-----------:|")
-for bgg_id, row in counts.iterrows():
+for bgg_id, row in counts[
+    (counts["winner", "total"] > 0) | (counts["all", "total"] > 1)
+].iterrows():
     cells = [
         "",
         f" [{row[('designer', 'name')]}](https://recommend.games/#/?designer={bgg_id:.0f}) ",
