@@ -22,6 +22,7 @@ import umap
 from bokeh.embed import json_item
 from bokeh.io import output_notebook
 from bokeh.plotting import show
+from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import CountVectorizer  # TfidfVectorizer
 from sklearn.manifold import TSNE
 from board_game_map.data import process_game_data
@@ -143,3 +144,25 @@ show(plot_umap)
 # %%
 with (plot_dir / "umap.json").open("w") as f:
     json.dump(json_item(plot_umap), f, indent=4)
+
+# %% [markdown]
+# ### PCA
+
+# %%
+pca_embedding = PCA(n_components=2)
+
+# %%
+mechanics_pca_embedded = pca_embedding.fit_transform(mechanics.toarray())
+mechanics_pca_embedded.shape
+
+# %%
+plot_pca = plot_embedding(
+    data=games_data,
+    latent_vectors=mechanics_pca_embedded,
+    title="PCA",
+)
+show(plot_pca)
+
+# %%
+with (plot_dir / "pca.json").open("w") as f:
+    json.dump(json_item(plot_pca), f, indent=4)
