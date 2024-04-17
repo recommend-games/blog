@@ -62,7 +62,8 @@ kindersdj = pd.read_csv(
 kindersdj["award"] = "kinder"
 
 awards = pd.concat((sdj, kennersdj, kindersdj))
-awards.drop_duplicates("bgg_id", inplace=True)  # TODO handle dupes better
+# TODO handle dupes better
+awards.drop_duplicates("bgg_id", inplace=True)
 awards.set_index("bgg_id", inplace=True)
 # Just one Exit and Sherlock game
 awards.drop(
@@ -109,6 +110,7 @@ recommended_mask = ~winner_mask & ~nominated_mask & data["recommended"]
 winner = data[winner_mask]
 nominated = data[nominated_mask]
 recommended = data[recommended_mask]
+# TODO add special awards
 winner.shape, nominated.shape, recommended.shape
 
 
