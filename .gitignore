@@ -126,7 +126,14 @@ sitepackages/
 # MyPy
 .mypy*
 
+# Hugo
+.hugo_build.lock
+
 # others
 .~*
 *.bk
+*.feather
 *.ipynb
+*.joblib
+*.parquet
+*.pickle
