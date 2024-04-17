@@ -6,30 +6,29 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.6.0
+#       jupytext_version: 1.16.1
 #   kernelspec:
-#     display_name: Python 3
+#     display_name: Python 3 (ipykernel)
 #     language: python
 #     name: python3
 # ---
 
 # %%
 import json
-
 from datetime import date
 from pathlib import Path
 
+import jupyter_black
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
-
 from pytility import parse_date
+from tqdm import tqdm
+
+jupyter_black.load()
 
 SEED = 23
 
-# %matplotlib inline
-# %load_ext nb_black
-# %load_ext lab_black
 
 # %%
 def process_row(
@@ -54,7 +53,7 @@ def process_row(
 
 def df_from_jl(path):
     with open(path) as f:
-        records = filter(None, map(process_row, f))
+        records = filter(None, map(process_row, tqdm(f)))
         df = pd.DataFrame.from_records(records, index="item_id")
     df["year"] = df.updated_at.apply(lambda x: x[:4]).astype("int32")
     return df
@@ -94,16 +93,14 @@ eoy_adj
 # %%
 by_year[by_year.index < now.year].plot(style="k-", linewidth=3)
 plt.plot([now.year - 1, now.year], [by_year[now.year - 1], eoy_adj], "k:", linewidth=3)
-
-# %%
+plt.tight_layout()
 plt.savefig("ratings_by_year.svg")
+plt.show()
 
 # %%
-games = pd.read_csv(
-    path_games,
-    index_col="bgg_id",
-    dtype={"cooperative": bool, "compilation": bool},
-)
+games = pd.read_csv(path_games, index_col="bgg_id")
+games.compilation = games.compilation.notnull()
+games.cooperative = games.cooperative.notnull()
 games.shape
 
 # %%
