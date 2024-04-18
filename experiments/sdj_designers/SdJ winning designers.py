@@ -243,22 +243,24 @@ def designer_table(counts):
         )
         >= 2
     )
-    result = "| Designer | Spiel | Kennerspiel | Kinderspiel |\n"
-    result += "|:---------|:-----:|:-----------:|:-----------:|\n"
+    result = "| Rank | Designer | Spiel | Kennerspiel | Kinderspiel | Total |\n"
+    result += "|:----:|:---------|:-----:|:-----------:|:-----------:|:-----:|\n"
     for bgg_id, row in counts[criterion].iterrows():
         cells = [
             "",
-            f" [{row[('designer', 'name')]}](https://recommend.games/#/?designer={bgg_id:.0f}) ",
+            f" {row['all', 'rank']}. ",
+            f" [{row['designer', 'name']}](https://recommend.games/#/?designer={bgg_id:.0f}) ",
         ]
         for award in ("spiel", "kenner", "kinder"):
-            winner = row[("winner", award)]
-            sonderpreis = row[("sonderpreis", award)]
+            winner = row["winner", award]
+            sonderpreis = row["sonderpreis", award]
             sonderpreis_str = f" ({sonderpreis:.0f})" if sonderpreis > 0 else ""
-            nominated = row[("nominated", award)]
-            recommended = row[("recommended", award)]
+            nominated = row["nominated", award]
+            recommended = row["recommended", award]
             cells.append(
                 f" {winner:.0f}{sonderpreis_str} / {nominated:.0f} / {recommended:.0f} "
             )
+        cells.append(f" {row['all', 'total']} ")
         cells.append("")
         result += "|".join(cells)
         result += "\n"
