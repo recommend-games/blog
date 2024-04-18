@@ -7,6 +7,7 @@ authors = ["Markus Shepherd <markus@recommend.games>"]
 [tool.poetry.dependencies]
 python = "3.12.*"
 
+more-itertools = "*"
 pandas = "*"
 pytility = "*"
 tabulate = "*"
