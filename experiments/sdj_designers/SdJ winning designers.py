@@ -17,9 +17,9 @@
 # # Spiel des Jahres winning designers
 
 # %%
-from itertools import chain, combinations
 import jupyter_black
 import pandas as pd
+from more_itertools import powerset
 from pytility import arg_to_iter, clear_list, parse_int
 
 jupyter_black.load()
@@ -269,17 +269,8 @@ def designer_table(counts):
 with open("table.md", "w") as f:
     f.write(designer_table(counts))
 
-
 # %% [markdown]
 # ## More statistics
-
-# %%
-def powerset(iterable, min_length=0):
-    s = list(iterable)
-    return chain.from_iterable(
-        combinations(s, r) for r in range(min_length, len(s) + 1)
-    )
-
 
 # %%
 awards = ("spiel", "kenner", "kinder")
@@ -290,8 +281,11 @@ awards_full_names = dict(
     )
 )
 
-for award_set in powerset(awards, min_length=1):
+for award_set in powerset(awards):
     award_set = list(award_set)
+    if not award_set:
+        # skip empty set
+        continue
     award_data = counts.swaplevel(axis=1)[award_set]
     num_longlist = award_data.T.groupby(level=0).any().all().sum()
     num_shortlist = (
