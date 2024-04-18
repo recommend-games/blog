@@ -13,6 +13,9 @@
 #     name: python3
 # ---
 
+# %% [markdown]
+# # Spiel des Jahres winning designers
+
 # %%
 import jupyter_black
 import pandas as pd
@@ -25,6 +28,9 @@ SEED = 23
 pd.options.display.max_columns = 100
 pd.options.display.max_rows = 1000
 pd.options.display.float_format = "{:.6g}".format
+
+# %% [markdown]
+# ## Basic data
 
 # %%
 game_data = pd.read_csv(
@@ -79,15 +85,16 @@ awards.drop(
     index=[203416, 203417, 247436, 250779],
     inplace=True,
 )
+# TODO: Are there more entries we should deduplicate?
 awards.shape
 
 # %%
 games = game_data.join(awards)
 games.shape
 
-# %%
-games.sample(5, random_state=SEED).T
 
+# %% [markdown]
+# ## Counting awards
 
 # %%
 def parse_ids(value):
@@ -159,6 +166,7 @@ counts[("all", "total")] = (
     + counts[("recommended", "total")]
     + counts[("sonderpreis", "total")]
 )
+# TODO: Add rank
 counts.sort_values(
     [
         ("winner", "total"),
@@ -185,6 +193,9 @@ counts.sort_values(
 )
 counts.drop(columns=("all", "rating"), inplace=True)
 counts.shape
+
+# %% [markdown]
+# ## Overall results
 
 # %%
 counts.head(10)
