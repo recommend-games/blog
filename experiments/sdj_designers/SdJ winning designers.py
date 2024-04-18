@@ -148,10 +148,13 @@ def count_awards(data, label):
 
 
 # %%
+# Individual counts
 winner_count = count_awards(winner, "winner")
 nominated_count = count_awards(nominated, "nominated")
 recommended_count = count_awards(recommended, "recommended")
 sonderpreis_count = count_awards(sonderpreis, "sonderpreis")
+
+# Join the counts
 counts = (
     winner_count.join(nominated_count, how="outer")
     .join(recommended_count, how="outer")
@@ -159,13 +162,28 @@ counts = (
     .join(best_rating, how="left")
     .fillna(0)
 )
+
+# Bring index and dtypes in correct format
+counts.index = counts.index.astype("int64")
+counts.index.name = None
+count_columns = pd.MultiIndex.from_product(
+    [
+        ["winner", "sonderpreis", "nominated", "recommended"],
+        ["spiel", "kenner", "kinder", "total"],
+    ]
+)
+counts[count_columns] = counts[count_columns].astype("int16")
+
+# Add some more data
 counts.insert(0, ("designer", "name"), designers)
-counts[("all", "total")] = (
+counts["all", "total"] = (
     counts[("winner", "total")]
     + counts[("nominated", "total")]
     + counts[("recommended", "total")]
     + counts[("sonderpreis", "total")]
 )
+
+# Rank and sort
 counts["all", "rank"] = (
     counts[
         [
@@ -191,6 +209,7 @@ counts["all", "rank"] = (
     ]
     .apply(tuple, axis=1)
     .rank(method="min", ascending=False)
+    .astype("int16")
 )
 counts.sort_values(
     [
@@ -200,6 +219,8 @@ counts.sort_values(
     ascending=True,
     inplace=True,
 )
+
+# Done.
 counts.shape
 
 # %% [markdown]
@@ -209,8 +230,7 @@ counts.shape
 counts.head(10)
 
 # %%
-# TODO: best_rating needs a different float_format
-counts.to_csv("designers.csv", float_format="%d")
+counts.to_csv("designers.csv")
 
 
 # %%
