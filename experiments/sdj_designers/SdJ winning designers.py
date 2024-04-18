@@ -230,7 +230,7 @@ counts.shape
 counts.head(10)
 
 # %%
-counts.to_csv("designers.csv")
+counts.reset_index(col_level=1, names="bgg_id").to_csv("designers.csv", index=False)
 
 
 # %%
