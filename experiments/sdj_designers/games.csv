@@ -87,7 +87,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 432,Take 5,1994,spiel,False,False,True,,6.837,7
 433,Shark,1987,spiel,False,False,True,,5.93984,488
 436,Canyon,1997,spiel,False,False,True,,5.71151,218
-437,Master Labyrinth,1991,spiel,False,False,False,Beautiful Game,5.9327,217
+437,Master Labyrinth,1991,spiel,False,False,True,,5.9327,217
 438,Scotland Yard,1983,spiel,True,True,True,,6.35096,4088
 438,Scotland Yard,1983,spiel,True,True,True,,6.35096,5491
 438,Scotland Yard,1983,spiel,True,True,True,,6.35096,5495
@@ -101,8 +101,8 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 445,Die Osterinsel,1994,spiel,False,False,True,,5.52767,138
 445,Die Osterinsel,1994,spiel,False,False,True,,5.52767,24
 464,Billabong,1992,spiel,False,False,True,,5.9195,104
-466,Inkognito,1988,spiel,False,False,False,Beautiful Game,6.16439,138
-466,Inkognito,1988,spiel,False,False,False,Beautiful Game,6.16439,24
+466,Inkognito,1988,spiel,False,False,True,,6.16439,138
+466,Inkognito,1988,spiel,False,False,True,,6.16439,24
 475,Taj Mahal,2000,spiel,False,False,True,,6.88042,2
 478,Citadels,2000,spiel,False,True,True,,6.94743,125
 481,Carolus Magnus,2000,spiel,False,True,True,,6.34747,138
@@ -161,13 +161,13 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 986,Babel,2000,spiel,False,False,True,,6.25456,10
 988,Zapp Zerapp,2000,spiel,False,True,True,,5.61703,256
 988,Zapp Zerapp,2000,spiel,False,True,True,,5.61703,267
-1012,Die Magier,1985,spiel,False,False,False,Beautiful Game,5.51353,233
-1012,Die Magier,1985,spiel,False,False,False,Beautiful Game,5.51353,581
+1012,Die Magier,1985,spiel,False,False,True,,5.51353,233
+1012,Die Magier,1985,spiel,False,False,True,,5.51353,581
 1041,San Marco,2001,spiel,False,False,True,,6.6397,9
 1041,San Marco,2001,spiel,False,False,True,,6.6397,235
 1045,Malawi,1986,spiel,False,False,True,,5.52441,1130
 1063,Schraumen,1992,spiel,False,False,True,,5.48856,172
-1071,Aztec,1995,spiel,False,False,False,Beautiful Game,5.53274,83
+1071,Aztec,1995,spiel,False,False,True,,5.53274,83
 1072,Wat'n dat!?,1996,spiel,False,False,True,,5.63861,2077
 1077,Baubylon,1981,spiel,False,False,True,,5.51666,94
 1082,Invers,1991,spiel,False,False,True,,5.52718,244
@@ -199,12 +199,12 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 1597,Streetcar,1995,spiel,False,False,True,,5.92214,13
 1702,Klondike,1993,kinder,True,True,True,,5.63641,579
 1702,Klondike,1993,kinder,True,True,True,,5.63641,580
-1703,Kula Kula,1991,spiel,False,False,False,Beautiful Game,5.48516,94
+1703,Kula Kula,1991,spiel,False,False,True,,5.48516,94
 1733,Iago,1984,spiel,False,False,True,,,24
 1753,Im Märchenwald,2000,kinder,False,True,True,,5.51828,748
 1806,The Piggyback Brigade,2001,kinder,False,True,True,,5.59447,24
 1816,Mississippi,1987,spiel,False,False,True,,5.52866,365
-1910,Venice Connection,1988,spiel,False,False,False,Beautiful Game,5.587,24
+1910,Venice Connection,1988,spiel,False,False,True,,5.587,24
 1992,Stop Thief,1979,spiel,False,False,True,,5.75082,8795
 1998,Tutankhamen's Revenge,1990,spiel,False,False,True,,5.49428,579
 1998,Tutankhamen's Revenge,1990,spiel,False,False,True,,5.49428,580
@@ -216,14 +216,14 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 2197,Kensington,1979,spiel,False,False,True,,5.46304,912
 2197,Kensington,1979,spiel,False,False,True,,5.46304,911
 2226,Greyhounds,1985,spiel,False,False,True,,5.55543,928
-2229,Spiel,1980,spiel,False,False,False,Beautiful Game,5.55915,94
+2229,Spiel,1980,spiel,False,False,True,,5.55915,94
 2290,Good & Bad Ghosts,1980,spiel,False,False,True,,5.86927,24
 2346,DVONN,2001,spiel,False,False,True,,6.87348,244
-2363,Orient Express,1985,spiel,False,False,False,Beautiful Game,5.78734,3548
-2363,Orient Express,1985,spiel,False,False,False,Beautiful Game,5.78734,3082
+2363,Orient Express,1985,spiel,False,False,True,,5.78734,3548
+2363,Orient Express,1985,spiel,False,False,True,,5.78734,3082
 2453,Blokus,2000,spiel,False,False,True,,6.71761,1001
 2473,Winkeladvokat,1986,spiel,False,False,True,,5.50866,365
-2492,Doctor Faust,1990,spiel,False,False,False,Beautiful Game,5.49368,94
+2492,Doctor Faust,1990,spiel,False,False,True,,5.49368,94
 2511,Sherlock Holmes Consulting Detective: The Thames Murders & Other Cases,1982,spiel,True,True,True,,7.4123,1221
 2511,Sherlock Holmes Consulting Detective: The Thames Murders & Other Cases,1982,spiel,True,True,True,,7.4123,1220
 2511,Sherlock Holmes Consulting Detective: The Thames Murders & Other Cases,1982,spiel,True,True,True,,7.4123,1219
@@ -284,20 +284,20 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 5825,Paris Paris,2003,spiel,False,False,True,,5.75493,86
 5886,Die Dracheninsel,2003,spiel,False,True,True,,5.49395,316
 5953,Karambolage,1995,kinder,True,True,True,,5.55134,256
-5986,Ra: Strategy Among Hexagons,1981,spiel,False,False,False,Beautiful Game,,839
+5986,Ra: Strategy Among Hexagons,1981,spiel,False,False,True,,,839
 6249,Alhambra,2003,spiel,True,True,True,,6.91012,60
-6383,Life Style,1989,spiel,False,False,False,Beautiful Game,5.49944,782
-6383,Life Style,1989,spiel,False,False,False,Beautiful Game,5.49944,783
+6383,Life Style,1989,spiel,False,False,True,,5.49944,782
+6383,Life Style,1989,spiel,False,False,True,,5.49944,783
 6411,Blokus 3D,2003,spiel,False,False,True,,6.34851,2286
 6508,Tom Tube,2003,spiel,False,False,True,,5.64311,2327
 6508,Tom Tube,2003,spiel,False,False,True,,5.64311,2328
 6657,Such a Thing?,1989,spiel,False,False,True,,5.67962,172
-6874,Müller & Sohn,1985,spiel,False,False,False,Beautiful Game,5.49121,94
+6874,Müller & Sohn,1985,spiel,False,False,True,,5.49121,94
 7065,Pusher,1993,spiel,False,False,True,,5.52576,425
 7067,Schloss Schlotterstein,2003,kinder,False,False,True,,5.52829,645
 7067,Schloss Schlotterstein,2003,kinder,False,False,True,,5.52829,748
 7338,Epaminondas,1975,spiel,False,False,True,,5.60645,221
-7377,Tri-Ba-Lance,1995,spiel,False,False,False,Beautiful Game,5.54157,1336
+7377,Tri-Ba-Lance,1995,spiel,False,False,True,,5.54157,1336
 7483,Schatz der Drachen,2003,kinder,False,True,True,,5.64145,2
 7578,Word-Whiz,1996,spiel,False,False,True,,5.52654,816
 7717,Carcassonne: The Castle,2003,spiel,False,False,True,,6.75788,2
@@ -349,7 +349,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 11084,Jumbo & Co,2004,spiel,False,False,True,,5.52565,1429
 11231,Snorta!,2004,kinder,False,False,True,,5.73879,4369
 11231,Snorta!,2004,kinder,False,False,True,,5.73879,4368
-11421,Uisge,1983,spiel,False,False,False,Beautiful Game,5.51466,365
+11421,Uisge,1983,spiel,False,False,True,,5.51466,365
 11778,Cat & Mouse,2001,kinder,False,False,True,,5.44019,3
 11797,Treasure Hunt,2003,kinder,False,True,True,,,816
 11797,Treasure Hunt,2003,kinder,False,True,True,,,817
@@ -409,16 +409,16 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 17724,Mister Zero,1985,spiel,False,False,True,,,5280
 17724,Mister Zero,1985,spiel,False,False,True,,,5281
 17784,Galaxis,1980,spiel,False,False,True,,,2819
-17785,Seti,1979,spiel,False,False,False,Beautiful Game,5.49458,855
-17785,Seti,1979,spiel,False,False,False,Beautiful Game,5.49458,275
+17785,Seti,1979,spiel,False,False,True,,5.49458,855
+17785,Seti,1979,spiel,False,False,True,,5.49458,275
 17786,Wendo,1977,spiel,False,False,True,,,3
 17788,Cash & Carry,1979,spiel,False,False,True,,,5307
 17794,Quibbix,1980,spiel,False,False,True,,,377
 17813,Vokabo,1982,spiel,False,False,True,,,233
 17814,Fang mich! ... wenn du kannst,1982,spiel,False,False,True,,,2684
-17815,Skript,1982,spiel,False,False,False,Beautiful Game,,159
+17815,Skript,1982,spiel,False,False,True,,,159
 17903,"Fuzzi, Heinz und Schlendrian",1983,spiel,False,False,True,,,500
-17904,Wir füttern die kleinen Nilpferde,1983,spiel,False,False,False,Beautiful Game,,94
+17904,Wir füttern die kleinen Nilpferde,1983,spiel,False,False,True,,,94
 17905,Feuerwehr,1984,spiel,False,False,True,,,5340
 18052,Pin,1985,spiel,False,False,True,,,2141
 18602,Caylus,2005,spiel,False,False,False,Complex Game,7.52316,5629
@@ -438,7 +438,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 20549,"Ene Mene Muh, gib mir deine Kuh!",2005,kinder,False,False,True,,,7
 20549,"Ene Mene Muh, gib mir deine Kuh!",2005,kinder,False,False,True,,,275
 20622,Mit Felix um die Welt,2005,kinder,False,False,True,,,645
-20685,Henne Berta,1988,spiel,False,False,False,Beautiful Game,,1391
+20685,Henne Berta,1988,spiel,False,False,True,,,1391
 20761,Ausgerechnet Buxtehude,2005,spiel,False,False,True,,5.60649,4308
 20761,Ausgerechnet Buxtehude,2005,spiel,False,False,True,,5.60649,4307
 20834,Husarengolf,1997,spiel,False,False,False,Dexterity Game,5.53102,301

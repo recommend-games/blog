@@ -86,6 +86,11 @@ awards.drop(
     index=[203416, 203417, 247436, 250779],
     inplace=True,
 )
+# The early "Beautiful Game" special awards clutter the results
+awards.loc[
+    awards["sonderpreis"] == "Beautiful Game",
+    ["recommended", "sonderpreis"],
+] = (True, "")
 awards.shape
 
 # %%
@@ -367,4 +372,5 @@ for title, count_list in count_lists.items():
             print(
                 f"- {count} designer{'' if count == 1 else 's'} appear in {'all' if num == 3 else 'at least'} {num} categor{'y' if num == 1 else 'ies'}"
             )
+    print()
     print()

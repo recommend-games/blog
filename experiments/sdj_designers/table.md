@@ -2,10 +2,10 @@
 |:---------|:-----:|:-----------:|:-----------:|:-----:|
 | [Wolfgang Kramer](https://recommend.games/#/?designer=7) | 5 / 4 / 12 | 0 / 1 / 0 | 1 / 2 / 3 | 28 |
 | [Klaus Teuber](https://recommend.games/#/?designer=11) | 4 / 0 / 3 | 0 / 0 / 0 | 0 / 1 / 1 | 9 |
-| [Alex Randolph](https://recommend.games/#/?designer=24) | 1 (2) / 0 / 11 | 0 / 0 / 0 | 2 / 1 / 0 | 17 |
 | [Michael Kiesling](https://recommend.games/#/?designer=42) | 3 / 3 / 4 | 0 / 2 / 0 | 0 / 0 / 0 | 12 |
 | [Inka Brand](https://recommend.games/#/?designer=6940) | 0 / 0 / 2 | 2 / 0 / 0 | 1 / 2 / 0 | 7 |
 | [Markus Brand](https://recommend.games/#/?designer=6941) | 0 / 0 / 2 | 2 / 0 / 0 | 1 / 2 / 0 | 7 |
+| [Alex Randolph](https://recommend.games/#/?designer=24) | 1 / 0 / 13 | 0 / 0 / 0 | 2 / 1 / 0 | 17 |
 | [Reiner Knizia](https://recommend.games/#/?designer=2) | 1 (1) / 6 / 17 | 0 / 0 / 1 | 1 / 4 / 5 | 36 |
 | [Marie Fort](https://recommend.games/#/?designer=79463) | 0 / 0 / 0 | 0 / 0 / 0 | 2 (1) / 1 / 0 | 4 |
 | [Wilfried Fort](https://recommend.games/#/?designer=79462) | 0 / 0 / 0 | 0 / 0 / 0 | 2 (1) / 1 / 0 | 4 |
@@ -22,7 +22,6 @@
 | [Peter-Paul Joopen](https://recommend.games/#/?designer=1783) | 0 / 0 / 0 | 0 / 0 / 0 | 2 / 0 / 1 | 3 |
 | [Donald X. Vaccarino](https://recommend.games/#/?designer=10525) | 2 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 | 2 |
 | [Vlaada Chvátil](https://recommend.games/#/?designer=789) | 1 (1) / 0 / 2 | 0 / 0 / 0 | 0 / 0 / 0 | 4 |
-| [Geni Wyss](https://recommend.games/#/?designer=1391) | 0 (1) / 0 / 0 | 0 / 0 / 0 | 1 / 0 / 0 | 2 |
 | [Rüdiger Dorn](https://recommend.games/#/?designer=381) | 0 / 5 / 3 | 1 / 0 / 0 | 0 / 1 / 0 | 10 |
 | [Wolfgang Warsch](https://recommend.games/#/?designer=80162) | 0 / 1 / 0 | 1 / 1 / 0 | 0 / 2 / 0 | 5 |
 | [Kai Haferkamp](https://recommend.games/#/?designer=645) | 0 / 0 / 0 | 0 / 0 / 0 | 1 / 3 / 9 | 13 |
@@ -44,17 +43,14 @@
 | [Michael Palm](https://recommend.games/#/?designer=461) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 2 | 3 |
 | [Thomas Sing](https://recommend.games/#/?designer=45563) | 0 / 0 / 2 | 1 / 0 / 0 | 0 / 0 / 0 | 3 |
 | [Virginia Charves](https://recommend.games/#/?designer=179) | 0 / 0 / 2 | 0 / 0 / 0 | 1 / 0 / 0 | 3 |
-| [Reinhold Wittig](https://recommend.games/#/?designer=94) | 0 (5) / 0 / 5 | 0 / 0 / 0 | 0 / 0 / 1 | 11 |
 | [Matt Leacock](https://recommend.games/#/?designer=378) | 0 / 3 / 0 | 0 (1) / 1 / 0 | 0 / 0 / 0 | 5 |
-| [Leo Colovini](https://recommend.games/#/?designer=138) | 0 (1) / 2 / 4 | 0 / 0 / 0 | 0 / 1 / 0 | 8 |
 | [Uwe Rosenberg](https://recommend.games/#/?designer=10) | 0 (1) / 1 / 4 | 0 / 0 / 2 | 0 / 0 / 0 | 8 |
 | [Michael Rieneck](https://recommend.games/#/?designer=142) | 0 (1) / 1 / 1 | 0 / 0 / 0 | 0 / 0 / 0 | 3 |
 | [Rob Daviau](https://recommend.games/#/?designer=442) | 0 / 0 / 0 | 0 (1) / 1 / 0 | 0 / 0 / 0 | 2 |
-| [Roland Siegers](https://recommend.games/#/?designer=365) | 0 (1) / 0 / 5 | 0 / 0 / 0 | 0 / 0 / 0 | 6 |
-| [Johann Rüttinger](https://recommend.games/#/?designer=233) | 0 (1) / 0 / 3 | 0 / 0 / 0 | 0 / 0 / 0 | 4 |
 | [Jürgen P. Grunau](https://recommend.games/#/?designer=272) | 0 / 2 / 0 | 0 / 0 / 0 | 0 / 3 / 0 | 5 |
 | [Stefan Dorra](https://recommend.games/#/?designer=13) | 0 / 2 / 6 | 0 / 0 / 0 | 0 / 1 / 1 | 10 |
 | [Stefan Feld](https://recommend.games/#/?designer=4958) | 0 / 0 / 5 | 0 / 3 / 1 | 0 / 0 / 0 | 9 |
+| [Leo Colovini](https://recommend.games/#/?designer=138) | 0 / 2 / 5 | 0 / 0 / 0 | 0 / 1 / 0 | 8 |
 | [Hans Raggan](https://recommend.games/#/?designer=2268) | 0 / 1 / 0 | 0 / 0 / 0 | 0 / 2 / 0 | 3 |
 | [Wolfgang Dirscherl](https://recommend.games/#/?designer=3990) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 2 / 4 | 6 |
 | [Ralf zur Linde](https://recommend.games/#/?designer=314) | 0 / 2 / 2 | 0 / 0 / 0 | 0 / 0 / 0 | 4 |
@@ -82,11 +78,14 @@
 | [Corentin Lebrat](https://recommend.games/#/?designer=60151) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 1 / 0 | 3 |
 | [Hajo Bücken](https://recommend.games/#/?designer=816) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 1 / 0 | 3 |
 | [Markus Nikisch](https://recommend.games/#/?designer=748) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 1 / 2 | 3 |
+| [Reinhold Wittig](https://recommend.games/#/?designer=94) | 0 / 0 / 10 | 0 / 0 / 0 | 0 / 0 / 1 | 11 |
 | [Kris Burm](https://recommend.games/#/?designer=244) | 0 / 0 / 6 | 0 / 0 / 0 | 0 / 0 / 0 | 6 |
+| [Roland Siegers](https://recommend.games/#/?designer=365) | 0 / 0 / 6 | 0 / 0 / 0 | 0 / 0 / 0 | 6 |
 | [Haim Shafir](https://recommend.games/#/?designer=1210) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 6 | 6 |
 | [Jacques Zeimet](https://recommend.games/#/?designer=144) | 0 / 0 / 5 | 0 / 0 / 0 | 0 / 0 / 0 | 5 |
 | [Marcel-André Casasola Merkle](https://recommend.games/#/?designer=59) | 0 / 0 / 4 | 0 / 0 / 0 | 0 / 0 / 0 | 4 |
 | [Urs Hostettler](https://recommend.games/#/?designer=172) | 0 / 0 / 4 | 0 / 0 / 0 | 0 / 0 / 0 | 4 |
+| [Johann Rüttinger](https://recommend.games/#/?designer=233) | 0 / 0 / 4 | 0 / 0 / 0 | 0 / 0 / 0 | 4 |
 | [Simone Luciani](https://recommend.games/#/?designer=35418) | 0 / 0 / 0 | 0 / 0 / 4 | 0 / 0 / 0 | 4 |
 | [Gunter Baars](https://recommend.games/#/?designer=491) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 4 | 4 |
 | [Eric Solomon](https://recommend.games/#/?designer=104) | 0 / 0 / 3 | 0 / 0 / 0 | 0 / 0 / 0 | 3 |
