@@ -19,13 +19,19 @@ tags:
 
 The first {{% sdj %}}red meeples{{% /sdj %}} were given out in 1979. Since 1989, the jury also awarded the {{% kindersdj / %}} for children's games, initially as an annual special award, and from 2001 as its own award with the {{% kindersdj %}}blue meeple{{% /kindersdj %}}. (In what follows I count those special awards as regular {{% kindersdj / %}} winners.) Finally, in 2011, the {{% kdj / %}} was introduced for (slightly) more complex games, again following a couple of special awards with a clearly similar intent, but less steady, so they just stand as special awards on their own in the statistics.
 
-Overall, the jury included 831 games on its various longlist across the three categories over its 45 year history, with (naturally) 45 {{% sdj / %}}, 35 {{% kindersdj / %}} and 13 {{% kdj / %}} winners. This is the overall number of games:
+Overall, the jury included 831 games on its various longlist across the three categories over its 45 year history, with (naturally) 45 {{% sdj / %}}, 35 {{% kindersdj / %}} and 13 {{% kdj / %}} winners.[^exit] This is the overall number of games:
 
 | Award | Winner | Nominated | Recommended | Special award |
 |:-----:|:------:|:---------:|:-----------:|:-------------:|
 | {{% sdj %}}Spiel{{% /sdj %}} | 45 | 109 | 482 | 11 |
 | {{% kdj %}}Kennerspiel{{% /kdj %}} | 13 | 39 | 76 | 2 |
 | {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} | 35 | 95 | 260 | 1 |
+
+A quick word about the data: As usual, I rely on BoardGameGeek (BGG) for data about the games and their designers. If a game is not in the database or if the designer entry is wrong, the statistics here will necessarily be wrong too. I've collected data about the different {{% sdj / %}} awards manually over the years, so that's another potential source of errors.
+
+The current format of having a longlist (which become the recommendations), out of which three games are selected for the shortlist (which are the nominated games), out of which one game will be given the award, has been in place since 2011 with the introduction of the {{% kdj / %}}. Formats have varied throughout the decades and I've tried to map them to the current situation as much as possible.
+
+I've already mentioned that the first 12 {{% kindersdj / %}} winners were really special awards. There was another special award given during the first 18 years between 1979 and 1997 for "beautiful games". It felt like those games clutter the statistics somewhat, so I treated them as recommendations rather than special award winners.
 
 
 ## Designers
@@ -215,3 +221,5 @@ Overall, the jury included 831 games on its various longlist across the three ca
 - How many different designers have won/nom/rec SdJ/KedJ/KidJ/any?
 - How many designers have won/nom/rec with more than one game?
 - How many designers have won/nom/rec in more than one category?
+
+[^exit]: Arguably, there's 15 {{% kdj / %}} winners: In 2017, the jury gave the award to the first three games in the Exit series. In all statistics, I only count them as a single entry. Similarly, in 2019, the first three entries of the Sherlock series got recommended, which I also count as just a single game.
