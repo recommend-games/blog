@@ -49,10 +49,10 @@ tags:
 | [Michael Menzel](https://recommend.games/#/?designer=11825) | 0 / 1 / 0 | 1 / 0 / 0 | 0 / 0 / 0 | 2 |
 | [Urtis Šulinskas](https://recommend.games/#/?designer=111626) | 0 / 0 / 0 | 0 / 0 / 0 | 1 / 1 / 0 | 2 |
 | [Michael Schacht](https://recommend.games/#/?designer=86) | 1 / 0 / 8 | 0 / 0 / 0 | 0 / 0 / 1 | 10 |
+| [(Uncredited)](https://recommend.games/#/?designer=3) | 0 / 0 / 2 | 0 / 0 / 0 | 1 / 0 / 6 | 9 |
 | [Sid Sackson](https://recommend.games/#/?designer=4) | 1 / 0 / 7 | 0 / 0 / 0 | 0 / 0 / 0 | 8 |
 | [Rudi Hoffmann](https://recommend.games/#/?designer=154) | 1 / 0 / 6 | 0 / 0 / 0 | 0 / 0 / 0 | 7 |
 | [Günter Burkhardt](https://recommend.games/#/?designer=173) | 0 / 0 / 5 | 0 / 0 / 0 | 1 / 0 / 1 | 7 |
-| [(Uncredited)](https://recommend.games/#/?designer=3) | 0 / 0 / 2 | 0 / 0 / 0 | 1 / 0 / 4 | 7 |
 | [Dirk Henn](https://recommend.games/#/?designer=60) | 1 / 0 / 5 | 0 / 0 / 0 | 0 / 0 / 0 | 6 |
 | [Klaus-Jürgen Wrede](https://recommend.games/#/?designer=398) | 1 / 0 / 3 | 0 / 0 / 0 | 0 / 0 / 0 | 4 |
 | [Guido Hoffmann](https://recommend.games/#/?designer=308) | 0 / 0 / 0 | 0 / 0 / 0 | 1 / 0 / 3 | 4 |

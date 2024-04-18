@@ -89,7 +89,7 @@ awards.drop(
 awards.shape
 
 # %%
-games = game_data.join(awards)
+games = game_data.join(awards, how="inner")
 games.shape
 
 
@@ -117,8 +117,13 @@ columns = [
     "sonderpreis",
     "bayes_rating",
 ]
-data = games[columns].dropna(subset=["award"]).join(designer_awards)
-data.shape
+data = games[columns].dropna(subset=["award"]).join(designer_awards).copy()
+data["designer"] = data["designer"].fillna(3).astype("int64")
+data["year"] = data["year"].fillna(0).astype("int64")
+data.shape, data.dtypes
+
+# %%
+data.to_csv("games.csv")
 
 # %%
 best_rating = data.groupby("designer").agg({"bayes_rating": "max"})
