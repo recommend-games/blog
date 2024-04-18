@@ -1,5 +1,6 @@
 ---
-title: The best board game designers of all times
+title: The best board game designers of all times – according to Spiel des Jahres
+subtitle: Who has won the most awards?
 slug: best-board-game-designers
 author: Markus Shepherd
 type: post
@@ -14,14 +15,17 @@ tags:
   - Germany
 ---
 
+{{% sdj %}}Spiel des Jahres 2024{{% /sdj %}} nominations are still a couple of months away (watch this space in June for our annual predictions), but I wanted to take this opportunity for a look back over the history of the award. Specifically, I wanted to see which designers have been most successful at the {{% sdj / %}}, {{% kdj / %}} and {{% kindersdj / %}} awards.
 
-## Games
+The first {{% sdj %}}red meeples{{% /sdj %}} were given out in 1979. Since 1989, the jury also awarded the {{% kindersdj / %}} for children's games, initially as an annual special award, and from 2001 as its own award with the {{% kindersdj %}}blue meeple{{% /kindersdj %}}. (In what follows I count those special awards as regular {{% kindersdj / %}} winners.) Finally, in 2011, the {{% kdj / %}} was introduced for (slightly) more complex games, again following a couple of special awards with a clearly similar intent, but less steady, so they just stand as special awards on their own in the statistics.
 
-| award   |   winner |   nominated |   recommended |   sonderpreis |
-|:--------|---------:|------------:|--------------:|--------------:|
-| kenner  |       13 |          39 |            76 |             2 |
-| kinder  |       35 |          95 |           260 |             1 |
-| spiel   |       45 |         109 |           482 |            11 |
+Overall, the jury included 831 games on its various longlist across the three categories over its 45 year history, with (naturally) 45 {{% sdj / %}}, 35 {{% kindersdj / %}} and 13 {{% kdj / %}} winners. This is the overall number of games:
+
+| Award | Winner | Nominated | Recommended | Special award |
+|:-----:|:------:|:---------:|:-----------:|:-------------:|
+| {{% sdj %}}Spiel{{% /sdj %}} | 45 | 109 | 482 | 11 |
+| {{% kdj %}}Kennerspiel{{% /kdj %}} | 13 | 39 | 76 | 2 |
+| {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} | 35 | 95 | 260 | 1 |
 
 
 ## Designers

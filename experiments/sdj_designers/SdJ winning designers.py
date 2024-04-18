@@ -51,19 +51,19 @@ designers.shape
 
 # %%
 sdj = pd.read_csv(
-    "../sdj.csv",
+    "sdj.csv",
     dtype={"winner": bool, "nominated": bool, "recommended": bool, "sonderpreis": str},
 )
 sdj["award"] = "spiel"
 
 kennersdj = pd.read_csv(
-    "../ksdj.csv",
+    "ksdj.csv",
     dtype={"winner": bool, "nominated": bool, "recommended": bool, "sonderpreis": str},
 )
 kennersdj["award"] = "kenner"
 
 kindersdj = pd.read_csv(
-    "../kindersdj.csv",
+    "kindersdj.csv",
     dtype={"winner": bool, "nominated": bool, "recommended": bool, "sonderpreis": str},
 )
 kindersdj["award"] = "kinder"
