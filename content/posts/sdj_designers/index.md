@@ -165,8 +165,32 @@ tags:
 - 0 different designers won the main award
 
 
+### Longlist
+
+- 9 designers appear in all 3 categories
+- 69 designers appear in at least 2 categories
+- 567 designers appear in at least 1 category
+
+### Shortlist
+
+- 4 designers appear in all 3 categories
+- 23 designers appear in at least 2 categories
+- 233 designers appear in at least 1 category
+
+### Winner (incl special award)
+
+- 9 designers appear in at least 2 categories
+- 128 designers appear in at least 1 category
+
+### Winner (main award)
+
+- 8 designers appear in at least 2 categories
+- 95 designers appear in at least 1 category
+
+
 ## Other questions
 
+- How many games on the respective lists?
 - How many different designers have won/nom/rec SdJ/KedJ/KidJ/any?
 - How many designers have won/nom/rec with more than one game?
 - How many designers have won/nom/rec in more than one category?

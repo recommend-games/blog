@@ -327,3 +327,44 @@ for award_set in powerset(awards):
     print(f"- {num_winner:d} different designers won the main award")
     print()
     print()
+
+# %%
+steps = ["winner", "sonderpreis", "nominated", "recommended"]
+cat_count_longlist = (
+    counts.drop(columns="total", level=1)[steps].T.groupby(level=1).any().sum()
+)
+cat_count_shortlist = (
+    counts.drop(columns="total", level=1)[steps[:3]].T.groupby(level=1).any().sum()
+)
+cat_count_winner_any = (
+    counts.drop(columns="total", level=1)[steps[:2]].T.groupby(level=1).any().sum()
+)
+cat_count_winner = (
+    counts.drop(columns="total", level=1)[steps[:1]].T.groupby(level=1).any().sum()
+)
+(
+    cat_count_longlist.shape,
+    cat_count_shortlist.shape,
+    cat_count_winner_any.shape,
+    cat_count_winner.shape,
+)
+
+# %%
+count_lists = {
+    "Longlist": cat_count_longlist,
+    "Shortlist": cat_count_shortlist,
+    "Winner (incl special award)": cat_count_winner_any,
+    "Winner (main award)": cat_count_winner,
+}
+
+for title, count_list in count_lists.items():
+    print(f"### {title}")
+    print()
+    for num, count in (
+        count_list.value_counts().sort_index(ascending=False).cumsum().items()
+    ):
+        if num > 0:
+            print(
+                f"- {count} designer{'' if count == 1 else 's'} appear in {'all' if num == 3 else 'at least'} {num} categor{'y' if num == 1 else 'ies'}"
+            )
+    print()
