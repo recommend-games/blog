@@ -315,9 +315,10 @@ for award_set in powerset(awards):
     print()
     print(f"- {num_longlist:d} different designers had a game on the longlist")
     print(f"- {num_shortlist:d} different designers had a game on the shortlist")
-    print(
-        f"- {num_winner_any:d} different designers won the award (incl special awards)"
-    )
+    if num_winner < num_winner_any:
+        print(
+            f"- {num_winner_any:d} different designers won the award (incl special awards)"
+        )
     print(f"- {num_winner:d} different designers won the main award")
     print()
     print()

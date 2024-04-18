@@ -140,7 +140,6 @@ tags:
 
 - 22 different designers had a game on the longlist
 - 9 different designers had a game on the shortlist
-- 1 different designers won the award (incl special awards)
 - 1 different designers won the main award
 
 
@@ -156,7 +155,6 @@ tags:
 
 - 9 different designers had a game on the longlist
 - 6 different designers had a game on the shortlist
-- 2 different designers won the award (incl special awards)
 - 2 different designers won the main award
 
 
@@ -164,7 +162,6 @@ tags:
 
 - 9 different designers had a game on the longlist
 - 4 different designers had a game on the shortlist
-- 0 different designers won the award (incl special awards)
 - 0 different designers won the main award
 
 
