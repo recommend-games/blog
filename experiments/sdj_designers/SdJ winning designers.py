@@ -243,12 +243,11 @@ def designer_table(counts):
         )
         >= 2
     )
-    result = "| Rank | Designer | Spiel | Kennerspiel | Kinderspiel | Total |\n"
-    result += "|:----:|:---------|:-----:|:-----------:|:-----------:|:-----:|\n"
+    result = "| Designer | Spiel | Kennerspiel | Kinderspiel | Total |\n"
+    result += "|:---------|:-----:|:-----------:|:-----------:|:-----:|\n"
     for bgg_id, row in counts[criterion].iterrows():
         cells = [
             "",
-            f" {row['all', 'rank']}. ",
             f" [{row['designer', 'name']}](https://recommend.games/#/?designer={bgg_id:.0f}) ",
         ]
         for award in ("spiel", "kenner", "kinder"):
