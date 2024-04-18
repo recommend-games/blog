@@ -94,6 +94,14 @@ awards.loc[
 awards.shape
 
 # %%
+games_summary = (
+    awards.assign(sonderpreis=awards["sonderpreis"].str.len() > 0)
+    .groupby("award")[["winner", "sonderpreis", "nominated", "recommended"]]
+    .sum()
+)
+print(games_summary.to_markdown())
+
+# %%
 games = game_data.join(awards, how="inner")
 games.shape
 
