@@ -267,3 +267,32 @@ def designer_table(counts):
 # %%
 with open("table.md", "w") as f:
     f.write(designer_table(counts))
+
+# %% [markdown]
+# ## More statistics
+
+# %%
+awards = ("spiel", "kenner", "kinder")
+awards_full_names = dict(
+    zip(
+        awards,
+        ("Spiel des Jahres", "Kennerspiel des Jahres", "Kinderspiel des Jahres"),
+    )
+)
+
+for award in awards:
+    award_data = counts.xs(key=award, level=1, axis=1)
+    num_longlist = award_data.any(axis=1).sum()
+    num_shortlist = award_data.drop(columns=["recommended"]).any(axis=1).sum()
+    num_winner_any = award_data[["winner", "sonderpreis"]].any(axis=1).sum()
+    num_winner = (award_data["winner"] > 0).sum()
+    print(f"### {awards_full_names[award]}")
+    print()
+    print(f"- {num_longlist:d} different designers had a game on the longlist")
+    print(f"- {num_shortlist:d} different designers had a game on the shortlist")
+    print(
+        f"- {num_winner_any:d} different designers won the award (incl special awards)"
+    )
+    print(f"- {num_winner:d} different designers won the main award")
+    print()
+    print()

@@ -112,6 +112,30 @@ tags:
 | [Uwe Rapp](https://recommend.games/#/?designer=4307) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 0 / 1 |
 
 
+### Spiel des Jahres
+
+- 343 different designers had a game on the longlist
+- 121 different designers had a game on the shortlist
+- 75 different designers won the award (incl special awards)
+- 48 different designers won the main award
+
+
+### Kennerspiel des Jahres
+
+- 95 different designers had a game on the longlist
+- 52 different designers had a game on the shortlist
+- 20 different designers won the award (incl special awards)
+- 14 different designers won the main award
+
+
+### Kinderspiel des Jahres
+
+- 207 different designers had a game on the longlist
+- 87 different designers had a game on the shortlist
+- 42 different designers won the award (incl special awards)
+- 41 different designers won the main award
+
+
 ## Other questions
 
 - How many different designers have won/nom/rec SdJ/KedJ/KidJ/any?
