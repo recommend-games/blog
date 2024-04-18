@@ -173,6 +173,9 @@ counts = (
     .fillna(0)
 )
 
+# "Uncredited" designs don't really make sense in our analysis
+counts.drop(index=3, inplace=True)
+
 # Bring index and dtypes in correct format
 counts.index = counts.index.astype("int64")
 counts.index.name = None

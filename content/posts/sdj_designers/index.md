@@ -48,7 +48,6 @@ tags:
 | [Michael Menzel](https://recommend.games/#/?designer=11825) | 0 / 1 / 0 | 1 / 0 / 0 | 0 / 0 / 0 | 2 |
 | [Urtis Šulinskas](https://recommend.games/#/?designer=111626) | 0 / 0 / 0 | 0 / 0 / 0 | 1 / 1 / 0 | 2 |
 | [Michael Schacht](https://recommend.games/#/?designer=86) | 1 / 0 / 8 | 0 / 0 / 0 | 0 / 0 / 1 | 10 |
-| [(Uncredited)](https://recommend.games/#/?designer=3) | 0 / 0 / 2 | 0 / 0 / 0 | 1 / 0 / 6 | 9 |
 | [Sid Sackson](https://recommend.games/#/?designer=4) | 1 / 0 / 7 | 0 / 0 / 0 | 0 / 0 / 0 | 8 |
 | [Rudi Hoffmann](https://recommend.games/#/?designer=154) | 1 / 0 / 6 | 0 / 0 / 0 | 0 / 0 / 0 | 7 |
 | [Günter Burkhardt](https://recommend.games/#/?designer=173) | 0 / 0 / 5 | 0 / 0 / 0 | 1 / 0 / 1 | 7 |
@@ -116,7 +115,7 @@ tags:
 
 ### Spiel des Jahres
 
-- 343 different designers had a game on the longlist
+- 342 different designers had a game on the longlist
 - 105 different designers had a game on the shortlist
 - 58 different designers won the award (incl special awards)
 - 48 different designers won the main award
@@ -132,10 +131,10 @@ tags:
 
 ### Kinderspiel des Jahres
 
-- 207 different designers had a game on the longlist
-- 87 different designers had a game on the shortlist
-- 42 different designers won the award (incl special awards)
-- 41 different designers won the main award
+- 206 different designers had a game on the longlist
+- 86 different designers had a game on the shortlist
+- 41 different designers won the award (incl special awards)
+- 40 different designers won the main award
 
 
 ### Spiel des Jahres & Kennerspiel des Jahres
@@ -147,7 +146,7 @@ tags:
 
 ### Spiel des Jahres & Kinderspiel des Jahres
 
-- 56 different designers had a game on the longlist
+- 55 different designers had a game on the longlist
 - 15 different designers had a game on the shortlist
 - 5 different designers won the main award
 
@@ -172,27 +171,27 @@ tags:
 ### Longlist
 
 - 9 designers appear in all 3 categories
-- 69 designers appear in at least 2 categories
-- 567 designers appear in at least 1 category
+- 68 designers appear in at least 2 categories
+- 566 designers appear in at least 1 category
 
 
 ### Shortlist
 
 - 4 designers appear in all 3 categories
 - 22 designers appear in at least 2 categories
-- 218 designers appear in at least 1 category
+- 217 designers appear in at least 1 category
 
 
 ### Winner (incl special award)
 
 - 8 designers appear in at least 2 categories
-- 112 designers appear in at least 1 category
+- 111 designers appear in at least 1 category
 
 
 ### Winner (main award)
 
 - 8 designers appear in at least 2 categories
-- 95 designers appear in at least 1 category
+- 94 designers appear in at least 1 category
 
 
 ## Other questions
