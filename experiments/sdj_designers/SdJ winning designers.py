@@ -17,6 +17,7 @@
 # # Spiel des Jahres winning designers
 
 # %%
+from itertools import chain, combinations
 import jupyter_black
 import pandas as pd
 from pytility import arg_to_iter, clear_list, parse_int
@@ -268,8 +269,17 @@ def designer_table(counts):
 with open("table.md", "w") as f:
     f.write(designer_table(counts))
 
+
 # %% [markdown]
 # ## More statistics
+
+# %%
+def powerset(iterable, min_length=0):
+    s = list(iterable)
+    return chain.from_iterable(
+        combinations(s, r) for r in range(min_length, len(s) + 1)
+    )
+
 
 # %%
 awards = ("spiel", "kenner", "kinder")
@@ -280,13 +290,33 @@ awards_full_names = dict(
     )
 )
 
-for award in awards:
-    award_data = counts.xs(key=award, level=1, axis=1)
-    num_longlist = award_data.any(axis=1).sum()
-    num_shortlist = award_data.drop(columns=["recommended"]).any(axis=1).sum()
-    num_winner_any = award_data[["winner", "sonderpreis"]].any(axis=1).sum()
-    num_winner = (award_data["winner"] > 0).sum()
-    print(f"### {awards_full_names[award]}")
+for award_set in powerset(awards, min_length=1):
+    award_set = list(award_set)
+    award_data = counts.swaplevel(axis=1)[award_set]
+    num_longlist = award_data.T.groupby(level=0).any().all().sum()
+    num_shortlist = (
+        award_data.drop(columns=["recommended"], level=1)
+        .T.groupby(level=0)
+        .any()
+        .all()
+        .sum()
+    )
+    num_winner_any = (
+        award_data.drop(columns=["recommended", "nominated"], level=1)
+        .T.groupby(level=0)
+        .any()
+        .all()
+        .sum()
+    )
+    num_winner = (
+        award_data.drop(columns=["recommended", "nominated", "sonderpreis"], level=1)
+        .T.groupby(level=0)
+        .any()
+        .all()
+        .sum()
+    )
+    headline = " & ".join(awards_full_names[award] for award in award_set)
+    print(f"### {headline}")
     print()
     print(f"- {num_longlist:d} different designers had a game on the longlist")
     print(f"- {num_shortlist:d} different designers had a game on the shortlist")
