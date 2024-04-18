@@ -14,6 +14,18 @@ tags:
   - Germany
 ---
 
+
+## Games
+
+| award   |   winner |   nominated |   recommended |   sonderpreis |
+|:--------|---------:|------------:|--------------:|--------------:|
+| kenner  |       13 |          39 |            76 |             2 |
+| kinder  |       35 |          95 |           260 |             1 |
+| spiel   |       45 |         109 |           482 |            11 |
+
+
+## Designers
+
 | Designer | Spiel | Kennerspiel | Kinderspiel | Total |
 |:---------|:-----:|:-----------:|:-----------:|:-----:|
 | [Wolfgang Kramer](https://recommend.games/#/?designer=7) | 5 / 4 / 12 | 0 / 1 / 0 | 1 / 2 / 3 | 28 |
@@ -196,7 +208,6 @@ tags:
 
 ## Other questions
 
-- How many games on the respective lists?
 - How many different designers have won/nom/rec SdJ/KedJ/KidJ/any?
 - How many designers have won/nom/rec with more than one game?
 - How many designers have won/nom/rec in more than one category?

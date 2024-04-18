@@ -96,7 +96,7 @@ awards.shape
 # %%
 games_summary = (
     awards.assign(sonderpreis=awards["sonderpreis"].str.len() > 0)
-    .groupby("award")[["winner", "sonderpreis", "nominated", "recommended"]]
+    .groupby("award")[["winner", "nominated", "recommended", "sonderpreis"]]
     .sum()
 )
 print(games_summary.to_markdown())
