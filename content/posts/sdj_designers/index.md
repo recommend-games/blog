@@ -17,7 +17,10 @@ tags:
 
 {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}} nominations are still a couple of months away (watch this space in June for our annual predictions), but I wanted to take this opportunity for a look back over the history of the award. Specifically, I wanted to see which designers have been most successful at the {{% sdj / %}}, {{% kdj / %}} and {{% kindersdj / %}} awards.
 
-The first {{% sdj %}}red meeples{{% /sdj %}} were given out in 1979. Since 1989, the jury also awarded the {{% kindersdj / %}} for children's games, initially as an annual special award, and from 2001 as its own award with the {{% kindersdj %}}blue meeple{{% /kindersdj %}}. (In what follows I count those special awards as regular {{% kindersdj / %}} winners.) Finally, in 2011, the {{% kdj / %}} was introduced for (slightly) more complex games, again following a couple of special awards with a clearly similar intent, but less steady, so they just stand as special awards on their own in the statistics.
+The first {{% sdj %}}red meeples{{% /sdj %}} were given out in 1979. Since 1989, the jury also awarded the {{% kindersdj / %}} for children's games, initially as an annual special award, and from 2001 as its own award with the {{% kindersdj %}}blue meeple{{% /kindersdj %}}. (In what follows I count those special awards as regular {{% kindersdj / %}} winners.) Finally, in 2011, the {{% kdj / %}} was introduced for (slightly) more complex games with an {{% kdj %}}anthracite meeple{{% /kdj %}}, again following a couple of special awards with a clearly similar intent, but less steady, so they just stand as special awards on their own in the statistics.
+
+
+## Games
 
 Overall, the jury included 831 games on its various longlist across the three categories over its 45 year history, with (naturally) 45 {{% sdj / %}}, 35 {{% kindersdj / %}} and 13 {{% kdj / %}} winners.[^exit] This is the overall number of games:
 
@@ -33,8 +36,14 @@ The current format of having a longlist (which become the recommendations), out 
 
 I've already mentioned that the first 12 {{% kindersdj / %}} winners were really special awards. There was another special award given during the first 18 years between 1979 and 1997 for "beautiful games". It felt like those games clutter the statistics somewhat, so I treated them as recommendations rather than special award winners.
 
+But this article was meant to be about neither games nor data, but the designers, so let's take a look at them.
+
 
 ## Designers
+
+Over the course of 45 sessions, the jury has mentioned games by 566 different designers. By far the most successful designer is [Wolfgang Kramer](https://recommend.games/#/?designer=7) who has won {{% sdj / %}} five times (four of those were co-designs) and {{% kindersdj / %}} once between 1986 and 2000. The record for most games on the longlists is held by [Reiner Knizia](https://recommend.games/#/?designer=2) with 36 games, which makes it even more surprising that he has "only" won two awards: one each of {{% sdj / %}} and {{% kindersdj / %}} – both in 2008.
+
+Overall, 94 designers have won at least one award (111 if we include special awards), with 21 of them winning more than one (22 including special awards). Only 8 of those have won their awards in more than one category and to this date, no designer has won in all three categories.
 
 | Designer | Spiel | Kennerspiel | Kinderspiel | Total |
 |:---------|:-----:|:-----------:|:-----------:|:-----:|
