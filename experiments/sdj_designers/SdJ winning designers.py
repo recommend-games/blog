@@ -122,7 +122,7 @@ data.shape
 
 # %%
 best_rating = data.groupby("designer").agg({"bayes_rating": "max"})
-best_rating.columns = pd.MultiIndex.from_arrays([["all"], ["rating"]])
+best_rating.columns = pd.MultiIndex.from_arrays([["all"], ["best_rating"]])
 best_rating.shape
 
 # %%
@@ -166,32 +166,40 @@ counts[("all", "total")] = (
     + counts[("recommended", "total")]
     + counts[("sonderpreis", "total")]
 )
-# TODO: Add rank
+counts["all", "rank"] = (
+    counts[
+        [
+            ("winner", "total"),
+            ("sonderpreis", "total"),
+            ("nominated", "total"),
+            ("recommended", "total"),
+            ("winner", "spiel"),
+            ("winner", "kenner"),
+            ("winner", "kinder"),
+            ("sonderpreis", "spiel"),
+            ("sonderpreis", "kenner"),
+            ("sonderpreis", "kinder"),
+            ("nominated", "spiel"),
+            ("nominated", "kenner"),
+            ("nominated", "kinder"),
+            ("recommended", "spiel"),
+            ("recommended", "kenner"),
+            ("recommended", "kinder"),
+            ("all", "total"),
+            ("all", "best_rating"),
+        ]
+    ]
+    .apply(tuple, axis=1)
+    .rank(method="min", ascending=False)
+)
 counts.sort_values(
     [
-        ("winner", "total"),
-        ("sonderpreis", "total"),
-        ("nominated", "total"),
-        ("recommended", "total"),
-        ("winner", "spiel"),
-        ("winner", "kenner"),
-        ("winner", "kinder"),
-        ("sonderpreis", "spiel"),
-        ("sonderpreis", "kenner"),
-        ("sonderpreis", "kinder"),
-        ("nominated", "spiel"),
-        ("nominated", "kenner"),
-        ("nominated", "kinder"),
-        ("recommended", "spiel"),
-        ("recommended", "kenner"),
-        ("recommended", "kinder"),
-        ("all", "total"),
-        ("all", "rating"),
+        ("all", "rank"),
+        ("designer", "name"),
     ],
-    ascending=False,
+    ascending=True,
     inplace=True,
 )
-counts.drop(columns=("all", "rating"), inplace=True)
 counts.shape
 
 # %% [markdown]
@@ -201,6 +209,7 @@ counts.shape
 counts.head(10)
 
 # %%
+# TODO: best_rating needs a different float_format
 counts.to_csv("designers.csv", float_format="%d")
 
 

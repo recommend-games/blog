@@ -7,8 +7,8 @@
 | [Inka Brand](https://recommend.games/#/?designer=6940) | 0 / 0 / 2 | 2 / 0 / 0 | 1 / 2 / 0 |
 | [Markus Brand](https://recommend.games/#/?designer=6941) | 0 / 0 / 2 | 2 / 0 / 0 | 1 / 2 / 0 |
 | [Reiner Knizia](https://recommend.games/#/?designer=2) | 1 (1) / 6 / 17 | 0 / 0 / 1 | 1 / 4 / 5 |
-| [Wilfried Fort](https://recommend.games/#/?designer=79462) | 0 / 0 / 0 | 0 / 0 / 0 | 2 (1) / 1 / 0 |
 | [Marie Fort](https://recommend.games/#/?designer=79463) | 0 / 0 / 0 | 0 / 0 / 0 | 2 (1) / 1 / 0 |
+| [Wilfried Fort](https://recommend.games/#/?designer=79462) | 0 / 0 / 0 | 0 / 0 / 0 | 2 (1) / 1 / 0 |
 | [Bruno Cathala](https://recommend.games/#/?designer=1727) | 1 (1) / 0 / 7 | 0 / 0 / 1 | 1 / 0 / 0 |
 | [Heinz Meister](https://recommend.games/#/?designer=256) | 0 / 1 / 2 | 0 / 0 / 0 | 2 / 3 / 5 |
 | [Alan R. Moon](https://recommend.games/#/?designer=9) | 2 / 2 / 5 | 0 / 0 / 0 | 0 / 0 / 0 |
@@ -40,8 +40,8 @@
 | [Dirk Henn](https://recommend.games/#/?designer=60) | 1 / 0 / 5 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Klaus-Jürgen Wrede](https://recommend.games/#/?designer=398) | 1 / 0 / 3 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Guido Hoffmann](https://recommend.games/#/?designer=308) | 0 / 0 / 0 | 0 / 0 / 0 | 1 / 0 / 3 |
-| [Michael Palm](https://recommend.games/#/?designer=461) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 2 |
 | [Lukas Zach](https://recommend.games/#/?designer=7808) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 2 |
+| [Michael Palm](https://recommend.games/#/?designer=461) | 1 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 2 |
 | [Thomas Sing](https://recommend.games/#/?designer=45563) | 0 / 0 / 2 | 1 / 0 / 0 | 0 / 0 / 0 |
 | [Virginia Charves](https://recommend.games/#/?designer=179) | 0 / 0 / 2 | 0 / 0 / 0 | 1 / 0 / 0 |
 | [Reinhold Wittig](https://recommend.games/#/?designer=94) | 0 (5) / 0 / 5 | 0 / 0 / 0 | 0 / 0 / 1 |
@@ -92,5 +92,5 @@
 | [Eric Solomon](https://recommend.games/#/?designer=104) | 0 / 0 / 3 | 0 / 0 / 0 | 0 / 0 / 0 |
 | [Théo Rivière](https://recommend.games/#/?designer=72628) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 0 / 1 |
 | [Ludovic Maublanc](https://recommend.games/#/?designer=4337) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 0 / 1 |
-| [Uwe Rapp](https://recommend.games/#/?designer=4307) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 0 / 1 |
 | [Bernhard Lach](https://recommend.games/#/?designer=4308) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 0 / 1 |
+| [Uwe Rapp](https://recommend.games/#/?designer=4307) | 0 / 0 / 2 | 0 / 0 / 0 | 0 / 0 / 1 |
