@@ -108,7 +108,7 @@ def parse_ids(value):
     return clear_list(map(parse_int, arg_to_iter(value)))
 
 
-designer_awards = games["designer"].apply(parse_ids).explode().dropna().astype(int)
+designer_awards = games["designer"].apply(parse_ids).explode().dropna().astype("int64")
 designer_awards.shape
 
 # %%
@@ -182,7 +182,7 @@ count_columns = pd.MultiIndex.from_product(
         ["spiel", "kenner", "kinder", "total"],
     ]
 )
-counts[count_columns] = counts[count_columns].astype("int16")
+counts[count_columns] = counts[count_columns].astype("int64")
 
 # Add some more data
 counts.insert(0, ("designer", "name"), designers)
@@ -219,7 +219,7 @@ counts["all", "rank"] = (
     ]
     .apply(tuple, axis=1)
     .rank(method="min", ascending=False)
-    .astype("int16")
+    .astype("int64")
 )
 counts.sort_values(
     [
