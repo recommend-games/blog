@@ -45,15 +45,15 @@ data.select(pl.n_unique("bgg_id", "bgg_user_name", "country")).collect()
 bayes = (
     data.with_columns(num_ratings_per_country=pl.len().over("country"))
     .filter(pl.col("num_ratings_per_country") >= 10_000)
-    .with_columns(num_dummies=pl.col("num_ratings_per_country") / 10_000)
-    .filter(
-        pl.len().over("country", "bgg_id")
-        >= pl.min_horizontal(3 * pl.col("num_dummies"), 30)
+    .with_columns(
+        num_dummies=pl.col("num_ratings_per_country") / 10_000,
+        num_ratings=pl.len().over("country", "bgg_id"),
     )
+    .filter(pl.col("num_ratings") >= pl.min_horizontal(3 * pl.col("num_dummies"), 30))
     .group_by("country", "bgg_id")
     .agg(
         pl.col("num_dummies").first(),
-        num_ratings=pl.len(),
+        pl.col("num_ratings").first(),
         avg_rating=pl.col("bgg_user_rating").mean(),
     )
     .with_columns(
