@@ -45,20 +45,33 @@ data.select(pl.n_unique("bgg_id", "bgg_user_name", "country")).collect()
 bayes = (
     data.with_columns(num_ratings_per_country=pl.len().over("country"))
     .filter(pl.col("num_ratings_per_country") >= 10_000)
-    .filter(pl.len().over("bgg_id") >= 30)
     .with_columns(num_dummies=pl.col("num_ratings_per_country") / 10_000)
+    .filter(
+        pl.len().over("country", "bgg_id")
+        >= pl.min_horizontal(3 * pl.col("num_dummies"), 30)
+    )
     .group_by("country", "bgg_id")
     .agg(
-        pl.col("num_ratings_per_country").first(),
+        pl.col("num_dummies").first(),
+        num_ratings=pl.len(),
+        avg_rating=pl.col("bgg_user_rating").mean(),
+    )
+    .with_columns(
         bayes_rating=(
-            pl.col("bgg_user_rating").sum() + pl.col("num_dummies").first() * 5.5
+            pl.col("avg_rating") * pl.col("num_ratings") + 5.5 * pl.col("num_dummies")
         )
-        / (pl.len() + pl.col("num_dummies").first()),
+        / (pl.col("num_ratings") + pl.col("num_dummies"))
     )
     .with_columns(
         rank=pl.col("bayes_rating").rank(method="min", descending=True).over("country")
     )
-    .sort("num_ratings_per_country", "country", "rank", descending=[True, False, False])
+    .sort(
+        "num_dummies",
+        "country",
+        "rank",
+        "bgg_id",
+        descending=[True, False, False, False],
+    )
     .collect()
 )
 bayes.shape
@@ -70,9 +83,17 @@ bayes.filter(pl.col("rank") == 1).head(10)
 bayes.filter(pl.col("rank") == 1)["bgg_id"].value_counts(sort=True).head(10)
 
 # %%
-bayes.group_by("country").agg(pl.col("num_ratings_per_country").first())[
-    "num_ratings_per_country"
-].sum()
+round(
+    bayes.group_by("country").agg(pl.col("num_dummies").first())["num_dummies"].sum()
+    * 10_000
+)
 
 # %%
-bayes.select("country", "rank", "bgg_id", "bayes_rating").write_csv("rankings.csv")
+bayes.select(
+    "country",
+    "rank",
+    "bgg_id",
+    "avg_rating",
+    "bayes_rating",
+    "num_ratings",
+).write_csv("rankings.csv", float_precision=5)
