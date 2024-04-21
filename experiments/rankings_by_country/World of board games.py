@@ -73,16 +73,17 @@ data.shape
 data.head(10)
 
 # %%
-response = requests.get(
-    "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson"
-)
+# url = "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson"
+# url = "https://raw.githubusercontent.com/simonepri/geo-maps/master/previews/countries-land.geo.json"
+url = "https://raw.githubusercontent.com/AshKyd/geojson-regions/main/public/countries/110m/all.geojson"
+response = requests.get(url)
 response.raise_for_status()
 geo_json = response.json()
 
 # %%
 for feature in geo_json["features"]:
     properties = feature["properties"]
-    country_code = properties["ISO_A2"].lower()
+    country_code = properties["ISO_A2_EH"].lower()
     try:
         row = data.row(by_predicate=pl.col("country_code") == country_code, named=True)
         properties.update(row)
@@ -99,7 +100,7 @@ view = CDSView(filter=~GroupFilter(column_name="ISO_A2", group="AQ"))
 plot = figure(
     title="World of board games",
     tooltips=[
-        ("Country", "@flag @ADMIN (@ISO_A2)"),
+        ("Country", "@flag @ADMIN (@ISO_A2_EH)"),
         ("#1 game", "@name (@year)"),
         ("Total ratings", "@total_ratings{0,0}k"),
     ],
