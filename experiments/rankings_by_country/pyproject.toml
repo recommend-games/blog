@@ -8,6 +8,8 @@ authors = ["Markus Shepherd <markus@recommend.games>"]
 python = "3.12.*"
 
 bokeh = "*"
+country-converter = "*"
+emoji-country-flag = "*"
 matplotlib = "*"
 numpy = "*"
 polars = {version = "*", extras = ["pandas"]}
