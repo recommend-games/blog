@@ -44,8 +44,17 @@ game_data = pl.scan_csv(DATA_DIR / "scraped" / "bgg_GameItem.csv").select(
 ranking_data = pl.scan_csv("rankings/*.csv")
 country_stats = (
     ranking_data.group_by("country_code")
-    .agg(num_games=pl.len(), total_ratings=pl.col("num_ratings").sum())
-    .with_columns(flag=pl.col("country_code").map_elements(get_flag_emoji))
+    .agg(
+        num_games=pl.len(),
+        total_ratings=pl.col("num_ratings").sum(),
+    )
+    .with_columns(
+        total_ratings=pl.col("total_ratings") // 1000,
+        flag=pl.col("country_code").map_elements(
+            get_flag_emoji,
+            return_dtype=pl.String,
+        ),
+    )
 )
 top_games = (
     ranking_data.sort("country_code", "rank")
@@ -76,10 +85,11 @@ for feature in geo_json["features"]:
     country_code = properties["ISO_A2"].lower()
     try:
         row = data.row(by_predicate=pl.col("country_code") == country_code, named=True)
+        properties.update(row)
     except pl.exceptions.NoRowsReturnedError:
         properties["flag"] = get_flag_emoji(properties["ISO_A2"])
-        continue
-    properties.update(row)
+        properties["name"] = "N/A"
+        properties["year"] = "N/A"
 
 # %%
 geo_source = GeoJSONDataSource(geojson=json.dumps(geo_json))
@@ -91,7 +101,7 @@ plot = figure(
     tooltips=[
         ("Country", "@flag @ADMIN (@ISO_A2)"),
         ("#1 game", "@name (@year)"),
-        ("Total ratings", "@total_ratings"),
+        ("Total ratings", "@total_ratings{0,0}k"),
     ],
     width=1000,
     height=500,
