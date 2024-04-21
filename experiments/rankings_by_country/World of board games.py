@@ -93,7 +93,8 @@ plot = figure(
         ("#1 game", "@name (@year)"),
         ("Total ratings", "@total_ratings"),
     ],
-    aspect_ratio=1.5,
+    width=1000,
+    height=500,
 )
 
 plot.patches(
