@@ -99,11 +99,15 @@ round(
 )
 
 # %%
-bayes.select(
+rankings_dir = PROJECT_DIR / "rankings"
+rankings_dir.mkdir(parents=True, exist_ok=True)
+partitions = bayes.select(
     "country_code",
     "rank",
     "bgg_id",
     "avg_rating",
     "bayes_rating",
     "num_ratings",
-).write_csv("rankings.csv", float_precision=5)
+).partition_by(["country_code"], maintain_order=True, include_key=False, as_dict=True)
+for (country_code,), group_data in partitions.items():
+    group_data.write_csv(rankings_dir / f"{country_code}.csv", float_precision=5)
