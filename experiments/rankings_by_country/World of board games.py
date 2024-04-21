@@ -19,6 +19,7 @@ from pathlib import Path
 import jupyter_black
 import polars as pl
 import requests
+from bokeh.embed import json_item
 from bokeh.io import output_notebook, show
 from bokeh.models import GeoJSONDataSource, GroupFilter, CDSView
 from bokeh.palettes import Plasma256
@@ -129,3 +130,9 @@ plot.axis.visible = False
 plot.grid.visible = False
 
 show(plot)
+
+# %%
+plot_dir = PROJECT_DIR / "plots"
+plot_dir.mkdir(parents=True, exist_ok=True)
+with (plot_dir / "board_games_world_map.json").open("w") as f:
+    json.dump(json_item(plot), f, indent=4)
