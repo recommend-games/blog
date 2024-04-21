@@ -17,6 +17,7 @@
 from pathlib import Path
 import jupyter_black
 import polars as pl
+from rankings_by_country.countries import get_country_code
 
 jupyter_black.load()
 
@@ -34,23 +35,28 @@ ratings = (
 users = (
     pl.scan_ndjson(DATA_DIR / "scraped" / "bgg_UserItem.jl")
     .select("bgg_user_name", "country")
+    .with_columns(
+        country_code=pl.col("country")
+        .map_elements(get_country_code, return_dtype=pl.String)
+        .str.to_lowercase()
+    )
     .drop_nulls()
 )
 data = ratings.join(other=users, on="bgg_user_name", how="inner")
 
 # %%
-data.select(pl.n_unique("bgg_id", "bgg_user_name", "country")).collect()
+data.select(pl.n_unique("bgg_id", "bgg_user_name", "country_code")).collect()
 
 # %%
 bayes = (
-    data.with_columns(num_ratings_per_country=pl.len().over("country"))
+    data.with_columns(num_ratings_per_country=pl.len().over("country_code"))
     .filter(pl.col("num_ratings_per_country") >= 10_000)
     .with_columns(
         num_dummies=pl.col("num_ratings_per_country") / 10_000,
-        num_ratings=pl.len().over("country", "bgg_id"),
+        num_ratings=pl.len().over("country_code", "bgg_id"),
     )
     .filter(pl.col("num_ratings") >= pl.min_horizontal(3 * pl.col("num_dummies"), 30))
-    .group_by("country", "bgg_id")
+    .group_by("country_code", "bgg_id")
     .agg(
         pl.col("num_dummies").first(),
         pl.col("num_ratings").first(),
@@ -63,11 +69,13 @@ bayes = (
         / (pl.col("num_ratings") + pl.col("num_dummies"))
     )
     .with_columns(
-        rank=pl.col("bayes_rating").rank(method="min", descending=True).over("country")
+        rank=pl.col("bayes_rating")
+        .rank(method="min", descending=True)
+        .over("country_code")
     )
     .sort(
         "num_dummies",
-        "country",
+        "country_code",
         "rank",
         "bgg_id",
         descending=[True, False, False, False],
@@ -84,13 +92,15 @@ bayes.filter(pl.col("rank") == 1)["bgg_id"].value_counts(sort=True).head(10)
 
 # %%
 round(
-    bayes.group_by("country").agg(pl.col("num_dummies").first())["num_dummies"].sum()
+    bayes.group_by("country_code")
+    .agg(pl.col("num_dummies").first())["num_dummies"]
+    .sum()
     * 10_000
 )
 
 # %%
 bayes.select(
-    "country",
+    "country_code",
     "rank",
     "bgg_id",
     "avg_rating",
