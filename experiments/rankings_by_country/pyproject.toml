@@ -13,6 +13,7 @@ emoji-country-flag = "*"
 matplotlib = "*"
 numpy = "*"
 polars = {version = "*", extras = ["pandas"]}
+requests = "*"
 scipy = "*"
 seaborn = "*"
 tqdm = "*"
