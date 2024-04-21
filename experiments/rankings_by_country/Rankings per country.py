@@ -108,6 +108,6 @@ partitions = bayes.select(
     "avg_rating",
     "bayes_rating",
     "num_ratings",
-).partition_by(["country_code"], maintain_order=True, include_key=False, as_dict=True)
+).partition_by(["country_code"], maintain_order=True, include_key=True, as_dict=True)
 for (country_code,), group_data in partitions.items():
     group_data.write_csv(rankings_dir / f"{country_code}.csv", float_precision=5)
