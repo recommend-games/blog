@@ -2,6 +2,7 @@ from functools import cache
 import json
 import logging
 from pathlib import Path
+import warnings
 import flag
 from country_converter import CountryConverter
 
@@ -24,7 +25,8 @@ def get_country_code(country_name: str) -> str | None:
     country = country_mapping.get(country_name)
     if country:
         return country
-    return CONVERTER.convert(names=country_name, to="ISO2", not_found="") or None
+    with warnings.catch_warnings(action="ignore"):
+        return CONVERTER.convert(names=country_name, to="ISO2", not_found="") or None
 
 
 @cache
