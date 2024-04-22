@@ -99,6 +99,13 @@ data = (
     )
     .drop("country_code_right")
     .with_columns(
+        total_ratings_rank=pl.col("total_ratings").rank(method="min", descending=True),
+        ratings_per_capita_rank=pl.col("ratings_per_capita").rank(
+            method="min",
+            descending=True,
+        ),
+    )
+    .with_columns(
         pl.col("total_ratings") // 1_000,
         pl.col("population") / 1_000_000,
         flag=pl.col("country_code").map_elements(
@@ -201,8 +208,11 @@ ranked_renderer = plot.patches(
 
 ranked_tooltips = unranked_tooltips + [
     ("#1 game", "@name (@year)"),
-    ("Total ratings", "@total_ratings{0,0}k"),
-    ("Ratings per capita", "@ratings_per_capita{0,0} per 100k"),
+    ("Total ratings", "@total_ratings{0,0}k (#@total_ratings_rank)"),
+    (
+        "Ratings per capita",
+        "@ratings_per_capita{0,0} per 100k (#@ratings_per_capita_rank)",
+    ),
 ]
 
 plot.add_tools(HoverTool(renderers=[ranked_renderer], tooltips=ranked_tooltips))
