@@ -49,7 +49,7 @@ pop_response = requests.get(
 )
 pop_response.raise_for_status()
 country_population = (
-    pl.read_csv(io.StringIO(pop_response.text))
+    pl.read_csv(io.StringIO(pop_response.text + "Taiwan,TWN,2022,23894394\n"))
     .lazy()
     .select(
         country_name=pl.col("Country Name"),
@@ -80,18 +80,9 @@ game_data = pl.scan_csv(DATA_DIR / "scraped" / "bgg_GameItem.csv").select(
     "year",
 )
 ranking_data = pl.scan_csv("rankings/*.csv")
-country_stats = (
-    ranking_data.group_by("country_code")
-    .agg(
-        num_games=pl.len(),
-        total_ratings=pl.col("num_ratings").sum(),
-    )
-    .with_columns(
-        flag=pl.col("country_code").map_elements(
-            get_flag_emoji,
-            return_dtype=pl.String,
-        ),
-    )
+country_stats = ranking_data.group_by("country_code").agg(
+    num_games=pl.len(),
+    total_ratings=pl.col("num_ratings").sum(),
 )
 top_games = (
     ranking_data.sort("country_code", "rank")
@@ -101,12 +92,21 @@ top_games = (
 )
 data = (
     country_stats.join(top_games, on="country_code", how="inner")
-    .join(country_population, on="country_code", how="inner")
+    .join(country_population, on="country_code", how="outer")
     .with_columns(
+        country_code=pl.coalesce("country_code", "country_code_right"),
         ratings_per_capita=pl.col("total_ratings") * 100_000 // pl.col("population"),
     )
-    .with_columns(total_ratings=pl.col("total_ratings") // 1_000)
-    .sort("total_ratings", descending=True)
+    .drop("country_code_right")
+    .with_columns(
+        pl.col("total_ratings") // 1_000,
+        pl.col("population") / 1_000_000,
+        flag=pl.col("country_code").map_elements(
+            get_flag_emoji,
+            return_dtype=pl.String,
+        ),
+    )
+    .sort("total_ratings", "population", descending=True, nulls_last=True)
     .collect()
 )
 data.shape
@@ -115,7 +115,7 @@ data.shape
 data.head(10)
 
 # %%
-data.sort("ratings_per_capita", descending=True).head(10)
+data.sort("ratings_per_capita", descending=True, nulls_last=True).head(10)
 
 # %%
 # url = "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson"
@@ -134,9 +134,6 @@ for feature in geo_json["features"]:
         properties.update(row)
     except pl.exceptions.NoRowsReturnedError:
         properties["flag"] = get_flag_emoji(properties["ISO_A2"])
-        properties["name"] = "N/A"
-        properties["year"] = "N/A"
-        properties["ratings_per_10k"] = "N/A"
 
 # %%
 geo_source = GeoJSONDataSource(geojson=json.dumps(geo_json))
@@ -180,6 +177,7 @@ unranked_renderer = plot.patches(
 
 unranked_tooltips = [
     ("Country", "@flag @ADMIN (@ISO_A2_EH)"),
+    ("Population", "@population{0,1} mil"),
 ]
 
 plot.add_tools(HoverTool(renderers=[unranked_renderer], tooltips=unranked_tooltips))
