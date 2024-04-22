@@ -115,8 +115,11 @@ ranked_view = CDSView(filter=~antarctica_filter & ~unranked_country_filter)
 plot = figure(
     title="World of board games",
     width=1000,
-    height=500,
+    aspect_ratio=2,
+    match_aspect=True,
     background_fill_color="lightblue",
+    x_range=(-180, 180),
+    y_range=(-60, 85),
 )
 
 unranked_renderer = plot.patches(
@@ -136,7 +139,9 @@ unranked_renderer = plot.patches(
     ),
 )
 
-unranked_tooltips = [("Country", "@flag @ADMIN (@ISO_A2_EH)")]
+unranked_tooltips = [
+    ("Country", "@flag @ADMIN (@ISO_A2_EH)"),
+]
 
 plot.add_tools(HoverTool(renderers=[unranked_renderer], tooltips=unranked_tooltips))
 

@@ -11,26 +11,34 @@
                 "id": "p1015",
                 "attributes": {
                     "width": 1000,
-                    "height": 500,
+                    "aspect_ratio": 2,
                     "x_range": {
                         "type": "object",
-                        "name": "DataRange1d",
-                        "id": "p1016"
+                        "name": "Range1d",
+                        "id": "p1025",
+                        "attributes": {
+                            "start": -180,
+                            "end": 180
+                        }
                     },
                     "y_range": {
                         "type": "object",
-                        "name": "DataRange1d",
-                        "id": "p1017"
+                        "name": "Range1d",
+                        "id": "p1026",
+                        "attributes": {
+                            "start": -60,
+                            "end": 85
+                        }
                     },
                     "x_scale": {
                         "type": "object",
                         "name": "LinearScale",
-                        "id": "p1025"
+                        "id": "p1027"
                     },
                     "y_scale": {
                         "type": "object",
                         "name": "LinearScale",
-                        "id": "p1026"
+                        "id": "p1028"
                     },
                     "title": {
                         "type": "object",
@@ -44,7 +52,7 @@
                         {
                             "type": "object",
                             "name": "GlyphRenderer",
-                            "id": "p1055",
+                            "id": "p1057",
                             "attributes": {
                                 "data_source": {
                                     "type": "object",
@@ -289,7 +297,7 @@
                                 "glyph": {
                                     "type": "object",
                                     "name": "Patches",
-                                    "id": "p1052",
+                                    "id": "p1054",
                                     "attributes": {
                                         "xs": {
                                             "type": "field",
@@ -309,7 +317,7 @@
                                             "transform": {
                                                 "type": "object",
                                                 "name": "LogColorMapper",
-                                                "id": "p1048",
+                                                "id": "p1050",
                                                 "attributes": {
                                                     "palette": [
                                                         "#0C0786",
@@ -580,7 +588,7 @@
                                 "nonselection_glyph": {
                                     "type": "object",
                                     "name": "Patches",
-                                    "id": "p1053",
+                                    "id": "p1055",
                                     "attributes": {
                                         "xs": {
                                             "type": "field",
@@ -602,7 +610,7 @@
                                             "type": "field",
                                             "field": "total_ratings",
                                             "transform": {
-                                                "id": "p1048"
+                                                "id": "p1050"
                                             }
                                         },
                                         "fill_alpha": {
@@ -618,7 +626,7 @@
                                 "muted_glyph": {
                                     "type": "object",
                                     "name": "Patches",
-                                    "id": "p1054",
+                                    "id": "p1056",
                                     "attributes": {
                                         "xs": {
                                             "type": "field",
@@ -640,7 +648,7 @@
                                             "type": "field",
                                             "field": "total_ratings",
                                             "transform": {
-                                                "id": "p1048"
+                                                "id": "p1050"
                                             }
                                         },
                                         "fill_alpha": {
@@ -658,7 +666,7 @@
                         {
                             "type": "object",
                             "name": "GlyphRenderer",
-                            "id": "p1066",
+                            "id": "p1068",
                             "attributes": {
                                 "data_source": {
                                     "id": "p1001"
@@ -702,7 +710,7 @@
                                 "glyph": {
                                     "type": "object",
                                     "name": "Patches",
-                                    "id": "p1063",
+                                    "id": "p1065",
                                     "attributes": {
                                         "xs": {
                                             "type": "field",
@@ -722,7 +730,7 @@
                                             "transform": {
                                                 "type": "object",
                                                 "name": "LogColorMapper",
-                                                "id": "p1059",
+                                                "id": "p1061",
                                                 "attributes": {
                                                     "palette": [
                                                         "#0C0786",
@@ -993,7 +1001,7 @@
                                 "nonselection_glyph": {
                                     "type": "object",
                                     "name": "Patches",
-                                    "id": "p1064",
+                                    "id": "p1066",
                                     "attributes": {
                                         "xs": {
                                             "type": "field",
@@ -1015,7 +1023,7 @@
                                             "type": "field",
                                             "field": "total_ratings",
                                             "transform": {
-                                                "id": "p1059"
+                                                "id": "p1061"
                                             }
                                         },
                                         "fill_alpha": {
@@ -1031,7 +1039,7 @@
                                 "muted_glyph": {
                                     "type": "object",
                                     "name": "Patches",
-                                    "id": "p1065",
+                                    "id": "p1067",
                                     "attributes": {
                                         "xs": {
                                             "type": "field",
@@ -1053,7 +1061,7 @@
                                             "type": "field",
                                             "field": "total_ratings",
                                             "transform": {
-                                                "id": "p1059"
+                                                "id": "p1061"
                                             }
                                         },
                                         "fill_alpha": {
@@ -1078,12 +1086,12 @@
                                 {
                                     "type": "object",
                                     "name": "PanTool",
-                                    "id": "p1037"
+                                    "id": "p1039"
                                 },
                                 {
                                     "type": "object",
                                     "name": "WheelZoomTool",
-                                    "id": "p1038",
+                                    "id": "p1040",
                                     "attributes": {
                                         "renderers": "auto"
                                     }
@@ -1091,12 +1099,12 @@
                                 {
                                     "type": "object",
                                     "name": "BoxZoomTool",
-                                    "id": "p1039",
+                                    "id": "p1041",
                                     "attributes": {
                                         "overlay": {
                                             "type": "object",
                                             "name": "BoxAnnotation",
-                                            "id": "p1040",
+                                            "id": "p1042",
                                             "attributes": {
                                                 "syncable": false,
                                                 "level": "overlay",
@@ -1137,26 +1145,26 @@
                                 {
                                     "type": "object",
                                     "name": "SaveTool",
-                                    "id": "p1045"
-                                },
-                                {
-                                    "type": "object",
-                                    "name": "ResetTool",
-                                    "id": "p1046"
-                                },
-                                {
-                                    "type": "object",
-                                    "name": "HelpTool",
                                     "id": "p1047"
                                 },
                                 {
                                     "type": "object",
+                                    "name": "ResetTool",
+                                    "id": "p1048"
+                                },
+                                {
+                                    "type": "object",
+                                    "name": "HelpTool",
+                                    "id": "p1049"
+                                },
+                                {
+                                    "type": "object",
                                     "name": "HoverTool",
-                                    "id": "p1058",
+                                    "id": "p1060",
                                     "attributes": {
                                         "renderers": [
                                             {
-                                                "id": "p1055"
+                                                "id": "p1057"
                                             }
                                         ],
                                         "tooltips": [
@@ -1170,11 +1178,11 @@
                                 {
                                     "type": "object",
                                     "name": "HoverTool",
-                                    "id": "p1069",
+                                    "id": "p1071",
                                     "attributes": {
                                         "renderers": [
                                             {
-                                                "id": "p1066"
+                                                "id": "p1068"
                                             }
                                         ],
                                         "tooltips": [
@@ -1200,13 +1208,13 @@
                         {
                             "type": "object",
                             "name": "LinearAxis",
-                            "id": "p1032",
+                            "id": "p1034",
                             "attributes": {
                                 "visible": false,
                                 "ticker": {
                                     "type": "object",
                                     "name": "BasicTicker",
-                                    "id": "p1033",
+                                    "id": "p1035",
                                     "attributes": {
                                         "mantissas": [
                                             1,
@@ -1218,12 +1226,12 @@
                                 "formatter": {
                                     "type": "object",
                                     "name": "BasicTickFormatter",
-                                    "id": "p1034"
+                                    "id": "p1036"
                                 },
                                 "major_label_policy": {
                                     "type": "object",
                                     "name": "AllLabels",
-                                    "id": "p1035"
+                                    "id": "p1037"
                                 }
                             }
                         }
@@ -1232,13 +1240,13 @@
                         {
                             "type": "object",
                             "name": "LinearAxis",
-                            "id": "p1027",
+                            "id": "p1029",
                             "attributes": {
                                 "visible": false,
                                 "ticker": {
                                     "type": "object",
                                     "name": "BasicTicker",
-                                    "id": "p1028",
+                                    "id": "p1030",
                                     "attributes": {
                                         "mantissas": [
                                             1,
@@ -1250,12 +1258,12 @@
                                 "formatter": {
                                     "type": "object",
                                     "name": "BasicTickFormatter",
-                                    "id": "p1029"
+                                    "id": "p1031"
                                 },
                                 "major_label_policy": {
                                     "type": "object",
                                     "name": "AllLabels",
-                                    "id": "p1030"
+                                    "id": "p1032"
                                 }
                             }
                         }
@@ -1264,28 +1272,29 @@
                         {
                             "type": "object",
                             "name": "Grid",
-                            "id": "p1031",
+                            "id": "p1033",
                             "attributes": {
                                 "visible": false,
                                 "axis": {
-                                    "id": "p1027"
+                                    "id": "p1029"
                                 }
                             }
                         },
                         {
                             "type": "object",
                             "name": "Grid",
-                            "id": "p1036",
+                            "id": "p1038",
                             "attributes": {
                                 "visible": false,
                                 "dimension": 1,
                                 "axis": {
-                                    "id": "p1032"
+                                    "id": "p1034"
                                 }
                             }
                         }
                     ],
-                    "background_fill_color": "lightblue"
+                    "background_fill_color": "lightblue",
+                    "match_aspect": true
                 }
             }
         ]
