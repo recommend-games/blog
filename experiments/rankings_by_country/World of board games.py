@@ -177,7 +177,7 @@ unranked_renderer = plot.patches(
 
 unranked_tooltips = [
     ("Country", "@flag @ADMIN (@ISO_A2_EH)"),
-    ("Population", "@population{0,1} mil"),
+    ("Population", "@population{0,0.0} mil"),
 ]
 
 plot.add_tools(HoverTool(renderers=[unranked_renderer], tooltips=unranked_tooltips))

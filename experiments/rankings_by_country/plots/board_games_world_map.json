@@ -1174,7 +1174,7 @@
                                             ],
                                             [
                                                 "Population",
-                                                "@population{0,1} mil"
+                                                "@population{0,0.0} mil"
                                             ]
                                         ]
                                     }
@@ -1196,7 +1196,7 @@
                                             ],
                                             [
                                                 "Population",
-                                                "@population{0,1} mil"
+                                                "@population{0,0.0} mil"
                                             ],
                                             [
                                                 "#1 game",
