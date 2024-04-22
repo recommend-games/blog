@@ -21,7 +21,13 @@ import polars as pl
 import requests
 from bokeh.embed import json_item
 from bokeh.io import output_notebook, show
-from bokeh.models import GeoJSONDataSource, GroupFilter, CDSView
+from bokeh.models import (
+    BooleanFilter,
+    CDSView,
+    GeoJSONDataSource,
+    GroupFilter,
+    HoverTool,
+)
 from bokeh.palettes import Plasma256
 from bokeh.plotting import figure
 from bokeh.transform import log_cmap
@@ -95,26 +101,29 @@ for feature in geo_json["features"]:
 
 # %%
 geo_source = GeoJSONDataSource(geojson=json.dumps(geo_json))
-view = CDSView(filter=~GroupFilter(column_name="ISO_A2", group="AQ"))
+antarctica_filter = GroupFilter(column_name="ISO_A2", group="AQ")
+unranked_country_filter = BooleanFilter(
+    booleans=[
+        not feature["properties"].get("total_ratings")
+        for feature in geo_json["features"]
+    ]
+)
+unranked_view = CDSView(filter=~antarctica_filter & unranked_country_filter)
+ranked_view = CDSView(filter=~antarctica_filter & ~unranked_country_filter)
 
 # %%
 plot = figure(
     title="World of board games",
-    tooltips=[
-        ("Country", "@flag @ADMIN (@ISO_A2_EH)"),
-        ("#1 game", "@name (@year)"),
-        ("Total ratings", "@total_ratings{0,0}k"),
-    ],
     width=1000,
     height=500,
     background_fill_color="lightblue",
 )
 
-plot.patches(
+unranked_renderer = plot.patches(
     "xs",
     "ys",
     source=geo_source,
-    view=view,
+    view=unranked_view,
     line_color="black",
     line_width=0.5,
     fill_alpha=1,
@@ -126,6 +135,34 @@ plot.patches(
         nan_color="white",
     ),
 )
+
+unranked_tooltips = [("Country", "@flag @ADMIN (@ISO_A2_EH)")]
+
+plot.add_tools(HoverTool(renderers=[unranked_renderer], tooltips=unranked_tooltips))
+
+ranked_renderer = plot.patches(
+    "xs",
+    "ys",
+    source=geo_source,
+    view=ranked_view,
+    line_color="black",
+    line_width=0.5,
+    fill_alpha=1,
+    fill_color=log_cmap(
+        "total_ratings",
+        palette=Plasma256,
+        low=data["total_ratings"].min(),
+        high=data["total_ratings"].max(),
+        nan_color="white",
+    ),
+)
+
+ranked_tooltips = unranked_tooltips + [
+    ("#1 game", "@name (@year)"),
+    ("Total ratings", "@total_ratings{0,0}k"),
+]
+
+plot.add_tools(HoverTool(renderers=[ranked_renderer], tooltips=ranked_tooltips))
 
 plot.axis.visible = False
 plot.grid.visible = False
