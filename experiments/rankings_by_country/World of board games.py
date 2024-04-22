@@ -14,6 +14,7 @@
 # ---
 
 # %%
+import io
 import json
 from pathlib import Path
 import jupyter_black
@@ -31,7 +32,7 @@ from bokeh.models import (
 from bokeh.palettes import Plasma256
 from bokeh.plotting import figure
 from bokeh.transform import log_cmap
-from rankings_by_country.countries import get_flag_emoji
+from rankings_by_country.countries import get_country_code, get_flag_emoji
 
 jupyter_black.load()
 
@@ -41,6 +42,36 @@ PROJECT_DIR = Path(".").resolve()
 BASE_DIR = PROJECT_DIR.parent.parent
 DATA_DIR = BASE_DIR.parent / "board-game-data"
 PROJECT_DIR, BASE_DIR, DATA_DIR
+
+# %%
+pop_response = requests.get(
+    "https://raw.githubusercontent.com/datasets/population/main/data/population.csv"
+)
+pop_response.raise_for_status()
+country_population = (
+    pl.read_csv(io.StringIO(pop_response.text))
+    .lazy()
+    .select(
+        country_name=pl.col("Country Name"),
+        year=pl.col("Year"),
+        population=pl.col("Value"),
+    )
+    .sort("country_name", "year", descending=[False, True])
+    .filter(pl.int_range(0, pl.len()).over("country_name") < 1)
+    .sort("population", descending=True)
+    .with_columns(
+        country_code=pl.col("country_name")
+        .map_elements(
+            get_country_code,
+            return_dtype=pl.String,
+        )
+        .str.to_lowercase()
+    )
+    .drop("country_name", "year")
+    .filter(pl.col("country_code").str.len_chars() == 2)
+    .group_by("country_code")
+    .agg(pl.col("population").max())
+)
 
 # %%
 game_data = pl.scan_csv(DATA_DIR / "scraped" / "bgg_GameItem.csv").select(
@@ -56,7 +87,6 @@ country_stats = (
         total_ratings=pl.col("num_ratings").sum(),
     )
     .with_columns(
-        total_ratings=pl.col("total_ratings") // 1000,
         flag=pl.col("country_code").map_elements(
             get_flag_emoji,
             return_dtype=pl.String,
@@ -71,6 +101,11 @@ top_games = (
 )
 data = (
     country_stats.join(top_games, on="country_code", how="inner")
+    .join(country_population, on="country_code", how="inner")
+    .with_columns(
+        ratings_per_capita=pl.col("total_ratings") * 100_000 // pl.col("population"),
+    )
+    .with_columns(total_ratings=pl.col("total_ratings") // 1_000)
     .sort("total_ratings", descending=True)
     .collect()
 )
@@ -78,6 +113,9 @@ data.shape
 
 # %%
 data.head(10)
+
+# %%
+data.sort("ratings_per_capita", descending=True).head(10)
 
 # %%
 # url = "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson"
@@ -94,13 +132,6 @@ for feature in geo_json["features"]:
     try:
         row = data.row(by_predicate=pl.col("country_code") == country_code, named=True)
         properties.update(row)
-        population = properties.get("POP_EST")
-        total_ratings = properties.get("total_ratings")
-        properties["ratings_per_10k"] = (
-            total_ratings * 1_000_000 / population
-            if total_ratings and population
-            else "N/A"
-        )
     except pl.exceptions.NoRowsReturnedError:
         properties["flag"] = get_flag_emoji(properties["ISO_A2"])
         properties["name"] = "N/A"
@@ -173,7 +204,7 @@ ranked_renderer = plot.patches(
 ranked_tooltips = unranked_tooltips + [
     ("#1 game", "@name (@year)"),
     ("Total ratings", "@total_ratings{0,0}k"),
-    ("Ratings per 10k", "@ratings_per_10k{0,0}"),
+    ("Ratings per capita", "@ratings_per_capita{0,0} per 100k"),
 ]
 
 plot.add_tools(HoverTool(renderers=[ranked_renderer], tooltips=ranked_tooltips))
