@@ -94,10 +94,18 @@ for feature in geo_json["features"]:
     try:
         row = data.row(by_predicate=pl.col("country_code") == country_code, named=True)
         properties.update(row)
+        population = properties.get("POP_EST")
+        total_ratings = properties.get("total_ratings")
+        properties["ratings_per_10k"] = (
+            total_ratings * 1_000_000 / population
+            if total_ratings and population
+            else "N/A"
+        )
     except pl.exceptions.NoRowsReturnedError:
         properties["flag"] = get_flag_emoji(properties["ISO_A2"])
         properties["name"] = "N/A"
         properties["year"] = "N/A"
+        properties["ratings_per_10k"] = "N/A"
 
 # %%
 geo_source = GeoJSONDataSource(geojson=json.dumps(geo_json))
@@ -165,6 +173,7 @@ ranked_renderer = plot.patches(
 ranked_tooltips = unranked_tooltips + [
     ("#1 game", "@name (@year)"),
     ("Total ratings", "@total_ratings{0,0}k"),
+    ("Ratings per 10k", "@ratings_per_10k{0,0}"),
 ]
 
 plot.add_tools(HoverTool(renderers=[ranked_renderer], tooltips=ranked_tooltips))
