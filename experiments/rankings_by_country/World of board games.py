@@ -107,6 +107,7 @@ plot = figure(
     ],
     width=1000,
     height=500,
+    background_fill_color="lightblue",
 )
 
 plot.patches(
