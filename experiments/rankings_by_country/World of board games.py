@@ -68,9 +68,9 @@ country_population = (
         .str.to_lowercase()
     )
     .drop("country_name", "year")
-    .filter(pl.col("country_code").str.len_chars() == 2)
     .group_by("country_code")
     .agg(pl.col("population").max())
+    .drop_nulls()
 )
 
 # %%

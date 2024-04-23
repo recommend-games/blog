@@ -2,7 +2,6 @@ from functools import cache
 import json
 import logging
 from pathlib import Path
-import warnings
 import flag
 from country_converter import CountryConverter
 
@@ -22,11 +21,15 @@ def load_country_mapping(path: str | Path = MAPPING_FILE) -> dict[str, str]:
 @cache
 def get_country_code(country_name: str) -> str | None:
     country_mapping = load_country_mapping()
-    country = country_mapping.get(country_name)
-    if country:
-        return country
-    with warnings.catch_warnings(action="ignore"):
-        return CONVERTER.convert(names=country_name, to="ISO2", not_found="") or None
+    country_code = country_mapping.get(country_name)
+    if country_code:
+        return country_code
+    country_code = CONVERTER.convert(
+        names=country_name,
+        to="ISO2",
+        not_found=NotImplemented,
+    )
+    return None if country_code is NotImplemented else country_code
 
 
 @cache
