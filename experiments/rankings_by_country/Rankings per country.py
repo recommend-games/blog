@@ -18,6 +18,7 @@ from pathlib import Path
 import jupyter_black
 import polars as pl
 from rankings_by_country.countries import CONVERTER, get_country_code, get_flag_emoji
+from rankings_by_country.data import load_population_data
 
 jupyter_black.load()
 
@@ -48,12 +49,6 @@ data = ratings.join(other=users, on="bgg_user_name", how="inner")
 data.select(
     pl.n_unique("bgg_id", "bgg_user_name", "country_code"),
     num_ratings=pl.len(),
-).collect()
-
-# %%
-data.filter(pl.col("country_code") == "aq").select(
-    pl.col("bgg_user_name").n_unique(),
-    pl.len(),
 ).collect()
 
 # %%
@@ -103,9 +98,87 @@ bayes.shape
 bayes.select(pl.n_unique("country_code"))
 
 # %%
+rankings_dir = PROJECT_DIR / "rankings"
+rankings_dir.mkdir(parents=True, exist_ok=True)
+partitions = bayes.select(
+    "country_code",
+    "rank",
+    "bgg_id",
+    "name",
+    "year",
+    "avg_rating",
+    "bayes_rating",
+    "num_ratings",
+).partition_by(["country_code"], maintain_order=True, include_key=True, as_dict=True)
+for (country_code,), group_data in partitions.items():
+    group_data.write_csv(rankings_dir / f"{country_code}.csv", float_precision=5)
+
+# %%
+population_data = load_population_data()
+
+country_users = data.group_by("country_code").agg(
+    num_users=pl.col("bgg_user_name").n_unique(),
+    total_ratings=pl.len(),
+)
+
+# TODO: Ensure uniqueness of #1 ranked game
+top_games = (
+    bayes.lazy()
+    .filter(pl.col("rank") == 1)
+    .select(
+        "country_code",
+        "bgg_id",
+        "name",
+        "year",
+        "num_ratings",
+        "avg_rating",
+        "bayes_rating",
+    )
+    .select("country_code", pl.exclude("country_code").name.prefix("top_game_"))
+)
+
+country_data = (
+    population_data.with_columns(
+        population_rank=pl.col("population").rank(method="min", descending=True),
+    )
+    .join(country_users, on="country_code", how="outer")
+    .with_columns(
+        country_code=pl.coalesce("country_code", "country_code_right"),
+        total_ratings_rank=pl.col("total_ratings").rank(method="min", descending=True),
+        ratings_per_capita=(pl.col("total_ratings") / pl.col("population")) * 100_000,
+    )
+    .drop("country_code_right")
+    .with_columns(
+        ratings_per_capita_rank=pl.when(pl.col("total_ratings") >= 10_000)
+        .then(pl.col("ratings_per_capita"))
+        .rank(method="min", descending=True)
+    )
+    .join(
+        top_games,
+        on="country_code",
+        how="left",
+    )
+    .sort(
+        "total_ratings",
+        "ratings_per_capita",
+        "population",
+        "country_code",
+        descending=[True, True, True, False],
+        nulls_last=True,
+    )
+    .collect()
+)
+country_data.shape
+
+# %%
+country_data.sort("total_ratings_rank", nulls_last=True).head(10)
+
+# %%
+country_data.sort("ratings_per_capita_rank", nulls_last=True).head(10)
+
+# %%
 top_games_by_country = (
-    bayes.filter(pl.col("rank") == 1)
-    .drop("rank")
+    country_data.sort("total_ratings_rank", nulls_last=True)
     .head(10)
     .with_columns(
         flag=pl.col("country_code").map_elements(get_flag_emoji, pl.String),
@@ -116,7 +189,9 @@ top_games_by_country = (
     )
     .select(
         Country=pl.format("{} {}", "flag", "country_name"),
-        Game=pl.format("{{% game {} %}}{}{{% /game %}}", "bgg_id", "name"),
+        Game=pl.format(
+            "{{% game {} %}}{}{{% /game %}}", "top_game_bgg_id", "top_game_name"
+        ),
     )
 )
 with pl.Config(
@@ -130,8 +205,8 @@ with pl.Config(
 
 # %%
 top_games_count = (
-    bayes.lazy()
-    .filter(pl.col("rank") == 1)
+    country_data.lazy()
+    .select(bgg_id="top_game_bgg_id")
     .select(pl.col("bgg_id").value_counts())
     .unnest("bgg_id")
     .join(game_data, on="bgg_id")
@@ -153,17 +228,4 @@ with pl.Config(
     print(top_games_count)
 
 # %%
-rankings_dir = PROJECT_DIR / "rankings"
-rankings_dir.mkdir(parents=True, exist_ok=True)
-partitions = bayes.select(
-    "country_code",
-    "rank",
-    "bgg_id",
-    "name",
-    "year",
-    "avg_rating",
-    "bayes_rating",
-    "num_ratings",
-).partition_by(["country_code"], maintain_order=True, include_key=True, as_dict=True)
-for (country_code,), group_data in partitions.items():
-    group_data.write_csv(rankings_dir / f"{country_code}.csv", float_precision=5)
+country_data.write_csv(PROJECT_DIR / "countries.csv", float_precision=3)
