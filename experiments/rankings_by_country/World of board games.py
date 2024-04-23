@@ -74,11 +74,6 @@ country_population = (
 )
 
 # %%
-game_data = pl.scan_csv(DATA_DIR / "scraped" / "bgg_GameItem.csv").select(
-    "bgg_id",
-    "name",
-    "year",
-)
 ranking_data = pl.scan_csv("rankings/*.csv")
 country_stats = ranking_data.group_by("country_code").agg(
     num_games=pl.len(),
@@ -88,7 +83,6 @@ top_games = (
     ranking_data.sort("country_code", "rank")
     .filter(pl.int_range(0, pl.len()).over("country_code") < 1)
     .drop("rank")
-    .join(game_data, on="bgg_id", how="inner")
 )
 data = (
     country_stats.join(top_games, on="country_code", how="inner")
