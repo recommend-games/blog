@@ -210,6 +210,8 @@ ranked_tooltips = unranked_tooltips + [
 ]
 
 plot.add_tools(HoverTool(renderers=[ranked_renderer], tooltips=ranked_tooltips))
+color_bar = ranked_renderer.construct_color_bar(title="Total ratings", padding=1)
+plot.add_layout(color_bar, "left")
 
 plot.axis.visible = False
 plot.grid.visible = False

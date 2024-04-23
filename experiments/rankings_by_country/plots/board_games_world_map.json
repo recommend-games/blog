@@ -972,6 +972,23 @@
                                     "id": "p1037"
                                 }
                             }
+                        },
+                        {
+                            "type": "object",
+                            "name": "ColorBar",
+                            "id": "p1071",
+                            "attributes": {
+                                "title": "Total ratings",
+                                "major_label_policy": {
+                                    "type": "object",
+                                    "name": "NoOverlap",
+                                    "id": "p1072"
+                                },
+                                "padding": 1,
+                                "color_mapper": {
+                                    "id": "p1060"
+                                }
+                            }
                         }
                     ],
                     "below": [
