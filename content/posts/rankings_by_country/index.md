@@ -21,4 +21,8 @@ tags:
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.4.1.min.js" ></script>
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-api-3.4.1.min.js" ></script>
 
+BoardGameGeek (BGG) users can select their country of residence in their profile. The main purpose is to find other users in your region to play face to face or maybe trade games, but but over here at [Recommend.Games](https://recommend.games/#/) we obviously cannot help ourselves but to use this information for some interesting statistics. 🤓
+
+Let's start with the usual disclaimer: We will have to rely on whatever information BGG provides. In particular, users can freely choose their country. As mentioned, this is meant to be the country of residence, but some users might rather choose their country of origin – or some outright nonsense. There are 19 BGG users who claim to be from Antarctica, for example. While I'm sure that the long polar nights on lonely research stations are perfect for playing board games, I'm not sure if they have a lot of time to rate them on BGG. 🐧 (If they actually did, Antarctica would have 6,880 ratings per 100 thousand residents, which would make them by far the biggest board game enthusiasts in the world – more on that later.)
+
 {{% bokeh "board_games_world_map.json" %}}

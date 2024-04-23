@@ -48,6 +48,12 @@ data = ratings.join(other=users, on="bgg_user_name", how="inner")
 data.select(pl.n_unique("bgg_id", "bgg_user_name", "country_code")).collect()
 
 # %%
+data.filter(pl.col("country_code") == "aq").select(
+    pl.col("bgg_user_name").n_unique(),
+    pl.len(),
+).collect()
+
+# %%
 bayes = (
     data.with_columns(num_ratings_per_country=pl.len().over("country_code"))
     .filter(pl.col("num_ratings_per_country") >= 10_000)
