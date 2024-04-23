@@ -45,7 +45,10 @@ users = (
 data = ratings.join(other=users, on="bgg_user_name", how="inner")
 
 # %%
-data.select(pl.n_unique("bgg_id", "bgg_user_name", "country_code")).collect()
+data.select(
+    pl.n_unique("bgg_id", "bgg_user_name", "country_code"),
+    num_ratings=pl.len(),
+).collect()
 
 # %%
 data.filter(pl.col("country_code") == "aq").select(
@@ -91,18 +94,13 @@ bayes = (
 bayes.shape
 
 # %%
+bayes.select(pl.n_unique("country_code"))
+
+# %%
 bayes.filter(pl.col("rank") == 1).head(10)
 
 # %%
 bayes.filter(pl.col("rank") == 1)["bgg_id"].value_counts(sort=True).head(10)
-
-# %%
-round(
-    bayes.group_by("country_code")
-    .agg(pl.col("num_dummies").first())["num_dummies"]
-    .sum()
-    * 10_000
-)
 
 # %%
 rankings_dir = PROJECT_DIR / "rankings"
