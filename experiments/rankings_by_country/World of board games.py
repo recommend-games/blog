@@ -29,7 +29,7 @@ from bokeh.models import (
     GroupFilter,
     HoverTool,
 )
-from bokeh.palettes import Plasma256
+from bokeh.palettes import TolYlOrBr9, interp_palette
 from bokeh.plotting import figure
 from bokeh.transform import log_cmap
 from rankings_by_country.countries import get_country_code, get_flag_emoji
@@ -155,6 +155,8 @@ unranked_view = CDSView(filter=~antarctica_filter & unranked_country_filter)
 ranked_view = CDSView(filter=~antarctica_filter & ~unranked_country_filter)
 
 # %%
+palette = interp_palette(TolYlOrBr9, 256)
+
 plot = figure(
     title="World of board games",
     width=750,
@@ -172,14 +174,8 @@ unranked_renderer = plot.patches(
     view=unranked_view,
     line_color="black",
     line_width=0.5,
+    fill_color="white",
     fill_alpha=1,
-    fill_color=log_cmap(
-        "total_ratings",
-        palette=Plasma256,
-        low=data["total_ratings"].min(),
-        high=data["total_ratings"].max(),
-        nan_color="white",
-    ),
 )
 
 unranked_tooltips = [
@@ -196,14 +192,14 @@ ranked_renderer = plot.patches(
     view=ranked_view,
     line_color="black",
     line_width=0.5,
-    fill_alpha=1,
     fill_color=log_cmap(
         "total_ratings",
-        palette=Plasma256,
+        palette=palette,
         low=data["total_ratings"].min(),
         high=data["total_ratings"].max(),
         nan_color="white",
     ),
+    fill_alpha=1,
 )
 
 ranked_tooltips = unranked_tooltips + [
