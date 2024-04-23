@@ -138,7 +138,14 @@ top_games = (
 )
 
 country_data = (
-    population_data.with_columns(
+    population_data.select(
+        "country_code",
+        country_name=pl.col("country_code").map_elements(
+            lambda c: CONVERTER.convert(c, to="name"),
+            pl.String,
+        ),
+        flag=pl.col("country_code").map_elements(get_flag_emoji, pl.String),
+        population="population",
         population_rank=pl.col("population").rank(method="min", descending=True),
     )
     .join(country_users, on="country_code", how="outer")
@@ -180,13 +187,6 @@ country_data.sort("ratings_per_capita_rank", nulls_last=True).head(10)
 top_games_by_country = (
     country_data.sort("total_ratings_rank", nulls_last=True)
     .head(10)
-    .with_columns(
-        flag=pl.col("country_code").map_elements(get_flag_emoji, pl.String),
-        country_name=pl.col("country_code").map_elements(
-            lambda c: CONVERTER.convert(c, to="name"),
-            pl.String,
-        ),
-    )
     .select(
         Country=pl.format("{} {}", "flag", "country_name"),
         Game=pl.format(
