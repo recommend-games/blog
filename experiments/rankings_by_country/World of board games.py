@@ -125,8 +125,6 @@ data.head(10)
 data.sort("ratings_per_capita", descending=True, nulls_last=True).head(10)
 
 # %%
-# url = "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson"
-# url = "https://raw.githubusercontent.com/simonepri/geo-maps/master/previews/countries-land.geo.json"
 url = "https://raw.githubusercontent.com/AshKyd/geojson-regions/main/public/countries/110m/all.geojson"
 response = requests.get(url)
 response.raise_for_status()
