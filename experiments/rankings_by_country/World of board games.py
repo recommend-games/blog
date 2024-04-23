@@ -14,7 +14,6 @@
 # ---
 
 # %%
-import io
 import json
 from pathlib import Path
 import jupyter_black
@@ -32,7 +31,7 @@ from bokeh.models import (
 from bokeh.palettes import TolYlOrBr9, interp_palette
 from bokeh.plotting import figure
 from bokeh.transform import log_cmap
-from rankings_by_country.countries import get_country_code, get_flag_emoji
+from rankings_by_country.countries import get_flag_emoji
 
 jupyter_black.load()
 
@@ -44,70 +43,19 @@ DATA_DIR = BASE_DIR.parent / "board-game-data"
 PROJECT_DIR, BASE_DIR, DATA_DIR
 
 # %%
-pop_response = requests.get(
-    "https://raw.githubusercontent.com/datasets/population/main/data/population.csv"
-)
-pop_response.raise_for_status()
-country_population = (
-    pl.read_csv(io.StringIO(pop_response.text + "Taiwan,TWN,2022,23894394\n"))
-    .lazy()
-    .select(
-        country_name=pl.col("Country Name"),
-        year=pl.col("Year"),
-        population=pl.col("Value"),
-    )
-    .sort("country_name", "year", descending=[False, True])
-    .filter(pl.int_range(0, pl.len()).over("country_name") < 1)
-    .sort("population", descending=True)
-    .with_columns(
-        country_code=pl.col("country_name")
-        .map_elements(
-            get_country_code,
-            return_dtype=pl.String,
-        )
-        .str.to_lowercase()
-    )
-    .drop("country_name", "year")
-    .group_by("country_code")
-    .agg(pl.col("population").max())
-    .drop_nulls()
-)
-
-# %%
-ranking_data = pl.scan_csv("rankings/*.csv")
-country_stats = ranking_data.group_by("country_code").agg(
-    num_games=pl.len(),
-    total_ratings=pl.col("num_ratings").sum(),
-)
-top_games = (
-    ranking_data.sort("country_code", "rank")
-    .filter(pl.int_range(0, pl.len()).over("country_code") < 1)
-    .drop("rank")
-)
 data = (
-    country_stats.join(top_games, on="country_code", how="inner")
-    .join(country_population, on="country_code", how="outer")
-    .with_columns(
-        country_code=pl.coalesce("country_code", "country_code_right"),
-        ratings_per_capita=pl.col("total_ratings") * 100_000 // pl.col("population"),
-    )
-    .drop("country_code_right")
-    .with_columns(
-        total_ratings_rank=pl.col("total_ratings").rank(method="min", descending=True),
-        ratings_per_capita_rank=pl.col("ratings_per_capita").rank(
-            method="min",
-            descending=True,
-        ),
+    pl.scan_csv("countries.csv")
+    .sort(
+        "total_ratings_rank",
+        "ratings_per_capita_rank",
+        "population_rank",
+        "country_code",
+        nulls_last=True,
     )
     .with_columns(
         pl.col("total_ratings") // 1_000,
         pl.col("population") / 1_000_000,
-        flag=pl.col("country_code").map_elements(
-            get_flag_emoji,
-            return_dtype=pl.String,
-        ),
     )
-    .sort("total_ratings", "population", descending=True, nulls_last=True)
     .collect()
 )
 data.shape
@@ -116,7 +64,7 @@ data.shape
 data.head(10)
 
 # %%
-data.sort("ratings_per_capita", descending=True, nulls_last=True).head(10)
+data.sort("ratings_per_capita_rank", nulls_last=True).head(10)
 
 # %%
 url = "https://raw.githubusercontent.com/AshKyd/geojson-regions/main/public/countries/110m/all.geojson"
@@ -139,7 +87,7 @@ geo_source = GeoJSONDataSource(geojson=json.dumps(geo_json))
 antarctica_filter = GroupFilter(column_name="ISO_A2", group="AQ")
 unranked_country_filter = BooleanFilter(
     booleans=[
-        not feature["properties"].get("total_ratings")
+        not feature["properties"].get("top_game_name")
         for feature in geo_json["features"]
     ]
 )
@@ -172,7 +120,7 @@ unranked_renderer = plot.patches(
 
 unranked_tooltips = [
     ("Country", "@flag @ADMIN (@ISO_A2_EH)"),
-    ("Population", "@population{0,0.0} mil"),
+    ("Population", "@population{0,0.0} mil (#@population_rank)"),
 ]
 
 plot.add_tools(HoverTool(renderers=[unranked_renderer], tooltips=unranked_tooltips))
@@ -187,7 +135,7 @@ ranked_renderer = plot.patches(
     fill_color=log_cmap(
         "total_ratings",
         palette=palette,
-        low=data["total_ratings"].min(),
+        low=10,
         high=data["total_ratings"].max(),
         nan_color="white",
     ),
@@ -195,7 +143,8 @@ ranked_renderer = plot.patches(
 )
 
 ranked_tooltips = unranked_tooltips + [
-    ("#1 game", "@name (@year)"),
+    ("#1 game", "@top_game_name (@top_game_year)"),
+    ("Number of users", "@num_users{0,0}"),
     ("Total ratings", "@total_ratings{0,0}k (#@total_ratings_rank)"),
     (
         "Ratings per capita",
