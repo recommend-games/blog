@@ -57,6 +57,11 @@ data.filter(pl.col("country_code") == "aq").select(
 ).collect()
 
 # %%
+game_data = pl.scan_csv(DATA_DIR / "scraped" / "bgg_GameItem.csv").select(
+    "bgg_id",
+    "name",
+    "year",
+)
 bayes = (
     data.with_columns(num_ratings_per_country=pl.len().over("country_code"))
     .filter(pl.col("num_ratings_per_country") >= 10_000)
@@ -82,6 +87,7 @@ bayes = (
         .rank(method="min", descending=True)
         .over("country_code")
     )
+    .join(game_data, on="bgg_id")
     .sort(
         "num_dummies",
         "country_code",
@@ -97,7 +103,7 @@ bayes.shape
 bayes.select(pl.n_unique("country_code"))
 
 # %%
-bayes.filter(pl.col("rank") == 1).head(10)
+bayes.filter(pl.col("rank") == 1).drop("rank").head(10)
 
 # %%
 bayes.filter(pl.col("rank") == 1)["bgg_id"].value_counts(sort=True).head(10)
@@ -109,6 +115,8 @@ partitions = bayes.select(
     "country_code",
     "rank",
     "bgg_id",
+    "name",
+    "year",
     "avg_rating",
     "bayes_rating",
     "num_ratings",
