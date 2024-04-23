@@ -111,6 +111,3 @@ partitions = bayes.select(
 ).partition_by(["country_code"], maintain_order=True, include_key=True, as_dict=True)
 for (country_code,), group_data in partitions.items():
     group_data.write_csv(rankings_dir / f"{country_code}.csv", float_precision=5)
-
-# %%
-# TODO: Most users / ratings per capita?
