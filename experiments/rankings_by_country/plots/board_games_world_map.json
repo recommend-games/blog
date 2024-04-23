@@ -10,7 +10,7 @@
                 "name": "Figure",
                 "id": "p1015",
                 "attributes": {
-                    "width": 1000,
+                    "width": 750,
                     "aspect_ratio": 2,
                     "x_range": {
                         "type": "object",

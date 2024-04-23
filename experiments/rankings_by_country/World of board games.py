@@ -157,7 +157,7 @@ ranked_view = CDSView(filter=~antarctica_filter & ~unranked_country_filter)
 # %%
 plot = figure(
     title="World of board games",
-    width=1000,
+    width=750,
     aspect_ratio=2,
     match_aspect=True,
     background_fill_color="lightblue",
