@@ -17,7 +17,7 @@
 from pathlib import Path
 import jupyter_black
 import polars as pl
-from rankings_by_country.countries import get_country_code
+from rankings_by_country.countries import CONVERTER, get_country_code, get_flag_emoji
 
 jupyter_black.load()
 
@@ -103,10 +103,54 @@ bayes.shape
 bayes.select(pl.n_unique("country_code"))
 
 # %%
-bayes.filter(pl.col("rank") == 1).drop("rank").head(10)
+top_games_by_country = (
+    bayes.filter(pl.col("rank") == 1)
+    .drop("rank")
+    .head(10)
+    .with_columns(
+        flag=pl.col("country_code").map_elements(get_flag_emoji, pl.String),
+        country_name=pl.col("country_code").map_elements(
+            lambda c: CONVERTER.convert(c, to="name"),
+            pl.String,
+        ),
+    )
+    .select(
+        Country=pl.format("{} {}", "flag", "country_name"),
+        Game=pl.format("{{% game {} %}}{}{{% /game %}}", "bgg_id", "name"),
+    )
+)
+with pl.Config(
+    tbl_formatting="ASCII_MARKDOWN",
+    tbl_hide_column_data_types=True,
+    tbl_hide_dataframe_shape=True,
+    tbl_width_chars=999,
+    fmt_str_lengths=999,
+):
+    print(top_games_by_country)
 
 # %%
-bayes.filter(pl.col("rank") == 1)["bgg_id"].value_counts(sort=True).head(10)
+top_games_count = (
+    bayes.lazy()
+    .filter(pl.col("rank") == 1)
+    .select(pl.col("bgg_id").value_counts())
+    .unnest("bgg_id")
+    .join(game_data, on="bgg_id")
+    .filter(pl.col("count") > 1)
+    .sort("count", descending=True)
+    .select(
+        Game=pl.format("{{% game {} %}}{}{{% /game %}}", "bgg_id", "name"),
+        Count="count",
+    )
+    .collect()
+)
+with pl.Config(
+    tbl_formatting="ASCII_MARKDOWN",
+    tbl_hide_column_data_types=True,
+    tbl_hide_dataframe_shape=True,
+    tbl_width_chars=999,
+    fmt_str_lengths=999,
+):
+    print(top_games_count)
 
 # %%
 rankings_dir = PROJECT_DIR / "rankings"

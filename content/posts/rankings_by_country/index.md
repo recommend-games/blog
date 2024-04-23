@@ -31,4 +31,31 @@ With that out of the way, let's look at some basic statistics. For this analysis
 
 In order to understand how board game preferences differ around the globe, we want to calculate a ranking similar to the way BGG ranks games. Remember that BGG calculates their "[geek score]({{<ref "posts/reverse_engineer_bgg/index.md">}})" based on a Bayesian average by adding a number of dummy ratings of 5.5 to each game. That [number of dummy ratings]({{<ref "posts/reverse_engineer_bgg_2/index.md">}}) is determined by the total number of ratings divided by 10,000. We can apply exactly the same logic to calculate a ranking by country. Since we want to apply at least one dummy rating to each game, we only consider countries with at least 10,000 ratings in total – **62 countries** meet this criterion. BGG ranks games with at least 30 ratings. If we applied the same rule to the country rankings, we would often have very short lists. So, I decided to include games with at least 3 times the number of dummy ratings in the country ranking, but never more than the BGG standard of 30.
 
+Enough of the boring technicalities, on to the fun part! 😎
+
+| Country           | Game                                                                          |
+|-------------------|-------------------------------------------------------------------------------|
+| 🇺🇸 United States  | {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}                     |
+| 🇩🇪 Germany        | {{% game 342942 %}}Ark Nova{{% /game %}}                                      |
+| 🇨🇦 Canada         | {{% game 174430 %}}Gloomhaven{{% /game %}}                                    |
+| 🇬🇧 United Kingdom | {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}                     |
+| 🇪🇸 Spain          | {{% game 224517 %}}Brass: Birmingham{{% /game %}}                             |
+| 🇵🇱 Poland         | {{% game 187645 %}}Star Wars: Rebellion{{% /game %}}                          |
+| 🇮🇹 Italy          | {{% game 182028 %}}Through the Ages: A New Story of Civilization{{% /game %}} |
+| 🇫🇷 France         | {{% game 342942 %}}Ark Nova{{% /game %}}                                      |
+| 🇳🇱 Netherlands    | {{% game 224517 %}}Brass: Birmingham{{% /game %}}                             |
+| 🇦🇺 Australia      | {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}                     |
+
+| Game                                                              | Count |
+|-------------------------------------------------------------------|-------|
+| {{% game 224517 %}}Brass: Birmingham{{% /game %}}                 | 14    |
+| {{% game 174430 %}}Gloomhaven{{% /game %}}                        | 8     |
+| {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}         | 6     |
+| {{% game 342942 %}}Ark Nova{{% /game %}}                          | 5     |
+| {{% game 233078 %}}Twilight Imperium: Fourth Edition{{% /game %}} | 4     |
+| {{% game 167791 %}}Terraforming Mars{{% /game %}}                 | 3     |
+| {{% game 115746 %}}War of the Ring: Second Edition{{% /game %}}   | 2     |
+| {{% game 187645 %}}Star Wars: Rebellion{{% /game %}}              | 2     |
+| {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}      | 2     |
+
 {{% bokeh "board_games_world_map.json" %}}
