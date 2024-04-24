@@ -247,3 +247,18 @@ with pl.Config(**markdown_settings):
 
 # %%
 country_data.write_csv(PROJECT_DIR / "countries.csv", float_precision=3)
+
+# %%
+country_links = (
+    country_data.filter(pl.col("top_game_bgg_id").is_not_null())
+    .sort("country_name")
+    .select(
+        link=pl.format(
+            "[{} {}](rankings/{}.csv)",
+            "flag",
+            "country_name",
+            "country_code",
+        )
+    )["link"]
+)
+print(" | ".join(country_links))
