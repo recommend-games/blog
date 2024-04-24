@@ -225,6 +225,9 @@ with pl.Config(**markdown_settings):
     print(top_games_by_country)
 
 # %%
+country_data["top_game_name"].n_unique()
+
+# %%
 top_games_count = (
     country_data.lazy()
     .select(bgg_id="top_game_bgg_id")

@@ -27,7 +27,7 @@ Let's start with the usual disclaimer: We will have to rely on whatever informat
 
 On a more serious note, what exactly is a country is a *very* political question and frequently highly controversial. I'm trying to stick with the sovereign nations recognized by the United Nations and️ add users from subdivisions and autonomous regions to the parent country. BGG allows users to choose 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England, 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland or 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales as their residence (not Northern Ireland though 🤔) – but for now, they're all stuck together in a 🇬🇧 United Kingdom, if they like it or not. The borders in the map that follows shortly are even more contentious – I just had to stick with what the provider chose, and they emphasised the actual situation on the ground.
 
-With that out of the way, let's look at some basic statistics. For this analysis, we used almost **20 million ratings** by **346,697 users** who selected one of the **200 countries** as their residence. Close to **88 thousand games** received at least one rating.
+With that out of the way, let's look at some basic statistics. For this analysis, we used **19.8 million ratings** by **347 thousand users** who selected one of the **199 countries** as their residence. Close to **88 thousand games** received at least one rating.
 
 In order to understand how board game preferences differ around the globe, we want to calculate a ranking similar to the way BGG ranks games. Remember that BGG calculates their "[geek score]({{<ref "posts/reverse_engineer_bgg/index.md">}})" based on a Bayesian average by adding a number of dummy ratings of 5.5 to each game. That [number of dummy ratings]({{<ref "posts/reverse_engineer_bgg_2/index.md">}}) is determined by the total number of ratings divided by 10,000. We can apply exactly the same logic to calculate a ranking by country. Since we want to apply at least one dummy rating to each game, we only consider countries with at least 10,000 ratings in total – **62 countries** meet this criterion. BGG ranks games with at least 30 ratings. If we applied the same rule to the country rankings, we would often have very short lists. So, I decided to include games with at least 3 times the number of dummy ratings in the country ranking, but never more than the BGG standard of 30.
 
@@ -46,6 +46,8 @@ Enough of the boring technicalities, on to the fun part! 😎 Let's first answer
 | **🇳🇱 Netherlands**    | 17.5 mil   | 7.5k   | 469k    | 2,680               | {{% game 224517 %}}Brass: Birmingham{{% /game %}}                             |
 | **🇦🇺 Australia**      | 25.7 mil   | 9.2k   | 468k    | 1,824               | {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}                     |
 
+We see lots of familiar names amongst the highest rated games. The 62 country rankings have 26 different games in the top spot. These nine games are favourites in more than one country:
+
 | Game                                                              | Count |
 |-------------------------------------------------------------------|-------|
 | {{% game 224517 %}}Brass: Birmingham{{% /game %}}                 | 14    |
@@ -57,5 +59,7 @@ Enough of the boring technicalities, on to the fun part! 😎 Let's first answer
 | {{% game 115746 %}}War of the Ring: Second Edition{{% /game %}}   | 2     |
 | {{% game 187645 %}}Star Wars: Rebellion{{% /game %}}              | 2     |
 | {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}      | 2     |
+
+This looks almost identical to the BGG top 10 list – only {{% game 316554 %}}Dune: Imperium{{% /game %}} is missing, though it is 🇦🇷 Argentina's favourite game.
 
 {{% bokeh "board_games_world_map.json" %}}
