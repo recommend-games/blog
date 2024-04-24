@@ -60,6 +60,8 @@ We see lots of familiar names amongst the highest rated games. The 62 country ra
 | {{% game 187645 %}}Star Wars: Rebellion{{% /game %}}              | 2     |
 | {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}      | 2     |
 
-This looks almost identical to the BGG top 10 list – only {{% game 316554 %}}Dune: Imperium{{% /game %}} is missing, though it is 🇦🇷 Argentina's favourite game.
+This looks almost identical to the BGG top 10 list – only {{% game 316554 %}}Dune: Imperium{{% /game %}} is missing, though it is 🇦🇷 Argentina's favourite game. Overall, the country rankings are dominated by international hits, but there are a couple of local favourites with a strong tie to the country, such as {{% game 188 %}}Go{{% /game %}} in 🇨🇳 China and {{% game 368789 %}}AFU: Armed Forces of Ukraine{{% /game %}} in 🇺🇦 Ukraine.
+
+Explore more details about the different countries in this interactive map:
 
 {{% bokeh "board_games_world_map.json" %}}
