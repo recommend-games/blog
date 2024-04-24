@@ -31,20 +31,20 @@ With that out of the way, let's look at some basic statistics. For this analysis
 
 In order to understand how board game preferences differ around the globe, we want to calculate a ranking similar to the way BGG ranks games. Remember that BGG calculates their "[geek score]({{<ref "posts/reverse_engineer_bgg/index.md">}})" based on a Bayesian average by adding a number of dummy ratings of 5.5 to each game. That [number of dummy ratings]({{<ref "posts/reverse_engineer_bgg_2/index.md">}}) is determined by the total number of ratings divided by 10,000. We can apply exactly the same logic to calculate a ranking by country. Since we want to apply at least one dummy rating to each game, we only consider countries with at least 10,000 ratings in total – **62 countries** meet this criterion. BGG ranks games with at least 30 ratings. If we applied the same rule to the country rankings, we would often have very short lists. So, I decided to include games with at least 3 times the number of dummy ratings in the country ranking, but never more than the BGG standard of 30.
 
-Enough of the boring technicalities, on to the fun part! 😎
+Enough of the boring technicalities, on to the fun part! 😎 Let's first answer some basic questions: How many users from that country? How many ratings have the entered? How many ratings per capita? And maybe most interestingly: What is their favourite game? Here's a quick overview over the 10 largest communities on BGG:
 
-| Country           | Population | Number of users | Total ratings | Ratings per 100k | #1 game                                                                       |
-|-------------------|------------|-----------------|---------------|------------------|-------------------------------------------------------------------------------|
-| 🇺🇸 United States  | 331.9 mil  | 131.7k          | 7724k         | 2327             | {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}                     |
-| 🇩🇪 Germany        | 83.2 mil   | 19.0k           | 1457k         | 1751             | {{% game 342942 %}}Ark Nova{{% /game %}}                                      |
-| 🇨🇦 Canada         | 38.2 mil   | 23.4k           | 1390k         | 3636             | {{% game 174430 %}}Gloomhaven{{% /game %}}                                    |
-| 🇬🇧 United Kingdom | 67.3 mil   | 24.3k           | 1300k         | 1931             | {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}                     |
-| 🇪🇸 Spain          | 47.4 mil   | 16.0k           | 913k          | 1926             | {{% game 224517 %}}Brass: Birmingham{{% /game %}}                             |
-| 🇵🇱 Poland         | 37.7 mil   | 11.8k           | 620k          | 1644             | {{% game 187645 %}}Star Wars: Rebellion{{% /game %}}                          |
-| 🇮🇹 Italy          | 59.1 mil   | 9.1k            | 550k          | 930              | {{% game 182028 %}}Through the Ages: A New Story of Civilization{{% /game %}} |
-| 🇫🇷 France         | 67.7 mil   | 10.6k           | 529k          | 782              | {{% game 342942 %}}Ark Nova{{% /game %}}                                      |
-| 🇳🇱 Netherlands    | 17.5 mil   | 7.5k            | 469k          | 2680             | {{% game 224517 %}}Brass: Birmingham{{% /game %}}                             |
-| 🇦🇺 Australia      | 25.7 mil   | 9.2k            | 468k          | 1824             | {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}                     |
+| Country           | Population | Users  | Ratings | Per 100k residents | #1 rated game                                                                 |
+|:------------------|-----------:|-------:|--------:|-------------------:|:------------------------------------------------------------------------------|
+| **🇺🇸 United States**  | 331.9 mil  | 131.7k | 7,724k   | 2,327               | {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}                     |
+| **🇩🇪 Germany**        | 83.2 mil   | 19.0k  | 1,457k   | 1,751               | {{% game 342942 %}}Ark Nova{{% /game %}}                                      |
+| **🇨🇦 Canada**         | 38.2 mil   | 23.4k  | 1,390k   | 3,636               | {{% game 174430 %}}Gloomhaven{{% /game %}}                                    |
+| **🇬🇧 United Kingdom** | 67.3 mil   | 24.3k  | 1,300k   | 1,931               | {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}                     |
+| **🇪🇸 Spain**          | 47.4 mil   | 16.0k  | 913k    | 1,926               | {{% game 224517 %}}Brass: Birmingham{{% /game %}}                             |
+| **🇵🇱 Poland**         | 37.7 mil   | 11.8k  | 620k    | 1,644               | {{% game 187645 %}}Star Wars: Rebellion{{% /game %}}                          |
+| **🇮🇹 Italy**          | 59.1 mil   | 9.1k   | 550k    | 930                | {{% game 182028 %}}Through the Ages: A New Story of Civilization{{% /game %}} |
+| **🇫🇷 France**         | 67.7 mil   | 10.6k  | 529k    | 782                | {{% game 342942 %}}Ark Nova{{% /game %}}                                      |
+| **🇳🇱 Netherlands**    | 17.5 mil   | 7.5k   | 469k    | 2,680               | {{% game 224517 %}}Brass: Birmingham{{% /game %}}                             |
+| **🇦🇺 Australia**      | 25.7 mil   | 9.2k   | 468k    | 1,824               | {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}}                     |
 
 | Game                                                              | Count |
 |-------------------------------------------------------------------|-------|

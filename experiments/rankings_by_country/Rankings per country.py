@@ -200,7 +200,7 @@ top_games_by_country = (
     country_data.sort("total_ratings_rank", nulls_last=True)
     .head(10)
     .select(
-        pl.format("{} {}", "flag", "country_name").alias("Country"),
+        pl.format("**{} {}**", "flag", "country_name").alias("Country"),
         pl.format(
             "{} mil",
             (pl.col("population") / 1_000_000).round(1),
@@ -208,17 +208,17 @@ top_games_by_country = (
         pl.format(
             "{}k",
             (pl.col("num_users") / 1_000).round(1),
-        ).alias("Number of users"),
+        ).alias("Users"),
         pl.format(
             "{}k",
             pl.col("total_ratings") // 1_000,
-        ).alias("Total ratings"),
-        pl.col("ratings_per_capita").cast(pl.Int64).alias("Ratings per 100k"),
+        ).alias("Ratings"),
+        pl.col("ratings_per_capita").cast(pl.Int64).alias("Per 100k residents"),
         pl.format(
             "{{% game {} %}}{}{{% /game %}}",
             "top_game_bgg_id",
             "top_game_name",
-        ).alias("#1 game"),
+        ).alias("#1 rated game"),
     )
 )
 with pl.Config(**markdown_settings):
