@@ -193,6 +193,9 @@ country_data.sort("total_ratings_rank", nulls_last=True).head(10)
 country_data.sort("ratings_per_capita_rank", nulls_last=True).head(10)
 
 # %%
+country_data.filter(pl.col("country_code").is_in(["aq", "va"]))
+
+# %%
 top_games_by_country = (
     country_data.sort("total_ratings_rank", nulls_last=True)
     .head(10)
