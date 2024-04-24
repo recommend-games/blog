@@ -28,6 +28,15 @@ DATA_DIR = BASE_DIR.parent / "board-game-data"
 PROJECT_DIR, BASE_DIR, DATA_DIR
 
 # %%
+markdown_settings = {
+    "tbl_formatting": "ASCII_MARKDOWN",
+    "tbl_hide_column_data_types": True,
+    "tbl_hide_dataframe_shape": True,
+    "tbl_width_chars": 999,
+    "fmt_str_lengths": 999,
+}
+
+# %%
 ratings = (
     pl.scan_ndjson(DATA_DIR / "scraped" / "bgg_RatingItem.jl")
     .select("bgg_id", "bgg_user_name", "bgg_user_rating")
@@ -188,19 +197,28 @@ top_games_by_country = (
     country_data.sort("total_ratings_rank", nulls_last=True)
     .head(10)
     .select(
-        Country=pl.format("{} {}", "flag", "country_name"),
-        Game=pl.format(
-            "{{% game {} %}}{}{{% /game %}}", "top_game_bgg_id", "top_game_name"
-        ),
+        pl.format("{} {}", "flag", "country_name").alias("Country"),
+        pl.format(
+            "{} mil",
+            (pl.col("population") / 1_000_000).round(1),
+        ).alias("Population"),
+        pl.format(
+            "{}k",
+            (pl.col("num_users") / 1_000).round(1),
+        ).alias("Number of users"),
+        pl.format(
+            "{}k",
+            pl.col("total_ratings") // 1_000,
+        ).alias("Total ratings"),
+        pl.col("ratings_per_capita").cast(pl.Int64).alias("Ratings per 100k"),
+        pl.format(
+            "{{% game {} %}}{}{{% /game %}}",
+            "top_game_bgg_id",
+            "top_game_name",
+        ).alias("#1 game"),
     )
 )
-with pl.Config(
-    tbl_formatting="ASCII_MARKDOWN",
-    tbl_hide_column_data_types=True,
-    tbl_hide_dataframe_shape=True,
-    tbl_width_chars=999,
-    fmt_str_lengths=999,
-):
+with pl.Config(**markdown_settings):
     print(top_games_by_country)
 
 # %%
@@ -218,13 +236,7 @@ top_games_count = (
     )
     .collect()
 )
-with pl.Config(
-    tbl_formatting="ASCII_MARKDOWN",
-    tbl_hide_column_data_types=True,
-    tbl_hide_dataframe_shape=True,
-    tbl_width_chars=999,
-    fmt_str_lengths=999,
-):
+with pl.Config(**markdown_settings):
     print(top_games_count)
 
 # %%
