@@ -66,8 +66,9 @@ Explore more details about the different countries in this interactive map:
 
 {{% bokeh "board_games_world_map.json" %}}
 
+As much fun as it is to browse the map, there's also the blank spaces staring in our faces: Africa and South Asia, together representing over 40% of the world's population, are almost completely missing from the international board gaming community. 🌍 Obviously, BGG being an American website only available in English means their data really only represents the Anglo-American gaming world, but still, it's notable how Latin America and other parts of Asia are present much stronger on BGG. I think some focus and effort needs to go into closing those gaps on the world map. 🕊️
+
 <!-- TODO: Most enthusiastic countries (ratings per capita) -->
-<!-- TODO: Very uneven distribution of countries, only one African country, no Pakistan and Bangladesh etc -->
 
 Finally, if you're interested in the full country overview, you can find it [here](countries.csv). Browse the full rankings for each country here:
 
