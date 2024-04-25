@@ -246,9 +246,6 @@ with pl.Config(**markdown_settings):
     print(top_games_count)
 
 # %%
-country_data.write_csv(PROJECT_DIR / "countries.csv", float_precision=3)
-
-# %%
 country_links = (
     country_data.filter(pl.col("top_game_bgg_id").is_not_null())
     .sort("country_name")
@@ -262,3 +259,25 @@ country_links = (
     )["link"]
 )
 print(" | ".join(country_links))
+
+# %%
+ratings_per_capita = (
+    country_data.sort("ratings_per_capita_rank", nulls_last=True)
+    .head(5)
+    .select(
+        ratings_per_capita=pl.format(
+            "{}. **{} {}** ({} per 100k residents)",
+            "ratings_per_capita_rank",
+            "flag",
+            "country_name",
+            pl.col("ratings_per_capita").cast(pl.Int64),
+        )
+    )["ratings_per_capita"]
+)
+print("\n".join(ratings_per_capita))
+
+# %%
+country_data.columns
+
+# %%
+country_data.write_csv(PROJECT_DIR / "countries.csv", float_precision=3)

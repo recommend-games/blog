@@ -68,7 +68,15 @@ Explore more details about the different countries in this interactive map:
 
 As much fun as it is to browse the map, there's also the blank spaces staring in our faces: Africa and South Asia, together representing over 40% of the world's population, are almost completely missing from the international board gaming community. 🌍 Obviously, BGG being an American website only available in English means their data really only represents the Anglo-American gaming world, but still, it's notable how Latin America and other parts of Asia are present much stronger on BGG. I think some focus and effort needs to go into closing those gaps on the world map. 🕊️
 
-<!-- TODO: Most enthusiastic countries (ratings per capita) -->
+I couldn't possibly leave you without circling back to the question of what country is the most enthusiastic about board games. We've already mentioned the statistical anomalities that are the 🇻🇦 Vatican and 🇦🇶 Antarctica, but if we only consider the 62 countries with their own rankings, which of those has the most ratings per capita? Here's the top 5:
+
+1. **🇫🇮 Finland** (4953 per 100k residents)
+2. **🇮🇸 Iceland** (4932 per 100k residents)
+3. **🇨🇦 Canada** (3636 per 100k residents)
+4. **🇧🇪 Belgium** (3575 per 100k residents)
+5. **🇸🇪 Sweden** (3337 per 100k residents)
+
+The Nordic countries sure hit the sweet spot here, with their highly educated populations (well versed in English) and strong emphasis on work–life balance. Also, you gotta have something to do during those long, dark winter nights. 🌌
 
 Finally, if you're interested in the full country overview, you can find it [here](countries.csv). Browse the full rankings for each country here:
 
