@@ -76,7 +76,7 @@ I couldn't possibly leave you without circling back to the question of what coun
 4. **🇧🇪 Belgium** (3575 per 100k residents)
 5. **🇸🇪 Sweden** (3337 per 100k residents)
 
-The Nordic countries sure hit the sweet spot here, with their highly educated populations (well versed in English) and strong emphasis on work–life balance. Also, you gotta have something to do during those long, dark winter nights. 🌌
+Those who were looking for the reason why my chosen home is the [happiest country in the world](https://yle.fi/a/74-20080027), you've finally got the answers: we seem to play more board games than anyone else! (*Torille! 🇫🇮*) In general, the Nordic countries sure hit the sweet spot here, with their highly educated populations (well versed in English) and strong emphasis on work–life balance. Also, you gotta have something to do during those long, dark winter nights. 🌌
 
 Finally, if you're interested in the full country overview, you can find it [here](countries.csv). Browse the full rankings for each country here:
 
