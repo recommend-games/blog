@@ -4,7 +4,7 @@ subtitle: Board game rankings by country
 slug: world-of-board-games
 author: Markus Shepherd
 type: post
-date: 2024-04-22T14:00:00+03:00
+date: 2024-04-25T23:00:00+03:00
 tags:
   - BoardGameGeek
   - BGG
