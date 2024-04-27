@@ -38,6 +38,8 @@ After running the algorithm, we end up with one vector for each user and one for
 
 In other words: we've taken the matrix of ratings from the table above and factored it into two matrices. So another way of thinking about collaborative filtering is as a matrix factorisation problem: we're trying to find two matrices that, when multiplied together, approximate the original matrix as closely as possible.
 
+Those user and game vectors are also known as *latent factors*. That's because they take the high-dimensional space of users and games and project it into a lower-dimensional space. While those latent dimensions don't carry any particular human interpretable meaning, they capture the essence of what makes a user like a game. For example, one latent factor might capture how much a user likes games with a lot of player interaction, while another might capture how much they like games with a lot of strategic depth.
+
 
 ## Outline
 
