@@ -44,10 +44,6 @@ The latent factors also have some interesting properties. For example, there's a
 
 The same goes for the game vectors: we can calculate the cosine similarity between two games to see if they appeal to the same users. Every game page on Recommend.Games has a "You might also like" section at the bottom. Those are the games with the highest cosine similarity to the game in question.
 
+Vector representations with some measure of distance are called *embeddings*. So this is yet another way of thinking about collaborative filtering: we're embedding users and games into a latent space where we can measure their similarity.
 
-## Outline
-
-- CF as linear regression "in two directions"
-- CF as matrix factorization (filling in the blanks)
-- CF as embeddings
-- CF as a neural network
+So, this was a pretty lengthy and technical article, but I hope it provides some intuition of how the recommendation engine behind Recommend.Games works. Obviously, there are a lot more details to it, but those are the most important ideas. One of the reasons why I wanted to talk about this topic is that we can have more fun with those latent factors, so stay tuned for more articles on this topic!
