@@ -6,17 +6,20 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.11.1
+#       jupytext_version: 1.16.1
 #   kernelspec:
-#     display_name: Python 3
+#     display_name: Python 3 (ipykernel)
 #     language: python
 #     name: python3
 # ---
 
 # %%
 from datetime import date
+import jupyter_black
 import pandas as pd
 from bokeh.plotting import figure, output_notebook, show
+
+jupyter_black.load()
 
 pd.options.display.max_columns = 100
 pd.options.display.max_rows = 1000
@@ -25,9 +28,6 @@ pd.options.display.float_format = "{:.6g}".format
 output_notebook()
 
 this_year = date.today().year
-
-# %load_ext nb_black
-# %load_ext lab_black
 
 # %%
 games = pd.read_csv(
@@ -67,7 +67,7 @@ data = {
 
 p = figure(
     x_range=year_range,
-    plot_height=250,
+    height=250,
     title="Co-operative games",
     toolbar_location=None,
     tools="",
@@ -89,7 +89,7 @@ data = {
 
 p = figure(
     x_range=year_range,
-    plot_height=250,
+    height=250,
     title="Co-operative games",
     toolbar_location=None,
     tools="",
