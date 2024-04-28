@@ -1,0 +1,4 @@
+data/
+*plots/
+num_collections.csv
+num_ratings.csv
