@@ -48,21 +48,20 @@ So, long story short, we have those two factors that are supposed to describe ho
 
 But before we go there, what users *do* we trust the most? Many of the highest scores actually belong to pretty random users, so I'm not comfortable exposing them here, but it's interesting to compare some of the "celebrities" in the hobby (and yours truly):
 
-|                                      User                                     |  Rank  | Trust |
-|:-----------------------------------------------------------------------------:|-------:|------:|
-|       [W Eric Martin](https://boardgamegeek.com/user/w%20eric%20martin)       |   21   | 7.376 |
-|            [Engelstein](https://boardgamegeek.com/user/engelstein)            |   77   | 7.227 |
-|              [Tomvasel](https://boardgamegeek.com/user/tomvasel)              |  312   | 7.009 |
-|                 [Aldie](https://boardgamegeek.com/user/aldie)                 |  1889  | 6.544 |
-|        [Jameystegmaier](https://boardgamegeek.com/user/jameystegmaier)        |  3213  | 6.343 |
-|             [Jonpurkis](https://boardgamegeek.com/user/jonpurkis)             |  3628  | 6.296 |
-|             [Bohnanzar](https://boardgamegeek.com/user/bohnanzar)             |  8801  | 5.848 |
-|      [Markus Shepherd](https://boardgamegeek.com/user/markus%20shepherd)      | 16207  | 5.453 |
-|                [Quinns](https://boardgamegeek.com/user/quinns)                | 16958  | 5.421 |
-|           [Matthiasmai](https://boardgamegeek.com/user/matthiasmai)           | 46390  | 4.489 |
-|           [Phelddagrif](https://boardgamegeek.com/user/phelddagrif)           | 67960  | 3.981 |
-|           [Cephalofair](https://boardgamegeek.com/user/cephalofair)           | 75010  | 3.833 |
-|              [Elizharg](https://boardgamegeek.com/user/elizharg)              | 108248 | 3.156 |
+|                                      User                                    |  Rank  | Trust |
+|:-----------------------------------------------------------------------------|-------:|------:|
+| [W Eric Martin](https://boardgamegeek.com/user/w%20eric%20martin) (BGG news) |   21   | 7.376 |
+| [Engelstein](https://boardgamegeek.com/user/engelstein) (Ludology)           |   77   | 7.227 |
+| [Tomvasel](https://boardgamegeek.com/user/tomvasel) (Dice Tower)             |  312   | 7.009 |
+| [Aldie](https://boardgamegeek.com/user/aldie) (BGG founder)                  |  1889  | 6.544 |
+| [Jameystegmaier](https://boardgamegeek.com/user/jameystegmaier) (Stonemaier) |  3213  | 6.343 |
+| [Jonpurkis](https://boardgamegeek.com/user/jonpurkis) (Actualol)             |  3628  | 6.296 |
+| [Bohnanzar](https://boardgamegeek.com/user/bohnanzar) (Uwe Rosenberg)        |  8801  | 5.848 |
+| [Markus Shepherd](https://boardgamegeek.com/user/markus%20shepherd) 🤓        | 16207  | 5.453 |
+| [Quinns](https://boardgamegeek.com/user/quinns) (SU&SD)                      | 16958  | 5.421 |
+| [Phelddagrif](https://boardgamegeek.com/user/phelddagrif) (Richard Garfield) | 67960  | 3.981 |
+| [Cephalofair](https://boardgamegeek.com/user/cephalofair) (Isaac Childres)   | 75010  | 3.833 |
+| [Elizharg](https://boardgamegeek.com/user/elizharg) (Elizabeth Hargrave)     | 108248 | 3.156 |
 
 My opinions on board games having more weight than Quintin Smith's sure feels good. 🧐
 
