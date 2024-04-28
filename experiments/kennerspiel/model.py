@@ -6,9 +6,9 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.8.2
+#       jupytext_version: 1.13.8
 #   kernelspec:
-#     display_name: Python 3
+#     display_name: Python 3 (ipykernel)
 #     language: python
 #     name: python3
 # ---
@@ -50,7 +50,18 @@ games["sdj"] = games.index.isin(
 )
 games["ksdj"] = games.index.isin(
     set(ksdj.bgg_id)
-    | set(sdj.bgg_id[sdj.sonderpreis.isin({"Complex Game", "Game of the Year Plus"})])
+    | set(
+        sdj.bgg_id[
+            sdj.sonderpreis.isin(
+                {
+                    "Complex Game",
+                    "Fantasy Game",
+                    "Game of the Year Plus",
+                    "New Worlds Game",
+                }
+            )
+        ]
+    )
 )
 games.sdj.sum(), games.ksdj.sum()
 
