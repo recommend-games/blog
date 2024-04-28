@@ -1,0 +1,68 @@
+baseurl: https://blog.recommend.games/
+
+archetypeDir: archetypes
+assetDir: assets
+contentdir: content
+dataDir: data
+layoutdir: layouts
+publishdir: public
+staticDir: static
+themesDir: themes
+
+title: Analysis Paralysis
+canonifyurls: true
+
+DefaultContentLanguage: en
+theme: beautifulhugo
+metaDataFormat: yaml
+enableRobotsTXT: true
+
+Params:
+  subtitle: Board Games ❤️ Data Science
+  mainSections:
+    - post
+    - posts
+  logo: logo.png
+  favicon: favicon.ico
+  dateFormat: January 2, 2006
+  commit: false
+  rss: true
+  comments: false
+  readingTime: true
+  wordCount: true
+  useHLJS: true
+  socialShare: true
+  showRelatedPosts: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Author:
+  name: Recommend.Games
+  email: contact@recommend.games
+  website: https://recommend.games/
+  gitlab: recommend.games
+  github: recommend-games
+  twitter: recommend_games
+  mastodon: 'tabletop.social/@markus'
+  linkedin: markusschepke
+  stackoverflow: users/2634131/markus-shepherd
+  youtube: user/MarkusSchepke
+  paypal: mschepke
+  kaggle: mshepherd
+
+menu:
+  main:
+    - name: Recommend.Games
+      url: https://recommend.games/#/
+      weight: 10
+
+    - name: About
+      url: page/about/
+      weight: 20
+
+sitemap:
+  changefreq: daily
+
