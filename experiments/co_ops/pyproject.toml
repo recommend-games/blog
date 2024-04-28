@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "co-ops"
+version = "0.1.0"
+description = "The rise of co-operative games"
+authors = ["Markus Shepherd <markus@recommend.games>"]
+
+[tool.poetry.dependencies]
+python = "3.12.*"
+
+bokeh = "*"
+matplotlib = "*"
+numpy = "*"
+pandas = "*"
+polars = {version = "*", extras = ["pandas"]}
+requests = "*"
+scipy = "*"
+seaborn = "*"
+tqdm = "*"
+
+[tool.poetry.group.dev.dependencies]
+jupyter-black = "*"
+jupyterlab = "*"
+jupytext = "*"
+mypy = "*"
+ruff = "*"
+types-tqdm = "*"
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
