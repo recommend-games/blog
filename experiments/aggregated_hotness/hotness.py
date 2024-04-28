@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.13.0
+#       jupytext_version: 1.16.1
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -16,12 +16,13 @@
 # %%
 from datetime import datetime, timedelta
 from pathlib import Path
+import jupyter_black
 import pandas as pd
 from pytility import parse_date
 from aggregated_hotness.hotness import aggregate_hotness
 
-# %load_ext nb_black
-# %load_ext lab_black
+jupyter_black.load()
+
 
 # %%
 def hot_games(
@@ -51,8 +52,8 @@ def hot_games(
 
 # %%
 results = hot_games(
-    start_date=parse_date("2021-08-01T00:00Z"),
-    end_date=parse_date("2021-10-01T00:00Z"),
+    start_date=parse_date("2024-02-01T00:00Z"),
+    end_date=parse_date("2024-04-01T00:00Z"),
     top=30,
 )
 results.head(50)

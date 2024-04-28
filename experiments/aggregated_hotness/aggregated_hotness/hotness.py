@@ -51,7 +51,7 @@ def _compute_scores(
         return pd.Series(
             {
                 bgg_id: np.exp2(1 - ranks.sort_values().head(top)).sum() / top
-                for bgg_id, ranks in result.T.iteritems()
+                for bgg_id, ranks in result.T.items()
             }
         )
 
