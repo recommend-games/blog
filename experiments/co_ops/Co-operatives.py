@@ -19,7 +19,6 @@ import jupyter_black
 import polars as pl
 
 jupyter_black.load()
-
 pl.Config.set_tbl_rows(200)
 
 this_year = date.today().year
@@ -42,7 +41,7 @@ games["cooperative"].mean()
 games.filter("cooperative").sort("year", nulls_last=True).head(20)
 
 # %%
-year = (
+years = (
     games.filter(pl.col("year").is_not_null())
     .group_by("year")
     .agg(
@@ -55,4 +54,4 @@ year = (
 )
 
 # %%
-year.filter(pl.col("year").is_between(this_year - 100, this_year))
+years.filter(pl.col("year").is_between(this_year - 100, this_year))
