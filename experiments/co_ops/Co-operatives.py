@@ -15,10 +15,12 @@
 
 # %%
 from datetime import date
+from bokeh.io import output_notebook
 import jupyter_black
 import polars as pl
 
 jupyter_black.load()
+output_notebook()
 pl.Config.set_tbl_rows(200)
 
 this_year = date.today().year
@@ -49,9 +51,27 @@ years = (
         num_coops=pl.col("cooperative").sum(),
         share_coops=pl.col("cooperative").mean(),
     )
-    .with_columns(num_competitives=pl.col("num_games") - pl.col("num_coops"))
+    .with_columns(
+        num_competitives=pl.col("num_games") - pl.col("num_coops"),
+        share_competitives=1 - pl.col("share_coops"),
+    )
     .sort("year")
 )
 
 # %%
 years.filter(pl.col("year").is_between(this_year - 100, this_year))
+
+# %%
+years_filtered = years.filter(pl.col("year").is_between(2000, this_year))
+years_filtered.plot.bar(
+    x="year",
+    y=["num_coops", "num_competitives"],
+    stacked=True,
+)
+
+# %%
+years_filtered.plot.bar(
+    x="year",
+    y=["share_coops", "share_competitives"],
+    stacked=True,
+)

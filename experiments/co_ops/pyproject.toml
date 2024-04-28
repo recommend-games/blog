@@ -7,6 +7,8 @@ authors = ["Markus Shepherd <markus@recommend.games>"]
 [tool.poetry.dependencies]
 python = "3.12.*"
 
+bokeh = "*"
+hvplot = "*"
 matplotlib = "*"
 numpy = "*"
 pandas = "*"
