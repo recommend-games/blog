@@ -40,7 +40,28 @@ games.shape
 games["cooperative"].mean()
 
 # %%
-games.filter("cooperative").sort("year", nulls_last=True).head(20)
+exclude = {
+    24331,  # Only some co-op variants?
+    9774,  # More activity than game
+    6932,  # Co-op only in 2007
+    12398,  # Party game, doesn't seem particularly co-op
+    2726,  # Doesn't seem co-op
+    22351,  # Role-play / teaching aid
+    33213,  # Social simulation
+    19631,  # Solo puzzle
+    9637,  # Sport simulation?
+    21627,  # Political simulation
+    44362,  # Educational
+    7893,  # Educational
+    33682,  # Puzzle
+}
+len(exclude)
+
+# %%
+games.filter("cooperative").filter(~pl.col("bgg_id").is_in(exclude)).sort(
+    "year",
+    nulls_last=True,
+).head(50)
 
 # %%
 years = (
