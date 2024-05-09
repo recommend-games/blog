@@ -4,7 +4,7 @@ subtitle: "Recommend.Games explained, part 1: how we recommend games to you"
 slug: collaborative-filtering
 author: Markus Shepherd
 type: post
-date: 2024-05-09T21:00:00+03:00
+date: 2024-05-09T21:47:57+03:00
 tags:
   - Recommend.Games explained
   - Collaborative filtering
