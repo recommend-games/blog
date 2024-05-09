@@ -73,5 +73,24 @@ TODO
 
 TODO
 
+---
+
+# Candidates for {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}}
+
+- Phantom Ink
+- Prey Another Day
+- The Same Game
+- Trio
+- Sky Team
+- Daybreak
+- Bier Pioniere
+- Forest Shuffle
+- Heat
+- Passt nicht!
+- Surfosaurus Max
+- Weimar
+- Hegemony
+- Schätz It If You Can
+- Cabanga!
 
 [^eligible]: As every year, it's not straightforward to determine what games are eligible for the awards. Generally speaking, it'd be those games release between April 2023 and March 2024 into German retail. Hence, filtering by BGG release year will exclude games that were released earlier elsewhere, but only recently in Germany, and likewise let some games pass that have not seen a German release in that time window. I did my best to catch what I could, but there's always some that get away.
