@@ -256,13 +256,8 @@ counts.reset_index(col_level=1, names="bgg_id").to_csv("designers.csv", index=Fa
 
 # %%
 def designer_table(counts):
-    criterion = (counts["all", "total"] >= 3) | (
-        (
-            counts["winner", "total"]
-            + counts["sonderpreis", "total"]
-            + counts["nominated", "total"]
-        )
-        >= 2
+    criterion = (counts["all", "total"] >= 5) | (
+        (counts["winner", "total"] + counts["sonderpreis", "total"]) >= 2
     )
     result = "| Designer | Spiel | Kennerspiel | Kinderspiel | Total |\n"
     result += "|:---------|:-----:|:-----------:|:-----------:|:-----:|\n"
