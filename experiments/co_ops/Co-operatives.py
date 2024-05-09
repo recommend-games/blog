@@ -28,7 +28,7 @@ this_year = date.today().year
 # %%
 games = (
     pl.scan_csv("../../../board-game-data/scraped/bgg_GameItem.csv")
-    .select("bgg_id", "name", "year", "cooperative", "compilation_of")
+    .select("bgg_id", "name", "year", "cooperative", "compilation_of", "game_type")
     .filter(pl.col("compilation_of").is_null())
     .drop("compilation_of")
     .with_columns(pl.col("cooperative").fill_null(0).cast(pl.Boolean))
@@ -58,10 +58,9 @@ exclude = {
 len(exclude)
 
 # %%
-games.filter("cooperative").filter(~pl.col("bgg_id").is_in(exclude)).sort(
-    "year",
-    nulls_last=True,
-).head(50)
+games.filter("cooperative").filter(~pl.col("bgg_id").is_in(exclude)).filter(
+    pl.col("game_type").str.contains("4665")
+).sort("year", nulls_last=True,).head(50)
 
 # %%
 years = (

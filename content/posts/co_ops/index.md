@@ -30,3 +30,5 @@ TODO.
   - Lord of the Rings
   - Pandemic
   - Hanabi, Exit, Andor, The Crew, MicroMacro, Paleo, Dorfromantik and other SdJ winners
+- SdJ co-op winners
+- Only ranked games, i.e., at least 30 ratings
