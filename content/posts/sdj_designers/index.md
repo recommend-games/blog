@@ -96,6 +96,8 @@ Overall, 94 designers have won at least one award (111 if we include special awa
 | [Haim Shafir](https://recommend.games/#/?designer=1210) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 6 | 6 |
 | [Jacques Zeimet](https://recommend.games/#/?designer=144) | 0 / 0 / 5 | 0 / 0 / 0 | 0 / 0 / 0 | 5 |
 
+Download the full results [here](designers.csv).
+
 
 ## Designers winning different awards
 
