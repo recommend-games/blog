@@ -12,7 +12,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 38,Runes,1981,spiel,False,False,True,,5.53254,35
 38,Runes,1981,spiel,False,False,True,,5.53254,36
 41,Can't Stop,1980,spiel,False,False,True,,6.74517,4
-42,Tigris & Euphrates,1997,spiel,False,False,True,,7.52114,2
+42,Tigris & Euphrates,1997,spiel,False,False,True,,7.52,2
 44,David & Goliath,1997,spiel,False,False,True,,5.95169,12
 45,Perudo,1800,spiel,True,True,True,,6.71514,25
 46,Medici,1995,spiel,False,False,True,,6.81537,2
@@ -29,8 +29,8 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 73,Show Manager,1996,spiel,False,False,True,,6.19539,60
 88,Torres,1999,spiel,True,True,True,,6.77934,42
 88,Torres,1999,spiel,True,True,True,,6.77934,7
-93,El Grande,1995,spiel,True,True,True,,7.56477,7
-93,El Grande,1995,spiel,True,True,True,,7.56477,8
+93,El Grande,1995,spiel,True,True,True,,7.57192,7
+93,El Grande,1995,spiel,True,True,True,,7.57192,8
 94,Union Pacific,1999,spiel,False,True,True,,6.64167,9
 110,Auf Achse,1987,spiel,True,True,True,,5.84277,7
 112,Condottiere,1995,spiel,False,False,True,,6.61952,79
@@ -199,13 +199,13 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 1597,Streetcar,1995,spiel,False,False,True,,5.92214,13
 1702,Klondike,1993,kinder,True,True,True,,5.63641,579
 1702,Klondike,1993,kinder,True,True,True,,5.63641,580
-1703,Kula Kula,1991,spiel,False,False,True,,5.48516,94
+1703,Kula Kula,1991,spiel,False,False,True,,5.4856,94
 1733,Iago,1984,spiel,False,False,True,,,24
 1753,Im Märchenwald,2000,kinder,False,True,True,,5.51828,748
 1806,The Piggyback Brigade,2001,kinder,False,True,True,,5.59447,24
 1816,Mississippi,1987,spiel,False,False,True,,5.52866,365
 1910,Venice Connection,1988,spiel,False,False,True,,5.587,24
-1992,Stop Thief,1979,spiel,False,False,True,,5.75082,8795
+1992,Stop Thief,1979,spiel,False,False,True,,5.74523,8795
 1998,Tutankhamen's Revenge,1990,spiel,False,False,True,,5.49428,579
 1998,Tutankhamen's Revenge,1990,spiel,False,False,True,,5.49428,580
 2043,Shogun,1976,spiel,False,False,True,,5.54195,287
@@ -231,7 +231,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 2558,Comeback,1996,spiel,False,False,True,,5.50726,12
 2570,Atlantic Star,2001,spiel,False,False,True,,6.13013,60
 2596,Villa Paletti,2001,spiel,True,True,True,,6.11925,1056
-2651,Power Grid,2004,spiel,False,False,True,,7.70489,141
+2651,Power Grid,2004,spiel,False,False,True,,7.70232,141
 2672,Der Herr der Ringe: Die Gefährten – Das Kartenspiel,2001,spiel,False,False,True,,5.55145,2
 2694,Donnerwetter,1991,spiel,False,False,True,,,523
 2759,Havannah,1980,spiel,False,False,True,,5.64654,1126
@@ -239,7 +239,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 2842,TransAmerica,2001,spiel,False,True,True,,6.42593,57
 2938,Zatre,1990,spiel,False,False,True,,5.61069,1205
 3015,Claim,1983,spiel,False,False,True,,5.57501,24
-3076,Puerto Rico,2002,spiel,False,True,True,,7.78241,117
+3076,Puerto Rico,2002,spiel,False,True,True,,7.78103,117
 3141,The Bucket King,2002,spiel,False,False,True,,5.86735,13
 3234,Dschunke,2002,spiel,False,False,True,,5.8882,86
 3267,Pizarro & Co.,2002,spiel,False,False,True,,5.91985,150
@@ -307,7 +307,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 7973,My Haunted Castle,1989,kinder,True,True,True,,5.5146,3
 7973,My Haunted Castle,1989,kinder,True,True,True,,5.5146,179
 7993,Pole Position,1989,spiel,False,False,True,,5.54414,1130
-8051,Attika,2003,spiel,False,False,True,,6.6151,59
+8051,Attika,2003,spiel,False,False,True,,6.61139,59
 8126,Maya,2003,spiel,False,False,True,,5.68341,2790
 8129,Sluff Off!,2003,spiel,False,False,True,,6.27334,13
 8168,Campus,1985,spiel,False,False,True,,5.51319,538
@@ -316,7 +316,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 8203,"Hey, That's My Fish!",2003,spiel,False,False,True,,6.57875,132
 8203,"Hey, That's My Fish!",2003,spiel,False,False,True,,6.57875,2815
 8217,San Juan,2004,spiel,False,False,True,,7.07106,117
-8262,Mücke mit Tücke,2003,kinder,False,False,True,,5.50764,1726
+8262,Mücke mit Tücke,2003,kinder,False,False,True,,5.50759,1726
 8299,Robbys Rutschpartie,2003,kinder,False,True,True,,,272
 8299,Robbys Rutschpartie,2003,kinder,False,True,True,,,7
 8299,Robbys Rutschpartie,2003,kinder,False,True,True,,,2268
@@ -336,10 +336,10 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 9440,Maharaja: The Game of Palace Building in India,2004,spiel,False,True,True,,6.6257,42
 9440,Maharaja: The Game of Palace Building in India,2004,spiel,False,True,True,,6.6257,7
 9441,Ribbit,2004,kinder,False,True,True,,6.19307,2
-9597,Vier zu mir!,1996,kinder,True,True,True,,5.51443,3244
+9597,Vier zu mir!,1996,kinder,True,True,True,,5.51498,3244
 9674,Ingenious,2004,spiel,False,True,True,,6.90918,2
 9989,Mare Polare,2004,kinder,False,True,True,,5.50477,285
-10508,Leinen los!,1997,kinder,True,True,True,,5.51655,24
+10508,Leinen los!,1997,kinder,True,True,True,,5.51637,24
 10509,Ringel-Rangel,1993,kinder,True,True,True,,,1391
 10511,Gute Freunde,1988,kinder,True,True,True,,5.49033,24
 10802,Somethin' Fishy,2004,spiel,False,False,True,,5.52046,961
@@ -349,7 +349,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 11084,Jumbo & Co,2004,spiel,False,False,True,,5.52565,1429
 11231,Snorta!,2004,kinder,False,False,True,,5.73879,4369
 11231,Snorta!,2004,kinder,False,False,True,,5.73879,4368
-11421,Uisge,1983,spiel,False,False,True,,5.51466,365
+11421,Uisge,1983,spiel,False,False,True,,5.51522,365
 11778,Cat & Mouse,2001,kinder,False,False,True,,5.44019,3
 11797,Treasure Hunt,2003,kinder,False,True,True,,,816
 11797,Treasure Hunt,2003,kinder,False,True,True,,,817
@@ -388,7 +388,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 16052,Merlin,1978,spiel,False,False,True,,5.47913,8795
 16140,Zahlenzwerge,2005,kinder,False,False,True,,,4849
 16140,Zahlenzwerge,2005,kinder,False,False,True,,,9962
-16149,Up And Down,2005,kinder,False,False,True,,5.55016,491
+16149,Up And Down,2005,kinder,False,False,True,,5.55047,491
 16151,Krabbel-Trabbel,2005,kinder,False,False,True,,,2
 16308,Ombagi,1980,spiel,False,False,True,,,94
 16369,Das Kleine Gespenst,2005,kinder,True,True,True,,5.54354,645
@@ -421,11 +421,11 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 17904,Wir füttern die kleinen Nilpferde,1983,spiel,False,False,True,,,94
 17905,Feuerwehr,1984,spiel,False,False,True,,,5340
 18052,Pin,1985,spiel,False,False,True,,,2141
-18602,Caylus,2005,spiel,False,False,False,Complex Game,7.52316,5629
-18880,Daddy Cool,2004,kinder,False,True,True,,5.52719,256
+18602,Caylus,2005,spiel,False,False,False,Complex Game,7.51968,5629
+18880,Daddy Cool,2004,kinder,False,True,True,,5.52704,256
 18881,Schildi Schildkröte,2004,kinder,False,True,True,,5.55215,545
 19129,Im Wassergarten,2004,spiel,False,False,True,,,609
-19301,Mesopotamia,2005,spiel,False,False,True,,5.93246,398
+19301,Mesopotamia,2005,spiel,False,False,True,,5.92286,398
 19646,Cowabunga,2005,spiel,False,False,True,,5.58531,12
 19877,Beetlez,2005,kinder,False,False,True,,5.50796,3841
 19996,Nacht der Magier,2005,kinder,False,True,True,,5.92321,3432
@@ -462,7 +462,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 22237,Hart an der Grenze,2005,spiel,False,False,True,,5.81305,3005
 22237,Hart an der Grenze,2005,spiel,False,False,True,,5.81305,3004
 22278,12 Thieves,2006,spiel,False,True,True,,5.90421,85
-22287,Buccaneer,2006,spiel,False,True,True,,5.85963,13
+22287,Buccaneer,2006,spiel,False,True,True,,5.84933,13
 22345,Yspahan,2006,spiel,False,True,True,,6.73548,6736
 22348,Duplik,2005,spiel,False,True,True,,6.24887,6740
 22348,Duplik,2005,spiel,False,True,True,,6.24887,6741
@@ -483,7 +483,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 25643,Arkadia,2006,spiel,False,True,True,,6.45575,381
 25669,Qwirkle,2006,spiel,True,True,True,,6.61677,7708
 25721,Turbulento,2006,kinder,False,False,True,,,256
-25760,Zoff im Hühnerhof,2006,kinder,False,False,True,,5.53859,4884
+25760,Zoff im Hühnerhof,2006,kinder,False,False,True,,5.5393,4884
 26178,Chicky Picky,2004,kinder,False,False,True,,,3505
 26182,Castello del Drago,2006,kinder,False,False,True,,,5070
 26233,Manimals,2006,kinder,False,False,True,,5.54481,227
@@ -491,7 +491,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 27363,Danger 13,2007,spiel,False,False,True,,5.549,381
 27385,Alchemist,2007,spiel,False,False,True,,5.78455,3540
 27536,Der kleine Sprechdachs,2006,kinder,False,False,True,,,2
-27588,Zooloretto,2007,spiel,True,True,True,,6.61245,86
+27588,Zooloretto,2007,spiel,True,True,True,,6.61115,86
 27940,RattleSnake,2007,kinder,False,False,True,,5.63281,3247
 27948,Beppo der Bock,2007,kinder,True,True,True,,5.53636,42714
 27948,Beppo der Bock,2007,kinder,True,True,True,,5.53636,8324
@@ -503,7 +503,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 28025,Wicked Witches Way,2006,spiel,False,False,True,,5.8815,295
 28089,Burg Appenzell,2007,spiel,False,False,True,,6.23973,1288
 28089,Burg Appenzell,2007,spiel,False,False,True,,6.23973,129
-28565,Save the Treasure of Fairy Tales,2006,kinder,False,True,True,,5.52973,645
+28565,Save the Treasure of Fairy Tales,2006,kinder,False,True,True,,5.52956,645
 28834,Heli Hopper,2007,kinder,False,False,True,,5.49246,8566
 28856,Cornu,2001,kinder,False,False,True,,,94
 29017,Dschungelschatz,2006,kinder,False,False,True,,5.63556,285
@@ -520,7 +520,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 30869,Thebes,2007,spiel,False,True,True,,6.82779,4299
 30932,Lascaux,2007,spiel,False,False,True,,5.80184,79
 30932,Lascaux,2007,spiel,False,False,True,,5.80184,101
-31260,Agricola,2007,spiel,False,False,False,Complex Game,7.75396,10
+31260,Agricola,2007,spiel,False,False,False,Complex Game,7.75163,10
 31481,Galaxy Trucker,2007,spiel,False,False,True,,7.21963,789
 31594,In the Year of the Dragon,2007,spiel,False,False,True,,7.03268,4958
 31976,"Wo bist du, heller Mond?",2004,kinder,False,False,True,,,5108
@@ -532,9 +532,9 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 33036,Alarme,2006,kinder,False,False,True,,,4809
 33160,Endeavor,2009,spiel,False,False,True,,7.03816,3526
 33160,Endeavor,2009,spiel,False,False,True,,7.03816,9733
-33414,Ghost Hunters,2007,kinder,False,True,True,,5.51117,9792
-33414,Ghost Hunters,2007,kinder,False,True,True,,5.51117,9793
-33414,Ghost Hunters,2007,kinder,False,True,True,,5.51117,9794
+33414,Ghost Hunters,2007,kinder,False,True,True,,5.51111,9792
+33414,Ghost Hunters,2007,kinder,False,True,True,,5.51111,9793
+33414,Ghost Hunters,2007,kinder,False,True,True,,5.51111,9794
 33643,Whoowasit?,2007,kinder,True,True,True,,5.92724,2
 34004,Big Points,2008,spiel,False,False,True,,5.8034,1307
 34004,Big Points,2008,spiel,False,False,True,,5.8034,1308
@@ -566,13 +566,13 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 38657,Cities,2008,spiel,False,False,True,,5.85571,9369
 38984,MOW,2008,spiel,False,False,True,,5.77556,1727
 39095,Klickado,2008,kinder,False,False,True,,5.54749,11333
-39192,Schwarzer Kater,2008,kinder,False,False,True,,5.47989,4677
+39192,Schwarzer Kater,2008,kinder,False,False,True,,5.47893,4677
 39856,Dixit,2008,spiel,True,True,True,,7.09388,11547
 40234,Einauge sei wachsam!,2009,spiel,False,False,True,,5.6422,42
 40234,Einauge sei wachsam!,2009,spiel,False,False,True,,5.6422,7
 40393,FITS,2009,spiel,False,True,True,,6.1687,2
 40425,Maori,2009,spiel,False,False,True,,5.99165,173
-40619,Tonga Island,2009,kinder,False,True,True,,5.52876,13
+40619,Tonga Island,2009,kinder,False,True,True,,5.52863,13
 40628,Finca,2009,spiel,False,True,True,,6.71118,11782
 40628,Finca,2009,spiel,False,True,True,,6.71118,314
 40769,Valdora,2009,spiel,False,False,True,,6.11696,86
@@ -582,7 +582,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 40941,Hide the Kids!,2009,kinder,False,True,True,,5.63011,1379
 40958,6 nimmt! Junior,2009,kinder,False,False,True,,5.51815,7
 41301,Hungry Wolves,2009,kinder,False,False,True,,,4884
-41496,Chickyboom,2008,kinder,False,False,True,,5.52286,942
+41496,Chickyboom,2008,kinder,False,False,True,,5.52312,942
 41916,The Magic Labyrinth,2009,kinder,True,True,True,,6.44564,12367
 42215,Tobago,2009,spiel,False,False,True,,6.85581,12461
 43015,Hansa Teutonica,2009,spiel,False,False,True,,7.46514,1018
@@ -591,7 +591,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 43528,World Without End,2009,spiel,False,False,False,Game of the Year Plus,6.71446,142
 43528,World Without End,2009,spiel,False,False,False,Game of the Year Plus,6.71446,7391
 43570,Friday,2011,kenner,False,False,True,,6.94006,141
-54043,Jaipur,2009,spiel,False,False,True,,7.37457,6736
+54043,Jaipur,2009,spiel,False,False,True,,7.37335,6736
 54137,Battle Sheep,2010,spiel,False,False,True,,6.26313,2432
 55834,Mosaix,2009,spiel,False,False,True,,5.76683,11797
 56933,Penguin Party,2008,spiel,False,False,True,,5.88936,2
@@ -614,9 +614,9 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 66188,Fresco,2010,spiel,False,True,True,,7.00095,34864
 66188,Fresco,2010,spiel,False,True,True,,7.00095,34866
 66214,Samarkand: Routes to Riches,2010,spiel,False,False,True,,6.13332,366
-66825,Kraken-Alarm,2010,kinder,False,True,True,,5.5239,961
+66825,Kraken-Alarm,2010,kinder,False,True,True,,5.52336,961
 66849,Safranito,2010,spiel,False,False,True,,6.10144,4884
-68448,7 Wonders,2010,kenner,True,True,True,,7.5789,9714
+68448,7 Wonders,2010,kenner,True,True,True,,7.57621,9714
 68561,Inspektor Hase,2010,kinder,False,False,True,,,256
 70149,Ora et Labora,2011,kenner,False,False,True,,7.32668,10
 70264,Shaun das Schaf: Echt Schaf!,2010,kinder,False,False,True,,,10246
@@ -637,7 +637,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 83195,Ghost Blitz,2010,spiel,False,False,True,,6.43889,144
 84671,Kissenschlacht,2010,kinder,False,False,True,,5.53245,2111
 84772,"Sun, Sea & Sand",2010,spiel,False,False,True,,5.89663,124
-84876,The Castles of Burgundy,2011,spiel,False,False,True,,8.01291,4958
+84876,The Castles of Burgundy,2011,spiel,False,False,True,,8.01499,4958
 85245,Magician's Kitchen,2010,kinder,False,True,True,,5.58048,3612
 85245,Magician's Kitchen,2010,kinder,False,True,True,,5.58048,37919
 87603,Flucht vor dem T-Rex,2010,kinder,False,False,True,,,8888
@@ -655,14 +655,14 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 91671,Da ist der Wurm drin,2011,kinder,True,True,True,,5.70319,44455
 91873,Strasbourg,2011,kenner,False,True,True,,6.46093,4958
 92415,Skull,2011,spiel,False,False,True,,7.02212,1318
-92591,Das große Kullern,2011,kinder,False,False,True,,5.52901,1288
-92591,Das große Kullern,2011,kinder,False,False,True,,5.52901,129
+92591,Das große Kullern,2011,kinder,False,False,True,,5.52873,1288
+92591,Das große Kullern,2011,kinder,False,False,True,,5.52873,129
 92644,Schnappt Hubi!,2011,kinder,True,True,True,,5.75055,10067
 93442,Zirkus Stapelix,2011,kinder,False,False,True,,,2111
 93551,Banana Jump,2011,kinder,False,False,True,,,3397
 93555,Miss Lupun…und das Geheimnis der Zahlen,2011,spiel,False,False,True,,5.51632,45564
 93555,Miss Lupun…und das Geheimnis der Zahlen,2011,spiel,False,False,True,,5.51632,45563
-93997,1000 and One Treasures,2010,kinder,False,False,True,,5.51725,4884
+93997,1000 and One Treasures,2010,kinder,False,False,True,,5.51715,4884
 96913,Lancaster,2011,kenner,False,True,True,,6.97628,34699
 98122,Monster Trap,2011,kinder,False,True,True,,5.59421,6941
 98122,Monster Trap,2011,kinder,False,True,True,,5.59421,6940
@@ -693,22 +693,22 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 117555,CLACK!,2012,kinder,False,False,True,,5.51745,1210
 117959,Las Vegas,2012,spiel,False,True,True,,6.88792,381
 118048,Targi,2012,kenner,False,True,True,,7.42701,57305
-118051,Spinnengift und Krötenschleim,2012,kinder,False,True,True,,5.52292,11
+118051,Spinnengift und Krötenschleim,2012,kinder,False,True,True,,5.52358,11
 118410,Dirty Pig,2012,spiel,False,False,True,,5.75805,57468
 118418,Divinare,2012,spiel,False,False,True,,6.04921,56058
 118610,Santa Cruz,2012,spiel,False,False,True,,5.96128,59
 118695,Riff Raff,2012,spiel,False,False,True,,6.19215,4923
 118697,Hand aufs Herz,2012,spiel,False,False,True,,5.50751,40631
 118698,Flossen hoch!,2012,kinder,False,False,True,,,483
-120677,Terra Mystica,2012,kenner,False,False,True,,7.90359,4300
-120677,Terra Mystica,2012,kenner,False,False,True,,7.90359,4407
-124361,Concordia,2013,kenner,False,True,True,,7.94581,6045
-124378,Die kleinen Drachenritter,2012,kinder,False,True,True,,5.5003,4884
+120677,Terra Mystica,2012,kenner,False,False,True,,7.89979,4300
+120677,Terra Mystica,2012,kenner,False,False,True,,7.89979,4407
+124361,Concordia,2013,kenner,False,True,True,,7.94407,6045
+124378,Die kleinen Drachenritter,2012,kinder,False,True,True,,5.49981,4884
 125618,Libertalia,2012,spiel,False,False,True,,6.90018,7640
-126163,Tzolk'in: The Mayan Calendar,2012,kenner,False,False,True,,7.70701,35418
-126163,Tzolk'in: The Mayan Calendar,2012,kenner,False,False,True,,7.70701,59986
-126749,Bim Bamm!,2012,kinder,False,False,True,,5.50063,461
-126749,Bim Bamm!,2012,kinder,False,False,True,,5.50063,7808
+126163,Tzolk'in: The Mayan Calendar,2012,kenner,False,False,True,,7.70425,35418
+126163,Tzolk'in: The Mayan Calendar,2012,kenner,False,False,True,,7.70425,59986
+126749,Bim Bamm!,2012,kinder,False,False,True,,5.50286,461
+126749,Bim Bamm!,2012,kinder,False,False,True,,5.50286,7808
 127134,Baobab,2012,kinder,False,False,True,,5.62309,8045
 127398,Legends of Andor,2012,kenner,True,True,True,,6.89987,11825
 127515,Mix Fix,2012,kinder,False,False,True,,,3343
@@ -729,10 +729,10 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 132783,Monster-Alarm,2011,kinder,False,False,True,,,64767
 133620,Yay!,2012,spiel,False,False,True,,5.53713,256
 133944,Pingi Pongo,2012,kinder,False,False,True,,,597
-135851,Connect the Thoughts,2013,kinder,False,False,True,,5.50411,1210
+135851,Connect the Thoughts,2013,kinder,False,False,True,,5.50457,1210
 136280,La Boca,2013,spiel,False,False,True,,6.2484,6940
 136280,La Boca,2013,spiel,False,False,True,,6.2484,6941
-136712,"Linus, der kleine Magier",2013,kinder,False,False,True,,5.51149,3990
+136712,"Linus, der kleine Magier",2013,kinder,False,False,True,,5.51079,3990
 136888,Bruges,2013,kenner,False,True,True,,7.12587,4958
 136991,Loony Quest,2015,spiel,False,False,True,,6.5428,3327
 136991,Loony Quest,2015,spiel,False,False,True,,6.5428,3418
@@ -746,7 +746,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 139326,UGO!,2013,spiel,False,False,True,,5.79428,49795
 139326,UGO!,2013,spiel,False,False,True,,5.79428,3973
 139326,UGO!,2013,spiel,False,False,True,,5.79428,60012
-140743,Catan Junior Madagascar,2012,kinder,False,False,True,,5.54256,11
+140743,Catan Junior Madagascar,2012,kinder,False,False,True,,5.54224,11
 142437,Move & Twist,2012,kinder,False,False,True,,,5178
 142437,Move & Twist,2012,kinder,False,False,True,,,62766
 143157,SOS Titanic,2013,spiel,False,False,True,,6.06852,1727
@@ -780,22 +780,22 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 158708,Joe's Zoo,2014,kinder,False,False,True,,,3990
 158899,Colt Express,2014,spiel,True,True,True,,6.95904,28912
 159629,Welches Tier bin ich?,2013,kinder,False,False,True,,,73432
-159675,Fields of Arle,2014,kenner,False,False,True,,7.60736,10
-161936,Pandemic Legacy: Season 1,2015,kenner,False,True,True,,8.38449,442
-161936,Pandemic Legacy: Season 1,2015,kenner,False,True,True,,8.38449,378
+159675,Fields of Arle,2014,kenner,False,False,True,,7.6069,10
+161936,Pandemic Legacy: Season 1,2015,kenner,False,True,True,,8.38212,442
+161936,Pandemic Legacy: Season 1,2015,kenner,False,True,True,,8.38212,378
 162082,Deus,2014,kenner,False,False,True,,6.94201,38335
 162191,Look!,2012,kinder,False,False,True,,5.55087,1210
 163412,Patchwork,2014,spiel,False,False,True,,7.49354,10
 163930,Abracada...What?,2014,spiel,False,False,True,,5.98077,41794
 163968,Elysium,2015,kenner,False,True,True,,6.89958,69007
 163968,Elysium,2015,kenner,False,True,True,,6.89958,56058
-164928,Orléans,2014,kenner,False,True,True,,7.87383,158
+164928,Orléans,2014,kenner,False,True,True,,7.87377,158
 165722,KLASK,2014,spiel,False,False,True,,7.24701,77890
 166384,Spyfall,2014,spiel,False,False,True,,6.64703,78199
-167791,Terraforming Mars,2016,kenner,False,True,True,,8.2179,52075
+167791,Terraforming Mars,2016,kenner,False,True,True,,8.2159,52075
 168534,Fröschlein aufgepasst!,2014,kinder,False,False,True,,,500
-170042,Raiders of the North Sea,2015,kenner,False,True,True,,7.52795,12547
-170216,Blood Rage,2015,kenner,False,False,True,,7.76234,1533
+170042,Raiders of the North Sea,2015,kenner,False,True,True,,7.52584,12547
+170216,Blood Rage,2015,kenner,False,False,True,,7.76003,1533
 170969,Gigamons,2014,kinder,False,True,True,,5.62805,78238
 170969,Gigamons,2014,kinder,False,True,True,,5.62805,78240
 171129,Spinderella,2015,kinder,True,True,True,,5.91238,285
@@ -804,8 +804,8 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 171233,The Big Book of Madness,2015,kenner,False,False,True,,6.54873,75577
 171499,Cacao,2015,spiel,False,False,True,,6.80081,8347
 171561,Der verdrehte Sprach-Zoo,2015,kinder,False,False,True,,,93
-171623,The Voyages of Marco Polo,2015,kenner,False,False,True,,7.58241,35418
-171623,The Voyages of Marco Polo,2015,kenner,False,False,True,,7.58241,59986
+171623,The Voyages of Marco Polo,2015,kenner,False,False,True,,7.57894,35418
+171623,The Voyages of Marco Polo,2015,kenner,False,False,True,,7.57894,59986
 171668,The Grizzled,2015,kenner,False,False,True,,6.90411,79931
 171668,The Grizzled,2015,kenner,False,False,True,,6.90411,2098
 172308,Broom Service,2015,kenner,True,True,True,,6.86671,8397
@@ -820,8 +820,8 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 172931,Outfoxed!,2014,kinder,False,False,True,,6.56826,105688
 172931,Outfoxed!,2014,kinder,False,False,True,,6.56826,27808
 173090,The Game,2015,spiel,False,True,True,,6.49911,11781
-173346,7 Wonders Duel,2015,kenner,False,False,True,,7.97163,9714
-173346,7 Wonders Duel,2015,kenner,False,False,True,,7.97163,1727
+173346,7 Wonders Duel,2015,kenner,False,False,True,,7.97244,9714
+173346,7 Wonders Duel,2015,kenner,False,False,True,,7.97244,1727
 174219,Time's Up! Kids,2015,kinder,False,False,True,,5.66782,567
 176494,Isle of Skye: From Chieftain to King,2015,kenner,True,True,True,,7.23376,8397
 176494,Isle of Skye: From Chieftain to King,2015,kenner,True,True,True,,7.23376,11767
@@ -834,14 +834,14 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 183006,Qwinto,2015,spiel,False,False,True,,6.43657,4308
 183006,Qwinto,2015,spiel,False,False,True,,6.43657,4307
 183251,Karuba,2015,spiel,False,True,True,,6.88558,381
-183401,Sleepy Castle,2015,kinder,False,False,True,,5.53695,256
+183401,Sleepy Castle,2015,kinder,False,False,True,,5.53859,256
 184490,Mein Schatz,2015,kinder,False,False,True,,5.52061,961
 186302,Die Fiesen 7,2015,spiel,False,False,True,,5.72597,144
 191004,My First Stone Age,2016,kinder,True,True,True,,6.11633,4884
 191065,Castle Flutterstone,2016,kinder,False,False,True,,5.5579,308
-191189,Aeon's End,2016,kenner,False,False,True,,7.62045,126022
-191189,Aeon's End,2016,kenner,False,False,True,,7.62045,72770
-191189,Aeon's End,2016,kenner,False,False,True,,7.62045,88122
+191189,Aeon's End,2016,kenner,False,False,True,,7.61732,126022
+191189,Aeon's End,2016,kenner,False,False,True,,7.61732,72770
+191189,Aeon's End,2016,kenner,False,False,True,,7.61732,88122
 191538,Leo,2016,kinder,False,True,True,,5.95617,138
 191572,Animals on Board,2016,spiel,False,False,True,,6.0378,11782
 191572,Animals on Board,2016,spiel,False,False,True,,6.0378,314
@@ -851,14 +851,14 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 191687,Jungle Party,2016,kinder,False,False,True,,5.52814,10614
 191862,Imhotep,2016,spiel,False,True,True,,6.9294,8347
 192283,Emojito!,2016,kinder,False,True,True,,5.5234,111626
-193738,Great Western Trail,2016,kenner,False,False,True,,8.03893,11767
+193738,Great Western Trail,2016,kenner,False,False,True,,8.03342,11767
 194655,Santorini,2016,spiel,False,False,True,,7.23251,3302
 195372,Krazy Wordz: Nicht 100% jugendfrei,2016,spiel,False,False,True,,6.1032,12367
 195372,Krazy Wordz: Nicht 100% jugendfrei,2016,spiel,False,False,True,,6.1032,5363
 195372,Krazy Wordz: Nicht 100% jugendfrei,2016,spiel,False,False,True,,6.1032,12779
 199611,Shiftago,2016,spiel,False,False,True,,5.54164,74724
 199611,Shiftago,2016,spiel,False,False,True,,5.54164,74723
-201808,Clank!: A Deck-Building Adventure,2016,kenner,False,False,True,,7.62052,92370
+201808,Clank!: A Deck-Building Adventure,2016,kenner,False,False,True,,7.61858,92370
 202296,Wizardry to the Power of Three,2016,kinder,False,False,True,,5.63462,461
 202296,Wizardry to the Power of Three,2016,kinder,False,False,True,,5.63462,7808
 203411,Word Slam,2016,spiel,False,False,True,,5.99401,6940
@@ -883,8 +883,8 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 219215,Werewords,2017,spiel,False,True,True,,6.65566,6046
 219509,Captain Silver,2017,kinder,False,True,True,,5.57537,3990
 219509,Captain Silver,2017,kinder,False,True,True,,5.57537,10614
-221107,Pandemic Legacy: Season 2,2017,kenner,False,False,False,Special Prize,7.72971,442
-221107,Pandemic Legacy: Season 2,2017,kenner,False,False,False,Special Prize,7.72971,378
+221107,Pandemic Legacy: Season 2,2017,kenner,False,False,False,Special Prize,7.7249,442
+221107,Pandemic Legacy: Season 2,2017,kenner,False,False,False,Special Prize,7.7249,378
 221965,The Fox in the Forest,2017,spiel,False,False,True,,6.90225,43202
 223040,Fantasy Realms,2017,kenner,False,True,True,,7.24797,3440
 223321,Detective: A Modern Crime Board Game,2018,kenner,False,True,True,,7.2323,108405
@@ -897,7 +897,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 227789,Heaven & Ale,2017,kenner,False,True,True,,7.12499,30744
 230080,Majesty: For the Realm,2017,spiel,False,False,True,,6.57082,50969
 230383,Memoarrr!,2017,spiel,False,False,True,,6.22574,101836
-230802,Azul,2017,spiel,True,True,True,,7.64478,42
+230802,Azul,2017,spiel,True,True,True,,7.64154,42
 231045,Speed Colors,2017,kinder,False,False,True,,5.56878,102038
 232045,Shaky Manor,2017,kinder,False,True,True,,5.67896,80520
 232045,Shaky Manor,2017,kinder,False,True,True,,5.67896,80521
@@ -907,8 +907,8 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 235927,Dino World,2017,kinder,False,False,True,,5.53566,6818
 235927,Dino World,2017,kinder,False,False,True,,5.53566,6817
 235927,Dino World,2017,kinder,False,False,True,,5.53566,48170
-236457,Architects of the West Kingdom,2018,kenner,False,False,True,,7.54268,103821
-236457,Architects of the West Kingdom,2018,kenner,False,False,True,,7.54268,12547
+236457,Architects of the West Kingdom,2018,kenner,False,False,True,,7.54029,103821
+236457,Architects of the West Kingdom,2018,kenner,False,False,True,,7.54029,12547
 236484,Facecards,2017,spiel,False,False,True,,5.65493,138
 241266,Little Town,2017,spiel,False,False,True,,6.57264,75617
 241266,Little Town,2017,spiel,False,False,True,,6.57264,75618
@@ -919,8 +919,8 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 244228,Reef,2018,spiel,False,False,True,,6.73,61330
 244320,SOS Dino,2018,kinder,False,False,True,,5.8408,4337
 244320,SOS Dino,2018,kinder,False,False,True,,5.8408,72628
-244521,The Quacks of Quedlinburg,2018,kenner,True,True,True,,7.68876,80162
-244522,That's Pretty Clever!,2018,kenner,False,True,True,,7.3862,80162
+244521,The Quacks of Quedlinburg,2018,kenner,True,True,True,,7.68647,80162
+244522,That's Pretty Clever!,2018,kenner,False,True,True,,7.38441,80162
 244711,Newton,2018,kenner,False,False,True,,7.06821,35418
 244711,Newton,2018,kenner,False,False,True,,7.06821,52377
 244992,The Mind,2018,spiel,False,True,True,,6.64455,80162
@@ -935,19 +935,19 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 247313,Woodlands,2018,spiel,False,False,True,,5.66441,90042
 247314,Concept Kids: Animals,2018,kinder,False,False,True,,5.99099,65537
 247314,Concept Kids: Animals,2018,kinder,False,False,True,,5.99099,8132
-247763,Underwater Cities,2018,kenner,False,False,True,,7.78965,9307
+247763,Underwater Cities,2018,kenner,False,False,True,,7.78719,9307
 249768,My First Adventure: Finding the Dragon,2018,kinder,False,False,True,,5.57269,84067
 250780,Sherlock: Last Call,2018,spiel,False,False,True,,5.98619,69099
 250780,Sherlock: Last Call,2018,spiel,False,False,True,,5.98619,108743
 250780,Sherlock: Last Call,2018,spiel,False,False,True,,5.98619,108574
-251247,Barrage,2019,kenner,False,False,True,,7.85099,108836
-251247,Barrage,2019,kenner,False,False,True,,7.85099,35418
+251247,Barrage,2019,kenner,False,False,True,,7.8479,108836
+251247,Barrage,2019,kenner,False,False,True,,7.8479,35418
 254640,Just One,2018,spiel,True,True,True,,7.42992,51255
 254640,Just One,2018,spiel,True,True,True,,7.42992,51055
 255674,Imhotep: The Duel,2018,spiel,False,False,True,,6.42277,8347
 256952,Zombie Kidz Evolution,2018,kinder,False,False,True,,6.95362,44054
-258779,Planet Unknown,2022,kenner,False,True,True,,7.33736,98336
-258779,Planet Unknown,2022,kenner,False,True,True,,7.33736,77564
+258779,Planet Unknown,2022,kenner,False,True,True,,7.34315,98336
+258779,Planet Unknown,2022,kenner,False,True,True,,7.34315,77564
 259374,Belratti,2018,spiel,False,False,True,,6.19828,104579
 259830,Hedgehog Roll,2019,kinder,True,True,True,,5.68328,111626
 261265,Monster-Bande,2018,kinder,False,False,True,,5.5334,112154
@@ -959,9 +959,9 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 264055,Draftosaurus,2019,spiel,False,False,True,,6.8641,72628
 264295,Fabulantica,2018,kinder,False,True,True,,5.60145,4884
 266083,L.L.A.M.A.,2019,spiel,False,True,True,,6.25213,2
-266192,Wingspan,2019,kenner,True,True,True,,7.91072,111338
-266810,Paladins of the West Kingdom,2019,kenner,False,False,True,,7.68215,103821
-266810,Paladins of the West Kingdom,2019,kenner,False,False,True,,7.68215,12547
+266192,Wingspan,2019,kenner,True,True,True,,7.90633,111338
+266810,Paladins of the West Kingdom,2019,kenner,False,False,True,,7.68019,103821
+266810,Paladins of the West Kingdom,2019,kenner,False,False,True,,7.68019,12547
 266830,QE,2019,spiel,False,False,True,,6.89483,13391
 267378,Chakra,2019,spiel,False,False,True,,6.22106,114258
 269199,Dizzle,2019,spiel,False,False,True,,6.04095,314
@@ -977,7 +977,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 274960,Point Salad,2019,spiel,False,False,True,,6.97053,116181
 274960,Point Salad,2019,spiel,False,False,True,,6.97053,116180
 283073,Zoo Run,2019,kinder,False,False,True,,5.54188,78797
-284083,The Crew: The Quest for Planet Nine,2019,kenner,True,True,True,,7.67228,45563
+284083,The Crew: The Quest for Planet Nine,2019,kenner,True,True,True,,7.66741,45563
 284108,Pictures,2019,spiel,True,True,True,,6.4697,60694
 284108,Pictures,2019,spiel,True,True,True,,6.4697,119515
 284435,Nova Luna,2019,spiel,False,True,True,,6.89511,10
@@ -990,18 +990,18 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 287591,Storytailors,2020,kinder,False,True,True,,5.62654,79462
 288969,Puzzle-Memo,2019,kinder,False,False,True,,5.51921,173
 291453,SCOUT,2019,spiel,False,True,True,,7.46571,116503
-291457,Gloomhaven: Jaws of the Lion,2020,kenner,False,False,True,,8.1758,69802
+291457,Gloomhaven: Jaws of the Lion,2020,kenner,False,False,True,,8.17176,69802
 291549,Go Slow!,2020,kinder,False,False,True,,5.54484,8767
 291550,Foto Fish,2020,kinder,False,True,True,,5.52903,106414
 291859,Riftforce,2021,kenner,False,False,True,,6.42983,101836
 295486,My City,2020,spiel,False,True,True,,7.2792,2
-295947,Cascadia,2021,spiel,True,True,True,,7.77298,122804
+295947,Cascadia,2021,spiel,True,True,True,,7.77391,122804
 296514,Robots,2020,kinder,False,True,True,,5.55216,12
 299028,Dream Catcher,2020,kinder,False,False,True,,5.53011,3327
 299028,Dream Catcher,2020,kinder,False,False,True,,5.53011,3418
-299169,Spicy,2020,spiel,False,False,True,,6.57679,111439
-299630,Honey,2021,kinder,False,False,True,,5.52363,77946
-299630,Honey,2021,kinder,False,False,True,,5.52363,84381
+299169,Spicy,2020,spiel,False,False,True,,6.6139,111439
+299630,Honey,2021,kinder,False,False,True,,5.52423,77946
+299630,Honey,2021,kinder,False,False,True,,5.52423,84381
 299684,Khôra: Rise of an Empire,2021,kenner,False,False,True,,6.70192,117987
 300010,Dragomino,2020,kinder,True,True,True,,6.22982,1727
 300010,Dragomino,2020,kinder,True,True,True,,6.22982,79463
@@ -1017,9 +1017,9 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 303672,Trek 12: Himalaya,2020,spiel,False,False,True,,6.19851,1727
 303672,Trek 12: Himalaya,2020,spiel,False,False,True,,6.19851,60151
 310448,Zombie Teenz Evolution,2020,spiel,False,True,True,,6.46121,44054
-312484,Lost Ruins of Arnak,2020,kenner,False,True,True,,7.89864,127823
-312484,Lost Ruins of Arnak,2020,kenner,False,True,True,,7.89864,127822
-316554,Dune: Imperium,2020,kenner,False,True,True,,8.21991,92370
+312484,Lost Ruins of Arnak,2020,kenner,False,True,True,,7.89997,127823
+312484,Lost Ruins of Arnak,2020,kenner,False,True,True,,7.89997,127822
+316554,Dune: Imperium,2020,kenner,False,True,True,,8.22738,92370
 317311,Switch & Signal,2020,spiel,False,False,True,,6.20047,67071
 318195,Biss 20,2020,spiel,False,False,True,,5.7436,85283
 318195,Biss 20,2020,spiel,False,False,True,,5.7436,173
@@ -1050,9 +1050,9 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 342184,Memo Friends,2019,kinder,False,False,True,,,3
 342207,echoes: The Dancer,2021,spiel,False,False,True,,5.75235,69007
 342207,echoes: The Dancer,2021,spiel,False,False,True,,5.75235,108002
-342942,Ark Nova,2021,kenner,False,False,True,,8.33108,138517
-343833,Turtle Splash!,2021,kinder,False,False,True,,5.56544,54144
-343833,Turtle Splash!,2021,kinder,False,False,True,,5.56544,54143
+342942,Ark Nova,2021,kenner,False,False,True,,8.33293,138517
+343833,Turtle Splash!,2021,kinder,False,False,True,,5.5685,54144
+343833,Turtle Splash!,2021,kinder,False,False,True,,5.5685,54143
 345584,Mindbug: First Contact,2022,kenner,False,False,True,,7.02758,118
 345584,Mindbug: First Contact,2022,kenner,False,False,True,,7.02758,14
 345584,Mindbug: First Contact,2022,kenner,False,False,True,,7.02758,139860
