@@ -200,6 +200,8 @@ I'll leave you with some more detailed statistics below. I hope you enjoy those 
 
 ## Designer Hall of Fame
 
+This table includes designers with at least 2 wins or 5 nominations across all categories.
+
 | Designer | Spiel | Kennerspiel | Kinderspiel | Total |
 |:---------|:-----:|:-----------:|:-----------:|:-----:|
 | [Wolfgang Kramer](https://recommend.games/#/?designer=7) | 5 / 4 / 12 | 0 / 1 / 0 | 1 / 2 / 3 | 28 |
