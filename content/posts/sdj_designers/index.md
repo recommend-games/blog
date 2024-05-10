@@ -4,7 +4,7 @@ subtitle: Who has won the most awards?
 slug: best-board-game-designers
 author: Markus Shepherd
 type: post
-date: 2024-04-17T21:00:00+03:00
+date: 2024-05-10T21:00:00+03:00
 tags:
   - SdJ
   - Spiel des Jahres
@@ -43,7 +43,11 @@ But this article was meant to be about neither games nor data, but the designers
 
 Over the course of 45 sessions, the jury has mentioned games by 566 different designers. By far the most successful designer is [Wolfgang Kramer](https://recommend.games/#/?designer=7) who has won {{% sdj / %}} five times (four of those were co-designs) and {{% kindersdj / %}} once between 1986 and 2000. The record for most games on the longlists is held by [Reiner Knizia](https://recommend.games/#/?designer=2) with 36 games, which makes it even more surprising that he has "only" won two awards: one each of {{% sdj / %}} and {{% kindersdj / %}} – both in 2008.
 
-Overall, 94 designers have won at least one award (111 if we include special awards), with 21 of them winning more than one (22 including special awards). Only 8 of those have won their awards in more than one category and to this date, no designer has won in all three categories.
+Overall, 94 designers have won at least one award (111 if we include special awards), with 21 of them winning more than one (22 including special awards). Only 8 of those have won their awards in more than one category: [Wolfgang Kramer](https://recommend.games/#/?designer=7), [Inka](https://recommend.games/#/?designer=6940) and [Markus Brand](https://recommend.games/#/?designer=6941), [Alex Randolph](https://recommend.games/#/?designer=24), [Reiner Knizia](https://recommend.games/#/?designer=2), [Bruno Cathala](https://recommend.games/#/?designer=1727), [Antoine Bauza](https://recommend.games/#/?designer=9714) and [Steffen Bogen](https://recommend.games/#/?designer=10067). To this date, no designer has won in all three categories.
+
+Looking at the longlists (including shortlists and winners), the jury nominated 217 different designers over the years. Of those, only 22 have been nominated in more than one category and just 4 designers can claim the distinction of being nominated in all three categories: [Wolfgang Kramer](https://recommend.games/#/?designer=7), [Antoine Bauza](https://recommend.games/#/?designer=9714), [Rüdiger Dorn](https://recommend.games/#/?designer=381) and [Wolfgang Warsch](https://recommend.games/#/?designer=80162).
+
+As mentioned earlier, the jury has recommended games by 566 different designers, with 68 of them appearing in more than one category and 9 in all three. In addition to the 4 mentioned above, those are [Inka](https://recommend.games/#/?designer=6940) and [Markus Brand](https://recommend.games/#/?designer=6941), [Reiner Knizia](https://recommend.games/#/?designer=2), [Bruno Cathala](https://recommend.games/#/?designer=1727) and [Roberto Fraga](https://recommend.games/#/?designer=285).
 
 | Designer | Spiel | Kennerspiel | Kinderspiel | Total |
 |:---------|:-----:|:-----------:|:-----------:|:-----:|
@@ -157,14 +161,14 @@ Download the full results [here](designers.csv).
 ## Designers winning in different categories
 
 
-### Longlist
+### Longlist (incl shortlist and winners)
 
 - 9 designers appear in all 3 categories
 - 68 designers appear in at least 2 categories
 - 566 designers appear in at least 1 category
 
 
-### Shortlist
+### Shortlist (incl winners)
 
 - 4 designers appear in all 3 categories
 - 22 designers appear in at least 2 categories
@@ -188,5 +192,9 @@ Download the full results [here](designers.csv).
 - How many different designers have won/nom/rec SdJ/KedJ/KidJ/any?
 - How many designers have won/nom/rec with more than one game?
 - How many designers have won/nom/rec in more than one category?
+- Who was nominated most often without winning?
+- Most wins: total, SdJ, KedJ, KidJ
+- Most nominations: total, SdJ, KedJ, KidJ
+- Most recommendations: total, SdJ, KedJ, KidJ
 
 [^exit]: Arguably, there's 15 {{% kdj / %}} winners: In 2017, the jury gave the award to the first three games in the Exit series. In all statistics, I only count them as a single entry. Similarly, in 2019, the first three entries of the Sherlock series got recommended, which I also count as just a single game.
