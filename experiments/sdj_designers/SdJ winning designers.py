@@ -27,7 +27,7 @@ jupyter_black.load()
 SEED = 23
 
 pd.options.display.max_columns = 100
-pd.options.display.max_rows = 1000
+pd.options.display.max_rows = 100
 pd.options.display.float_format = "{:.6g}".format
 
 # %% [markdown]
@@ -133,7 +133,7 @@ columns = [
 data = games[columns].dropna(subset=["award"]).join(designer_awards).copy()
 data["designer"] = data["designer"].fillna(3).astype("int64")
 data["year"] = data["year"].fillna(0).astype("int64")
-data.shape, data.dtypes
+data.shape
 
 # %%
 data.to_csv("games.csv")
@@ -380,3 +380,47 @@ for title, count_list in count_lists.items():
             )
     print()
     print()
+
+# %%
+awards = (
+    "total",
+    "spiel",
+    "kenner",
+    "kinder",
+)
+award_titles = (
+    "Overall",
+    "Spiel des Jahres",
+    "Kennerspiel des Jahres",
+    "Kinderspiel des Jahres",
+)
+steps = ("winner", "sonderpreis", "nominated", "recommended")
+step_titles = (
+    "Most wins (main award)",
+    "Most wins (incl special award)",
+    "Most games on the shortlist",
+    "Most games on the longlist",
+)
+print("# Designer records")
+for award, award_title in zip(awards, award_titles):
+    print(f"\n\n## {award_title}\n")
+
+    for i in range(len(steps), 0, -1):
+        num_games = counts[pd.MultiIndex.from_product([steps[:i], [award]])].sum(axis=1)
+        most = num_games.max()
+        print(f"- {step_titles[i-1]}: {most}")
+        for bgg_id, name in counts.reindex(num_games[num_games == most].index)[
+            "designer", "name"
+        ].items():
+            print(f"  - [{name}](https://recommend.games/#/?designer={bgg_id:.0f})")
+
+    nominated = counts[counts["winner", award] == 0].sort_values(
+        ("nominated", award),
+        ascending=False,
+    )
+    nominated_num = nominated["nominated", award].max()
+    print(f"- Most games on the shortlist without win: {nominated_num}")
+    for bgg_id, name in nominated[nominated["nominated", award] == nominated_num][
+        "designer", "name"
+    ].items():
+        print(f"  - [{name}](https://recommend.games/#/?designer={bgg_id:.0f})")
