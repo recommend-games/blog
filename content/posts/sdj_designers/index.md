@@ -103,6 +103,73 @@ As mentioned earlier, the jury has recommended games by 566 different designers,
 Download the full results [here](designers.csv).
 
 
+## Designer records
+
+
+### Overall
+
+- Most games on the longlist: 36
+  - [Reiner Knizia](https://recommend.games/#/?designer=2)
+- Most games on the shortlist: 13
+  - [Wolfgang Kramer](https://recommend.games/#/?designer=7)
+  - [Reiner Knizia](https://recommend.games/#/?designer=2)
+- Most wins: 6
+  - [Wolfgang Kramer](https://recommend.games/#/?designer=7)
+- Most games on the shortlist without win: 5
+  - [Jürgen P. Grunau](https://recommend.games/#/?designer=272)
+
+
+### Spiel des Jahres
+
+- Most games on the longlist: 25
+  - [Reiner Knizia](https://recommend.games/#/?designer=2)
+- Most games on the shortlist: 9
+  - [Wolfgang Kramer](https://recommend.games/#/?designer=7)
+- Most wins: 5
+  - [Wolfgang Kramer](https://recommend.games/#/?designer=7)
+- Most games on the shortlist without win: 5
+  - [Rüdiger Dorn](https://recommend.games/#/?designer=381)
+
+
+### Kennerspiel des Jahres
+
+- Most games on the longlist: 4
+  - [Alexander Pfister](https://recommend.games/#/?designer=11767)
+  - [Stefan Feld](https://recommend.games/#/?designer=4958)
+  - [Simone Luciani](https://recommend.games/#/?designer=35418)
+- Most games on the shortlist: 3
+  - [Stefan Feld](https://recommend.games/#/?designer=4958)
+- Most wins: 2
+  - [Inka Brand](https://recommend.games/#/?designer=6940)
+  - [Markus Brand](https://recommend.games/#/?designer=6941)
+  - [Andreas Pelikan](https://recommend.games/#/?designer=8397)
+  - [Alexander Pfister](https://recommend.games/#/?designer=11767)
+- Most games on the shortlist without win: 3
+  - [Stefan Feld](https://recommend.games/#/?designer=4958)
+
+
+### Kinderspiel des Jahres
+
+- Most games on the longlist: 13
+  - [Kai Haferkamp](https://recommend.games/#/?designer=645)
+- Most games on the shortlist: 5
+  - [Reiner Knizia](https://recommend.games/#/?designer=2)
+  - [Heinz Meister](https://recommend.games/#/?designer=256)
+- Most wins (incl special award): 3
+  - [Marie Fort](https://recommend.games/#/?designer=79463)
+  - [Wilfried Fort](https://recommend.games/#/?designer=79462)
+- Most wins (main award): 2
+  - [Alex Randolph](https://recommend.games/#/?designer=24)
+  - [Marie Fort](https://recommend.games/#/?designer=79463)
+  - [Wilfried Fort](https://recommend.games/#/?designer=79462)
+  - [Heinz Meister](https://recommend.games/#/?designer=256)
+  - [Manfred Ludwig](https://recommend.games/#/?designer=500)
+  - [Klaus Zoch](https://recommend.games/#/?designer=267)
+  - [Peter-Paul Joopen](https://recommend.games/#/?designer=1783)
+- Most games on the shortlist without win: 3
+  - [Jürgen P. Grunau](https://recommend.games/#/?designer=272)
+
+
 ## Designers winning in different categories
 
 
@@ -180,14 +247,5 @@ Download the full results [here](designers.csv).
 - 9 designers had a game on all longlists
 - 4 designers had a game on all shortlists
 - 0 designers won all main awards
-
-
-
-## Other questions
-
-- Who was nominated most often without winning?
-- Most wins: total, SdJ, KedJ, KidJ
-- Most nominations: total, SdJ, KedJ, KidJ
-- Most recommendations: total, SdJ, KedJ, KidJ
 
 [^exit]: Arguably, there's 15 {{% kdj / %}} winners: In 2017, the jury gave the award to the first three games in the Exit series. In all statistics, I only count them as a single entry. Similarly, in 2019, the first three entries of the Sherlock series got recommended, which I also count as just a single game.

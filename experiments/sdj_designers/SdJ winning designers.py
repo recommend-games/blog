@@ -401,9 +401,9 @@ step_titles = (
     "Most games on the shortlist",
     "Most games on the longlist",
 )
-print("# Designer records")
+print("## Designer records")
 for award, award_title in zip(awards, award_titles):
-    print(f"\n\n## {award_title}\n")
+    print(f"\n\n### {award_title}\n")
 
     for i in range(len(steps), 0, -1):
         num_games = counts[pd.MultiIndex.from_product([steps[:i], [award]])].sum(axis=1)
