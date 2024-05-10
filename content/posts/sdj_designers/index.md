@@ -103,61 +103,6 @@ As mentioned earlier, the jury has recommended games by 566 different designers,
 Download the full results [here](designers.csv).
 
 
-## Designers winning different awards
-
-
-### Spiel des Jahres
-
-- 342 different designers had a game on the longlist
-- 105 different designers had a game on the shortlist
-- 58 different designers won the award (incl special awards)
-- 48 different designers won the main award
-
-
-### Kennerspiel des Jahres
-
-- 95 different designers had a game on the longlist
-- 52 different designers had a game on the shortlist
-- 20 different designers won the award (incl special awards)
-- 14 different designers won the main award
-
-
-### Kinderspiel des Jahres
-
-- 206 different designers had a game on the longlist
-- 86 different designers had a game on the shortlist
-- 41 different designers won the award (incl special awards)
-- 40 different designers won the main award
-
-
-### Spiel des Jahres & Kennerspiel des Jahres
-
-- 22 different designers had a game on the longlist
-- 9 different designers had a game on the shortlist
-- 1 different designers won the main award
-
-
-### Spiel des Jahres & Kinderspiel des Jahres
-
-- 55 different designers had a game on the longlist
-- 15 different designers had a game on the shortlist
-- 5 different designers won the main award
-
-
-### Kennerspiel des Jahres & Kinderspiel des Jahres
-
-- 9 different designers had a game on the longlist
-- 6 different designers had a game on the shortlist
-- 2 different designers won the main award
-
-
-### Spiel des Jahres & Kennerspiel des Jahres & Kinderspiel des Jahres
-
-- 9 different designers had a game on the longlist
-- 4 different designers had a game on the shortlist
-- 0 different designers won the main award
-
-
 ## Designers winning in different categories
 
 
@@ -175,23 +120,71 @@ Download the full results [here](designers.csv).
 - 217 designers appear in at least 1 category
 
 
-### Winner (incl special award)
+### Winners
 
+- 0 designers appear in all 3 categories
 - 8 designers appear in at least 2 categories
-- 111 designers appear in at least 1 category
+- 94 designers appear in at least 1 category (111 incl special awards)
 
 
-### Winner (main award)
+## Designers winning different awards
 
-- 8 designers appear in at least 2 categories
-- 94 designers appear in at least 1 category
+
+### Spiel des Jahres
+
+- 342 designers had a game on the longlist
+- 105 designers had a game on the shortlist
+- 58 designers won the award (incl special awards)
+- 48 designers won the main award
+
+
+### Kennerspiel des Jahres
+
+- 95 designers had a game on the longlist
+- 52 designers had a game on the shortlist
+- 20 designers won the award (incl special awards)
+- 14 designers won the main award
+
+
+### Kinderspiel des Jahres
+
+- 206 designers had a game on the longlist
+- 86 designers had a game on the shortlist
+- 41 designers won the award (incl special awards)
+- 40 designers won the main award
+
+
+### Spiel & Kennerspiel des Jahres
+
+- 22 designers had a game on both longlists
+- 9 designers had a game on both shortlists
+- 1 designer won both main awards
+
+
+### Spiel & Kinderspiel des Jahres
+
+- 55 designers had a game on both longlists
+- 15 designers had a game on both shortlists
+- 5 designers won both main awards
+
+
+### Kennerspiel & Kinderspiel des Jahres
+
+- 9 designers had a game on both longlists
+- 6 designers had a game on both shortlists
+- 2 designers won both main awards
+
+
+### Spiel, Kennerspiel & Kinderspiel des Jahres
+
+- 9 designers had a game on all longlists
+- 4 designers had a game on all shortlists
+- 0 designers won all main awards
+
 
 
 ## Other questions
 
-- How many different designers have won/nom/rec SdJ/KedJ/KidJ/any?
-- How many designers have won/nom/rec with more than one game?
-- How many designers have won/nom/rec in more than one category?
 - Who was nominated most often without winning?
 - Most wins: total, SdJ, KedJ, KidJ
 - Most nominations: total, SdJ, KedJ, KidJ
