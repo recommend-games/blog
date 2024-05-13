@@ -1,10 +1,10 @@
 ---
-title: The best board game designers of all times – according to Spiel des Jahres
-subtitle: Who has won the most awards?
-slug: best-board-game-designers
+title: Game Designer Hall of Fame
+subtitle: The best board game designers of all times – according to Spiel des Jahres
+slug: game-designer-hall-of-fame
 author: Markus Shepherd
 type: post
-date: 2024-05-10T21:00:00+03:00
+date: 2024-05-13T15:00:00+03:00
 tags:
   - SdJ
   - Spiel des Jahres
@@ -41,7 +41,7 @@ But this article was meant to be about neither games nor data, but the designers
 
 ## Designers
 
-Over the course of 45 sessions, the jury has mentioned games by 566 different designers. By far the most successful designer is [Wolfgang Kramer](https://recommend.games/#/?designer=7) who has won {{% sdj / %}} five times (four of those were co-designs) and {{% kindersdj / %}} once between 1986 and 2000. The record for most games on the longlists is held by [Reiner Knizia](https://recommend.games/#/?designer=2) with 36 games, which makes it even more surprising that he has "only" won two awards: one each of {{% sdj / %}} and {{% kindersdj / %}} – both in 2008.
+Over the course of 45 sessions, the jury has mentioned games by 566 different designers. By far the most successful designer is [Wolfgang Kramer](https://recommend.games/#/?designer=7) who has won {{% sdj / %}} five times (four of those were co-designs) and {{% kindersdj / %}} once between 1986 and 2000. During that time period, [Klaus Teuber](https://recommend.games/#/?designer=11) won {{% sdj / %}} four times, so during those 15 years those two designers shared 11 awards between them. The record for most games on the longlists is held by [Reiner Knizia](https://recommend.games/#/?designer=2) with 36 games, which makes it even more surprising that he has "only" won two awards: one each of {{% sdj / %}} and {{% kindersdj / %}} – both in 2008.
 
 Overall, 94 designers have won at least one award (111 if we include special awards), with 21 of them winning more than one (22 including special awards). Only 8 of those have won their awards in more than one category: [Wolfgang Kramer](https://recommend.games/#/?designer=7), [Inka](https://recommend.games/#/?designer=6940) and [Markus Brand](https://recommend.games/#/?designer=6941), [Alex Randolph](https://recommend.games/#/?designer=24), [Reiner Knizia](https://recommend.games/#/?designer=2), [Bruno Cathala](https://recommend.games/#/?designer=1727), [Antoine Bauza](https://recommend.games/#/?designer=9714) and [Steffen Bogen](https://recommend.games/#/?designer=10067). To this date, no designer has won in all three categories.
 
@@ -200,7 +200,7 @@ I'll leave you with some more detailed statistics below. I hope you enjoy those 
 
 ## Designer Hall of Fame
 
-This table includes designers with at least 2 wins or 5 nominations across all categories.
+This table includes designers with at least 2 wins or 5 nominations across all categories. Each entry shows the number of wins / nominations / recommendations for that designer in each category. Special awards are added in parentheses.
 
 | Designer | Spiel | Kennerspiel | Kinderspiel | Total |
 |:---------|:-----:|:-----------:|:-----------:|:-----:|
