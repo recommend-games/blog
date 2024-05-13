@@ -20,6 +20,8 @@ tags:
 
 {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}} nominations are just around the corner (watch this space for our annual predictions), but I wanted to take this opportunity for a look back over the history of the award. Specifically, I wanted to see which designers have been most successful at the {{% sdj %}}Spiel{{% /sdj %}}, {{% kdj %}}Kennerspiel{{% /kdj %}} and {{% kindersdj / %}} awards.
 
+{{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
+
 The first {{% sdj %}}red meeple{{% /sdj %}} was given out in 1979. Since 1989, the jury also awarded the {{% kindersdj / %}} for children's games, initially as an annual special award, and from 2001 as its own award with the {{% kindersdj %}}blue meeple{{% /kindersdj %}}. (In what follows I count those special awards as regular {{% kindersdj / %}} winners.) Finally, in 2011, the {{% kdj / %}} was introduced for (slightly) more complex games with an {{% kdj %}}anthracite meeple{{% /kdj %}}, again following a couple of special awards with a clearly similar intent, but less steady, so they just stand as special awards on their own in the statistics.
 
 
