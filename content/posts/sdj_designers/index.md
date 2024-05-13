@@ -6,13 +6,16 @@ author: Markus Shepherd
 type: post
 date: 2024-05-13T15:00:00+03:00
 tags:
-  - SdJ
   - Spiel des Jahres
-  - KSdJ
-  - Kennerspiel
   - Kennerspiel des Jahres
+  - Kinderspiel des Jahres
   - Game of the Year
-  - Germany
+  - Hall of Fame
+  - Designers
+  - Records
+  - Statistics
+  - Wolfgang Kramer
+  - Reiner Knizia
 ---
 
 {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}} nominations are just around the corner (watch this space for our annual predictions), but I wanted to take this opportunity for a look back over the history of the award. Specifically, I wanted to see which designers have been most successful at the {{% sdj / %}}, {{% kdj / %}} and {{% kindersdj / %}} awards.
