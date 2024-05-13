@@ -1,0 +1,1088 @@
+bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,designer
+1,Die Macher,1986,spiel,False,False,True,,7.04394,1
+5,Acquire,1963,spiel,False,False,True,,7.12471,4
+9,El Caballero,1998,spiel,False,False,True,,5.89105,7
+9,El Caballero,1998,spiel,False,False,True,,5.89105,8
+10,Elfenland,1998,spiel,True,True,True,,6.44584,9
+11,Bohnanza,1997,spiel,False,False,True,,6.93611,10
+13,CATAN,1995,spiel,True,True,True,,6.92496,11
+14,Basari,1998,spiel,False,False,True,,6.07964,12
+19,Wacky Wacky West,1991,spiel,True,True,True,,5.86552,11
+38,Runes,1981,spiel,False,False,True,,5.53254,34
+38,Runes,1981,spiel,False,False,True,,5.53254,35
+38,Runes,1981,spiel,False,False,True,,5.53254,36
+41,Can't Stop,1980,spiel,False,False,True,,6.74517,4
+42,Tigris & Euphrates,1997,spiel,False,False,True,,7.52,2
+44,David & Goliath,1997,spiel,False,False,True,,5.95169,12
+45,Perudo,1800,spiel,True,True,True,,6.71514,25
+46,Medici,1995,spiel,False,False,True,,6.81537,2
+47,Chinatown,1999,spiel,False,False,True,,7.10589,37
+49,Mamma Mia!,1998,spiel,False,False,True,,6.21663,10
+54,Tikal,1999,spiel,True,True,True,,7.12975,42
+54,Tikal,1999,spiel,True,True,True,,7.12975,7
+57,Schoko & Co.,1987,spiel,False,False,True,,5.69822,44
+57,Schoko & Co.,1987,spiel,False,False,True,,5.69822,45
+59,Giganten,1999,spiel,False,True,True,,6.00587,48
+60,Vinci,1999,spiel,False,False,True,,6.53245,49
+66,Löwenherz,1997,spiel,False,False,True,,6.3598,11
+72,Verräter,1998,spiel,False,False,True,,6.08659,59
+73,Show Manager,1996,spiel,False,False,True,,6.19539,60
+88,Torres,1999,spiel,True,True,True,,6.77934,42
+88,Torres,1999,spiel,True,True,True,,6.77934,7
+93,El Grande,1995,spiel,True,True,True,,7.57192,7
+93,El Grande,1995,spiel,True,True,True,,7.57192,8
+94,Union Pacific,1999,spiel,False,True,True,,6.64167,9
+110,Auf Achse,1987,spiel,True,True,True,,5.84277,7
+112,Condottiere,1995,spiel,False,False,True,,6.61952,79
+112,Condottiere,1995,spiel,False,False,True,,6.61952,80
+112,Condottiere,1995,spiel,False,False,True,,6.61952,72460
+115,I'm the Boss!,1994,spiel,False,False,True,,6.31892,4
+117,Ta Yü,1999,spiel,False,False,True,,6.12236,83
+118,Modern Art,1992,spiel,False,False,True,,7.30341,2
+120,Hoity Toity,1990,spiel,True,True,True,,6.21752,11
+122,Quo Vadis?,1992,spiel,False,False,True,,6.01934,2
+125,Money!,1999,spiel,False,False,True,,6.10549,2
+128,Take it Easy!,1983,spiel,False,False,True,,6.15196,84
+132,Caesar & Cleopatra,1997,spiel,False,False,True,,6.10156,87
+135,Kontor,1999,spiel,False,False,True,,5.62134,86
+145,Metropolis,1984,spiel,False,False,True,,5.63375,4
+150,PitchCar,1995,spiel,False,False,False,Dexterity Game,6.9781,5
+152,Mü & More,1995,spiel,False,False,True,,6.31302,74
+152,Mü & More,1995,spiel,False,False,True,,6.31302,75
+155,Was sticht?,1993,spiel,False,False,True,,5.86887,1
+175,What the Heck?,1988,spiel,False,False,True,,6.01742,24
+196,Kremlin,1986,spiel,False,False,True,,6.34872,172
+199,Manhattan,1994,spiel,True,True,True,,6.39647,117
+202,Targui,1988,spiel,False,False,True,,5.73178,199
+202,Targui,1988,spiel,False,False,True,,5.73178,200
+214,Café International,1989,spiel,True,True,True,,5.9057,154
+217,A la carte,1989,spiel,False,True,True,,6.0845,1
+223,Expedition,1996,spiel,False,False,True,,5.97453,7
+247,Gloria Picktoria,1996,spiel,False,False,True,,5.79821,165
+247,Gloria Picktoria,1996,spiel,False,False,True,,5.79821,9
+256,Mississippi Queen,1997,spiel,True,True,True,,6.04106,130
+263,Manitou,1997,spiel,False,False,True,,5.59687,173
+267,Tycoon,1998,spiel,False,False,True,,5.81934,7
+267,Tycoon,1998,spiel,False,False,True,,5.81934,139
+278,Catan Card Game,1996,spiel,False,False,True,,6.50575,11
+300,Tutankhamen,1993,spiel,False,False,True,,5.7437,2
+301,Campanile,1996,spiel,False,False,True,,5.59791,114
+301,Campanile,1996,spiel,False,False,True,,5.59791,115
+302,Forum Romanum,1988,spiel,False,False,True,,5.7476,7
+314,Highlanders,1993,spiel,False,False,True,,5.56618,193
+321,The Mole in the Hole,1995,spiel,False,False,True,,5.76434,179
+321,The Mole in the Hole,1995,spiel,False,False,True,,5.76434,180
+322,Tonga Bonga,1998,spiel,False,False,True,,5.68504,13
+327,Loopin' Louie,1992,kinder,True,True,True,,6.50919,83763
+327,Loopin' Louie,1992,kinder,True,True,True,,6.50919,137
+340,Frank's Zoo,1999,spiel,False,False,True,,6.20755,74
+340,Frank's Zoo,1999,spiel,False,False,True,,6.20755,75
+356,Ab die Post!,1996,spiel,False,False,True,,5.48052,146
+356,Ab die Post!,1996,spiel,False,False,True,,5.48052,147
+361,Hare & Tortoise,1973,spiel,True,True,True,,6.26571,166
+382,Heimlich & Co.,1984,spiel,True,True,True,,6.11236,7
+394,Kahuna,1998,spiel,False,False,True,,6.4042,132
+401,Gold Connection,1992,spiel,False,False,True,,5.57346,4
+428,Galopp Royal,1995,spiel,False,False,True,,5.54333,11
+432,Take 5,1994,spiel,False,False,True,,6.837,7
+433,Shark,1987,spiel,False,False,True,,5.93984,488
+436,Canyon,1997,spiel,False,False,True,,5.71151,218
+437,Master Labyrinth,1991,spiel,False,False,True,,5.9327,217
+438,Scotland Yard,1983,spiel,True,True,True,,6.35096,4088
+438,Scotland Yard,1983,spiel,True,True,True,,6.35096,5491
+438,Scotland Yard,1983,spiel,True,True,True,,6.35096,5495
+438,Scotland Yard,1983,spiel,True,True,True,,6.35096,5492
+438,Scotland Yard,1983,spiel,True,True,True,,6.35096,5493
+438,Scotland Yard,1983,spiel,True,True,True,,6.35096,5490
+442,Um Reifenbreite,1979,spiel,True,True,True,,6.19074,210
+443,Code 777,1985,spiel,False,False,True,,6.1251,221
+443,Code 777,1985,spiel,False,False,True,,6.1251,24
+444,Escape from the Hidden Castle,1989,spiel,False,False,True,,5.85943,7
+445,Die Osterinsel,1994,spiel,False,False,True,,5.52767,138
+445,Die Osterinsel,1994,spiel,False,False,True,,5.52767,24
+464,Billabong,1992,spiel,False,False,True,,5.9195,104
+466,Inkognito,1988,spiel,False,False,True,,6.16439,138
+466,Inkognito,1988,spiel,False,False,True,,6.16439,24
+475,Taj Mahal,2000,spiel,False,False,True,,6.88042,2
+478,Citadels,2000,spiel,False,True,True,,6.94743,125
+481,Carolus Magnus,2000,spiel,False,True,True,,6.34747,138
+485,Galloping Pigs,1992,kinder,True,True,True,,5.58667,256
+491,Web of Power,2000,spiel,False,False,True,,6.6134,86
+499,Arbos,1999,kinder,True,True,True,,5.63793,259
+499,Arbos,1999,kinder,True,True,True,,5.63793,260
+503,Through the Desert,1998,spiel,False,False,True,,6.88036,2
+504,Die Verbotene Stadt,1992,spiel,False,False,True,,5.53844,24
+504,Die Verbotene Stadt,1992,spiel,False,False,True,,5.53844,233
+526,Abalone,1987,spiel,False,False,True,,6.21813,101
+526,Abalone,1987,spiel,False,False,True,,6.21813,102
+527,GIPF,1996,spiel,False,False,True,,6.47416,244
+528,ZÈRTZ,1999,spiel,False,False,True,,6.67324,244
+530,Entenrallye,1988,spiel,False,False,True,,5.51648,254
+536,Visionary,1997,spiel,False,False,True,,5.59841,245
+539,Dampfross,1979,spiel,True,True,True,,5.70048,250
+540,Sisimizi,1996,spiel,False,False,True,,5.58586,24
+545,Kaleidos,1994,spiel,False,False,True,,5.86391,190
+545,Kaleidos,1994,spiel,False,False,True,,5.86391,20997
+545,Kaleidos,1994,spiel,False,False,True,,5.86391,20996
+550,Barbarossa,1988,spiel,True,True,True,,5.82971,11
+554,La Città,2000,spiel,False,False,True,,6.58267,264
+559,Metro,1997,spiel,False,False,True,,6.13998,60
+565,Port Royal,2000,spiel,False,False,True,,5.55041,249
+569,Maestro,1989,spiel,False,False,True,,5.5268,154
+585,Kardinal,2000,spiel,False,False,True,,5.567,249
+593,Favoriten,1989,spiel,False,False,True,,5.57662,254
+634,River Dragons,2000,spiel,False,False,True,,6.11898,285
+681,Quarto,1991,spiel,False,False,True,,6.55626,921
+691,Timbuktu,1993,spiel,False,False,True,,6.04614,60
+697,Conspiracy,1973,spiel,False,False,True,,5.67423,104
+766,Regatta,1967,spiel,False,False,True,,5.68793,8384
+766,Regatta,1967,spiel,False,False,True,,5.68793,7204
+766,Regatta,1967,spiel,False,False,True,,5.68793,382
+787,Palermo,1992,spiel,False,False,True,,5.51714,387
+789,Focus,1963,spiel,True,True,True,,5.77696,4
+811,Rummikub,1977,spiel,True,True,True,,6.27712,634
+821,La Trel,1994,spiel,False,False,True,,5.50109,397
+822,Carcassonne,2000,spiel,True,True,True,,7.29756,398
+823,The Lord of the Rings,2000,spiel,False,False,False,Literary Game,6.55838,2
+826,Cartagena,2000,spiel,False,False,True,,6.42728,138
+841,Razzia,1992,spiel,False,False,True,,5.62126,13
+877,Troia,2000,spiel,False,False,False,Historical Game,5.50621,176
+906,Abilene,1983,spiel,False,False,True,,5.52634,365
+923,Breakaway Rider,1963,spiel,False,False,True,,5.68769,1214
+925,Werewolf,1986,spiel,False,False,True,,6.12899,6959
+925,Werewolf,1986,spiel,False,False,True,,6.12899,5168
+932,Top Race,1996,spiel,False,False,True,,5.99996,7
+933,New Orleans Big Band,1990,spiel,False,False,True,,5.51946,430
+938,Enchanted Forest,1981,spiel,True,True,True,,5.60825,432
+938,Enchanted Forest,1981,spiel,True,True,True,,5.60825,24
+949,Twixt,1962,spiel,False,False,True,,6.08686,24
+963,The Gardens of the Alhambra,1993,spiel,False,False,True,,5.75225,60
+986,Babel,2000,spiel,False,False,True,,6.25456,455
+986,Babel,2000,spiel,False,False,True,,6.25456,10
+988,Zapp Zerapp,2000,spiel,False,True,True,,5.61703,256
+988,Zapp Zerapp,2000,spiel,False,True,True,,5.61703,267
+1012,Die Magier,1985,spiel,False,False,True,,5.51353,233
+1012,Die Magier,1985,spiel,False,False,True,,5.51353,581
+1041,San Marco,2001,spiel,False,False,True,,6.6397,9
+1041,San Marco,2001,spiel,False,False,True,,6.6397,235
+1045,Malawi,1986,spiel,False,False,True,,5.52441,1130
+1063,Schraumen,1992,spiel,False,False,True,,5.48856,172
+1071,Aztec,1995,spiel,False,False,True,,5.53274,83
+1072,Wat'n dat!?,1996,spiel,False,False,True,,5.63861,2077
+1077,Baubylon,1981,spiel,False,False,True,,5.51666,94
+1082,Invers,1991,spiel,False,False,True,,5.52718,244
+1101,Flying Carpet,1987,spiel,False,False,True,,5.54467,511
+1101,Flying Carpet,1987,spiel,False,False,True,,5.54467,513
+1111,Taboo,1989,spiel,False,False,True,,6.13093,3233
+1117,You're Bluffing!,1985,spiel,False,False,True,,6.19093,7101
+1132,Top Secret,1985,spiel,False,False,True,,5.51351,24
+1155,Capitol,2001,spiel,False,False,True,,6.04901,9
+1155,Capitol,2001,spiel,False,False,True,,6.04901,235
+1173,Millionenspiel,1982,spiel,False,False,True,,5.51398,7101
+1174,Minister,1975,spiel,False,False,True,,5.46089,154
+1197,Blink,1995,spiel,False,False,True,,5.68805,12
+1219,Labyrinth,1986,spiel,False,False,True,,6.23243,217
+1231,Bausack,1987,spiel,False,False,True,,6.35463,267
+1345,Genoa,2001,spiel,False,False,True,,6.63024,381
+1350,Das Amulett,2001,spiel,False,True,True,,5.73774,9
+1350,Das Amulett,2001,spiel,False,True,True,,5.73774,235
+1356,Hexen Rennen,2001,spiel,False,False,True,,5.57237,249
+1379,Ebbe & Flut,2000,spiel,False,False,True,,5.72255,331
+1382,Winner's Circle,2001,spiel,False,False,True,,6.57633,2
+1387,Alaska,1979,spiel,False,False,True,,5.5537,104
+1390,Auf Kurs,1987,spiel,False,False,True,,5.52898,94
+1403,Turn the Tide,1997,spiel,False,False,True,,6.392,13
+1451,Dimenticato,1998,spiel,False,False,True,,5.50704,609
+1520,Monad,1969,spiel,False,False,True,,5.62687,4
+1547,Janus,1975,spiel,False,False,True,,5.5355,154
+1588,Bauernschlau,1991,spiel,False,False,True,,5.52062,316
+1597,Streetcar,1995,spiel,False,False,True,,5.92214,13
+1702,Klondike,1993,kinder,True,True,True,,5.63641,579
+1702,Klondike,1993,kinder,True,True,True,,5.63641,580
+1703,Kula Kula,1991,spiel,False,False,True,,5.4856,94
+1733,Iago,1984,spiel,False,False,True,,,24
+1753,Im Märchenwald,2000,kinder,False,True,True,,5.51828,748
+1806,The Piggyback Brigade,2001,kinder,False,True,True,,5.59447,24
+1816,Mississippi,1987,spiel,False,False,True,,5.52866,365
+1910,Venice Connection,1988,spiel,False,False,True,,5.587,24
+1992,Stop Thief,1979,spiel,False,False,True,,5.74523,8795
+1998,Tutankhamen's Revenge,1990,spiel,False,False,True,,5.49428,579
+1998,Tutankhamen's Revenge,1990,spiel,False,False,True,,5.49428,580
+2043,Shogun,1976,spiel,False,False,True,,5.54195,287
+2043,Shogun,1976,spiel,False,False,True,,5.54195,4363
+2075,Restaurant,1987,spiel,False,False,True,,5.48477,365
+2087,Magic Dance,1988,spiel,False,False,True,,5.54733,862
+2186,Dino,1987,spiel,False,False,True,,5.49468,94
+2197,Kensington,1979,spiel,False,False,True,,5.46304,912
+2197,Kensington,1979,spiel,False,False,True,,5.46304,911
+2226,Greyhounds,1985,spiel,False,False,True,,5.55543,928
+2229,Spiel,1980,spiel,False,False,True,,5.55915,94
+2290,Good & Bad Ghosts,1980,spiel,False,False,True,,5.86927,24
+2346,DVONN,2001,spiel,False,False,True,,6.87348,244
+2363,Orient Express,1985,spiel,False,False,True,,5.78734,3548
+2363,Orient Express,1985,spiel,False,False,True,,5.78734,3082
+2453,Blokus,2000,spiel,False,False,True,,6.71761,1001
+2473,Winkeladvokat,1986,spiel,False,False,True,,5.50866,365
+2492,Doctor Faust,1990,spiel,False,False,True,,5.49368,94
+2511,Sherlock Holmes Consulting Detective: The Thames Murders & Other Cases,1982,spiel,True,True,True,,7.4123,1221
+2511,Sherlock Holmes Consulting Detective: The Thames Murders & Other Cases,1982,spiel,True,True,True,,7.4123,1220
+2511,Sherlock Holmes Consulting Detective: The Thames Murders & Other Cases,1982,spiel,True,True,True,,7.4123,1219
+2533,Kupferkessel Co.,2001,spiel,False,False,True,,6.02315,173
+2558,Comeback,1996,spiel,False,False,True,,5.50726,12
+2570,Atlantic Star,2001,spiel,False,False,True,,6.13013,60
+2596,Villa Paletti,2001,spiel,True,True,True,,6.11925,1056
+2651,Power Grid,2004,spiel,False,False,True,,7.70232,141
+2672,Der Herr der Ringe: Die Gefährten – Das Kartenspiel,2001,spiel,False,False,True,,5.55145,2
+2694,Donnerwetter,1991,spiel,False,False,True,,,523
+2759,Havannah,1980,spiel,False,False,True,,5.64654,1126
+2840,Heuchel und Meuchel,1990,spiel,False,False,True,,5.48832,154
+2842,TransAmerica,2001,spiel,False,True,True,,6.42593,57
+2938,Zatre,1990,spiel,False,False,True,,5.61069,1205
+3015,Claim,1983,spiel,False,False,True,,5.57501,24
+3076,Puerto Rico,2002,spiel,False,True,True,,7.78103,117
+3141,The Bucket King,2002,spiel,False,False,True,,5.86735,13
+3234,Dschunke,2002,spiel,False,False,True,,5.8882,86
+3267,Pizarro & Co.,2002,spiel,False,False,True,,5.91985,150
+3305,Anticipation,1987,spiel,False,False,True,,5.51352,1356
+3305,Anticipation,1987,spiel,False,False,True,,5.51352,1355
+3335,Ganoven Jagd,1983,spiel,False,False,True,,5.50758,154
+3373,San Gimignano,2002,spiel,False,False,True,,5.50314,1388
+3377,20 Questions,1988,spiel,False,False,True,,5.53565,1390
+3377,20 Questions,1988,spiel,False,False,True,,5.53565,28051
+3383,Mahé,1974,spiel,False,False,True,,5.74175,24
+3406,Lines of Action,1969,spiel,False,False,True,,5.8359,904
+3570,Chicken Cha Cha Cha,1997,kinder,True,True,True,,6.11794,267
+3586,Sherlock,1999,kinder,False,False,True,,5.67264,12
+3679,Ramparts,1993,spiel,False,False,True,,5.60923,154
+3800,Himalaya,2002,spiel,False,True,True,,6.27998,1532
+3977,Strong Stuff!,2002,kinder,False,True,True,,5.57511,256
+4107,Hang in There!,2000,kinder,False,False,True,,5.52907,3
+4370,Fische Fluppen Frikadellen,2002,spiel,False,False,True,,5.87235,141
+4493,Kayanak,1999,kinder,True,True,True,,5.70625,1783
+4518,Sauerbaum,1986,spiel,False,False,True,Cooperative Family Game,5.51669,1791
+4522,The Ladybug's Costume Party,2002,kinder,True,True,True,,5.67187,1783
+4553,Attribute,2002,spiel,False,False,True,,5.79771,59
+4586,Bärenspiel,1983,spiel,False,False,True,,5.50078,816
+4636,Clans,2002,spiel,False,True,True,,6.25912,138
+5096,Sly,1975,spiel,False,False,True,,5.51773,4
+5136,Piraten-Abenteuer,1991,kinder,True,True,True,,5.5321,7
+5380,Lancelot,1985,spiel,False,False,True,,5.51674,365
+5389,Niki Lauda's Formel 1,1980,spiel,False,False,True,,5.54383,7
+5404,Amun-Re,2003,spiel,False,False,True,,6.95138,2
+5664,3 Or More,1980,spiel,False,False,True,,,5339
+5694,Highly Suspect,2002,kinder,False,True,True,,5.5405,500
+5707,Cuckoo Zoo,2002,kinder,False,False,True,,5.51388,1210
+5709,Touché,1979,spiel,False,False,True,,5.49121,3
+5709,Touché,1979,spiel,False,False,True,,5.49121,2114
+5716,Balloon Cup,2003,spiel,False,False,True,,6.36801,2118
+5749,Simon,1978,spiel,False,False,True,,5.06668,6430
+5749,Simon,1978,spiel,False,False,True,,5.06668,11051
+5749,Simon,1978,spiel,False,False,True,,5.06668,11050
+5781,"Edel, Stein & Reich",2003,spiel,False,False,True,,6.10395,12
+5782,Coloretto,2003,spiel,False,False,True,,6.82891,86
+5795,Richelieu,2003,spiel,False,False,True,,5.87613,86
+5825,Paris Paris,2003,spiel,False,False,True,,5.75493,86
+5886,Die Dracheninsel,2003,spiel,False,True,True,,5.49395,316
+5953,Karambolage,1995,kinder,True,True,True,,5.55134,256
+5986,Ra: Strategy Among Hexagons,1981,spiel,False,False,True,,,839
+6249,Alhambra,2003,spiel,True,True,True,,6.91012,60
+6383,Life Style,1989,spiel,False,False,True,,5.49944,782
+6383,Life Style,1989,spiel,False,False,True,,5.49944,783
+6411,Blokus 3D,2003,spiel,False,False,True,,6.34851,2286
+6508,Tom Tube,2003,spiel,False,False,True,,5.64311,2327
+6508,Tom Tube,2003,spiel,False,False,True,,5.64311,2328
+6657,Such a Thing?,1989,spiel,False,False,True,,5.67962,172
+6874,Müller & Sohn,1985,spiel,False,False,True,,5.49121,94
+7065,Pusher,1993,spiel,False,False,True,,5.52576,425
+7067,Schloss Schlotterstein,2003,kinder,False,False,True,,5.52829,645
+7067,Schloss Schlotterstein,2003,kinder,False,False,True,,5.52829,748
+7338,Epaminondas,1975,spiel,False,False,True,,5.60645,221
+7377,Tri-Ba-Lance,1995,spiel,False,False,True,,5.54157,1336
+7483,Schatz der Drachen,2003,kinder,False,True,True,,5.64145,2
+7578,Word-Whiz,1996,spiel,False,False,True,,5.52654,816
+7717,Carcassonne: The Castle,2003,spiel,False,False,True,,6.75788,2
+7717,Carcassonne: The Castle,2003,spiel,False,False,True,,6.75788,398
+7806,King Up!,2004,spiel,False,False,True,,5.95985,2729
+7854,YINSH,2003,spiel,False,False,True,,7.28326,244
+7973,My Haunted Castle,1989,kinder,True,True,True,,5.5146,3
+7973,My Haunted Castle,1989,kinder,True,True,True,,5.5146,179
+7993,Pole Position,1989,spiel,False,False,True,,5.54414,1130
+8051,Attika,2003,spiel,False,False,True,,6.61139,59
+8126,Maya,2003,spiel,False,False,True,,5.68341,2790
+8129,Sluff Off!,2003,spiel,False,False,True,,6.27334,13
+8168,Campus,1985,spiel,False,False,True,,5.51319,538
+8172,Coyote,2003,spiel,False,False,True,,6.0232,190
+8195,Viva Topo!,2002,kinder,True,True,True,,6.03505,500
+8203,"Hey, That's My Fish!",2003,spiel,False,False,True,,6.57875,132
+8203,"Hey, That's My Fish!",2003,spiel,False,False,True,,6.57875,2815
+8217,San Juan,2004,spiel,False,False,True,,7.07106,117
+8262,Mücke mit Tücke,2003,kinder,False,False,True,,5.50759,1726
+8299,Robbys Rutschpartie,2003,kinder,False,True,True,,,272
+8299,Robbys Rutschpartie,2003,kinder,False,True,True,,,7
+8299,Robbys Rutschpartie,2003,kinder,False,True,True,,,2268
+8589,Viele Dinge,2003,spiel,False,False,True,,5.51522,814
+8589,Viele Dinge,2003,spiel,False,False,True,,5.51522,227
+8946,Da Vinci Code,2002,spiel,False,False,True,,5.79261,59211
+8946,Da Vinci Code,2002,spiel,False,False,True,,5.79261,3569
+8964,Funny Bunny,1999,kinder,False,False,True,,5.47634,113670
+9021,Sunken City,2004,spiel,False,False,True,,5.69185,42
+9021,Sunken City,2004,spiel,False,False,True,,5.69185,7
+9022,Im Reich des weißen Bären,1991,spiel,False,False,True,,5.50206,1176
+9027,Oasis,2004,spiel,False,False,True,,6.13127,9
+9027,Oasis,2004,spiel,False,False,True,,6.13127,235
+9209,Ticket to Ride,2004,spiel,True,True,True,,7.2774,9
+9217,Saint Petersburg,2004,spiel,False,True,True,,7.04804,928
+9408,Dos Rios,2004,spiel,False,False,True,,5.8616,57
+9440,Maharaja: The Game of Palace Building in India,2004,spiel,False,True,True,,6.6257,42
+9440,Maharaja: The Game of Palace Building in India,2004,spiel,False,True,True,,6.6257,7
+9441,Ribbit,2004,kinder,False,True,True,,6.19307,2
+9597,Vier zu mir!,1996,kinder,True,True,True,,5.51498,3244
+9674,Ingenious,2004,spiel,False,True,True,,6.90918,2
+9989,Mare Polare,2004,kinder,False,True,True,,5.50477,285
+10508,Leinen los!,1997,kinder,True,True,True,,5.51637,24
+10509,Ringel-Rangel,1993,kinder,True,True,True,,,1391
+10511,Gute Freunde,1988,kinder,True,True,True,,5.49033,24
+10802,Somethin' Fishy,2004,spiel,False,False,True,,5.52046,961
+10814,Dawn Under,2004,spiel,False,True,True,,5.77216,3513
+10997,Boomtown,2004,spiel,False,False,True,,6.08004,1727
+10997,Boomtown,2004,spiel,False,False,True,,6.08004,125
+11084,Jumbo & Co,2004,spiel,False,False,True,,5.52565,1429
+11231,Snorta!,2004,kinder,False,False,True,,5.73879,4369
+11231,Snorta!,2004,kinder,False,False,True,,5.73879,4368
+11421,Uisge,1983,spiel,False,False,True,,5.51522,365
+11778,Cat & Mouse,2001,kinder,False,False,True,,5.44019,3
+11797,Treasure Hunt,2003,kinder,False,True,True,,,816
+11797,Treasure Hunt,2003,kinder,False,True,True,,,817
+11915,Tabaijana: Flucht von der Feuerinsel,1990,spiel,False,False,True,,5.50694,7
+11945,Linq,2004,spiel,False,False,True,,5.96581,1106
+11945,Linq,2004,spiel,False,False,True,,5.96581,3772
+11971,Cockroach Poker,2004,spiel,False,False,True,,6.58171,144
+11972,Monte Rolla,2003,kinder,False,False,True,,5.51079,3777
+11972,Monte Rolla,2003,kinder,False,False,True,,5.51079,3778
+11973,Können Schweine fliegen?,2004,kinder,False,False,True,,5.54539,3779
+11974,"Kipp, Kipp, Ahoi!",2004,kinder,False,False,True,,5.50348,491
+11976,Spatzenbande,2004,kinder,False,False,True,,,645
+12002,Jambo,2004,spiel,False,True,True,,6.68601,381
+12005,Around the World in 80 Days,2004,spiel,False,True,True,,6.13957,142
+12305,Scalino,1970,spiel,False,False,True,,,1480
+12318,Typo,2004,spiel,False,False,True,,5.62973,124
+12346,Spooky Stairs,2003,kinder,True,True,True,,5.92657,3882
+12359,Schieberbande,1986,spiel,False,False,True,,,2141
+12942,No Thanks!,2004,spiel,False,False,True,,6.95337,85
+13005,Dance of Ibexes,2004,spiel,False,False,True,,5.76242,7
+13065,Flieg Dumbo Flieg,1989,spiel,False,False,True,,,179
+13089,Wie ich die Welt sehe...,2004,spiel,False,False,True,,5.70161,172
+13236,Der Schwarze Prinz,1983,spiel,False,False,True,,,233
+13308,Niagara,2004,spiel,True,True,True,,6.25122,4155
+13926,Froschkönig,2003,kinder,False,False,True,,5.5359,4308
+13926,Froschkönig,2003,kinder,False,False,True,,5.5359,4307
+14035,Piranha Pedro,2004,spiel,False,False,True,,5.73979,12705
+14035,Piranha Pedro,2004,spiel,False,False,True,,5.73979,1288
+14113,Netzwerk,1984,spiel,False,False,True,,,1147
+14208,Der Krähenschatz,2003,kinder,False,False,True,,,951
+14729,Krokodil unterm Bett,2002,kinder,False,False,True,,,1898
+15062,Shadows over Camelot,2005,spiel,False,False,False,Fantasy Game,6.94328,1727
+15062,Shadows over Camelot,2005,spiel,False,False,False,Fantasy Game,6.94328,295
+15512,Incan Gold,2005,spiel,False,False,True,,6.69678,125
+15512,Incan Gold,2005,spiel,False,False,True,,6.69678,9
+16052,Merlin,1978,spiel,False,False,True,,5.47913,8795
+16140,Zahlenzwerge,2005,kinder,False,False,True,,,4849
+16140,Zahlenzwerge,2005,kinder,False,False,True,,,9962
+16149,Up And Down,2005,kinder,False,False,True,,5.55047,491
+16151,Krabbel-Trabbel,2005,kinder,False,False,True,,,2
+16308,Ombagi,1980,spiel,False,False,True,,,94
+16369,Das Kleine Gespenst,2005,kinder,True,True,True,,5.54354,645
+16474,"Geißlein, versteck dich!",2003,kinder,False,False,True,,5.50952,236
+16474,"Geißlein, versteck dich!",2003,kinder,False,False,True,,5.50952,237
+16496,Roma,2005,spiel,False,False,True,,6.35362,4958
+16767,Frantic Frogs,2004,kinder,False,False,True,,,315
+16767,Frantic Frogs,2004,kinder,False,False,True,,,3980
+16767,Frantic Frogs,2004,kinder,False,False,True,,,1050
+17025,Poison,2005,spiel,False,False,True,,6.11415,2
+17044,Riombo,1983,spiel,False,False,True,,,94
+17053,Sleeping Queens,2005,kinder,False,False,True,,6.10444,5114
+17235,Mago Magino,2004,kinder,False,True,True,,5.54498,2
+17240,That's Life!,2005,spiel,False,True,True,,6.09871,42
+17240,That's Life!,2005,spiel,False,True,True,,6.09871,7
+17329,Animal Upon Animal,2005,kinder,False,False,True,,6.52141,5178
+17534,Just4Fun,2005,spiel,False,True,True,,5.57449,272
+17724,Mister Zero,1985,spiel,False,False,True,,,5280
+17724,Mister Zero,1985,spiel,False,False,True,,,5281
+17784,Galaxis,1980,spiel,False,False,True,,,2819
+17785,Seti,1979,spiel,False,False,True,,5.49458,855
+17785,Seti,1979,spiel,False,False,True,,5.49458,275
+17786,Wendo,1977,spiel,False,False,True,,,3
+17788,Cash & Carry,1979,spiel,False,False,True,,,5307
+17794,Quibbix,1980,spiel,False,False,True,,,377
+17813,Vokabo,1982,spiel,False,False,True,,,233
+17814,Fang mich! ... wenn du kannst,1982,spiel,False,False,True,,,2684
+17815,Skript,1982,spiel,False,False,True,,,159
+17903,"Fuzzi, Heinz und Schlendrian",1983,spiel,False,False,True,,,500
+17904,Wir füttern die kleinen Nilpferde,1983,spiel,False,False,True,,,94
+17905,Feuerwehr,1984,spiel,False,False,True,,,5340
+18052,Pin,1985,spiel,False,False,True,,,2141
+18602,Caylus,2005,spiel,False,False,False,Complex Game,7.51968,5629
+18880,Daddy Cool,2004,kinder,False,True,True,,5.52704,256
+18881,Schildi Schildkröte,2004,kinder,False,True,True,,5.55215,545
+19129,Im Wassergarten,2004,spiel,False,False,True,,,609
+19301,Mesopotamia,2005,spiel,False,False,True,,5.92286,398
+19646,Cowabunga,2005,spiel,False,False,True,,5.58531,12
+19877,Beetlez,2005,kinder,False,False,True,,5.50796,3841
+19996,Nacht der Magier,2005,kinder,False,True,True,,5.92321,3432
+19996,Nacht der Magier,2005,kinder,False,True,True,,5.92321,1288
+20080,Aqua Romana,2005,spiel,False,True,True,,5.86294,840
+20544,"Macius: Achtung, fertig, los !",2003,kinder,False,True,True,,,272
+20544,"Macius: Achtung, fertig, los !",2003,kinder,False,True,True,,,7
+20544,"Macius: Achtung, fertig, los !",2003,kinder,False,True,True,,,2268
+20548,Sternenkinder,2005,kinder,False,False,True,,,3
+20549,"Ene Mene Muh, gib mir deine Kuh!",2005,kinder,False,False,True,,,7
+20549,"Ene Mene Muh, gib mir deine Kuh!",2005,kinder,False,False,True,,,275
+20622,Mit Felix um die Welt,2005,kinder,False,False,True,,,645
+20685,Henne Berta,1988,spiel,False,False,True,,,1391
+20761,Ausgerechnet Buxtehude,2005,spiel,False,False,True,,5.60649,4308
+20761,Ausgerechnet Buxtehude,2005,spiel,False,False,True,,5.60649,4307
+20834,Husarengolf,1997,spiel,False,False,False,Dexterity Game,5.53102,301
+20953,Piratissimo,2005,kinder,False,True,True,,5.51524,500
+21022,Was'n das?,2005,spiel,False,False,True,,5.67796,219
+21049,Lauras Sternenspiel,2002,kinder,False,True,True,,,645
+21049,Lauras Sternenspiel,2002,kinder,False,True,True,,,6330
+21636,Affentheater,2006,kinder,False,False,True,,,6525
+21790,Thurn and Taxis,2006,spiel,True,True,True,,6.9204,117
+21790,Thurn and Taxis,2006,spiel,True,True,True,,6.9204,6569
+21827,Schnapp zu!,2002,kinder,False,False,True,,,2302
+21854,Los Mampfos,2006,kinder,False,True,True,,5.60395,381
+21854,Los Mampfos,2006,kinder,False,True,True,,5.60395,6589
+21882,Blue Moon City,2006,spiel,False,True,True,,6.72994,2
+21985,Giro Galoppo,2006,kinder,False,True,True,,5.75894,272
+21986,Ramba Samba,2006,kinder,False,False,True,,5.50297,8022
+21987,Doktor Schlüsselbart,2006,kinder,False,False,True,,5.5188,6623
+22123,Enkounter,2006,spiel,False,False,True,,5.50557,6305
+22123,Enkounter,2006,spiel,False,False,True,,5.50557,6304
+22233,Fischmarkt,2006,spiel,False,False,True,,5.53203,4323
+22237,Hart an der Grenze,2005,spiel,False,False,True,,5.81305,3005
+22237,Hart an der Grenze,2005,spiel,False,False,True,,5.81305,3004
+22278,12 Thieves,2006,spiel,False,True,True,,5.90421,85
+22287,Buccaneer,2006,spiel,False,True,True,,5.84933,13
+22345,Yspahan,2006,spiel,False,True,True,,6.73548,6736
+22348,Duplik,2005,spiel,False,True,True,,6.24887,6740
+22348,Duplik,2005,spiel,False,True,True,,6.24887,6741
+23329,Skybridge,2006,spiel,False,False,True,,5.54729,5866
+23686,Gift Trap,2006,spiel,False,False,False,Party Game,5.98886,7176
+23890,Der schwarze Pirat,2006,kinder,True,True,True,,5.76489,308
+23891,Die Kullerbande,2006,kinder,False,False,True,,5.50862,256
+24181,Imperial,2006,spiel,False,False,True,,7.16868,6045
+24480,The Pillars of the Earth,2006,spiel,False,False,True,,7.05777,142
+24480,The Pillars of the Earth,2006,spiel,False,False,True,,7.05777,7391
+24669,Sparito!,2003,kinder,False,False,True,,,491
+25114,Die Säulen von Venedig,2006,spiel,False,False,True,,5.75148,6076
+25114,Die Säulen von Venedig,2006,spiel,False,False,True,,5.75148,5930
+25358,Domorino,2006,kinder,False,False,True,,,6334
+25554,Notre Dame,2007,spiel,False,False,True,,7.06004,4958
+25568,Metropolys,2008,spiel,False,False,True,,6.54926,6736
+25593,Der Prestel Kunstmarkt,2006,spiel,False,False,True,,5.5279,57
+25643,Arkadia,2006,spiel,False,True,True,,6.45575,381
+25669,Qwirkle,2006,spiel,True,True,True,,6.61677,7708
+25721,Turbulento,2006,kinder,False,False,True,,,256
+25760,Zoff im Hühnerhof,2006,kinder,False,False,True,,5.5393,4884
+26178,Chicky Picky,2004,kinder,False,False,True,,,3505
+26182,Castello del Drago,2006,kinder,False,False,True,,,5070
+26233,Manimals,2006,kinder,False,False,True,,5.54481,227
+27173,Vikings,2007,spiel,False,False,True,,6.89583,42
+27363,Danger 13,2007,spiel,False,False,True,,5.549,381
+27385,Alchemist,2007,spiel,False,False,True,,5.78455,3540
+27536,Der kleine Sprechdachs,2006,kinder,False,False,True,,,2
+27588,Zooloretto,2007,spiel,True,True,True,,6.61115,86
+27940,RattleSnake,2007,kinder,False,False,True,,5.63281,3247
+27948,Beppo der Bock,2007,kinder,True,True,True,,5.53636,42714
+27948,Beppo der Bock,2007,kinder,True,True,True,,5.53636,8324
+27948,Beppo der Bock,2007,kinder,True,True,True,,5.53636,267
+28023,Jamaica,2007,spiel,False,False,True,,6.88518,8097
+28023,Jamaica,2007,spiel,False,False,True,,6.88518,1727
+28023,Jamaica,2007,spiel,False,False,True,,6.88518,6736
+28025,Wicked Witches Way,2006,spiel,False,False,True,,5.8815,1727
+28025,Wicked Witches Way,2006,spiel,False,False,True,,5.8815,295
+28089,Burg Appenzell,2007,spiel,False,False,True,,6.23973,1288
+28089,Burg Appenzell,2007,spiel,False,False,True,,6.23973,129
+28565,Save the Treasure of Fairy Tales,2006,kinder,False,True,True,,5.52956,645
+28834,Heli Hopper,2007,kinder,False,False,True,,5.49246,8566
+28856,Cornu,2001,kinder,False,False,True,,,94
+29017,Dschungelschatz,2006,kinder,False,False,True,,5.63556,285
+29073,Blockers!,2007,spiel,False,False,True,,6.09735,2201
+29223,Marrakech,2007,spiel,False,True,True,,6.32354,79
+29355,Würfel Bingo,2007,spiel,False,False,True,,5.75132,8679
+29411,Castle Knights,2007,kinder,False,True,True,,5.62169,6647
+29637,Gesagt - getan!,2006,kinder,False,True,True,,,285
+29638,Hop Hop Hooray!,2007,kinder,False,True,True,,5.58607,256
+29639,Mein erstes Mitmach-Spiel,2006,kinder,False,False,True,,,3
+29641,Ding Dong,2007,kinder,False,False,True,,,8766
+29642,Was zählt?,2006,kinder,False,False,True,,,8767
+30549,Pandemic,2008,spiel,False,True,True,,7.43456,378
+30869,Thebes,2007,spiel,False,True,True,,6.82779,4299
+30932,Lascaux,2007,spiel,False,False,True,,5.80184,79
+30932,Lascaux,2007,spiel,False,False,True,,5.80184,101
+31260,Agricola,2007,spiel,False,False,False,Complex Game,7.75163,10
+31481,Galaxy Trucker,2007,spiel,False,False,True,,7.21963,789
+31594,In the Year of the Dragon,2007,spiel,False,False,True,,7.03268,4958
+31976,"Wo bist du, heller Mond?",2004,kinder,False,False,True,,,5108
+31999,TZAAR,2007,spiel,False,False,True,,6.90135,244
+32341,Cockroach Salad,2007,spiel,False,False,True,,5.87257,144
+32405,Alles Tomate!,2007,kinder,False,False,True,,5.58512,2
+32423,Pino Sortino,2007,kinder,False,False,True,,,4884
+32465,Didi Dotter,2007,kinder,False,True,True,,5.53361,8360
+33036,Alarme,2006,kinder,False,False,True,,,4809
+33160,Endeavor,2009,spiel,False,False,True,,7.03816,3526
+33160,Endeavor,2009,spiel,False,False,True,,7.03816,9733
+33414,Ghost Hunters,2007,kinder,False,True,True,,5.51111,9792
+33414,Ghost Hunters,2007,kinder,False,True,True,,5.51111,9793
+33414,Ghost Hunters,2007,kinder,False,True,True,,5.51111,9794
+33643,Whoowasit?,2007,kinder,True,True,True,,5.92724,2
+34004,Big Points,2008,spiel,False,False,True,,5.8034,1307
+34004,Big Points,2008,spiel,False,False,True,,5.8034,1308
+34084,Witch's Brew,2008,spiel,False,True,True,,6.48504,8397
+34227,Blox,2008,spiel,False,True,True,,5.73354,272
+34227,Blox,2008,spiel,False,True,True,,5.73354,7
+34227,Blox,2008,spiel,False,True,True,,5.73354,2268
+34585,Keltis,2008,spiel,True,True,True,,6.1838,2
+34635,Stone Age,2008,spiel,False,True,True,,7.40643,928
+34707,The Hanging Gardens,2008,spiel,False,False,True,,6.19204,10183
+35481,The Suitcase Detectives,2008,kinder,False,False,True,,5.51561,308
+35497,Fauna,2008,spiel,False,True,True,,6.55495,141
+35812,Wild Vikings,2008,kinder,False,False,True,,5.55715,3990
+36218,Dominion,2008,spiel,True,True,True,,7.48239,10525
+36725,Lauras erste Übernachtung,2007,kinder,False,False,True,,,645
+36727,Capt'n Sharky: Abenteuer auf der Schatzinsel,2008,kinder,False,True,True,,,645
+36728,Pingo Tour,2008,kinder,False,False,True,,,1794
+36729,Fluss der Drachen,2008,kinder,False,True,True,,,6940
+36729,Fluss der Drachen,2008,kinder,False,True,True,,,6941
+36730,Farben ringsum,2008,kinder,False,False,True,,,10669
+36731,Kleiner Teddy,2008,kinder,False,False,True,,,256
+36732,Die kleinen Regentropfen,2008,kinder,False,False,True,,,10407
+37120,Pack & Stack,2008,spiel,False,False,True,,6.06935,2790
+37380,Roll Through the Ages: The Bronze Age,2008,spiel,False,True,True,,6.64967,378
+37907,Diamonds Club,2008,spiel,False,False,True,,6.23009,381
+38437,Curli Kuller,2008,kinder,False,True,True,,5.54522,4884
+38453,Space Alert,2008,spiel,False,False,False,New Worlds Game,7.1506,789
+38545,Kamisado,2008,spiel,False,False,True,,6.28634,84
+38657,Cities,2008,spiel,False,False,True,,5.85571,9369
+38984,MOW,2008,spiel,False,False,True,,5.77556,1727
+39095,Klickado,2008,kinder,False,False,True,,5.54749,11333
+39192,Schwarzer Kater,2008,kinder,False,False,True,,5.47893,4677
+39856,Dixit,2008,spiel,True,True,True,,7.09388,11547
+40234,Einauge sei wachsam!,2009,spiel,False,False,True,,5.6422,42
+40234,Einauge sei wachsam!,2009,spiel,False,False,True,,5.6422,7
+40393,FITS,2009,spiel,False,True,True,,6.1687,2
+40425,Maori,2009,spiel,False,False,True,,5.99165,173
+40619,Tonga Island,2009,kinder,False,True,True,,5.52863,13
+40628,Finca,2009,spiel,False,True,True,,6.71118,11782
+40628,Finca,2009,spiel,False,True,True,,6.71118,314
+40769,Valdora,2009,spiel,False,False,True,,6.11696,86
+40790,Der kleine Ritter Trenk,2008,kinder,False,False,True,,,645
+40837,Finde die Tiere!,2008,kinder,False,False,True,,,3524
+40935,Zoowaboo,2009,kinder,False,True,True,,5.65296,3540
+40941,Hide the Kids!,2009,kinder,False,True,True,,5.63011,1379
+40958,6 nimmt! Junior,2009,kinder,False,False,True,,5.51815,7
+41301,Hungry Wolves,2009,kinder,False,False,True,,,4884
+41496,Chickyboom,2008,kinder,False,False,True,,5.52312,942
+41916,The Magic Labyrinth,2009,kinder,True,True,True,,6.44564,12367
+42215,Tobago,2009,spiel,False,False,True,,6.85581,12461
+43015,Hansa Teutonica,2009,spiel,False,False,True,,7.46514,1018
+43023,Polizei-Alarm!,2009,kinder,False,False,True,,5.55318,645
+43023,Polizei-Alarm!,2009,kinder,False,False,True,,5.55318,748
+43528,World Without End,2009,spiel,False,False,False,Game of the Year Plus,6.71446,142
+43528,World Without End,2009,spiel,False,False,False,Game of the Year Plus,6.71446,7391
+43570,Friday,2011,kenner,False,False,True,,6.94006,141
+54043,Jaipur,2009,spiel,False,False,True,,7.37335,6736
+54137,Battle Sheep,2010,spiel,False,False,True,,6.26313,2432
+55834,Mosaix,2009,spiel,False,False,True,,5.76683,11797
+56933,Penguin Party,2008,spiel,False,False,True,,5.88936,2
+57349,Vampires of the Night,2009,kinder,False,True,True,,5.55877,3432
+57349,Vampires of the Night,2009,kinder,False,True,True,,5.55877,1288
+58565,Panic Tower!,2009,kinder,False,True,True,,5.52425,3343
+58565,Panic Tower!,2009,kinder,False,True,True,,5.52425,3342
+59223,Diego Drachenzahn,2009,kinder,True,True,True,,5.59114,500
+59776,Razzo Raketo,2009,kinder,False,False,True,,,10067
+60245,Mummy's Treasure,2009,kinder,False,False,True,,5.58305,4884
+60451,Combino,2009,kinder,False,False,True,,,4542
+60451,Combino,2009,kinder,False,False,True,,,4543
+60574,Mausgeflippt,2009,kinder,False,False,True,,5.52402,7282
+63975,Mountain Goats,2010,spiel,False,False,True,,6.24365,5766
+65244,Forbidden Island,2010,spiel,False,True,True,,6.66072,378
+65568,Jäger und Sammler,2010,spiel,False,False,True,,5.77055,2
+65599,Turi-Tour,2010,kinder,False,True,True,,,6008
+65990,Don Quixote,2010,spiel,False,False,True,,5.64389,12
+66188,Fresco,2010,spiel,False,True,True,,7.00095,249
+66188,Fresco,2010,spiel,False,True,True,,7.00095,34864
+66188,Fresco,2010,spiel,False,True,True,,7.00095,34866
+66214,Samarkand: Routes to Riches,2010,spiel,False,False,True,,6.13332,366
+66825,Kraken-Alarm,2010,kinder,False,True,True,,5.52336,961
+66849,Safranito,2010,spiel,False,False,True,,6.10144,4884
+68448,7 Wonders,2010,kenner,True,True,True,,7.57621,9714
+68561,Inspektor Hase,2010,kinder,False,False,True,,,256
+70149,Ora et Labora,2011,kenner,False,False,True,,7.32668,10
+70264,Shaun das Schaf: Echt Schaf!,2010,kinder,False,False,True,,,10246
+70512,Luna,2010,spiel,False,False,True,,6.77385,4958
+71820,Die Lieben Sieben: Ab auf die Wippe!,2010,kinder,False,False,True,,,3735
+72181,Gackerei ums Hühnerei,2010,kinder,False,False,True,,,3
+72368,Mein Mäuschen-Farbspiel,2009,kinder,False,False,True,,,3612
+72368,Mein Mäuschen-Farbspiel,2009,kinder,False,False,True,,,37919
+72374,Die kleine Raupe Nimmersatt: Das Original-Spiel zum Buch,2009,kinder,False,False,True,,,645
+72392,Zauberlehrling,2005,kinder,False,False,True,,,8324
+72406,Igel und Floh,2003,kinder,False,False,True,,,37907
+72406,Igel und Floh,2003,kinder,False,False,True,,,37906
+72991,Asara,2010,spiel,False,True,True,,6.38628,42
+72991,Asara,2010,spiel,False,True,True,,6.38628,7
+73761,K2,2010,kenner,False,True,True,,6.74209,7324
+76728,Freeze,2010,spiel,False,False,True,,5.57484,1106
+76728,Freeze,2010,spiel,False,False,True,,5.57484,29035
+83195,Ghost Blitz,2010,spiel,False,False,True,,6.43889,144
+84671,Kissenschlacht,2010,kinder,False,False,True,,5.53245,2111
+84772,"Sun, Sea & Sand",2010,spiel,False,False,True,,5.89663,124
+84876,The Castles of Burgundy,2011,spiel,False,False,True,,8.01499,4958
+85245,Magician's Kitchen,2010,kinder,False,True,True,,5.58048,3612
+85245,Magician's Kitchen,2010,kinder,False,True,True,,5.58048,37919
+87603,Flucht vor dem T-Rex,2010,kinder,False,False,True,,,8888
+89076,Schätzinsel,2010,kinder,False,False,True,,,12731
+90009,Eselsbrücke,2011,spiel,False,True,True,,5.76822,13
+90009,Eselsbrücke,2011,spiel,False,True,True,,5.76822,314
+90692,Das große Tier-Rätsel,2011,kinder,False,False,True,,,491
+90692,Das große Tier-Rätsel,2011,kinder,False,False,True,,,7
+90870,Pelican Cove,2011,spiel,False,False,True,,5.98037,43874
+90942,Mixtour,2011,spiel,False,False,True,,5.63741,3063
+91514,Rhino Hero,2011,kinder,False,False,True,,6.66144,44378
+91514,Rhino Hero,2011,kinder,False,False,True,,6.66144,3911
+91523,Mondo,2011,spiel,False,False,True,,6.03261,86
+91653,Zicke Zacke,2011,kinder,False,False,True,,5.52867,44443
+91671,Da ist der Wurm drin,2011,kinder,True,True,True,,5.70319,44455
+91873,Strasbourg,2011,kenner,False,True,True,,6.46093,4958
+92415,Skull,2011,spiel,False,False,True,,7.02212,1318
+92591,Das große Kullern,2011,kinder,False,False,True,,5.52873,1288
+92591,Das große Kullern,2011,kinder,False,False,True,,5.52873,129
+92644,Schnappt Hubi!,2011,kinder,True,True,True,,5.75055,10067
+93442,Zirkus Stapelix,2011,kinder,False,False,True,,,2111
+93551,Banana Jump,2011,kinder,False,False,True,,,3397
+93555,Miss Lupun…und das Geheimnis der Zahlen,2011,spiel,False,False,True,,5.51632,45564
+93555,Miss Lupun…und das Geheimnis der Zahlen,2011,spiel,False,False,True,,5.51632,45563
+93997,1000 and One Treasures,2010,kinder,False,False,True,,5.51715,4884
+96913,Lancaster,2011,kenner,False,True,True,,6.97628,34699
+98122,Monster Trap,2011,kinder,False,True,True,,5.59421,6941
+98122,Monster Trap,2011,kinder,False,True,True,,5.59421,6940
+98229,Pictomania,2011,spiel,False,False,True,,6.64585,789
+98778,Hanabi,2010,spiel,True,True,True,,6.944,9714
+99316,Grimaffen,2010,kinder,False,False,True,,,2
+99379,Kleine Froschmusik,2010,kinder,False,False,True,,,3524
+103132,Rapa Nui,2011,spiel,False,False,True,,5.87296,398
+104006,Village,2011,kenner,True,True,True,,7.30708,6940
+104006,Village,2011,kenner,True,True,True,,7.30708,6941
+105153,Pappsatt,2011,kinder,False,False,True,,,10264
+105153,Pappsatt,2011,kinder,False,False,True,,,30759
+105305,Coraxis & Co.,2012,kinder,False,False,True,,5.51686,9792
+105305,Coraxis & Co.,2012,kinder,False,False,True,,5.51686,9793
+105305,Coraxis & Co.,2012,kinder,False,False,True,,5.51686,9794
+105593,Cheating Moth,2011,kinder,False,False,True,,6.0877,51522
+105593,Cheating Moth,2011,kinder,False,False,True,,6.0877,51523
+106217,Hawaii,2011,kenner,False,False,True,,6.60639,51590
+107529,Kingdom Builder,2011,spiel,True,True,True,,6.80086,10525
+107680,Broomsticks and Backflips,2011,kinder,False,False,True,,5.50075,93
+108157,Kalimambo,2011,spiel,False,False,True,,5.60926,52026
+108831,Kulami,2011,spiel,False,False,True,,5.87833,42256
+112897,Magors Lesezauber,2010,kinder,False,False,True,,,645
+113294,Escape: The Curse of the Temple,2012,spiel,False,False,True,,6.7803,4063
+116954,Indigo,2012,spiel,False,False,True,,6.32855,2
+116981,Star Wars: Battle of Hoth,2012,kinder,False,False,True,,5.55637,35250
+116981,Star Wars: Battle of Hoth,2012,kinder,False,False,True,,5.55637,22684
+117555,CLACK!,2012,kinder,False,False,True,,5.51745,1210
+117959,Las Vegas,2012,spiel,False,True,True,,6.88792,381
+118048,Targi,2012,kenner,False,True,True,,7.42701,57305
+118051,Spinnengift und Krötenschleim,2012,kinder,False,True,True,,5.52358,11
+118410,Dirty Pig,2012,spiel,False,False,True,,5.75805,57468
+118418,Divinare,2012,spiel,False,False,True,,6.04921,56058
+118610,Santa Cruz,2012,spiel,False,False,True,,5.96128,59
+118695,Riff Raff,2012,spiel,False,False,True,,6.19215,4923
+118697,Hand aufs Herz,2012,spiel,False,False,True,,5.50751,40631
+118698,Flossen hoch!,2012,kinder,False,False,True,,,483
+120677,Terra Mystica,2012,kenner,False,False,True,,7.89979,4300
+120677,Terra Mystica,2012,kenner,False,False,True,,7.89979,4407
+124361,Concordia,2013,kenner,False,True,True,,7.94407,6045
+124378,Die kleinen Drachenritter,2012,kinder,False,True,True,,5.49981,4884
+125618,Libertalia,2012,spiel,False,False,True,,6.90018,7640
+126163,Tzolk'in: The Mayan Calendar,2012,kenner,False,False,True,,7.70425,35418
+126163,Tzolk'in: The Mayan Calendar,2012,kenner,False,False,True,,7.70425,59986
+126749,Bim Bamm!,2012,kinder,False,False,True,,5.50286,461
+126749,Bim Bamm!,2012,kinder,False,False,True,,5.50286,7808
+127134,Baobab,2012,kinder,False,False,True,,5.62309,8045
+127398,Legends of Andor,2012,kenner,True,True,True,,6.89987,11825
+127515,Mix Fix,2012,kinder,False,False,True,,,3343
+127515,Mix Fix,2012,kinder,False,False,True,,,3342
+128123,Captain Kidd,2012,kinder,False,False,True,,,4542
+128123,Captain Kidd,2012,kinder,False,False,True,,,4543
+129492,Bee Alert,2012,kinder,False,False,True,,5.61156,2
+129614,Rondo,2012,spiel,False,False,True,,5.77371,2
+129622,Love Letter,2012,spiel,False,False,True,,7.12865,9495
+129948,The Palaces of Carrara,2012,kenner,False,True,True,,6.64335,42
+129948,The Palaces of Carrara,2012,kenner,False,True,True,,6.64335,7
+130792,The Enchanted Tower,2012,kinder,True,True,True,,5.9404,6940
+130792,The Enchanted Tower,2012,kinder,True,True,True,,5.9404,6941
+130877,Blood Bound,2013,kenner,False,False,True,,5.96387,63813
+131260,Qwixx,2012,spiel,False,True,True,,6.65441,11781
+131788,Game Over,2012,kinder,False,False,True,,5.54979,64265
+132372,Guildhall,2012,kenner,False,False,True,,6.43022,52007
+132783,Monster-Alarm,2011,kinder,False,False,True,,,64767
+133620,Yay!,2012,spiel,False,False,True,,5.53713,256
+133944,Pingi Pongo,2012,kinder,False,False,True,,,597
+135851,Connect the Thoughts,2013,kinder,False,False,True,,5.50457,1210
+136280,La Boca,2013,spiel,False,False,True,,6.2484,6940
+136280,La Boca,2013,spiel,False,False,True,,6.2484,6941
+136712,"Linus, der kleine Magier",2013,kinder,False,False,True,,5.51079,3990
+136888,Bruges,2013,kenner,False,True,True,,7.12587,4958
+136991,Loony Quest,2015,spiel,False,False,True,,6.5428,3327
+136991,Loony Quest,2015,spiel,False,False,True,,6.5428,3418
+137152,Mucca Pazza,2013,kinder,False,True,True,,5.49665,64163
+137155,Potato Man,2013,spiel,False,False,True,,6.02025,173
+137155,Potato Man,2013,spiel,False,False,True,,6.02025,237
+137297,Rise of Augustus,2013,spiel,False,True,True,,6.48409,7640
+137408,Amerigo,2013,kenner,False,False,True,,6.95536,4958
+137480,Gold am Orinoko,2013,kinder,False,True,True,,5.61234,129
+137909,Bugs in the Kitchen,2013,kinder,False,False,True,,5.7805,1783
+139326,UGO!,2013,spiel,False,False,True,,5.79428,49795
+139326,UGO!,2013,spiel,False,False,True,,5.79428,3973
+139326,UGO!,2013,spiel,False,False,True,,5.79428,60012
+140743,Catan Junior Madagascar,2012,kinder,False,False,True,,5.54224,11
+142437,Move & Twist,2012,kinder,False,False,True,,,5178
+142437,Move & Twist,2012,kinder,False,False,True,,,62766
+143157,SOS Titanic,2013,spiel,False,False,True,,6.06852,1727
+143157,SOS Titanic,2013,spiel,False,False,True,,6.06852,4337
+143884,Machi Koro,2012,spiel,False,True,True,,6.4963,68814
+144344,Rococo,2013,kenner,False,True,True,,7.1853,34699
+144344,Rococo,2013,kenner,False,True,True,,7.1853,54147
+144344,Rococo,2013,kenner,False,True,True,,7.1853,54146
+144733,Russian Railroads,2013,kenner,False,False,True,,7.49323,2748
+144733,Russian Railroads,2013,kenner,False,False,True,,7.49323,1828
+146149,Quick Cups,2013,kinder,False,False,True,,5.779,1210
+146312,Ghost Fightin' Treasure Hunters,2013,kinder,True,True,True,,6.55245,1496
+146508,T.I.M.E Stories,2015,kenner,False,True,True,,7.20243,87947
+146508,T.I.M.E Stories,2015,kenner,False,True,True,,7.20243,69927
+146816,Sanssouci,2013,spiel,False,False,True,,6.26441,42
+147151,Concept,2013,spiel,False,True,True,,6.61285,65537
+147151,Concept,2013,spiel,False,True,True,,6.61285,8132
+147949,One Night Ultimate Werewolf,2014,spiel,False,False,True,,6.89571,6046
+147949,One Night Ultimate Werewolf,2014,spiel,False,False,True,,6.89571,69462
+148228,Splendor,2014,spiel,False,True,True,,7.30295,50969
+148764,Feuerdrachen,2013,kinder,False,False,True,,5.58977,49760
+148767,Brandon the Brave,2013,kinder,False,True,True,,5.67988,66521
+148768,"Oh Schreck, der Speck fliegt weg!",2013,kinder,False,False,True,,,305
+148768,"Oh Schreck, der Speck fliegt weg!",2013,kinder,False,False,True,,,69969
+148949,Istanbul,2014,kenner,True,True,True,,7.39145,381
+153753,Gruselrunde zur Geisterstunde,2014,kinder,False,False,True,,,645
+153938,Camel Up,2014,spiel,True,True,True,,6.89543,10067
+154681,Flizz & Miez,2014,kinder,False,True,True,,5.51485,11507
+154681,Flizz & Miez,2014,kinder,False,True,True,,5.51485,427
+154681,Flizz & Miez,2014,kinder,False,True,True,,5.51485,11222
+158708,Joe's Zoo,2014,kinder,False,False,True,,,3990
+158899,Colt Express,2014,spiel,True,True,True,,6.95904,28912
+159629,Welches Tier bin ich?,2013,kinder,False,False,True,,,73432
+159675,Fields of Arle,2014,kenner,False,False,True,,7.6069,10
+161936,Pandemic Legacy: Season 1,2015,kenner,False,True,True,,8.38212,442
+161936,Pandemic Legacy: Season 1,2015,kenner,False,True,True,,8.38212,378
+162082,Deus,2014,kenner,False,False,True,,6.94201,38335
+162191,Look!,2012,kinder,False,False,True,,5.55087,1210
+163412,Patchwork,2014,spiel,False,False,True,,7.49354,10
+163930,Abracada...What?,2014,spiel,False,False,True,,5.98077,41794
+163968,Elysium,2015,kenner,False,True,True,,6.89958,69007
+163968,Elysium,2015,kenner,False,True,True,,6.89958,56058
+164928,Orléans,2014,kenner,False,True,True,,7.87377,158
+165722,KLASK,2014,spiel,False,False,True,,7.24701,77890
+166384,Spyfall,2014,spiel,False,False,True,,6.64703,78199
+167791,Terraforming Mars,2016,kenner,False,True,True,,8.2159,52075
+168534,Fröschlein aufgepasst!,2014,kinder,False,False,True,,,500
+170042,Raiders of the North Sea,2015,kenner,False,True,True,,7.52584,12547
+170216,Blood Rage,2015,kenner,False,False,True,,7.76003,1533
+170969,Gigamons,2014,kinder,False,True,True,,5.62805,78238
+170969,Gigamons,2014,kinder,False,True,True,,5.62805,78240
+171129,Spinderella,2015,kinder,True,True,True,,5.91238,285
+171131,Captain Sonar,2016,kenner,False,False,True,,7.31396,285
+171131,Captain Sonar,2016,kenner,False,False,True,,7.31396,43218
+171233,The Big Book of Madness,2015,kenner,False,False,True,,6.54873,75577
+171499,Cacao,2015,spiel,False,False,True,,6.80081,8347
+171561,Der verdrehte Sprach-Zoo,2015,kinder,False,False,True,,,93
+171623,The Voyages of Marco Polo,2015,kenner,False,False,True,,7.57894,35418
+171623,The Voyages of Marco Polo,2015,kenner,False,False,True,,7.57894,59986
+171668,The Grizzled,2015,kenner,False,False,True,,6.90411,79931
+171668,The Grizzled,2015,kenner,False,False,True,,6.90411,2098
+172308,Broom Service,2015,kenner,True,True,True,,6.86671,8397
+172308,Broom Service,2015,kenner,True,True,True,,6.86671,11767
+172386,Mombasa,2015,kenner,False,False,True,,7.51273,11767
+172507,Mmm!,2015,kinder,False,True,True,,5.71851,2
+172542,Push a Monster,2015,kinder,False,True,True,,5.60879,3990
+172542,Push a Monster,2015,kinder,False,True,True,,5.60879,10614
+172543,Chef Alfredo,2015,kinder,False,False,True,,5.53926,86
+172550,Harry Hopper,2015,kinder,False,False,True,,5.51479,80476
+172931,Outfoxed!,2014,kinder,False,False,True,,6.56826,109544
+172931,Outfoxed!,2014,kinder,False,False,True,,6.56826,105688
+172931,Outfoxed!,2014,kinder,False,False,True,,6.56826,27808
+173090,The Game,2015,spiel,False,True,True,,6.49911,11781
+173346,7 Wonders Duel,2015,kenner,False,False,True,,7.97244,9714
+173346,7 Wonders Duel,2015,kenner,False,False,True,,7.97244,1727
+174219,Time's Up! Kids,2015,kinder,False,False,True,,5.66782,567
+176494,Isle of Skye: From Chieftain to King,2015,kenner,True,True,True,,7.23376,8397
+176494,Isle of Skye: From Chieftain to King,2015,kenner,True,True,True,,7.23376,11767
+177478,IKI,2015,kenner,False,True,True,,6.98784,77702
+177524,ICECOOL,2016,kinder,True,True,True,,6.57054,66638
+178053,Schatz-Rabatz,2015,kinder,False,True,True,,5.51925,60914
+178900,Codenames,2015,spiel,True,True,True,,7.45382,789
+180565,Die geheimnisvolle Drachenhöhle,2015,kinder,False,False,True,,5.51168,49760
+180565,Die geheimnisvolle Drachenhöhle,2015,kinder,False,False,True,,5.51168,607
+183006,Qwinto,2015,spiel,False,False,True,,6.43657,4308
+183006,Qwinto,2015,spiel,False,False,True,,6.43657,4307
+183251,Karuba,2015,spiel,False,True,True,,6.88558,381
+183401,Sleepy Castle,2015,kinder,False,False,True,,5.53859,256
+184490,Mein Schatz,2015,kinder,False,False,True,,5.52061,961
+186302,Die Fiesen 7,2015,spiel,False,False,True,,5.72597,144
+191004,My First Stone Age,2016,kinder,True,True,True,,6.11633,4884
+191065,Castle Flutterstone,2016,kinder,False,False,True,,5.5579,308
+191189,Aeon's End,2016,kenner,False,False,True,,7.61732,126022
+191189,Aeon's End,2016,kenner,False,False,True,,7.61732,72770
+191189,Aeon's End,2016,kenner,False,False,True,,7.61732,88122
+191538,Leo,2016,kinder,False,True,True,,5.95617,138
+191572,Animals on Board,2016,spiel,False,False,True,,6.0378,11782
+191572,Animals on Board,2016,spiel,False,False,True,,6.0378,314
+191681,Lagoonies,2016,kinder,False,False,True,,5.52216,1288
+191681,Lagoonies,2016,kinder,False,False,True,,5.52216,129
+191687,Jungle Party,2016,kinder,False,False,True,,5.52814,13
+191687,Jungle Party,2016,kinder,False,False,True,,5.52814,10614
+191862,Imhotep,2016,spiel,False,True,True,,6.9294,8347
+192283,Emojito!,2016,kinder,False,True,True,,5.5234,111626
+193738,Great Western Trail,2016,kenner,False,False,True,,8.03342,11767
+194655,Santorini,2016,spiel,False,False,True,,7.23251,3302
+195372,Krazy Wordz: Nicht 100% jugendfrei,2016,spiel,False,False,True,,6.1032,12367
+195372,Krazy Wordz: Nicht 100% jugendfrei,2016,spiel,False,False,True,,6.1032,5363
+195372,Krazy Wordz: Nicht 100% jugendfrei,2016,spiel,False,False,True,,6.1032,12779
+199611,Shiftago,2016,spiel,False,False,True,,5.54164,74724
+199611,Shiftago,2016,spiel,False,False,True,,5.54164,74723
+201808,Clank!: A Deck-Building Adventure,2016,kenner,False,False,True,,7.61858,92370
+202296,Wizardry to the Power of Three,2016,kinder,False,False,True,,5.63462,461
+202296,Wizardry to the Power of Three,2016,kinder,False,False,True,,5.63462,7808
+203411,Word Slam,2016,spiel,False,False,True,,5.99401,6940
+203411,Word Slam,2016,spiel,False,False,True,,5.99401,6941
+203420,Exit: The Game – The Abandoned Cabin,2016,kenner,True,True,True,,7.12022,6940
+203420,Exit: The Game – The Abandoned Cabin,2016,kenner,True,True,True,,7.12022,6941
+203427,Fabled Fruit,2016,spiel,False,False,True,,6.60904,141
+204583,Kingdomino,2016,spiel,True,True,True,,7.1962,1727
+204592,The Mysterious Forest,2016,kinder,False,True,True,,5.56869,3540
+206915,Tempel des Schreckens,2016,spiel,False,False,True,,6.40323,82544
+206938,Kullerhexe,2016,kinder,False,False,True,,5.53101,4884
+206939,Do De Li Do,2016,spiel,False,False,True,,5.84596,144
+207830,5-Minute Dungeon,2017,spiel,False,False,True,,6.60757,85851
+209578,"Little Bird, Big Hunger",2016,kinder,False,False,True,,5.52471,85285
+209778,Magic Maze,2017,spiel,False,True,True,,6.8049,95143
+213491,The Legend of the Wendigo,2017,kinder,False,False,True,,5.54193,8103
+217321,Déjà Vu,2017,spiel,False,False,True,,5.77272,256
+217372,The Quest for El Dorado,2017,spiel,False,True,True,,7.47788,2
+217861,Paper Tales,2017,kenner,False,False,True,,6.5654,76303
+218333,Rhino Hero: Super Battle,2017,kinder,False,False,True,,6.72975,44378
+218333,Rhino Hero: Super Battle,2017,kinder,False,False,True,,6.72975,3911
+219215,Werewords,2017,spiel,False,True,True,,6.65566,6046
+219509,Captain Silver,2017,kinder,False,True,True,,5.57537,3990
+219509,Captain Silver,2017,kinder,False,True,True,,5.57537,10614
+221107,Pandemic Legacy: Season 2,2017,kenner,False,False,False,Special Prize,7.7249,442
+221107,Pandemic Legacy: Season 2,2017,kenner,False,False,False,Special Prize,7.7249,378
+221965,The Fox in the Forest,2017,spiel,False,False,True,,6.90225,43202
+223040,Fantasy Realms,2017,kenner,False,True,True,,7.24797,3440
+223321,Detective: A Modern Crime Board Game,2018,kenner,False,True,True,,7.2323,108405
+223321,Detective: A Modern Crime Board Game,2018,kenner,False,True,True,,7.2323,99503
+223321,Detective: A Modern Crime Board Game,2018,kenner,False,True,True,,7.2323,4735
+223742,Colourbrain,2017,spiel,False,False,True,,5.65287,146537
+223953,Kitchen Rush,2017,spiel,False,False,True,,6.63643,35005
+223953,Kitchen Rush,2017,spiel,False,False,True,,6.63643,76227
+227789,Heaven & Ale,2017,kenner,False,True,True,,7.12499,42
+227789,Heaven & Ale,2017,kenner,False,True,True,,7.12499,30744
+230080,Majesty: For the Realm,2017,spiel,False,False,True,,6.57082,50969
+230383,Memoarrr!,2017,spiel,False,False,True,,6.22574,101836
+230802,Azul,2017,spiel,True,True,True,,7.64154,42
+231045,Speed Colors,2017,kinder,False,False,True,,5.56878,102038
+232045,Shaky Manor,2017,kinder,False,True,True,,5.67896,80520
+232045,Shaky Manor,2017,kinder,False,True,True,,5.67896,80521
+232520,Pioneers,2017,kenner,False,False,True,,6.03236,2762
+235655,Dragon's Breath,2017,kinder,True,True,True,,5.97517,173
+235655,Dragon's Breath,2017,kinder,True,True,True,,5.97517,85283
+235927,Dino World,2017,kinder,False,False,True,,5.53566,6818
+235927,Dino World,2017,kinder,False,False,True,,5.53566,6817
+235927,Dino World,2017,kinder,False,False,True,,5.53566,48170
+236457,Architects of the West Kingdom,2018,kenner,False,False,True,,7.54029,103821
+236457,Architects of the West Kingdom,2018,kenner,False,False,True,,7.54029,12547
+236484,Facecards,2017,spiel,False,False,True,,5.65493,138
+241266,Little Town,2017,spiel,False,False,True,,6.57264,75617
+241266,Little Town,2017,spiel,False,False,True,,6.57264,75618
+241491,Who Did It?,2018,spiel,False,False,True,,5.88894,106170
+242740,Magic Maze Kids,2018,kinder,False,False,True,,5.73693,95143
+242804,Lowlands,2018,kenner,False,False,True,,6.61181,105994
+242804,Lowlands,2018,kenner,False,False,True,,6.61181,105995
+244228,Reef,2018,spiel,False,False,True,,6.73,61330
+244320,SOS Dino,2018,kinder,False,False,True,,5.8408,4337
+244320,SOS Dino,2018,kinder,False,False,True,,5.8408,72628
+244521,The Quacks of Quedlinburg,2018,kenner,True,True,True,,7.68647,80162
+244522,That's Pretty Clever!,2018,kenner,False,True,True,,7.38441,80162
+244711,Newton,2018,kenner,False,False,True,,7.06821,35418
+244711,Newton,2018,kenner,False,False,True,,7.06821,52377
+244992,The Mind,2018,spiel,False,True,True,,6.64455,80162
+245643,Luxor,2018,spiel,False,True,True,,6.64016,381
+245655,The King's Dilemma,2019,kenner,False,True,True,,7.14447,91211
+245655,The King's Dilemma,2019,kenner,False,True,True,,7.14447,28238
+245934,Carpe Diem,2018,kenner,False,True,True,,7.06672,4958
+246696,Monster Match,2018,kinder,False,False,True,,5.62513,68073
+246696,Monster Match,2018,kinder,False,False,True,,5.62513,68072
+246784,Cryptid,2018,kenner,False,True,True,,7.18238,107037
+246784,Cryptid,2018,kenner,False,True,True,,7.18238,107036
+247313,Woodlands,2018,spiel,False,False,True,,5.66441,90042
+247314,Concept Kids: Animals,2018,kinder,False,False,True,,5.99099,65537
+247314,Concept Kids: Animals,2018,kinder,False,False,True,,5.99099,8132
+247763,Underwater Cities,2018,kenner,False,False,True,,7.78719,9307
+249768,My First Adventure: Finding the Dragon,2018,kinder,False,False,True,,5.57269,84067
+250780,Sherlock: Last Call,2018,spiel,False,False,True,,5.98619,69099
+250780,Sherlock: Last Call,2018,spiel,False,False,True,,5.98619,108743
+250780,Sherlock: Last Call,2018,spiel,False,False,True,,5.98619,108574
+251247,Barrage,2019,kenner,False,False,True,,7.8479,108836
+251247,Barrage,2019,kenner,False,False,True,,7.8479,35418
+254640,Just One,2018,spiel,True,True,True,,7.42992,51255
+254640,Just One,2018,spiel,True,True,True,,7.42992,51055
+255674,Imhotep: The Duel,2018,spiel,False,False,True,,6.42277,8347
+256952,Zombie Kidz Evolution,2018,kinder,False,False,True,,6.95362,44054
+258779,Planet Unknown,2022,kenner,False,True,True,,7.34315,98336
+258779,Planet Unknown,2022,kenner,False,True,True,,7.34315,77564
+259374,Belratti,2018,spiel,False,False,True,,6.19828,104579
+259830,Hedgehog Roll,2019,kinder,True,True,True,,5.68328,111626
+261265,Monster-Bande,2018,kinder,False,False,True,,5.5334,112154
+262712,Res Arcana,2019,kenner,False,False,True,,7.43113,150
+263918,Cartographers,2019,kenner,False,True,True,,7.43716,109218
+264055,Draftosaurus,2019,spiel,False,False,True,,6.8641,9714
+264055,Draftosaurus,2019,spiel,False,False,True,,6.8641,60151
+264055,Draftosaurus,2019,spiel,False,False,True,,6.8641,4337
+264055,Draftosaurus,2019,spiel,False,False,True,,6.8641,72628
+264295,Fabulantica,2018,kinder,False,True,True,,5.60145,4884
+266083,L.L.A.M.A.,2019,spiel,False,True,True,,6.25213,2
+266192,Wingspan,2019,kenner,True,True,True,,7.90633,111338
+266810,Paladins of the West Kingdom,2019,kenner,False,False,True,,7.68019,103821
+266810,Paladins of the West Kingdom,2019,kenner,False,False,True,,7.68019,12547
+266830,QE,2019,spiel,False,False,True,,6.89483,13391
+267378,Chakra,2019,spiel,False,False,True,,6.22106,114258
+269199,Dizzle,2019,spiel,False,False,True,,6.04095,314
+269526,Valley of the Vikings,2019,kinder,True,True,True,,5.85695,79462
+269526,Valley of the Vikings,2019,kinder,True,True,True,,5.85695,79463
+269596,Voll Verwackelt,2019,kinder,False,False,True,,,3990
+269596,Voll Verwackelt,2019,kinder,False,False,True,,,10614
+269624,Barnyard Bunch,2019,kinder,False,False,True,,5.50597,111812
+270140,Go Gecko Go!,2019,kinder,False,True,True,,5.55159,34434
+271785,Slide Quest,2019,kinder,False,False,True,,5.99568,57953
+271785,Slide Quest,2019,kinder,False,False,True,,5.99568,77649
+274960,Point Salad,2019,spiel,False,False,True,,6.97053,116182
+274960,Point Salad,2019,spiel,False,False,True,,6.97053,116181
+274960,Point Salad,2019,spiel,False,False,True,,6.97053,116180
+283073,Zoo Run,2019,kinder,False,False,True,,5.54188,78797
+284083,The Crew: The Quest for Planet Nine,2019,kenner,True,True,True,,7.66741,45563
+284108,Pictures,2019,spiel,True,True,True,,6.4697,60694
+284108,Pictures,2019,spiel,True,True,True,,6.4697,119515
+284435,Nova Luna,2019,spiel,False,True,True,,6.89511,10
+284435,Nova Luna,2019,spiel,False,True,True,,6.89511,124
+284895,Magic School,2019,kinder,False,False,True,,5.51589,106170
+285526,Hans im Glück,2019,kinder,False,False,True,,,405
+286569,Octopus,2018,kinder,False,False,True,,,9695
+286569,Octopus,2018,kinder,False,False,True,,,59321
+287591,Storytailors,2020,kinder,False,True,True,,5.62654,79463
+287591,Storytailors,2020,kinder,False,True,True,,5.62654,79462
+288969,Puzzle-Memo,2019,kinder,False,False,True,,5.51921,173
+291453,SCOUT,2019,spiel,False,True,True,,7.46571,116503
+291457,Gloomhaven: Jaws of the Lion,2020,kenner,False,False,True,,8.17176,69802
+291549,Go Slow!,2020,kinder,False,False,True,,5.54484,8767
+291550,Foto Fish,2020,kinder,False,True,True,,5.52903,106414
+291859,Riftforce,2021,kenner,False,False,True,,6.42983,101836
+295486,My City,2020,spiel,False,True,True,,7.2792,2
+295947,Cascadia,2021,spiel,True,True,True,,7.77391,122804
+296514,Robots,2020,kinder,False,True,True,,5.55216,12
+299028,Dream Catcher,2020,kinder,False,False,True,,5.53011,3327
+299028,Dream Catcher,2020,kinder,False,False,True,,5.53011,3418
+299169,Spicy,2020,spiel,False,False,True,,6.6139,111439
+299630,Honey,2021,kinder,False,False,True,,5.52423,77946
+299630,Honey,2021,kinder,False,False,True,,5.52423,84381
+299684,Khôra: Rise of an Empire,2021,kenner,False,False,True,,6.70192,117987
+300010,Dragomino,2020,kinder,True,True,True,,6.22982,1727
+300010,Dragomino,2020,kinder,True,True,True,,6.22982,79463
+300010,Dragomino,2020,kinder,True,True,True,,6.22982,79462
+300531,Paleo,2020,kenner,True,True,True,,7.30857,92425
+300905,Top Ten,2020,spiel,False,True,True,,6.67617,124205
+302417,Mia London and the Case of the 625 Scoundrels,2020,kinder,False,True,True,,5.56284,9714
+302417,Mia London and the Case of the 625 Scoundrels,2020,kinder,False,True,True,,5.56284,60151
+303669,Magic Rabbit,2020,spiel,False,False,True,,5.69084,125003
+303669,Magic Rabbit,2020,spiel,False,False,True,,5.69084,81298
+303669,Magic Rabbit,2020,spiel,False,False,True,,5.69084,125004
+303669,Magic Rabbit,2020,spiel,False,False,True,,5.69084,125005
+303672,Trek 12: Himalaya,2020,spiel,False,False,True,,6.19851,1727
+303672,Trek 12: Himalaya,2020,spiel,False,False,True,,6.19851,60151
+310448,Zombie Teenz Evolution,2020,spiel,False,True,True,,6.46121,44054
+312484,Lost Ruins of Arnak,2020,kenner,False,True,True,,7.89997,127823
+312484,Lost Ruins of Arnak,2020,kenner,False,True,True,,7.89997,127822
+316554,Dune: Imperium,2020,kenner,False,True,True,,8.22738,92370
+317311,Switch & Signal,2020,spiel,False,False,True,,6.20047,67071
+318195,Biss 20,2020,spiel,False,False,True,,5.7436,85283
+318195,Biss 20,2020,spiel,False,False,True,,5.7436,173
+318243,HITSTER,2022,spiel,False,False,True,,6.14916,153553
+318560,Witchstone,2021,kenner,False,False,True,,6.72129,76530
+318560,Witchstone,2021,kenner,False,False,True,,6.72129,2
+318977,MicroMacro: Crime City,2020,spiel,True,True,True,,7.25246,70631
+320157,Swip'Sheep,2020,kinder,False,False,True,,,111422
+320840,Tapikekoi,2020,kinder,False,False,True,,,81298
+320840,Tapikekoi,2020,kinder,False,False,True,,,130860
+322039,The Key: Sabotage at Lucky Llama Land,2020,spiel,False,False,True,,5.73035,45563
+326494,The Adventures of Robin Hood,2021,spiel,False,True,True,,6.75211,11825
+327056,Unlock! Kids: Detective Stories,2021,kinder,False,False,False,Special Prize,6.06605,4009
+327056,Unlock! Kids: Detective Stories,2021,kinder,False,False,False,Special Prize,6.06605,79462
+327056,Unlock! Kids: Detective Stories,2021,kinder,False,False,False,Special Prize,6.06605,79463
+327838,Käpt'n Kuller,2020,kinder,False,False,True,,,12731
+328479,Living Forest,2021,kenner,True,True,True,,6.76209,133041
+329839,So Clover!,2021,spiel,False,False,True,,7.1205,133522
+330602,Inspektor Nase,2021,kinder,False,False,True,,5.60373,12
+331571,My Gold Mine,2021,spiel,False,False,True,,5.88528,111158
+331571,My Gold Mine,2021,spiel,False,False,True,,5.88528,104579
+331571,My Gold Mine,2021,spiel,False,False,True,,5.88528,111159
+339489,Hipp Hopp Hippo,2020,kinder,False,False,True,,,77946
+339489,Hipp Hopp Hippo,2020,kinder,False,False,True,,,84381
+341914,Froggies,2021,kinder,False,False,True,,5.54248,1210
+341919,Magic Mountain,2021,kinder,True,True,True,,5.7369,1288
+341919,Magic Mountain,2021,kinder,True,True,True,,5.7369,129
+342184,Memo Friends,2019,kinder,False,False,True,,,3
+342207,echoes: The Dancer,2021,spiel,False,False,True,,5.75235,69007
+342207,echoes: The Dancer,2021,spiel,False,False,True,,5.75235,108002
+342942,Ark Nova,2021,kenner,False,False,True,,8.33293,138517
+343833,Turtle Splash!,2021,kinder,False,False,True,,5.5685,54144
+343833,Turtle Splash!,2021,kinder,False,False,True,,5.5685,54143
+345584,Mindbug: First Contact,2022,kenner,False,False,True,,7.02758,118
+345584,Mindbug: First Contact,2022,kenner,False,False,True,,7.02758,14
+345584,Mindbug: First Contact,2022,kenner,False,False,True,,7.02758,139860
+345584,Mindbug: First Contact,2022,kenner,False,False,True,,7.02758,139861
+346703,7 Wonders: Architects,2021,spiel,False,False,True,,6.72927,9714
+350636,Unlock!: Game Adventures,2021,kenner,False,False,False,Special Prize,6.26391,130658
+350636,Unlock!: Game Adventures,2021,kenner,False,False,False,Special Prize,6.26391,156823
+350636,Unlock!: Game Adventures,2021,kenner,False,False,False,Special Prize,6.26391,10394
+350636,Unlock!: Game Adventures,2021,kenner,False,False,False,Special Prize,6.26391,130986
+351937,Carla Caramel,2022,kinder,False,True,True,,5.5205,113106
+353545,Next Station: London,2022,spiel,False,True,True,,6.78038,69007
+354886,Quacks & Co.: Quedlinburg Dash,2022,kinder,False,True,True,,5.91302,80162
+354892,That's Pretty Clever! Kids,2022,kinder,False,True,True,,5.6243,80162
+355274,Die Villa der Vampire,2022,kinder,False,False,True,,,308
+355274,Die Villa der Vampire,2022,kinder,False,False,True,,,1288
+356742,KuZOOkA,2022,spiel,False,False,True,,5.68533,138
+357563,Akropolis,2022,spiel,False,False,True,,6.95668,144139
+358095,Golden Ei,2022,kinder,False,False,True,,,961
+358690,MANTIS,2022,spiel,False,False,True,,5.84745,68073
+358690,MANTIS,2022,spiel,False,False,True,,5.84745,116981
+359970,Challengers!,2022,kenner,True,True,True,,6.51002,42380
+359970,Challengers!,2022,kenner,True,True,True,,6.51002,110904
+367206,Mysterium Kids: Captain Echo's Treasure,2022,kinder,True,True,True,,5.5549,91325
+367206,Mysterium Kids: Captain Echo's Treasure,2022,kinder,True,True,True,,5.5549,44
+367220,Sea Salt & Paper,2022,spiel,False,False,True,,6.95688,1727
+367220,Sea Salt & Paper,2022,spiel,False,False,True,,6.95688,72628
+368954,Council of Shadows,2022,kenner,False,False,True,,5.9234,51251
+368954,Council of Shadows,2022,kenner,False,False,True,,5.9234,77911
+370164,Fun Facts,2022,spiel,False,True,True,,6.12933,95143
+370591,Dorfromantik: The Board Game,2022,spiel,True,True,True,,6.88379,461
+370591,Dorfromantik: The Board Game,2022,spiel,True,True,True,,6.88379,7808
+375651,That's Not a Hat,2023,spiel,False,False,True,,5.97306,95143
+375737,Douzanimo,2022,kinder,False,False,True,,,79777
