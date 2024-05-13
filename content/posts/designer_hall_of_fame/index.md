@@ -33,7 +33,7 @@ Overall, the jury included 831 games on its various longlist across the three ca
 | {{% kdj %}}Kennerspiel{{% /kdj %}} | 13 | 39 | 76 | 2 |
 | {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} | 35 | 95 | 260 | 1 |
 
-A quick word about the data: As usual, I rely on BoardGameGeek (BGG) for data about the games and their designers. If a game is not in the database or if the designer entry is wrong, the statistics here will necessarily be wrong too. I've collected data about the different {{% sdj / %}} awards manually over the years, so that's another potential source of errors.
+A quick word about the data: As usual, I rely on BoardGameGeek (BGG) for data about the games and their designers. If a game is not in the database or if the designer entry is wrong, the statistics here will necessarily be wrong too. I've collected data about the different {{% sdj / %}} awards manually over the years, so that's another potential source of errors. If you're reading this from the future, I should point out that the statistics here should be complete up to and including {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}.
 
 The current format of having a longlist (which become the recommendations), out of which three games are selected for the shortlist (which are the nominated games), out of which one game will be given the award, has been in place since 2011 with the introduction of the {{% kdj / %}}. Formats have varied throughout the decades and I've tried to map them to the current situation as much as possible.
 
