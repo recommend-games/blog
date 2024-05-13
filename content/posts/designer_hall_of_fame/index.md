@@ -4,7 +4,7 @@ subtitle: The best board game designers of all times – according to Spiel des 
 slug: game-designer-hall-of-fame
 author: Markus Shepherd
 type: post
-date: 2024-05-13T15:00:00+03:00
+date: 2024-05-17T12:00:00+03:00
 tags:
   - Spiel des Jahres
   - Kennerspiel des Jahres
@@ -20,7 +20,7 @@ tags:
 
 {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}} nominations are just around the corner (watch this space for our annual predictions), but I wanted to take this opportunity for a look back over the history of the award. Specifically, I wanted to see which designers have been most successful at the {{% sdj / %}}, {{% kdj / %}} and {{% kindersdj / %}} awards.
 
-The first {{% sdj %}}red meeples{{% /sdj %}} were given out in 1979. Since 1989, the jury also awarded the {{% kindersdj / %}} for children's games, initially as an annual special award, and from 2001 as its own award with the {{% kindersdj %}}blue meeple{{% /kindersdj %}}. (In what follows I count those special awards as regular {{% kindersdj / %}} winners.) Finally, in 2011, the {{% kdj / %}} was introduced for (slightly) more complex games with an {{% kdj %}}anthracite meeple{{% /kdj %}}, again following a couple of special awards with a clearly similar intent, but less steady, so they just stand as special awards on their own in the statistics.
+The first {{% sdj %}}red meeple{{% /sdj %}} was given out in 1979. Since 1989, the jury also awarded the {{% kindersdj / %}} for children's games, initially as an annual special award, and from 2001 as its own award with the {{% kindersdj %}}blue meeple{{% /kindersdj %}}. (In what follows I count those special awards as regular {{% kindersdj / %}} winners.) Finally, in 2011, the {{% kdj / %}} was introduced for (slightly) more complex games with an {{% kdj %}}anthracite meeple{{% /kdj %}}, again following a couple of special awards with a clearly similar intent, but less steady, so they just stand as special awards on their own in the statistics.
 
 
 ## Games
@@ -37,14 +37,14 @@ A quick word about the data: As usual, I rely on BoardGameGeek (BGG) for data ab
 
 The current format of having a longlist (which become the recommendations), out of which three games are selected for the shortlist (which are the nominated games), out of which one game will be given the award, has been in place since 2011 with the introduction of the {{% kdj / %}}. Formats have varied throughout the decades and I've tried to map them to the current situation as much as possible.
 
-I've already mentioned that the first 12 {{% kindersdj / %}} winners were really special awards. There was another special award given during the first 18 years between 1979 and 1997 for "beautiful games". It felt like those games clutter the statistics somewhat, so I treated them as recommendations rather than special award winners.
+I've already mentioned that the first 12 {{% kindersdj / %}} winners were really special awards. There was another special award given during the first 18 years between 1979 and 1997 for "beautiful games". Since this article is meant to focus on designers, not artists, it felt like those games clutter the statistics somewhat, so I treated them as recommendations rather than special award winners.
 
-But this article was meant to be about neither games nor data, but the designers, so let's take a look at them.
+So without further ado, let's take a look at the designers.
 
 
 ## Designers
 
-Over the course of 45 sessions, the jury has mentioned games by 566 different designers. By far the most successful designer is [Wolfgang Kramer](https://recommend.games/#/?designer=7) who has won {{% sdj / %}} five times (four of those were co-designs) and {{% kindersdj / %}} once between 1986 and 2000. During that time period, [Klaus Teuber](https://recommend.games/#/?designer=11) won {{% sdj / %}} four times, so during those 15 years those two designers shared 11 awards between them. The record for most games on the longlists is held by [Reiner Knizia](https://recommend.games/#/?designer=2) with 36 games, which makes it even more surprising that he has "only" won two awards: one each of {{% sdj / %}} and {{% kindersdj / %}} – both in 2008.
+Over the course of 45 sessions, the jury has mentioned games by 566 different designers. By far the most successful designer is [Wolfgang Kramer](https://recommend.games/#/?designer=7) who has won {{% sdj / %}} five times (four of those were co-designs) and {{% kindersdj / %}} once between 1986 and 2000. During that time period, [Klaus Teuber](https://recommend.games/#/?designer=11) won {{% sdj / %}} four times, so during those 15 years Wolfgang & Klaus shared 11 awards between them. The record for most games on the longlists is held by [Reiner Knizia](https://recommend.games/#/?designer=2) with 36 games, which makes it even more surprising that he has "only" won two awards: one each of {{% sdj / %}} and {{% kindersdj / %}} – both in 2008 (and both largely forgotten today, unlike his other timeless designs).
 
 Overall, 94 designers have won at least one award (111 if we include special awards), with 21 of them winning more than one (22 including special awards). Only 8 of those have won their awards in more than one category: [Wolfgang Kramer](https://recommend.games/#/?designer=7), [Inka](https://recommend.games/#/?designer=6940) & [Markus Brand](https://recommend.games/#/?designer=6941), [Alex Randolph](https://recommend.games/#/?designer=24), [Reiner Knizia](https://recommend.games/#/?designer=2), [Bruno Cathala](https://recommend.games/#/?designer=1727), [Antoine Bauza](https://recommend.games/#/?designer=9714) and [Steffen Bogen](https://recommend.games/#/?designer=10067). To this date, no designer has won in all three categories.
 
@@ -71,7 +71,7 @@ I'll leave you with some more detailed statistics below. I hope you enjoy those 
   - [Jürgen P. Grunau](https://recommend.games/#/?designer=272)
 
 
-### Spiel des Jahres
+### {{% sdj / %}}
 
 - Most games on the longlist: 25
   - [Reiner Knizia](https://recommend.games/#/?designer=2)
@@ -83,7 +83,7 @@ I'll leave you with some more detailed statistics below. I hope you enjoy those 
   - [Rüdiger Dorn](https://recommend.games/#/?designer=381)
 
 
-### Kennerspiel des Jahres
+### {{% kdj / %}}
 
 - Most games on the longlist: 4
   - [Alexander Pfister](https://recommend.games/#/?designer=11767)
@@ -100,7 +100,7 @@ I'll leave you with some more detailed statistics below. I hope you enjoy those 
   - [Stefan Feld](https://recommend.games/#/?designer=4958)
 
 
-### Kinderspiel des Jahres
+### {{% kindersdj / %}}
 
 - Most games on the longlist: 13
   - [Kai Haferkamp](https://recommend.games/#/?designer=645)
@@ -122,7 +122,7 @@ I'll leave you with some more detailed statistics below. I hope you enjoy those 
   - [Jürgen P. Grunau](https://recommend.games/#/?designer=272)
 
 
-## Designers winning in different categories
+## Designers in different categories
 
 
 ### Longlist (incl shortlist and winners)
@@ -146,10 +146,10 @@ I'll leave you with some more detailed statistics below. I hope you enjoy those 
 - 94 designers appear in at least 1 category (111 incl special awards)
 
 
-## Designers winning different awards
+## Winners per category
 
 
-### Spiel des Jahres
+### {{% sdj / %}}
 
 - 342 designers had a game on the longlist
 - 105 designers had a game on the shortlist
@@ -157,7 +157,7 @@ I'll leave you with some more detailed statistics below. I hope you enjoy those 
 - 48 designers won the main award
 
 
-### Kennerspiel des Jahres
+### {{% kdj / %}}
 
 - 95 designers had a game on the longlist
 - 52 designers had a game on the shortlist
@@ -165,7 +165,7 @@ I'll leave you with some more detailed statistics below. I hope you enjoy those 
 - 14 designers won the main award
 
 
-### Kinderspiel des Jahres
+### {{% kindersdj / %}}
 
 - 206 designers had a game on the longlist
 - 86 designers had a game on the shortlist
@@ -173,28 +173,28 @@ I'll leave you with some more detailed statistics below. I hope you enjoy those 
 - 40 designers won the main award
 
 
-### Spiel & Kennerspiel des Jahres
+### {{% sdj %}}Spiel{{% /sdj %}} & {{% kdj / %}}
 
 - 22 designers had a game on both longlists
 - 9 designers had a game on both shortlists
 - 1 designer won both main awards
 
 
-### Spiel & Kinderspiel des Jahres
+### {{% sdj %}}Spiel{{% /sdj %}} & {{% kindersdj / %}}
 
 - 55 designers had a game on both longlists
 - 15 designers had a game on both shortlists
 - 5 designers won both main awards
 
 
-### Kennerspiel & Kinderspiel des Jahres
+### {{% kdj %}}Kennerspiel{{% /kdj %}} & {{% kindersdj / %}}
 
 - 9 designers had a game on both longlists
 - 6 designers had a game on both shortlists
 - 2 designers won both main awards
 
 
-### Spiel, Kennerspiel & Kinderspiel des Jahres
+### {{% sdj %}}Spiel{{% /sdj %}}, {{% kdj %}}Kennerspiel{{% /kdj %}} & {{% kindersdj / %}}
 
 - 9 designers had a game on all longlists
 - 4 designers had a game on all shortlists
