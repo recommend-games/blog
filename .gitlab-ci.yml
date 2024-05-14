@@ -8,7 +8,7 @@ test:
   script:
   - hugo
   artifacts:
-    expire_in: 1 week
+    expire_in: 1 hour
   except:
   - master
 
@@ -18,6 +18,6 @@ pages:
   artifacts:
     paths:
     - public
-    expire_in: 1 week
+    expire_in: 48 hours
   only:
   - master
