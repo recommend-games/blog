@@ -10,6 +10,8 @@ comments: false
 
 [**Recommend.Games**](https://recommend.games/) strives to recommend the best board games for you. We take the user ratings from [BoardGameGeek](https://boardgamegeek.com/) (BGG), apply some black magic, and present recommendations that suit you. Check out its own [About page](https://recommend.games/#/about) to learn more about the details!
 
+If you enjoy our work, please check out the [Donations]({{<ref "page/donations/index.md">}}) page or tell your friends about us.
+
 
 # Analysis Paralysis
 
@@ -20,9 +22,9 @@ This blog takes the data we collect for [Recommend.Games](https://recommend.game
 
 {{< img src="markus" size="x300" alt="Markus Shepherd" style="border-radius: 50%;" >}}
 
-[Markus Shepherd](https://www.riemannhypothesis.info/about/me/) (né Schepke) is a mathematician 🧮 turned AI developer 👨‍🔬 and board game enthusiast 🎲 from 🇩🇪 Germany living in 🇫🇮 Finland with his wife 👩‍⚕️ and daughters Stella ✨ und Luna 🌝.
+My name is [Markus Shepherd](https://www.riemannhypothesis.info/about/me/) (né Schepke) and I'm a mathematician 🧮 turned AI developer 👨‍🔬 and board game enthusiast 🎲 from 🇩🇪 Germany living in 🇫🇮 Finland with my wife 👩‍⚕️ and our daughters Stella ✨ und Luna 🌝.
 
-He's all over the internet, so if you want to get in touch, you have a choice of platforms where he will probably forget to respond. Don't take it personally. 🤷
+I'm all over the internet, so if you want to get in touch, you have a choice of platforms where I will probably forget to respond. Please don't take it personally. 🤷
 
 - [BoardGameGeek](https://boardgamegeek.com/user/Markus%20Shepherd)
 - [Twitter](https://twitter.com/MarkusRShepherd)

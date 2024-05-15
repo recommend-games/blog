@@ -63,6 +63,10 @@ menu:
       url: page/about/
       weight: 20
 
+    - name: Donate
+      url: page/donations/
+      weight: 30
+
 sitemap:
   changefreq: daily
 
