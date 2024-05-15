@@ -1,6 +1,6 @@
 ---
 title: About
-date: 2020-04-26T08:14:27+03:00
+date: 2020-04-26T12:00:00+03:00
 comments: false
 ---
 
