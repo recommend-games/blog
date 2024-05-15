@@ -1,4 +1,5 @@
 {{ $src := .Page.Resources.GetMatch (printf "%s*" (.Get "src")) }}
 <img
 	src="{{ with .Get "size" }}{{ ($src.Resize .).RelPermalink }}{{ else }}{{ $src.RelPermalink }}{{ end }}"
-	{{ with .Get "alt" }}alt="{{ . }}"{{ else }}alt=""{{ end }} />
+	{{ with .Get "alt" }}alt="{{ . }}"{{ else }}alt=""{{ end }}
+	{{ with .Get "style" }}style="{{ . | safeCSS }}"{{ end }} />
