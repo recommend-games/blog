@@ -20,7 +20,7 @@ This blog takes the data we collect for [Recommend.Games](https://recommend.game
 
 {{< img src="markus" size="x300" alt="Markus Shepherd" style="border-radius: 50%;" >}}
 
-[Markus Shepherd](https://riemannhypothesis.info/about/me/) (né Schepke) is a mathematician 🧮 turned AI developer 👨‍🔬 and board game enthusiast 🎲 from 🇩🇪 Germany living in 🇫🇮 Finland.
+[Markus Shepherd](https://www.riemannhypothesis.info/about/me/) (né Schepke) is a mathematician 🧮 turned AI developer 👨‍🔬 and board game enthusiast 🎲 from 🇩🇪 Germany living in 🇫🇮 Finland with his wife 👩‍⚕️ and daughters Stella ✨ und Luna 🌝.
 
 He's all over the internet, so if you want to get in touch, you have a choice of platforms where he will probably forget to respond. Don't take it personally. 🤷
 
