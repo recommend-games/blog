@@ -15,7 +15,7 @@ If you enjoy our work, please check out the [Donations]({{<ref "page/donations/i
 
 # Analysis Paralysis
 
-This blog takes the data we collect for [Recommend.Games](https://recommend.games/) and tries to answer insteresting questions with them (at least we think they are interesting). Everything we do is open source including work in progress, so you can get a sneek peek at upcoming articles on [GitLab](https://gitlab.com/recommend.games/blog). Better yet, you can contribute by fixing typos, suggesting new topics or even performing some analyses yourself!
+This blog takes the data we collect for [Recommend.Games](https://recommend.games/) and tries to answer insteresting questions with them (at least we think they are interesting). Everything we do is open source including work in progress, so you can get a sneak peek at upcoming articles on [GitLab](https://gitlab.com/recommend.games/blog). Better yet, you can contribute by fixing typos, suggesting new topics or even performing some analyses yourself!
 
 
 # Markus Shepherd
