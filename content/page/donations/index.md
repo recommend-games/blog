@@ -16,3 +16,5 @@ comments: false
 If you'd rather donate to a charity of your choice, why not give some money to an organisation that promotes a more diverse, sustainable and loving world on our behalf?
 
 Finally, you can always support us for free by sharing our content, giving feedback or contributing to our projects on [GitLab](https://gitlab.com/recommend.games/).
+
+**Thank you for your support!** 🙏
