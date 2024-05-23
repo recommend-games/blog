@@ -159,13 +159,18 @@ data[rank_columns] = data.groupby("kennerspiel")[rank_features].rank(
 data.shape
 
 # %%
+data["jury_reviews"] = reviews.mean(axis=1)
+data["jury_reviews"] = data["jury_reviews"].fillna(5.5)
+data.shape
+
+# %%
 scale_max_features = ["num_votes", "rec_rating"]
 scale_max_columns = [f"{f}_scale_max" for f in scale_max_features]
 data[scale_max_columns] = data[scale_max_features] / data[scale_max_features].max()
 data.shape
 
 # %%
-scale_10_features = ["avg_rating", "bayes_rating"]
+scale_10_features = ["avg_rating", "bayes_rating", "jury_reviews"]
 scale_10_columns = [f"{f}_scale_10" for f in scale_10_features]
 data[scale_10_columns] = data[scale_10_features] / 10
 data.shape
@@ -175,7 +180,7 @@ qt = joblib.load("qt.joblib")
 qt
 
 # %%
-quantile_features = ["rec_rating"]
+quantile_features = ["rec_rating", "jury_reviews"]
 for col in quantile_features:
     data[f"{col}_quantile"] = qt.transform(data[[col]].values)[:, 0]
 data.shape
@@ -197,6 +202,9 @@ sdj_score_weights = {
     "rec_rating_rank": 0,
     "rec_rating_scale_max": 0,
     "rec_rating_quantile": 1,
+    "jury_reviews": 0,
+    "jury_reviews_scale_10": 0,
+    "jury_reviews_quantile": 1,
     "sdj_prob": 0,
     "sdj_prob_rank": 0,
 }

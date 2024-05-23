@@ -1,45 +1,42 @@
-172235:
-  name: "Schr\xF6dinger's Cats"
-  text: "{{% game 172235 %}}Schr\xF6dinger's Cats{{% /game %}}"
 231733:
   name: Obsession
   text: '{{% game 231733 %}}Obsession{{% /game %}}'
 234260:
   name: Prey Another Day
   text: '{{% game 234260 %}}Prey Another Day{{% /game %}}'
+275284:
+  name: Arkeis
+  text: '{{% game 275284 %}}Arkeis{{% /game %}}'
 276086:
   name: 'Hamlet: The Village Building Game'
   text: '{{% game 276086 %}}Hamlet: The Village Building Game{{% /game %}}'
-277699:
-  name: A Fistful of Meeples
-  text: '{{% game 277699 %}}A Fistful of Meeples{{% /game %}}'
-295480:
-  name: 'TIME Stories Revolution: Cavendish'
-  text: '{{% game 295480 %}}TIME Stories Revolution: Cavendish{{% /game %}}'
+288276:
+  name: 'Tough Calls: Dystopia'
+  text: '{{% game 288276 %}}Tough Calls: Dystopia{{% /game %}}'
 295895:
   name: Distilled
   text: '{{% game 295895 %}}Distilled{{% /game %}}'
 296108:
   name: 'Terraforming Mars: The Dice Game'
   text: '{{% game 296108 %}}Terraforming Mars: The Dice Game{{% /game %}}'
-298086:
-  name: 'The Fog: Escape from Paradise'
-  text: '{{% game 298086 %}}The Fog: Escape from Paradise{{% /game %}}'
 303057:
   name: Pan Am
   text: '{{% game 303057 %}}Pan Am{{% /game %}}'
+321608:
+  name: 'Hegemony: Lead Your Class to Victory'
+  text: '{{% game 321608 %}}Hegemony: Lead Your Class to Victory{{% /game %}}'
 322289:
   name: Darwin's Journey
   text: '{{% game 322289 %}}Darwin''s Journey{{% /game %}}'
-328124:
-  name: Bot Factory
-  text: '{{% game 328124 %}}Bot Factory{{% /game %}}'
+325022:
+  name: Coffee Traders
+  text: '{{% game 325022 %}}Coffee Traders{{% /game %}}'
 328565:
   name: 'Caper: Europe'
   text: '{{% game 328565 %}}Caper: Europe{{% /game %}}'
-329551:
-  name: 'Mosaic: A Story of Civilization'
-  text: '{{% game 329551 %}}Mosaic: A Story of Civilization{{% /game %}}'
+329484:
+  name: Pyramido
+  text: '{{% game 329484 %}}Pyramido{{% /game %}}'
 330592:
   name: Phantom Ink
   text: '{{% game 330592 %}}Phantom Ink{{% /game %}}'
@@ -55,9 +52,15 @@
 335275:
   name: Whirling Witchcraft
   text: '{{% game 335275 %}}Whirling Witchcraft{{% /game %}}'
+341519:
+  name: The Light in the Mist
+  text: '{{% game 341519 %}}The Light in the Mist{{% /game %}}'
 344114:
   name: Bag of Chips
   text: '{{% game 344114 %}}Bag of Chips{{% /game %}}'
+344554:
+  name: "D\xE9corum"
+  text: "{{% game 344554 %}}D\xE9corum{{% /game %}}"
 345069:
   name: Karigar-e-Taj
   text: '{{% game 345069 %}}Karigar-e-Taj{{% /game %}}'
@@ -88,9 +91,6 @@
 352515:
   name: Trio
   text: '{{% game 352515 %}}Trio{{% /game %}}'
-352574:
-  name: Fit to Print
-  text: '{{% game 352574 %}}Fit to Print{{% /game %}}'
 353288:
   name: Trekking Through History
   text: '{{% game 353288 %}}Trekking Through History{{% /game %}}'
@@ -103,15 +103,15 @@
 356123:
   name: Turing Machine
   text: '{{% game 356123 %}}Turing Machine{{% /game %}}'
+361025:
+  name: Come Together
+  text: '{{% game 361025 %}}Come Together{{% /game %}}'
 361840:
   name: Gardeners
   text: '{{% game 361840 %}}Gardeners{{% /game %}}'
 361850:
   name: Nimalia
   text: '{{% game 361850 %}}Nimalia{{% /game %}}'
-361958:
-  name: Maple Valley
-  text: '{{% game 361958 %}}Maple Valley{{% /game %}}'
 362986:
   name: Tribes of the Wind
   text: '{{% game 362986 %}}Tribes of the Wind{{% /game %}}'
@@ -134,18 +134,15 @@
 366994:
   name: Bonsai
   text: '{{% game 366994 %}}Bonsai{{% /game %}}'
+367490:
+  name: Hickory Dickory
+  text: '{{% game 367490 %}}Hickory Dickory{{% /game %}}'
 368017:
   name: Point City
   text: '{{% game 368017 %}}Point City{{% /game %}}'
 368058:
   name: The Wolves
   text: '{{% game 368058 %}}The Wolves{{% /game %}}'
-368432:
-  name: The Fox Experiment
-  text: '{{% game 368432 %}}The Fox Experiment{{% /game %}}'
-369142:
-  name: Savernake Forest
-  text: '{{% game 369142 %}}Savernake Forest{{% /game %}}'
 371922:
   name: Rauha
   text: '{{% game 371922 %}}Rauha{{% /game %}}'
@@ -155,12 +152,18 @@
 371947:
   name: 3 Ring Circus
   text: '{{% game 371947 %}}3 Ring Circus{{% /game %}}'
+372631:
+  name: Books of Time
+  text: '{{% game 372631 %}}Books of Time{{% /game %}}'
 373106:
   name: Sky Team
   text: '{{% game 373106 %}}Sky Team{{% /game %}}'
-374173:
-  name: 'Star Wars: The Deckbuilding Game'
-  text: '{{% game 374173 %}}Star Wars: The Deckbuilding Game{{% /game %}}'
+376472:
+  name: Noobs in Space
+  text: '{{% game 376472 %}}Noobs in Space{{% /game %}}'
+376683:
+  name: In the Footsteps of Darwin
+  text: '{{% game 376683 %}}In the Footsteps of Darwin{{% /game %}}'
 376760:
   name: "Sebastian Fitzek Killercruise: Das W\xFCrfelspiel"
   text: "{{% game 376760 %}}Sebastian Fitzek Killercruise: Das W\xFCrfelspiel{{% /game\
@@ -168,15 +171,12 @@
 377738:
   name: "Caf\xE9 del Gatto"
   text: "{{% game 377738 %}}Caf\xE9 del Gatto{{% /game %}}"
-378001:
-  name: Moon River
-  text: '{{% game 378001 %}}Moon River{{% /game %}}'
 378200:
   name: Triqueta
   text: '{{% game 378200 %}}Triqueta{{% /game %}}'
-378604:
-  name: Tiere toppen!
-  text: '{{% game 378604 %}}Tiere toppen!{{% /game %}}'
+378565:
+  name: Black Hole Buccaneers
+  text: '{{% game 378565 %}}Black Hole Buccaneers{{% /game %}}'
 378833:
   name: Happy Campers
   text: '{{% game 378833 %}}Happy Campers{{% /game %}}'
@@ -192,9 +192,6 @@
 379005:
   name: The Lord of the Rings Adventure Book Game
   text: '{{% game 379005 %}}The Lord of the Rings Adventure Book Game{{% /game %}}'
-379037:
-  name: 'Istanbul: Choose & Write'
-  text: '{{% game 379037 %}}Istanbul: Choose & Write{{% /game %}}'
 379066:
   name: 'HITSTER: Schlager Party'
   text: '{{% game 379066 %}}HITSTER: Schlager Party{{% /game %}}'
@@ -225,9 +222,6 @@
 383458:
   name: Sides
   text: '{{% game 383458 %}}Sides{{% /game %}}'
-385417:
-  name: 'Walking in Burano: Roll & Write'
-  text: '{{% game 385417 %}}Walking in Burano: Roll & Write{{% /game %}}'
 385761:
   name: Faraway
   text: '{{% game 385761 %}}Faraway{{% /game %}}'
@@ -237,9 +231,6 @@
 386148:
   name: ArcheOlogic
   text: '{{% game 386148 %}}ArcheOlogic{{% /game %}}'
-388036:
-  name: 'Ticket To Ride: Berlin'
-  text: '{{% game 388036 %}}Ticket To Ride: Berlin{{% /game %}}'
 388329:
   name: Waypoints
   text: '{{% game 388329 %}}Waypoints{{% /game %}}'
@@ -255,21 +246,27 @@
 390092:
   name: 'Ticket to Ride Legacy: Legends of the West'
   text: '{{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}}'
+390094:
+  name: FTW?!
+  text: '{{% game 390094 %}}FTW?!{{% /game %}}'
 391163:
   name: Forest Shuffle
   text: '{{% game 391163 %}}Forest Shuffle{{% /game %}}'
 391214:
   name: OTLO Stones
   text: '{{% game 391214 %}}OTLO Stones{{% /game %}}'
-391834:
-  name: SpellBook
-  text: '{{% game 391834 %}}SpellBook{{% /game %}}'
+391565:
+  name: Champions!
+  text: '{{% game 391565 %}}Champions!{{% /game %}}'
 392023:
   name: Mycelia
   text: '{{% game 392023 %}}Mycelia{{% /game %}}'
 393530:
   name: Karak II
   text: '{{% game 393530 %}}Karak II{{% /game %}}'
+393973:
+  name: Match of the Century
+  text: '{{% game 393973 %}}Match of the Century{{% /game %}}'
 394735:
   name: "Exit: The Game \u2013 Advent Calendar: The Missing Hollywood Star"
   text: "{{% game 394735 %}}Exit: The Game \u2013 Advent Calendar: The Missing Hollywood\
@@ -280,15 +277,18 @@
 396618:
   name: Waterfall Park
   text: '{{% game 396618 %}}Waterfall Park{{% /game %}}'
+396790:
+  name: Nucleum
+  text: '{{% game 396790 %}}Nucleum{{% /game %}}'
 397228:
   name: Piazza
   text: '{{% game 397228 %}}Piazza{{% /game %}}'
+397385:
+  name: Pirates of Maracaibo
+  text: '{{% game 397385 %}}Pirates of Maracaibo{{% /game %}}'
 397431:
   name: Moorland
   text: '{{% game 397431 %}}Moorland{{% /game %}}'
-399094:
-  name: Lecker Lava
-  text: '{{% game 399094 %}}Lecker Lava{{% /game %}}'
 399375:
   name: 'For One: Schwarze Rosen'
   text: '{{% game 399375 %}}For One: Schwarze Rosen{{% /game %}}'
