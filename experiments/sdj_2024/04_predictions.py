@@ -70,8 +70,6 @@ params = {
     "year__gte": 2023,
     "year__lte": 2024,
     "num_votes__gte": 1,
-    "avg_rating__gte": 1.0,
-    "bayes_rating__gte": 1.0,
     "kennerspiel_score__gte": 0.0,
     "include": ",".join(map(str, include)),
     "exclude": ",".join(map(str, exclude)),
@@ -99,14 +97,7 @@ df = pd.DataFrame.from_records(candidates, index="bgg_id")
 df["kennerspiel"] = df["kennerspiel_score"] >= 0.5
 df = df.join(r_g_rankings["score"].rename("r_g_score"), how="inner")
 df.dropna(
-    subset=[
-        "num_votes",
-        "avg_rating",
-        "bayes_rating",
-        "rec_rating",
-        "kennerspiel_score",
-        "r_g_score",
-    ],
+    subset=["num_votes", "rec_rating", "kennerspiel_score", "r_g_score"],
     inplace=True,
 )
 df.shape
@@ -142,8 +133,6 @@ data.shape
 
 # %%
 rank_features = [
-    "avg_rating",
-    "bayes_rating",
     "num_votes",
     "rec_rating",
     "sdj_prob",
@@ -164,13 +153,18 @@ data["jury_reviews"] = data["jury_reviews"].fillna(5.5)
 data.shape
 
 # %%
-scale_max_features = ["num_votes", "rec_rating"]
+scale_max_features = [
+    "num_votes",
+    "rec_rating",
+]
 scale_max_columns = [f"{f}_scale_max" for f in scale_max_features]
 data[scale_max_columns] = data[scale_max_features] / data[scale_max_features].max()
 data.shape
 
 # %%
-scale_10_features = ["avg_rating", "bayes_rating", "jury_reviews"]
+scale_10_features = [
+    "jury_reviews",
+]
 scale_10_columns = [f"{f}_scale_10" for f in scale_10_features]
 data[scale_10_columns] = data[scale_10_features] / 10
 data.shape
@@ -180,19 +174,16 @@ qt = joblib.load("qt.joblib")
 qt
 
 # %%
-quantile_features = ["rec_rating", "jury_reviews"]
+quantile_features = [
+    "rec_rating",
+    "jury_reviews",
+]
 for col in quantile_features:
     data[f"{col}_quantile"] = qt.transform(data[[col]].values)[:, 0]
 data.shape
 
 # %%
 sdj_score_weights = {
-    "avg_rating": 0,
-    "avg_rating_rank": 0,
-    "avg_rating_scale_10": 0,
-    "bayes_rating": 0,
-    "bayes_rating_rank": 0,
-    "bayes_rating_scale_10": 0,
     "num_votes": 0,
     "num_votes_rank": 0,
     "num_votes_scale_max": 0,
@@ -240,10 +231,9 @@ results = data[
         "sdj_score",
         "sdj_rank",
         "num_votes",
+        "jury_reviews",
         "avg_rating",
-        "avg_rating_rank",
         "bayes_rating",
-        "bayes_rating_rank",
         "rec_rating",
         "rec_rating_rank",
         "sdj_prob",

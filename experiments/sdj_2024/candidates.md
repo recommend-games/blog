@@ -28,7 +28,16 @@
 {{% game 390094 %}}FTW?!{{% /game %}}
 
 
-## #4: {{% game 392023 %}}Mycelia{{% /game %}}
+## #4: {{% game 400205 %}}5 Towers{{% /game %}}
+
+*2–5 players, 15–30 minutes, 7+ years,  (nan), 79% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="400205" size="x300" alt="5 Towers" >}}
+
+{{% game 400205 %}}5 Towers{{% /game %}}
+
+
+## #5: {{% game 392023 %}}Mycelia{{% /game %}}
 
 *1–4 players, 45 minutes, 9+ years, medium light (2.0), 62% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -37,7 +46,7 @@
 {{% game 392023 %}}Mycelia{{% /game %}}
 
 
-## #5: {{% game 383458 %}}Sides{{% /game %}}
+## #6: {{% game 383458 %}}Sides{{% /game %}}
 
 *2–9 players, 30–60 minutes, 10+ years, medium light (2.0), 74% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -46,7 +55,7 @@
 {{% game 383458 %}}Sides{{% /game %}}
 
 
-## #6: {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}}
+## #7: {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}}
 
 *2–5 players, 20–30 minutes, 8+ years, medium light (1.6), 97% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -55,7 +64,7 @@
 {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}}
 
 
-## #7: {{% game 348096 %}}Kites{{% /game %}}
+## #8: {{% game 348096 %}}Kites{{% /game %}}
 
 *2–6 players, 10 minutes, 10+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -64,7 +73,25 @@
 {{% game 348096 %}}Kites{{% /game %}}
 
 
-## #8: {{% game 352515 %}}Trio{{% /game %}}
+## #9: {{% game 381078 %}}Comet{{% /game %}}
+
+*2–4 players, 45–75 minutes, 12+ years, medium light (2.0), 70% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="381078" size="x300" alt="Comet" >}}
+
+{{% game 381078 %}}Comet{{% /game %}}
+
+
+## #10: {{% game 401885 %}}Schätz it if you can{{% /game %}}
+
+*2–5 players, 20–40 minutes, 14+ years, light (1.0), 99% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="401885" size="x300" alt="Schätz it if you can" >}}
+
+{{% game 401885 %}}Schätz it if you can{{% /game %}}
+
+
+## #11: {{% game 352515 %}}Trio{{% /game %}}
 
 *3–5 players, 15 minutes, 6+ years, light (1.0), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -73,40 +100,13 @@
 {{% game 352515 %}}Trio{{% /game %}}
 
 
-## #9: {{% game 330592 %}}Phantom Ink{{% /game %}}
+## #12: {{% game 330592 %}}Phantom Ink{{% /game %}}
 
 *4–8 players, 10–15 minutes, 13+ years, light (1.1), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="330592" size="x300" alt="Phantom Ink" >}}
 
 {{% game 330592 %}}Phantom Ink{{% /game %}}
-
-
-## #10: {{% game 351040 %}}Ready Set Bet{{% /game %}}
-
-*2–9 players, 45–60 minutes, 14+ years, light (1.3), 66% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="351040" size="x300" alt="Ready Set Bet" >}}
-
-{{% game 351040 %}}Ready Set Bet{{% /game %}}
-
-
-## #11: {{% game 344114 %}}Bag of Chips{{% /game %}}
-
-*2–5 players, 15–20 minutes, 8+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="344114" size="x300" alt="Bag of Chips" >}}
-
-{{% game 344114 %}}Bag of Chips{{% /game %}}
-
-
-## #12: {{% game 397431 %}}Moorland{{% /game %}}
-
-*2–4 players, 45–60 minutes, 10+ years, medium light (2.4), 56% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="397431" size="x300" alt="Moorland" >}}
-
-{{% game 397431 %}}Moorland{{% /game %}}
 
 
 # Kennerspiel des Jahres
@@ -202,21 +202,21 @@
 {{% game 334986 %}}Daybreak{{% /game %}}
 
 
-## #11: {{% game 296108 %}}Terraforming Mars: The Dice Game{{% /game %}}
+## #11: {{% game 387776 %}}Verplant & Zugestellt{{% /game %}}
+
+*2–6 players, 30 minutes, 10+ years, medium (3.0), 86% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="387776" size="x300" alt="Verplant & Zugestellt" >}}
+
+{{% game 387776 %}}Verplant & Zugestellt{{% /game %}}
+
+
+## #12: {{% game 296108 %}}Terraforming Mars: The Dice Game{{% /game %}}
 
 *1–4 players, 45 minutes, 14+ years, medium light (2.3), 98% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="296108" size="x300" alt="Terraforming Mars: The Dice Game" >}}
 
 {{% game 296108 %}}Terraforming Mars: The Dice Game{{% /game %}}
-
-
-## #12: {{% game 396790 %}}Nucleum{{% /game %}}
-
-*1–4 players, 60–150 minutes, 14+ years, medium heavy (4.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="396790" size="x300" alt="Nucleum" >}}
-
-{{% game 396790 %}}Nucleum{{% /game %}}
 
 
