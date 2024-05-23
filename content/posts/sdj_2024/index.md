@@ -3,7 +3,7 @@ title: Spiel des Jahres 2024 predictions
 slug: spiel-des-jahres-2024-predictions
 author: Markus Shepherd
 type: post
-date: 2024-05-28T17:00:00+03:00
+date: 2024-05-31T12:00:00+03:00
 tags:
   - SdJ
   - SdJ 2024
