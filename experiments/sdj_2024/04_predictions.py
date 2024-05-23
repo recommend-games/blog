@@ -16,6 +16,7 @@
 
 # %%
 import json
+import warnings
 from functools import reduce
 from itertools import islice
 from operator import add
@@ -33,6 +34,8 @@ jupyter_black.load()
 pd.options.display.max_columns = 100
 pd.options.display.max_rows = 500
 pd.options.display.float_format = "{:.6g}".format
+
+warnings.simplefilter(action="ignore", category=pd.errors.PerformanceWarning)
 
 # %%
 reviews = pd.read_csv("reviews.csv", index_col="bgg_id")
@@ -168,6 +171,16 @@ data[scale_10_columns] = data[scale_10_features] / 10
 data.shape
 
 # %%
+qt = joblib.load("qt.joblib")
+qt
+
+# %%
+quantile_features = ["rec_rating"]
+for col in quantile_features:
+    data[f"{col}_quantile"] = qt.transform(data[[col]].values)[:, 0]
+data.shape
+
+# %%
 sdj_score_weights = {
     "avg_rating": 0,
     "avg_rating_rank": 0,
@@ -181,8 +194,9 @@ sdj_score_weights = {
     "r_g_score": 0,
     "r_g_score_rank": 0,
     "rec_rating": 0,
-    "rec_rating_rank": 1,
+    "rec_rating_rank": 0,
     "rec_rating_scale_max": 0,
+    "rec_rating_quantile": 1,
     "sdj_prob": 0,
     "sdj_prob_rank": 0,
 }

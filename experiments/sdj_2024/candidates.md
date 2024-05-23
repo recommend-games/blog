@@ -10,25 +10,16 @@
 {{% game 353288 %}}Trekking Through History{{% /game %}}
 
 
-## #2: {{% game 378200 %}}Triqueta{{% /game %}}
+## #2: {{% game 348096 %}}Kites{{% /game %}}
 
-*2–5 players, 20–30 minutes, 7+ years, light (1.3), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–6 players, 10 minutes, 10+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="378200" size="x300" alt="Triqueta" >}}
+{{< img src="348096" size="x300" alt="Kites" >}}
 
-{{% game 378200 %}}Triqueta{{% /game %}}
-
-
-## #3: {{% game 388392 %}}Durchmarsch{{% /game %}}
-
-*2–4 players, 15 minutes, 8+ years,  (nan), 91% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="388392" size="x300" alt="Durchmarsch" >}}
-
-{{% game 388392 %}}Durchmarsch{{% /game %}}
+{{% game 348096 %}}Kites{{% /game %}}
 
 
-## #4: {{% game 376760 %}}Sebastian Fitzek Killercruise: Das Würfelspiel{{% /game %}}
+## #3: {{% game 376760 %}}Sebastian Fitzek Killercruise: Das Würfelspiel{{% /game %}}
 
 *1–4 players, 30 minutes, 12+ years, medium light (2.0), 90% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -37,25 +28,16 @@
 {{% game 376760 %}}Sebastian Fitzek Killercruise: Das Würfelspiel{{% /game %}}
 
 
-## #5: {{% game 386061 %}}Audition{{% /game %}}
+## #4: {{% game 381827 %}}Pick a Pen: Tuinen{{% /game %}}
 
-*2–6 players, 20 minutes, 8+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–4 players, 30 minutes, 8+ years, medium light (1.5), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="386061" size="x300" alt="Audition" >}}
+{{< img src="381827" size="x300" alt="Pick a Pen: Tuinen" >}}
 
-{{% game 386061 %}}Audition{{% /game %}}
-
-
-## #6: {{% game 351040 %}}Ready Set Bet{{% /game %}}
-
-*2–9 players, 45–60 minutes, 14+ years, light (1.3), 66% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="351040" size="x300" alt="Ready Set Bet" >}}
-
-{{% game 351040 %}}Ready Set Bet{{% /game %}}
+{{% game 381827 %}}Pick a Pen: Tuinen{{% /game %}}
 
 
-## #7: {{% game 352515 %}}Trio{{% /game %}}
+## #5: {{% game 352515 %}}Trio{{% /game %}}
 
 *3–5 players, 15 minutes, 6+ years, light (1.0), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -64,13 +46,31 @@
 {{% game 352515 %}}Trio{{% /game %}}
 
 
-## #8: {{% game 378983 %}}Tipperary{{% /game %}}
+## #6: {{% game 396542 %}}The Same Game{{% /game %}}
 
-*2–5 players, 45 minutes, 8+ years, medium light (2.0), 81% {{% sdj %}}Spiel{{% /sdj %}}*
+*3–6 players, 30–45 minutes, 10+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="378983" size="x300" alt="Tipperary" >}}
+{{< img src="396542" size="x300" alt="The Same Game" >}}
 
-{{% game 378983 %}}Tipperary{{% /game %}}
+{{% game 396542 %}}The Same Game{{% /game %}}
+
+
+## #7: {{% game 386061 %}}Audition{{% /game %}}
+
+*2–6 players, 20 minutes, 8+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="386061" size="x300" alt="Audition" >}}
+
+{{% game 386061 %}}Audition{{% /game %}}
+
+
+## #8: {{% game 377738 %}}Café del Gatto{{% /game %}}
+
+*2–5 players, 30 minutes, 8+ years, medium light (1.6), 97% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="377738" size="x300" alt="Café del Gatto" >}}
+
+{{% game 377738 %}}Café del Gatto{{% /game %}}
 
 
 ## #9: {{% game 381826 %}}Pick a Pen: Riffen{{% /game %}}
@@ -91,46 +91,28 @@
 {{% game 392023 %}}Mycelia{{% /game %}}
 
 
-## #11: {{% game 347112 %}}Secret Identity{{% /game %}}
+## #11: {{% game 378200 %}}Triqueta{{% /game %}}
 
-*3–8 players, 20–40 minutes, 10+ years, light (1.2), 99% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–5 players, 20–30 minutes, 7+ years, light (1.3), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="347112" size="x300" alt="Secret Identity" >}}
+{{< img src="378200" size="x300" alt="Triqueta" >}}
 
-{{% game 347112 %}}Secret Identity{{% /game %}}
+{{% game 378200 %}}Triqueta{{% /game %}}
 
 
-## #12: {{% game 381825 %}}Pick a Pen: Crypts{{% /game %}}
+## #12: {{% game 397228 %}}Piazza{{% /game %}}
 
-*2–4 players, 30 minutes, 8+ years, medium light (1.5), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–4 players, 15–30 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="381825" size="x300" alt="Pick a Pen: Crypts" >}}
+{{< img src="397228" size="x300" alt="Piazza" >}}
 
-{{% game 381825 %}}Pick a Pen: Crypts{{% /game %}}
+{{% game 397228 %}}Piazza{{% /game %}}
 
 
 # Kennerspiel des Jahres
 
 
-## #1: {{% game 345972 %}}Cat in the Box: Deluxe Edition{{% /game %}}
-
-*2–5 players, 20–40 minutes, 13+ years, medium light (2.0), 68% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="345972" size="x300" alt="Cat in the Box: Deluxe Edition" >}}
-
-{{% game 345972 %}}Cat in the Box: Deluxe Edition{{% /game %}}
-
-
-## #2: {{% game 303057 %}}Pan Am{{% /game %}}
-
-*2–4 players, 60 minutes, 12+ years, medium light (2.4), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="303057" size="x300" alt="Pan Am" >}}
-
-{{% game 303057 %}}Pan Am{{% /game %}}
-
-
-## #3: {{% game 366013 %}}Heat: Pedal to the Metal{{% /game %}}
+## #1: {{% game 366013 %}}Heat: Pedal to the Metal{{% /game %}}
 
 *1–6 players, 30–60 minutes, 10+ years, medium light (2.2), 66% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -139,7 +121,34 @@
 {{% game 366013 %}}Heat: Pedal to the Metal{{% /game %}}
 
 
-## #4: {{% game 356123 %}}Turing Machine{{% /game %}}
+## #2: {{% game 345972 %}}Cat in the Box: Deluxe Edition{{% /game %}}
+
+*2–5 players, 20–40 minutes, 13+ years, medium light (2.0), 68% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="345972" size="x300" alt="Cat in the Box: Deluxe Edition" >}}
+
+{{% game 345972 %}}Cat in the Box: Deluxe Edition{{% /game %}}
+
+
+## #3: {{% game 303057 %}}Pan Am{{% /game %}}
+
+*2–4 players, 60 minutes, 12+ years, medium light (2.4), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="303057" size="x300" alt="Pan Am" >}}
+
+{{% game 303057 %}}Pan Am{{% /game %}}
+
+
+## #4: {{% game 231733 %}}Obsession{{% /game %}}
+
+*1–4 players, 30–90 minutes, 14+ years, medium (3.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="231733" size="x300" alt="Obsession" >}}
+
+{{% game 231733 %}}Obsession{{% /game %}}
+
+
+## #5: {{% game 356123 %}}Turing Machine{{% /game %}}
 
 *1–4 players, 20 minutes, 14+ years, medium light (2.4), 82% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -148,25 +157,7 @@
 {{% game 356123 %}}Turing Machine{{% /game %}}
 
 
-## #5: {{% game 335275 %}}Whirling Witchcraft{{% /game %}}
-
-*2–5 players, 15–30 minutes, 14+ years, medium light (1.8), 87% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="335275" size="x300" alt="Whirling Witchcraft" >}}
-
-{{% game 335275 %}}Whirling Witchcraft{{% /game %}}
-
-
-## #6: {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
-
-*1–4 players, 45 minutes, 14+ years, medium light (2.0), 95% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="350933" size="x300" alt="The Guild of Merchant Explorers" >}}
-
-{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
-
-
-## #7: {{% game 391163 %}}Forest Shuffle{{% /game %}}
+## #6: {{% game 391163 %}}Forest Shuffle{{% /game %}}
 
 *2–5 players, 40–60 minutes, 10+ years, medium light (2.2), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -175,25 +166,25 @@
 {{% game 391163 %}}Forest Shuffle{{% /game %}}
 
 
-## #8: {{% game 350184 %}}Earth{{% /game %}}
+## #7: {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
 
-*1–5 players, 45–90 minutes, 13+ years, medium (2.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–4 players, 45 minutes, 14+ years, medium light (2.0), 95% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="350184" size="x300" alt="Earth" >}}
+{{< img src="350933" size="x300" alt="The Guild of Merchant Explorers" >}}
 
-{{% game 350184 %}}Earth{{% /game %}}
-
-
-## #9: {{% game 334065 %}}Verdant{{% /game %}}
-
-*1–5 players, 45–60 minutes, 10+ years, medium light (2.1), 95% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="334065" size="x300" alt="Verdant" >}}
-
-{{% game 334065 %}}Verdant{{% /game %}}
+{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
 
 
-## #10: {{% game 371942 %}}The White Castle{{% /game %}}
+## #8: {{% game 388329 %}}Waypoints{{% /game %}}
+
+*1–100 players, 20–40 minutes, 8+ years, medium light (2.3), 88% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="388329" size="x300" alt="Waypoints" >}}
+
+{{% game 388329 %}}Waypoints{{% /game %}}
+
+
+## #9: {{% game 371942 %}}The White Castle{{% /game %}}
 
 *1–4 players, 80 minutes, 12+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -202,21 +193,30 @@
 {{% game 371942 %}}The White Castle{{% /game %}}
 
 
-## #11: {{% game 348450 %}}Lacrimosa{{% /game %}}
+## #10: {{% game 328565 %}}Caper: Europe{{% /game %}}
 
-*1–4 players, 90 minutes, 14+ years, medium (3.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*2 players, 25–35 minutes, 10+ years, medium light (2.1), 77% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="348450" size="x300" alt="Lacrimosa" >}}
+{{< img src="328565" size="x300" alt="Caper: Europe" >}}
 
-{{% game 348450 %}}Lacrimosa{{% /game %}}
+{{% game 328565 %}}Caper: Europe{{% /game %}}
 
 
-## #12: {{% game 373106 %}}Sky Team{{% /game %}}
+## #11: {{% game 363086 %}}The Legends of Andor: The Eternal Frost{{% /game %}}
 
-*2 players, 15 minutes, 12+ years, medium light (2.0), 66% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*2–4 players, 60–90 minutes, 10+ years, medium light (2.5), 98% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
-{{< img src="373106" size="x300" alt="Sky Team" >}}
+{{< img src="363086" size="x300" alt="The Legends of Andor: The Eternal Frost" >}}
 
-{{% game 373106 %}}Sky Team{{% /game %}}
+{{% game 363086 %}}The Legends of Andor: The Eternal Frost{{% /game %}}
+
+
+## #12: {{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}}
+
+*2–5 players, 20–90 minutes, 10+ years, medium (2.5), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="390092" size="x300" alt="Ticket to Ride Legacy: Legends of the West" >}}
+
+{{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}}
 
 
