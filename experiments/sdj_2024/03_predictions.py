@@ -7,7 +7,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.16.1
+#       jupytext_version: 1.16.2
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -35,7 +35,18 @@ pd.options.display.max_rows = 500
 pd.options.display.float_format = "{:.6g}".format
 
 # %%
-include = clear_list(pd.read_csv("include.csv").bgg_id)
+reviews = pd.read_csv("reviews.csv", index_col="bgg_id")
+reviews.drop(columns="name", inplace=True)
+reviews.dropna(axis=1, how="all", inplace=True)
+reviews.shape
+
+# %%
+include = clear_list(
+    pd.concat(
+        [pd.read_csv("include.csv").bgg_id, reviews.reset_index().bgg_id],
+        ignore_index=True,
+    )
+)
 exclude = clear_list(pd.read_csv("exclude.csv").bgg_id)
 len(include), len(exclude)
 
