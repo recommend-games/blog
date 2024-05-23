@@ -41,7 +41,7 @@ ratings.describe()
 
 # %%
 qt = QuantileTransformer(output_distribution="uniform", subsample=1_000_000)
-qt.fit(ratings)
+qt.fit(ratings.to_numpy())
 
 # %%
 sample = ratings.sample(10_000)
