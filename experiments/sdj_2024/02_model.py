@@ -35,12 +35,12 @@ games.shape
 
 # %%
 sdj = pd.read_csv(
-    "../sdj.csv",
+    "sdj.csv",
     dtype={"winner": bool, "nominated": bool, "recommended": bool, "sonderpreis": str},
 )
 sdj["award"] = "sdj"
 ksdj = pd.read_csv(
-    "../ksdj.csv",
+    "ksdj.csv",
     dtype={"winner": bool, "nominated": bool, "recommended": bool, "sonderpreis": str},
 )
 ksdj["award"] = "ksdj"
@@ -92,9 +92,12 @@ def train_model(data, model=None, target="longlist", num_features=NUM_FEATURES):
         for col in transformed.columns
         if (":" in col) or col.startswith("playable_")
     ]
+    print(f"Features: {', '.join(features)}")
     in_data = transformed[features + [target]].dropna()  # TODO impute
+    print(f"Data shape: {in_data.shape}")
 
     model.fit(in_data[features], in_data[target])
+    print(f"Training scores: {model.scores_}")
 
     return model, features
 
