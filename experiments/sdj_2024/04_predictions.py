@@ -191,12 +191,12 @@ sdj_score_weights = {
     "r_g_score_rank": 0,
     "rec_rating": 0,
     "rec_rating_rank": 0,
-    "rec_rating_scale_max": 0,
+    "rec_rating_scale_max": 1,
     "rec_rating_quantile": 1,
     "jury_reviews": 0,
     "jury_reviews_scale_10": 0,
     "jury_reviews_quantile": 1,
-    "sdj_prob": 0,
+    "sdj_prob": 1,
     "sdj_prob_rank": 0,
 }
 
