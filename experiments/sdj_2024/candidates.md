@@ -55,16 +55,7 @@
 {{% game 383458 %}}Sides{{% /game %}}
 
 
-## #7: {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}}
-
-*2–5 players, 20–30 minutes, 8+ years, medium light (1.6), 97% {{% sdj %}}Spiel{{% /sdj %}}*
-
-{{< img src="376683" size="x300" alt="In the Footsteps of Darwin" >}}
-
-{{% game 376683 %}}In the Footsteps of Darwin{{% /game %}}
-
-
-## #8: {{% game 348096 %}}Kites{{% /game %}}
+## #7: {{% game 348096 %}}Kites{{% /game %}}
 
 *2–6 players, 10 minutes, 10+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -73,7 +64,7 @@
 {{% game 348096 %}}Kites{{% /game %}}
 
 
-## #9: {{% game 381078 %}}Comet{{% /game %}}
+## #8: {{% game 381078 %}}Comet{{% /game %}}
 
 *2–4 players, 45–75 minutes, 12+ years, medium light (2.0), 70% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -82,7 +73,7 @@
 {{% game 381078 %}}Comet{{% /game %}}
 
 
-## #10: {{% game 401885 %}}Schätz it if you can{{% /game %}}
+## #9: {{% game 401885 %}}Schätz it if you can{{% /game %}}
 
 *2–5 players, 20–40 minutes, 14+ years, light (1.0), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -91,7 +82,7 @@
 {{% game 401885 %}}Schätz it if you can{{% /game %}}
 
 
-## #11: {{% game 352515 %}}Trio{{% /game %}}
+## #10: {{% game 352515 %}}Trio{{% /game %}}
 
 *3–5 players, 15 minutes, 6+ years, light (1.0), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -100,7 +91,7 @@
 {{% game 352515 %}}Trio{{% /game %}}
 
 
-## #12: {{% game 330592 %}}Phantom Ink{{% /game %}}
+## #11: {{% game 330592 %}}Phantom Ink{{% /game %}}
 
 *4–8 players, 10–15 minutes, 13+ years, light (1.1), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -109,28 +100,19 @@
 {{% game 330592 %}}Phantom Ink{{% /game %}}
 
 
+## #12: {{% game 378983 %}}Tipperary{{% /game %}}
+
+*2–5 players, 45 minutes, 8+ years, medium light (2.0), 81% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="378983" size="x300" alt="Tipperary" >}}
+
+{{% game 378983 %}}Tipperary{{% /game %}}
+
+
 # Kennerspiel des Jahres
 
 
-## #1: {{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}}
-
-*2–5 players, 20–90 minutes, 10+ years, medium (2.5), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="390092" size="x300" alt="Ticket to Ride Legacy: Legends of the West" >}}
-
-{{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}}
-
-
-## #2: {{% game 303057 %}}Pan Am{{% /game %}}
-
-*2–4 players, 60 minutes, 12+ years, medium light (2.4), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="303057" size="x300" alt="Pan Am" >}}
-
-{{% game 303057 %}}Pan Am{{% /game %}}
-
-
-## #3: {{% game 373106 %}}Sky Team{{% /game %}}
+## #1: {{% game 373106 %}}Sky Team{{% /game %}}
 
 *2 players, 15 minutes, 12+ years, medium light (2.0), 66% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -139,7 +121,7 @@
 {{% game 373106 %}}Sky Team{{% /game %}}
 
 
-## #4: {{% game 366013 %}}Heat: Pedal to the Metal{{% /game %}}
+## #2: {{% game 366013 %}}Heat: Pedal to the Metal{{% /game %}}
 
 *1–6 players, 30–60 minutes, 10+ years, medium light (2.2), 66% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -148,7 +130,7 @@
 {{% game 366013 %}}Heat: Pedal to the Metal{{% /game %}}
 
 
-## #5: {{% game 231733 %}}Obsession{{% /game %}}
+## #3: {{% game 231733 %}}Obsession{{% /game %}}
 
 *1–4 players, 30–90 minutes, 14+ years, medium (3.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -157,25 +139,7 @@
 {{% game 231733 %}}Obsession{{% /game %}}
 
 
-## #6: {{% game 391163 %}}Forest Shuffle{{% /game %}}
-
-*2–5 players, 40–60 minutes, 10+ years, medium light (2.2), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="391163" size="x300" alt="Forest Shuffle" >}}
-
-{{% game 391163 %}}Forest Shuffle{{% /game %}}
-
-
-## #7: {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
-
-*1–4 players, 45 minutes, 14+ years, medium light (2.0), 95% {{% kdj %}}Kennerspiel{{% /kdj %}}*
-
-{{< img src="350933" size="x300" alt="The Guild of Merchant Explorers" >}}
-
-{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
-
-
-## #8: {{% game 328565 %}}Caper: Europe{{% /game %}}
+## #4: {{% game 328565 %}}Caper: Europe{{% /game %}}
 
 *2 players, 25–35 minutes, 10+ years, medium light (2.1), 77% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -184,13 +148,49 @@
 {{% game 328565 %}}Caper: Europe{{% /game %}}
 
 
-## #9: {{% game 321608 %}}Hegemony: Lead Your Class to Victory{{% /game %}}
+## #5: {{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}}
+
+*2–5 players, 20–90 minutes, 10+ years, medium (2.5), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="390092" size="x300" alt="Ticket to Ride Legacy: Legends of the West" >}}
+
+{{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}}
+
+
+## #6: {{% game 303057 %}}Pan Am{{% /game %}}
+
+*2–4 players, 60 minutes, 12+ years, medium light (2.4), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="303057" size="x300" alt="Pan Am" >}}
+
+{{% game 303057 %}}Pan Am{{% /game %}}
+
+
+## #7: {{% game 321608 %}}Hegemony: Lead Your Class to Victory{{% /game %}}
 
 *2–4 players, 90–180 minutes, 14+ years, medium heavy (4.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="321608" size="x300" alt="Hegemony: Lead Your Class to Victory" >}}
 
 {{% game 321608 %}}Hegemony: Lead Your Class to Victory{{% /game %}}
+
+
+## #8: {{% game 391163 %}}Forest Shuffle{{% /game %}}
+
+*2–5 players, 40–60 minutes, 10+ years, medium light (2.2), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="391163" size="x300" alt="Forest Shuffle" >}}
+
+{{% game 391163 %}}Forest Shuffle{{% /game %}}
+
+
+## #9: {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
+
+*1–4 players, 45 minutes, 14+ years, medium light (2.0), 95% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="350933" size="x300" alt="The Guild of Merchant Explorers" >}}
+
+{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
 
 
 ## #10: {{% game 334986 %}}Daybreak{{% /game %}}

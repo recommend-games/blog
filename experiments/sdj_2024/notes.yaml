@@ -7,9 +7,6 @@
 275284:
   name: Arkeis
   text: '{{% game 275284 %}}Arkeis{{% /game %}}'
-276086:
-  name: 'Hamlet: The Village Building Game'
-  text: '{{% game 276086 %}}Hamlet: The Village Building Game{{% /game %}}'
 288276:
   name: 'Tough Calls: Dystopia'
   text: '{{% game 288276 %}}Tough Calls: Dystopia{{% /game %}}'
@@ -88,9 +85,6 @@
 353288:
   name: Trekking Through History
   text: '{{% game 353288 %}}Trekking Through History{{% /game %}}'
-355888:
-  name: Orichalcum
-  text: '{{% game 355888 %}}Orichalcum{{% /game %}}'
 356123:
   name: Turing Machine
   text: '{{% game 356123 %}}Turing Machine{{% /game %}}'
@@ -100,6 +94,9 @@
 361025:
   name: Come Together
   text: '{{% game 361025 %}}Come Together{{% /game %}}'
+361241:
+  name: Vaalbara
+  text: '{{% game 361241 %}}Vaalbara{{% /game %}}'
 361850:
   name: Nimalia
   text: '{{% game 361850 %}}Nimalia{{% /game %}}'
@@ -115,9 +112,6 @@
 366013:
   name: 'Heat: Pedal to the Metal'
   text: '{{% game 366013 %}}Heat: Pedal to the Metal{{% /game %}}'
-366466:
-  name: 'Murder Party Pocket: The Curtain Falls'
-  text: '{{% game 366466 %}}Murder Party Pocket: The Curtain Falls{{% /game %}}'
 367490:
   name: Hickory Dickory
   text: '{{% game 367490 %}}Hickory Dickory{{% /game %}}'
@@ -168,6 +162,9 @@
 378955:
   name: Beethupferl
   text: '{{% game 378955 %}}Beethupferl{{% /game %}}'
+378983:
+  name: Tipperary
+  text: '{{% game 378983 %}}Tipperary{{% /game %}}'
 379005:
   name: The Lord of the Rings Adventure Book Game
   text: '{{% game 379005 %}}The Lord of the Rings Adventure Book Game{{% /game %}}'
@@ -201,6 +198,9 @@
 383481:
   name: "CATAN: Sternenfahrer \u2013 Das Duell"
   text: "{{% game 383481 %}}CATAN: Sternenfahrer \u2013 Das Duell{{% /game %}}"
+385529:
+  name: The Vale of Eternity
+  text: '{{% game 385529 %}}The Vale of Eternity{{% /game %}}'
 386061:
   name: Audition
   text: '{{% game 386061 %}}Audition{{% /game %}}'
@@ -222,6 +222,9 @@
 388753:
   name: Five Peaks
   text: '{{% game 388753 %}}Five Peaks{{% /game %}}'
+389102:
+  name: Bier Pioniere
+  text: '{{% game 389102 %}}Bier Pioniere{{% /game %}}'
 390092:
   name: 'Ticket to Ride Legacy: Legends of the West'
   text: '{{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}}'
@@ -286,9 +289,6 @@
 398772:
   name: "Stich f\xFCr Stich"
   text: "{{% game 398772 %}}Stich f\xFCr Stich{{% /game %}}"
-399375:
-  name: 'For One: Schwarze Rosen'
-  text: '{{% game 399375 %}}For One: Schwarze Rosen{{% /game %}}'
 399806:
   name: Karvi
   text: '{{% game 399806 %}}Karvi{{% /game %}}'
