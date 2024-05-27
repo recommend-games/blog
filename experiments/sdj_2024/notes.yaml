@@ -182,9 +182,6 @@
 381827:
   name: 'Pick a Pen: Tuinen'
   text: '{{% game 381827 %}}Pick a Pen: Tuinen{{% /game %}}'
-382966:
-  name: The Glade
-  text: '{{% game 382966 %}}The Glade{{% /game %}}'
 383458:
   name: Sides
   text: '{{% game 383458 %}}Sides{{% /game %}}'
@@ -299,3 +296,6 @@
 406861:
   name: TowerBrix
   text: '{{% game 406861 %}}TowerBrix{{% /game %}}'
+414275:
+  name: Colour Lines
+  text: '{{% game 414275 %}}Colour Lines{{% /game %}}'
