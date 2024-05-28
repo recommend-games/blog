@@ -100,13 +100,13 @@
 {{% game 396542 %}}The Same Game{{% /game %}}
 
 
-## #12: {{% game 398162 %}}MicroMacro: Crime City – Showdown{{% /game %}}
+## #12: {{% game 388394 %}}The Choice{{% /game %}}
 
-*1–4 players, 15–45 minutes, 12+ years,  (nan), 88% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–4 players, 20 minutes, 8+ years,  (nan), 89% {{% sdj %}}Spiel{{% /sdj %}}*
 
-{{< img src="398162" size="x300" alt="MicroMacro: Crime City – Showdown" >}}
+{{< img src="388394" size="x300" alt="The Choice" >}}
 
-{{% game 398162 %}}MicroMacro: Crime City – Showdown{{% /game %}}
+{{% game 388394 %}}The Choice{{% /game %}}
 
 
 # Kennerspiel des Jahres

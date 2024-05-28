@@ -100,9 +100,6 @@
 362986:
   name: Tribes of the Wind
   text: '{{% game 362986 %}}Tribes of the Wind{{% /game %}}'
-363086:
-  name: 'The Legends of Andor: The Eternal Frost'
-  text: '{{% game 363086 %}}The Legends of Andor: The Eternal Frost{{% /game %}}'
 363307:
   name: Evergreen
   text: '{{% game 363307 %}}Evergreen{{% /game %}}'
@@ -152,9 +149,6 @@
 378851:
   name: 'The Mind: Soulmates'
   text: '{{% game 378851 %}}The Mind: Soulmates{{% /game %}}'
-378955:
-  name: Beethupferl
-  text: '{{% game 378955 %}}Beethupferl{{% /game %}}'
 378983:
   name: Tipperary
   text: '{{% game 378983 %}}Tipperary{{% /game %}}'
@@ -182,6 +176,9 @@
 381827:
   name: 'Pick a Pen: Tuinen'
   text: '{{% game 381827 %}}Pick a Pen: Tuinen{{% /game %}}'
+382966:
+  name: The Glade
+  text: '{{% game 382966 %}}The Glade{{% /game %}}'
 383458:
   name: Sides
   text: '{{% game 383458 %}}Sides{{% /game %}}'
@@ -242,6 +239,9 @@
 392023:
   name: Mycelia
   text: '{{% game 392023 %}}Mycelia{{% /game %}}'
+393325:
+  name: Captain Flip
+  text: '{{% game 393325 %}}Captain Flip{{% /game %}}'
 393887:
   name: Kuhfstein
   text: '{{% game 393887 %}}Kuhfstein{{% /game %}}'
@@ -272,9 +272,6 @@
 397736:
   name: 'HITSTER: Guilty Pleasures'
   text: '{{% game 397736 %}}HITSTER: Guilty Pleasures{{% /game %}}'
-398162:
-  name: "MicroMacro: Crime City \u2013 Showdown"
-  text: "{{% game 398162 %}}MicroMacro: Crime City \u2013 Showdown{{% /game %}}"
 398772:
   name: "Stich f\xFCr Stich"
   text: "{{% game 398772 %}}Stich f\xFCr Stich{{% /game %}}"
@@ -296,6 +293,9 @@
 406861:
   name: TowerBrix
   text: '{{% game 406861 %}}TowerBrix{{% /game %}}'
-414275:
-  name: Colour Lines
-  text: '{{% game 414275 %}}Colour Lines{{% /game %}}'
+413260:
+  name: Botanicus
+  text: '{{% game 413260 %}}Botanicus{{% /game %}}'
+414317:
+  name: Harmonies
+  text: '{{% game 414317 %}}Harmonies{{% /game %}}'

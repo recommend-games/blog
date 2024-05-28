@@ -72,7 +72,7 @@ sdj = pd.concat(
 sdj.sort_values("jahrgang", ascending=False, inplace=True)
 bgg_ids = sdj[
     ((sdj.winner != 1) & (sdj.nominated != 1)) | (sdj.jahrgang >= 2020)
-].bgg_id.unique()[:496]
+].bgg_id.unique()[:494]
 exclude = ",".join(map(str, bgg_ids))
 exclude[:100]
 
