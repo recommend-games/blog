@@ -4,6 +4,9 @@
 234260:
   name: Prey Another Day
   text: '{{% game 234260 %}}Prey Another Day{{% /game %}}'
+276086:
+  name: 'Hamlet: The Village Building Game'
+  text: '{{% game 276086 %}}Hamlet: The Village Building Game{{% /game %}}'
 295895:
   name: Distilled
   text: '{{% game 295895 %}}Distilled{{% /game %}}'
@@ -25,6 +28,9 @@
 328565:
   name: 'Caper: Europe'
   text: '{{% game 328565 %}}Caper: Europe{{% /game %}}'
+329593:
+  name: Settlement
+  text: '{{% game 329593 %}}Settlement{{% /game %}}'
 330592:
   name: Phantom Ink
   text: '{{% game 330592 %}}Phantom Ink{{% /game %}}'
@@ -40,9 +46,9 @@
 335275:
   name: Whirling Witchcraft
   text: '{{% game 335275 %}}Whirling Witchcraft{{% /game %}}'
-341358:
-  name: DONUTS
-  text: '{{% game 341358 %}}DONUTS{{% /game %}}'
+341519:
+  name: The Light in the Mist
+  text: '{{% game 341519 %}}The Light in the Mist{{% /game %}}'
 344114:
   name: Bag of Chips
   text: '{{% game 344114 %}}Bag of Chips{{% /game %}}'
@@ -61,6 +67,9 @@
 348096:
   name: Kites
   text: '{{% game 348096 %}}Kites{{% /game %}}'
+348447:
+  name: Hens
+  text: '{{% game 348447 %}}Hens{{% /game %}}'
 348450:
   name: Lacrimosa
   text: '{{% game 348450 %}}Lacrimosa{{% /game %}}'
@@ -82,6 +91,9 @@
 354934:
   name: Legacy of Yu
   text: '{{% game 354934 %}}Legacy of Yu{{% /game %}}'
+355224:
+  name: 'Isle of Trains: All Aboard'
+  text: '{{% game 355224 %}}Isle of Trains: All Aboard{{% /game %}}'
 355888:
   name: Orichalcum
   text: '{{% game 355888 %}}Orichalcum{{% /game %}}'
@@ -100,9 +112,6 @@
 362986:
   name: Tribes of the Wind
   text: '{{% game 362986 %}}Tribes of the Wind{{% /game %}}'
-363307:
-  name: Evergreen
-  text: '{{% game 363307 %}}Evergreen{{% /game %}}'
 365258:
   name: World Wonders
   text: '{{% game 365258 %}}World Wonders{{% /game %}}'
@@ -121,9 +130,6 @@
 371942:
   name: The White Castle
   text: '{{% game 371942 %}}The White Castle{{% /game %}}'
-371947:
-  name: 3 Ring Circus
-  text: '{{% game 371947 %}}3 Ring Circus{{% /game %}}'
 373106:
   name: Sky Team
   text: '{{% game 373106 %}}Sky Team{{% /game %}}'
@@ -146,33 +152,30 @@
 378200:
   name: Triqueta
   text: '{{% game 378200 %}}Triqueta{{% /game %}}'
+378565:
+  name: Black Hole Buccaneers
+  text: '{{% game 378565 %}}Black Hole Buccaneers{{% /game %}}'
 378851:
   name: 'The Mind: Soulmates'
   text: '{{% game 378851 %}}The Mind: Soulmates{{% /game %}}'
 378983:
   name: Tipperary
   text: '{{% game 378983 %}}Tipperary{{% /game %}}'
-379005:
-  name: The Lord of the Rings Adventure Book Game
-  text: '{{% game 379005 %}}The Lord of the Rings Adventure Book Game{{% /game %}}'
+379066:
+  name: 'HITSTER: Schlager Party'
+  text: '{{% game 379066 %}}HITSTER: Schlager Party{{% /game %}}'
 379078:
   name: Expeditions
   text: '{{% game 379078 %}}Expeditions{{% /game %}}'
 379153:
   name: Pacifica
   text: '{{% game 379153 %}}Pacifica{{% /game %}}'
-379391:
-  name: 'Murder Party Pocket: Deadly Sin'
-  text: '{{% game 379391 %}}Murder Party Pocket: Deadly Sin{{% /game %}}'
 379629:
   name: Knarr
   text: '{{% game 379629 %}}Knarr{{% /game %}}'
-381825:
-  name: 'Pick a Pen: Crypts'
-  text: '{{% game 381825 %}}Pick a Pen: Crypts{{% /game %}}'
-381826:
-  name: 'Pick a Pen: Riffen'
-  text: '{{% game 381826 %}}Pick a Pen: Riffen{{% /game %}}'
+381078:
+  name: Comet
+  text: '{{% game 381078 %}}Comet{{% /game %}}'
 381827:
   name: 'Pick a Pen: Tuinen'
   text: '{{% game 381827 %}}Pick a Pen: Tuinen{{% /game %}}'
@@ -194,9 +197,6 @@
 386436:
   name: House of Cats
   text: '{{% game 386436 %}}House of Cats{{% /game %}}'
-387052:
-  name: Merchants of Culture
-  text: '{{% game 387052 %}}Merchants of Culture{{% /game %}}'
 387378:
   name: 'MLEM: Space Agency'
   text: '{{% game 387378 %}}MLEM: Space Agency{{% /game %}}'
@@ -206,12 +206,6 @@
 388329:
   name: Waypoints
   text: '{{% game 388329 %}}Waypoints{{% /game %}}'
-388392:
-  name: Durchmarsch
-  text: '{{% game 388392 %}}Durchmarsch{{% /game %}}'
-388394:
-  name: The Choice
-  text: '{{% game 388394 %}}The Choice{{% /game %}}'
 388427:
   name: Get It!
   text: '{{% game 388427 %}}Get It!{{% /game %}}'
@@ -230,15 +224,15 @@
 391163:
   name: Forest Shuffle
   text: '{{% game 391163 %}}Forest Shuffle{{% /game %}}'
-391625:
-  name: The Brain
-  text: '{{% game 391625 %}}The Brain{{% /game %}}'
 391834:
   name: SpellBook
   text: '{{% game 391834 %}}SpellBook{{% /game %}}'
 392023:
   name: Mycelia
   text: '{{% game 392023 %}}Mycelia{{% /game %}}'
+392476:
+  name: France Rails
+  text: '{{% game 392476 %}}France Rails{{% /game %}}'
 393325:
   name: Captain Flip
   text: '{{% game 393325 %}}Captain Flip{{% /game %}}'
@@ -251,12 +245,15 @@
 393973:
   name: Match of the Century
   text: '{{% game 393973 %}}Match of the Century{{% /game %}}'
+394325:
+  name: Fruitoplay
+  text: '{{% game 394325 %}}Fruitoplay{{% /game %}}'
+394887:
+  name: Surfosaurus MAX
+  text: '{{% game 394887 %}}Surfosaurus MAX{{% /game %}}'
 394889:
   name: Cabanga!
   text: '{{% game 394889 %}}Cabanga!{{% /game %}}'
-395009:
-  name: Unmask the Werewolves
-  text: '{{% game 395009 %}}Unmask the Werewolves{{% /game %}}'
 395260:
   name: Blobs
   text: '{{% game 395260 %}}Blobs{{% /game %}}'
@@ -269,6 +266,9 @@
 396790:
   name: Nucleum
   text: '{{% game 396790 %}}Nucleum{{% /game %}}'
+397431:
+  name: Moorland
+  text: '{{% game 397431 %}}Moorland{{% /game %}}'
 397736:
   name: 'HITSTER: Guilty Pleasures'
   text: '{{% game 397736 %}}HITSTER: Guilty Pleasures{{% /game %}}'
@@ -281,18 +281,18 @@
 400205:
   name: 5 Towers
   text: '{{% game 400205 %}}5 Towers{{% /game %}}'
+400314:
+  name: Apiary
+  text: '{{% game 400314 %}}Apiary{{% /game %}}'
 401885:
   name: "Sch\xE4tz it if you can"
   text: "{{% game 401885 %}}Sch\xE4tz it if you can{{% /game %}}"
-402488:
-  name: Sleuth the Bomb
-  text: '{{% game 402488 %}}Sleuth the Bomb{{% /game %}}'
 403791:
   name: 'Party & Co: Shock You!'
   text: '{{% game 403791 %}}Party & Co: Shock You!{{% /game %}}'
-406861:
-  name: TowerBrix
-  text: '{{% game 406861 %}}TowerBrix{{% /game %}}'
+410209:
+  name: 'Hitster: Summer Party'
+  text: '{{% game 410209 %}}Hitster: Summer Party{{% /game %}}'
 413260:
   name: Botanicus
   text: '{{% game 413260 %}}Botanicus{{% /game %}}'
