@@ -95,4 +95,4 @@ kennerspiel = candidates.kennerspiel_score >= 0.5
 (~kennerspiel).sum(), kennerspiel.sum()
 
 # %%
-candidates.to_csv("alt_candidates.csv", header=True, float_format="%g")
+candidates.to_csv("alt_candidates.csv", header=True, float_format="%.5g")

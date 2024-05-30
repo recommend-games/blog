@@ -271,7 +271,7 @@ results.shape, sdj.shape, kdj.shape
 # %%
 results.drop(columns="url", inplace=True)
 results.sort_values(["kennerspiel", "sdj_rank"], inplace=True)
-results.to_csv("predictions.csv", header=True, float_format="%g")
+results.to_csv("predictions.csv", header=True, float_format="%.5g")
 
 # %% [markdown]
 # # SdJ candidates
