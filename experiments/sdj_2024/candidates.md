@@ -12,7 +12,7 @@
 
 ## #2: {{% game 390094 %}}FTW?!{{% /game %}}
 
-*2–6 players, 25–40 minutes, 8+ years,  (nan), 90% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–6 players, 25–40 minutes, 8+ years, 90% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="390094" size="x300" alt="FTW?!" >}}
 
@@ -21,7 +21,7 @@
 
 ## #3: {{% game 400205 %}}5 Towers{{% /game %}}
 
-*2–5 players, 15–30 minutes, 7+ years,  (nan), 79% {{% sdj %}}Spiel{{% /sdj %}}*
+*2–5 players, 15–30 minutes, 7+ years, 79% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="400205" size="x300" alt="5 Towers" >}}
 

@@ -23,6 +23,7 @@ from operator import add
 from pathlib import Path
 import joblib
 import jupyter_black
+import numpy as np
 import pandas as pd
 from bg_utils import transform, recommend_games
 from pytility import clear_list
@@ -336,8 +337,16 @@ def game_str(game, bgg_id=None, position=None, notes=NOTES):
         if (min_age := game["min_age"]) and pd.notna(min_age)
         else ""
     )
-    complexity = complexity if (complexity := game["complexity"]) else 0
-    complexity_str = f"{COMPLEXITIES[round(complexity)]}" if complexity > 0 else ""
+    complexity = (
+        complexity
+        if (complexity := game["complexity"]) and np.isfinite(complexity)
+        else 0
+    )
+    complexity_str = (
+        f"{COMPLEXITIES[round(complexity)]} ({complexity:.1f}), "
+        if complexity > 0
+        else ""
+    )
     kennerspiel_score = (
         round(100 * kennerspiel_score)
         if (kennerspiel_score := game["kennerspiel_score"])
@@ -366,7 +375,7 @@ def game_str(game, bgg_id=None, position=None, notes=NOTES):
 
     return f"""## {position_str}{{{{% game {bgg_id} %}}}}{name}{{{{% /game %}}}}
 
-*{player_count}, {play_time}, {player_age}, {complexity_str} ({complexity:.1f}), {kennerspiel}*
+*{player_count}, {play_time}, {player_age}, {complexity_str}{kennerspiel}*
 
 {{{{< img src="{bgg_id}" size="x300" alt="{name}" >}}}}
 
