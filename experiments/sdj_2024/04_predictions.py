@@ -298,6 +298,7 @@ if not notes_file.exists():
         bgg_id: {
             "name": game.name_raw,
             "text": f"{{{{% game {bgg_id} %}}}}{game.name_raw}{{{{% /game %}}}}",
+            "description": "",
         }
         for bgg_id, game in top_candidates.iterrows()
     }
@@ -351,8 +352,12 @@ def game_str(game, bgg_id=None, position=None, notes=NOTES):
             else f"{100 - kennerspiel_score}% {{{{% sdj %}}}}Spiel{{{{% /sdj %}}}}"
         )
     )
+    description = (
+        note.get("description") if notes and (note := notes.get(bgg_id)) else None
+    )
+    description_str = f"*{description}*\n\n" if description else ""
     text = (
-        note.get("text")
+        (note.get("text") or "")
         if notes and (note := notes.get(bgg_id))
         else f"{{{{% game {bgg_id} %}}}}{name}{{{{% /game %}}}}"
     )
@@ -365,7 +370,7 @@ def game_str(game, bgg_id=None, position=None, notes=NOTES):
 
 {{{{< img src="{bgg_id}" size="x300" alt="{name}" >}}}}
 
-{text}"""
+{description_str}{text}"""
 
 
 # %%
