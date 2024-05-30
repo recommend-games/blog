@@ -261,26 +261,34 @@ At least for me, {{% game 321608 %}}Hegemony{{% /game %}} shot out of nowhere in
 
 # My two cents
 
-TODO
+It's time for my picks for the nominations. As indicated in the introduction, I think the algorithm has done a pretty good at predicting the longlist, which means there's lots of strong contenders. Let's go with these predictions for the nominations:
 
 
 ## My predictions for nominees for {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}}
 
-* TODO
-* TODO
-* TODO
+* {{% game 330592 %}}Phantom Ink{{% /game %}}
+* {{% game 396542 %}}The Same Game{{% /game %}}
+* {{% game 383458 %}}Sides{{% /game %}}
+
+The grognards will go crazy if there's three party games on the shortlist, but those are just the most approachable kind of games.
 
 
 ## My predictions for nominees for {{% kdj %}}Kennerspiel des Jahres 2024{{% /kdj %}}
 
-* TODO
-* TODO
-* TODO
+* {{% game 334986 %}}Daybreak{{% /game %}}
+* {{% game 391163 %}}Forest Shuffle{{% /game %}}
+* {{% game 373106 %}}Sky Team{{% /game %}}
+
+To be honest, I'd see {{% game 373106 %}}Sky Team{{% /game %}} rather on the {{% sdj %}}red list{{% /sdj %}}, but I'll stick with the categorisation of the algorithm here.
 
 
 # Honourable mentions
 
-TODO
+Finally, I always like to sneak in a few more games that I think have a good shot at the longlist, even though the algorithm didn't place them in the top 10.
+
+* {{% game 389102 %}}Bier Pioniere{{% /game %}}
+* {{% game 393888 %}}Passt nicht!{{% /game %}}
+* {{% game 234260 %}}Prey Another Day{{% /game %}}
 
 
 # Conclusion
