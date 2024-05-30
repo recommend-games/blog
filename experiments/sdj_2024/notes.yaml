@@ -1,5 +1,5 @@
 231733:
-  description: ''
+  description: 'Renovate an estate, manage servants, and pursue romance in Victorian England.'
   name: Obsession
   text: '{{% game 231733 %}}Obsession{{% /game %}}'
 234260:
@@ -23,11 +23,11 @@
   name: Block and Key
   text: '{{% game 311930 %}}Block and Key{{% /game %}}'
 321608:
-  description: ''
+  description: 'Simulate a whole contemporary nation in this asymmetric, politico-economic euro-game.'
   name: 'Hegemony: Lead Your Class to Victory'
   text: '{{% game 321608 %}}Hegemony: Lead Your Class to Victory{{% /game %}}'
 322289:
-  description: ''
+  description: 'Retrace Darwin’s journey to the Galapagos in a worker-placement adventure.'
   name: Darwin's Journey
   text: '{{% game 322289 %}}Darwin''s Journey{{% /game %}}'
 325022:
@@ -35,7 +35,7 @@
   name: Coffee Traders
   text: '{{% game 325022 %}}Coffee Traders{{% /game %}}'
 328565:
-  description: ''
+  description: 'Three heists. Two rivals. One criminal mastermind will rise to the top.'
   name: 'Caper: Europe'
   text: '{{% game 328565 %}}Caper: Europe{{% /game %}}'
 329593:
@@ -55,7 +55,7 @@
   name: Verdant
   text: '{{% game 334065 %}}Verdant{{% /game %}}'
 334986:
-  description: ''
+  description: 'Cooperatively decarbonize the planet and create resilient societies.'
   name: Daybreak
   text: '{{% game 334986 %}}Daybreak{{% /game %}}'
 335275:
@@ -103,7 +103,7 @@
   name: Earth
   text: '{{% game 350184 %}}Earth{{% /game %}}'
 350933:
-  description: ''
+  description: 'Explore strange lands, establish trade routes, and search for treasure.'
   name: The Guild of Merchant Explorers
   text: '{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}'
 351040:
@@ -163,7 +163,7 @@
   name: World Wonders
   text: '{{% game 365258 %}}World Wonders{{% /game %}}'
 366013:
-  description: ''
+  description: "Manage your race car's speed to keep from overheating."
   name: 'Heat: Pedal to the Metal'
   text: '{{% game 366013 %}}Heat: Pedal to the Metal{{% /game %}}'
 366466:
@@ -187,7 +187,7 @@
   name: Books of Time
   text: '{{% game 372631 %}}Books of Time{{% /game %}}'
 373106:
-  description: ''
+  description: 'Pilot and co-pilot work together to land planes.'
   name: Sky Team
   text: '{{% game 373106 %}}Sky Team{{% /game %}}'
 374173:
@@ -296,7 +296,7 @@
   name: Bier Pioniere
   text: '{{% game 389102 %}}Bier Pioniere{{% /game %}}'
 390092:
-  description: ''
+  description: 'Build train lines across the United States in a twelve-game campaign.'
   name: 'Ticket to Ride Legacy: Legends of the West'
   text: '{{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}}'
 390094:
@@ -304,7 +304,7 @@
   name: FTW?!
   text: '{{% game 390094 %}}FTW?!{{% /game %}}'
 391163:
-  description: ''
+  description: 'Gather the most valuable trees and attract species to them.'
   name: Forest Shuffle
   text: '{{% game 391163 %}}Forest Shuffle{{% /game %}}'
 391565:

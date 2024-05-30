@@ -138,6 +138,8 @@
 
 {{< img src="390092" size="x300" alt="Ticket to Ride Legacy: Legends of the West" >}}
 
+*Build train lines across the United States in a twelve-game campaign.*
+
 {{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}}
 
 
@@ -146,6 +148,8 @@
 *2 players, 15 minutes, 12+ years, medium light (2.0), 66% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="373106" size="x300" alt="Sky Team" >}}
+
+*Pilot and co-pilot work together to land planes.*
 
 {{% game 373106 %}}Sky Team{{% /game %}}
 
@@ -156,6 +160,8 @@
 
 {{< img src="231733" size="x300" alt="Obsession" >}}
 
+*Renovate an estate, manage servants, and pursue romance in Victorian England.*
+
 {{% game 231733 %}}Obsession{{% /game %}}
 
 
@@ -164,6 +170,8 @@
 *2–5 players, 40–60 minutes, 10+ years, medium light (2.2), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="391163" size="x300" alt="Forest Shuffle" >}}
+
+*Gather the most valuable trees and attract species to them.*
 
 {{% game 391163 %}}Forest Shuffle{{% /game %}}
 
@@ -174,6 +182,8 @@
 
 {{< img src="328565" size="x300" alt="Caper: Europe" >}}
 
+*Three heists. Two rivals. One criminal mastermind will rise to the top.*
+
 {{% game 328565 %}}Caper: Europe{{% /game %}}
 
 
@@ -182,6 +192,8 @@
 *1–6 players, 30–60 minutes, 10+ years, medium light (2.2), 66% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="366013" size="x300" alt="Heat: Pedal to the Metal" >}}
+
+*Manage your race car's speed to keep from overheating.*
 
 {{% game 366013 %}}Heat: Pedal to the Metal{{% /game %}}
 
@@ -192,6 +204,8 @@
 
 {{< img src="350933" size="x300" alt="The Guild of Merchant Explorers" >}}
 
+*Explore strange lands, establish trade routes, and search for treasure.*
+
 {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
 
 
@@ -200,6 +214,8 @@
 *1–4 players, 60–120 minutes, 10+ years, medium (3.0), 99% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="334986" size="x300" alt="Daybreak" >}}
+
+*Cooperatively decarbonize the planet and create resilient societies.*
 
 {{% game 334986 %}}Daybreak{{% /game %}}
 
@@ -210,6 +226,8 @@
 
 {{< img src="321608" size="x300" alt="Hegemony: Lead Your Class to Victory" >}}
 
+*Simulate a whole contemporary nation in this asymmetric, politico-economic euro-game.*
+
 {{% game 321608 %}}Hegemony: Lead Your Class to Victory{{% /game %}}
 
 
@@ -218,6 +236,8 @@
 *1–4 players, 60–120 minutes, 14+ years, medium heavy (3.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="322289" size="x300" alt="Darwin's Journey" >}}
+
+*Retrace Darwin’s journey to the Galapagos in a worker-placement adventure.*
 
 {{% game 322289 %}}Darwin's Journey{{% /game %}}
 
