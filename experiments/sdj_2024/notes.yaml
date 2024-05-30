@@ -45,7 +45,7 @@
 330592:
   description: 'Spirits race to get their medium teammates to guess a secret object.'
   name: Phantom Ink
-  text: '{{% game 330592 %}}Phantom Ink{{% /game %}} is another word guessing party game, but one with a lot of atmosphere. Its chances might be drastically improved by its much better the German title.'
+  text: '{{% game 330592 %}}Phantom Ink{{% /game %}} is another word guessing party game, but one with a lot of atmosphere. Its chances might be drastically improved by its much better German title.'
 332772:
   description: ''
   name: Revive
@@ -105,7 +105,7 @@
 350933:
   description: 'Explore strange lands, establish trade routes, and search for treasure.'
   name: The Guild of Merchant Explorers
-  text: '{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}} was actually also #7 on [last year''s predictions]({{<ref "posts/sdj_2023/index.md">}}), but apparently the jury only considers it for this year. Sometimes that''s the hardest part of the predictions. 🤷'
+  text: '{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}} was actually also #7 on [last year''s predictions]({{<ref "posts/sdj_2023/index.md">}}#7-a-hrefhttpsrecommendgamesgame350933-stylefont-variant-small-capsthe-guild-of-merchant-explorersa), but apparently the jury only considers it for this year. Sometimes that''s the hardest part of the predictions. 🤷'
 351040:
   description: ''
   name: Ready Set Bet
@@ -113,7 +113,7 @@
 352515:
   description: "Reveal anyone's lowest or highest card and keep going until there're three of a kind!"
   name: Trio
-  text: "{{% game 352515 %}}Trio{{% /game %}} has won this year's As d'Or, France's answer to the {{ %sdj / %}}, so is definitely one to consider."
+  text: "{{% game 352515 %}}Trio{{% /game %}} has won this year's As d'Or, France's answer to the {{% sdj / %}}, so is definitely one to consider."
 353288:
   description: 'Time travel to some of the greatest moments in human history.'
   name: Trekking Through History

@@ -86,7 +86,7 @@ One of two games called {{% game 392023 %}}Mycelia{{% /game %}} from last year â
 
 *Reveal anyone's lowest or highest card and keep going until there're three of a kind!*
 
-{{% game 352515 %}}Trio{{% /game %}} has won this year's As d'Or, France's answer to the {{ %sdj / %}}, so is definitely one to consider.
+{{% game 352515 %}}Trio{{% /game %}} has won this year's As d'Or, France's answer to the {{% sdj / %}}, so is definitely one to consider.
 
 
 ## #9: {{% game 330592 %}}Phantom Ink{{% /game %}}
@@ -97,7 +97,7 @@ One of two games called {{% game 392023 %}}Mycelia{{% /game %}} from last year â
 
 *Spirits race to get their medium teammates to guess a secret object.*
 
-{{% game 330592 %}}Phantom Ink{{% /game %}} is another word guessing party game, but one with a lot of atmosphere. Its chances might be drastically improved by its much better the German title.
+{{% game 330592 %}}Phantom Ink{{% /game %}} is another word guessing party game, but one with a lot of atmosphere. Its chances might be drastically improved by its much better German title.
 
 
 ## #10: {{% game 381078 %}}Comet{{% /game %}}
@@ -206,7 +206,7 @@ The last 2-player game to be nominated for {{% kdj / %}} was {{% game 118048 %}}
 
 *Explore strange lands, establish trade routes, and search for treasure.*
 
-{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}} was actually also #7 on [last year's predictions]({{<ref "posts/sdj_2023/index.md">}}), but apparently the jury only considers it for this year. Sometimes that's the hardest part of the predictions. ðŸ¤·
+{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}} was actually also #7 on [last year's predictions]({{<ref "posts/sdj_2023/index.md">}}#7-a-hrefhttpsrecommendgamesgame350933-stylefont-variant-small-capsthe-guild-of-merchant-explorersa), but apparently the jury only considers it for this year. Sometimes that's the hardest part of the predictions. ðŸ¤·
 
 
 ## #8: {{% game 334986 %}}Daybreak{{% /game %}}
