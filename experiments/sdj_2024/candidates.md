@@ -140,7 +140,7 @@ One of two games called {{% game 392023 %}}Mycelia{{% /game %}} from last year â
 
 *Build train lines across the United States in a twelve-game campaign.*
 
-{{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}}
+The jury states that they won't consider straight reimplementations of previous games, but they did nominate three different {{% game 30549 %}}Pandemic{{% /game %}} variants over the year. {{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}} could definitely find a place on the longlist.
 
 
 ## #2: {{% game 373106 %}}Sky Team{{% /game %}}
@@ -151,7 +151,7 @@ One of two games called {{% game 392023 %}}Mycelia{{% /game %}} from last year â
 
 *Pilot and co-pilot work together to land planes.*
 
-{{% game 373106 %}}Sky Team{{% /game %}}
+The last 2-player game to be nominated for {{% kdj / %}} was {{% game 118048 %}}Targi{{% /game %}} in 2012. {{% game 373106 %}}Sky Team{{% /game %}} is highly praised, but has next to no chance of winning.
 
 
 ## #3: {{% game 231733 %}}Obsession{{% /game %}}
@@ -162,7 +162,7 @@ One of two games called {{% game 392023 %}}Mycelia{{% /game %}} from last year â
 
 *Renovate an estate, manage servants, and pursue romance in Victorian England.*
 
-{{% game 231733 %}}Obsession{{% /game %}}
+{{% game 231733 %}}Obsession{{% /game %}} was first released in 2018 and has gathered quite the following over the years, sitting at #62 on BGG.
 
 
 ## #4: {{% game 391163 %}}Forest Shuffle{{% /game %}}
@@ -173,7 +173,7 @@ One of two games called {{% game 392023 %}}Mycelia{{% /game %}} from last year â
 
 *Gather the most valuable trees and attract species to them.*
 
-{{% game 391163 %}}Forest Shuffle{{% /game %}}
+{{% game 391163 %}}Forest Shuffle{{% /game %}} is high up on most pundits' lists. I'd say the theme is super bland, but at least in German its title is a pretty good pun.
 
 
 ## #5: {{% game 328565 %}}Caper: Europe{{% /game %}}
@@ -184,7 +184,7 @@ One of two games called {{% game 392023 %}}Mycelia{{% /game %}} from last year â
 
 *Three heists. Two rivals. One criminal mastermind will rise to the top.*
 
-{{% game 328565 %}}Caper: Europe{{% /game %}}
+
 
 
 ## #6: {{% game 366013 %}}Heat: Pedal to the Metal{{% /game %}}
@@ -195,7 +195,7 @@ One of two games called {{% game 392023 %}}Mycelia{{% /game %}} from last year â
 
 *Manage your race car's speed to keep from overheating.*
 
-{{% game 366013 %}}Heat: Pedal to the Metal{{% /game %}}
+{{% game 366013 %}}Heat{{% /game %}} has been in the BGG hotness pretty much non-stop since its release and has climbed to #42. The jury however has not been as hot on it (pun intended) as the community.
 
 
 ## #7: {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
@@ -206,7 +206,7 @@ One of two games called {{% game 392023 %}}Mycelia{{% /game %}} from last year â
 
 *Explore strange lands, establish trade routes, and search for treasure.*
 
-{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
+{{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}} was actually also #7 on [last year's predictions]({{<ref "posts/sdj_2023/index.md">}}), but apparently the jury only considers it for this year. Sometimes that's the hardest part of the predictions. ðŸ¤·
 
 
 ## #8: {{% game 334986 %}}Daybreak{{% /game %}}
@@ -217,7 +217,7 @@ One of two games called {{% game 392023 %}}Mycelia{{% /game %}} from last year â
 
 *Cooperatively decarbonize the planet and create resilient societies.*
 
-{{% game 334986 %}}Daybreak{{% /game %}}
+What a topical game between all those anthropomorphic animals! {{% game 334986 %}}Daybreak{{% /game %}} combines a bold theme with interesting gameplay â€“ and again has a much better title in German.
 
 
 ## #9: {{% game 321608 %}}Hegemony: Lead Your Class to Victory{{% /game %}}
@@ -228,7 +228,7 @@ One of two games called {{% game 392023 %}}Mycelia{{% /game %}} from last year â
 
 *Simulate a whole contemporary nation in this asymmetric, politico-economic euro-game.*
 
-{{% game 321608 %}}Hegemony: Lead Your Class to Victory{{% /game %}}
+At least for me, {{% game 321608 %}}Hegemony{{% /game %}} shot out of nowhere into the BGG top 100. Quite heavy overall, but a place on the longlist is always possible.
 
 
 ## #10: {{% game 322289 %}}Darwin's Journey{{% /game %}}
@@ -239,7 +239,7 @@ One of two games called {{% game 392023 %}}Mycelia{{% /game %}} from last year â
 
 *Retrace Darwinâ€™s journey to the Galapagos in a worker-placement adventure.*
 
-{{% game 322289 %}}Darwin's Journey{{% /game %}}
+
 
 
 ## #11: {{% game 414317 %}}Harmonies{{% /game %}}
