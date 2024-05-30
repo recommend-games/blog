@@ -28,7 +28,13 @@ tags:
 
 {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}} is around the corner! As in [the]({{<ref "posts/sdj_2020/index.md">}}) [previous]({{<ref "posts/sdj_2021/index.md">}}) [four]({{<ref "posts/sdj_2022/index.md">}}) [years]({{<ref "posts/sdj_2023/index.md">}}), I'll try to predict what games have the best shot at ending up on the longlist (aka *recommendations*) and the shortlist (aka *nominations*) when the jury announces their picks on June 11th.
 
-As every year, I'll let the algorithms speak. The predictions for the longlist come directly from the [recommendendations](https://recommend.games/#/?for=S_d_J&excludeRated=false&yearMin=2023&yearMax=2024) out of all eligible[^eligible] games. Our very own [Kennerspiel score]({{<ref "posts/kennerspiel/index.md">}}) is then used to sort those into their respective list of the top 10 contenders for either award. You can find the [detailed analysis here](predictions.py) and [complete results here](predictions.csv). But without further ado, here are the favourite games to win {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2024{{% /kdj %}}.
+As every year, I'll let the algorithms speak, but I've added something new this year: I tried to track the jury members' reviews of all eligible[^eligible] games, in particular when they publish scores (such as in the magazine Spielbox), and fed those into the predictions. The other major contributor are the ["recommendendations to the jury"](https://recommend.games/#/?for=S_d_J&excludeRated=false&yearMin=2023&yearMax=2024). Our very own [Kennerspiel score]({{<ref "posts/kennerspiel/index.md">}}) is then used to sort those into their respective list of the top 10 contenders for either award. You can find the [detailed analysis here](04_predictions.py) and [complete results here](predictions.csv).
+
+This is quite a curious year. Usually, I've had quite clear favourites for the nominations or even the winners, but would find lots of surprises on the longlist. This year, however, there's been a large number of games with a really warm reception by the jury, which I believe we will see on the longlist, but not really any game that stands out as a clear favourite for the nominations.
+
+The jury chairman, Harald Schrapers, already spoke some time ago of the [year of the card games](https://brett-spiel.de/2023/uno-mau-mau-derivate-ftw-vs-passt-nicht/), so prepare for lots of small but original card games in the predictions, which might be one reason why there's no clear favourite.
+
+But without further ado, here are the favourite games to win {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2024{{% /kdj %}}.
 
 
 # Candidates for {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}}
