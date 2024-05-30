@@ -7,6 +7,8 @@
 
 {{< img src="396542" size="x300" alt="The Same Game" >}}
 
+*Discuss how completely different objects might share something in common.*
+
 {{% game 396542 %}}The Same Game{{% /game %}}
 
 
@@ -15,6 +17,8 @@
 *2–6 players, 25–40 minutes, 8+ years, 90% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="390094" size="x300" alt="FTW?!" >}}
+
+*Play your cards cleverly to be the 1337 in FTW?!*
 
 {{% game 390094 %}}FTW?!{{% /game %}}
 
@@ -25,6 +29,8 @@
 
 {{< img src="400205" size="x300" alt="5 Towers" >}}
 
+*Get the most cards and build fantastic towers!*
+
 {{% game 400205 %}}5 Towers{{% /game %}}
 
 
@@ -33,6 +39,8 @@
 *1–4 players, 45 minutes, 9+ years, medium light (2.0), 62% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="392023" size="x300" alt="Mycelia" >}}
+
+*Attract help from forest dwellers to remove dewdrops from your field.*
 
 {{% game 392023 %}}Mycelia{{% /game %}}
 
@@ -43,6 +51,8 @@
 
 {{< img src="383458" size="x300" alt="Sides" >}}
 
+*Team members work together to have two of them guessing hidden word.*
+
 {{% game 383458 %}}Sides{{% /game %}}
 
 
@@ -51,6 +61,8 @@
 *2–4 players, 30–60 minutes, 10+ years, medium light (1.8), 93% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="353288" size="x300" alt="Trekking Through History" >}}
+
+*Time travel to some of the greatest moments in human history.*
 
 {{% game 353288 %}}Trekking Through History{{% /game %}}
 
@@ -61,6 +73,8 @@
 
 {{< img src="311930" size="x300" alt="Block and Key" >}}
 
+*Cleverly place 3D blocks in a shared space to unlock the key to victory points.*
+
 {{% game 311930 %}}Block and Key{{% /game %}}
 
 
@@ -69,6 +83,8 @@
 *3–5 players, 15 minutes, 6+ years, light (1.0), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="352515" size="x300" alt="Trio" >}}
+
+*Reveal anyone's lowest or highest card and keep going until there're three of a kind!*
 
 {{% game 352515 %}}Trio{{% /game %}}
 
@@ -79,6 +95,8 @@
 
 {{< img src="330592" size="x300" alt="Phantom Ink" >}}
 
+*Spirits race to get their medium teammates to guess a secret object.*
+
 {{% game 330592 %}}Phantom Ink{{% /game %}}
 
 
@@ -87,6 +105,8 @@
 *2–4 players, 45–75 minutes, 12+ years, medium light (2.0), 70% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="381078" size="x300" alt="Comet" >}}
+
+*Save extinct and endangered species from their deadly fate by the threatening comet!*
 
 {{% game 381078 %}}Comet{{% /game %}}
 

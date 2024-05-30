@@ -111,7 +111,7 @@
   name: Ready Set Bet
   text: '{{% game 351040 %}}Ready Set Bet{{% /game %}}'
 352515:
-  description: 'Reveal anyone's lowest or highest card and keep going until there're three of a kind!'
+  description: "Reveal anyone's lowest or highest card and keep going until there're three of a kind!"
   name: Trio
   text: '{{% game 352515 %}}Trio{{% /game %}}'
 353288:
