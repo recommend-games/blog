@@ -293,26 +293,11 @@ Finally, I always like to sneak in a few more games that I think have a good sho
 
 # Conclusion
 
-TODO
+This year is set to be one that lives from its breadth rather than its depth. I'd say the race is pretty open in both awards, much more so than in previous years. While this makes my job as a predictor harder, as a board game fan I'm looking forward to the surprises that the jury will have in store for us.
 
----
+With every passing year, I also get more and more excited about the picks for {{% kindersdj / %}} – so far all their recommendations were hits with my kids, and I can't wait to see what's the latest hotness in children's games.
 
-# Candidates for {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}}
+Stay tuned for the announcement on June 11th! 🤩
 
-- Phantom Ink
-- Prey Another Day
-- The Same Game
-- Trio
-- Sky Team
-- Daybreak
-- Bier Pioniere
-- Forest Shuffle
-- Heat
-- Passt nicht!
-- Surfosaurus Max
-- Weimar
-- Hegemony
-- Schätz It If You Can
-- Cabanga!
 
 [^eligible]: As every year, it's not straightforward to determine what games are eligible for the awards. Generally speaking, it'd be those games release between April 2023 and March 2024 into German retail. Hence, filtering by BGG release year will exclude games that were released earlier elsewhere, but only recently in Germany, and likewise let some games pass that have not seen a German release in that time window. I did my best to catch what I could, but there's always some that get away.
