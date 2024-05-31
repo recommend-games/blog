@@ -18,7 +18,7 @@ tags:
   - Reiner Knizia
 ---
 
-{{% sdj %}}Spiel des Jahres 2024{{% /sdj %}} nominations are just around the corner (watch this space for our annual predictions), but I wanted to take this opportunity for a look back over the history of the award. Specifically, I wanted to see which designers have been most successful at the {{% sdj %}}Spiel{{% /sdj %}}, {{% kdj %}}Kennerspiel{{% /kdj %}} and {{% kindersdj / %}} awards.
+{{% sdj %}}Spiel des Jahres 2024{{% /sdj %}} nominations are just around the corner (watch this space for our [annual predictions]({{<ref "posts/sdj_2024/index.md">}})), but I wanted to take this opportunity for a look back over the history of the award. Specifically, I wanted to see which designers have been most successful at the {{% sdj %}}Spiel{{% /sdj %}}, {{% kdj %}}Kennerspiel{{% /kdj %}} and {{% kindersdj / %}} awards.
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
