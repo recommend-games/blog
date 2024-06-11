@@ -3,7 +3,7 @@ title: Spiel des Jahres 2024 nominations
 slug: spiel-des-jahres-2024-nominations
 author: Markus Shepherd
 type: post
-date: 2024-06-11T16:00:00+02:00
+date: 2024-06-11T17:00:00+02:00
 tags:
   - SdJ
   - SdJ 2024
@@ -22,7 +22,12 @@ tags:
   - Kennerspiel nominations
   - Kennerspiel des Jahres nominations
   - Kennerspiel des Jahres 2024 nominations
-  - 'TODO: nominees'
+  - Captain Flip
+  - In the Footsteps of Darwin
+  - Sky Team
+  - Daybreak
+  - The Guild of Merchant Explorers
+  - 'Ticket to Ride Legacy: Legends of the West'
 ---
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
