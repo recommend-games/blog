@@ -121,14 +121,18 @@ This really is a drama in three acts: the decision of {{% kdj %}}Kennerspiel{{% 
 
 ## {{% kdj %}}Kennerspiel{{% /kdj %}} score
 
-TODO
+This was a bad year for the [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}})… 🙈 It classified four out of sixteen games wrong: It saw {{% game 373106 %}}Sky Team{{% /game %}} and {{% game 414317 %}}Harmonies{{% /game %}} as {{% kdj %}}Kennerspiel{{% /kdj %}} and {{% game 413260 %}}Botanicus{{% /game %}} and {{% game 373055 %}}Ritual{{% /game %}} as {{% sdj %}}Spiel{{% /sdj %}}. An acuracy of 75% is pretty poor – the only solace I can take is that I correctly saw {{% game 373106 %}}Sky Team{{% /game %}} on the {{% sdj %}}red list{{% /sdj %}}… 🤷
 
 
 ## Longlist
 
-TODO
+It's not getting better… 😅 The algorithm picked out only three out of nine games on the {{% sdj %}}Spiel{{% /sdj %}} longlist, plus one game for the wrong award, plus one "honourable mention". Things look a little brighter for {{% kdj %}}Kennerspiel{{% /kdj %}} where the algorithm predicted four out of seven entries, plus one honourable mention. In summary, this would be a 44% hit rate (63% if we count all those pluses). In a year where I was more confident about the longlist than in any previous edition, it's a bit disappointing.
+
+There's some good news though: 11, 11, 12, 14, 15, 16, 22. Those are the positions on their respective prediction lists for seven out of the eight misses. I'll call those pretty close – {{% game 373055 %}}Ritual{{% /game %}} on #292 of the {{% sdj %}}Spiel{{% /sdj %}} list is the only catastrophic miss.
 
 
 ## Shortlist
 
-TODO
+Again, not great… Only two out of six nominees called correctly, one of them on the wrong list. That's my worst year so far – the score so far is two years with three and two years with four correct predictions. I did announce this more or less, but it's still a bit disappointing. I've got some ideas how to improve the algorithm for next year, so let's hope it'll be better… 🤞
+
+That's it for now, we'll be back soon with a little more in-depth analyses on the six nominees and their chances of winning an award.
