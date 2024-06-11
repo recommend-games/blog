@@ -66,7 +66,12 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 
 ## {{% sdj / %}} recommendations
 
-* TODO
+* {{% game 414317 %}}Harmonies{{% /game %}}
+* {{% game 393888 %}}Passt nicht!{{% /game %}}
+* {{% game 330592 %}}Phantom Ink{{% /game %}}
+* {{% game 401885 %}}Schätz it if you can{{% /game %}}
+* {{% game 353288 %}}Trekking Through History{{% /game %}}
+* {{% game 352515 %}}Trio{{% /game %}}
 
 
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2024{{% /kdj %}}
@@ -103,7 +108,10 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 
 ## {{% kdj / %}} recommendations
 
-* TODO
+* {{% game 389102 %}}Bier Pioniere{{% /game %}}
+* {{% game 413260 %}}Botanicus{{% /game %}}
+* {{% game 391163 %}}Forest Shuffle{{% /game %}}
+* {{% game 373055 %}}Ritual{{% /game %}}
 
 
 # How good were the predictions?
