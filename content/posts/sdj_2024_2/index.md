@@ -27,7 +27,7 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-[Nominations are out](TODO)! The jury selected a total of X games for their longlist, Y for {{% sdj / %}} and Z for {{% kdj / %}}. Out of these games, three games each are nominated for the two awards and can hope to get the coveted meeple added to their covers on July 21.
+[Nominations are out](https://www.spiel-des-jahres.de/nominierte-spiele-2024.html)! The jury selected a total of sixteen games for their longlist, nine for {{% sdj / %}} and seven for {{% kdj / %}}. Out of these games, three games each are nominated for the two awards and can hope to get the coveted meeple added to their covers on July 21.
 
 Let's dive straight into the nominations and recommendations, before we discuss how good (or bad) [my predictions]({{<ref "posts/sdj_2024/index.md">}}) were and if the agreed with our [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}}).
 
@@ -37,7 +37,31 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 {{< img src="sdj-2024" size="x300" alt="Spiel des Jahres 2024" >}}
 
 
-## TODO
+## {{% game 393325 %}}Captain Flip{{% /game %}}
+
+*2–5 players, 20 minutes, 8+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="393325" size="x300" alt="Captain Flip" >}}
+
+*Hoist your flag, recruit a colorful crew, and earn as many gold coins as you can.*
+
+
+## {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}}
+
+*2–5 players, 20–30 minutes, 8+ years, medium light (1.6), 97% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="376683" size="x300" alt="In the Footsteps of Darwin" >}}
+
+*Assist Charles Darwin with his research for On the Origins of Species.*
+
+
+## {{% game 373106 %}}Sky Team{{% /game %}}
+
+*2 players, 15 minutes, 12+ years, medium light (2.0), 66% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="373106" size="x300" alt="Sky Team" >}}
+
+*Pilot and co-pilot work together to land planes.*
 
 
 ## {{% sdj / %}} recommendations
@@ -50,7 +74,31 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 {{< img src="ksdj-2024" size="x300" alt="Kennerspiel des Jahres 2024" >}}
 
 
-## TODO
+## {{% game 334986 %}}Daybreak{{% /game %}}
+
+*1–4 players, 60–120 minutes, 10+ years, medium (3.0), 99% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="334986" size="x300" alt="Daybreak" >}}
+
+*Cooperatively decarbonize the planet and create resilient societies.*
+
+
+## {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
+
+*1–4 players, 45 minutes, 14+ years, medium light (2.0), 95% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="350933" size="x300" alt="The Guild of Merchant Explorers" >}}
+
+*Explore strange lands, establish trade routes, and search for treasure.*
+
+
+## {{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}}
+
+*2–5 players, 20–90 minutes, 10+ years, medium (2.5), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="390092" size="x300" alt="Ticket to Ride Legacy: Legends of the West" >}}
+
+*Build train lines across the United States in a twelve-game campaign.*
 
 
 ## {{% kdj / %}} recommendations
