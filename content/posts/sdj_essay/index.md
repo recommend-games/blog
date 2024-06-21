@@ -42,7 +42,7 @@ TODO
 
 # Who is the jury?
 
-TODO
+Maybe one of the most common question you'll hear time and again: Who gives the jury the right to hand out this award? The short answer is: nobody. The jury decides who their members should be and what the purpose of the awards should be. There's no supervisory board, no government agency, no industry association that has any say in the matter. The {{% sdj / %}} was founded by a group of journalists and game critics in 1978 who thought it would be useful to have an award that highlights great games to the public. Over the decades, the public has learnt to trust the jury's recommendations, and this trust really is the only currency the jury possesses. That's why they are very protective of their brand and will be very careful about any changed they might implement.
 
 
 # Do they fulfill their intentions?
