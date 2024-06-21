@@ -9,6 +9,31 @@ tags:
   - Spiel des Jahres
 ---
 
+# What's the purpose of awards?
+
+TODO
+
+
+# What's the purpose of Spiel des Jahres?
+
+TODO
+
+
+# Who is the jury?
+
+TODO
+
+
+# Do they fulfill their intentions?
+
+TODO
+
+
+# How could the award be improved?
+
+TODO
+
+
 ## From the notebook
 
 - It doesn't represent the hobby
