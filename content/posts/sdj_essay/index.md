@@ -9,9 +9,30 @@ tags:
   - Spiel des Jahres
 ---
 
+# Introduction
+
+Some of you might have notices that I'm a bit of a {{% sdj / %}} fanboy. 🙃 Every year when the award season rolls around, the discussion about the purpose and the influence of {{% sdj / %}} comes up again. So I thought it's a good idea to collect my thoughts on the subject in one handy place I can easily reference in the future. 🤓
+
+
 # What's the purpose of awards?
 
-TODO
+Let's start more generally: what are awards and why are they given out? Here's the definition from [Wikipedia](https://en.wikipedia.org/wiki/Award):
+
+> An award, sometimes called a distinction, is given to a recipient as a token of recognition of excellence in a certain field.
+
+"Excellence in a field" can obviously mean a broad range of things. Here's a couple of "achievements" in the realm of board games that could be awarded:
+
+- A game to exceed a certain number of copies sold
+- A design that is so intracate that even the most advanced AI can't solve it (for some definition of a [solved game](https://en.wikipedia.org/wiki/Solved_game))
+- The most popular game (as measured, e.g., by a poll) of a given year
+- The best game (for some definition of "best") of a given year
+- The best game *for a certain purpose* of a given year
+
+Any one of those awards could be interesting and useful. So we need to ask ourselves: who is this award really for? Obviously, there's always the recipient, but the meaning of any award comes from its recognition: the group of people who really care about the award.
+
+Some awards want to recognise well defined exceptional achievements, like the Wolfskehl prize for proving Fermat's Last Theorem. Other awards really want to bring together a certain community and recognise distinguished members. Most academic awards fall into that category, as well as industry awards like the Oscars. Finally, there are awards that are mostly about highlighting the recipient to a wider audience, such as Nobel Peace Prize.
+
+Obviously, the lines between those categories are blurry, but I think it's a useful distinction to make. In particular it should be clear that the {{% sdj / %}} is a public facing award, *not* an industry award.
 
 
 # What's the purpose of Spiel des Jahres?
