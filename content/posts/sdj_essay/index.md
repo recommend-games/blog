@@ -33,6 +33,15 @@ Outward facing awards, on the other hand, are meant to highlight said "excellenc
 I think internalising this mission goes a long way towards understand what the award does and doesn't want to be.
 
 
+# Who is the jury?
+
+Another crucial aspect to understand about {{% sdj / %}} is the jury: who are they, who appoints them and who gives them the right to hand out this award? The short answer to the last question is: nobody. The jury decides who their members should be and what the purpose of the awards should be. There's no supervisory board, no government agency, no industry association that has any say in the matter. The {{% sdj / %}} was founded by a group of journalists and game critics in 1978 who thought it would be useful to have an award that highlights great games to the public. Over the decades, the public has learnt to trust the jury's recommendations, and this trust really is the only currency the jury possesses. That's why they are very protective of their brand and will be very careful about any changed they might implement.
+
+Currently, there's a dozen [jury members](https://www.spiel-des-jahres.de/en/the-jury/) voting for {{% sdj %}}Spiel{{% /sdj %}} and {{% kdj / %}}. All of them review board games regularly, be it for print media such as news papers or special interest magazines like Spielbox, on YouTube or on podcasts. I'll concede that not every jury members writes the sharpest analyses of board games or our industry and I don't know if they would qualify for a PhD in ludology either. But what's more important: they play a lot and they play *with a lot of different people*. That's another fact that's often overlooked in the geek community: the jury members make a very active effort to reach the target audience, i.e., people outside the hardcore hobbyist crowd. That the geeks consider an easy gateway game might well be a considerable challenge for a person who doesn't have the same game literacy and tries to work out the rules from the rulebook in the dim light of the Christmas tree after the third glass of Glühwein. 🍷
+
+One last thing to emphasise about the jury: they all do this as an unpaid side gig. An important part of the jury's self-image is their independence, which necessitates that they don't take money from the industry. Conversely, the {{% sdj / %}} e.V. (a registered association) cannot be under pressure to earn a steady income every year. This is a lesson they learnt the hard way in the early 2000s when they were financing a game archive and had to pick winners that would sell well to keep the money flowing. A winner like {{% game 98778 %}}Hanabi{{% /game %}} (which retails for less than a tenner) would have been unthinkable under those circumstances. That's why they're very careful about any financial commitments they make. So, when people "demand" the jury should be doing this and be better at that: remember that they're only humans with families and day jobs who do this in their precious spare time.
+
+
 # What's the purpose of awards?
 
 Let's start more generally: what are awards and why are they given out? Here's the definition from [Wikipedia](https://en.wikipedia.org/wiki/Award):
@@ -52,11 +61,6 @@ Any one of those awards could be interesting and useful. So we need to ask ourse
 Some awards want to recognise well defined exceptional achievements, like the Wolfskehl prize for proving Fermat's Last Theorem. Other awards really want to bring together a certain community and recognise distinguished members. Most academic awards fall into that category, as well as industry awards like the Oscars. Finally, there are awards that are mostly about highlighting the recipient to a wider audience, such as Nobel Peace Prize.
 
 Obviously, the lines between those categories are blurry, but I think it's a useful distinction to make. In particular it should be clear that the {{% sdj / %}} is a public facing award, *not* an industry award.
-
-
-# Who is the jury?
-
-Maybe one of the most common question you'll hear time and again: Who gives the jury the right to hand out this award? The short answer is: nobody. The jury decides who their members should be and what the purpose of the awards should be. There's no supervisory board, no government agency, no industry association that has any say in the matter. The {{% sdj / %}} was founded by a group of journalists and game critics in 1978 who thought it would be useful to have an award that highlights great games to the public. Over the decades, the public has learnt to trust the jury's recommendations, and this trust really is the only currency the jury possesses. That's why they are very protective of their brand and will be very careful about any changed they might implement.
 
 
 # Do they fulfill their intentions?
