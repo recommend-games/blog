@@ -39,38 +39,21 @@ Another crucial aspect to understand about {{% sdj / %}} is the jury: who are th
 
 Currently, there's a dozen [jury members](https://www.spiel-des-jahres.de/en/the-jury/) voting for {{% sdj %}}Spiel{{% /sdj %}} and {{% kdj / %}}. All of them review board games regularly, be it for print media such as news papers or special interest magazines like Spielbox, on YouTube or on podcasts. I'll concede that not every jury members writes the sharpest analyses of board games or our industry and I don't know if they would qualify for a PhD in ludology either. But what's more important: they play a lot and they play *with a lot of different people*. That's another fact that's often overlooked in the geek community: the jury members make a very active effort to reach the target audience, i.e., people outside the hardcore hobbyist crowd. That the geeks consider an easy gateway game might well be a considerable challenge for a person who doesn't have the same game literacy and tries to work out the rules from the rulebook in the dim light of the Christmas tree after the third glass of Glühwein. 🍷
 
+A very valid criticism of the jury is it's a very small group of people – not a very diverse one, for that matter, but to their credit they've clearly made an effort to include more women and younger jury members (still all white though). Partially, this is simply down to the job requirements: there simply aren't all that many people who are able and prepared to systematically play hundreds of games with dozens of people to collate their feedback. But that last point should ease the concern about the jury's size: they might be only a dozen people, but through their various play groups they represent the taste and opinions of hundreds of people.
+
 One last thing to emphasise about the jury: they all do this as an unpaid side gig. An important part of the jury's self-image is their independence, which necessitates that they don't take money from the industry. Conversely, the {{% sdj / %}} e.V. (a registered association) cannot be under pressure to earn a steady income every year. This is a lesson they learnt the hard way in the early 2000s when they were financing a game archive and had to pick winners that would sell well to keep the money flowing. A winner like {{% game 98778 %}}Hanabi{{% /game %}} (which retails for less than a tenner) would have been unthinkable under those circumstances. That's why they're very careful about any financial commitments they make. So, when people "demand" the jury should be doing this and be better at that: remember that they're only humans with families and day jobs who do this in their precious spare time.
 
 
-# What's the purpose of awards?
+# Do they fulfill their mission?
 
-Let's start more generally: what are awards and why are they given out? Here's the definition from [Wikipedia](https://en.wikipedia.org/wiki/Award):
-
-> An award, sometimes called a distinction, is given to a recipient as a token of recognition of excellence in a certain field.
-
-"Excellence in a field" can obviously mean a broad range of things. Here's a couple of "achievements" in the realm of board games that could be awarded:
-
-- A game to exceed a certain number of copies sold
-- A design that is so intracate that even the most advanced AI can't solve it (for some definition of a [solved game](https://en.wikipedia.org/wiki/Solved_game))
-- The most popular game (as measured, e.g., by a poll) of a given year
-- The best game (for some definition of "best") of a given year
-- The best game *for a certain purpose* of a given year
-
-Any one of those awards could be interesting and useful. So we need to ask ourselves: who is this award really for? Obviously, there's always the recipient, but the meaning of any award comes from its recognition: the group of people who really care about the award.
-
-Some awards want to recognise well defined exceptional achievements, like the Wolfskehl prize for proving Fermat's Last Theorem. Other awards really want to bring together a certain community and recognise distinguished members. Most academic awards fall into that category, as well as industry awards like the Oscars. Finally, there are awards that are mostly about highlighting the recipient to a wider audience, such as Nobel Peace Prize.
-
-Obviously, the lines between those categories are blurry, but I think it's a useful distinction to make. In particular it should be clear that the {{% sdj / %}} is a public facing award, *not* an industry award.
-
-
-# Do they fulfill their intentions?
-
-TODO
+- Do they fulfill promoting "Kulturgut Spiel" if they only highlight very light games?
+- Does their focus harm creativity?
 
 
 # How could the award be improved?
 
-TODO
+- More categories?
+- Clearer criteria?
 
 
 ## From the notebook
