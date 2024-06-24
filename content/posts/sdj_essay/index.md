@@ -14,6 +14,25 @@ tags:
 Some of you might have notices that I'm a bit of a {{% sdj / %}} fanboy. 🙃 Every year when the award season rolls around, the discussion about the purpose and the influence of {{% sdj / %}} comes up again. So I thought it's a good idea to collect my thoughts on the subject in one handy place I can easily reference in the future. 🤓
 
 
+# What's the purpose of {{% sdj / %}}?
+
+Let's get something fundamental out of the way: what is the purpose of not just this award, but *any* award? Here's the definition from [Wikipedia](https://en.wikipedia.org/wiki/Award):
+
+> An award, sometimes called a distinction, is given to a recipient as a token of recognition of excellence in a certain field.
+
+Maybe more important for our discussion isn't what the award is for, but *whom* it is for. Broadly speaking, there's two categories here: *inward* facing awards and *outward* facing awards.
+
+Inward facing awards are given by a certain community (or a subset of it) to its members. The main goal is to bring the community together, to recognise current achievements and discuss future directions. Most academic and industry awards fall into this category, as well as popularity contests in board gaming such as the Deutscher Spielepreis and the Golden Geek. In the most reductive way, it's about the community patting itself on the back.
+
+Outward facing awards, on the other hand, are meant to highlight said "excellence in a certain field" to a wider audience. Those awards are less concerned about being cutting edge or seeking consensus within a community, but rather about promoting the field to the public. {{% sdj / %}} is firmly in this category. To quote [their FAQ](https://www.spiel-des-jahres.de/en/faq/):
+
+> Ultimately, the jury is concerned with selecting and rewarding those games that seem best suited to promote the cultural asset of board games in society.
+
+*Kulturgut Spiel* or *games as a cultural asset* is a term you'll hear a lot when you listen to the jury. That's the most philosophical way to state their mission. The most reductive way to view {{% sdj / %}} is as a buyer's guide for people who are looking for one new game a year to play beneath the Christmas tree with their family. 🎄
+
+I think internalising this mission goes a long way towards understand what the award does and doesn't want to be.
+
+
 # What's the purpose of awards?
 
 Let's start more generally: what are awards and why are they given out? Here's the definition from [Wikipedia](https://en.wikipedia.org/wiki/Award):
@@ -33,11 +52,6 @@ Any one of those awards could be interesting and useful. So we need to ask ourse
 Some awards want to recognise well defined exceptional achievements, like the Wolfskehl prize for proving Fermat's Last Theorem. Other awards really want to bring together a certain community and recognise distinguished members. Most academic awards fall into that category, as well as industry awards like the Oscars. Finally, there are awards that are mostly about highlighting the recipient to a wider audience, such as Nobel Peace Prize.
 
 Obviously, the lines between those categories are blurry, but I think it's a useful distinction to make. In particular it should be clear that the {{% sdj / %}} is a public facing award, *not* an industry award.
-
-
-# What's the purpose of Spiel des Jahres?
-
-TODO
 
 
 # Who is the jury?
