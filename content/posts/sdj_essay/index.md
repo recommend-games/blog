@@ -44,6 +44,24 @@ A very valid criticism of the jury is it's a very small group of people – not 
 One last thing to emphasise about the jury: they all do this as an unpaid side gig. An important part of the jury's self-image is their independence, which necessitates that they don't take money from the industry. Conversely, the {{% sdj / %}} e.V. (a registered association) cannot be under pressure to earn a steady income every year. This is a lesson they learnt the hard way in the early 2000s when they were financing a game archive and had to pick winners that would sell well to keep the money flowing. A winner like {{% game 98778 %}}Hanabi{{% /game %}} (which retails for less than ten euros) would have been unthinkable under those circumstances. That's why they're very careful about any financial commitments they make. So, when people "demand" the jury should be doing this and be better at that: remember that they're only humans with families and day jobs who do this in their precious spare time.
 
 
+# Important points to make
+
+- Mission: Kulturgut Spiel (creativity)
+- Large windfall for a handful of publishers
+- Relevance to "gamers" and internationally
+  - Games I might have missed
+  - Great recommendations to play with your "non-gamer" friends & family
+  - Kinderspiel as a consumer: spot on!
+  - Spiel / Kennerspiel / Expertenspiel? (Compare to Golden Ace? Does their expert game award increase sales?)
+  - "Things were better back in the days"
+    - Do we know that people were actually playing El Grande?
+    - Did the jury lose trust during the late 90s?
+    - After all, this era came to an end with a big scandal
+- "Best" game of the year
+- Eligibility criteria (in particular: regular distribution)
+- Conclusion: a different award would be possible – but would it be a better one, in particular at fulfilling their mission? For me, the jury is doing a great job at being laser focused on their mission
+
+
 # Do they fulfill their mission?
 
 - Do they fulfill promoting "Kulturgut Spiel" if they only highlight very light games?
