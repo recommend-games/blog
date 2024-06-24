@@ -28,12 +28,12 @@ Outward facing awards, on the other hand, are meant to highlight said "excellenc
 
 > Ultimately, the jury is concerned with selecting and rewarding those games that seem best suited to promote the cultural asset of board games in society.
 
-*Kulturgut Spiel* or *games as a cultural asset* is a term you'll hear a lot when you listen to the jury. That's the most philosophical way to state their mission. The most reductive way to view {{% sdj / %}} is as a buyer's guide for people who are looking for one new game a year to play beneath the Christmas tree with their family. 🎄
+*Kulturgut Spiel* or *games as a cultural asset* is a term you'll hear a lot when you listen to the jury. That's the most philosophical way to state their mission. The most reductive way to view {{% sdj / %}} is as a buyer's guide for people who are looking for one new game a year to play underneath the Christmas tree with their family. 🎄
 
 I think internalising this mission goes a long way towards understand what the award does and doesn't want to be.
 
 
-# Who is the jury?
+# Who are the jury members?
 
 Another crucial aspect to understand about {{% sdj / %}} is the jury: who are they, who appoints them and who gives them the right to hand out this award? The short answer to the last question is: nobody. The jury decides who their members should be and what the purpose of the awards should be. There's no supervisory board, no government agency, no industry association that has any say in the matter. The {{% sdj / %}} was founded by a group of journalists and game critics in 1978 who thought it would be useful to have an award that highlights great games to the public. Over the decades, the public has learnt to trust the jury's recommendations, and this trust really is the only currency the jury possesses. That's why they are very protective of their brand and will be very careful about any changed they might implement.
 
