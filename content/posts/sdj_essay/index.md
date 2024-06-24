@@ -50,13 +50,7 @@ One last thing to emphasise about the jury: they all do this as an unpaid side g
 - Does their focus harm creativity?
 
 
-# How could the award be improved?
-
-- More categories?
-- Clearer criteria?
-
-
-## From the notebook
+# Does it represent the hobby?
 
 - It doesn't represent the hobby
   - It does, just in a much wider sense than the 'geeks
@@ -72,11 +66,35 @@ One last thing to emphasise about the jury: they all do this as an unpaid side g
 - It's irrelevant for "real" gamers
   - Here's a couple of games I probably would've missed if it wasn't for the jury:
     - TODO
+- Why does the jury put a heavyweight like Terraforming Mars or Ark Nova on the short- or longlist when they have no chance of winning anyways?
+  - Which one is it: Does the jury have no idea about gamers' games? Or should they completely ignore them?
+  - It is ambiguous: no expert game awards, but expert game recommendations – why?
+  - Clearly there are certain games they want to highlight
+  - After all, the jury members are "proper" games trough and trough!
+
+
+# How could the award be improved?
+
+- More categories?
+- Clearer criteria?
 - They claim to award the best game of the year and they don't!
   - It's easy to mentally add "best" in front of "game of the year", and the jury does say something like this – with caveats – in their FAQ
   - The name is probably not ideal
   - Relict from foundation in the late 70s, when there were only a handful of eligible games, most of them lighter, so SdJ really went to the best game
   - Now it's much more the best ambassador for the hobby
+- SdJ throws a big payday to one publisher, it should spread attention more
+  - Valid point, there's just one main winner that takes it all
+  - With the jury's focus, there's probably no way around this without watering down the brand
+  - Look at other awards with dozen of categories, nobody pays attention (worst offender: the Golden Geek)
+  - SdJ jury takes their license fees and try to promote the hobby where they can
+  - Forward concrete suggestions to them!
+- The criteria (game must be in regular circulation) disadvantage small publishers
+  - Probably only relevant for KS and Spielworxx
+  - The jury must be able to test exactly the product they'll be recommending to the gamers, so it needs to be the final product in stores, not something that gets changed from a licensor
+
+
+# Is it relevant internationally?
+
 - Its relevance only comes from its age as the oldest award
   - Classic survivorship bias
   - Probably not true, Origins Award seems older
@@ -89,30 +107,6 @@ One last thing to emphasise about the jury: they all do this as an unpaid side g
   - So many haters imply importance
   - All sorts of other awards are covered, but only SdJ articles get the "who cares" comments
   - There is a valid point: should SdJ expand internationally?
-- The jury is too small
-  - Yes, but: it's hard to expand since a membership is a lot to ask
-  - While the jury is small (compared to, e.g., the Oscars), you've got to remember that each member plays with dozens of people, so despite only 12 members in the jury, they do represent the taste and opinions of hundreds of people
-- SdJ throws a big payday to one publisher, it should spread attention more
-  - Valid point, there's just one main winner that takes it all
-  - With the jury's focus, there's probably no way around this without watering down the brand
-  - Look at other awards with dozen of categories, nobody pays attention (worst offender: the Golden Geek)
-  - SdJ jury takes their license fees and try to promote the hobby where they can
-  - Forward concrete suggestions to them!
-- The criteria (game must be in regular circulation) disadvantage small publishers
-  - Probably only relevant for KS and Spielworxx
-  - The jury must be able to test exactly the product they'll be recommending to the gamers, so it needs to be the final product in stores, not something that gets changed from a licensor
-- Why does the jury put a heavyweight like Terraforming Mars or Ark Nova on the short- or longlist when they have no chance of winning anyways?
-  - Which one is it: Does the jury have no idea about gamers' games? Or should they completely ignore them?
-  - It is ambiguous: no expert game awards, but expert game recommendations – why?
-  - Clearly there are certain games they want to highlight
-  - After all, the jury members are "proper" games trough and trough!
-- The judges are pre-programmed
-  - They claim to be fiercely independent
-  - Scandal in the early 2000s when SdJ was financing a game archive
-  - They observe play with lots of people, incl target audience
-  - Still painfully white though (at least much younger and more female than they used to be)
-- Flamme Rouge should have been SdJ!
-  - Yes, it should have been 😎
 
 
 ## Notes from Discord
