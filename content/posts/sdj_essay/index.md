@@ -46,13 +46,40 @@ One last thing to emphasise about the jury: they all do this as an unpaid side g
 
 # The good old days…
 
-You'll frequently hear the complaints that {{% sdj / %}} has become too shallow, in particular since the introduction of the {{% kdj %}}Kennerspiel{{% /kdj %}} in 2011 – an award which in turn has become too simple in many gamers' eyes. Just quickly to that point: the jury made up the term *Kennerspiel*, so they kind of get to decide what it means. It's often translated as *connoisseur game*, but that doesn't really capture its meaning. The name comes from *kennen*, i.e., it's an award for people who already *know* some games, no more, no less. As mentioned, the jury plays with a wide variety of people and they really experience when a game is hard to approach for some people, so we should really take their word for it what they label {{% kdj %}}Kennerspiel{{% /kdj %}}. (And it's not like they are inconsistent about it – there clearly are [some patterns]({{<ref "posts/kennerspiel/index.md">}}) to it. 🤓)
+You'll frequently hear the complaints that {{% sdj / %}} has become too shallow, in particular since the introduction of the {{% kdj %}}Kennerspiel{{% /kdj %}} in 2011 – an award which in turn has become too simple in many gamers' eyes. Just quickly to that point: the jury made up the term *Kennerspiel*, so they kind of get to decide what it means. It's often translated as *connoisseur game*, but that doesn't really capture its meaning. The name comes from *kennen*, i.e., it's an award for people who already *know* some games, no more, no less. As mentioned, the jury plays with a wide variety of people and they really experience when a game presents some hurdles of entry for some people, which is the much more important criterion that a game's "complexity". So we should really take their word for it what they label {{% kdj %}}Kennerspiel{{% /kdj %}}. (And it's not like they are inconsistent about it – there clearly are [some patterns]({{<ref "posts/kennerspiel/index.md">}}) to it. 🤓)
 
 But let's go back to those "good old days" in the second half of the 90s. {{% game 13 %}}CATAN{{% /game %}} won {{% sdj / %}} in 1995 – at that time, this was considered a really heavy pick (though the jury chairman [Harald Schrapers](https://x.com/HaraldSchrapers/status/1287829667211284480) would still consider it for {{% sdj %}}Spiel{{% /sdj %}}, not {{% kdj / %}}). Seemingly, this opened a door and paved the way for titles such as {{% game 93 %}}El Grande{{% /game %}}, {{% game 54 %}}Tikal{{% /game %}} and {{% game 88 %}}Torres{{% /game %}}, which would be considered complex for a {{% kdj %}}Kennerspiel{{% /kdj %}} by today's standards. So were people really smarter back then or had a longer attention span? Or did the jury actually make mistakes in that period and lost a lot of people's trust?
 
 I don't have any evidence for either interpretation – maybe people were excitedly playing {{% game 93 %}}El Grande{{% /game %}} with grandma and grandchild, or maybe those winners gathered dust on many shelves. What we do know is how this era came to an end: with a big scandal. In the early 2000s, the {{% sdj / %}} was financing a game archive and had to pick winners that would sell well to keep the money flowing. This kind of financial commitment put a lot of pressure on the jury and curtails their independence. A winner like {{% game 98778 %}}Hanabi{{% /game %}} (which retails for less than ten euros) would have been unthinkable under those circumstances.
 
 Overall, those years between 1996 and 2001 were hardly a golden age to be nostalgic about, but rather something of a dark period. Luckily, the jury today operates much more transparently, is very careful about any financial commitment they make and will emphasise their independence every chance they get.
+
+
+# Does it represent the hobby?
+
+Another frequent comment under any {{% sdj / %}} post is that it's irrelevant for "real gamers". First off: If this is true, why bother posting? Where does all the hate about something irrelevant come from? I know social media has trained us to state our opinion on everything all the time, even (or especially) when we don't have anything to add to the topic, but seriously: Silence is always an option. 🤫
+
+With that out of the way, it should be quite obvious that the award might not be relevant to any one individual, but it has a tremendous influence on the board game industry and hobby as a whole, in particular in Germany. I hear folks claim that {{% sdj / %}} is only relevant because it's from the largest board game country, but those people have the causation all wrong: The board game scene in Germany has grown so strong because it had this guiding beam over the decades as the focal point that drew in generations after generations of gamers. It's hard to write a history of the German board game scene without {{% sdj / %}} and it's very unlikely Germany would hold its position within the industry without it. Even SPIEL Essen, the largest board game convention in the world, grew out of waves that {{% sdj / %}} set in motion and was initially hosted in the very same location as first the award ceremony (a [school in Essen](https://de.wikipedia.org/wiki/Volkshochschule_Essen#Geb%C3%A4ude_an_der_Hollestra%C3%9Fe)).
+
+- It doesn't represent the hobby
+  - It does, just in a much wider sense than the 'geeks
+  - This award is where hobby and mass market intersect most strongly
+- That's a Kennerspiel? It's a Kinderspiel!
+  - The jury lets people play and observes them, with a wide variety of people
+  - They know quite well what difficulty some games pose to people, e.g., not knowing trick taking games, limited communication, the pressure of messing up common goals (letting the team down)
+  - They made up the term, so they get to decide what's a Kennerspiel
+- There should be an expert game category
+  - The jury is very protective of their brand, with a laser focus on their mission promoting games as a cultural asset
+  - Expert gamers don't need the guidance SdJ offers
+  - SdJ is not an industry award, but a consumer recommendation
+- It's irrelevant for "real" gamers
+  - Here's a couple of games I probably would've missed if it wasn't for the jury:
+    - TODO
+- Why does the jury put a heavyweight like Terraforming Mars or Ark Nova on the short- or longlist when they have no chance of winning anyways?
+  - Which one is it: Does the jury have no idea about gamers' games? Or should they completely ignore them?
+  - It is ambiguous: no expert game awards, but expert game recommendations – why?
+  - Clearly there are certain games they want to highlight
+  - After all, the jury members are "proper" games trough and trough!
 
 
 # Important points to make
@@ -77,29 +104,6 @@ Overall, those years between 1996 and 2001 were hardly a golden age to be nostal
 
 - Do they fulfill promoting "Kulturgut Spiel" if they only highlight very light games?
 - Does their focus harm creativity?
-
-
-# Does it represent the hobby?
-
-- It doesn't represent the hobby
-  - It does, just in a much wider sense than the 'geeks
-  - This award is where hobby and mass market intersect most strongly
-- That's a Kennerspiel? It's a Kinderspiel!
-  - The jury lets people play and observes them, with a wide variety of people
-  - They know quite well what difficulty some games pose to people, e.g., not knowing trick taking games, limited communication, the pressure of messing up common goals (letting the team down)
-  - They made up the term, so they get to decide what's a Kennerspiel
-- There should be an expert game category
-  - The jury is very protective of their brand, with a laser focus on their mission promoting games as a cultural asset
-  - Expert gamers don't need the guidance SdJ offers
-  - SdJ is not an industry award, but a consumer recommendation
-- It's irrelevant for "real" gamers
-  - Here's a couple of games I probably would've missed if it wasn't for the jury:
-    - TODO
-- Why does the jury put a heavyweight like Terraforming Mars or Ark Nova on the short- or longlist when they have no chance of winning anyways?
-  - Which one is it: Does the jury have no idea about gamers' games? Or should they completely ignore them?
-  - It is ambiguous: no expert game awards, but expert game recommendations – why?
-  - Clearly there are certain games they want to highlight
-  - After all, the jury members are "proper" games trough and trough!
 
 
 # How could the award be improved?
