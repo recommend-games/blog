@@ -61,25 +61,21 @@ Another frequent comment under any {{% sdj / %}} post is that it's irrelevant fo
 
 With that out of the way, it should be quite obvious that the award might not be relevant to any one individual, but it has a tremendous influence on the board game industry and hobby as a whole, in particular in Germany. I hear folks claim that {{% sdj / %}} is only relevant because it's from the largest board game country, but those people have the causation all wrong: The board game scene in Germany has grown so strong because it had this guiding beam over the decades as the focal point that drew in generations after generations of gamers. It's hard to write a history of the German board game scene without {{% sdj / %}} and it's very unlikely Germany would hold its position within the industry without it. Even SPIEL Essen, the largest board game convention in the world, grew out of waves that {{% sdj / %}} set in motion and was initially hosted in the very same location as first the award ceremony (a [school in Essen](https://de.wikipedia.org/wiki/Volkshochschule_Essen#Geb%C3%A4ude_an_der_Hollestra%C3%9Fe)).
 
-- It doesn't represent the hobby
-  - It does, just in a much wider sense than the 'geeks
-  - This award is where hobby and mass market intersect most strongly
-- That's a Kennerspiel? It's a Kinderspiel!
-  - The jury lets people play and observes them, with a wide variety of people
-  - They know quite well what difficulty some games pose to people, e.g., not knowing trick taking games, limited communication, the pressure of messing up common goals (letting the team down)
-  - They made up the term, so they get to decide what's a Kennerspiel
-- There should be an expert game category
-  - The jury is very protective of their brand, with a laser focus on their mission promoting games as a cultural asset
-  - Expert gamers don't need the guidance SdJ offers
-  - SdJ is not an industry award, but a consumer recommendation
-- It's irrelevant for "real" gamers
-  - Here's a couple of games I probably would've missed if it wasn't for the jury:
-    - TODO
-- Why does the jury put a heavyweight like Terraforming Mars or Ark Nova on the short- or longlist when they have no chance of winning anyways?
-  - Which one is it: Does the jury have no idea about gamers' games? Or should they completely ignore them?
-  - It is ambiguous: no expert game awards, but expert game recommendations – why?
-  - Clearly there are certain games they want to highlight
-  - After all, the jury members are "proper" games trough and trough!
+But are the awarded games representative of the hobby? With well [over a thousand games released every year]({{<ref "posts/gini/index.md">}}#historical-perspective), the twenty or so titles on the three longlists cannot possibly hope to cover the full breadth of the hobby. Admittedly, the jury doesn't even attempt to achieve a particular representation within their picks and it cannot be denied their recommendations come from a fairly narrow area of the hobby. One can lament this, but I'd say that {{% sdj / %}} is where hobby and mass market games most strongly intersect, and within this contraint the jury usually does a great job at highlighting some exceptional games to a broader audience.
+
+Here's another perspective for the geeks out there: {{% sdj / %}} is a great way to find games to play with your "non-gamer" friends and family. The {{% sdj %}}red games{{% /sdj %}} should be pretty much safe to break out with just about anyone and a great way to introduce folks to modern board games. Unless they already have some experience, resist the temptation to skip straight to the {{% kdj %}}anthrazithe games{{% /kdj %}} – don't introduce {{% game 284083 %}}The Crew{{% /game %}} to brand new gamers, no matter how much you insist it's a gateway game to you.
+
+Even for seasoned gamers, there are usually some interesting recommendations on the longlists. Here are a couple of games I love from the past few years I might have missed if it wasn't for {{% sdj / %}}:
+
+- {{% game 266083 %}}L.L.A.M.A.{{% /game %}} (2019)
+- {{% game 299169 %}}Spicy{{% /game %}} (2020)
+- {{% game 317311 %}}Switch & Signal{{% /game %}}
+- {{% game 300905 %}}Top Ten{{% /game %}} (2022)
+- {{% game 345584 %}}Mindbug{{% /game %}} (2023)
+
+And then there's of course the {{% kindersdj / %}}. While I'm not the target audience for the two "grown up" awards (nor are any one of you, dear readers of a board game blog 🤓), I'm definitely on the lookout for new and interesting games to play with my daughters without spending any time to research the latest releases. That's why {{% kindersdj / %}} is such a valuable resource to me – so far, each and every winner we've played was a hit with my girls, and I'm already looking forward to trying out this year's winner. I know it's only a sample size of two, but at least my little gamers seem happy the award exists. 🥰
+
+Finally, let's address the question if there should be an "expert game" category. This is a reasonable idea – after all, the [As d'Or](https://en.wikipedia.org/wiki/As_d'Or), often called the French equivalent of {{% sdj / %}} and the second most important award in board gaming, does have an expert category. (In fact, they introduced *initié*, their {{% kdj %}}Kennerspiel{{% /kdj %}}, only in 2022, six years after the *expert* category.) I'd be really curious to learn if {{% game 316554 %}}Dune: Imperium{{% /game %}}, {{% game 342942 %}}Ark Nova{{% /game %}} and {{% game 367517 %}}La Famiglia{{% /game %}}, the three most recent winners of the expert game award actually saw a notable increase of their sales in France. The jury {{% sdj / %}} has always denied the necessity of such a category, arguing that expert gamers don't need the guidance they offer. Attention is a very limited resource, so any additional award would water down the others. The jury is laser focused on their mission promoting games to the public and an expert category would be a distraction from that. I agree, it would be one of those inward facing industry awards – interesting, for sure, but not as relevant to the wider public.
 
 
 # Important points to make
