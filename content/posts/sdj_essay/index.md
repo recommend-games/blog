@@ -9,12 +9,12 @@ tags:
   - Spiel des Jahres
 ---
 
-# Introduction
-
 Some of you might have notices that I'm a bit of a {{% sdj / %}} fanboy. 🙃 Every year when the award season rolls around, the discussion about the purpose and the influence of {{% sdj / %}} comes up again. So I thought it's a good idea to collect my thoughts on the subject in one handy place I can easily reference in the future. 🤓
 
 
 # What's the purpose of {{% sdj / %}}?
+
+{{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
 Let's get something fundamental out of the way: what is the purpose of not just this award, but *any* award? Here's the definition from [Wikipedia](https://en.wikipedia.org/wiki/Award):
 
@@ -78,6 +78,17 @@ And then there's of course the {{% kindersdj / %}}. While I'm not the target aud
 Finally, let's address the question if there should be an "expert game" category. This is a reasonable idea – after all, the [As d'Or](https://en.wikipedia.org/wiki/As_d'Or), often called the French equivalent of {{% sdj / %}} and the second most important award in board gaming, does have an expert category. (In fact, they introduced *initié*, their {{% kdj %}}Kennerspiel{{% /kdj %}}, only in 2022, six years after the *expert* category.) I'd be really curious to learn if {{% game 316554 %}}Dune: Imperium{{% /game %}}, {{% game 342942 %}}Ark Nova{{% /game %}} and {{% game 367517 %}}La Famiglia{{% /game %}}, the three most recent winners of the expert game award actually saw a notable increase of their sales in France. The jury {{% sdj / %}} has always denied the necessity of such a category, arguing that expert gamers don't need the guidance they offer. Attention is a very limited resource, so any additional award would water down the others. The jury is laser focused on their mission promoting games to the public and an expert category would be a distraction from that. I agree, it would be one of those inward facing industry awards – interesting, for sure, but not as relevant to the wider public.
 
 
+# Do they fulfill their mission?
+
+After more than 2'000 words it's probably high time for some kind of conclusion. 😅 The jury set a lofty goal for themselves: promoting *Kulturgut Spiel*. It's only fair to ask: Do they succeed? Where could they improve?
+
+One criticism I've already alluded to is their focus on very light – one might say "mass compatible" – games. If one takes the *Kulturgut Spiel* concept seriously and regards board games as a form of art that's worth of academic study, shouldn't they also promote some of the the very deep and thoughtprovoking games that are being released off the beaten path? I think this is a very valid point and I wish the jury would find a way to achieve this goal. We shouldn't forget though that the award is only one part of the jury's work. Part of the license fees they collect for using their logo to promote the winners goes into [funding board game related topics](https://www.spiel-des-jahres.de/foerderprogramm/), such as games for libraries, schools, clubs etc, a [stipend](https://www.spiel-des-jahres.de/stipendium/) for new game designers, [academic positions](https://www.spiel-des-jahres.de/jetzt-bewerben-postdoc-stelle-fuer-brettspiel-forschung/) and an [initiative](https://www.spiel-des-jahres.de/spielend-fuer-toleranz/) for tolerance and against racism.
+
+{{< img src="spielend-fuer-toleranz" size="x300" alt="Spielend für Toleranz" >}}
+
+Are those the right projects? Are they enough? Hard to say, obviously. One problem the (German) board game industry has been facing for some time is the lack of political organisation. There's no central lobby group and hence very little political attention to board gaming. The jury is probably the group with the most resources and clout to make a difference, but an independent group of a dozen volunteers is certainly not the right entity to shoulder this task. I'd say it's symptomatic of the expectations many industry players have of the jury: because of their influence and financial means, {{% sdj / %}} is supposed to solve all kinds of problems, when really all they want to do is to recommend a good game to play with your family and friends. 😎
+
+
 # Important points to make
 
 - Mission: Kulturgut Spiel (creativity)
@@ -94,12 +105,6 @@ Finally, let's address the question if there should be an "expert game" category
 - "Best" game of the year
 - Eligibility criteria (in particular: regular distribution)
 - Conclusion: a different award would be possible – but would it be a better one, in particular at fulfilling their mission? For me, the jury is doing a great job at being laser focused on their mission
-
-
-# Do they fulfill their mission?
-
-- Do they fulfill promoting "Kulturgut Spiel" if they only highlight very light games?
-- Does their focus harm creativity?
 
 
 # How could the award be improved?
