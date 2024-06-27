@@ -101,7 +101,7 @@ TODO: Interpret numbers
 
 ## {{% game 334986 %}}Daybreak{{% /game %}}
 
-*1–4 players, 60–120 minutes, 10+ years, medium (3.0), 99% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–4 players, 60–120 minutes, 10+ years, medium (3.0)*
 
 {{< img src="334986" size="x300" alt="Daybreak" >}}
 
@@ -110,7 +110,7 @@ TODO: Interpret numbers
 
 ## {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
 
-*1–4 players, 45 minutes, 14+ years, medium light (2.0), 95% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*1–4 players, 45 minutes, 14+ years, medium light (2.0)*
 
 {{< img src="350933" size="x300" alt="The Guild of Merchant Explorers" >}}
 
@@ -119,7 +119,7 @@ TODO: Interpret numbers
 
 ## {{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}}
 
-*2–5 players, 20–90 minutes, 10+ years, medium (2.5), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+*2–5 players, 20–90 minutes, 10+ years, medium (2.5)*
 
 {{< img src="390092" size="x300" alt="Ticket to Ride Legacy: Legends of the West" >}}
 
