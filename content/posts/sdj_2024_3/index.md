@@ -41,13 +41,13 @@ I've been doing this [for]({{<ref "posts/sdj_2020_3/index.md">}}) [four]({{<ref 
 
 {{< img src="sdj-2024" size="x300" alt="Spiel des Jahres 2024" >}}
 
-Before we dive into the individual games, let's look at some numbers to see some objective measures for them – as far as this is possible. What we've got at our disposal are the [recommendations to the `S_d_J` bot](https://recommend.games/#/?for=S_d_J&yearMin=2024&yearMax=2023&include=376683,393325,373106,350933,390092,334986&excludeRated=false), BoardGameGeek's average rating and the [Bayesian rating]({{<ref "posts/reverse_engineer_bgg/index.md">}}). Additionally, I've created a [poll on BGG](https://boardgamegeek.com/thread/3319930/poll-spiel-des-jahres-2024-and-kennerspiel-des-jah) where the geeks could have their say:
+Before we dive into the individual games, let's look at some numbers to see some objective measures for them – as far as this is possible. What we've got at our disposal are the [jury's reviews](reviews.csv), [recommendations to the `S_d_J` bot](https://recommend.games/#/?for=S_d_J&yearMin=2024&yearMax=2023&include=376683,393325,373106,350933,390092,334986&excludeRated=false), BoardGameGeek's average rating and the [Bayesian rating]({{<ref "posts/reverse_engineer_bgg/index.md">}}). Additionally, I've created a [poll on BGG](https://boardgamegeek.com/thread/3319930/poll-spiel-des-jahres-2024-and-kennerspiel-des-jah) where the geeks could have their say:
 
-| Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2024&yearMax=2023&include=376683,393325,373106&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3319930/poll-spiel-des-jahres-2024-and-kennerspiel-des-jah) |
-|:---|---:|---:|---:|---:|
-| {{% game 393325 %}}Captain Flip{{% /game %}} | TODO | TODO | TODO | TODO |
-| {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}} | TODO | TODO | TODO | TODO |
-| {{% game 373106 %}}Sky Team{{% /game %}} | TODO | TODO | TODO | TODO |
+| Game | [Jury](reviews.csv) | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2024&yearMax=2023&include=376683,393325,373106&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3319930/poll-spiel-des-jahres-2024-and-kennerspiel-des-jah) |
+|:---|---:|---:|---:|---:|---:|
+| {{% game 393325 %}}Captain Flip{{% /game %}} | 7.2 (5) | 5.3 | TODO | TODO | TODO |
+| {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}} | 7.0 (3) | 5.1 | TODO | TODO | TODO |
+| {{% game 373106 %}}Sky Team{{% /game %}} | **8.8** (4) | **7.0** | TODO | TODO | TODO |
 
 TODO: What do the numbers say?
 
@@ -90,11 +90,11 @@ TODO: Predict winner
 
 Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspiel{{% /kdj %}} nominees:
 
-| Game | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2024&yearMax=2023&include=350933,390092,334986&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3319930/poll-spiel-des-jahres-2024-and-kennerspiel-des-jah) |
-|:---|---:|---:|---:|---:|
-| {{% game 334986 %}}Daybreak{{% /game %}} | TODO | TODO | TODO | TODO |
-| {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}} | TODO | TODO | TODO | TODO |
-| {{% game 390092 %}}Ticket to Ride Legacy{{% /game %}} | TODO | TODO | TODO | TODO |
+| Game | [Jury](reviews.csv) | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2024&yearMax=2023&include=350933,390092,334986&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3319930/poll-spiel-des-jahres-2024-and-kennerspiel-des-jah) |
+|:---|---:|---:|---:|---:|---:|
+| {{% game 334986 %}}Daybreak{{% /game %}} | **8.3** (4) | 4.5 | TODO | TODO | TODO |
+| {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}} | 7.3 (3) | 6.9 | TODO | TODO | TODO |
+| {{% game 390092 %}}Ticket to Ride Legacy{{% /game %}} | 8.0 (2) | **7.1** | TODO | TODO | TODO |
 
 TODO: Interpret numbers
 
