@@ -60,6 +60,8 @@ TODO: What do the numbers say?
 
 *Hoist your flag, recruit a colorful crew, and earn as many gold coins as you can.*
 
+The first release by [PlayPunk](https://boardgamewire.com/index.php/2023/06/20/7-wonders-creator-repos-productions-co-founder-launch-new-publishing-company-playpunk/), co-founded by [hall-of-fame-member]({{<ref "posts/designer_hall_of_fame/index.md">}}) [Antoine Bauza](https://recommend.games/#/?designer=9714) immediately landed their first nomination.
+
 
 ## {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}}
 
