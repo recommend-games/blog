@@ -93,7 +93,7 @@ One last thought about it being nominated on the {{% sdj %}}red list{{% /sdj %}}
 
 ## Who will win?
 
-TODO: Predict winner
+It may be my ignorance, but {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}} is for me the outsider amongst the nominees. I have a really hard time deciding between the other two games. {{% game 373106 %}}Sky Team{{% /game %}} appears to be quite an exceptional game, but maybe the whole two-player-curse is still a bit of a burden. In the end, my (proverbial) money is on {{% game 393325 %}}Captain Flip{{% /game %}} – it'd be the winner most in keeping with the most recent choices.
 
 
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2024{{% /kdj %}}
