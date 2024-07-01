@@ -73,6 +73,8 @@ On the surface, there isn't all that much to this game of flipping tiles and fil
 
 *Assist Charles Darwin with his research for On the Origins of Species.*
 
+I'll admit I have neither played nor heard all that much about this game until [Ben Maddox's interview](https://youtu.be/gLEq5l4RfWY?si=pHwe9qF5Hpg0eKda) which I've mentioned in the [previous article]({{<ref "posts/sdj_essay/index.md">}}). One very interesting outcome was that {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}} was designed from the onset very intentionally with winning awards in mind. So far this plan seems to (almost) work out: The game got nominated for both [As d'Or](https://en.wikipedia.org/wiki/As_d'Or) and {{% sdj / %}}, widely regarded as the most important awards in board gaming. It didn't win the former, but now has the chance to win the latter.
+
 
 ## {{% game 373106 %}}Sky Team{{% /game %}}
 
