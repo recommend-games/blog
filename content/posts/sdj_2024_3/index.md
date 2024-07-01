@@ -84,6 +84,12 @@ I'll admit I have neither played nor heard all that much about this game until [
 
 *Pilot and co-pilot work together to land planes.*
 
+{{% game 373106 %}}Sky Team{{% /game %}} is only the third two-player-game to be nominated for either {{% sdj %}}Spiel{{% /sdj %}} and {{% kdj %}}Kennerspiel{{% /kdj %}} after {{% game 12002 %}}Jambo{{% /game %}} and {{% game 118048 %}}Targi{{% /game %}}. Of course, neither of them won, and I've already made during the [nominations predictions]({{<ref "posts/sdj_2024/index.md">}}#2-a-hrefhttpsrecommendgamesgame373106-stylefont-variant-small-capssky-teama) the somewhat bold statement that {{% game 373106 %}}Sky Team{{% /game %}} "has next to no chance of winning". I'm not so sure of that anymore. For starters, there were similar sentiments that card games or co-ops wouldn't have a chance of winning {{% sdj / %}} – until they did. Also, the jury stated that one can simply play this game in teams – given that {{% game 318977 %}}MicroMacro{{% /game %}} and {{% game 370591 %}}Dorfromantik{{% /game %}} are essentially solo games that play well with a group, I'd say this logic checks out.
+
+Of course, the strongest argument for {{% game 373106 %}}Sky Team{{% /game %}} is its overwhelming reception, both within the geek community (it's en route of breaking into the BGG top 100) and the jury (just look at the phenominal average score of 8.8).
+
+One last thought about it being nominated on the {{% sdj %}}red list{{% /sdj %}} even though most pundits had it under {{% kdj %}}anthracite{{% /kdj %}}. First off, it should prove that {{% sdj / %}} isn't nearly as shallow as the grognards want us to believe. Second, it shows that the question of {{% sdj %}}Spiel{{% /sdj %}} or {{% kdj %}}Kennerspiel{{% /kdj %}} is much less about *complexity* and much more about *approachability*. The studio did a great job of providing a clear yet compelling first game experience, while literally hiding the extra material (and complexity) at first.
+
 
 ## Who will win?
 
