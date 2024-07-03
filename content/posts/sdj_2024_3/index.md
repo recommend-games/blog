@@ -145,6 +145,16 @@ Despite its age, I still haven't played it, so I don't have much more to say abo
 
 *Build train lines across the United States in a twelve-game campaign.*
 
+This game might be the first hobby board game I'd call a true blockbuster title: the biggest publisher in town hires some of the most famous designers to make one of the most popular titles even bigger. [Marvelisation]({{<ref "posts/gini/index.md">}}) in action. Of course, just as Marvel movies can be perfectly executed and highly entertaining cinema, {{% game 390092 %}}Ticket to Ride Legacy{{% /game %}} has received high praises for its game play experience.
+
+This experience comes at a cost though. The game retails for 100 euros or more, which is an extremely steep ask for an award that otherwise emphasises approachability every chance they get. It would be very disappointing if the jury would display this kind of blatant disregard to the economic reality of many of its target audience.
+
+And then there's the issue of the game's narrative: Unlike in classic {{% game 9209 %}}Ticket to Ride{{% /game %}}, where you're simply riding the existing railroads, {{% game 390092 %}}TtR Legacy{{% /game %}} is all about building and expanding westwards. For that, it heavily relies on the common tropes of the "Old West", which is often romanticised in American culture. The designers themselves acknowledge omitting its darker side in a pretty tired note at the end of the rulebook:
+
+> Native American tribes were dispossessed and killed. Railroad laborers were exploited, mistreated, and injured. While designing this experience, we found no way to include these elements within the lighter theme of the game.
+
+The German edition made it somehow even worse by translating "light" as "shallow". I don't say that every game needs to address every possible problematic aspect of its setting nor that the jury shouldn't have nominated {{% game 390092 %}}TtR Legacy{{% /game %}} because of it, but a note like just seems like a poor excuse. Harald Schrapers, the jury chairman, wrote an essay in Spielbox 2024/2 expressing his disappointment about the thematic embedding – yet still ranks {{% game 390092 %}}TtR Legacy{{% /game %}} amongst [his top games of 2024](https://gamesweplay.de/).
+
 
 ## Who will win?
 
