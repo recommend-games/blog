@@ -93,7 +93,7 @@ One last thought about it being nominated on the {{% sdj %}}red list{{% /sdj %}}
 
 ## Who will win?
 
-It may be my ignorance, but {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}} is for me the outsider amongst the nominees. I have a really hard time deciding between the other two games. {{% game 373106 %}}Sky Team{{% /game %}} appears to be quite an exceptional game, but maybe the whole two-player-curse is still a bit of a burden. In the end, my (proverbial) money is on {{% game 393325 %}}Captain Flip{{% /game %}} – it'd be the winner most in keeping with the most recent choices.
+It may be my ignorance, but {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}} is for me the outsider amongst the nominees. I have a really hard time deciding between the other two games. {{% game 373106 %}}Sky Team{{% /game %}} appears to be quite an exceptional game, but maybe the whole two-player-curse is still too much of a burden. In the end, my (proverbial) money is on {{% game 393325 %}}Captain Flip{{% /game %}} – it'd be the winner most in keeping with the most recent choices.
 
 
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2024{{% /kdj %}}
@@ -121,7 +121,7 @@ TODO: Interpret numbers
 
 I had the good fortune of trying out {{% game 334986 %}}Daybreak{{% /game %}} at SPIEL Essen last year. I'll admit, when I sat down at the table, I was overwhelmed by the flurry of icons. 😵‍💫 But quickly, the gears all fit together and the beautiful thematic touches won over my heart before we'd finish the second round. This design is a masterpiece and the way it manages to make a statement without forgetting to be a fun game experience is quite outstanding.
 
-This doesn't mean it's perfect – game play can feel fairly solitaire and some thematic choices aren't too everybody's taste. Some called the game too easy, other too hard. Some find the heavy topic of the climate crisis disturbing their escapism, others find the game overly optimistic and relying too much on technical advances for its solutions. And pretty much every German seems to take offence with nuclear power being presented as a green source of energy. So should this game receive the award, I think is safe to say it's going to generate some conversations, both in public and around the Christmas tree. In my opinion, this is the strongest argument for making {{% game 334986 %}}Daybreak{{% /game %}} the {{% kdj %}}Kennerspiel 2024{{% /kdj %}}.
+This doesn't mean it's perfect – game play can feel fairly solitaire and some thematic choices aren't too everybody's taste. Some called the game too easy, other too hard. Some find the heavy topic of the climate crisis disturbing their escapism, others find the game overly optimistic and relying too much on technical advances for its solutions. And pretty much every German seems to take offence with nuclear power being presented as a green source of energy. So should this game receive the award, I think it's safe to say it's going to generate some conversations, both in public and around the Christmas tree. In my opinion, this is the strongest argument for making {{% game 334986 %}}Daybreak{{% /game %}} the {{% kdj %}}Kennerspiel 2024{{% /kdj %}}.
 
 
 ## {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
@@ -132,7 +132,7 @@ This doesn't mean it's perfect – game play can feel fairly solitaire and some 
 
 *Explore strange lands, establish trade routes, and search for treasure.*
 
-This game is so old, not only did I already predict it to be on the longlist [last year]({{<ref "posts/sdj_2023/index.md">}}), but [reportedly](https://bsky.app/profile/peersylvester.bsky.social/post/3kuntlbj3jy2t) even its German publisher had already marked it as "out of print". Now it's nominated for the biggest award in board gaming and can hope for many more print runs to come.
+This game is so old, not only did I already predict it to be on the longlist [last year]({{<ref "posts/sdj_2023/index.md">}}#7-a-hrefhttpsrecommendgamesgame350933-stylefont-variant-small-capsthe-guild-of-merchant-explorersa), but [reportedly](https://bsky.app/profile/peersylvester.bsky.social/post/3kuntlbj3jy2t) even its German publisher had already marked it as "out of print". Now it's nominated for the biggest award in board gaming and can hope for many more print runs to come.
 
 Despite its age, I still haven't played it, so I don't have much more to say about {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}. My impression is that it was received very warmly and the nomination certainly wasn't a surprise (other than it not being clear what year it belongs to), but I haven't heard of much enthusiasm either, so a win would come unexpectedly.
 
@@ -153,7 +153,7 @@ And then there's the issue of the game's narrative: Unlike in classic {{% game 9
 
 > Native American tribes were dispossessed and killed. Railroad laborers were exploited, mistreated, and injured. While designing this experience, we found no way to include these elements within the lighter theme of the game.
 
-The German edition made it somehow even worse by translating "light" as "shallow". I don't say that every game needs to address every possible problematic aspect of its setting nor that the jury shouldn't have nominated {{% game 390092 %}}TtR Legacy{{% /game %}} because of it, but a note like just seems like a poor excuse. Harald Schrapers, the jury chairman, wrote an essay in Spielbox 2024/2 expressing his disappointment about the thematic embedding – yet still ranks {{% game 390092 %}}TtR Legacy{{% /game %}} amongst [his top games of 2024](https://gamesweplay.de/).
+The German edition made it somehow even worse by translating "light" as "shallow". I don't say that every game needs to address every possible problematic aspect of its setting nor that the jury shouldn't have nominated {{% game 390092 %}}TtR Legacy{{% /game %}} because of it, but a note like this just seems like a poor excuse. Harald Schrapers, the jury chairman, wrote an essay in Spielbox 2024/2 expressing his disappointment about the thematic embedding – and yet he still ranks {{% game 390092 %}}TtR Legacy{{% /game %}} amongst [his top games of 2024](https://gamesweplay.de/).
 
 
 ## Who will win?
