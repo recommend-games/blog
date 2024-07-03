@@ -132,6 +132,10 @@ This doesn't mean it's perfect – game play can feel fairly solitaire and some 
 
 *Explore strange lands, establish trade routes, and search for treasure.*
 
+This game is so old, not only did I already predict it to be on the longlist [last year]({{<ref "posts/sdj_2023/index.md">}}), but [reportedly](https://bsky.app/profile/peersylvester.bsky.social/post/3kuntlbj3jy2t) even its German publisher had already marked it as "out of print". Now it's nominated for the biggest award in board gaming and can hope for many more print runs to come.
+
+Despite its age, I still haven't played it, so I don't have much more to say about {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}. My impression is that it was received very warmly and the nomination certainly wasn't a surprise (other than it not being clear what year it belongs to), but I haven't heard of much enthusiasm either, so a win would come unexpectedly.
+
 
 ## {{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}}
 
