@@ -119,6 +119,10 @@ TODO: Interpret numbers
 
 *Cooperatively decarbonize the planet and create resilient societies.*
 
+I had the good fortune of trying out {{% game 334986 %}}Daybreak{{% /game %}} at SPIEL Essen last year. I'll admit, when I sat down at the table, I was overwhelmed by the flurry of icons. 😵‍💫 But quickly, the gears all fit together and the beautiful thematic touches won over my heart before we'd finish the second round. This design is a masterpiece and the way it manages to make a statement without forgetting to be a fun game experience is quite outstanding.
+
+This doesn't mean it's perfect – game play can feel fairly solitaire and some thematic choices aren't too everybody's taste. Some called the game too easy, other too hard. Some find the heavy topic of the climate crisis disturbing their escapism, others find the game overly optimistic and relying too much on technical advances for its solutions. And pretty much every German seems to take offence with nuclear power being presented as a green source of energy. So should this game receive the award, I think is safe to say it's going to generate some conversations, both in public and around the Christmas tree. In my opinion, this is the strongest argument for making {{% game 334986 %}}Daybreak{{% /game %}} the {{% kdj %}}Kennerspiel 2024{{% /kdj %}}.
+
 
 ## {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
 
