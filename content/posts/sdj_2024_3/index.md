@@ -158,6 +158,6 @@ The German edition made it somehow even worse by translating "light" as "shallow
 
 ## Who will win?
 
-TODO: Predict winner
+I guess I made my position pretty clear: if the jury takes their own mission of promoting [*Kulturgut Spiel*]({{<ref "posts/sdj_essay/index.md">}}) seriously, they need to hand the award to {{% game 334986 %}}Daybreak{{% /game %}}. Even leaving the somewhat political considerations aside, there's too many aspects speaking *against* {{% game 390092 %}}Ticket to Ride Legacy{{% /game %}} and not enough *for* {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}, so my clear favourite on all acounts is {{% game 334986 %}}Daybreak{{% /game %}}.
 
-TODO: Conclusion
+I feel I've leaned pretty far out of the window, especially given that I called this the closest race yet. 😅 We shall see if my predictions come true on July 21 – I'll be even more excited than usual!
