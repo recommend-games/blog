@@ -45,11 +45,11 @@ Before we dive into the individual games, let's look at some numbers to see some
 
 | Game | [Jury](reviews.csv) | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2024&yearMax=2023&include=376683,393325,373106&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3319930/poll-spiel-des-jahres-2024-and-kennerspiel-des-jah) |
 |:---|---:|---:|---:|---:|---:|
-| {{% game 393325 %}}Captain Flip{{% /game %}} | 7.2 (5) | 5.3 | TODO | TODO | TODO |
-| {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}} | 7.0 (3) | 5.1 | TODO | TODO | TODO |
-| {{% game 373106 %}}Sky Team{{% /game %}} | **8.8** (4) | **7.0** | TODO | TODO | TODO |
+| {{% game 393325 %}}Captain Flip{{% /game %}} | 7.2 (5) | 5.3 | 7.0 | 6.0 | 28.9% |
+| {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}} | 7.0 (3) | 5.1 | 7.4 | 6.2 | 13.2% |
+| {{% game 373106 %}}Sky Team{{% /game %}} | **8.8** (4) | **7.0** | **8.2** | **7.5** | **57.9%** |
 
-TODO: What do the numbers say?
+Obviously, {{% game 373106 %}}Sky Team{{% /game %}} is the high favourite according to all metrics. But will the jury follow the numbers? Let's take a closer look at all the nominees and their pros and cons.
 
 
 ## {{% game 393325 %}}Captain Flip{{% /game %}}
@@ -104,11 +104,11 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 
 | Game | [Jury](reviews.csv) | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2024&yearMax=2023&include=350933,390092,334986&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3319930/poll-spiel-des-jahres-2024-and-kennerspiel-des-jah) |
 |:---|---:|---:|---:|---:|---:|
-| {{% game 334986 %}}Daybreak{{% /game %}} | **8.3** (4) | 4.5 | TODO | TODO | TODO |
-| {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}} | 7.3 (3) | 6.9 | TODO | TODO | TODO |
-| {{% game 390092 %}}Ticket to Ride Legacy{{% /game %}} | 8.0 (2) | **7.1** | TODO | TODO | TODO |
+| {{% game 334986 %}}Daybreak{{% /game %}} | **8.3** (4) | 4.5 | 7.8 | 6.5 | **40.8%** |
+| {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}} | 7.3 (3) | 6.9 | 7.7 | 7.0 | 24.8% |
+| {{% game 390092 %}}Ticket to Ride Legacy{{% /game %}} | 8.0 (2) | **7.1** | **8.8** | **7.3** | 34.4% |
 
-TODO: Interpret numbers
+{{% game 334986 %}}Daybreak{{% /game %}} hasn't been available in retail for very long (not at all yet in Europe outside Germany), which harms its rating related metrics. This way, {{% game 390092 %}}Ticket to Ride Legacy{{% /game %}} looks like the favourite by those numbers, but {{% game 334986 %}}Daybreak{{% /game %}} would be the frontrunner according to the jury and the poll. Again, let's take a look at the nominees in details to understand their chances of winning.
 
 
 ## {{% game 334986 %}}Daybreak{{% /game %}}
@@ -153,7 +153,7 @@ And then there's the issue of the game's narrative: Unlike in classic {{% game 9
 
 > Native American tribes were dispossessed and killed. Railroad laborers were exploited, mistreated, and injured. While designing this experience, we found no way to include these elements within the lighter theme of the game.
 
-The German edition made it somehow even worse by translating "light" as "shallow". I don't say that every game needs to address every possible problematic aspect of its setting nor that the jury shouldn't have nominated {{% game 390092 %}}TtR Legacy{{% /game %}} because of it, but a note like this just seems like a poor excuse. Harald Schrapers, the jury chairman, wrote an essay in Spielbox 2024/2 expressing his disappointment about the thematic embedding – and yet he still ranks {{% game 390092 %}}TtR Legacy{{% /game %}} amongst [his top games of 2024](https://gamesweplay.de/).
+The German edition made it somehow even worse by translating "light" as "shallow". I don't say that every game needs to address every possible problematic aspect of its setting nor that the jury shouldn't have nominated {{% game 390092 %}}TtR Legacy{{% /game %}} because of it, but a note like this just seems like a poor excuse. Harald Schrapers, the jury chairman, wrote an essay in [Spielbox](https://spielbox.de/) 2024/2 expressing his disappointment about the thematic embedding – and yet he still ranks {{% game 390092 %}}TtR Legacy{{% /game %}} amongst [his top games of 2024](https://gamesweplay.de/).
 
 
 ## Who will win?
