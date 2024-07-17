@@ -56,7 +56,7 @@ To answer that question, we can look at how the Gini coefficient has changed ove
 
 {{< img src="gini_coefficient_over_time" alt="The Gini coefficient of BoardGameGeek ratings over time" >}}
 
-So, we started out this period with a little over 0.8 and have been steadily creeping up to over 0.835 today. This increase of inequality on a very high level is an interesting observation – and somewhat worrying. For comparison: The most unequal country in the world is considered to be South Africa 🇿🇦, with a Gini coefficient of 0.63. The US 🇺🇸 has a Gini coefficient of 0.40, Finland 🇫🇮 0.27 and Slowakia 🇸🇰 0.23, the lowest value in the world.[^wikipedia]
+So, we started out this period with a little over 0.8 and have been steadily creeping up to over 0.835 today. This increase of inequality on a very high level is an interesting observation – and somewhat worrying. For comparison: The most unequal country in the world is considered to be South Africa 🇿🇦, with a Gini coefficient of 0.63. The US 🇺🇸 has a Gini coefficient of 0.40, Finland 🇫🇮 0.27 and Slovakia 🇸🇰 0.23, the lowest value in the world.[^wikipedia]
 
 Obviously, those values don't compare directly, but they serve as a reminder of just how unequal the baseline in 2016 was, and the situation has intensified since then. So, why is that? One obvious factor is the number of new games being released each year. Let's take a look at this plot:
 
@@ -66,7 +66,7 @@ So, there's a lot to unpack here. Start from the bars in the background: they co
 
 The dots are the Gini coefficient just for that cohort, i.e., those dots measure how unequal the ratings are distributed among the games released in that year. The higher up a dot is, the more a year is dominated by a few games – or just a single one. {{% game 13 %}}CATAN{{% /game %}}, the most rated game on BGG (see above), single-handedly makes the 1995 cohort the most unequal year in the dataset. The sizes of the dots represent the most popular game of that year, so 1995, 2000 and 2008 get the biggest dots. Unsurprisingly, games with an uber-popular game (big dot) tend to have a higher Gini coefficient (high up on the y-axis).
 
-But there something else going on: whilst the number of releases have been skyrocketing since 2013, the Gini coefficients of the years since 2016 have been falling noticibly, indicating less concentration of the ratings on just a few games. Games released in 2022 form the first cohort with a Gini coefficient below 0.75 since the 90s.
+But there's something else going on: whilst the number of releases have been skyrocketing since 2013, the Gini coefficients of the years since 2016 have been falling noticibly, indicating less concentration of the ratings on just a few games. Games released in 2022 form the first cohort with a Gini coefficient below 0.75 since the 90s.
 
 So how come that rating inequality is still rising? This might have to do with publishers' increased focus on evergreens – flagship titles and lines that have proven to be consistently popular. Most publishers will rather release new expansions for and versions of a successful game than take a risk on a new one. So while new releases get slightly more evenly distributed attention, much of the overall attention (and marketing budget) is still drawn to select few games. Publishers and designers certainly complain that it's increasingly harder for new games to get noticed and even get a second printrun, and the data seems to support those complaints.
 

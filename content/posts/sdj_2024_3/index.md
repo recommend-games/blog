@@ -34,7 +34,7 @@ tags:
 
 The waiting is finally coming to an end! On Sunday, July 21, the jury will announce the winners of {{% sdj %}}Spiel des Jahres{{% /sdj %}} and {{% kdj %}}Kennerspiel des Jahres 2024{{% /kdj %}}. We're blessed with another year of very strong games and I'm certainly very excited to learn what games will win the two awards.
 
-I've been doing this [for]({{<ref "posts/sdj_2020_3/index.md">}}) [four]({{<ref "posts/sdj_2021_3/index.md">}}) [years]({{<ref "posts/sdj_2022_3/index.md">}}) [now]({{<ref "posts/sdj_2024_3/index.md">}}) and I've called seven out of the eight winners correctly. No reason to rest on any laurels – there's another batch of awards coming up, and this year might be the closest race yet!
+I've been doing this [for]({{<ref "posts/sdj_2020_3/index.md">}}) [four]({{<ref "posts/sdj_2021_3/index.md">}}) [years]({{<ref "posts/sdj_2022_3/index.md">}}) [now]({{<ref "posts/sdj_2023_3/index.md">}}) and I've called seven out of the eight winners correctly. No reason to rest on any laurels – there's another batch of awards coming up, and this year might be the closest race yet!
 
 
 # Nominated for {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}}
