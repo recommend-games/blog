@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "generate-bg-titles"
+version = "0.1.0"
+description = "Use textgenrnn to generate board game titles"
+authors = ["Markus Shepherd <markus@recommend.games>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.7.*"
+
+tensorflow = "*"
+textgenrnn = "*"
+tqdm = "*"
+
+[tool.poetry.group.dev.dependencies]
+jupyter-black = "*"
+jupyterlab = "*"
+jupytext = "*"
+mypy = "*"
+ruff = "*"
+types-tqdm = "*"
+
+[tool.ruff]
+target-version = "py37"
+
+[tool.mypy]
+python_version = "3.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
