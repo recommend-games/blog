@@ -1,3 +1,6 @@
+# Original Javascript code: https://github.com/mscroggs/MENACE
+# Ported by ChatGPT
+
 import random
 
 
