@@ -106,27 +106,25 @@ for epoch in range(epochs):
         print(f'Epoch: {epoch}, Loss: {loss.item()}')
 
 # Save the fine-tuned model
-model.save_pretrained('./fine_tuned_gpt2_board_games')
-tokenizer.save_pretrained('./fine_tuned_gpt2_board_games')
-
+model.save_pretrained("./fine_tuned_gpt2_board_games")
+tokenizer.save_pretrained("./fine_tuned_gpt2_board_games")
 
 # %%
 # Load the fine-tuned model and tokenizer
-model = GPT2LMHeadModel.from_pretrained('./fine_tuned_gpt2_board_games')
-tokenizer = GPT2Tokenizer.from_pretrained('./fine_tuned_gpt2_board_games')
+model = GPT2LMHeadModel.from_pretrained("./fine_tuned_gpt2_board_games")
+tokenizer = GPT2Tokenizer.from_pretrained("./fine_tuned_gpt2_board_games")
 
 # Generate new board game titles
 input_text = "Board Game Title: "
-input_ids = tokenizer.encode(input_text, return_tensors='pt')
+input_ids = tokenizer.encode(input_text, return_tensors="pt")
 output = model.generate(
-    input_ids, 
-    max_length=20, 
-    num_return_sequences=5, 
-    no_repeat_ngram_size=2, 
-    early_stopping=True
+    input_ids,
+    max_length=50,
+    num_return_sequences=1,
+    no_repeat_ngram_size=2,
+    early_stopping=True,
 )
 
 # Decode and print the generated titles
 for i, sequence in enumerate(output):
-    print(f'Title {i+1}: {tokenizer.decode(sequence, skip_special_tokens=True)}')
-
+    print(f"Title {i+1}: {tokenizer.decode(sequence, skip_special_tokens=True)}")
