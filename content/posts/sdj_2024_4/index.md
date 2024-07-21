@@ -69,4 +69,6 @@ TODO
 
 # Conclusion
 
-TODO
+Another year with [two co-operative winners]({{<ref "posts/sdj_2021/index.md">}}), and two particularly complex ones by the last few years' standards. Maybe this saves us some of the annual "{{% sdj / %}} is only for kids and party games" discussions next year.
+
+The last thing to notice is that the irony of having {{% game 334986 %}}Daybreak{{% /game %}} share the winners' photo with a game about flying, as well as the plastic heavy {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} winner {{% game 368899 %}}Magic Keys{{% /game %}}, seems to be completely lost on the jury. Maybe they should seek some professional help with their show next year – to make it more entertaining and ensure we're back on time for supper. 😋
