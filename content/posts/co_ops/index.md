@@ -14,6 +14,13 @@ TODO.
 ### Outline
 
 - SdJ 2021 had all co-op nominees
+- Prosperity Game (1903)
+  - Not challenging puzzle, but educational tool
+- Murder Off Miami etc (1936–1939)
+  - Shared puzzle solving, no player agency
+- Beat the Clock (1954) and other party games:
+  - Often "co-operative" means team play
+  - We're only interested in fully co-operative games
 - Pandemic as the archetype
   - Fully co-op: win or lose against the game
   - Challenging: losing is a real possiblilty, winning is a real achievement
