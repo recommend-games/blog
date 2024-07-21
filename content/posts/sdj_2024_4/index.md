@@ -3,7 +3,7 @@ title: Spiel des Jahres 2024 winners
 slug: spiel-des-jahres-2024-winners
 author: Markus Shepherd
 type: post
-date: 2024-07-21T22:52:00+03:00
+date: 2024-07-21T22:54:32+03:00
 tags:
   - SdJ
   - SdJ 2024
