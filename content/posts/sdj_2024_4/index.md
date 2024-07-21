@@ -64,11 +64,13 @@ Still, this remains a remarkable choice, because the award's family friendliness
 
 *Cooperatively decarbonize the planet and create resilient societies.*
 
-TODO
+*Kulturgut Spiel* is alive and well! 🥳 Also, [Matt Leacock](https://recommend.games/#/?designer=378) finally got his first main award with his … checking [notes]({{<ref "posts/designer_hall_of_fame/index.md">}}) … fifth nomination.
+
+This is a great choice on so many levels. A fun game with a serious, yet not imposing, message, which en passante proves that the jury doesn't always just go with the safe and shallow choices. I can only hope this game will be found underneath countless Christmas trees this year, encourage some honest conversations about the climate crisis (and importantly, the solutions), and encourage more designers to tackle serious topics in their games.
 
 
 # Conclusion
 
-Another year with [two co-operative winners]({{<ref "posts/sdj_2021/index.md">}}), and two particularly complex ones by the last few years' standards. Maybe this saves us some of the annual "{{% sdj / %}} is only for kids and party games" discussions next year.
+Another year with two co-operative winners after [2021]({{<ref "posts/sdj_2021/index.md">}}), and two particularly complex ones by the last few years' standards. Maybe this saves us some of the annual "{{% sdj / %}} is only for kids and party games" discussions next year.
 
 The last thing to notice is that the irony of having {{% game 334986 %}}Daybreak{{% /game %}} share the winners' photo with a game about flying, as well as the plastic heavy {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} winner {{% game 368899 %}}Magic Keys{{% /game %}}, seems to be completely lost on the jury. Maybe they should seek some professional help with their show next year – to make it more entertaining and ensure we're back on time for supper. 😋
