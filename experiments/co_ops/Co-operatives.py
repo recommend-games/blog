@@ -55,16 +55,26 @@ exclude = {
     7893,  # Educational
     33682,  # Puzzle
 }
-len(exclude)
+exclude_childrens_games = False
+len(exclude), exclude_childrens_games
 
 # %%
-games.filter("cooperative").filter(~pl.col("bgg_id").is_in(exclude)).filter(
-    pl.col("game_type").str.contains("4665")
-).sort("year", nulls_last=True,).head(50)
+earliest_coops = games.lazy().filter("cooperative")
+if exclude:
+    earliest_coops = earliest_coops.filter(~pl.col("bgg_id").is_in(exclude))
+if exclude_childrens_games:
+    earliest_coops = earliest_coops.filter(
+        pl.col("game_type").is_null() | ~pl.col("game_type").str.contains("4665")
+    )
+earliest_coops.sort(
+    "year",
+    nulls_last=True,
+).head(50).collect()
 
 # %%
 years = (
-    games.filter(pl.col("year").is_not_null())
+    games.lazy()
+    .filter(pl.col("year").is_not_null())
     .group_by("year")
     .agg(
         num_games=pl.len(),
@@ -79,10 +89,10 @@ years = (
 )
 
 # %%
-years.filter(pl.col("year").is_between(this_year - 100, this_year))
+years.filter(pl.col("year").is_between(this_year - 100, this_year)).collect()
 
 # %%
-years_filtered = years.filter(pl.col("year").is_between(2000, this_year))
+years_filtered = years.filter(pl.col("year").is_between(2000, this_year)).collect()
 p = years_filtered.plot.bar(
     x="year",
     y=["num_coops", "num_competitives"],
