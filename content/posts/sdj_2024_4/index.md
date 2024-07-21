@@ -42,7 +42,13 @@ Anyways, trying not to fall into the same trap, here are the winners of {{% sdj 
 
 *Pilot and co-pilot work together to land planes.*
 
-TODO
+To [quote]({{<ref "posts/sdj_2024/index.md">}}#2-a-hrefhttpsrecommendgamesgame373106-stylefont-variant-small-capssky-teama) myself:
+
+> {{% game 373106 %}}Sky Team{{% /game %}} is highly praised, but has next to no chance of winning.
+
+I guess I was wrong. 😅 It goes to show that any perceived patterns in the jury's decisions are just based on very small samples. Harald Schrapers, the jury chairman, always emphasises that the only thing they really care about is the fun in the game. And by all accounts, no game was as much fun this year as {{% game 373106 %}}Sky Team{{% /game %}}.
+
+Still, this remains a remarkable choice, because the award's family friendliness was the guiding principle behind the decisions over the past 45 years. It remains to be seen if the market is willing to go along with this new direction.
 
 
 # {{% kdj %}}Kennerspiel des Jahres 2024{{% /kdj %}}
