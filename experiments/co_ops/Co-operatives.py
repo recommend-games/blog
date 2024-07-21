@@ -83,15 +83,19 @@ years.filter(pl.col("year").is_between(this_year - 100, this_year))
 
 # %%
 years_filtered = years.filter(pl.col("year").is_between(2000, this_year))
-years_filtered.plot.bar(
+p = years_filtered.plot.bar(
     x="year",
     y=["num_coops", "num_competitives"],
     stacked=True,
 )
+p.opts(xrotation=45, legend_position="top_left")
+p
 
 # %%
-years_filtered.plot.bar(
+p = years_filtered.plot.bar(
     x="year",
     y=["share_coops", "share_competitives"],
     stacked=True,
 )
+p.opts(xrotation=45, legend_position="top_left")
+p
