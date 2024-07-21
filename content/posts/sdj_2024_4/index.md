@@ -3,7 +3,7 @@ title: Spiel des Jahres 2024 winners
 slug: spiel-des-jahres-2024-winners
 author: Markus Shepherd
 type: post
-date: 2024-07-21T22:00:00+03:00
+date: 2024-07-21T22:52:00+03:00
 tags:
   - SdJ
   - SdJ 2024
@@ -66,7 +66,7 @@ Still, this remains a remarkable choice, because the award's family friendliness
 
 *Kulturgut Spiel* is alive and well! 🥳 Also, [Matt Leacock](https://recommend.games/#/?designer=378) finally got his first main award with his … checking [notes]({{<ref "posts/designer_hall_of_fame/index.md">}}) … fifth nomination.
 
-This is a great choice on so many levels. A fun game with a serious, yet not imposing, message, which en passante proves that the jury doesn't always just go with the safe and shallow choices. I can only hope this game will be found underneath countless Christmas trees this year, encourage some honest conversations about the climate crisis (and importantly, the solutions), and encourage more designers to tackle serious topics in their games.
+This is a great choice on so many levels. A fun game with a serious, yet not imposing, message, which *en passant* proves that the jury doesn't always just go with the safe and shallow choices. I can only hope this game will be found underneath countless Christmas trees this year, encourage some honest conversations about the climate crisis (and importantly, the solutions), and encourage more designers to tackle serious topics in their games.
 
 
 # Conclusion
