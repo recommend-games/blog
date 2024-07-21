@@ -35,6 +35,6 @@ def load_titles(path):
 
 
 # %%
-titles = load_titles(path)
+titles = load_titles(in_path)
 with open(out_path, mode="w", encoding="utf-8") as file:
     file.writelines(tqdm(titles))

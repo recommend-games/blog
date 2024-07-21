@@ -16,6 +16,7 @@
 # %%
 import jupyter_black
 import torch
+import random
 from torch.utils.data import Dataset, DataLoader
 from tqdm import tqdm
 from transformers import AdamW, GPT2LMHeadModel, GPT2Tokenizer
@@ -35,14 +36,15 @@ tokenizer.pad_token = tokenizer.eos_token
 
 
 # Define a function to load and tokenize the dataset
-def load_and_tokenize_dataset(file_path, tokenizer):
+def load_and_tokenize_dataset(file_path, tokenizer, sample_rate=1.0):
     with open(file_path, "r", encoding="utf-8") as file:
         lines = file.readlines()
     # Tokenize the dataset
     tokenized_dataset = [
         tensor
         for line in tqdm(lines)
-        if (
+        if random.random() <= sample_rate
+        and (
             tensor := tokenizer(line.strip(), return_tensors="pt")["input_ids"].squeeze(
                 dim=0
             )
@@ -54,7 +56,7 @@ def load_and_tokenize_dataset(file_path, tokenizer):
 
 # Load and tokenize your dataset
 file_path = "titles.txt"
-tokenized_dataset = load_and_tokenize_dataset(file_path, tokenizer)
+tokenized_dataset = load_and_tokenize_dataset(file_path, tokenizer, 0.1)
 len(tokenized_dataset)
 
 
@@ -86,7 +88,7 @@ dataloader = DataLoader(dataset, batch_size=64, shuffle=True, collate_fn=collate
 
 # %%
 # Load the model
-model = GPT2LMHeadModel.from_pretrained('gpt2')
+model = GPT2LMHeadModel.from_pretrained("gpt2")
 
 # Set the model in training mode
 model.train()
@@ -103,7 +105,7 @@ for epoch in range(epochs):
         loss = outputs.loss
         loss.backward()
         optimizer.step()
-        print(f'Epoch: {epoch}, Loss: {loss.item()}')
+        print(f"Epoch: {epoch}, Loss: {loss.item()}")
 
 # Save the fine-tuned model
 model.save_pretrained("./fine_tuned_gpt2_board_games")
