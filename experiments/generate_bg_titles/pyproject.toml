@@ -8,8 +8,9 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "3.12.*"
 
+accelerate = ">=0.32.0"
 torch = "<2.3.0"
-transformers = "*"
+transformers = {extras = ["torch"], version = "*"}
 tqdm = "*"
 
 [tool.poetry.group.dev.dependencies]
