@@ -56,7 +56,7 @@ def load_and_tokenize_dataset(file_path, tokenizer, sample_rate=1.0):
 
 # Load and tokenize your dataset
 file_path = "titles.txt"
-tokenized_dataset = load_and_tokenize_dataset(file_path, tokenizer, 0.1)
+tokenized_dataset = load_and_tokenize_dataset(file_path, tokenizer, 1.0)
 len(tokenized_dataset)
 
 
@@ -97,7 +97,7 @@ model.train()
 optimizer = AdamW(model.parameters(), lr=5e-5)
 
 # Training loop
-epochs = 3
+epochs = 1
 for epoch in range(epochs):
     for batch in dataloader:
         optimizer.zero_grad()
@@ -117,12 +117,16 @@ model = GPT2LMHeadModel.from_pretrained("./fine_tuned_gpt2_board_games")
 tokenizer = GPT2Tokenizer.from_pretrained("./fine_tuned_gpt2_board_games")
 
 # Generate new board game titles
-input_text = "Board Game Title: "
+input_text = "Board Game Title in English: "
 input_ids = tokenizer.encode(input_text, return_tensors="pt")
 output = model.generate(
     input_ids,
-    max_length=50,
-    num_return_sequences=1,
+    max_length=20,
+    num_return_sequences=50,
+    do_sample=True,  # Enable sampling
+    temperature=1.0,  # Adjust the temperature to control randomness
+    top_k=50,  # Use top-k sampling
+    top_p=0.95,  # Use nucleus (top-p) sampling
     no_repeat_ngram_size=2,
     early_stopping=True,
 )
