@@ -30,8 +30,8 @@ pd.options.display.max_rows = 100
 SEED = 23
 
 # %%
-sdj = pd.read_csv("../sdj.csv", low_memory=False)
-ksdj = pd.read_csv("../ksdj.csv", low_memory=False)
+sdj = pd.read_csv("sdj.csv", low_memory=False)
+ksdj = pd.read_csv("ksdj.csv", low_memory=False)
 games = pd.read_csv(
     "../../../board-game-data/scraped/bgg_GameItem.csv",
     index_col="bgg_id",
