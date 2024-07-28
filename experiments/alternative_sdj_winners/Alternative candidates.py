@@ -27,7 +27,7 @@ exclude = (
 len(exclude)
 
 # %%
-df = pl.DataFrame(fetch_alt_candidates(progress=True))
+df = pl.DataFrame(fetch_alt_candidates(exclude=exclude, progress=True))
 df.shape
 
 # %%
