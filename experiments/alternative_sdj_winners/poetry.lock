@@ -2236,6 +2236,20 @@ files = [
 ]
 
 [[package]]
+name = "types-requests"
+version = "2.32.0.20240712"
+description = "Typing stubs for requests"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "types-requests-2.32.0.20240712.tar.gz", hash = "sha256:90c079ff05e549f6bf50e02e910210b98b8ff1ebdd18e19c873cd237737c1358"},
+    {file = "types_requests-2.32.0.20240712-py3-none-any.whl", hash = "sha256:f754283e152c752e46e70942fa2a146b5bc70393522257bb85bd1ef7e019dcc3"},
+]
+
+[package.dependencies]
+urllib3 = ">=2"
+
+[[package]]
 name = "types-tqdm"
 version = "4.66.0.20240417"
 description = "Typing stubs for tqdm"
@@ -2344,4 +2358,4 @@ test = ["websockets"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.12.*"
-content-hash = "7d12ab96501e938170340a73f405a6116058d5006ae2e94fb6f3d126c7850717"
+content-hash = "51ea1b69ea586ce8e41ba5d63700cd427a2b1201bb84812577e9f509073c958a"

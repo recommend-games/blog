@@ -18,6 +18,7 @@ jupyterlab = "*"
 jupytext = "*"
 mypy = "*"
 ruff = "*"
+types-requests = "*"
 types-tqdm = "*"
 
 [tool.ruff]
