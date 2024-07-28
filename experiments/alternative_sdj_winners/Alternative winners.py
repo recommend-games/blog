@@ -15,9 +15,16 @@
 
 # %%
 import jupyter_black
+import polars as pl
 import requests
 
 jupyter_black.load()
+
+# %%
+exclude = (
+    pl.scan_csv("exclude.csv").select(pl.col("bgg_id").unique()).collect()["bgg_id"]
+)
+len(exclude)
 
 # %%
 base_url = "https://recommend.games/api/games/recommend/"
@@ -25,6 +32,7 @@ base_params = {
     "exclude_clusters": True,
     "exclude_known": True,
     "user": "S_d_J",
+    "exclude": list(exclude),
 }
 base_url, base_params
 
