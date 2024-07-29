@@ -78,7 +78,11 @@ data.shape
 data.head(10)
 
 # %%
-data.select(pl.col("alt_winner").sum())
+alt_winners = data.filter(pl.col("alt_winner"))
+alt_winners.shape
 
 # %%
-data.filter(pl.col("alt_winner"))
+alt_winners
+
+# %%
+alt_winners.select(pl.col("award").value_counts())
