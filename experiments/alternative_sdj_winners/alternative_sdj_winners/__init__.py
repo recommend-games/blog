@@ -5,6 +5,7 @@ import requests
 
 
 def fetch_alt_candidates(
+    *,
     first_year: int = 1979,
     last_year: int = date.today().year - 1,
     base_url: str = "https://recommend.games/api/games/recommend/",
@@ -12,11 +13,13 @@ def fetch_alt_candidates(
     progress: bool = False,
 ) -> Iterable[dict[str, str | int]]:
     exclude = list(exclude) if exclude is not None else []
+    # TODO: Exclude games from response, not via parameter
+    # This avoids accidentally excluding reimplementations
     base_params = {
         "exclude_clusters": True,
         "exclude_known": True,
         "user": "S_d_J",
-        "exclude": list(exclude),
+        "exclude": exclude,
     }
     years = (
         trange(first_year, last_year + 1)

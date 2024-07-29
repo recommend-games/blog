@@ -17,21 +17,32 @@
 import jupyter_black
 import polars as pl
 from alternative_sdj_winners import fetch_alt_candidates
+from pathlib import Path
 
 jupyter_black.load()
 
+BASE_DIR = Path().resolve()
+BASE_DIR
+
 # %%
 exclude = (
-    pl.scan_csv("./exclude.csv").select(pl.col("bgg_id").unique()).collect()["bgg_id"]
+    pl.scan_csv(BASE_DIR / "exclude.csv")
+    .select(pl.col("bgg_id").unique())
+    .collect()["bgg_id"]
 )
 len(exclude)
 
 # %%
-df = pl.DataFrame(fetch_alt_candidates(exclude=exclude, progress=True))
+df = pl.DataFrame(
+    fetch_alt_candidates(
+        exclude=exclude,
+        progress=True,
+    )
+)
 df.shape
 
 # %%
 df.head(10)
 
 # %%
-df.write_csv("./alt_candidates.csv")
+df.write_csv(BASE_DIR / "alt_candidates.csv")
