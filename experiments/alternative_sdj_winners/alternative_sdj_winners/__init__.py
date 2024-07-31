@@ -1,3 +1,4 @@
+import itertools
 from datetime import date
 from tqdm import trange
 from typing import Iterable
@@ -25,19 +26,27 @@ def fetch_alt_candidates(
     )
     for year in years:
         for kennerspiel in (False, True):
-            params = base_params | {
-                "year__gte": year,
-                "year__lte": year,
-                f"kennerspiel_score__{'gte' if kennerspiel else 'lt'}": 0.5,
-            }
-            response = requests.get(base_url, params)
-            response.raise_for_status()
-            results = [
-                result
-                for result in response.json()["results"]
-                if result["bgg_id"] not in exclude
-            ]
-            alt_winner = results[0]
+            for page in itertools.count(1):
+                params = base_params | {
+                    "year__gte": year,
+                    "year__lte": year,
+                    f"kennerspiel_score__{'gte' if kennerspiel else 'lt'}": 0.5,
+                    "page": page,
+                }
+                response = requests.get(base_url, params)
+                response.raise_for_status()
+                results = (
+                    result
+                    for result in response.json()["results"]
+                    if result["bgg_id"] not in exclude
+                )
+                alt_winner = next(results, None)
+                if alt_winner is not None:
+                    break
+                if not response.json()["next"]:
+                    raise ValueError(
+                        f"No alternative {'Kennerspiel' if kennerspiel else 'Spiel'} winner found for {year}"
+                    )
             yield {
                 "bgg_id": alt_winner["bgg_id"],
                 "name": alt_winner["name"],
