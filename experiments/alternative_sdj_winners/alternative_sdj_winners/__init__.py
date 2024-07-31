@@ -12,14 +12,11 @@ def fetch_alt_candidates(
     exclude: Iterable[int] | None = None,
     progress: bool = False,
 ) -> Iterable[dict[str, str | int]]:
-    exclude = list(exclude) if exclude is not None else []
-    # TODO: Exclude games from response, not via parameter
-    # This avoids accidentally excluding reimplementations
+    exclude = frozenset(exclude if exclude is not None else ())
     base_params = {
         "exclude_clusters": True,
         "exclude_known": True,
         "user": "S_d_J",
-        "exclude": exclude,
     }
     years = (
         trange(first_year, last_year + 1)
@@ -35,7 +32,12 @@ def fetch_alt_candidates(
             }
             response = requests.get(base_url, params)
             response.raise_for_status()
-            alt_winner = response.json()["results"][0]
+            results = [
+                result
+                for result in response.json()["results"]
+                if result["bgg_id"] not in exclude
+            ]
+            alt_winner = results[0]
             yield {
                 "bgg_id": alt_winner["bgg_id"],
                 "name": alt_winner["name"],
