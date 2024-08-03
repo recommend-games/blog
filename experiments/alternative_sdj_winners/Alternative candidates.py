@@ -30,6 +30,7 @@ exclude = (
     .select(pl.col("bgg_id").unique())
     .collect()["bgg_id"]
 )
+# TODO: Exclude all Kinderspiel winners etc too
 len(exclude)
 
 # %%
