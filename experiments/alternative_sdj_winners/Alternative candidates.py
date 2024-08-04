@@ -22,15 +22,17 @@ from pathlib import Path
 jupyter_black.load()
 
 BASE_DIR = Path().resolve()
-BASE_DIR
+PROJECT_DIR = BASE_DIR.parent.parent
+BASE_DIR, PROJECT_DIR
 
 # %%
+exclude_list = pl.scan_csv(BASE_DIR / "exclude.csv")
+sdj = pl.scan_csv(PROJECT_DIR / "spiel-des-jahres" / "data" / "*.csv")
 exclude = (
-    pl.scan_csv(BASE_DIR / "exclude.csv")
+    pl.concat([exclude_list.select("bgg_id"), sdj.select("bgg_id")])
     .select(pl.col("bgg_id").unique())
     .collect()["bgg_id"]
 )
-# TODO: Exclude all Kinderspiel winners etc too
 len(exclude)
 
 # %%
