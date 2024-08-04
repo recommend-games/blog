@@ -18,6 +18,7 @@ def fetch_alt_candidates(
         "exclude_clusters": True,
         "exclude_known": True,
         "user": "S_d_J",
+        "bayes_rating__gte": 1.0,
     }
     years = (
         trange(first_year, last_year + 1)
