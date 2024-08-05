@@ -106,3 +106,32 @@ data.tail(100)
 
 # %%
 sns.barplot(data=joined.filter(pl.col("year") >= this_year - 10), x="year", y="rating")
+
+# %% [markdown]
+# # Linear Model
+
+# %%
+import statsmodels.api as sm
+
+# %%
+df = data.filter(pl.col("year") >= 1970)
+df.shape
+
+# %%
+df.tail()
+
+# %%
+sns.regplot(data=df, x="year", y="avg_rating", ci=95)
+
+# %%
+model = sm.OLS(df["avg_rating"].to_numpy(), sm.add_constant(df["year"].to_numpy()))
+results = model.fit()
+results
+
+# %%
+results.summary().tables[1]
+
+# %%
+model.predict(1990)
+
+# %%
