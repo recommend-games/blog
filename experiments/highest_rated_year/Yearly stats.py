@@ -27,12 +27,18 @@ pl.Config.set_tbl_rows(100)
 # %%
 this_year = date.today().year
 
+# %%
+base_dir = Path(".").resolve()
+project_dir = base_dir.parent.parent
+rankings_dir = project_dir.parent / "bgg-ranking-historicals"
+data_dir = project_dir.parent / "board-game-data"
+base_dir, project_dir, rankings_dir, data_dir
+
 # %% [markdown]
 # # Rankings
 
 # %%
-base_dir = Path("/Users/markus/Recommend.Games/bgg-ranking-historicals/").resolve()
-file_path = max(base_dir.glob("*.csv"))
+file_path = max(rankings_dir.glob("*.csv"))
 file_path
 
 # %%
@@ -67,13 +73,13 @@ data.tail(100)
 
 # %%
 games = (
-    pl.scan_ndjson("../../../board-game-data/scraped/bgg_GameItem.jl")
+    pl.scan_ndjson(data_dir / "scraped" / "bgg_GameItem.jl")
     .select("bgg_id", "name", "year")
     .filter(pl.col("year") >= 1900)
     .filter(pl.col("year") < this_year)
 )
 ratings = (
-    pl.scan_ndjson("../../../board-game-data/scraped/bgg_RatingItem.jl")
+    pl.scan_ndjson(data_dir / "scraped" / "bgg_RatingItem.jl")
     .select("bgg_id", "bgg_user_rating")
     .drop_nulls()
 )
