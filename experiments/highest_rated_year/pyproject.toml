@@ -8,8 +8,11 @@ authors = ["Markus Shepherd <markus@recommend.games>"]
 python = "3.12.*"
 
 matplotlib = "*"
+numpy = "*"
 polars = "*"
+scipy = "*"
 seaborn = "*"
+statsmodels = "*"
 tqdm = "*"
 
 [tool.poetry.group.dev.dependencies]
