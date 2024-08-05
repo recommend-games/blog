@@ -24,6 +24,9 @@ jupyter_black.load()
 
 pl.Config.set_tbl_rows(100)
 
+# %%
+this_year = date.today().year
+
 # %% [markdown]
 # # Rankings
 
@@ -43,8 +46,8 @@ data = (
         bayes_rating="Bayes average",
         num_ratings="Users rated",
     )
-    .filter(1900 <= pl.col("year"))
-    .filter(pl.col("year") <= 2023)
+    .filter(pl.col("year") >= 1900)
+    .filter(pl.col("year") < this_year)
     .group_by("year")
     .agg(
         num_games=pl.len(),
@@ -67,7 +70,7 @@ games = (
     pl.scan_ndjson("../../../board-game-data/scraped/bgg_GameItem.jl")
     .select("bgg_id", "name", "year")
     .filter(pl.col("year") >= 1900)
-    .filter(pl.col("year") <= 2023)
+    .filter(pl.col("year") < this_year)
 )
 ratings = (
     pl.scan_ndjson("../../../board-game-data/scraped/bgg_RatingItem.jl")
@@ -96,4 +99,4 @@ joined.shape, data.shape
 data.tail(100)
 
 # %%
-sns.barplot(data=joined.filter(pl.col("year") >= 2014), x="year", y="rating")
+sns.barplot(data=joined.filter(pl.col("year") >= this_year - 10), x="year", y="rating")
