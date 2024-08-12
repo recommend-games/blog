@@ -105,6 +105,27 @@ plt.savefig(plot_dir / "avg_ratings_from_rankings.png")
 plt.savefig(plot_dir / "avg_ratings_from_rankings.svg")
 plt.show()
 
+# %%
+_, ax = plt.subplots(figsize=(6, 4))
+sns.regplot(
+    data=data_from_rankings,
+    x="year",
+    y="bayes_rating",
+    ci=95,
+    color="purple",
+    scatter_kws={
+        "s": data_from_rankings["rel_num_games"]
+        * matplotlib.rcParams["lines.markersize"] ** 2
+    },
+    seed=seed,
+    ax=ax,
+)
+ax.set_title("Yearly average geek score from ranked games")
+plt.tight_layout()
+plt.savefig(plot_dir / "bayes_ratings_from_rankings.png")
+plt.savefig(plot_dir / "bayes_ratings_from_rankings.svg")
+plt.show()
+
 # %% [markdown]
 # # Ratings
 
