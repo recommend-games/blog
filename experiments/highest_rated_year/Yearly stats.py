@@ -19,6 +19,7 @@ from pathlib import Path
 import jupyter_black
 import polars as pl
 import seaborn as sns
+import statsmodels.api as sm
 
 jupyter_black.load()
 
@@ -42,7 +43,7 @@ file_path = max(rankings_dir.glob("*.csv"))
 file_path
 
 # %%
-data = (
+years_from_rankings = (
     pl.scan_csv(file_path)
     .select(
         bgg_id="ID",
@@ -63,10 +64,22 @@ data = (
     .sort("year")
     .collect()
 )
-data.shape
+years_from_rankings.shape
 
 # %%
-data.tail(100)
+years_from_rankings.filter(pl.col("year") >= 1990)
+
+# %%
+data_from_rankings = years_from_rankings.filter(pl.col("year") >= 1970)
+model_from_rankings = sm.OLS(
+    data_from_rankings["avg_rating"].to_numpy(),
+    sm.add_constant(data_from_rankings["year"].to_numpy()),
+)
+results_from_rankings = model_from_rankings.fit()
+results_from_rankings.summary().tables[1]
+
+# %%
+sns.regplot(data=data_from_rankings, x="year", y="avg_rating", ci=95)
 
 # %% [markdown]
 # # Ratings
@@ -83,55 +96,33 @@ ratings = (
     .select("bgg_id", "bgg_user_rating")
     .drop_nulls()
 )
-joined = (
+years_from_ratings = (
     games.join(ratings, on="bgg_id", how="inner")
     .select(
         "year",
         rating="bgg_user_rating",
     )
-    .collect()
-)
-data = (
-    joined.group_by("year")
+    .group_by("year")
     .agg(
         num_ratings=pl.len(),
         avg_rating=pl.mean("rating"),
     )
     .sort("year")
+    .collect()
 )
-joined.shape, data.shape
+years_from_ratings.shape
 
 # %%
-data.tail(100)
+years_from_ratings.filter(pl.col("year") >= 1990)
 
 # %%
-sns.barplot(data=joined.filter(pl.col("year") >= this_year - 10), x="year", y="rating")
-
-# %% [markdown]
-# # Linear Model
-
-# %%
-import statsmodels.api as sm
-
-# %%
-df = data.filter(pl.col("year") >= 1970)
-df.shape
+data_from_ratings = years_from_ratings.filter(pl.col("year") >= 1970)
+model_from_ratings = sm.OLS(
+    data_from_ratings["avg_rating"].to_numpy(),
+    sm.add_constant(data_from_ratings["year"].to_numpy()),
+)
+results_from_ratings = model_from_ratings.fit()
+results_from_ratings.summary().tables[1]
 
 # %%
-df.tail()
-
-# %%
-sns.regplot(data=df, x="year", y="avg_rating", ci=95)
-
-# %%
-model = sm.OLS(df["avg_rating"].to_numpy(), sm.add_constant(df["year"].to_numpy()))
-results = model.fit()
-results
-
-# %%
-results.summary().tables[1]
-
-# %%
-model.predict(1990)
-
-# %%
+sns.regplot(data=data_from_ratings, x="year", y="avg_rating", ci=95)
