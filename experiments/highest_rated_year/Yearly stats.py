@@ -17,6 +17,7 @@
 from datetime import date
 from matplotlib import pyplot as plt
 from pathlib import Path
+import matplotlib
 import jupyter_black
 import polars as pl
 import seaborn as sns
@@ -65,6 +66,7 @@ years_from_rankings = (
         avg_rating=pl.mean("avg_rating"),
         bayes_rating=pl.mean("bayes_rating"),
     )
+    .with_columns(rel_num_games=pl.col("num_games") / pl.max("num_games"))
     .sort("year")
     .collect()
 )
@@ -84,13 +86,16 @@ results_from_rankings.summary().tables[1]
 
 # %%
 _, ax = plt.subplots(figsize=(6, 4))
-# TODO: circle size by number of games
 sns.regplot(
     data=data_from_rankings,
     x="year",
     y="avg_rating",
     ci=95,
     color="purple",
+    scatter_kws={
+        "s": data_from_rankings["rel_num_games"]
+        * matplotlib.rcParams["lines.markersize"] ** 2
+    },
     seed=seed,
     ax=ax,
 )
@@ -126,6 +131,7 @@ years_from_ratings = (
         num_ratings=pl.len(),
         avg_rating=pl.mean("rating"),
     )
+    .with_columns(rel_num_ratings=pl.col("num_ratings") / pl.max("num_ratings"))
     .sort("year")
     .collect()
 )
@@ -145,13 +151,16 @@ results_from_ratings.summary().tables[1]
 
 # %%
 _, ax = plt.subplots(figsize=(6, 4))
-# TODO: circle size by number of ratings
 sns.regplot(
     data=data_from_ratings,
     x="year",
     y="avg_rating",
     ci=95,
     color="purple",
+    scatter_kws={
+        "s": data_from_ratings["rel_num_ratings"]
+        * matplotlib.rcParams["lines.markersize"] ** 2
+    },
     seed=seed,
     ax=ax,
 )
