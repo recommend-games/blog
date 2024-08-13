@@ -43,3 +43,40 @@ def plot_average(
     ax.set_title("TODO")
 
     return ax
+
+
+def save_plots(
+    data: pl.DataFrame,
+    y_column: str,
+    show: bool = False,
+    *,
+    figsize: tuple[int, int] | None = None,
+    seed: int | None = None,
+) -> None:
+    plot_average(
+        data=data,
+        y_column=y_column,
+        regression=False,
+        figsize=figsize,
+        seed=seed,
+    )
+    plt.tight_layout()
+    plt.savefig(f"plots/{y_column}_scatter.png")
+    plt.savefig(f"plots/{y_column}_scatter.svg")
+    if show:
+        plt.show()
+    plt.close()
+
+    plot_average(
+        data=data,
+        y_column=y_column,
+        regression=True,
+        figsize=figsize,
+        seed=seed,
+    )
+    plt.tight_layout()
+    plt.savefig(f"plots/{y_column}_reg.png")
+    plt.savefig(f"plots/{y_column}_reg.svg")
+    if show:
+        plt.show()
+    plt.close()
