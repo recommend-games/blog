@@ -86,23 +86,32 @@ results_from_rankings.summary().tables[1]
 
 # %%
 _, ax = plt.subplots(figsize=(6, 4))
-sns.regplot(
+sns.scatterplot(
     data=data_from_rankings,
     x="year",
     y="avg_rating",
-    ci=95,
     color="purple",
-    scatter_kws={
-        "s": data_from_rankings["rel_num_games"]
-        * matplotlib.rcParams["lines.markersize"] ** 2
-    },
-    seed=seed,
     ax=ax,
 )
 ax.set_title("Yearly average ratings from ranked games")
 plt.tight_layout()
-plt.savefig(plot_dir / "avg_ratings_from_rankings.png")
-plt.savefig(plot_dir / "avg_ratings_from_rankings.svg")
+plt.savefig(plot_dir / "avg_ratings_from_rankings_scatter.png")
+plt.savefig(plot_dir / "avg_ratings_from_rankings_scatter.svg")
+plt.show()
+
+# %%
+_, ax = plt.subplots(figsize=(6, 4))
+sns.scatterplot(
+    data=data_from_rankings,
+    x="year",
+    y="bayes_rating",
+    color="purple",
+    ax=ax,
+)
+ax.set_title("Yearly average geek score from ranked games")
+plt.tight_layout()
+plt.savefig(plot_dir / "bayes_ratings_from_rankings_scatter.png")
+plt.savefig(plot_dir / "bayes_ratings_from_rankings_scatter.svg")
 plt.show()
 
 # %%
@@ -122,8 +131,8 @@ sns.regplot(
 )
 ax.set_title("Yearly average geek score from ranked games")
 plt.tight_layout()
-plt.savefig(plot_dir / "bayes_ratings_from_rankings.png")
-plt.savefig(plot_dir / "bayes_ratings_from_rankings.svg")
+plt.savefig(plot_dir / "bayes_ratings_from_rankings_reg.png")
+plt.savefig(plot_dir / "bayes_ratings_from_rankings_reg.svg")
 plt.show()
 
 # %% [markdown]
@@ -172,6 +181,21 @@ results_from_ratings.summary().tables[1]
 
 # %%
 _, ax = plt.subplots(figsize=(6, 4))
+sns.scatterplot(
+    data=data_from_ratings,
+    x="year",
+    y="avg_rating",
+    color="purple",
+    ax=ax,
+)
+ax.set_title("Yearly average ratings")
+plt.tight_layout()
+plt.savefig(plot_dir / "avg_ratings_from_ratings_scatter.png")
+plt.savefig(plot_dir / "avg_ratings_from_ratings_scatter.svg")
+plt.show()
+
+# %%
+_, ax = plt.subplots(figsize=(6, 4))
 sns.regplot(
     data=data_from_ratings,
     x="year",
@@ -187,6 +211,6 @@ sns.regplot(
 )
 ax.set_title("Yearly average ratings")
 plt.tight_layout()
-plt.savefig(plot_dir / "avg_ratings_from_ratings.png")
-plt.savefig(plot_dir / "avg_ratings_from_ratings.svg")
+plt.savefig(plot_dir / "avg_ratings_from_ratings_reg.png")
+plt.savefig(plot_dir / "avg_ratings_from_ratings_reg.svg")
 plt.show()
