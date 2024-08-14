@@ -17,6 +17,7 @@
 from datetime import date
 from matplotlib import pyplot as plt
 from pathlib import Path
+from highest_rated_year.plots import save_plots
 import matplotlib
 import jupyter_black
 import polars as pl
@@ -85,19 +86,20 @@ results_from_rankings = model_from_rankings.fit()
 results_from_rankings.summary().tables[1]
 
 # %%
-_, ax = plt.subplots(figsize=(6, 4))
-sns.scatterplot(
+save_plots(
     data=data_from_rankings,
-    x="year",
-    y="avg_rating",
-    color="purple",
-    ax=ax,
+    y_column="avg_rating",
+    show=True,
+    seed=this_year,
 )
-ax.set_title("Yearly average ratings from ranked games")
-plt.tight_layout()
-plt.savefig(plot_dir / "avg_ratings_from_rankings_scatter.png")
-plt.savefig(plot_dir / "avg_ratings_from_rankings_scatter.svg")
-plt.show()
+
+# %%
+save_plots(
+    data=data_from_rankings,
+    y_column="bayes_rating",
+    show=True,
+    seed=this_year,
+)
 
 # %%
 _, ax = plt.subplots(figsize=(6, 4))

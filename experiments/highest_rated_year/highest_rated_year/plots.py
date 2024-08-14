@@ -27,20 +27,23 @@ def plot_average(
         "ax": ax,
     }
 
+    sizes = data["rel_num_games"]* matplotlib.rcParams["lines.markersize"] ** 2
+
     if regression:
         sns.regplot(
             **plot_kwargs,
             ci=95,
             scatter_kws={
-                "s": data["rel_num_games"]
-                * matplotlib.rcParams["lines.markersize"] ** 2,
+                "s": sizes
             },
             seed=seed,
         )
     else:
-        sns.scatterplot(**plot_kwargs)
+        sns.scatterplot(**plot_kwargs, size=sizes, legend=False,)
 
     ax.set_title("TODO")
+    ax.set_xlabel(None)
+    ax.set_ylabel(None)
 
     return ax
 
