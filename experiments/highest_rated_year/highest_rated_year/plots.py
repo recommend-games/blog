@@ -1,6 +1,6 @@
 import logging
 import matplotlib
-from matplotlib.path import Path
+from pathlib import Path
 import polars as pl
 import seaborn as sns
 from matplotlib import pyplot as plt

@@ -35,7 +35,6 @@ seed = this_year
 # %%
 base_dir = Path(".").resolve()
 plot_dir = base_dir / "plots"
-plot_dir.mkdir(parents=True, exist_ok=True)
 project_dir = base_dir.parent.parent
 rankings_dir = project_dir.parent / "bgg-ranking-historicals"
 data_dir = project_dir.parent / "board-game-data"
@@ -89,6 +88,10 @@ results_from_rankings.summary().tables[1]
 save_plots(
     data=data_from_rankings,
     y_column="avg_rating",
+    sizes_column="rel_num_games",
+    title="Yearly average ratings from ranked games",
+    plot_dir=plot_dir,
+    file_name="avg_ratings_from_rankings",
     show=True,
     seed=this_year,
 )
@@ -97,45 +100,13 @@ save_plots(
 save_plots(
     data=data_from_rankings,
     y_column="bayes_rating",
+    sizes_column="rel_num_games",
+    title="Yearly average geek score from ranked games",
+    plot_dir=plot_dir,
+    file_name="bayes_rating_from_rankings",
     show=True,
     seed=this_year,
 )
-
-# %%
-_, ax = plt.subplots(figsize=(6, 4))
-sns.scatterplot(
-    data=data_from_rankings,
-    x="year",
-    y="bayes_rating",
-    color="purple",
-    ax=ax,
-)
-ax.set_title("Yearly average geek score from ranked games")
-plt.tight_layout()
-plt.savefig(plot_dir / "bayes_ratings_from_rankings_scatter.png")
-plt.savefig(plot_dir / "bayes_ratings_from_rankings_scatter.svg")
-plt.show()
-
-# %%
-_, ax = plt.subplots(figsize=(6, 4))
-sns.regplot(
-    data=data_from_rankings,
-    x="year",
-    y="bayes_rating",
-    ci=95,
-    color="purple",
-    scatter_kws={
-        "s": data_from_rankings["rel_num_games"]
-        * matplotlib.rcParams["lines.markersize"] ** 2
-    },
-    seed=seed,
-    ax=ax,
-)
-ax.set_title("Yearly average geek score from ranked games")
-plt.tight_layout()
-plt.savefig(plot_dir / "bayes_ratings_from_rankings_reg.png")
-plt.savefig(plot_dir / "bayes_ratings_from_rankings_reg.svg")
-plt.show()
 
 # %% [markdown]
 # # Ratings
@@ -182,37 +153,13 @@ results_from_ratings = model_from_ratings.fit()
 results_from_ratings.summary().tables[1]
 
 # %%
-_, ax = plt.subplots(figsize=(6, 4))
-sns.scatterplot(
+save_plots(
     data=data_from_ratings,
-    x="year",
-    y="avg_rating",
-    color="purple",
-    ax=ax,
+    y_column="avg_rating",
+    sizes_column="rel_num_ratings",
+    title="Yearly average ratings",
+    plot_dir=plot_dir,
+    file_name="avg_ratings_from_ratings",
+    show=True,
+    seed=this_year,
 )
-ax.set_title("Yearly average ratings")
-plt.tight_layout()
-plt.savefig(plot_dir / "avg_ratings_from_ratings_scatter.png")
-plt.savefig(plot_dir / "avg_ratings_from_ratings_scatter.svg")
-plt.show()
-
-# %%
-_, ax = plt.subplots(figsize=(6, 4))
-sns.regplot(
-    data=data_from_ratings,
-    x="year",
-    y="avg_rating",
-    ci=95,
-    color="purple",
-    scatter_kws={
-        "s": data_from_ratings["rel_num_ratings"]
-        * matplotlib.rcParams["lines.markersize"] ** 2
-    },
-    seed=seed,
-    ax=ax,
-)
-ax.set_title("Yearly average ratings")
-plt.tight_layout()
-plt.savefig(plot_dir / "avg_ratings_from_ratings_reg.png")
-plt.savefig(plot_dir / "avg_ratings_from_ratings_reg.svg")
-plt.show()
