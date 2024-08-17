@@ -21,7 +21,7 @@ import jupyter_black
 import polars as pl
 import seaborn as sns
 
-from highest_rated_year import load_years_from_rankings, load_years_from_ratings, save_plots
+from highest_rated_year import save_plots
 
 jupyter_black.load()
 pl.Config.set_tbl_rows(100)
@@ -30,19 +30,17 @@ sns.set_style("dark")
 # %%
 seed = date.today().year
 
-# %%
 base_dir = Path(".").resolve()
+data_dir = base_dir / "data"
 plot_dir = base_dir / "plots"
-project_dir = base_dir.parent.parent
-rankings_dir = project_dir.parent / "bgg-ranking-historicals"
-data_dir = project_dir.parent / "board-game-data"
-base_dir, plot_dir, project_dir, rankings_dir, data_dir
+
+seed, base_dir, data_dir, plot_dir
 
 # %% [markdown]
 # # Rankings
 
 # %%
-years_from_rankings = load_years_from_rankings(rankings_dir)
+years_from_rankings = pl.read_csv(data_dir / "years_from_rankings.csv")
 data_from_rankings = years_from_rankings.filter(pl.col("year") >= 1970)
 years_from_rankings.shape, data_from_rankings.shape
 
@@ -74,7 +72,7 @@ save_plots(
 # # Ratings
 
 # %%
-years_from_ratings = load_years_from_ratings(data_dir)
+years_from_ratings = pl.read_csv(data_dir / "years_from_ratings.csv")
 data_from_ratings = years_from_ratings.filter(pl.col("year") >= 1970)
 years_from_ratings.shape, data_from_ratings.shape
 
