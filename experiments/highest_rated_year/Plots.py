@@ -20,7 +20,6 @@ from pathlib import Path
 import jupyter_black
 import polars as pl
 import seaborn as sns
-import statsmodels.api as sm
 
 from highest_rated_year import load_years_from_rankings, load_years_from_ratings, save_plots
 
@@ -44,19 +43,8 @@ base_dir, plot_dir, project_dir, rankings_dir, data_dir
 
 # %%
 years_from_rankings = load_years_from_rankings(rankings_dir)
-years_from_rankings.shape
-
-# %%
-years_from_rankings.filter(pl.col("year") >= 1990)
-
-# %%
 data_from_rankings = years_from_rankings.filter(pl.col("year") >= 1970)
-model_from_rankings = sm.OLS(
-    data_from_rankings["avg_rating"].to_numpy(),
-    sm.add_constant(data_from_rankings["year"].to_numpy()),
-)
-results_from_rankings = model_from_rankings.fit()
-results_from_rankings.summary().tables[1]
+years_from_rankings.shape, data_from_rankings.shape
 
 # %%
 save_plots(
@@ -87,19 +75,8 @@ save_plots(
 
 # %%
 years_from_ratings = load_years_from_ratings(data_dir)
-years_from_ratings.shape
-
-# %%
-years_from_ratings.filter(pl.col("year") >= 1990)
-
-# %%
 data_from_ratings = years_from_ratings.filter(pl.col("year") >= 1970)
-model_from_ratings = sm.OLS(
-    data_from_ratings["avg_rating"].to_numpy(),
-    sm.add_constant(data_from_ratings["year"].to_numpy()),
-)
-results_from_ratings = model_from_ratings.fit()
-results_from_ratings.summary().tables[1]
+years_from_ratings.shape, data_from_ratings.shape
 
 # %%
 save_plots(
