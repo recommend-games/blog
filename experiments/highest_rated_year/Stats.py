@@ -33,26 +33,34 @@ base_dir, data_dir
 
 # %%
 years_from_rankings = pl.read_csv(data_dir / "years_from_rankings.csv")
-years_from_rankings.shape
+data_from_rankings = years_from_rankings.filter(pl.col("year") >= 1970)
+years_from_rankings.shape, data_from_rankings.shape
 
 # %%
-data_from_rankings = years_from_rankings.filter(pl.col("year") >= 1970)
-model_from_rankings = sm.OLS(
+model_from_avg_rankings = sm.OLS(
     data_from_rankings["avg_rating"].to_numpy(),
     sm.add_constant(data_from_rankings["year"].to_numpy()),
 )
-results_from_rankings = model_from_rankings.fit()
-results_from_rankings.summary().tables[1]
+results_from_avg_rankings = model_from_avg_rankings.fit()
+results_from_avg_rankings.summary().tables[1]
+
+# %%
+model_from_bayes_rankings = sm.OLS(
+    data_from_rankings["bayes_rating"].to_numpy(),
+    sm.add_constant(data_from_rankings["year"].to_numpy()),
+)
+results_from_bayes_rankings = model_from_bayes_rankings.fit()
+results_from_bayes_rankings.summary().tables[1]
 
 # %% [markdown]
 # # Ratings
 
 # %%
 years_from_ratings = pl.read_csv(data_dir / "years_from_ratings.csv")
-years_from_ratings.shape
+data_from_ratings = years_from_ratings.filter(pl.col("year") >= 1970)
+years_from_ratings.shape, data_from_ratings.shape
 
 # %%
-data_from_ratings = years_from_ratings.filter(pl.col("year") >= 1970)
 model_from_ratings = sm.OLS(
     data_from_ratings["avg_rating"].to_numpy(),
     sm.add_constant(data_from_ratings["year"].to_numpy()),
