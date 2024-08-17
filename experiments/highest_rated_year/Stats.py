@@ -20,27 +20,20 @@ import jupyter_black
 import polars as pl
 import statsmodels.api as sm
 
-from highest_rated_year import load_years_from_rankings, load_years_from_ratings
-
 jupyter_black.load()
 pl.Config.set_tbl_rows(100)
 
 # %%
 base_dir = Path(".").resolve()
-project_dir = base_dir.parent.parent
-rankings_dir = project_dir.parent / "bgg-ranking-historicals"
-data_dir = project_dir.parent / "board-game-data"
-base_dir, project_dir, rankings_dir, data_dir
+data_dir = base_dir / "data"
+base_dir, data_dir
 
 # %% [markdown]
 # # Rankings
 
 # %%
-years_from_rankings = load_years_from_rankings(rankings_dir)
+years_from_rankings = pl.read_csv(data_dir / "years_from_rankings.csv")
 years_from_rankings.shape
-
-# %%
-years_from_rankings.filter(pl.col("year") >= 1990)
 
 # %%
 data_from_rankings = years_from_rankings.filter(pl.col("year") >= 1970)
@@ -55,11 +48,8 @@ results_from_rankings.summary().tables[1]
 # # Ratings
 
 # %%
-years_from_ratings = load_years_from_ratings(data_dir)
+years_from_ratings = pl.read_csv(data_dir / "years_from_ratings.csv")
 years_from_ratings.shape
-
-# %%
-years_from_ratings.filter(pl.col("year") >= 1990)
 
 # %%
 data_from_ratings = years_from_ratings.filter(pl.col("year") >= 1970)
