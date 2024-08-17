@@ -12,6 +12,7 @@ def plot_average(
     y_column: str,
     regression: bool = False,
     *,
+    sizes_column: str | None = None,
     figsize: tuple[int, int] | None = None,
     seed: int | None = None,
     ax: Axes | None = None,
@@ -27,21 +28,27 @@ def plot_average(
         "ax": ax,
     }
 
-    sizes = data["rel_num_games"]* matplotlib.rcParams["lines.markersize"] ** 2
+    sizes = (
+        data[sizes_column] * matplotlib.rcParams["lines.markersize"] ** 2
+        if sizes_column
+        else None
+    )
 
     if regression:
         sns.regplot(
             **plot_kwargs,
             ci=95,
-            scatter_kws={
-                "s": sizes
-            },
+            scatter_kws={"s": sizes},
             seed=seed,
         )
     else:
-        sns.scatterplot(**plot_kwargs, size=sizes, legend=False,)
+        sns.scatterplot(
+            **plot_kwargs,
+            size=sizes,
+            legend=False,
+        )
 
-    ax.set_title("TODO")
+    ax.set_title(y_column)
     ax.set_xlabel(None)
     ax.set_ylabel(None)
 
@@ -53,6 +60,7 @@ def save_plots(
     y_column: str,
     show: bool = False,
     *,
+    sizes_column: str | None = None,
     figsize: tuple[int, int] | None = None,
     seed: int | None = None,
 ) -> None:
@@ -60,6 +68,7 @@ def save_plots(
         data=data,
         y_column=y_column,
         regression=False,
+        sizes_column=sizes_column,
         figsize=figsize,
         seed=seed,
     )
@@ -74,6 +83,7 @@ def save_plots(
         data=data,
         y_column=y_column,
         regression=True,
+        sizes_column=sizes_column,
         figsize=figsize,
         seed=seed,
     )
