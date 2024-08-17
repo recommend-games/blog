@@ -15,14 +15,14 @@
 
 # %%
 from datetime import date
-from matplotlib import pyplot as plt
 from pathlib import Path
-from highest_rated_year.plots import save_plots
-import matplotlib
+
 import jupyter_black
 import polars as pl
 import seaborn as sns
 import statsmodels.api as sm
+
+from highest_rated_year.plots import save_plots
 
 jupyter_black.load()
 pl.Config.set_tbl_rows(100)
@@ -103,7 +103,7 @@ save_plots(
     sizes_column="rel_num_games",
     title="Yearly average geek score from ranked games",
     plot_dir=plot_dir,
-    file_name="bayes_rating_from_rankings",
+    file_name="bayes_ratings_from_rankings",
     show=True,
     seed=this_year,
 )
