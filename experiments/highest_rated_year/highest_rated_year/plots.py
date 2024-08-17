@@ -1,10 +1,14 @@
+import logging
 import matplotlib
+from matplotlib.path import Path
 import polars as pl
 import seaborn as sns
 from matplotlib import pyplot as plt
 from matplotlib.axes import Axes
 
 sns.set_style("dark")
+
+LOGGER = logging.getLogger(__name__)
 
 
 def plot_average(
@@ -59,13 +63,24 @@ def plot_average(
 def save_plots(
     data: pl.DataFrame,
     y_column: str,
-    show: bool = False,
     *,
     title: str | None = None,
     sizes_column: str | None = None,
     figsize: tuple[int, int] | None = None,
     seed: int | None = None,
+    plot_dir: str | Path | None = None,
+    file_name: str | None = None,
+    show: bool = False,
 ) -> None:
+    if plot_dir is None and show is False:
+        raise ValueError("Neither plot_dir nor show is set")
+
+    if plot_dir is not None:
+        plot_dir = Path(plot_dir).resolve()
+        plot_dir.mkdir(parents=True, exist_ok=True)
+        LOGGER.info("Saving plots to <%s>", plot_dir)
+        file_name = file_name or y_column
+
     plot_average(
         data=data,
         y_column=y_column,
@@ -76,8 +91,9 @@ def save_plots(
         seed=seed,
     )
     plt.tight_layout()
-    plt.savefig(f"plots/{y_column}_scatter.png")
-    plt.savefig(f"plots/{y_column}_scatter.svg")
+    if plot_dir:
+        plt.savefig(plot_dir / f"{file_name}_scatter.png")
+        plt.savefig(plot_dir / f"{file_name}_scatter.svg")
     if show:
         plt.show()
     plt.close()
@@ -92,8 +108,9 @@ def save_plots(
         seed=seed,
     )
     plt.tight_layout()
-    plt.savefig(f"plots/{y_column}_reg.png")
-    plt.savefig(f"plots/{y_column}_reg.svg")
+    if plot_dir:
+        plt.savefig(plot_dir / f"{file_name}_reg.png")
+        plt.savefig(plot_dir / f"{file_name}_reg.svg")
     if show:
         plt.show()
     plt.close()
