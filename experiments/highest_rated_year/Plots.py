@@ -22,15 +22,14 @@ import polars as pl
 import seaborn as sns
 import statsmodels.api as sm
 
-from highest_rated_year.plots import save_plots
+from highest_rated_year import load_years_from_rankings, load_years_from_ratings, save_plots
 
 jupyter_black.load()
 pl.Config.set_tbl_rows(100)
 sns.set_style("dark")
 
 # %%
-this_year = date.today().year
-seed = this_year
+seed = date.today().year
 
 # %%
 base_dir = Path(".").resolve()
@@ -44,32 +43,7 @@ base_dir, plot_dir, project_dir, rankings_dir, data_dir
 # # Rankings
 
 # %%
-file_path = max(rankings_dir.glob("*.csv"))
-file_path
-
-# %%
-years_from_rankings = (
-    pl.scan_csv(file_path)
-    .select(
-        bgg_id="ID",
-        name="Name",
-        year="Year",
-        avg_rating="Average",
-        bayes_rating="Bayes average",
-        num_ratings="Users rated",
-    )
-    .filter(pl.col("year") >= 1900)
-    .filter(pl.col("year") < this_year)
-    .group_by("year")
-    .agg(
-        num_games=pl.len(),
-        avg_rating=pl.mean("avg_rating"),
-        bayes_rating=pl.mean("bayes_rating"),
-    )
-    .with_columns(rel_num_games=pl.col("num_games") / pl.max("num_games"))
-    .sort("year")
-    .collect()
-)
+years_from_rankings = load_years_from_rankings(rankings_dir)
 years_from_rankings.shape
 
 # %%
@@ -93,7 +67,7 @@ save_plots(
     plot_dir=plot_dir,
     file_name="avg_ratings_from_rankings",
     show=True,
-    seed=this_year,
+    seed=seed,
 )
 
 # %%
@@ -105,39 +79,14 @@ save_plots(
     plot_dir=plot_dir,
     file_name="bayes_ratings_from_rankings",
     show=True,
-    seed=this_year,
+    seed=seed,
 )
 
 # %% [markdown]
 # # Ratings
 
 # %%
-games = (
-    pl.scan_ndjson(data_dir / "scraped" / "bgg_GameItem.jl")
-    .select("bgg_id", "name", "year")
-    .filter(pl.col("year") >= 1900)
-    .filter(pl.col("year") < this_year)
-)
-ratings = (
-    pl.scan_ndjson(data_dir / "scraped" / "bgg_RatingItem.jl")
-    .select("bgg_id", "bgg_user_rating")
-    .drop_nulls()
-)
-years_from_ratings = (
-    games.join(ratings, on="bgg_id", how="inner")
-    .select(
-        "year",
-        rating="bgg_user_rating",
-    )
-    .group_by("year")
-    .agg(
-        num_ratings=pl.len(),
-        avg_rating=pl.mean("rating"),
-    )
-    .with_columns(rel_num_ratings=pl.col("num_ratings") / pl.max("num_ratings"))
-    .sort("year")
-    .collect()
-)
+years_from_ratings = load_years_from_ratings(data_dir)
 years_from_ratings.shape
 
 # %%
@@ -161,5 +110,5 @@ save_plots(
     plot_dir=plot_dir,
     file_name="avg_ratings_from_ratings",
     show=True,
-    seed=this_year,
+    seed=seed,
 )
