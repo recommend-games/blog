@@ -12,6 +12,7 @@ def plot_average(
     y_column: str,
     regression: bool = False,
     *,
+    title: str | None = None,
     sizes_column: str | None = None,
     figsize: tuple[int, int] | None = None,
     seed: int | None = None,
@@ -48,7 +49,7 @@ def plot_average(
             legend=False,
         )
 
-    ax.set_title(y_column)
+    ax.set_title(title or y_column)
     ax.set_xlabel(None)
     ax.set_ylabel(None)
 
@@ -60,6 +61,7 @@ def save_plots(
     y_column: str,
     show: bool = False,
     *,
+    title: str | None = None,
     sizes_column: str | None = None,
     figsize: tuple[int, int] | None = None,
     seed: int | None = None,
@@ -68,6 +70,7 @@ def save_plots(
         data=data,
         y_column=y_column,
         regression=False,
+        title=title,
         sizes_column=sizes_column,
         figsize=figsize,
         seed=seed,
@@ -83,6 +86,7 @@ def save_plots(
         data=data,
         y_column=y_column,
         regression=True,
+        title=title,
         sizes_column=sizes_column,
         figsize=figsize,
         seed=seed,
