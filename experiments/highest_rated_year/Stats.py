@@ -18,8 +18,6 @@ from pathlib import Path
 
 import jupyter_black
 import polars as pl
-# import statsmodels.api as sm
-# from scipy.stats import t
 
 from highest_rated_year import t_test
 
