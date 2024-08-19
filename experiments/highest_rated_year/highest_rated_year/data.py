@@ -31,7 +31,6 @@ def load_years_from_rankings(rankings_dir: str | Path) -> pl.DataFrame:
             avg_rating=pl.mean("avg_rating"),
             bayes_rating=pl.mean("bayes_rating"),
         )
-        .with_columns(rel_num_games=pl.col("num_games") / pl.max("num_games"))
         .sort("year")
         .collect()
     )
@@ -63,7 +62,6 @@ def load_years_from_ratings(data_dir: str | Path) -> pl.DataFrame:
             num_ratings=pl.len(),
             avg_rating=pl.mean("bgg_user_rating"),
         )
-        .with_columns(rel_num_ratings=pl.col("num_ratings") / pl.max("num_ratings"))
         .sort("year")
         .collect()
     )

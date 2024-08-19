@@ -40,9 +40,13 @@ seed, base_dir, data_dir, plot_dir
 # # Rankings
 
 # %%
-years_from_rankings = pl.read_csv(data_dir / "years_from_rankings.csv")
-data_from_rankings = years_from_rankings.filter(pl.col("year") >= 1970)
-years_from_rankings.shape, data_from_rankings.shape
+data_from_rankings = (
+    pl.scan_csv(data_dir / "years_from_rankings.csv")
+    .filter(pl.col("year") >= 1970)
+    .with_columns(rel_num_games=pl.col("num_games") / pl.max("num_games"))
+    .collect()
+)
+data_from_rankings.shape
 
 # %%
 save_plots(
@@ -72,9 +76,13 @@ save_plots(
 # # Ratings
 
 # %%
-years_from_ratings = pl.read_csv(data_dir / "years_from_ratings.csv")
-data_from_ratings = years_from_ratings.filter(pl.col("year") >= 1970)
-years_from_ratings.shape, data_from_ratings.shape
+data_from_ratings = (
+    pl.scan_csv(data_dir / "years_from_ratings.csv")
+    .filter(pl.col("year") >= 1970)
+    .with_columns(rel_num_ratings=pl.col("num_ratings") / pl.max("num_ratings"))
+    .collect()
+)
+data_from_ratings.shape
 
 # %%
 save_plots(

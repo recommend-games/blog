@@ -51,6 +51,9 @@ data_from_rankings.shape
 # %%
 data_from_rankings.sort(pl.col("bayes_rating_p_value")).head(10)
 
+# %%
+# TODO: Write results back to CSV
+
 # %% [markdown]
 # # Ratings
 
@@ -65,3 +68,6 @@ data_from_ratings.shape
 
 # %%
 data_from_ratings.sort(pl.col("avg_rating_p_value")).head(10)
+
+# %%
+# TODO: Write results back to CSV
