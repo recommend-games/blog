@@ -18,3 +18,9 @@ Using the average of games actually presents two different options in its own ri
 {{< img src="avg_ratings_from_rankings_scatter" alt="TODO" >}}
 
 Every dot is a year between 1970 and 2023, with its height on the *y*-axis indicating the average rating of all games released in that year (higher is better) and the size of the dot indicating the number of games. The acceleration in the past few years is striking, so looking at this plot the answer to Corey's question would definitely have to be: **2023** (and counting).
+
+But we might want to refrain from using those plain averages in this context for the same reason they're not used for ranking: the averages for games with few ratings are just too swingy. So let's look at the Bayesian averages (aka geek scores) instead:
+
+{{< img src="bayes_ratings_from_rankings_scatter" alt="TODO" >}}
+
+There's a couple of interesting observations about this plot. First of, there's a much more uniform linear trend going on, though there's a notable drop in the last two years. That can easily be explained by the way the Bayesian averages are calculated: the dummies ratings that get added to the regular ones weigh much heavier on games with fewer ratings, which naturally is the case for newer games. So this plot tells us that **2019** should be considered the best year.
