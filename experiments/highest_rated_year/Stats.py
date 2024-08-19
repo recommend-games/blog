@@ -33,9 +33,12 @@ base_dir, data_dir
 # # Rankings
 
 # %%
-years_from_rankings = pl.read_csv(data_dir / "years_from_rankings.csv")
-data_from_rankings = years_from_rankings.filter(pl.col("year") >= 1970)
-years_from_rankings.shape, data_from_rankings.shape
+data_from_rankings = (
+    pl.scan_csv(data_dir / "years_from_rankings.csv")
+    .filter(pl.col("year") >= 1970)
+    .collect()
+)
+data_from_rankings.shape
 
 # %%
 data_from_rankings = t_test(data_from_rankings, y_column="avg_rating")
@@ -58,9 +61,12 @@ data_from_rankings.sort(pl.col("bayes_rating_p_value")).head(10)
 # # Ratings
 
 # %%
-years_from_ratings = pl.read_csv(data_dir / "years_from_ratings.csv")
-data_from_ratings = years_from_ratings.filter(pl.col("year") >= 1970)
-years_from_ratings.shape, data_from_ratings.shape
+data_from_ratings = (
+    pl.scan_csv(data_dir / "years_from_ratings.csv")
+    .filter(pl.col("year") >= 1970)
+    .collect()
+)
+data_from_ratings.shape
 
 # %%
 data_from_ratings = t_test(data_from_ratings, y_column="avg_rating")
