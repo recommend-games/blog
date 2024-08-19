@@ -55,7 +55,32 @@ data_from_rankings.shape
 data_from_rankings.sort(pl.col("bayes_rating_p_value")).head(10)
 
 # %%
-# TODO: Write results back to CSV
+data_from_rankings.select(
+    "year",
+    "num_games",
+    "avg_rating",
+    "avg_rating_pred",
+    "avg_rating_error",
+    "avg_rating_p_value",
+    "avg_rating_significant",
+    "avg_rating_p_value_bonferroni",
+    "avg_rating_significant_bonferroni",
+    "avg_rating_p_value_holm",
+    "avg_rating_significant_holm",
+    "avg_rating_p_value_bh",
+    "avg_rating_significant_bh",
+    "bayes_rating",
+    "bayes_rating_pred",
+    "bayes_rating_error",
+    "bayes_rating_p_value",
+    "bayes_rating_significant",
+    "bayes_rating_p_value_bonferroni",
+    "bayes_rating_significant_bonferroni",
+    "bayes_rating_p_value_holm",
+    "bayes_rating_significant_holm",
+    "bayes_rating_p_value_bh",
+    "bayes_rating_significant_bh",
+).sort("year").write_csv(data_dir / "years_from_rankings_stats.csv", float_precision=5)
 
 # %% [markdown]
 # # Ratings
@@ -76,4 +101,18 @@ data_from_ratings.shape
 data_from_ratings.sort(pl.col("avg_rating_p_value")).head(10)
 
 # %%
-# TODO: Write results back to CSV
+data_from_ratings.select(
+    "year",
+    "num_ratings",
+    "avg_rating",
+    "avg_rating_pred",
+    "avg_rating_error",
+    "avg_rating_p_value",
+    "avg_rating_significant",
+    "avg_rating_p_value_bonferroni",
+    "avg_rating_significant_bonferroni",
+    "avg_rating_p_value_holm",
+    "avg_rating_significant_holm",
+    "avg_rating_p_value_bh",
+    "avg_rating_significant_bh",
+).write_csv(data_dir / "years_from_ratings_stats.csv", float_precision=5)
