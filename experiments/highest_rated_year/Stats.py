@@ -32,6 +32,9 @@ base_dir, data_dir
 # %% [markdown]
 # # Rankings
 
+# %% [markdown]
+# ## Average rating
+
 # %%
 data_from_rankings = (
     pl.scan_csv(data_dir / "years_from_rankings.csv")
@@ -45,11 +48,26 @@ data_from_rankings = t_test(data_from_rankings, y_column="avg_rating")
 data_from_rankings.shape
 
 # %%
+data_from_rankings.sort(pl.col("avg_rating"), descending=True).head(10)
+
+# %%
+data_from_rankings.sort(pl.col("avg_rating_error"), descending=True).head(10)
+
+# %%
 data_from_rankings.sort(pl.col("avg_rating_p_value")).head(10)
+
+# %% [markdown]
+# ## Bayes rating
 
 # %%
 data_from_rankings = t_test(data_from_rankings, y_column="bayes_rating")
 data_from_rankings.shape
+
+# %%
+data_from_rankings.sort(pl.col("bayes_rating"), descending=True).head(10)
+
+# %%
+data_from_rankings.sort(pl.col("bayes_rating_error"), descending=True).head(10)
 
 # %%
 data_from_rankings.sort(pl.col("bayes_rating_p_value")).head(10)
@@ -96,6 +114,12 @@ data_from_ratings.shape
 # %%
 data_from_ratings = t_test(data_from_ratings, y_column="avg_rating")
 data_from_ratings.shape
+
+# %%
+data_from_ratings.sort(pl.col("avg_rating"), descending=True).head(10)
+
+# %%
+data_from_ratings.sort(pl.col("avg_rating_error"), descending=True).head(10)
 
 # %%
 data_from_ratings.sort(pl.col("avg_rating_p_value")).head(10)
