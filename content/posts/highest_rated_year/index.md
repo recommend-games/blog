@@ -24,3 +24,7 @@ But we might want to refrain from using those plain averages in this context for
 {{< img src="bayes_ratings_from_rankings_scatter" alt="TODO" >}}
 
 There's a couple of interesting observations about this plot. First of, there's a much more uniform linear trend going on, though there's a notable drop in the last two years. That can easily be explained by the way the Bayesian averages are calculated: the dummies ratings that get added to the regular ones weigh much heavier on games with fewer ratings, which naturally is the case for newer games. So this plot tells us that **2019** should be considered the best year.
+
+Is it though? Or is it simply the most recent year with complete data? Shouldn't the best year be the one that defeated the trend? To answer those questions, let's first make the trend explicit:
+
+{{< img src="bayes_ratings_from_rankings_reg" alt="TODO" >}}
