@@ -84,3 +84,12 @@ If you're not interested in any of those statistical details, you can just call 
 In our case, we have two years significantly outperforming the trend (1980 and 1982) and two significantly underperforming (1996 and 2001). So, I guess we can conclude by calling those years the confirmed best and worst years, respectively.
 
 Except, it's not that simple. (I wasn't lying when I said I'd be going into unnecessary depths. 🤓) One possible interpretation of that 5% threshold is that you'll get positive results just by random chance in 1 in 20 experiments. But when we just calculated *p*-values for 53 years, we effectively performed 53 experiments, so a couple of years sticking out randomly would actually be expected. Again, there's a vast body of research to deal with those multiple tests. For good measure, I've checked the outcome for the procedures according to Bonferroni, Holm and Benjamini–Hochberg, but the result is the same for all of them: None of the years differ significantly from the trend. So I guess I've just wrote over 1500 words just to conclude that the best years in board gaming are yet to come. There's some comfort in that.
+
+
+# Golden age or cult of the new?
+
+Let me finish with a more philosophical thought: We've collected a lot of evidence to confidently conclude that the average ratings have been increasing over the years and continue to do so, but is the reason for this? Is it because we are, as many people claim, in a "golden age of board gaming"? Or is it a by-product of the "cult of the new" which willingly drops hundreds of dollars on games that don't even exist yet, but which receive 10 ratings from their backers as if to reassure themselves that this was a sound investment?
+
+I don't think there's a definitive answer. [Grade inflation](https://en.wikipedia.org/wiki/Grade_inflation) is a real thing, and if it affects professional teach who (hopefully) put a lot of thought and attention into the way they rate students, I'd say it's safe to assume the same will be true for some random people judging games on a website.
+
+But it's also true that designer games are still a very young art form and their creators have made a tremendous amount of progress in their craft over the past decades. In that respect, it's understandable that gamers want to express their appreciation for those advances. Let's just hope we won't run out of rating space before this century is over: At the current pace, by 2110 ever game will be a perfect 10.
