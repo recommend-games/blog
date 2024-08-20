@@ -54,3 +54,20 @@ Very simply put, the trends tells us that the average game from 1970 has a geek 
 Of course, I was now talking of the hypothetical scores if they were indeed lining up perfectly on that trend line. The reality is slightly more messy, and we can now calculate the difference between the actual average values for a year and the trend line. Years that beat the expecation from the trend lie above that line, underperforming years under the line. So now we can find the year that is the best in relation to the trend of its time, which is … 🥁 … **1977**. This might not be the most obvious year at first glance, but when looking more closely, it did bring forth iconic titles such as {{% game 1035 %}}Squad Leader{{% /game %}}, {{% game 15 %}}Cosmic Encounter{{% /game %}} and {{% game 811 %}}Rummikub{{% /game %}}. In light of those games, I'd say it's a well earned title.
 
 Now, one can also look at the underperforming years. Generally, it appears that the 70s are still held in high regards, whilst from the mid 80s to the mid 00s most years are underperforming, with the worst year being **1996**. This makes 1995 with {{% game 13 %}}CATAN{{% /game %}}, as well as {{% game 93 %}}El Grande{{% /game %}} and {{% game 220 %}}High Society{{% /game %}}, stand out even more.
+
+
+# Data from ratings
+
+I've promised a different way to calculate the average ratings for each year, so now we look at all the individual ratings for all the games released in that year and average those. Here's the result plot:
+
+{{< img src="avg_ratings_from_ratings_scatter" alt="TODO" >}}
+
+We see a similar increasing trend, but one that does continue to the present, so again, we'd have to say that the best year for games is **2023**. Another interesting observation is that the slope is much steeper. Let's make this concrete:
+
+{{< img src="avg_ratings_from_ratings_reg" alt="TODO" >}}
+
+Again, the trend tells us that the average rating for 1970 is 5.926, but here the yearly increase is almost 0.03, an order of magnitude higher than when we looked at the geek scores, so we end up with a trend of 7.471 for 2023.
+
+So, what years are the biggest winners and losers compared to the trend? The biggest overperformer, by quite a margin, is **1980** according to this measure. It got classics such as {{% game 71 %}}Civilization{{% /game %}} and {{% game 41 %}}Can't Stop{{% /game %}} going for itself, which hit really hard in this metric since there's so few ratings for those old games, as you can tell by those vanishingly small dots. Other strong positive outliers are 1982 (with {{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}} and {{% game 2653 %}}Survive: Escape from Atlantis!{{% /game %}}), as well as the aforementioned 1995 and 1977.
+
+The most disappointing year in this category is **2001**, which is curiously nested between the strong 2000 ({{% game 822 %}}Carcassonne{{% /game %}}) and 2002 ({{% game 3076 %}}Puerto Rico{{% /game %}}).
