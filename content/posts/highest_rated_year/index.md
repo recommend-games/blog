@@ -71,3 +71,16 @@ Again, the trend tells us that the average rating for 1970 is 5.926, but here th
 So, what years are the biggest winners and losers compared to the trend? The biggest overperformer, by quite a margin, is **1980** according to this measure. It got classics such as {{% game 71 %}}Civilization{{% /game %}} and {{% game 41 %}}Can't Stop{{% /game %}} going for itself, which hit really hard in this metric since there's so few ratings for those old games, as you can tell by those vanishingly small dots. Other strong positive outliers are 1982 (with {{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}} and {{% game 2653 %}}Survive: Escape from Atlantis!{{% /game %}}), as well as the aforementioned 1995 and 1977.
 
 The most disappointing year in this category is **2001**, which is curiously nested between the strong 2000 ({{% game 822 %}}Carcassonne{{% /game %}}) and 2002 ({{% game 3076 %}}Puerto Rico{{% /game %}}).
+
+
+## Testing for significance
+
+I promised excrutiating details, didn't I? So I've gotta answer one more question: Are those outliers significant, or are they just randomly spread around the trend line? Statistical testing is a vast field – so vast in fact that I always feel completely lost whenever I enter it.
+
+So let's not make things overly complicated. In their most basic form, most of those tests boil down to checking if values we're looking at don't stray too far from the mean. In our case, we look at the distances between actual values and the trend line and check how they are distributed. Those values that lie more than two standard deviations from the mean could be considered significant outliers.
+
+If you're not interested in any of those statistical details, you can just call your favourite software package to calculate the *p*-value, which – roughly speaking – tells you the probability that the effect you observed is due to random chance. The smaller the *p*-value, the more likely you've observed the actual effect you were interested in. Usually, an arbitrary threshold is chosen, often 5%. Observations with a *p*-value below that threshold are considered significant.
+
+In our case, we have two years significantly outperforming the trend (1980 and 1982) and two significantly underperforming (1996 and 2001). So, I guess we can conclude by calling those years the confirmed best and worst years, respectively.
+
+Except, it's not that simple. (I wasn't lying when I said I'd be going into unnecessary depths. 🤓) One possible interpretation of that 5% threshold is that you'll get positive results just by random chance in 1 in 20 experiments. But when we just calculated *p*-values for 53 years, we effectively performed 53 experiments, so a couple of years sticking out randomly would actually be expected. Again, there's a vast body of research to deal with those multiple tests. For good measure, I've checked the outcome for the procedures according to Bonferroni, Holm and Benjamini–Hochberg, but the result is the same for all of them: None of the years differ significantly from the trend. So I guess I've just wrote over 1500 words just to conclude that the best years in board gaming are yet to come. There's some comfort in that.
