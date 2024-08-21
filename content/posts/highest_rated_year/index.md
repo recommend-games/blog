@@ -8,9 +8,11 @@ date: 2024-08-19T12:00:00+03:00
 tags:
   - BoardGameGeek
   - Ratings
-  - highest rated games
+  - Highest rated games
   - Corey Thompson
   - Board Games Insider
+  - Golden age
+  - Cult of the new
 ---
 
 Corey Thompson (of [Above Board TV](https://www.youtube.com/@aboveboardTV) and [Dice Tower Dish](https://dicetowerdish.com/) fame) recently raised an interesting [question](https://boardgamegeek.com/thread/3336646/playtesting-327) on the [Board Games Insider podcast](https://boardgamesinsider.com/):
@@ -33,7 +35,7 @@ Using the average of games actually presents two different options in its own ri
 
 {{< img src="avg_ratings_from_rankings_scatter" alt="Yearly average ratings from ranked games" >}}
 
-Every dot is a year between 1970 and 2023, with its height on the *y*-axis indicating the average rating of all games released in that year (higher is better) and the size of the dot indicating the number of games. The acceleration in the past few years is striking, so looking at this plot the answer to Corey's question would definitely have to be: **2023** (and counting).
+Every dot is a year between 1970 (before then very few games have enough ratings) and 2023, with its height on the *y*-axis indicating the average rating of all games released in that year (higher is better) and the size of the dot indicating the number of games. The acceleration in the past few years is striking, so looking at this plot the answer to Corey's question would definitely have to be: **2023** (and counting).
 
 
 ## Geek scores
@@ -51,7 +53,7 @@ Is it though? Or is it simply the most recent year with complete data? Shouldn't
 
 {{< img src="bayes_ratings_from_rankings_reg" alt="Yearly average geek score from ranked games (including trend line)" >}}
 
-I've added the "line of best fit", i.e., the one that follows the trend most closely, via standard linear regression. The shaded band indicates the 95% confidence interval, i.e., we can be 95% confident that the true trend line lies within that band.
+I've added the *line of best fit*, i.e., the one that follows the trend most closely, via standard linear regression. The shaded band indicates the 95% confidence interval, i.e., we can be 95% confident that the true trend line lies within that band.
 
 Very simply put, the trends tells us that the average game from 1970 has a geek score of around 5.516. This makes sense, since it is strongly pulled towards the value 5.5 of the dummy ratings added to calculate this Bayesian average. According to the trend, that geek score then increases year on year by about 0.004. This might not sound like much, but 53 years later, in 2023, the average game should have a geek score of 5.722. In increase of over 0.2 is huge for a score that is so strongly drawn to its mean.
 
