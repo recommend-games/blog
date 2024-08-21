@@ -31,7 +31,7 @@ First of all, we need to make sure we understand what the question is asking. I'
 
 Using the average of games actually presents two different options in its own right because BoardGameGeek (BGG) uses both plain averages for display purposes and Bayesian averages for [rankings]({{<ref "posts/reverse_engineer_bgg/index.md">}}). Let's start from the plain average:
 
-{{< img src="avg_ratings_from_rankings_scatter" alt="TODO" >}}
+{{< img src="avg_ratings_from_rankings_scatter" alt="Yearly average ratings from ranked games" >}}
 
 Every dot is a year between 1970 and 2023, with its height on the *y*-axis indicating the average rating of all games released in that year (higher is better) and the size of the dot indicating the number of games. The acceleration in the past few years is striking, so looking at this plot the answer to Corey's question would definitely have to be: **2023** (and counting).
 
@@ -40,7 +40,7 @@ Every dot is a year between 1970 and 2023, with its height on the *y*-axis indic
 
 But we might want to refrain from using those plain averages in this context for the same reason they're not used for ranking: the averages for games with few ratings are just too swingy. So let's look at the Bayesian averages (aka geek scores) instead:
 
-{{< img src="bayes_ratings_from_rankings_scatter" alt="TODO" >}}
+{{< img src="bayes_ratings_from_rankings_scatter" alt="Yearly average geek score from ranked games" >}}
 
 There's a couple of interesting observations about this plot. First of, there's a much more uniform linear trend going on, though there's a notable drop in the last two years. That can easily be explained by the way the Bayesian averages are calculated: the dummies ratings that get added to the regular ones weigh much heavier on games with fewer ratings, which naturally is the case for newer games. So this plot tells us that **2019** should be considered the best year.
 
@@ -49,7 +49,7 @@ There's a couple of interesting observations about this plot. First of, there's 
 
 Is it though? Or is it simply the most recent year with complete data? Shouldn't the best year be the one that defeated the trend? To answer those questions, let's first make the trend explicit:
 
-{{< img src="bayes_ratings_from_rankings_reg" alt="TODO" >}}
+{{< img src="bayes_ratings_from_rankings_reg" alt="Yearly average geek score from ranked games (including trend line)" >}}
 
 I've added the "line of best fit", i.e., the one that follows the trend most closely, via standard linear regression. The shaded band indicates the 95% confidence interval, i.e., we can be 95% confident that the true trend line lies within that band.
 
@@ -64,11 +64,11 @@ Now, one can also look at the underperforming years. Generally, it appears that 
 
 I've promised a different way to calculate the average ratings for each year, so now we look at all the individual ratings for all the games released in that year and average those. Here's the result plot:
 
-{{< img src="avg_ratings_from_ratings_scatter" alt="TODO" >}}
+{{< img src="avg_ratings_from_ratings_scatter" alt="Yearly average ratings" >}}
 
 We see a similar increasing trend, but one that does continue to the present, so again, we'd have to say that the best year for games is **2023**. Another interesting observation is that the slope is much steeper. Let's make this concrete:
 
-{{< img src="avg_ratings_from_ratings_reg" alt="TODO" >}}
+{{< img src="avg_ratings_from_ratings_reg" alt="Yearly average ratings (including trend line)" >}}
 
 Again, the trend tells us that the average rating for 1970 is 5.926, but here the yearly increase is almost 0.03, an order of magnitude higher than when we looked at the geek scores, so we end up with a trend of 7.471 for 2023.
 
