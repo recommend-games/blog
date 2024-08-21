@@ -7,6 +7,10 @@ type: post
 date: 2024-08-19T12:00:00+03:00
 tags:
   - BoardGameGeek
+  - Ratings
+  - highest rated games
+  - Corey Thompson
+  - Board Games Insider
 ---
 
 Corey Thompson (of [Above Board TV](https://www.youtube.com/@aboveboardTV) and [Dice Tower Dish](https://dicetowerdish.com/) fame) recently raised an interesting [question](https://boardgamegeek.com/thread/3336646/playtesting-327) on the [Board Games Insider podcast](https://boardgamesinsider.com/):
