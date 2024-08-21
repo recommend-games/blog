@@ -4,7 +4,7 @@ subtitle: The highest rated years on BoardGameGeek
 slug: highest-rated-year
 author: Markus Shepherd
 type: post
-date: 2024-08-19T12:00:00+03:00
+date: 2024-08-22T12:00:00+03:00
 tags:
   - BoardGameGeek
   - Ratings
