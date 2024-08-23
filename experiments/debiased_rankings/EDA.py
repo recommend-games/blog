@@ -20,6 +20,7 @@ from pathlib import Path
 import jupyter_black
 import numpy as np
 import polars as pl
+import statsmodels.api as sm
 from sklearn.preprocessing import MultiLabelBinarizer
 
 jupyter_black.load()
@@ -48,7 +49,7 @@ games = (
         "avg_rating",
         "bayes_rating",
         "complexity",
-        pl.col("cooperative").fill_null(False),
+        pl.col("cooperative").fill_null(False).cast(pl.Int8),
         pl.col("game_type").fill_null([]),
     )
     .with_columns(age=this_year - pl.col("year"))
@@ -80,3 +81,25 @@ data.shape
 
 # %%
 data.sample(10, seed=seed)
+
+# %%
+endog = data["avg_rating"].to_pandas()
+exog = sm.add_constant(
+    data.select(
+        "age",
+        "complexity",
+        "cooperative",
+        "Abstract Game:4666",
+        "Children's Game:4665",
+        "Customizable:4667",
+        "Family Game:5499",
+        "Party Game:5498",
+        "Strategy Game:5497",
+        "Thematic:5496",
+        "War Game:4664",
+    ).to_pandas()
+)
+model = sm.OLS(endog=endog, exog=exog).fit()
+
+# %%
+model.summary().tables[1]
