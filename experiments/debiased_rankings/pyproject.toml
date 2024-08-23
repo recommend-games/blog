@@ -2,12 +2,32 @@
 name = "debiased-rankings"
 version = "0.1.0"
 description = ""
-authors = ["Markus Schepke <markus.schepke@wolt.com>"]
-readme = "README.md"
+authors = ["Markus Shepherd <markus@recommend.games>"]
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "3.12.*"
 
+matplotlib = "*"
+numpy = "*"
+polars = "*"
+scipy = "*"
+seaborn = "*"
+statsmodels = "*"
+tqdm = "*"
+
+[tool.poetry.group.dev.dependencies]
+jupyter-black = "*"
+jupyterlab = "*"
+jupytext = "*"
+mypy = "*"
+ruff = "*"
+types-tqdm = "*"
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
 
 [build-system]
 requires = ["poetry-core"]
