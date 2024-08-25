@@ -45,10 +45,14 @@ games = (
     .filter(pl.col("rank").is_not_null())
     .filter(pl.col("bgg_id") != 91313)  # Video game
     .select(
+        "bgg_id",
+        "name",
         "year",
         "avg_rating",
         "bayes_rating",
         "complexity",
+        "num_votes",
+        "rank",
         pl.col("cooperative").fill_null(False).cast(pl.Int8),
         pl.col("game_type").fill_null([]),
     )
@@ -103,3 +107,44 @@ model = sm.OLS(endog=endog, exog=exog).fit()
 
 # %%
 model.summary().tables[1]
+
+# %%
+influence = model.get_influence()
+rating_debiased = influence.resid + np.mean(endog)
+
+# %%
+rating_dummies = 5.5
+num_dummies = data.select(pl.col("num_votes").sum()).item() / 10_000
+
+data = (
+    data.with_columns(
+        pl.Series("avg_rating_debiased", rating_debiased),
+    )
+    .with_columns(
+        bayes_rating_debiased=(
+            pl.col("avg_rating_debiased") * pl.col("num_votes")
+            + rating_dummies * num_dummies
+        )
+        / (pl.col("num_votes") + num_dummies),
+    )
+    .with_columns(
+        rank_debiased=pl.col("bayes_rating_debiased").rank(
+            method="min",
+            descending=True,
+        )
+    )
+    .with_columns(
+        avg_rating_change=pl.col("avg_rating") - pl.col("avg_rating_debiased"),
+        bayes_rating_change=pl.col("bayes_rating") - pl.col("bayes_rating_debiased"),
+        rank_change=pl.col("rank") - pl.col("rank_debiased"),
+    )
+    .sort("rank_debiased")
+)
+
+data.shape
+
+# %%
+data.head(100)
+
+# %%
+data.sort("bayes_rating_change").head(10)
