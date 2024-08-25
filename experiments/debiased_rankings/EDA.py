@@ -41,6 +41,7 @@ games = (
     pl.scan_ndjson(data_dir / "scraped" / "bgg_GameItem.jl")
     .filter(pl.col("year") >= 1970)
     .filter(pl.col("year") <= this_year)
+    .filter(pl.col("min_time") <= 360)
     .filter(pl.col("complexity").is_not_null())
     .filter(pl.col("rank").is_not_null())
     .filter(pl.col("bgg_id") != 91313)  # Video game
@@ -48,11 +49,12 @@ games = (
         "bgg_id",
         "name",
         "year",
+        "rank",
+        "num_votes",
         "avg_rating",
         "bayes_rating",
         "complexity",
-        "num_votes",
-        "rank",
+        "min_time",
         pl.col("cooperative").fill_null(False).cast(pl.Int8),
         pl.col("game_type").fill_null([]),
     )
@@ -92,6 +94,7 @@ exog = sm.add_constant(
     data.select(
         "age",
         "complexity",
+        "min_time",
         "cooperative",
         "Abstract Game:4666",
         "Children's Game:4665",
