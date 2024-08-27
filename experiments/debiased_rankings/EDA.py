@@ -21,72 +21,34 @@ import jupyter_black
 import numpy as np
 import polars as pl
 import statsmodels.api as sm
-from sklearn.preprocessing import MultiLabelBinarizer
+
+from debiased_rankings.data import load_data
 
 jupyter_black.load()
 pl.Config.set_tbl_rows(100)
 
-seed = 23
 this_year = date.today().year
 
 # %%
 base_dir = Path(".").resolve()
 project_dir = base_dir.parent.parent
-rankings_dir = project_dir.parent / "bgg-ranking-historicals"
 data_dir = project_dir.parent / "board-game-data"
-base_dir, project_dir, rankings_dir, data_dir
+base_dir, project_dir, data_dir
 
 # %%
-games = (
-    pl.scan_ndjson(data_dir / "scraped" / "bgg_GameItem.jl")
-    .filter(pl.col("year") >= 1970)
-    .filter(pl.col("year") <= this_year)
-    .filter(pl.col("min_time") <= 360)
-    .filter(pl.col("complexity").is_not_null())
-    .filter(pl.col("rank").is_not_null())
-    .filter(pl.col("bgg_id") != 91313)  # Video game
-    .select(
-        "bgg_id",
-        "name",
-        "year",
-        "rank",
-        "num_votes",
-        "avg_rating",
-        "bayes_rating",
-        "complexity",
-        "min_time",
-        pl.col("cooperative").fill_null(False).cast(pl.Int8),
-        pl.col("game_type").fill_null([]),
-    )
-    .with_columns(age=this_year - pl.col("year"))
-    .collect()
+data = load_data(
+    path=data_dir / "scraped" / "bgg_GameItem.jl",
+    min_year=1970,
+    max_year=this_year,
+    max_min_time=360,
 )
-games.shape
-
-# %%
-games.describe()
-
-# %%
-games.sample(10, seed=seed)
-
-# %%
-mlb = MultiLabelBinarizer()
-game_types_transformed = mlb.fit_transform(games["game_type"])
-game_types_transformed.shape
-
-# %%
-game_types = pl.DataFrame(
-    data=game_types_transformed.astype(np.int8),
-    schema=list(mlb.classes_),
-)
-game_types.describe()
-
-# %%
-data = pl.concat([games, game_types], how="horizontal")
 data.shape
 
 # %%
-data.sample(10, seed=seed)
+data.describe()
+
+# %%
+data.sample(10, seed=this_year)
 
 # %%
 endog = data["avg_rating"].to_pandas()
