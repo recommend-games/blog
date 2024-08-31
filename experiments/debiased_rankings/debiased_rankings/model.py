@@ -39,7 +39,7 @@ def debias(
             )
         )
         .with_columns(
-            (pl.col(target_col) - pl.col(f"{target_col}_debiased")).alias(
+            (pl.col(f"{target_col}_debiased") - pl.col(target_col)).alias(
                 f"{target_col}_change",
             ),
             rank_change=pl.col("rank") - pl.col("rank_debiased"),

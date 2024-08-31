@@ -50,29 +50,68 @@ data.describe()
 data.sample(10, seed=this_year)
 
 # %%
-regressor_cols = (
-    "age",
-    "complexity",
-    "min_time",
-    "cooperative",
-    "Abstract Game:4666",
-    "Children's Game:4665",
-    "Customizable:4667",
-    "Family Game:5499",
-    "Party Game:5498",
-    "Strategy Game:5497",
-    "Thematic:5496",
-    "War Game:4664",
+experiments = (
+    ("age",),
+    ("complexity",),
+    ("min_time",),
+    ("cooperative",),
+    (
+        "Abstract Game:4666",
+        "Children's Game:4665",
+        "Customizable:4667",
+        "Family Game:5499",
+        "Party Game:5498",
+        "Strategy Game:5497",
+        "Thematic:5496",
+        "War Game:4664",
+    ),
+    (
+        "age",
+        "complexity",
+        "min_time",
+        "cooperative",
+        "Abstract Game:4666",
+        "Children's Game:4665",
+        "Customizable:4667",
+        "Family Game:5499",
+        "Party Game:5498",
+        "Strategy Game:5497",
+        "Thematic:5496",
+        "War Game:4664",
+    ),
 )
-model, data = debias(
-    data=data,
-    target_col="avg_rating",
-    regressor_cols=regressor_cols,
-)
-data.shape
 
 # %%
-model.summary().tables[1]
-
-# %%
-data.sort("rank_debiased").head(10)
+for regressor_cols in experiments:
+    print("***", "Columns:", ", ".join(regressor_cols), "***")
+    model, exp_results = debias(
+        data=data,
+        target_col="avg_rating",
+        regressor_cols=regressor_cols,
+    )
+    print()
+    print(model.summary().tables[1])
+    print()
+    with pl.Config(
+        tbl_formatting="ASCII_MARKDOWN",
+        tbl_hide_column_data_types=True,
+        tbl_hide_dataframe_shape=True,
+        tbl_width_chars=10000,
+        tbl_cols=-1,
+        fmt_str_lengths=20,
+    ):
+        print(
+            exp_results.sort("rank_debiased")
+            .select(
+                "bgg_id",
+                "name",
+                "year",
+                "rank",
+                "avg_rating",
+                "avg_rating_debiased",
+            )
+            .head(10)
+        )
+    print()
+    print()
+    print()
