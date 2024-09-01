@@ -30,9 +30,10 @@ this_year = date.today().year
 
 # %%
 base_dir = Path(".").resolve()
+results_dir = base_dir / "results"
 project_dir = base_dir.parent.parent
 data_dir = project_dir.parent / "board-game-data"
-base_dir, project_dir, data_dir
+base_dir, results_dir, project_dir, data_dir
 
 # %%
 data = load_data(
@@ -50,12 +51,12 @@ data.describe()
 data.sample(10, seed=this_year)
 
 # %%
-experiments = (
-    ("age",),
-    ("complexity",),
-    ("min_time",),
-    ("cooperative",),
-    (
+experiments = {
+    "age": ("age",),
+    "complexity": ("complexity",),
+    "min_time": ("min_time",),
+    "cooperative": ("cooperative",),
+    "game_type": (
         "Abstract Game",
         "Children's Game",
         "Customizable",
@@ -65,7 +66,7 @@ experiments = (
         "Thematic",
         "War Game",
     ),
-    (
+    "_all": (
         "age",
         "complexity",
         "min_time",
@@ -79,39 +80,35 @@ experiments = (
         "Thematic",
         "War Game",
     ),
-)
+}
 
 # %%
-for regressor_cols in experiments:
-    print("***", "Columns:", ", ".join(regressor_cols), "***")
+for name, regressor_cols in experiments.items():
+    print(f"*** *{name}*;", "columns:", ", ".join(regressor_cols), "***")
+    out_dir = results_dir / name
+    out_dir.mkdir(parents=True, exist_ok=True)
+    print(out_dir)
     model, exp_results = debias(
         data=data,
         target_col="avg_rating",
         regressor_cols=regressor_cols,
     )
-    print()
-    print(model.summary().tables[1])
-    print()
-    with pl.Config(
-        tbl_formatting="ASCII_MARKDOWN",
-        tbl_hide_column_data_types=True,
-        tbl_hide_dataframe_shape=True,
-        tbl_width_chars=10000,
-        tbl_cols=-1,
-        fmt_str_lengths=20,
-    ):
-        print(
-            exp_results.sort("rank_debiased")
-            .select(
-                "bgg_id",
-                "name",
-                "year",
-                "rank",
-                "avg_rating",
-                "avg_rating_debiased",
-            )
-            .head(10)
-        )
-    print()
-    print()
-    print()
+
+    model_path = out_dir / "model.csv"
+    with model_path.open("w") as model_file:
+        model_file.write(model.summary().tables[1].as_csv())
+        model_file.write("\n")
+
+    ranking_path = out_dir / "ranking.csv"
+    exp_results.sort("rank_debiased").select(
+        "rank_debiased",
+        "bgg_id",
+        "name",
+        "year",
+        "rank",
+        "avg_rating",
+        "avg_rating_debiased",
+        "avg_rating_change",
+        "avg_rating_bayes_debiased",
+        "rank_change",
+    ).write_csv(ranking_path, float_precision=3)
