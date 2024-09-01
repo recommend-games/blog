@@ -42,7 +42,7 @@ def load_data(
         "complexity",
         "min_time",
         pl.col("cooperative").fill_null(False).cast(pl.Int8),
-        pl.col("game_type").fill_null([]),
+        pl.col("game_type").fill_null([]).list.eval(pl.element().str.head(-5)),
     )
 
     if max_year:
