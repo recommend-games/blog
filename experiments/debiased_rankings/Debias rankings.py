@@ -22,6 +22,7 @@ import polars as pl
 
 from debiased_rankings.data import load_data
 from debiased_rankings.model import debias
+from debiased_rankings.plots import save_plot
 
 jupyter_black.load()
 pl.Config.set_tbl_rows(100)
@@ -112,3 +113,33 @@ for name, regressor_cols in experiments.items():
         "avg_rating_bayes_debiased",
         "rank_change",
     ).write_csv(ranking_path, float_precision=3)
+
+    if name == "_all":
+        continue
+
+    plot_data = data
+
+    if name == "game_type":
+        plot_data = data.explode("game_type").filter(~pl.col("game_type").is_null())
+        plot_kind = "cat"
+    elif name == "cooperative":
+        plot_data = data.select(
+            "avg_rating",
+            "num_votes",
+            pl.col("cooperative").replace_strict({0: "competitive", 1: "cooperative"}),
+        )
+        plot_kind = "cat"
+    else:
+        plot_data = data
+        plot_kind = "reg"
+
+    save_plot(
+        data=plot_data,
+        x_column=name if plot_kind == "reg" else "avg_rating",
+        y_column="avg_rating" if plot_kind == "reg" else name,
+        kind=plot_kind,
+        path=out_dir / "plot",
+        top_k=1000,
+        seed=this_year,
+        show=True,
+    )
