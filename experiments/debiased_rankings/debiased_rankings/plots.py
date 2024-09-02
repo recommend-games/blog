@@ -21,6 +21,9 @@ def plot(
     top_k: int | None = None,
     figsize: tuple[int, int] | None = None,
     seed: int | None = None,
+    title: str | None = None,
+    x_label: str | None = None,
+    y_label: str | None = None,
     plot_kwargs: dict[str, any] | None = None,
     ax: Axes | None = None,
 ) -> Axes:
@@ -55,9 +58,9 @@ def plot(
     else:
         raise ValueError(f"Unknown kind: {kind}")
 
-    ax.set_title(y_column)
-    ax.set_xlabel(None)
-    ax.set_ylabel(None)
+    ax.set_title(title or f"{y_column} vs {x_column}")
+    ax.set_xlabel(x_label or x_column)
+    ax.set_ylabel(y_label or y_column)
 
     return ax
 
@@ -73,6 +76,9 @@ def save_plot(
     top_k: int | None = None,
     figsize: tuple[int, int] | None = None,
     seed: int | None = None,
+    title: str | None = None,
+    x_label: str | None = None,
+    y_label: str | None = None,
     plot_kwargs: dict[str, any] | None = None,
     show: bool = False,
 ) -> None:
@@ -93,6 +99,9 @@ def save_plot(
         top_k=top_k,
         figsize=figsize,
         seed=seed,
+        title=title,
+        x_label=x_label,
+        y_label=y_label,
         plot_kwargs=plot_kwargs,
     )
 
