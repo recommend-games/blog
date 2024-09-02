@@ -126,8 +126,8 @@ plots = {
     "min_time": {
         "data": data.filter(pl.col("min_time") <= 180),
         "plot_kwargs": {"x_jitter": 2.5},
-        "x_label": "Min play time in minutes",
-        "title": "Play time vs Rating",
+        "x_label": "Minimum playing time in minutes",
+        "title": "Playing time vs Rating",
     },
     "cooperative": {
         "data": data.select(
