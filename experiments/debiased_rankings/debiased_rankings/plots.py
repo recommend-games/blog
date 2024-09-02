@@ -24,6 +24,7 @@ def plot(
     title: str | None = None,
     x_label: str | None = None,
     y_label: str | None = None,
+    invert_x: bool = False,
     plot_kwargs: dict[str, any] | None = None,
     ax: Axes | None = None,
 ) -> Axes:
@@ -62,6 +63,9 @@ def plot(
     ax.set_xlabel(x_label or x_column)
     ax.set_ylabel(y_label or y_column)
 
+    if invert_x:
+        ax.invert_xaxis()
+
     return ax
 
 
@@ -79,6 +83,7 @@ def save_plot(
     title: str | None = None,
     x_label: str | None = None,
     y_label: str | None = None,
+    invert_x: bool = False,
     plot_kwargs: dict[str, any] | None = None,
     show: bool = False,
 ) -> None:
@@ -102,6 +107,7 @@ def save_plot(
         title=title,
         x_label=x_label,
         y_label=y_label,
+        invert_x=invert_x,
         plot_kwargs=plot_kwargs,
     )
 
