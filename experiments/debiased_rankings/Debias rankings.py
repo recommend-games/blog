@@ -114,32 +114,65 @@ for name, regressor_cols in experiments.items():
         "rank_change",
     ).write_csv(ranking_path, float_precision=3)
 
-    if name == "_all":
-        continue
-
-    plot_data = data
-
-    if name == "game_type":
-        plot_data = data.explode("game_type").filter(~pl.col("game_type").is_null())
-        plot_kind = "cat"
-    elif name == "cooperative":
-        plot_data = data.select(
+# %%
+plots = {
+    "age": {
+        "invert_x": True,
+        "plot_kwargs": {"x_jitter": 0.25},
+        "x_label": "Age in years",
+        "title": "Age vs Rating",
+    },
+    "complexity": {},
+    "min_time": {
+        "data": data.filter(pl.col("min_time") <= 180),
+        "plot_kwargs": {"x_jitter": 2.5},
+        "x_label": "Min play time in minutes",
+        "title": "Play time vs Rating",
+    },
+    "cooperative": {
+        "data": data.select(
             "avg_rating",
             "num_votes",
-            pl.col("cooperative").replace_strict({0: "competitive", 1: "cooperative"}),
-        )
-        plot_kind = "cat"
-    else:
-        plot_data = data
-        plot_kind = "reg"
+            pl.col("cooperative").replace_strict({0: "Competitive", 1: "Cooperative"}),
+        ),
+        "kind": "cat",
+        "x_label": "Cooperative/Competitive",
+        "swap_axes": True,
+    },
+    "game_type": {
+        "data": data.explode("game_type").filter(~pl.col("game_type").is_null()),
+        "kind": "cat",
+        "x_label": "Game type",
+        "swap_axes": True,
+    },
+}
 
-    save_plot(
-        data=plot_data,
-        x_column=name if plot_kind == "reg" else "avg_rating",
-        y_column="avg_rating" if plot_kind == "reg" else name,
-        kind=plot_kind,
-        path=out_dir / "plot",
-        top_k=1000,
-        seed=this_year,
-        show=True,
-    )
+# %%
+for name, plot_opts in plots.items():
+    out_dir = results_dir / name
+    out_dir.mkdir(parents=True, exist_ok=True)
+    print(out_dir)
+
+    plot_opts.setdefault("data", data)
+    plot_opts.setdefault("x_column", name)
+    plot_opts.setdefault("y_column", "avg_rating")
+    plot_opts.setdefault("x_label", name.capitalize())
+    plot_opts.setdefault("y_label", "Rating")
+    plot_opts.setdefault("title", f"{plot_opts['x_label']} vs {plot_opts['y_label']}")
+    plot_opts.setdefault("kind", "reg")
+    plot_opts.setdefault("path", out_dir / "plot")
+    plot_opts.setdefault("top_k", 1000)
+    plot_opts.setdefault("seed", this_year)
+    plot_opts.setdefault("show", True)
+
+    if plot_opts.pop("swap_axes", False):
+        plot_opts["x_column"], plot_opts["y_column"] = (
+            plot_opts["y_column"],
+            plot_opts["x_column"],
+        )
+        plot_opts["x_label"], plot_opts["y_label"] = (
+            plot_opts["y_label"],
+            plot_opts["x_label"],
+        )
+
+    save_plot(**plot_opts)
