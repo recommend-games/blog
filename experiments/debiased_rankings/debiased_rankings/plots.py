@@ -21,6 +21,7 @@ def plot(
     top_k: int | None = None,
     figsize: tuple[int, int] | None = None,
     seed: int | None = None,
+    plot_kwargs: dict[str, any] | None = None,
     ax: Axes | None = None,
 ) -> Axes:
     if ax is None:
@@ -29,13 +30,12 @@ def plot(
     if top_k and top_k_column:
         data = data.top_k(by=top_k_column, k=top_k)
 
-    plot_kwargs = {
-        "data": data,
-        "x": x_column,
-        "y": y_column,
-        "color": "purple",
-        "ax": ax,
-    }
+    plot_kwargs = plot_kwargs or {}
+    plot_kwargs["data"] = data
+    plot_kwargs["x"] = x_column
+    plot_kwargs["y"] = y_column
+    plot_kwargs.setdefault("color", "purple")
+    plot_kwargs["ax"] = ax
 
     if kind == "reg":
         sns.regplot(
@@ -73,6 +73,7 @@ def save_plot(
     top_k: int | None = None,
     figsize: tuple[int, int] | None = None,
     seed: int | None = None,
+    plot_kwargs: dict[str, any] | None = None,
     show: bool = False,
 ) -> None:
     if not path and not show:
@@ -92,6 +93,7 @@ def save_plot(
         top_k=top_k,
         figsize=figsize,
         seed=seed,
+        plot_kwargs=plot_kwargs,
     )
 
     plt.tight_layout()
