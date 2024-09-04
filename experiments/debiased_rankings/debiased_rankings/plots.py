@@ -55,6 +55,12 @@ def plot(
             seed=seed,
         )
     elif kind == "cat":
+        plot_kwargs.setdefault(
+            "order",
+            data.group_by(y_column)
+            .agg(pl.col(x_column).mean())
+            .sort(x_column)[y_column],
+        )
         sns.violinplot(**plot_kwargs)
     else:
         raise ValueError(f"Unknown kind: {kind}")
