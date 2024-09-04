@@ -136,7 +136,8 @@ plots = {
             pl.col("cooperative").replace_strict({0: "Competitive", 1: "Cooperative"}),
         ),
         "kind": "cat",
-        "x_label": "Cooperative/Competitive",
+        "x_label": False,
+        "title": "Competitive/Cooperative vs Rating",
         "swap_axes": True,
     },
     "game_type": {

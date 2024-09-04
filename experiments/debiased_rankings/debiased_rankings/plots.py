@@ -21,9 +21,9 @@ def plot(
     top_k: int | None = None,
     figsize: tuple[int, int] | None = None,
     seed: int | None = None,
-    title: str | None = None,
-    x_label: str | None = None,
-    y_label: str | None = None,
+    title: str | bool | None = None,
+    x_label: str | bool | None = None,
+    y_label: str | bool | None = None,
     invert_x: bool = False,
     plot_kwargs: dict[str, any] | None = None,
     ax: Axes | None = None,
@@ -59,9 +59,9 @@ def plot(
     else:
         raise ValueError(f"Unknown kind: {kind}")
 
-    ax.set_title(title or f"{y_column} vs {x_column}")
-    ax.set_xlabel(x_label or x_column)
-    ax.set_ylabel(y_label or y_column)
+    ax.set_title(None if title is False else (title or f"{y_column} vs {x_column}"))
+    ax.set_xlabel(None if x_label is False else (x_label or x_column))
+    ax.set_ylabel(None if y_label is False else (y_label or y_column))
 
     if invert_x:
         ax.invert_xaxis()
@@ -80,9 +80,9 @@ def save_plot(
     top_k: int | None = None,
     figsize: tuple[int, int] | None = None,
     seed: int | None = None,
-    title: str | None = None,
-    x_label: str | None = None,
-    y_label: str | None = None,
+    title: str | bool | None = None,
+    x_label: str | bool | None = None,
+    y_label: str | bool | None = None,
     invert_x: bool = False,
     plot_kwargs: dict[str, any] | None = None,
     show: bool = False,
