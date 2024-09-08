@@ -36,7 +36,7 @@ def plot(
     if top_k and top_k_column:
         data = data.top_k(by=top_k_column, k=top_k)
 
-    plot_kwargs = plot_kwargs or {}
+    plot_kwargs = plot_kwargs.copy() if plot_kwargs else {}
     plot_kwargs["data"] = data
     plot_kwargs["x"] = x_column
     plot_kwargs["y"] = y_column
@@ -122,8 +122,14 @@ def animate(
     if progress:
         alphas = tqdm(alphas)
 
+    if plot_kwargs:
+        plot_kwargs = plot_kwargs.copy()
+        plot_kwargs.pop("x_jitter", None)
+        plot_kwargs.pop("y_jitter", None)
+
     writer = animation.PillowWriter(fps=fps)
     fig, ax = plt.subplots(figsize=figsize)
+    LOGGER.info("Animating %s plot to <%s>", kind, path)
     with writer.saving(fig=fig, outfile=path, dpi=dpi):
         for alpha in alphas:
             ax.clear()
@@ -168,6 +174,8 @@ def save_plot(
     invert_x: bool = False,
     plot_kwargs: dict[str, any] | None = None,
     show: bool = False,
+    save_animation: bool = False,
+    progress: bool = False,
 ) -> None:
     if not path and not show:
         raise ValueError("Neither path nor show is set")
@@ -200,3 +208,22 @@ def save_plot(
     if show:
         plt.show()
     plt.close()
+
+    if save_animation and path:
+        animate(
+            path=path.parent / f"{path.stem}_{kind}_animated.gif",
+            data=data,
+            x_column=x_column,
+            y_column=y_column,
+            kind=kind,
+            top_k_column=top_k_column,
+            top_k=top_k,
+            figsize=figsize,
+            seed=seed,
+            title=title,
+            x_label=x_label,
+            y_label=y_label,
+            invert_x=invert_x,
+            plot_kwargs=plot_kwargs,
+            progress=progress,
+        )
