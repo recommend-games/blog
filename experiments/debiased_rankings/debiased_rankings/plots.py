@@ -216,7 +216,7 @@ def save_plot(
             y_column=y_column,
             kind=kind,
             top_k_column=top_k_column,
-            top_k=top_k,
+            top_k=top_k * 10 if top_k else None,
             figsize=figsize,
             seed=seed,
             title=title,
