@@ -151,7 +151,6 @@ def animate(
                 plot_kwargs=plot_kwargs,
                 ax=ax,
             )
-            plt.tight_layout()
             plt.ylim(y_min, y_max)
             writer.grab_frame()
     plt.close()

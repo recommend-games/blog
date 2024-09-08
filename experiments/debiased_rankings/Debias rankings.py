@@ -82,6 +82,7 @@ experiments = {
         "War Game",
     ),
 }
+results = {}
 
 # %%
 for name, regressor_cols in experiments.items():
@@ -114,6 +115,8 @@ for name, regressor_cols in experiments.items():
         "rank_change",
     ).write_csv(ranking_path, float_precision=3)
 
+    results[name] = exp_results
+
 # %%
 plots = {
     "age": {
@@ -124,13 +127,13 @@ plots = {
     },
     "complexity": {},
     "min_time": {
-        "data": data.filter(pl.col("min_time") <= 180),
+        "data": results["min_time"].filter(pl.col("min_time") <= 180),
         "plot_kwargs": {"x_jitter": 2.5},
         "x_label": "Minimum playing time in minutes",
         "title": "Playing time vs Rating",
     },
     "cooperative": {
-        "data": data.select(
+        "data": results["cooperative"].select(
             "avg_rating",
             "num_votes",
             pl.col("cooperative").replace_strict({0: "Competitive", 1: "Cooperative"}),
@@ -139,12 +142,16 @@ plots = {
         "x_label": False,
         "title": "Competitive/Cooperative vs Rating",
         "swap_axes": True,
+        "save_animation": False,
     },
     "game_type": {
-        "data": data.explode("game_type").filter(~pl.col("game_type").is_null()),
+        "data": results["game_type"]
+        .explode("game_type")
+        .filter(~pl.col("game_type").is_null()),
         "kind": "cat",
         "x_label": "Game type",
         "swap_axes": True,
+        "save_animation": False,
     },
 }
 
@@ -154,7 +161,7 @@ for name, plot_opts in plots.items():
     out_dir.mkdir(parents=True, exist_ok=True)
     print(out_dir)
 
-    plot_opts.setdefault("data", data)
+    plot_opts.setdefault("data", results.get(name, data))
     plot_opts.setdefault("x_column", name)
     plot_opts.setdefault("y_column", "avg_rating")
     plot_opts.setdefault("x_label", name.capitalize())
@@ -165,6 +172,8 @@ for name, plot_opts in plots.items():
     plot_opts.setdefault("top_k", 1000)
     plot_opts.setdefault("seed", this_year)
     plot_opts.setdefault("show", True)
+    plot_opts.setdefault("save_animation", True)
+    plot_opts.setdefault("progress", True)
 
     if plot_opts.pop("swap_axes", False):
         plot_opts["x_column"], plot_opts["y_column"] = (
