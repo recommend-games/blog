@@ -94,7 +94,9 @@ def animate(
     invert_x: bool = False,
     plot_kwargs: dict[str, any] | None = None,
     fps: int = 25,
-    duration: float = 2.0,
+    duration_pre: float | None = None,
+    duration_main: float = 2.0,
+    duration_post: float | None = None,
     dpi: int = 100,
     progress: bool = False,
 ):
@@ -118,7 +120,7 @@ def animate(
         ),
     ).item()
 
-    alphas = np.linspace(0.0, 1.0, int(duration * fps))
+    alphas = np.linspace(0.0, 1.0, int(duration_main * fps))
     if progress:
         alphas = tqdm(alphas)
 
@@ -131,6 +133,24 @@ def animate(
     fig, ax = plt.subplots(figsize=figsize)
     LOGGER.info("Animating %s plot to <%s>", kind, path)
     with writer.saving(fig=fig, outfile=path, dpi=dpi):
+        if duration_pre:
+            ax.clear()
+            plot(
+                data=data,
+                x_column=x_column,
+                y_column=y_column,
+                kind=kind,
+                seed=seed,
+                title=title,
+                x_label=x_label,
+                y_label=y_label,
+                invert_x=invert_x,
+                plot_kwargs=plot_kwargs,
+                ax=ax,
+            )
+            plt.ylim(y_min, y_max)
+            for _ in range(int(duration_pre * fps)):
+                writer.grab_frame()
         for alpha in alphas:
             ax.clear()
             plot(
@@ -153,6 +173,24 @@ def animate(
             )
             plt.ylim(y_min, y_max)
             writer.grab_frame()
+        if duration_post:
+            ax.clear()
+            plot(
+                data=data,
+                x_column=x_column,
+                y_column=y_column_debiased,
+                kind=kind,
+                seed=seed,
+                title=title,
+                x_label=x_label,
+                y_label=y_label,
+                invert_x=invert_x,
+                plot_kwargs=plot_kwargs,
+                ax=ax,
+            )
+            plt.ylim(y_min, y_max)
+            for _ in range(int(duration_post * fps)):
+                writer.grab_frame()
     plt.close()
 
 
@@ -225,4 +263,7 @@ def save_plot(
             invert_x=invert_x,
             plot_kwargs=plot_kwargs,
             progress=progress,
+            duration_pre=1.0,
+            duration_main=2.0,
+            duration_post=2.0,
         )
