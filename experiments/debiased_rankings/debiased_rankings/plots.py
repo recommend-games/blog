@@ -103,20 +103,21 @@ def animate(
     if top_k and top_k_column:
         data = data.top_k(by=top_k_column, k=top_k)
 
-    y_column_debiased = f"{y_column}_debiased"
-    assert y_column_debiased in data.columns, f"Column {y_column_debiased} not found"
-    y_column_weighted = f"{y_column}_weighted"
+    column = y_column if kind == "reg" else x_column
+    column_debiased = f"{column}_debiased"
+    assert column_debiased in data.columns, f"Column {column_debiased} not found"
+    column_weighted = f"{column}_weighted"
 
-    y_min = data.select(
+    min_value = data.select(
         pl.min_horizontal(
-            pl.col(y_column).quantile(0.01),
-            pl.col(y_column_debiased).quantile(0.01),
+            pl.col(column).quantile(0.01),
+            pl.col(column_debiased).quantile(0.01),
         ),
     ).item()
-    y_max = data.select(
+    max_value = data.select(
         pl.max_horizontal(
-            pl.col(y_column).quantile(0.99),
-            pl.col(y_column_debiased).quantile(0.99),
+            pl.col(column).quantile(0.99),
+            pl.col(column_debiased).quantile(0.99),
         ),
     ).item()
 
@@ -128,6 +129,16 @@ def animate(
         plot_kwargs = plot_kwargs.copy()
         plot_kwargs.pop("x_jitter", None)
         plot_kwargs.pop("y_jitter", None)
+    else:
+        plot_kwargs = {}
+
+    if kind == "cat":
+        plot_kwargs.setdefault(
+            "order",
+            data.group_by(y_column)
+            .agg(pl.col(x_column).mean())
+            .sort(x_column)[y_column],
+        )
 
     writer = animation.PillowWriter(fps=fps)
     fig, ax = plt.subplots(figsize=figsize)
@@ -148,7 +159,10 @@ def animate(
                 plot_kwargs=plot_kwargs,
                 ax=ax,
             )
-            plt.ylim(y_min, y_max)
+            if kind == "reg":
+                plt.ylim(min_value, max_value)
+            else:
+                plt.xlim(min_value, max_value)
             for _ in range(int(duration_pre * fps)):
                 writer.grab_frame()
         for alpha in alphas:
@@ -156,12 +170,11 @@ def animate(
             plot(
                 data=data.with_columns(
                     (
-                        (1 - alpha) * pl.col(y_column)
-                        + alpha * pl.col(y_column_debiased)
-                    ).alias(y_column_weighted),
+                        (1 - alpha) * pl.col(column) + alpha * pl.col(column_debiased)
+                    ).alias(column_weighted),
                 ),
-                x_column=x_column,
-                y_column=y_column_weighted,
+                x_column=x_column if kind == "reg" else column_weighted,
+                y_column=column_weighted if kind == "reg" else y_column,
                 kind=kind,
                 seed=seed,
                 title=title,
@@ -171,14 +184,17 @@ def animate(
                 plot_kwargs=plot_kwargs,
                 ax=ax,
             )
-            plt.ylim(y_min, y_max)
+            if kind == "reg":
+                plt.ylim(min_value, max_value)
+            else:
+                plt.xlim(min_value, max_value)
             writer.grab_frame()
         if duration_post:
             ax.clear()
             plot(
                 data=data,
-                x_column=x_column,
-                y_column=y_column_debiased,
+                x_column=x_column if kind == "reg" else column_debiased,
+                y_column=column_debiased if kind == "reg" else y_column,
                 kind=kind,
                 seed=seed,
                 title=title,
@@ -188,7 +204,10 @@ def animate(
                 plot_kwargs=plot_kwargs,
                 ax=ax,
             )
-            plt.ylim(y_min, y_max)
+            if kind == "reg":
+                plt.ylim(min_value, max_value)
+            else:
+                plt.xlim(min_value, max_value)
             for _ in range(int(duration_post * fps)):
                 writer.grab_frame()
     plt.close()

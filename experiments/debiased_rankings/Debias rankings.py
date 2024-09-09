@@ -135,6 +135,7 @@ plots = {
     "cooperative": {
         "data": results["cooperative"].select(
             "avg_rating",
+            "avg_rating_debiased",
             "num_votes",
             pl.col("cooperative").replace_strict({0: "Competitive", 1: "Cooperative"}),
         ),
@@ -142,7 +143,6 @@ plots = {
         "x_label": False,
         "title": "Competitive/Cooperative vs Rating",
         "swap_axes": True,
-        "save_animation": False,
     },
     "game_type": {
         "data": results["game_type"]
@@ -151,7 +151,6 @@ plots = {
         "kind": "cat",
         "x_label": "Game type",
         "swap_axes": True,
-        "save_animation": False,
     },
 }
 
