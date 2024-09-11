@@ -140,6 +140,7 @@ plots = {
             pl.col("cooperative").replace_strict({0: "Competitive", 1: "Cooperative"}),
         ),
         "kind": "cat",
+        "top_k": None,
         "x_label": False,
         "title": "Competitive/Cooperative vs Rating",
         "swap_axes": True,
@@ -149,6 +150,7 @@ plots = {
         .explode("game_type")
         .filter(~pl.col("game_type").is_null()),
         "kind": "cat",
+        "top_k": None,
         "x_label": "Game type",
         "swap_axes": True,
     },
