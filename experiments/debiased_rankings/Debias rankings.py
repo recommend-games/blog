@@ -140,7 +140,6 @@ plots = {
             pl.col("cooperative").replace_strict({0: "Competitive", 1: "Cooperative"}),
         ),
         "kind": "cat",
-        "top_k": None,
         "x_label": False,
         "title": "Competitive/Cooperative vs Rating",
         "swap_axes": True,
@@ -150,7 +149,6 @@ plots = {
         .explode("game_type")
         .filter(~pl.col("game_type").is_null()),
         "kind": "cat",
-        "top_k": None,
         "x_label": "Game type",
         "swap_axes": True,
     },
@@ -170,7 +168,6 @@ for name, plot_opts in plots.items():
     plot_opts.setdefault("title", f"{plot_opts['x_label']} vs {plot_opts['y_label']}")
     plot_opts.setdefault("kind", "reg")
     plot_opts.setdefault("path", out_dir / "plot")
-    plot_opts.setdefault("top_k", 1000)
     plot_opts.setdefault("seed", this_year)
     plot_opts.setdefault("show", True)
     plot_opts.setdefault("save_animation", True)

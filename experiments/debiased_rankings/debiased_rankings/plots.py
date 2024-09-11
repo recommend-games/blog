@@ -4,7 +4,7 @@ from typing import Literal
 import numpy as np
 import polars as pl
 import seaborn as sns
-from matplotlib import animation, pyplot as plt
+from matplotlib import animation, colors as mcolors, pyplot as plt
 from matplotlib.axes import Axes
 from tqdm import tqdm
 
@@ -44,10 +44,13 @@ def plot(
     plot_kwargs["ax"] = ax
 
     if kind == "reg":
+        top_k_series = data[top_k_column]
+        alphas = top_k_series / top_k_series.max()
+        colors = mcolors.to_rgba_array(c=plot_kwargs.pop("color"), alpha=alphas)
         sns.regplot(
             **plot_kwargs,
             scatter_kws={
-                "alpha": 0.5,
+                "color": colors,
                 "s": 10,
             },
             line_kws={
