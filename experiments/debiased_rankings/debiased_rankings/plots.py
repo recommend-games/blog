@@ -163,6 +163,7 @@ def animate(
                 plt.ylim(min_value, max_value)
             else:
                 plt.xlim(min_value, max_value)
+            plt.tight_layout()
             for _ in range(int(duration_pre * fps)):
                 writer.grab_frame()
         for alpha in alphas:
@@ -188,6 +189,7 @@ def animate(
                 plt.ylim(min_value, max_value)
             else:
                 plt.xlim(min_value, max_value)
+            plt.tight_layout()
             writer.grab_frame()
         if duration_post:
             ax.clear()
@@ -208,6 +210,7 @@ def animate(
                 plt.ylim(min_value, max_value)
             else:
                 plt.xlim(min_value, max_value)
+            plt.tight_layout()
             for _ in range(int(duration_post * fps)):
                 writer.grab_frame()
     plt.close()
