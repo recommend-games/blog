@@ -44,8 +44,12 @@ def plot(
     plot_kwargs["ax"] = ax
 
     if kind == "reg":
-        top_k_series = data[top_k_column]
-        alphas = top_k_series / top_k_series.max()
+        alphas = data.select(
+            pl.max_horizontal(
+                pl.col(top_k_column) / pl.max(top_k_column),
+                0.01,
+            ),
+        )[top_k_column]
         colors = mcolors.to_rgba_array(c=plot_kwargs.pop("color"), alpha=alphas)
         sns.regplot(
             **plot_kwargs,
@@ -263,6 +267,7 @@ def save_plot(
         plot_kwargs=plot_kwargs,
     )
 
+    # TODO: Clip the plot the same way we do in animate
     plt.tight_layout()
     if path:
         plt.savefig(path.parent / f"{path.stem}_{kind}.png")
