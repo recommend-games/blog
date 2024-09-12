@@ -26,6 +26,7 @@ def plot(
     title: str | bool | None = None,
     x_label: str | bool | None = None,
     y_label: str | bool | None = None,
+    clip_quantiles: tuple[float, float] | None = None,
     invert_x: bool = False,
     plot_kwargs: dict[str, any] | None = None,
     ax: Axes | None = None,
@@ -63,6 +64,11 @@ def plot(
             },
             seed=seed,
         )
+        if clip_quantiles:
+            plt.ylim(
+                data.select(pl.col(y_column).quantile(clip_quantiles[0])).item(),
+                data.select(pl.col(y_column).quantile(clip_quantiles[1])).item(),
+            )
     elif kind == "cat":
         plot_kwargs.setdefault(
             "order",
@@ -71,6 +77,11 @@ def plot(
             .sort(x_column)[y_column],
         )
         sns.violinplot(**plot_kwargs)
+        if clip_quantiles:
+            plt.xlim(
+                data.select(pl.col(x_column).quantile(clip_quantiles[0])).item(),
+                data.select(pl.col(x_column).quantile(clip_quantiles[1])).item(),
+            )
     else:
         raise ValueError(f"Unknown kind: {kind}")
 
@@ -99,6 +110,7 @@ def animate(
     x_label: str | bool | None = None,
     y_label: str | bool | None = None,
     invert_x: bool = False,
+    clip_quantiles: tuple[float, float] | None = None,
     plot_kwargs: dict[str, any] | None = None,
     fps: int = 25,
     duration_pre: float | None = None,
@@ -115,18 +127,21 @@ def animate(
     assert column_debiased in data.columns, f"Column {column_debiased} not found"
     column_weighted = f"{column}_weighted"
 
-    min_value = data.select(
-        pl.min_horizontal(
-            pl.col(column).quantile(0.01),
-            pl.col(column_debiased).quantile(0.01),
-        ),
-    ).item()
-    max_value = data.select(
-        pl.max_horizontal(
-            pl.col(column).quantile(0.99),
-            pl.col(column_debiased).quantile(0.99),
-        ),
-    ).item()
+    if clip_quantiles:
+        min_value = data.select(
+            pl.min_horizontal(
+                pl.col(column).quantile(clip_quantiles[0]),
+                pl.col(column_debiased).quantile(clip_quantiles[0]),
+            ),
+        ).item()
+        max_value = data.select(
+            pl.max_horizontal(
+                pl.col(column).quantile(clip_quantiles[1]),
+                pl.col(column_debiased).quantile(clip_quantiles[1]),
+            ),
+        ).item()
+    else:
+        min_value, max_value = None, None
 
     alphas = np.linspace(0.0, 1.0, int(duration_main * fps))
     if progress:
@@ -166,10 +181,11 @@ def animate(
                 plot_kwargs=plot_kwargs,
                 ax=ax,
             )
-            if kind == "reg":
-                plt.ylim(min_value, max_value)
-            else:
-                plt.xlim(min_value, max_value)
+            if min_value is not None and max_value is not None:
+                if kind == "reg":
+                    plt.ylim(min_value, max_value)
+                else:
+                    plt.xlim(min_value, max_value)
             plt.tight_layout()
             for _ in range(int(duration_pre * fps)):
                 writer.grab_frame()
@@ -192,10 +208,11 @@ def animate(
                 plot_kwargs=plot_kwargs,
                 ax=ax,
             )
-            if kind == "reg":
-                plt.ylim(min_value, max_value)
-            else:
-                plt.xlim(min_value, max_value)
+            if min_value is not None and max_value is not None:
+                if kind == "reg":
+                    plt.ylim(min_value, max_value)
+                else:
+                    plt.xlim(min_value, max_value)
             plt.tight_layout()
             writer.grab_frame()
         if duration_post:
@@ -213,10 +230,11 @@ def animate(
                 plot_kwargs=plot_kwargs,
                 ax=ax,
             )
-            if kind == "reg":
-                plt.ylim(min_value, max_value)
-            else:
-                plt.xlim(min_value, max_value)
+            if min_value is not None and max_value is not None:
+                if kind == "reg":
+                    plt.ylim(min_value, max_value)
+                else:
+                    plt.xlim(min_value, max_value)
             plt.tight_layout()
             for _ in range(int(duration_post * fps)):
                 writer.grab_frame()
@@ -238,6 +256,7 @@ def save_plot(
     x_label: str | bool | None = None,
     y_label: str | bool | None = None,
     invert_x: bool = False,
+    clip_quantiles: tuple[float, float] | None = None,
     plot_kwargs: dict[str, any] | None = None,
     show: bool = False,
     save_animation: bool = False,
@@ -264,10 +283,10 @@ def save_plot(
         x_label=x_label,
         y_label=y_label,
         invert_x=invert_x,
+        clip_quantiles=clip_quantiles,
         plot_kwargs=plot_kwargs,
     )
 
-    # TODO: Clip the plot the same way we do in animate
     plt.tight_layout()
     if path:
         plt.savefig(path.parent / f"{path.stem}_{kind}.png")
@@ -291,6 +310,7 @@ def save_plot(
             x_label=x_label,
             y_label=y_label,
             invert_x=invert_x,
+            clip_quantiles=clip_quantiles,
             plot_kwargs=plot_kwargs,
             progress=progress,
             duration_pre=1.0,

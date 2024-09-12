@@ -141,6 +141,7 @@ plots = {
         "kind": "cat",
         "x_label": False,
         "title": "Competitive/Cooperative vs Rating",
+        "clip_quantiles": (0.001, 0.999),
         "swap_axes": True,
     },
     "game_type": {
@@ -149,6 +150,7 @@ plots = {
         .filter(~pl.col("game_type").is_null()),
         "kind": "cat",
         "x_label": "Game type",
+        "clip_quantiles": (0.001, 0.999),
         "swap_axes": True,
     },
 }
@@ -166,6 +168,7 @@ for name, plot_opts in plots.items():
     plot_opts.setdefault("y_label", "Rating")
     plot_opts.setdefault("title", f"{plot_opts['x_label']} vs {plot_opts['y_label']}")
     plot_opts.setdefault("kind", "reg")
+    plot_opts.setdefault("clip_quantiles", (0.01, 0.99))
     plot_opts.setdefault("path", out_dir / "plot")
     plot_opts.setdefault("seed", this_year)
     plot_opts.setdefault("show", True)
