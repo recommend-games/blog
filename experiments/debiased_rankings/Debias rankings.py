@@ -186,3 +186,19 @@ for name, plot_opts in plots.items():
         )
 
     save_plot(**plot_opts)
+
+# %%
+filtered_out_games = (
+    pl.scan_ndjson(data_dir / "scraped" / "bgg_GameItem.jl")
+    .filter(pl.col("rank").is_not_null())
+    .join(data.lazy().select("bgg_id", "name"), on="bgg_id", how="left")
+    .filter(pl.col("name_right").is_null())
+    .select("rank", "bgg_id", "name", "year", "complexity", "min_time")
+    .sort("rank")
+    .head(100)
+    .collect()
+)
+filtered_out_games.shape
+
+# %%
+filtered_out_games
