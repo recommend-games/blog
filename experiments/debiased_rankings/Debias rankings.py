@@ -41,7 +41,7 @@ data = load_data(
     path=data_dir / "scraped" / "bgg_GameItem.jl",
     min_year=1970,
     max_year=this_year,
-    max_min_time=360,
+    max_min_time=180,
 )
 data.shape
 
@@ -127,7 +127,6 @@ plots = {
     },
     "complexity": {},
     "min_time": {
-        "data": results["min_time"].filter(pl.col("min_time") <= 180),
         "plot_kwargs": {"x_jitter": 2.5},
         "x_label": "Minimum playing time in minutes",
         "title": "Playing time vs Rating",
