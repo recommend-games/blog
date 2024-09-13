@@ -141,7 +141,7 @@ plots = {
         "kind": "cat",
         "x_label": False,
         "title": "Competitive/Cooperative vs Rating",
-        "clip_quantiles": (0.001, 0.999),
+        "clip_quantiles": (0.0001, 0.9999),
         "swap_axes": True,
     },
     "game_type": {
@@ -150,7 +150,7 @@ plots = {
         .filter(~pl.col("game_type").is_null()),
         "kind": "cat",
         "x_label": "Game type",
-        "clip_quantiles": (0.001, 0.999),
+        "clip_quantiles": (0.0001, 0.9999),
         "swap_axes": True,
     },
 }
