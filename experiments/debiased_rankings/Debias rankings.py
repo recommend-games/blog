@@ -195,10 +195,14 @@ filtered_out_games = (
     .filter(pl.col("name_right").is_null())
     .select("rank", "bgg_id", "name", "year", "complexity", "min_time")
     .sort("rank")
-    .head(100)
     .collect()
 )
 filtered_out_games.shape
 
 # %%
-filtered_out_games
+filtered_out_games.head(100)
+
+# %%
+filtered_out_games.filter(pl.col("complexity").is_null()).head(100)
+
+# %%
