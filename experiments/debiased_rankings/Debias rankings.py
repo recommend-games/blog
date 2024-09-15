@@ -92,6 +92,18 @@ experiments = {
 results = {}
 
 # %%
+csv_cols = (
+    "rank_debiased",
+    "bgg_id",
+    "name",
+    "year",
+    "rank",
+    "avg_rating",
+    "avg_rating_debiased",
+    "avg_rating_change",
+    "avg_rating_bayes_debiased",
+    "rank_change",
+)
 for name, regressor_cols in experiments.items():
     print(f"*** *{name}*;", "columns:", ", ".join(regressor_cols), "***")
     out_dir = results_dir / name
@@ -109,18 +121,22 @@ for name, regressor_cols in experiments.items():
         model_file.write("\n")
 
     ranking_path = out_dir / "ranking.csv"
-    exp_results.sort("rank_debiased").select(
+    exp_results.sort(
         "rank_debiased",
-        "bgg_id",
-        "name",
-        "year",
-        "rank",
-        "avg_rating",
-        "avg_rating_debiased",
-        "avg_rating_change",
-        "avg_rating_bayes_debiased",
+        descending=False,
+    ).select(*csv_cols).write_csv(
+        ranking_path,
+        float_precision=3,
+    )
+
+    movers_path = out_dir / "movers.csv"
+    exp_results.filter((pl.col("rank") <= 100) | (pl.col("rank_debiased") <= 100)).sort(
         "rank_change",
-    ).write_csv(ranking_path, float_precision=3)
+        descending=True,
+    ).select(*csv_cols).write_csv(
+        movers_path,
+        float_precision=3,
+    )
 
     results[name] = exp_results
 
