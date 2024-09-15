@@ -34,11 +34,15 @@ base_dir = Path(".").resolve()
 results_dir = base_dir / "results"
 project_dir = base_dir.parent.parent
 data_dir = project_dir.parent / "board-game-data"
-base_dir, results_dir, project_dir, data_dir
+games_path = data_dir / "scraped" / "bgg_GameItem.jl"
+base_dir, results_dir, project_dir, data_dir, games_path
+
+# %% [markdown]
+# # Data
 
 # %%
 data = load_data(
-    path=data_dir / "scraped" / "bgg_GameItem.jl",
+    path=games_path,
     min_year=1970,
     max_year=this_year,
     max_min_time=180,
@@ -50,6 +54,9 @@ data.describe()
 
 # %%
 data.sample(10, seed=this_year)
+
+# %% [markdown]
+# # Debiased rankings
 
 # %%
 experiments = {
@@ -116,6 +123,9 @@ for name, regressor_cols in experiments.items():
     ).write_csv(ranking_path, float_precision=3)
 
     results[name] = exp_results
+
+# %% [markdown]
+# # Plots
 
 # %%
 plots = {
@@ -187,9 +197,12 @@ for name, plot_opts in plots.items():
 
     save_plot(**plot_opts)
 
+# %% [markdown]
+# # Filtered out games
+
 # %%
 filtered_out_games = (
-    pl.scan_ndjson(data_dir / "scraped" / "bgg_GameItem.jl")
+    pl.scan_ndjson(games_path)
     .filter(pl.col("rank").is_not_null())
     .join(data.lazy().select("bgg_id", "name"), on="bgg_id", how="left")
     .filter(pl.col("name_right").is_null())
@@ -200,9 +213,7 @@ filtered_out_games = (
 filtered_out_games.shape
 
 # %%
-filtered_out_games.head(100)
+filtered_out_games.head(10)
 
 # %%
-filtered_out_games.filter(pl.col("complexity").is_null()).head(100)
-
-# %%
+filtered_out_games.write_csv(results_dir / "filtered_out.csv", float_precision=3)
