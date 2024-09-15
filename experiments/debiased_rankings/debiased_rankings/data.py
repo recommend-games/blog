@@ -58,3 +58,23 @@ def load_data(
     )
 
     return pl.concat([games, game_types], how="horizontal")
+
+
+def markdown_table(data):
+    header = ["Rank", "Game"]
+    lines = [
+        "|".join([""] + header + [""]),
+        "|".join([""] + ["-"] * len(header) + [""]),
+    ]
+    for row in data.select("bgg_id", "name", "year", "rank").iter_rows(named=True):
+        lines += [
+            "|".join(
+                [
+                    "",
+                    f"{{{{% game {row["bgg_id"]} %}}}}{row["name"]}{{{{% /game %}}}} ({row["year"]})",
+                    str(row["rank"]),
+                    "",
+                ]
+            )
+        ]
+    return "\n".join(lines)
