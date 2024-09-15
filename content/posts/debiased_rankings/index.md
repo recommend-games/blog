@@ -34,10 +34,39 @@ That trend line has a slope of 0.03, which means that overall, a game's average 
 
 (Again, credit to Dinesh Vatvani for introducing this kind of visualisation in his article.)
 
+
+# Removing the complexity bias
+
 {{< img src="plot_reg_complexity" alt="Scatter plot: a game's complexity vs its rating" >}}
+
+
+# Removing the playing time bias
 
 {{< img src="plot_reg_min_time" alt="Scatter plot: a game's minimum playing time vs its rating" >}}
 
+
+# Removing the bias towards cooperative games
+
 {{< img src="plot_cat_cooperative" alt="Violin plot: competitive/cooperative games vs their ratings" >}}
 
+
+# Removing the game type bias
+
 {{< img src="plot_cat_game_type" alt="Violin plot: game types vs their ratings" >}}
+
+
+# The boring details
+
+In order to have good data and comparable values for all those corrections, I had to filter out games by certain criteria. We only only considered games which:
+
+- have a ranking (i.e., are rated by at least 30 users),
+- have a complexity score,
+- have been released between 1970 and 2024 and
+- have a minimum playing time of at most 3 hours.
+
+This includes 23,325 of the 27,026 currently ranked games (86.3%), but does exclude some notable games, such as:
+
+- {{% game 233078 %}}Twilight Imperium (Fourth Edition){{% /game %}}, {{% game 91 %}}Paths of Glory{{% /game %}} and {{% game 1 %}}Die Macher{{% /game %}} (too long), as well as
+- {{% game 521 %}}Crokinole{{% /game %}}, {{% game 188 %}}Go{{% /game %}} and {{% game 5 %}}Acquire{{% /game %}} (too old).
+
+Those are the highest ranked exclusions. While it's definitely sad to miss out on those and some other games, they make up only 2% of the top 1000 games on BGG, so I feel it's a reasonable tradeoff.
