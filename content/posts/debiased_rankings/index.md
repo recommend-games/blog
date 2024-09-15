@@ -26,13 +26,13 @@ So, let's start with the bias readers of this blog will already be familar with:
 
 {{< img src="plot_reg_age" alt="Scatter plot: a game's age vs its rating" >}}
 
-The points on the very left are the oldest games in our dataset, those published in 1970, whilst the ones on the right are those published in 2024. I've plotted games with few ratings more faintly in order to declutter the image. The bold red line is the line of best fit, i.e., the trend line that best describes the yearly increase in average ratings. This picture should look pretty familiar if you've read the previous article, though we didn't aggregate by year but plotted every single game as an individual dot.
+The points on the very left are the oldest games in our dataset, those published in 1970, whilst the ones on the right are those published in 2024. I've plotted games with few ratings more faintly in order to declutter the image. The bold red line is the line of best fit, i.e., the trend line that best describes the yearly increase in average ratings. This picture should look pretty familiar if you've read the [previous article]({{<ref "posts/highest_rated_year/index.md">}}), though we didn't aggregate by year but plotted every single game as an individual dot.
 
 That trend line has a slope of 0.03, which means that overall, a game's average rating decrease by 0.03 with every year that has passed since its release. Now, removing the age bias means reducing that slope to 0. It's as if we consider each year on its own and only care how much better or worse a game was compared to its peers released at the same time. I hope this little animation will make things much clearer:
 
 {{< img src="plot_reg_age_animated" alt="Animation: removing the age biased from games' ratings" >}}
 
-(Again, credit to Dinesh Vatvani for introducing this kind of visualisation in his article.)
+(Again, credit to Dinesh Vatvani for introducing this kind of visualisation in [his article](https://dvatvani.com/blog/bgg-analysis-part-2).)
 
 
 # Removing the complexity bias
@@ -64,7 +64,7 @@ In order to have good data and comparable values for all those corrections, I ha
 - have been released between 1970 and 2024 and
 - have a minimum playing time of at most 3 hours.
 
-This includes 23,325 of the 27,026 currently ranked games (86.3%), but does exclude some notable games, such as:
+This includes 23,325 of the 26,266 currently ranked games (88.8%), but does exclude some notable games, such as:
 
 - {{% game 233078 %}}Twilight Imperium (Fourth Edition){{% /game %}}, {{% game 91 %}}Paths of Glory{{% /game %}} and {{% game 1 %}}Die Macher{{% /game %}} (too long), as well as
 - {{% game 521 %}}Crokinole{{% /game %}}, {{% game 188 %}}Go{{% /game %}} and {{% game 5 %}}Acquire{{% /game %}} (too old).
