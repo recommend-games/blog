@@ -40,16 +40,16 @@ Without further ado, those are the new top 10 rated games after removing the age
 
 |Rank|Game|Rating|
 |:--:|:---|:----:|
-|1 (+2)|{{% game 174430 %}}Gloomhaven{{% /game %}} (2017)|8.4 (-0.2)|
-|2 (+11)|{{% game 12333 %}}Twilight Struggle{{% /game %}} (2005)|8.4 (+0.2)|
-|3 (-1)|{{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}} (2015)|8.4 (-0.1)|
-|4 (+4)|{{% game 115746 %}}War of the Ring: Second Edition{{% /game %}} (2011)|8.5 (-0.0)|
-|5 (-4)|{{% game 224517 %}}Brass: Birmingham{{% /game %}} (2018)|8.4 (-0.2)|
-|6 (+145)|{{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}} (1982)|8.5 (+0.8)|
-|7 (+0)|{{% game 167791 %}}Terraforming Mars{{% /game %}} (2016)|8.2 (-0.2)|
-|8 (-4)|{{% game 342942 %}}Ark Nova{{% /game %}} (2021)|8.2 (-0.3)|
-|9 (+36)|{{% game 3076 %}}Puerto Rico{{% /game %}} (2002)|8.2 (+0.2)|
-|10 (-1)|{{% game 187645 %}}Star Wars: Rebellion{{% /game %}} (2016)|8.2 (-0.2)|
+|**#1** <small>(🔺 2)</small>|{{% game 174430 %}}Gloomhaven{{% /game %}} <small>(2017)</small>|8.4 <small>(🔻 0.2)</small>|
+|**#2** <small>(🔺 11)</small>|{{% game 12333 %}}Twilight Struggle{{% /game %}} <small>(2005)</small>|8.4 <small>(🔺 0.2)</small>|
+|**#3** <small>(🔻 1)</small>|{{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}} <small>(2015)</small>|8.4 <small>(🔻 0.1)</small>|
+|**#4** <small>(🔺 4)</small>|{{% game 115746 %}}War of the Ring: Second Edition{{% /game %}} <small>(2011)</small>|8.5 <small>(🔸 0.0)</small>|
+|**#5** <small>(🔻 4)</small>|{{% game 224517 %}}Brass: Birmingham{{% /game %}} <small>(2018)</small>|8.4 <small>(🔻 0.2)</small>|
+|**#6** <small>(🔺 145)</small>|{{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}} <small>(1982)</small>|8.5 <small>(🔺 0.8)</small>|
+|**#7** <small>(🔸 0)</small>|{{% game 167791 %}}Terraforming Mars{{% /game %}} <small>(2016)</small>|8.2 <small>(🔻 0.2)</small>|
+|**#8** <small>(🔻 4)</small>|{{% game 342942 %}}Ark Nova{{% /game %}} <small>(2021)</small>|8.2 <small>(🔻 0.3)</small>|
+|**#9** <small>(🔺 36)</small>|{{% game 3076 %}}Puerto Rico{{% /game %}} <small>(2002)</small>|8.2 <small>(🔺 0.2)</small>|
+|**#10** <small>(🔻 1)</small>|{{% game 187645 %}}Star Wars: Rebellion{{% /game %}} <small>(2016)</small>|8.2 <small>(🔻 0.2)</small>|
 
 As designed, older games are the big winners of this adjustment, with former BGG #1s {{% game 12333 %}}Twilight Struggle{{% /game %}} and {{% game 3076 %}}Puerto Rico{{% /game %}} making a comeback and {{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}} making a huge leap.
 

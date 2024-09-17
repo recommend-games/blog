@@ -74,11 +74,21 @@ def markdown_table(data):
         "avg_rating_debiased",
         "avg_rating_change",
     ).iter_rows(named=True):
+        rank_change = game["rank_change"]
+        rank_change_emoji = (
+            "🔺" if rank_change > 0 else "🔻" if rank_change < 0 else "🔸"
+        )
+
+        rating_change = game["avg_rating_change"]
+        rating_change_emoji = (
+            "🔸" if abs(rating_change) < 0.05 else "🔺" if rating_change > 0 else "🔻"
+        )
+
         rows += [
             [
-                f"{game["rank_debiased"]} ({game["rank_change"]:+d})",
-                f"{{{{% game {game["bgg_id"]} %}}}}{game["name"]}{{{{% /game %}}}} ({game["year"]})",
-                f"{game["avg_rating_debiased"]:.1f} ({game["avg_rating_change"]:+.1f})",
+                f"**#{game["rank_debiased"]}** <small>({rank_change_emoji} {abs(rank_change)})</small>",
+                f"{{{{% game {game["bgg_id"]} %}}}}{game["name"]}{{{{% /game %}}}} <small>({game["year"]})</small>",
+                f"{game["avg_rating_debiased"]:.1f} <small>({rating_change_emoji} {abs(rating_change):.1f})</small>",
             ]
         ]
 
