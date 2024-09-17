@@ -30,7 +30,7 @@ The points on the very left are the oldest games in our dataset, those published
 
 That trend line has a slope of 0.03, which means that overall, a game's average rating decrease by 0.03 with every year that has passed since its release. Now, removing the age bias means reducing that slope to 0. It's as if we consider each year on its own and only care how much better or worse a game was compared to its peers released at the same time. I hope this little animation will make things much clearer:
 
-{{< img src="plot_reg_age_animated" alt="Animation: removing the age biased from games' ratings" >}}
+{{< img src="plot_reg_age_animated" alt="Animation: removing the age bias from games' ratings" >}}
 
 (Again, credit to Dinesh Vatvani for introducing this kind of visualisation in [his article](https://dvatvani.com/blog/bgg-analysis-part-2).)
 
@@ -56,7 +56,30 @@ As designed, older games are the big winners of this adjustment, with former BGG
 
 # Removing the complexity bias
 
+Obviously, we can apply the exact same idea to other features, e.g., a game's complexity (or weight) as Dinesh Vatvani did in his [original article](https://dvatvani.com/blog/bgg-analysis-part-2). Again, we start by looking at the spread of the data points:
+
 {{< img src="plot_reg_complexity" alt="Scatter plot: a game's complexity vs its rating" >}}
+
+The trend line has a slope of 0.63, i.e., the heaviest games on BGG have on average a full 2.5 point higher average score than the lighest ones. Somehow it feels particularly pleasing to see the light but clever games being lifted when we remove this complexity bias:
+
+{{< img src="plot_reg_complexity_animated" alt="Animation: removing the complexity bias from games' ratings" >}}
+
+This is the new top 10 after adjusting for the complexity bias:
+
+|Rank|Game|Rating|
+|:--:|:---|:----:|
+|**#1** <small>(🔺 141)</small>|{{% game 254640 %}}Just One{{% /game %}} <small>(2018)</small>|8.2 <small>(🔺 0.6)</small>|
+|**#2** <small>(🔺 127)</small>|{{% game 178900 %}}Codenames{{% /game %}} <small>(2015)</small>|8.0 <small>(🔺 0.4)</small>|
+|**#3** <small>(🔺 45)</small>|{{% game 295947 %}}Cascadia{{% /game %}} <small>(2021)</small>|8.0 <small>(🔺 0.1)</small>|
+|**#4** <small>(🔺 101)</small>|{{% game 291453 %}}SCOUT{{% /game %}} <small>(2019)</small>|8.2 <small>(🔺 0.4)</small>|
+|**#5** <small>(🔻 3)</small>|{{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}} <small>(2015)</small>|8.0 <small>(🔻 0.6)</small>|
+|**#6** <small>(🔺 13)</small>|{{% game 173346 %}}7 Wonders Duel{{% /game %}} <small>(2015)</small>|7.9 <small>(🔻 0.2)</small>|
+|**#7** <small>(🔺 30)</small>|{{% game 324856 %}}The Crew: Mission Deep Sea{{% /game %}} <small>(2021)</small>|8.1 <small>(🔻 0.1)</small>|
+|**#8** <small>(🔺 71)</small>|{{% game 230802 %}}Azul{{% /game %}} <small>(2017)</small>|7.8 <small>(🔺 0.1)</small>|
+|**#9** <small>(🔺 117)</small>|{{% game 163412 %}}Patchwork{{% /game %}} <small>(2014)</small>|7.8 <small>(🔺 0.2)</small>|
+|**#10** <small>(🔺 57)</small>|{{% game 244521 %}}The Quacks of Quedlinburg{{% /game %}} <small>(2018)</small>|7.8 <small>(🔸 0.0)</small>|
+
+I'm not going to lie: As a lover of small and interactive games, this top 10 looks much more apealing to me than the actual BGG top 10. Download the full new ranking [here](ranking_debiased_complexity.csv).
 
 
 # Removing the playing time bias
