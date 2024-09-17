@@ -36,6 +36,26 @@ That trend line has a slope of 0.03, which means that overall, a game's average 
 
 Next, we can use those adjusted average ratings to calculate a new, debiased ranking. In order to do this, we recreate the [BGG ranking]({{<ref "posts/reverse_engineer_bgg/index.md">}}) by taking the Bayesian average, i.e., adding 2311 dummy ratings ([one for every 10,000 ratings]({{<ref "posts/reverse_engineer_bgg_2/index.md">}}) in total) of 5.5.
 
+Without further ado, those are the new top 10 rated games after removing the age bias:
+
+|Rank|Game|Rating|
+|:--:|:---|:----:|
+|1 (+2)|{{% game 174430 %}}Gloomhaven{{% /game %}} (2017)|8.4 (-0.2)|
+|2 (+11)|{{% game 12333 %}}Twilight Struggle{{% /game %}} (2005)|8.4 (+0.2)|
+|3 (-1)|{{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}} (2015)|8.4 (-0.1)|
+|4 (+4)|{{% game 115746 %}}War of the Ring: Second Edition{{% /game %}} (2011)|8.5 (-0.0)|
+|5 (-4)|{{% game 224517 %}}Brass: Birmingham{{% /game %}} (2018)|8.4 (-0.2)|
+|6 (+145)|{{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}} (1982)|8.5 (+0.8)|
+|7 (+0)|{{% game 167791 %}}Terraforming Mars{{% /game %}} (2016)|8.2 (-0.2)|
+|8 (-4)|{{% game 342942 %}}Ark Nova{{% /game %}} (2021)|8.2 (-0.3)|
+|9 (+36)|{{% game 3076 %}}Puerto Rico{{% /game %}} (2002)|8.2 (+0.2)|
+|10 (-1)|{{% game 187645 %}}Star Wars: Rebellion{{% /game %}} (2016)|8.2 (-0.2)|
+
+As designed, older games are the big winners of this adjustment, with former BGG #1s {{% game 12333 %}}Twilight Struggle{{% /game %}} and {{% game 3076 %}}Puerto Rico{{% /game %}} making a comeback and {{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}} making a huge leap.
+
+TODO: Biggest winners/losers.
+
+
 # Removing the complexity bias
 
 {{< img src="plot_reg_complexity" alt="Scatter plot: a game's complexity vs its rating" >}}
