@@ -61,20 +61,25 @@ def load_data(
 
 
 def markdown_table(data):
-    header = ["Rank", "Game"]
-    lines = [
-        "|".join([""] + header + [""]),
-        "|".join([""] + ["-"] * len(header) + [""]),
-    ]
-    for row in data.select("bgg_id", "name", "year", "rank").iter_rows(named=True):
-        lines += [
-            "|".join(
-                [
-                    "",
-                    f"{{{{% game {row["bgg_id"]} %}}}}{row["name"]}{{{{% /game %}}}} ({row["year"]})",
-                    str(row["rank"]),
-                    "",
-                ]
-            )
+    header = ["Rank", "Game", "Rating"]
+    align = [":--:", ":---", ":----:"]
+    rows = [header, align]
+
+    for game in data.select(
+        "bgg_id",
+        "name",
+        "year",
+        "rank_debiased",
+        "rank_change",
+        "avg_rating_debiased",
+        "avg_rating_change",
+    ).iter_rows(named=True):
+        rows += [
+            [
+                f"{game["rank_debiased"]} ({game["rank_change"]:+d})",
+                f"{{{{% game {game["bgg_id"]} %}}}}{game["name"]}{{{{% /game %}}}} ({game["year"]})",
+                f"{game["avg_rating_debiased"]:.1f} ({game["avg_rating_change"]:+.1f})",
+            ]
         ]
-    return "\n".join(lines)
+
+    return "\n".join("|".join([""] + row + [""]) for row in rows)

@@ -20,7 +20,7 @@ from pathlib import Path
 import jupyter_black
 import polars as pl
 
-from debiased_rankings.data import load_data
+from debiased_rankings.data import load_data, markdown_table
 from debiased_rankings.model import debias
 from debiased_rankings.plots import save_plot
 
@@ -137,6 +137,11 @@ for name, regressor_cols in experiments.items():
         movers_path,
         float_precision=3,
     )
+
+    markdown_path = out_dir / "ranking.md"
+    with markdown_path.open("w") as markdown_file:
+        markdown_file.write(markdown_table(exp_results.sort("rank_debiased")))
+        markdown_file.write("\n")
 
     results[name] = exp_results
 
