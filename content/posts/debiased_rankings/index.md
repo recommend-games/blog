@@ -60,6 +60,8 @@ Obviously, we can apply the exact same idea to other features, e.g., a game's co
 
 {{< img src="plot_reg_complexity" alt="Scatter plot: a game's complexity vs its rating" >}}
 
+<!-- TODO: Do we need to explain the complexity score from BGG? -->
+
 The trend line has a slope of 0.63, i.e., the heaviest games on BGG have on average a full 2.5 point higher average score than the lighest ones. Somehow it feels particularly pleasing to see the light but clever games being lifted when we remove this complexity bias:
 
 {{< img src="plot_reg_complexity_animated" alt="Animation: removing the complexity bias from games' ratings" >}}
@@ -84,7 +86,13 @@ I'm not going to lie: As a lover of small and interactive games, this top 10 loo
 
 # Removing the playing time bias
 
+Next, we'll take a look at how a game's playing time (as measured by the minimum playing time printed on the box) affects its rating:
+
 {{< img src="plot_reg_min_time" alt="Scatter plot: a game's minimum playing time vs its rating" >}}
+
+We see a similar trend line as with the complexity bias, which shouldn't come as a surprise since a game's length and complexity are highly correlated. The slope here is 0.0045, i.e., every minute it takes longer to play a game makes it 0.0045 points "better", which does sound a bit weird when one puts it like that.
+
+Because publishers love to lie about playing time and claim most games can be played in about an hour, the adjusted ranking doesn't look all that different from the usual one, so I'll skip it for this article, but download it [here](ranking_debiased_min_time.csv) if you'd like to take a look anyways.
 
 
 # Removing the bias towards cooperative games
