@@ -95,14 +95,37 @@ We see a similar trend line as with the complexity bias, which shouldn't come as
 Because publishers love to lie about playing time and claim most games can be played in about an hour, the adjusted ranking doesn't look all that different from the usual one, so I'll skip it for this article, but you can download it [here](ranking_debiased_min_time.csv) if you'd like to take a look anyways.
 
 
+# Removing the game type bias
+
+So far, we've been looking at continuous values (also known as numerical features), but we can apply the same principal to categories. One particularly interesting feature in this context is a game's type: BGG maintains separate rankings for eight different game types, and users can vote which of those types a game belongs to (depending on the share of votes, a game might be classified as more than one type). Given everything we've seen so far, you can probably already guess that the lighter categories like children's and party games aren't as highly praised as war and strategy games. Here's all eight types sorted from lowest to highest average rating:
+
+{{< img src="plot_cat_game_type" alt="Violin plot: game types vs their ratings" >}}
+
+Each of those little violins represent the distribution of ratings amongst that type, with the white line indicating the median. Removing the game type bias now means bringing those distributions in line:
+
+{{< img src="plot_cat_game_type_animated" alt="Animation: removing the game type bias from games' ratings" >}}
+
+Just like before, we can calculate a new, debiased ranking:
+
+|Rank|Game|Rating|
+|:--:|:---|:----:|
+|**#1** <small>(🔸 0)</small>|{{% game 224517 %}}Brass: Birmingham{{% /game %}} <small>(2018)</small>|8.2 <small>(🔻 0.4)</small>|
+|**#2** <small>(🔺 7)</small>|{{% game 187645 %}}Star Wars: Rebellion{{% /game %}} <small>(2016)</small>|8.2 <small>(🔻 0.2)</small>|
+|**#3** <small>(🔺 1)</small>|{{% game 342942 %}}Ark Nova{{% /game %}} <small>(2021)</small>|8.1 <small>(🔻 0.4)</small>|
+|**#4** <small>(🔺 36)</small>|{{% game 285774 %}}Marvel Champions: The Card Game{{% /game %}} <small>(2019)</small>|8.2 <small>(🔺 0.1)</small>|
+|**#5** <small>(🔺 43)</small>|{{% game 295947 %}}Cascadia{{% /game %}} <small>(2021)</small>|8.1 <small>(🔺 0.1)</small>|
+|**#6** <small>(🔺 31)</small>|{{% game 324856 %}}The Crew: Mission Deep Sea{{% /game %}} <small>(2021)</small>|8.2 <small>(🔺 0.1)</small>|
+|**#7** <small>(🔺 34)</small>|{{% game 366013 %}}Heat: Pedal to the Metal{{% /game %}} <small>(2022)</small>|8.1 <small>(🔺 0.1)</small>|
+|**#8** <small>(🔻 2)</small>|{{% game 316554 %}}Dune: Imperium{{% /game %}} <small>(2020)</small>|8.0 <small>(🔻 0.4)</small>|
+|**#9** <small>(🔻 2)</small>|{{% game 167791 %}}Terraforming Mars{{% /game %}} <small>(2016)</small>|7.9 <small>(🔻 0.4)</small>|
+|**#10** <small>(🔺 11)</small>|{{% game 167355 %}}Nemesis{{% /game %}} <small>(2018)</small>|8.0 <small>(🔻 0.2)</small>|
+
+At first glance, it might seem curious that some games from the current BGG top 10 stay (more or less) put whilst others fall off. The reason for this is that both {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}} and {{% game 174430 %}}Gloomhaven{{% /game %}} are considered to be both strategy and thematic games, two of the most popular categories, and so the model weighs them down twice. Instead, we see some of the top rated customisable, abstract and family games in this adjusted top 10. Download the full new ranking [here](ranking_debiased_game_type.csv).
+
+
 # Removing the bias towards cooperative games
 
 {{< img src="plot_cat_cooperative" alt="Violin plot: competitive/cooperative games vs their ratings" >}}
-
-
-# Removing the game type bias
-
-{{< img src="plot_cat_game_type" alt="Violin plot: game types vs their ratings" >}}
 
 
 # The boring details
