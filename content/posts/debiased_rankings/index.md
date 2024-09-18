@@ -132,6 +132,28 @@ Let's take a look at one final categorical feature to debias: competitive vs coo
 We can go through the exercise of debiasing the ratings and calculating a new ranking here too, but the outcome would pretty much be just the standard BGG ranking with the cooperative games filter out (or rather weighed down). If you really want to take a look, you can download the new ranking [here](ranking_debiased_cooperative.csv).
 
 
+# Removing ALL the biases
+
+OK, so you might be thinking by now why I went through all that trouble, in particular since complexity, playing time and game types are all so strongly correlated. You've probably also been thinking *association isn't causation*. You'd be right: viewing those different features *individually*, this approach yields nothing but correlations. But take them all *together* and we get a shot at a bit of [causal inference](https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html).
+
+How does it work? So far, I've calculated those trend lines using simple linear regression (also known as the ordinary least squares method) in a single explanatory variable. But the maths works just the same in higher dimensions and we can throw in *all* the features discussed above into a single model, predicting again the game's rating, but now with much more information. The outcome is this:
+
+> **Estimated rating** =  
+> -0.031 * age in years  
+> +0.567 * complexity score  
+> -0.001 * minimum playing time in minutes  
+> +0.199 * if cooperative  
+> +0.167 * if an abstract game  
+> -0.029 * if a children's game  
+> -0.030 * if a customizable game  
+> +0.225 * if a family game  
+> +0.274 * if a party game  
+> +0.125 * if a strategy game  
+> +0.125 * if a thematic game  
+> +0.485 * if a war game  
+> +5.700
+
+
 # The boring details
 
 In order to have good data and comparable values for all those corrections, I had to filter out games by certain criteria. We only only considered games which:
