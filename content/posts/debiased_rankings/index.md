@@ -92,7 +92,7 @@ Next, we'll take a look at how a game's playing time (as measured by the minimum
 
 We see a similar trend line as with the complexity bias, which shouldn't come as a surprise since a game's length and complexity are highly correlated. The slope here is 0.0045, i.e., every minute it takes longer to play a game makes it 0.0045 points "better", which does sound a bit weird when one puts it like that.
 
-Because publishers love to lie about playing time and claim most games can be played in about an hour, the adjusted ranking doesn't look all that different from the usual one, so I'll skip it for this article, but download it [here](ranking_debiased_min_time.csv) if you'd like to take a look anyways.
+Because publishers love to lie about playing time and claim most games can be played in about an hour, the adjusted ranking doesn't look all that different from the usual one, so I'll skip it for this article, but you can download it [here](ranking_debiased_min_time.csv) if you'd like to take a look anyways.
 
 
 # Removing the bias towards cooperative games
