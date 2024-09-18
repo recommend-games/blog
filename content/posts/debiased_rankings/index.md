@@ -125,7 +125,11 @@ At first glance, it might seem curious that some games from the current BGG top 
 
 # Removing the bias towards cooperative games
 
+Let's take a look at one final categorical feature to debias: competitive vs cooperative games. Cooperative games have been on the rise for a number of years now, winning six out of ten {{% sdj %}}Spiel{{% /sdj %}} and {{% kdj / %}} awards since I started my predictions in [2020]({{<ref "posts/sdj_2020_4/index.md">}}). While less than 9% of all games in our dataset are cooperative, on average they have a significanly higher (by almost 0.48 points) rating compared to competitive games:
+
 {{< img src="plot_cat_cooperative" alt="Violin plot: competitive/cooperative games vs their ratings" >}}
+
+We can go through the exercise of debiasing the ratings and calculating a new ranking here too, but the outcome would pretty much be just the standard BGG ranking with the cooperative games filter out (or rather weighed down). If you really want to take a look, you can download the new ranking [here](ranking_debiased_cooperative.csv).
 
 
 # The boring details
