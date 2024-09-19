@@ -159,6 +159,25 @@ We observe some similar effects with the game types. In the single feature model
 
 Finally, the bias in favour of cooperative games is still pretty clear, but at around 0.2 it's less than have what the single feature model predicted. They clear are very fashionable, but much of their higher average ratings can be explained by other variables.
 
+Enough looking at coefficients, let's finally move on to the moment you didn't even know you were looking forward to: the ultimate debiased ranking. Just like with all the other models, we can use this multivariate model to debias the games' ratings by simply setting all those coefficients to zero. We lose the ability to animate this process for easy visualisation, but we gain average ratings and a ranking freed of all the biases we've been talking about:
+
+|Rank|Game|Rating|
+|:--:|:---|:----:|
+|**#1** <small>(🔺 323)</small>|{{% game 2653 %}}Survive: Escape from Atlantis!{{% /game %}} <small>(1982)</small>|8.2 <small>(🔺 0.9)</small>|
+|**#2** <small>(🔺 772)</small>|{{% game 41 %}}Can't Stop{{% /game %}} <small>(1980)</small>|8.2 <small>(🔺 1.3)</small>|
+|**#3** <small>(🔺 326)</small>|{{% game 172 %}}For Sale{{% /game %}} <small>(1997)</small>|7.9 <small>(🔺 0.7)</small>|
+|**#4** <small>(🔺 15)</small>|{{% game 173346 %}}7 Wonders Duel{{% /game %}} <small>(2015)</small>|7.8 <small>(🔻 0.3)</small>|
+|**#5** <small>(🔺 146)</small>|{{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}} <small>(1982)</small>|7.9 <small>(🔺 0.3)</small>|
+|**#6** <small>(🔺 209)</small>|{{% game 215 %}}Tichu{{% /game %}} <small>(1991)</small>|8.0 <small>(🔺 0.4)</small>|
+|**#7** <small>(🔺 205)</small>|{{% game 118 %}}Modern Art{{% /game %}} <small>(1992)</small>|7.9 <small>(🔺 0.4)</small>|
+|**#8** <small>(🔺 637)</small>|{{% game 432 %}}Take 5{{% /game %}} <small>(1994)</small>|7.8 <small>(🔺 0.8)</small>|
+|**#9** <small>(🔺 316)</small>|{{% game 50 %}}Lost Cities{{% /game %}} <small>(1999)</small>|7.7 <small>(🔺 0.5)</small>|
+|**#10** <small>(🔺 204)</small>|{{% game 822 %}}Carcassonne{{% /game %}} <small>(2000)</small>|7.6 <small>(🔺 0.2)</small>|
+
+I will say: {{% game 2653 %}}Survive: Escape from Atlantis!{{% /game %}} is not a game I would have expected om top of this list. In general, this top 10 is clearly much lighter and less recent than the regular BGG ranking. Personally, I'm up for this: it's a wonderful list full of proven classics, devoid of any cult of the new.
+
+Some games made huge leaps into the top 100, including {{% game 811 %}}Rummikub{{% /game %}}, {{% game 327 %}}Loopin' Louie{{% /game %}} and {{% game 17329 %}}Animal Upon Animal{{% /game %}} which all jumped up over 1000 positions. The biggest losers of this method – games dropping out of the top 100 – are {{% game 184267 %}}On Mars{{% /game %}}, {{% game 237182 %}}Root{{% /game %}} and {{% game 96848 %}}Mage Knight{{% /game %}}, all of which lost 1000 positions and more. Download the full new ranking [here](ranking_debiased_all.csv).
+
 
 # The boring details
 
