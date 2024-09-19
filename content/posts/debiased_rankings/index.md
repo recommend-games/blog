@@ -142,16 +142,18 @@ How does it work? So far, I've calculated those trend lines using simple linear 
 > -0.031 * age in years  
 > +0.567 * complexity score  
 > -0.001 * minimum playing time in minutes  
-> +0.199 * if cooperative  
-> +0.167 * if an abstract game  
-> -0.029 * if a children's game  
-> -0.030 * if a customizable game  
-> +0.225 * if a family game  
-> +0.274 * if a party game  
-> +0.125 * if a strategy game  
-> +0.125 * if a thematic game  
-> +0.485 * if a war game  
+> +0.167 if an abstract game  
+> -0.029 if a children's game  
+> -0.030 if a customizable game  
+> +0.225 if a family game  
+> +0.274 if a party game  
+> +0.125 if a strategy game  
+> +0.125 if a thematic game  
+> +0.485 if a war game  
+> +0.199 if cooperative  
 > +5.700
+
+It's worth taking a look at and comparing some of those coefficients. Age and complexity have about the same influence in this combined model as they had individually, but something interesting happened with playing time: if you recall, the original model estimated that every minute of longer playing time *increased* the rating by around 0.005, but this model tells us that every minute extra actually *decreases* a game's rating by 0.001. This number is very small, but the direction is still statistically significant. This is a sign that the model correctly decoupled what we discussed before intuitively: the positive correlation between a game's length and rating can be explained by the game's complexity. Once we take that into account, any additional playing time actually harms the game'r rating. In other words: Our model finds that – all other features being equal – players prefer shorter over longer games.
 
 
 # The boring details
