@@ -26,7 +26,7 @@ So, let's start with the bias readers of this blog will already be familar with:
 
 {{< img src="plot_reg_age" alt="Scatter plot: a game's age vs its rating" >}}
 
-The points on the very left are the oldest games in our dataset, those published in 1970, whilst the ones on the right are those published in 2024. I've plotted games with few ratings more faintly in order to declutter the image. The bold red line is the line of best fit, i.e., the trend line that best describes the yearly increase in average ratings. This picture should look pretty familiar if you've read the [previous article]({{<ref "posts/highest_rated_year/index.md">}}), though we didn't aggregate by year but plotted every single game as an individual dot.
+The points on the very left are the oldest games in our dataset, those published in 1970, whilst the ones on the right are those published in 2024. I've plotted games with few ratings more faintly in order to declutter the image. The bold red line is the line of best fit, i.e., the trend line that best describes the yearly increase in average ratings. This picture should look pretty familiar if you've read the [previous article]({{<ref "posts/highest_rated_year/index.md">}}), though here we plotted every single game as an individual dot instead of aggregating by year.
 
 That trend line has a slope of 0.03, which means that overall, a game's average rating decrease by 0.03 with every year that has passed since its release. Now, removing the age bias means reducing that slope to 0. It's as if we consider each year on its own and only care how much better or worse a game was compared to its peers released at the same time. I hope this little animation will make things much clearer:
 
@@ -51,18 +51,16 @@ Without further ado, those are the new top 10 rated games after removing the age
 |**#9** <small>(🔺 36)</small>|{{% game 3076 %}}Puerto Rico{{% /game %}} <small>(2002)</small>|8.2 <small>(🔺 0.2)</small>|
 |**#10** <small>(🔻 1)</small>|{{% game 187645 %}}Star Wars: Rebellion{{% /game %}} <small>(2016)</small>|8.2 <small>(🔻 0.2)</small>|
 
-As designed, older games are the big winners of this adjustment, with former BGG #1s {{% game 12333 %}}Twilight Struggle{{% /game %}} and {{% game 3076 %}}Puerto Rico{{% /game %}} making a comeback. Classic murder mystery game {{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}} makes a huge leap into the top 10 as one of the few games from the 80s that stood the test of time. Download the full new ranking [here](ranking_debiased_age.csv).
+As designed, older games are the big winners of this adjustment, with former BGG #1s {{% game 12333 %}}Twilight Struggle{{% /game %}} and {{% game 3076 %}}Puerto Rico{{% /game %}} making a comeback. Classic murder mystery game {{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}} makes a huge leap into the top 10 as one of the few games from the 80s that stood the test of time. You can download the full new ranking [here](ranking_debiased_age.csv).
 
 
 # Removing the complexity bias
 
-Obviously, we can apply the exact same idea to other features, e.g., a game's complexity (or weight) as Dinesh Vatvani did in his [original article](https://dvatvani.com/blog/bgg-analysis-part-2). Again, we start by looking at the spread of the data points:
+Obviously, we can apply the exact same idea to other features, e.g., a game's complexity (or weight) as Dinesh Vatvani did in his [original article](https://dvatvani.com/blog/bgg-analysis-part-2). Again, we start by looking at the spread of the data points, from the lightest games on the left to the heaviest on the right:
 
 {{< img src="plot_reg_complexity" alt="Scatter plot: a game's complexity vs its rating" >}}
 
-<!-- TODO: Do we need to explain the complexity score from BGG? -->
-
-The trend line has a slope of 0.63, i.e., the heaviest games on BGG have on average a full 2.5 point higher average score than the lighest ones. Somehow it feels particularly pleasing to see the light but clever games being lifted when we remove this complexity bias:
+The trend line has a slope of 0.63, i.e., the heaviest games on BGG have on average a full 2.5 point higher average score than the lighest ones. Somehow it feels particularly pleasing to see the light but clever games being lifted up when we remove this complexity bias:
 
 {{< img src="plot_reg_complexity_animated" alt="Animation: removing the complexity bias from games' ratings" >}}
 
@@ -81,7 +79,7 @@ This is the new top 10 after adjusting for the complexity bias:
 |**#9** <small>(🔺 117)</small>|{{% game 163412 %}}Patchwork{{% /game %}} <small>(2014)</small>|7.8 <small>(🔺 0.2)</small>|
 |**#10** <small>(🔺 57)</small>|{{% game 244521 %}}The Quacks of Quedlinburg{{% /game %}} <small>(2018)</small>|7.8 <small>(🔸 0.0)</small>|
 
-I'm not going to lie: As a lover of small and interactive games, this top 10 looks much more apealing to me than the actual BGG top 10. Download the full new ranking [here](ranking_debiased_complexity.csv).
+I'm not going to lie: As a lover of small and interactive games, this top 10 looks much more apealing to me than the actual BGG top 10. One striking observation: six out of these ten games won {{% sdj %}}Spiel{{% /sdj %}} or {{% kdj / %}} (if we generously count the other {{% game 284083 %}}Crew{{% /game %}}'s title), with two more nominated and the other two recommended. The grognards on the internet can complain all they want about how the awards have become too shallow, but the jury really knows how to pick out the games that put the maximum amount of game play into minimal rules. You can download the full new ranking [here](ranking_debiased_complexity.csv).
 
 
 # Removing the playing time bias
@@ -120,7 +118,7 @@ Just like before, we can calculate a new, debiased ranking:
 |**#9** <small>(🔻 2)</small>|{{% game 167791 %}}Terraforming Mars{{% /game %}} <small>(2016)</small>|7.9 <small>(🔻 0.4)</small>|
 |**#10** <small>(🔺 11)</small>|{{% game 167355 %}}Nemesis{{% /game %}} <small>(2018)</small>|8.0 <small>(🔻 0.2)</small>|
 
-At first glance, it might seem curious that some games from the current BGG top 10 stay (more or less) put whilst others fall off. The reason for this is that both {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}} and {{% game 174430 %}}Gloomhaven{{% /game %}} are considered to be both strategy and thematic games, two of the most popular categories, and so the model weighs them down twice. Instead, we see some of the top rated customisable, abstract and family games in this adjusted top 10. Download the full new ranking [here](ranking_debiased_game_type.csv).
+At first glance, it might seem curious that some games from the current BGG top 10 stay (more or less) put whilst others fall off. The reason for this is that both {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}} and {{% game 174430 %}}Gloomhaven{{% /game %}} are considered to be both strategy and thematic games, two of the most popular categories, and so the model weighs them down twice. Instead, we see some of the top rated customisable, abstract and family games in this adjusted top 10. Again, you can download the full new ranking [here](ranking_debiased_game_type.csv).
 
 
 # Removing the bias towards cooperative games
@@ -132,9 +130,9 @@ Let's take a look at one final categorical feature to debias: competitive vs coo
 We can go through the exercise of debiasing the ratings and calculating a new ranking here too, but the outcome would pretty much be just the standard BGG ranking with the cooperative games filter out (or rather weighed down). If you really want to take a look, you can download the new ranking [here](ranking_debiased_cooperative.csv).
 
 
-# Removing ALL the biases
+# Removing *all* the biases
 
-OK, so you might be thinking by now why I went through all that trouble, in particular since complexity, playing time and game types are all so strongly correlated. You've probably also been thinking *association isn't causation*. You'd be right: viewing those different features *individually*, this approach yields nothing but correlations. But take them all *together* and we get a shot at a bit of [causal inference](https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html).
+OK, so you might be wondering by now why I went through all that trouble, in particular since complexity, playing time and game types are all so strongly correlated. You've probably also been thinking *association isn't causation*. You'd be right: viewing those different features *individually*, this approach yields nothing but correlations. But take them all *together* and we get a shot at a bit of [causal inference](https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html).
 
 How does it work? So far, I've calculated those trend lines using simple linear regression (also known as the ordinary least squares method) in a single explanatory variable. But the maths works just the same in higher dimensions and we can throw in *all* the features discussed above into a single model, predicting again the game's rating, but now with much more information. The outcome is this:
 
@@ -155,7 +153,7 @@ How does it work? So far, I've calculated those trend lines using simple linear 
 
 It's worth taking a look at and comparing some of those coefficients. First of: Age and complexity have about the same influence in this combined model as they had individually. This means that age and complexity bias are real. Even when taking other factors into account, gamers clearly strongly prefer newer over older and heavier over lighter games.
 
-Interestingly, something else is happening with playing time: If you recall, the original model estimated that every minute of additional playing time *increased* the rating by around 0.005, but this model tells us that every minute extra actually *decreases* a game's rating by 0.001. This number is very small, but the direction is still statistically significant. This is a sign that the model correctly decoupled what we discussed before intuitively: the positive correlation between a game's length and rating can be explained by the game's complexity. Once we take that into account, any additional playing time actually harms the game's rating. In other words: Our model finds that – all other features being equal – players prefer shorter over longer games.
+Interestingly, something different is happening with playing time: If you recall, the original model estimated that every minute of additional playing time *increased* the rating by around 0.005, but this model tells us that every minute extra actually *decreases* a game's rating by 0.001. This number is very small, but the direction is still statistically significant. This is a sign that the model correctly decoupled what we discussed before intuitively: the positive correlation between a game's length and rating can be explained by the game's complexity. Once we take that into account, any additional playing time actually harms the game's rating. In other words: Our model finds that – all other features being equal – players do prefer shorter over longer games.
 
 We observe some similar effects with the game types. In the single feature model, children's games were rated over 0.6 points lower. But in this multi feature model, the coefficient is very close to zero, in fact not statistically significantly different. This is evidence that the 'geeks don't actually have a systematic bias against children's games – they dislike all light games equally, no matter whether they are for children or adults.
 
@@ -193,21 +191,21 @@ Enough looking at coefficients, let's finally move on to the moment you didn't e
 
 I will say: {{% game 2653 %}}Survive: Escape from Atlantis!{{% /game %}} is not a game I would have expected om top of this list. In general, this top 25 is clearly much lighter and less recent than the regular BGG ranking. Personally, I'm up for this: it's a wonderful list full of proven classics, devoid of any cult of the new or Kickstarter bloat.
 
-Some games made huge leaps into the top 100, including {{% game 811 %}}Rummikub{{% /game %}}, {{% game 327 %}}Loopin' Louie{{% /game %}} and {{% game 17329 %}}Animal Upon Animal{{% /game %}} which all jumped up over 1000 positions. The biggest losers of this method – games dropping out of the top 100 – are {{% game 184267 %}}On Mars{{% /game %}}, {{% game 237182 %}}Root{{% /game %}} and {{% game 96848 %}}Mage Knight{{% /game %}}, all of which lost 1000 positions and more. Download the full new ranking [here](ranking_debiased_all.csv).
+Some games made huge leaps into the top 100, including {{% game 811 %}}Rummikub{{% /game %}}, {{% game 327 %}}Loopin' Louie{{% /game %}} and {{% game 17329 %}}Animal Upon Animal{{% /game %}} which all jumped up over 1000 positions. The biggest losers of this method – games dropping out of the top 100 – are {{% game 184267 %}}On Mars{{% /game %}}, {{% game 237182 %}}Root{{% /game %}} and {{% game 96848 %}}Mage Knight{{% /game %}}, all of which lost 1000 positions and more. You can download the full debiased ranking [here](ranking_debiased_all.csv).
 
 
 # Some boring technical details
 
 In order to have good data and comparable values for all those corrections, I had to filter out games by certain criteria. We only considered games which:
 
-- have a ranking (i.e., are rated by at least 30 users),
+- are ranked (i.e., rated by at least 30 users),
 - have a complexity score,
 - have been released between 1970 and 2024 and
 - have a minimum playing time of at most 3 hours.
 
 This includes 23,325 of the 26,266 currently ranked games (88.8%), but does exclude some notable games, such as:
 
-- {{% game 233078 %}}Twilight Imperium (Fourth Edition){{% /game %}}, {{% game 91 %}}Paths of Glory{{% /game %}} and {{% game 1 %}}Die Macher{{% /game %}} (too long), as well as
+- {{% game 233078 %}}Twilight Imperium{{% /game %}}, {{% game 91 %}}Paths of Glory{{% /game %}} and {{% game 1 %}}Die Macher{{% /game %}} (too long), as well as
 - {{% game 521 %}}Crokinole{{% /game %}}, {{% game 188 %}}Go{{% /game %}} and {{% game 5 %}}Acquire{{% /game %}} (too old).
 
 Those are the highest ranked exclusions. While it's definitely sad to miss out on those and some other games, they make up only 2% of the top 1000 games on BGG, so I feel it's a reasonable tradeoff.
