@@ -4,7 +4,7 @@ title: Debiasing the BoardGameGeek ranking
 slug: debiasing-boardgamegeek-ranking
 author: Markus Shepherd
 type: post
-date: 2024-09-20T22:30:00+03:00
+date: 2024-09-20T22:34:11+03:00
 tags:
   - BoardGameGeek
   - Debiasing
@@ -214,3 +214,5 @@ Those are the highest ranked exclusions. While it's definitely sad to miss out o
 # Conclusion
 
 So that's a wrap on our quest for debiased rankings. It's important to remember that *bias* isn't a negative term in this context – we're simply interested in the tendencies that pertain to the BGG user ratings. By not just considering a single feature like age or complexity, but throwing those two as well as playing time, game type and cooperative into one model, we hope to explain the way those features influence rating beyond mere correlations. If you're interested in the mathematical background to this method, I highly recommend the [article](https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html) I've already mentioned above.
+
+*As always, you can find the full analysis code and notebooks on [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/debiased_rankings).*
