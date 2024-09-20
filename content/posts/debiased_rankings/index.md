@@ -153,11 +153,13 @@ How does it work? So far, I've calculated those trend lines using simple linear 
 > +0.199 if cooperative  
 > +5.700
 
-It's worth taking a look at and comparing some of those coefficients. Age and complexity have about the same influence in this combined model as they had individually, but something interesting happened with playing time: if you recall, the original model estimated that every minute of longer playing time *increased* the rating by around 0.005, but this model tells us that every minute extra actually *decreases* a game's rating by 0.001. This number is very small, but the direction is still statistically significant. This is a sign that the model correctly decoupled what we discussed before intuitively: the positive correlation between a game's length and rating can be explained by the game's complexity. Once we take that into account, any additional playing time actually harms the game's rating. In other words: Our model finds that – all other features being equal – players prefer shorter over longer games.
+It's worth taking a look at and comparing some of those coefficients. First of: Age and complexity have about the same influence in this combined model as they had individually. This means that age and complexity bias are real. Even when taking other factors into account, gamers clearly strongly prefer newer over older and heavier over lighter games.
+
+Interestingly, something else is happening with playing time: If you recall, the original model estimated that every minute of additional playing time *increased* the rating by around 0.005, but this model tells us that every minute extra actually *decreases* a game's rating by 0.001. This number is very small, but the direction is still statistically significant. This is a sign that the model correctly decoupled what we discussed before intuitively: the positive correlation between a game's length and rating can be explained by the game's complexity. Once we take that into account, any additional playing time actually harms the game's rating. In other words: Our model finds that – all other features being equal – players prefer shorter over longer games.
 
 We observe some similar effects with the game types. In the single feature model, children's games were rated over 0.6 points lower. But in this multi feature model, the coefficient is very close to zero, in fact not statistically significantly different. This is evidence that the 'geeks don't actually have a systematic bias against children's games – they dislike all light games equally, no matter whether they are for children or adults.
 
-Finally, the bias in favour of cooperative games is still pretty clear, but at around 0.2 it's less than have what the single feature model predicted. They clear are very fashionable, but much of their higher average ratings can be explained by other variables.
+Finally, the bias in favour of cooperative games is still pretty clear, but at around 0.2 it's less than have what the single feature model predicted. They clearly are very fashionable, but much of their higher average ratings can be explained by other variables.
 
 Enough looking at coefficients, let's finally move on to the moment you didn't even know you were looking forward to: the ultimate debiased ranking. Just like with all the other models, we can use this multivariate model to debias the games' ratings by simply setting all those coefficients to zero. We lose the ability to animate this process for easy visualisation, but we gain average ratings and a ranking freed of all the biases we've been talking about:
 
@@ -173,8 +175,23 @@ Enough looking at coefficients, let's finally move on to the moment you didn't e
 |**#8** <small>(🔺 637)</small>|{{% game 432 %}}Take 5{{% /game %}} <small>(1994)</small>|7.8 <small>(🔺 0.8)</small>|
 |**#9** <small>(🔺 316)</small>|{{% game 50 %}}Lost Cities{{% /game %}} <small>(1999)</small>|7.7 <small>(🔺 0.5)</small>|
 |**#10** <small>(🔺 204)</small>|{{% game 822 %}}Carcassonne{{% /game %}} <small>(2000)</small>|7.6 <small>(🔺 0.2)</small>|
+|**#11** <small>(🔺 177)</small>|{{% game 54043 %}}Jaipur{{% /game %}} <small>(2009)</small>|7.7 <small>(🔺 0.2)</small>|
+|**#12** <small>(🔺 117)</small>|{{% game 178900 %}}Codenames{{% /game %}} <small>(2015)</small>|7.6 <small>(🔺 0.1)</small>|
+|**#13** <small>(🔺 125)</small>|{{% game 12 %}}Ra{{% /game %}} <small>(1999)</small>|7.7 <small>(🔺 0.1)</small>|
+|**#14** <small>(🔺 141)</small>|{{% game 14996 %}}Ticket to Ride: Europe{{% /game %}} <small>(2005)</small>|7.6 <small>(🔺 0.1)</small>|
+|**#15** <small>(🔺 76)</small>|{{% game 93 %}}El Grande{{% /game %}} <small>(1995)</small>|7.7 <small>(🔻 0.1)</small>|
+|**#16** <small>(🔻 9)</small>|{{% game 167791 %}}Terraforming Mars{{% /game %}} <small>(2016)</small>|7.6 <small>(🔻 0.8)</small>|
+|**#17** <small>(🔻 15)</small>|{{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}} <small>(2015)</small>|7.6 <small>(🔻 0.9)</small>|
+|**#18** <small>(🔺 289)</small>|{{% game 46213 %}}Telestrations{{% /game %}} <small>(2009)</small>|7.8 <small>(🔺 0.4)</small>|
+|**#19** <small>(🔺 211)</small>|{{% game 9209 %}}Ticket to Ride{{% /game %}} <small>(2004)</small>|7.5 <small>(🔺 0.1)</small>|
+|**#20** <small>(🔺 85)</small>|{{% game 291453 %}}SCOUT{{% /game %}} <small>(2019)</small>|7.8 <small>(🔻 0.1)</small>|
+|**#21** <small>(🔺 273)</small>|{{% game 760 %}}Battle Line{{% /game %}} <small>(2000)</small>|7.8 <small>(🔺 0.3)</small>|
+|**#22** <small>(🔺 634)</small>|{{% game 699 %}}HeroQuest{{% /game %}} <small>(1989)</small>|7.8 <small>(🔺 0.6)</small>|
+|**#23** <small>(🔺 368)</small>|{{% game 39856 %}}Dixit{{% /game %}} <small>(2008)</small>|7.5 <small>(🔺 0.3)</small>|
+|**#24** <small>(🔻 8)</small>|{{% game 84876 %}}The Castles of Burgundy{{% /game %}} <small>(2011)</small>|7.5 <small>(🔻 0.6)</small>|
+|**#25** <small>(🔻 19)</small>|{{% game 316554 %}}Dune: Imperium{{% /game %}} <small>(2020)</small>|7.5 <small>(🔻 0.9)</small>|
 
-I will say: {{% game 2653 %}}Survive: Escape from Atlantis!{{% /game %}} is not a game I would have expected om top of this list. In general, this top 10 is clearly much lighter and less recent than the regular BGG ranking. Personally, I'm up for this: it's a wonderful list full of proven classics, devoid of any cult of the new.
+I will say: {{% game 2653 %}}Survive: Escape from Atlantis!{{% /game %}} is not a game I would have expected om top of this list. In general, this top 25 is clearly much lighter and less recent than the regular BGG ranking. Personally, I'm up for this: it's a wonderful list full of proven classics, devoid of any cult of the new or Kickstarter bloat.
 
 Some games made huge leaps into the top 100, including {{% game 811 %}}Rummikub{{% /game %}}, {{% game 327 %}}Loopin' Louie{{% /game %}} and {{% game 17329 %}}Animal Upon Animal{{% /game %}} which all jumped up over 1000 positions. The biggest losers of this method – games dropping out of the top 100 – are {{% game 184267 %}}On Mars{{% /game %}}, {{% game 237182 %}}Root{{% /game %}} and {{% game 96848 %}}Mage Knight{{% /game %}}, all of which lost 1000 positions and more. Download the full new ranking [here](ranking_debiased_all.csv).
 
