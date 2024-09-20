@@ -196,9 +196,9 @@ I will say: {{% game 2653 %}}Survive: Escape from Atlantis!{{% /game %}} is not 
 Some games made huge leaps into the top 100, including {{% game 811 %}}Rummikub{{% /game %}}, {{% game 327 %}}Loopin' Louie{{% /game %}} and {{% game 17329 %}}Animal Upon Animal{{% /game %}} which all jumped up over 1000 positions. The biggest losers of this method – games dropping out of the top 100 – are {{% game 184267 %}}On Mars{{% /game %}}, {{% game 237182 %}}Root{{% /game %}} and {{% game 96848 %}}Mage Knight{{% /game %}}, all of which lost 1000 positions and more. Download the full new ranking [here](ranking_debiased_all.csv).
 
 
-# The boring details
+# Some boring technical details
 
-In order to have good data and comparable values for all those corrections, I had to filter out games by certain criteria. We only only considered games which:
+In order to have good data and comparable values for all those corrections, I had to filter out games by certain criteria. We only considered games which:
 
 - have a ranking (i.e., are rated by at least 30 users),
 - have a complexity score,
@@ -211,3 +211,8 @@ This includes 23,325 of the 26,266 currently ranked games (88.8%), but does excl
 - {{% game 521 %}}Crokinole{{% /game %}}, {{% game 188 %}}Go{{% /game %}} and {{% game 5 %}}Acquire{{% /game %}} (too old).
 
 Those are the highest ranked exclusions. While it's definitely sad to miss out on those and some other games, they make up only 2% of the top 1000 games on BGG, so I feel it's a reasonable tradeoff.
+
+
+# Conclusion
+
+So that's a wrap on our quest for debiased rankings. It's important to remember that *bias* isn't a negative term in this context – we're simply interested in the tendencies that pertain to the BGG user ratings. By not just considering a single feature like age or complexity, but throwing those two as well as playing time, game type and cooperative into one model, we hope to explain the way those features influence rating beyond mere correlations. If you're interested in the mathematical background to this method, I highly recommend the [article](https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html) I've already mentioned above.
