@@ -4,7 +4,7 @@ title: Debiasing the BoardGameGeek ranking
 slug: debiasing-boardgamegeek-ranking
 author: Markus Shepherd
 type: post
-date: 2024-09-05T12:00:00+03:00
+date: 2024-09-20T22:30:00+03:00
 tags:
   - BoardGameGeek
   - Debiasing
