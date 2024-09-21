@@ -123,7 +123,7 @@ At first glance, it might seem curious that some games from the current BGG top 
 
 # Removing the bias towards cooperative games
 
-Let's take a look at one final categorical feature to debias: competitive vs cooperative games. Cooperative games have been on the rise for a number of years now, winning six out of ten {{% sdj %}}Spiel{{% /sdj %}} and {{% kdj / %}} awards since I started my predictions in [2020]({{<ref "posts/sdj_2020_4/index.md">}}). While less than 9% of all games in our dataset are cooperative, on average they have a significanly higher (by almost 0.48 points) rating compared to competitive games:
+Let's take a look at one final categorical feature to debias: competitive vs cooperative games. Cooperative games have been on the rise for a number of years now, winning six out of ten {{% sdj %}}Spiel{{% /sdj %}} and {{% kdj / %}} awards since I started my predictions in [2020]({{<ref "posts/sdj_2020_4/index.md">}}). While less than 9% of all games in our dataset are cooperative, on average they have a significantly higher (by almost 0.48 points) rating compared to competitive games:
 
 {{< img src="plot_cat_cooperative" alt="Violin plot: competitive/cooperative games vs their ratings" >}}
 
@@ -134,7 +134,7 @@ We can go through the exercise of debiasing the ratings and calculating a new ra
 
 OK, so you might be wondering by now why I went through all that trouble, in particular since complexity, playing time and game types are all so strongly correlated. You've probably also been thinking *association isn't causation*. You'd be right: viewing those different features *individually*, this approach yields nothing but correlations. But take them all *together* and we get a shot at a bit of [causal inference](https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html).
 
-How does it work? So far, I've calculated those trend lines using simple linear regression (also known as the ordinary least squares method) in a single explanatory variable. But the maths works just the same in higher dimensions and we can throw in *all* the features discussed above into a single model, predicting again the game's rating, but now with much more information. The outcome is this:
+How does it work? So far, I've calculated those trend lines using simple linear regression (also known as the ordinary least squares method) in a single explanatory variable. But the maths works just the same in higher dimensions and we can throw *all* the features discussed above at once into a single model, predicting again the game's rating, but now with much more information. The outcome is this:
 
 > **Estimated rating** =  
 > -0.031 * age in years  
@@ -151,7 +151,7 @@ How does it work? So far, I've calculated those trend lines using simple linear 
 > +0.199 if cooperative  
 > +5.700
 
-It's worth taking a look at and comparing some of those coefficients. First of: Age and complexity have about the same influence in this combined model as they had individually. This means that age and complexity bias are real. Even when taking other factors into account, gamers clearly strongly prefer newer over older and heavier over lighter games.
+It's worth taking a look at and comparing some of those coefficients. First of: Age and complexity have about the same influence in this combined model as they had individually. This means that age and complexity biases are real. Even when taking other factors into account, gamers clearly strongly prefer newer over older and heavier over lighter games.
 
 Interestingly, something different is happening with playing time: If you recall, the original model estimated that every minute of additional playing time *increased* the rating by around 0.005, but this model tells us that every minute extra actually *decreases* a game's rating by 0.001. This number is very small, but the direction is still statistically significant. This is a sign that the model correctly decoupled what we discussed before intuitively: the positive correlation between a game's length and rating can be explained by the game's complexity. Once we take that into account, any additional playing time actually harms the game's rating. In other words: Our model finds that – all other features being equal – players do prefer shorter over longer games.
 
@@ -213,6 +213,6 @@ Those are the highest ranked exclusions. While it's definitely sad to miss out o
 
 # Conclusion
 
-So that's a wrap on our quest for debiased rankings. It's important to remember that *bias* isn't a negative term in this context – we're simply interested in the tendencies that pertain to the BGG user ratings. By not just considering a single feature like age or complexity, but throwing those two as well as playing time, game type and cooperative into one model, we hope to explain the way those features influence rating beyond mere correlations. If you're interested in the mathematical background to this method, I highly recommend the [article](https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html) I've already mentioned above.
+So that's a wrap on our quest for debiased rankings. It's important to remember that *bias* isn't a negative term in this context – we're simply interested in the tendencies that pertain to the BGG user ratings and try to imagine counterfactual rankings if those tendencies didn't exist. By considering not just a single feature like age or complexity, but throwing those two as well as playing time, game type and cooperative into one model, we hope to explain the way those features influence ratings beyond mere correlations. If you're interested in the mathematical background to this method, I highly recommend the [article](https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html) I've already linked above.
 
 *As always, you can find the full analysis code and notebooks on [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/debiased_rankings).*
