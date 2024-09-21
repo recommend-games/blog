@@ -1,5 +1,6 @@
 import logging
 from pathlib import Path
+from typing import Any
 import numpy as np
 import polars as pl
 from sklearn.preprocessing import MultiLabelBinarizer
@@ -93,3 +94,19 @@ def markdown_table(data):
         ]
 
     return "\n".join("|".join([""] + row + [""]) for row in rows)
+
+
+def _bgg_item(g: dict[str, Any]) -> str:
+    rank_change_emoji = (
+        "🔺" if g["rank_change"] > 0 else "🔻" if g["rank_change"] < 0 else "🔸"
+    )
+    return f"{g["rank_debiased"]}. [thing={g["bgg_id"]}][/thing] ({rank_change_emoji} {abs(g["rank_change"])})"
+
+
+def bgg_list(data) -> str:
+    return "\n".join(
+        map(
+            _bgg_item,
+            data.select("bgg_id", "rank_debiased", "rank_change").iter_rows(named=True),
+        )
+    )
