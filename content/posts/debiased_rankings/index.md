@@ -189,7 +189,7 @@ Enough looking at coefficients, let's finally move on to the moment you didn't e
 |**#24** <small>(🔻 8)</small>|{{% game 84876 %}}The Castles of Burgundy{{% /game %}} <small>(2011)</small>|7.5 <small>(🔻 0.6)</small>|
 |**#25** <small>(🔻 19)</small>|{{% game 316554 %}}Dune: Imperium{{% /game %}} <small>(2020)</small>|7.5 <small>(🔻 0.9)</small>|
 
-I will say: {{% game 2653 %}}Survive: Escape from Atlantis!{{% /game %}} is not a game I would have expected om top of this list. In general, this top 25 is clearly much lighter and less recent than the regular BGG ranking. Personally, I'm up for this: it's a wonderful list full of proven classics, devoid of any cult of the new or Kickstarter bloat.
+I will say: {{% game 2653 %}}Survive: Escape from Atlantis!{{% /game %}} is not a game I would have expected on top of this list. In general, this top 25 is clearly much lighter and less recent than the regular BGG ranking. Personally, I'm up for this: it's a wonderful list full of proven classics, devoid of any cult of the new or Kickstarter bloat.
 
 Some games made huge leaps into the top 100, including {{% game 811 %}}Rummikub{{% /game %}}, {{% game 327 %}}Loopin' Louie{{% /game %}} and {{% game 17329 %}}Animal Upon Animal{{% /game %}} which all jumped up over 1000 positions. The biggest losers of this method – games dropping out of the top 100 – are {{% game 184267 %}}On Mars{{% /game %}}, {{% game 237182 %}}Root{{% /game %}} and {{% game 96848 %}}Mage Knight{{% /game %}}, all of which lost 1000 positions and more. You can download the full debiased ranking [here](ranking_debiased_all.csv).
 
