@@ -3,7 +3,7 @@ title: "Beyond games: Visualising the Riemann Hypothesis"
 slug: visualising-riemann-hypothesis
 author: Markus Shepherd
 type: post
-date: 2024-10-21T12:00:00+03:00
+date: 2024-10-23T12:00:00+03:00
 tags:
   - Beyond games
   - Mathematics
