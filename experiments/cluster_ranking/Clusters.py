@@ -42,6 +42,31 @@ games = pl.scan_ndjson(
     "num_votes",
 )
 
+# %%
+rankings = (
+    games.select(
+        "bgg_id",
+        "avg_rating",
+        "num_votes",
+        num_dummies=pl.col("num_votes").sum() / 10_000,
+    )
+    .with_columns(
+        bayes_rating=(
+            pl.col("avg_rating").fill_null(0.0) * pl.col("num_votes").fill_null(0)
+            + 5.5 * pl.col("num_dummies")
+        )
+        / (pl.col("num_votes").fill_null(0) + pl.col("num_dummies"))
+    )
+    .select(
+        "bgg_id",
+        rank=pl.col("bayes_rating").rank(method="random", descending=True, seed=13),
+    )
+    .sort("rank")
+    .collect()
+)
+rankings.shape
+
+# %%
 clusters = (
     games.explode("connected_id")
     .select(
