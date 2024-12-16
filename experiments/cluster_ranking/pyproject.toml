@@ -8,6 +8,7 @@ authors = ["Markus Shepherd <markus@recommend.games>"]
 python = "3.12.*"
 
 matplotlib = "*"
+networkx = {extras = ["default"], version = "^3.4.2"}
 numpy = "*"
 polars = {version = "*", extras = ["numpy", "pandas", "pyarrow"]}
 scikit-learn = "*"
