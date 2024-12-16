@@ -20,6 +20,8 @@ import polars as pl
 
 jupyter_black.load()
 
+seed = 13
+
 # %%
 games = pl.scan_ndjson(
     source="../../../board-game-data/scraped/bgg_GameItem.jl",
@@ -43,6 +45,44 @@ games = pl.scan_ndjson(
 )
 
 # %%
+clusters = (
+    games.explode("connected_id")
+    .select(
+        "bgg_id",
+        pl.col("connected_id").fill_null(pl.col("bgg_id")),
+    )
+    .collect()
+)
+clusters.shape
+
+# %%
+clusters.describe()
+
+# %%
+clusters.sample(10, seed=seed)
+
+# %%
+graph = nx.Graph()
+graph.add_edges_from(clusters.iter_rows())
+graph.number_of_nodes(), graph.number_of_edges(), nx.number_connected_components(graph)
+
+# %%
+largest_cluster = max(nx.connected_components(graph), key=len)
+min(largest_cluster), len(largest_cluster)
+
+
+# %%
+def find_cluster_ids(graph):
+    for component in nx.connected_components(graph):
+        cluster_id = min(component)
+        for bgg_id in component:
+            yield bgg_id, cluster_id
+
+
+cluster_id_mapping = dict(find_cluster_ids(graph))
+len(cluster_id_mapping)
+
+# %%
 rankings = (
     games.select(
         "bgg_id",
@@ -59,35 +99,13 @@ rankings = (
     )
     .select(
         "bgg_id",
-        rank=pl.col("bayes_rating").rank(method="random", descending=True, seed=13),
+        rank=pl.col("bayes_rating").rank(method="random", descending=True, seed=seed),
     )
     .sort("rank")
+    .with_columns(cluster_id=pl.col("bgg_id").replace(cluster_id_mapping))
     .collect()
 )
 rankings.shape
 
 # %%
-clusters = (
-    games.explode("connected_id")
-    .select(
-        "bgg_id",
-        pl.col("connected_id").fill_null(pl.col("bgg_id")),
-    )
-    .collect()
-)
-
-clusters.shape
-
-# %%
-clusters.describe()
-
-# %%
-clusters.sample(10)
-
-# %%
-graph = nx.Graph()
-graph.add_edges_from(clusters.iter_rows())
-graph.number_of_nodes(), graph.number_of_edges(), nx.number_connected_components(graph)
-
-# %%
-max(nx.connected_components(graph), key=len)
+rankings.head(10)
