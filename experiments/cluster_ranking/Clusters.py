@@ -20,37 +20,29 @@ import polars as pl
 
 jupyter_black.load()
 
+# %%
 seed = 13
+cluster_fields = ("compilation_of", "implementation", "integration")
+schema = {f: pl.List(pl.Int64) for f in cluster_fields}
+schema.update({"bgg_id": pl.Int64, "avg_rating": pl.Float64, "num_votes": pl.Int64})
 
 # %%
 games = pl.scan_ndjson(
-    source="../../../board-game-data/scraped/bgg_GameItem.jl",
-    schema={
-        "bgg_id": pl.Int64,
-        "compilation_of": pl.List(pl.Int64),
-        "implementation": pl.List(pl.Int64),
-        "integration": pl.List(pl.Int64),
-        "avg_rating": pl.Float64,
-        "num_votes": pl.Int64,
-    },
+    source="../../../board-game-data/scraped/bgg_GameItem.jl", schema=schema
 ).select(
     "bgg_id",
-    pl.concat_list(
-        pl.col("compilation_of").fill_null([]),
-        pl.col("implementation").fill_null([]),
-        pl.col("integration").fill_null([]),
-    ).alias("connected_id"),
+    pl.concat_list([pl.col(f).fill_null([]) for f in cluster_fields]).alias(
+        "connected_id"
+    ),
     "avg_rating",
     "num_votes",
 )
 
 # %%
 clusters = (
-    games.explode("connected_id")
-    .select(
-        "bgg_id",
-        pl.col("connected_id").fill_null(pl.col("bgg_id")),
-    )
+    games.select("bgg_id", "connected_id")
+    .explode("connected_id")
+    .drop_nulls()
     .collect()
 )
 clusters.shape
