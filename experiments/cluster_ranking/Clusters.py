@@ -108,3 +108,6 @@ rankings.describe()
 
 # %%
 rankings.head(10)
+
+# %%
+rankings.select("bgg_id", "representative_id").write_csv("clusters.csv")
