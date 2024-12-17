@@ -28,14 +28,13 @@ schema.update({"bgg_id": pl.Int64, "avg_rating": pl.Float64, "num_votes": pl.Int
 
 # %%
 games = pl.scan_ndjson(
-    source="../../../board-game-data/scraped/bgg_GameItem.jl", schema=schema
+    source="../../../board-game-data/scraped/v3/bgg_GameItem.jl",
+    schema=schema,
 ).select(
     "bgg_id",
-    pl.concat_list([pl.col(f).fill_null([]) for f in cluster_fields]).alias(
-        "connected_id"
-    ),
     "avg_rating",
     "num_votes",
+    connected_id=pl.concat_list([pl.col(f).fill_null([]) for f in cluster_fields]),
 )
 
 # %%
