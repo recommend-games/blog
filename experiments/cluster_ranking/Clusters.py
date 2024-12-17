@@ -95,9 +95,17 @@ rankings = (
     )
     .sort("rank")
     .with_columns(cluster_id=pl.col("bgg_id").replace(cluster_id_mapping))
-    .collect()
 )
+representative = rankings.group_by("cluster_id").agg(
+    representative_id=pl.col("bgg_id")
+    .filter(pl.col("rank") == pl.col("rank").min())
+    .first()
+)
+rankings = rankings.join(representative, on="cluster_id").collect()
 rankings.shape
+
+# %%
+rankings.describe()
 
 # %%
 rankings.head(10)
