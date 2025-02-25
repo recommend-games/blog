@@ -21,7 +21,7 @@ def compute_pairwise_preferences(rating_matrix: csr_matrix) -> csr_matrix:
     pairwise_wins = dok_matrix((num_games, num_games), dtype=int)
 
     for user_ratings in rating_matrix:
-        rated_indices = user_ratings.nonzero()[1]
+        rated_indices = user_ratings.indices
         user_data = user_ratings.data
         for i, idx_i in enumerate(rated_indices):
             for j, idx_j in enumerate(rated_indices):
@@ -39,17 +39,17 @@ def schulze_method(pairwise_wins: csr_matrix) -> list[int]:
         pairwise_wins (csr_matrix): A sparse (num_games, num_games) matrix of pairwise wins.
 
     Returns:
-        List[int]: List of game indices in descending order of preference.
+        list[int]: List of game indices in descending order of preference.
     """
     num_games = pairwise_wins.shape[0]
     strength = pairwise_wins.toarray()
 
-    # Compute strongest paths using Floyd-Warshall-like updates
+    # Compute strongest paths using optimized Floyd-Warshall updates
     for i in range(num_games):
         for j in range(num_games):
-            if i != j:
+            if strength[j, i] > 0:
                 for k in range(num_games):
-                    if i != k and j != k:
+                    if strength[i, k] > 0:
                         strength[j, k] = max(
                             strength[j, k], min(strength[j, i], strength[i, k])
                         )
@@ -57,7 +57,7 @@ def schulze_method(pairwise_wins: csr_matrix) -> list[int]:
     # Determine ranking based on strongest paths
     ranking = sorted(
         range(num_games),
-        key=lambda x: sum(strength[x, y] > strength[y, x] for y in range(num_games)),
+        key=lambda x: np.count_nonzero(strength[x] > strength[:, x]),
         reverse=True,
     )
 
