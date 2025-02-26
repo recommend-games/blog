@@ -7,6 +7,7 @@ authors = ["Markus Shepherd <markus@recommend.games>"]
 [tool.poetry.dependencies]
 python = "3.12.*"
 
+board-game-recommender = {git = "https://gitlab.com/recommend.games/board-game-recommender.git", rev = "0b6b6fad012392e8d523d0027972cc3f6e8f62b2", extras = ["light", "trust"]}
 matplotlib = "*"
 numpy = "*"
 polars = {version = "*", extras = ["numpy", "pandas", "pyarrow"]}

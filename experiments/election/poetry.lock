@@ -254,6 +254,32 @@ webencodings = "*"
 css = ["tinycss2 (>=1.1.0,<1.5)"]
 
 [[package]]
+name = "board-game-recommender"
+version = "3.6.0"
+description = "Board games recommender engine"
+optional = false
+python-versions = "*"
+files = []
+develop = false
+
+[package.dependencies]
+numpy = "*"
+pandas = {version = "*", optional = true, markers = "extra == \"light\""}
+scipy = {version = "*", optional = true, markers = "extra == \"trust\""}
+
+[package.extras]
+evaluation = ["polars", "scikit-learn"]
+full = ["pytility", "turicreate"]
+light = ["pandas"]
+trust = ["scipy"]
+
+[package.source]
+type = "git"
+url = "https://gitlab.com/recommend.games/board-game-recommender.git"
+reference = "0b6b6fad012392e8d523d0027972cc3f6e8f62b2"
+resolved_reference = "0b6b6fad012392e8d523d0027972cc3f6e8f62b2"
+
+[[package]]
 name = "certifi"
 version = "2025.1.31"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -2907,13 +2933,13 @@ win32 = ["pywin32"]
 
 [[package]]
 name = "setuptools"
-version = "75.8.1"
+version = "75.8.2"
 description = "Easily download, build, install, upgrade, and uninstall Python packages"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "setuptools-75.8.1-py3-none-any.whl", hash = "sha256:3bc32c0b84c643299ca94e77f834730f126efd621de0cc1de64119e0e17dab1f"},
-    {file = "setuptools-75.8.1.tar.gz", hash = "sha256:65fb779a8f28895242923582eadca2337285f0891c2c9e160754df917c3d2530"},
+    {file = "setuptools-75.8.2-py3-none-any.whl", hash = "sha256:558e47c15f1811c1fa7adbd0096669bf76c1d3f433f58324df69f3f5ecac4e8f"},
+    {file = "setuptools-75.8.2.tar.gz", hash = "sha256:4880473a969e5f23f2a2be3646b2dfd84af9028716d398e46192f84bc36900d2"},
 ]
 
 [package.extras]
@@ -3289,4 +3315,4 @@ test = ["websockets"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.12.*"
-content-hash = "15cfd7c9ea5db46b9810a46d7fc5fc13b63d9999ea7054fbfa0a1832723794cd"
+content-hash = "705b06ad23d209ff50aeb2e1cacd5e2030173067e7d8e5698a09d5817954e6d4"
