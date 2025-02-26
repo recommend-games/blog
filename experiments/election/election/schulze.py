@@ -8,13 +8,13 @@ import numpy as np
 from scipy.sparse import dok_matrix, csr_matrix, lil_matrix
 
 
-def compute_pairwise_preferences(rating_matrix: csr_matrix) -> csr_matrix:
+def compute_pairwise_preferences(rating_matrix: csr_matrix | np.ndarray) -> csr_matrix:
     """
     Compute sparse pairwise wins matrix from a user-game rating matrix.
     Assumes ratings are numeric and higher means better.
 
     Args:
-        rating_matrix (csr_matrix): A sparse (num_users, num_games) matrix with ratings.
+        rating_matrix (csr_matrix | np.ndarray): A (num_users, num_games) matrix with ratings.
 
     Returns:
         csr_matrix: A sparse (num_games, num_games) matrix with pairwise wins.
@@ -22,13 +22,24 @@ def compute_pairwise_preferences(rating_matrix: csr_matrix) -> csr_matrix:
     num_games = rating_matrix.shape[1]
     pairwise_wins = dok_matrix((num_games, num_games), dtype=int)
 
-    for user_ratings in rating_matrix:
-        rated_indices = user_ratings.indices
-        user_data = user_ratings.data
-        for i, idx_i in enumerate(rated_indices):
-            for j, idx_j in enumerate(rated_indices):
-                if idx_i != idx_j and user_data[i] > user_data[j]:
-                    pairwise_wins[idx_i, idx_j] += 1
+    if isinstance(rating_matrix, np.ndarray):
+        for user_ratings in rating_matrix:
+            # Get indices of non-zero/non-nan values
+            rated_indices = np.where(~np.isnan(user_ratings))[0]
+            user_data = user_ratings[rated_indices]
+            for i, idx_i in enumerate(rated_indices):
+                for j, idx_j in enumerate(rated_indices):
+                    if idx_i != idx_j and user_data[i] > user_data[j]:
+                        pairwise_wins[idx_i, idx_j] += 1
+
+    else:
+        for user_ratings in rating_matrix:
+            rated_indices = user_ratings.indices
+            user_data = user_ratings.data
+            for i, idx_i in enumerate(rated_indices):
+                for j, idx_j in enumerate(rated_indices):
+                    if idx_i != idx_j and user_data[i] > user_data[j]:
+                        pairwise_wins[idx_i, idx_j] += 1
 
     return pairwise_wins.tocsr()
 
