@@ -20,18 +20,18 @@ def _user_trust(
 ) -> float:
     ratings = tuple(r for r in ratings if r is not None)
     if (len(ratings) < min_ratings) or all(r == ratings[0] for r in ratings):
-        return 0
+        return 0.0
 
     months = len({d[:7] for d in dates if isinstance(d, str)})
     if months < 2:
-        return 0
+        return 0.0
 
     try:
         score, _ = shapiro(ratings)
     except Exception:
-        return 0
+        return 0.0
 
-    return score * math.log2(months)
+    return float(score * math.log2(months))
 
 
 def _users_trust(
