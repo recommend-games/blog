@@ -9,6 +9,7 @@ from collections.abc import Generator, Iterable
 from typing import Any
 
 from scipy.stats import shapiro
+from tqdm import tqdm
 
 
 def _user_trust(
@@ -40,6 +41,7 @@ def _users_trust(
     key_col: str,
     ratings_col: str,
     date_col: str,
+    progress: bool = False,
 ) -> Generator[tuple[str, float], None, None]:
     if isinstance(ratings, str):
         with open(ratings, encoding="utf-8") as file:
@@ -51,6 +53,9 @@ def _users_trust(
                 date_col=date_col,
             )
             return
+
+    if progress:
+        ratings = tqdm(ratings, desc="Processing ratings")
 
     for key, group in groupby(ratings, key=lambda r: r[key_col]):
         rows = ((row.get(ratings_col), row.get(date_col)) for row in group)
@@ -65,6 +70,7 @@ def user_trust(
     key_col: str = "bgg_user_name",
     ratings_col: str = "bgg_user_rating",
     date_col: str = "updated_at",
+    progress: bool = False,
 ) -> dict[str, float]:
     """Calculate the trust in users."""
 
@@ -74,6 +80,7 @@ def user_trust(
         key_col=key_col,
         ratings_col=ratings_col,
         date_col=date_col,
+        progress=progress,
     )
 
     return dict(trust)
