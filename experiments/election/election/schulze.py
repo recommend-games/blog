@@ -2,6 +2,8 @@
 This module implements the Schulze method for ranking games based on user preferences.
 """
 
+from __future__ import annotations
+
 import numpy as np
 from scipy.sparse import dok_matrix, csr_matrix, lil_matrix
 
