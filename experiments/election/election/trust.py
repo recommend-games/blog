@@ -41,7 +41,7 @@ def _users_trust(
     key_col: str,
     ratings_col: str,
     date_col: str,
-    progress: bool = False,
+    progress_bar: bool = False,
 ) -> Generator[tuple[str, float], None, None]:
     if isinstance(ratings, str):
         with open(ratings, encoding="utf-8") as file:
@@ -51,10 +51,11 @@ def _users_trust(
                 key_col=key_col,
                 ratings_col=ratings_col,
                 date_col=date_col,
+                progress_bar=progress_bar,
             )
             return
 
-    if progress:
+    if progress_bar:
         ratings = tqdm(ratings, desc="Processing ratings")
 
     for key, group in groupby(ratings, key=lambda r: r[key_col]):
@@ -70,7 +71,7 @@ def user_trust(
     key_col: str = "bgg_user_name",
     ratings_col: str = "bgg_user_rating",
     date_col: str = "updated_at",
-    progress: bool = False,
+    progress_bar: bool = False,
 ) -> dict[str, float]:
     """Calculate the trust in users."""
 
@@ -80,7 +81,7 @@ def user_trust(
         key_col=key_col,
         ratings_col=ratings_col,
         date_col=date_col,
-        progress=progress,
+        progress_bar=progress_bar,
     )
 
     return dict(trust)

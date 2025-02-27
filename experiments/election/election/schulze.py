@@ -6,9 +6,13 @@ from __future__ import annotations
 
 import numpy as np
 from scipy.sparse import dok_matrix, csr_matrix, lil_matrix
+from tqdm import tqdm, trange
 
 
-def compute_pairwise_preferences(rating_matrix: csr_matrix | np.ndarray) -> csr_matrix:
+def compute_pairwise_preferences(
+    rating_matrix: csr_matrix | np.ndarray,
+    progress_bar: bool = False,
+) -> csr_matrix:
     """
     Compute sparse pairwise wins matrix from a user-game rating matrix.
     Assumes ratings are numeric and higher means better.
@@ -23,6 +27,8 @@ def compute_pairwise_preferences(rating_matrix: csr_matrix | np.ndarray) -> csr_
     pairwise_wins = dok_matrix((num_games, num_games), dtype=int)
 
     if isinstance(rating_matrix, np.ndarray):
+        if progress_bar:
+            rating_matrix = tqdm(rating_matrix, desc="Computing pairwise preferences")
         for user_ratings in rating_matrix:
             # Get indices of non-zero/non-nan values
             rated_indices = np.where(~np.isnan(user_ratings))[0]
@@ -33,6 +39,8 @@ def compute_pairwise_preferences(rating_matrix: csr_matrix | np.ndarray) -> csr_
                         pairwise_wins[idx_i, idx_j] += 1
 
     else:
+        if progress_bar:
+            rating_matrix = tqdm(rating_matrix, desc="Computing pairwise preferences")
         for user_ratings in rating_matrix:
             rated_indices = user_ratings.indices
             user_data = user_ratings.data
@@ -44,7 +52,10 @@ def compute_pairwise_preferences(rating_matrix: csr_matrix | np.ndarray) -> csr_
     return pairwise_wins.tocsr()
 
 
-def schulze_method(pairwise_wins: csr_matrix) -> list[int]:
+def schulze_method(
+    pairwise_wins: csr_matrix,
+    progress_bar: bool = False,
+) -> list[int]:
     """
     Compute the Schulze ranking from a sparse pairwise wins matrix.
 
@@ -57,14 +68,17 @@ def schulze_method(pairwise_wins: csr_matrix) -> list[int]:
     num_games = pairwise_wins.shape[0]
     strength = pairwise_wins.toarray()
 
+    rng = trange(num_games) if progress_bar else range(num_games)
+
     # Compute strongest paths using optimized Floyd-Warshall updates
-    for i in range(num_games):
+    for i in rng:
         for j in range(num_games):
             if strength[j, i] > 0:
                 for k in range(num_games):
                     if strength[i, k] > 0:
                         strength[j, k] = max(
-                            strength[j, k], min(strength[j, i], strength[i, k])
+                            strength[j, k],
+                            min(strength[j, i], strength[i, k]),
                         )
 
     # Determine ranking based on strongest paths
