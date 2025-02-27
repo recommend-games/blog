@@ -21,7 +21,7 @@ import jupyter_black
 import numpy as np
 import polars as pl
 from board_game_recommender import LightGamesRecommender
-from election.schulze import compute_pairwise_preferences
+from election.schulze import compute_pairwise_preferences, schulze_method
 from election.trust import user_trust
 
 jupyter_black.load()
@@ -31,17 +31,22 @@ rng = np.random.default_rng()
 PROJECT_DIR = Path(".").resolve().parent.parent
 
 DATA_DIR = PROJECT_DIR.parent / "board-game-data"
+GAMES_FILE = DATA_DIR / "scraped" / "bgg_GameItem.jl"
 RATINGS_FILE = DATA_DIR / "scraped" / "bgg_RatingItem.jl"
 
 SERVER_DIR = PROJECT_DIR.parent / "recommend-games-server"
 RECOMMENDER_FILE = SERVER_DIR / "data" / "recommender_light.npz"
 
-PROJECT_DIR, DATA_DIR, RATINGS_FILE, SERVER_DIR, RECOMMENDER_FILE
+PROJECT_DIR, DATA_DIR, GAMES_FILE, RATINGS_FILE, SERVER_DIR, RECOMMENDER_FILE
 
 # %%
 NUM_USERS = 100
 NUM_GAMES = 10
 NUM_USERS, NUM_GAMES
+
+# %%
+games = pl.scan_ndjson(GAMES_FILE).select("bgg_id", "name").collect()
+len(games)
 
 # %%
 ratings_count = (
@@ -94,8 +99,21 @@ recommender.num_games, recommender.num_users
 
 # %%
 # The whole matrix at once might be too large
-ratings_matrix = recommender.recommend_as_numpy(
+rating_matrix = recommender.recommend_as_numpy(
     users=sampled_users,
     games=sampled_games,
 )
-ratings_matrix.shape
+rating_matrix.shape
+
+# %%
+pairwise_preferences = compute_pairwise_preferences(rating_matrix)
+pairwise_preferences.shape
+
+# %%
+ranking = np.array(schulze_method(pairwise_preferences))
+
+# %%
+ranking
+
+# %%
+sampled_games[ranking]
