@@ -40,8 +40,8 @@ RECOMMENDER_FILE = SERVER_DIR / "data" / "recommender_light.npz"
 PROJECT_DIR, DATA_DIR, GAMES_FILE, RATINGS_FILE, SERVER_DIR, RECOMMENDER_FILE
 
 # %%
-NUM_USERS = 100
-NUM_GAMES = 10
+NUM_USERS = 10_000
+NUM_GAMES = 1_000
 NUM_USERS, NUM_GAMES
 
 # %%
@@ -62,18 +62,19 @@ ratings_count.head()
 
 # %%
 # Sample or top NUM_GAMES?
-sampled_games = rng.choice(
-    ratings_count["bgg_id"],
-    size=NUM_GAMES,
-    replace=False,
-    p=ratings_count["p_games"],
-    shuffle=False,
-)
+# sampled_games = rng.choice(
+#     ratings_count["bgg_id"],
+#     size=NUM_GAMES,
+#     replace=False,
+#     p=ratings_count["p_games"],
+#     shuffle=False,
+# )
+sampled_games = ratings_count["bgg_id"].head(NUM_GAMES)
 len(sampled_games)
 
 # %%
 with warnings.catch_warnings(action="ignore"):
-    trust = user_trust(str(RATINGS_FILE), progress=True)
+    trust = user_trust(str(RATINGS_FILE), progress_bar=True)
 len(trust)
 
 # %%
@@ -106,14 +107,29 @@ rating_matrix = recommender.recommend_as_numpy(
 rating_matrix.shape
 
 # %%
-pairwise_preferences = compute_pairwise_preferences(rating_matrix)
+pairwise_preferences = compute_pairwise_preferences(
+    rating_matrix,
+    progress_bar=True,
+)
 pairwise_preferences.shape
 
 # %%
-ranking = np.array(schulze_method(pairwise_preferences))
+ranking = np.array(
+    schulze_method(
+        pairwise_preferences,
+        progress_bar=True,
+    )
+)
+ranking.shape
 
 # %%
-ranking
+ranked_games = pl.DataFrame(
+    {
+        "bgg_id": sampled_games[ranking],
+        "rank": range(1, len(sampled_games) + 1),
+    },
+).join(games, on="bgg_id", how="left")
+ranked_games.shape
 
 # %%
-sampled_games[ranking]
+ranked_games.head(10)
