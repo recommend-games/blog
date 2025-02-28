@@ -44,7 +44,7 @@ BASE_DIR, RESULTS_DIR, PROJECT_DIR, DATA_DIR, GAMES_FILE, RATINGS_FILE, SERVER_D
 
 # %%
 NUM_USERS = 10_000
-NUM_GAMES = 1_000
+NUM_GAMES = 100
 NUM_USERS, NUM_GAMES
 
 # %%
@@ -52,16 +52,20 @@ games = pl.scan_ndjson(GAMES_FILE).select("bgg_id", "name").collect()
 len(games)
 
 # %%
-ratings_count = (
-    pl.scan_ndjson(RATINGS_FILE)
-    .filter(pl.col("bgg_user_rating").is_not_nan())
-    .group_by("bgg_id")
-    .agg(pl.len())
-    .with_columns(p_games=pl.col("len") / pl.sum("len"))
-    .sort("len", descending=True)
-    .collect()
-)
-ratings_count.write_csv(RESULTS_DIR / "ratings_count.csv", float_precision=12)
+ratings_count_file = RESULTS_DIR / "ratings_count.csv"
+if ratings_count_file.exists():
+    ratings_count = pl.read_csv(ratings_count_file)
+else:
+    ratings_count = (
+        pl.scan_ndjson(RATINGS_FILE)
+        .filter(pl.col("bgg_user_rating").is_not_nan())
+        .group_by("bgg_id")
+        .agg(pl.len())
+        .with_columns(p_games=pl.col("len") / pl.sum("len"))
+        .sort("len", descending=True)
+        .collect()
+    )
+    ratings_count.write_csv(ratings_count_file, float_precision=12)
 ratings_count.head()
 
 # %%
@@ -77,23 +81,24 @@ sampled_games = ratings_count["bgg_id"].head(NUM_GAMES)
 len(sampled_games)
 
 # %%
-with warnings.catch_warnings(action="ignore"):
-    trust = user_trust(str(RATINGS_FILE), progress_bar=True)
-len(trust)
-
-# %%
-trust_df = (
-    pl.DataFrame(
-        {
-            "bgg_user_name": trust.keys(),
-            "trust": trust.values(),
-        }
+trust_file = RESULTS_DIR / "trust.csv"
+if trust_file.exists():
+    trust_df = pl.read_csv(trust_file)
+else:
+    with warnings.catch_warnings(action="ignore"):
+        trust = user_trust(str(RATINGS_FILE), progress_bar=True)
+    trust_df = (
+        pl.DataFrame(
+            {
+                "bgg_user_name": trust.keys(),
+                "trust": trust.values(),
+            }
+        )
+        .filter(pl.col("trust") > 0)
+        .sort("trust", descending=True)
+        .with_columns(p_users=pl.col("trust") / pl.sum("trust"))
     )
-    .filter(pl.col("trust") > 0)
-    .sort("trust", descending=True)
-    .with_columns(p_users=pl.col("trust") / pl.sum("trust"))
-)
-trust_df.write_csv(RESULTS_DIR / "trust.csv", float_precision=12)
+    trust_df.write_csv(trust_file, float_precision=12)
 trust_df.shape
 
 # %%
@@ -118,6 +123,85 @@ rating_matrix = recommender.recommend_as_numpy(
     games=sampled_games,
 )
 rating_matrix.shape
+
+# %%
+df = (
+    pl.LazyFrame(data=rating_matrix.T, schema=tuple(sampled_users))
+    .with_columns(bgg_id=sampled_games)
+    .unpivot(
+        index="bgg_id",
+        variable_name="bgg_user_name",
+        value_name="bgg_user_rating",
+    )
+)
+pairwise_wins = (
+    df.join(df, on="bgg_user_name", how="inner", suffix="_other")
+    .filter(pl.col("bgg_id") != pl.col("bgg_id_other"))
+    .filter(pl.col("bgg_user_rating") > pl.col("bgg_user_rating_other"))
+    .group_by(["bgg_id", "bgg_id_other"])
+    .agg(pl.len().alias("wins"))
+)
+
+# %%
+strength = (
+    pairwise_wins.join(
+        pairwise_wins,
+        left_on="bgg_id_other",
+        right_on="bgg_id",
+        suffix="_mid",
+    )
+    .select(
+        pl.col("bgg_id"),
+        pl.col("bgg_id_other_mid").alias("bgg_id_other"),
+        pl.min_horizontal([pl.col("wins"), pl.col("wins_mid")]).alias("strength"),
+    )
+    .group_by(["bgg_id", "bgg_id_other"])
+    .agg(pl.max("strength"))
+)
+
+# %%
+ranking = (
+    strength.group_by("bgg_id")
+    .agg((pl.col("strength") > pl.col("strength").reverse()).sum().alias("score"))
+    .sort("score", descending=True)
+    .collect()
+)
+ranking.shape
+
+# %%
+ranking.tail(10)
+
+# %%
+num_users, num_games = rating_matrix.shape
+# Convert sparse matrix to Polars DataFrame in long format
+rows, cols = rating_matrix.nonzero()
+# ratings = rating_matrix.data
+df = pl.DataFrame(
+    {
+        "user": rows,
+        "game": cols,
+        "rating": rating_matrix.reshape(-1),
+    },
+).lazy()
+
+# %%
+pairwise_wins = (
+    df.join(df, on="user", how="inner", suffix="_other")
+    .filter(pl.col("game") != pl.col("game_other"))
+    .filter(pl.col("rating") > pl.col("rating_other"))
+    .group_by(["game", "game_other"])
+    .agg(pl.len().alias("wins"))
+    .collect()
+)
+pairwise_wins.shape
+
+# %%
+pairwise_wins.pivot(
+    index="game",
+    on="game_other",
+    values="wins",
+    aggregate_function="sum",
+).fill_null(0)
 
 # %%
 pairwise_preferences = compute_pairwise_preferences(
