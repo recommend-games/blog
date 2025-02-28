@@ -28,7 +28,10 @@ jupyter_black.load()
 rng = np.random.default_rng()
 
 # %%
-PROJECT_DIR = Path(".").resolve().parent.parent
+BASE_DIR = Path(".").resolve()
+RESULTS_DIR = BASE_DIR / "results"
+RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+PROJECT_DIR = BASE_DIR.parent.parent
 
 DATA_DIR = PROJECT_DIR.parent / "board-game-data"
 GAMES_FILE = DATA_DIR / "scraped" / "bgg_GameItem.jl"
@@ -37,7 +40,7 @@ RATINGS_FILE = DATA_DIR / "scraped" / "bgg_RatingItem.jl"
 SERVER_DIR = PROJECT_DIR.parent / "recommend-games-server"
 RECOMMENDER_FILE = SERVER_DIR / "data" / "recommender_light.npz"
 
-PROJECT_DIR, DATA_DIR, GAMES_FILE, RATINGS_FILE, SERVER_DIR, RECOMMENDER_FILE
+BASE_DIR, RESULTS_DIR, PROJECT_DIR, DATA_DIR, GAMES_FILE, RATINGS_FILE, SERVER_DIR, RECOMMENDER_FILE
 
 # %%
 NUM_USERS = 10_000
@@ -58,6 +61,7 @@ ratings_count = (
     .sort("len", descending=True)
     .collect()
 )
+ratings_count.write_csv(RESULTS_DIR / "ratings_count.csv", float_precision=12)
 ratings_count.head()
 
 # %%
@@ -78,18 +82,27 @@ with warnings.catch_warnings(action="ignore"):
 len(trust)
 
 # %%
-users, trust_scores = zip(*trust.items())
-trust_scores = np.array(trust_scores)
-p_users = trust_scores / trust_scores.sum()
-trust_scores.shape
+trust_df = (
+    pl.DataFrame(
+        {
+            "bgg_user_name": trust.keys(),
+            "trust": trust.values(),
+        }
+    )
+    .filter(pl.col("trust") > 0)
+    .sort("trust", descending=True)
+    .with_columns(p_users=pl.col("trust") / pl.sum("trust"))
+)
+trust_df.write_csv(RESULTS_DIR / "trust.csv", float_precision=12)
+trust_df.shape
 
 # %%
 # Sample or top NUM_USERS?
 sampled_users = rng.choice(
-    users,
+    trust_df["bgg_user_name"],
     size=NUM_USERS,
     replace=False,
-    p=p_users,
+    p=trust_df["p_users"],
     shuffle=False,
 )
 len(sampled_users)
@@ -114,6 +127,14 @@ pairwise_preferences = compute_pairwise_preferences(
 pairwise_preferences.shape
 
 # %%
+pairwise_preferences_df = pl.DataFrame(
+    data=pairwise_preferences.toarray(),
+    schema=tuple(map(str, sampled_games)),
+).insert_column(0, pl.Series("bgg_id", sampled_games))
+pairwise_preferences_df.write_csv(RESULTS_DIR / "pairwise_preferences.csv")
+pairwise_preferences_df.shape
+
+# %%
 ranking = np.array(
     schulze_method(
         pairwise_preferences,
@@ -129,6 +150,9 @@ ranked_games = pl.DataFrame(
         "rank": range(1, len(sampled_games) + 1),
     },
 ).join(games, on="bgg_id", how="left")
+ranked_games.select("rank", "bgg_id", "name").write_csv(
+    RESULTS_DIR / "ranked_games.csv",
+)
 ranked_games.shape
 
 # %%
