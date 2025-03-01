@@ -43,8 +43,8 @@ RECOMMENDER_FILE = SERVER_DIR / "data" / "recommender_light.npz"
 BASE_DIR, RESULTS_DIR, PROJECT_DIR, DATA_DIR, GAMES_FILE, RATINGS_FILE, SERVER_DIR, RECOMMENDER_FILE
 
 # %%
-NUM_USERS = 100_000
-NUM_GAMES = 100
+NUM_USERS = 10_000
+NUM_GAMES = 1_000
 NUM_USERS, NUM_GAMES
 
 # %%
@@ -121,6 +121,7 @@ ranked_games = schulze_method(
     rating_matrix=rating_matrix,
     bgg_ids=sampled_games,
     bgg_user_names=sampled_users,
+    progress_bar=True,
 ).join(games, on="bgg_id", how="left")
 ranked_games.select("rank", "bgg_id", "name").write_csv(
     RESULTS_DIR / "ranked_games.csv",

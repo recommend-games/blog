@@ -7,12 +7,14 @@ from collections.abc import Iterable
 
 import polars as pl
 import numpy as np
+from tqdm import trange
 
 
 def schulze_method(
     rating_matrix: np.ndarray,
     bgg_user_names: Iterable[str],
     bgg_ids: Iterable[int],
+    progress_bar: bool = False,
 ) -> pl.DataFrame:
     """
     Compute the Schulze ranking from a sparse pairwise wins matrix.
@@ -54,12 +56,13 @@ def schulze_method(
         )
         .sort("bgg_id")
         .drop("bgg_id")
-        .collect()
+        .collect(streaming=True)
         .to_numpy(order="c", writable=True)
     )
 
     num_games = len(bgg_ids)
-    for i in range(num_games):
+    range_ = trange(num_games) if progress_bar else range(num_games)
+    for i in range_:
         for j in range(num_games):
             if i != j:
                 for k in range(num_games):
