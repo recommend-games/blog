@@ -21,11 +21,11 @@ import jupyter_black
 import numpy as np
 import polars as pl
 from board_game_recommender import LightGamesRecommender
-from election.schulze import compute_pairwise_preferences, schulze_method
+from election.schulze import schulze_method
 from election.trust import user_trust
 
 jupyter_black.load()
-rng = np.random.default_rng()
+rng = np.random.default_rng(seed=13)
 
 # %%
 BASE_DIR = Path(".").resolve()
@@ -43,7 +43,7 @@ RECOMMENDER_FILE = SERVER_DIR / "data" / "recommender_light.npz"
 BASE_DIR, RESULTS_DIR, PROJECT_DIR, DATA_DIR, GAMES_FILE, RATINGS_FILE, SERVER_DIR, RECOMMENDER_FILE
 
 # %%
-NUM_USERS = 10_000
+NUM_USERS = 100_000
 NUM_GAMES = 100
 NUM_USERS, NUM_GAMES
 
@@ -69,14 +69,6 @@ else:
 ratings_count.head()
 
 # %%
-# Sample or top NUM_GAMES?
-# sampled_games = rng.choice(
-#     ratings_count["bgg_id"],
-#     size=NUM_GAMES,
-#     replace=False,
-#     p=ratings_count["p_games"],
-#     shuffle=False,
-# )
 sampled_games = ratings_count["bgg_id"].head(NUM_GAMES)
 len(sampled_games)
 
@@ -125,114 +117,10 @@ rating_matrix = recommender.recommend_as_numpy(
 rating_matrix.shape
 
 # %%
-df = (
-    pl.LazyFrame(data=rating_matrix.T, schema=tuple(sampled_users))
-    .with_columns(bgg_id=sampled_games)
-    .unpivot(
-        index="bgg_id",
-        variable_name="bgg_user_name",
-        value_name="bgg_user_rating",
-    )
-)
-pairwise_wins = (
-    df.join(df, on="bgg_user_name", how="inner", suffix="_other")
-    .filter(pl.col("bgg_id") != pl.col("bgg_id_other"))
-    .filter(pl.col("bgg_user_rating") > pl.col("bgg_user_rating_other"))
-    .group_by(["bgg_id", "bgg_id_other"])
-    .agg(pl.len().alias("wins"))
-)
-
-# %%
-strength = (
-    pairwise_wins.join(
-        pairwise_wins,
-        left_on="bgg_id_other",
-        right_on="bgg_id",
-        suffix="_mid",
-    )
-    .select(
-        pl.col("bgg_id"),
-        pl.col("bgg_id_other_mid").alias("bgg_id_other"),
-        pl.min_horizontal([pl.col("wins"), pl.col("wins_mid")]).alias("strength"),
-    )
-    .group_by(["bgg_id", "bgg_id_other"])
-    .agg(pl.max("strength"))
-)
-
-# %%
-ranking = (
-    strength.group_by("bgg_id")
-    .agg((pl.col("strength") > pl.col("strength").reverse()).sum().alias("score"))
-    .sort("score", descending=True)
-    .collect()
-)
-ranking.shape
-
-# %%
-ranking.tail(10)
-
-# %%
-num_users, num_games = rating_matrix.shape
-# Convert sparse matrix to Polars DataFrame in long format
-rows, cols = rating_matrix.nonzero()
-# ratings = rating_matrix.data
-df = pl.DataFrame(
-    {
-        "user": rows,
-        "game": cols,
-        "rating": rating_matrix.reshape(-1),
-    },
-).lazy()
-
-# %%
-pairwise_wins = (
-    df.join(df, on="user", how="inner", suffix="_other")
-    .filter(pl.col("game") != pl.col("game_other"))
-    .filter(pl.col("rating") > pl.col("rating_other"))
-    .group_by(["game", "game_other"])
-    .agg(pl.len().alias("wins"))
-    .collect()
-)
-pairwise_wins.shape
-
-# %%
-pairwise_wins.pivot(
-    index="game",
-    on="game_other",
-    values="wins",
-    aggregate_function="sum",
-).fill_null(0)
-
-# %%
-pairwise_preferences = compute_pairwise_preferences(
-    rating_matrix,
-    progress_bar=True,
-)
-pairwise_preferences.shape
-
-# %%
-pairwise_preferences_df = pl.DataFrame(
-    data=pairwise_preferences.toarray(),
-    schema=tuple(map(str, sampled_games)),
-).insert_column(0, pl.Series("bgg_id", sampled_games))
-pairwise_preferences_df.write_csv(RESULTS_DIR / "pairwise_preferences.csv")
-pairwise_preferences_df.shape
-
-# %%
-ranking = np.array(
-    schulze_method(
-        pairwise_preferences,
-        progress_bar=True,
-    )
-)
-ranking.shape
-
-# %%
-ranked_games = pl.DataFrame(
-    {
-        "bgg_id": sampled_games[ranking],
-        "rank": range(1, len(sampled_games) + 1),
-    },
+ranked_games = schulze_method(
+    rating_matrix=rating_matrix,
+    bgg_ids=sampled_games,
+    bgg_user_names=sampled_users,
 ).join(games, on="bgg_id", how="left")
 ranked_games.select("rank", "bgg_id", "name").write_csv(
     RESULTS_DIR / "ranked_games.csv",
