@@ -11,6 +11,7 @@ board-game-recommender = {git = "https://gitlab.com/recommend.games/board-game-r
 matplotlib = "*"
 numpy = "*"
 polars = {version = "*", extras = ["numpy", "pandas", "pyarrow"]}
+polars-u64-idx = "*"
 scikit-learn = "*"
 scipy = "!= 1.14.1"
 seaborn = "*"
