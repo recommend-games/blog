@@ -1,16 +1,18 @@
+from collections.abc import Generator
 import json
 import re
-import scrapy
-import scrapy.responsetypes
+
+from scrapy import FormRequest, Request, Spider
+from scrapy.http import Response, TextResponse
 
 
-class BgaSpider(scrapy.Spider):
+class BgaSpider(Spider):
     name = "bga"
     start_urls = ("https://en.boardgamearena.com/gamelist?allGames=",)
 
     regex = re.compile("globalUserInfos=(.+);$", flags=re.MULTILINE)
 
-    def parse(self, response: scrapy.responsetypes.Response):
+    def parse(self, response: Response) -> Generator[dict | Request]:
         for text in response.xpath(
             "//script[@type = 'text/javascript']/text()"
         ).getall():
@@ -35,7 +37,7 @@ class BgaSpider(scrapy.Spider):
                     "games_played": game["games_played"],
                 }
 
-                yield scrapy.http.FormRequest(
+                yield FormRequest(
                     url=response.urljoin("/gamepanel/gamepanel/getRanking.html"),
                     method="POST",
                     formdata={
@@ -46,8 +48,8 @@ class BgaSpider(scrapy.Spider):
                     callback=self.parse_ranking,
                 )
 
-    def parse_ranking(self, response: scrapy.responsetypes.Response):
-        if not isinstance(response, scrapy.http.response.text.TextResponse):
+    def parse_ranking(self, response: Response) -> Generator[dict | Request]:
+        if not isinstance(response, TextResponse):
             return
 
         payload = response.json()
