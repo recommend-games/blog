@@ -34,13 +34,7 @@ class BgaSpider(Spider):
                 continue
 
             for game in payload["game_list"]:
-                yield {
-                    "bgg_id": game["bgg_id"],
-                    "bga_id": game["id"],
-                    "bga_slug": game["name"],
-                    "name": game["display_name_en"],
-                    "games_played": game["games_played"],
-                }
+                yield game
 
                 yield FormRequest(
                     url=response.urljoin("/gamepanel/gamepanel/getRanking.html"),
