@@ -10,6 +10,11 @@ class BgaSpider(Spider):
     name = "bga"
     start_urls = ("https://en.boardgamearena.com/gamelist?allGames=",)
 
+    custom_settings = {
+        "DOWNLOAD_DELAY": 1,
+        "CONCURRENT_REQUESTS_PER_DOMAIN": 4,
+    }
+
     regex = re.compile("globalUserInfos=(.+);$", flags=re.MULTILINE)
 
     def parse(self, response: Response) -> Generator[dict | Request]:
