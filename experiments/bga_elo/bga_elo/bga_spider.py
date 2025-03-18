@@ -1,9 +1,30 @@
 from collections.abc import Generator
 import json
 import re
+from typing import Any
 
 from scrapy import FormRequest, Request, Spider
 from scrapy.http import Response, TextResponse
+
+
+class BaseFilter:
+    type_name: str
+
+    def __init__(self, feed_options: dict[str, Any] | None) -> None:
+        self.feed_options = feed_options
+
+    def accepts(self, item: Any) -> bool:
+        if "type" in item and item["type"] == self.type_name:
+            return True
+        return False
+
+
+class GameFilter(BaseFilter):
+    type_name = "game"
+
+
+class RankingFilter(BaseFilter):
+    type_name = "ranking"
 
 
 class BgaSpider(Spider):
@@ -13,6 +34,20 @@ class BgaSpider(Spider):
     custom_settings = {
         "DOWNLOAD_DELAY": 1,
         "CONCURRENT_REQUESTS_PER_DOMAIN": 4,
+        "FEEDS": {
+            "results/games.jl": {
+                "format": "jsonlines",
+                "item_filter": GameFilter,
+                "overwrite": True,
+                "store_empty": False,
+            },
+            "results/rankings.jl": {
+                "format": "jsonlines",
+                "item_filter": RankingFilter,
+                "overwrite": True,
+                "store_empty": False,
+            },
+        },
     }
 
     max_ranking_pages = 10
@@ -35,6 +70,7 @@ class BgaSpider(Spider):
                 continue
 
             for game in payload["game_list"]:
+                game["type"] = "game"
                 yield game
 
                 yield FormRequest(
@@ -76,4 +112,5 @@ class BgaSpider(Spider):
 
         for entry in payload["data"]["ranks"]:
             entry["game_id"] = game_id
+            entry["type"] = "ranking"
             yield entry
