@@ -45,3 +45,9 @@ games.describe()
 
 # %%
 games.sample(10, seed=13)
+
+# %%
+games.sort("games_played", descending=True).head(10)
+
+# %%
+games.sort("weight", descending=True).head(10)
