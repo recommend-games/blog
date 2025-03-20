@@ -66,3 +66,28 @@ games.sort("weight", descending=True).head(10)
 for k, v in games.partition_by("premium", maintain_order=False, as_dict=True).items():
     print("Premium:", *k)
     display(v.describe())
+
+# %%
+rankings = pl.read_ndjson(
+    "results/rankings.jl",
+    schema_overrides={
+        "id": pl.Int128,
+        # "ranking": pl.Float64,
+        "nbr_game": pl.Int128,
+        "rank_no": pl.Int128,
+    },
+).with_columns(pl.col("ranking").cast(pl.Float64))
+rankings.shape
+
+# %%
+rankings.sample(10)
+
+# %%
+rankings.describe()
+
+# %%
+rankings.group_by("game_id").agg(min_ranking=pl.col("ranking").min()).join(
+    games,
+    left_on="game_id",
+    right_on="id",
+).filter(~pl.col("is_ranking_disabled")).sort("min_ranking", descending=True).head(10)
