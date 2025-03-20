@@ -16,6 +16,7 @@
 # %%
 import jupyter_black
 import polars as pl
+from datetime import datetime, timezone
 
 jupyter_black.load()
 
@@ -37,7 +38,13 @@ schema = {
 }
 
 # %%
-games = pl.read_ndjson("results/games.jl", schema=schema)
+games = (
+    pl.read_ndjson("results/games.jl", schema=schema)
+    .with_columns(days_online=pl.lit(datetime.now()) - pl.col("published_on"))
+    .with_columns(
+        games_per_day=pl.col("games_played") / pl.col("days_online").dt.total_days()
+    )
+)
 games.shape
 
 # %%
@@ -50,4 +57,12 @@ games.sample(10, seed=13)
 games.sort("games_played", descending=True).head(10)
 
 # %%
+games.sort("games_per_day", descending=True).head(10)
+
+# %%
 games.sort("weight", descending=True).head(10)
+
+# %%
+for k, v in games.partition_by("premium", maintain_order=False, as_dict=True).items():
+    print("Premium:", *k)
+    display(v.describe())
