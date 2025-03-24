@@ -1,5 +1,6 @@
 from collections.abc import Generator
 import json
+import math
 import re
 from typing import Any
 
@@ -50,7 +51,7 @@ class BgaSpider(Spider):
         },
     }
 
-    max_ranking_pages = 10
+    max_rank_scraped = 1_000_000
     regex = re.compile("globalUserInfos=(.+);$", flags=re.MULTILINE)
 
     def parse(self, response: Response) -> Generator[dict | Request]:
@@ -82,35 +83,33 @@ class BgaSpider(Spider):
                         "mode": "elo",
                     },
                     callback=self.parse_ranking,
-                    meta={
-                        "game_id": game["id"],
-                        "start": 0,
-                    },
+                    meta={"game_id": game["id"]},
                 )
 
     def parse_ranking(self, response: Response) -> Generator[dict | Request]:
-        game_id = response.meta["game_id"]
-        start = response.meta["start"]
-
-        if start < self.max_ranking_pages - 1:
-            yield response.request.replace(
-                formdata={
-                    "game": str(game_id),
-                    "start": str(start + 1),
-                    "mode": "elo",
-                },
-                meta={
-                    "game_id": game_id,
-                    "start": start + 1,
-                },
-            )
-
         if not isinstance(response, TextResponse):
+            self.logger.warning("Response <%s> is not a TextResponse", response.url)
             return
 
+        game_id = response.meta["game_id"]
         payload = response.json()
+
+        rank_nos = []
 
         for entry in payload["data"]["ranks"]:
             entry["game_id"] = game_id
             entry["type"] = "ranking"
             yield entry
+            rank_nos.append(int(entry["rank_no"]))
+
+        max_rank_no = max(rank_nos, default=math.inf)
+
+        if max_rank_no < self.max_rank_scraped:
+            yield response.request.replace(
+                formdata={
+                    "game": str(game_id),
+                    "start": str(max_rank_no + 1),
+                    "mode": "elo",
+                },
+                meta={"game_id": game_id},
+            )
