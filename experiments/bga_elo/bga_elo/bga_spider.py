@@ -84,6 +84,7 @@ class BgaSpider(Spider):
                     },
                     callback=self.parse_ranking,
                     meta={"game_id": game["id"]},
+                    priority=0,
                 )
 
     def parse_ranking(self, response: Response) -> Generator[dict | Request]:
@@ -108,8 +109,9 @@ class BgaSpider(Spider):
             yield response.request.replace(
                 formdata={
                     "game": str(game_id),
-                    "start": str(max_rank_no + 1),
+                    "start": str(max_rank_no),
                     "mode": "elo",
                 },
                 meta={"game_id": game_id},
+                priority=-max_rank_no,
             )
