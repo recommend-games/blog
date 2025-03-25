@@ -23,6 +23,8 @@ from datetime import datetime, timezone
 
 jupyter_black.load()
 
+seed = 13
+
 # %% [markdown]
 # ## Games
 
@@ -54,10 +56,11 @@ games = (
 games.shape
 
 # %%
-games.describe()
+with pl.Config(tbl_rows=100):
+    display(games.describe(percentiles=[0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99]))
 
 # %%
-games.sample(10, seed=13)
+games.sample(10, seed=seed)
 
 # %%
 games.sort("games_played", descending=True).head(10)
@@ -77,22 +80,27 @@ for k, v in games.partition_by("premium", maintain_order=False, as_dict=True).it
 # ## Rankings
 
 # %%
-rankings = pl.read_ndjson(
-    "results/rankings.jl",
-    schema_overrides={
-        "id": pl.Int128,
-        # "ranking": pl.Float64,
-        "nbr_game": pl.Int64,
-        "rank_no": pl.Int64,
-    },
-).with_columns(pl.col("ranking").cast(pl.Float64))
+rankings = (
+    pl.read_ndjson(
+        "results/rankings.jl",
+        schema_overrides={
+            "id": pl.Int64,
+            # "ranking": pl.Float64,
+            "nbr_game": pl.Int64,
+            "rank_no": pl.Int64,
+        },
+    )
+    .with_columns(pl.col("ranking").cast(pl.Float64))
+    .with_columns(elo=pl.col("ranking") - 1300)
+)
 rankings.shape
 
 # %%
-rankings.sample(10)
+rankings.sample(10, seed=seed)
 
 # %%
-rankings.describe(percentiles=[0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99])
+with pl.Config(tbl_rows=100):
+    display(rankings.describe(percentiles=[0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99]))
 
 # %%
 rankings.group_by("game_id").agg(min_ranking=pl.col("ranking").min()).join(
