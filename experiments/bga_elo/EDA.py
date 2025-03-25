@@ -13,12 +13,18 @@
 #     name: python3
 # ---
 
+# %% [markdown]
+# # Board Game Arena data
+
 # %%
 import jupyter_black
 import polars as pl
 from datetime import datetime, timezone
 
 jupyter_black.load()
+
+# %% [markdown]
+# ## Games
 
 # %%
 schema = {
@@ -67,14 +73,17 @@ for k, v in games.partition_by("premium", maintain_order=False, as_dict=True).it
     print("Premium:", *k)
     display(v.describe())
 
+# %% [markdown]
+# ## Rankings
+
 # %%
 rankings = pl.read_ndjson(
     "results/rankings.jl",
     schema_overrides={
         "id": pl.Int128,
         # "ranking": pl.Float64,
-        "nbr_game": pl.Int128,
-        "rank_no": pl.Int128,
+        "nbr_game": pl.Int64,
+        "rank_no": pl.Int64,
     },
 ).with_columns(pl.col("ranking").cast(pl.Float64))
 rankings.shape
@@ -83,7 +92,7 @@ rankings.shape
 rankings.sample(10)
 
 # %%
-rankings.describe()
+rankings.describe(percentiles=[0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99])
 
 # %%
 rankings.group_by("game_id").agg(min_ranking=pl.col("ranking").min()).join(
