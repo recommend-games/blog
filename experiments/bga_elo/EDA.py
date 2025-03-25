@@ -19,6 +19,7 @@
 # %%
 import jupyter_black
 import polars as pl
+import seaborn as sns
 from datetime import datetime, timezone
 
 jupyter_black.load()
@@ -165,3 +166,22 @@ game_info.sort("games_per_player", descending=True).head(10)
 
 # %%
 game_info.sort("elo_std", descending=True).head(10)
+
+# %% [markdown]
+# ## Plots
+
+# %%
+most_played = (
+    games.sort("games_played", descending=True)
+    .head(5)
+    .select("id", "display_name_en")
+    .join(rankings, left_on="id", right_on="game_id", how="inner")
+)
+most_played.shape
+
+# %%
+sns.kdeplot(
+    data=most_played.select("elo", "display_name_en").to_pandas(),
+    x="elo",
+    hue="display_name_en",
+)
