@@ -213,14 +213,20 @@ sns.kdeplot(
 
 # %%
 sns.scatterplot(
-    data=game_info.select("elo_std", "complexity").to_pandas(),
+    data=game_info.sort("num_players", descending=True)
+    .head(250)
+    .select("elo_std", "complexity")
+    .to_pandas(),
     x="elo_std",
     y="complexity",
 )
 
 # %%
 sns.scatterplot(
-    data=game_info.select("elo_iqr", "complexity").to_pandas(),
+    data=game_info.sort("num_players", descending=True)
+    .head(250)
+    .select("elo_iqr", "complexity")
+    .to_pandas(),
     x="elo_iqr",
     y="complexity",
 )
