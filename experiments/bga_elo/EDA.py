@@ -30,6 +30,21 @@ seed = 13
 # ## Games
 
 # %%
+games_bgg = (
+    pl.scan_ndjson("../../../board-game-data/scraped/bgg_GameItem.jl")
+    .select(
+        "complexity",
+        "avg_rating",
+        "bayes_rating",
+        "bgg_id",
+        "name",
+        "year",
+    )
+    .collect()
+)
+games_bgg.shape
+
+# %%
 schema = {
     "id": pl.Int128,
     "name": pl.Utf8,
@@ -123,6 +138,7 @@ game_ranking_stats = (
         elo_max=pl.col("elo").max(),
     )
     .filter(pl.col("num_players") >= 100)
+    .filter(pl.col("game_id") > 0)
     .with_columns(
         elo_iqr=pl.col("elo_p75") - pl.col("elo_p25"),
     )
@@ -131,6 +147,7 @@ solitaire_games = ["vault", "thebrambles", "dicepyramid", "orchard", "grovesolit
 game_info = (
     games.filter(~pl.col("is_ranking_disabled"))
     .filter(~pl.col("name").is_in(solitaire_games))
+    .filter(pl.col("id") > 0)
     .select(
         "id",
         "bgg_id",
@@ -150,6 +167,7 @@ game_info = (
     )
     .drop("id")
     .with_columns(games_per_player=pl.col("games_played") / pl.col("num_players"))
+    .join(games_bgg, on="bgg_id", how="left")
 )
 games.shape, game_ranking_stats.shape, game_info.shape
 
@@ -191,4 +209,18 @@ sns.kdeplot(
     data=most_played.select("elo", "display_name_en").to_pandas(),
     x="elo",
     hue="display_name_en",
+)
+
+# %%
+sns.scatterplot(
+    data=game_info.select("elo_std", "complexity").to_pandas(),
+    x="elo_std",
+    y="complexity",
+)
+
+# %%
+sns.scatterplot(
+    data=game_info.select("elo_iqr", "complexity").to_pandas(),
+    x="elo_iqr",
+    y="complexity",
 )
