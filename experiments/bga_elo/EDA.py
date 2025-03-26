@@ -51,7 +51,7 @@ games = (
     pl.read_ndjson("results/games.jl", schema=schema)
     .with_columns(days_online=pl.lit(datetime.now()) - pl.col("published_on"))
     .with_columns(
-        games_per_day=pl.col("games_played") / pl.col("days_online").dt.total_days()
+        games_per_day=pl.col("games_played") / pl.col("days_online").dt.total_days(),
     )
 )
 games.shape
@@ -106,27 +106,31 @@ with pl.Config(tbl_rows=100):
     display(rankings.describe(percentiles=[0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99]))
 
 # %%
-game_ranking_stats = rankings.group_by("game_id").agg(
-    num_players=pl.len(),
-    elo_mean=pl.col("elo").mean(),
-    elo_std=pl.col("elo").std(),
-    elo_min=pl.col("elo").min(),
-    elo_p01=pl.col("elo").quantile(0.01),
-    elo_p05=pl.col("elo").quantile(0.05),
-    elo_p25=pl.col("elo").quantile(0.25),
-    elo_p50=pl.col("elo").quantile(0.50),
-    elo_p75=pl.col("elo").quantile(0.75),
-    elo_p95=pl.col("elo").quantile(0.95),
-    elo_p99=pl.col("elo").quantile(0.99),
-    elo_max=pl.col("elo").max(),
+game_ranking_stats = (
+    rankings.group_by("game_id")
+    .agg(
+        num_players=pl.len(),
+        elo_mean=pl.col("elo").mean(),
+        elo_std=pl.col("elo").std(),
+        elo_min=pl.col("elo").min(),
+        elo_p01=pl.col("elo").quantile(0.01),
+        elo_p05=pl.col("elo").quantile(0.05),
+        elo_p25=pl.col("elo").quantile(0.25),
+        elo_p50=pl.col("elo").quantile(0.50),
+        elo_p75=pl.col("elo").quantile(0.75),
+        elo_p95=pl.col("elo").quantile(0.95),
+        elo_p99=pl.col("elo").quantile(0.99),
+        elo_max=pl.col("elo").max(),
+    )
+    .filter(pl.col("num_players") >= 100)
+    .with_columns(
+        elo_iqr=pl.col("elo_p75") - pl.col("elo_p25"),
+    )
 )
+solitaire_games = ["vault", "thebrambles", "dicepyramid", "orchard", "grovesolitaire"]
 game_info = (
     games.filter(~pl.col("is_ranking_disabled"))
-    .filter(
-        ~pl.col("name").is_in(
-            ["vault", "thebrambles", "dicepyramid", "orchard", "grovesolitaire"]
-        )
-    )
+    .filter(~pl.col("name").is_in(solitaire_games))
     .select(
         "id",
         "bgg_id",
@@ -166,6 +170,9 @@ game_info.sort("games_per_player", descending=True).head(10)
 
 # %%
 game_info.sort("elo_std", descending=True).head(10)
+
+# %%
+game_info.sort("elo_iqr", descending=True).head(10)
 
 # %% [markdown]
 # ## Plots
