@@ -1,4 +1,5 @@
 from collections.abc import Generator
+from datetime import datetime, timezone
 import json
 import math
 import re
@@ -35,26 +36,30 @@ class BgaSpider(Spider):
     custom_settings = {
         "DOWNLOAD_DELAY": 1,
         "CONCURRENT_REQUESTS_PER_DOMAIN": 4,
+        "FEED_EXPORT_BATCH_ITEM_COUNT": 10_000,
         "FEEDS": {
-            "results/games.jl": {
+            "results/games-%(time)s-%(batch_id)05d.jl": {
                 "format": "jsonlines",
                 "item_filter": GameFilter,
-                "overwrite": True,
+                "overwrite": False,
                 "store_empty": False,
             },
-            "results/rankings.jl": {
+            "results/rankings-%(time)s-%(batch_id)05d.jl": {
                 "format": "jsonlines",
                 "item_filter": RankingFilter,
-                "overwrite": True,
+                "overwrite": False,
                 "store_empty": False,
             },
         },
+        "JOBDIR": ".jobs",
     }
 
-    max_rank_scraped = 1_000_000
+    max_rank_scraped = None
     regex = re.compile("globalUserInfos=(.+);$", flags=re.MULTILINE)
 
     def parse(self, response: Response) -> Generator[dict | Request]:
+        now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+
         for text in response.xpath(
             "//script[@type = 'text/javascript']/text()"
         ).getall():
@@ -72,6 +77,7 @@ class BgaSpider(Spider):
 
             for game in payload["game_list"]:
                 game["type"] = "game"
+                game["scraped_at"] = now
                 yield game
 
                 yield FormRequest(
@@ -92,6 +98,8 @@ class BgaSpider(Spider):
             self.logger.warning("Response <%s> is not a TextResponse", response.url)
             return
 
+        now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+
         game_id = response.meta["game_id"]
         payload = response.json()
 
@@ -100,12 +108,13 @@ class BgaSpider(Spider):
         for entry in payload["data"]["ranks"]:
             entry["game_id"] = game_id
             entry["type"] = "ranking"
+            entry["scraped_at"] = now
             yield entry
             rank_nos.append(int(entry["rank_no"]))
 
         max_rank_no = max(rank_nos, default=math.inf)
 
-        if max_rank_no < self.max_rank_scraped:
+        if not self.max_rank_scraped or max_rank_no < self.max_rank_scraped:
             yield response.request.replace(
                 formdata={
                     "game": str(game_id),
