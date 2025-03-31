@@ -90,6 +90,7 @@ def load_data(
     *,
     bgg_games_path: str | Path,
     bga_games_path: str | Path,
+    bga_rankings_path: str | Path,
 ) -> pl.DataFrame:
     bgg_games_data = pl.scan_ndjson(bgg_games_path).select(
         "bgg_id",
@@ -108,7 +109,7 @@ def load_data(
         "premium": pl.Boolean,
         "locked": pl.Boolean,
         "weight": pl.Int64,
-        "priority": pl.Int64,
+        # "priority": pl.Int64,
         "games_played": pl.Int64,
         "published_on": pl.Datetime,
         "average_duration": pl.Int64,
@@ -118,7 +119,13 @@ def load_data(
 
     bga_games_data = (
         pl.scan_ndjson(bga_games_path, schema=bga_games_schema)
+        .with_columns(pl.col(pl.Boolean).fill_null(False))
+        .filter(~pl.col("is_ranking_disabled"))
+        .filter(~pl.col("locked"))
+        .filter(pl.col("status") == "public")
+        .drop("is_ranking_disabled", "locked", "status")
         .drop_nulls("bgg_id")
+        .rename({"id": "bga_id", "name": "bga_slug", "display_name_en": "bga_name"})
         .with_columns(days_online=pl.lit(datetime.now()) - pl.col("published_on"))
         .with_columns(
             games_per_day=pl.col("games_played")
@@ -126,7 +133,45 @@ def load_data(
         )
     )
 
-    return bgg_games_data.join(bga_games_data, on="bgg_id", how="inner").collect()
+    bga_rankings_schema = {
+        "ranking": pl.Float64,
+        # "nbr_game": pl.Int64,
+        # "rank_no": pl.Int64,
+        "game_id": pl.Int64,
+    }
+
+    bga_rankings_data = (
+        pl.scan_ndjson(bga_rankings_path)
+        .select([pl.col(k).cast(v) for k, v in bga_rankings_schema.items()])
+        .with_columns(elo=pl.col("ranking") - 1300)
+        .drop("ranking")
+        .rename({"game_id": "bga_id"})
+        .group_by("bga_id")
+        .agg(
+            num_players=pl.len(),
+            elo_mean=pl.col("elo").mean(),
+            elo_std=pl.col("elo").std(),
+            elo_min=pl.col("elo").min(),
+            elo_p01=pl.col("elo").quantile(0.01),
+            elo_p05=pl.col("elo").quantile(0.05),
+            elo_p25=pl.col("elo").quantile(0.25),
+            elo_p50=pl.col("elo").quantile(0.50),
+            elo_p75=pl.col("elo").quantile(0.75),
+            elo_p95=pl.col("elo").quantile(0.95),
+            elo_p99=pl.col("elo").quantile(0.99),
+            elo_max=pl.col("elo").max(),
+        )
+        .with_columns(
+            elo_iqr=pl.col("elo_p75") - pl.col("elo_p25"),
+        )
+    )
+
+    return (
+        bgg_games_data.join(bga_games_data, on="bgg_id", how="inner")
+        .join(bga_rankings_data, on="bga_id", how="left")
+        .sort("num_players", "games_played", "bayes_rating", descending=True)
+        .collect()
+    )
 
 
 if __name__ == "__main__":
