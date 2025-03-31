@@ -86,7 +86,20 @@ def merge_rankings(
     )
 
 
-def load_data(bga_games_path: str | Path) -> pl.DataFrame:
+def load_data(
+    *,
+    bgg_games_path: str | Path,
+    bga_games_path: str | Path,
+) -> pl.DataFrame:
+    bgg_games_data = pl.scan_ndjson(bgg_games_path).select(
+        "bgg_id",
+        "name",
+        "year",
+        "complexity",
+        "avg_rating",
+        "bayes_rating",
+    )
+
     bga_games_schema = {
         "id": pl.Int64,
         "name": pl.String,
@@ -105,6 +118,7 @@ def load_data(bga_games_path: str | Path) -> pl.DataFrame:
 
     bga_games_data = (
         pl.scan_ndjson(bga_games_path, schema=bga_games_schema)
+        .drop_nulls("bgg_id")
         .with_columns(days_online=pl.lit(datetime.now()) - pl.col("published_on"))
         .with_columns(
             games_per_day=pl.col("games_played")
@@ -112,7 +126,7 @@ def load_data(bga_games_path: str | Path) -> pl.DataFrame:
         )
     )
 
-    return bga_games_data.collect()
+    return bgg_games_data.join(bga_games_data, on="bgg_id", how="inner").collect()
 
 
 if __name__ == "__main__":
