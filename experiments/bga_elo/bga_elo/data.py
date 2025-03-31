@@ -91,6 +91,7 @@ def load_data(
     bgg_games_path: str | Path,
     bga_games_path: str | Path,
     bga_rankings_path: str | Path,
+    exclude_bga_slugs: list[str] | None = None,
 ) -> pl.DataFrame:
     bgg_games_data = pl.scan_ndjson(bgg_games_path).select(
         "bgg_id",
@@ -120,8 +121,8 @@ def load_data(
     bga_games_data = (
         pl.scan_ndjson(bga_games_path, schema=bga_games_schema)
         .with_columns(pl.col(pl.Boolean).fill_null(False))
-        .filter(~pl.col("is_ranking_disabled"))
-        .filter(~pl.col("locked"))
+        .remove(pl.col("is_ranking_disabled"))
+        .remove(pl.col("locked"))
         .filter(pl.col("status") == "public")
         .drop("is_ranking_disabled", "locked", "status")
         .drop_nulls("bgg_id")
@@ -132,6 +133,11 @@ def load_data(
             / pl.col("days_online").dt.total_days(),
         )
     )
+
+    if exclude_bga_slugs:
+        bga_games_data = bga_games_data.remove(
+            pl.col("bga_slug").is_in(exclude_bga_slugs),
+        )
 
     bga_rankings_schema = {
         "ranking": pl.Float64,
