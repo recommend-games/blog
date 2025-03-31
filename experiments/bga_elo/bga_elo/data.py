@@ -175,6 +175,7 @@ def load_data(
     return (
         bgg_games_data.join(bga_games_data, on="bgg_id", how="inner")
         .join(bga_rankings_data, on="bga_id", how="left")
+        .with_columns(games_per_player=pl.col("games_played") / pl.col("num_players"))
         .sort("num_players", "games_played", "bayes_rating", descending=True)
         .collect()
     )
