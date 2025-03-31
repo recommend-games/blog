@@ -1,4 +1,5 @@
 from __future__ import annotations
+from datetime import datetime
 from pathlib import Path
 
 import polars as pl
@@ -83,6 +84,35 @@ def merge_rankings(
         sort_keys=True,
         progress_bar=progress_bar,
     )
+
+
+def load_data(bga_games_path: str | Path) -> pl.DataFrame:
+    bga_games_schema = {
+        "id": pl.Int64,
+        "name": pl.String,
+        "display_name_en": pl.String,
+        "status": pl.String,
+        "premium": pl.Boolean,
+        "locked": pl.Boolean,
+        "weight": pl.Int64,
+        "priority": pl.Int64,
+        "games_played": pl.Int64,
+        "published_on": pl.Datetime,
+        "average_duration": pl.Int64,
+        "bgg_id": pl.Int64,
+        "is_ranking_disabled": pl.Boolean,
+    }
+
+    bga_games_data = (
+        pl.scan_ndjson(bga_games_path, schema=bga_games_schema)
+        .with_columns(days_online=pl.lit(datetime.now()) - pl.col("published_on"))
+        .with_columns(
+            games_per_day=pl.col("games_played")
+            / pl.col("days_online").dt.total_days(),
+        )
+    )
+
+    return bga_games_data.collect()
 
 
 if __name__ == "__main__":
