@@ -268,6 +268,21 @@ webencodings = "*"
 css = ["tinycss2 (>=1.1.0,<1.5)"]
 
 [[package]]
+name = "board-game-merger"
+version = "1.0.0"
+description = "Merging board game data"
+optional = false
+python-versions = "<4.0,>=3.9.0"
+files = [
+    {file = "board_game_merger-1.0.0-py3-none-any.whl", hash = "sha256:4960d1775b626f86e6715a720626118c892266dcb0e08af505d9eebd63dcbfa3"},
+    {file = "board_game_merger-1.0.0.tar.gz", hash = "sha256:87663cfc9403e5de1823ecd746b7b1eb2b020152f0051d5b837c99a070e63452"},
+]
+
+[package.dependencies]
+polars = ">=1.0.0,<2.0.0"
+tqdm = "*"
+
+[[package]]
 name = "certifi"
 version = "2025.1.31"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -3926,4 +3941,4 @@ testing = ["coverage[toml]", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.12.*"
-content-hash = "9a078fe7024f3dba81c1750a0d639c9a62b42a584a4beb56946e4499c9a9832b"
+content-hash = "7fa7288b22a748ab6464991f76cabf3cb4558dfa61f8a80d0abf22930287c2d7"
