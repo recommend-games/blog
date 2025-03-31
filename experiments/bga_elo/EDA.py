@@ -76,24 +76,22 @@ games.sort("elo_iqr", descending=True).head(10)
 # ## Plots
 
 # %%
-most_played = (
-    games.sort("games_played", descending=True)
-    .head(5)
-    .select("id", "display_name_en")
-    .join(rankings, left_on="id", right_on="game_id", how="inner")
-)
-most_played.shape
+# most_played = (
+#     games.sort("games_played", descending=True)
+#     .head(5)
+#     .select("id", "display_name_en")
+#     .join(rankings, left_on="id", right_on="game_id", how="inner")
+# )
 
-# %%
-sns.kdeplot(
-    data=most_played.select("elo", "display_name_en").to_pandas(),
-    x="elo",
-    hue="display_name_en",
-)
+# sns.kdeplot(
+#     data=most_played.select("elo", "display_name_en").to_pandas(),
+#     x="elo",
+#     hue="display_name_en",
+# )
 
 # %%
 sns.scatterplot(
-    data=game_info.sort("num_players", descending=True)
+    data=games.sort("num_players", descending=True)
     .head(250)
     .select("elo_std", "complexity")
     .to_pandas(),
@@ -103,7 +101,7 @@ sns.scatterplot(
 
 # %%
 sns.scatterplot(
-    data=game_info.sort("num_players", descending=True)
+    data=games.sort("num_players", descending=True)
     .head(250)
     .select("elo_iqr", "complexity")
     .to_pandas(),
