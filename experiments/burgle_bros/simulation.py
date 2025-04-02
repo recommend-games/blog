@@ -106,13 +106,13 @@ def simulation(
 
 
 # %%
-results_rolls, results_actions = simulation(max_pool=10, min_runs=100_000)
+results_rolls, results_actions = simulation(max_pool=10, min_runs=1_000_000)
+results_rolls.shape, results_actions.shape
 
 # %%
-print(results_rolls)
-
-# %%
-print(results_actions)
-
-# %%
-results_actions.argmin(axis=1) + 1
+for target in range(6):
+    print(f"*** {target + 1} target{'s' if target else ''} ***")
+    for dice, actions in enumerate(results_actions[target, :]):
+        print(f"\t{dice + 1:2d} dice: {actions:6.3f} actions")
+    best_dice_pool = results_actions[target, :].argmin() + 1
+    print(f"Best dice pool: *{best_dice_pool} dice*\n")
