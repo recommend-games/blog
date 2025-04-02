@@ -1,5 +1,5 @@
 # All available Hugo versions are listed here: https://gitlab.com/pages/hugo/container_registry
-image: registry.gitlab.com/pages/hugo:0.75.1
+image: registry.gitlab.com/pages/hugo:0.122.0
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
@@ -7,6 +7,8 @@ variables:
 test:
   script:
   - hugo
+  artifacts:
+    expire_in: 1 hour
   except:
   - master
 
@@ -16,6 +18,6 @@ pages:
   artifacts:
     paths:
     - public
-    expire_in: 1 week
+    expire_in: 48 hours
   only:
   - master

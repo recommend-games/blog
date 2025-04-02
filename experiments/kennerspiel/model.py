@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.13.2
+#       jupytext_version: 1.15.2
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -15,24 +15,23 @@
 
 # %%
 import joblib
+import jupyter_black
 import pandas as pd
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegressionCV
 from sklearn.pipeline import make_pipeline
 from bg_utils import make_transformer
 
+jupyter_black.load()
+
 pd.options.display.max_columns = 100
 pd.options.display.max_rows = 100
 
 SEED = 23
 
-# %matplotlib inline
-# %load_ext nb_black
-# %load_ext lab_black
-
 # %%
-sdj = pd.read_csv("../sdj.csv", low_memory=False)
-ksdj = pd.read_csv("../ksdj.csv", low_memory=False)
+sdj = pd.read_csv("sdj.csv", low_memory=False)
+ksdj = pd.read_csv("ksdj.csv", low_memory=False)
 games = pd.read_csv(
     "../../../board-game-data/scraped/bgg_GameItem.csv",
     index_col="bgg_id",
@@ -50,7 +49,18 @@ games["sdj"] = games.index.isin(
 )
 games["ksdj"] = games.index.isin(
     set(ksdj.bgg_id)
-    | set(sdj.bgg_id[sdj.sonderpreis.isin({"Complex Game", "Game of the Year Plus"})])
+    | set(
+        sdj.bgg_id[
+            sdj.sonderpreis.isin(
+                {
+                    "Complex Game",
+                    "Fantasy Game",
+                    "Game of the Year Plus",
+                    "New Worlds Game",
+                }
+            )
+        ]
+    )
 )
 games.sdj.sum(), games.ksdj.sum()
 
