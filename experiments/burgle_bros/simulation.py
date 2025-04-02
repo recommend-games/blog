@@ -30,7 +30,7 @@ def one_run(
     dice_pool: int,
     number_of_targets: int,
     die_faces: int = 6,
-) -> dict:
+) -> dict[int, int]:
     assert 0 < number_of_targets <= die_faces
 
     remaining_targets = set(range(number_of_targets))
@@ -65,7 +65,7 @@ def many_runs(
     dice_pool: int,
     min_runs: int,
     die_faces: int = 6,
-) -> dict:
+) -> dict[int, list[int]]:
     results = defaultdict(list)
     for number_of_targets in range(die_faces, 0, -1):
         while len(results[number_of_targets]) < min_runs:
@@ -85,7 +85,7 @@ def simulation(
     max_pool: int,
     min_runs: int,
     die_faces: int = 6,
-):
+) -> tuple[np.ndarray, np.ndarray]:
     results_rolls = np.zeros((die_faces, max_pool))
     results_actions = np.zeros((die_faces, max_pool))
     for dice_pool in range(1, max_pool + 1):
