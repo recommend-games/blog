@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.13.6
+#       jupytext_version: 1.16.6
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -17,10 +17,12 @@
 from collections import defaultdict
 from itertools import count
 from random import randrange
+
+import jupyter_black
 import numpy as np
 
-# %load_ext nb_black
-# %load_ext lab_black
+jupyter_black.load()
+
 
 # %%
 def one_run(
