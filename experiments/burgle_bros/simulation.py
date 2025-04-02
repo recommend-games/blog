@@ -17,6 +17,7 @@
 from collections import defaultdict
 from itertools import count
 from random import randrange
+from tqdm import tqdm
 
 import jupyter_black
 import numpy as np
@@ -67,15 +68,17 @@ def many_runs(
     die_faces: int = 6,
 ) -> dict[int, list[int]]:
     results = defaultdict(list)
-    for number_of_targets in range(die_faces, 0, -1):
-        while len(results[number_of_targets]) < min_runs:
-            run = one_run(
-                dice_pool=dice_pool,
-                number_of_targets=number_of_targets,
-                die_faces=die_faces,
-            )
-            for number, length in run.items():
-                results[number].append(length)
+    with tqdm() as t:
+        for number_of_targets in range(die_faces, 0, -1):
+            while len(results[number_of_targets]) < min_runs:
+                run = one_run(
+                    dice_pool=dice_pool,
+                    number_of_targets=number_of_targets,
+                    die_faces=die_faces,
+                )
+                for number, length in run.items():
+                    results[number].append(length)
+                t.update()
     return results
 
 
