@@ -8,6 +8,7 @@ authors = ["Markus Shepherd <markus@recommend.games>"]
 python = "3.12.*"
 
 numpy = "*"
+tqdm = "*"
 
 [tool.poetry.group.dev.dependencies]
 jupyter-black = "*"
