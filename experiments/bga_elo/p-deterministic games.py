@@ -17,6 +17,7 @@
 import jupyter_black
 import numpy as np
 import polars as pl
+import seaborn as sns
 from tqdm import trange
 
 jupyter_black.load()
@@ -76,7 +77,18 @@ for i in trange(num_games):
     elo_scores[player_b] -= elo_update
 
 # %% jp-MarkdownHeadingCollapsed=true
-elo_scores
+with pl.Config(tbl_rows=100):
+    display(pl.Series(elo_scores).describe([0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99]))
 
 # %%
-np.std(elo_scores)
+p_std = elo_probability(diff=np.std(elo_scores), scale=elo_s)
+p_std
+
+# %%
+quart = np.quantile(elo_scores, [0.25, 0.75])
+iqr = quart[1] - quart[0]
+p_iqr = elo_probability(diff=iqr, scale=elo_s)
+p_iqr
+
+# %%
+sns.kdeplot(elo_scores)
