@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "bga-elo"
+name = "elo"
 version = "0.1.0"
 description = ""
 authors = ["Markus Shepherd <markus@recommend.games>"]
