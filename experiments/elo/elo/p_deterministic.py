@@ -9,11 +9,25 @@ def simulate_p_deterministic_games(
     num_games: int,
     p_deterministic: float,
 ) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    assert 0 <= p_deterministic <= 1, "p_deterministic must be between 0 and 1"
+    assert num_players > 1, "num_players must be greater than 1"
+    assert num_games > 0, "num_games must be greater than 0"
+
     players_a = rng.integers(low=0, high=num_players, size=num_games)
     # Sample offset for second player, ensuring it's not equal to the first
     offset = rng.integers(low=1, high=num_players, size=num_games)
     players_b = (players_a + offset) % num_players
+    assert np.all(players_a != players_b), "Players A and B must be different"
 
+    if p_deterministic == 0:
+        # If p_deterministic is 0, all games are probabilistic
+        return players_a, players_b, rng.random(size=num_games) < 0.5
+
+    if p_deterministic == 1:
+        # If p_deterministic is 1, all games are deterministic
+        return players_a, players_b, players_a < players_b
+
+    # Otherwise, mix deterministic and probabilistic outcomes
     prob_player_a_wins = rng.random(size=num_games) < 0.5
     det_player_a_wins = players_a < players_b
 
