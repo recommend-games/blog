@@ -79,6 +79,7 @@ class SnookerSpider(Spider):
                 url=f"{self.api_url}?t=5&s={season}&tr=main",
                 callback=self.parse_season,
                 headers={"X-Requested-By": self.snooker_api_header},
+                priority=2,
             )
 
     def parse_season(self, response: Response) -> Generator[dict | Request]:
@@ -116,18 +117,19 @@ class SnookerSpider(Spider):
             for player_id in player_ids:
                 yield Request(
                     url=f"{self.api_url}?p={player_id}",
-                    callback=self.parse_player,
+                    callback=self.parse_players,
                     headers={"X-Requested-By": self.snooker_api_header},
+                    priority=1,
                 )
 
-    def parse_player(self, response: Response) -> Generator[dict]:
+    def parse_players(self, response: Response) -> Generator[dict]:
         if not isinstance(response, TextResponse):
             self.logger.warning("Response <%s> is not a TextResponse", response.url)
             return
 
         now = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
-        player = response.json()
-        player["type"] = "player"
-        player["scraped_at"] = now
-        yield player
+        for player in response.json():
+            player["type"] = "player"
+            player["scraped_at"] = now
+            yield player
