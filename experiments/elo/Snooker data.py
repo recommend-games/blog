@@ -14,6 +14,8 @@
 # ---
 
 # %%
+from collections import defaultdict
+from tqdm import tqdm
 import jupyter_black
 import polars as pl
 
@@ -81,3 +83,65 @@ players.sample(10, seed=seed)
 
 # %%
 players.describe()
+
+# %%
+data = (
+    matches.lazy()
+    .filter(~pl.col("Unfinished"))
+    .filter(pl.col("Player1ID") > 0)
+    .filter(pl.col("Player2ID") > 0)
+    .filter(
+        (pl.col("WinnerID") == pl.col("Player1ID"))
+        | (pl.col("WinnerID") == pl.col("Player2ID"))
+    )
+    .with_columns(Date=pl.coalesce("EndDate", "StartDate", "ScheduledDate"))
+    .select("Date", "Player1ID", "Player2ID", "WinnerID")
+    .drop_nulls()
+    .sort("Date")
+    .collect()
+)
+data.shape
+
+# %%
+elo_ratings = defaultdict(int)
+for _, player_1, player_2, winner in tqdm(data.iter_rows()):
+    elo_1 = elo_ratings[player_1]
+    elo_2 = elo_ratings[player_2]
+    diff = elo_1 - elo_2
+    player_1_pred = 1 / (1 + 10 ** (-diff / 400))
+    player_1_actual = winner == player_1
+    player_1_update = 20 * (player_1_actual - player_1_pred)
+    elo_ratings[player_1] += player_1_update
+    elo_ratings[player_2] -= player_1_update
+len(elo_ratings)
+
+# %%
+elo_df = (
+    pl.DataFrame({"ID": elo_ratings.keys(), "Elo": elo_ratings.values()})
+    .join(players, on="ID", how="full")
+    .sort("Elo", descending=True, nulls_last=True)
+    .with_columns(pl.col("Elo").rank(method="min", descending=True).alias("Rank"))
+)
+elo_df.shape
+
+# %%
+with pl.Config(tbl_rows=100):
+    display(
+        elo_df.select(
+            "Rank",
+            "Elo",
+            pl.col("FirstName") + " " + pl.col("LastName"),
+            "ID",
+        ).head(100)
+    )
+
+# %%
+with pl.Config(tbl_rows=100):
+    display(
+        elo_df.select(
+            "Rank",
+            "Elo",
+            pl.col("FirstName") + " " + pl.col("LastName"),
+            "ID",
+        ).tail(100)
+    )
