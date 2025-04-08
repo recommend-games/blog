@@ -25,22 +25,41 @@ seed = 13
 events = (
     pl.scan_ndjson("results/snooker/events*.jl")
     .sort("scraped_at")
+    .drop("scraped_at", "type")
     .group_by("ID", maintain_order=True)
     .last()
+    .with_columns(pl.col(pl.String).replace("", None))
+    .with_columns(
+        pl.col("StartDate", "EndDate").str.to_date().cast(pl.Datetime(time_zone="UTC")),
+    )
     .collect()
 )
 matches = (
     pl.scan_ndjson("results/snooker/matches*.jl")
     .sort("scraped_at")
+    .drop("scraped_at", "type")
     .group_by("ID", maintain_order=True)
     .last()
+    .with_columns(pl.col(pl.String).replace("", None))
+    .with_columns(
+        pl.col(
+            "InitDate",
+            "ModDate",
+            "ScheduledDate",
+            "StartDate",
+            "EndDate",
+        ).str.to_datetime("%+", strict=False, time_zone="UTC")
+    )
     .collect()
 )
 players = (
     pl.scan_ndjson("results/snooker/players*.jl")
     .sort("scraped_at")
+    .drop("scraped_at", "type")
     .group_by("ID", maintain_order=True)
     .last()
+    .with_columns(pl.col(pl.String).replace("", None))
+    .with_columns(pl.col("Born", "Died").str.to_date(strict=False))
     .collect()
 )
 events.shape, matches.shape, players.shape
