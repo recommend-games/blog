@@ -44,7 +44,7 @@ elo_k = approximate_optimal_k(
     player_2_ids=player_2_ids,
     player_1_outcomes=player_1_outcomes,
     min_elo_k=0,
-    max_elo_k=160,
+    max_elo_k=elo_scale,
     elo_scale=elo_scale,
 )
 elo_k
