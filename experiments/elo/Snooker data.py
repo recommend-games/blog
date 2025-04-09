@@ -16,6 +16,7 @@
 # %%
 import jupyter_black
 import polars as pl
+from elo.optimal_k import approximate_optimal_k
 from elo.elo_ratings import calculate_elo_ratings
 
 jupyter_black.load()
@@ -108,11 +109,22 @@ data = (
 data.shape
 
 # %%
+elo_k = approximate_optimal_k(
+    player_1_ids=data["Player1ID"],
+    player_2_ids=data["Player2ID"],
+    player_1_outcomes=data["Player1Outcome"],
+    min_elo_k=0,
+    max_elo_k=160,
+    elo_scale=400,
+)
+elo_k
+
+# %%
 elo_ratings = calculate_elo_ratings(
     player_1_ids=data["Player1ID"],
     player_2_ids=data["Player2ID"],
     player_1_outcomes=data["Player1Outcome"],
-    elo_k=20,
+    elo_k=elo_k,
     elo_scale=400,
     progress_bar=True,
 )
@@ -123,28 +135,22 @@ elo_df = (
     pl.DataFrame({"ID": elo_ratings.keys(), "Elo": elo_ratings.values()})
     .join(players, on="ID", how="full")
     .sort("Elo", descending=True, nulls_last=True)
-    .with_columns(pl.col("Elo").rank(method="min", descending=True).alias("Rank"))
+    .with_columns(
+        Name=pl.when(pl.col("SurnameFirst"))
+        .then(pl.col("LastName") + " " + pl.col("FirstName"))
+        .otherwise(pl.col("FirstName") + " " + pl.col("LastName")),
+        Rank=pl.col("Elo").rank(method="min", descending=True),
+    )
 )
 elo_df.shape
 
 # %%
-with pl.Config(tbl_rows=100):
-    display(
-        elo_df.select(
-            "Rank",
-            "Elo",
-            pl.col("FirstName") + " " + pl.col("LastName"),
-            "ID",
-        ).head(100)
-    )
+elo_df["Elo"].describe()
 
 # %%
 with pl.Config(tbl_rows=100):
-    display(
-        elo_df.select(
-            "Rank",
-            "Elo",
-            pl.col("FirstName") + " " + pl.col("LastName"),
-            "ID",
-        ).tail(100)
-    )
+    display(elo_df.select("Rank", "Elo", "Name", "ID").head(100))
+
+# %%
+with pl.Config(tbl_rows=100):
+    display(elo_df.select("Rank", "Elo", "Name", "ID").tail(100))
