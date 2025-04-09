@@ -1,0 +1,47 @@
+from __future__ import annotations
+from collections import defaultdict
+from collections.abc import Iterable, Mapping
+from typing import TypeVar
+
+ID_TYPE = TypeVar("ID_TYPE")
+
+
+def calculate_elo_ratings(
+    *,
+    player_1_ids: Iterable[ID_TYPE],
+    player_2_ids: Iterable[ID_TYPE],
+    player_1_outcomes: Iterable[float],
+    init_elo_ratings: Mapping[ID_TYPE, float] | None = None,
+    elo_initial: float = 0,
+    elo_k: float = 32,
+    elo_scale: float = 400,
+    progress_bar: bool = False,
+) -> defaultdict[ID_TYPE, float]:
+    elo_ratings = defaultdict(
+        lambda: elo_initial,
+        init_elo_ratings if init_elo_ratings is not None else {},
+    )
+
+    if progress_bar:
+        from tqdm import tqdm
+
+        player_1_ids = tqdm(player_1_ids, desc="Processing games")
+
+    for player_1_id, player_2_id, player_1_outcome in zip(
+        player_1_ids,
+        player_2_ids,
+        player_1_outcomes,
+        strict=True,
+    ):
+        elo_1 = elo_ratings[player_1_id]
+        elo_2 = elo_ratings[player_2_id]
+
+        diff = elo_1 - elo_2
+        player_1_win_prob = 1 / (1 + 10 ** (-diff / elo_scale))
+        player_1_update = elo_k * (player_1_outcome - player_1_win_prob)
+
+        # Update ratings
+        elo_ratings[player_1_id] += player_1_update
+        elo_ratings[player_2_id] -= player_1_update
+
+    return elo_ratings
