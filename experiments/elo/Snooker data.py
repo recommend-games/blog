@@ -14,10 +14,9 @@
 # ---
 
 # %%
-from collections import defaultdict
-from tqdm import tqdm
 import jupyter_black
 import polars as pl
+from elo.elo_ratings import calculate_elo_ratings
 
 jupyter_black.load()
 
@@ -95,7 +94,13 @@ data = (
         | (pl.col("WinnerID") == pl.col("Player2ID"))
     )
     .with_columns(Date=pl.coalesce("EndDate", "StartDate", "ScheduledDate"))
-    .select("Date", "Player1ID", "Player2ID", "WinnerID")
+    .select(
+        "Date",
+        "Player1ID",
+        "Player2ID",
+        "WinnerID",
+        Player1Outcome=pl.col("Player1ID") == pl.col("WinnerID"),
+    )
     .drop_nulls()
     .sort("Date")
     .collect()
@@ -103,16 +108,14 @@ data = (
 data.shape
 
 # %%
-elo_ratings = defaultdict(int)
-for _, player_1, player_2, winner in tqdm(data.iter_rows()):
-    elo_1 = elo_ratings[player_1]
-    elo_2 = elo_ratings[player_2]
-    diff = elo_1 - elo_2
-    player_1_pred = 1 / (1 + 10 ** (-diff / 400))
-    player_1_actual = winner == player_1
-    player_1_update = 20 * (player_1_actual - player_1_pred)
-    elo_ratings[player_1] += player_1_update
-    elo_ratings[player_2] -= player_1_update
+elo_ratings = calculate_elo_ratings(
+    player_1_ids=data["Player1ID"],
+    player_2_ids=data["Player2ID"],
+    player_1_outcomes=data["Player1Outcome"],
+    elo_k=20,
+    elo_scale=400,
+    progress_bar=True,
+)
 len(elo_ratings)
 
 # %%
