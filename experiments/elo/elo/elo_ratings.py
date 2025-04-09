@@ -6,6 +6,10 @@ from typing import TypeVar
 ID_TYPE = TypeVar("ID_TYPE")
 
 
+def elo_probability(diff: float, scale: float = 400) -> float:
+    return 1 / (1 + 10 ** (-diff / scale))
+
+
 def calculate_elo_ratings(
     *,
     player_1_ids: Iterable[ID_TYPE],
@@ -44,7 +48,7 @@ def calculate_elo_ratings(
         elo_2 = elo_ratings[player_2_id]
 
         diff = elo_1 - elo_2
-        player_1_win_prob = 1 / (1 + 10 ** (-diff / elo_scale))
+        player_1_win_prob = elo_probability(diff, elo_scale)
         player_1_update = elo_k * (player_1_outcome - player_1_win_prob)
 
         # Update ratings

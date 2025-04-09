@@ -1,6 +1,8 @@
 from __future__ import annotations
-from collections.abc import Iterable
+from collections import defaultdict
 import numpy as np
+
+from elo.elo_ratings import calculate_elo_ratings
 
 
 def simulate_p_deterministic_games(
@@ -37,15 +39,12 @@ def simulate_p_deterministic_games(
     return players_a, players_b, player_a_wins
 
 
-def elo_probability(diff: float, scale: float = 400) -> float:
-    return 1 / (1 + 10 ** (-diff / scale))
-
-
 def update_elo_scores_p_deterministic(
     rng: np.random.Generator,
     elo_scores: np.ndarray,
     num_games: int,
     p_deterministic: float,
+    elo_initial: float = 0,
     elo_k: float = 32,
     elo_scale: float = 400,
     inplace: bool = True,
@@ -64,23 +63,21 @@ def update_elo_scores_p_deterministic(
         p_deterministic=p_deterministic,
     )
 
-    if progress_bar:
-        from tqdm import trange
+    elo_ratings = calculate_elo_ratings(
+        player_1_ids=players_a,
+        player_2_ids=players_b,
+        player_1_outcomes=player_a_wins,
+        init_elo_ratings=dict(enumerate(elo_scores)),
+        elo_initial=elo_initial,
+        elo_k=elo_k,
+        elo_scale=elo_scale,
+        full_results=False,
+        progress_bar=progress_bar,
+    )
 
-        iterator: Iterable[int] = trange(num_games)
+    assert isinstance(elo_ratings, defaultdict)
 
-    else:
-        iterator = range(num_games)
-
-    for i in iterator:
-        player_a = players_a[i]
-        elo_a = elo_scores[player_a]
-        player_b = players_b[i]
-        elo_b = elo_scores[player_b]
-        prob_a_wins = elo_probability(diff=elo_a - elo_b, scale=elo_scale)
-        outcome_a_wins = player_a_wins[i]
-        elo_update = elo_k * (outcome_a_wins - prob_a_wins)
-        elo_scores[player_a] += elo_update
-        elo_scores[player_b] -= elo_update
+    for player_id, elo_rating in elo_ratings.items():
+        elo_scores[player_id] = elo_rating
 
     return elo_scores
