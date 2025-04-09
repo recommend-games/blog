@@ -15,12 +15,19 @@ def calculate_elo_ratings(
     elo_initial: float = 0,
     elo_k: float = 32,
     elo_scale: float = 400,
+    full_results: bool = False,
     progress_bar: bool = False,
-) -> defaultdict[ID_TYPE, float]:
+) -> (
+    defaultdict[ID_TYPE, float]
+    | tuple[defaultdict[ID_TYPE, float], list[float], list[float]]
+):
     elo_ratings = defaultdict(
         lambda: elo_initial,
         init_elo_ratings if init_elo_ratings is not None else {},
     )
+
+    player_1_win_probs: list[float] = []
+    elo_updates: list[float] = []
 
     if progress_bar:
         from tqdm import tqdm
@@ -44,4 +51,10 @@ def calculate_elo_ratings(
         elo_ratings[player_1_id] += player_1_update
         elo_ratings[player_2_id] -= player_1_update
 
+        if full_results:
+            player_1_win_probs.append(player_1_win_prob)
+            elo_updates.append(player_1_update)
+
+    if full_results:
+        return elo_ratings, player_1_win_probs, elo_updates
     return elo_ratings
