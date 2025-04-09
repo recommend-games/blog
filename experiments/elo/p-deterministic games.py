@@ -18,7 +18,8 @@ import jupyter_black
 import numpy as np
 import polars as pl
 import seaborn as sns
-from elo.p_deterministic import elo_probability, update_elo_scores_p_deterministic
+from elo.p_deterministic import update_elo_ratings_p_deterministic
+from elo.elo_ratings import elo_probability
 
 jupyter_black.load()
 
@@ -32,13 +33,13 @@ elo_scale = 400
 elo_k = 32
 
 # %%
-elo_scores = np.zeros(num_players)
-elo_scores.shape, elo_scores.dtype
+elo_ratings = np.zeros(num_players)
+elo_ratings.shape, elo_ratings.dtype
 
 # %%
-elo_scores = update_elo_scores_p_deterministic(
+elo_scores = update_elo_ratings_p_deterministic(
     rng=rng,
-    elo_scores=elo_scores,
+    elo_ratings=elo_ratings,
     num_games=num_games,
     p_deterministic=p_deterministic,
     elo_k=elo_k,
@@ -46,21 +47,21 @@ elo_scores = update_elo_scores_p_deterministic(
     inplace=True,
     progress_bar=True,
 )
-elo_scores.shape, elo_scores.dtype
+elo_ratings.shape, elo_ratings.dtype
 
 # %% jp-MarkdownHeadingCollapsed=true
 with pl.Config(tbl_rows=100):
-    display(pl.Series(elo_scores).describe([0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99]))
+    display(pl.Series(elo_ratings).describe([0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99]))
 
 # %%
-p_std = elo_probability(diff=np.std(elo_scores), scale=elo_scale)
+p_std = elo_probability(diff=np.std(elo_ratings), scale=elo_scale)
 p_std
 
 # %%
-quart = np.quantile(elo_scores, [0.25, 0.75])
+quart = np.quantile(elo_ratings, [0.25, 0.75])
 iqr = quart[1] - quart[0]
 p_iqr = elo_probability(diff=iqr, scale=elo_scale)
 p_iqr
 
 # %%
-sns.kdeplot(elo_scores)
+sns.kdeplot(elo_ratings)

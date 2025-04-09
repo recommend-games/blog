@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.16.7
+#       jupytext_version: 1.17.0
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -21,7 +21,7 @@ import jupyter_black
 import polars as pl
 import seaborn as sns
 from datetime import datetime, timezone
-from bga_elo.data import load_data
+from elo.data import load_data
 
 jupyter_black.load()
 

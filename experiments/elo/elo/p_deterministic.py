@@ -39,9 +39,9 @@ def simulate_p_deterministic_games(
     return players_a, players_b, player_a_wins
 
 
-def update_elo_scores_p_deterministic(
+def update_elo_ratings_p_deterministic(
     rng: np.random.Generator,
-    elo_scores: np.ndarray,
+    elo_ratings: np.ndarray,
     num_games: int,
     p_deterministic: float,
     elo_initial: float = 0,
@@ -50,11 +50,11 @@ def update_elo_scores_p_deterministic(
     inplace: bool = True,
     progress_bar: bool = False,
 ) -> np.ndarray:
-    assert elo_scores.ndim == 1
-    num_players = len(elo_scores)
+    assert elo_ratings.ndim == 1
+    num_players = len(elo_ratings)
 
     if not inplace:
-        elo_scores = np.copy(elo_scores)
+        elo_ratings = np.copy(elo_ratings)
 
     players_a, players_b, player_a_wins = simulate_p_deterministic_games(
         rng=rng,
@@ -63,11 +63,11 @@ def update_elo_scores_p_deterministic(
         p_deterministic=p_deterministic,
     )
 
-    elo_ratings = calculate_elo_ratings(
+    results = calculate_elo_ratings(
         player_1_ids=players_a,
         player_2_ids=players_b,
         player_1_outcomes=player_a_wins,
-        init_elo_ratings=dict(enumerate(elo_scores)),
+        init_elo_ratings=dict(enumerate(elo_ratings)),
         elo_initial=elo_initial,
         elo_k=elo_k,
         elo_scale=elo_scale,
@@ -75,9 +75,9 @@ def update_elo_scores_p_deterministic(
         progress_bar=progress_bar,
     )
 
-    assert isinstance(elo_ratings, defaultdict)
+    assert isinstance(results, defaultdict)
 
-    for player_id, elo_rating in elo_ratings.items():
-        elo_scores[player_id] = elo_rating
+    for player_id, elo_rating in results.items():
+        elo_ratings[player_id] = elo_rating
 
-    return elo_scores
+    return elo_ratings
