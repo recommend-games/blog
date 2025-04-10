@@ -28,7 +28,7 @@ jupyter_black.load()
 seed = 13
 rng = np.random.default_rng(seed)
 num_players = 1000
-num_games = 100_000_000
+num_games = 1_000_000
 p_deterministic = 0.5
 elo_scale = 400
 
@@ -36,7 +36,7 @@ elo_scale = 400
 player_1_ids, player_2_ids, player_1_outcomes = simulate_p_deterministic_games(
     rng=rng,
     num_players=num_players,
-    num_games=num_games // 1000,
+    num_games=num_games,
     p_deterministic=p_deterministic,
 )
 elo_k = approximate_optimal_k(
@@ -44,7 +44,7 @@ elo_k = approximate_optimal_k(
     player_2_ids=player_2_ids,
     player_1_outcomes=player_1_outcomes,
     min_elo_k=0,
-    max_elo_k=elo_scale,
+    max_elo_k=elo_scale / 2,
     elo_scale=elo_scale,
 )
 elo_k
