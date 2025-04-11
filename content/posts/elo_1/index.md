@@ -14,17 +14,33 @@ tags:
 
 - How to measure skills in games?
 - Why does it matter to measure this? Applications?
-- Discuss possible ways (if any)
-- Key idea for Elo rating: find a way to predict a game's outcome from players' relative strengths
+  - Find opponents to match your (current) skills well
+  - People love a good ranking!
+- Discuss possible other ways (if any)
+- Elo used in chess, BGA, football etc
+
+
+## Key idea
+
+- Elo ≠ absolute skill, but relative skill.
+- Winning against stronger players gains more points, losing against weaker ones loses more.
+- Simple mental model: shifting ratings based on expected vs actual outcomes.
 
 
 ## Formula
 
 - Explain formula, how to convert to probability and rating update
+- Winning against stronger players gains more points, losing against weaker ones loses more.
+- Imagine putting an ante into the pot according to your expected outcome (p * K), then the winner gets the pot (or split in case of a tie)
+- Discuss diffent choices of $$K$$
+
+
+## Strengths & weaknesses
+
 - Caveats to using Elo:
   - Only meaningful in relative terms
   - Group needs to be sufficiently connected
-  - Very sensitive to $$k$$
+  - Very sensitive to $$K$$
 
 
 ## Logistic regression
