@@ -111,4 +111,10 @@ results.write_csv("results/p_deterministic.csv", float_precision=5)
 sns.scatterplot(data=results, x="p_deterministic", y="elo_k")
 
 # %%
+sns.scatterplot(x=results["p_deterministic"], y=np.log(results["elo_k"]))
+
+# %%
 sns.scatterplot(data=results, x="p_deterministic", y="elo_ratings_std")
+
+# %%
+sns.scatterplot(x=results["p_deterministic"], y=np.log(results["elo_ratings_std"]))
