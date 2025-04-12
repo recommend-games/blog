@@ -154,3 +154,6 @@ with pl.Config(tbl_rows=100):
 # %%
 with pl.Config(tbl_rows=100):
     display(elo_df.select("Rank", "Elo", "Name", "ID").tail(100))
+
+# %%
+elo_df.select("Rank", "Elo", "Name", "ID").write_csv("results/snooker/elo_ranking.csv")
