@@ -35,10 +35,27 @@ Consider this metaphor: imagine both players placing an ante of "skill chits" in
 
 ## Formula
 
-- Explain formula, how to convert to probability and rating update
-- Pot metaphor: players put $$p \cdot K$$ chits into the pot
-- Discuss diffent choices of $$K$$
-- Multi-player version?
+Let's make this more concrete with formulae. Assume we have players *A* and *B* with some ratings \\(r_A\\) and \\(r_B\\). (I know it's a bit confusing to explain how to use the ratings before we explained how to calculate them, but just roll with it for a minute.) Then we can calculate \\(p_A\\), the probability that *A* will win the game, like this:
+
+\\[ p_A = \frac{1}{1 + 10^{-(r_A - r_B) / 400}}. \\]
+
+If you've never seen a formula like this, it's probably a lot to digest, so let's take a minute to understand what's going on here. Whenever I encounter a formula like this, I like to first check that it makes any sense at all by plugging in some values. Notice how the important part about the ratings is just their difference \\(r_A-r_B\\), as mentioned before, so let's consider some case.
+
+First: what if both players have the same skill level, i.e., that difference is 0? In this case, we'd have \\(p_A=\frac{1}{1+10^0}=\frac{1}{1+1}=0.5\\), i.e., both players having equal chances of winning, which checks out. Next, what if player *A* is so much higher rated that the difference tends towards infinity? The exponent contains a minus sign, and the exponential function tends to 0 for negative infinity, so we'd have \\(p_A=\frac{1}{1+10^{-\infty}}=\frac{1}{1+0}=1\\), i.e., player *A* would be all but guaranteed to win. Conversely, if the "infinite advantage" was on player *B*'s side, we'd have an exponential function that goes to infinity in the denominator, and hence the whole expression goint to 0, i.e., \\(p_A=0\\). (Note that we can get the probability of *B* winning simply by calculating \\(p_B=1-p_A\\), and all the formulae work analoguous, so we're not going to spend much attention to it.)
+
+I hope this convinces you that this expression produces sensible probability values, if nothing else. To recap, this calculation would happen pre-match and give you a predicted probability that player *A* will win the match. (If you're the gambling kind, this might be how you determine your bet on *A*.) Once the match is over, we need to compare this prediction with the actual outcome or score \\(s_A\\), where \\(s_A = 1\\) if *A* won the game, \\(s_A = 0\\) if they lost and \\(s_A = 0.5\\) in case of a draw. We then update *A*'s rating by
+
+\\[ r_A \leftarrow r_A + K \cdot (s_A - p_A), \\]
+
+where \\(K>0\\) is a factor we can freely choose. (More on this in a bit.)
+
+Again, let's check if this makes sense. If *A* won, we have \\(s_A = 1\\), and so \\(s_A - p_A\\) will be positive. If player *A* was highly rated and so the win was expected, that difference will be very small and *A* will have their rating increased by only very few points, if the win was unexpected, i.e., \\(p_A\\) was low, then difference between predicted and actual outcome will be large and *A*'s rating will be increased by up to \\(K\\) points. If *A* lost, then \\(s_A = 0\\) and the difference will be negative, i.e., *A*'s rating will be decreased in the same way (and now *B* would receive those points).
+
+Let's go back to our "skill chits pot" metaphor. In that view, player *A* would put \\(K \cdot p_A\\) chits into the ante, with player *B* contributing \\(K \cdot p_B = K \cdot (1-p_A)\\). The pot now holds \\(K\\) chits in total as reward for the winner. Because they paid \\(K \cdot p\\) chits as buy-in for the game, they've now gained \\(K \cdot (1 - p)\\) chits in total, which is exactly our update rule (remember that \\(s=1\\) for the winner).
+
+This is really all there is to the Elo rating system. It's quite simple and interpretable, and players could easily keep track of their ratings with pen and paper back in the 1960s when the system was invented, well before computers and apps would rule the world.
+
+I still owe you the details on some of the hyperparameters you can choose. First off, you might have noticed that 400 in the denominator of the exponent. This really could be any positive number – 400 is just a common choice, so I'm keeping with the convention here. I also didn't mention how to initialise the ratings, i.e., what rating to assign to new players before their first match. That's because it doesn't matter: the probability calculation only cares about the difference between the two ratings, so we could add any constant to both ratings, and they would just cancel out. The maths would work out easiest if we initialise new players with a rating of 0. This would have the charming side effect that it's immediately obvious if a player was an above or below average player depending if their rating was positive or negative. But I guess people don't like the feeling of having negative skills, so typically a value like 1300 or 1500 is added to the Elo ratings. Lastly, choosing that update factor \\(K\\) is very important if you want to have a meaningful ranking: Too low and ratings will take a very long time to converge and recent improvements in skills will take a long time to be reflected in the ratings. Too high and individual games will have too large an influence on the rating and the whole system will become too volatile. If you want to get a feeling of how to choose \\(K\\), I'll invite you to dive even deeper into the mathematics with me… 🤓
 
 
 ## Logistic regression
