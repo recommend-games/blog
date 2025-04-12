@@ -28,12 +28,9 @@ Perhaps the best known and most widely adopted way to measure skills in games is
 
 ## Key idea
 
-First of all, the Elo rating system doesn't attempt to measure absolute, but relative skills. As such, it uses the difference in ratings between the two[^multi-player] players to try and predict the probability of one player winning or the other.
+First of all, the Elo rating system doesn't attempt to measure absolute, but relative skills. As such, it uses the difference in ratings between the two[^multi-player] players to try and predict the probability of one player winning or the other. So, the higher the rating difference between two players is, the more likely it is that the stronger player wins. As one might expect, players earn rating points through winning matches, but crucially, they earn more by winnining against stronger players and lose more by losing against weaker players. Elo ratings achieve this by compare the expected with the actual outcome. If you beat the odds and exceed expectations, your rating goes up; if you underperform, your rating goes down.
 
-- Elo ≠ absolute skill, but relative skill.
-- Winning against stronger players gains more points, losing against weaker ones loses more.
-- Simple mental model: shifting ratings based on expected vs actual outcomes.
-- Imagine putting an ante into the pot according to your expected outcome, then the winner gets the pot (or split in case of a tie)
+Consider this metaphor: imagine both players placing an ante of "skill chits" into the pot before the game begins. The higher your rating advantage over your opponent is, the higher your stake in the game. Conversely, if you're much lower rated, you don't have much too lose. The winner will take the whole pot, so if you can land an unexpected upset win, you're increasing your rating by a lot. A draw means splitting the pot, so you will still increase your rating in this case if you were expected to lose and hence put much less than 50% into the pot.
 
 
 ## Formula
