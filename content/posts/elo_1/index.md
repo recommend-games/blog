@@ -28,6 +28,8 @@ Perhaps the best known and most widely adopted way to measure skills in games is
 
 ## Key idea
 
+First of all, the Elo rating system doesn't attempt to measure absolute, but relative skills. As such, it uses the difference in ratings between the two[^multi-player] players to try and predict the probability of one player winning or the other.
+
 - Elo ≠ absolute skill, but relative skill.
 - Winning against stronger players gains more points, losing against weaker ones loses more.
 - Simple mental model: shifting ratings based on expected vs actual outcomes.
@@ -39,6 +41,7 @@ Perhaps the best known and most widely adopted way to measure skills in games is
 - Explain formula, how to convert to probability and rating update
 - Pot metaphor: players put $$p \cdot K$$ chits into the pot
 - Discuss diffent choices of $$K$$
+- Multi-player version?
 
 
 ## Logistic regression
@@ -78,3 +81,4 @@ Perhaps the best known and most widely adopted way to measure skills in games is
 - Tease / outline the other articles
 
 [^no-acronym]: Please note that Elo is a proper name and not an acronym, so please never ever spell it in all caps – it's disrespectful to the person who invented the rating system.
+[^multi-player]: Since the Elo system was developed for chess, it's been originally formulated for two player zero-sum games only. For simplicity, we stick with that case for this article. There are various ways to generalise to multi-player settings and we shall examine those in future articles.
