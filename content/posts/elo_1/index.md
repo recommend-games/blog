@@ -133,24 +133,14 @@ It's also worth mentioning that the system as presented does not require or enco
 Finally, and you might have picked up on that by now, it's really important but difficult to choose a good update factor \\(K\\). What exactly constitutes "good" very much depends on the size and activity of the community, the nature of the game, but also what you want to use the ratings for. For instance, it's common to use a larger \\(K\\) for new players so they reach a rating faster which is more meaningful than the initial value. In general, the volatility a larger \\(K\\) brings to a ranking might be desirable if that dynamic is more important to the community than perfect predictions from rating differences.
 
 
-## Example / application: Snooker
+## Conclusion and outlook
 
-**Best factor this out into a separate article. Publish the general Elo article on 2025-04-13, and the Snooker article on 2025-04-19, in time for the opening of the World Snooker Championship.**
+Wow, I intended for this article to just be a brief introduction to the topic of Elo ratings, mostly motivated by future articles I want to write in this series. But Elo ratings are super interesting in their own right and I hope you understand them better now. I think I've done a good job if you take away from this article that Elo ratings measure the relative skill between players and can be used to predict the win probabilities before the match. Afterwards, ratings will be updated depending on if a player exceeded expectations of fell short. If you were able to follow through all of my little logistic regression detour, you will also understand that the update factor \\(K\\) can be thought of as the step size in the gradient ascent step.
 
-- World Championship opening today
-- How does it apply to Snooker
-- Sample calculations
-- Winner prediction / simulation?
-  - Use Elo ratings we just calculated to predict matches
-  - Simulate tournaments where each match is decided according to Elo probability predictions
-  - Who is going to be the next champion?
+You might have noticed and already complained that I didn't give a single example or concrete application of Elo ratings in this whole long article. I hope to follow up with an article entirely dedicated to that, so stay tuned.
 
+I also want to shift the view back from players' individual strengths to the overall distribution of ratings in order to answer the initial question of how we can quantify luck and skills in games in general. That's going to get even more scientific, so hold on tight! 🧑‍🔬
 
-## Conclusion / outlook
-
-- Summary
-- What's next?
-- Tease / outline the other articles
 
 [^no-acronym]: Please note that Elo is a proper name and not an acronym, so please never ever spell it in all caps – it's disrespectful to the person who invented the rating system.
 [^multi-player]: Since the Elo system was developed for chess, it's been originally formulated for two player zero-sum games only. For simplicity, we stick with that case for this article. There are various ways to generalise to multi-player settings and we shall examine those in future articles.
