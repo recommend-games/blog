@@ -66,7 +66,7 @@ The most basic, but perhaps still most powerful tool at a machine learning pract
 
 where \\(\lambda>0\\). For \\(\lambda=1\\), this function is better known as a *sigmoid* and looks like this:
 
-**TODO: Plot of sigmoid**
+{{< img src="sigmoid" alt="A plot of the sigmoid function" >}}
 
 The sigmoid has a particularly nice derivative:
 
