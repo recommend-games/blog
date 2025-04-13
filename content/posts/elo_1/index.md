@@ -122,13 +122,15 @@ which is exactly the Elo update if we choose \\(K=\alpha\lambda\\). Remember tha
 
 ## Strengths & weaknesses
 
-- Positive:
-  - It's pretty simple and fairly interpretable
-  - It has a descent performance at predicting outcomes of, e.g., chess matches
-- Caveats to using Elo:
-  - Only meaningful in relative terms
-  - Group needs to be sufficiently connected
-  - Very sensitive to $$K$$ (tie back to logistic regression and the difficulty of picking a good learning rate)
+I've already spent over 2500 words on describing how the Elo rating works, but haven't even discussed yet if it's any good. 😅 As I've already mentioned, the Elo rating system definitely has its relative simplicity going for itself. The previous section might have managed to conceal the fact that the calculations and applications are pretty straightforward and interpretable. For a system which is meant to communicate the abstract notion of "skills" to humans, this is no small feat.
+
+Arguably the most important success criterion for the Elo ratings is their predictive power. After all, if they can somewhat reliable tell us who is going to win a match, very little else matters. And indeed, it appears that empiracally Elo ratings do a decent job at that. Other systems have been devised which show greater success, and if you're in the business of calculating the right odds for your next gamble, you're probably interested in those, but no system is as simple and widely adopted as the Elo ratings.
+
+Let's look at some of its downsides though. As with any model, it's a simplification which is only as good as the assumptions that go into it. Maybe the biggest caveat of this system is that it's only meaningful within a given population of players. Remember that Elo measures the relative strengths of players, which should also hold transitively, i.e., it's not necessary for every player to play against all other players. But if two groups of players are not at all or insufficiently connected, the ratings between those groups won't be comparable. In general, Elo ratings can only measure the distribution of skills amongst active participants. If it was only chess grandmasters playing each other, some of their ratings would suffer and look very low in absolute terms, even though they'd easily defeat almost any other chess player on this planet.
+
+It's also worth mentioning that the system as presented does not require or encourage active participation. Elo rating points are only earned or lost after matches, so if someone stops playing, their rating would just be frozen. One might choose to do something like this if one reached a particularly high (potentially top) rating and does not want to risk deteriorating it. This is an example of the classic moniker: *once a metric becomes a target, it ceases to be a good metric*. Elo ratings want to measure skill, but once earning a high rating becomes the primary motivation, they stop being good predictors.
+
+Finally, and you might have picked up on that by now, it's really important but difficult to choose a good update factor \\(K\\). What exactly constitutes "good" very much depends on the size and activity of the community, the nature of the game, but also what you want to use the ratings for. For instance, it's common to use a larger \\(K\\) for new players so they reach a rating faster which is more meaningful than the initial value. In general, the volatility a larger \\(K\\) brings to a ranking might be desirable if that dynamic is more important to the community than perfect predictions from rating differences.
 
 
 ## Example / application: Snooker
