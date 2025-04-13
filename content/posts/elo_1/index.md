@@ -60,6 +60,16 @@ I still owe you the details on some of the hyperparameters you can choose. First
 
 ## Logistic regression
 
+The most basic, but perhaps still most powerful tool at a machine learning practitioner's disposal is linear regression. We've encountered it already numerous times on this blog, e.g., in the context of understanding the [BoardGameGeek ranking]({{<ref "posts/reverse_engineer_bgg_2/index.md">}}), explaining [collaborative filtering]({{<ref "posts/rg_collaborative_filtering/index.md">}}) and [debiasing the BGG ranking]({{<ref "posts/debiased_rankings/index.md">}}). In its basic form, it just describes a way of finding the "line of best fit" given some data points (e.g., observations). This works great if you want to predict a continous variable, i.e., values which can take a wide (potentially infinite) range. If you want to predict a binary outcome (e.g., *win* or *loss*) or a probability (e.g., the probability of one player winning), you usually use the *logistic function* (hence the name *logistic regression*) to squeeze the values of your predictions between 0 and 1:
+
+\\[ f(x) = \frac{1}{1 + e^{-\beta x}}, \\]
+
+Where \\(\beta>0\\). For \\(\beta=1\\), this function is better known as a *sigmoid* and looks like this:
+
+**TODO: Plot of sigmoid**
+
+If you plug in \\(x=r_A-r_B\\) and \\(\beta=\ln 10 / 400\\), we recover our update rule from above, so in a way, we're using logistic regression to predict player *A*'s win probability from the rating difference.
+
 - Interpret Elo rating as logistic regression
 - Derive update from stochastic gradient descent
 
