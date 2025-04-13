@@ -82,7 +82,7 @@ Remember: what we're really trying to achieve is calculate the win probability \
 
 \\[ P(X = s) = p^s (1 - p)^{1-s}, \\]
 
-where \\(s\in\{0,1\}\\) is the outcome. Again, let's check what's going on here: for \\(s=1\\), the second factor will be \\((1 - p)^0=1\\) and hence the whole expression will be \\(p\\). Conversely, for \\(s=0\\), the first factor will be \\(p^0=1\\), so we have \\(1-p\\) overall, as desired. We can use this formula to write down the likelihood function
+where \\(s\in\\{0,1\\}\\) is the outcome. Again, let's check what's going on here: for \\(s=1\\), the second factor will be \\((1 - p)^0=1\\) and hence the whole expression will be \\(p\\). Conversely, for \\(s=0\\), the first factor will be \\(p^0=1\\), so we have \\(1-p\\) overall, as desired. We can use this formula to write down the likelihood function
 
 \\[ L(r_A) = p_A^{s_A} (1 - p_A)^{1-s_A}, \\]
 
