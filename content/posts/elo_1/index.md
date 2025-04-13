@@ -94,23 +94,30 @@ In our case, we just receive a single observation (the outcome of a game), and i
 
 \\[ r_A \leftarrow r_A + \alpha \frac{\partial\ell}{\partial r_A}. \\]
 
-So, let's roll up our sleeves and calculate said derivative, remembering that \\(p_A=\sigma_\lambda(r_A-r_B)\\) and \\(\frac{\partial}{\partial x}\ln f(x)=\frac{f'(x)}{f(x)}\\):
+So, let's roll up our sleeves and calculate said derivative. Using \\(\frac{\partial}{\partial x}\ln f(x)=\frac{f'(x)}{f(x)}\\), we have:
 
-\\[ \frac{\partial\ell}{\partial r_A} = s_A \frac{\sigma'_ \lambda(r_A-r_B)}{\sigma_\lambda(r_A-r_B)} + (1 - s_A) \frac{-\sigma'_ \lambda(r_A-r_B)}{1-\sigma_\lambda(r_A-r_B)}. \\]
+\\[ \frac{\partial\ell}{\partial r_A} = s_A \frac{p'_ A}{p_A} + (1 - s_A) \frac{-p'_ A}{1-p_A}. \\]
 
-Recalling the derivative of the logistic function
+Remember now that \\(p_A=\sigma_\lambda(r_A-r_B)\\) and the derivative of the logistic function
 
-\\[ \sigma'_ \lambda(x) = \lambda \sigma_\lambda(x) (1 - \sigma_\lambda(x)) \\]
+\\[ \sigma'_ \lambda(x) = \lambda \sigma_\lambda(x) (1 - \sigma_\lambda(x)), \\]
 
-we have:
+hence
 
-\\[ \frac{\partial\ell}{\partial r_A} = s_A \frac{\lambda \sigma_\lambda(r_A-r_B) (1 - \sigma_\lambda(r_A-r_B))}{\sigma_\lambda(r_A-r_B)} - (1 - s_A) \frac{\lambda \sigma_\lambda(r_A-r_B) (1 - \sigma_\lambda(r_A-r_B))}{1-\sigma_\lambda(r_A-r_B)} \\\\
-= s_A \lambda (1 - \sigma_\lambda(r_A-r_B)) - (1 - s_A) \lambda \sigma_\lambda(r_A-r_B) \\\\
-= s_A \lambda - s_A \lambda \sigma_\lambda(r_A-r_B) - \lambda \sigma_\lambda(r_A-r_B) + s_A \lambda \sigma_\lambda(r_A-r_B) \\\\
-= \lambda \cdot (s_A - \sigma_\lambda(r_A-r_B)). \\]
+\\[ p'_ A = \lambda p_A (1 - p_A). \\]
 
-- Interpret Elo rating as logistic regression
-- Derive update from stochastic gradient descent
+Plugging this in yields:
+
+\\[ \frac{\partial\ell}{\partial r_A} = s_A \frac{\lambda p_A (1 - p_A)}{p_A} - (1 - s_A) \frac{\lambda p_A (1 - p_A)}{1-p_A} \\\\
+= \lambda s_A (1 - p_A) - \lambda (1 - s_A) p_A \\\\
+= \lambda s_A - \lambda s_A p_A - \lambda p_A + \lambda s_A p_A \\\\
+= \lambda (s_A - p_A). \\]
+
+Using this in the stochastic gradient ascent update rule, we finally obtain
+
+\\[ r_A \leftarrow r_A + \alpha \lambda (s_A - p_A), \\]
+
+which is exactly the Elo update if we choose \\(K=\alpha\lambda\\). Remember that \\(\lambda=\ln 10 / 400\\) if we go with the standard Elo scale, so it's really just a constant for all intents and purposes. The step size \\(\alpha\\) on the other hand comes from gradient ascent, and anybody working in machine learning will tell you that choosing a good step size is a science and an art in of of itself. Too small, and your model will take a long time to converge; too large and it might diverge – that's why one can think of \\(K\\) as the step size in the Elo rating update. (See? I wasn't lying when I told you we'd dive *deep* into the maths to understand the importance of getting \\(K\\) right. 🤓)
 
 
 ## Strengths & weaknesses
