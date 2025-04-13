@@ -90,6 +90,25 @@ keeping in mind that \\(p_A\\), our estimate for the probability that *A* will w
 
 \\[ \ell(r_A) = \ln L(r_A) = s_A \ln p_A + (1 - s_A) \ln (1 - p_A). \\]
 
+In our case, we just receive a single observation (the outcome of a game), and immediately want to update \\(r_A\\) afterwards, which makes it a good candidate for stochastic gradient ascent. This means we'll update \\(r_A\\) after each game by taking a step of size \\(\alpha>0\\) towards the gradient of \\(\ell\\) with respect to \\(r_A\\):
+
+\\[ r_A \leftarrow r_A + \alpha \frac{\partial\ell}{\partial r_A}. \\]
+
+So, let's roll up our sleeves and calculate said derivative, remembering that \\(p_A=\sigma_\lambda(r_A-r_B)\\) and \\(\frac{\partial}{\partial x}\ln f(x)=\frac{f'(x)}{f(x)}\\):
+
+\\[ \frac{\partial\ell}{\partial r_A} = s_A \frac{\sigma'_ \lambda(r_A-r_B)}{\sigma_\lambda(r_A-r_B)} + (1 - s_A) \frac{-\sigma'_ \lambda(r_A-r_B)}{1-\sigma_\lambda(r_A-r_B)}. \\]
+
+Recalling the derivative of the logistic function
+
+\\[ \sigma'_ \lambda(x) = \lambda \sigma_\lambda(x) (1 - \sigma_\lambda(x)) \\]
+
+we have:
+
+\\[ \frac{\partial\ell}{\partial r_A} = s_A \frac{\lambda \sigma_\lambda(r_A-r_B) (1 - \sigma_\lambda(r_A-r_B))}{\sigma_\lambda(r_A-r_B)} - (1 - s_A) \frac{\lambda \sigma_\lambda(r_A-r_B) (1 - \sigma_\lambda(r_A-r_B))}{1-\sigma_\lambda(r_A-r_B)} \\\\
+= s_A \lambda (1 - \sigma_\lambda(r_A-r_B)) - (1 - s_A) \lambda \sigma_\lambda(r_A-r_B) \\\\
+= s_A \lambda - s_A \lambda \sigma_\lambda(r_A-r_B) - \lambda \sigma_\lambda(r_A-r_B) + s_A \lambda \sigma_\lambda(r_A-r_B) \\\\
+= \lambda \cdot (s_A - \sigma_\lambda(r_A-r_B)). \\]
+
 - Interpret Elo rating as logistic regression
 - Derive update from stochastic gradient descent
 
