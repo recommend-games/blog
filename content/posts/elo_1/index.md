@@ -86,7 +86,9 @@ where \\(s\in\{0,1\}\\) is the outcome. Again, let's check what's going on here:
 
 \\[ L(r_A) = p_A^{s_A} (1 - p_A)^{1-s_A}, \\]
 
-keeping in mind that \\(p_A\\), our estimate for the probability that *A* will win, depends on their rating \\(r_A\\) via the formula we established a couple of hundred words ago.
+keeping in mind that \\(p_A\\), our estimate for the probability that *A* will win, depends on their rating \\(r_A\\) via the formula we established a couple of hundred words ago. So, we want to choose \\(r_A\\) such that \\(L(r_A)\\) will be maximised for the given observation of game outcomes. If you remember your calculus 101, you'll know that the easiest way to maximise a function is by taking its derivative. For this purpose, it's often convenient to turn products into sums by applying logarithms. When searching for optimal points, that's OK since logarithms are monotonic. We hence arrive at the log-likelihood function:
+
+\\[ \ell(r_A) = \ln L(r_A) = s_A \ln p_A + (1 - s_A) \ln (1 - p_A). \\]
 
 - Interpret Elo rating as logistic regression
 - Derive update from stochastic gradient descent
