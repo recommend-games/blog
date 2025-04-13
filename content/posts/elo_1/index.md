@@ -78,7 +78,15 @@ Using standard calculus, we can easily find the derivate for the general logisti
 
 If you plug in \\(x=r_A-r_B\\) and \\(\lambda=\ln 10 / 400\\), we recover our update rule from above, so in a way, we're using logistic regression to predict player *A*'s win probability from the rating difference.
 
-Remember: what we're really trying to achieve is calculate the win probability \\(p_A\\) from the rating difference such that it predicts the actual outcome \\(s_A\\) (which will be 1 if *A* wins and 0 if they lose) as closely as possible.
+Remember: what we're really trying to achieve is calculate the win probability \\(p_A\\) from the rating difference such that it predicts the actual outcome \\(s_A\\) (which will be 1 if *A* wins and 0 if they lose) as closely as possible. This is a classic case for a *maximum likelihood estimation*: we want to select a parameter (in this case the rating \\(r_A\\)) such that the observed data (the actual outcome \\(s_A\\) of the game) is most probable. If you want to prove just how fancy you are, you say a random variable \\(X\\) with a binary outcome follows a *Bernoulli distribution* with parameter \\(p\in[0,1]\\) (the probability of a success). Its probability mass function is then given by
+
+\\[ P(X = s) = p^s (1 - p)^{1-s}, \\]
+
+where \\(s\in\{0,1\}\\) is the outcome. Again, let's check what's going on here: for \\(s=1\\), the second factor will be \\((1 - p)^0=1\\) and hence the whole expression will be \\(p\\). Conversely, for \\(s=0\\), the first factor will be \\(p^0=1\\), so we have \\(1-p\\) overall, as desired. We can use this formula to write down the likelihood function
+
+\\[ L(r_A) = p_A^{s_A} (1 - p_A)^{1-s_A}, \\]
+
+keeping in mind that \\(p_A\\), our estimate for the probability that *A* will win, depends on their rating \\(r_A\\) via the formula we established a couple of hundred words ago.
 
 - Interpret Elo rating as logistic regression
 - Derive update from stochastic gradient descent
