@@ -4,7 +4,7 @@ subtitle: How to measure players' skills in games
 slug: elo-ratings-explained
 author: Markus Shepherd
 type: post
-date: 2025-04-13T12:00:00+03:00
+date: 2025-04-14T23:05:30+03:00
 tags:
   - Elo rating
   - Snooker
@@ -141,7 +141,7 @@ Using this in the stochastic gradient ascent update rule, we finally obtain
 which is exactly the Elo update if we choose \\(K=\alpha\lambda\\). Remember that \\(\lambda=\ln 10 / 400\\) if we go with the standard Elo scale, so it's really just a constant for all intents and purposes. The step size \\(\alpha\\) on the other hand comes from gradient ascent, and anybody working in machine learning will tell you that choosing a good step size is a science and an art in and of itself. Too small, and your model will take a long time to converge; too large and it might diverge – that's why one can think of \\(K\\) as the step size in the Elo rating update. (See? I wasn't lying when I told you we'd dive *deep* into the maths to understand the importance of getting \\(K\\) right. 🤓)
 
 
-## What Elo gets right – and where it falls short
+## What Elo gets right — and where it falls short
 
 I've already spent over 2500 words on describing how the Elo rating works, but haven't even discussed yet if it's any good. 😅 As I've already mentioned, the Elo rating system definitely has its relative simplicity going for itself. The previous section might have managed to conceal the fact that the calculations and applications are pretty straightforward and interpretable. For a system which is meant to communicate the abstract notion of "skill" to humans, this is no small feat.
 
@@ -154,11 +154,11 @@ It's also worth mentioning that the system as presented does not require or enco
 Finally, and you might have picked up on that by now, it's really important but difficult to choose a good update factor \\(K\\). What exactly constitutes "good" very much depends on the size and activity of the community, the nature of the game, but also what you want to use the ratings for. For instance, it's common to use a larger \\(K\\) for new players so they reach a rating faster which is more meaningful than the initial value. In general, the volatility a larger \\(K\\) brings to a ranking might be desirable if that dynamic is more important to the community than perfect predictions from rating differences.
 
 
-## Conclusion and outlook
+## Wrapping up — and what comes next
 
 Wow, I intended for this article to just be a brief introduction to the topic of Elo ratings, mostly motivated by future articles I want to write in this series. But Elo ratings are super interesting in their own right and I hope you understand them better now. I think I've done a good job if you take away from this article that Elo ratings measure the relative skills between players and can be used to predict the win probabilities before the match. Afterwards, ratings will be updated depending on if a player exceeded expectations or fell short. If you were able to follow through all of my little logistic regression detour, you will also understand that the update factor \\(K\\) can be thought of as the step size in the gradient ascent step.
 
-You might have noticed and already complained that I didn't give a single example or concrete application of Elo ratings in this whole long article. I hope to follow up with an article entirely dedicated to that, so stay tuned.
+You might have noticed and already complained that I didn't give a single concrete example of Elo ratings in this whole long article. I hope to follow up with an article entirely dedicated to that, so stay tuned.
 
 I also want to shift the view back from players' individual strengths to the overall distribution of ratings in order to answer the initial question of how we can quantify luck and skills in games in general. That's going to get even more scientific, so hold on tight! 🧑‍🔬
 
