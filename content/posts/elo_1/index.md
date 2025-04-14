@@ -1,6 +1,6 @@
 ---
-title: Am I getting better? A guide to skill ratings in games
-subtitle: Why Elo matters, how it works, and what it tells you about your play
+title: Elo ratings explained
+subtitle: How to measure players' skills in games
 slug: elo-ratings-explained
 author: Markus Shepherd
 type: post
@@ -10,77 +10,52 @@ tags:
   - Snooker
 ---
 
-> Chance in games is like seasoning in food — it's all about the right amount. Just imagine a life without chance, where everything could be planned out strategically. That would get boring over time. In a game, I want to have experiences — I want adventure. A good game is like a miniature life, one where I can make mistakes, enjoy a streak of bad or good luck, and still recover. But you shouldn't be at the mercy of randomness. There should be ways to compensate — like a friend of mine in CATAN, who always complains about his bad luck, prompting others to treat him more kindly and rarely target him with the robber. In the end, he often wins — to everyone's surprise.\
+## Introduction
+
+> Chance in games is like seasoning in food — it's all about the right amount. Just imagine a life without chance, where everything could be planned out strategically. That would get boring over time. In a game, I want to have experiences — I want adventure. A good game is like a miniature life, one where I can make mistakes, enjoy a streak of bad or good luck, and still recover. But you shouldn't be at the mercy of randomness. There should be ways to compensate — like a friend of mine in CATAN, who always complains about his bad luck, prompting others to treat him more kindly and rarely target him with the robber. In the end, he often wins — to everyone's surprise. \
 > — **Klaus Teuber** on the importance of randomness in games in [CATAN-News 1/2000](https://www.catan.de/sites/default/files/2021-11/dl_Catan-News-2000-1.pdf)
 
-## How much is luck, how huch is skill?
+The balance between luck and skill in games can sometimes feel like a magic trick: the winner will attribute their victory to their great skills, whilst the losers can blame their misfortune on unlucky rolls of dice. Striking that balance right will have a major impact on the target audience of a game: if a game is totally random and offers no meaningful choices, it won't be interesting for anyone above a certain age (I'm still waiting for my kids to outgrow that phase 😅); if its learning curve is too steep, the upfront investment of navigating the strategic depths might put off many people who have an overflowing shelf of shame waiting to be played.
 
-So how do we separate the role of luck from a player's actual skill? One way is to measure skill directly.
+But how can we quantify luck and skills in games? It's a vast and deep topic – one about which I intend to write a small series. We'll start with a slightly simpler question: how can we measure *an individual player's skill* in a game? There's good reasons why one would want to do this (beyond writing articles about it):
 
-The balance between luck and skill in games can sometimes feel like a magic trick: the winner will attribute their victory to their great skills, whilst the losers can blame their misfortune on unlucky rolls of dice. Striking that balance right will have a major impact on the target audience of a game: if a game is totally random and offers no meaningful choices, it won't be interesting for anyone above a certain age (I'm still waiting for my kids to outgrow that phase); if its learning curve is too steep, the upfront investment of navigating the strategic depths might put off many people who have an overflowing shelf of shame waiting to be played.
+- Tracking one's progress in learning the best strategies in a game: If I want to dive deep into a game, it's useful to understand how much I've advanced and what the road ahead might look like.
+- Finding opponents which match one's skill level: If I were to play chess against Magnus Carlsen, I'd be crushed in no time and neither one of us would particularly enjoy the experience, nor would I learn anything from such a match. Many games are most fun if all players around the table are at a somewhat comparable level.
+- Showing off one's skill level: People do love a good ranking – once we've put a number on players' skills, we can rank them and "objectively" determine who is the best. 🤓
 
-But how can we quantify luck and skill in games? It's a vast and deep topic – one that I want to explore in a small series. Let's start with a slightly simpler question: how can you measure *your skill* in a game? There are plenty of good reasons why you might want to:
-
-- Track your progress in learning the best strategies in a game. If you want to dive deep, it's useful to see how far you've come and what the road ahead looks like.
-- Find opponents who match your skill level. If you were to play chess against Magnus Carlsen, you'd be crushed in no time. Neither of you would enjoy it, and you probably wouldn't learn much either. Many games are most fun when all players are on a comparable level.
-- Show off. People love a good ranking – once there's a number on your skill, you can see where you stand. "Objectively". 🤓
-
-Perhaps the best known and most widely adopted way to measure skill is the **Elo rating**, developed by and named[^no-acronym] after Arpad Elo, a Hungarian-American physics professor. As an avid chess player, Elo devised the system on behalf of the United States Chess Federation (USCF). The ideas behind it are very general though, and it has been adapted for other games, sports and online platforms such as [Board Game Arena](https://boardgamearena.com/). Reason enough for us to study and understand it.
+Perhaps the best known and most widely adopted way to measure skills in games is the **Elo rating**, developed by and named[^no-acronym] after Arpad Elo, a Hungarian-American physics professor. As an avid chess player, Elo devised the system on behalf of the United States Chess Federation (USCF). The ideas behind it are very general though, and it has been adapted for other games, sports and online platforms such as [Board Game Arena](https://boardgamearena.com/). Reason enough for us to study and understand it.
 
 
-## How Elo turns match results into skill ratings
+## Key idea
 
-Elo ratings don't measure absolute skill, but *relative* skill. The difference in ratings between two[^multi-player] players is used to predict the probability of one beating the other. The higher your rating difference over your opponent, the more likely you are to win.
+First of all, the Elo rating system doesn't attempt to measure absolute, but relative skills. As such, it uses the difference in ratings between the two[^multi-player] players to try and predict the probability of one player winning or the other. So, the higher the rating difference between two players is, the more likely it is that the stronger player wins. As one might expect, players earn rating points through winning matches, but crucially, they earn more by winnining against stronger players and lose more by losing against weaker players. Elo ratings achieve this by compare the expected with the actual outcome. If you beat the odds and exceed expectations, your rating goes up; if you underperform, your rating goes down.
 
-As you might expect, you gain rating points by winning matches. But the Elo twist is: beating stronger opponents gives you more points, and losing to weaker ones costs you more. The system compares expected and actual outcomes. If you beat the odds, your rating goes up. If you underperform, it drops.
-
-Imagine this: before each match, you and your opponent each put "skill chits" into a pot. If you're the favourite, you have to ante more. If you're the underdog, you risk less. The winner takes the whole pot. If you win an upset, you gain a lot. If the result was expected, gains are smaller. A draw means splitting the pot — which still means gaining chits if you were rated weaker, since your initial stake was smaller.
+Consider this metaphor: imagine both players placing an ante of "skill chits" into the pot before the game begins. The higher your rating advantage over your opponent is, the higher your stake in the game. Conversely, if you're much lower rated, you don't have much too lose. The winner will take the whole pot, so if you can land an unexpected upset win, you're increasing your rating by a lot. A draw means splitting the pot, so you will still increase your rating in this case if you were expected to lose and hence put much less than 50% into the pot.
 
 
-## The maths behind the magic: Elo’s core formula
+## Formula
 
-Let's make this more concrete with formulae. Assume we have players *A* and *B* with some ratings \\(r_A\\) and \\(r_B\\). (I know it's a bit confusing to explain how to use the ratings before we explain how to calculate them, but just roll with it for a minute.) Then we can calculate \\(p_A\\), the probability that *A* will win the game, like this:
+Let's make this more concrete with formulae. Assume we have players *A* and *B* with some ratings \\(r_A\\) and \\(r_B\\). (I know it's a bit confusing to explain how to use the ratings before we explained how to calculate them, but just roll with it for a minute.) Then we can calculate \\(p_A\\), the probability that *A* will win the game, like this:
 
 \\[ p_A = \frac{1}{1 + 10^{-(r_A - r_B) / 400}}. \\]
 
-If you've never seen a formula like this, it's probably a lot to digest, so let's take a minute to understand what's going on here. Whenever I encounter a formula like this, I like to first check that it makes any sense at all by plugging in some values. Notice how the important part is that only the difference \\(r_A - r_B\\) matters, not the absolute ratings. So let's look at a few examples:
+If you've never seen a formula like this, it's probably a lot to digest, so let's take a minute to understand what's going on here. Whenever I encounter a formula like this, I like to first check that it makes any sense at all by plugging in some values. Notice how the important part about the ratings is just their difference \\(r_A-r_B\\), as mentioned before, so let's consider some case.
 
-| Rating Difference (\\(r_A - r_B\\)) | Win Probability \\(p_A\\) |
-|------------------------------------:|--------------------------:|
-| ±0                                  | 0.50                      |
-| +100                                | 0.64                      |
-| +200                                | 0.76                      |
-| +400                                | 0.91                      |
-| +800                                | 0.99                      |
+First: what if both players have the same skill level, i.e., that difference is 0? In this case, we'd have \\(p_A=\frac{1}{1+10^0}=\frac{1}{1+1}=0.5\\), i.e., both players having equal chances of winning, which checks out. Next, what if player *A* is so much higher rated that the difference tends towards infinity? The exponent contains a minus sign, and the exponential function tends to 0 for negative infinity, so we'd have \\(p_A=\frac{1}{1+10^{-\infty}}=\frac{1}{1+0}=1\\), i.e., player *A* would be all but guaranteed to win. Conversely, if the "infinite advantage" was on player *B*'s side, we'd have an exponential function that goes to infinity in the denominator, and hence the whole expression goint to 0, i.e., \\(p_A=0\\). (Note that we can get the probability of *B* winning simply by calculating \\(p_B=1-p_A\\), and all the formulae work analoguous, so we're not going to spend much attention to it.)
 
-As the difference tends to infinity, \\(p_A\\) tends to 1 — a near-certain win for *A*. If *B* is much higher rated instead, \\(p_A\\) tends to 0. Since we’re dealing with a two-player game, we can always compute \\(p_B = 1 - p_A\\), and all formulae work analogously. That’s why we’ll mostly focus on *A* in the following.
-
-This win probability is calculated before the match — a prediction based on the ratings. Once the game is played, we compare that prediction with the actual outcome \\(s_A\\): we set \\(s_A = 1\\) if *A* wins, \\(s_A = 0\\) if they lose, and \\(s_A = 0.5\\) for a draw. The updated rating is then given by:
+I hope this convinces you that this expression produces sensible probability values, if nothing else. To recap, this calculation would happen pre-match and give you a predicted probability that player *A* will win the match. (If you're the gambling kind, this might be how you determine your bet on *A*.) Once the match is over, we need to compare this prediction with the actual outcome or score \\(s_A\\), where \\(s_A = 1\\) if *A* won the game, \\(s_A = 0\\) if they lost and \\(s_A = 0.5\\) in case of a draw. We then update *A*'s rating by
 
 \\[ r_A \leftarrow r_A + K \cdot (s_A - p_A), \\]
 
-where \\(K > 0\\) is a constant that determines how much ratings can change per game. (*Much* more on this soon.)
+where \\(K>0\\) is a factor we can freely choose. (More on this in a bit.)
 
-Again, a sanity check might help understand this:
+Again, let's check if this makes sense. If *A* won, we have \\(s_A = 1\\), and so \\(s_A - p_A\\) will be positive. If player *A* was highly rated and so the win was expected, that difference will be very small and *A* will have their rating increased by only very few points, if the win was unexpected, i.e., \\(p_A\\) was low, then difference between predicted and actual outcome will be large and *A*'s rating will be increased by up to \\(K\\) points. If *A* lost, then \\(s_A = 0\\) and the difference will be negative, i.e., *A*'s rating will be decreased in the same way (and now *B* would receive those points).
 
-- If *A* wins and was expected to (\\(p_A\\) close to 1), the change \\(s_A - p_A\\) is small — the rating only increases a little.
-- If *A* wins unexpectedly (\\(p_A\\) low), the difference is large and the rating jumps.
-- If *A* loses when expected to win, their rating drops proportionally.
+Let's go back to our "skill chits pot" metaphor. In that view, player *A* would put \\(K \cdot p_A\\) chits into the ante, with player *B* contributing \\(K \cdot p_B = K \cdot (1-p_A)\\). The pot now holds \\(K\\) chits in total as reward for the winner. Because they paid \\(K \cdot p\\) chits as buy-in for the game, they've now gained \\(K \cdot (1 - p)\\) chits in total, which is exactly our update rule (remember that \\(s=1\\) for the winner).
 
-Let's revisit our "skill chits pot" metaphor. In that view, player *A* would put \\(K \cdot p_A\\) chits into the ante, with player *B* contributing \\(K \cdot p_B = K \cdot (1-p_A)\\). The pot now holds \\(K\\) chits in total as reward for the winner. Because they paid \\(K \cdot p\\) chits as buy-in for the game, they've now gained \\(K \cdot (1 - p)\\) chits in total, which is exactly our update rule (remember that \\(s=1\\) for the winner).
+This is really all there is to the Elo rating system. It's quite simple and interpretable, and players could easily keep track of their ratings with pen and paper back in the 1960s when the system was invented, well before computers and apps would rule the world.
 
-This is really all there is to the Elo rating system. It's quite simple and interpretable, and players could easily keep track of their ratings with pen and paper back in the 1960s when the system was invented — well before computers and apps ruled the world.
-
-
-### Setting the Dials: \\(K\\), scaling and initial ratings
-
-I still owe you the details on some of the hyperparameters you can choose.
-
-- *Rating scale*: You might have noticed that 400 in the denominator of the exponent. This really could be any positive number – 400 is just a common choice, so I'm keeping with the convention here.
-- *Initial rating*: I glossed over the question what rating to assign to new players before their first match. That's because it doesn't matter: the probability calculation only cares about the difference between the two ratings, so we could add any constant to both ratings, and they would just cancel out. For simplicity, I'll just use 0 as initial values. In real world applications, a value like 1300 or 1500 is typically added to the Elo ratings, perhaps because people don't like the feeling of having "negative skills".
-- *Update factor \\(K\\)*: Last but not least, choosing that update factor \\(K\\) is very important if you want to have a meaningful ranking: Too low and ratings will take a very long time to converge and recent improvements in skills will take a long time to be reflected in the ratings. Too high and individual games will have too large an influence on the rating and the whole system will become too volatile.
-
-If you want to gain some intuition about the importance of \\(K\\), I'll invite you to dive even deeper into the mathematics with me… 🤓 (Feel free to skip if the mention of partial derivatives scares you.)
+I still owe you the details on some of the hyperparameters you can choose. First off, you might have noticed that 400 in the denominator of the exponent. This really could be any positive number – 400 is just a common choice, so I'm keeping with the convention here. I also didn't mention how to initialise the ratings, i.e., what rating to assign to new players before their first match. That's because it doesn't matter: the probability calculation only cares about the difference between the two ratings, so we could add any constant to both ratings, and they would just cancel out. The maths would work out easiest if we initialise new players with a rating of 0. This would have the charming side effect that it's immediately obvious if a player was an above or below average player depending if their rating was positive or negative. But I guess people don't like the feeling of having negative skills, so typically a value like 1300 or 1500 is added to the Elo ratings. Lastly, choosing that update factor \\(K\\) is very important if you want to have a meaningful ranking: Too low and ratings will take a very long time to converge and recent improvements in skills will take a long time to be reflected in the ratings. Too high and individual games will have too large an influence on the rating and the whole system will become too volatile. If you want to get a feeling of how to choose \\(K\\), I'll invite you to dive even deeper into the mathematics with me… 🤓
 
 
 ## Logistic regression
