@@ -34,7 +34,7 @@ Elo ratings don't measure absolute skill, but *relative* skill. The difference i
 
 As you might expect, you gain rating points by winning matches. But the Elo twist is: beating stronger opponents gives you more points, and losing to weaker ones costs you more. The system compares expected and actual outcomes. If you beat the odds, your rating goes up. If you underperform, it drops.
 
-Imagine this: before each match, you and your opponent each put "skill chits" into a pot. If you're the favourite, you have to ante more. If you're the underdog, you risk less. The winner takes the whole pot. If you win an upset, you gain a lot. If the result was expected, gains are smaller. A draw means splitting the pot, which still means gaining chits if you were rated weaker since your initial stake was smaller.
+Imagine this: before each match, you and your opponent each put "skill chits" into a pot. If you're the favourite, you have to ante more. If you're the underdog, you risk less. The winner takes the whole pot. If you win an upset, you gain a lot. If the result was expected, gains are smaller. A draw means splitting the pot — which still means gaining chits if you were rated weaker, since your initial stake was smaller.
 
 
 ## Formula
