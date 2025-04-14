@@ -1,0 +1,4 @@
+.env
+.jobs/
+results/
+*.jl
