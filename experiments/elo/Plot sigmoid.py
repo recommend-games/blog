@@ -50,3 +50,32 @@ plt.tight_layout()
 plt.savefig(plot_dir / "sigmoid.png")
 plt.savefig(plot_dir / "sigmoid.svg")
 plt.show()
+
+# %%
+x = np.linspace(-800, 800, 10_000)
+y = 1 / (1 + 10 ** (-x / 400))
+
+_, ax = plt.subplots(figsize=(6, 4))
+ax.spines["left"].set_position("zero")
+ax.spines["left"].set_color("black")
+ax.spines["bottom"].set_position("zero")
+ax.spines["bottom"].set_color("black")
+ax.spines["right"].set_color(None)
+ax.spines["top"].set_color(None)
+ax.xaxis.set_ticks_position("bottom")
+ax.yaxis.set_ticks_position("left")
+ax.grid(True, which="both", linestyle="--", linewidth=0.5)
+sns.lineplot(x=x, y=y, color="purple", lw=3, ax=ax)
+ax.set_title("Elo win probabilities")
+ax.set_xlabel(None)
+ax.set_ylabel(None)
+plt.tight_layout()
+plt.savefig(plot_dir / "elo_probabilities.png")
+plt.savefig(plot_dir / "elo_probabilities.svg")
+plt.show()
+
+# %%
+x = np.arange(-800, 801, 100)
+y = 1 / (1 + 10 ** (-x / 400))
+for xi, yi in zip(x, y):
+    print(f"| {xi:+5d} | {yi:6.1%} |")
