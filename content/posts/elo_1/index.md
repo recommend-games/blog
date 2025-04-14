@@ -15,7 +15,7 @@ tags:
 
 The balance between luck and skill in games can sometimes feel like a magic trick: as the winner, you might attribute your victory to your great skills, whilst as the loser, you can blame your misfortune on unlucky dice rolls. Striking that balance right will have a major impact on the target audience of a game: if a game is totally random and offers no meaningful choices, it won't be interesting for anyone above a certain age (I'm still waiting for my kids to outgrow that phase 😅); if its learning curve is too steep, the upfront investment of navigating the strategic depths might put off many people who have an overflowing shelf of shame waiting to be played.
 
-But how can you quantify luck and skills in games? It's a vast and deep topic – one which I want to explore in a small series. We'll start with a slightly simpler question: how can you measure *your skill* in a game? There are good reasons why you would want to do this (beyond writing articles about it):
+But how can we quantify luck and skills in games? It's a vast and deep topic – one which I want to explore in a small series. We'll start with a slightly simpler question: how can you measure *your skill* in a game? There are good reasons why you would want to do this (beyond writing articles about it):
 
 - Tracking your progress in learning the best strategies in a game: If you want to dive deep into a game, it's useful to understand how much you've advanced and what the road ahead might look like.
 - Finding opponents who match your skill level: If you were to play chess against Magnus Carlsen, you'd be crushed in no time and neither one of you would particularly enjoy the experience, nor would you learn anything from such a match. Many games are most fun if all players around the table are at a somewhat comparable level.
@@ -33,23 +33,29 @@ Consider this metaphor: imagine both players placing an ante of "skill chits" in
 
 ## The maths behind the magic: Elo's core formula
 
-Let's make this more concrete with formulae. Assume you have players *A* and *B* with some ratings \\(r_A\\) and \\(r_B\\). (I know it's a bit confusing to explain how to use the ratings before we explained how to calculate them, but just roll with it for a minute.) Then you can calculate \\(p_A\\), the probability that *A* will win the game, like this:
+Let's make this more concrete with formulae. Assume we have players *A* and *B* with some ratings \\(r_A\\) and \\(r_B\\). (I know it's a bit confusing to explain how to use the ratings before we explained how to calculate them, but just roll with it for a minute.) Then we can calculate \\(p_A\\), the probability that *A* will win the game, like this:
 
 \\[ p_A = \frac{1}{1 + 10^{-(r_A - r_B) / 400}}. \\]
 
-If you've never seen a formula like this, it's probably a lot to digest, so let's take a minute to understand what's going on here. Whenever you encounter a formula like this, it's helpful to first check that it makes any sense at all by plugging in some values. Notice how the important part about the ratings is just their difference \\(r_A-r_B\\), as mentioned before, so let's consider some case.
+If you've never seen a formula like this, it's probably a lot to digest. Notice how the important part about the ratings is just their difference \\(r_A-r_B\\), so we can consider that rating difference as the single input variable. As the saying goes, a picture is worth a thousand words, so here's the plot of that function:
 
-First: what if both players have the same skill level, i.e., that difference is 0? In this case, you'd have \\(p_A=\frac{1}{1+10^0}=\frac{1}{1+1}=0.5\\), i.e., both players having equal chances of winning, which checks out. Next, what if player *A* is so much higher rated that the difference tends towards infinity? The exponent contains a minus sign, and the exponential function tends to 0 for negative infinity, so you'd have \\(p_A=\frac{1}{1+10^{-\infty}}=\frac{1}{1+0}=1\\), i.e., player *A* would be all but guaranteed to win. Conversely, if the "infinite advantage" was on player *B*'s side, you'd have an exponential function that goes to infinity in the denominator, and hence the whole expression going to 0, i.e., \\(p_A=0\\). (Note that you can get the probability of *B* winning simply by calculating \\(p_B=1-p_A\\), and all the formulae work analogous, so we're not going to spend much attention to it.)
+**TODO: plot probability**
 
-I hope this convinces you that this expression produces sensible probability values, if nothing else. To recap, this calculation would happen pre-match and give you a predicted probability that player *A* will win the match. (If you're the gambling kind, this might be how you determine your bet on *A*.) Once the match is over, you need to compare this prediction with the actual outcome or score \\(s_A\\), where \\(s_A = 1\\) if *A* won the game, \\(s_A = 0\\) if they lost and \\(s_A = 0.5\\) in case of a draw. You then update *A*'s rating by
+It's also instructive to get a feeling of how rating differences translate into winning probabilities by plugging in some values into the formula:
 
-\\[ r_A \leftarrow r_A + K \cdot (s_A - p_A), \\]
+**TODO: rating table**
 
-where \\(K>0\\) is a factor you can freely choose. (More on this in a bit.)
+Note that we can get the probability of *B* winning simply by calculating \\(p_B=1-p_A\\), and all the formulae work analogous, so we're just going to focus on player *A*'s perspective.
 
-Again, let's check if this makes sense. If *A* won, you have \\(s_A = 1\\), and so \\(s_A - p_A\\) will be positive. If player *A* was highly rated and so the win was expected, that difference will be very small and *A* will have their rating increased by only very few points, if the win was unexpected, i.e., \\(p_A\\) was low, then difference between predicted and actual outcome will be large and *A*'s rating will be increased by up to \\(K\\) points. If *A* lost, then \\(s_A = 0\\) and the difference will be negative, i.e., *A*'s rating will be decreased in the same way (and now *B* would receive those points).
+To recap, this calculation would happen pre-match and give you a predicted probability that player *A* will win the match. (If you're the gambling kind, this might be how you determine your bet on *A*.) Once the match is over, we need to compare this prediction with the actual outcome or score \\(s_A\\), where \\(s_A = 1\\) if *A* won the game, \\(s_A = 0\\) if they lost and \\(s_A = 0.5\\) in case of a draw. We then update *A*'s rating by
 
-Let's go back to our "skill chits pot" metaphor. In that view, player *A* would put \\(K \cdot p_A\\) chits into the ante, with player *B* contributing \\(K \cdot p_B = K \cdot (1-p_A)\\). The pot now holds \\(K\\) chits in total as reward for the winner. Because they paid \\(K \cdot p\\) chits as buy-in for the game, they've now gained \\(K \cdot (1 - p)\\) chits in total, which is exactly our update rule (remember that \\(s=1\\) for the winner).
+\\[ r_A \leftarrow r_A + K (s_A - p_A), \\]
+
+where \\(K>0\\) is a factor we can freely choose. (*Much* more on this soon.)
+
+Again, let's check if this makes sense. If *A* won, we have \\(s_A = 1\\), and so \\(s_A - p_A\\) will be positive. If player *A* was highly rated and so the win was expected, that difference will be very small and *A* will have their rating increased by only very few points, if the win was unexpected, i.e., \\(p_A\\) was low, then difference between predicted and actual outcome will be large and *A*'s rating will be increased by up to \\(K\\) points. If *A* lost, then \\(s_A = 0\\) and the difference will be negative, i.e., *A*'s rating will be decreased in the same way (and now *B* would receive those points).
+
+Let's go back to our "skill chits pot" metaphor. In that view, player *A* would put \\(K p_A\\) chits into the ante, with player *B* contributing \\(K p_B = K (1-p_A)\\). The pot now holds \\(K\\) chits in total as reward for the winner. Because they paid \\(K p\\) chits as buy-in for the game, they've now gained \\(K (1 - p)\\) chits in total, which is exactly our update rule (remember that \\(s=1\\) for the winner).
 
 This is really all there is to the Elo rating system. It's quite simple and interpretable, and you could easily keep track of your ratings with pen and paper back in the 1960s when the system was invented, well before computers and apps would rule the world.
 
