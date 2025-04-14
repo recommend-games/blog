@@ -43,7 +43,15 @@ If you've never seen a formula like this, it's probably a lot to digest. Notice 
 
 It's also instructive to get a feeling of how rating differences translate into winning probabilities by plugging in some values into the formula:
 
-**TODO: rating table**
+| Rating difference \\(r_A-r_B\\) | Win probability \\(p_A\\) |
+|------:|-------:|
+|    ±0 |  50.0% |
+|  +100 |  64.0% |
+|  +200 |  76.0% |
+|  +300 |  84.9% |
+|  +400 |  90.9% |
+|  +800 |  99.0% |
+|  \\(+\infty\\) | 100.0% |
 
 Note that we can get the probability of *B* winning simply by calculating \\(p_B=1-p_A\\), and all the formulae work analogous, so we're just going to focus on player *A*'s perspective.
 
