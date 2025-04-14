@@ -79,15 +79,17 @@ I still owe you the details on some of the hyperparameters we can choose.
 If you want develop an intuition about the importance of \\(K\\), I'll invite you to dive even deeper into the mathematics with me… 🤓 (Feel free to skip the next section if the thought of calculating partial derivatives of the formulae so far sounds like horror to you.)
 
 
-## Logistic regression
+## Elo as logistic regression: a machine learning perspective
 
-The most basic, but perhaps still most powerful tool at a machine learning practitioner's disposal is linear regression. We've encountered it already numerous times on this blog, e.g., in the context of understanding the [BoardGameGeek ranking]({{<ref "posts/reverse_engineer_bgg_2/index.md">}}), explaining [collaborative filtering]({{<ref "posts/rg_collaborative_filtering/index.md">}}) and [debiasing the BGG ranking]({{<ref "posts/debiased_rankings/index.md">}}). In its basic form, it just describes a way of finding the "line of best fit" given some data points (e.g., observations). This works great if you want to predict a continuous variable, i.e., values which can take a wide (potentially infinite) range. If you want to predict a binary outcome (e.g., *win* or *loss*) or a probability (e.g., the probability of one player winning), you usually use the *logistic function* (hence the name *Logistic Regression*) to squeeze the values of your predictions between 0 and 1:
+The most basic, but perhaps still most powerful tool at a machine learning practitioner's disposal is linear regression. We've encountered it already numerous times on this blog, e.g., in the context of understanding the [BoardGameGeek ranking]({{<ref "posts/reverse_engineer_bgg_2/index.md">}}), explaining [collaborative filtering]({{<ref "posts/rg_collaborative_filtering/index.md">}}) and [debiasing the BGG ranking]({{<ref "posts/debiased_rankings/index.md">}}). In its basic form, it just describes a way of finding the "line of best fit" given some data points (e.g., observations). This works great if you want to predict a continuous variable, i.e., values which can take a wide (potentially infinite) range. If you want to predict a binary outcome (e.g., *win* or *loss*) or a probability (e.g., the probability of one player winning), you usually use the *logistic function* (hence the name *logistic regression*) to squeeze the values of your predictions between 0 and 1:
 
 \\[ \sigma_\lambda(x) = \frac{1}{1 + e^{-\lambda x}}, \\]
 
 where \\(\lambda>0\\). For \\(\lambda=1\\), this function is better known as a *sigmoid* and looks like this:
 
 {{< img src="sigmoid" alt="A plot of the sigmoid function" >}}
+
+That plot should look familiar to you from the Elo probabilities. That's because you'll recover our formula for \\(p_A\\) from above if you plug in \\(x=r_A-r_B\\) and \\(\lambda=\ln 10 / 400\\), so in a way, we're using logistic regression to predict player *A*'s win probability from the rating difference.
 
 The sigmoid has a particularly nice derivative:
 
@@ -97,13 +99,11 @@ Using standard calculus, you can easily find the derivative for the general logi
 
 \\[ \sigma'_ \lambda(x) = \lambda \sigma_\lambda(x) (1 - \sigma_\lambda(x)). \\]
 
-If you plug in \\(x=r_A-r_B\\) and \\(\lambda=\ln 10 / 400\\), you recover our update rule from above, so in a way, you're using logistic regression to predict player *A*'s win probability from the rating difference.
-
 Remember: what we're really trying to achieve is calculate the win probability \\(p_A\\) from the rating difference such that it predicts the actual outcome \\(s_A\\) (which will be 1 if *A* wins and 0 if they lose) as closely as possible. This is a classic case for a *maximum likelihood estimation*: we want to select a parameter (in this case the rating \\(r_A\\)) such that the observed data (the actual outcome \\(s_A\\) of the game) is most probable. If you want to prove just how fancy you are, you say a random variable \\(X\\) with a binary outcome follows a *Bernoulli distribution* with parameter \\(p\in[0,1]\\) (the probability of a success). Its probability mass function is then given by
 
 \\[ P(X = s) = p^s (1 - p)^{1-s}, \\]
 
-where \\(s\in\\{0,1\\}\\) is the outcome. Again, let's check what's going on here: for \\(s=1\\), the second factor will be \\((1 - p)^0=1\\) and hence the whole expression will be \\(p\\). Conversely, for \\(s=0\\), the first factor will be \\(p^0=1\\), so we have \\(1-p\\) overall, as desired. We can use this formula to write down the likelihood function
+where \\(s\in\\{0,1\\}\\) is the outcome. As usual, let's check what's going on here: for \\(s=1\\), the second factor will be \\((1 - p)^0=1\\) and hence the whole expression will be \\(p\\). Conversely, for \\(s=0\\), the first factor will be \\(p^0=1\\), so we have \\(1-p\\) overall, as desired. We can use this formula to write down the likelihood function
 
 \\[ L(r_A) = p_A^{s_A} (1 - p_A)^{1-s_A}, \\]
 
@@ -111,7 +111,7 @@ keeping in mind that \\(p_A\\), our estimate for the probability that *A* will w
 
 \\[ \ell(r_A) = \ln L(r_A) = s_A \ln p_A + (1 - s_A) \ln (1 - p_A). \\]
 
-In our case, we just receive a single observation (the outcome of a game), and immediately want to update \\(r_A\\) afterwards, which makes it a good candidate for stochastic gradient ascent. This means we'll update \\(r_A\\) after each game by taking a step of size \\(\alpha>0\\) towards the gradient of \\(\ell\\) with respect to \\(r_A\\):
+In our case, we just receive a single observation (the outcome of a game), and immediately want to update \\(r_A\\) afterwards, which makes it a good candidate for *stochastic gradient ascent*[^descent]. This means we'll update \\(r_A\\) after each game by taking a step of size \\(\alpha>0\\) towards the gradient of \\(\ell\\) with respect to \\(r_A\\):
 
 \\[ r_A \leftarrow r_A + \alpha \frac{\partial\ell}{\partial r_A}. \\]
 
@@ -138,7 +138,7 @@ Using this in the stochastic gradient ascent update rule, we finally obtain
 
 \\[ r_A \leftarrow r_A + \alpha \lambda (s_A - p_A), \\]
 
-which is exactly the Elo update if we choose \\(K=\alpha\lambda\\). Remember that \\(\lambda=\ln 10 / 400\\) if we go with the standard Elo scale, so it's really just a constant for all intents and purposes. The step size \\(\alpha\\) on the other hand comes from gradient ascent, and anybody working in machine learning will tell you that choosing a good step size is a science and an art in of of itself. Too small, and your model will take a long time to converge; too large and it might diverge – that's why one can think of \\(K\\) as the step size in the Elo rating update. (See? I wasn't lying when I told you we'd dive *deep* into the maths to understand the importance of getting \\(K\\) right. 🤓)
+which is exactly the Elo update if we choose \\(K=\alpha\lambda\\). Remember that \\(\lambda=\ln 10 / 400\\) if we go with the standard Elo scale, so it's really just a constant for all intents and purposes. The step size \\(\alpha\\) on the other hand comes from gradient ascent, and anybody working in machine learning will tell you that choosing a good step size is a science and an art in and of itself. Too small, and your model will take a long time to converge; too large and it might diverge – that's why one can think of \\(K\\) as the step size in the Elo rating update. (See? I wasn't lying when I told you we'd dive *deep* into the maths to understand the importance of getting \\(K\\) right. 🤓)
 
 
 ## Strengths & weaknesses
@@ -165,3 +165,4 @@ I also want to shift the view back from players' individual strengths to the ove
 
 [^no-acronym]: Please note that Elo is a proper name and not an acronym, so please never ever spell it in all caps – it's disrespectful to the person who invented the rating system.
 [^multi-player]: Since the Elo system was developed for chess, it's been originally formulated for two player zero-sum games only. For simplicity, we stick with that case for this article. There are various ways to generalise to multi-player settings and we shall examine those in future articles.
+[^descent]: You'll find a lot more references for gradient *descent*. That's just the same method but for minimising a function and hence with the sign flipped.
