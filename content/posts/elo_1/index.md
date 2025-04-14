@@ -39,7 +39,7 @@ Let's make this more concrete with formulae. Assume we have players *A* and *B* 
 
 If you've never seen a formula like this, it's probably a lot to digest. Notice how the important part about the ratings is just their difference \\(r_A-r_B\\), so we can consider that rating difference as the single input variable. As the saying goes, a picture is worth a thousand words, so here's the plot of that function:
 
-**TODO: plot probability**
+{{< img src="elo_probabilities" alt="A plot of the win probabilities depending on the rating differences" >}}
 
 It's also instructive to get a feeling of how rating differences translate into winning probabilities by plugging in some values into the formula:
 
