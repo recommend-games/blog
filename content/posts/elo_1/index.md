@@ -10,14 +10,16 @@ tags:
   - Snooker
 ---
 
-> Chance in games is like seasoning in food — it's all about the right amount. Just imagine a life without chance, where everything could be planned out strategically. That would get boring over time. In a game, I want to have experiences — I want adventure. A good game is like a miniature life, one where I can make mistakes, enjoy a streak of bad or good luck, and still recover. But you shouldn't be at the mercy of randomness. There should be ways to compensate — like a friend of mine in CATAN, who always complains about his bad luck, prompting others to treat him more kindly and rarely target him with the robber. In the end, he often wins — to everyone's surprise. \
+> Chance in games is like seasoning in food — it's all about the right amount. Just imagine a life without chance, where everything could be planned out strategically. That would get boring over time. In a game, I want to have experiences — I want adventure. A good game is like a miniature life, one where I can make mistakes, enjoy a streak of bad or good luck, and still recover. But you shouldn't be at the mercy of randomness. There should be ways to compensate — like a friend of mine in CATAN, who always complains about his bad luck, prompting others to treat him more kindly and rarely target him with the robber. In the end, he often wins — to everyone's surprise.\
 > — **Klaus Teuber** on the importance of randomness in games in [CATAN-News 1/2000](https://www.catan.de/sites/default/files/2021-11/dl_Catan-News-2000-1.pdf)
+
+## How much is luck, how huch is skill?
 
 So how do we separate the role of luck from a player's actual skill? One way is to measure skill directly.
 
 The balance between luck and skill in games can sometimes feel like a magic trick: the winner will attribute their victory to their great skills, whilst the losers can blame their misfortune on unlucky rolls of dice. Striking that balance right will have a major impact on the target audience of a game: if a game is totally random and offers no meaningful choices, it won't be interesting for anyone above a certain age (I'm still waiting for my kids to outgrow that phase); if its learning curve is too steep, the upfront investment of navigating the strategic depths might put off many people who have an overflowing shelf of shame waiting to be played.
 
-But how can we quantify luck and skills in games? It's a vast and deep topic – one that I want to explore in a small series. Let's start with a slightly simpler question: how can you measure *your skill* in a game? There are plenty of good reasons why you might want to:
+But how can we quantify luck and skill in games? It's a vast and deep topic – one that I want to explore in a small series. Let's start with a slightly simpler question: how can you measure *your skill* in a game? There are plenty of good reasons why you might want to:
 
 - Track your progress in learning the best strategies in a game. If you want to dive deep, it's useful to see how far you've come and what the road ahead looks like.
 - Find opponents who match your skill level. If you were to play chess against Magnus Carlsen, you'd be crushed in no time. Neither of you would enjoy it, and you probably wouldn't learn much either. Many games are most fun when all players are on a comparable level.
