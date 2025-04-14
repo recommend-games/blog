@@ -1,5 +1,5 @@
 ---
-title: Am I Getting Better? A Guide to Skill Ratings in Games
+title: Am I getting better? A guide to skill ratings in games
 subtitle: Why Elo matters, how it works, and what it tells you about your play
 slug: elo-ratings-explained
 author: Markus Shepherd
@@ -26,11 +26,13 @@ But how can we quantify luck and skills in games? It's a vast and deep topic –
 Perhaps the best known and most widely adopted way to measure skill is the **Elo rating**, developed by and named[^no-acronym] after Arpad Elo, a Hungarian-American physics professor. As an avid chess player, Elo devised the system on behalf of the United States Chess Federation (USCF). The ideas behind it are very general though, and it has been adapted for other games, sports and online platforms such as [Board Game Arena](https://boardgamearena.com/). Reason enough for us to study and understand it.
 
 
-## Key idea
+## How Elo turns match results into skill ratings
 
-First of all, the Elo rating system doesn't attempt to measure absolute, but relative skills. As such, it uses the difference in ratings between the two[^multi-player] players to try and predict the probability of one player winning or the other. So, the higher the rating difference between two players is, the more likely it is that the stronger player wins. As one might expect, players earn rating points through winning matches, but crucially, they earn more by winnining against stronger players and lose more by losing against weaker players. Elo ratings achieve this by compare the expected with the actual outcome. If you beat the odds and exceed expectations, your rating goes up; if you underperform, your rating goes down.
+Elo ratings don't measure absolute skill, but *relative* skill. The difference in ratings between two[^multi-player] players is used to predict the probability of one beating the other. The higher your rating difference over your opponent, the more likely you are to win.
 
-Consider this metaphor: imagine both players placing an ante of "skill chits" into the pot before the game begins. The higher your rating advantage over your opponent is, the higher your stake in the game. Conversely, if you're much lower rated, you don't have much too lose. The winner will take the whole pot, so if you can land an unexpected upset win, you're increasing your rating by a lot. A draw means splitting the pot, so you will still increase your rating in this case if you were expected to lose and hence put much less than 50% into the pot.
+As you might expect, you gain rating points by winning matches. But the Elo twist is: beating stronger opponents gives you more points, and losing to weaker ones costs you more. The system compares expected and actual outcomes. If you beat the odds, your rating goes up. If you underperform, it drops.
+
+Imagine this: before each match, you and your opponent each put "skill chits" into a pot. If you're the favourite, you have to ante more. If you're the underdog, you risk less. The winner takes the whole pot. If you win an upset, you gain a lot. If the result was expected, gains are smaller. A draw means splitting the pot, which still means gaining chits if you were rated weaker since your initial stake was smaller.
 
 
 ## Formula
