@@ -67,7 +67,16 @@ Let's go back to our "skill chits pot" metaphor. In that view, player *A* would 
 
 This is really all there is to the Elo rating system. It's quite simple and interpretable, and you could easily keep track of your ratings with pen and paper back in the 1960s when the system was invented, well before computers and apps would rule the world.
 
-I still owe you the details on some of the hyperparameters you can choose. First off, you might have noticed that 400 in the denominator of the exponent. This really could be any positive number – 400 is just a common choice, so I'm keeping with the convention here. I also didn't mention how to initialise the ratings, i.e., what rating to assign to new players before their first match. That's because it doesn't matter: the probability calculation only cares about the difference between the two ratings, so you could add any constant to both ratings, and they would just cancel out. The maths would work out easiest if you initialise new players with a rating of 0. This would have the charming side effect that it's immediately obvious if a player was an above or below average player depending if their rating was positive or negative. But I guess people don't like the feeling of having negative skills, so typically a value like 1300 or 1500 is added to the Elo ratings. Lastly, choosing that update factor \\(K\\) is very important if you want to have a meaningful ranking: Too low and ratings will take a very long time to converge and recent improvements in skills will take a long time to be reflected in the ratings. Too high and individual games will have too large an influence on the rating and the whole system will become too volatile. If you want to get a feeling of how to choose \\(K\\), I'll invite you to dive even deeper into the mathematics with me… 🤓
+
+### Setting the dials: scaling, initial ratings and update factor
+
+I still owe you the details on some of the hyperparameters we can choose.
+
+- *Rating scale*: You might have noticed that 400 in the denominator of the exponent. This really could be any positive number – 400 is just a common choice, so I'm keeping with the convention here.
+- *Initial rating*: I also glossed over the question of how to initialise the ratings, i.e., what rating to assign to new players before their first match. That's because it doesn't matter: the probability calculation only cares about the difference between the two ratings, so you could add any constant to both ratings, and they would just cancel out. The maths works out easiest if you initialise new players with a rating of 0 (and we shall stick with that), but in real world application a value like 1300 or 1500 is typically added to the Elo ratings. I guess people don't like the feeling of having negative skills.
+- *Update factor \\(K\\)*: Finally, choosing that update factor \\(K\\) is very important if you want to have a meaningful ranking: Too low and ratings will take a very long time to converge and recent improvements in skills will take a long time to be reflected in the ratings. Too high and individual games will have too large an influence on the rating and the whole system will become too volatile.
+
+If you want develop an intuition about the importance of \\(K\\), I'll invite you to dive even deeper into the mathematics with me… 🤓 (Feel free to skip the next section if the thought of calculating partial derivatives of the formulae so far sounds like horror to you.)
 
 
 ## Logistic regression
