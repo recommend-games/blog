@@ -4,7 +4,7 @@ subtitle: How to measure players' skills in games
 slug: elo-ratings-explained
 author: Markus Shepherd
 type: post
-date: 2025-04-14T23:05:30+03:00
+date: 2025-04-14T23:07:10+03:00
 tags:
   - Elo rating
   - Snooker
