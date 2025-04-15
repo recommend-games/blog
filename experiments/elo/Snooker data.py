@@ -122,10 +122,9 @@ data = (
     .filter(pl.col("Discipline") == "snooker")
     .with_columns(
         Date=pl.coalesce(
-            pl.min_horizontal("ScheduledDate", "StartDate"),
+            pl.min_horizontal("ScheduledDate", "StartDate", "EndDateEvent"),
             "EndDate",
             "StartDateEvent",
-            "EndDateEvent",
         )
     )
     .filter(pl.col("Date").dt.year() >= first_season)
