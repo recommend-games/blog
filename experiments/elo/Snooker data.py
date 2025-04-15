@@ -130,24 +130,39 @@ data = (
 
 data.shape
 
+
 # %%
-num_matches = (
-    data.lazy()
-    .group_by(PlayerID="Player1ID")
-    .agg(NumMatches1=pl.len())
-    .join(
-        data.lazy().group_by(PlayerID="Player2ID").agg(NumMatches2=pl.len()),
-        on="PlayerID",
-        how="full",
+def player_info_df(data, player_id_col):
+    return (
+        data.lazy()
+        .group_by(PlayerID=player_id_col)
+        .agg(
+            pl.len().alias(f"{player_id_col}NumMatches"),
+            pl.col("Date").min().alias(f"{player_id_col}FirstMatchDate"),
+            pl.col("Date").max().alias(f"{player_id_col}LastMatchDate"),
+        )
     )
+
+
+player_info = (
+    player_info_df(data, "Player1ID")
+    .join(player_info_df(data, "Player2ID"), on="PlayerID", how="full")
     .select(
         ID=pl.coalesce("PlayerID", "PlayerID_right"),
-        NumMatches=pl.col("NumMatches1").fill_null(0)
-        + pl.col("NumMatches2").fill_null(0),
+        NumMatches=pl.col("Player1IDNumMatches").fill_null(0)
+        + pl.col("Player2IDNumMatches").fill_null(0),
+        FirstMatchDate=pl.min_horizontal(
+            pl.col("Player1IDFirstMatchDate"),
+            pl.col("Player2IDFirstMatchDate"),
+        ),
+        LastMatchDate=pl.max_horizontal(
+            pl.col("Player1IDLastMatchDate"),
+            pl.col("Player2IDLastMatchDate"),
+        ),
     )
     .collect()
 )
-num_matches.shape
+player_info.shape
 
 # %%
 elo_k = approximate_optimal_k(
@@ -175,7 +190,7 @@ len(elo_ratings)
 elo_df = (
     pl.DataFrame({"ID": elo_ratings.keys(), "Elo": elo_ratings.values()})
     .join(players, on="ID", how="left")
-    .join(num_matches, on="ID", how="left")
+    .join(player_info, on="ID", how="left")
     .sort("Elo", descending=True, nulls_last=True)
     .select(
         pl.col("Elo").rank(method="min", descending=True).alias("Rank"),
@@ -186,12 +201,14 @@ elo_df = (
         "ID",
         "Elo",
         "NumMatches",
+        "FirstMatchDate",
+        "LastMatchDate",
     )
 )
 elo_df.shape
 
 # %%
-elo_df["Elo"].describe()
+elo_df.describe()
 
 # %%
 with pl.Config(tbl_rows=100):
