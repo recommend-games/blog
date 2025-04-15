@@ -76,7 +76,7 @@ class SnookerSpider(Spider):
         end_season = self.end_season or datetime.now(timezone.utc).year
         for season in range(self.start_season, end_season + 1):
             yield Request(
-                url=f"{self.api_url}?t=5&s={season}&tr=main",
+                url=f"{self.api_url}?t=5&s={season}",
                 callback=self.parse_season,
                 headers={"X-Requested-By": self.snooker_api_header},
                 priority=2,

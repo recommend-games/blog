@@ -26,7 +26,7 @@ API_HEADER = {"X-Requested-By": os.getenv("SNOOKER_API_HEADER")}
 # %%
 events_response = requests.get(
     url="https://api.snooker.org/",
-    params={"t": 5, "s": 1974, "tr": "main"},
+    params={"t": 5, "s": 1974},
     headers=API_HEADER,
 )
 
