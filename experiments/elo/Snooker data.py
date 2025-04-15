@@ -44,13 +44,25 @@ matches = (
     .last()
     .with_columns(pl.col(pl.String).replace("", None))
     .with_columns(
-        pl.col(
-            "InitDate",
-            "ModDate",
-            "ScheduledDate",
-            "StartDate",
-            "EndDate",
-        ).str.to_datetime("%+", strict=False, time_zone="UTC")
+        pl.col("InitDate", "ModDate", "StartDate", "EndDate").str.to_datetime(
+            "%+",
+            strict=False,
+            time_zone="UTC",
+        ),
+        pl.coalesce(
+            pl.col("ScheduledDate").str.to_datetime(
+                "%+",
+                strict=False,
+                ambiguous="null",
+                time_zone="UTC",
+            ),
+            pl.col("ScheduledDate").str.to_datetime(
+                "%Y-%m-%d",
+                strict=False,
+                ambiguous="null",
+                time_zone="UTC",
+            ),
+        ),
     )
     .collect()
 )
@@ -86,6 +98,7 @@ players.describe()
 
 # %%
 nobody_id = 440
+first_season = events.select(pl.col("Season").min()).item()
 
 data = (
     matches.lazy()
@@ -109,13 +122,13 @@ data = (
     .filter(pl.col("Discipline") == "snooker")
     .with_columns(
         Date=pl.coalesce(
+            pl.min_horizontal("ScheduledDate", "StartDate"),
             "EndDate",
-            "StartDate",
-            "ScheduledDate",
-            "EndDateEvent",
             "StartDateEvent",
+            "EndDateEvent",
         )
     )
+    .filter(pl.col("Date").dt.year() >= first_season)
     .select(
         "Date",
         "Player1ID",
