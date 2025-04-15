@@ -131,6 +131,25 @@ data = (
 data.shape
 
 # %%
+num_matches = (
+    data.lazy()
+    .group_by(PlayerID="Player1ID")
+    .agg(NumMatches1=pl.len())
+    .join(
+        data.lazy().group_by(PlayerID="Player2ID").agg(NumMatches2=pl.len()),
+        on="PlayerID",
+        how="full",
+    )
+    .select(
+        ID=pl.coalesce("PlayerID", "PlayerID_right"),
+        NumMatches=pl.col("NumMatches1").fill_null(0)
+        + pl.col("NumMatches2").fill_null(0),
+    )
+    .collect()
+)
+num_matches.shape
+
+# %%
 elo_k = approximate_optimal_k(
     player_1_ids=data["Player1ID"],
     player_2_ids=data["Player2ID"],
@@ -156,12 +175,17 @@ len(elo_ratings)
 elo_df = (
     pl.DataFrame({"ID": elo_ratings.keys(), "Elo": elo_ratings.values()})
     .join(players, on="ID", how="left")
+    .join(num_matches, on="ID", how="left")
     .sort("Elo", descending=True, nulls_last=True)
-    .with_columns(
-        Name=pl.when(pl.col("SurnameFirst"))
+    .select(
+        pl.col("Elo").rank(method="min", descending=True).alias("Rank"),
+        pl.when(pl.col("SurnameFirst"))
         .then(pl.col("LastName") + " " + pl.col("FirstName"))
-        .otherwise(pl.col("FirstName") + " " + pl.col("LastName")),
-        Rank=pl.col("Elo").rank(method="min", descending=True),
+        .otherwise(pl.col("FirstName") + " " + pl.col("LastName"))
+        .alias("Name"),
+        "ID",
+        "Elo",
+        "NumMatches",
     )
 )
 elo_df.shape
@@ -171,11 +195,11 @@ elo_df["Elo"].describe()
 
 # %%
 with pl.Config(tbl_rows=100):
-    display(elo_df.select("Rank", "Elo", "Name", "ID").head(100))
+    display(elo_df.head(100))
 
 # %%
 with pl.Config(tbl_rows=100):
-    display(elo_df.select("Rank", "Elo", "Name", "ID").tail(100))
+    display(elo_df.tail(100))
 
 # %%
-elo_df.select("Rank", "Elo", "Name", "ID").write_csv("results/snooker/elo_ranking.csv")
+elo_df.write_csv("results/snooker/elo_ranking.csv")
