@@ -85,16 +85,37 @@ players.sample(10, seed=seed)
 players.describe()
 
 # %%
+nobody_id = 440
+
 data = (
     matches.lazy()
     .filter(~pl.col("Unfinished"))
     .filter(pl.col("Player1ID") > 0)
+    .filter(pl.col("Player1ID") != nobody_id)
     .filter(pl.col("Player2ID") > 0)
+    .filter(pl.col("Player2ID") != nobody_id)
     .filter(
         (pl.col("WinnerID") == pl.col("Player1ID"))
         | (pl.col("WinnerID") == pl.col("Player2ID"))
     )
-    .with_columns(Date=pl.coalesce("EndDate", "StartDate", "ScheduledDate"))
+    .join(
+        events.lazy(),
+        left_on="EventID",
+        right_on="ID",
+        how="left",
+        suffix="Event",
+    )
+    .filter(~pl.col("Team"))
+    .filter(pl.col("Discipline") == "snooker")
+    .with_columns(
+        Date=pl.coalesce(
+            "EndDate",
+            "StartDate",
+            "ScheduledDate",
+            "EndDateEvent",
+            "StartDateEvent",
+        )
+    )
     .select(
         "Date",
         "Player1ID",
@@ -106,6 +127,7 @@ data = (
     .sort("Date")
     .collect()
 )
+
 data.shape
 
 # %%
@@ -114,7 +136,7 @@ elo_k = approximate_optimal_k(
     player_2_ids=data["Player2ID"],
     player_1_outcomes=data["Player1Outcome"],
     min_elo_k=0,
-    max_elo_k=160,
+    max_elo_k=200,
     elo_scale=400,
 )
 elo_k
@@ -133,7 +155,7 @@ len(elo_ratings)
 # %%
 elo_df = (
     pl.DataFrame({"ID": elo_ratings.keys(), "Elo": elo_ratings.values()})
-    .join(players, on="ID", how="full")
+    .join(players, on="ID", how="left")
     .sort("Elo", descending=True, nulls_last=True)
     .with_columns(
         Name=pl.when(pl.col("SurnameFirst"))
