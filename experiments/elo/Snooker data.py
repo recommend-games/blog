@@ -20,8 +20,12 @@ from elo.optimal_k import approximate_optimal_k
 from elo.elo_ratings import calculate_elo_ratings
 
 jupyter_black.load()
+pl.Config.set_tbl_rows(100)
 
 seed = 13
+
+# %% [markdown]
+# # General EDA
 
 # %%
 events = (
@@ -78,11 +82,17 @@ players = (
 )
 events.shape, matches.shape, players.shape
 
+# %% [markdown]
+# ## Events
+
 # %%
 events.sample(10, seed=seed)
 
 # %%
 events.describe()
+
+# %% [markdown]
+# ## Matches
 
 # %%
 matches.sample(10, seed=seed)
@@ -90,11 +100,17 @@ matches.sample(10, seed=seed)
 # %%
 matches.describe()
 
+# %% [markdown]
+# ## Players
+
 # %%
 players.sample(10, seed=seed)
 
 # %%
 players.describe()
+
+# %% [markdown]
+# # Elo ratings
 
 # %%
 nobody_id = 440
@@ -223,12 +239,10 @@ elo_df.shape
 elo_df.describe()
 
 # %%
-with pl.Config(tbl_rows=100):
-    display(elo_df.head(100))
+elo_df.head(100)
 
 # %%
-with pl.Config(tbl_rows=100):
-    display(elo_df.tail(100))
+elo_df.tail(100)
 
 # %%
-elo_df.write_csv("results/snooker/elo_ranking.csv")
+elo_df.write_csv("results/snooker/elo_ranking.csv", datetime_format="%+")
