@@ -246,3 +246,29 @@ elo_df.tail(100)
 
 # %%
 elo_df.write_csv("results/snooker/elo_ranking.csv", datetime_format="%+")
+
+# %% [markdown]
+# # Elo over time
+
+# %%
+curr_elo_ratings = None
+display_player_id = 5
+
+for (dt,), group in data.group_by_dynamic(
+    "Date",
+    every="1mo",
+    period="1mo",
+    closed="left",
+    label="right",
+):
+    curr_elo_ratings = calculate_elo_ratings(
+        player_1_ids=group["Player1ID"],
+        player_2_ids=group["Player2ID"],
+        player_1_outcomes=group["Player1Outcome"],
+        init_elo_ratings=curr_elo_ratings,
+        elo_k=elo_k,
+        elo_scale=400,
+        progress_bar=False,
+    )
+    if display_player_id in curr_elo_ratings:
+        print(f"{dt.date()}: {curr_elo_ratings[5]:5.1f}")
