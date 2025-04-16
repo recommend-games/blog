@@ -15,14 +15,19 @@
 
 # %%
 import jupyter_black
+import numpy as np
 import polars as pl
+import seaborn as sns
 from elo.optimal_k import approximate_optimal_k
 from elo.elo_ratings import calculate_elo_ratings
+from matplotlib import pyplot as plt
+from tqdm import tqdm
 
 jupyter_black.load()
 pl.Config.set_tbl_rows(100)
 
 seed = 13
+elo_scale = 400
 
 # %% [markdown]
 # # General EDA
@@ -198,8 +203,8 @@ elo_k = approximate_optimal_k(
     player_2_ids=data["Player2ID"],
     player_1_outcomes=data["Player1Outcome"],
     min_elo_k=0,
-    max_elo_k=200,
-    elo_scale=400,
+    max_elo_k=elo_scale / 2,
+    elo_scale=elo_scale,
 )
 elo_k
 
@@ -209,7 +214,7 @@ elo_ratings = calculate_elo_ratings(
     player_2_ids=data["Player2ID"],
     player_1_outcomes=data["Player1Outcome"],
     elo_k=elo_k,
-    elo_scale=400,
+    elo_scale=elo_scale,
     progress_bar=True,
 )
 len(elo_ratings)
@@ -247,28 +252,52 @@ elo_df.tail(100)
 # %%
 elo_df.write_csv("results/snooker/elo_ranking.csv", datetime_format="%+")
 
+
 # %% [markdown]
 # # Elo over time
 
 # %%
-curr_elo_ratings = None
-display_player_id = 5
+def calculate_elo_ratings_by_month(data=data, elo_k=elo_k, elo_scale=elo_scale):
+    curr_elo_ratings = None
 
-for (dt,), group in data.group_by_dynamic(
-    "Date",
-    every="1mo",
-    period="1mo",
-    closed="left",
-    label="right",
-):
-    curr_elo_ratings = calculate_elo_ratings(
-        player_1_ids=group["Player1ID"],
-        player_2_ids=group["Player2ID"],
-        player_1_outcomes=group["Player1Outcome"],
-        init_elo_ratings=curr_elo_ratings,
-        elo_k=elo_k,
-        elo_scale=400,
-        progress_bar=False,
-    )
-    if display_player_id in curr_elo_ratings:
-        print(f"{dt.date()}: {curr_elo_ratings[5]:5.1f}")
+    for (dt,), group in tqdm(
+        data.group_by_dynamic(
+            "Date",
+            every="1mo",
+            period="1mo",
+            closed="left",
+            label="right",
+        )
+    ):
+        curr_elo_ratings = calculate_elo_ratings(
+            player_1_ids=group["Player1ID"],
+            player_2_ids=group["Player2ID"],
+            player_1_outcomes=group["Player1Outcome"],
+            init_elo_ratings=curr_elo_ratings,
+            elo_k=elo_k,
+            elo_scale=elo_scale,
+            progress_bar=False,
+        )
+
+        df = pl.DataFrame(
+            data=np.array(list(curr_elo_ratings.values())).reshape(1, -1),
+            schema=list(map(str, curr_elo_ratings.keys())),
+        )
+        yield df.select(pl.lit(dt.date()).alias("Date"), pl.all())
+
+
+# %%
+hist_elo = pl.concat(calculate_elo_ratings_by_month(), how="diagonal")
+hist_elo.shape
+
+# %%
+hist_elo.tail(12)
+
+# %%
+_, ax = plt.subplots()
+sns.lineplot(data=hist_elo, x="Date", y="1", label="Mark Williams", ax=ax)
+sns.lineplot(data=hist_elo, x="Date", y="5", label="Ronnie O'Sullivan", ax=ax)
+sns.lineplot(data=hist_elo, x="Date", y="237", label="John Higgins", ax=ax)
+ax.set_xlabel(None)
+ax.set_ylabel("Elo")
+plt.show()
