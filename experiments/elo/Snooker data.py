@@ -323,3 +323,33 @@ ax.grid(True)
 ax.set_xlabel(None)
 ax.set_ylabel("Elo")
 plt.show()
+
+# %%
+long_hist = (
+    hist_elo.lazy()
+    .unpivot(index="Date", variable_name="ID", value_name="Elo")
+    .filter(pl.col("Elo").is_not_null())
+    .with_columns(pl.col("ID").cast(pl.Int64))
+)
+max_elo = long_hist.group_by("Date").agg(EloMax=pl.col("Elo").max())
+top_rated_players = (
+    long_hist.join(max_elo, on="Date", how="inner")
+    .filter(pl.col("Elo") == pl.col("EloMax"))
+    .drop("EloMax")
+    .join(elo_df.lazy().select("ID", "Name"), on="ID", how="left")
+    .sort("Date")
+    .collect()
+)
+top_rated_players.shape
+
+# %%
+top_rated_players.group_by("Name").agg(pl.len()).sort("len", descending=True)
+
+# %%
+top_rated_players.filter(pl.col("Elo") == pl.col("Elo").max())
+
+# %%
+top_rated_players.head(100)
+
+# %%
+top_rated_players.tail(100)
