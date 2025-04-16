@@ -301,10 +301,17 @@ hist_elo = hist_elo.collect()
 hist_elo.shape
 
 # %%
-hist_elo.write_csv("results/snooker/elo_ratings_history.csv", float_precision=1)
+player_cols = sorted(hist_elo.select(pl.exclude("Date")).columns, key=int)
+len(player_cols)
 
 # %%
-hist_elo.tail(12)
+hist_elo.select("Date", *player_cols).write_csv(
+    "results/snooker/elo_ratings_history.csv",
+    float_precision=1,
+)
+
+# %%
+hist_elo.select("Date", *player_cols).tail(12)
 
 # %%
 _, ax = plt.subplots()
