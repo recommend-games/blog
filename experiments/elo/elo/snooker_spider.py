@@ -5,6 +5,7 @@ from typing import Any
 
 from scrapy import Request, Spider
 from scrapy.http import Response, TextResponse
+from scrapy.utils.misc import arg_to_iter
 
 
 class BaseFilter:
@@ -37,6 +38,17 @@ class SnookerSpider(Spider):
     api_url = "https://api.snooker.org/"
     start_season: int = 1974
     end_season: int | None = None
+    tours = (
+        "challenge",
+        "ebsa",
+        "ibsf",
+        "main",
+        "other",
+        "q",
+        "seniors",
+        "women",
+        "wsf",
+    )
 
     custom_settings = {
         # Rate limit 10: requests per minute
@@ -79,8 +91,15 @@ class SnookerSpider(Spider):
                 url=f"{self.api_url}?t=5&s={season}",
                 callback=self.parse_season,
                 headers={"X-Requested-By": self.snooker_api_header},
-                priority=2,
+                priority=3,
             )
+            for tour in arg_to_iter(self.tours):
+                yield Request(
+                    url=f"{self.api_url}?t=5&s={season}&tr={tour}",
+                    callback=self.parse_season,
+                    headers={"X-Requested-By": self.snooker_api_header},
+                    priority=2,
+                )
 
     def parse_season(self, response: Response) -> Generator[dict | Request]:
         if not isinstance(response, TextResponse):
