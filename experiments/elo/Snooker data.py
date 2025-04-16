@@ -340,6 +340,17 @@ top_rated_players = (
     .sort("Date")
     .collect()
 )
+full_dates = pl.date_range(
+    start=top_rated_players["Date"].min(),
+    end=top_rated_players["Date"].max(),
+    interval="1mo",
+    eager=True,
+).alias("Date")
+top_rated_players = (
+    pl.DataFrame({"Date": full_dates})
+    .join(top_rated_players, on="Date", how="left")
+    .fill_null(strategy="forward")
+)
 top_rated_players.shape
 
 # %%
@@ -353,3 +364,9 @@ top_rated_players.head(100)
 
 # %%
 top_rated_players.tail(100)
+
+# %%
+top_rated_players.write_csv(
+    "results/snooker/elo_top_rated_players.csv",
+    float_precision=1,
+)
