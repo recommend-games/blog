@@ -18,6 +18,7 @@ import jupyter_black
 import numpy as np
 import polars as pl
 import seaborn as sns
+from datetime import timedelta
 from elo.optimal_k import approximate_optimal_k
 from elo.elo_ratings import calculate_elo_ratings
 from matplotlib import pyplot as plt
@@ -279,7 +280,7 @@ def calculate_elo_ratings_by_month(data=data, elo_k=elo_k, elo_scale=elo_scale):
             progress_bar=False,
         )
 
-        df = pl.DataFrame(
+        df = pl.LazyFrame(
             data=np.array(list(curr_elo_ratings.values())).reshape(1, -1),
             schema=list(map(str, curr_elo_ratings.keys())),
         )
@@ -288,7 +289,19 @@ def calculate_elo_ratings_by_month(data=data, elo_k=elo_k, elo_scale=elo_scale):
 
 # %%
 hist_elo = pl.concat(calculate_elo_ratings_by_month(), how="diagonal")
+for player_id, last_match_date in tqdm(
+    player_info.select("ID", "LastMatchDate").iter_rows(),
+):
+    player_id = str(player_id)
+    last_match_date += timedelta(days=31)
+    hist_elo = hist_elo.with_columns(
+        pl.when(pl.col("Date") <= last_match_date).then(player_id).alias(player_id),
+    )
+hist_elo = hist_elo.collect()
 hist_elo.shape
+
+# %%
+hist_elo.write_csv("results/snooker/elo_ratings_history.csv", float_precision=1)
 
 # %%
 hist_elo.tail(12)
