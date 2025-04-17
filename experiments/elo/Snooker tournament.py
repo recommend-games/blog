@@ -151,4 +151,5 @@ results = full_simulation(
 # %%
 for name, count in results.most_common():
     prob = count / num_simulations
-    print(f"{prob:6.2%}: {name}")
+    odds = 1 / prob
+    print(f"{prob:6.2%} ({odds:7.2f}): {name}")
