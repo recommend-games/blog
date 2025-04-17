@@ -48,7 +48,7 @@ len(odds_list)
 
 # %%
 odds = (
-    pl.DataFrame(odds)
+    pl.DataFrame(odds_list)
     .select("Name", "BestOdds", pl.exclude("Name", "BestOdds"))
     .sort("BestOdds")
 )
