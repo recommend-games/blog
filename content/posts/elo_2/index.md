@@ -34,6 +34,8 @@ tags:
 
 # Snooker Elo ratings
 
+So, let's break off and finally calculate some Elo ratings. For this, [snooker.org](https://www.snooker.org/index.asp) kindly provided data of TODO matches from TODO events contested by TODO players, ranging from 1975 till last Wednesday, via their [API](https://api.snooker.org/). I've included as many matches as I could find, regardless of tour, ranking status or eligible player group, as long as they weren't team matches nor had any kind of inconsistency. For Elo calculations, it's important to sequence matches correctly, and some matches in the database weren't correctly labelled, but I did my best to get as clear data as possible. TODO: mention snooker is always win/loss; ignore frame count – since dead frames aren't played, those differences aren't meaningful.
+
 - Mention data source (https://api.snooker.org/, make sure to get attribution right)
   - Problems with availability, dates, all matches treated equal
 - Mention choice of K (tease details for next article)
