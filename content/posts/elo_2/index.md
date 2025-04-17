@@ -96,13 +96,13 @@ TODO: comment
 
 TODO: Plot 20's
 
-TODO: comment; link to full results
+TODO: comment; link to full results; discuss why it's hard to choose constant K: the current value was picked mostly to work well with the current calendar, but back then very few tournaments were played. Reminder: Elo is strongest amongst an active community, but not directly comparable across time, games, and different implementations. Compare to snooker-predictions.org?
 
 An interesting measure of dominance is the question of what player has spent the most time as highest rated. Here's the top 10:
 
 TODO: table (include first and last as columns)
 
-TODO: Link to full results. Finally, who had the highest rating ever? TODO. Maybe: what was the highest rated match?
+TODO: Link to full results. Finally, who had the highest rating ever? TODO. Maybe: what was the highest rated match? Biggest upset?
 
 
 - Mention data source (https://api.snooker.org/, make sure to get attribution right)
