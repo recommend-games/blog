@@ -58,14 +58,25 @@ Let's look at some examples. Before the very first match in the database, Ray Re
 
 \\[ r_{\text{JS}} \leftarrow 0 + 42 \cdot (1 - 0.5) = 21. \\]
 
-His opponent got his rating reduced by the same amount[^zero-sum]: \\(r_{\text{RR}}\leftarrow-21\\). I wrote a simple [Python script](https://gitlab.com/recommend.games/blog/-/blob/master/experiments/elo/Snooker%20data.py) to carry out these calculations for all 68,259 matches that followed. Let's take a look at one more match: the final of the most recent tournament, the 2025 Tour Championship, played between snooker legends John Higgins and Mark Selby, both with four world titles to their name. They went into the match with Elo ratings of 718.3 and 714.5, respectively. This means we would've predicted Higgins' win probability to be 50.5%. The match was indeed won by John Higgins, who gained \\(42\cdot(1-0.505)=20.8\\) points, whilst Mark Selby lost the same amount, for a new (and current) rating of 739.1 and 693.7, respectively.
+His opponent got his rating reduced by the same amount[^zero-sum]: \\(r_{\text{RR}}\leftarrow-21\\). I wrote a simple [Python script](https://gitlab.com/recommend.games/blog/-/blob/master/experiments/elo/Snooker%20data.py) to carry out these calculations for all 68,259 matches that followed. Let's take a look at one more match: the final of the most recent tournament, the 2025 Tour Championship, played between snooker legends John Higgins and Mark Selby, both with four world titles to their name. They went into the match with Elo ratings of 718.3 and 714.5, respectively. This means we would've predicted Higgins' win probability to be 50.5%. The match was indeed won by John Higgins, who gained \\(42\cdot(1-0.505)=20.8\\) points, whilst Mark Selby lost the same amount, for a new (and current) rating of 739.0 and 693.7, respectively.
 
 
 ## Who's on top? Elo's current kings
 
 As mentioned, my code diligently carried out the Elo predictions and updates for every single match from 1975 till the 2025 World Championship Qualifiers, which ended on Wednesday. These are the ten currently highest rated player:
 
-TODO: Table
+| Rank | Name           |   Elo | Matches | First match |
+|-----:|:---------------|------:|--------:|:-----------:|
+|    1 | John Higgins   | 739.0 |    1436 |  1992-10-25 |
+|    2 | Judd Trump     | 709.2 |    1407 |  2005-11-03 |
+|    3 | Kyren Wilson   | 695.9 |    1055 |  2010-06-27 |
+|    4 | Mark Selby     | 693.7 |    1446 |  1999-10-24 |
+|    5 | Zhao Xintong   | 687.6 |     424 |  2012-06-18 |
+|    6 | Joe O'Connor   | 646.7 |     367 |  2012-09-05 |
+|    7 | Barry Hawkins  | 641.1 |    1153 |  1997-03-25 |
+|    8 | Neil Robertson | 624.1 |    1236 |  1999-03-20 |
+|    9 | Shaun Murphy   | 606.9 |    1225 |  2001-02-11 |
+|   10 | Ali Carter     | 605.2 |    1194 |  1997-03-25 |
 
 TODO: notes on present and absent players. Maybe some sample probabilities about chosen pairings? Link to download full results.
 
