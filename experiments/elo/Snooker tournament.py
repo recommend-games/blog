@@ -22,11 +22,12 @@ from elo.elo_ratings import elo_probability
 from tqdm import trange
 
 jupyter_black.load()
+pl.Config.set_tbl_rows(100)
 
 seed = 13
 rng = np.random.default_rng(seed)
 elo_scale = 400
-num_simulations = 1_000_000
+num_simulations = 10_000_000
 
 # %%
 players = pl.read_csv("results/snooker/elo_ranking.csv")
@@ -70,18 +71,28 @@ draw = [
     "Judd Trump",
     "",
 ]
+qualifiers = [
+    "Daniel Wells",
+    "Zhou Yuelong",
+    "Zak Surety",
+    "Hossein Vafaei",
+    "Ben Woollaston",
+    "Zhao Xintong",
+    "Ryan Day",
+    "Chris Wakelin",
+    "Fan Zhengyi",
+    "Joe O'Connor",
+    "Pang Junxu",
+    "Wu Yize",
+    "David Gilbert",
+    "Lei Peifan",
+    "Matthew Selt",
+    "Ali Carter",
+]
 
 # %%
-seeded_players = frozenset(draw) - {""}
-other_players = (
-    players.filter(~pl.col("Name").is_in(seeded_players))
-    .sort("Elo", descending=True, nulls_last=True)
-    .head(32 - len(seeded_players))
-)
-len(other_players)
-
-# %%
-draw[1::2] = other_players["Name"]
+rng.shuffle(qualifiers)
+draw[1::2] = qualifiers
 draw
 
 
