@@ -18,14 +18,14 @@ import jupyter_black
 import numpy as np
 import polars as pl
 import seaborn as sns
-from datetime import timedelta
+from datetime import date, timedelta
 from elo.optimal_k import approximate_optimal_k
 from elo.elo_ratings import calculate_elo_ratings
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 
 jupyter_black.load()
-pl.Config.set_tbl_rows(100)
+pl.Config.set_tbl_rows(200)
 
 seed = 13
 elo_scale = 400
@@ -315,9 +315,12 @@ hist_elo.select("Date", *player_cols).tail(12)
 
 # %%
 _, ax = plt.subplots()
-ax.step(x=hist_elo["Date"], y=hist_elo["1"], where="post", label="Mark Williams")
-ax.step(x=hist_elo["Date"], y=hist_elo["5"], where="post", label="Ronnie O'Sullivan")
-ax.step(x=hist_elo["Date"], y=hist_elo["237"], where="post", label="John Higgins")
+plot_data = hist_elo.filter(
+    pl.col("Date") >= date.today() - timedelta(days=10 * 365.25)
+)
+ax.step(x=plot_data["Date"], y=plot_data["5"], where="post", label="Ronnie O'Sullivan")
+ax.step(x=plot_data["Date"], y=plot_data["237"], where="post", label="John Higgins")
+ax.step(x=plot_data["Date"], y=plot_data["1"], where="post", label="Mark Williams")
 ax.legend()
 ax.grid(True)
 ax.set_xlabel(None)
@@ -360,10 +363,33 @@ top_rated_players.group_by("Name").agg(pl.len()).sort("len", descending=True)
 top_rated_players.filter(pl.col("Elo") == pl.col("Elo").max())
 
 # %%
-top_rated_players.head(100)
+top_rated_players_compact = (
+    top_rated_players.with_columns(
+        group=(pl.col("ID") != pl.col("ID").shift())
+        .cast(pl.Int8)
+        .fill_null(0)
+        .cum_sum()
+    )
+    .group_by("group", maintain_order=True)
+    .agg(
+        pl.col("Date").first().alias("DateFrom"),
+        pl.col("Date").last().alias("DateTo"),
+        pl.col("ID").first(),
+        pl.col("Name").first(),
+        pl.col("Elo").max(),
+    )
+    .with_columns(
+        Months=(
+            (pl.col("DateTo") - pl.col("DateFrom")).dt.total_days() / 365.25 * 12 + 1
+        )
+        .round()
+        .cast(pl.Int64),
+    )
+)
+top_rated_players_compact.shape
 
 # %%
-top_rated_players.tail(100)
+top_rated_players_compact
 
 # %%
 top_rated_players.write_csv(
