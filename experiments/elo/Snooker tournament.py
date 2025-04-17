@@ -130,3 +130,25 @@ for name, count in results.most_common():
     prob = count / num_simulations
     odds = 1 / prob
     print(f"{prob:6.2%} ({odds:7.2f}): {name}")
+
+# %%
+betting_odds = pl.read_csv("results/snooker/wsc_odds.csv")
+betting_odds.shape
+
+# %%
+full_result = (
+    pl.DataFrame({"Name": results.keys(), "Wins": results.values()})
+    .with_columns(Prob=pl.col("Wins") / num_simulations)
+    .drop("Wins")
+    .with_columns(Odds=1 / pl.col("Prob"))
+    .join(betting_odds.select("Name", "BestOdds"), on="Name", how="left")
+    .with_columns(ExpectedWin=pl.col("BestOdds") - pl.col("Odds"))
+    .sort("Odds")
+)
+full_result.shape
+
+# %%
+full_result
+
+# %%
+full_result.write_csv("results/snooker/wsc_predictions.csv")
