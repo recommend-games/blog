@@ -15,9 +15,11 @@
 
 # %%
 import jupyter_black
+import polars as pl
 from parsel import Selector
 
 jupyter_black.load()
+pl.Config.set_tbl_rows(100)
 
 # %%
 # Load HTML file
@@ -27,15 +29,33 @@ with open("results/snooker/oddschecker.html", encoding="utf-8") as f:
 # %%
 selector = Selector(text=html)
 
+odds_list = []
+
 for row in selector.css("tr.diff-row"):
     name = row.xpath("@data-bname").get()
-    print(name)
 
-    odds = {
+    result = {
         td.xpath("@data-bk").get(): float(td.xpath("@data-odig").get())
         for td in row.xpath("td[@data-bk and @data-odig]")
     }
+    best_odds = max(result.values())
+    result["Name"] = name
+    result["BestOdds"] = best_odds
 
-    print(odds)
-    print(max(odds.values()))
-    print()
+    odds_list.append(result)
+
+len(odds_list)
+
+# %%
+odds = (
+    pl.DataFrame(odds)
+    .select("Name", "BestOdds", pl.exclude("Name", "BestOdds"))
+    .sort("BestOdds")
+)
+odds.shape
+
+# %%
+odds
+
+# %%
+odds.write_csv("results/snooker/wsc_odds.csv")
