@@ -47,9 +47,46 @@ for row in selector.css("tr.diff-row"):
 len(odds_list)
 
 # %%
+name_mapping = {
+    "Allister Carter": "Ali Carter",
+    "Barry Hawkins": "Barry Hawkins",
+    "Ben Woollaston": "Ben Woollaston",
+    "Chris Wakelin": "Chris Wakelin",
+    "Daniel Wells": "Daniel Wells",
+    "David Gilbert": "David Gilbert",
+    "Ding Junhui": "Ding Junhui",
+    "Fan Zhengyi": "Fan Zhengyi",
+    "Hossein Vafaei": "Hossein Vafaei",
+    "Jak Jones": "Jak Jones",
+    "Joe OConnor": "Joe O'Connor",
+    "John Higgins": "John Higgins",
+    "Judd Trump": "Judd Trump",
+    "Kyren Wilson": "Kyren Wilson",
+    "Peifan Lei": "Lei Peifan",
+    "Luca Brecel": "Luca Brecel",
+    "Mark Allen": "Mark Allen",
+    "Mark Selby": "Mark Selby",
+    "Mark Williams": "Mark Williams",
+    "Matthew Selt": "Matthew Selt",
+    "Neil Robertson": "Neil Robertson",
+    "Pang Junxu": "Pang Junxu",
+    "Ronnie OSullivan": "Ronnie O'Sullivan",
+    "Ryan Day": "Ryan Day",
+    "Shaun Murphy": "Shaun Murphy",
+    "Si Jiahui": "Si Jiahui",
+    "Wu Yize": "Wu Yize",
+    "Xiao Guodong": "Xiao Guodong",
+    "Zak Surety": "Zak Surety",
+    "Zhang Anda": "Zhang Anda",
+    "Zhao Xintong": "Zhao Xintong",
+    "Zhou Yuelong": "Zhou Yuelong",
+}
+
+# %%
 odds = (
     pl.DataFrame(odds_list)
     .select("Name", "BestOdds", pl.exclude("Name", "BestOdds"))
+    .with_columns(pl.col("Name").replace(name_mapping))
     .sort("BestOdds")
 )
 odds.shape
