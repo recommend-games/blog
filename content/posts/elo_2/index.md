@@ -67,7 +67,7 @@ As mentioned, my code diligently carried out the Elo predictions and updates for
 
 TODO: Table
 
-TODO: notes on present and absent players. Maybe some sample probabilities about chosen pairings?
+TODO: notes on present and absent players. Maybe some sample probabilities about chosen pairings? Link to download full results.
 
 
 ## Elo ratings over time
@@ -96,13 +96,14 @@ TODO: comment
 
 TODO: Plot 20's
 
-TODO: comment
+TODO: comment; link to full results
 
 An interesting measure of dominance is the question of what player has spent the most time as highest rated. Here's the top 10:
 
 TODO: table (include first and last as columns)
 
-Finally, who had the highest rating ever? TODO. Maybe: what was the highest rated match?
+TODO: Link to full results. Finally, who had the highest rating ever? TODO. Maybe: what was the highest rated match?
+
 
 - Mention data source (https://api.snooker.org/, make sure to get attribution right)
   - Problems with availability, dates, all matches treated equal
@@ -121,7 +122,13 @@ Finally, who had the highest rating ever? TODO. Maybe: what was the highest rate
 - Highest ever rating
 
 
-# Predict outcome of 2025 World Championship
+# Predicting the 2025 World Snooker Champion
+
+I thought it would be a fun application to use those Elo ratings we calculated to predict who will win the current World Championship. For this, I've run a bunch of simulated tournaments. The idea is quite simple: for each of the first round pairings in the draw, I compare the current Elo ratings of those two players, convert them into a win probability as described above, and toss a virtual coin in order to determine who proceeds to the second round. We apply the same principal to that and all the following rounds, until the final coin for the final is tossed and the winner of that simulation run is determined. I've run a total of 10 million simulated tournaments and counted how often each player won a simulation. Here are the results:
+
+TODO: table of WC predictions. Add Elo and/or world ranking? Mention Ronnie here or above?
+
+Unsurprisingly, the order strongly correlated with the Elo ranking we've seen above, but it's not quite the same. E.g., TODO: example of players higher or lower ranked. Explain with harder and easier paths to the final. Should we include the pairings here?
 
 - Explain simulation
 - Result table
@@ -129,6 +136,20 @@ Finally, who had the highest rating ever? TODO. Maybe: what was the highest rate
 
 
 ## Compare to betting odds
+
+> Disclaimer: gambling is bad. TODO
+
+I'm personally not the gambling kind and wouldn't advice you to pick up that addictive habit either. But sport bets are an undeniably interesting data source for predictions, as you really need to put your money where your mouth is. That's why you often see betting odds discussed ahead of big sporting events: there's few models with comparable predictive accuracy. So I thought it's an interesting reality check for those simulations to compare those results to what gamblers are willing to bet on the snooker stars.
+
+First, we need briefly discuss how to convert those probabilities to odds. Let's say I offer you the following gamble: you pay me €1, then I toss a (fair) coin. Heads: I pay you back €2; tails: I keep your money. You probably intuitively know that the expected payout is €1, so you can take or leave the bet and wouldn't be better or worse off for it. Had I offered you a potential win of €2.10, you actually should take the bet; for a €1.90 stake you should definitely pass.
+
+The same basic idea applies to the odds quoted[^odds-quotes] in sport betting: The broker will quote odds like 5, meaning I could win €5 if I bet €1 (for a potential gain of €4). If I believe the event will occur with a 20% probability, my expected payout is exactly 1 – I should only take the bet if my believe in that event is higher (if you must take the bet at all). In other words: in order to convert between probabilities and odds, you just take the reciprocal. E.g., the win probability of TODO for TODO corresponds to odds of TODO, i.e., I'd expect to make money if someone offered longer odds and might be inclined to take the bet.
+
+So, I've taken a look at [oddschecker.com](https://www.oddschecker.com/snooker/world-championship/winner) to see what odds different brokers offer for different players to win the World Championship. These are the odds[^max-and-vig] as offered and how they compare to the odds implied by our simulations:
+
+TODO: Table. Include comparision. Discuss Ronnie again?
+
+I'd say, by and large those match quite well. Clearly, "the market" believes more in some players than our model, but the ballpark is right – with the exception of Ronnie O'Sullivan. He truely is a wildcard this year. TODO: is he playing?
 
 - Disclaimer
 - Present some odds from https://www.oddschecker.com/snooker/world-championship/winner
@@ -146,3 +167,5 @@ Finally, who had the highest rating ever? TODO. Maybe: what was the highest rate
 
 
 [^zero-sum]: Because we applied Elo's formula in its simplest form, all updates will be zero-sum, and the overall average Elo rating will stay fixed at 0.
+[^odds-quotes]: TODO: British and other styles.
+[^max-and-vig]: Note that I've only used the highest odds offered by any broker. If you were to place a bet, you'd always want to go with the provider who offers you the highest payout, so that number is the most relevant. It's also worth pointing out that when you sum up the probabilities implied by the odds, they will usually exceed 100%. That's because the odds are slightly shorter than they should be because the brooker wants their cut (also know as vigorish) too. Remember: the house always wins.
