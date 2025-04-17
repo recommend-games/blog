@@ -36,7 +36,7 @@ tags:
 
 ## Decades of data
 
-So, let's break off and finally calculate some Elo ratings. For this, [snooker.org](https://www.snooker.org/index.asp) kindly provided data of TODO matches from TODO events contested by TODO players, ranging from 1975 till last Wednesday, via their [API](https://api.snooker.org/). I've included as many matches as I could find, regardless of tour, ranking status or eligible player group, as long as they weren't team matches nor had any kind of inconsistency. For Elo calculations, it's important to sequence matches correctly, and some matches in the database weren't correctly labelled, but I did my best to get as clear data as possible. Note that I did not take frame score into account, but only cared about win/loss: since the match is stopped after a player reached the winning score and dead frames aren't played out, that difference has very little relevance to the predictions.
+So, let's break off and finally calculate some Elo ratings. For this, [snooker.org](https://www.snooker.org/index.asp) kindly provided data of 68,260 matches from 2,163 events contested by 4,212 players, ranging from 1975 till last Wednesday, via their [API](https://api.snooker.org/). I've included as many matches as I could find, regardless of tour, ranking status or eligible player group, as long as they weren't team matches nor had any kind of inconsistency. For Elo calculations, it's important to sequence matches correctly, and some matches in the database weren't correctly labelled, but I did my best to get as clear data as possible. Note that I did not take frame score into account, but only cared about win/loss: since the match is stopped after a player reached the winning score and dead frames aren't played out, that difference has very little relevance to the predictions.
 
 
 ## How Elo predicts the winners
@@ -49,16 +49,16 @@ As usual, we can calculate *B*'s chances via \\(p_B=1-p_A\\), so we won't need t
 
 \\[ r_A \leftarrow r_A + K (s_A - p_A), \\]
 
-where \\(K\\) is the update factor I've set to TODO for the purpose of this exercise since it's the value that yields the most accurate predictions. (*Much* more on this in the next article.)
+where \\(K\\) is the update factor I've set to 42 for the purpose of this exercise since it's the value that yields the most accurate predictions.[^42] (*Much* more on this in the next article.)
 
 
 ## Match by match: how ratings shift
 
-Let's look at some examples. Before the very first match in the database, TODO vs TODO on TODO, we didn't know anything about any player, so they all had the initial rating of 0 and, if you plug a rating difference of 0 into the formula, you'll see that we predict even chances of winning for both players (which makes perfect sense). TODO won that match, so we updated
+Let's look at some examples. Before the very first match in the database, Ray Reardon vs John Spencer on 1975-01-17, we didn't know anything about any player, so they all had the initial rating of 0 and, if you plug a rating difference of 0 into the formula, you'll see that we predict even chances of winning for both players (which makes perfect sense). John Spencer won that match, so we updated
 
-\\[ r_{TODO} \leftarrow 0 + K_{TODO} (1 - 0.5) = TODO. \\]
+\\[ r_{\text{JS}} \leftarrow 0 + 42 \cdot (1 - 0.5) = 21. \\]
 
-His opponent got his rating reduced by the same amount[^zero-sum]: \\(r_{TODO}\leftarrow TODO\\). I wrote a simple [Python script](TODO) to carry out these calculations for all TODO matches that followed. Let's take a look at one more match: the final of the most recent tournament, the 2025 Tour Championship, played between snooker legends John Higgins and Mark Selby, both with four world titles to their name. They went into the match with Elo ratings of TODO and TODO, respectively. This means we would've predicted TODO's win probability to be TODO. The match was eventually won by John Higgins, who gained \\( K_{TODO} \cdot (1 - TODO)\\) points, whilst Mark Selby lost the same amount, for a new (and current [TODO: verify]) rating of TODO and TODO, respectively.
+His opponent got his rating reduced by the same amount[^zero-sum]: \\(r_{\text{RR}}\leftarrow -21\\). I wrote a simple [Python script](https://gitlab.com/recommend.games/blog/-/blob/master/experiments/elo/Snooker%20data.py) to carry out these calculations for all 68,259 matches that followed. Let's take a look at one more match: the final of the most recent tournament, the 2025 Tour Championship, played between snooker legends John Higgins and Mark Selby, both with four world titles to their name. They went into the match with Elo ratings of 718.268161605361 and 714.542266994681, respectively. This means we would've predicted Higgins' win probability to be 50.53617878273073%. The match was indeed won by John Higgins, who gained \\( 42.01940669158428 \cdot (1 - 0.5053617878273073) = 20.784404\\) points, whilst Mark Selby lost the same amount, for a new (and current) rating of 739.0525656053612 and 693.7578629946814, respectively.
 
 
 ## Who's on top? Elo's current kings
@@ -166,6 +166,7 @@ I'd say, by and large those match quite well. Clearly, "the market" believes mor
 - Outlook
 
 
+[^42]: Seriously, it's not a Douglas Adams reference. The maths just worked out that way.
 [^zero-sum]: Because we applied Elo's formula in its simplest form, all updates will be zero-sum, and the overall average Elo rating will stay fixed at 0.
 [^odds-quotes]: TODO: British and other styles.
 [^max-and-vig]: Note that I've only used the highest odds offered by any broker. If you were to place a bet, you'd always want to go with the provider who offers you the highest payout, so that number is the most relevant. It's also worth pointing out that when you sum up the probabilities implied by the odds, they will usually exceed 100%. That's because the odds are slightly shorter than they should be because the brooker wants their cut (also know as vigorish) too. Remember: the house always wins.
