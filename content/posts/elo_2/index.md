@@ -78,7 +78,7 @@ As mentioned, my code diligently carried out the Elo predictions and updates for
 |    9 | Shaun Murphy   | 606.9 |    1225 |  2001-02-11 |
 |   10 | Ali Carter     | 605.2 |    1194 |  1997-03-25 |
 
-TODO: notes on present and absent players. Maybe some sample probabilities about chosen pairings? Link to download full results.
+TODO: Link to download full results. Compare to https://snooker-predictions.com/rankings.html ?
 
 
 ## Rising stars and fading legends
