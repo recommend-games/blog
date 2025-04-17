@@ -396,3 +396,36 @@ top_rated_players.write_csv(
     "results/snooker/elo_top_rated_players.csv",
     float_precision=1,
 )
+
+# %%
+for year in range(1970, 2021, 10):
+    start_date = date(year, 1, 1)
+    end_date = date(year + 10, 1, 1)
+    print(start_date, end_date)
+    player_df = (
+        long_hist.filter(pl.col("Date") >= start_date)
+        .filter(pl.col("Date") < end_date)
+        .group_by("ID")
+        .agg(pl.col("Elo").max())
+        .sort("Elo", descending=True)
+        .head(3)
+        .join(elo_df.lazy().select("ID", "Name"), on="ID", how="left")
+        .collect()
+    )
+
+    _, ax = plt.subplots()
+    plot_data = hist_elo.filter(pl.col("Date") >= start_date).filter(
+        pl.col("Date") < end_date
+    )
+    for id_, elo, name in player_df.iter_rows():
+        ax.step(
+            x=plot_data["Date"],
+            y=plot_data[str(id_)],
+            where="post",
+            label=f"{name} (max: {elo:.0f})",
+        )
+    ax.legend()
+    ax.grid(True)
+    ax.set_xlabel(None)
+    ax.set_ylabel("Elo")
+    plt.show()
