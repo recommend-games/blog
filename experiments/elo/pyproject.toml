@@ -17,6 +17,7 @@ scipy = "!= 1.14.1"
 scrapy = "*"
 seaborn = "*"
 statsmodels = "*"
+tabulate = "*"
 tqdm = "*"
 
 [tool.poetry.group.dev.dependencies]
