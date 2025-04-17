@@ -1,6 +1,6 @@
 ---
-title: Who will be the next World Snooker Champion?
-subtitle: "Elo, part 2: TODO"
+title: "Cue the maths: predicting snooker’s next champion with Elo"
+subtitle: "Elo, part 2: How maths, models and millions of simulations might tell us who lifts the trophy"
 slug: next-world-snooker-champion
 author: Markus Shepherd
 type: post
@@ -22,7 +22,7 @@ tags:
 - Comparison to betting odds
 
 
-# Intro
+# Welcome to the Crucible
 
 - World Snooker Championship!
   - Few words about snooker in general
@@ -32,14 +32,14 @@ tags:
   - Maybe make some money
 
 
-# Snooker Elo ratings
+# Building the model: Elo meets the baize
 
-## The data
+## Decades of data
 
 So, let's break off and finally calculate some Elo ratings. For this, [snooker.org](https://www.snooker.org/index.asp) kindly provided data of TODO matches from TODO events contested by TODO players, ranging from 1975 till last Wednesday, via their [API](https://api.snooker.org/). I've included as many matches as I could find, regardless of tour, ranking status or eligible player group, as long as they weren't team matches nor had any kind of inconsistency. For Elo calculations, it's important to sequence matches correctly, and some matches in the database weren't correctly labelled, but I did my best to get as clear data as possible. Note that I did not take frame score into account, but only cared about win/loss: since the match is stopped after a player reached the winning score and dead frames aren't played out, that difference has very little relevance to the predictions.
 
 
-## Elo's formula
+## How Elo predicts the winners
 
 To recap the actual calculations: all players start at an Elo rating of 0. (As mentioned before, it really could be any value, but we'll stick with the simplest one.) Using the ratings \\(r_A\\) and \\(r_b\\) before the match, we can predict *A*'s win probability \\(p_A\\) like this:
 
@@ -52,7 +52,7 @@ As usual, we can calculate *B*'s chances via \\(p_B=1-p_A\\), so we won't need t
 where \\(K\\) is the update factor I've set to TODO for the purpose of this exercise since it's the value that yields the most accurate predictions. (*Much* more on this in the next article.)
 
 
-## Examples
+## Match by match: how ratings shift
 
 Let's look at some examples. Before the very first match in the database, TODO vs TODO on TODO, we didn't know anything about any player, so they all had the initial rating of 0 and, if you plug a rating difference of 0 into the formula, you'll see that we predict even chances of winning for both players (which makes perfect sense). TODO won that match, so we updated
 
@@ -61,7 +61,7 @@ Let's look at some examples. Before the very first match in the database, TODO v
 His opponent got his rating reduced by the same amount[^zero-sum]: \\(r_{TODO}\leftarrow TODO\\). I wrote a simple [Python script](TODO) to carry out these calculations for all TODO matches that followed. Let's take a look at one more match: the final of the most recent tournament, the 2025 Tour Championship, played between snooker legends John Higgins and Mark Selby, both with four world titles to their name. They went into the match with Elo ratings of TODO and TODO, respectively. This means we would've predicted TODO's win probability to be TODO. The match was eventually won by John Higgins, who gained \\( K_{TODO} \cdot (1 - TODO)\\) points, whilst Mark Selby lost the same amount, for a new (and current [TODO: verify]) rating of TODO and TODO, respectively.
 
 
-## The ranking
+## Who's on top? Elo's current kings
 
 As mentioned, my code diligently carried out the Elo predictions and updates for every single match from 1975 till the 2025 World Championship Qualifiers, which ended on Wednesday. These are the ten currently highest rated player:
 
@@ -70,7 +70,7 @@ TODO: Table
 TODO: notes on present and absent players. Maybe some sample probabilities about chosen pairings? Link to download full results.
 
 
-## Elo ratings over time
+## Rising stars and fading legends
 
 It's fun to look back in time and check how players' ratings evolved over time: Who was the highest rated player of his time? When did his ratings rise and fall? Let's take a look across the decades:
 
@@ -122,7 +122,7 @@ TODO: Link to full results. Finally, who had the highest rating ever? TODO. Mayb
 - Highest ever rating
 
 
-# Predicting the 2025 World Snooker Champion
+# 10 Million Tournaments Later…
 
 I thought it would be a fun application to use those Elo ratings we calculated to predict who will win the current World Championship. For this, I've run a bunch of simulated tournaments. The idea is quite simple: for each of the first round pairings in the draw, I compare the current Elo ratings of those two players, convert them into a win probability as described above, and toss a virtual coin in order to determine who proceeds to the second round. We apply the same principal to that and all the following rounds, until the final coin for the final is tossed and the winner of that simulation run is determined. I've run a total of 10 million simulated tournaments and counted how often each player won a simulation. Here are the results:
 
@@ -135,7 +135,7 @@ Unsurprisingly, the order strongly correlated with the Elo ranking we've seen ab
 - How does this compare to Elo ranking – why are players in different order?
 
 
-## Compare to betting odds
+## How does the market compare? Bookies vs model
 
 > Disclaimer: gambling is bad. TODO
 
@@ -160,7 +160,7 @@ I'd say, by and large those match quite well. Clearly, "the market" believes mor
   - Mention Ronnie again
 
 
-# Conclusion
+# Final frame 🎱
 
 - Summary
 - Outlook
