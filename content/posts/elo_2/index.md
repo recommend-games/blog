@@ -10,22 +10,11 @@ tags:
   - Snooker
 ---
 
-# Outline
-
-- Intro to snooker
-  - Opening of the world championship
-- Explain Elo ratings with examples
-  - E.g., take a recent match and explain how points were exchanged
-- Maybe some statistics, such as #1 rated player over time?
-- Tournament simulation
-  - Win probabilities
-- Comparison to betting odds
-
-
 # Welcome to the Crucible
 
 - World Snooker Championship!
   - Few words about snooker in general
+  - Snooker is one of the most popular tabletop games
 - Application of Elo
   - Concrete examples
   - Predict winner
@@ -37,6 +26,8 @@ tags:
 ## Decades of data
 
 So, let's break off and finally calculate some Elo ratings. For this, [snooker.org](https://www.snooker.org/index.asp) kindly provided data of 68,260 matches from 2,163 events contested by 4,212 players, ranging from 1975 till last Wednesday, via their [API](https://api.snooker.org/). I've included as many matches as I could find, regardless of tour, ranking status or eligible player group, as long as they weren't team matches nor had any kind of inconsistency. For Elo calculations, it's important to sequence matches correctly, and some matches in the database weren't correctly labelled, but I did my best to get as clear data as possible. Note that I did not take frame score into account, but only cared about win/loss: since the match is stopped after a player reached the winning score and dead frames aren't played out, that difference has very little relevance to the predictions.
+
+<!-- TODO: mention that status (minor ranking vs world championship) or match length does not matter to the model -->
 
 
 ## How Elo predicts the winners
@@ -54,7 +45,7 @@ where \\(K\\) is the update factor I've set to 42 for the purpose of this exerci
 
 ## Match by match: how ratings shift
 
-Let's look at some examples. Before the very first match in the database, Ray Reardon vs John Spencer on 1975-01-17, we didn't know anything about any player, so they all had the initial rating of 0 and, if you plug a rating difference of 0 into the formula, you'll see that we predict even chances of winning for both players (which makes perfect sense). John Spencer won that match, so we updated
+Let's look at some examples. Before the very first match in the database, Ray Reardon vs John Spencer on 1975-01-17, we didn't know anything about any player, so they all had the initial rating of 0. If you plug a rating difference of 0 into the formula, you'll see that we predict even chances of winning for both players (which makes perfect sense). John Spencer won that match, so we updated
 
 \\[ r_{\text{JS}} \leftarrow 0 + 42 \cdot (1 - 0.5) = 21. \\]
 
@@ -93,7 +84,7 @@ The 1980's we undoubtably Steve Davis' years, who won six world championships. T
 
 {{< img src="elo_timeseries_1990" alt="The evolution of the Elo ratings of the best three players of the 1990's" >}}
 
-Much like Steve Davis dominated the 80's, Stephen Hendry dominated the next decade, winning seven of the ten world championships. The plot also quite clearly shows the change in generations when John Higgins overtook Stephen Hendry in 1998.
+Much like Steve Davis dominated the 80's, Stephen Hendry dominated the next decade, winning seven of the ten world championships. The plot also quite clearly shows the change in generations when John Higgins, the first of the "Class of '92", overtook Stephen Hendry in 1998.
 
 {{< img src="elo_timeseries_2000" alt="The evolution of the Elo ratings of the best three players of the 2000's" >}}
 
@@ -105,11 +96,11 @@ Maybe the first thing you'll notice in the 2010's is how much more often the rat
 
 {{< img src="elo_timeseries_2020" alt="The evolution of the Elo ratings of the best three players of the 2020's" >}}
 
-Judd Trump won more titles than any other player in this decade, reaching an all time high Elo rating of 837 in February 2021, though notably he's been struggling with the long distances during the world championship, "only" winning one so far in 2019. You might also notice how Ronnie O'Sullivan sharply dropped recently in his rating. This is because he lost a couple of matches in his last tournament and the withdrew from the next, which are counted as losses in my code. (If you've ever played games online you'll agree that players who rage quit should still suffer the full Elo penalty.) Snooker experts might have been curious about the most successful player of all times missing from the top 10 above, but now you know why that is.
+Judd Trump won more titles than any other player in this decade, reaching an all time high Elo rating of 837 in February 2021, though notably he's been struggling with the long distances during the world championship, "only" winning one so far in 2019. You might also notice how Ronnie O'Sullivan sharply dropped recently in his rating. This is because he lost a couple of matches in his last tournament and the withdrew from the next, which are counted as losses in my code. (If you've ever played games online you'll agree that players who rage quit should still suffer the full Elo penalty.)
 
 <!-- TODO: comment; link to full results; discuss why it's hard to choose constant K: the current value was picked mostly to work well with the current calendar, but back then very few tournaments were played. Reminder: Elo is strongest amongst an active community, but not directly comparable across time, games, and different implementations. Compare to snooker-predictions.org? -->
 
-An interesting measure of dominance is the question of what player has spent the most time as highest rated. Here's the top 10:
+Still, he's been the most successful player of all times and has been the highest rated for a total of 9.5 years, longer than anybody else. Here's the top 10 of the players who spent the most time at the top spot:
 
 | Name              |   Months | First      | Last       |
 |:------------------|---------:|:----------:|:----------:|
@@ -126,29 +117,12 @@ An interesting measure of dominance is the question of what player has spent the
 
 Obviously, it was much easier to remain highest rated for a long time when there were much fewer events per year, but I do believe this list is a pretty representative hall of fame of snooker players.
 
-<!-- TODO: Link to full results. Finally, who had the highest rating ever? TODO. Maybe: what was the highest rated match? Biggest upset? -->
-
-
-- Mention data source (https://api.snooker.org/, make sure to get attribution right)
-  - Problems with availability, dates, all matches treated equal
-- Mention choice of K (tease details for next article)
-- Current top 10
-  - Example of point exchange, e.g., during last final
-  - Compare to https://snooker-predictions.com/rankings.html
-  - Mention retired players
-- Plot point evolution over time of Class of '92
-  - Mention problem with rating Ronnie O'Sullivan right
-- Alternative: Plot top three players (by max score) for each decade?
-- Highest rated player over time
-  - Maybe early year and recent changes in leaders
-  - Mention how K (there it is again!) is geared towards modern event calender
-- Who has spent most time as highest rated player?
-- Highest ever rating
+<!-- TODO: Link to full results. Maybe: what was the highest rated match? Biggest upset? -->
 
 
 # 10 Million Tournaments Later…
 
-I thought it would be a fun application to use those Elo ratings we calculated to predict who will win the current World Championship. For this, I've run a bunch of simulated tournaments. The idea is quite simple: for each of the first round pairings in the draw, I compare the current Elo ratings of those two players, convert them into a win probability as described above, and toss a virtual coin in order to determine who proceeds to the second round. We apply the same principal to that and all the following rounds, until the final coin for the final is tossed and the winner of that simulation run is determined. I've run a total of 10 million simulated tournaments and counted how often each player won a simulation. Here are the results:
+I thought it would be a fun application to use those Elo ratings we calculated to predict who will win the current world championship. For this, I've run a bunch of simulated tournaments. The idea is quite simple: for each of the first round pairings in the draw, I compare the current Elo ratings of those two players, convert them into a win probability as described above, and toss a virtual coin in order to determine who proceeds to the second round. We apply the same principal to that and all the following rounds, until the final coin for the final is tossed and the winner of that simulation run is determined. I've run a total of 10 million simulated tournaments and counted how often each player won a simulation. Here are the results:
 
 | Player            |   Elo | Simulation probability   |
 |:------------------|------:|-------------------------:|
@@ -185,11 +159,9 @@ I thought it would be a fun application to use those Elo ratings we calculated t
 | Jak Jones         | 379.3 |  0.03%                   |
 | Ronnie O'Sullivan | 345.2 |  0.03%                   |
 
-Unsurprisingly, the order strongly correlated with the Elo ranking we've seen above, but it's not quite the same. E.g., TODO: example of players higher or lower ranked. Explain with harder and easier paths to the final. Should we include the pairings here?
+Unsurprisingly, the order strongly correlated with the Elo ranking we've seen above, but it's not quite the same. E.g., defending champion Kyren Wilson is the third highest rated player according to Elo, but only fifth favourite to win the tournament again. How come? The answer is that there are easier and harder paths to the final. Kyren Wilson faces the relatively highly rated Lei Peifan in the first round, whilst the two players which overtook him, Mark Selby and Zhao Xintong, face the relatively lowly rated Ben Woollaston and Jak Jones, respectively.
 
-- Explain simulation
-- Result table
-- How does this compare to Elo ranking – why are players in different order?
+Let's make some money with this knowledge, shall we? 💸
 
 
 ## How does the market compare? Bookies vs model
@@ -200,7 +172,7 @@ I'm personally not the gambling kind and wouldn't advice you to pick up that add
 
 First, we need briefly discuss how to convert those probabilities to odds. Let's say I offer you the following gamble: you pay me €1, then I toss a (fair) coin. Heads: I pay you back €2; tails: I keep your money. You probably intuitively know that the expected payout is €1, so you can take or leave the bet and wouldn't be better or worse off for it. Had I offered you a potential win of €2.10, you actually should take the bet; for a €1.90 stake you should definitely pass.
 
-The same basic idea applies to the odds quoted[^odds-quotes] in sport betting: The broker will quote odds like 5, meaning I could win €5 if I bet €1 (for a potential gain of €4). If I believe the event will occur with a 20% probability, my expected payout is exactly 1 – I should only take the bet if my believe in that event is higher (if you must take the bet at all). In other words: in order to convert between probabilities and odds, you just take the reciprocal. E.g., the win probability of TODO for TODO corresponds to odds of TODO, i.e., I'd expect to make money if someone offered longer odds and might be inclined to take the bet.
+The same basic idea applies to the odds quoted[^odds-quotes] in sport betting: The broker will quote odds like 5, meaning I could win €5 if I bet €1 (for a potential gain of €4). If I believe the event will occur with a 20% probability, my expected payout is exactly 1 – I should only take the bet if my believe in that event is higher (if you must take the bet at all). In other words: in order to convert between probabilities and odds, you just take the reciprocal. E.g., the win probability of 13.14% for John Higgins corresponds to odds of \\(1/0.1314=7.61\\), i.e., I'd expect to make money if someone offered longer odds and might be inclined to take the bet.
 
 So, I've taken a look at [oddschecker.com](https://www.oddschecker.com/snooker/world-championship/winner) to see what odds different brokers offer for different players to win the World Championship. These are the odds[^max-and-vig] as offered and how they compare to the odds implied by our simulations:
 
@@ -239,24 +211,23 @@ So, I've taken a look at [oddschecker.com](https://www.oddschecker.com/snooker/w
 | Jak Jones         |           3642.99 |         127.00 |     -3515.99 |
 | Ronnie O'Sullivan |           3703.70 |           8.50 |     -3695.20 |
 
-I'd say, by and large those match quite well. Clearly, "the market" believes more in some players than our model, but the ballpark is right – with the exception of Ronnie O'Sullivan. He truely is a wildcard this year. TODO: is he playing?
+I'd say, by and large those match quite well. Clearly, "the market" believes more in some players than our model, but the ballpark is right, at least for the highest rated players. (Low probabilities correspond to hugh odds, which brokers rarely are willing to offer.) The most notable exception is Ronnie O'Sullivan: as discussed before, our model rates him lowest amongst all participants, but he's still one of the favourites to win according to the bookmakers – even though he hadn't even confirmed his participation until a day before the opening match.
 
-- Disclaimer
-- Present some odds from https://www.oddschecker.com/snooker/world-championship/winner
-  - Explain how to read / convert odds
-- Convert our winning probabilities to odds
-  - Where could you make money?
-  - Disclaimer!
-  - Mention Ronnie again
+I wouldn't bet my money on him, but as I said: I'm not the gambling kind. 🤷
+
+<!-- TODO: link to full results -->
 
 
 # Final frame 🎱
 
-- Summary
-- Outlook
+I hope I made up for the absence of concrete examples from the last article. I'm certainly more excited than ever for 17 days of world class snooker. We'll see on May 5th if my predictions were worth anything.
+
+The next Elo article will finally drill deeper into the often teased nuances of choosing \\(K\\) correctly. We'll then use this knowledge to exactly quantify what's the ratio between luck and skills in games. It'll get properly scientific! 🧑‍🔬
+
+*As always, you can find all the code for the simulations etc from [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/elo).*
 
 
 [^42]: Seriously, it's not a Douglas Adams reference. The maths just worked out that way.
 [^zero-sum]: Because we applied Elo's formula in its simplest form, all updates will be zero-sum, and the overall average Elo rating will stay fixed at 0.
-[^odds-quotes]: TODO: British and other styles.
+[^odds-quotes]: There are different ways to quote odds. The one I'm using for this article is call the decimal or European style, which most easily translates to probabilities. The fractional or British style (which is more common in snooker bets for obvious reasons) quotes the potential win as a fraction. E.g., decimal odds of 5.00 would be quoted as 4/1 (or simply 4) in fractional style.
 [^max-and-vig]: Note that I've only used the highest odds offered by any broker. If you were to place a bet, you'd always want to go with the provider who offers you the highest payout, so that number is the most relevant. It's also worth pointing out that when you sum up the probabilities implied by the odds, they will usually exceed 100%. That's because the odds are slightly shorter than they should be because the brooker wants their cut (also know as vigorish) too. Remember: the house always wins.
