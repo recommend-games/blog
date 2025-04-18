@@ -12,13 +12,9 @@ tags:
 
 # Welcome to the Crucible
 
-- World Snooker Championship!
-  - Few words about snooker in general
-  - Snooker is one of the most popular tabletop games
-- Application of Elo
-  - Concrete examples
-  - Predict winner
-  - Maybe make some money
+This blog is usually all about board games, but let's stretch the definition just a little: snooker is, after all, one of the most widely followed tabletop games in the world. And with the World Championship kicking off at the Crucible Theatre in Sheffield, I couldn't resist the excuse to dive into something a bit different.
+
+In the [last article]({{<ref "posts/elo_1/index.md">}}), we looked at how Elo ratings can be used to measure player strength over time. This time, we’ll take it a step further: using historical match data, a bit of Python, and a lot of simulated tournaments, we’ll try to predict who’s most likely to lift the trophy this year. We’ll also compare our predictions to what the betting markets say – and see whether the wisdom of the crowd agrees with the cold logic of the model.
 
 
 # Building the model: Elo meets the baize
