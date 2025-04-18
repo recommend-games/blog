@@ -21,14 +21,21 @@ import seaborn as sns
 from datetime import date, timedelta
 from elo.optimal_k import approximate_optimal_k
 from elo.elo_ratings import calculate_elo_ratings
+from pathlib import Path
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 
 jupyter_black.load()
 pl.Config.set_tbl_rows(200)
+sns.set_style("dark")
 
 seed = 13
 elo_scale = 400
+
+# %%
+plot_dir = (Path(".") / "plots").resolve()
+plot_dir.mkdir(parents=True, exist_ok=True)
+plot_dir
 
 # %% [markdown]
 # # General EDA
@@ -398,6 +405,13 @@ top_rated_players.write_csv(
 )
 
 # %%
+line_styles = ("dashed", "dashdot", "dotted")
+colors = ("crimson", "purple", "darkblue")
+top_n_players = 3
+
+assert len(line_styles) == top_n_players
+assert len(colors) == top_n_players
+
 for year in range(1970, 2021, 10):
     start_date = date(year, 1, 1)
     end_date = date(year + 10, 1, 1)
@@ -408,7 +422,7 @@ for year in range(1970, 2021, 10):
         .group_by("ID")
         .agg(pl.col("Elo").max())
         .sort("Elo", descending=True)
-        .head(3)
+        .head(top_n_players)
         .join(elo_df.lazy().select("ID", "Name"), on="ID", how="left")
         .collect()
     )
@@ -417,15 +431,31 @@ for year in range(1970, 2021, 10):
     plot_data = hist_elo.filter(pl.col("Date") >= start_date).filter(
         pl.col("Date") < end_date
     )
-    for id_, elo, name in player_df.iter_rows():
+    for (id_, elo, name), line_style, color in zip(
+        player_df.iter_rows(),
+        line_styles,
+        colors,
+    ):
         ax.step(
             x=plot_data["Date"],
             y=plot_data[str(id_)],
             where="post",
+            linestyle=line_style,
+            color=color,
             label=f"{name} (max: {elo:.0f})",
         )
     ax.legend()
     ax.grid(True)
+    min_max_year = plot_data.select(
+        min_year=pl.col("Date").dt.year().min(),
+        max_year=pl.col("Date").dt.year().max(),
+    )
+    min_year = min_max_year.item(0, 0)
+    max_year = min_max_year.item(0, 1)
+    ax.set_title(f"Highest rated players {min_year}–{max_year}")
     ax.set_xlabel(None)
     ax.set_ylabel("Elo")
+    plt.tight_layout()
+    plt.savefig(plot_dir / f"elo_timeseries_{year}.png")
+    plt.savefig(plot_dir / f"elo_timeseries_{year}.svg")
     plt.show()
