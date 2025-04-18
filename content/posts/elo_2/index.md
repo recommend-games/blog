@@ -1,5 +1,5 @@
 ---
-title: "Cue the maths: predicting snooker’s next champion with Elo"
+title: "Cue the maths: predicting snooker's next champion with Elo"
 subtitle: "Elo, part 2: How maths, models and millions of simulations might tell us who lifts the trophy"
 slug: world-snooker-champion-2025
 author: Markus Shepherd
@@ -14,19 +14,19 @@ tags:
 
 This blog is usually all about board games, but let's stretch the definition just a little: snooker is, after all, one of the most widely followed tabletop games in the world. And with the World Championship kicking off at the Crucible Theatre in Sheffield, I couldn't resist the excuse to dive into something a bit different.
 
-In the [last article]({{<ref "posts/elo_1/index.md">}}), we looked at how Elo ratings can be used to measure player strength over time. This time, we’ll take it a step further: using historical match data, a bit of Python, and a lot of simulated tournaments, we’ll try to predict who’s most likely to lift the trophy this year. We’ll also compare our predictions to what the betting markets say – and see whether the wisdom of the crowd agrees with the cold logic of the model.
+In the [last article]({{<ref "posts/elo_1/index.md">}}), we looked at how Elo ratings can be used to measure player strength over time. This time, we'll take it a step further: using historical match data, a bit of Python, and a lot of simulated tournaments, we'll try to predict who's most likely to lift the trophy this year. We'll also compare our predictions to what the betting markets say – and see whether the wisdom of the crowd agrees with the cold logic of the model.
 
 
 # Building the model: Elo meets the baize
 
 ## Decades of data
 
-So, let's break off and finally calculate some Elo ratings. For this, [snooker.org](https://www.snooker.org/index.asp) kindly provided data of 68,260 matches from 2,163 events contested by 4,212 players, ranging from 1975 till last Wednesday, via their [API](https://api.snooker.org/). I've included as many matches as I could find, regardless of tour, ranking status or eligible player group, as long as they weren't team matches nor had any kind of inconsistency. For Elo calculations, it's important to sequence matches correctly, and some matches in the database weren't correctly labelled, but I did my best to get as clear data as possible. Note that I did not take frame score into account, but only cared about win/loss: since the match is stopped after a player reached the winning score and dead frames aren’t played out, so the exact scoreline has little bearing on predictions.
+So, let's break off and finally calculate some Elo ratings. For this, [snooker.org](https://www.snooker.org/index.asp) kindly provided data of 68,260 matches from 2,163 events contested by 4,212 players, ranging from 1975 till last Wednesday, via their [API](https://api.snooker.org/). I've included as many matches as I could find, regardless of tour, ranking status or eligible player group, as long as they weren't team matches nor had any kind of inconsistency. For Elo calculations, it's important to sequence matches correctly, and some matches in the database weren't correctly labelled, but I did my best to get as clear data as possible. Note that I did not take frame score into account, but only cared about win/loss: since the match is stopped after a player reached the winning score and dead frames aren't played out, the exact scoreline has little bearing on predictions.[^snooker-predictions]
 
 
 ## How Elo predicts the winners
 
-To recap the actual calculations: all players start at an Elo rating of 0. (As mentioned before, it really could be any value, but we'll stick with the simplest one.) Using the ratings \\(r_A\\) and \\(r_b\\) before the match, we can predict *A*'s win probability \\(p_A\\) like this:
+To recap the actual calculations: all players start at an Elo rating of 0. (As mentioned before, it really could be any value, but we'll stick with the simplest one.) Using the ratings \\(r_A\\) and \\(r_B\\) before the match, we can predict *A*'s win probability \\(p_A\\) like this:
 
 \\[ p_A = \frac{1}{1 + 10^{-(r_A - r_B) / 400}}. \\]
 
@@ -43,12 +43,14 @@ Let's look at some examples. Before the very first match in the database, Ray Re
 
 \\[ r_{\text{JS}} \leftarrow 0 + 42 \cdot (1 - 0.5) = 21. \\]
 
-His opponent got his rating reduced by the same amount[^zero-sum]: \\(r_{\text{RR}}\leftarrow-21\\). I wrote a simple [Python script](https://gitlab.com/recommend.games/blog/-/blob/master/experiments/elo/Snooker%20data.py) to carry out these calculations for all 68,259 matches that followed. Let's take a look at one more match: the final of the most recent tournament, the 2025 Tour Championship, played between snooker legends John Higgins and Mark Selby, both with four world titles to their name. They went into the match with Elo ratings of 718.3 and 714.5, respectively. This means we would've predicted Higgins' win probability to be 50.5%. The match was indeed won by John Higgins, who gained \\(42\cdot(1-0.505)=20.8\\) points, whilst Mark Selby lost the same amount, for a new (and current) rating of 739.0 and 693.7, respectively.
+His opponent got his rating reduced by the same amount[^zero-sum]: \\(r_{\text{RR}}\leftarrow-21\\). I wrote a simple [Python script](https://gitlab.com/recommend.games/blog/-/blob/master/experiments/elo/Snooker%20data.py) to carry out these calculations for all 68,259 matches that followed.
+
+Let's take a look at one more match: the final of the most recent tournament, the 2025 Tour Championship, played between snooker legends John Higgins and Mark Selby, both with four world titles to their name. They went into the match with Elo ratings of 718.3 and 714.5, respectively. This means we would've predicted Higgins' win probability to be 50.5%. The match was indeed won by John Higgins, who gained \\(42\cdot(1-0.505)=20.8\\) points, whilst Mark Selby lost the same amount, for a new (and current) rating of 739.0 and 693.7, respectively.
 
 
 ## Who's on top? Elo's current kings
 
-As mentioned, my code diligently carried out the Elo predictions and updates for every single match from 1975 till the 2025 World Championship Qualifiers, which ended on Wednesday. These are the ten currently highest rated player:
+As mentioned, my code diligently carried out the Elo predictions and updates for every single match from 1975 till the 2025 World Championship Qualifiers earlier this week. These are the ten currently highest rated player:
 
 | Rank | Name           |   Elo | Matches | First match |
 |-----:|:---------------|------:|--------:|:-----------:|
@@ -72,6 +74,8 @@ By winning the 2025 Tour Championship, John Higgins claimed back the top spot he
 
 It's fun to look back in time and check how players' ratings evolved over time: Who was the highest rated player of his time? When did his ratings rise and fall? Let's take a look across the decades:
 
+<!-- TODO: Link to full results -->
+
 {{< img src="elo_timeseries_1980" alt="The evolution of the Elo ratings of the best three players of the 1980's" >}}
 
 The 1980's we undoubtably Steve Davis' years, who won six world championships. The only way was up for him. It's also noteworthy how teenager Stephen Hendry rose to prominence.
@@ -82,7 +86,7 @@ Just as Steve Davis dominated the 80's, Stephen Hendry dominated the next decade
 
 {{< img src="elo_timeseries_2000" alt="The evolution of the Elo ratings of the best three players of the 2000's" >}}
 
-The first decade in the new millennium were strongly influenced by the other two members of the "Class of '92": Ronnie O'Sullivan and Mark Williams.
+The first decade in the new millennium was strongly influenced by the other two members of the "Class of '92": Ronnie O'Sullivan and Mark Williams.
 
 {{< img src="elo_timeseries_2010" alt="The evolution of the Elo ratings of the best three players of the 2010's" >}}
 
@@ -90,11 +94,11 @@ Maybe the first thing you'll notice in the 2010's is how much more often the rat
 
 {{< img src="elo_timeseries_2020" alt="The evolution of the Elo ratings of the best three players of the 2020's" >}}
 
-Judd Trump won more titles than any other player in this decade, reaching an all time high Elo rating of 837 in February 2021, though notably he's been struggling with the long distances during the world championship, "only" winning one so far in 2019. You might also notice how Ronnie O'Sullivan sharply dropped recently in his rating. This is because he lost a couple of matches in his last tournament and then withdrew from the next, which are counted as losses in my code. (If you've ever played games online you'll agree that players who rage quit should still suffer the full Elo penalty.)
+Judd Trump won more titles than any other player in recent years, reaching an all time high Elo rating of 837 in February 2021, though notably he's been struggling with the long distances during the World Championship, "only" winning one so far in 2019.
 
-<!-- TODO: Link to full results -->
+You might also notice how Ronnie O'Sullivan sharply dropped recently in his rating. This is because he lost a couple of matches in his last tournament and then withdrew from the next, which are counted as losses in my code. (If you've ever played games online you'll agree that players who rage quit should still suffer the full Elo penalty.) Still, he's the most successful player of all times and has been rated highest for a total of 9.5 years, longer than anybody else.
 
-Still, he's been the most successful player of all times and has been the highest rated for a total of 9.5 years, longer than anybody else. Here's the top 10 of the players who spent the most time at the top spot:
+Here's the top 10 of the players who spent the most time at the top spot:
 
 | Name              |   Months | First      | Last       |
 |:------------------|---------:|:----------:|:----------:|
@@ -113,12 +117,12 @@ Still, he's been the most successful player of all times and has been the highes
 
 Obviously, it was much easier to remain highest rated for a long time when there were much fewer events per year, but I do believe this list is a pretty representative hall of fame of snooker players.
 
-One final comment on the historical view of Elo ratings: you might have noticed that the values have generally increased over time. There's a number of factors at play – mostly the fact that there are a lot more players and matches these days, which give the top players more opportunities to collect points from weaker opponents. Remember that we chose \\(K\\) such that it the Elo system would have the best predictive power. Since the vast majority of the matches in the dataset were played in the last two decades or so, the ratings are tuned with a strong recency bias. Interpret historical Elo ratings with a grain of salt and remember that Elo is most descriptive within an active community of players.
+One final comment on the historical view of Elo ratings: you might have noticed that the values have generally increased over time. There's a number of factors at play – mostly the fact that there are a lot more players and matches these days, which give the top players more opportunities to collect points from weaker opponents. Remember that we chose \\(K\\) such that it the Elo system would have the best predictive power. Since the vast majority of the matches in the dataset were played in the last two decades or so, the ratings are tuned with a strong recency bias. Interpret historical Elo ratings with caution and remember that Elo is most descriptive within an active community of players.
 
 
 # 10 Million Tournaments Later…
 
-I thought it would be a fun application to use those Elo ratings we calculated to predict who will win the current world championship. For this, I've run a bunch of simulated tournaments. The idea is quite simple: for each of the first round pairings in the draw, I compare the current Elo ratings of those two players, convert them into a win probability as described above, and toss a virtual coin in order to determine who proceeds to the second round. We apply the same principle to that and all the following rounds, until the final coin for the final is tossed and the winner of that simulation run is determined. I've run a total of 10 million simulated tournaments and counted how often each player won a simulation. Here are the results:
+I thought it would be a fun application to use those Elo ratings we calculated to predict who will win the current World Championship. For this, I've run a bunch of simulated tournaments. The idea is quite simple: for each of the first round pairings in the draw, I compare the current Elo ratings of those two players, convert them into a win probability as described above, and toss a virtual coin in order to determine who proceeds to the second round. We apply the same principle to that and all the following rounds, until the final coin for the final is tossed and the winner of that simulation run is determined. I've run a total of 10 million simulated tournaments and counted how often each player won a simulation. Here are the results:
 
 | Player            |   Elo | Simulation probability   |
 |:------------------|------:|-------------------------:|
@@ -223,6 +227,7 @@ The next Elo article will finally drill deeper into the often teased nuances of 
 *As always, you can find all the code for the simulations etc from [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/elo).*
 
 
+[^snooker-predictions]: There's a number of different decisions one needs to make for such a system, e.g., what matches to include, how to score them, the ubiquitous choice of \\(K\\), etc. If you want to compare my results with a different approach, take a look at [snooker-predictions.com](https://snooker-predictions.com/rankings.html).
 [^42]: Seriously, it's not a Douglas Adams reference. The maths just worked out that way.
 [^zero-sum]: Because we applied Elo's formula in its simplest form, all updates will be zero-sum, and the overall average Elo rating will stay fixed at 0.
 [^odds-quotes]: There are different ways to quote odds. The one I'm using for this article is called the decimal or European style, which most easily translates to probabilities. The fractional or British style (which is more common in snooker bets for obvious reasons) quotes the potential win as a fraction. E.g., decimal odds of 5.00 would be quoted as 4/1 (or simply 4) in fractional style.
