@@ -85,27 +85,23 @@ TODO: Link to download full results. Compare to https://snooker-predictions.com/
 
 It's fun to look back in time and check how players' ratings evolved over time: Who was the highest rated player of his time? When did his ratings rise and fall? Let's take a look across the decades:
 
-TODO: Plot 70's
+{{< img src="elo_timeseries_1980" alt="The evolution of the Elo ratings of the best three players of the 1980's" >}}
 
 TODO: comment
 
-TODO: Plot 80's
+{{< img src="elo_timeseries_1990" alt="The evolution of the Elo ratings of the best three players of the 1990's" >}}
 
 TODO: comment
 
-TODO: Plot 90's
+{{< img src="elo_timeseries_2000" alt="The evolution of the Elo ratings of the best three players of the 2000's" >}}
 
 TODO: comment
 
-TODO: Plot 00's
+{{< img src="elo_timeseries_2010" alt="The evolution of the Elo ratings of the best three players of the 2010's" >}}
 
 TODO: comment
 
-TODO: Plot 10's
-
-TODO: comment
-
-TODO: Plot 20's
+{{< img src="elo_timeseries_2020" alt="The evolution of the Elo ratings of the best three players of the 2020's" >}}
 
 TODO: comment; link to full results; discuss why it's hard to choose constant K: the current value was picked mostly to work well with the current calendar, but back then very few tournaments were played. Reminder: Elo is strongest amongst an active community, but not directly comparable across time, games, and different implementations. Compare to snooker-predictions.org?
 
