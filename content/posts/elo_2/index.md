@@ -1,7 +1,7 @@
 ---
 title: "Cue the maths: predicting snooker’s next champion with Elo"
 subtitle: "Elo, part 2: How maths, models and millions of simulations might tell us who lifts the trophy"
-slug: next-world-snooker-champion
+slug: world-snooker-champion-2025
 author: Markus Shepherd
 type: post
 date: 2025-04-19T12:00:00+03:00
