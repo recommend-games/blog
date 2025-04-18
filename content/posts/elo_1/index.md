@@ -1,13 +1,13 @@
 ---
 title: Elo ratings explained
-subtitle: How to measure players' skills in games
+subtitle: "Elo, part 1: How to measure players' skills in games"
 slug: elo-ratings-explained
 author: Markus Shepherd
 type: post
 date: 2025-04-14T23:07:10+03:00
 tags:
   - Elo rating
-  - Snooker
+  - Logistic regression
 ---
 
 > Chance in games is like seasoning in food — it's all about the right amount. Just imagine a life without chance, where everything could be planned out strategically. That would get boring over time. In a game, I want to have experiences — I want adventure. A good game is like a miniature life, one where I can make mistakes, enjoy a streak of bad or good luck, and still recover. But you shouldn't be at the mercy of randomness. There should be ways to compensate — like a friend of mine in CATAN, who always complains about his bad luck, prompting others to treat him more kindly and rarely target him with the robber. In the end, he often wins — to everyone's surprise. \

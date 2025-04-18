@@ -22,11 +22,12 @@ from elo.elo_ratings import elo_probability
 from tqdm import trange
 
 jupyter_black.load()
+pl.Config.set_tbl_rows(100)
 
 seed = 13
 rng = np.random.default_rng(seed)
 elo_scale = 400
-num_simulations = 1_000_000
+num_simulations = 10_000_000
 
 # %%
 players = pl.read_csv("results/snooker/elo_ranking.csv")
@@ -38,51 +39,38 @@ players.head(10)
 # %%
 draw = [
     "Kyren Wilson",
-    "",
+    "Lei Peifan",
     "Jak Jones",
-    "",
+    "Zhao Xintong",
     "Neil Robertson",
-    "",
+    "Chris Wakelin",
     "Mark Allen",
-    "",
+    "Fan Zhengyi",
     "Ronnie O'Sullivan",
-    "",
+    "Ali Carter",
     "Zhang Anda",
-    "",
+    "Pang Junxu",
     "Si Jiahui",
-    "",
+    "David Gilbert",
     "Mark Selby",
-    "",
+    "Ben Woollaston",
     "John Higgins",
-    "",
+    "Joe O'Connor",
     "Xiao Guodong",
-    "",
+    "Matthew Selt",
     "Barry Hawkins",
-    "",
+    "Hossein Vafaei",
     "Mark Williams",
-    "",
+    "Wu Yize",
     "Luca Brecel",
-    "",
+    "Ryan Day",
     "Ding Junhui",
-    "",
+    "Zak Surety",
     "Shaun Murphy",
-    "",
+    "Daniel Wells",
     "Judd Trump",
-    "",
+    "Zhou Yuelong",
 ]
-
-# %%
-seeded_players = frozenset(draw) - {""}
-other_players = (
-    players.filter(~pl.col("Name").is_in(seeded_players))
-    .sort("Elo", descending=True, nulls_last=True)
-    .head(32 - len(seeded_players))
-)
-len(other_players)
-
-# %%
-draw[1::2] = other_players["Name"]
-draw
 
 
 # %%
@@ -140,4 +128,38 @@ results = full_simulation(
 # %%
 for name, count in results.most_common():
     prob = count / num_simulations
-    print(f"{prob:6.2%}: {name}")
+    odds = 1 / prob
+    print(f"{prob:6.2%} ({odds:7.2f}): {name}")
+
+# %%
+betting_odds = pl.read_csv("results/snooker/wsc_odds.csv")
+betting_odds.shape
+
+# %%
+full_result = (
+    pl.DataFrame({"Name": results.keys(), "Wins": results.values()})
+    .with_columns(Prob=pl.col("Wins") / num_simulations)
+    .drop("Wins")
+    .with_columns(Odds=1 / pl.col("Prob"))
+    .join(players.select("Name", "Elo"), on="Name", how="left")
+    .join(betting_odds.select("Name", "BestOdds"), on="Name", how="left")
+    .with_columns(ExpectedWin=pl.col("BestOdds") - pl.col("Odds"))
+    .sort("Odds")
+    .select(
+        pl.col("Name").alias("Player"),
+        pl.col("Elo").round(1),
+        pl.format("{}%", (pl.col("Prob") * 100).round(2)).alias(
+            "Simulation probability"
+        ),
+        pl.col("Odds").round(2).alias("Simulation odds"),
+        pl.col("BestOdds").round(2).alias("Betting odds"),
+        pl.col("ExpectedWin").round(2).alias("Difference"),
+    )
+)
+full_result.shape
+
+# %%
+full_result
+
+# %%
+full_result.write_csv("results/snooker/wsc_predictions.csv")
