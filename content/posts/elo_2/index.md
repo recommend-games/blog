@@ -204,7 +204,40 @@ The same basic idea applies to the odds quoted[^odds-quotes] in sport betting: T
 
 So, I've taken a look at [oddschecker.com](https://www.oddschecker.com/snooker/world-championship/winner) to see what odds different brokers offer for different players to win the World Championship. These are the odds[^max-and-vig] as offered and how they compare to the odds implied by our simulations:
 
-TODO: Table. Include comparision. Discuss Ronnie again?
+| Player            |   Simulation odds |   Betting odds |   Difference |
+|:------------------|------------------:|---------------:|-------------:|
+| John Higgins      |              7.61 |          16.20 |         8.59 |
+| Judd Trump        |              7.92 |           5.12 |        -2.80 |
+| Mark Selby        |              7.94 |           6.50 |        -1.44 |
+| Zhao Xintong      |              9.45 |          17.00 |         7.55 |
+| Kyren Wilson      |             10.46 |          10.30 |        -0.16 |
+| Ali Carter        |             19.24 |         137.00 |       117.76 |
+| Neil Robertson    |             21.08 |          17.00 |        -4.08 |
+| Barry Hawkins     |             22.48 |          29.00 |         6.52 |
+| Shaun Murphy      |             28.41 |          26.00 |        -2.41 |
+| Joe O'Connor      |             28.48 |          69.00 |        40.52 |
+| Xiao Guodong      |             43.98 |          88.00 |        44.02 |
+| Hossein Vafaei    |             44.24 |         225.00 |       180.76 |
+| Wu Yize           |             48.84 |          64.00 |        15.16 |
+| David Gilbert     |             65.32 |         167.00 |       101.68 |
+| Zak Surety        |             69.14 |         265.00 |       195.86 |
+| Mark Allen        |             72.02 |          25.00 |       -47.02 |
+| Ding Junhui       |             73.62 |          41.00 |       -32.62 |
+| Pang Junxu        |             74.79 |         126.00 |        51.21 |
+| Ryan Day          |             89.73 |         490.00 |       400.27 |
+| Luca Brecel       |            111.24 |          54.00 |       -57.24 |
+| Zhou Yuelong      |            121.72 |         314.00 |       192.28 |
+| Matthew Selt      |            126.09 |         598.00 |       471.91 |
+| Lei Peifan        |            156.10 |         470.00 |       313.90 |
+| Fan Zhengyi       |            166.10 |         323.00 |       156.90 |
+| Ben Woollaston    |            237.23 |         843.00 |       605.77 |
+| Chris Wakelin     |            337.92 |         235.00 |      -102.92 |
+| Mark Williams     |            436.80 |          64.00 |      -372.80 |
+| Si Jiahui         |            485.60 |          54.00 |      -431.60 |
+| Daniel Wells      |            516.10 |         980.00 |       463.90 |
+| Zhang Anda        |            587.96 |          83.00 |      -504.96 |
+| Jak Jones         |           3642.99 |         127.00 |     -3515.99 |
+| Ronnie O'Sullivan |           3703.70 |           8.50 |     -3695.20 |
 
 I'd say, by and large those match quite well. Clearly, "the market" believes more in some players than our model, but the ballpark is right – with the exception of Ronnie O'Sullivan. He truely is a wildcard this year. TODO: is he playing?
 

@@ -141,9 +141,20 @@ full_result = (
     .with_columns(Prob=pl.col("Wins") / num_simulations)
     .drop("Wins")
     .with_columns(Odds=1 / pl.col("Prob"))
+    .join(players.select("Name", "Elo"), on="Name", how="left")
     .join(betting_odds.select("Name", "BestOdds"), on="Name", how="left")
     .with_columns(ExpectedWin=pl.col("BestOdds") - pl.col("Odds"))
     .sort("Odds")
+    .select(
+        pl.col("Name").alias("Player"),
+        pl.col("Elo").round(1),
+        pl.format("{}%", (pl.col("Prob") * 100).round(2)).alias(
+            "Simulation probability"
+        ),
+        pl.col("Odds").round(2).alias("Simulation odds"),
+        pl.col("BestOdds").round(2).alias("Betting odds"),
+        pl.col("ExpectedWin").round(2).alias("Difference"),
+    )
 )
 full_result.shape
 
