@@ -150,7 +150,40 @@ Obviously, it was much easier to remain highest rated for a long time when there
 
 I thought it would be a fun application to use those Elo ratings we calculated to predict who will win the current World Championship. For this, I've run a bunch of simulated tournaments. The idea is quite simple: for each of the first round pairings in the draw, I compare the current Elo ratings of those two players, convert them into a win probability as described above, and toss a virtual coin in order to determine who proceeds to the second round. We apply the same principal to that and all the following rounds, until the final coin for the final is tossed and the winner of that simulation run is determined. I've run a total of 10 million simulated tournaments and counted how often each player won a simulation. Here are the results:
 
-TODO: table of WC predictions. Add Elo and/or world ranking? Mention Ronnie here or above?
+| Player            |   Elo | Simulation probability   |
+|:------------------|------:|-------------------------:|
+| John Higgins      | 739.1 | 13.14%                   |
+| Judd Trump        | 709.3 | 12.63%                   |
+| Mark Selby        | 693.8 | 12.59%                   |
+| Zhao Xintong      | 687.7 | 10.58%                   |
+| Kyren Wilson      | 695.9 |  9.56%                   |
+| Ali Carter        | 605.3 |  5.20%                   |
+| Neil Robertson    | 624.2 |  4.74%                   |
+| Barry Hawkins     | 641.2 |  4.45%                   |
+| Shaun Murphy      | 607.0 |  3.52%                   |
+| Joe O'Connor      | 646.8 |  3.51%                   |
+| Xiao Guodong      | 601.5 |  2.27%                   |
+| Hossein Vafaei    | 600.4 |  2.26%                   |
+| Wu Yize           | 579.1 |  2.05%                   |
+| David Gilbert     | 544.4 |  1.53%                   |
+| Zak Surety        | 552.3 |  1.45%                   |
+| Mark Allen        | 551.2 |  1.39%                   |
+| Ding Junhui       | 549.3 |  1.36%                   |
+| Pang Junxu        | 528.0 |  1.34%                   |
+| Ryan Day          | 535.8 |  1.11%                   |
+| Luca Brecel       | 525.0 |  0.90%                   |
+| Zhou Yuelong      | 539.7 |  0.82%                   |
+| Matthew Selt      | 545.6 |  0.79%                   |
+| Lei Peifan        | 534.1 |  0.64%                   |
+| Fan Zhengyi       | 508.5 |  0.60%                   |
+| Ben Woollaston    | 490.1 |  0.42%                   |
+| Chris Wakelin     | 476.1 |  0.30%                   |
+| Mark Williams     | 470.7 |  0.23%                   |
+| Si Jiahui         | 445.5 |  0.21%                   |
+| Daniel Wells      | 458.3 |  0.19%                   |
+| Zhang Anda        | 427.4 |  0.17%                   |
+| Jak Jones         | 379.3 |  0.03%                   |
+| Ronnie O'Sullivan | 345.2 |  0.03%                   |
 
 Unsurprisingly, the order strongly correlated with the Elo ranking we've seen above, but it's not quite the same. E.g., TODO: example of players higher or lower ranked. Explain with harder and easier paths to the final. Should we include the pairings here?
 
@@ -161,7 +194,7 @@ Unsurprisingly, the order strongly correlated with the Elo ranking we've seen ab
 
 ## How does the market compare? Bookies vs model
 
-> Disclaimer: gambling is bad. TODO
+> **Disclaimer**: This section discusses betting odds for the purpose of statistical comparison and analysis. It is not intended to promote gambling or serve as betting advice. Please gamble responsibly and be aware of your local laws and age restrictions.
 
 I'm personally not the gambling kind and wouldn't advice you to pick up that addictive habit either. But sport bets are an undeniably interesting data source for predictions, as you really need to put your money where your mouth is. That's why you often see betting odds discussed ahead of big sporting events: there's few models with comparable predictive accuracy. So I thought it's an interesting reality check for those simulations to compare those results to what gamblers are willing to bet on the snooker stars.
 
