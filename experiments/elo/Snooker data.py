@@ -364,7 +364,16 @@ top_rated_players = (
 top_rated_players.shape
 
 # %%
-top_rated_players.group_by("Name").agg(pl.len()).sort("len", descending=True)
+top_rated_months = (
+    top_rated_players.group_by("Name")
+    .agg(
+        Months=pl.len(),
+        First=pl.col("Date").min(),
+        Last=pl.col("Date").max(),
+    )
+    .sort("Months", "First", descending=[True, False])
+)
+top_rated_months
 
 # %%
 top_rated_players.filter(pl.col("Elo") == pl.col("Elo").max())

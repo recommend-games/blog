@@ -111,9 +111,22 @@ Judd Trump won more titles than any other player in this decade, reaching an all
 
 An interesting measure of dominance is the question of what player has spent the most time as highest rated. Here's the top 10:
 
-TODO: table (include first and last as columns)
+| Name              |   Months | First      | Last       |
+|:------------------|---------:|:----------:|:----------:|
+| Ronnie O'Sullivan |      114 | 1998-03-01 | 2024-02-01 |
+| Steve Davis       |       97 | 1981-05-01 | 1990-10-01 |
+| Stephen Hendry    |       91 | 1990-11-01 | 2006-01-01 |
+| John Higgins      |       61 | 1998-06-01 | 2025-05-01 |
+| Ray Reardon       |       44 | 1976-02-01 | 1983-05-01 |
+| Judd Trump        |       44 | 2012-01-01 | 2025-04-01 |
+| Mark Williams     |       34 | 2000-06-01 | 2021-11-01 |
+| John Spencer      |       24 | 1975-02-01 | 1978-04-01 |
+| Neil Robertson    |       18 | 2011-11-01 | 2023-01-01 |
+| Cliff Thorburn    |       10 | 1985-03-01 | 1986-10-01 |
 
-TODO: Link to full results. Finally, who had the highest rating ever? TODO. Maybe: what was the highest rated match? Biggest upset?
+Obviously, it was much easier to remain highest rated for a long time when there were much fewer events per year, but I do believe this list is a pretty representative hall of fame of snooker players.
+
+<!-- TODO: Link to full results. Finally, who had the highest rating ever? TODO. Maybe: what was the highest rated match? Biggest upset? -->
 
 
 - Mention data source (https://api.snooker.org/, make sure to get attribution right)
