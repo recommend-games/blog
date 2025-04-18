@@ -78,7 +78,9 @@ As mentioned, my code diligently carried out the Elo predictions and updates for
 |    9 | Shaun Murphy   | 606.9 |    1225 |  2001-02-11 |
 |   10 | Ali Carter     | 605.2 |    1194 |  1997-03-25 |
 
-TODO: Link to download full results. Compare to https://snooker-predictions.com/rankings.html ?
+So, by winning the 2025 Tour Championship, John Higgins claimed back the top spot he first held after winning his maiden world title in 1998. The list mostly contains consistently successful players over the past decades, as well as more recently rising stars like Zhao Xintong and Joe O'Connor.
+
+<!-- TODO: Link to download full results. Compare to https://snooker-predictions.com/rankings.html ? -->
 
 
 ## Rising stars and fading legends
@@ -87,23 +89,25 @@ It's fun to look back in time and check how players' ratings evolved over time: 
 
 {{< img src="elo_timeseries_1980" alt="The evolution of the Elo ratings of the best three players of the 1980's" >}}
 
-TODO: comment
+The 1980's we undoubtably Steve Davis' years, who won six world championships. The only way was up for him. It's also noteworthy how teenager Stephen Hendry rose to prominence.
 
 {{< img src="elo_timeseries_1990" alt="The evolution of the Elo ratings of the best three players of the 1990's" >}}
 
-TODO: comment
+Much like Steve Davis dominated the 80's, Stephen Hendry dominated the next decade, winning seven of the ten world championships. The plot also quite clearly shows the change in generations when John Higgins overtook Stephen Hendry in 1998.
 
 {{< img src="elo_timeseries_2000" alt="The evolution of the Elo ratings of the best three players of the 2000's" >}}
 
-TODO: comment
+The first decade in the new millennium were strongly influenced by the other two members of the "Class of '92": Ronnie O'Sullivan and Mark Williams.
 
 {{< img src="elo_timeseries_2010" alt="The evolution of the Elo ratings of the best three players of the 2010's" >}}
 
-TODO: comment
+Maybe the first thing you'll notice in the 2010's is how much more often the ratings change, reflecting a notable increase in tournaments. Mark Selby won three world titles in this decade.
 
 {{< img src="elo_timeseries_2020" alt="The evolution of the Elo ratings of the best three players of the 2020's" >}}
 
-TODO: comment; link to full results; discuss why it's hard to choose constant K: the current value was picked mostly to work well with the current calendar, but back then very few tournaments were played. Reminder: Elo is strongest amongst an active community, but not directly comparable across time, games, and different implementations. Compare to snooker-predictions.org?
+Judd Trump won more titles than any other player in this decade, reaching an all time high Elo rating of 837 in February 2021, though notably he's been struggling with the long distances during the world championship, "only" winning one so far in 2019. You might also notice how Ronnie O'Sullivan sharply dropped recently in his rating. This is because he lost a couple of matches in his last tournament and the withdrew from the next, which are counted as losses in my code. (If you've ever played games online you'll agree that players who rage quit should still suffer the full Elo penalty.) Snooker experts might have been curious about the most successful player of all times missing from the top 10 above, but now you know why that is.
+
+<!-- TODO: comment; link to full results; discuss why it's hard to choose constant K: the current value was picked mostly to work well with the current calendar, but back then very few tournaments were played. Reminder: Elo is strongest amongst an active community, but not directly comparable across time, games, and different implementations. Compare to snooker-predictions.org? -->
 
 An interesting measure of dominance is the question of what player has spent the most time as highest rated. Here's the top 10:
 
