@@ -29,6 +29,10 @@ class RankingFilter(BaseFilter):
     type_name = "ranking"
 
 
+class MatchFilter(BaseFilter):
+    type_name = "match"
+
+
 class BgaSpider(Spider):
     name = "bga"
     start_urls = ("https://en.boardgamearena.com/gamelist?allGames=",)
@@ -50,6 +54,12 @@ class BgaSpider(Spider):
                 "overwrite": False,
                 "store_empty": False,
             },
+            "results/matches-%(time)s-%(batch_id)05d.jl": {
+                "format": "jsonlines",
+                "item_filter": MatchFilter,
+                "overwrite": False,
+                "store_empty": False,
+            },
         },
         "JOBDIR": ".jobs",
     }
@@ -57,6 +67,10 @@ class BgaSpider(Spider):
     scrape_rankings = False
     max_rank_scraped = None
     regex = re.compile("globalUserInfos=(.+);$", flags=re.MULTILINE)
+
+    scrape_matches = False
+    base_match_url = "https://en.boardgamearena.com/message/board"
+    max_matches_per_page = 9500
 
     def parse(self, response: Response) -> Generator[dict | Request]:
         now = datetime.now(timezone.utc).isoformat(timespec="seconds")
@@ -95,6 +109,13 @@ class BgaSpider(Spider):
                         priority=0,
                     )
 
+                if self.scrape_matches:
+                    yield Request(
+                        url=self.build_match_url(game["id"]),
+                        callback=self.parse_matches,
+                        meta={"game_id": game["id"]},
+                    )
+
     def parse_ranking(self, response: Response) -> Generator[dict | Request]:
         if not isinstance(response, TextResponse):
             self.logger.warning("Response <%s> is not a TextResponse", response.url)
@@ -126,3 +147,39 @@ class BgaSpider(Spider):
                 meta={"game_id": game_id},
                 priority=-max_rank_no,
             )
+
+    def build_match_url(self, game_id: int, from_time: int = None, from_id: int = None):
+        params = {
+            "type": "lastresult",
+            "id": str(game_id),
+            "social": "false",
+            "per_page": str(self.max_matches_per_page),
+            "dojo.preventCache": "1",  # TODO: timestamp
+        }
+
+        if from_time is not None and from_id is not None:
+            params["page"] = "0"
+            params["from_time"] = str(from_time)
+            params["from_id"] = str(from_id)
+
+        query = "&".join(f"{k}={v}" for k, v in params.items())
+        return f"{self.base_match_url}?{query}"
+
+    def parse_matches(self, response: Response) -> Generator[dict[str, Any] | Request]:
+        if not isinstance(response, TextResponse):
+            self.logger.warning("Response <%s> is not a TextResponse", response.url)
+            return
+
+        now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+        game_id = response.meta["game_id"]
+        payload = response.json()
+
+        for match in payload["data"]["news"]:
+            match["game_id"] = game_id
+            match["type"] = "match"
+            match["scraped_at"] = now
+            # TODO: parse match["html"] for match results
+            yield match
+
+        # TODO: request next page
