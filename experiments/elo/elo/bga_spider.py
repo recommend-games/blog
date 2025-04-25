@@ -42,7 +42,7 @@ class BgaSpider(Spider):
 
     custom_settings = {
         "COOKIES_ENABLED": True,
-        "COOKIES_DEBUG": True,
+        "COOKIES_DEBUG": False,
         "DOWNLOAD_DELAY": 1,
         "CONCURRENT_REQUESTS_PER_DOMAIN": 4,
         "LOG_FORMATTER": "scrapy_extensions.QuietLogFormatter",
@@ -81,7 +81,7 @@ class BgaSpider(Spider):
     ranking_path = jmespath.compile("data.ranks")
     max_rank_scraped = None
 
-    scrape_matches = False
+    scrape_matches = True
     base_match_url = "/message/board"
     match_path = jmespath.compile("data.news")
     max_matches_per_page = 9500
