@@ -3381,6 +3381,27 @@ w3lib = ">=1.17.0"
 "zope.interface" = ">=5.1.0"
 
 [[package]]
+name = "scrapy-extensions"
+version = "1.0.2"
+description = "A collection of Scrapy extensions and other utilities"
+optional = false
+python-versions = "<4.0,>=3.9.0"
+files = [
+    {file = "scrapy_extensions-1.0.2-py3-none-any.whl", hash = "sha256:bdd2d931e67af8ceb9bf71c5d1230ad93b7587ec0d0ebd3794f392c4cd5e72a1"},
+    {file = "scrapy_extensions-1.0.2.tar.gz", hash = "sha256:1a29d9d250dc5a6a89f1cb64e7b795766e69c9400da22c6aef9c6ba2da282e64"},
+]
+
+[package.dependencies]
+itemadapter = "*"
+jmespath = "*"
+scrapy = ">=2.0.0,<3.0.0"
+twisted = "*"
+w3lib = ">=2.0.0,<3.0"
+
+[package.extras]
+blurhash = ["blurhash-numba[pillow]", "numpy", "pillow (>=4.0.0)"]
+
+[[package]]
 name = "seaborn"
 version = "0.13.2"
 description = "Statistical data visualization"
@@ -3960,4 +3981,4 @@ testing = ["coverage[toml]", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.12.*"
-content-hash = "6a7eccea95cc27430baaa17f60b919e2431f2b7f08147bea112e2a28d9a49bbf"
+content-hash = "ac855e9d941ba4dc041d553e018cd808886e32250ef32e288ab637652c1c4a60"

@@ -44,6 +44,7 @@ class BgaSpider(Spider):
         "COOKIES_DEBUG": True,
         "DOWNLOAD_DELAY": 1,
         "CONCURRENT_REQUESTS_PER_DOMAIN": 4,
+        "LOG_FORMATTER": "scrapy_extensions.QuietLogFormatter",
         "FEED_EXPORT_BATCH_ITEM_COUNT": 100_000,
         "FEEDS": {
             "results/games-%(time)s-%(batch_id)05d.jl": {
