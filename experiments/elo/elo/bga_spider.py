@@ -54,6 +54,7 @@ class BgaSpider(Spider):
         "JOBDIR": ".jobs",
     }
 
+    scrape_rankings = False
     max_rank_scraped = None
     regex = re.compile("globalUserInfos=(.+);$", flags=re.MULTILINE)
 
@@ -80,18 +81,19 @@ class BgaSpider(Spider):
                 game["scraped_at"] = now
                 yield game
 
-                yield FormRequest(
-                    url=response.urljoin("/gamepanel/gamepanel/getRanking.html"),
-                    method="POST",
-                    formdata={
-                        "game": str(game["id"]),
-                        "start": "0",
-                        "mode": "elo",
-                    },
-                    callback=self.parse_ranking,
-                    meta={"game_id": game["id"]},
-                    priority=0,
-                )
+                if self.scrape_rankings:
+                    yield FormRequest(
+                        url=response.urljoin("/gamepanel/gamepanel/getRanking.html"),
+                        method="POST",
+                        formdata={
+                            "game": str(game["id"]),
+                            "start": "0",
+                            "mode": "elo",
+                        },
+                        callback=self.parse_ranking,
+                        meta={"game_id": game["id"]},
+                        priority=0,
+                    )
 
     def parse_ranking(self, response: Response) -> Generator[dict | Request]:
         if not isinstance(response, TextResponse):
