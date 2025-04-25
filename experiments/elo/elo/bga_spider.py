@@ -4,6 +4,7 @@ import jmespath
 import json
 import math
 import re
+import time
 from typing import Any
 
 from scrapy import FormRequest, Request, Selector, Spider
@@ -214,7 +215,7 @@ class BgaSpider(Spider):
             "id": str(game_id),
             "social": "false",
             "per_page": str(self.max_matches_per_page),
-            "dojo.preventCache": "1",  # TODO: timestamp
+            "dojo.preventCache": str(int(time.time() * 1000)),
         }
 
         if from_time is not None and from_id is not None:
