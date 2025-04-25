@@ -267,7 +267,7 @@ class BgaSpider(Spider):
             player_id = int(player_href.split("=")[-1]) if "=" in player_href else None
 
             player_name = player_link.xpath("text()").get()
-            score_text = player_div.xpath("following-sibling::text()[1]").get() or ""
+            score_text = player_link.xpath("following-sibling::text()[1]").get() or ""
             match = self.integer_regex.search(score_text)
             score = int(match.group(1)) if match else None
 
