@@ -242,6 +242,9 @@ class BgaSpider(Spider):
             self.logger.error("Matches not found in response <%s>", response.url)
             return
 
+        last_id = None
+        last_timestamp = None
+
         for match in matches:
             match["game_id"] = game_id
             match["type"] = "match"
@@ -250,9 +253,19 @@ class BgaSpider(Spider):
                 match["players"] = list(self.parse_match_html(match["html"]))
             except Exception:
                 match["players"] = None
+            last_id = match.get("id")
+            last_timestamp = match.get("timestamp")
             yield match
 
-        # TODO: request next page
+        if last_id and last_timestamp:
+            yield Request(
+                url=self.build_match_url(response, game_id, last_timestamp, last_id),
+                method="GET",
+                callback=self.parse_matches,
+                meta={"game_id": game_id},
+                priority=response.request.priority - 1,
+                headers={"X-Request-Token": self.request_token},
+            )
 
     def parse_match_html(self, html: str) -> Generator[dict[str, Any]]:
         selector = Selector(text=html, type="html")
