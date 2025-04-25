@@ -43,8 +43,8 @@ class BgaSpider(Spider):
     custom_settings = {
         "COOKIES_ENABLED": True,
         "COOKIES_DEBUG": False,
-        "DOWNLOAD_DELAY": 1,
-        "CONCURRENT_REQUESTS_PER_DOMAIN": 4,
+        "DOWNLOAD_DELAY": 10,
+        "CONCURRENT_REQUESTS_PER_DOMAIN": 16,
         "LOG_FORMATTER": "scrapy_extensions.QuietLogFormatter",
         "FEED_EXPORT_BATCH_ITEM_COUNT": 100_000,
         "FEEDS": {
