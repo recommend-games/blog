@@ -35,9 +35,11 @@ class MatchFilter(BaseFilter):
 
 class BgaSpider(Spider):
     name = "bga"
-    start_urls = ("https://en.boardgamearena.com/gamelist?allGames=",)
+    start_urls = ("https://en.boardgamearena.com/",)
 
     custom_settings = {
+        "COOKIES_ENABLED": True,
+        "COOKIES_DEBUG": True,
         "DOWNLOAD_DELAY": 1,
         "CONCURRENT_REQUESTS_PER_DOMAIN": 4,
         "FEED_EXPORT_BATCH_ITEM_COUNT": 10_000,
@@ -64,6 +66,13 @@ class BgaSpider(Spider):
         "JOBDIR": ".jobs",
     }
 
+    request_token_url = (
+        "https://en.boardgamearena.com/account/auth/getRequestToken.html"
+    )
+    request_token: str | None = None
+
+    game_list_url = "https://en.boardgamearena.com/gamelist?allGames="
+
     scrape_rankings = False
     max_rank_scraped = None
     regex = re.compile("globalUserInfos=(.+);$", flags=re.MULTILINE)
@@ -72,7 +81,29 @@ class BgaSpider(Spider):
     base_match_url = "https://en.boardgamearena.com/message/board"
     max_matches_per_page = 9500
 
-    def parse(self, response: Response) -> Generator[dict | Request]:
+    def parse(self, response: Response) -> Request:
+        return FormRequest(
+            url=self.request_token_url,
+            formdata={"bgapp": "bga"},
+            callback=self.parse_request_token,
+            method="POST",
+        )
+
+    def parse_request_token(self, response: Response) -> Request | None:
+        if not isinstance(response, TextResponse):
+            self.logger.warning("Response <%s> is not a TextResponse", response.url)
+            return
+
+        payload = response.json()
+        self.request_token = payload["data"]["request_token"]
+
+        return Request(
+            url=self.game_list_url,
+            callback=self.parse_games,
+            headers={"X-Request-Token": self.request_token},
+        )
+
+    def parse_games(self, response: Response) -> Generator[dict | Request]:
         now = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
         for text in response.xpath(
@@ -107,6 +138,7 @@ class BgaSpider(Spider):
                         callback=self.parse_ranking,
                         meta={"game_id": game["id"]},
                         priority=0,
+                        headers={"X-Request-Token": self.request_token},
                     )
 
                 if self.scrape_matches:
@@ -114,6 +146,7 @@ class BgaSpider(Spider):
                         url=self.build_match_url(game["id"]),
                         callback=self.parse_matches,
                         meta={"game_id": game["id"]},
+                        headers={"X-Request-Token": self.request_token},
                     )
 
     def parse_ranking(self, response: Response) -> Generator[dict | Request]:
@@ -148,7 +181,12 @@ class BgaSpider(Spider):
                 priority=-max_rank_no,
             )
 
-    def build_match_url(self, game_id: int, from_time: int = None, from_id: int = None):
+    def build_match_url(
+        self,
+        game_id: int,
+        from_time: int = None,
+        from_id: int = None,
+    ) -> str:
         params = {
             "type": "lastresult",
             "id": str(game_id),
