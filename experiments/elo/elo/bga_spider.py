@@ -85,6 +85,9 @@ class BgaSpider(Spider):
     match_path = jmespath.compile("data.news")
     max_matches_per_page = 9500
 
+    ordinal_regex = re.compile(r"(\d+)(st|nd|rd|th)")
+    integer_regex = re.compile(r"(\d+)")
+
     def parse(self, response: Response) -> Request:
         return FormRequest(
             url=response.urljoin(self.request_token_url),
@@ -243,24 +246,30 @@ class BgaSpider(Spider):
             match["game_id"] = game_id
             match["type"] = "match"
             match["scraped_at"] = now
-            match["players"] = list(self.parse_match_html(match["html"]))
+            try:
+                match["players"] = list(self.parse_match_html(match["html"]))
+            except Exception:
+                match["players"] = None
             yield match
 
         # TODO: request next page
 
     def parse_match_html(self, html: str) -> Generator[dict[str, Any]]:
-        selector = Selector(text=html)
+        selector = Selector(text=html, type="html")
+
         for player_div in selector.css("div.board-score-entry"):
-            rank_text = player_div.xpath("text()[1]").get()
-            match = re.search(r"(\d+)(?:st|nd|rd|th)", rank_text or "")
+            rank_text = player_div.xpath("text()[1]").get() or ""
+            match = self.ordinal_regex.search(rank_text)
             place = int(match.group(1)) if match else None
 
             player_link = player_div.css("a.playername")
-            player_id = int(player_link.xpath("@href").get().split("=")[-1])
+            player_href = player_link.xpath("@href").get() or ""
+            player_id = int(player_href.split("=")[-1]) if "=" in player_href else None
+
             player_name = player_link.xpath("text()").get()
-            score_text = player_div.xpath("following-sibling::text()[1]").get()
-            score_str = re.search(r"(\d+)", score_text or "").group(1)
-            score = int(score_str) if score_str else None
+            score_text = player_div.xpath("following-sibling::text()[1]").get() or ""
+            match = self.integer_regex.search(score_text)
+            score = int(match.group(1)) if match else None
 
             yield {
                 "player_id": player_id,
