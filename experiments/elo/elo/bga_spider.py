@@ -6,7 +6,7 @@ import math
 import re
 from typing import Any
 
-from scrapy import FormRequest, Request, Spider
+from scrapy import FormRequest, Request, Selector, Spider
 from scrapy.http import Response, TextResponse
 
 
@@ -154,8 +154,10 @@ class BgaSpider(Spider):
                 if self.scrape_matches:
                     yield Request(
                         url=self.build_match_url(response, game["id"]),
+                        method="GET",
                         callback=self.parse_matches,
                         meta={"game_id": game["id"]},
+                        priority=0,
                         headers={"X-Request-Token": self.request_token},
                     )
 
@@ -241,7 +243,28 @@ class BgaSpider(Spider):
             match["game_id"] = game_id
             match["type"] = "match"
             match["scraped_at"] = now
-            # TODO: parse match["html"] for match results
+            match["players"] = list(self.parse_match_html(match["html"]))
             yield match
 
         # TODO: request next page
+
+    def parse_match_html(self, html: str) -> Generator[dict[str, Any]]:
+        selector = Selector(text=html)
+        for player_div in selector.css("div.board-score-entry"):
+            rank_text = player_div.xpath("text()[1]").get()
+            match = re.search(r"(\d+)(?:st|nd|rd|th)", rank_text or "")
+            place = int(match.group(1)) if match else None
+
+            player_link = player_div.css("a.playername")
+            player_id = int(player_link.xpath("@href").get().split("=")[-1])
+            player_name = player_link.xpath("text()").get()
+            score_text = player_div.xpath("following-sibling::text()[1]").get()
+            score_str = re.search(r"(\d+)", score_text or "").group(1)
+            score = int(score_str) if score_str else None
+
+            yield {
+                "player_id": player_id,
+                "player_name": player_name,
+                "place": place,
+                "score": score,
+            }
