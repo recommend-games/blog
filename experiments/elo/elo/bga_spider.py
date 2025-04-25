@@ -1,5 +1,6 @@
 from collections.abc import Generator
 from datetime import datetime, timezone
+import jmespath
 import json
 import math
 import re
@@ -69,16 +70,19 @@ class BgaSpider(Spider):
     request_token_url = (
         "https://en.boardgamearena.com/account/auth/getRequestToken.html"
     )
+    request_token_path = jmespath.compile("data.request_token")
     request_token: str | None = None
 
     game_list_url = "https://en.boardgamearena.com/gamelist?allGames="
+    game_list_regex = re.compile("globalUserInfos=(.+);$", flags=re.MULTILINE)
 
     scrape_rankings = False
+    ranking_path = jmespath.compile("data.ranks")
     max_rank_scraped = None
-    regex = re.compile("globalUserInfos=(.+);$", flags=re.MULTILINE)
 
     scrape_matches = False
     base_match_url = "https://en.boardgamearena.com/message/board"
+    match_path = jmespath.compile("data.news")
     max_matches_per_page = 9500
 
     def parse(self, response: Response) -> Request:
@@ -95,12 +99,18 @@ class BgaSpider(Spider):
             return
 
         payload = response.json()
-        self.request_token = payload["data"]["request_token"]
+        request_token = self.request_token_path.search(payload)
+
+        if not request_token:
+            self.logger.error("Request token not found in response <%s>", response.url)
+            return
+
+        self.request_token = request_token
 
         return Request(
             url=self.game_list_url,
             callback=self.parse_games,
-            headers={"X-Request-Token": self.request_token},
+            headers={"X-Request-Token": request_token},
         )
 
     def parse_games(self, response: Response) -> Generator[dict | Request]:
@@ -109,7 +119,7 @@ class BgaSpider(Spider):
         for text in response.xpath(
             "//script[@type = 'text/javascript']/text()"
         ).getall():
-            match = self.regex.search(text)
+            match = self.game_list_regex.search(text)
             if not match:
                 continue
 
@@ -159,9 +169,15 @@ class BgaSpider(Spider):
         game_id = response.meta["game_id"]
         payload = response.json()
 
+        entries = self.ranking_path.search(payload)
+
+        if not entries:
+            self.logger.error("Ranking not found in response <%s>", response.url)
+            return
+
         rank_nos = []
 
-        for entry in payload["data"]["ranks"]:
+        for entry in entries:
             entry["game_id"] = game_id
             entry["type"] = "ranking"
             entry["scraped_at"] = now
@@ -213,7 +229,13 @@ class BgaSpider(Spider):
         game_id = response.meta["game_id"]
         payload = response.json()
 
-        for match in payload["data"]["news"]:
+        matches = self.match_path.search(payload)
+
+        if not matches:
+            self.logger.error("Matches not found in response <%s>", response.url)
+            return
+
+        for match in matches:
             match["game_id"] = game_id
             match["type"] = "match"
             match["scraped_at"] = now
