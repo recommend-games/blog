@@ -36,14 +36,15 @@ class MatchFilter(BaseFilter):
 
 class BgaSpider(Spider):
     name = "bga"
-    start_urls = ("https://en.boardgamearena.com/",)
+    base_url = "https://en.boardgamearena.com/"
+    start_urls = (base_url,)
 
     custom_settings = {
         "COOKIES_ENABLED": True,
         "COOKIES_DEBUG": True,
         "DOWNLOAD_DELAY": 1,
         "CONCURRENT_REQUESTS_PER_DOMAIN": 4,
-        "FEED_EXPORT_BATCH_ITEM_COUNT": 10_000,
+        "FEED_EXPORT_BATCH_ITEM_COUNT": 100_000,
         "FEEDS": {
             "results/games-%(time)s-%(batch_id)05d.jl": {
                 "format": "jsonlines",
@@ -67,13 +68,11 @@ class BgaSpider(Spider):
         "JOBDIR": ".jobs",
     }
 
-    request_token_url = (
-        "https://en.boardgamearena.com/account/auth/getRequestToken.html"
-    )
+    request_token_url = "/account/auth/getRequestToken.html"
     request_token_path = jmespath.compile("data.request_token")
     request_token: str | None = None
 
-    game_list_url = "https://en.boardgamearena.com/gamelist?allGames="
+    game_list_url = "/gamelist?allGames="
     game_list_regex = re.compile("globalUserInfos=(.+);$", flags=re.MULTILINE)
 
     scrape_rankings = False
@@ -81,13 +80,13 @@ class BgaSpider(Spider):
     max_rank_scraped = None
 
     scrape_matches = False
-    base_match_url = "https://en.boardgamearena.com/message/board"
+    base_match_url = "/message/board"
     match_path = jmespath.compile("data.news")
     max_matches_per_page = 9500
 
     def parse(self, response: Response) -> Request:
         return FormRequest(
-            url=self.request_token_url,
+            url=response.urljoin(self.request_token_url),
             formdata={"bgapp": "bga"},
             callback=self.parse_request_token,
             method="POST",
@@ -108,7 +107,7 @@ class BgaSpider(Spider):
         self.request_token = request_token
 
         return Request(
-            url=self.game_list_url,
+            url=response.urljoin(self.game_list_url),
             callback=self.parse_games,
             headers={"X-Request-Token": request_token},
         )
@@ -153,7 +152,7 @@ class BgaSpider(Spider):
 
                 if self.scrape_matches:
                     yield Request(
-                        url=self.build_match_url(game["id"]),
+                        url=self.build_match_url(response, game["id"]),
                         callback=self.parse_matches,
                         meta={"game_id": game["id"]},
                         headers={"X-Request-Token": self.request_token},
@@ -199,6 +198,7 @@ class BgaSpider(Spider):
 
     def build_match_url(
         self,
+        response: Response,
         game_id: int,
         from_time: int = None,
         from_id: int = None,
@@ -217,7 +217,8 @@ class BgaSpider(Spider):
             params["from_id"] = str(from_id)
 
         query = "&".join(f"{k}={v}" for k, v in params.items())
-        return f"{self.base_match_url}?{query}"
+        url = f"{self.base_match_url}?{query}"
+        return response.urljoin(url)
 
     def parse_matches(self, response: Response) -> Generator[dict[str, Any] | Request]:
         if not isinstance(response, TextResponse):
