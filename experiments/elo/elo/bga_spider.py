@@ -156,12 +156,14 @@ class BgaSpider(Spider):
                     )
 
                 if self.scrape_matches:
+                    games_played = int(game.get("games_played", 0))
+                    priority = games_played // (2 * self.max_matches_per_page)
                     yield Request(
                         url=self.build_match_url(response, game["id"]),
                         method="GET",
                         callback=self.parse_matches,
                         meta={"game_id": game["id"]},
-                        priority=0,
+                        priority=priority,
                         headers={"X-Request-Token": self.request_token},
                     )
 
@@ -200,7 +202,7 @@ class BgaSpider(Spider):
                     "mode": "elo",
                 },
                 meta={"game_id": game_id},
-                priority=-max_rank_no,
+                priority=response.request.priority - 1,
             )
 
     def build_match_url(
