@@ -93,8 +93,8 @@ def merge_matches(
     progress_bar: bool = False,
 ) -> None:
     schema = {
-        "id": pl.Int64,
-        "timestamp": pl.Int64,
+        "id": pl.String,
+        "timestamp": pl.String,
         "game_id": pl.Int64,
         "players": pl.List(
             pl.Struct(
@@ -236,6 +236,12 @@ if __name__ == "__main__":
     merge_rankings(
         rankings_path="results/rankings-*.jl",
         output_path="rankings.jl",
+        overwrite=True,
+        progress_bar=True,
+    )
+    merge_matches(
+        matches_path="results/matches-*.jl",
+        output_path="matches.jl",
         overwrite=True,
         progress_bar=True,
     )
