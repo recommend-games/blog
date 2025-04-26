@@ -78,6 +78,7 @@ class BgaSpider(Spider):
     game_list_regex = re.compile("globalUserInfos=(.+);$", flags=re.MULTILINE)
 
     scrape_rankings = False
+    ranking_url = "/gamepanel/gamepanel/getRanking.html"
     ranking_path = jmespath.compile("data.ranks")
     max_rank_scraped = None
 
@@ -142,7 +143,7 @@ class BgaSpider(Spider):
 
                 if self.scrape_rankings:
                     yield FormRequest(
-                        url=response.urljoin("/gamepanel/gamepanel/getRanking.html"),
+                        url=response.urljoin(self.ranking_url),
                         method="POST",
                         formdata={
                             "game": str(game["id"]),
