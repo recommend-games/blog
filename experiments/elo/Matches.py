@@ -43,27 +43,26 @@ matches.head(10).collect()
 
 # %%
 games_info = pl.scan_ndjson("games.jl").select(
-        pl.col("id").alias("game_id"),
-        pl.col("name").alias("game_slug"),
-        "bgg_id",
-        "display_name_en",
-        "games_played",
-    )
-games_matches = (
-    matches.group_by("game_id")
-    .agg(
-        num_matches=pl.len(),
-        min_players=pl.col("num_players").min(),
-        max_players=pl.col("num_players").max(),
-        first=pl.col("timestamp").min(),
-        last=pl.col("timestamp").max(),
-    )
+    pl.col("id").alias("game_id"),
+    pl.col("name").alias("game_slug"),
+    "bgg_id",
+    "display_name_en",
+    "games_played",
 )
-all_games = games_info.join(games_matches, on='game_id', how='full').collect()
+games_matches = matches.group_by("game_id").agg(
+    num_matches=pl.len(),
+    min_players=pl.col("num_players").min(),
+    max_players=pl.col("num_players").max(),
+    first=pl.col("timestamp").min(),
+    last=pl.col("timestamp").max(),
+)
+all_games = games_info.join(games_matches, on="game_id", how="full").collect()
 all_games.shape
 
 # %%
 all_games.describe()
 
 # %%
-all_games.filter(pl.col("min_players") == 2).filter(pl.col("max_players") == 2).describe()
+all_games.filter(pl.col("min_players") == 2).filter(
+    pl.col("max_players") == 2
+).describe()
