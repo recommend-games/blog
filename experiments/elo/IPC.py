@@ -16,6 +16,7 @@
 # %%
 import jupyter_black
 import polars as pl
+from datetime import datetime
 from itertools import batched
 from pathlib import Path
 from tqdm import tqdm
@@ -24,11 +25,16 @@ jupyter_black.load()
 pl.Config.set_tbl_rows(100)
 
 # %%
-file_batch_size = 10
 in_dir = Path("results").resolve()
 out_dir = in_dir / "arrow"
 out_dir.mkdir(parents=True, exist_ok=True)
-file_batch_size, in_dir, out_dir
+in_dir, out_dir
+
+# %%
+file_batch_size = 10
+ts = datetime.now().replace(microsecond=0).isoformat().replace(":", "-")
+suffix = f"{ts}-euler-"
+file_batch_size, suffix
 
 # %%
 schema = {
@@ -60,4 +66,4 @@ for i, batch in enumerate(batched(tqdm(in_dir.glob("matches-*.jl")), file_batch_
             pl.col("scraped_at").str.to_datetime(time_zone="UTC"),
         )
     )
-    df.sink_ipc(out_dir / f"matches_{i:05d}.arrow")
+    df.sink_ipc(out_dir / f"matches-{suffix}{i:05d}.arrow")
