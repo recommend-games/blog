@@ -40,15 +40,19 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
     def calculate_probability_matrix(self, players: Iterable[ID_TYPE]) -> np.ndarray:
         players = tuple(players)
         num_players = len(players)
+
+        if num_players < 2:
+            raise ValueError("At least 2 players are required")
+
         if num_players > self.max_exact:
+            # TODO: implement Monte Carlo fallback
             raise NotImplementedError(
                 f"Monte Carlo fallback not implemented for n>{self.max_exact}"
             )
 
-        probs = np.zeros((num_players, num_players))
-
         ratings = self._get_ratings(players)
         exp_ratings = 10 ** (ratings / self.elo_scale)
+        probs = np.zeros((num_players, num_players))
 
         for perm in itertools.permutations(range(num_players)):
             prob = 1
@@ -56,8 +60,13 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
             for i in range(num_players - 1):
                 prob *= exp_ratings[perm[i]] / denom
                 denom -= exp_ratings[perm[i]]
-            for player, position in enumerate(perm):
+            for position, player in enumerate(perm):
                 probs[player, position] += prob
+
+        assert np.allclose(probs.sum(axis=0), 1), "Probabilities must sum to 1"
+        assert np.allclose(probs.sum(axis=1), 1), "Probabilities must sum to 1"
+
+        return probs
 
     def _calculate_player_scores(self, players: Mapping[ID_TYPE, float]) -> np.ndarray:
         scores = np.array(list(players.values()), dtype=float)
