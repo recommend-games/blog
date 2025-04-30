@@ -9,7 +9,7 @@ from collections import defaultdict
 ID_TYPE = TypeVar("ID_TYPE")
 
 if TYPE_CHECKING:
-    from collections.abc import Mapping
+    from collections.abc import Iterable, Mapping
 
 
 class RankOrderedLogitElo(Generic[ID_TYPE]):
@@ -37,10 +37,49 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
             init_elo_ratings if init_elo_ratings is not None else {},
         )
 
-    def _get_ratings(self, players: list[ID_TYPE]) -> np.ndarray:
-        return np.array([self.elo_ratings.get(p, 0.0) for p in players], dtype=float)
+    def calculate_probability_matrix(self, players: Iterable[ID_TYPE]) -> np.ndarray:
+        players = tuple(players)
+        num_players = len(players)
+        if num_players > self.max_exact:
+            raise NotImplementedError(
+                f"Monte Carlo fallback not implemented for n>{self.max_exact}"
+            )
 
-    def _set_ratings(self, players: list[ID_TYPE], arr: np.ndarray):
+        probs = np.zeros((num_players, num_players))
+
+        ratings = self._get_ratings(players)
+        exp_ratings = 10 ** (ratings / self.elo_scale)
+
+        for perm in itertools.permutations(range(num_players)):
+            prob = 1
+            denom = np.sum(exp_ratings)
+            for i in range(num_players - 1):
+                prob *= exp_ratings[perm[i]] / denom
+                denom -= exp_ratings[perm[i]]
+            for player, position in enumerate(perm):
+                probs[player, position] += prob
+
+    def _calculate_player_scores(self, players: Mapping[ID_TYPE, float]) -> np.ndarray:
+        scores = np.array(list(players.values()), dtype=float)
+        assert np.all(scores >= 0)
+        assert np.any(scores > 0)
+        scores /= scores.max()
+        return scores
+
+    def calculate_elo_ratings(
+        self,
+        players: Mapping[ID_TYPE, float],
+    ) -> defaultdict[ID_TYPE, float]:
+        # player_ids = list(players.keys())
+        # player_scores = self._calculate_player_scores(players)
+        # probs = self.calculate_probability_matrix(player_ids)
+        # TODO: finish calculations
+        return self.elo_ratings
+
+    def _get_ratings(self, players: Iterable[ID_TYPE]) -> np.ndarray:
+        return np.array([self.elo_ratings[p] for p in players], dtype=float)
+
+    def _set_ratings(self, players: Iterable[ID_TYPE], arr: np.ndarray):
         for p, r in zip(players, arr):
             self.elo_ratings[p] = float(r)
 
