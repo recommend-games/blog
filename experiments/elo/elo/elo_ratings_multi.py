@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import numpy as np
 import itertools
-import numpy.random as npr
 from typing import Generic, TypeVar, TYPE_CHECKING
 from collections import defaultdict
 
@@ -50,7 +49,7 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
                 f"Monte Carlo fallback not implemented for n>{self.max_exact}"
             )
 
-        ratings = self._get_ratings(players)
+        ratings = np.array([self.elo_ratings[p] for p in players], dtype=float)
         exp_ratings = 10 ** (ratings / self.elo_scale)
         probs = np.zeros((num_players, num_players))
 
@@ -100,83 +99,3 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
         diffs = (payoffs - expected_payoffs) / max_payoff
         for player_id, diff in zip(player_ids, diffs):
             self.elo_ratings[player_id] += self.elo_k * diff
-
-    def _get_ratings(self, players: Iterable[ID_TYPE]) -> np.ndarray:
-        return np.array([self.elo_ratings[p] for p in players], dtype=float)
-
-    def rate(
-        self,
-        players: list[ID_TYPE],
-        ranks: list[int],
-        prizes: list[float] | None = None,
-    ):
-        n = len(players)
-        R = self._get_ratings(players)
-        expR = np.exp(R)
-
-        # define payoff vector π
-        if prizes is not None:
-            pi = np.array(prizes, dtype=float)
-        else:
-            ranks_arr = np.array(ranks, dtype=float)
-            pi = (n - ranks_arr) / (n - 1)
-
-        pi_max = pi.max()
-        S_hat = pi / pi_max
-
-        # compute expected payoffs
-        if n <= self.max_exact:
-            perms = np.array(list(itertools.permutations(range(n))), dtype=int)
-            # Plackett-Luce probability for each perm
-            stage_probs = []
-            for k in range(n):
-                num = expR[perms[:, k]]
-                denom = np.sum(expR[perms[:, k:]], axis=1)
-                stage_probs.append(num / denom)
-            perm_probs = np.prod(np.stack(stage_probs, axis=1), axis=1)
-            # payoff per perm
-            rows = np.arange(perms.shape[0])[:, None]
-            payoff_mat = np.zeros_like(
-                perm_probs[:, None] * np.zeros((perms.shape[0], n))
-            )
-            payoff_mat[rows, perms] = pi[None, :]
-            E_raw = (perm_probs[:, None] * payoff_mat).sum(axis=0)
-        else:
-            # Monte Carlo fallback
-            E_raw = np.zeros(n, dtype=float)
-            for _ in range(self.mc_samples):
-                remaining = list(range(n))
-                denom = expR.copy()
-                ranking_pos = [None] * n
-                for k in range(n):
-                    weights = denom[remaining]
-                    weights_sum = weights.sum()
-                    probs = weights / weights_sum
-                    chosen = npr.choice(remaining, p=probs)
-                    ranking_pos[chosen] = k
-                    remaining.remove(chosen)
-                # accumulate payoff
-                for i in range(n):
-                    E_raw[i] += pi[ranking_pos[i]]
-            E_raw /= self.mc_samples
-
-        E_hat = E_raw / pi_max
-
-        # update ratings
-        R += self.elo_k * (S_hat - E_hat)
-        self._set_ratings(players, R)
-
-    def get_rating(self, player: ID_TYPE) -> float:
-        return self.elo_ratings.get(player, 0.0)
-
-    def batch_ratings(self, players: list[ID_TYPE]) -> np.ndarray:
-        return self._get_ratings(players)
-
-
-# Example usage
-if __name__ == "__main__":
-    elo = RankOrderedLogitElo(elo_k=24.0, max_exact=6, mc_samples=10000)
-    players = ["A", "B", "C", "D", "E", "F", "G"]
-    ranks = [1, 2, 3, 4, 5, 6, 7]
-    elo.rate(players, ranks)  # uses Monte Carlo for n>6
-    print({p: elo.get_rating(p) for p in players})
