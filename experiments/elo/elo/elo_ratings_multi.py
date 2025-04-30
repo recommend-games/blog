@@ -68,6 +68,18 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
 
         return probs
 
+    def calculate_expected_payoff(
+        self,
+        players: Iterable[ID_TYPE],
+        rank_payoffs: np.ndarray,
+    ) -> np.ndarray:
+        assert rank_payoffs.ndim == 1, "Rank payoffs must be a 1D array"
+        probs = self.calculate_probability_matrix(players)
+        assert len(rank_payoffs) == len(probs), (
+            "Rank payoffs must be the same length as the number of players"
+        )
+        return probs @ rank_payoffs
+
     def _calculate_player_scores(self, players: Mapping[ID_TYPE, float]) -> np.ndarray:
         scores = np.array(list(players.values()), dtype=float)
         assert np.all(scores >= 0)
@@ -79,9 +91,6 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
         self,
         players: Mapping[ID_TYPE, float],
     ) -> defaultdict[ID_TYPE, float]:
-        # player_ids = list(players.keys())
-        # player_scores = self._calculate_player_scores(players)
-        # probs = self.calculate_probability_matrix(player_ids)
         # TODO: finish calculations
         return self.elo_ratings
 
