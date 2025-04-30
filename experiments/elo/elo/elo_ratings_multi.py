@@ -81,12 +81,18 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
 
     def update_elo_ratings(
         self,
-        players: Mapping[ID_TYPE, float],
+        players: Mapping[ID_TYPE, float] | Iterable[ID_TYPE],
     ) -> None:
-        player_ids = tuple(players.keys())
-        payoffs = np.array(list(players.values()), dtype=float)
+        if isinstance(players, Mapping):
+            player_ids = tuple(players.keys())
+            payoffs = np.array(list(players.values()), dtype=float)
+        else:
+            player_ids = tuple(players)
+            payoffs = np.arange(len(player_ids) - 1, -1, -1, dtype=float)
+
         assert np.all(payoffs >= 0), "Payoffs must be non-negative"
         assert np.any(payoffs > 0), "At least one payoff must be positive"
+
         max_payoff = payoffs.max()
         expected_payoffs = self.calculate_expected_payoff(player_ids, payoffs)
         diffs = (payoffs - expected_payoffs) / max_payoff
