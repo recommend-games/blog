@@ -1,26 +1,40 @@
 import numpy as np
 import itertools
 import numpy.random as npr
-from typing import List, Any, Optional
+from typing import List, Any, Optional, Generic, TypeVar
+from collections import defaultdict
+
+ID_TYPE = TypeVar("ID_TYPE")
 
 
-class RankOrderedLogitElo:
+class RankOrderedLogitElo(Generic[ID_TYPE]):
     """
-    Numpy-based rank-ordered-logit Elo with Monte-Carlo fallback for large fields.
+    Rank-ordered-logit Elo with Monte-Carlo fallback for large fields.
     """
 
-    def __init__(self, k: float = 32.0, max_exact: int = 6, mc_samples: int = 5000):
-        self.k = k
+    def __init__(
+        self,
+        elo_initial: float = 0,
+        elo_k: float = 32,
+        elo_scale: float = 400,
+        max_exact: int = 6,
+        mc_samples: int = 5_000,
+    ):
+        self.elo_initial = elo_initial
+        self.elo_k = elo_k
+        self.elo_scale = elo_scale
         self.max_exact = max_exact
         self.mc_samples = mc_samples
-        self.ratings = {}  # player_id -> rating
+        self.elo_ratings: defaultdict[ID_TYPE, float] = defaultdict(
+            lambda: self.elo_initial
+        )
 
     def _get_ratings(self, players: List[Any]) -> np.ndarray:
-        return np.array([self.ratings.get(p, 0.0) for p in players], dtype=float)
+        return np.array([self.elo_ratings.get(p, 0.0) for p in players], dtype=float)
 
     def _set_ratings(self, players: List[Any], arr: np.ndarray):
         for p, r in zip(players, arr):
-            self.ratings[p] = float(r)
+            self.elo_ratings[p] = float(r)
 
     def rate(
         self,
@@ -81,11 +95,11 @@ class RankOrderedLogitElo:
         E_hat = E_raw / pi_max
 
         # update ratings
-        R += self.k * (S_hat - E_hat)
+        R += self.elo_k * (S_hat - E_hat)
         self._set_ratings(players, R)
 
     def get_rating(self, player: Any) -> float:
-        return self.ratings.get(player, 0.0)
+        return self.elo_ratings.get(player, 0.0)
 
     def batch_ratings(self, players: List[Any]) -> np.ndarray:
         return self._get_ratings(players)
@@ -93,7 +107,7 @@ class RankOrderedLogitElo:
 
 # Example usage
 if __name__ == "__main__":
-    elo = RankOrderedLogitElo(k=24.0, max_exact=6, mc_samples=10000)
+    elo = RankOrderedLogitElo(elo_k=24.0, max_exact=6, mc_samples=10000)
     players = ["A", "B", "C", "D", "E", "F", "G"]
     ranks = [1, 2, 3, 4, 5, 6, 7]
     elo.rate(players, ranks)  # uses Monte Carlo for n>6
