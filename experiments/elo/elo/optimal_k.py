@@ -55,7 +55,7 @@ def calculate_loss_multi(
         full_results=True,
         progress_bar=progress_bar,
     )
-    return np.mean(errors**2)
+    return np.nanmean(errors**2)
 
 
 def approximate_optimal_k(
