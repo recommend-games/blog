@@ -29,7 +29,7 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
         mc_samples: int = 5_000,
     ) -> None:
         self.elo_ratings: defaultdict[ID_TYPE, float] = defaultdict(
-            lambda: self.elo_initial,
+            lambda: elo_initial,
             init_elo_ratings if init_elo_ratings is not None else {},
         )
         self.elo_k = elo_k
