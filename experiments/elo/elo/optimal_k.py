@@ -1,13 +1,15 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
-from typing import TypeVar
+from typing import TypeVar, TYPE_CHECKING
 
 import numpy as np
 from scipy.optimize import minimize_scalar
 
 from elo.elo_ratings import calculate_elo_ratings
+from elo.elo_ratings_multi import RankOrderedLogitElo
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable, Mapping
 
 ID_TYPE = TypeVar("ID_TYPE")
 
@@ -37,6 +39,22 @@ def calculate_loss(
     player_1_win_probs = np.array(player_1_win_probs_list)
     errors = player_1_outcomes - player_1_win_probs
 
+    return np.mean(errors**2)
+
+
+def calculate_loss_multi(
+    *,
+    matches: Iterable[Mapping[ID_TYPE, float] | Iterable[ID_TYPE]],
+    elo_k: float,
+    elo_scale: float,
+    progress_bar: bool = False,
+) -> np.float64:
+    elo = RankOrderedLogitElo(elo_k=elo_k, elo_scale=elo_scale)
+    errors = elo.update_elo_ratings_batch(
+        matches,
+        full_results=True,
+        progress_bar=progress_bar,
+    )
     return np.mean(errors**2)
 
 
