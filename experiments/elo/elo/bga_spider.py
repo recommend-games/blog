@@ -1,14 +1,19 @@
-from collections.abc import Generator
-from datetime import datetime, timezone
-import jmespath
+from __future__ import annotations
+
 import json
 import math
 import re
 import time
-from typing import Any
+from datetime import datetime, timezone
+from typing import Any, TYPE_CHECKING
 
+import funcy
+import jmespath
 from scrapy import FormRequest, Request, Selector, Spider
 from scrapy.http import Response, TextResponse
+
+if TYPE_CHECKING:
+    from collections.abc import Generator, Iterable
 
 
 class BaseFilter:
@@ -76,16 +81,28 @@ class BgaSpider(Spider):
 
     game_list_url = "/gamelist?allGames="
     game_list_regex = re.compile("globalUserInfos=(.+);$", flags=re.MULTILINE)
+    game_keys: Iterable[str] | None = None
 
     scrape_rankings = False
     ranking_url = "/gamepanel/gamepanel/getRanking.html"
     ranking_path = jmespath.compile("data.ranks")
     max_rank_scraped = None
+    ranking_keys: Iterable[str] | None = None
 
     scrape_matches = True
     base_match_url = "/message/board"
     match_path = jmespath.compile("data.news")
     max_matches_per_page = 9500
+    match_keys: Iterable[str] | None = frozenset(
+        (
+            "id",
+            "timestamp",
+            "game_id",
+            "players",
+            "scraped_at",
+            "type",
+        )
+    )
 
     ordinal_regex = re.compile(r"(\d+)(st|nd|rd|th)")
     integer_regex = re.compile(r"(\d+)")
@@ -139,7 +156,7 @@ class BgaSpider(Spider):
             for game in payload["game_list"]:
                 game["type"] = "game"
                 game["scraped_at"] = now
-                yield game
+                yield funcy.project(game, self.game_keys) if self.game_keys else game
 
                 if self.scrape_rankings:
                     yield FormRequest(
@@ -190,7 +207,9 @@ class BgaSpider(Spider):
             entry["game_id"] = game_id
             entry["type"] = "ranking"
             entry["scraped_at"] = now
-            yield entry
+            yield (
+                funcy.project(entry, self.ranking_keys) if self.ranking_keys else entry
+            )
             rank_nos.append(int(entry["rank_no"]))
 
         max_rank_no = max(rank_nos, default=math.inf)
@@ -259,7 +278,7 @@ class BgaSpider(Spider):
                 match["players"] = None
             last_id = match.get("id")
             last_timestamp = match.get("timestamp")
-            yield match
+            yield funcy.project(match, self.match_keys) if self.match_keys else match
 
         if last_id and last_timestamp:
             yield Request(
