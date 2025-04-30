@@ -4,6 +4,7 @@ import numpy as np
 import itertools
 from typing import Generic, TypeVar, TYPE_CHECKING
 from collections import defaultdict
+from elo.elo_ratings import elo_probability
 
 ID_TYPE = TypeVar("ID_TYPE")
 
@@ -36,6 +37,17 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
         self.max_exact = max_exact
         self.mc_samples = mc_samples
 
+    def _calculate_probability_matrix_two_players(
+        self,
+        players: tuple[ID_TYPE, ID_TYPE],
+    ) -> np.ndarray:
+        rating_a = self.elo_ratings[players[0]]
+        rating_b = self.elo_ratings[players[1]]
+        diff = rating_a - rating_b
+        prob_a = elo_probability(diff, self.elo_scale)
+        prob_b = 1 - prob_a
+        return np.array([[prob_a, prob_b], [prob_b, prob_a]])
+
     def calculate_probability_matrix(self, players: Iterable[ID_TYPE]) -> np.ndarray:
         players = tuple(players)
         num_players = len(players)
@@ -43,7 +55,8 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
         if num_players < 2:
             raise ValueError("At least 2 players are required")
 
-        # TODO: For two players, default back to regular Elo
+        if num_players == 2:
+            return self._calculate_probability_matrix_two_players(players)
 
         if num_players > self.max_exact:
             # TODO: implement Monte Carlo fallback
