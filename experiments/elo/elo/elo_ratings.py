@@ -1,7 +1,10 @@
 from __future__ import annotations
+
 from collections import defaultdict
-from collections.abc import Iterable, Mapping
-from typing import TypeVar
+from typing import TypeVar, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from collections.abc import Iterable, Mapping
 
 ID_TYPE = TypeVar("ID_TYPE")
 

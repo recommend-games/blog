@@ -2,14 +2,15 @@ from __future__ import annotations
 
 import numpy as np
 import itertools
-from typing import Generic, TypeVar, TYPE_CHECKING
 from collections import defaultdict
+from collections.abc import Mapping
+from typing import Generic, TypeVar, TYPE_CHECKING
 from elo.elo_ratings import elo_probability
 
 ID_TYPE = TypeVar("ID_TYPE")
 
 if TYPE_CHECKING:
-    from collections.abc import Generator, Iterable, Mapping
+    from collections.abc import Generator, Iterable
 
 
 class RankOrderedLogitElo(Generic[ID_TYPE]):
