@@ -48,6 +48,13 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
         prob_b = 1 - prob_a
         return np.array([[prob_a, prob_b], [prob_b, prob_a]])
 
+    def _calculate_probability_matrix_from_simulations(
+        self,
+        players: tuple[ID_TYPE, ...],
+    ) -> np.ndarray:
+        # TODO: implement Monte Carlo fallback
+        raise NotImplementedError
+
     def calculate_probability_matrix(self, players: Iterable[ID_TYPE]) -> np.ndarray:
         players = tuple(players)
         num_players = len(players)
@@ -59,10 +66,7 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
             return self._calculate_probability_matrix_two_players(players)
 
         if num_players > self.max_exact:
-            # TODO: implement Monte Carlo fallback
-            raise NotImplementedError(
-                f"Monte Carlo fallback not implemented for n>{self.max_exact}"
-            )
+            return self._calculate_probability_matrix_from_simulations(players)
 
         ratings = np.array([self.elo_ratings[p] for p in players], dtype=float)
         exp_ratings = 10 ** (ratings / self.elo_scale)
