@@ -43,6 +43,8 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
         if num_players < 2:
             raise ValueError("At least 2 players are required")
 
+        # TODO: For two players, default back to regular Elo
+
         if num_players > self.max_exact:
             # TODO: implement Monte Carlo fallback
             raise NotImplementedError(
@@ -73,10 +75,11 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
         rank_payoffs: np.ndarray,
     ) -> np.ndarray:
         assert rank_payoffs.ndim == 1, "Rank payoffs must be a 1D array"
-        probs = self.calculate_probability_matrix(players)
-        assert len(rank_payoffs) == len(probs), (
+        players = tuple(players)
+        assert len(rank_payoffs) == len(players), (
             "Rank payoffs must be the same length as the number of players"
         )
+        probs = self.calculate_probability_matrix(players)
         return probs @ rank_payoffs
 
     def update_elo_ratings(
