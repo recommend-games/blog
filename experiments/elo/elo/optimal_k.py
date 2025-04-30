@@ -87,3 +87,28 @@ def approximate_optimal_k(
     )
 
     return result.x
+
+
+def approximate_optimal_k_multi(
+    *,
+    matches: Iterable[Mapping[ID_TYPE, float] | Iterable[ID_TYPE]],
+    min_elo_k: float = 0,
+    max_elo_k: float = 160,
+    elo_scale: float = 400,
+) -> np.float64:
+    matches = list(matches)
+
+    def loss(elo_k: float) -> np.float64:
+        return calculate_loss_multi(
+            matches=matches,
+            elo_k=elo_k,
+            elo_scale=elo_scale,
+        )
+
+    result = minimize_scalar(
+        fun=loss,
+        method="bounded",
+        bounds=(min_elo_k, max_elo_k),
+    )
+
+    return result.x
