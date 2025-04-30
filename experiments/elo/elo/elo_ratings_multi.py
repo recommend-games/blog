@@ -148,7 +148,21 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
             matches = tqdm(matches)
 
         if full_results:
-            return np.array(list(self._update_elo_ratings_batch(matches)))
+            return _padded_numpy_array(self._update_elo_ratings_batch(matches))
 
         for _ in self._update_elo_ratings_batch(matches):
             pass
+
+
+def _padded_numpy_array(
+    arrays: Iterable[np.ndarray],
+    *,
+    pad_value: float = np.nan,
+    dtype: np.dtype = np.float64,
+) -> np.ndarray:
+    arrays = tuple(arrays)
+    max_len = max(a.shape[0] for a in arrays)
+    result = np.full((len(arrays), max_len), pad_value, dtype=dtype)
+    for i, a in enumerate(arrays):
+        result[i, : a.shape[0]] = a
+    return result
