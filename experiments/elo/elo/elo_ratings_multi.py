@@ -55,19 +55,11 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
         # TODO: implement Monte Carlo fallback
         raise NotImplementedError
 
-    def calculate_probability_matrix(self, players: Iterable[ID_TYPE]) -> np.ndarray:
-        players = tuple(players)
+    def _calculate_probability_matrix_from_permutations(
+        self,
+        players: tuple[ID_TYPE, ...],
+    ) -> np.ndarray:
         num_players = len(players)
-
-        if num_players < 2:
-            raise ValueError("At least 2 players are required")
-
-        if num_players == 2:
-            return self._calculate_probability_matrix_two_players(players)
-
-        if num_players > self.max_exact:
-            return self._calculate_probability_matrix_from_simulations(players)
-
         ratings = np.array([self.elo_ratings[p] for p in players], dtype=float)
         exp_ratings = 10 ** (ratings / self.elo_scale)
         probs = np.zeros((num_players, num_players))
@@ -85,6 +77,21 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
         assert np.allclose(probs.sum(axis=1), 1), "Probabilities must sum to 1"
 
         return probs
+
+    def calculate_probability_matrix(self, players: Iterable[ID_TYPE]) -> np.ndarray:
+        players = tuple(players)
+        num_players = len(players)
+
+        if num_players < 2:
+            raise ValueError("At least 2 players are required")
+
+        if num_players == 2:
+            return self._calculate_probability_matrix_two_players(players)
+
+        if num_players > self.max_exact:
+            return self._calculate_probability_matrix_from_simulations(players)
+
+        return self._calculate_probability_matrix_from_permutations(players)
 
     def calculate_expected_payoff(
         self,
