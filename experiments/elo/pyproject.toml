@@ -8,6 +8,7 @@ authors = ["Markus Shepherd <markus@recommend.games>"]
 python = "3.12.*"
 
 board-game-merger = "*"
+funcy = "*"
 jmespath = "*"
 matplotlib = "*"
 numpy = "*"
