@@ -9,7 +9,7 @@ from elo.elo_ratings import elo_probability
 ID_TYPE = TypeVar("ID_TYPE")
 
 if TYPE_CHECKING:
-    from collections.abc import Iterable, Mapping
+    from collections.abc import Generator, Iterable, Mapping
 
 
 class RankOrderedLogitElo(Generic[ID_TYPE]):
@@ -127,3 +127,27 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
             self.elo_ratings[player_id] += self.elo_k * diff
 
         return diffs
+
+    def _update_elo_ratings_batch(
+        self,
+        matches: Iterable[Mapping[ID_TYPE, float] | Iterable[ID_TYPE]],
+    ) -> Generator[np.ndarray]:
+        for match in matches:
+            yield self.update_elo_ratings(match)
+
+    def update_elo_ratings_batch(
+        self,
+        matches: Iterable[Mapping[ID_TYPE, float] | Iterable[ID_TYPE]],
+        full_results: bool = False,
+        progress_bar: bool = False,
+    ) -> np.ndarray | None:
+        if progress_bar:
+            from tqdm import tqdm
+
+            matches = tqdm(matches)
+
+        if full_results:
+            return np.array(list(self._update_elo_ratings_batch(matches)))
+
+        for _ in self._update_elo_ratings_batch(matches):
+            pass
