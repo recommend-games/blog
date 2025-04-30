@@ -1,10 +1,15 @@
+from __future__ import annotations
+
 import numpy as np
 import itertools
 import numpy.random as npr
-from typing import List, Any, Optional, Generic, TypeVar
+from typing import Generic, TypeVar, TYPE_CHECKING
 from collections import defaultdict
 
 ID_TYPE = TypeVar("ID_TYPE")
+
+if TYPE_CHECKING:
+    from collections.abc import Mapping
 
 
 class RankOrderedLogitElo(Generic[ID_TYPE]):
@@ -14,33 +19,36 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
 
     def __init__(
         self,
+        *,
+        init_elo_ratings: Mapping[ID_TYPE, float] | None = None,
         elo_initial: float = 0,
         elo_k: float = 32,
         elo_scale: float = 400,
         max_exact: int = 6,
         mc_samples: int = 5_000,
-    ):
+    ) -> None:
         self.elo_initial = elo_initial
         self.elo_k = elo_k
         self.elo_scale = elo_scale
         self.max_exact = max_exact
         self.mc_samples = mc_samples
         self.elo_ratings: defaultdict[ID_TYPE, float] = defaultdict(
-            lambda: self.elo_initial
+            lambda: self.elo_initial,
+            init_elo_ratings if init_elo_ratings is not None else {},
         )
 
-    def _get_ratings(self, players: List[Any]) -> np.ndarray:
+    def _get_ratings(self, players: list[ID_TYPE]) -> np.ndarray:
         return np.array([self.elo_ratings.get(p, 0.0) for p in players], dtype=float)
 
-    def _set_ratings(self, players: List[Any], arr: np.ndarray):
+    def _set_ratings(self, players: list[ID_TYPE], arr: np.ndarray):
         for p, r in zip(players, arr):
             self.elo_ratings[p] = float(r)
 
     def rate(
         self,
-        players: List[Any],
-        ranks: List[int],
-        prizes: Optional[List[float]] = None,
+        players: list[ID_TYPE],
+        ranks: list[int],
+        prizes: list[float] | None = None,
     ):
         n = len(players)
         R = self._get_ratings(players)
@@ -98,10 +106,10 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
         R += self.elo_k * (S_hat - E_hat)
         self._set_ratings(players, R)
 
-    def get_rating(self, player: Any) -> float:
+    def get_rating(self, player: ID_TYPE) -> float:
         return self.elo_ratings.get(player, 0.0)
 
-    def batch_ratings(self, players: List[Any]) -> np.ndarray:
+    def batch_ratings(self, players: list[ID_TYPE]) -> np.ndarray:
         return self._get_ratings(players)
 
 
