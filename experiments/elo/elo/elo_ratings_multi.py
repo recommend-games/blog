@@ -87,19 +87,22 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
         scores /= scores.max()
         return scores
 
-    def calculate_elo_ratings(
+    def update_elo_ratings(
         self,
         players: Mapping[ID_TYPE, float],
-    ) -> defaultdict[ID_TYPE, float]:
-        # TODO: finish calculations
-        return self.elo_ratings
+    ) -> None:
+        player_ids = tuple(players.keys())
+        payoffs = np.array(list(players.values()), dtype=float)
+        assert np.all(payoffs >= 0), "Payoffs must be non-negative"
+        assert np.any(payoffs > 0), "At least one payoff must be positive"
+        max_payoff = payoffs.max()
+        expected_payoffs = self.calculate_expected_payoff(player_ids, payoffs)
+        diffs = (payoffs - expected_payoffs) / max_payoff
+        for player_id, diff in zip(player_ids, diffs):
+            self.elo_ratings[player_id] += self.elo_k * diff
 
     def _get_ratings(self, players: Iterable[ID_TYPE]) -> np.ndarray:
         return np.array([self.elo_ratings[p] for p in players], dtype=float)
-
-    def _set_ratings(self, players: Iterable[ID_TYPE], arr: np.ndarray):
-        for p, r in zip(players, arr):
-            self.elo_ratings[p] = float(r)
 
     def rate(
         self,
