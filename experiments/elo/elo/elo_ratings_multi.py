@@ -26,15 +26,15 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
         max_exact: int = 6,
         mc_samples: int = 5_000,
     ) -> None:
-        self.elo_initial = elo_initial
-        self.elo_k = elo_k
-        self.elo_scale = elo_scale
-        self.max_exact = max_exact
-        self.mc_samples = mc_samples
         self.elo_ratings: defaultdict[ID_TYPE, float] = defaultdict(
             lambda: self.elo_initial,
             init_elo_ratings if init_elo_ratings is not None else {},
         )
+        self.elo_k = elo_k
+        self.elo_scale = elo_scale
+
+        self.max_exact = max_exact
+        self.mc_samples = mc_samples
 
     def calculate_probability_matrix(self, players: Iterable[ID_TYPE]) -> np.ndarray:
         players = tuple(players)
@@ -78,13 +78,6 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
             "Rank payoffs must be the same length as the number of players"
         )
         return probs @ rank_payoffs
-
-    def _calculate_player_scores(self, players: Mapping[ID_TYPE, float]) -> np.ndarray:
-        scores = np.array(list(players.values()), dtype=float)
-        assert np.all(scores >= 0)
-        assert np.any(scores > 0)
-        scores /= scores.max()
-        return scores
 
     def update_elo_ratings(
         self,
