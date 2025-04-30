@@ -109,7 +109,7 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
     def update_elo_ratings(
         self,
         players: Mapping[ID_TYPE, float] | Iterable[ID_TYPE],
-    ) -> None:
+    ) -> np.ndarray:
         if isinstance(players, Mapping):
             player_ids = tuple(players.keys())
             payoffs = np.array(list(players.values()), dtype=float)
@@ -125,3 +125,5 @@ class RankOrderedLogitElo(Generic[ID_TYPE]):
         diffs = (payoffs - expected_payoffs) / max_payoff
         for player_id, diff in zip(player_ids, diffs):
             self.elo_ratings[player_id] += self.elo_k * diff
+
+        return diffs
