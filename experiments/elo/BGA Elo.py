@@ -20,31 +20,13 @@ from elo.elo_ratings_multi import RankOrderedLogitElo
 from elo.optimal_k import approximate_optimal_k_multi
 
 jupyter_black.load()
+pl.Config.set_tbl_rows(100)
 
+num_matches_regulars = 25
 game_id = 1741  # Ark Nova
 
 # %%
-data = (
-    pl.scan_ipc("results/arrow/matches-*.arrow")
-    .filter(pl.col("game_id") == game_id)
-    .sort("scraped_at", "timestamp")
-    .unique("id", keep="first")
-    .select(
-        num_players=pl.col("players").list.len(),
-        player_ids=pl.col("players").list.eval(pl.element().struct.field("player_id")),
-        places=pl.col("players").list.eval(pl.element().struct.field("place")),
-    )
-    .filter(pl.col("num_players") >= 2)
-    .filter(pl.col("player_ids").list.eval(pl.element().is_not_null()).list.all())
-    .filter(
-        pl.col("places")
-        .list.eval(pl.element().is_not_null() & (pl.element() >= 1))
-        .list.all()
-    )
-    .with_columns(payoffs=pl.col("places").list.eval(pl.len() - pl.element()))
-    .filter(pl.col("payoffs").list.eval(pl.element() >= 0).list.all())
-    .collect()
-)
+data = pl.read_ipc(f"results/arrow/matches/{game_id}.arrow", memory_map=False)
 data.shape
 
 # %%
@@ -52,6 +34,19 @@ data.sample(10)
 
 # %%
 data.describe()
+
+# %%
+players = (
+    data.lazy()
+    .select(pl.col("player_ids").explode().value_counts())
+    .unnest("player_ids")
+)
+players.describe(percentiles=(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99))
+
+# %%
+players.select(
+    frac_regulars=(pl.col("count") >= num_matches_regulars).sum() / pl.len()
+).collect()
 
 # %%
 matches = (
