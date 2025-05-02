@@ -27,8 +27,10 @@ pl.Config.set_tbl_rows(100)
 # %%
 in_dir = Path("results").resolve()
 out_dir = in_dir / "arrow"
+match_dir = out_dir / "matches"
 out_dir.mkdir(parents=True, exist_ok=True)
-in_dir, out_dir
+match_dir.mkdir(parents=True, exist_ok=True)
+in_dir, out_dir, match_dir
 
 # %%
 file_batch_size = 10
@@ -67,3 +69,33 @@ for i, batch in enumerate(batched(tqdm(in_dir.glob("matches-*.jl")), file_batch_
         )
     )
     df.sink_ipc(out_dir / f"matches-{suffix}{i:05d}.arrow")
+
+# %%
+matches = pl.scan_ipc(out_dir / "matches-*.arrow")
+game_ids = matches.select(pl.col("game_id").unique()).collect()["game_id"]
+game_ids.shape
+
+# %%
+for game_id in tqdm(game_ids):
+    match_data = (
+        matches.filter(pl.col("game_id") == game_id)
+        .sort("scraped_at", "timestamp")
+        .unique("id", keep="first")
+        .select(
+            num_players=pl.col("players").list.len(),
+            player_ids=pl.col("players").list.eval(
+                pl.element().struct.field("player_id")
+            ),
+            places=pl.col("players").list.eval(pl.element().struct.field("place")),
+        )
+        .filter(pl.col("num_players") >= 2)
+        .filter(pl.col("player_ids").list.eval(pl.element().is_not_null()).list.all())
+        .filter(
+            pl.col("places")
+            .list.eval(pl.element().is_not_null() & (pl.element() >= 1))
+            .list.all()
+        )
+        .with_columns(payoffs=pl.col("places").list.eval(pl.len() - pl.element()))
+        .filter(pl.col("payoffs").list.eval(pl.element() >= 0).list.all())
+    )
+    match_data.sink_ipc(match_dir / f"{game_id}.arrow")
