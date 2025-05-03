@@ -94,12 +94,17 @@ def _games_stats(
             yield game
             continue
 
-        stats = game_stats(
-            matches_path,
-            threshold_matches_regulars=threshold_matches_regulars,
-            progress_bar=progress_bar,
-        )
-        yield game | stats
+        try:
+            stats = game_stats(
+                matches_path,
+                threshold_matches_regulars=threshold_matches_regulars,
+                progress_bar=progress_bar,
+            )
+        except Exception:
+            LOGGER.exception("Error processing game %s", game["display_name_en"])
+            yield game
+        else:
+            yield game | stats
 
     LOGGER.info("Done.")
 
