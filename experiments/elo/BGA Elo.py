@@ -14,10 +14,13 @@
 # ---
 
 # %%
+import itertools
 import jupyter_black
+import networkx as nx
 import polars as pl
 from elo.elo_ratings_multi import RankOrderedLogitElo
 from elo.optimal_k import approximate_optimal_k_multi
+from tqdm import tqdm
 
 jupyter_black.load()
 pl.Config.set_tbl_rows(100)
@@ -27,6 +30,26 @@ game_id = 1741  # Ark Nova
 
 # %%
 data = pl.read_ipc(f"results/arrow/matches/{game_id}.arrow", memory_map=False)
+num_all_matches = len(data)
+data.shape
+
+# %%
+graph = nx.Graph()
+for player_ids in tqdm(data["player_ids"]):
+    graph.add_edges_from(itertools.combinations(player_ids, 2))
+num_all_players = graph.number_of_nodes()
+graph.number_of_nodes(), graph.number_of_edges()
+
+# %%
+largest_community = max(nx.connected_components(graph), key=len)
+num_players = len(largest_community)
+num_players
+
+# %%
+data = data.filter(
+    pl.col("player_ids").list.eval(pl.element().is_in(largest_community)).list.any()
+)
+num_matches = len(data)
 data.shape
 
 # %%
@@ -41,12 +64,27 @@ players = (
     .select(pl.col("player_ids").explode().value_counts())
     .unnest("player_ids")
 )
-players.describe(percentiles=(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99))
+player_stats = players.describe(
+    percentiles=(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99)
+)
+num_matches_max = int(player_stats["count"][-1])
+player_stats
 
 # %%
-players.select(
-    frac_regulars=(pl.col("count") >= num_matches_regulars).sum() / pl.len()
-).collect()
+num_regular_players = (
+    players.filter(pl.col("count") >= num_matches_regulars)
+    .select(pl.len())
+    .collect()
+    .item()
+)
+num_regular_players
+
+# %%
+print(f"Number of matches: {num_all_matches} (all) / {num_matches} (connected only)")
+print(
+    f"Number of players: {num_all_players} (all) / {num_players} (connected only) / {num_regular_players} (regulars only)"
+)
+print(f"Maximum number of players by a single player: {num_matches_max}")
 
 # %%
 matches = (
@@ -56,7 +94,12 @@ matches = (
 
 # %%
 elo = RankOrderedLogitElo()
-elo.update_elo_ratings_batch(matches, full_results=True, progress_bar=True)
+elo.update_elo_ratings_batch(
+    matches,
+    full_results=True,
+    progress_bar=True,
+    tqdm_kwargs={"total": len(data)},
+)
 len(elo.elo_ratings)
 
 # %%
