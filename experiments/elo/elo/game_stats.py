@@ -3,6 +3,7 @@ from __future__ import annotations
 import itertools
 import json
 import logging
+import sys
 from pathlib import Path
 from typing import TYPE_CHECKING
 
@@ -84,22 +85,19 @@ def _games_stats(
     games = pl.read_ndjson(games_path)
     games_dicts = games.to_dicts()
 
-    if progress_bar:
-        from tqdm import tqdm
-
-        games_dicts = tqdm(games_dicts)
-
     for game in games_dicts:
-        game_id = game["game_id"]
+        LOGGER.info("Processing game %s", game["display_name_en"])
+        game_id = game["id"]
         matches_path = matches_dir / f"{game_id}.arrow"
         if not matches_path.exists():
             LOGGER.warning("Matches file %s does not exist", matches_path)
+            yield game
             continue
 
         stats = game_stats(
             matches_path,
             threshold_matches_regulars=threshold_matches_regulars,
-            progress_bar=False,
+            progress_bar=progress_bar,
         )
         yield game | stats
 
@@ -127,3 +125,18 @@ def games_stats(
             progress_bar=progress_bar,
         ):
             file.write(json.dumps(game) + "\n")
+
+
+def _main():
+    logging.basicConfig(level=logging.INFO, stream=sys.stdout)
+    games_stats(
+        games_path="games.jl",
+        matches_dir="results/arrow/matches",
+        output_path="games_stats.jl",
+        threshold_matches_regulars=25,
+        progress_bar=True,
+    )
+
+
+if __name__ == "__main__":
+    _main()
