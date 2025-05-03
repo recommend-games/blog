@@ -11,6 +11,7 @@ board-game-merger = "*"
 funcy = "*"
 jmespath = "*"
 matplotlib = "*"
+networkx = "*"
 numpy = "*"
 polars = {version = "*", extras = ["numpy", "pandas", "pyarrow"]}
 requests = "*"
