@@ -1,23 +1,26 @@
 from __future__ import annotations
 
 import itertools
+import json
 import logging
 from pathlib import Path
 from typing import TYPE_CHECKING
 
 import networkx as nx
 import polars as pl
-from tqdm import tqdm
+
 
 if TYPE_CHECKING:
-    pass
+    from typing import Generator, Any
 
 LOGGER = logging.getLogger(__name__)
 
 
 def game_stats(
     matches_path: Path | str,
+    *,
     threshold_matches_regulars: int = 25,
+    progress_bar: bool = False,
 ) -> dict[str, int]:
     matches_path = Path(matches_path).resolve()
     LOGGER.info("Reading matches from %s", matches_path)
@@ -26,8 +29,16 @@ def game_stats(
     num_all_matches = len(data)
 
     graph = nx.Graph()
-    for player_ids in tqdm(data["player_ids"]):
+
+    player_ids_col = data["player_ids"]
+    if progress_bar:
+        from tqdm import tqdm
+
+        player_ids_col = tqdm(player_ids_col)
+
+    for player_ids in player_ids_col:
         graph.add_edges_from(itertools.combinations(player_ids, 2))
+
     num_all_players = graph.number_of_nodes()
     largest_community = max(nx.connected_components(graph), key=len)
     num_players = len(largest_community)
@@ -55,3 +66,64 @@ def game_stats(
     result["num_players"] = num_players
 
     return result
+
+
+def _games_stats(
+    *,
+    games_path: Path | str,
+    matches_dir: Path | str,
+    threshold_matches_regulars: int = 25,
+    progress_bar: bool = False,
+) -> Generator[dict[str, Any]]:
+    games_path = Path(games_path).resolve()
+    matches_dir = Path(matches_dir).resolve()
+
+    LOGGER.info("Reading games from %s", games_path)
+    LOGGER.info("Reading matches from %s", matches_dir)
+
+    games = pl.read_ndjson(games_path)
+    games_dicts = games.to_dicts()
+
+    if progress_bar:
+        from tqdm import tqdm
+
+        games_dicts = tqdm(games_dicts)
+
+    for game in games_dicts:
+        game_id = game["game_id"]
+        matches_path = matches_dir / f"{game_id}.arrow"
+        if not matches_path.exists():
+            LOGGER.warning("Matches file %s does not exist", matches_path)
+            continue
+
+        stats = game_stats(
+            matches_path,
+            threshold_matches_regulars=threshold_matches_regulars,
+            progress_bar=False,
+        )
+        yield game | stats
+
+    LOGGER.info("Done.")
+
+
+def games_stats(
+    *,
+    games_path: Path | str,
+    matches_dir: Path | str,
+    output_path: Path | str,
+    threshold_matches_regulars: int = 25,
+    progress_bar: bool = False,
+):
+    output_path = Path(output_path).resolve()
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    LOGGER.info("Writing games stats to %s", output_path)
+
+    with output_path.open("w") as file:
+        for game in _games_stats(
+            games_path=games_path,
+            matches_dir=matches_dir,
+            threshold_matches_regulars=threshold_matches_regulars,
+            progress_bar=progress_bar,
+        ):
+            file.write(json.dumps(game) + "\n")
