@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.17.0
+#       jupytext_version: 1.17.1
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -19,7 +19,7 @@ import numpy as np
 import polars as pl
 import seaborn as sns
 from elo.optimal_k import approximate_optimal_k
-from elo.p_deterministic import simulate_p_deterministic_games, update_elo_ratings_p_deterministic
+from elo.p_deterministic import simulate_p_deterministic_matches, update_elo_ratings_p_deterministic
 
 jupyter_black.load()
 
@@ -49,7 +49,7 @@ def generate_distributions(
         p_deterministics = tqdm(p_deterministics)
 
     for p_deterministic in p_deterministics:
-        player_1_ids, player_2_ids, player_1_outcomes = simulate_p_deterministic_games(
+        player_1_ids, player_2_ids, player_1_outcomes = simulate_p_deterministic_matches(
             rng=rng,
             num_players=num_players,
             num_games=num_games,
