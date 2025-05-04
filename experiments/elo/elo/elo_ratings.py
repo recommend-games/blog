@@ -3,12 +3,13 @@ from __future__ import annotations
 import itertools
 import warnings
 from collections import defaultdict
+from collections.abc import Mapping
 from typing import TYPE_CHECKING
 
 import numpy as np
 
 if TYPE_CHECKING:
-    from collections.abc import Iterable, Generator, Mapping
+    from collections.abc import Iterable, Generator
     from typing import Any
 
 

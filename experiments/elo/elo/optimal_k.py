@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections.abc import Mapping
 from typing import TYPE_CHECKING
 
 import numpy as np
@@ -8,7 +9,7 @@ from scipy.optimize import minimize_scalar
 from elo.elo_ratings import EloRatingSystem, TwoPlayerElo, RankOrderedLogitElo
 
 if TYPE_CHECKING:
-    from collections.abc import Iterable, Mapping
+    from collections.abc import Iterable
 
 
 def calculate_loss[ID_TYPE](
@@ -36,7 +37,7 @@ def approximate_optimal_k[ID_TYPE](
 ) -> np.float64:
     match_list: list[Mapping[ID_TYPE, float]] = [
         dict(zip((m := tuple(match)), range(len(m) - 1, -1, -1)))
-        if isinstance(match, Iterable)
+        if not isinstance(match, Mapping)
         else match
         for match in matches
     ]
