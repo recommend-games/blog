@@ -1,7 +1,9 @@
 from __future__ import annotations
+
 import numpy as np
 
 from elo.elo_ratings import EloRatingSystem, TwoPlayerElo, RankOrderedLogitElo
+from elo.optimal_k import approximate_optimal_k
 
 
 def simulate_p_deterministic_matches(
@@ -74,3 +76,45 @@ def update_elo_ratings_p_deterministic(
     )
 
     return elo
+
+
+def p_deterministic_experiment(
+    *,
+    rng: np.random.Generator,
+    num_players: int,
+    num_matches: int,
+    players_per_match: int = 2,
+    p_deterministic: float,
+    elo_scale: float = 400,
+    progress_bar: bool = False,
+) -> tuple[float, float, np.ndarray]:
+    matches = simulate_p_deterministic_matches(
+        rng=rng,
+        num_players=num_players,
+        num_matches=num_matches,
+        players_per_match=players_per_match,
+        p_deterministic=p_deterministic,
+    )
+
+    elo_k = approximate_optimal_k(
+        matches=matches,
+        two_player_only=players_per_match == 2,
+        min_elo_k=0,
+        max_elo_k=elo_scale / 2,
+        elo_scale=elo_scale,
+    )
+
+    elo = update_elo_ratings_p_deterministic(
+        rng=rng,
+        elo=TwoPlayerElo(elo_k=elo_k, elo_scale=elo_scale)
+        if players_per_match == 2
+        else RankOrderedLogitElo(elo_k=elo_k, elo_scale=elo_scale),
+        num_players=num_players,
+        num_matches=num_matches,
+        players_per_match=players_per_match,
+        p_deterministic=p_deterministic,
+        progress_bar=False,
+    )
+    elo_ratings = np.array(list(elo.elo_ratings.values()))
+
+    return p_deterministic, elo_k, elo_ratings
