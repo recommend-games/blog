@@ -18,8 +18,12 @@ import jupyter_black
 import numpy as np
 import polars as pl
 import seaborn as sns
+from elo.elo_ratings import RankOrderedLogitElo, TwoPlayerElo
 from elo.optimal_k import approximate_optimal_k
-from elo.p_deterministic import simulate_p_deterministic_matches, update_elo_ratings_p_deterministic
+from elo.p_deterministic import (
+    simulate_p_deterministic_matches,
+    update_elo_ratings_p_deterministic,
+)
 
 jupyter_black.load()
 
@@ -27,7 +31,8 @@ jupyter_black.load()
 # %%
 def generate_distributions(
     num_players=1000,
-    num_games=1_000_000,
+    num_matches=1_000_000,
+    players_per_match=2,
     p_deterministic_min=0.01,
     p_deterministic_max=0.99,
     num_steps=99,
@@ -49,32 +54,38 @@ def generate_distributions(
         p_deterministics = tqdm(p_deterministics)
 
     for p_deterministic in p_deterministics:
-        player_1_ids, player_2_ids, player_1_outcomes = simulate_p_deterministic_matches(
+        matches = simulate_p_deterministic_matches(
             rng=rng,
             num_players=num_players,
-            num_games=num_games,
+            num_matches=num_matches,
+            players_per_match=players_per_match,
             p_deterministic=p_deterministic,
         )
 
         elo_k = approximate_optimal_k(
-            player_1_ids=player_1_ids,
-            player_2_ids=player_2_ids,
-            player_1_outcomes=player_1_outcomes,
+            matches=matches,
+            two_player_only=players_per_match == 2,
             min_elo_k=0,
             max_elo_k=elo_scale / 2,
             elo_scale=elo_scale,
         )
 
-        elo_ratings = update_elo_ratings_p_deterministic(
+        elo_kwargs = {"elo_k": elo_k, "elo_scale": elo_scale}
+        elo = (
+            TwoPlayerElo(**elo_kwargs)
+            if players_per_match == 2
+            else RankOrderedLogitElo(**elo_kwargs)
+        )
+        elo = update_elo_ratings_p_deterministic(
             rng=rng,
-            elo_ratings=np.zeros(num_players),
-            num_games=num_games,
+            elo=elo,
+            num_players=num_players,
+            num_matches=num_matches,
+            players_per_match=players_per_match,
             p_deterministic=p_deterministic,
-            elo_k=elo_k,
-            elo_scale=elo_scale,
-            inplace=True,
             progress_bar=False,
         )
+        elo_ratings = np.array(list(elo.elo_ratings.values()))
 
         yield p_deterministic, elo_k, elo_ratings
 
