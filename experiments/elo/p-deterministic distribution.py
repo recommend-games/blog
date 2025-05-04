@@ -20,6 +20,7 @@ import numpy as np
 import polars as pl
 import seaborn as sns
 from elo.p_deterministic import p_deterministic_experiments
+from tqdm import tqdm
 
 jupyter_black.load()
 
@@ -35,7 +36,7 @@ experiments = p_deterministic_experiments(
     elo_scale=400,
 )
 results = (
-    pl.LazyFrame(dataclasses.asdict(experiment) for experiment in experiments)
+    pl.LazyFrame(dataclasses.asdict(experiment) for experiment in tqdm(experiments))
     .sort("num_players", "num_matches", "players_per_match", "p_deterministic")
     .collect()
 )
