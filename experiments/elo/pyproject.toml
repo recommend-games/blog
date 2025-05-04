@@ -12,6 +12,7 @@ funcy = "*"
 jmespath = "*"
 matplotlib = "*"
 networkx = "*"
+nevergrad = "*"
 numpy = "*"
 polars = {version = "*", extras = ["numpy", "pandas", "pyarrow"]}
 requests = "*"
