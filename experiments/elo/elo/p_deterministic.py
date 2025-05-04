@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import dataclasses
+
 import numpy as np
 
 from elo.elo_ratings import EloRatingSystem, TwoPlayerElo, RankOrderedLogitElo
@@ -78,6 +80,27 @@ def update_elo_ratings_p_deterministic(
     return elo
 
 
+@dataclasses.dataclass(frozen=True, kw_only=True)
+class ExperimentResult:
+    num_players: int
+    num_matches: int
+    players_per_match: int
+
+    p_deterministic: float
+    elo_k: float
+    elo_scale: float
+
+    mean: float
+    std_dev: float
+    p00: float
+    p01: float
+    p25: float
+    p50: float
+    p75: float
+    p99: float
+    p100: float
+
+
 def p_deterministic_experiment(
     *,
     rng: np.random.Generator,
@@ -87,7 +110,7 @@ def p_deterministic_experiment(
     p_deterministic: float,
     elo_scale: float = 400,
     progress_bar: bool = False,
-) -> tuple[float, float, np.ndarray]:
+) -> ExperimentResult:
     matches = simulate_p_deterministic_matches(
         rng=rng,
         num_players=num_players,
@@ -117,4 +140,20 @@ def p_deterministic_experiment(
     )
     elo_ratings = np.array(list(elo.elo_ratings.values()))
 
-    return p_deterministic, elo_k, elo_ratings
+    return ExperimentResult(
+        num_players=num_players,
+        num_matches=num_matches,
+        players_per_match=players_per_match,
+        p_deterministic=p_deterministic,
+        elo_k=elo_k,
+        elo_scale=elo_scale,
+        mean=elo_ratings.mean(),
+        std_dev=elo_ratings.std(),
+        p00=elo_ratings.min(),
+        p01=np.percentile(elo_ratings, 1),
+        p25=np.percentile(elo_ratings, 25),
+        p50=np.percentile(elo_ratings, 50),
+        p75=np.percentile(elo_ratings, 75),
+        p99=np.percentile(elo_ratings, 99),
+        p100=elo_ratings.max(),
+    )
