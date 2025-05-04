@@ -19,7 +19,7 @@ import numpy as np
 import polars as pl
 import seaborn as sns
 from elo.optimal_k import approximate_optimal_k
-from elo.p_deterministic import simulate_p_deterministic_games, update_elo_ratings_p_deterministic
+from elo.p_deterministic import simulate_p_deterministic_matches, update_elo_ratings_p_deterministic
 from elo.elo_ratings import elo_probability
 
 jupyter_black.load()
@@ -33,7 +33,7 @@ p_deterministic = 0.5
 elo_scale = 400
 
 # %%
-player_1_ids, player_2_ids, player_1_outcomes = simulate_p_deterministic_games(
+player_1_ids, player_2_ids, player_1_outcomes = simulate_p_deterministic_matches(
     rng=rng,
     num_players=num_players,
     num_games=num_games,
