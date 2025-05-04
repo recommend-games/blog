@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import functools
 from collections.abc import Mapping
 from typing import TYPE_CHECKING
 
@@ -42,6 +43,7 @@ def approximate_optimal_k[ID_TYPE](
         for match in matches
     ]
 
+    @functools.cache
     def loss(elo_k: float) -> np.float64:
         return calculate_loss(
             elo=TwoPlayerElo(elo_k=elo_k, elo_scale=elo_scale)
