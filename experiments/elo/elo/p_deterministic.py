@@ -1,11 +1,19 @@
 from __future__ import annotations
 
 import dataclasses
+import itertools
+import time
+from concurrent.futures import ProcessPoolExecutor, as_completed
+from typing import TYPE_CHECKING
 
 import numpy as np
 
 from elo.elo_ratings import EloRatingSystem, TwoPlayerElo, RankOrderedLogitElo
 from elo.optimal_k import approximate_optimal_k
+
+if TYPE_CHECKING:
+    from collections.abc import Iterable, Generator
+    from concurrent.futures import Future
 
 
 def simulate_p_deterministic_matches(
@@ -136,7 +144,7 @@ def p_deterministic_experiment(
         num_matches=num_matches,
         players_per_match=players_per_match,
         p_deterministic=p_deterministic,
-        progress_bar=False,
+        progress_bar=progress_bar,
     )
     elo_ratings = np.array(list(elo.elo_ratings.values()))
 
@@ -157,3 +165,64 @@ def p_deterministic_experiment(
         p99=np.percentile(elo_ratings, 99),
         p100=elo_ratings.max(),
     )
+
+
+def _p_deterministic_experiment_futures(
+    *,
+    executor: ProcessPoolExecutor,
+    seed: int,
+    num_playerss: Iterable[int],
+    num_matchess: Iterable[int],
+    players_per_matchs: Iterable[int] = (2,),
+    p_deterministics: Iterable[float],
+    elo_scales: Iterable[float] = (400,),
+) -> Generator[Future[ExperimentResult]]:
+    for i, (
+        num_players,
+        num_matches,
+        players_per_match,
+        p_deterministic,
+        elo_scale,
+    ) in enumerate(
+        itertools.product(
+            num_playerss,
+            num_matchess,
+            players_per_matchs,
+            p_deterministics,
+            elo_scales,
+        )
+    ):
+        rng = np.random.default_rng(seed + i)
+        yield executor.submit(
+            p_deterministic_experiment,
+            rng=rng,
+            num_players=num_players,
+            num_matches=num_matches,
+            players_per_match=players_per_match,
+            p_deterministic=p_deterministic,
+            elo_scale=elo_scale,
+            progress_bar=False,
+        )
+
+
+def p_deterministic_experiments(
+    *,
+    seed: int | None = None,
+    num_players: Iterable[int],
+    num_matches: Iterable[int],
+    players_per_match: Iterable[int] = (2,),
+    p_deterministic: Iterable[float],
+    elo_scale: Iterable[float] = (400,),
+) -> Generator[ExperimentResult]:
+    with ProcessPoolExecutor() as executor:
+        futures = _p_deterministic_experiment_futures(
+            executor=executor,
+            seed=seed or time.time_ns(),
+            num_playerss=num_players,
+            num_matchess=num_matches,
+            players_per_matchs=players_per_match,
+            p_deterministics=p_deterministic,
+            elo_scales=elo_scale,
+        )
+        for future in as_completed(futures):
+            yield future.result()
