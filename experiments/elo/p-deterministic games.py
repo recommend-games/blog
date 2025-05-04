@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.17.0
+#       jupytext_version: 1.17.1
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -19,8 +19,11 @@ import numpy as np
 import polars as pl
 import seaborn as sns
 from elo.optimal_k import approximate_optimal_k
-from elo.p_deterministic import simulate_p_deterministic_matches, update_elo_ratings_p_deterministic
-from elo.elo_ratings import elo_probability
+from elo.p_deterministic import (
+    simulate_p_deterministic_matches,
+    update_elo_ratings_p_deterministic,
+)
+from elo.elo_ratings import RankOrderedLogitElo, TwoPlayerElo, elo_probability
 
 jupyter_black.load()
 
@@ -28,21 +31,25 @@ jupyter_black.load()
 seed = 13
 rng = np.random.default_rng(seed)
 num_players = 1000
-num_games = 1_000_000
+num_matches = 1_000_000
+players_per_match = 2
 p_deterministic = 0.5
 elo_scale = 400
 
 # %%
-player_1_ids, player_2_ids, player_1_outcomes = simulate_p_deterministic_matches(
+matches = simulate_p_deterministic_matches(
     rng=rng,
     num_players=num_players,
-    num_games=num_games,
+    num_matches=num_matches,
+    players_per_match=players_per_match,
     p_deterministic=p_deterministic,
 )
+matches.shape
+
+# %%
 elo_k = approximate_optimal_k(
-    player_1_ids=player_1_ids,
-    player_2_ids=player_2_ids,
-    player_1_outcomes=player_1_outcomes,
+    matches=matches,
+    two_player_only=players_per_match == 2,
     min_elo_k=0,
     max_elo_k=elo_scale / 2,
     elo_scale=elo_scale,
@@ -50,20 +57,22 @@ elo_k = approximate_optimal_k(
 elo_k
 
 # %%
-elo_ratings = np.zeros(num_players)
-elo_ratings.shape, elo_ratings.dtype
-
-# %%
-elo_scores = update_elo_ratings_p_deterministic(
+elo_kwargs = {"elo_k": elo_k, "elo_scale": elo_scale}
+elo = (
+    TwoPlayerElo(**elo_kwargs)
+    if players_per_match == 2
+    else RankOrderedLogitElo(**elo_kwargs)
+)
+elo = update_elo_ratings_p_deterministic(
     rng=rng,
-    elo_ratings=elo_ratings,
-    num_games=num_games,
+    elo=elo,
+    num_players=num_players,
+    num_matches=num_matches,
+    players_per_match=players_per_match,
     p_deterministic=p_deterministic,
-    elo_k=elo_k,
-    elo_scale=elo_scale,
-    inplace=True,
     progress_bar=True,
 )
+elo_ratings = np.array(list(elo.elo_ratings.values()))
 elo_ratings.shape, elo_ratings.dtype
 
 # %% jp-MarkdownHeadingCollapsed=true
