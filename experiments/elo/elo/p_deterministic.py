@@ -12,34 +12,36 @@ def simulate_p_deterministic_matches(
     num_matches: int,
     players_per_match: int = 2,
     p_deterministic: float,
-) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+) -> np.ndarray:
     assert 0 <= p_deterministic <= 1, "p_deterministic must be between 0 and 1"
     assert num_players > 1, "num_players must be greater than 1"
     assert num_matches > 0, "num_games must be greater than 0"
-    assert 2 <= players_per_match <= num_players, "players_per_match must be between 2 and num_players"
+    assert 2 <= players_per_match <= num_players, (
+        "players_per_match must be between 2 and num_players"
+    )
 
-    players_a = rng.integers(low=0, high=num_players, size=num_matches)
-    # Sample offset for second player, ensuring it's not equal to the first
-    offset = rng.integers(low=1, high=num_players, size=num_matches)
-    players_b = (players_a + offset) % num_players
-    assert np.all(players_a != players_b), "Players A and B must be different"
+    players = np.arange(num_players)
+    random_outcomes = np.array(
+        [
+            rng.choice(
+                players,
+                size=players_per_match,
+                replace=False,
+            )
+            for _ in range(num_matches)
+        ]
+    )
 
     if p_deterministic == 0:
-        # If p_deterministic is 0, all games are probabilistic
-        return players_a, players_b, rng.random(size=num_matches) < 0.5
+        return random_outcomes
+
+    deterministic_outcomes = np.sort(random_outcomes, axis=1)
 
     if p_deterministic == 1:
-        # If p_deterministic is 1, all games are deterministic
-        return players_a, players_b, players_a < players_b
+        return deterministic_outcomes
 
-    # Otherwise, mix deterministic and probabilistic outcomes
-    prob_player_a_wins = rng.random(size=num_matches) < 0.5
-    det_player_a_wins = players_a < players_b
-
-    deterministic = rng.random(size=num_matches) < p_deterministic
-    player_a_wins = np.where(deterministic, det_player_a_wins, prob_player_a_wins)
-
-    return players_a, players_b, player_a_wins
+    mask = rng.random(size=num_matches) < p_deterministic
+    return np.where(mask[:, np.newaxis], deterministic_outcomes, random_outcomes)
 
 
 def update_elo_ratings_p_deterministic(
