@@ -1,12 +1,13 @@
 from __future__ import annotations
 
+import warnings
 from collections import defaultdict
 from typing import TYPE_CHECKING
 
 import numpy as np
 
 if TYPE_CHECKING:
-    from collections.abc import Iterable, Mapping
+    from collections.abc import Iterable, Generator, Mapping
     from typing import Any
 
 
@@ -121,3 +122,73 @@ class EloRatingSystem[ID_TYPE]:
         rank_payoffs: np.ndarray | None = None,
     ) -> np.ndarray:
         raise NotImplementedError
+
+
+class TwoPlayerElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
+    def expected_outcome(
+        self,
+        players: Iterable[ID_TYPE],
+        *,
+        rank_payoffs: np.ndarray | None = None,
+    ) -> np.ndarray:
+        if rank_payoffs is not None:
+            warnings.warn("rank_payoffs are ignored for two-player elo")
+
+        player_1, player_2 = players
+        elo_1 = self.elo_ratings[player_1]
+        elo_2 = self.elo_ratings[player_2]
+        diff = elo_1 - elo_2
+        prob = elo_probability(diff, self.elo_scale)
+        return np.array([prob, 1 - prob])
+
+    def probability_matrix(
+        self,
+        players: Iterable[ID_TYPE],
+    ) -> np.ndarray:
+        expected_outcome = self.expected_outcome(players)
+        return np.array([expected_outcome, 1 - expected_outcome])
+
+    def update_elo_ratings(
+        self,
+        players: Mapping[ID_TYPE, float] | Iterable[ID_TYPE],
+    ) -> np.ndarray:
+        if isinstance(players, Mapping):
+            player_ids = tuple(players.keys())
+            outcomes = np.array(list(players.values()), dtype=float)
+        else:
+            player_ids = tuple(players)
+            outcomes = np.array([1, 0], dtype=float)
+
+        diffs = outcomes - self.expected_outcome(player_ids)
+        for player_id, diff in zip(player_ids, diffs):
+            self.elo_ratings[player_id] += self.elo_k * diff
+
+        return diffs
+
+    def _update_elo_ratings_batch(
+        self,
+        matches: Iterable[Mapping[ID_TYPE, float] | Iterable[ID_TYPE]],
+    ) -> Generator[np.ndarray]:
+        for match in matches:
+            yield self.update_elo_ratings(match)
+
+    def update_elo_ratings_batch(
+        self,
+        matches: Iterable[Mapping[ID_TYPE, float] | Iterable[ID_TYPE]],
+        *,
+        full_results: bool = False,
+        progress_bar: bool = False,
+        tqdm_kwargs: dict[str, Any] | None = None,
+    ) -> np.ndarray | None:
+        if progress_bar:
+            from tqdm import tqdm
+
+            tqdm_kwargs = tqdm_kwargs or {}
+            matches = tqdm(matches, desc="Updating elo ratings", **tqdm_kwargs)
+
+        if full_results:
+            return np.array(list(self._update_elo_ratings_batch(matches)))
+
+        for _ in self._update_elo_ratings_batch(matches):
+            pass
+        return None
