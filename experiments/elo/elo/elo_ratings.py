@@ -1,19 +1,20 @@
 from __future__ import annotations
 
 from collections import defaultdict
-from typing import TypeVar, TYPE_CHECKING
+from typing import TYPE_CHECKING
+
+import numpy as np
 
 if TYPE_CHECKING:
     from collections.abc import Iterable, Mapping
-
-ID_TYPE = TypeVar("ID_TYPE")
+    from typing import Any
 
 
 def elo_probability(diff: float, scale: float = 400) -> float:
     return 1 / (1 + 10 ** (-diff / scale))
 
 
-def calculate_elo_ratings(
+def calculate_elo_ratings[ID_TYPE](
     *,
     player_1_ids: Iterable[ID_TYPE],
     player_2_ids: Iterable[ID_TYPE],
@@ -65,3 +66,58 @@ def calculate_elo_ratings(
     if full_results:
         return elo_ratings, player_1_win_probs, elo_updates
     return elo_ratings
+
+
+class EloRatingSystem[ID_TYPE]:
+    elo_initial: float = 0
+    elo_k: float = 32
+    elo_scale: float = 400
+
+    elo_ratings: defaultdict[ID_TYPE, float]
+
+    def __init__(
+        self,
+        *,
+        init_elo_ratings: Mapping[ID_TYPE, float] | None = None,
+        elo_initial: float = 0,
+        elo_k: float = 32,
+        elo_scale: float = 400,
+    ) -> None:
+        self.elo_initial = elo_initial
+        self.elo_k = elo_k
+        self.elo_scale = elo_scale
+
+        self.elo_ratings = defaultdict(
+            lambda: elo_initial,
+            init_elo_ratings if init_elo_ratings is not None else {},
+        )
+
+    def update_elo_ratings(
+        self,
+        players: Mapping[ID_TYPE, float] | Iterable[ID_TYPE],
+    ) -> np.ndarray:
+        raise NotImplementedError
+
+    def update_elo_ratings_batch(
+        self,
+        matches: Iterable[Mapping[ID_TYPE, float] | Iterable[ID_TYPE]],
+        *,
+        full_results: bool = False,
+        progress_bar: bool = False,
+        tqdm_kwargs: dict[str, Any] | None = None,
+    ) -> np.ndarray | None:
+        raise NotImplementedError
+
+    def probability_matrix(
+        self,
+        players: Iterable[ID_TYPE],
+    ) -> np.ndarray:
+        raise NotImplementedError
+
+    def expected_outcome(
+        self,
+        players: Iterable[ID_TYPE],
+        *,
+        rank_payoffs: np.ndarray | None = None,
+    ) -> np.ndarray:
+        raise NotImplementedError
