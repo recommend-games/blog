@@ -14,106 +14,35 @@
 # ---
 
 # %%
+import dataclasses
 import jupyter_black
 import numpy as np
 import polars as pl
 import seaborn as sns
-from elo.elo_ratings import RankOrderedLogitElo, TwoPlayerElo
-from elo.optimal_k import approximate_optimal_k
-from elo.p_deterministic import (
-    simulate_p_deterministic_matches,
-    update_elo_ratings_p_deterministic,
-)
+from elo.p_deterministic import p_deterministic_experiments
 
 jupyter_black.load()
 
+seed = 13
 
 # %%
-def generate_distributions(
+experiments = p_deterministic_experiments(
+    seed=seed,
     num_players=1000,
     num_matches=1_000_000,
     players_per_match=2,
-    p_deterministic_min=0.01,
-    p_deterministic_max=0.99,
-    num_steps=99,
+    p_deterministic=np.linspace(start=0.01, stop=0.99, num=99),
     elo_scale=400,
-    seed=None,
-    progress_bar: bool = False,
-):
-    rng = np.random.default_rng(seed)
-
-    p_deterministics = np.linspace(
-        start=p_deterministic_min,
-        stop=p_deterministic_max,
-        num=num_steps,
-    )
-
-    if progress_bar:
-        from tqdm import tqdm
-
-        p_deterministics = tqdm(p_deterministics)
-
-    for p_deterministic in p_deterministics:
-        matches = simulate_p_deterministic_matches(
-            rng=rng,
-            num_players=num_players,
-            num_matches=num_matches,
-            players_per_match=players_per_match,
-            p_deterministic=p_deterministic,
-        )
-
-        elo_k = approximate_optimal_k(
-            matches=matches,
-            two_player_only=players_per_match == 2,
-            min_elo_k=0,
-            max_elo_k=elo_scale / 2,
-            elo_scale=elo_scale,
-        )
-
-        elo_kwargs = {"elo_k": elo_k, "elo_scale": elo_scale}
-        elo = (
-            TwoPlayerElo(**elo_kwargs)
-            if players_per_match == 2
-            else RankOrderedLogitElo(**elo_kwargs)
-        )
-        elo = update_elo_ratings_p_deterministic(
-            rng=rng,
-            elo=elo,
-            num_players=num_players,
-            num_matches=num_matches,
-            players_per_match=players_per_match,
-            p_deterministic=p_deterministic,
-            progress_bar=False,
-        )
-        elo_ratings = np.array(list(elo.elo_ratings.values()))
-
-        yield p_deterministic, elo_k, elo_ratings
-
-
-# %%
-p_deterministics, elo_ks, elo_ratingss = zip(
-    *generate_distributions(seed=13, progress_bar=True)
 )
-
-# %%
-elo_ratingss_array = np.array(elo_ratingss)
-elo_ratingss_array.shape, elo_ratingss_array.dtype
-
-# %%
-elo_ratings_stds = np.std(elo_ratingss_array, axis=1)
-elo_ratings_stds.shape, elo_ratings_stds.dtype
-
-# %%
-results = pl.DataFrame(
-    data=elo_ratingss_array,
-    schema=[f"elo_{i:03d}" for i in range(elo_ratingss_array.shape[1])],
-).select(
-    pl.Series("p_deterministic", p_deterministics),
-    pl.Series("elo_k", elo_ks),
-    pl.Series("elo_ratings_std", elo_ratings_stds),
-    pl.all(),
+results = (
+    pl.LazyFrame(dataclasses.asdict(experiment) for experiment in experiments)
+    .sort("num_players", "num_matches", "players_per_match", "p_deterministic")
+    .collect()
 )
 results.shape
+
+# %%
+results.sample(10, seed=seed)
 
 # %%
 results.write_csv("results/p_deterministic.csv", float_precision=5)
@@ -125,7 +54,7 @@ sns.scatterplot(data=results, x="p_deterministic", y="elo_k")
 sns.scatterplot(x=results["p_deterministic"], y=np.log(results["elo_k"]))
 
 # %%
-sns.scatterplot(data=results, x="p_deterministic", y="elo_ratings_std")
+sns.scatterplot(data=results, x="p_deterministic", y="std_dev")
 
 # %%
-sns.scatterplot(x=results["p_deterministic"], y=np.log(results["elo_ratings_std"]))
+sns.scatterplot(x=results["p_deterministic"], y=np.log(results["std_dev"]))
