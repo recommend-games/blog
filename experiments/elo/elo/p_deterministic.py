@@ -3,6 +3,7 @@ from __future__ import annotations
 import dataclasses
 import itertools
 import time
+from collections.abc import Iterable
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from typing import TYPE_CHECKING
 
@@ -12,7 +13,7 @@ from elo.elo_ratings import EloRatingSystem, TwoPlayerElo, RankOrderedLogitElo
 from elo.optimal_k import approximate_optimal_k
 
 if TYPE_CHECKING:
-    from collections.abc import Iterable, Generator
+    from collections.abc import Generator
     from concurrent.futures import Future
 
 
@@ -167,6 +168,10 @@ def p_deterministic_experiment(
     )
 
 
+def _make_iterable[T](value: T | Iterable[T]) -> Iterable[T]:
+    return value if isinstance(value, Iterable) else (value,)
+
+
 def _p_deterministic_experiment_futures(
     *,
     executor: ProcessPoolExecutor,
@@ -185,15 +190,11 @@ def _p_deterministic_experiment_futures(
         elo_scale,
     ) in enumerate(
         itertools.product(
-            (num_playerss,) if isinstance(num_playerss, int) else num_playerss,
-            (num_matchess,) if isinstance(num_matchess, int) else num_matchess,
-            (players_per_matchs,)
-            if isinstance(players_per_matchs, int)
-            else players_per_matchs,
-            (p_deterministics,)
-            if isinstance(p_deterministics, float)
-            else p_deterministics,
-            (elo_scales,) if isinstance(elo_scales, float) else elo_scales,
+            _make_iterable(num_playerss),
+            _make_iterable(num_matchess),
+            _make_iterable(players_per_matchs),
+            _make_iterable(p_deterministics),
+            _make_iterable(elo_scales),
         )
     ):
         rng = np.random.default_rng(seed + i)
