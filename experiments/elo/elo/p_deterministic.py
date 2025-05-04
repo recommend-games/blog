@@ -171,11 +171,11 @@ def _p_deterministic_experiment_futures(
     *,
     executor: ProcessPoolExecutor,
     seed: int,
-    num_playerss: Iterable[int],
-    num_matchess: Iterable[int],
-    players_per_matchs: Iterable[int] = (2,),
-    p_deterministics: Iterable[float],
-    elo_scales: Iterable[float] = (400,),
+    num_playerss: Iterable[int] | int,
+    num_matchess: Iterable[int] | int,
+    players_per_matchs: Iterable[int] | int,
+    p_deterministics: Iterable[float] | float,
+    elo_scales: Iterable[float] | float,
 ) -> Generator[Future[ExperimentResult]]:
     for i, (
         num_players,
@@ -185,11 +185,15 @@ def _p_deterministic_experiment_futures(
         elo_scale,
     ) in enumerate(
         itertools.product(
-            num_playerss,
-            num_matchess,
-            players_per_matchs,
-            p_deterministics,
-            elo_scales,
+            (num_playerss,) if isinstance(num_playerss, int) else num_playerss,
+            (num_matchess,) if isinstance(num_matchess, int) else num_matchess,
+            (players_per_matchs,)
+            if isinstance(players_per_matchs, int)
+            else players_per_matchs,
+            (p_deterministics,)
+            if isinstance(p_deterministics, float)
+            else p_deterministics,
+            (elo_scales,) if isinstance(elo_scales, float) else elo_scales,
         )
     ):
         rng = np.random.default_rng(seed + i)
@@ -208,11 +212,11 @@ def _p_deterministic_experiment_futures(
 def p_deterministic_experiments(
     *,
     seed: int | None = None,
-    num_players: Iterable[int],
-    num_matches: Iterable[int],
-    players_per_match: Iterable[int] = (2,),
-    p_deterministic: Iterable[float],
-    elo_scale: Iterable[float] = (400,),
+    num_players: Iterable[int] | int,
+    num_matches: Iterable[int] | int,
+    players_per_match: Iterable[int] | int = 2,
+    p_deterministic: Iterable[float] | float,
+    elo_scale: Iterable[float] | float = 400,
 ) -> Generator[ExperimentResult]:
     with ProcessPoolExecutor() as executor:
         futures = _p_deterministic_experiment_futures(
