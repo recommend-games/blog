@@ -34,14 +34,19 @@ def approximate_optimal_k[ID_TYPE](
     max_elo_k: float = 200,
     elo_scale: float = 400,
 ) -> np.float64:
-    matches = list(matches)
+    match_list: list[Mapping[ID_TYPE, float]] = [
+        dict(zip((m := tuple(match)), range(len(m) - 1, -1, -1)))
+        if isinstance(match, Iterable)
+        else match
+        for match in matches
+    ]
 
     def loss(elo_k: float) -> np.float64:
         return calculate_loss(
             elo=TwoPlayerElo(elo_k=elo_k, elo_scale=elo_scale)
             if two_player_only
             else RankOrderedLogitElo(elo_k=elo_k, elo_scale=elo_scale),
-            matches=matches,
+            matches=match_list,
             progress_bar=False,
         )
 
