@@ -5,7 +5,7 @@ import warnings
 from abc import ABC, abstractmethod
 from collections import defaultdict
 from collections.abc import Mapping
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, override
 
 import numpy as np
 
@@ -74,6 +74,7 @@ class EloRatingSystem[ID_TYPE](ABC):
 
 
 class TwoPlayerElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
+    @override
     def expected_outcome(
         self,
         players: Iterable[ID_TYPE],
@@ -90,6 +91,7 @@ class TwoPlayerElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
         prob = elo_probability(diff, self.elo_scale)
         return np.array([prob, 1 - prob])
 
+    @override
     def probability_matrix(
         self,
         players: Iterable[ID_TYPE],
@@ -97,6 +99,7 @@ class TwoPlayerElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
         expected_outcome = self.expected_outcome(players)
         return np.array([expected_outcome, 1 - expected_outcome])
 
+    @override
     def update_elo_ratings(
         self,
         players: Mapping[ID_TYPE, float] | Iterable[ID_TYPE],
@@ -121,6 +124,7 @@ class TwoPlayerElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
         for match in matches:
             yield self.update_elo_ratings(match)
 
+    @override
     def update_elo_ratings_batch(
         self,
         matches: Iterable[Mapping[ID_TYPE, float] | Iterable[ID_TYPE]],
@@ -209,6 +213,7 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
 
         return probs
 
+    @override
     def probability_matrix(
         self,
         players: Iterable[ID_TYPE],
@@ -226,6 +231,7 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
 
         return self._calculate_probability_matrix_from_permutations(players)
 
+    @override
     def expected_outcome(
         self,
         players: Iterable[ID_TYPE],
@@ -243,6 +249,7 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
         probs = self.probability_matrix(players)
         return probs @ rank_payoffs
 
+    @override
     def update_elo_ratings(
         self,
         players: Mapping[ID_TYPE, float] | Iterable[ID_TYPE],
@@ -272,6 +279,7 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
         for match in matches:
             yield self.update_elo_ratings(match)
 
+    @override
     def update_elo_ratings_batch(
         self,
         matches: Iterable[Mapping[ID_TYPE, float] | Iterable[ID_TYPE]],
