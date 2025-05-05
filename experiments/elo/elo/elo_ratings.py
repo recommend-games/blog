@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import itertools
 import warnings
+from abc import ABC, abstractmethod
 from collections import defaultdict
 from collections.abc import Mapping
 from typing import TYPE_CHECKING
@@ -17,7 +18,7 @@ def elo_probability(diff: float, scale: float = 400) -> float:
     return 1 / (1 + 10 ** (-diff / scale))
 
 
-class EloRatingSystem[ID_TYPE]:
+class EloRatingSystem[ID_TYPE](ABC):
     elo_initial: float = 0
     elo_k: float = 32
     elo_scale: float = 400
@@ -41,12 +42,13 @@ class EloRatingSystem[ID_TYPE]:
             init_elo_ratings if init_elo_ratings is not None else {},
         )
 
+    @abstractmethod
     def update_elo_ratings(
         self,
         players: Mapping[ID_TYPE, float] | Iterable[ID_TYPE],
-    ) -> np.ndarray:
-        raise NotImplementedError
+    ) -> np.ndarray: ...
 
+    @abstractmethod
     def update_elo_ratings_batch(
         self,
         matches: Iterable[Mapping[ID_TYPE, float] | Iterable[ID_TYPE]],
@@ -54,22 +56,21 @@ class EloRatingSystem[ID_TYPE]:
         full_results: bool = False,
         progress_bar: bool = False,
         tqdm_kwargs: dict[str, Any] | None = None,
-    ) -> np.ndarray | None:
-        raise NotImplementedError
+    ) -> np.ndarray | None: ...
 
+    @abstractmethod
     def probability_matrix(
         self,
         players: Iterable[ID_TYPE],
-    ) -> np.ndarray:
-        raise NotImplementedError
+    ) -> np.ndarray: ...
 
+    @abstractmethod
     def expected_outcome(
         self,
         players: Iterable[ID_TYPE],
         *,
         rank_payoffs: np.ndarray | None = None,
-    ) -> np.ndarray:
-        raise NotImplementedError
+    ) -> np.ndarray: ...
 
 
 class TwoPlayerElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
