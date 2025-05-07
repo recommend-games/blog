@@ -25,25 +25,32 @@ jupyter_black.load()
 
 # %%
 data = (
-    pl.scan_csv("results/p_deterministic.csv")
-    .filter(pl.col("num_matches") > 1000)
+    pl.scan_csv("results/p_deterministic*.csv")
+    # .filter(pl.col("num_matches") > 1000)
     .with_columns(matches_per_player=pl.col("num_matches") / pl.col("num_players"))
+    .sort("p_deterministic")
     .collect()
 )
 data.shape
 
 
 # %%
-def power_law(x: np.ndarray, a: float) -> np.ndarray:
-    return a / (x**0.5)
+def power_law(x: np.ndarray, a: float, b: float, c: float) -> np.ndarray:
+    return a / (x**b) + c
 
 
 def fit_and_plot(data):
+    data = data.filter(pl.col("matches_per_player") > 10)
+
+    if len(data) < 10:
+        print(f"Only {len(data)} row(s) provided, skipping…")
+        return
+
     x = data["matches_per_player"].to_numpy()
     y = data["elo_k"].to_numpy()
     popt, pcov = curve_fit(power_law, x, y, bounds=(0, np.inf))
-    (a,) = popt
-    print(f"Fitted parameters: a={a:.4f}, b={.5:.4f}, c={.0:.4f}")
+    a, b, c = popt
+    print(f"Fitted parameters: a={a:.4f}, b={b:.4f}, c={c:.4f}")
     x_fit = np.linspace(x.min(), x.max(), 100)
     y_fit = power_law(x_fit, *popt)
 
@@ -62,13 +69,9 @@ def fit_and_plot(data):
 
 
 # %%
-fit_and_plot(data.filter(pl.col("p_deterministic") == 0.25))
-plt.show()
+for (p_deterministic,), group in data.group_by("p_deterministic", maintain_order=True):
+    print(f"{p_deterministic=}")
+    fit_and_plot(group)
+    plt.show()
 
 # %%
-fit_and_plot(data.filter(pl.col("p_deterministic") == 0.5))
-plt.show()
-
-# %%
-fit_and_plot(data.filter(pl.col("p_deterministic") == 0.75))
-plt.show()
