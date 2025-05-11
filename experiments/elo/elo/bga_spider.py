@@ -104,7 +104,7 @@ class BgaSpider(Spider):
         )
     )
 
-    ordinal_regex = re.compile(r"(\d+)(st|nd|rd|th)")
+    ordinal_regex = re.compile(r"(\d+)(st|nd|rd|th)|winner|loser", re.IGNORECASE)
     integer_regex = re.compile(r"(\d+)")
 
     def parse(self, response: Response) -> Request:
@@ -293,10 +293,22 @@ class BgaSpider(Spider):
     def parse_match_html(self, html: str) -> Generator[dict[str, Any]]:
         selector = Selector(text=html, type="html")
 
-        for player_div in selector.css("div.board-score-entry"):
+        player_divs = selector.css("div.board-score-entry")
+        num_players = len(player_divs)
+
+        for player_div in player_divs:
             rank_text = player_div.xpath("text()[1]").get() or ""
             match = self.ordinal_regex.search(rank_text)
-            place = int(match.group(1)) if match else None
+            if not match:
+                place = None
+            elif match.group(1):
+                place = int(match.group(1))
+            elif match.group(0).lower() == "winner":
+                place = 1
+            elif match.group(0).lower() == "loser":
+                place = num_players
+            else:
+                raise ValueError(f"Invalid place: {place}")
 
             player_link = player_div.css("a.playername")
             player_href = player_link.xpath("@href").get() or ""
