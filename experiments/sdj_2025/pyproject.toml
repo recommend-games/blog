@@ -7,7 +7,7 @@ authors = ["Markus Shepherd <markus@recommend.games>"]
 [tool.poetry.dependencies]
 python = "3.13.*"
 
-spiel-des-jahres = {version = ">=0.2.0,<1.0.0", extras = ["kennerspiel", "predictions"]}
+spiel-des-jahres = {version = ">=0.2.1,<1.0.0", extras = ["kennerspiel", "predictions"]}
 
 [tool.poetry.group.dev.dependencies]
 jupyter-black = "*"
