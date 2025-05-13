@@ -15,9 +15,13 @@
 
 # %%
 import jupyter_black
+import polars as pl
 from spiel_des_jahres.predictions import sdj_predictions
 
 jupyter_black.load()
+
+pl.Config.set_fmt_str_lengths(100)
+pl.Config.set_tbl_rows(100)
 
 # %%
 predictions = sdj_predictions(
@@ -30,3 +34,12 @@ predictions = sdj_predictions(
     recommender_model="../../../recommend-games-server/data/recommender_light.npz",
 ).collect()
 predictions.shape
+
+# %%
+predictions.remove(pl.col("kennerspiel")).head(100)
+
+# %%
+predictions.filter(pl.col("kennerspiel")).head(100)
+
+# %%
+predictions.write_csv("predictions.csv", float_precision=5)
