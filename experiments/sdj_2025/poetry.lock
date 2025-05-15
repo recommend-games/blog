@@ -2551,13 +2551,13 @@ files = [
 
 [[package]]
 name = "spiel-des-jahres"
-version = "0.2.2"
+version = "0.2.3"
 description = "Spiel des Jahres predictions"
 optional = false
 python-versions = "<4.0,>=3.10.0"
 files = [
-    {file = "spiel_des_jahres-0.2.2-py3-none-any.whl", hash = "sha256:c75f9d65f8a7d61a40013b400f513340038488c515a7d7022042ff436f2fa9bc"},
-    {file = "spiel_des_jahres-0.2.2.tar.gz", hash = "sha256:7c53a2a8fc55a3a256b4ba445e21cb263251a55f7aed0ff5ae434dc632476047"},
+    {file = "spiel_des_jahres-0.2.3-py3-none-any.whl", hash = "sha256:2f3a139b5a0d5ff5b3649275d35a574c2b168e25b12ae42d2b7af846fc4fa8bb"},
+    {file = "spiel_des_jahres-0.2.3.tar.gz", hash = "sha256:138b758a913176c9792bd92e65f8f1af88d28804044b4caabf65e5b911d43e9a"},
 ]
 
 [package.dependencies]
@@ -2828,4 +2828,4 @@ test = ["websockets"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.13.*"
-content-hash = "42270deed362af22d9c9f7dc690fa76bcf73300e821a78370986ddde6b8dfa2f"
+content-hash = "e6ecf3b635e537bcd995e907e7f2fac76b1efc73f25e9ea9ed1fdee31181e86f"
