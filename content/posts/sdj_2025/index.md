@@ -134,7 +134,95 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 
 {{< img src="ksdj-2025" size="x300" alt="Kennerspiel des Jahres 2025" >}}
 
-TODO
+
+## #1: {{% game 413246 %}}Bomb Busters{{% /game %}}
+
+*2–5 players, 30 minutes, 10+ years, medium light (2.0), 54% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="413246" size="x300" alt="Bomb Busters" >}}
+
+*Players defuse bombs by deducing and cutting unseen wires of different values.*
+
+
+## #2: {{% game 421006 %}}The Lord of the Rings: Duel for Middle-earth{{% /game %}}
+
+*2 players, 30–45 minutes, 10+ years, medium light (2.1), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="421006" size="x300" alt="The Lord of the Rings: Duel for Middle-earth" >}}
+
+*Play as the Fellowship or Sauron and attempt to determine the fate of Middle-earth.*
+
+
+## #3: {{% game 385761 %}}Faraway{{% /game %}}
+
+*2–6 players, 15–30 minutes, 10+ years, medium light (1.9), 67% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="385761" size="x300" alt="Faraway" >}}
+
+*Explore a mysterious land and fulfill quests on your way back.*
+
+
+## #4: {{% game 240980 %}}Blood on the Clocktower{{% /game %}}
+
+*6–21 players, 30–120 minutes, 15+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="240980" size="x300" alt="Blood on the Clocktower" >}}
+
+*Deduce who the Demon is through logic and bluffing. Dead players still play.*
+
+
+## #5: {{% game 400314 %}}Apiary{{% /game %}}
+
+*1–5 players, 60–90 minutes, 14+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="400314" size="x300" alt="Apiary" >}}
+
+*Hyper-intelligent bees take to outer space to build, explore, and grow.*
+
+
+## #6: {{% game 410201 %}}Wyrmspan{{% /game %}}
+
+*1–5 players, 90 minutes, 14+ years, medium (2.8), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="410201" size="x300" alt="Wyrmspan" >}}
+
+*Build a cavernous sanctuary for dragons of all shapes and sizes!*
+
+
+## #7: {{% game 227935 %}}Wonderland's War{{% /game %}}
+
+*2–5 players, 45–125 minutes, 13+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="227935" size="x300" alt="Wonderland's War" >}}
+
+*The looking glass has shattered and war has come to Wonderland!*
+
+
+## #8: {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}}
+
+*1–4 players, 60–120 minutes, 10+ years, medium (2.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="367966" size="x300" alt="Endeavor: Deep Sea" >}}
+
+*Lead your research institute to explore ocean depths and publish your findings!*
+
+
+## #9: {{% game 418059 %}}SETI: Search for Extraterrestrial Intelligence{{% /game %}}
+
+*1–4 players, 40–160 minutes, 14+ years, medium heavy (3.8), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="418059" size="x300" alt="SETI: Search for Extraterrestrial Intelligence" >}}
+
+*Search for signs of alien life by launching probes and analyzing distant signals.*
+
+
+## #10: {{% game 429293 %}}The Fellowship of the Ring: Trick-Taking Game{{% /game %}}
+
+*1–4 players, 20 minutes, 10+ years, medium light (2.0), 75% {{% kdj %}}Kennerspiel{{% /kdj %}}*
+
+{{< img src="429293" size="x300" alt="The Fellowship of the Ring: Trick-Taking Game" >}}
+
+*Travel from the Shire and overcome every obstacle as a team.*
 
 
 # My two cents
