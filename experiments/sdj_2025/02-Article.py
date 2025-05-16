@@ -22,6 +22,9 @@ jupyter_black.load()
 pl.Config.set_fmt_str_lengths(100)
 pl.Config.set_tbl_rows(100)
 
+COMPLEXITIES = (None, "light", "medium light", "medium", "medium heavy", "heavy")
+comp_cat = pl.lit(COMPLEXITIES)
+
 # %%
 with open("template.md") as f:
     template = f.read()
@@ -51,11 +54,28 @@ predictions = (
             "sdj_rank",
             "bgg_id",
             "name",
-            "min_players",  # also max_players
-            "min_time",  # also max_time
-            "min_age",  # add +
-            "complexity",  # category?
-            (pl.col("kennerspiel_score") * 100).round(),  # format
+            pl.when(pl.col("min_players") < pl.col("max_players"))
+            .then(pl.format("{}–{}", "min_players", "max_players"))
+            .otherwise("min_players"),
+            pl.when(pl.col("min_time") < pl.col("max_time"))
+            .then(pl.format("{}–{}", "min_time", "max_time"))
+            .otherwise("min_time"),
+            "min_age",
+            comp_cat.list.get(pl.col("complexity").round().cast(pl.Int64)),
+            pl.col("complexity").round(1),
+            pl.when(pl.col("kennerspiel"))
+            .then(
+                pl.format(
+                    "{}% {{% kdj %}}Kennerspiel{{% /kdj %}}",
+                    (pl.col("kennerspiel_score") * 100).round().cast(pl.Int64),
+                ),
+            )
+            .otherwise(
+                pl.format(
+                    "{}% {{% sdj %}}Spiel{{% /sdj %}}",
+                    ((1 - pl.col("kennerspiel_score")) * 100).round().cast(pl.Int64),
+                ),
+            ),
             "bgg_id",
             "name",
             pl.lit("TODO: description"),
@@ -68,3 +88,4 @@ predictions.shape
 # %%
 for lit in predictions["literal"]:
     print(lit)
+    print()
