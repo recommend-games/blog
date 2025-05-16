@@ -30,7 +30,7 @@ tags:
 
 As every year, I'll let the algorithms speak, and I've doubled down on the path I've started [last year]({{<ref "posts/sdj_2024/index.md">}}) when I put more focus on jury members' reviews. Back then, I simply averaged all available reviews to obtain a proxy for the "jury review". The major problem with this are of course the gaps in the data for missing reviews. Luckily, we have a method to fill those gaps in the form of our [recommendation algorithm]({{<ref "posts/rg_collaborative_filtering/index.md">}}). So this year, I've put 50% of the weight on the individual recommendations for the 14 jury members and 50% on the ["recommendendations to the jury"](https://recommend.games/#/?for=S_d_J&excludeRated=false&yearMin=2024&yearMax=2025). This way, I was able to calculated a score for all eligible[^eligible] games. Our very own [Kennerspiel score]({{<ref "posts/kennerspiel/index.md">}}) is then used to sort those into their respective list of the top 10 contenders for either award. As always, you can find the complete code on [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/sdj_2025) and the [complete results here](predictions.csv).
 
-TODO: Commentary on the year
+We have another year with some strong contenders. I think there's one clear nomination (though it's less clear on what list, more on that later), with the rest of the field pretty wide open. My predictions last year weren't particularly good, so the only way is up… 📈
 
 But without further ado, here are the favourite games to win {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}.
 
@@ -227,41 +227,34 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 
 # My two cents
 
-It's time for my picks for the nominations. TODO.
+It's time for my picks for the nominations. The algorithms determined the longlist predictions, but my gut feeling takes over from here on.
 
 
 ## My predictions for nominees for {{% sdj %}}Spiel des Jahres 2025{{% /sdj %}}
 
 * {{% game 422732 %}}Agent Avenue{{% /game %}}
-* {{% game 413246 %}}Bomb Busters{{% /game %}}
+* {{% game 411567 %}}The Gang{{% /game %}}
 * {{% game 393307 %}}Tower Up{{% /game %}}
 
-TODO
+There's at least five or six games amongst the predictions for the longlist that I could see being nominated, but I had to pick just three of them… 🤞
 
 
 ## My predictions for nominees for {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}
 
 * {{% game 400314 %}}Apiary{{% /game %}}
+* {{% game 413246 %}}Bomb Busters{{% /game %}}
 * {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}}
-* {{% game 418059 %}}SETI: Search for Extraterrestrial Intelligence{{% /game %}}
 
-TODO
-
-
-# Honourable mentions
-
-Finally, I always like to sneak in a few more games that I think have a good shot at the longlist, even though the algorithm didn't place them in the top 10.
-
-* TODO
+Again, many more strong contenders than I could fit on the predictions list. {{% game 413246 %}}Bomb Busters{{% /game %}} is the candidate everybody is talking about, and I too am fairly certain it'll be nominated. Its Kennerspiel score is 54%, so I left it on the {{% kdj %}}anthracite{{% /kdj %}} list, though personally I think it'll end up on the {{% sdj %}}red{{% /sdj %}} one.
 
 
 # Conclusion
 
-This year is set to be one that lives from its breadth rather than its depth. I'd say the race is pretty open in both awards, much more so than in previous years. While this makes my job as a predictor harder, as a board game fan I'm looking forward to the surprises that the jury will have in store for us.
+Another year full of wonderful games – let's enjoy being spoiled for choice until the trade wars dry up the supplies. 🙈
 
-With every passing year, I also get more and more excited about the picks for {{% kindersdj / %}} – so far all their recommendations were hits with my kids, and I can't wait to see what's the latest hotness in children's games.
+Also, let's not forget {{% kindersdj / %}} – my daughters are now 4 and 5 years old, and we've already played through most of the back catalogue of past winners, so the whole family is looking forward to more great recommendations.
 
-Stay tuned for the announcement on June 11th! 🤩
+Stay tuned for the announcement on May 20th! 🤩
 
 
-[^eligible]: As every year, it's not straightforward to determine what games are eligible for the awards. Generally speaking, it'd be those games release between April 2023 and March 2025 into German retail. Hence, filtering by BGG release year will exclude games that were released earlier elsewhere, but only recently in Germany, and likewise let some games pass that have not seen a German release in that time window. I did my best to catch what I could, but there's always some that get away.
+[^eligible]: As every year, it's not straightforward to determine what games are eligible for the awards. Generally speaking, it'd be those games release between April 2024 and March 2025 into German retail. Hence, filtering by BGG release year will exclude games that were released earlier elsewhere, but only recently in Germany, and likewise let some games pass that have not seen a German release in that time window. I did my best to catch what I could, but there's always some that get away.
