@@ -39,7 +39,95 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 
 {{< img src="sdj-2025" size="x300" alt="Spiel des Jahres 2025" >}}
 
-TODO
+
+## #1: {{% game 411567 %}}The Gang{{% /game %}}
+
+*3–6 players, 20 minutes, 10+ years, medium light (1.7), 89% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="411567" size="x300" alt="The Gang" >}}
+
+*Bet together the order of your hands in Texas Hold'em Poker to win together.*
+
+
+## #2: {{% game 425235 %}}Point of View: Lost Places{{% /game %}}
+
+*2–8 players, 60 minutes, 10+ years, light (1.0), 99% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="425235" size="x300" alt="Point of View: Lost Places" >}}
+
+*A cooperative-communicative game series with different points of view for everyone.*
+
+
+## #3: {{% game 393307 %}}Tower Up{{% /game %}}
+
+*2–4 players, 30–45 minutes, 8+ years, medium light (1.9), 87% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="393307" size="x300" alt="Tower Up" >}}
+
+*Architects compete against one another to construct the best buildings in town.*
+
+
+## #4: {{% game 416851 %}}Castle Combo{{% /game %}}
+
+*2–5 players, 10–25 minutes, 10+ years, medium light (1.7), 86% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="416851" size="x300" alt="Castle Combo" >}}
+
+*Draft people from the lower and upper city to create a valuable house.*
+
+
+## #5: {{% game 394338 %}}Chocolates{{% /game %}}
+
+*2–4 players, 15–20 minutes, 10+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="394338" size="x300" alt="Chocolates" >}}
+
+*Figure out as much as you can about your box of chocolates BEFORE tasting them!*
+
+
+## #6: {{% game 415836 %}}Slide{{% /game %}}
+
+*2–6 players, 15 minutes, 7+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="415836" size="x300" alt="Slide" >}}
+
+*Group numbers in your grid to make them disappear.*
+
+
+## #7: {{% game 419639 %}}Krakel Orakel{{% /game %}}
+
+*2–8 players, 30 minutes, 10+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="419639" size="x300" alt="Krakel Orakel" >}}
+
+*Can you spot and reveal pictures in a tangle of lines?*
+
+
+## #8: {{% game 422732 %}}Agent Avenue{{% /game %}}
+
+*2–4 players, 10–20 minutes, 8+ years, light (1.4), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="422732" size="x300" alt="Agent Avenue" >}}
+
+*A blend of strategic bluffing and set collection in a whimsical spy world.*
+
+
+## #9: {{% game 412927 %}}Quando{{% /game %}}
+
+*2–6 players, 15 minutes, 8+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="412927" size="x300" alt="Quando" >}}
+
+*Ditch cards from your hand as you aim to have the lowest score.*
+
+
+## #10: {{% game 402283 %}}Courtisans{{% /game %}}
+
+*2–5 players, 20–30 minutes, 8+ years, light (1.4), 91% {{% sdj %}}Spiel{{% /sdj %}}*
+
+{{< img src="402283" size="x300" alt="Courtisans" >}}
+
+*When the Queen holds her banquet, skullduggery is on the menu!*
 
 
 # Candidates for {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}
