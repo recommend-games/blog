@@ -227,19 +227,23 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 
 # My two cents
 
-It's time for my picks for the nominations. As indicated in the introduction, I think the algorithm has done a pretty good at predicting the longlist, which means there's lots of strong contenders. Let's go with these predictions for the nominations:
+It's time for my picks for the nominations. TODO.
 
 
 ## My predictions for nominees for {{% sdj %}}Spiel des Jahres 2025{{% /sdj %}}
 
-* TODO
+* {{% game 422732 %}}Agent Avenue{{% /game %}}
+* {{% game 413246 %}}Bomb Busters{{% /game %}}
+* {{% game 393307 %}}Tower Up{{% /game %}}
 
 TODO
 
 
 ## My predictions for nominees for {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}
 
-* TODO
+* {{% game 400314 %}}Apiary{{% /game %}}
+* {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}}
+* {{% game 418059 %}}SETI: Search for Extraterrestrial Intelligence{{% /game %}}
 
 TODO
 
