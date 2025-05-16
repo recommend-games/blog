@@ -129,6 +129,10 @@ sitepackages/
 # Hugo
 .hugo_build.lock
 
+# Syncthing
+.stfolder/
+.stignore
+
 # others
 .~*
 *.bk
