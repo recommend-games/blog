@@ -16,6 +16,7 @@
 # %%
 import importlib.resources
 import jupyter_black
+import numpy as np
 import polars as pl
 from pathlib import Path
 from datetime import date
@@ -69,9 +70,12 @@ def calculate_ndcg(
                 experiment_dir / f"sdj_{jahrgang}" / "predictions.csv",
                 infer_schema_length=None,
             )
-            .select("bgg_id", "name", "sdj_score")
-            .join(sdj, on="bgg_id", how="left")
-            .with_columns(pl.col("points").fill_null(0))
+            .select("bgg_id", "sdj_score")
+            .join(sdj, on="bgg_id", how="full", coalesce=True)
+            .with_columns(
+                pl.col("points").fill_null(0),
+                pl.col("sdj_score").fill_null(-np.inf),
+            )
             .with_columns(
                 rank_pred=pl.col("sdj_score").rank("ordinal", descending=True),
                 rank_ideal=pl.col("points").rank("ordinal", descending=True),
