@@ -36,24 +36,82 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 
 {{< img src="sdj-2025" size="x300" alt="Spiel des Jahres 2025" >}}
 
-TODO
+
+## {{% game 413246 %}}Bomb Busters{{% /game %}}
+
+*2–5 players, 30 minutes, 10+ years, medium light (2.0), 54% {{% kdj %}}Kennerspiel{{% /kdj %}}, prediction #1*
+
+{{< img src="413246" size="x300" alt="Bomb Busters" >}}
+
+*Players defuse bombs by deducing and cutting unseen wires of different values.*
+
+
+## {{% game 420087 %}}Flip 7{{% /game %}}
+
+*3–99 players, 20 minutes, 8+ years, light (1.1), 99% {{% sdj %}}Spiel{{% /sdj %}}, prediction #21*
+
+{{< img src="420087" size="x300" alt="Flip 7" >}}
+
+*Score the cards in front of you, or take another card, risking everything you hold?*
+
+
+## {{% game 419639 %}}Krakel Orakel{{% /game %}}
+
+*2–8 players, 30 minutes, 10+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}, prediction #7*
+
+{{< img src="419639" size="x300" alt="Krakel Orakel" >}}
+
+*Can you spot and reveal pictures in a tangle of lines?*
 
 
 ## {{% sdj / %}} recommendations
 
-* TODO
+* {{% game 422732 %}}Agent Avenue{{% /game %}} (prediction #8)
+* {{% game 416851 %}}Castle Combo{{% /game %}} (#4)
+* {{% game 402676 %}}Cities{{% /game %}} (#29)
+* {{% game 359318 %}}Foxy{{% /game %}} (no prediction)
+* {{% game 393352 %}}Perfect Words{{% /game %}} (#43)
+* {{% game 359124 %}}The Animals of Baker Street{{% /game %}} (#19)
 
 
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}
 
 {{< img src="ksdj-2025" size="x300" alt="Kennerspiel des Jahres 2025" >}}
 
-TODO
+
+## {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}}
+
+*1–4 players, 60–120 minutes, 10+ years, medium (2.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}, #8*
+
+{{< img src="367966" size="x300" alt="Endeavor: Deep Sea" >}}
+
+*Lead your research institute to explore ocean depths and publish your findings!*
+
+
+## {{% game 385761 %}}Faraway{{% /game %}}
+
+*2–6 players, 15–30 minutes, 10+ years, medium light (1.9), 67% {{% kdj %}}Kennerspiel{{% /kdj %}}, #3*
+
+{{< img src="385761" size="x300" alt="Faraway" >}}
+
+*Explore a mysterious land and fulfill quests on your way back.*
+
+
+## {{% game 410991 %}}Looot{{% /game %}}
+
+*2–4 players, 35 minutes, 10+ years, medium light (2.1), 92% {{% sdj %}}Spiel{{% /sdj %}}, #30*
+
+{{< img src="410991" size="x300" alt="Looot" >}}
+
+*Gather resources and capture buildings to develop your fjord.*
 
 
 ## {{% kdj / %}} recommendations
 
-* TODO
+* {{% game 411567 %}}The Gang{{% /game %}} (#1 {{% sdj %}}Spiel{{% /sdj %}} prediction)
+* {{% game 381188 %}}Kauri{{% /game %}} (#45)
+* {{% game 419293 %}}Medical Mysteries: Miami Flatline{{% /game %}} (#27)
+* {{% game 424219 %}}Zenith{{% /game %}} (#99)
 
 
 # How good were the predictions?
