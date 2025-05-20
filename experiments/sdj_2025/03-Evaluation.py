@@ -92,5 +92,11 @@ def calculate_ndcg(
 
 # %%
 for jahrgang in range(FROM_YEAR, TO_YEAR + 1):
-    ndcg = calculate_ndcg(jahrgang)
+    ndcg = calculate_ndcg(
+        jahrgang,
+        points_winner=1,
+        points_sonderpreis=1,
+        points_nominated=1,
+        points_recommended=1,
+    )
     print(f"{jahrgang}: {ndcg:.5f}")
