@@ -39,7 +39,7 @@ with TEMPLATE_PATH.open() as f:
 # %%
 predictions = (
     pl.scan_csv(PREDICTIONS_PATH, infer_schema_length=None)
-    .filter(pl.col("sdj_rank") <= 12)
+    .filter(pl.col("sdj_rank") <= 30)
     .select(
         "bgg_id",
         "name",
