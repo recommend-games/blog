@@ -99,4 +99,4 @@ for jahrgang in range(FROM_YEAR, TO_YEAR + 1):
         points_nominated=1,
         points_recommended=1,
     )
-    print(f"{jahrgang}: {ndcg:.5f}")
+    print(f"* {jahrgang}: {ndcg:.3f}")

@@ -61,7 +61,7 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 
 *Score the cards in front of you, or take another card, risking everything you hold?*
 
-By their own claim "the greatest card game of all times", by some other folks' opinions dull and random.
+By their own claim "the greatest card game of all time", by some other folks' opinions dull and random.
 
 
 ## {{% game 419639 %}}Krakel Orakel{{% /game %}}
@@ -138,16 +138,26 @@ This really is a drama in three acts: the decision of {{% kdj %}}Kennerspiel{{% 
 
 ## {{% kdj %}}Kennerspiel{{% /kdj %}} score
 
-TODO
+The algorithm classified thirteen out of sixteen games on the longlists correctly ({{% game 359318 %}}Foxy{{% /game %}} was completely absent from the predictions, but its Kennerspiel score in the database is 1%), with {{% game 413246 %}}Bomb Busters{{% /game %}} actually on the {{% sdj %}}red{{% /sdj %}} list (as predicted in the last article), and {{% game 410991 %}}Looot{{% /game %}} and {{% game 411567 %}}The Gang{{% /game %}} on the {{% kdj %}}anthracite{{% /kdj %}} list (as predicted on [social media](https://bsky.app/profile/markus.recommend.games/post/3lplshtwqus23)). 81% accurate isn't bad for a simple model classifying a vague concept.
 
 
 ## Longlist
 
-TODO: nDCG, compare to previous years!
+This was a pretty poor year for the algorithm (again). It caught correctly three out of nine games on the {{% sdj %}}Spiel{{% /sdj %}} longlist (plus one from the other list) and two out of seven on the {{% kdj %}}Kennerspiel{{% /kdj %}} longlist (again plus one from the other list). Just 31% accurate is really bad, and even 44% accurate when counting the games from the wrong lists isn't great. I thought the changes to the algorithm were working great, but clearly there's still a lot of room for improvement.
+
+I actually thought this year, I'll also calculate some "proper" performance metric, which is one of the standard tool to evaluate how good a given ranking is: the [Normalized Discounted Cumulative Gain](https://en.wikipedia.org/wiki/Discounted_cumulative_gain#Normalized_DCG) (nDCG). I won't get into the details here, but the general idea is to rank item (as we did with our predictions), then score them according to their relevance (in this case we give all games on the longlists a relevance of 1, with all other games getting 0). The higher our ranking sorts the recommended games, the higher the nDCG, and the better we consider the ranking. So, here are the results of the past years:
+
+* 2021: 0.655
+* 2022: 0.795
+* 2023: 0.669
+* 2024: 0.803
+* 2025: 0.718
+
+So, in that respect this year was a pretty average year for the predictions. It got somewhat redeemed by the misses being overall still pretty high on the [full prediction lists](predictions.csv).
 
 
 ## Shortlist
 
-TODO
+Again, a poor performance: I've only predicted two out of six nominations correctly (one on the wrong list), matching the (bottom) performance from last year. Have I lost my edge? Well, I know it won't stop me from coming back next year with more predictions.
 
 That's it for now, we'll be back soon with a little more in-depth analyses on the six nominees and their chances of winning an award.
