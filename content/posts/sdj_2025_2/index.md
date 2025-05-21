@@ -80,9 +80,9 @@ Reportedly a drawing game which is still fun for people who cannot draw. With {{
 * {{% game 422732 %}}Agent Avenue{{% /game %}} (prediction #8)
 * {{% game 416851 %}}Castle Combo{{% /game %}} (#4)
 * {{% game 402676 %}}Cities{{% /game %}} (#29)
-* {{% game 359318 %}}Foxy{{% /game %}} (no prediction)
+* {{% game 359318 %}}Foxy{{% /game %}} (no prediction): The inevitable "game that got away" and wasn't on my prediction list at all.
 * {{% game 393352 %}}Perfect Words{{% /game %}} (#43)
-* {{% game 359124 %}}The Animals of Baker Street{{% /game %}} (#19)
+* {{% game 359124 %}}The Animals of Baker Street{{% /game %}} (#19): One of those late arrivals which is probably already forgotten internationally. I think it's quite charming and I'm happy it got some recongition by the jury.
 
 
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}
@@ -125,7 +125,7 @@ Not going to lie: {{% game 410991 %}}Looot{{% /game %}}'s description sounds lik
 
 ## {{% kdj / %}} recommendations
 
-* {{% game 411567 %}}The Gang{{% /game %}} (#1 {{% sdj %}}Spiel{{% /sdj %}} prediction)
+* {{% game 411567 %}}The Gang{{% /game %}} (#1 {{% sdj %}}Spiel{{% /sdj %}} prediction): I hadn't played this one when I made my predictions, but did so in the meantime, and really had a blast. It also made me realise that the algorithm probably got its {{% kdj %}}Kennerspiel{{% /kdj %}} score wrong, and had to [post](https://bsky.app/profile/markus.recommend.games/post/3lplshtwqus23) about it lest my insights go without receipts… 🤓😉
 * {{% game 381188 %}}Kauri{{% /game %}} (#45)
 * {{% game 419293 %}}Medical Mysteries: Miami Flatline{{% /game %}} (#27)
 * {{% game 424219 %}}Zenith{{% /game %}} (#99)
