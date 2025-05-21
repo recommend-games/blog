@@ -22,12 +22,17 @@ tags:
   - Kennerspiel nominations
   - Kennerspiel des Jahres nominations
   - Kennerspiel des Jahres 2025 nominations
-  - 'TODO: nominees'
+  - Bomb Busters
+  - Flip 7
+  - Krakel Orakel
+  - 'Endeavor: Deep Sea'
+  - Faraway
+  - Looot
 ---
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-[Nominations are out](TODO)! The jury selected a total of TODO games for their longlist, TODO for {{% sdj / %}} and TODO for {{% kdj / %}}. Out of these games, three games each are nominated for the two awards and can hope to get the coveted meeple added to their covers on July 13.
+[Nominations are out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2025/)! The jury selected a total of sixteen games for their longlist, nine for {{% sdj / %}} and seven for {{% kdj / %}}. Out of these games, three games each are nominated for the two awards and can hope to get the coveted meeple added to their covers on July 13.
 
 Let's dive straight into the nominations and recommendations, before we discuss how good (or bad) [my predictions]({{<ref "posts/sdj_2025/index.md">}}) were and if the agreed with our [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}}).
 
@@ -45,6 +50,8 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 
 *Players defuse bombs by deducing and cutting unseen wires of different values.*
 
+{{% game 413246 %}}Bomb Busters{{% /game %}} was probably the top favourite pretty much on everybody's list, and the jury agreed. It did not agree with the algorithm's prediction that this is a {{% kdj %}}Kennerspiel{{% /kdj %}} (more on that below).
+
 
 ## {{% game 420087 %}}Flip 7{{% /game %}}
 
@@ -54,6 +61,8 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 
 *Score the cards in front of you, or take another card, risking everything you hold?*
 
+By their own claim "the greatest card game of all times", by some other folks' opinions dull and random.
+
 
 ## {{% game 419639 %}}Krakel Orakel{{% /game %}}
 
@@ -62,6 +71,8 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 {{< img src="419639" size="x300" alt="Krakel Orakel" >}}
 
 *Can you spot and reveal pictures in a tangle of lines?*
+
+Reportedly a drawing game which is still fun for people who cannot draw. With {{% game 252526 %}}Pictomania{{% /game %}}, there's some strong competition in that genre.
 
 
 ## {{% sdj / %}} recommendations
@@ -87,6 +98,8 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 
 *Lead your research institute to explore ocean depths and publish your findings!*
 
+Interestingly, this is a re-re-implementation of {{% game 33160 %}}Endeavor{{% /game %}}, which was recommended back in 2010. The jury has a bit of an inconsistent attitude towards remakes.
+
 
 ## {{% game 385761 %}}Faraway{{% /game %}}
 
@@ -96,6 +109,8 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 
 *Explore a mysterious land and fulfill quests on your way back.*
 
+The nomination that allows you to tick off the "that's supposed to be a {{% kdj %}}Kennerspiel{{% /kdj %}}?" on your [bingo card](https://lidude.net/sdj-comment-bingo/).
+
 
 ## {{% game 410991 %}}Looot{{% /game %}}
 
@@ -104,6 +119,8 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 {{< img src="410991" size="x300" alt="Looot" >}}
 
 *Gather resources and capture buildings to develop your fjord.*
+
+Not going to lie: {{% game 410991 %}}Looot{{% /game %}}'s description sounds like the most generic Eurogame imaginable.
 
 
 ## {{% kdj / %}} recommendations
@@ -126,7 +143,7 @@ TODO
 
 ## Longlist
 
-TODO
+TODO: nDCG, compare to previous years!
 
 
 ## Shortlist
