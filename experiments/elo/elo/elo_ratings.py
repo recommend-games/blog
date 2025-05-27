@@ -309,7 +309,7 @@ def _padded_numpy_array(
     dtype: np.dtype | None = None,
 ) -> np.ndarray:
     arrays = tuple(arrays)
-    max_len = max(a.shape[0] for a in arrays)
+    max_len = max((a.shape[0] for a in arrays), default=0)
     result = np.full((len(arrays), max_len), pad_value, dtype=dtype or np.float64)
     for i, a in enumerate(arrays):
         result[i, : a.shape[0]] = a
