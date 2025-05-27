@@ -18,8 +18,8 @@ import itertools
 import jupyter_black
 import networkx as nx
 import polars as pl
-from elo.elo_ratings_multi import RankOrderedLogitElo
-from elo.optimal_k import approximate_optimal_k_multi
+from elo.elo_ratings import RankOrderedLogitElo
+from elo.optimal_k import approximate_optimal_k
 from tqdm import tqdm
 
 jupyter_black.load()
@@ -107,7 +107,7 @@ sorted(elo.elo_ratings.items(), key=lambda x: -x[1])[:100]
 
 # %%
 # This will take very very long if there's a large number of matches
-optimal_k = approximate_optimal_k_multi(
+optimal_k = approximate_optimal_k(
     matches=matches,
     min_elo_k=0,
     max_elo_k=200,
