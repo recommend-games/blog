@@ -84,7 +84,7 @@ print(f"Number of matches: {num_all_matches} (all) / {num_matches} (connected on
 print(
     f"Number of players: {num_all_players} (all) / {num_players} (connected only) / {num_regular_players} (regulars only)"
 )
-print(f"Maximum number of players by a single player: {num_matches_max}")
+print(f"Maximum number of plays by a single player: {num_matches_max}")
 
 # %%
 matches = (
