@@ -3,7 +3,7 @@ title: Spiel des Jahres 2025 predictions – Part 2!
 slug: spiel-des-jahres-2025-predictions-part-2
 author: Markus Shepherd
 type: post
-date: 2025-07-08T12:00:00+03:00
+date: 2025-07-10T23:20:00+03:00
 tags:
   - SdJ
   - SdJ 2025
@@ -32,7 +32,7 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-The waiting is finally coming to an end! On Sunday, July 13, the jury will announce the winners of {{% sdj %}}Spiel des Jahres{{% /sdj %}} and {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}. We're blessed with another year of very strong games and I'm certainly very excited to learn what games will win the two awards.
+The waiting is finally coming to an end! On Sunday, July 13, the jury will announce the winners of {{% sdj %}}Spiel des Jahres{{% /sdj %}} and {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}. As always, there's six games hoping to win one of the two most important awards in gaming – and one hopeless geek trying to predict which will be the lucky ones. 🤓
 
 I've been doing [this]({{<ref "posts/sdj_2020_3/index.md">}}) [for]({{<ref "posts/sdj_2021_3/index.md">}}) [five]({{<ref "posts/sdj_2022_3/index.md">}}) [years]({{<ref "posts/sdj_2023_3/index.md">}}) [now]({{<ref "posts/sdj_2024_3/index.md">}}) and I've called eight out of the ten winners correctly, with the second fail happening last year because I just didn't want to believe the jury would award {{% sdj / %}} to the two player game {{% game 373106 %}}Sky Team{{% /game %}}. Let's hope I'll do better this year, but it's again a tough choice!
 
