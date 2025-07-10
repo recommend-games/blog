@@ -154,6 +154,6 @@ I probably sound more negative towards the game than I actually am – the game 
 
 ## Who will win?
 
-TODO: Prediction.
+This is a really tough one. From the overall reviews, it seems {{% game 367966 %}}Endeavor{{% /game %}} would have the edge, but it also appears to be just outside what a {{% kdj %}}Kennerspiel{{% /kdj %}} usually demands of the players, so I'll put my money on {{% game 385761 %}}Faraway{{% /game %}}. Seeing {{% game 410991 %}}Looot{{% /game %}} win would be a huge surprise.
 
-TODO: Conclusion.
+Alright, that's it for the predictions, we'll see each other again in a couple of days to discuss the results. I know I'll be glued to the livestream. 🤩
