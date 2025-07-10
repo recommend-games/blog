@@ -98,8 +98,8 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 
 | Game | [Jury](reviews.csv) | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2025&yearMax=2024&include=367966,385761,410991&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3536688/poll-spiel-des-jahres-2025-and-kennerspiel-des-jah) |
 |:---|---:|---:|---:|---:|---:|
-| {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}} | 8.0 (5) | 5.8 | 8.2 | 7.4 | 43.9% |
-| {{% game 385761 %}}Faraway{{% /game %}} | 7.6 (5) | 7.1 | 7.6 | 7.2 | 41.8% |
+| {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}} | **8.0** (5) | 5.8 | **8.2** | **7.4** | **43.9%** |
+| {{% game 385761 %}}Faraway{{% /game %}} | 7.6 (5) | **7.1** | 7.6 | 7.2 | 41.8% |
 | {{% game 410991 %}}Looot{{% /game %}} | 6.8 (4) | 5.0 | 7.1 | 6.2 | 14.3% |
 
 TODO: Summary.
