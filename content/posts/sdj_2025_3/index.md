@@ -34,20 +34,20 @@ tags:
 
 The waiting is finally coming to an end! On Sunday, July 13, the jury will announce the winners of {{% sdj %}}Spiel des Jahres{{% /sdj %}} and {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}. We're blessed with another year of very strong games and I'm certainly very excited to learn what games will win the two awards.
 
-I've been doing [this]{{{<ref "posts/sdj_2020_3/index.md">}}} [for]({{<ref "posts/sdj_2021_3/index.md">}}) [five]({{<ref "posts/sdj_2022_3/index.md">}}) [years]({{<ref "posts/sdj_2023_3/index.md">}}) [now]({{<ref "posts/sdj_2024_3/index.md">}}) and I've called eight out of the ten winners correctly, with the second fail happening last year because I just didn't want to believe the jury would award {{% sdj / %}} to the two player game {{% game 373106 %}}Sky Team{{% /game %}}. Let's hope I'll do better this year, but it's again a tough choice!
+I've been doing [this]({{<ref "posts/sdj_2020_3/index.md">}}) [for]({{<ref "posts/sdj_2021_3/index.md">}}) [five]({{<ref "posts/sdj_2022_3/index.md">}}) [years]({{<ref "posts/sdj_2023_3/index.md">}}) [now]({{<ref "posts/sdj_2024_3/index.md">}}) and I've called eight out of the ten winners correctly, with the second fail happening last year because I just didn't want to believe the jury would award {{% sdj / %}} to the two player game {{% game 373106 %}}Sky Team{{% /game %}}. Let's hope I'll do better this year, but it's again a tough choice!
 
 
 # Nominated for {{% sdj %}}Spiel des Jahres 2025{{% /sdj %}}
 
 {{< img src="sdj-2025" size="x300" alt="Spiel des Jahres 2025" >}}
 
-Before we dive into the individual games, let's look at some numbers to see some objective measures for them – as far as this is possible. TODO: Update. What we've got at our disposal are the [jury's reviews](reviews.csv), [recommendations to the `S_d_J` bot](https://recommend.games/#/?for=S_d_J&yearMin=2025&yearMax=2024&include=367966,385761,410991,413246,419639,420087&excludeRated=false), BoardGameGeek's average rating and the [Bayesian rating]({{<ref "posts/reverse_engineer_bgg/index.md">}}). Additionally, I've created a [poll on BGG](https://boardgamegeek.com/thread/3536688/poll-spiel-des-jahres-2025-and-kennerspiel-des-jah) where the geeks could have their say:
+Before we dive into the individual games, let's look at some numbers to see some objective measures for them – as far as this is possible. What we've got at our disposal are the [jury's reviews](reviews.csv), [recommendations to the `S_d_J` bot](https://recommend.games/#/?for=S_d_J&yearMin=2025&yearMax=2024&include=367966,385761,410991,413246,419639,420087&excludeRated=false), BoardGameGeek's average rating and the [Bayesian rating]({{<ref "posts/reverse_engineer_bgg/index.md">}}). Additionally, I've created a [poll on BGG](https://boardgamegeek.com/thread/3536688/poll-spiel-des-jahres-2025-and-kennerspiel-des-jah) where the geeks could have their say:
 
 | Game | [Jury](reviews.csv) | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2025&yearMax=2024&include=413246,419639,420087&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3536688/poll-spiel-des-jahres-2025-and-kennerspiel-des-jah) |
 |:---|---:|---:|---:|---:|---:|
-| {{% game 413246 %}}Bomb Busters{{% /game %}} | 8.3 (3) | TODO | TODO | TODO | TODO |
-| {{% game 420087 %}}Flip 7{{% /game %}} | 7.0 (1) | TODO | TODO | TODO | TODO |
-| {{% game 419639 %}}Krakel Orakel{{% /game %}} | 7 (1) | TODO | TODO | TODO | TODO |
+| {{% game 413246 %}}Bomb Busters{{% /game %}} | **8.3** (3) | **7.8** | **8.0** | **7.1** | **59.8%** |
+| {{% game 420087 %}}Flip 7{{% /game %}} | 7.0 (1) | 5.7 | 7.2 | 6.7 | 35.1% |
+| {{% game 419639 %}}Krakel Orakel{{% /game %}} | 7.0 (1) | 7.3 | 7.4 | 5.7 | 5.2% |
 
 TODO: Summary.
 
