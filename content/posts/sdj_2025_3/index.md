@@ -91,7 +91,7 @@ Something of a wildcard amongst the nominations, still without English edition a
 
 ## Who will win?
 
-TODO: Prediction.
+I'll have to go with the herd here and say that any winner other than {{% game 413246 %}}Bomb Busters{{% /game %}} would be a surprise. I know {{% game 420087 %}}Flip 7{{% /game %}} has its fans, though I don't see the appeal, and {{% game 419639 %}}Krakel Orakel{{% /game %}} sure sounds nice, but I think the jury will continue the streak of favourite wins.
 
 
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}
