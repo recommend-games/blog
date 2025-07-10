@@ -86,7 +86,7 @@ After the nomination, I've read through the rules, and didn't really get what wo
 
 *Can you spot and reveal pictures in a tangle of lines?*
 
-TODO.
+Something of a wildcard amongst the nominations, still without English edition announced. I've mentioned in the previous article that as a drawing game for people who can't draw it has strong competition from {{% game 252526 %}}Pictomania{{% /game %}}. What I overlooked was the fact that this one's co-operative, reducing the hurdle for people to engage even further. Overall, this sounds like an appealing package to win {{% sdj / %}}, somewhat following along the line of winners we've had a couple of years ago, e.g., {{% game 254640 %}}Just One{{% /game %}} and {{% game 284108 %}}Pictures{{% /game %}}.
 
 
 ## Who will win?
