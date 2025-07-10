@@ -130,7 +130,13 @@ In the end, no matter how enthusiastic the critical response to this game is, th
 
 *Explore a mysterious land and fulfill quests on your way back.*
 
-TODO.
+{{% game 385761 %}}Faraway{{% /game %}} already appeared on some prediction lists last year because it took a while for the German edition to be released, so the international buzz has pretty much eased up by now. Overall, this is a pretty standard engine builder – with the twist of the "reverse" scoring of the cards.
+
+I've only played this game on BGA, so take my impression with a grain of salt, but I'm not blown away by {{% game 385761 %}}Faraway{{% /game %}}. I guess I'm generally not too much into engine builders and that twist isn't particularly exciting after the first game or two, when it's novelty and surprise implications have become familiar. At that point working out the best card to play becomes mostly tedious.
+
+That said, it does play quickly and has some interesting decisions to offer, so there's that.
+
+Or I'm just a little grumpy at this title for giving me an *Ohrwurm* of the [best worst song of all times](https://youtu.be/kEq12L_EE1U?si=BEg5ltlVkgvb9zsw)… 🤷
 
 
 ## {{% game 410991 %}}Looot{{% /game %}}
