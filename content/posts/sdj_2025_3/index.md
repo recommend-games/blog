@@ -117,7 +117,9 @@ Those numbers look much closer than they did for {{% sdj %}}Spiel{{% /sdj %}}. O
 
 *Lead your research institute to explore ocean depths and publish your findings!*
 
-TODO.
+It's another game I haven't played yet, though its predecessor has been sitting on my shelf of shame for ages now. It's quite interesting that the jury themselves pointed out when revealing the longlist that this game is very much on the heavy side of {{% kdj %}}Kennerspiel{{% /kdj %}}, but then proceeded to nominate it anyways. It's even more curious when you consider that last year's winner {{% game 334986 %}}Daybreak{{% /game %}} has almost the same complexity rating on BGG.
+
+In the end, no matter how enthusiastic the critical response to this game is, this big box with its myriad of icons might just be a tad too intimidating for the target audience of {{% kdj %}}Kennerspiel{{% /kdj %}}.
 
 
 ## {{% game 385761 %}}Faraway{{% /game %}}
