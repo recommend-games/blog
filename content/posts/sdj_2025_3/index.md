@@ -147,7 +147,9 @@ Or I'm just a little grumpy at this title for giving me an *Ohrwurm* of the [bes
 
 *Gather resources and capture buildings to develop your fjord.*
 
-TODO.
+Another game I've only played on BGA and another one which I think is just fine. I've read somewhere someone comparing it to games Reiner Knizia used to design, which is back-handed but fitting compliment. Choosing and laying the tiles sure offer a lot of choices, and I can see how they might be appealing to some people, but once you've understood how the different criteria interact, optimising your point booty becomes another tedious exercise.
+
+I probably sound more negative towards the game than I actually am – the game really seems to be fine – but the nomination did come as a bit of a surprise given that even the jury members seemed to be rather lukewarm on it.
 
 
 ## Who will win?
