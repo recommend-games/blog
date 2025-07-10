@@ -106,7 +106,7 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 | {{% game 385761 %}}Faraway{{% /game %}} | 7.6 (5) | **7.1** | 7.6 | 7.2 | 41.8% |
 | {{% game 410991 %}}Looot{{% /game %}} | 6.8 (4) | 5.0 | 7.1 | 6.2 | 14.3% |
 
-TODO: Summary.
+Those numbers look much closer than they did for {{% sdj %}}Spiel{{% /sdj %}}. Overall, the critical and geek response to {{% game 367966 %}}Endeavor{{% /game %}} is stronger, but {{% game 385761 %}}Faraway{{% /game %}} might be more up the jury's alley. Let's take a closer look at each nominee!
 
 
 ## {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}}
