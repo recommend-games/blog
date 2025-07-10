@@ -45,11 +45,11 @@ Before we dive into the individual games, let's look at some numbers to see some
 
 | Game | [Jury](reviews.csv) | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2025&yearMax=2024&include=413246,419639,420087&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3536688/poll-spiel-des-jahres-2025-and-kennerspiel-des-jah) |
 |:---|---:|---:|---:|---:|---:|
-| {{% game 393325 %}}Captain Flip{{% /game %}} | 7.2 (5) | 5.3 | 7.0 | 6.0 | 28.9% |
-| {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}} | 7.0 (3) | 5.1 | 7.4 | 6.2 | 13.2% |
-| {{% game 373106 %}}Sky Team{{% /game %}} | **8.8** (4) | **7.0** | **8.2** | **7.5** | **57.9%** |
+| {{% game 413246 %}}Bomb Busters{{% /game %}} | 8.3 (3) | TODO | TODO | TODO | TODO |
+| {{% game 420087 %}}Flip 7{{% /game %}} | 7.0 (1) | TODO | TODO | TODO | TODO |
+| {{% game 419639 %}}Krakel Orakel{{% /game %}} | 7 (1) | TODO | TODO | TODO | TODO |
 
-Obviously, {{% game 373106 %}}Sky Team{{% /game %}} is the high favourite according to all metrics. But will the jury follow the numbers? Let's take a closer look at all the nominees and their pros and cons.
+TODO: Summary.
 
 
 ## {{% game 413246 %}}Bomb Busters{{% /game %}}
