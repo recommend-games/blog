@@ -49,7 +49,7 @@ Before we dive into the individual games, let's look at some numbers to see some
 | {{% game 420087 %}}Flip 7{{% /game %}} | 7.0 (1) | 5.7 | 7.2 | 6.7 | 35.1% |
 | {{% game 419639 %}}Krakel Orakel{{% /game %}} | 7.0 (1) | 7.3 | 7.4 | 5.7 | 5.2% |
 
-TODO: Summary.
+The numbers tell a clear story: {{% game 413246 %}}Bomb Busters{{% /game %}} is considered the high favourite to win {{% sdj %}}Spiel des Jahres 2025{{% /sdj %}}. It's also top of list for most pundits. But is this position justified? Let's dive into the details!
 
 
 ## {{% game 413246 %}}Bomb Busters{{% /game %}}
