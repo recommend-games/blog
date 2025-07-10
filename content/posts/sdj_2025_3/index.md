@@ -3,7 +3,7 @@ title: Spiel des Jahres 2025 predictions – Part 2!
 slug: spiel-des-jahres-2025-predictions-part-2
 author: Markus Shepherd
 type: post
-date: 2025-07-10T23:20:00+03:00
+date: 2025-07-10T23:21:26+03:00
 tags:
   - SdJ
   - SdJ 2025
