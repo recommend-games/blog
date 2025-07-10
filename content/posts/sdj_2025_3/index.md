@@ -87,22 +87,22 @@ TODO.
 
 ## Who will win?
 
-TODO.
+TODO: Prediction.
 
 
 # Nominated for {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}
 
 {{< img src="ksdj-2025" size="x300" alt="Kennerspiel des Jahres 2025" >}}
 
-Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspiel{{% /kdj %}} nominees (TODO: Update):
+Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspiel{{% /kdj %}} nominees:
 
 | Game | [Jury](reviews.csv) | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2025&yearMax=2024&include=367966,385761,410991&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3536688/poll-spiel-des-jahres-2025-and-kennerspiel-des-jah) |
 |:---|---:|---:|---:|---:|---:|
-| {{% game 334986 %}}Daybreak{{% /game %}} | **8.3** (4) | 4.5 | 7.8 | 6.5 | **40.8%** |
-| {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}} | 7.3 (3) | 6.9 | 7.7 | 7.0 | 24.8% |
-| {{% game 390092 %}}Ticket to Ride Legacy{{% /game %}} | 8.0 (2) | **7.1** | **8.8** | **7.3** | 34.4% |
+| {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}} | 8.0 (5) | TODO | TODO | TODO | TODO |
+| {{% game 385761 %}}Faraway{{% /game %}} | 7.6 (5) | TODO | TODO | TODO | TODO |
+| {{% game 410991 %}}Looot{{% /game %}} | 6.8 (4) | TODO | TODO | TODO | TODO |
 
-{{% game 334986 %}}Daybreak{{% /game %}} hasn't been available in retail for very long (not at all yet in Europe outside Germany), which harms its rating related metrics. This way, {{% game 390092 %}}Ticket to Ride Legacy{{% /game %}} looks like the favourite by those numbers, but {{% game 334986 %}}Daybreak{{% /game %}} would be the frontrunner according to the jury and the poll. Again, let's take a look at the nominees in details to understand their chances of winning.
+TODO: Summary.
 
 
 ## {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}}
@@ -140,6 +140,6 @@ TODO.
 
 ## Who will win?
 
-TODO.
+TODO: Prediction.
 
 TODO: Conclusion.
