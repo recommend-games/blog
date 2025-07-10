@@ -54,18 +54,22 @@ The numbers tell a clear story: {{% game 413246 %}}Bomb Busters{{% /game %}} is 
 
 ## {{% game 413246 %}}Bomb Busters{{% /game %}}
 
-*2–5 players, 30 minutes, 10+ years, medium light (2.0), 54% {{% kdj %}}Kennerspiel{{% /kdj %}}, prediction #1*
+*2–5 players, 30 minutes, 10+ years, medium light (2.0), prediction #1*
 
 {{< img src="413246" size="x300" alt="Bomb Busters" >}}
 
 *Players defuse bombs by deducing and cutting unseen wires of different values.*
 
-TODO.
+As mentioned before: everybody was talking about {{% game 413246 %}}Bomb Busters{{% /game %}} and agreed that it'll be nominated, so the only question was: {{% sdj %}}Spiel{{% /sdj %}} or {{% kdj %}}Kennerspiel{{% /kdj %}}? The algorithm was very non-committing at 54% and opinions were equally divided. There's a couple of aspects worth repeating in this question: first of all, the jury coined the term {{% kdj %}}Kennerspiel{{% /kdj %}} and hence kind of gets to decide what games fall under this category. More importantly, they don't do it by just looking at BGG complexity ratings, but rather by observing the target audience playing the game and hence assessing what games pose a higher barrier to entry than others. In the case of {{% game 413246 %}}Bomb Busters{{% /game %}} it's the training missions that make all the difference: they introduce the concepts at a gentle pace, one at a time, and allow groups to go as deep or as shallow in terms of difficulty as they are comfortable. I'd be willing to place a sizable bet (if I was the gambling kind, [which I'm not]({{<ref "posts/elo_2/index.md">}}) 🤑) that the people who shout about how hard it is to get into {{% game 413246 %}}Bomb Busters{{% /game %}} have skipped the training missions entirely.
+
+In the end, what matters is the jury thought this game is approachable enough to be nominated for {{% sdj / %}}, and from my own experience, I agree it's a very clever and fun game. The jury always emphasises that the latter point is what they really care about, not if they'd give the award to another limited communication co-operative game (after {{% game 373106 %}}Sky Team{{% /game %}} last year) nor that the inevitable windfall whcih comes with the award will again hit the major publisher Pegasus Spiele.
+
+Another aspect that the jury reportedly doesn't care about, but which would be an important milestone in the internationalisation of the board game hobby, is that [Hisashi Hayashi](https://recommend.games/#/?designer=39436) could be the first designer from Asia to win any of the three awards. (Someone correct me please if I overlooked any of the previous winners.)
 
 
 ## {{% game 420087 %}}Flip 7{{% /game %}}
 
-*3–99 players, 20 minutes, 8+ years, light (1.1), 99% {{% sdj %}}Spiel{{% /sdj %}}, prediction #21*
+*3–99 players, 20 minutes, 8+ years, light (1.1), prediction #21*
 
 {{< img src="420087" size="x300" alt="Flip 7" >}}
 
@@ -76,7 +80,7 @@ TODO.
 
 ## {{% game 419639 %}}Krakel Orakel{{% /game %}}
 
-*2–8 players, 30 minutes, 10+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}, prediction #7*
+*2–8 players, 30 minutes, 10+ years, light (1.1), prediction #7*
 
 {{< img src="419639" size="x300" alt="Krakel Orakel" >}}
 
@@ -107,7 +111,7 @@ TODO: Summary.
 
 ## {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}}
 
-*1–4 players, 60–120 minutes, 10+ years, medium (2.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}, #8*
+*1–4 players, 60–120 minutes, 10+ years, medium (2.9), prediction #8*
 
 {{< img src="367966" size="x300" alt="Endeavor: Deep Sea" >}}
 
@@ -118,7 +122,7 @@ TODO.
 
 ## {{% game 385761 %}}Faraway{{% /game %}}
 
-*2–6 players, 15–30 minutes, 10+ years, medium light (1.9), 67% {{% kdj %}}Kennerspiel{{% /kdj %}}, #3*
+*2–6 players, 15–30 minutes, 10+ years, medium light (1.9), prediction #3*
 
 {{< img src="385761" size="x300" alt="Faraway" >}}
 
@@ -129,7 +133,7 @@ TODO.
 
 ## {{% game 410991 %}}Looot{{% /game %}}
 
-*2–4 players, 35 minutes, 10+ years, medium light (2.1), 92% {{% sdj %}}Spiel{{% /sdj %}}, #30*
+*2–4 players, 35 minutes, 10+ years, medium light (2.1), prediction #30*
 
 {{< img src="410991" size="x300" alt="Looot" >}}
 
