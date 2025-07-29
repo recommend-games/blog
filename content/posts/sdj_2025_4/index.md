@@ -24,7 +24,7 @@ tags:
 
 The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/en/the-spiel-des-jahres-2025-is-bomb-busters/)!
 
-After [two]({{<ref "posts/sdj_2023_4/index.md">}}) [year]({{<ref "posts/sdj_2024_4/index.md">}}) of complaining how the ceremonies went on for too long, it appears the jury finally listened to me and made it snappier, while still retaining the sections highlighting all the various facets of the hobby. Kudos! I don't know if the presenters gained more experience in hosting the show, or if their non-polished charm is simply growing on me, but I definitely found the whole thing more enjoyable. (Don't forget the *Empfehlungsliste* really had me cracking…)
+After [two]({{<ref "posts/sdj_2023_4/index.md">}}) [year]({{<ref "posts/sdj_2024_4/index.md">}}) of complaining how the ceremonies went on for too long, it appears the jury finally listened to me and made it snappier, while still retaining the sections highlighting all the various facets of the hobby. Kudos! I don't know if the presenters gained more experience in hosting the show, or if their non-polished charm is simply growing on me, but I definitely found the whole thing more enjoyable. (Don't forget the *Empfehlungsliste* really had me cracking up…)
 
 Enough about the show though, let's look at the actual stars of the evening! 🤩
 
@@ -42,7 +42,9 @@ Enough about the show though, let's look at the actual stars of the evening! �
 
 *Players defuse bombs by deducing and cutting unseen wires of different values.*
 
-TODO: Comment.
+I think it's fair to say that {{% game 413246 %}}Bomb Busters{{% /game %}} has been everybody's favourite for a ling time, and in the end the jury followed the crowd's wisdom. I'm just happy I didn't have to fall out of love with the jury for picking {{% game 420087 %}}Flip 7{{% /game %}}, a game whose appeal I'm yet to find. Instead, we can indeed celebrate the first win for a Japanese, or indeed any Asian, designer, a truly remarkable testimony of the ongoing internationalisation of the hobby.
+
+Finally, it's worth noticing that before 2019, there were only two co-operative {{% sdj / %}} winners: {{% game 2511 %}}Sherlock Holmes: Consulting Detective{{% /game %}} (1985) and {{% game 98778 %}}Hanabi{{% /game %}} (2013). But since then five out of seven winners were co-operative: {{% game 254640 %}}Just One{{% /game %}} (2019), {{% game 318977 %}}MicroMacro{{% /game %}} (2021), {{% game 370591 %}}Dorfromantik{{% /game %}} (2023), {{% game 373106 %}}Sky Team{{% /game %}} (2024) and {{% game 413246 %}}Bomb Busters{{% /game %}} this year. Let's see if this trend continues in the next years – I'd be all for it. 🥰
 
 
 # {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}
