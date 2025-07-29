@@ -60,7 +60,9 @@ Finally, it's worth noticing that before 2019, there were only two co-operative 
 
 *Lead your research institute to explore ocean depths and publish your findings!*
 
-TODO: Comment.
+I clearly should've trusted my own courage and picked {{% game 367966 %}}Endeavor{{% /game %}} as my prediction for {{% kdj / %}}, but I got deterred by the jury's own remarks that this game is on the heavy side of what they'd consider a {{% kdj %}}Kennerspiel{{% /kdj %}}. (Incidentally, we've been spared the discussion that would have followed if {{% game 385761 %}}Faraway{{% /game %}} had won and hence the {{% kdj %}}Kennerspiel{{% /kdj %}} would've had a lower complexity rating than the {{% sdj %}}Spiel{{% /sdj %}} winner.) Despite this ruining my statistics (which are probably statistically indistinguishable from randomly guessing by now), I'm still very happy about the jury's selection since I've already expressed how meh I was on the other two nominees.
+
+An interesting fact about this winner is that to my knowledge it's only the second time a re-implementation won one of the two "adult" awards, the first one being {{% game 6249 %}}Alhambra{{% /game %}} in 2003. (By my count there's three {{% kindersdj / %}} winners which re-implemented a grown up game, with plenty more of those having been nominated.)
 
 
 # Conclusion
