@@ -24,7 +24,9 @@ tags:
 
 The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/en/the-spiel-des-jahres-2025-is-bomb-busters/)!
 
-TODO: Intro. (Ceremony? General comment on the year / games?)
+After [two]({{<ref "posts/sdj_2023_4/index.md">}}) [year]({{<ref "posts/sdj_2024_4/index.md">}}) of complaining how the ceremonies went on for too long, it appears the jury finally listened to me and made it snappier, while still retaining the sections highlighting all the various facets of the hobby. Kudos! I don't know if the presenters gained more experience in hosting the show, or if their non-polished charm is simply growing on me, but I definitely found the whole thing more enjoyable. (Don't forget the *Empfehlungsliste* really had me cracking…)
+
+Enough about the show though, let's look at the actual stars of the evening! 🤩
 
 
 # {{% sdj %}}Spiel des Jahres 2025{{% /sdj %}}
