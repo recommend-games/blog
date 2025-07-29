@@ -67,4 +67,8 @@ An interesting fact about this winner is that to my knowledge it's only the seco
 
 # Conclusion
 
-TODO.
+While I don't make predictions for the {{% kindersdj / %}} (simply because I have zero expertise), there's two things I'd like to mention here: First, my daughters watched the live stream with me and asked with every kids' game flashing on the screen what's the age limit and if they can play it (I think I'll solicit their advice next year to pick the winner from the nominees). Second, by winning {{% kindersdj / %}} with {{% game 423232 %}}Topp die Torte!{{% /game %}}, Wolfgang Warsch became the eighth designer to win two out the three different awards (tenth if you include the predecessor *Sonderpreis* winners). He already announced he's going to put his focus on being the first to complete the hat-trick now!
+
+I'll leave you with the remark that this was the second year in a row where both winners are on the high end of complexity for their respective awards. The jury keeps emphasising, and I hope the 'geek crowd will finally accept, that really all eligible games are considered for {{% sdj / %}} and the jury picks in the end the games which resonated best with the target audience. This could be a party game, a simple card game or a challenging deduction game. By and large, the hobby is alive and well, and the sixteen games on the longlist reflect its wide variety.
+
+As always, I'm already excited what the next year of games have in store for us. 🤓
