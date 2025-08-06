@@ -54,3 +54,6 @@ def matches_from_ratings(users):
 # %%
 elo = TwoPlayerElo()
 elo.update_elo_ratings_batch(matches_from_ratings(users), progress_bar=True)
+
+# %%
+sorted(elo.elo_ratings.items(), key=lambda x: -x[1])[:100]
