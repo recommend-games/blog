@@ -120,6 +120,47 @@ def p_deterministic_experiment(
     elo_scale: float = 400,
     progress_bar: bool = False,
 ) -> ExperimentResult:
+    if p_deterministic < 0 or p_deterministic > 1:
+        raise ValueError("p_deterministic must be between 0 and 1")
+
+    if np.isclose(p_deterministic, 0.0):
+        return ExperimentResult(
+            num_players=num_players,
+            num_matches=num_matches,
+            players_per_match=players_per_match,
+            p_deterministic=0.0,
+            elo_k=0.0,
+            elo_scale=elo_scale,
+            mean=0.0,
+            std_dev=0.0,
+            p00=0.0,
+            p01=0.0,
+            p25=0.0,
+            p50=0.0,
+            p75=0.0,
+            p99=0.0,
+            p100=0.0,
+        )
+
+    if np.isclose(p_deterministic, 1.0):
+        return ExperimentResult(
+            num_players=num_players,
+            num_matches=num_matches,
+            players_per_match=players_per_match,
+            p_deterministic=1.0,
+            elo_k=float("inf"),
+            elo_scale=elo_scale,
+            mean=0.0,
+            std_dev=float("inf"),
+            p00=-float("inf"),
+            p01=-float("inf"),
+            p25=-float("inf"),
+            p50=0.0,
+            p75=float("inf"),
+            p99=float("inf"),
+            p100=float("inf"),
+        )
+
     matches = simulate_p_deterministic_matches(
         rng=rng,
         num_players=num_players,
