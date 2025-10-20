@@ -118,6 +118,8 @@ def p_deterministic_experiment(
     players_per_match: int = 2,
     p_deterministic: float,
     elo_scale: float = 400,
+    max_iterations: int | None = None,
+    x_absolute_tol: float | None = None,
     progress_bar: bool = False,
 ) -> ExperimentResult:
     if p_deterministic < 0 or p_deterministic > 1:
@@ -175,6 +177,8 @@ def p_deterministic_experiment(
         min_elo_k=0,
         max_elo_k=elo_scale / 2,
         elo_scale=elo_scale,
+        max_iterations=max_iterations,
+        x_absolute_tol=x_absolute_tol,
     )
 
     elo = update_elo_ratings_p_deterministic(
@@ -222,6 +226,8 @@ def _p_deterministic_experiment_futures(
     players_per_matchs: Iterable[int] | int,
     p_deterministics: Iterable[float] | float,
     elo_scales: Iterable[float] | float,
+    max_iterations: int | None = None,
+    x_absolute_tol: float | None = None,
 ) -> Generator[Future[ExperimentResult]]:
     for i, (
         num_players,
@@ -247,6 +253,8 @@ def _p_deterministic_experiment_futures(
             players_per_match=players_per_match,
             p_deterministic=p_deterministic,
             elo_scale=elo_scale,
+            max_iterations=max_iterations,
+            x_absolute_tol=x_absolute_tol,
             progress_bar=False,
         )
 
@@ -259,6 +267,8 @@ def p_deterministic_experiments(
     players_per_match: Iterable[int] | int = 2,
     p_deterministic: Iterable[float] | float,
     elo_scale: Iterable[float] | float = 400,
+    max_iterations: int | None = None,
+    x_absolute_tol: float | None = None,
 ) -> Generator[ExperimentResult]:
     with ProcessPoolExecutor() as executor:
         futures = _p_deterministic_experiment_futures(
@@ -269,6 +279,8 @@ def p_deterministic_experiments(
             players_per_matchs=players_per_match,
             p_deterministics=p_deterministic,
             elo_scales=elo_scale,
+            max_iterations=max_iterations,
+            x_absolute_tol=x_absolute_tol,
         )
         for future in as_completed(futures):
             yield future.result()

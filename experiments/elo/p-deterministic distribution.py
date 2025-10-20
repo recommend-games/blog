@@ -29,8 +29,8 @@ seed = 13
 # %%
 num_players = (1000,)
 num_matches = (1_000_000,)
-players_per_match = (2,)
-p_deterministic = np.linspace(start=0.00, stop=0.99, num=100)
+players_per_match = (2, 3)
+p_deterministic = np.linspace(start=0.00, stop=0.99, num=10)
 elo_scale = (400,)
 num_experiments = (
     len(num_players)
