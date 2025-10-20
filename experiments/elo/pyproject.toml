@@ -26,12 +26,15 @@ tabulate = "*"
 tqdm = "*"
 
 [tool.poetry.group.dev.dependencies]
+funcy-typing = "*"
 jupyter-black = "*"
 jupyterlab = "*"
 jupytext = "*"
 mypy = "*"
 ruff = "*"
 scipy-stubs = "*"
+types-jmespath = "*"
+types-networkx = "*"
 types-tqdm = "*"
 
 [tool.ruff]
