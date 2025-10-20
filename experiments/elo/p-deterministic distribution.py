@@ -27,16 +27,32 @@ jupyter_black.load()
 seed = 13
 
 # %%
+num_players = (1000,)
+num_matches = (1_000_000,)
+players_per_match = (2,)
+p_deterministic = np.linspace(start=0.00, stop=0.99, num=100)
+elo_scale = (400,)
+num_experiments = (
+    len(num_players)
+    * len(num_matches)
+    * len(players_per_match)
+    * len(p_deterministic)
+    * len(elo_scale)
+)
+num_experiments
+
+# %%
 experiments = p_deterministic_experiments(
     seed=seed,
-    num_players=1000,
-    num_matches=1_000_000,
-    players_per_match=2,
-    p_deterministic=np.linspace(start=0.01, stop=0.99, num=99),
-    elo_scale=400,
+    num_players=num_players,
+    num_matches=num_matches,
+    players_per_match=players_per_match,
+    p_deterministic=p_deterministic,
+    elo_scale=elo_scale,
 )
+experiments = tqdm(experiments, desc="Running experiments", total=num_experiments)
 results = (
-    pl.LazyFrame(dataclasses.asdict(experiment) for experiment in tqdm(experiments))
+    pl.LazyFrame(dataclasses.asdict(experiment) for experiment in experiments)
     .sort("num_players", "num_matches", "players_per_match", "p_deterministic")
     .collect()
 )
@@ -49,13 +65,31 @@ results.sample(10, seed=seed)
 results.write_csv("results/p_deterministic.csv", float_precision=5)
 
 # %%
-sns.scatterplot(data=results, x="p_deterministic", y="elo_k")
+sns.scatterplot(
+    data=results,
+    x="p_deterministic",
+    y="elo_k",
+    hue="players_per_match",
+)
 
 # %%
-sns.scatterplot(x=results["p_deterministic"], y=np.log(results["elo_k"]))
+sns.scatterplot(
+    x=results["p_deterministic"],
+    y=np.log(results["elo_k"].alias("log(elo_k)")),
+    hue=results["players_per_match"],
+)
 
 # %%
-sns.scatterplot(data=results, x="p_deterministic", y="std_dev")
+sns.scatterplot(
+    data=results,
+    x="p_deterministic",
+    y="std_dev",
+    hue="players_per_match",
+)
 
 # %%
-sns.scatterplot(x=results["p_deterministic"], y=np.log(results["std_dev"]))
+sns.scatterplot(
+    x=results["p_deterministic"],
+    y=np.log(results["std_dev"].alias("log(std_dev)")),
+    hue=results["players_per_match"],
+)
