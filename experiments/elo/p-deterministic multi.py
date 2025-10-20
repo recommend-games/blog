@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.17.1
+#       jupytext_version: 1.18.1
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -16,8 +16,8 @@
 # %%
 import jupyter_black
 import numpy as np
-from elo.elo_ratings_multi import RankOrderedLogitElo
-from elo.optimal_k import approximate_optimal_k_multi
+from elo.elo_ratings import RankOrderedLogitElo
+from elo.optimal_k import approximate_optimal_k
 
 jupyter_black.load()
 rng = np.random.default_rng()
@@ -47,7 +47,7 @@ outcomes = np.where(mask[:, np.newaxis], deterministic_outcomes, random_outcomes
 random_outcomes.shape, deterministic_outcomes.shape, outcomes.shape
 
 # %%
-optimal_k = approximate_optimal_k_multi(
+optimal_k = approximate_optimal_k(
     matches=outcomes,
     elo_scale=elo_scale,
     min_elo_k=0,
