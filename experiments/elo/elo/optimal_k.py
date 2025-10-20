@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import logging
+
 from collections.abc import Mapping
 from typing import TYPE_CHECKING
 
@@ -13,6 +15,8 @@ if TYPE_CHECKING:
     from typing import TypeVar
 
     ID_TYPE = TypeVar("ID_TYPE")
+
+LOGGER = logging.getLogger(__name__)
 
 
 def calculate_loss[ID_TYPE](
@@ -38,8 +42,8 @@ def approximate_optimal_k[ID_TYPE](
     max_elo_k: float | np.float64 = 200.0,
     elo_scale: float | np.float64 = 400.0,
     coarse_points: int | np.int64 = 12,  # number of thetas in coarse scan
-    final_bracket_halfwidth: float | np.float64 = np.log(2.0),  # half-width in log-k
     xatol: float | np.float64 = 1e-3,  # tolerance in log-k for Brent refine
+    maxiter: int | np.int64 = 80,
 ) -> np.float64:
     """
     Compute k* for the *given* population of players and matches ONLY.
@@ -84,7 +88,21 @@ def approximate_optimal_k[ID_TYPE](
     if not n:
         raise ValueError("approximate_optimal_k: empty match stream")
 
-    def _loss(elo_k: np.float64) -> np.float64:
+    # Validate and sanitise bounds
+    min_k = min_elo_k
+    max_k = max_elo_k
+    if not (np.isfinite(min_k) and np.isfinite(max_k)):
+        raise ValueError("min_elo_k and max_elo_k must be finite")
+    if min_k <= 0.0:
+        # Avoid log(0); use the smallest positive *normal* float, not subnormal
+        min_k = np.finfo(float).tiny
+    if max_k <= min_k:
+        raise ValueError(
+            f"max_elo_k ({max_k}) must be greater than min_elo_k ({min_k})."
+        )
+
+    def _loss_theta(theta: np.float64) -> np.float64:
+        elo_k = np.exp(theta)
         elo: EloRatingSystem[ID_TYPE] = (
             TwoPlayerElo(elo_k=elo_k, elo_scale=elo_scale)
             if two_player_only
@@ -93,40 +111,47 @@ def approximate_optimal_k[ID_TYPE](
         return calculate_loss(elo=elo, matches=match_list, progress_bar=False)
 
     # 1) Coarse bracket on the FULL sample in theta = log(k)
-    th_min = np.log(min_elo_k)
-    th_max = np.log(max_elo_k)
+    th_min: np.float64 = np.log(min_k)
+    th_max: np.float64 = np.log(max_k)
     thetas = np.linspace(th_min, th_max, max(5, coarse_points))
     # Evaluate coarse grid on FULL data
-    coarse_vals = [_loss(np.exp(th)) for th in thetas]
-    # Pick best theta and form a local bracket [a, b, c] in log-space
-    best_i = int(np.argmin(coarse_vals))
-    # Keep b away from edges for a proper (a < b < c) triple
-    b = thetas[np.clip(best_i, 1, len(thetas) - 2)]
-    # Symmetric bracket around b in log-space, clipped to bounds.
-    # Ensure non-degenerate width by using at least half a grid step.
-    grid_step = thetas[1] - thetas[0]
-    half = max(final_bracket_halfwidth, 0.5 * grid_step)
-    # Form bracket
-    a = max(th_min, b - half)
-    c = min(th_max, b + half)
+    coarse_vals = np.array([_loss_theta(th) for th in thetas])
 
-    if not (a < b < c):
-        # Degenerate cases: zero half-width, collapsed bounds, or numerical ties.
-        eps = 1e-9
-        mid = 0.5 * (th_min + th_max)
-        a, b, c = th_min, mid, th_max
-        if not (a < b < c):  # th_min == th_max edge case
-            c = a + eps
+    # Pick a bracket that satisfies Brent's requirement: f(b) < f(a) and f(b) < f(c)
+    if not np.all(np.isfinite(coarse_vals)):
+        raise ValueError("Non-finite loss encountered during coarse scan.")
 
-    # 2) Final Brent refine on the FULL sample
-    def _loss_theta(theta: np.float64) -> np.float64:
-        return _loss(np.exp(theta))
+    # Find local minima on the coarse grid
+    candidates = [
+        i
+        for i in range(1, len(coarse_vals) - 1)
+        if (coarse_vals[i] < coarse_vals[i - 1])
+        and (coarse_vals[i] < coarse_vals[i + 1])
+    ]
 
-    result = minimize_scalar(
+    if not candidates:
+        LOGGER.debug(
+            "approximate_optimal_k: No strict local minimum found on coarse grid; "
+            "falling back to bounded search.",
+        )
+        LOGGER.debug("thetas: %s; values: %s", thetas, coarse_vals)
+        # No strict local minimum on the coarse grid (flat/noisy surface): fall back to bounded search
+        result = minimize_scalar(  # type: ignore[call-overload]
+            fun=_loss_theta,
+            method="bounded",
+            bounds=(th_min, th_max),
+            options={"xatol": xatol, "maxiter": maxiter * 2},
+        )
+        return np.exp(result.x)
+
+    # Choose the lowest local minimum and its immediate neighbours as a strict bracket
+    i = min(candidates, key=lambda j: coarse_vals[j])
+    a, b, c = thetas[i - 1], thetas[i], thetas[i + 1]
+
+    result = minimize_scalar(  # type: ignore[call-overload]
         fun=_loss_theta,
         method="brent",
         bracket=(a, b, c),
-        options={"xtol": xatol, "maxiter": 80},
+        options={"xtol": xatol, "maxiter": maxiter},
     )
-
     return np.exp(result.x)
