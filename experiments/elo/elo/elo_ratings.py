@@ -193,6 +193,8 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
     def _calculate_probability_matrix_from_permutations(
         self,
         players: tuple[ID_TYPE, ...],
+        rtol: float = 1e-3,
+        atol: float = 1e-4,
     ) -> np.ndarray:
         num_players = len(players)
         ratings = np.array([self.elo_ratings[p] for p in players], dtype=float)
@@ -208,8 +210,27 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
             for position, player in enumerate(perm):
                 probs[player, position] += prob
 
-        assert np.allclose(probs.sum(axis=0), 1), "Probabilities must sum to 1"
-        assert np.allclose(probs.sum(axis=1), 1), "Probabilities must sum to 1"
+        col_sum = probs.sum(axis=0, keepdims=True)
+        row_sum = probs.sum(axis=1, keepdims=True)
+        while not (
+            np.allclose(col_sum, 1.0, rtol=rtol, atol=atol)
+            and np.allclose(row_sum, 1.0, rtol=rtol, atol=atol)
+        ):
+            col_sum[col_sum == 0.0] = 1.0
+            probs /= col_sum
+            row_sum[row_sum == 0.0] = 1.0
+            probs /= row_sum
+            col_sum = probs.sum(axis=0, keepdims=True)
+            row_sum = probs.sum(axis=1, keepdims=True)
+
+        # Robust checks for probability matrix
+        assert np.all(np.isfinite(probs)), "Probability matrix has non-finite values"
+        assert np.allclose(col_sum, 1.0, rtol=rtol, atol=atol), (
+            f"Probabilities must sum to 1 over players per position (got {col_sum})"
+        )
+        assert np.allclose(row_sum, 1.0, rtol=rtol, atol=atol), (
+            f"Probabilities must sum to 1 over positions per player (got {row_sum})"
+        )
 
         return probs
 
