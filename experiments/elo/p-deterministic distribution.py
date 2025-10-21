@@ -73,10 +73,16 @@ sns.scatterplot(
 )
 
 # %%
+results_log = results.filter(pl.col("elo_k") > 0).select(
+    "p_deterministic",
+    pl.col("elo_k").log().alias("log(elo_k)"),
+    "players_per_match",
+)
 sns.scatterplot(
-    x=results["p_deterministic"],
-    y=np.log(results["elo_k"].alias("log(elo_k)")),
-    hue=results["players_per_match"],
+    data=results_log,
+    x="p_deterministic",
+    y="log(elo_k)",
+    hue="players_per_match",
 )
 
 # %%
@@ -88,8 +94,14 @@ sns.scatterplot(
 )
 
 # %%
+results_log = results.filter(pl.col("std_dev") > 0).select(
+    "p_deterministic",
+    pl.col("std_dev").log().alias("log(std_dev)"),
+    "players_per_match",
+)
 sns.scatterplot(
-    x=results["p_deterministic"],
-    y=np.log(results["std_dev"].alias("log(std_dev)")),
-    hue=results["players_per_match"],
+    data=results_log,
+    x="p_deterministic",
+    y="log(std_dev)",
+    hue="players_per_match",
 )
