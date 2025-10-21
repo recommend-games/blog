@@ -218,6 +218,7 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
         ):
             col_sum[col_sum == 0.0] = 1.0
             probs /= col_sum
+            row_sum = probs.sum(axis=1, keepdims=True)
             row_sum[row_sum == 0.0] = 1.0
             probs /= row_sum
             col_sum = probs.sum(axis=0, keepdims=True)
