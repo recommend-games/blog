@@ -33,6 +33,7 @@ dev = [
     "jupyter-black",
     "jupyterlab",
     "jupytext",
+    "maturin",
     "mypy",
     "ruff",
     "scipy-stubs",
