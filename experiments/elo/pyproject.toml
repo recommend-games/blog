@@ -52,7 +52,7 @@ build-backend = "maturin"
 [tool.maturin]
 # "extension-module" tells pyo3 we want to build an extension module (skips linking against libpython.so)
 features = ["pyo3/extension-module"]
-module-name = "elo._core"
+module-name = "elo._rust"
 python-packages = ["elo"]
 python-source = "src"
 

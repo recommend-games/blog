@@ -1,4 +1,4 @@
-from elo._core import hello_from_bin
+from elo._rust import hello_from_bin
 
 
 def main() -> None:
