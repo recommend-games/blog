@@ -11,3 +11,6 @@ crate-type = ["cdylib", "rlib"]
 [dependencies]
 rand = "0.9.0"
 pyo3 = { version = "0.22.4", features = ["extension-module", "abi3-py312"] }
+rand_distr = "0.4"
+rayon = "1.10"     # optional for MC sampling
+once_cell = "1.19" # for cached permutations
