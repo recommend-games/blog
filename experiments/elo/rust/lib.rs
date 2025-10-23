@@ -1,6 +1,8 @@
 use once_cell::sync::Lazy;
 use pyo3::prelude::*;
 
+pub mod core;
+
 pub static PERMS: Lazy<Vec<Vec<Vec<usize>>>> = Lazy::new(|| {
     // PERMS[n] = all permutations of 0..n-1, for n up to 6
     let mut out: Vec<Vec<Vec<usize>>> = vec![vec![]; 7];
