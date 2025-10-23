@@ -27,6 +27,10 @@ dependencies = [
     "tqdm",
 ]
 
+packages = [
+    { include = "elo", from = "python" }
+]
+
 [project.scripts]
 elo = "elo:main"
 
@@ -54,7 +58,7 @@ build-backend = "maturin"
 features = ["pyo3/extension-module"]
 module-name = "elo._rust"
 python-packages = ["elo"]
-python-source = "src"
+python-source = "python"
 
 [tool.uv]
 cache-keys = [
