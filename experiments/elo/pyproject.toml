@@ -32,7 +32,7 @@ packages = [
 ]
 
 [project.scripts]
-elo = "elo:main"
+elo = "elo.__main__:main"
 
 [dependency-groups]
 dev = [
