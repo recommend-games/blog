@@ -1,11 +1,19 @@
-use elo::{hello_for_rust, PERMS};
+use elo::core::rating_system::{EloConfig, EloRatingSystem, Match};
+use elo::core::two_player::TwoPlayerElo;
 
 fn main() {
-    println!("{}", hello_for_rust());
-    for n in 0..=6 {
-        println!("n={} perms={}", n, PERMS[n].len());
-        for p in &PERMS[n] {
-            println!("{:?}", p);
-        }
-    }
+    let cfg = EloConfig {
+        elo_initial: 0.0,
+        elo_k: 32.0,
+        elo_scale: 400.0,
+    };
+    let mut elo = TwoPlayerElo::<&'static str>::new(cfg, None);
+
+    // Match as ordered players: winner first
+    elo.update(Match::Ordered(vec!["A", "B"]));
+    // Or explicit outcomes
+    elo.update(Match::Outcomes(vec![("A", 1.0), ("B", 0.0)]));
+
+    let expected = elo.expected_outcome(&["A", "B"], None);
+    println!("P(A wins) = {}", expected[0]);
 }
