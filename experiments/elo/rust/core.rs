@@ -1,5 +1,5 @@
 pub mod rating_system;
-// pub mod two_player;
+pub mod two_player;
 
 /// Elo win probability for player A vs B given rating difference `diff = r_a - r_b`.
 #[inline]
