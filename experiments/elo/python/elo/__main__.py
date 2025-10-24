@@ -2,8 +2,9 @@ import polars as pl
 import numpy as np
 from numpy import typing as npt
 import sys
-from elo._rust import calculate_elo_ratings_rust
+from elo._rust import approx_optimal_k_two_player_rust, calculate_elo_ratings_rust
 from elo.elo_ratings import calculate_elo_ratings_python
+from elo.optimal_k import approximate_optimal_k
 
 
 def matches_from_arrow_file(file_path: str) -> npt.NDArray[np.int32]:
@@ -55,6 +56,31 @@ def main():
         sorted_ratings = sorted_ratings[:10] + [(0, 0)] + sorted_ratings[-10:]
     for player, rating in sorted_ratings:
         print(f"Player {player:10d}:\tElo {rating:10.3f}")
+
+    print("Approximate optimal K (Python implementation):")
+    with Timer(text="Calculated optimal K (Python) in {:.3f} seconds", logger=print):
+        optimal_k = approximate_optimal_k(
+            matches=matches,
+            two_player_only=True,
+            min_elo_k=0,
+            max_elo_k=200,
+            elo_scale=elo_scale,
+            max_iterations=None,
+            x_absolute_tol=None,
+        )
+    print(f"Approximate optimal K (Python): {optimal_k:.3f}")
+
+    print("Approximate optimal K (Rust implementation):")
+    with Timer(text="Calculated optimal K (Rust) in {:.3f} seconds", logger=print):
+        optimal_k = approx_optimal_k_two_player_rust(
+            matches=matches,
+            min_k=0,
+            max_k=200,
+            elo_scale=elo_scale,
+            max_iterations=None,
+            x_absolute_tol=None,
+        )
+    print(f"Approximate optimal K (Rust): {optimal_k:.3f}")
 
 
 if __name__ == "__main__":
