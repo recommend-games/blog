@@ -1,3 +1,4 @@
+pub mod optimal_k;
 pub mod rating_system;
 pub mod two_player;
 
