@@ -4,6 +4,8 @@ use std::hash::Hash;
 
 use crate::core::rating_system::{EloConfig, EloRatingSystem, Match};
 use crate::core::two_player::TwoPlayerElo;
+use argmin::core::{CostFunction, Error, Executor, State};
+use argmin::solver::brent::BrentOpt;
 
 /// Compute mean squared error of the per-player diffs produced over a batch.
 /// Diffs are the normalised (observed - expected) values returned by the rating updates.
@@ -33,44 +35,33 @@ where
     }
 }
 
-/// Simple golden-section search for bounded scalar minimisation.
-/// Returns the x that (approximately) minimises f on [a, b].
-fn golden_section_search<F>(mut a: f64, mut b: f64, tol: f64, max_iters: usize, f: F) -> f64
+/// Argmin problem: minimise the Elo diff MSE over k in [min_k, max_k].
+struct BrentKProblem<'a, Id> {
+    matches: &'a [Match<Id>],
+    elo_scale: f64,
+}
+
+impl<'a, Id> CostFunction for BrentKProblem<'a, Id>
 where
-    F: Fn(f64) -> f64,
+    Id: Eq + Hash + Clone,
 {
-    // φ = (1 + sqrt(5)) / 2; 1 - 1/φ = 1/φ^2 ≈ 0.381966...
-    let gr = 0.5 * (5.0_f64.sqrt() + 1.0);
-    let inv_gr2 = 1.0 / (gr * gr);
+    type Param = f64;
+    type Output = f64;
 
-    let mut c = b - (b - a) * inv_gr2;
-    let mut d = a + (b - a) * inv_gr2;
-    let mut fc = f(c);
-    let mut fd = f(d);
-
-    for _ in 0..max_iters {
-        if (b - a).abs() <= tol {
-            break;
+    fn cost(&self, k: &Self::Param) -> Result<Self::Output, Error> {
+        // Guard against degenerate inputs
+        if !k.is_finite() || *k < 0.0 {
+            return Ok(f64::INFINITY);
         }
-        if fc < fd {
-            b = d;
-            d = c;
-            fd = fc;
-            c = b - (b - a) * inv_gr2;
-            fc = f(c);
-        } else {
-            a = c;
-            c = d;
-            fc = fd;
-            d = a + (b - a) * inv_gr2;
-            fd = f(d);
-        }
-    }
-    // Return the best of c/d region
-    if fc < fd {
-        c
-    } else {
-        d
+        let mut sys: TwoPlayerElo<Id> = TwoPlayerElo::new(
+            EloConfig {
+                elo_k: *k,
+                elo_scale: self.elo_scale,
+                ..EloConfig::default()
+            },
+            Some(HashMap::new()),
+        );
+        Ok(calculate_loss(&mut sys, self.matches))
     }
 }
 
@@ -87,25 +78,39 @@ pub fn approx_optimal_k_two_player<Id>(
 where
     Id: Eq + Hash + Clone,
 {
-    let max_iters = max_iterations.unwrap_or(200);
-    let tol = x_absolute_tol.unwrap_or(1e-3);
+    let max_iters = max_iterations.unwrap_or(200) as u64;
 
-    // Loss as a function of k: create a fresh system each time (like Python).
-    let loss = |k: f64| -> f64 {
-        // Guard against degenerate inputs
-        if !k.is_finite() || k < 0.0 {
-            return f64::INFINITY;
+    // Brent uses combined tolerance: tol = eps * |x| + t.
+    // We map the provided absolute tolerance to `t` and keep default `eps = sqrt(machine_epsilon)`.
+    let abs_tol = x_absolute_tol.unwrap_or(1e-3);
+    let eps = f64::EPSILON.sqrt();
+
+    let problem = BrentKProblem { matches, elo_scale };
+
+    let solver = BrentOpt::new(min_k, max_k).set_tolerance(eps, abs_tol);
+
+    // Use the mid-point as an initial guess for completeness (Brent brackets anyway).
+    let init = 0.5 * (min_k + max_k);
+
+    let res = Executor::new(problem, solver)
+        .configure(|state| state.param(init).max_iters(max_iters))
+        .run();
+
+    match res {
+        Ok(res) => {
+            // Prefer the best parameter found; fall back to the last one if unset.
+            if let Some(k) = res.state().get_best_param() {
+                *k
+            } else if let Some(k) = res.state().get_param() {
+                *k
+            } else {
+                // Shouldn't happen; conservative fallback.
+                init
+            }
         }
-        let mut sys: TwoPlayerElo<Id> = TwoPlayerElo::new(
-            EloConfig {
-                elo_k: k,
-                elo_scale,
-                ..EloConfig::default()
-            },
-            Some(HashMap::new()),
-        );
-        calculate_loss(&mut sys, matches)
-    };
-
-    golden_section_search(min_k, max_k, tol, max_iters, loss)
+        Err(_e) => {
+            // On failure, return the mid-point as a safe fallback.
+            init
+        }
+    }
 }
