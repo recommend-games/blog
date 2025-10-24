@@ -360,9 +360,40 @@ def calculate_elo_ratings_python(
 
 
 def _main():
+    from elo._rust import calculate_elo_ratings_rust
+
     matches = np.array([[0, 1], [0, 1]], dtype=np.int32)
-    elo_ratings = calculate_elo_ratings_python(matches=matches, progress_bar=True)
-    for player, rating in sorted(elo_ratings.items(), key=lambda x: x[1], reverse=True):
+    elo_initial = 0.0
+    elo_k = 32.0
+    elo_scale = 400.0
+
+    print("Elo ratings (Python implementation):")
+    elo_ratings = calculate_elo_ratings_python(
+        matches=matches,
+        elo_initial=elo_initial,
+        elo_k=elo_k,
+        elo_scale=elo_scale,
+        progress_bar=True,
+    )
+    for player, rating in sorted(
+        elo_ratings.items(),
+        key=lambda x: x[1],
+        reverse=True,
+    ):
+        print(f"Player {player:4d}:\tElo {rating:10.3f}")
+
+    print("Elo ratings (Rust implementation):")
+    elo_ratings_rust = calculate_elo_ratings_rust(
+        matches=matches,
+        elo_initial=elo_initial,
+        elo_k=elo_k,
+        elo_scale=elo_scale,
+    )
+    for player, rating in sorted(
+        elo_ratings_rust.items(),
+        key=lambda x: x[1],
+        reverse=True,
+    ):
         print(f"Player {player:4d}:\tElo {rating:10.3f}")
 
 
