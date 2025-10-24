@@ -36,6 +36,7 @@ elo = "elo.__main__:main"
 
 [dependency-groups]
 dev = [
+    "codetiming",
     "funcy-typing",
     "jupyter-black",
     "jupyterlab",
