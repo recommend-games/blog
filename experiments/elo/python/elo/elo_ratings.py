@@ -8,6 +8,7 @@ from collections.abc import Mapping
 from typing import TYPE_CHECKING, override
 
 import numpy as np
+from numpy import typing as npt
 
 if TYPE_CHECKING:
     from collections.abc import Iterable, Generator
@@ -336,3 +337,34 @@ def _padded_numpy_array(
     for i, a in enumerate(arrays):
         result[i, : a.shape[0]] = a
     return result
+
+
+def calculate_elo_ratings_python(
+    *,
+    matches: npt.NDArray[np.int32],
+    elo_initial: float = 0,
+    elo_k: float = 32,
+    elo_scale: float = 400,
+    progress_bar: bool = False,
+) -> dict[int, float]:
+    assert matches.ndim == 2 and matches.shape[1] == 2, (
+        "Matches must be a 2D array with shape (num_matches, 2)"
+    )
+    elo: TwoPlayerElo = TwoPlayerElo(
+        elo_initial=elo_initial,
+        elo_k=elo_k,
+        elo_scale=elo_scale,
+    )
+    elo.update_elo_ratings_batch(matches, progress_bar=progress_bar)
+    return dict(elo.elo_ratings)
+
+
+def _main():
+    matches = np.array([[0, 1], [0, 1]], dtype=np.int32)
+    elo_ratings = calculate_elo_ratings_python(matches=matches, progress_bar=True)
+    for player, rating in sorted(elo_ratings.items(), key=lambda x: x[1], reverse=True):
+        print(f"Player {player:4d}:\tElo {rating:10.3f}")
+
+
+if __name__ == "__main__":
+    _main()
