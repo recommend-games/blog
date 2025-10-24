@@ -359,10 +359,26 @@ def calculate_elo_ratings_python(
     return dict(elo.elo_ratings)
 
 
+def matches_from_arrow_file(file_path: str) -> npt.NDArray[np.int32]:
+    import polars as pl
+
+    data = (
+        pl.scan_ipc(file_path)
+        .select(pl.col("player_ids").list.to_struct(upper_bound=2))
+        .unnest("player_ids")
+        .drop_nulls()
+        .collect()
+    )
+    print(f"Loaded {len(data)} matches from {file_path}")
+    return data.to_numpy().astype(np.int32)
+
+
 def _main():
+    import sys
     from elo._rust import calculate_elo_ratings_rust
 
-    matches = np.array([[0, 1], [0, 1]], dtype=np.int32)
+    matches = matches_from_arrow_file(sys.argv[1])
+
     elo_initial = 0.0
     elo_k = 32.0
     elo_scale = 400.0
@@ -375,25 +391,23 @@ def _main():
         elo_scale=elo_scale,
         progress_bar=True,
     )
-    for player, rating in sorted(
-        elo_ratings.items(),
-        key=lambda x: x[1],
-        reverse=True,
-    ):
+    sorted_ratings = sorted(elo_ratings.items(), key=lambda x: x[1], reverse=True)
+    if len(sorted_ratings) > 20:
+        sorted_ratings = sorted_ratings[:10] + [(0, 0)] + sorted_ratings[-10:]
+    for player, rating in sorted_ratings:
         print(f"Player {player:4d}:\tElo {rating:10.3f}")
 
     print("Elo ratings (Rust implementation):")
-    elo_ratings_rust = calculate_elo_ratings_rust(
+    elo_ratings = calculate_elo_ratings_rust(
         matches=matches,
         elo_initial=elo_initial,
         elo_k=elo_k,
         elo_scale=elo_scale,
     )
-    for player, rating in sorted(
-        elo_ratings_rust.items(),
-        key=lambda x: x[1],
-        reverse=True,
-    ):
+    sorted_ratings = sorted(elo_ratings.items(), key=lambda x: x[1], reverse=True)
+    if len(sorted_ratings) > 20:
+        sorted_ratings = sorted_ratings[:10] + [(0, 0)] + sorted_ratings[-10:]
+    for player, rating in sorted_ratings:
         print(f"Player {player:4d}:\tElo {rating:10.3f}")
 
 
