@@ -14,8 +14,10 @@ name = "elo"
 path = "rust/main.rs"
 
 [dependencies]
+ndarray = "0.16.1"
+numpy = "0.27.0"
+once_cell = "1.19" # for cached permutations
+pyo3 = { version = "0.27.0", features = ["extension-module", "abi3-py312"] }
 rand = "0.9.0"
-pyo3 = { version = "0.22.4", features = ["extension-module", "abi3-py312"] }
 rand_distr = "0.4"
 rayon = "1.10"     # optional for MC sampling
-once_cell = "1.19" # for cached permutations
