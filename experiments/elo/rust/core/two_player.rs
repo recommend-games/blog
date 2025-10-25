@@ -2,7 +2,7 @@ use std::collections::HashMap;
 use std::hash::Hash;
 
 use super::elo_probability;
-use super::rating_system::{EloConfig, EloRatingSystem, Match};
+use super::rating_system::{EloConfig, EloRatingSystem};
 
 /// Two-player Elo. Mirrors your Python `TwoPlayerElo`.
 #[derive(Debug, Clone)]
@@ -23,11 +23,6 @@ where
             cfg,
             ratings: initial_ratings.unwrap_or_default(),
         }
-    }
-
-    /// Convenience: update with explicit outcomes (id, outcome in [0,1]) or ordered (winner first).
-    pub fn update(&mut self, m: Match<Id>) -> Vec<f64> {
-        self.update_elo_ratings(m)
     }
 }
 

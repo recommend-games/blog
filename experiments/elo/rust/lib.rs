@@ -1,5 +1,6 @@
 pub mod core;
 
+use crate::core::multi_player::RankOrderedLogitElo;
 use crate::core::optimal_k::approx_optimal_k_two_player;
 use crate::core::rating_system::EloRatingSystem;
 use crate::core::rating_system::{EloConfig, Match};
@@ -64,7 +65,35 @@ fn calculate_elo_ratings_two_players_rust<'py>(
     let mut elo = TwoPlayerElo::<i32>::new(cfg, None);
 
     for row in arr.rows() {
-        elo.update(Match::Ordered(row.to_vec()));
+        elo.update_elo_ratings(Match::Ordered(row.to_vec()));
+    }
+
+    Ok(elo.ratings().clone())
+}
+
+#[pyfunction]
+fn calculate_elo_ratings_multi_players_rust<'py>(
+    matches: PyReadonlyArray2<'py, i32>, // shape: (n_matches, n_players)
+    elo_initial: f64,
+    elo_k: f64,
+    elo_scale: f64,
+) -> PyResult<HashMap<i32, f64>> {
+    // Simple, straightforward implementation (ordered players).
+    let arr: ArrayView2<'_, i32> = matches.as_array();
+    if arr.ndim() != 2 {
+        return Err(pyo3::exceptions::PyValueError::new_err(
+            "matches must be shape (n_matches, n_players) of int32",
+        ));
+    }
+    let cfg = EloConfig {
+        elo_initial,
+        elo_k,
+        elo_scale,
+    };
+    let mut elo = RankOrderedLogitElo::<i32>::new(cfg, None, 6, 12);
+
+    for row in arr.rows() {
+        elo.update_elo_ratings(Match::Ordered(row.to_vec()));
     }
 
     Ok(elo.ratings().clone())
@@ -77,5 +106,9 @@ fn calculate_elo_ratings_two_players_rust<'py>(
 fn _rust(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(approx_optimal_k_two_player_rust, m)?)?;
     m.add_function(wrap_pyfunction!(calculate_elo_ratings_two_players_rust, m)?)?;
+    m.add_function(wrap_pyfunction!(
+        calculate_elo_ratings_multi_players_rust,
+        m
+    )?)?;
     Ok(())
 }

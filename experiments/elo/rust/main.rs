@@ -10,9 +10,9 @@ fn main() {
     let mut elo = TwoPlayerElo::<&'static str>::new(cfg, None);
 
     // Match as ordered players: winner first
-    elo.update(Match::Ordered(vec!["A", "B"]));
+    elo.update_elo_ratings(Match::Ordered(vec!["A", "B"]));
     // Or explicit outcomes
-    elo.update(Match::Outcomes(vec![("A", 1.0), ("B", 0.0)]));
+    elo.update_elo_ratings(Match::Outcomes(vec![("A", 1.0), ("B", 0.0)]));
 
     let expected = elo.expected_outcome(&["A", "B"], None);
     println!("P(A wins) = {}", expected[0]);
