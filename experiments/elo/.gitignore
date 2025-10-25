@@ -2,4 +2,5 @@
 .jobs/
 results*/
 /target
+/supplemental/
 *.jl
