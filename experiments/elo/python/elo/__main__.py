@@ -2,8 +2,11 @@ import polars as pl
 import numpy as np
 from numpy import typing as npt
 import sys
-from elo._rust import approx_optimal_k_two_player_rust, calculate_elo_ratings_rust
-from elo.elo_ratings import calculate_elo_ratings_python
+from elo._rust import (
+    approx_optimal_k_two_player_rust,
+    calculate_elo_ratings_two_players_rust,
+)
+from elo.elo_ratings import calculate_elo_ratings_two_players_python
 from elo.optimal_k import approximate_optimal_k
 
 
@@ -30,7 +33,7 @@ def main():
 
     print("Elo ratings (Python implementation):")
     with Timer(text="Calculated Elo ratings (Python) in {:.3f} seconds", logger=print):
-        elo_ratings = calculate_elo_ratings_python(
+        elo_ratings = calculate_elo_ratings_two_players_python(
             matches=matches,
             elo_initial=elo_initial,
             elo_k=elo_k,
@@ -45,7 +48,7 @@ def main():
 
     print("Elo ratings (Rust implementation):")
     with Timer(text="Calculated Elo ratings (Rust) in {:.3f} seconds", logger=print):
-        elo_ratings = calculate_elo_ratings_rust(
+        elo_ratings = calculate_elo_ratings_two_players_rust(
             matches=matches,
             elo_initial=elo_initial,
             elo_k=elo_k,

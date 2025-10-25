@@ -10,7 +10,7 @@ def approx_optimal_k_two_player_rust(
     max_iterations: int | None = None,
     x_absolute_tol: float | None = None,
 ) -> float: ...
-def calculate_elo_ratings_rust(
+def calculate_elo_ratings_two_players_rust(
     *,
     matches: npt.NDArray[np.int32],
     elo_initial: float,

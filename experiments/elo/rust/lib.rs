@@ -43,7 +43,7 @@ fn approx_optimal_k_two_player_rust<'py>(
 }
 
 #[pyfunction]
-fn calculate_elo_ratings_rust<'py>(
+fn calculate_elo_ratings_two_players_rust<'py>(
     matches: PyReadonlyArray2<'py, i32>, // shape: (n_matches, 2)
     elo_initial: f64,
     elo_k: f64,
@@ -76,6 +76,6 @@ fn calculate_elo_ratings_rust<'py>(
 #[pymodule]
 fn _rust(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(approx_optimal_k_two_player_rust, m)?)?;
-    m.add_function(wrap_pyfunction!(calculate_elo_ratings_rust, m)?)?;
+    m.add_function(wrap_pyfunction!(calculate_elo_ratings_two_players_rust, m)?)?;
     Ok(())
 }

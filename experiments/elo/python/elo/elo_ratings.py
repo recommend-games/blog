@@ -333,7 +333,7 @@ def _padded_numpy_array(
     return result
 
 
-def calculate_elo_ratings_python(
+def calculate_elo_ratings_two_players_python(
     *,
     matches: npt.NDArray[np.int32],
     elo_initial: float = 0,
