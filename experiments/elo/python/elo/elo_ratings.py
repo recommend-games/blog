@@ -361,8 +361,8 @@ def calculate_elo_ratings_multi_players_python(
     elo_scale: float = 400,
     progress_bar: bool = False,
 ) -> dict[int, float]:
-    assert matches.ndim == 2 and matches.shape[1] == 2, (
-        "Matches must be a 2D array with shape (num_matches, 2)"
+    assert matches.ndim == 2 and matches.shape[1] >= 2, (
+        "Matches must be a 2D array with shape (num_matches, num_players>=2)"
     )
     elo: RankOrderedLogitElo = RankOrderedLogitElo(
         elo_initial=elo_initial,

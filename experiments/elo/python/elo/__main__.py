@@ -6,7 +6,10 @@ from elo._rust import (
     approx_optimal_k_two_player_rust,
     calculate_elo_ratings_two_players_rust,
 )
-from elo.elo_ratings import calculate_elo_ratings_two_players_python
+from elo.elo_ratings import (
+    calculate_elo_ratings_two_players_python,
+    calculate_elo_ratings_multi_players_python,
+)
 from elo.optimal_k import approximate_optimal_k
 
 
@@ -31,7 +34,7 @@ def main():
     elo_k = 32.0
     elo_scale = 400.0
 
-    print("Elo ratings (Python implementation):")
+    print("Elo ratings (two player Python implementation):")
     with Timer(text="Calculated Elo ratings (Python) in {:.3f} seconds", logger=print):
         elo_ratings = calculate_elo_ratings_two_players_python(
             matches=matches,
@@ -46,7 +49,22 @@ def main():
     for player, rating in sorted_ratings:
         print(f"Player {player:10d}:\tElo {rating:10.3f}")
 
-    print("Elo ratings (Rust implementation):")
+    print("Elo ratings (multi player Python implementation):")
+    with Timer(text="Calculated Elo ratings (Python) in {:.3f} seconds", logger=print):
+        elo_ratings = calculate_elo_ratings_multi_players_python(
+            matches=matches,
+            elo_initial=elo_initial,
+            elo_k=elo_k,
+            elo_scale=elo_scale,
+            progress_bar=True,
+        )
+    sorted_ratings = sorted(elo_ratings.items(), key=lambda x: x[1], reverse=True)
+    if len(sorted_ratings) > 20:
+        sorted_ratings = sorted_ratings[:10] + [(0, 0)] + sorted_ratings[-10:]
+    for player, rating in sorted_ratings:
+        print(f"Player {player:10d}:\tElo {rating:10.3f}")
+
+    print("Elo ratings (two player Rust implementation):")
     with Timer(text="Calculated Elo ratings (Rust) in {:.3f} seconds", logger=print):
         elo_ratings = calculate_elo_ratings_two_players_rust(
             matches=matches,
