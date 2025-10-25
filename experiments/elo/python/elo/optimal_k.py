@@ -25,7 +25,7 @@ def calculate_loss[ID_TYPE](
         progress_bar=progress_bar,
     )
     assert errors is not None
-    return np.nanmean(errors**2)
+    return np.nanmean(errors**2, dtype=np.float64)
 
 
 def approximate_optimal_k[ID_TYPE](
