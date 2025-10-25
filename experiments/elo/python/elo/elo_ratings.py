@@ -351,3 +351,30 @@ def calculate_elo_ratings_two_players_python(
     )
     elo.update_elo_ratings_batch(matches, progress_bar=progress_bar)
     return dict(elo.elo_ratings)
+
+
+def calculate_elo_ratings_multi_players_python(
+    *,
+    matches: npt.NDArray[np.int32],
+    elo_initial: float = 0,
+    elo_k: float = 32,
+    elo_scale: float = 400,
+    progress_bar: bool = False,
+) -> dict[int, float]:
+    assert matches.ndim == 2 and matches.shape[1] == 2, (
+        "Matches must be a 2D array with shape (num_matches, 2)"
+    )
+    elo: RankOrderedLogitElo = RankOrderedLogitElo(
+        elo_initial=elo_initial,
+        elo_k=elo_k,
+        elo_scale=elo_scale,
+    )
+    num_matches = len(matches)
+    # Iterate over matches and drop nans from each match
+    matches_iter = (match[~np.isnan(match)].astype(np.int32) for match in matches)
+    elo.update_elo_ratings_batch(
+        matches_iter,
+        progress_bar=progress_bar,
+        tqdm_kwargs={"total": num_matches},
+    )
+    return dict(elo.elo_ratings)
