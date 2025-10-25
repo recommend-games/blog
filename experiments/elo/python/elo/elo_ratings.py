@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import itertools
+import math
 import warnings
 from abc import ABC, abstractmethod
 from collections import defaultdict
@@ -161,7 +162,9 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
         elo_k: float = 32,
         elo_scale: float = 400,
         max_exact: int = 6,
+        max_dp: int = 12,
         mc_samples: int = 5_000,
+        rng: np.random.Generator | int | None = None,
     ) -> None:
         super().__init__(
             init_elo_ratings=init_elo_ratings,
@@ -170,7 +173,11 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
             elo_scale=elo_scale,
         )
         self.max_exact = max_exact
+        self.max_dp = max_dp
         self.mc_samples = mc_samples
+        self._rng = (
+            rng if isinstance(rng, np.random.Generator) else np.random.default_rng(rng)
+        )
 
     def _calculate_probability_matrix_two_players(
         self,
@@ -182,13 +189,6 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
         prob_a = elo_probability(diff, self.elo_scale)
         prob_b = 1 - prob_a
         return np.array([[prob_a, prob_b], [prob_b, prob_a]])
-
-    def _calculate_probability_matrix_from_simulations(
-        self,
-        players: tuple[ID_TYPE, ...],
-    ) -> np.ndarray:
-        # TODO: implement Monte Carlo fallback
-        raise NotImplementedError
 
     def _calculate_probability_matrix_from_permutations(
         self,
@@ -230,6 +230,90 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
 
         return probs
 
+    def _calculate_probability_matrix_from_dp(
+        self,
+        players: tuple[ID_TYPE, ...],
+        *,
+        rtol: float = 1e-9,
+        atol: float = 1e-12,
+    ) -> np.ndarray:
+        n = len(players)
+        ratings = np.array([self.elo_ratings[p] for p in players], dtype=np.float64)
+        w = np.power(10.0, ratings / self.elo_scale)
+        W_total = float(w.sum())
+
+        probs = np.zeros((n, n), dtype=np.float64)
+        for i in range(n):
+            other_idx = [j for j in range(n) if j != i]
+            m = n - 1
+            other_w = w[other_idx]
+
+            num_masks = 1 << m
+            subset_sum = np.zeros(num_masks, dtype=np.float64)
+            for mask in range(1, num_masks):
+                lsb = mask & -mask
+                bit = lsb.bit_length() - 1
+                subset_sum[mask] = subset_sum[mask ^ lsb] + other_w[bit]
+
+            P = np.zeros(m + 1, dtype=np.float64)
+            wi = float(w[i])
+            for mask in range(num_masks):
+                tsize = mask.bit_count()
+                denom = W_total - subset_sum[mask]
+                base = wi / denom
+                sign_mask = -1.0 if (tsize & 1) else 1.0
+                for k in range(tsize, m + 1):
+                    sign_k = -1.0 if (k & 1) else 1.0
+                    coeff = math.comb(m - tsize, k - tsize)
+                    P[k] += base * sign_mask * sign_k * coeff
+
+            P = np.clip(P, 0.0, 1.0)
+            s = P.sum()
+            if not np.isclose(s, 1.0, rtol=rtol, atol=atol):
+                P = (P / s) if s > 0 else np.full_like(P, 1.0 / (m + 1))
+            probs[i, : m + 1] = P
+
+        col_sum = probs.sum(axis=0)
+        row_sum = probs.sum(axis=1)
+        assert np.allclose(col_sum, 1.0, rtol=1e-6, atol=1e-8)
+        assert np.allclose(row_sum, 1.0, rtol=1e-6, atol=1e-8)
+        return probs
+
+    def _calculate_probability_matrix_from_simulations(
+        self,
+        players: tuple[ID_TYPE, ...],
+    ) -> np.ndarray:
+        n = len(players)
+        ratings = np.array([self.elo_ratings[p] for p in players], dtype=np.float64)
+        weights = np.power(10.0, ratings / self.elo_scale)
+        counts = np.zeros((n, n), dtype=np.float64)
+
+        rng = self._rng
+        idx_all = np.arange(n, dtype=np.int64)
+        for _ in range(self.mc_samples):
+            remaining = idx_all.tolist()
+            order: list[int] = []
+            w = weights.copy()
+            while remaining:
+                rem_arr = np.array(remaining, dtype=np.int64)
+                probs = w[rem_arr]
+                tot = probs.sum()
+                if not np.isfinite(tot) or tot <= 0:
+                    probs = np.ones_like(probs, dtype=np.float64)
+                    tot = probs.sum()
+                probs = probs / tot
+                chosen = int(rng.choice(rem_arr, p=probs))
+                order.append(chosen)
+                remaining.remove(chosen)
+                w[chosen] = 0.0
+            for pos, player_idx in enumerate(order):
+                counts[player_idx, pos] += 1.0
+
+        probs = np.clip(counts / float(self.mc_samples), 0.0, 1.0)
+        col_sums = probs.sum(axis=0, keepdims=True)
+        col_sums[col_sums == 0.0] = 1.0
+        return probs / col_sums
+
     @override
     def probability_matrix(
         self,
@@ -243,10 +327,13 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
         if len(players) == 2:
             return self._calculate_probability_matrix_two_players(players)
 
-        if len(players) > self.max_exact:
-            return self._calculate_probability_matrix_from_simulations(players)
+        if len(players) <= self.max_exact:
+            return self._calculate_probability_matrix_from_permutations(players)
 
-        return self._calculate_probability_matrix_from_permutations(players)
+        if len(players) <= self.max_dp:
+            return self._calculate_probability_matrix_from_dp(players)
+
+        return self._calculate_probability_matrix_from_simulations(players)
 
     @override
     def expected_outcome(
