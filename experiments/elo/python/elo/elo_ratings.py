@@ -178,9 +178,9 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
         elo_initial: np.float64 | float = NP_ZERO,
         elo_k: np.float64 | float = NP_THIRTYTWO,
         elo_scale: np.float64 | float = NP_FOURHUNDRED,
-        max_exact: int = 6,
-        max_dp: int = 12,
-        mc_samples: int = 5_000,
+        max_permutations: int = 6,
+        max_dynamic_programming: int = 12,
+        monte_carlo_samples: int = 5_000,
         rng: np.random.Generator | int | None = None,
     ) -> None:
         super().__init__(
@@ -189,9 +189,9 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
             elo_k=elo_k,
             elo_scale=elo_scale,
         )
-        self.max_exact = max_exact
-        self.max_dp = max_dp
-        self.mc_samples = mc_samples
+        self.max_permutations = max_permutations
+        self.max_dynamic_programming = max_dynamic_programming
+        self.monte_carlo_samples = monte_carlo_samples
         self._rng = (
             rng if isinstance(rng, np.random.Generator) else np.random.default_rng(rng)
         )
@@ -207,9 +207,10 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
         prob_b = 1 - prob_a
         return np.asarray([[prob_a, prob_b], [prob_b, prob_a]], dtype=np.float64)
 
-    def _calculate_probability_matrix_from_permutations(
+    def _calculate_probability_matrix_permutations(
         self,
         players: tuple[ID_TYPE, ...],
+        *,
         rtol: np.float64 | float = np.float64(1e-3),
         atol: np.float64 | float = np.float64(1e-4),
     ) -> npt.NDArray[np.float64]:
@@ -239,7 +240,7 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
         )
         return probs
 
-    def _calculate_probability_matrix_from_dp(
+    def _calculate_probability_matrix_dynamic_programming(
         self,
         players: tuple[ID_TYPE, ...],
         *,
@@ -295,7 +296,7 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
         assert np.allclose(row_sum, NP_ONE, rtol=rtol, atol=atol)
         return probs
 
-    def _calculate_probability_matrix_from_simulations(
+    def _calculate_probability_matrix_monte_carlo(
         self,
         players: tuple[ID_TYPE, ...],
     ) -> npt.NDArray[np.float64]:
@@ -305,7 +306,7 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
         counts = np.zeros((n, n), dtype=np.float64)
 
         idx_all = np.arange(n, dtype=np.int64)
-        for _ in range(self.mc_samples):
+        for _ in range(self.monte_carlo_samples):
             remaining = idx_all.tolist()
             order: list[int] = []
             w = weights.copy()
@@ -313,7 +314,6 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
                 rem_arr = np.array(remaining, dtype=np.int64)
                 probs = w[rem_arr]
                 tot = probs.sum(dtype=np.float64)
-                # Robustness for degenerate/underflow cases
                 probs = np.divide(
                     probs,
                     tot,
@@ -327,7 +327,7 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
             for pos, player_idx in enumerate(order):
                 counts[player_idx, pos] += NP_ONE
 
-        probs = np.clip(counts / np.float64(self.mc_samples), NP_ZERO, NP_ONE)
+        probs = np.clip(counts / np.float64(self.monte_carlo_samples), NP_ZERO, NP_ONE)
         col_sums = probs.sum(axis=0, keepdims=True)
         col_sums[col_sums == NP_ZERO] = NP_ONE
         return probs / col_sums
@@ -347,13 +347,13 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
             assert len(players) == 2
             return self._calculate_probability_matrix_two_players(players)
 
-        if n <= self.max_exact:
-            return self._calculate_probability_matrix_from_permutations(players)
+        if n <= self.max_permutations:
+            return self._calculate_probability_matrix_permutations(players)
 
-        if n <= self.max_dp:
-            return self._calculate_probability_matrix_from_dp(players)
+        if n <= self.max_dynamic_programming:
+            return self._calculate_probability_matrix_dynamic_programming(players)
 
-        return self._calculate_probability_matrix_from_simulations(players)
+        return self._calculate_probability_matrix_monte_carlo(players)
 
     @override
     def expected_outcome(
