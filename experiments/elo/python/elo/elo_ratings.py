@@ -169,7 +169,6 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
             elo_k=elo_k,
             elo_scale=elo_scale,
         )
-
         self.max_exact = max_exact
         self.mc_samples = mc_samples
 
@@ -198,35 +197,30 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
         atol: float = 1e-4,
     ) -> np.ndarray:
         num_players = len(players)
-        ratings = np.array([self.elo_ratings[p] for p in players], dtype=float)
-        exp_ratings = 10 ** (ratings / self.elo_scale)
-        probs = np.zeros((num_players, num_players))
+        ratings = np.array([self.elo_ratings[p] for p in players], dtype=np.float64)
+        # Plackett–Luce weights (paper §2.2): w_i = 10^(R_i/scale)
+        weights = np.power(10.0, ratings / self.elo_scale)
+
+        # probs[i, k] = P(player i finishes at rank k), k=0 is best rank
+        probs = np.zeros((num_players, num_players), dtype=np.float64)
 
         for perm in itertools.permutations(range(num_players)):
-            prob = 1
-            denom = np.sum(exp_ratings)
-            for i in range(num_players - 1):
-                prob *= exp_ratings[perm[i]] / denom
-                denom -= exp_ratings[perm[i]]
-            for position, player in enumerate(perm):
-                probs[player, position] += prob
+            # Probability of this exact ranking under PL:
+            # \prod_{l=0}^{n-2} w_{perm[l]} / \sum_{j=l}^{n-1} w_{perm[j]}
+            denom = weights.sum()
+            p_perm = np.float64(1.0)
+            for player in range(num_players - 1):
+                w = weights[perm[player]]
+                p_perm *= w / denom
+                denom -= w  # remove the chosen player's weight
 
-        col_sum = probs.sum(axis=0, keepdims=True)
-        row_sum = probs.sum(axis=1, keepdims=True)
-        while not (
-            np.allclose(col_sum, 1.0, rtol=rtol, atol=atol)
-            and np.allclose(row_sum, 1.0, rtol=rtol, atol=atol)
-        ):
-            col_sum[col_sum == 0.0] = 1.0
-            probs /= col_sum
-            row_sum = probs.sum(axis=1, keepdims=True)
-            row_sum[row_sum == 0.0] = 1.0
-            probs /= row_sum
-            col_sum = probs.sum(axis=0, keepdims=True)
-            row_sum = probs.sum(axis=1, keepdims=True)
+            # Accumulate into player/position probabilities
+            for position, player_idx in enumerate(perm):
+                probs[player_idx, position] += p_perm
 
-        # Robust checks for probability matrix
-        assert np.all(np.isfinite(probs)), "Probability matrix has non-finite values"
+        # Numerical sanity checks (no balancing; PL is already doubly-stochastic up to FP error)
+        col_sum = probs.sum(axis=0)
+        row_sum = probs.sum(axis=1)
         assert np.allclose(col_sum, 1.0, rtol=rtol, atol=atol), (
             f"Probabilities must sum to 1 over players per position (got {col_sum})"
         )
