@@ -2,6 +2,7 @@
 use std::collections::HashMap;
 use std::hash::Hash;
 
+use crate::core::multi_player::RankOrderedLogitElo;
 use crate::core::rating_system::{EloConfig, EloRatingSystem, Match};
 use crate::core::two_player::TwoPlayerElo;
 use argmin::core::{CostFunction, Error, Executor, State};
@@ -9,12 +10,11 @@ use argmin::solver::brent::BrentOpt;
 
 /// Compute mean squared error of the per-player diffs produced over a batch.
 /// Diffs are the normalised (observed - expected) values returned by the rating updates.
-fn calculate_loss<Id, S>(elo: &mut S, matches: &[Match<Id>]) -> f64
+fn calculate_loss<Id>(elo: &mut dyn EloRatingSystem<Id>, matches: &[Match<Id>]) -> f64
 where
     Id: Eq + Hash + Clone,
-    S: EloRatingSystem<Id>,
 {
-    let Some(all_diffs) = elo.update_elo_ratings_batch(matches.iter().cloned(), true) else {
+    let Some(all_diffs) = elo.update_elo_ratings_batch_slice(matches, true) else {
         return f64::INFINITY;
     };
 
@@ -39,6 +39,7 @@ where
 struct BrentKProblem<'a, Id> {
     matches: &'a [Match<Id>],
     elo_scale: f64,
+    two_player_only: bool,
 }
 
 impl<'a, Id> CostFunction for BrentKProblem<'a, Id>
@@ -53,22 +54,36 @@ where
         if !k.is_finite() || *k < 0.0 {
             return Ok(f64::INFINITY);
         }
-        let mut sys: TwoPlayerElo<Id> = TwoPlayerElo::new(
-            EloConfig {
-                elo_k: *k,
-                elo_scale: self.elo_scale,
-                ..EloConfig::default()
-            },
-            Some(HashMap::new()),
-        );
-        Ok(calculate_loss(&mut sys, self.matches))
+        let mut sys: Box<dyn EloRatingSystem<Id>> = if self.two_player_only {
+            Box::new(TwoPlayerElo::new(
+                EloConfig {
+                    elo_k: *k,
+                    elo_scale: self.elo_scale,
+                    ..EloConfig::default()
+                },
+                Some(HashMap::new()),
+            ))
+        } else {
+            Box::new(RankOrderedLogitElo::new(
+                EloConfig {
+                    elo_k: *k,
+                    elo_scale: self.elo_scale,
+                    ..EloConfig::default()
+                },
+                Some(HashMap::new()),
+                6,
+                12,
+            ))
+        };
+        Ok(calculate_loss::<Id>(sys.as_mut(), self.matches))
     }
 }
 
 /// Port of Python's `approximate_optimal_k(..., two_player_only=True, ...)`.
 /// Minimises the MSE of diffs over k in [min_k, max_k].
-pub fn approx_optimal_k_two_player<Id>(
+pub fn approx_optimal_k<Id>(
     matches: &[Match<Id>],
+    two_player_only: bool,
     min_k: f64,
     max_k: f64,
     elo_scale: f64,                // default 400.0 in EloConfig::default()
@@ -85,7 +100,11 @@ where
     let abs_tol = x_absolute_tol.unwrap_or(1e-3);
     let eps = f64::EPSILON.sqrt();
 
-    let problem = BrentKProblem { matches, elo_scale };
+    let problem = BrentKProblem {
+        matches,
+        elo_scale,
+        two_player_only,
+    };
 
     let solver = BrentOpt::new(min_k, max_k).set_tolerance(eps, abs_tol);
 

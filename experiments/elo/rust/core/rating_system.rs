@@ -64,25 +64,22 @@ where
         }
     }
 
-    /// Batch update over an iterator of matches. If `collect_diffs` is true,
-    /// returns a ragged list of per-match diffs; otherwise returns `None`.
-    fn update_elo_ratings_batch<I>(
+    /// Batch update over a slice (object-safe).
+    /// If `collect_diffs` is true, returns per-match diffs; otherwise `None`.
+    fn update_elo_ratings_batch_slice(
         &mut self,
-        matches: I,
+        matches: &[Match<Id>],
         collect_diffs: bool,
-    ) -> Option<Vec<Vec<f64>>>
-    where
-        I: IntoIterator<Item = Match<Id>>,
-    {
+    ) -> Option<Vec<Vec<f64>>> {
         if collect_diffs {
-            let mut all = Vec::new();
+            let mut all = Vec::with_capacity(matches.len());
             for m in matches {
-                all.push(self.update_elo_ratings(m));
+                all.push(self.update_elo_ratings(m.clone()));
             }
             Some(all)
         } else {
             for m in matches {
-                let _ = self.update_elo_ratings(m);
+                let _ = self.update_elo_ratings(m.clone());
             }
             None
         }

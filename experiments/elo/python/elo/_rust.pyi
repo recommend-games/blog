@@ -1,11 +1,12 @@
 import numpy as np
 import numpy.typing as npt
 
-def approx_optimal_k_two_player_rust(
+def approx_optimal_k_rust(
     *,
     matches: npt.NDArray[np.int32],
-    min_k: np.float64 | float,
-    max_k: np.float64 | float,
+    two_player_only: bool,
+    min_elo_k: np.float64 | float,
+    max_elo_k: np.float64 | float,
     elo_scale: np.float64 | float,
     max_iterations: int | None = None,
     x_absolute_tol: np.float64 | float | None = None,

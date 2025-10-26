@@ -5,7 +5,7 @@ import numpy as np
 from numpy import typing as npt
 
 from elo._rust import (
-    approx_optimal_k_two_player_rust,
+    approx_optimal_k_rust,
     calculate_elo_ratings_multi_players_rust,
     calculate_elo_ratings_two_players_rust,
 )
@@ -137,18 +137,18 @@ def main():
         )
     print(f"Approximate optimal K (Python): {optimal_k:.3f}")
 
-    if player_count == 2:
-        print("Approximate optimal K (Rust implementation):")
-        with Timer(text="Calculated optimal K (Rust) in {:.3f} seconds", logger=print):
-            optimal_k = approx_optimal_k_two_player_rust(
-                matches=matches,
-                min_k=0,
-                max_k=200,
-                elo_scale=elo_scale,
-                max_iterations=None,
-                x_absolute_tol=None,
-            )
-        print(f"Approximate optimal K (Rust): {optimal_k:.3f}")
+    print("Approximate optimal K (Rust implementation):")
+    with Timer(text="Calculated optimal K (Rust) in {:.3f} seconds", logger=print):
+        optimal_k = approx_optimal_k_rust(
+            matches=matches,
+            two_player_only=(player_count == 2),
+            min_elo_k=0,
+            max_elo_k=200,
+            elo_scale=elo_scale,
+            max_iterations=None,
+            x_absolute_tol=None,
+        )
+    print(f"Approximate optimal K (Rust): {optimal_k:.3f}")
 
 
 if __name__ == "__main__":
