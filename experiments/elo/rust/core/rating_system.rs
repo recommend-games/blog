@@ -101,7 +101,7 @@ where
 
     /// Shared path: compute diffs = (outcomes - expected) / max_outcome, then apply.
     fn apply_diffs_from_outcomes(&mut self, ids: &[Id], outcomes: &[f64]) -> Vec<f64> {
-        assert!(!ids.is_empty(), "At least 2 players are required");
+        assert!(ids.len() >= 2, "At least 2 players are required");
         assert!(
             outcomes.iter().all(|&x| x >= 0.0),
             "Payoffs must be non-negative"
