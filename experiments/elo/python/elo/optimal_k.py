@@ -117,10 +117,25 @@ def _player_ids_to_ints[ID_TYPE](
 
 
 def _matches_to_arrays[ID_TYPE](
-    matches: Iterable[Mapping[ID_TYPE, float]] | Iterable[Iterable[ID_TYPE]],
+    matches: Iterable[Mapping[ID_TYPE, float]]
+    | Iterable[Iterable[ID_TYPE]]
+    | npt.NDArray[np.int64],
 ) -> tuple[
-    npt.NDArray[np.int64], npt.NDArray[np.float64] | None, npt.NDArray[np.int64]
+    npt.NDArray[np.int64],
+    npt.NDArray[np.float64] | None,
+    npt.NDArray[np.int64],
 ]:
+    if (
+        isinstance(matches, np.ndarray)
+        and matches.dtype in (np.int8, np.int16, np.int32, np.int64)
+        and matches.ndim == 2
+    ):
+        return (
+            matches.flatten().astype(np.int64),
+            None,
+            np.arange(0, matches.size + 1, matches.shape[1], dtype=np.int64),
+        )
+
     matches_iter = iter(matches)
     first_match = next(matches_iter)
     if isinstance(first_match, Mapping):
@@ -146,7 +161,9 @@ def _matches_to_arrays[ID_TYPE](
 
 def approximate_optimal_k[ID_TYPE](
     *,
-    matches: Iterable[Mapping[ID_TYPE, float]] | Iterable[Iterable[ID_TYPE]],
+    matches: Iterable[Mapping[ID_TYPE, float]]
+    | Iterable[Iterable[ID_TYPE]]
+    | npt.NDArray[np.int64],
     two_player_only: bool = False,
     min_elo_k: float = 0,
     max_elo_k: float = 200,
