@@ -171,15 +171,34 @@ def p_deterministic_experiment(
         p_deterministic=p_deterministic,
     )
 
-    elo_k = approximate_optimal_k(
-        matches=matches,
-        two_player_only=players_per_match == 2,
-        min_elo_k=0,
-        max_elo_k=elo_scale / 2,
-        elo_scale=elo_scale,
-        max_iterations=max_iterations,
-        x_absolute_tol=x_absolute_tol,
-    )
+    try:
+        elo_k = approximate_optimal_k(
+            matches=matches,
+            two_player_only=players_per_match == 2,
+            min_elo_k=0,
+            max_elo_k=elo_scale / 2,
+            elo_scale=elo_scale,
+            max_iterations=max_iterations,
+            x_absolute_tol=x_absolute_tol,
+        )
+    except Exception:
+        return ExperimentResult(
+            num_players=num_players,
+            num_matches=num_matches,
+            players_per_match=players_per_match,
+            p_deterministic=p_deterministic,
+            elo_k=float("nan"),
+            elo_scale=elo_scale,
+            mean=float("nan"),
+            std_dev=float("nan"),
+            p00=float("nan"),
+            p01=float("nan"),
+            p25=float("nan"),
+            p50=float("nan"),
+            p75=float("nan"),
+            p99=float("nan"),
+            p100=float("nan"),
+        )
 
     elo = update_elo_ratings_p_deterministic(
         rng=rng,
