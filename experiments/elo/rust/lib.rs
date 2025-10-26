@@ -12,7 +12,9 @@ use std::collections::HashMap;
 
 #[pyfunction]
 fn approx_optimal_k_rust<'py>(
-    matches: PyReadonlyArray2<'py, i32>, // shape: (n_matches, n_players)
+    players: numpy::PyReadonlyArray1<'py, i64>,
+    payoffs: Option<numpy::PyReadonlyArray1<'py, f64>>,
+    row_splits: numpy::PyReadonlyArray1<'py, i64>,
     two_player_only: bool,
     min_elo_k: f64,
     max_elo_k: f64,
@@ -20,18 +22,38 @@ fn approx_optimal_k_rust<'py>(
     max_iterations: Option<usize>,
     x_absolute_tol: Option<f64>,
 ) -> PyResult<f64> {
-    let arr: ArrayView2<'_, i32> = matches.as_array();
-    if arr.ndim() != 2 || arr.shape()[1] < 2 {
+    let p = players.as_slice()?;
+    let rs = row_splits.as_slice()?;
+
+    if rs.len() < 2 || rs[0] != 0 || *rs.last().unwrap() as usize != p.len() {
         return Err(pyo3::exceptions::PyValueError::new_err(
-            "matches must be shape (n_matches, n_players>=2) of int32",
+            "row_splits must start at 0 and end at players.len()",
         ));
     }
 
-    let matches = arr
-        .rows()
-        .into_iter()
-        .map(|r| Match::Ordered(r.to_vec()))
-        .collect::<Vec<Match<i32>>>();
+    let matches: Vec<Match<i64>> = if let Some(payoffs) = payoffs {
+        let payoffs = payoffs.as_slice()?;
+        if payoffs.len() != p.len() {
+            return Err(pyo3::exceptions::PyValueError::new_err(
+                "payoffs length must equal players length",
+            ));
+        }
+        rs.windows(2)
+            .map(|w| {
+                Match::Outcomes(
+                    p[w[0] as usize..w[1] as usize]
+                        .iter()
+                        .cloned()
+                        .zip(payoffs[w[0] as usize..w[1] as usize].iter().cloned())
+                        .collect(),
+                )
+            })
+            .collect::<Vec<_>>()
+    } else {
+        rs.windows(2)
+            .map(|w| Match::Ordered(p[w[0] as usize..w[1] as usize].to_vec()))
+            .collect::<Vec<_>>()
+    };
 
     let optimal_k = approx_optimal_k(
         &matches,

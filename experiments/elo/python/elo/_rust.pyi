@@ -3,7 +3,9 @@ import numpy.typing as npt
 
 def approx_optimal_k_rust(
     *,
-    matches: npt.NDArray[np.int32],
+    players: npt.NDArray[np.int64],
+    payoffs: npt.NDArray[np.float64] | None,
+    row_splits: npt.NDArray[np.int64],
     two_player_only: bool,
     min_elo_k: np.float64 | float,
     max_elo_k: np.float64 | float,
