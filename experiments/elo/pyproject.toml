@@ -33,6 +33,7 @@ packages = [
 
 [project.scripts]
 elo = "elo.__main__:main"
+p_deterministic = "elo.p_deterministic:main"
 
 [dependency-groups]
 dev = [
