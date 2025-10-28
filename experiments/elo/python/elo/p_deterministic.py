@@ -1,13 +1,18 @@
 from __future__ import annotations
 
+import argparse
 import dataclasses
 import itertools
+import logging
+import sys
 import time
 from collections.abc import Iterable
 from concurrent.futures import ProcessPoolExecutor, as_completed
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 import numpy as np
+import polars as pl
 
 from elo.elo_ratings import EloRatingSystem, TwoPlayerElo, RankOrderedLogitElo
 from elo.optimal_k import approximate_optimal_k
@@ -15,6 +20,8 @@ from elo.optimal_k import approximate_optimal_k
 if TYPE_CHECKING:
     from collections.abc import Generator
     from concurrent.futures import Future
+
+LOGGER = logging.getLogger(__name__)
 
 
 def simulate_p_deterministic_matches(
@@ -303,3 +310,166 @@ def p_deterministic_experiments(
         )
         for future in as_completed(futures):
             yield future.result()
+
+
+def _parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Run p-deterministic Elo experiments and save results to CSV.",
+    )
+    parser.add_argument(
+        "output",
+        type=str,
+        help="Path to save the results CSV file.",
+    )
+    parser.add_argument(
+        "--num-players",
+        type=int,
+        nargs="+",
+        default=(100,),
+        help="Number of players.",
+    )
+    parser.add_argument(
+        "--num-matches",
+        type=int,
+        nargs="+",
+        default=(10_000,),
+        help="Number of matches.",
+    )
+    parser.add_argument(
+        "--players-per-match",
+        type=int,
+        nargs="+",
+        default=(2,),
+        help="Number of players per match.",
+    )
+    parser.add_argument(
+        "--p-deterministic-start",
+        type=float,
+        default=0.0,
+        help="Starting value of p-deterministic.",
+    )
+    parser.add_argument(
+        "--p-deterministic-stop",
+        type=float,
+        default=0.9,
+        help="Stopping value of p-deterministic.",
+    )
+    parser.add_argument(
+        "--p-deterministic-steps",
+        type=int,
+        default=10,
+        help="Number of steps for p-deterministic values.",
+    )
+    parser.add_argument(
+        "--elo-scale",
+        type=float,
+        nargs="+",
+        default=(400,),
+        help="Elo scale values.",
+    )
+    parser.add_argument(
+        "--seed",
+        "-s",
+        type=int,
+        default=None,
+        help="Random seed for reproducibility.",
+    )
+    parser.add_argument(
+        "--float-precision",
+        type=int,
+        default=5,
+        help="Float precision in CSV output.",
+    )
+    parser.add_argument(
+        "--progress-bar",
+        "-p",
+        action="store_true",
+        help="Show a progress bar during experiments.",
+    )
+    parser.add_argument(
+        "--verbose",
+        "-v",
+        action="count",
+        help="Enable verbose output (can be used multiple times).",
+    )
+    return parser.parse_args()
+
+
+def main():
+    args = _parse_args()
+    verbose_level = args.verbose if args.verbose is not None else 0
+    logging.basicConfig(
+        stream=sys.stdout,
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        level=logging.DEBUG
+        if verbose_level > 1
+        else logging.INFO
+        if verbose_level
+        else logging.WARNING,
+    )
+    LOGGER.info(args)
+    LOGGER.info("Starting p-deterministic Elo experiments")
+
+    num_players = tuple(args.num_players)
+    LOGGER.info("num_players: %s", num_players)
+
+    num_matches = tuple(args.num_matches)
+    LOGGER.info("num_matches: %s", num_matches)
+
+    players_per_match = tuple(args.players_per_match)
+    LOGGER.info("players_per_match: %s", players_per_match)
+
+    p_deterministic = np.linspace(
+        start=args.p_deterministic_start,
+        stop=args.p_deterministic_stop,
+        num=args.p_deterministic_steps,
+    )
+    LOGGER.info("p_deterministic: %s", p_deterministic)
+
+    elo_scale = tuple(args.elo_scale)
+    LOGGER.info("elo_scale: %s", elo_scale)
+
+    num_experiments = (
+        len(num_players)
+        * len(num_matches)
+        * len(players_per_match)
+        * len(p_deterministic)
+        * len(elo_scale)
+    )
+    LOGGER.info("Total number of experiments to run: %d", num_experiments)
+
+    results_path = Path(args.output).resolve()
+    LOGGER.info("Results will be saved to: %s", results_path)
+    results_path.parent.mkdir(parents=True, exist_ok=True)
+
+    experiments = p_deterministic_experiments(
+        seed=args.seed,
+        num_players=num_players,
+        num_matches=num_matches,
+        players_per_match=players_per_match,
+        p_deterministic=p_deterministic,
+        elo_scale=elo_scale,
+    )
+    if args.progress_bar:
+        from tqdm import tqdm
+
+        experiments = tqdm(
+            experiments,
+            desc="Running experiments",
+            total=num_experiments,
+        )
+
+    LOGGER.info("Running experiments, this may take a while…")
+    results = (
+        pl.LazyFrame(dataclasses.asdict(experiment) for experiment in experiments)
+        .sort("num_players", "num_matches", "players_per_match", "p_deterministic")
+        .collect()
+    )
+    LOGGER.info("Successfully completed %d experiments", len(results))
+
+    results.write_csv(results_path, float_precision=args.float_precision)
+    LOGGER.info("Results saved to: %s", results_path)
+
+
+if __name__ == "__main__":
+    main()
