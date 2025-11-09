@@ -387,6 +387,12 @@ def _parse_args() -> argparse.Namespace:
         help="Show a progress bar during experiments.",
     )
     parser.add_argument(
+        "--overwrite",
+        "-o",
+        action="store_true",
+        help="Overwrite existing output file if it exists.",
+    )
+    parser.add_argument(
         "--verbose",
         "-v",
         action="count",
@@ -441,6 +447,13 @@ def main():
     results_path = Path(args.output).resolve()
     LOGGER.info("Results will be saved to: %s", results_path)
     results_path.parent.mkdir(parents=True, exist_ok=True)
+
+    if results_path.exists() and not args.overwrite:
+        LOGGER.error(
+            "Output file %s already exists. Use --overwrite to overwrite.",
+            results_path,
+        )
+        sys.exit(1)
 
     experiments = p_deterministic_experiments(
         seed=args.seed,
