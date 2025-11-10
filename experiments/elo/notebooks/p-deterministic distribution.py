@@ -27,10 +27,10 @@ jupyter_black.load()
 seed = 13
 
 # %%
-num_players = (100,)
-num_matches = (10_000,)
-players_per_match = (2, 3, 6, 9)
-p_deterministic = np.linspace(start=0.0, stop=0.95, num=96)
+num_players = (1000,)
+num_matches = (1_000_000,)
+players_per_match = (2, 3, 6, 9, 12, 15)
+p_deterministic = np.linspace(start=0.0, stop=0.90, num=10)
 elo_scale = (400,)
 num_experiments = (
     len(num_players)
