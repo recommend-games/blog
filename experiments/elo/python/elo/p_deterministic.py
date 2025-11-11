@@ -386,7 +386,14 @@ def _parse_args() -> argparse.Namespace:
         action="store_true",
         help="Show a progress bar during experiments.",
     )
-    parser.add_argument(
+    output_group = parser.add_mutually_exclusive_group(required=False)
+    output_group.add_argument(
+        "--merge",
+        "-m",
+        action="store_true",
+        help="Merge with existing output file (if any).",
+    )
+    output_group.add_argument(
         "--overwrite",
         "-o",
         action="store_true",
@@ -448,10 +455,10 @@ def main():
     LOGGER.info("Results will be saved to: %s", results_path)
     results_path.parent.mkdir(parents=True, exist_ok=True)
 
-    if results_path.exists() and not args.overwrite:
-        LOGGER.error(
-            "Output file %s already exists. Use --overwrite to overwrite.",
-            results_path,
+    if results_path.exists() and not (args.merge or args.overwrite):
+        print(
+            f"Output file <{results_path}> already exists. Use --merge or --overwrite.",
+            file=sys.stderr,
         )
         sys.exit(1)
 
@@ -473,13 +480,21 @@ def main():
         )
 
     LOGGER.info("Running experiments, this may take a while…")
-    results = (
-        pl.LazyFrame(dataclasses.asdict(experiment) for experiment in experiments)
-        .sort("num_players", "num_matches", "players_per_match", "p_deterministic")
-        .collect()
-    )
+    results = pl.DataFrame(dataclasses.asdict(experiment) for experiment in experiments)
     LOGGER.info("Successfully completed %d experiments", len(results))
 
+    if args.merge and results_path.exists():
+        LOGGER.info("Merging with existing results in: %s", results_path)
+        existing_results = pl.read_csv(results_path)
+        results = pl.concat([existing_results, results])
+        LOGGER.info("Total results after merging: %d", len(results))
+
+    results = results.sort(
+        "num_players",
+        "num_matches",
+        "players_per_match",
+        "p_deterministic",
+    )
     results.write_csv(results_path, float_precision=args.float_precision)
     LOGGER.info("Results saved to: %s", results_path)
 
