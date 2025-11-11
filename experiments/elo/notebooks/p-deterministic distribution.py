@@ -14,93 +14,72 @@
 # ---
 
 # %%
-import dataclasses
 import jupyter_black
-import numpy as np
 import polars as pl
 import seaborn as sns
-from elo.p_deterministic import p_deterministic_experiments
-from tqdm import tqdm
+from pathlib import Path
 
 jupyter_black.load()
+sns.set_style("dark")
 
 seed = 13
 
 # %%
-num_players = (1000,)
-num_matches = (1_000_000,)
-players_per_match = (2, 3, 6, 9, 12, 15)
-p_deterministic = np.linspace(start=0.0, stop=0.90, num=10)
-elo_scale = (400,)
-num_experiments = (
-    len(num_players)
-    * len(num_matches)
-    * len(players_per_match)
-    * len(p_deterministic)
-    * len(elo_scale)
-)
-num_experiments
+path = Path("../csv/p_deterministic.csv").resolve()
+path
 
 # %%
-experiments = p_deterministic_experiments(
-    seed=seed,
-    num_players=num_players,
-    num_matches=num_matches,
-    players_per_match=players_per_match,
-    p_deterministic=p_deterministic,
-    elo_scale=elo_scale,
-)
-experiments = tqdm(experiments, desc="Running experiments", total=num_experiments)
-results = (
-    pl.LazyFrame(dataclasses.asdict(experiment) for experiment in experiments)
-    .sort("num_players", "num_matches", "players_per_match", "p_deterministic")
-    .collect()
-)
+results = pl.read_csv(path)
 results.shape
 
 # %%
 results.sample(10, seed=seed)
 
 # %%
-results.write_csv("results/p_deterministic.csv", float_precision=5)
+results.group_by("players_per_match").agg(pl.len()).sort("players_per_match")
 
 # %%
-sns.scatterplot(
-    data=results,
-    x="p_deterministic",
-    y="elo_k",
-    hue="players_per_match",
-)
-
-# %%
-results_log = results.filter(pl.col("elo_k") > 0).select(
-    "p_deterministic",
-    pl.col("elo_k").log().alias("log(elo_k)"),
-    "players_per_match",
+plot_data = (
+    results.filter(pl.col("p_deterministic") <= 0.9)
+    .rename({"elo_k": "k*"})
+    .with_columns(pl.col("players_per_match").cast(pl.String))
 )
 sns.scatterplot(
-    data=results_log,
+    data=plot_data,
     x="p_deterministic",
-    y="log(elo_k)",
+    y="k*",
     hue="players_per_match",
 )
 
 # %%
 sns.scatterplot(
-    data=results,
+    data=plot_data,
     x="p_deterministic",
     y="std_dev",
     hue="players_per_match",
 )
 
 # %%
-results_log = results.filter(pl.col("std_dev") > 0).select(
-    "p_deterministic",
-    pl.col("std_dev").log().alias("log(std_dev)"),
-    "players_per_match",
+plot_data = (
+    results.filter(pl.col("p_deterministic") <= 0.9)
+    .filter(pl.col("elo_k") > 0)
+    .select(
+        "p_deterministic",
+        pl.col("elo_k").log().alias("log(k*)"),
+        pl.col("std_dev").log().alias("log(std_dev)"),
+        pl.col("players_per_match").cast(pl.String),
+    )
 )
 sns.scatterplot(
-    data=results_log,
+    data=plot_data,
+    x="p_deterministic",
+    y="log(k*)",
+    hue="players_per_match",
+)
+
+# %%
+sns.scatterplot(
+    data=plot_data,
     x="p_deterministic",
     y="log(std_dev)",
     hue="players_per_match",
