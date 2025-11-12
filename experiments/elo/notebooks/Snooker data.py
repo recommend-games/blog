@@ -106,7 +106,7 @@ players = (
     .with_columns(pl.col("Born", "Died").str.to_date(strict=False))
     .collect()
 )
-matches.shape, players.shape
+events.shape, matches.shape, players.shape
 
 # %% [markdown]
 # ## Events
@@ -278,6 +278,23 @@ elo_df.write_csv(
     datetime_format="%+",
     float_precision=3,
 )
+
+# %%
+_, ax = plt.subplots()
+sns.kdeplot(
+    data=elo_df["Elo"],
+    clip=(-elo_scale / 2, elo_scale / 2),
+    ax=ax,
+)
+ax.legend([])
+ax.grid(True)
+ax.set_title("Elo ratings distribution of Snooker players")
+ax.set_xlabel(None)
+ax.set_ylabel(None)
+plt.tight_layout()
+plt.savefig(plot_dir / "elo_distribution.png")
+plt.savefig(plot_dir / "elo_distribution.svg")
+plt.show()
 
 
 # %% [markdown]
