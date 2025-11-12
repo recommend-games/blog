@@ -15,6 +15,7 @@ dependencies = [
     "networkx",
     "nevergrad",
     "numpy",
+    "polars-io",
     "polars[numpy,pandas,pyarrow]",
     "requests",
     "scikit-learn",
