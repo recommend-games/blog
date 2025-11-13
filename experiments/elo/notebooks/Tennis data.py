@@ -15,21 +15,17 @@
 
 # %%
 import jupyter_black
-import numpy as np
 import polars as pl
 import seaborn as sns
-from datetime import date, timedelta
 from elo.optimal_k import approximate_optimal_k
 from elo.elo_ratings import TwoPlayerElo
 from pathlib import Path
 from matplotlib import pyplot as plt
-from tqdm import tqdm
 
 jupyter_black.load()
-pl.Config.set_tbl_rows(200)
 sns.set_style("dark")
 
-association = "atp"
+association = "wta" # atp or wta
 seed = 13
 elo_scale = 400
 
