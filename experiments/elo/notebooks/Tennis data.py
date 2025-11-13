@@ -74,6 +74,20 @@ matches.describe()
 # ## Players
 
 # %%
+match_info = (
+    matches.lazy()
+    .unpivot(
+        on=["winner_id", "loser_id"],
+        value_name="player_id",
+        index="tourney_date",
+    )
+    .group_by("player_id")
+    .agg(
+        num_matches=pl.len(),
+        first_tourney=pl.min("tourney_date"),
+        last_tourney=pl.max("tourney_date"),
+    )
+)
 players = (
     pl.scan_csv(data_dir / f"{association}_players.csv")
     .select(
@@ -81,6 +95,7 @@ players = (
         name=pl.concat_str("name_first", "name_last", separator=" ", ignore_nulls=True),
     )
     .drop_nulls()
+    .join(match_info, on="player_id", how="left")
     .collect()
 )
 players.shape
@@ -122,7 +137,6 @@ elo_df = (
     )
     .join(players, on="player_id", how="left")
     .sort("elo", descending=True)
-    # TODO: First / last match, num matches
 )
 elo_df.shape
 
