@@ -36,7 +36,7 @@ elo_scale = 400
 data_dir = Path("../results/snooker/").resolve()
 result_dir = Path("../csv/snooker").resolve()
 result_dir.mkdir(parents=True, exist_ok=True)
-plot_dir = Path("../plots").resolve()
+plot_dir = Path("../plots/snooker").resolve()
 plot_dir.mkdir(parents=True, exist_ok=True)
 data_dir, result_dir, plot_dir
 
