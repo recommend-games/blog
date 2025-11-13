@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.17.1
+#       jupytext_version: 1.18.1
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -25,7 +25,7 @@ jupyter_black.load()
 pl.Config.set_tbl_rows(100)
 
 # %%
-in_dir = Path("results").resolve()
+in_dir = Path("../results").resolve()
 out_dir = in_dir / "arrow"
 match_dir = out_dir / "matches"
 out_dir.mkdir(parents=True, exist_ok=True)

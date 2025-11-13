@@ -43,6 +43,9 @@ data_dir, result_dir, plot_dir
 # %% [markdown]
 # # General EDA
 
+# %% [markdown]
+# ## Events
+
 # %%
 events = (
     pl.scan_ndjson(data_dir / "events*.jl")
@@ -66,6 +69,18 @@ events = (
     )
     .collect()
 )
+events.shape
+
+# %%
+events.sample(10, seed=seed)
+
+# %%
+events.describe()
+
+# %% [markdown]
+# ## Matches
+
+# %%
 matches = (
     pl.scan_ndjson(data_dir / "matches*.jl", infer_schema_length=10_000)
     .sort("scraped_at")
@@ -96,6 +111,18 @@ matches = (
     )
     .collect()
 )
+matches.shape
+
+# %%
+matches.sample(10, seed=seed)
+
+# %%
+matches.describe()
+
+# %% [markdown]
+# ## Players
+
+# %%
 players = (
     pl.scan_ndjson(data_dir / "players*.jl", infer_schema_length=10_000)
     .sort("scraped_at")
@@ -106,28 +133,7 @@ players = (
     .with_columns(pl.col("Born", "Died").str.to_date(strict=False))
     .collect()
 )
-events.shape, matches.shape, players.shape
-
-# %% [markdown]
-# ## Events
-
-# %%
-events.sample(10, seed=seed)
-
-# %%
-events.describe()
-
-# %% [markdown]
-# ## Matches
-
-# %%
-matches.sample(10, seed=seed)
-
-# %%
-matches.describe()
-
-# %% [markdown]
-# ## Players
+players.shape
 
 # %%
 players.sample(10, seed=seed)
@@ -184,6 +190,9 @@ data = (
 
 data.shape
 
+# %%
+data.sample(10)
+
 
 # %%
 def player_info_df(data, player_id_col):
@@ -198,7 +207,7 @@ def player_info_df(data, player_id_col):
     )
 
 
-def df_to_matches(data):
+def df_to_numpy(data):
     return data.select(
         winner=pl.when("Player1Outcome").then("Player1ID").otherwise("Player2ID"),
         loser=pl.when("Player1Outcome").then("Player2ID").otherwise("Player1ID"),
@@ -226,9 +235,9 @@ player_info = (
 player_info.shape
 
 # %%
-matches = df_to_matches(data)
+matches_array = df_to_numpy(data)
 elo_k = approximate_optimal_k(
-    matches=matches,
+    matches=matches_array,
     two_player_only=True,
     min_elo_k=0,
     max_elo_k=elo_scale / 2,
@@ -238,7 +247,7 @@ elo_k
 
 # %%
 elo = TwoPlayerElo(elo_k=elo_k, elo_scale=elo_scale)
-elo.update_elo_ratings_batch(matches=matches, progress_bar=True)
+elo.update_elo_ratings_batch(matches=matches_array, progress_bar=True)
 elo_ratings = elo.elo_ratings
 len(elo_ratings)
 
@@ -313,8 +322,8 @@ def calculate_elo_ratings_by_month(data=data, elo_k=elo_k, elo_scale=elo_scale):
             label="right",
         )
     ):
-        matches = df_to_matches(group)
-        elo.update_elo_ratings_batch(matches=matches, progress_bar=False)
+        matches_array = df_to_numpy(group)
+        elo.update_elo_ratings_batch(matches=matches_array, progress_bar=False)
         df = pl.LazyFrame(
             data=np.array(list(elo.elo_ratings.values())).reshape(1, -1),
             schema=list(map(str, elo.elo_ratings.keys())),
