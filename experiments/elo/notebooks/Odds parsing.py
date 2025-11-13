@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.17.0
+#       jupytext_version: 1.18.1
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -23,7 +23,7 @@ pl.Config.set_tbl_rows(100)
 
 # %%
 # Load HTML file
-with open("results/snooker/oddschecker.html", encoding="utf-8") as f:
+with open("../results/snooker/oddschecker.html", encoding="utf-8") as f:
     html = f.read()
 
 # %%
@@ -95,4 +95,4 @@ odds.shape
 odds
 
 # %%
-odds.write_csv("results/snooker/wsc_odds.csv")
+odds.write_csv("../csv/snooker/wsc_odds.csv")

@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.17.1
+#       jupytext_version: 1.18.1
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -25,7 +25,7 @@ jupyter_black.load()
 
 # %%
 data = (
-    pl.scan_csv("results/p_deterministic*.csv")
+    pl.scan_csv("../results/p_deterministic*.csv")
     # .filter(pl.col("num_matches") > 1000)
     .with_columns(matches_per_player=pl.col("num_matches") / pl.col("num_players"))
     .sort("p_deterministic")
@@ -73,5 +73,3 @@ for (p_deterministic,), group in data.group_by("p_deterministic", maintain_order
     print(f"{p_deterministic=}")
     fit_and_plot(group)
     plt.show()
-
-# %%

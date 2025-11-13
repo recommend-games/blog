@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.17.0
+#       jupytext_version: 1.18.1
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -30,7 +30,7 @@ elo_scale = 400
 num_simulations = 10_000_000
 
 # %%
-players = pl.read_csv("results/snooker/elo_ranking.csv")
+players = pl.read_csv("../csv/snooker/elo_ranking.csv")
 players.shape
 
 # %%
@@ -132,7 +132,7 @@ for name, count in results.most_common():
     print(f"{prob:6.2%} ({odds:7.2f}): {name}")
 
 # %%
-betting_odds = pl.read_csv("results/snooker/wsc_odds.csv")
+betting_odds = pl.read_csv("../csv/snooker/wsc_odds.csv")
 betting_odds.shape
 
 # %%
@@ -162,4 +162,4 @@ full_result.shape
 full_result
 
 # %%
-full_result.write_csv("results/snooker/wsc_predictions.csv")
+full_result.write_csv("../csv/snooker/wsc_predictions.csv")
