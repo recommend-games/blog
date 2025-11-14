@@ -25,11 +25,12 @@ from tqdm import tqdm
 jupyter_black.load()
 pl.Config.set_tbl_rows(100)
 
+game_id = 9  # Lost Cities
 num_matches_regulars = 25
-game_id = 1741  # Ark Nova
+elo_scale = 400
 
 # %%
-data = pl.read_ipc(f"results/arrow/matches/{game_id}.arrow", memory_map=False)
+data = pl.read_ipc(f"../results/arrow/matches/{game_id}.arrow", memory_map=False)
 num_all_matches = len(data)
 data.shape
 
@@ -87,13 +88,23 @@ print(
 print(f"Maximum number of plays by a single player: {num_matches_max}")
 
 # %%
-matches = (
+matches = [
     dict(zip(player_ids, payoffs))
     for player_ids, payoffs in zip(data["player_ids"], data["payoffs"])
-)
+]
 
 # %%
-elo = RankOrderedLogitElo()
+# This will take very very long if there's a large number of matches
+optimal_k = approximate_optimal_k(
+    matches=matches,
+    min_elo_k=0,
+    max_elo_k=elo_scale / 2,
+    elo_scale=elo_scale,
+)
+optimal_k
+
+# %%
+elo = RankOrderedLogitElo(elo_k=optimal_k, elo_scale=elo_scale)
 elo.update_elo_ratings_batch(
     matches,
     full_results=True,
@@ -104,13 +115,3 @@ len(elo.elo_ratings)
 
 # %%
 sorted(elo.elo_ratings.items(), key=lambda x: -x[1])[:100]
-
-# %%
-# This will take very very long if there's a large number of matches
-optimal_k = approximate_optimal_k(
-    matches=matches,
-    min_elo_k=0,
-    max_elo_k=200,
-    elo_scale=400,
-)
-optimal_k
