@@ -86,51 +86,6 @@ def merge_rankings(
     )
 
 
-def merge_matches(
-    matches_path: str | Path | list[str] | list[Path],
-    output_path: str | Path,
-    overwrite: bool = False,
-    progress_bar: bool = False,
-) -> None:
-    schema: dict[str, pl.schema.SchemaInitDataType] = {
-        "id": pl.String,
-        "timestamp": pl.String,
-        "game_id": pl.Int64,
-        "players": pl.List(
-            pl.Struct(
-                {
-                    "player_id": pl.Int64,
-                    "player_name": pl.String,
-                    "place": pl.Int64,
-                    "score": pl.Float64,
-                }
-            )
-        ),
-        "scraped_at": pl.String,
-    }
-
-    config = MergeConfig(
-        schema=pl.Schema(schema),
-        in_paths=matches_path,
-        out_path=output_path,
-        key_col="id",
-        latest_col=pl.col("scraped_at").str.to_datetime(time_zone="UTC"),
-        sort_fields=[
-            "game_id",
-            "timestamp",
-            "id",
-        ],
-    )
-
-    merge_files(
-        merge_config=config,
-        overwrite=overwrite,
-        drop_empty=True,
-        sort_keys=True,
-        progress_bar=progress_bar,
-    )
-
-
 def load_data(
     *,
     bgg_games_path: str | Path,
@@ -236,12 +191,6 @@ if __name__ == "__main__":
     merge_rankings(
         rankings_path="results/rankings-*.jl",
         output_path="rankings.jl",
-        overwrite=True,
-        progress_bar=True,
-    )
-    merge_matches(
-        matches_path="results/matches-*.jl",
-        output_path="matches.jl",
         overwrite=True,
         progress_bar=True,
     )
