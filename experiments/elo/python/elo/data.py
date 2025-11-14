@@ -37,6 +37,7 @@ def merge_games(
         key_col="id",
         latest_col=pl.col("scraped_at").str.to_datetime(time_zone="UTC"),
         sort_fields="id",
+        fieldnames_exclude=["scraped_at"],
     )
 
     merge_files(
@@ -75,6 +76,7 @@ def merge_rankings(
             pl.col("rank_no").cast(pl.Float64),
             "name",
         ],
+        fieldnames_exclude=["scraped_at"],
     )
 
     merge_files(
@@ -181,16 +183,22 @@ def load_data(
     )
 
 
-if __name__ == "__main__":
+def main() -> None:
+    input_dir = Path("results").resolve()
+    output_dir = Path("csv").resolve()
     merge_games(
-        games_path="results/games-*.jl",
-        output_path="games.jl",
+        games_path=input_dir / "games-*.jl",
+        output_path=output_dir / "games.jl",
         overwrite=True,
         progress_bar=True,
     )
     merge_rankings(
-        rankings_path="results/rankings-*.jl",
-        output_path="rankings.jl",
+        rankings_path=input_dir / "rankings-*.jl",
+        output_path=output_dir / "rankings.jl",
         overwrite=True,
         progress_bar=True,
     )
+
+
+if __name__ == "__main__":
+    main()
