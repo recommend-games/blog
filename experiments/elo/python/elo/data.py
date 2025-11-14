@@ -92,7 +92,7 @@ def merge_matches(
     overwrite: bool = False,
     progress_bar: bool = False,
 ) -> None:
-    schema = {
+    schema: dict[str, pl.schema.SchemaInitDataType] = {
         "id": pl.String,
         "timestamp": pl.String,
         "game_id": pl.Int64,

@@ -12,7 +12,8 @@ import polars as pl
 
 
 if TYPE_CHECKING:
-    from typing import Generator, Any
+    from typing import Any
+    from collections.abc import Generator, Iterable
 
 LOGGER = logging.getLogger(__name__)
 
@@ -29,9 +30,9 @@ def game_stats(
     data = pl.read_ipc(matches_path, memory_map=False)
     num_all_matches = len(data)
 
-    graph = nx.Graph()
+    graph: nx.Graph = nx.Graph()
 
-    player_ids_col = data["player_ids"]
+    player_ids_col: Iterable[Any] = data["player_ids"]
     if progress_bar:
         from tqdm import tqdm
 
