@@ -34,11 +34,13 @@ elo_scale = 400
 
 # %%
 data_dir = Path("../results/snooker/").resolve()
+arrow_dir = Path("../results/arrow/matches").resolve()
+arrow_dir.mkdir(parents=True, exist_ok=True)
 result_dir = Path("../csv/snooker").resolve()
 result_dir.mkdir(parents=True, exist_ok=True)
 plot_dir = Path("../plots/snooker").resolve()
 plot_dir.mkdir(parents=True, exist_ok=True)
-data_dir, result_dir, plot_dir
+data_dir, arrow_dir, result_dir, plot_dir
 
 # %% [markdown]
 # # General EDA
@@ -192,6 +194,16 @@ data.shape
 
 # %%
 data.sample(10)
+
+# %%
+data.lazy().select(
+    num_players=2,
+    player_ids=pl.when("Player1Outcome")
+    .then(pl.concat_list("Player1ID", "Player2ID"))
+    .otherwise(pl.concat_list("Player2ID", "Player1ID")),
+    places=[1, 2],
+    payoffs=[1, 0],
+).sink_ipc(arrow_dir / "snooker.arrow")
 
 
 # %%

@@ -31,11 +31,13 @@ elo_scale = 400
 
 # %%
 data_dir = Path.home() / "Workspace" / f"tennis_{association}"
+arrow_dir = Path("../results/arrow/matches").resolve()
+arrow_dir.mkdir(parents=True, exist_ok=True)
 result_dir = Path("../csv/tennis").resolve()
 result_dir.mkdir(parents=True, exist_ok=True)
 plot_dir = Path("../plots/tennis").resolve()
 plot_dir.mkdir(parents=True, exist_ok=True)
-data_dir, result_dir, plot_dir
+data_dir, arrow_dir, result_dir, plot_dir
 
 # %% [markdown]
 # # General EDA
@@ -65,6 +67,14 @@ matches.sample(10, seed=seed)
 
 # %%
 matches.describe()
+
+# %%
+matches.lazy().select(
+    num_players=2,
+    player_ids=pl.concat_list("winner_id", "loser_id"),
+    places=[1, 2],
+    payoffs=[1, 0],
+).sink_ipc(arrow_dir / f"tennis_{association}.arrow")
 
 # %% [markdown]
 # ## Players
