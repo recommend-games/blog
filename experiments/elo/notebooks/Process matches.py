@@ -71,7 +71,7 @@ for i, batch in enumerate(batched(tqdm(in_dir.glob("matches-*.jl")), file_batch_
     df.sink_ipc(out_dir / f"matches-{suffix}{i:05d}.arrow")
 
 # %%
-matches = pl.scan_ipc(out_dir / "matches-*.arrow")
+matches = pl.scan_ipc(out_dir / "matches-*.arrow").select("id", "game_id", "players")
 game_ids = matches.select(pl.col("game_id").unique()).collect()["game_id"]
 game_ids.shape
 
@@ -79,8 +79,8 @@ game_ids.shape
 for game_id in tqdm(game_ids):
     match_data = (
         matches.filter(pl.col("game_id") == game_id)
-        .sort("scraped_at", "timestamp")
-        .unique("id", keep="first")
+        .drop("game_id")
+        .unique("id", keep="any")
         .select(
             num_players=pl.col("players").list.len(),
             player_ids=pl.col("players").list.eval(
