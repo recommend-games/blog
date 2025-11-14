@@ -25,7 +25,7 @@ from matplotlib import pyplot as plt
 jupyter_black.load()
 sns.set_style("dark")
 
-association = "wta" # atp or wta
+association = "wta"  # atp or wta
 seed = 13
 elo_scale = 400
 

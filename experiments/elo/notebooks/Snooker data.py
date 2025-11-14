@@ -309,6 +309,7 @@ plt.show()
 # %% [markdown]
 # # Elo over time
 
+
 # %%
 def calculate_elo_ratings_by_month(data=data, elo_k=elo_k, elo_scale=elo_scale):
     elo = TwoPlayerElo(elo_k=elo_k, elo_scale=elo_scale)
