@@ -23,6 +23,12 @@ from tqdm import tqdm
 
 jupyter_black.load()
 pl.Config.set_tbl_rows(100)
+exclude_games = frozenset(
+    {
+        49,  # Yahtzee
+        1467,  # Azul
+    }
+)
 
 # %%
 in_dir = Path("../results").resolve()
@@ -71,7 +77,11 @@ for i, batch in enumerate(batched(tqdm(in_dir.glob("matches-*.jl")), file_batch_
     df.sink_ipc(out_dir / f"matches-{suffix}{i:05d}.arrow")
 
 # %%
-matches = pl.scan_ipc(out_dir / "matches-*.arrow").select("id", "game_id", "players")
+matches = (
+    pl.scan_ipc(out_dir / "matches-*.arrow")
+    .select("id", "game_id", "players")
+    .filter(~pl.col("game_id").is_in(exclude_games))
+)
 game_ids = matches.select(pl.col("game_id").unique()).collect()["game_id"]
 game_ids.shape
 
