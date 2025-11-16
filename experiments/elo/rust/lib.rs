@@ -10,18 +10,11 @@ use numpy::PyReadonlyArray2;
 use pyo3::prelude::*;
 use std::collections::HashMap;
 
-#[pyfunction]
-fn approx_optimal_k_rust<'py>(
+fn _build_matches_from_pyinputs<'py>(
     players: numpy::PyReadonlyArray1<'py, i64>,
     payoffs: Option<numpy::PyReadonlyArray1<'py, f64>>,
     row_splits: numpy::PyReadonlyArray1<'py, i64>,
-    two_player_only: bool,
-    min_elo_k: f64,
-    max_elo_k: f64,
-    elo_scale: f64,
-    max_iterations: Option<usize>,
-    x_absolute_tol: Option<f64>,
-) -> PyResult<f64> {
+) -> PyResult<Vec<Match<i64>>> {
     let p = players.as_slice()?;
     let rs = row_splits.as_slice()?;
 
@@ -55,6 +48,23 @@ fn approx_optimal_k_rust<'py>(
             .collect::<Vec<_>>()
     };
 
+    Ok(matches)
+}
+
+#[pyfunction]
+fn approx_optimal_k_rust<'py>(
+    players: numpy::PyReadonlyArray1<'py, i64>,
+    payoffs: Option<numpy::PyReadonlyArray1<'py, f64>>,
+    row_splits: numpy::PyReadonlyArray1<'py, i64>,
+    two_player_only: bool,
+    min_elo_k: f64,
+    max_elo_k: f64,
+    elo_scale: f64,
+    max_iterations: Option<usize>,
+    x_absolute_tol: Option<f64>,
+) -> PyResult<f64> {
+    let matches = _build_matches_from_pyinputs(players, payoffs, row_splits)?;
+
     let optimal_k = approx_optimal_k(
         &matches,
         two_player_only,
@@ -66,6 +76,39 @@ fn approx_optimal_k_rust<'py>(
     );
 
     Ok(optimal_k)
+}
+
+#[pyfunction]
+fn calculate_elo_ratings_rust<'py>(
+    players: numpy::PyReadonlyArray1<'py, i64>,
+    payoffs: Option<numpy::PyReadonlyArray1<'py, f64>>,
+    row_splits: numpy::PyReadonlyArray1<'py, i64>,
+    two_player_only: bool,
+    elo_initial: f64,
+    elo_k: f64,
+    elo_scale: f64,
+) -> PyResult<HashMap<i64, f64>> {
+    let matches = _build_matches_from_pyinputs(players, payoffs, row_splits)?;
+
+    let cfg = EloConfig {
+        elo_initial,
+        elo_k,
+        elo_scale,
+    };
+
+    if two_player_only {
+        let mut elo = TwoPlayerElo::<i64>::new(cfg, None);
+        for m in matches {
+            elo.update_elo_ratings(m);
+        }
+        Ok(elo.ratings().clone())
+    } else {
+        let mut elo = RankOrderedLogitElo::<i64>::new(cfg, None, 6, 12);
+        for m in matches {
+            elo.update_elo_ratings(m);
+        }
+        Ok(elo.ratings().clone())
+    }
 }
 
 #[pyfunction]
@@ -130,6 +173,7 @@ fn calculate_elo_ratings_multi_players_rust<'py>(
 #[pymodule]
 fn _rust(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(approx_optimal_k_rust, m)?)?;
+    m.add_function(wrap_pyfunction!(calculate_elo_ratings_rust, m)?)?;
     m.add_function(wrap_pyfunction!(calculate_elo_ratings_two_players_rust, m)?)?;
     m.add_function(wrap_pyfunction!(
         calculate_elo_ratings_multi_players_rust,
