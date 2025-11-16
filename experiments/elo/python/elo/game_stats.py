@@ -7,11 +7,11 @@ import sys
 from pathlib import Path
 from typing import TYPE_CHECKING
 
+from elo._rust import approx_optimal_k_rust, calculate_elo_ratings_rust
+from elo.utils import matches_to_arrays
 import networkx as nx
 import polars as pl
 
-from elo.elo_ratings import EloRatingSystem, TwoPlayerElo, RankOrderedLogitElo
-from elo.optimal_k import approximate_optimal_k
 
 
 if TYPE_CHECKING:
@@ -26,6 +26,8 @@ def _remove_isolated_players(
     *,
     progress_bar: bool = False,
 ) -> pl.LazyFrame:
+    LOGGER.info("Removing isolated players…")
+
     graph: nx.Graph = nx.Graph()
 
     player_ids_col: Iterable[Any] = data.select("player_ids").collect().to_series()
@@ -69,8 +71,7 @@ def _elo_distribution(
     *,
     elo_k: float | None = None,
     elo_scale: float = 400.0,
-    progress_bar: bool = False,
-) -> EloRatingSystem:
+) -> tuple[float, float, bool, dict[int, float]]:
     two_player_only = (
         data.select(two_players=pl.col("num_players") == 2)
         .select(pl.all("two_players"))
@@ -78,10 +79,15 @@ def _elo_distribution(
         .item()
     )
 
+    matches = _pl_to_matches(data)
+    players_array, payoffs_array, row_splits_array = matches_to_arrays(matches)
+
     if elo_k is None:
         LOGGER.info("Calculating approximate optimal k*, this may take a while…")
-        elo_k = approximate_optimal_k(
-            matches=_pl_to_matches(data),
+        elo_k = approx_optimal_k_rust(
+            players=players_array,
+            payoffs=payoffs_array,
+            row_splits=row_splits_array,
             two_player_only=two_player_only,
             min_elo_k=0.0,
             max_elo_k=elo_scale / 2,
@@ -90,19 +96,17 @@ def _elo_distribution(
 
     LOGGER.info("Calculating Elo ratings with k*=%f", elo_k)
 
-    elo: EloRatingSystem = (
-        TwoPlayerElo(elo_k=elo_k, elo_scale=elo_scale)
-        if two_player_only
-        else RankOrderedLogitElo(elo_k=elo_k, elo_scale=elo_scale)
+    elo_ratings = calculate_elo_ratings_rust(
+        players=players_array,
+        payoffs=payoffs_array,
+        row_splits=row_splits_array,
+        two_player_only=two_player_only,
+        elo_initial=0.0,
+        elo_k=elo_k,
+        elo_scale=elo_scale,
     )
 
-    elo.update_elo_ratings_batch(
-        matches=_pl_to_matches(data),
-        full_results=False,
-        progress_bar=progress_bar,
-    )
-
-    return elo
+    return elo_k, elo_scale, two_player_only, elo_ratings
 
 
 def game_stats(
@@ -125,14 +129,11 @@ def game_stats(
         )
     num_connected_matches, num_connected_players = _match_and_player_count(data)
 
-    elo = _elo_distribution(
-        data=data,
-        progress_bar=progress_bar,
-    )
+    elo_k, elo_scale, two_player_only, elo_ratings = _elo_distribution(data=data)
     elo_df = pl.LazyFrame(
         data={
-            "player_id": list(elo.elo_ratings.keys()),
-            "elo_rating": list(elo.elo_ratings.values()),
+            "player_id": list(elo_ratings.keys()),
+            "elo_rating": list(elo_ratings.values()),
         },
     )
     matches_per_player = (
@@ -174,9 +175,9 @@ def game_stats(
         "num_connected_matches": num_connected_matches,
         "num_all_players": num_all_players,
         "num_connected_players": num_connected_players,
-        "elo_k": elo.elo_k,
-        "elo_scale": elo.elo_scale,
-        "two_player_only": isinstance(elo, TwoPlayerElo),
+        "elo_k": elo_k,
+        "elo_scale": elo_scale,
+        "two_player_only": two_player_only,
         "remove_isolated_players": remove_isolated_players,
         "threshold_matches_regulars": threshold_matches_regulars,
     }
