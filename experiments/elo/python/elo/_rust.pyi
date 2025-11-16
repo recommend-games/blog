@@ -10,8 +10,8 @@ def approx_optimal_k_rust(
     min_elo_k: np.float64 | float,
     max_elo_k: np.float64 | float,
     elo_scale: np.float64 | float,
-    max_iterations: int | None = None,
-    x_absolute_tol: np.float64 | float | None = None,
+    max_iterations: int | None,
+    x_absolute_tol: np.float64 | float | None,
 ) -> np.float64: ...
 def calculate_elo_ratings_rust(
     *,

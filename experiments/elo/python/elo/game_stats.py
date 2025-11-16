@@ -13,7 +13,6 @@ import networkx as nx
 import polars as pl
 
 
-
 if TYPE_CHECKING:
     from typing import Any
     from collections.abc import Generator, Iterable
@@ -92,6 +91,8 @@ def _elo_distribution(
             min_elo_k=0.0,
             max_elo_k=elo_scale / 2,
             elo_scale=elo_scale,
+            max_iterations=None,
+            x_absolute_tol=None,
         )
 
     LOGGER.info("Calculating Elo ratings with k*=%f", elo_k)
@@ -142,7 +143,7 @@ def game_stats(
         .select(player_id="player_ids", num_matches="count")
     )
     player_info = (
-        matches_per_player.join(elo_df, on="player_id", how="outer")
+        matches_per_player.join(elo_df, on="player_id", how="full")
         .fill_null(0)
         .sort("elo_rating", "num_matches", descending=True)
     )
