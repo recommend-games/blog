@@ -10,6 +10,9 @@ from typing import TYPE_CHECKING
 import networkx as nx
 import polars as pl
 
+from elo.elo_ratings import EloRatingSystem, TwoPlayerElo, RankOrderedLogitElo
+from elo.optimal_k import approximate_optimal_k
+
 
 if TYPE_CHECKING:
     from typing import Any
@@ -55,6 +58,53 @@ def _match_and_player_count(data: pl.LazyFrame) -> tuple[int, int]:
     return stats["num_matches"], stats["num_players"]
 
 
+def _pl_to_matches(data: pl.LazyFrame) -> Iterable[dict[Any, float]]:
+    match_rows = data.select("player_ids", "payoffs").collect().iter_rows(named=True)
+    for row in match_rows:
+        yield dict(zip(row["player_ids"], row["payoffs"]))
+
+
+def _elo_distribution(
+    data: pl.LazyFrame,
+    *,
+    elo_k: float | None = None,
+    elo_scale: float = 400.0,
+    progress_bar: bool = False,
+) -> EloRatingSystem:
+    two_player_only = (
+        data.select(two_players=pl.col("num_players") == 2)
+        .select(pl.all("two_players"))
+        .collect()
+        .item()
+    )
+
+    if elo_k is None:
+        LOGGER.info("Calculating approximate optimal k*, this may take a while…")
+        elo_k = approximate_optimal_k(
+            matches=_pl_to_matches(data),
+            two_player_only=two_player_only,
+            min_elo_k=0.0,
+            max_elo_k=elo_scale / 2,
+            elo_scale=elo_scale,
+        )
+
+    LOGGER.info("Calculating Elo ratings with k*=%f", elo_k)
+
+    elo: EloRatingSystem = (
+        TwoPlayerElo(elo_k=elo_k, elo_scale=elo_scale)
+        if two_player_only
+        else RankOrderedLogitElo(elo_k=elo_k, elo_scale=elo_scale)
+    )
+
+    elo.update_elo_ratings_batch(
+        matches=_pl_to_matches(data),
+        full_results=False,
+        progress_bar=progress_bar,
+    )
+
+    return elo
+
+
 def game_stats(
     matches_path: Path | str,
     *,
@@ -75,25 +125,61 @@ def game_stats(
         )
     num_connected_matches, num_connected_players = _match_and_player_count(data)
 
-    # TODO: Elo ratings
-
-    result = (
+    elo = _elo_distribution(
+        data=data,
+        progress_bar=progress_bar,
+    )
+    elo_df = pl.LazyFrame(
+        data={
+            "player_id": list(elo.elo_ratings.keys()),
+            "elo_rating": list(elo.elo_ratings.values()),
+        },
+    )
+    matches_per_player = (
         data.select(pl.col("player_ids").explode().value_counts())
         .unnest("player_ids")
+        .select(player_id="player_ids", num_matches="count")
+    )
+    player_info = (
+        matches_per_player.join(elo_df, on="player_id", how="outer")
+        .fill_null(0)
+        .sort("elo_rating", "num_matches", descending=True)
+    )
+    # TODO: Save the full Elo ratings per player somewhere?
+
+    result = (
+        player_info.filter(pl.col("num_matches") >= threshold_matches_regulars)
         .select(
-            num_matches_max=pl.col("count").max(),
-            num_regular_players=(pl.col("count") >= threshold_matches_regulars).sum(),
+            num_regular_matches=pl.sum("num_matches"),
+            num_regular_players=pl.len(),
+            num_max_matches=pl.max("num_matches"),
+            mean=pl.mean("elo_rating"),
+            std_dev=pl.std("elo_rating"),
+            p00=pl.min("elo_rating"),
+            p01=pl.quantile("elo_rating", 0.01),
+            p05=pl.quantile("elo_rating", 0.05),
+            p25=pl.quantile("elo_rating", 0.25),
+            p50=pl.median("elo_rating"),
+            p75=pl.quantile("elo_rating", 0.75),
+            p95=pl.quantile("elo_rating", 0.95),
+            p99=pl.quantile("elo_rating", 0.99),
+            p100=pl.max("elo_rating"),
         )
         .collect()
         .to_dicts()[0]
     )
 
-    result["num_all_matches"] = num_all_matches
-    result["num_connected_matches"] = num_connected_matches
-    result["num_all_players"] = num_all_players
-    result["num_connected_players"] = num_connected_players
-
-    return result
+    return result | {
+        "num_all_matches": num_all_matches,
+        "num_connected_matches": num_connected_matches,
+        "num_all_players": num_all_players,
+        "num_connected_players": num_connected_players,
+        "elo_k": elo.elo_k,
+        "elo_scale": elo.elo_scale,
+        "two_player_only": isinstance(elo, TwoPlayerElo),
+        "remove_isolated_players": remove_isolated_players,
+        "threshold_matches_regulars": threshold_matches_regulars,
+    }
 
 
 def _games_stats(
