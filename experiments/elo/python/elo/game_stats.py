@@ -18,21 +18,14 @@ if TYPE_CHECKING:
 LOGGER = logging.getLogger(__name__)
 
 
-def game_stats(
-    matches_path: Path | str,
+def _remove_isolated_players(
+    data: pl.LazyFrame,
     *,
-    threshold_matches_regulars: int = 25,
     progress_bar: bool = False,
-) -> dict[str, int]:
-    matches_path = Path(matches_path).resolve()
-    LOGGER.info("Reading matches from %s", matches_path)
-
-    data = pl.read_ipc(matches_path, memory_map=False)
-    num_all_matches = len(data)
-
+) -> pl.LazyFrame:
     graph: nx.Graph = nx.Graph()
 
-    player_ids_col: Iterable[Any] = data["player_ids"]
+    player_ids_col: Iterable[Any] = data.select("player_ids").collect().to_series()
     if progress_bar:
         from tqdm import tqdm
 
@@ -41,18 +34,51 @@ def game_stats(
     for player_ids in player_ids_col:
         graph.add_edges_from(itertools.combinations(player_ids, 2))
 
-    num_all_players = graph.number_of_nodes()
     largest_community = max(nx.connected_components(graph), key=len)
-    num_players = len(largest_community)
 
-    data = data.filter(
-        pl.col("player_ids").list.eval(pl.element().is_in(largest_community)).list.any()
+    return data.filter(
+        pl.col("player_ids")
+        .list.eval(pl.element().is_in(largest_community))
+        .list.any(),
     )
-    num_matches = len(data)
+
+
+def _match_and_player_count(data: pl.LazyFrame) -> tuple[int, int]:
+    stats = (
+        data.select(
+            num_matches=pl.len(),
+            num_players=pl.col("player_ids").explode().n_unique(),
+        )
+        .collect()
+        .to_dicts()[0]
+    )
+    return stats["num_matches"], stats["num_players"]
+
+
+def game_stats(
+    matches_path: Path | str,
+    *,
+    remove_isolated_players: bool = True,
+    threshold_matches_regulars: int = 25,
+    progress_bar: bool = False,
+) -> dict[str, int]:
+    matches_path = Path(matches_path).resolve()
+    LOGGER.info("Reading matches from %s", matches_path)
+
+    data = pl.scan_ipc(matches_path, memory_map=True)
+    num_all_matches, num_all_players = _match_and_player_count(data)
+
+    if remove_isolated_players:
+        data = _remove_isolated_players(
+            data=data,
+            progress_bar=progress_bar,
+        )
+    num_connected_matches, num_connected_players = _match_and_player_count(data)
+
+    # TODO: Elo ratings
 
     result = (
-        data.lazy()
-        .select(pl.col("player_ids").explode().value_counts())
+        data.select(pl.col("player_ids").explode().value_counts())
         .unnest("player_ids")
         .select(
             num_matches_max=pl.col("count").max(),
@@ -63,9 +89,9 @@ def game_stats(
     )
 
     result["num_all_matches"] = num_all_matches
-    result["num_matches"] = num_matches
+    result["num_connected_matches"] = num_connected_matches
     result["num_all_players"] = num_all_players
-    result["num_players"] = num_players
+    result["num_connected_players"] = num_connected_players
 
     return result
 
