@@ -27,6 +27,7 @@ exclude_games = frozenset(
     {
         49,  # Yahtzee
         1467,  # Azul
+        1542,  # Ticket to Ride
     }
 )
 
