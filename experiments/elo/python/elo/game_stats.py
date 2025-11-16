@@ -186,6 +186,7 @@ def _games_stats(
     *,
     games_path: Path | str,
     matches_dir: Path | str,
+    remove_isolated_players: bool = True,
     threshold_matches_regulars: int = 25,
     progress_bar: bool = False,
 ) -> Generator[dict[str, Any]]:
@@ -209,7 +210,8 @@ def _games_stats(
 
         try:
             stats = game_stats(
-                matches_path,
+                matches_path=matches_path,
+                remove_isolated_players=remove_isolated_players,
                 threshold_matches_regulars=threshold_matches_regulars,
                 progress_bar=progress_bar,
             )
@@ -227,6 +229,7 @@ def games_stats(
     games_path: Path | str,
     matches_dir: Path | str,
     output_path: Path | str,
+    remove_isolated_players: bool = True,
     threshold_matches_regulars: int = 25,
     progress_bar: bool = False,
 ):
@@ -239,6 +242,7 @@ def games_stats(
         for game in _games_stats(
             games_path=games_path,
             matches_dir=matches_dir,
+            remove_isolated_players=remove_isolated_players,
             threshold_matches_regulars=threshold_matches_regulars,
             progress_bar=progress_bar,
         ):
@@ -248,9 +252,10 @@ def games_stats(
 def _main():
     logging.basicConfig(level=logging.INFO, stream=sys.stdout)
     games_stats(
-        games_path="games.jl",
+        games_path="csv/games.jl",
         matches_dir="results/arrow/matches",
-        output_path="games_stats.jl",
+        output_path="csv/games_stats.jl",
+        remove_isolated_players=True,
         threshold_matches_regulars=25,
         progress_bar=True,
     )
