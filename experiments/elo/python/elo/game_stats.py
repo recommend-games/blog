@@ -1,25 +1,23 @@
 from __future__ import annotations
 
-from concurrent.futures import Future, ProcessPoolExecutor, as_completed
 import itertools
 import json
 import logging
-import sys
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-from elo._rust import approx_optimal_k_rust, calculate_elo_ratings_rust
-from elo.utils import matches_to_arrays
 import networkx as nx
 import numpy as np
 import polars as pl
 
+from elo._rust import approx_optimal_k_rust, calculate_elo_ratings_rust
+from elo.utils import matches_to_arrays
 
 if TYPE_CHECKING:
-    from typing import Any
     from collections.abc import Generator, Iterable
-
-LOGGER = logging.getLogger(__name__)
+    from concurrent.futures import Future
+    from typing import Any
 
 
 def _remove_isolated_players(
@@ -27,7 +25,7 @@ def _remove_isolated_players(
     *,
     progress_bar: bool = False,
 ) -> pl.LazyFrame:
-    LOGGER.info("Removing isolated players…")
+    logging.info("Removing isolated players…")
 
     graph: nx.Graph = nx.Graph()
 
@@ -84,13 +82,14 @@ def _elo_distribution(
     players_array, payoffs_array, row_splits_array, unique_players = matches_to_arrays(
         matches=matches,
     )
-    if unique_players is None:
-        unique_player_ids = np.unique(players_array)
-        unique_players = tuple(unique_player_ids)
-    player_id_mapping = dict(enumerate(unique_players))
+    if unique_players is not None:
+        player_id_mapping = dict(enumerate(unique_players))
+    else:
+        unique_players_array = np.unique(players_array)
+        player_id_mapping = dict(zip(unique_players_array, unique_players_array))
 
     if elo_k is None:
-        LOGGER.info("Calculating approximate optimal k*, this may take a while…")
+        logging.info("Calculating approximate optimal k*, this may take a while…")
         elo_k = approx_optimal_k_rust(
             players=players_array,
             payoffs=payoffs_array,
@@ -103,8 +102,7 @@ def _elo_distribution(
             x_absolute_tol=None,
         )
 
-    LOGGER.info("Calculating Elo ratings with k*=%f", elo_k)
-
+    logging.info("Calculating Elo ratings with k*=%f", elo_k)
     elo_ratings = calculate_elo_ratings_rust(
         players=players_array,
         payoffs=payoffs_array,
@@ -114,6 +112,8 @@ def _elo_distribution(
         elo_k=elo_k,
         elo_scale=elo_scale,
     )
+    logging.info("Elo ratings calculated for %d players", len(elo_ratings))
+
     elo_ratings_dict = {
         player_id_mapping[k]: rating for k, rating in elo_ratings.items()
     }
@@ -129,10 +129,11 @@ def game_stats(
     progress_bar: bool = False,
 ) -> dict[str, int]:
     matches_path = Path(matches_path).resolve()
-    LOGGER.info("Reading matches from %s", matches_path)
+    logging.info("Reading matches from %s", matches_path)
 
     data = pl.scan_ipc(matches_path, memory_map=True)
     num_all_matches, num_all_players = _match_and_player_count(data)
+    logging.info("Loaded %d matches with %d players", num_all_matches, num_all_players)
 
     if remove_isolated_players:
         data = _remove_isolated_players(
@@ -140,6 +141,11 @@ def game_stats(
             progress_bar=progress_bar,
         )
     num_connected_matches, num_connected_players = _match_and_player_count(data)
+    logging.info(
+        "After removing isolated players: %d matches with %d players",
+        num_connected_matches,
+        num_connected_players,
+    )
 
     elo_k, elo_scale, two_player_only, elo_ratings = _elo_distribution(data=data)
     elo_df = pl.LazyFrame(
@@ -176,6 +182,9 @@ def game_stats(
         .collect()
         .to_dicts()[0]
     )
+    logging.info(
+        "Game stats calculated for %d regular players", result["num_regular_players"]
+    )
 
     return result | {
         "num_all_matches": num_all_matches,
@@ -198,11 +207,11 @@ def _game_stats(
     threshold_matches_regulars: int = 25,
     progress_bar: bool = False,
 ) -> dict[str, Any]:
-    LOGGER.info("Processing game %s", game["display_name_en"])
+    logging.info("Processing game %s", game["display_name_en"])
     game_id = game["id"]
     matches_path = matches_dir / f"{game_id}.arrow"
     if not matches_path.exists():
-        LOGGER.warning("Matches file %s does not exist", matches_path)
+        logging.warning("Matches file %s does not exist", matches_path)
         return game
 
     try:
@@ -213,7 +222,7 @@ def _game_stats(
             progress_bar=progress_bar,
         )
     except Exception:
-        LOGGER.exception("Error processing game %s", game["display_name_en"])
+        logging.exception("Error processing game %s", game["display_name_en"])
         return game
     else:
         return game | stats
@@ -230,8 +239,8 @@ def _games_stats(
     games_path = Path(games_path).resolve()
     matches_dir = Path(matches_dir).resolve()
 
-    LOGGER.info("Reading games from %s", games_path)
-    LOGGER.info("Reading matches from %s", matches_dir)
+    logging.info("Reading games from %s", games_path)
+    logging.info("Reading matches from %s", matches_dir)
 
     games = pl.read_ndjson(games_path)
     games_dicts = games.to_dicts()
@@ -246,7 +255,12 @@ def _games_stats(
             progress_bar=False,
         )
 
-    LOGGER.info("Done.")
+
+def _init_worker():
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(processName)s] %(levelname)s: %(message)s",
+    )
 
 
 def games_stats(
@@ -260,7 +274,7 @@ def games_stats(
     output_path = Path(output_path).resolve()
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    with ProcessPoolExecutor() as executor:
+    with ProcessPoolExecutor(initializer=_init_worker) as executor:
         futures = _games_stats(
             executor=executor,
             games_path=games_path,
@@ -268,21 +282,22 @@ def games_stats(
             remove_isolated_players=remove_isolated_players,
             threshold_matches_regulars=threshold_matches_regulars,
         )
-        LOGGER.info("Writing games stats to %s", output_path)
+        logging.info("Writing games stats to %s", output_path)
         with output_path.open("w") as file:
             for game in as_completed(futures):
                 file.write(json.dumps(game) + "\n")
 
+    logging.info("Done.")
+
 
 def _main():
-    logging.basicConfig(level=logging.INFO, stream=sys.stdout)
+    _init_worker()
     games_stats(
         games_path="csv/games.jl",
         matches_dir="results/arrow/matches",
         output_path="csv/games_stats.jl",
         remove_isolated_players=True,
         threshold_matches_regulars=25,
-        progress_bar=True,
     )
 
 
