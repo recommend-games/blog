@@ -117,6 +117,7 @@ def game_stats(
     matches_path: Path | str,
     *,
     remove_isolated_players: bool = True,
+    max_matches: int | None = None,
     threshold_matches_regulars: int = 25,
 ) -> dict[str, int]:
     matches_path = Path(matches_path).resolve()
@@ -156,6 +157,21 @@ def game_stats(
             "num_connected_matches": 0,
             "num_all_players": num_all_players,
             "num_connected_players": 0,
+            "remove_isolated_players": remove_isolated_players,
+            "threshold_matches_regulars": threshold_matches_regulars,
+        }
+
+    if max_matches is not None and num_connected_matches > max_matches:
+        logging.warning(
+            "Too many matches (%d>%d), skipping Elo calculation.",
+            num_connected_matches,
+            max_matches,
+        )
+        return {
+            "num_all_matches": num_all_matches,
+            "num_connected_matches": num_connected_matches,
+            "num_all_players": num_all_players,
+            "num_connected_players": num_connected_players,
             "remove_isolated_players": remove_isolated_players,
             "threshold_matches_regulars": threshold_matches_regulars,
         }
@@ -218,6 +234,7 @@ def _game_stats(
     game: dict[str, Any],
     matches_dir: Path,
     remove_isolated_players: bool = True,
+    max_matches: int | None = None,
     threshold_matches_regulars: int = 25,
 ) -> dict[str, Any]:
     logging.info("Processing game %s", game["display_name_en"])
@@ -232,6 +249,7 @@ def _game_stats(
             matches_path=matches_path,
             remove_isolated_players=remove_isolated_players,
             threshold_matches_regulars=threshold_matches_regulars,
+            max_matches=max_matches,
         )
     except Exception:
         logging.exception("Error processing game %s", game["display_name_en"])
@@ -246,6 +264,7 @@ def _games_stats(
     games_path: Path | str,
     matches_dir: Path | str,
     remove_isolated_players: bool = True,
+    max_matches: int | None = None,
     threshold_matches_regulars: int = 25,
 ) -> Generator[Future[dict[str, Any]]]:
     games_path = Path(games_path).resolve()
@@ -264,6 +283,7 @@ def _games_stats(
             game=game,
             matches_dir=matches_dir,
             remove_isolated_players=remove_isolated_players,
+            max_matches=max_matches,
             threshold_matches_regulars=threshold_matches_regulars,
         )
 
@@ -281,6 +301,7 @@ def games_stats(
     matches_dir: Path | str,
     output_path: Path | str,
     remove_isolated_players: bool = True,
+    max_matches: int | None = None,
     threshold_matches_regulars: int = 25,
 ) -> None:
     output_path = Path(output_path).resolve()
@@ -292,6 +313,7 @@ def games_stats(
             games_path=games_path,
             matches_dir=matches_dir,
             remove_isolated_players=remove_isolated_players,
+            max_matches=max_matches,
             threshold_matches_regulars=threshold_matches_regulars,
         )
         logging.info("Writing games stats to %s", output_path)
@@ -309,6 +331,7 @@ def _main():
         matches_dir="results/arrow/matches",
         output_path="csv/games_stats.jl",
         remove_isolated_players=True,
+        max_matches=None,
         threshold_matches_regulars=25,
     )
 
