@@ -123,7 +123,11 @@ def game_stats(
     matches_path = Path(matches_path).resolve()
     logging.info("Reading matches from %s", matches_path)
 
-    data = pl.scan_ipc(matches_path, memory_map=True)
+    data = (
+        pl.scan_ipc(matches_path, memory_map=True)
+        .filter(pl.col("payoffs").list.eval(pl.element() >= 0).list.all())
+        .filter(pl.col("payoffs").list.eval(pl.element() > 0).list.any())
+    )
     num_all_matches, num_all_players = _match_and_player_count(data)
     logging.info("Loaded %d matches with %d players", num_all_matches, num_all_players)
 
@@ -288,10 +292,15 @@ def _games_stats(
         )
 
 
-def _init_worker():
+def _init_worker(name: str | None = None) -> None:
+    log_format = (
+        f"%(asctime)s [%(processName)s – {name}] %(levelname)s: %(message)s"
+        if name
+        else "%(asctime)s [%(processName)s] %(levelname)s: %(message)s"
+    )
     logging.basicConfig(
         level=logging.INFO,
-        format="%(asctime)s [%(processName)s] %(levelname)s: %(message)s",
+        format=log_format,
     )
 
 
