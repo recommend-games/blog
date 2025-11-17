@@ -20,20 +20,12 @@ if TYPE_CHECKING:
     from typing import Any
 
 
-def _remove_isolated_players(
-    data: pl.LazyFrame,
-    *,
-    progress_bar: bool = False,
-) -> pl.LazyFrame:
+def _remove_isolated_players(data: pl.LazyFrame) -> pl.LazyFrame:
     logging.info("Removing isolated players…")
 
     graph: nx.Graph = nx.Graph()
 
-    player_ids_col: Iterable[Any] = data.select("player_ids").collect().to_series()
-    if progress_bar:
-        from tqdm import tqdm
-
-        player_ids_col = tqdm(player_ids_col)
+    player_ids_col = data.select("player_ids").collect().to_series()
 
     for player_ids in player_ids_col:
         graph.add_edges_from(itertools.combinations(player_ids, 2))
@@ -126,7 +118,6 @@ def game_stats(
     *,
     remove_isolated_players: bool = True,
     threshold_matches_regulars: int = 25,
-    progress_bar: bool = False,
 ) -> dict[str, int]:
     matches_path = Path(matches_path).resolve()
     logging.info("Reading matches from %s", matches_path)
@@ -147,10 +138,7 @@ def game_stats(
         }
 
     if remove_isolated_players:
-        data = _remove_isolated_players(
-            data=data,
-            progress_bar=progress_bar,
-        )
+        data = _remove_isolated_players(data=data)
     num_connected_matches, num_connected_players = _match_and_player_count(data)
     logging.info(
         "After removing isolated players: %d matches with %d players",
@@ -231,7 +219,6 @@ def _game_stats(
     matches_dir: Path,
     remove_isolated_players: bool = True,
     threshold_matches_regulars: int = 25,
-    progress_bar: bool = False,
 ) -> dict[str, Any]:
     logging.info("Processing game %s", game["display_name_en"])
     game_id = game["id"]
@@ -245,7 +232,6 @@ def _game_stats(
             matches_path=matches_path,
             remove_isolated_players=remove_isolated_players,
             threshold_matches_regulars=threshold_matches_regulars,
-            progress_bar=progress_bar,
         )
     except Exception:
         logging.exception("Error processing game %s", game["display_name_en"])
@@ -270,6 +256,7 @@ def _games_stats(
 
     games = pl.read_ndjson(games_path)
     games_dicts = games.to_dicts()
+    logging.info("Loaded %d games", len(games_dicts))
 
     for game in games_dicts:
         yield executor.submit(
@@ -278,7 +265,6 @@ def _games_stats(
             matches_dir=matches_dir,
             remove_isolated_players=remove_isolated_players,
             threshold_matches_regulars=threshold_matches_regulars,
-            progress_bar=False,
         )
 
 
