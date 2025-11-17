@@ -3,6 +3,7 @@ from __future__ import annotations
 import itertools
 import json
 import logging
+import os
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 from typing import TYPE_CHECKING
@@ -326,9 +327,12 @@ def games_stats(
             threshold_matches_regulars=threshold_matches_regulars,
         )
         logging.info("Writing games stats to %s", output_path)
-        with output_path.open("w") as file:
-            for game in as_completed(futures):
-                file.write(json.dumps(game) + "\n")
+        with output_path.open("w", buffering=1) as file:
+            for future in as_completed(futures):
+                result = future.result()
+                file.write(json.dumps(result) + "\n")
+                file.flush()
+                os.fsync(file.fileno())
 
     logging.info("Done.")
 
