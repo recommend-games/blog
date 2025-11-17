@@ -135,6 +135,17 @@ def game_stats(
     num_all_matches, num_all_players = _match_and_player_count(data)
     logging.info("Loaded %d matches with %d players", num_all_matches, num_all_players)
 
+    if not num_all_matches:
+        logging.warning("No matches found in %s", matches_path)
+        return {
+            "num_all_matches": 0,
+            "num_connected_matches": 0,
+            "num_all_players": 0,
+            "num_connected_players": 0,
+            "remove_isolated_players": remove_isolated_players,
+            "threshold_matches_regulars": threshold_matches_regulars,
+        }
+
     if remove_isolated_players:
         data = _remove_isolated_players(
             data=data,
@@ -146,6 +157,20 @@ def game_stats(
         num_connected_matches,
         num_connected_players,
     )
+
+    if not num_connected_matches:
+        logging.warning(
+            "No connected matches found in %s after removing isolated players",
+            matches_path,
+        )
+        return {
+            "num_all_matches": num_all_matches,
+            "num_connected_matches": 0,
+            "num_all_players": num_all_players,
+            "num_connected_players": 0,
+            "remove_isolated_players": remove_isolated_players,
+            "threshold_matches_regulars": threshold_matches_regulars,
+        }
 
     elo_k, elo_scale, two_player_only, elo_ratings = _elo_distribution(data=data)
     elo_df = pl.LazyFrame(
@@ -183,7 +208,8 @@ def game_stats(
         .to_dicts()[0]
     )
     logging.info(
-        "Game stats calculated for %d regular players", result["num_regular_players"]
+        "Game stats calculated for %d regular players",
+        result["num_regular_players"],
     )
 
     return result | {
