@@ -102,7 +102,7 @@ def approximate_optimal_k[ID_TYPE](
             x_absolute_tol=x_absolute_tol,
         )
 
-    players_array, payoffs_array, row_splits_array = matches_to_arrays(matches)
+    players_array, payoffs_array, row_splits_array, _ = matches_to_arrays(matches)
     return approx_optimal_k_rust(
         players=players_array,
         payoffs=payoffs_array,

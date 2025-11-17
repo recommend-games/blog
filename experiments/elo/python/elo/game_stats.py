@@ -10,6 +10,7 @@ from typing import TYPE_CHECKING
 from elo._rust import approx_optimal_k_rust, calculate_elo_ratings_rust
 from elo.utils import matches_to_arrays
 import networkx as nx
+import numpy as np
 import polars as pl
 
 
@@ -70,7 +71,7 @@ def _elo_distribution(
     *,
     elo_k: float | None = None,
     elo_scale: float = 400.0,
-) -> tuple[float, float, bool, dict[int, float]]:
+) -> tuple[float, float, bool, dict[np.int64, float]]:
     two_player_only = (
         data.select(two_players=pl.col("num_players") == 2)
         .select(pl.all("two_players"))
@@ -79,7 +80,13 @@ def _elo_distribution(
     )
 
     matches = _pl_to_matches(data)
-    players_array, payoffs_array, row_splits_array = matches_to_arrays(matches)
+    players_array, payoffs_array, row_splits_array, unique_players = matches_to_arrays(
+        matches=matches,
+    )
+    if unique_players is None:
+        unique_player_ids = np.unique(players_array)
+        unique_players = tuple(unique_player_ids)
+    player_id_mapping = dict(enumerate(unique_players))
 
     if elo_k is None:
         LOGGER.info("Calculating approximate optimal k*, this may take a while…")
@@ -106,8 +113,11 @@ def _elo_distribution(
         elo_k=elo_k,
         elo_scale=elo_scale,
     )
+    elo_ratings_dict = {
+        player_id_mapping[k]: rating for k, rating in elo_ratings.items()
+    }
 
-    return elo_k, elo_scale, two_player_only, elo_ratings
+    return elo_k, elo_scale, two_player_only, elo_ratings_dict
 
 
 def game_stats(
@@ -142,17 +152,12 @@ def game_stats(
         .unnest("player_ids")
         .select(player_id="player_ids", num_matches="count")
     )
-    player_info = (
-        matches_per_player.join(elo_df, on="player_id", how="full")
-        .fill_null(0)
-        .sort("elo_rating", "num_matches", descending=True)
-    )
+    player_info = matches_per_player.join(elo_df, on="player_id", how="inner")
     # TODO: Save the full Elo ratings per player somewhere?
 
     result = (
         player_info.filter(pl.col("num_matches") >= threshold_matches_regulars)
         .select(
-            num_regular_matches=pl.sum("num_matches"),
             num_regular_players=pl.len(),
             num_max_matches=pl.max("num_matches"),
             mean=pl.mean("elo_rating"),

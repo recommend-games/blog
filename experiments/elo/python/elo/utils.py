@@ -44,10 +44,10 @@ def _match_iterable_to_lists[ID_TYPE](
 
 def _player_ids_to_ints[ID_TYPE](
     players: list[ID_TYPE],
-) -> npt.NDArray[np.int64]:
+) -> tuple[npt.NDArray[np.int64], tuple[ID_TYPE, ...]]:
     unique_players = tuple(frozenset(players))
-    mapping = dict(zip(unique_players, range(len(unique_players))))
-    return np.asarray([mapping[p] for p in players], dtype=np.int64)
+    mapping = dict(zip(unique_players, np.arange(len(unique_players), dtype=np.int64)))
+    return np.asarray([mapping[p] for p in players], dtype=np.int64), unique_players
 
 
 def matches_to_arrays[ID_TYPE](
@@ -58,6 +58,7 @@ def matches_to_arrays[ID_TYPE](
     npt.NDArray[np.int64],
     npt.NDArray[np.float64] | None,
     npt.NDArray[np.int64],
+    tuple[ID_TYPE, ...] | None,
 ]:
     if (
         isinstance(matches, np.ndarray)
@@ -68,6 +69,7 @@ def matches_to_arrays[ID_TYPE](
             matches.flatten().astype(np.int64),
             None,
             np.arange(0, matches.size + 1, matches.shape[1], dtype=np.int64),
+            None,
         )
 
     matches_iter = iter(matches)
@@ -87,7 +89,7 @@ def matches_to_arrays[ID_TYPE](
         players, row_splits = _match_iterable_to_lists(match_iterables)
         payoffs_array = None
 
-    players_array = _player_ids_to_ints(players)
+    players_array, unique_players = _player_ids_to_ints(players)
     row_splits_array = np.asarray(row_splits, dtype=np.int64)
 
-    return players_array, payoffs_array, row_splits_array
+    return players_array, payoffs_array, row_splits_array, unique_players
