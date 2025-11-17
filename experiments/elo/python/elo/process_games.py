@@ -102,6 +102,7 @@ def merge_matches() -> None:
             )
             .with_columns(payoffs=pl.col("places").list.eval(pl.len() - pl.element()))
             .filter(pl.col("payoffs").list.eval(pl.element() >= 0).list.all())
+            .filter(pl.col("payoffs").list.eval(pl.element() > 0).list.any())
         )
         match_data.sink_ipc(match_dir / f"{game_id}.arrow")
 
