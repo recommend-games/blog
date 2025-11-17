@@ -145,6 +145,6 @@ def process_games() -> None:
         games_path=output_dir / "games.jl",
         matches_dir="results/arrow/matches",
         output_path=output_dir / "games_stats.jl",
+        remove_isolated_players=True,
         threshold_matches_regulars=25,
-        progress_bar=True,
     )

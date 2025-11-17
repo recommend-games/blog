@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from concurrent.futures import Future, ProcessPoolExecutor, as_completed
 import itertools
 import json
 import logging
@@ -189,14 +190,43 @@ def game_stats(
     }
 
 
+def _game_stats(
+    *,
+    game: dict[str, Any],
+    matches_dir: Path,
+    remove_isolated_players: bool = True,
+    threshold_matches_regulars: int = 25,
+    progress_bar: bool = False,
+) -> dict[str, Any]:
+    LOGGER.info("Processing game %s", game["display_name_en"])
+    game_id = game["id"]
+    matches_path = matches_dir / f"{game_id}.arrow"
+    if not matches_path.exists():
+        LOGGER.warning("Matches file %s does not exist", matches_path)
+        return game
+
+    try:
+        stats = game_stats(
+            matches_path=matches_path,
+            remove_isolated_players=remove_isolated_players,
+            threshold_matches_regulars=threshold_matches_regulars,
+            progress_bar=progress_bar,
+        )
+    except Exception:
+        LOGGER.exception("Error processing game %s", game["display_name_en"])
+        return game
+    else:
+        return game | stats
+
+
 def _games_stats(
     *,
+    executor: ProcessPoolExecutor,
     games_path: Path | str,
     matches_dir: Path | str,
     remove_isolated_players: bool = True,
     threshold_matches_regulars: int = 25,
-    progress_bar: bool = False,
-) -> Generator[dict[str, Any]]:
+) -> Generator[Future[dict[str, Any]]]:
     games_path = Path(games_path).resolve()
     matches_dir = Path(matches_dir).resolve()
 
@@ -207,26 +237,14 @@ def _games_stats(
     games_dicts = games.to_dicts()
 
     for game in games_dicts:
-        LOGGER.info("Processing game %s", game["display_name_en"])
-        game_id = game["id"]
-        matches_path = matches_dir / f"{game_id}.arrow"
-        if not matches_path.exists():
-            LOGGER.warning("Matches file %s does not exist", matches_path)
-            yield game
-            continue
-
-        try:
-            stats = game_stats(
-                matches_path=matches_path,
-                remove_isolated_players=remove_isolated_players,
-                threshold_matches_regulars=threshold_matches_regulars,
-                progress_bar=progress_bar,
-            )
-        except Exception:
-            LOGGER.exception("Error processing game %s", game["display_name_en"])
-            yield game
-        else:
-            yield game | stats
+        yield executor.submit(
+            _game_stats,
+            game=game,
+            matches_dir=matches_dir,
+            remove_isolated_players=remove_isolated_players,
+            threshold_matches_regulars=threshold_matches_regulars,
+            progress_bar=False,
+        )
 
     LOGGER.info("Done.")
 
@@ -238,22 +256,22 @@ def games_stats(
     output_path: Path | str,
     remove_isolated_players: bool = True,
     threshold_matches_regulars: int = 25,
-    progress_bar: bool = False,
-):
+) -> None:
     output_path = Path(output_path).resolve()
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    LOGGER.info("Writing games stats to %s", output_path)
-
-    with output_path.open("w") as file:
-        for game in _games_stats(
+    with ProcessPoolExecutor() as executor:
+        futures = _games_stats(
+            executor=executor,
             games_path=games_path,
             matches_dir=matches_dir,
             remove_isolated_players=remove_isolated_players,
             threshold_matches_regulars=threshold_matches_regulars,
-            progress_bar=progress_bar,
-        ):
-            file.write(json.dumps(game) + "\n")
+        )
+        LOGGER.info("Writing games stats to %s", output_path)
+        with output_path.open("w") as file:
+            for game in as_completed(futures):
+                file.write(json.dumps(game) + "\n")
 
 
 def _main():
