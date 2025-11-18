@@ -124,6 +124,7 @@ def game_stats(
     matches_path: Path | str,
     *,
     remove_isolated_players: bool = True,
+    max_players: int | None = 12,
     max_matches: int | None = None,
     threshold_matches_regulars: int = 25,
     log_tag: str | None = None,
@@ -138,6 +139,8 @@ def game_stats(
         .filter(pl.col("payoffs").list.eval(pl.element() >= 0).list.all())
         .filter(pl.col("payoffs").list.eval(pl.element() > 0).list.any())
     )
+    if max_players:
+        data = data.filter(pl.col("num_players") <= max_players)
     num_all_matches, num_all_players = _match_and_player_count(data)
     logging.info(
         "%sLoaded %d matches with %d players",
@@ -260,6 +263,7 @@ def _game_stats(
     game: dict[str, Any],
     matches_dir: Path,
     remove_isolated_players: bool = True,
+    max_players: int | None = 12,
     max_matches: int | None = None,
     threshold_matches_regulars: int = 25,
 ) -> dict[str, Any]:
@@ -277,6 +281,7 @@ def _game_stats(
             matches_path=matches_path,
             remove_isolated_players=remove_isolated_players,
             threshold_matches_regulars=threshold_matches_regulars,
+            max_players=max_players,
             max_matches=max_matches,
             log_tag=log_tag,
         )
@@ -293,6 +298,7 @@ def _games_stats(
     games_path: Path | str,
     matches_dir: Path | str,
     remove_isolated_players: bool = True,
+    max_players: int | None = 12,
     max_matches: int | None = None,
     threshold_matches_regulars: int = 25,
 ) -> Generator[Future[dict[str, Any]]]:
@@ -312,6 +318,7 @@ def _games_stats(
             game=game,
             matches_dir=matches_dir,
             remove_isolated_players=remove_isolated_players,
+            max_players=max_players,
             max_matches=max_matches,
             threshold_matches_regulars=threshold_matches_regulars,
         )
@@ -339,6 +346,7 @@ def games_stats(
     matches_dir: Path | str,
     output_path: Path | str,
     remove_isolated_players: bool = True,
+    max_players: int | None = 12,
     max_matches: int | None = None,
     threshold_matches_regulars: int = 25,
 ) -> None:
@@ -351,6 +359,7 @@ def games_stats(
             games_path=games_path,
             matches_dir=matches_dir,
             remove_isolated_players=remove_isolated_players,
+            max_players=max_players,
             max_matches=max_matches,
             threshold_matches_regulars=threshold_matches_regulars,
         )
@@ -445,6 +454,7 @@ def _main():
         matches_dir="results/arrow/matches",
         output_path="csv/games_stats.jl",
         remove_isolated_players=True,
+        max_players=12,
         max_matches=None,
         threshold_matches_regulars=25,
     )
