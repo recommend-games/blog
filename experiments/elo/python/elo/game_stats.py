@@ -4,13 +4,15 @@ import itertools
 import json
 import logging
 import os
-from concurrent.futures import ProcessPoolExecutor, as_completed
+from concurrent.futures import ProcessPoolExecutor, wait, FIRST_COMPLETED
 from pathlib import Path
 from typing import TYPE_CHECKING
 
 import networkx as nx
 import numpy as np
 import polars as pl
+
+import time
 
 from elo._rust import approx_optimal_k_rust, calculate_elo_ratings_rust
 from elo.utils import matches_to_arrays
@@ -283,7 +285,7 @@ def _games_stats(
     logging.info("Loaded %d games", len(games_dicts))
 
     for game in games_dicts:
-        yield executor.submit(
+        fut = executor.submit(
             _game_stats,
             game=game,
             matches_dir=matches_dir,
@@ -291,6 +293,10 @@ def _games_stats(
             max_matches=max_matches,
             threshold_matches_regulars=threshold_matches_regulars,
         )
+        # Attach identifiers for periodic logging
+        setattr(fut, "game_id", game.get("id"))
+        setattr(fut, "game_name", game.get("display_name_en"))
+        yield fut
 
 
 def _init_worker(name: str | None = None) -> None:
@@ -327,12 +333,75 @@ def games_stats(
             threshold_matches_regulars=threshold_matches_regulars,
         )
         logging.info("Writing games stats to %s", output_path)
+
+        # Collect all submitted futures so we can monitor periodically.
+        pending = set(futures)
+        # Record start times only when a future actually begins running.
+        started_at: dict[Future, float] = {}
+        report_interval = int(os.getenv("PENDING_LOG_INTERVAL_SEC", "60"))
+        warn_after = int(os.getenv("PENDING_WARN_AFTER_SEC", "600"))
+
         with output_path.open("w", buffering=1) as file:
-            for future in as_completed(futures):
-                result = future.result()
-                file.write(json.dumps(result) + "\n")
-                file.flush()
-                os.fsync(file.fileno())
+            while pending:
+                done, not_done = wait(
+                    pending,
+                    timeout=report_interval,
+                    return_when=FIRST_COMPLETED,
+                )
+
+                # Write completed results immediately
+                for future in done:
+                    try:
+                        result = future.result()
+
+                    except Exception:
+                        logging.exception(
+                            "Worker failed for %s (%s)",
+                            getattr(future, "game_name", "?"),
+                            getattr(future, "game_id", "?"),
+                        )
+                        # Write a minimal record so downstream knows this game failed
+                        result = {
+                            "id": getattr(future, "game_id", None),
+                            "display_name_en": getattr(future, "game_name", None),
+                            "error": True,
+                        }
+
+                    file.write(json.dumps(result) + "\n")
+                    file.flush()
+                    os.fsync(file.fileno())
+
+                # Update the pending set
+                pending = not_done
+
+                if pending:
+                    now = time.monotonic()
+                    running = [f for f in pending if f.running() and not f.done()]
+                    queued = [f for f in pending if not f.running() and not f.done()]
+                    # Stamp start time on first transition to running
+                    for f in running:
+                        if f not in started_at:
+                            started_at[f] = now
+
+                    # Heartbeat shows only actively running tasks
+                    names = [getattr(f, "game_name", "?") for f in running[:10]]
+                    logging.info(
+                        "In progress: %d running, %d queued%s",
+                        len(running),
+                        len(queued),
+                        f" — running (up to 10): {', '.join(names)}" if names else "",
+                    )
+
+                    # Warn about long-runners (only for actually running tasks)
+                    for f in running:
+                        elapsed = now - started_at.get(f, now)
+                        if elapsed >= warn_after:
+                            logging.warning(
+                                "Long-running job: %s (%s) running for %.0fs",
+                                getattr(f, "game_name", "?"),
+                                getattr(f, "game_id", "?"),
+                                elapsed,
+                            )
 
     logging.info("Done.")
 
