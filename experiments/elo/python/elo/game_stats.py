@@ -386,10 +386,20 @@ def games_stats(
                         result = {
                             "id": getattr(future, "game_id", None),
                             "display_name_en": getattr(future, "game_name", None),
-                            "error": True,
+                            "num_all_matches": None,
+                            "num_connected_matches": None,
+                            "num_all_players": None,
+                            "num_connected_players": None,
+                            "remove_isolated_players": remove_isolated_players,
+                            "threshold_matches_regulars": threshold_matches_regulars,
                         }
 
-                    file.write(json.dumps(result, sort_keys=True) + "\n")
+                    result_json = json.dumps(
+                        obj=result,
+                        sort_keys=True,
+                        separators=(",", ":"),
+                    )
+                    file.write(f"{result_json}\n")
                     file.flush()
                     os.fsync(file.fileno())
 
