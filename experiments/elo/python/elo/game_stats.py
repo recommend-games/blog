@@ -23,8 +23,8 @@ if TYPE_CHECKING:
     from typing import Any
 
 
-def _remove_isolated_players(data: pl.LazyFrame) -> pl.LazyFrame:
-    logging.info("Removing isolated players…")
+def _remove_isolated_players(data: pl.LazyFrame, log_tag: str = "") -> pl.LazyFrame:
+    logging.info("%sRemoving isolated players…", log_tag)
 
     graph: nx.Graph = nx.Graph()
 
@@ -65,6 +65,7 @@ def _elo_distribution(
     *,
     elo_k: float | None = None,
     elo_scale: float = 400.0,
+    log_tag: str = "",
 ) -> tuple[float, float, bool, dict[np.int64, float]]:
     two_player_only = (
         data.select(two_players=pl.col("num_players") == 2)
@@ -84,7 +85,10 @@ def _elo_distribution(
         player_id_mapping = dict(zip(unique_players_array, unique_players_array))
 
     if elo_k is None:
-        logging.info("Calculating approximate optimal k*, this may take a while…")
+        logging.info(
+            "%sCalculating approximate optimal k*, this may take a while…",
+            log_tag,
+        )
         elo_k = approx_optimal_k_rust(
             players=players_array,
             payoffs=payoffs_array,
@@ -97,7 +101,7 @@ def _elo_distribution(
             x_absolute_tol=None,
         )
 
-    logging.info("Calculating Elo ratings with k*=%f", elo_k)
+    logging.info("%sCalculating Elo ratings with k*=%.3f", log_tag, elo_k)
     elo_ratings = calculate_elo_ratings_rust(
         players=players_array,
         payoffs=payoffs_array,
@@ -107,7 +111,7 @@ def _elo_distribution(
         elo_k=elo_k,
         elo_scale=elo_scale,
     )
-    logging.info("Elo ratings calculated for %d players", len(elo_ratings))
+    logging.info("%sElo ratings calculated for %d players", log_tag, len(elo_ratings))
 
     elo_ratings_dict = {
         player_id_mapping[k]: rating for k, rating in elo_ratings.items()
@@ -122,9 +126,12 @@ def game_stats(
     remove_isolated_players: bool = True,
     max_matches: int | None = None,
     threshold_matches_regulars: int = 25,
+    log_tag: str | None = None,
 ) -> dict[str, int]:
+    log_tag = f"[{log_tag}] " if log_tag else ""
+
     matches_path = Path(matches_path).resolve()
-    logging.info("Reading matches from %s", matches_path)
+    logging.info("%sReading matches from %s", log_tag, matches_path)
 
     data = (
         pl.scan_ipc(matches_path, memory_map=True)
@@ -132,10 +139,15 @@ def game_stats(
         .filter(pl.col("payoffs").list.eval(pl.element() > 0).list.any())
     )
     num_all_matches, num_all_players = _match_and_player_count(data)
-    logging.info("Loaded %d matches with %d players", num_all_matches, num_all_players)
+    logging.info(
+        "%sLoaded %d matches with %d players",
+        log_tag,
+        num_all_matches,
+        num_all_players,
+    )
 
     if not num_all_matches:
-        logging.warning("No matches found in %s", matches_path)
+        logging.warning("%sNo matches found in %s", log_tag, matches_path)
         return {
             "num_all_matches": 0,
             "num_connected_matches": 0,
@@ -146,17 +158,19 @@ def game_stats(
         }
 
     if remove_isolated_players:
-        data = _remove_isolated_players(data=data)
+        data = _remove_isolated_players(data=data, log_tag=log_tag)
     num_connected_matches, num_connected_players = _match_and_player_count(data)
     logging.info(
-        "After removing isolated players: %d matches with %d players",
+        "%sAfter removing isolated players: %d matches with %d players",
+        log_tag,
         num_connected_matches,
         num_connected_players,
     )
 
     if not num_connected_matches:
         logging.warning(
-            "No connected matches found in %s after removing isolated players",
+            "%sNo connected matches found in %s after removing isolated players",
+            log_tag,
             matches_path,
         )
         return {
@@ -170,7 +184,8 @@ def game_stats(
 
     if max_matches is not None and num_connected_matches > max_matches:
         logging.warning(
-            "Too many matches (%d>%d), skipping Elo calculation.",
+            "%sToo many matches (%d>%d), skipping Elo calculation.",
+            log_tag,
             num_connected_matches,
             max_matches,
         )
@@ -183,7 +198,10 @@ def game_stats(
             "threshold_matches_regulars": threshold_matches_regulars,
         }
 
-    elo_k, elo_scale, two_player_only, elo_ratings = _elo_distribution(data=data)
+    elo_k, elo_scale, two_player_only, elo_ratings = _elo_distribution(
+        data=data,
+        log_tag=log_tag,
+    )
     elo_df = pl.LazyFrame(
         data={
             "player_id": list(elo_ratings.keys()),
@@ -219,7 +237,8 @@ def game_stats(
         .to_dicts()[0]
     )
     logging.info(
-        "Game stats calculated for %d regular players",
+        "%sGame stats calculated for %d regular players",
+        log_tag,
         result["num_regular_players"],
     )
 
@@ -244,11 +263,13 @@ def _game_stats(
     max_matches: int | None = None,
     threshold_matches_regulars: int = 25,
 ) -> dict[str, Any]:
-    logging.info("Processing game %s", game["display_name_en"])
+    game_name = game["display_name_en"]
     game_id = game["id"]
+    log_tag = f"{game_name} ({game_id})"
+    logging.info("Processing game %s", log_tag)
     matches_path = matches_dir / f"{game_id}.arrow"
     if not matches_path.exists():
-        logging.warning("Matches file %s does not exist", matches_path)
+        logging.warning("[%s] Matches file %s does not exist", log_tag, matches_path)
         return game
 
     try:
@@ -257,9 +278,10 @@ def _game_stats(
             remove_isolated_players=remove_isolated_players,
             threshold_matches_regulars=threshold_matches_regulars,
             max_matches=max_matches,
+            log_tag=log_tag,
         )
     except Exception:
-        logging.exception("Error processing game %s", game["display_name_en"])
+        logging.exception("Error processing game %s", log_tag)
         return game
     else:
         return game | stats
