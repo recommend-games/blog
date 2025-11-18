@@ -4,15 +4,15 @@ import itertools
 import json
 import logging
 import os
+import time
 from concurrent.futures import ProcessPoolExecutor, wait, FIRST_COMPLETED
+from datetime import timedelta
 from pathlib import Path
 from typing import TYPE_CHECKING
 
 import networkx as nx
 import numpy as np
 import polars as pl
-
-import time
 
 from elo._rust import approx_optimal_k_rust, calculate_elo_ratings_rust
 from elo.utils import matches_to_arrays
@@ -367,7 +367,7 @@ def games_stats(
                             "error": True,
                         }
 
-                    file.write(json.dumps(result) + "\n")
+                    file.write(json.dumps(result, sort_keys=True) + "\n")
                     file.flush()
                     os.fsync(file.fileno())
 
@@ -397,10 +397,10 @@ def games_stats(
                         elapsed = now - started_at.get(f, now)
                         if elapsed >= warn_after:
                             logging.warning(
-                                "Long-running job: %s (%s) running for %.0fs",
+                                "Long-running job: %s (%s) running for %s",
                                 getattr(f, "game_name", "?"),
                                 getattr(f, "game_id", "?"),
-                                elapsed,
+                                timedelta(seconds=int(elapsed)),
                             )
 
     logging.info("Done.")
