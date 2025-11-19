@@ -74,9 +74,12 @@ def matches_jl_to_ipc(
 
 def _dedupe_matches_single_game(path: Path, *, delete: bool) -> None:
     files = list(path.glob("*.arrow"))
-    logging.info("Merging %d files in %s", len(files), path)
-    if not files:
+
+    if len(files) < 2:
+        logging.info("Skipping dedupe for %s; only %d file(s)", path, len(files))
         return
+
+    logging.info("Deduping %d files in %s", len(files), path)
 
     (
         pl.scan_ipc(files, memory_map=False)
@@ -201,7 +204,7 @@ def process_games() -> None:
     )
 
     matches_jl_to_ipc(
-        in_dir=csv_dir,
+        in_dir=input_dir,
         out_dir=partition_dir,
         delete=True,
         progress_bar=True,
