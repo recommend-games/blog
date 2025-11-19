@@ -1,26 +1,27 @@
 from __future__ import annotations
 
+import logging
 from datetime import datetime
-from itertools import batched
 from pathlib import Path
 
 import polars as pl
-from polars import PartitionByKey
 from tqdm import tqdm
 
 from elo.data import merge_games
 
 
-def games_jl_to_ipc() -> None:
-    in_dir = Path("results").resolve()
-    out_dir = in_dir / "arrow"
-    match_dir = out_dir / "matches"
-    out_dir.mkdir(parents=True, exist_ok=True)
-    match_dir.mkdir(parents=True, exist_ok=True)
+def _now() -> str:
+    return datetime.now().isoformat(timespec="seconds").replace(":", "-")
 
-    file_batch_size = 10
-    ts = datetime.now().replace(microsecond=0).isoformat().replace(":", "-")
-    suffix = f"{ts}-euler-"
+
+def matches_jl_to_ipc(
+    *,
+    delete_jl: bool = False,
+    progress_bar: bool = False,
+) -> None:
+    in_dir = Path("results").resolve()
+    out_dir = in_dir / "arrow" / "partitions"
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     schema: dict[str, pl.datatypes.DataType | pl.datatypes.DataTypeClass] = {
         "id": pl.String,
@@ -37,24 +38,35 @@ def games_jl_to_ipc() -> None:
         ),
         "scraped_at": pl.String,
     }
-    for i, batch in enumerate(
-        batched(
-            tqdm(in_dir.glob("matches-*.jl")),
-            file_batch_size,
-        ),
-    ):
-        df = (
-            pl.scan_ndjson(list(batch), schema=schema)
-            .with_columns(
-                pl.col("id").cast(pl.Int64),
-                pl.col("timestamp").cast(pl.Int64),
-            )
+
+    paths = list(in_dir.glob("matches-*.jl"))
+    logging.info(
+        "Processing %d match JL files in <%s> into Arrow format",
+        len(paths),
+        in_dir,
+    )
+    iterator = tqdm(paths) if progress_bar else paths
+
+    for path in iterator:
+        p_key = pl.PartitionByKey(
+            base_path=out_dir,
+            file_path=lambda ctx: f"{ctx.keys[0].str_value}/{path.stem}.arrow",
+            by="game_id",
+            include_key=True,
+        )
+
+        (
+            pl.scan_ndjson(source=path, schema=schema)
+            .with_columns(pl.col("id", "timestamp").cast(pl.Int64))
             .with_columns(
                 pl.from_epoch("timestamp").dt.convert_time_zone(time_zone="UTC"),
                 pl.col("scraped_at").str.to_datetime(time_zone="UTC"),
             )
+            .sink_ipc(path=p_key, mkdir=True)
         )
-        df.sink_ipc(out_dir / f"matches-{suffix}{i:05d}.arrow")
+
+        if delete_jl:
+            path.unlink()
 
 
 def merge_matches() -> None:
@@ -103,7 +115,7 @@ def merge_matches() -> None:
             pl.col("payoffs").list.eval(pl.element() > 0).list.any(),
         )
         .sink_ipc(
-            PartitionByKey(
+            pl.PartitionByKey(
                 base_path=match_dir,
                 file_path=lambda ctx: f"{ctx.keys[0].str_value}.arrow",
                 by="game_id",
@@ -135,6 +147,11 @@ def process_games() -> None:
         - Write the results into one CSV file per match
     """
 
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(processName)s] %(levelname)s: %(message)s",
+    )
+
     input_dir = Path("results").resolve()
     output_dir = Path("csv").resolve()
 
@@ -145,7 +162,10 @@ def process_games() -> None:
         progress_bar=True,
     )
 
-    games_jl_to_ipc()
+    matches_jl_to_ipc(
+        delete_jl=True,
+        progress_bar=True,
+    )
 
     merge_matches()
 
