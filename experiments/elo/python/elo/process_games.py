@@ -16,13 +16,11 @@ def _now() -> str:
 
 def matches_jl_to_ipc(
     *,
+    in_dir: Path | str,
+    out_dir: Path | str,
     delete_jl: bool = False,
     progress_bar: bool = False,
 ) -> None:
-    in_dir = Path("results").resolve()
-    out_dir = in_dir / "arrow" / "partitions"
-    out_dir.mkdir(parents=True, exist_ok=True)
-
     schema: dict[str, pl.datatypes.DataType | pl.datatypes.DataTypeClass] = {
         "id": pl.String,
         "timestamp": pl.String,
@@ -39,13 +37,18 @@ def matches_jl_to_ipc(
         "scraped_at": pl.String,
     }
 
+    in_dir = Path(in_dir).resolve()
+    out_dir = Path(out_dir).resolve()
+    out_dir.mkdir(parents=True, exist_ok=True)
+
     paths = list(in_dir.glob("matches-*.jl"))
+    iterator = tqdm(paths) if progress_bar else paths
     logging.info(
-        "Processing %d match JL files in <%s> into Arrow format",
+        "Processing %d match JL files from <%s> into Arrow format in <%s>",
         len(paths),
         in_dir,
+        out_dir,
     )
-    iterator = tqdm(paths) if progress_bar else paths
 
     for path in iterator:
         p_key = pl.PartitionByKey(
@@ -153,16 +156,19 @@ def process_games() -> None:
     )
 
     input_dir = Path("results").resolve()
-    output_dir = Path("csv").resolve()
+    partition_dir = input_dir / "arrow" / "partitions"
+    csv_dir = Path("csv").resolve()
 
     merge_games(
         games_path=input_dir / "games-*.jl",
-        output_path=output_dir / "games.jl",
+        output_path=csv_dir / "games.jl",
         overwrite=True,
         progress_bar=True,
     )
 
     matches_jl_to_ipc(
+        in_dir=csv_dir,
+        out_dir=partition_dir,
         delete_jl=True,
         progress_bar=True,
     )
