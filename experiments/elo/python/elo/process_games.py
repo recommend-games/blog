@@ -5,14 +5,14 @@ from itertools import batched
 from pathlib import Path
 
 import polars as pl
+from polars import PartitionByKey
 from tqdm import tqdm
 
 from elo.data import merge_games
-from elo.game_stats import games_stats
 
 
 def games_jl_to_ipc() -> None:
-    in_dir = Path("../results").resolve()
+    in_dir = Path("results").resolve()
     out_dir = in_dir / "arrow"
     match_dir = out_dir / "matches"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -58,53 +58,60 @@ def games_jl_to_ipc() -> None:
 
 
 def merge_matches() -> None:
-    in_dir = Path("../results").resolve()
+    in_dir = Path("results").resolve()
     out_dir = in_dir / "arrow"
-    match_dir = out_dir / "matches"
+    match_dir = out_dir / "matches" / "new"
     out_dir.mkdir(parents=True, exist_ok=True)
     match_dir.mkdir(parents=True, exist_ok=True)
 
     exclude_games = frozenset(
         {
+            1,
+            10,
+            11,
             49,  # Yahtzee
             1467,  # Azul
         }
     )
 
-    matches = (
+    (
         pl.scan_ipc(out_dir / "matches-*.arrow")
-        .select("id", "game_id", "players")
-        .filter(~pl.col("game_id").is_in(exclude_games))
-    )
-
-    game_ids = matches.select(pl.col("game_id").unique()).collect()["game_id"]
-
-    for game_id in tqdm(game_ids):
-        match_data = (
-            matches.filter(pl.col("game_id") == game_id)
-            .drop("game_id")
-            .unique("id", keep="any")
-            .select(
-                num_players=pl.col("players").list.len(),
-                player_ids=pl.col("players").list.eval(
-                    pl.element().struct.field("player_id")
-                ),
-                places=pl.col("players").list.eval(pl.element().struct.field("place")),
-            )
-            .filter(pl.col("num_players") >= 2)
-            .filter(
-                pl.col("player_ids").list.eval(pl.element().is_not_null()).list.all()
-            )
-            .filter(
-                pl.col("places")
-                .list.eval(pl.element().is_not_null() & (pl.element() >= 1))
-                .list.all()
-            )
-            .with_columns(payoffs=pl.col("places").list.eval(pl.len() - pl.element()))
-            .filter(pl.col("payoffs").list.eval(pl.element() >= 0).list.all())
-            .filter(pl.col("payoffs").list.eval(pl.element() > 0).list.any())
+        .select("id", "game_id", "players", "scraped_at")
+        .remove(pl.col("game_id").is_in(exclude_games))
+        # Deduplicate per (id, game_id); keep an arbitrary row for each group (streaming-friendly)
+        .group_by("id", "game_id")
+        .agg(pl.all().first())
+        # Derive per-match features
+        .select(
+            "game_id",
+            num_players=pl.col("players").list.len(),
+            player_ids=pl.col("players").list.eval(
+                pl.element().struct.field("player_id")
+            ),
+            places=pl.col("players").list.eval(pl.element().struct.field("place")),
         )
-        match_data.sink_ipc(match_dir / f"{game_id}.arrow")
+        .filter(
+            pl.col("num_players") >= 2,
+            pl.col("player_ids").list.eval(pl.element().is_not_null()).list.all(),
+            pl.col("places")
+            .list.eval(pl.element().is_not_null() & (pl.element() >= 1))
+            .list.all(),
+        )
+        .with_columns(payoffs=pl.col("places").list.eval(pl.len() - pl.element()))
+        .filter(
+            pl.col("payoffs").list.eval(pl.element() >= 0).list.all(),
+            pl.col("payoffs").list.eval(pl.element() > 0).list.any(),
+        )
+        .sink_ipc(
+            PartitionByKey(
+                base_path=match_dir,
+                file_path=lambda ctx: f"{ctx.keys[0].str_value}.arrow",
+                by="game_id",
+                include_key=False,
+            ),
+            mkdir=True,
+        )
+    )
 
 
 def process_games() -> None:
@@ -142,10 +149,14 @@ def process_games() -> None:
 
     merge_matches()
 
-    games_stats(
-        games_path=output_dir / "games.jl",
-        matches_dir="results/arrow/matches",
-        output_path=output_dir / "games_stats.jl",
-        remove_isolated_players=True,
-        threshold_matches_regulars=25,
-    )
+    # games_stats(
+    #     games_path=output_dir / "games.jl",
+    #     matches_dir="results/arrow/matches",
+    #     output_path=output_dir / "games_stats.jl",
+    #     remove_isolated_players=True,
+    #     threshold_matches_regulars=25,
+    # )
+
+
+if __name__ == "__main__":
+    process_games()
