@@ -8,6 +8,7 @@ import polars as pl
 from tqdm import tqdm
 
 from elo.data import merge_games
+from elo.game_stats import games_stats
 
 
 def _now() -> str:
@@ -213,13 +214,13 @@ def process_games() -> None:
         matches_dir=matches_dir,
     )
 
-    # games_stats(
-    #     games_path=output_dir / "games.jl",
-    #     matches_dir="results/arrow/matches",
-    #     output_path=output_dir / "games_stats.jl",
-    #     remove_isolated_players=True,
-    #     threshold_matches_regulars=25,
-    # )
+    games_stats(
+        games_path=csv_dir / "games.jl",
+        matches_dir=matches_dir,
+        output_path=csv_dir / "games_stats.jl",
+        remove_isolated_players=True,
+        threshold_matches_regulars=25,
+    )
 
 
 if __name__ == "__main__":
