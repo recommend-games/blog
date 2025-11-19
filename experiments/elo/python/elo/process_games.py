@@ -109,61 +109,52 @@ def dedupe_matches(partitions_dir: Path | str, *, delete: bool = False) -> None:
         _dedupe_matches_single_game(game_dir, delete=delete)
 
 
-def merge_matches() -> None:
-    in_dir = Path("results").resolve()
-    out_dir = in_dir / "arrow"
-    match_dir = out_dir / "matches" / "new"
-    out_dir.mkdir(parents=True, exist_ok=True)
-    match_dir.mkdir(parents=True, exist_ok=True)
+def merge_matches(
+    partitions_dir: Path | str,
+    matches_dir: Path | str,
+) -> None:
+    partitions_dir = Path(partitions_dir).resolve()
+    matches_dir = Path(matches_dir).resolve()
+    matches_dir.mkdir(parents=True, exist_ok=True)
 
-    exclude_games = frozenset(
-        {
-            1,
-            10,
-            11,
-            49,  # Yahtzee
-            1467,  # Azul
-        }
-    )
+    for match_dir in partitions_dir.iterdir():
+        if not match_dir.is_dir():
+            continue
 
-    (
-        pl.scan_ipc(out_dir / "matches-*.arrow")
-        .select("id", "game_id", "players", "scraped_at")
-        .remove(pl.col("game_id").is_in(exclude_games))
-        # Deduplicate per (id, game_id); keep an arbitrary row for each group (streaming-friendly)
-        .group_by("id", "game_id")
-        .agg(pl.all().first())
-        # Derive per-match features
-        .select(
-            "game_id",
-            num_players=pl.col("players").list.len(),
-            player_ids=pl.col("players").list.eval(
-                pl.element().struct.field("player_id")
-            ),
-            places=pl.col("players").list.eval(pl.element().struct.field("place")),
+        match_path = matches_dir / f"{match_dir.name}.arrow"
+        logging.info(
+            "Merging matches from <%s> into <%s>",
+            match_dir,
+            match_path,
         )
-        .filter(
-            pl.col("num_players") >= 2,
-            pl.col("player_ids").list.eval(pl.element().is_not_null()).list.all(),
-            pl.col("places")
-            .list.eval(pl.element().is_not_null() & (pl.element() >= 1))
-            .list.all(),
+
+        (
+            pl.scan_ipc(match_dir / "matches-*.arrow")
+            .select("id", "players", "timestamp", "scraped_at")
+            .group_by("id")
+            .agg(pl.all().sort_by("timestamp", "scraped_at").last())
+            .sort("timestamp")
+            .select(
+                num_players=pl.col("players").list.len(),
+                player_ids=pl.col("players").list.eval(
+                    pl.element().struct.field("player_id")
+                ),
+                places=pl.col("players").list.eval(pl.element().struct.field("place")),
+            )
+            .filter(
+                pl.col("num_players") >= 2,
+                pl.col("player_ids").list.eval(pl.element().is_not_null()).list.all(),
+                pl.col("places")
+                .list.eval(pl.element().is_not_null() & (pl.element() >= 1))
+                .list.all(),
+            )
+            .with_columns(payoffs=pl.col("places").list.eval(pl.len() - pl.element()))
+            .filter(
+                pl.col("payoffs").list.eval(pl.element() >= 0).list.all(),
+                pl.col("payoffs").list.eval(pl.element() > 0).list.any(),
+            )
+            .sink_ipc(match_path)
         )
-        .with_columns(payoffs=pl.col("places").list.eval(pl.len() - pl.element()))
-        .filter(
-            pl.col("payoffs").list.eval(pl.element() >= 0).list.all(),
-            pl.col("payoffs").list.eval(pl.element() > 0).list.any(),
-        )
-        .sink_ipc(
-            pl.PartitionByKey(
-                base_path=match_dir,
-                file_path=lambda ctx: f"{ctx.keys[0].str_value}.arrow",
-                by="game_id",
-                include_key=False,
-            ),
-            mkdir=True,
-        )
-    )
 
 
 def process_games() -> None:
@@ -193,7 +184,9 @@ def process_games() -> None:
     )
 
     input_dir = Path("results").resolve()
-    partition_dir = input_dir / "arrow" / "partitions"
+    arrow_dir = input_dir / "arrow"
+    partition_dir = arrow_dir / "partitions"
+    matches_dir = arrow_dir / "matches"
     csv_dir = Path("csv").resolve()
 
     merge_games(
@@ -215,7 +208,10 @@ def process_games() -> None:
         delete=True,
     )
 
-    merge_matches()
+    merge_matches(
+        partitions_dir=partition_dir,
+        matches_dir=matches_dir,
+    )
 
     # games_stats(
     #     games_path=output_dir / "games.jl",
