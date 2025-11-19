@@ -18,7 +18,7 @@ def matches_jl_to_ipc(
     *,
     in_dir: Path | str,
     out_dir: Path | str,
-    delete_jl: bool = False,
+    delete: bool = False,
     progress_bar: bool = False,
 ) -> None:
     schema: dict[str, pl.datatypes.DataType | pl.datatypes.DataTypeClass] = {
@@ -68,8 +68,42 @@ def matches_jl_to_ipc(
             .sink_ipc(path=p_key, mkdir=True)
         )
 
-        if delete_jl:
+        if delete:
             path.unlink()
+
+
+def _dedupe_matches_single_game(path: Path, *, delete: bool) -> None:
+    files = list(path.glob("*.arrow"))
+    logging.info("Merging %d files in %s", len(files), path)
+    if not files:
+        return
+
+    (
+        pl.scan_ipc(files, memory_map=False)
+        .group_by("id")
+        .agg(pl.all().sort_by("timestamp", "scraped_at").last())
+        .sink_ipc(path / f"matches-{_now()}-merged.arrow")
+    )
+
+    if not delete:
+        return
+
+    for file in files:
+        file.unlink()
+
+
+def dedupe_matches(partitions_dir: Path | str, *, delete: bool = False) -> None:
+    partitions_dir = Path(partitions_dir).resolve()
+    game_dirs = [d for d in partitions_dir.iterdir() if d.is_dir()]
+
+    logging.info(
+        "Deduping matches in %d game dirs in %s",
+        len(game_dirs),
+        partitions_dir,
+    )
+
+    for game_dir in game_dirs:
+        _dedupe_matches_single_game(game_dir, delete=delete)
 
 
 def merge_matches() -> None:
@@ -169,8 +203,13 @@ def process_games() -> None:
     matches_jl_to_ipc(
         in_dir=csv_dir,
         out_dir=partition_dir,
-        delete_jl=True,
+        delete=True,
         progress_bar=True,
+    )
+
+    dedupe_matches(
+        partitions_dir=partition_dir,
+        delete=True,
     )
 
     merge_matches()
