@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import itertools
-import json
 import logging
 import os
 import time
@@ -305,40 +304,101 @@ def _elo_stats_for_regular_players(
     )
 
 
-def _games_stats(
+def games_stats(
     *,
-    executor: ProcessPoolExecutor,
     games_path: Path | str,
     matches_dir: Path | str,
+    output_dir: Path | str,
     remove_isolated_players: bool = True,
     max_players: int | None = 12,
     max_matches: int | None = None,
-    threshold_matches_regulars: int = 25,
-) -> Generator[Future[dict[str, Any]]]:
+    max_threshold_matches_regulars: int = 100,
+) -> None:
     games_path = Path(games_path).resolve()
     matches_dir = Path(matches_dir).resolve()
+    output_dir = Path(output_dir).resolve()
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     logging.info("Reading games from %s", games_path)
     logging.info("Reading matches from %s", matches_dir)
+    logging.info("Writing games stats to %s", output_dir)
 
-    games = pl.read_ndjson(games_path)
-    games_dicts = games.to_dicts()
-    logging.info("Loaded %d games", len(games_dicts))
+    games = dict(
+        pl.scan_ndjson(games_path)
+        .select("id", "display_name_en")
+        .select(pl.all().cast(pl.String))
+        .collect()
+        .iter_rows()
+    )
+    logging.info("Loaded %d games", len(games))
 
-    for game in games_dicts:
-        fut = executor.submit(
-            game_stats_and_elo_distribution,
-            game=game,
+    with ProcessPoolExecutor(initializer=_init_worker) as executor:
+        futures = _game_stats_futures(
+            executor=executor,
             matches_dir=matches_dir,
+            output_dir=output_dir,
+            games=games,
             remove_isolated_players=remove_isolated_players,
             max_players=max_players,
             max_matches=max_matches,
-            threshold_matches_regulars=threshold_matches_regulars,
+            max_threshold_matches_regulars=max_threshold_matches_regulars,
         )
-        # Attach identifiers for periodic logging
-        setattr(fut, "game_id", game.get("id"))
-        setattr(fut, "game_name", game.get("display_name_en"))
-        yield fut
+
+        # Collect all submitted futures so we can monitor periodically.
+        pending = set(futures)
+        # Record start times only when a future actually begins running.
+        started_at: dict[Future, float] = {}
+        report_interval = int(os.getenv("PENDING_LOG_INTERVAL_SEC", "60"))
+        warn_after = int(os.getenv("PENDING_WARN_AFTER_SEC", "600"))
+
+        while pending:
+            done, not_done = wait(
+                pending,
+                timeout=report_interval,
+                return_when=FIRST_COMPLETED,
+            )
+
+            # Write completed results immediately
+            for future in done:
+                logging.info(
+                    "Completed stats for %s (%s)",
+                    getattr(future, "game_name", "?"),
+                    getattr(future, "game_id", "?"),
+                )
+
+            # Update the pending set
+            pending = not_done
+
+            if pending:
+                now = time.monotonic()
+                running = [f for f in pending if f.running() and not f.done()]
+                queued = [f for f in pending if not f.running() and not f.done()]
+                # Stamp start time on first transition to running
+                for f in running:
+                    if f not in started_at:
+                        started_at[f] = now
+
+                # Heartbeat shows only actively running tasks
+                names = [getattr(f, "game_name", "?") for f in running[:10]]
+                logging.info(
+                    "In progress: %d running, %d queued%s",
+                    len(running),
+                    len(queued),
+                    f" — running (up to 10): {', '.join(names)}" if names else "",
+                )
+
+                # Warn about long-runners (only for actually running tasks)
+                for f in running:
+                    elapsed = now - started_at.get(f, now)
+                    if elapsed >= warn_after:
+                        logging.warning(
+                            "Long-running job: %s (%s) running for %s",
+                            getattr(f, "game_name", "?"),
+                            getattr(f, "game_id", "?"),
+                            timedelta(seconds=int(elapsed)),
+                        )
+
+    logging.info("Done.")
 
 
 def _init_worker(name: str | None = None) -> None:
@@ -353,125 +413,53 @@ def _init_worker(name: str | None = None) -> None:
     )
 
 
-def games_stats(
-    *,
-    games_path: Path | str,
-    matches_dir: Path | str,
-    output_path: Path | str,
-    remove_isolated_players: bool = True,
-    max_players: int | None = 12,
-    max_matches: int | None = None,
-    threshold_matches_regulars: int = 25,
-) -> None:
-    output_path = Path(output_path).resolve()
-    output_path.parent.mkdir(parents=True, exist_ok=True)
+def _game_stats_futures(
+    executor: ProcessPoolExecutor,
+    matches_dir: Path,
+    output_dir: Path,
+    games: dict[str, str],
+    remove_isolated_players: bool,
+    max_players: int | None,
+    max_matches: int | None,
+    max_threshold_matches_regulars: int,
+) -> Generator[Future]:
+    for matches_path in matches_dir.glob("*.arrow"):
+        if not matches_path.is_file():
+            continue
 
-    with ProcessPoolExecutor(initializer=_init_worker) as executor:
-        futures = _games_stats(
-            executor=executor,
-            games_path=games_path,
-            matches_dir=matches_dir,
+        game_id = matches_path.stem
+        game_name = games.get(game_id) or "?"
+        output_path = output_dir / f"{game_id}.csv"
+
+        future = executor.submit(
+            game_stats_and_elo_distribution,
+            matches_path=matches_path,
+            output_path=output_path,
+            game_name=game_name,
             remove_isolated_players=remove_isolated_players,
             max_players=max_players,
             max_matches=max_matches,
-            threshold_matches_regulars=threshold_matches_regulars,
+            max_threshold_matches_regulars=max_threshold_matches_regulars,
         )
-        logging.info("Writing games stats to %s", output_path)
 
-        # Collect all submitted futures so we can monitor periodically.
-        pending = set(futures)
-        # Record start times only when a future actually begins running.
-        started_at: dict[Future, float] = {}
-        report_interval = int(os.getenv("PENDING_LOG_INTERVAL_SEC", "60"))
-        warn_after = int(os.getenv("PENDING_WARN_AFTER_SEC", "600"))
+        setattr(future, "game_id", game_id)
+        setattr(future, "game_name", game_name)
 
-        with output_path.open("w", buffering=1) as file:
-            while pending:
-                done, not_done = wait(
-                    pending,
-                    timeout=report_interval,
-                    return_when=FIRST_COMPLETED,
-                )
-
-                # Write completed results immediately
-                for future in done:
-                    try:
-                        result = future.result()
-
-                    except Exception:
-                        logging.exception(
-                            "Worker failed for %s (%s)",
-                            getattr(future, "game_name", "?"),
-                            getattr(future, "game_id", "?"),
-                        )
-                        # Write a minimal record so downstream knows this game failed
-                        result = {
-                            "id": getattr(future, "game_id", None),
-                            "display_name_en": getattr(future, "game_name", None),
-                            "num_all_matches": None,
-                            "num_connected_matches": None,
-                            "num_all_players": None,
-                            "num_connected_players": None,
-                            "remove_isolated_players": remove_isolated_players,
-                            "threshold_matches_regulars": threshold_matches_regulars,
-                        }
-
-                    result_json = json.dumps(
-                        obj=result,
-                        sort_keys=True,
-                        separators=(",", ":"),
-                    )
-                    file.write(f"{result_json}\n")
-                    file.flush()
-                    os.fsync(file.fileno())
-
-                # Update the pending set
-                pending = not_done
-
-                if pending:
-                    now = time.monotonic()
-                    running = [f for f in pending if f.running() and not f.done()]
-                    queued = [f for f in pending if not f.running() and not f.done()]
-                    # Stamp start time on first transition to running
-                    for f in running:
-                        if f not in started_at:
-                            started_at[f] = now
-
-                    # Heartbeat shows only actively running tasks
-                    names = [getattr(f, "game_name", "?") for f in running[:10]]
-                    logging.info(
-                        "In progress: %d running, %d queued%s",
-                        len(running),
-                        len(queued),
-                        f" — running (up to 10): {', '.join(names)}" if names else "",
-                    )
-
-                    # Warn about long-runners (only for actually running tasks)
-                    for f in running:
-                        elapsed = now - started_at.get(f, now)
-                        if elapsed >= warn_after:
-                            logging.warning(
-                                "Long-running job: %s (%s) running for %s",
-                                getattr(f, "game_name", "?"),
-                                getattr(f, "game_id", "?"),
-                                timedelta(seconds=int(elapsed)),
-                            )
-
-    logging.info("Done.")
+        yield future
 
 
-def _main():
+def main():
     _init_worker()
     games_stats(
         games_path="csv/games.jl",
         matches_dir="results/arrow/matches",
-        output_path="csv/games_stats.jl",
+        output_dir="csv/game_stats",
         remove_isolated_players=True,
         max_players=12,
         max_matches=None,
-        threshold_matches_regulars=25,
+        max_threshold_matches_regulars=100,
     )
 
 
 if __name__ == "__main__":
-    _main()
+    main()
