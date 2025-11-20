@@ -23,6 +23,182 @@ if TYPE_CHECKING:
     from typing import Any
 
 
+def game_stats_and_elo_distribution(
+    *,
+    matches_path: Path | str,
+    output_path: Path | str,
+    game_name: str | None = None,
+    remove_isolated_players: bool = True,
+    max_players: int | None = 12,
+    max_matches: int | None = None,
+    max_threshold_matches_regulars: int = 100,
+) -> None:
+    matches_path = Path(matches_path).resolve()
+    output_path = Path(output_path).resolve()
+
+    game_name = game_name or "?"
+    game_id = matches_path.stem
+    log_tag = f"[{game_name} ({game_id})] "
+
+    logging.info(
+        "%sReading matches from <%s>, writing stats to <%s>",
+        log_tag,
+        matches_path,
+        output_path,
+    )
+
+    if not matches_path.exists():
+        logging.warning("%sMatches file <%s> does not exist", log_tag, matches_path)
+        return
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    try:
+        result_lazy = _game_stats_and_elo_distribution(
+            matches_path=matches_path,
+            remove_isolated_players=remove_isolated_players,
+            max_threshold_matches_regulars=max_threshold_matches_regulars,
+            max_players=max_players,
+            max_matches=max_matches,
+            log_tag=log_tag,
+        )
+
+    except Exception:
+        logging.exception("%sError while processing", log_tag)
+        return
+
+    if result_lazy is None:
+        logging.warning("%sNo game stats calculated", log_tag)
+        return
+
+    result = result_lazy.collect()
+
+    logging.info(
+        "%sGame stats calculated for %d thresholds",
+        log_tag,
+        max_threshold_matches_regulars,
+    )
+
+    logging.info("%sWriting game stats to <%s>", log_tag, output_path)
+    result.write_csv(
+        file=output_path,
+        include_header=True,
+        float_precision=3,
+    )
+
+
+def _game_stats_and_elo_distribution(
+    *,
+    matches_path: Path,
+    remove_isolated_players: bool,
+    max_players: int | None,
+    max_matches: int | None,
+    max_threshold_matches_regulars: int,
+    log_tag: str = "",
+) -> pl.LazyFrame | None:
+    data = pl.scan_ipc(matches_path, memory_map=True).filter(
+        pl.col("payoffs").list.eval(pl.element() >= 0).list.all(),
+        pl.col("payoffs").list.eval(pl.element() > 0).list.any(),
+    )
+
+    if max_players:
+        data = data.filter(pl.col("num_players") <= max_players)
+
+    num_all_matches, num_all_players = _match_and_player_count(data)
+    logging.info(
+        "%sLoaded %d matches with %d players",
+        log_tag,
+        num_all_matches,
+        num_all_players,
+    )
+
+    if not num_all_matches:
+        logging.warning("%sNo matches found in %s", log_tag, matches_path)
+        return None
+
+    if remove_isolated_players:
+        data = _remove_isolated_players(data=data, log_tag=log_tag)
+
+    num_connected_matches, num_connected_players = _match_and_player_count(data)
+    logging.info(
+        "%sAfter removing isolated players: %d matches with %d players",
+        log_tag,
+        num_connected_matches,
+        num_connected_players,
+    )
+
+    if not num_connected_matches:
+        logging.warning(
+            "%sNo connected matches found in %s after removing isolated players",
+            log_tag,
+            matches_path,
+        )
+        return None  # TODO: Write stats so far?
+
+    if max_matches is not None and num_connected_matches > max_matches:
+        logging.warning(
+            "%sToo many matches (%d>%d), skipping Elo calculation.",
+            log_tag,
+            num_connected_matches,
+            max_matches,
+        )
+        return None  # TODO: Write stats so far?
+
+    elo_k, elo_scale, two_player_only, elo_ratings = _optimal_k_and_elo_ratings(
+        data=data,
+        log_tag=log_tag,
+    )
+    elo_df = pl.LazyFrame(
+        data={
+            "player_id": list(elo_ratings.keys()),
+            "elo_rating": list(elo_ratings.values()),
+        },
+    )
+    matches_per_player = (
+        data.select(pl.col("player_ids").explode().value_counts())
+        .unnest("player_ids")
+        .select(player_id="player_ids", num_matches="count")
+    )
+    player_info = matches_per_player.join(elo_df, on="player_id", how="inner")
+    # TODO: Save the full Elo ratings per player somewhere?
+
+    return (
+        pl.concat(
+            _elo_stats_for_regular_players(
+                data=player_info,
+                threshold_matches_regulars=threshold_matches_regulars,
+            )
+            for threshold_matches_regulars in range(
+                1, max_threshold_matches_regulars + 1
+            )
+        )
+        .with_columns(
+            num_all_matches=pl.lit(num_all_matches),
+            num_connected_matches=pl.lit(num_connected_matches),
+            num_all_players=pl.lit(num_all_players),
+            num_connected_players=pl.lit(num_connected_players),
+            elo_k=pl.lit(elo_k),
+            elo_scale=pl.lit(elo_scale),
+            two_player_only=pl.lit(two_player_only),
+            remove_isolated_players=pl.lit(remove_isolated_players),
+            threshold_matches_regulars=pl.arange(1, max_threshold_matches_regulars + 1),
+        )
+        .sort("threshold_matches_regulars")
+    )
+
+
+def _match_and_player_count(data: pl.LazyFrame) -> tuple[int, int]:
+    stats = (
+        data.select(
+            num_matches=pl.len(),
+            num_players=pl.col("player_ids").explode().n_unique(),
+        )
+        .collect()
+        .to_dicts()[0]
+    )
+    return stats["num_matches"], stats["num_players"]
+
+
 def _remove_isolated_players(data: pl.LazyFrame, log_tag: str = "") -> pl.LazyFrame:
     logging.info("%sRemoving isolated players…", log_tag)
 
@@ -42,25 +218,7 @@ def _remove_isolated_players(data: pl.LazyFrame, log_tag: str = "") -> pl.LazyFr
     )
 
 
-def _match_and_player_count(data: pl.LazyFrame) -> tuple[int, int]:
-    stats = (
-        data.select(
-            num_matches=pl.len(),
-            num_players=pl.col("player_ids").explode().n_unique(),
-        )
-        .collect()
-        .to_dicts()[0]
-    )
-    return stats["num_matches"], stats["num_players"]
-
-
-def _pl_to_matches(data: pl.LazyFrame) -> Iterable[dict[Any, float]]:
-    match_rows = data.select("player_ids", "payoffs").collect().iter_rows(named=True)
-    for row in match_rows:
-        yield dict(zip(row["player_ids"], row["payoffs"]))
-
-
-def _elo_distribution(
+def _optimal_k_and_elo_ratings(
     data: pl.LazyFrame,
     *,
     elo_k: float | None = None,
@@ -120,176 +278,31 @@ def _elo_distribution(
     return elo_k, elo_scale, two_player_only, elo_ratings_dict
 
 
-def game_stats(
-    matches_path: Path | str,
-    *,
-    remove_isolated_players: bool = True,
-    max_players: int | None = 12,
-    max_matches: int | None = None,
+def _pl_to_matches(data: pl.LazyFrame) -> Iterable[dict[Any, float]]:
+    match_rows = data.select("player_ids", "payoffs").collect().iter_rows(named=True)
+    for row in match_rows:
+        yield dict(zip(row["player_ids"], row["payoffs"]))
+
+
+def _elo_stats_for_regular_players(
+    data: pl.LazyFrame,
     threshold_matches_regulars: int = 25,
-    log_tag: str | None = None,
-) -> dict[str, int]:
-    log_tag = f"[{log_tag}] " if log_tag else ""
-
-    matches_path = Path(matches_path).resolve()
-    logging.info("%sReading matches from %s", log_tag, matches_path)
-
-    data = (
-        pl.scan_ipc(matches_path, memory_map=True)
-        .filter(pl.col("payoffs").list.eval(pl.element() >= 0).list.all())
-        .filter(pl.col("payoffs").list.eval(pl.element() > 0).list.any())
+) -> pl.LazyFrame:
+    return data.filter(pl.col("num_matches") >= threshold_matches_regulars).select(
+        num_regular_players=pl.len(),
+        num_max_matches=pl.max("num_matches"),
+        mean=pl.mean("elo_rating"),
+        std_dev=pl.std("elo_rating"),
+        p00=pl.min("elo_rating"),
+        p01=pl.quantile("elo_rating", 0.01),
+        p05=pl.quantile("elo_rating", 0.05),
+        p25=pl.quantile("elo_rating", 0.25),
+        p50=pl.median("elo_rating"),
+        p75=pl.quantile("elo_rating", 0.75),
+        p95=pl.quantile("elo_rating", 0.95),
+        p99=pl.quantile("elo_rating", 0.99),
+        p100=pl.max("elo_rating"),
     )
-    if max_players:
-        data = data.filter(pl.col("num_players") <= max_players)
-    num_all_matches, num_all_players = _match_and_player_count(data)
-    logging.info(
-        "%sLoaded %d matches with %d players",
-        log_tag,
-        num_all_matches,
-        num_all_players,
-    )
-
-    if not num_all_matches:
-        logging.warning("%sNo matches found in %s", log_tag, matches_path)
-        return {
-            "num_all_matches": 0,
-            "num_connected_matches": 0,
-            "num_all_players": 0,
-            "num_connected_players": 0,
-            "remove_isolated_players": remove_isolated_players,
-            "threshold_matches_regulars": threshold_matches_regulars,
-        }
-
-    if remove_isolated_players:
-        data = _remove_isolated_players(data=data, log_tag=log_tag)
-    num_connected_matches, num_connected_players = _match_and_player_count(data)
-    logging.info(
-        "%sAfter removing isolated players: %d matches with %d players",
-        log_tag,
-        num_connected_matches,
-        num_connected_players,
-    )
-
-    if not num_connected_matches:
-        logging.warning(
-            "%sNo connected matches found in %s after removing isolated players",
-            log_tag,
-            matches_path,
-        )
-        return {
-            "num_all_matches": num_all_matches,
-            "num_connected_matches": 0,
-            "num_all_players": num_all_players,
-            "num_connected_players": 0,
-            "remove_isolated_players": remove_isolated_players,
-            "threshold_matches_regulars": threshold_matches_regulars,
-        }
-
-    if max_matches is not None and num_connected_matches > max_matches:
-        logging.warning(
-            "%sToo many matches (%d>%d), skipping Elo calculation.",
-            log_tag,
-            num_connected_matches,
-            max_matches,
-        )
-        return {
-            "num_all_matches": num_all_matches,
-            "num_connected_matches": num_connected_matches,
-            "num_all_players": num_all_players,
-            "num_connected_players": num_connected_players,
-            "remove_isolated_players": remove_isolated_players,
-            "threshold_matches_regulars": threshold_matches_regulars,
-        }
-
-    elo_k, elo_scale, two_player_only, elo_ratings = _elo_distribution(
-        data=data,
-        log_tag=log_tag,
-    )
-    elo_df = pl.LazyFrame(
-        data={
-            "player_id": list(elo_ratings.keys()),
-            "elo_rating": list(elo_ratings.values()),
-        },
-    )
-    matches_per_player = (
-        data.select(pl.col("player_ids").explode().value_counts())
-        .unnest("player_ids")
-        .select(player_id="player_ids", num_matches="count")
-    )
-    player_info = matches_per_player.join(elo_df, on="player_id", how="inner")
-    # TODO: Save the full Elo ratings per player somewhere?
-
-    result = (
-        player_info.filter(pl.col("num_matches") >= threshold_matches_regulars)
-        .select(
-            num_regular_players=pl.len(),
-            num_max_matches=pl.max("num_matches"),
-            mean=pl.mean("elo_rating"),
-            std_dev=pl.std("elo_rating"),
-            p00=pl.min("elo_rating"),
-            p01=pl.quantile("elo_rating", 0.01),
-            p05=pl.quantile("elo_rating", 0.05),
-            p25=pl.quantile("elo_rating", 0.25),
-            p50=pl.median("elo_rating"),
-            p75=pl.quantile("elo_rating", 0.75),
-            p95=pl.quantile("elo_rating", 0.95),
-            p99=pl.quantile("elo_rating", 0.99),
-            p100=pl.max("elo_rating"),
-        )
-        .collect()
-        .to_dicts()[0]
-    )
-    logging.info(
-        "%sGame stats calculated for %d regular players",
-        log_tag,
-        result["num_regular_players"],
-    )
-
-    return result | {
-        "num_all_matches": num_all_matches,
-        "num_connected_matches": num_connected_matches,
-        "num_all_players": num_all_players,
-        "num_connected_players": num_connected_players,
-        "elo_k": elo_k,
-        "elo_scale": elo_scale,
-        "two_player_only": two_player_only,
-        "remove_isolated_players": remove_isolated_players,
-        "threshold_matches_regulars": threshold_matches_regulars,
-    }
-
-
-def _game_stats(
-    *,
-    game: dict[str, Any],
-    matches_dir: Path,
-    remove_isolated_players: bool = True,
-    max_players: int | None = 12,
-    max_matches: int | None = None,
-    threshold_matches_regulars: int = 25,
-) -> dict[str, Any]:
-    game_name = game["display_name_en"]
-    game_id = game["id"]
-    log_tag = f"{game_name} ({game_id})"
-    logging.info("Processing game %s", log_tag)
-    matches_path = matches_dir / f"{game_id}.arrow"
-    if not matches_path.exists():
-        logging.warning("[%s] Matches file %s does not exist", log_tag, matches_path)
-        return game
-
-    try:
-        stats = game_stats(
-            matches_path=matches_path,
-            remove_isolated_players=remove_isolated_players,
-            threshold_matches_regulars=threshold_matches_regulars,
-            max_players=max_players,
-            max_matches=max_matches,
-            log_tag=log_tag,
-        )
-    except Exception:
-        logging.exception("Error processing game %s", log_tag)
-        return game
-    else:
-        return game | stats
 
 
 def _games_stats(
@@ -314,7 +327,7 @@ def _games_stats(
 
     for game in games_dicts:
         fut = executor.submit(
-            _game_stats,
+            game_stats_and_elo_distribution,
             game=game,
             matches_dir=matches_dir,
             remove_isolated_players=remove_isolated_players,
