@@ -333,7 +333,15 @@ def games_stats(
     )
     logging.info("Loaded %d games", len(games))
 
-    with ProcessPoolExecutor(initializer=_init_worker) as executor:
+    cpu_count = os.cpu_count() or 2
+    max_workers = cpu_count // 2
+    logging.info("Using up to %d workers (of %d CPUs)", max_workers, cpu_count)
+
+    with ProcessPoolExecutor(
+        max_workers=max_workers,
+        max_tasks_per_child=3,
+        initializer=_init_worker,
+    ) as executor:
         futures = _game_stats_futures(
             executor=executor,
             matches_dir=matches_dir,
