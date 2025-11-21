@@ -339,7 +339,6 @@ def games_stats(
 
     with ProcessPoolExecutor(
         max_workers=max_workers,
-        max_tasks_per_child=3,
         initializer=_init_worker,
     ) as executor:
         futures = _game_stats_futures(
@@ -467,7 +466,7 @@ def main():
         matches_dir="results/arrow/matches",
         output_dir="csv/game_stats",
         remove_isolated_players=True,
-        max_players=12,
+        max_players=6,
         max_matches=None,
         max_threshold_matches_regulars=100,
     )
