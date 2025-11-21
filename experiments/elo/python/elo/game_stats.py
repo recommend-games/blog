@@ -82,7 +82,7 @@ def game_stats_and_elo_distribution(
     result.write_csv(
         file=output_path,
         include_header=True,
-        float_precision=3,
+        float_precision=1,
     )
 
 
