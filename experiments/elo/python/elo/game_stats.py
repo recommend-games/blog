@@ -3,6 +3,7 @@ from __future__ import annotations
 import itertools
 import logging
 import os
+import random
 import time
 from concurrent.futures import ProcessPoolExecutor, wait, FIRST_COMPLETED
 from datetime import timedelta
@@ -423,7 +424,10 @@ def _game_stats_futures(
     max_matches: int | None,
     max_threshold_matches_regulars: int,
 ) -> Generator[Future]:
-    for matches_path in matches_dir.glob("*.arrow"):
+    matches_paths = list(matches_dir.glob("*.arrow"))
+    random.shuffle(matches_paths)
+
+    for matches_path in matches_paths:
         if not matches_path.is_file():
             continue
 
