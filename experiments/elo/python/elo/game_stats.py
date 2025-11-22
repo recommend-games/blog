@@ -54,7 +54,7 @@ def game_stats_and_elo_distribution(
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     try:
-        result_lazy = _game_stats_and_elo_distribution(
+        result = _game_stats_and_elo_distribution(
             matches_path=matches_path,
             remove_isolated_players=remove_isolated_players,
             max_threshold_matches_regulars=max_threshold_matches_regulars,
@@ -67,11 +67,9 @@ def game_stats_and_elo_distribution(
         logging.exception("%sError while processing", log_tag)
         return
 
-    if result_lazy is None:
+    if result is None:
         logging.warning("%sNo game stats calculated", log_tag)
         return
-
-    result = result_lazy.collect()
 
     logging.info(
         "%sGame stats calculated for %d thresholds",
@@ -95,7 +93,7 @@ def _game_stats_and_elo_distribution(
     max_matches: int | None,
     max_threshold_matches_regulars: int,
     log_tag: str = "",
-) -> pl.LazyFrame | None:
+) -> pl.DataFrame | None:
     data = pl.scan_ipc(matches_path, memory_map=True).filter(
         pl.col("payoffs").list.eval(pl.element() >= 0).list.all(),
         pl.col("payoffs").list.eval(pl.element() > 0).list.any(),
@@ -161,21 +159,16 @@ def _game_stats_and_elo_distribution(
     )
     player_info = matches_per_player.join(elo_df, on="player_id", how="inner")
     # TODO: Save the full Elo ratings per player somewhere?
+    elo_distributions = [
+        _elo_stats_for_regular_players(
+            data=player_info,
+            threshold_matches_regulars=threshold_matches_regulars,
+        ).collect()
+        for threshold_matches_regulars in range(1, max_threshold_matches_regulars + 1)
+    ]
 
     return (
-        pl.concat(
-            items=(
-                _elo_stats_for_regular_players(
-                    data=player_info,
-                    threshold_matches_regulars=threshold_matches_regulars,
-                )
-                for threshold_matches_regulars in range(
-                    1,
-                    max_threshold_matches_regulars + 1,
-                )
-            ),
-            parallel=False,
-        )
+        pl.concat(items=elo_distributions)
         .with_columns(
             num_all_matches=pl.lit(num_all_matches),
             num_connected_matches=pl.lit(num_connected_matches),
