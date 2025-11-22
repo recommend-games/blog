@@ -164,13 +164,17 @@ def _game_stats_and_elo_distribution(
 
     return (
         pl.concat(
-            _elo_stats_for_regular_players(
-                data=player_info,
-                threshold_matches_regulars=threshold_matches_regulars,
-            )
-            for threshold_matches_regulars in range(
-                1, max_threshold_matches_regulars + 1
-            )
+            items=(
+                _elo_stats_for_regular_players(
+                    data=player_info,
+                    threshold_matches_regulars=threshold_matches_regulars,
+                )
+                for threshold_matches_regulars in range(
+                    1,
+                    max_threshold_matches_regulars + 1,
+                )
+            ),
+            parallel=False,
         )
         .with_columns(
             num_all_matches=pl.lit(num_all_matches),
@@ -333,14 +337,7 @@ def games_stats(
     )
     logging.info("Loaded %d games", len(games))
 
-    cpu_count = os.cpu_count() or 2
-    max_workers = cpu_count // 2
-    logging.info("Using up to %d workers (of %d CPUs)", max_workers, cpu_count)
-
-    with ProcessPoolExecutor(
-        max_workers=max_workers,
-        initializer=_init_worker,
-    ) as executor:
+    with ProcessPoolExecutor(initializer=_init_worker) as executor:
         futures = _game_stats_futures(
             executor=executor,
             matches_dir=matches_dir,
@@ -466,7 +463,7 @@ def main():
         matches_dir="results/arrow/matches",
         output_dir="csv/game_stats",
         remove_isolated_players=True,
-        max_players=6,
+        max_players=12,
         max_matches=None,
         max_threshold_matches_regulars=100,
     )
