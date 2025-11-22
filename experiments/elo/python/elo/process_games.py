@@ -145,6 +145,7 @@ def merge_matches(
             .filter(
                 pl.col("num_players") >= 2,
                 pl.col("player_ids").list.eval(pl.element().is_not_null()).list.all(),
+                pl.col("player_ids").list.unique().list.len() == pl.col("num_players"),
                 pl.col("places")
                 .list.eval(pl.element().is_not_null() & (pl.element() >= 1))
                 .list.all(),

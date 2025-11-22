@@ -95,6 +95,7 @@ def _game_stats_and_elo_distribution(
     log_tag: str = "",
 ) -> pl.DataFrame | None:
     data = pl.scan_ipc(matches_path, memory_map=True).filter(
+        pl.col("player_ids").list.unique().list.len() == pl.col("num_players"),
         pl.col("payoffs").list.eval(pl.element() >= 0).list.all(),
         pl.col("payoffs").list.eval(pl.element() > 0).list.any(),
     )
@@ -157,7 +158,7 @@ def _game_stats_and_elo_distribution(
         .unnest("player_ids")
         .select(player_id="player_ids", num_matches="count")
     )
-    player_info = matches_per_player.join(elo_df, on="player_id", how="inner")
+    player_info = matches_per_player.join(elo_df, on="player_id", how="inner").collect()
     # TODO: Save the full Elo ratings per player somewhere?
     elo_distributions = [
         _elo_stats_for_regular_players(
@@ -282,23 +283,27 @@ def _pl_to_matches(data: pl.LazyFrame) -> Iterable[dict[Any, float]]:
 
 
 def _elo_stats_for_regular_players(
-    data: pl.LazyFrame,
+    data: pl.DataFrame | pl.LazyFrame,
     threshold_matches_regulars: int = 25,
 ) -> pl.LazyFrame:
-    return data.filter(pl.col("num_matches") >= threshold_matches_regulars).select(
-        num_regular_players=pl.len(),
-        num_max_matches=pl.max("num_matches"),
-        mean=pl.mean("elo_rating"),
-        std_dev=pl.std("elo_rating"),
-        p00=pl.min("elo_rating"),
-        p01=pl.quantile("elo_rating", 0.01),
-        p05=pl.quantile("elo_rating", 0.05),
-        p25=pl.quantile("elo_rating", 0.25),
-        p50=pl.median("elo_rating"),
-        p75=pl.quantile("elo_rating", 0.75),
-        p95=pl.quantile("elo_rating", 0.95),
-        p99=pl.quantile("elo_rating", 0.99),
-        p100=pl.max("elo_rating"),
+    return (
+        data.lazy()
+        .filter(pl.col("num_matches") >= threshold_matches_regulars)
+        .select(
+            num_regular_players=pl.len(),
+            num_max_matches=pl.max("num_matches"),
+            mean=pl.mean("elo_rating"),
+            std_dev=pl.std("elo_rating"),
+            p00=pl.min("elo_rating"),
+            p01=pl.quantile("elo_rating", 0.01),
+            p05=pl.quantile("elo_rating", 0.05),
+            p25=pl.quantile("elo_rating", 0.25),
+            p50=pl.median("elo_rating"),
+            p75=pl.quantile("elo_rating", 0.75),
+            p95=pl.quantile("elo_rating", 0.95),
+            p99=pl.quantile("elo_rating", 0.99),
+            p100=pl.max("elo_rating"),
+        )
     )
 
 
