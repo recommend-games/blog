@@ -183,9 +183,15 @@ def _game_stats_and_elo_distribution(
     )
     player_info = (
         matches_per_player.join(elo_df, on="player_id", how="inner")
-        .sort("elo_rating", "num_matches", descending=True, nulls_last=True)
+        .sort(
+            by=["elo_rating", "num_matches", "player_id"],
+            descending=[True, True, False],
+            nulls_last=True,
+        )
         .select(
-            pl.col("elo_rating").rank(method="min", descending=True).alias("rank"),
+            pl.struct("elo_rating", "num_matches")
+            .rank(method="min", descending=True)
+            .alias("rank"),
             "player_id",
             "elo_rating",
             "num_matches",
