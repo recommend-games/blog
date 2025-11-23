@@ -26,7 +26,8 @@ if TYPE_CHECKING:
 def game_stats_and_elo_distribution(
     *,
     matches_path: Path | str,
-    output_path: Path | str,
+    stats_output_path: Path | str,
+    players_output_path: Path | str | None = None,
     game_name: str | None = None,
     remove_isolated_players: bool = True,
     max_players: int | None = 12,
@@ -34,7 +35,10 @@ def game_stats_and_elo_distribution(
     max_threshold_matches_regulars: int = 100,
 ) -> None:
     matches_path = Path(matches_path).resolve()
-    output_path = Path(output_path).resolve()
+    stats_output_path = Path(stats_output_path).resolve()
+    players_output_path = (
+        Path(players_output_path).resolve() if players_output_path is not None else None
+    )
 
     game_name = game_name or "?"
     game_id = matches_path.stem
@@ -44,14 +48,22 @@ def game_stats_and_elo_distribution(
         "%sReading matches from <%s>, writing stats to <%s>",
         log_tag,
         matches_path,
-        output_path,
+        stats_output_path,
     )
+    if players_output_path is not None:
+        logging.info(
+            "%sWriting player info to <%s>",
+            log_tag,
+            players_output_path,
+        )
 
     if not matches_path.exists():
         logging.warning("%sMatches file <%s> does not exist", log_tag, matches_path)
         return
 
-    output_path.parent.mkdir(parents=True, exist_ok=True)
+    stats_output_path.parent.mkdir(parents=True, exist_ok=True)
+    if players_output_path is not None:
+        players_output_path.parent.mkdir(parents=True, exist_ok=True)
 
     try:
         result = _game_stats_and_elo_distribution(
@@ -71,18 +83,29 @@ def game_stats_and_elo_distribution(
         logging.warning("%sNo game stats calculated", log_tag)
         return
 
+    elo_stats, player_info = result
+
     logging.info(
-        "%sGame stats calculated for %d thresholds",
+        "%sGame stats calculated for %d thresholds; player info for %d players",
         log_tag,
-        max_threshold_matches_regulars,
+        len(elo_stats),
+        len(player_info),
     )
 
-    logging.info("%sWriting game stats to <%s>", log_tag, output_path)
-    result.write_csv(
-        file=output_path,
+    logging.info("%sWriting game stats to <%s>", log_tag, stats_output_path)
+    elo_stats.write_csv(
+        file=stats_output_path,
         include_header=True,
         float_precision=1,
     )
+
+    if players_output_path is not None:
+        logging.info("%sWriting player info to <%s>", log_tag, players_output_path)
+        player_info.write_csv(
+            file=players_output_path,
+            include_header=True,
+            float_precision=1,
+        )
 
 
 def _game_stats_and_elo_distribution(
@@ -93,7 +116,7 @@ def _game_stats_and_elo_distribution(
     max_matches: int | None,
     max_threshold_matches_regulars: int,
     log_tag: str = "",
-) -> pl.DataFrame | None:
+) -> tuple[pl.DataFrame, pl.DataFrame] | None:
     data = pl.scan_ipc(matches_path, memory_map=True).filter(
         pl.col("player_ids").list.unique().list.len() == pl.col("num_players"),
         pl.col("payoffs").list.eval(pl.element() >= 0).list.all(),
@@ -132,7 +155,7 @@ def _game_stats_and_elo_distribution(
             log_tag,
             matches_path,
         )
-        return None  # TODO: Write stats so far?
+        return None
 
     if max_matches is not None and num_connected_matches > max_matches:
         logging.warning(
@@ -141,7 +164,7 @@ def _game_stats_and_elo_distribution(
             num_connected_matches,
             max_matches,
         )
-        return None  # TODO: Write stats so far?
+        return None
 
     elo_k, elo_scale, two_player_only, elo_ratings = _optimal_k_and_elo_ratings(
         data=data,
@@ -158,8 +181,18 @@ def _game_stats_and_elo_distribution(
         .unnest("player_ids")
         .select(player_id="player_ids", num_matches="count")
     )
-    player_info = matches_per_player.join(elo_df, on="player_id", how="inner").collect()
-    # TODO: Save the full Elo ratings per player somewhere?
+    player_info = (
+        matches_per_player.join(elo_df, on="player_id", how="inner")
+        .sort("elo_rating", "num_matches", descending=True, nulls_last=True)
+        .select(
+            pl.col("elo_rating").rank(method="min", descending=True).alias("rank"),
+            "player_id",
+            "elo_rating",
+            "num_matches",
+        )
+        .collect()
+    )
+
     elo_distributions = [
         _elo_stats_for_regular_players(
             data=player_info,
@@ -168,7 +201,7 @@ def _game_stats_and_elo_distribution(
         for threshold_matches_regulars in range(1, max_threshold_matches_regulars + 1)
     ]
 
-    return (
+    elo_stats = (
         pl.concat(items=elo_distributions)
         .with_columns(
             num_all_matches=pl.lit(num_all_matches),
@@ -183,6 +216,8 @@ def _game_stats_and_elo_distribution(
         )
         .sort("threshold_matches_regulars")
     )
+
+    return elo_stats, player_info
 
 
 def _match_and_player_count(data: pl.LazyFrame) -> tuple[int, int]:
@@ -311,7 +346,8 @@ def games_stats(
     *,
     games_path: Path | str,
     matches_dir: Path | str,
-    output_dir: Path | str,
+    stats_output_dir: Path | str,
+    players_output_dir: Path | str | None = None,
     remove_isolated_players: bool = True,
     max_players: int | None = 12,
     max_matches: int | None = None,
@@ -319,12 +355,17 @@ def games_stats(
 ) -> None:
     games_path = Path(games_path).resolve()
     matches_dir = Path(matches_dir).resolve()
-    output_dir = Path(output_dir).resolve()
-    output_dir.mkdir(parents=True, exist_ok=True)
+    stats_output_dir = Path(stats_output_dir).resolve()
+    stats_output_dir.mkdir(parents=True, exist_ok=True)
+    if players_output_dir is not None:
+        players_output_dir = Path(players_output_dir).resolve()
+        players_output_dir.mkdir(parents=True, exist_ok=True)
 
     logging.info("Reading games from %s", games_path)
     logging.info("Reading matches from %s", matches_dir)
-    logging.info("Writing games stats to %s", output_dir)
+    logging.info("Writing games stats to %s", stats_output_dir)
+    if players_output_dir is not None:
+        logging.info("Writing players info to %s", players_output_dir)
 
     games = dict(
         pl.scan_ndjson(games_path)
@@ -339,7 +380,8 @@ def games_stats(
         futures = _game_stats_futures(
             executor=executor,
             matches_dir=matches_dir,
-            output_dir=output_dir,
+            stats_output_dir=stats_output_dir,
+            players_output_dir=players_output_dir,
             games=games,
             remove_isolated_players=remove_isolated_players,
             max_players=max_players,
@@ -419,7 +461,8 @@ def _init_worker(name: str | None = None) -> None:
 def _game_stats_futures(
     executor: ProcessPoolExecutor,
     matches_dir: Path,
-    output_dir: Path,
+    stats_output_dir: Path,
+    players_output_dir: Path | None,
     games: dict[str, str],
     remove_isolated_players: bool,
     max_players: int | None,
@@ -435,12 +478,18 @@ def _game_stats_futures(
 
         game_id = matches_path.stem
         game_name = games.get(game_id) or "?"
-        output_path = output_dir / f"{game_id}.csv"
+        stats_output_path = stats_output_dir / f"{game_id}.csv"
+        players_output_path = (
+            players_output_dir / f"{game_id}.csv"
+            if players_output_dir is not None
+            else None
+        )
 
         future = executor.submit(
             game_stats_and_elo_distribution,
             matches_path=matches_path,
-            output_path=output_path,
+            stats_output_path=stats_output_path,
+            players_output_path=players_output_path,
             game_name=game_name,
             remove_isolated_players=remove_isolated_players,
             max_players=max_players,
@@ -459,7 +508,8 @@ def main():
     games_stats(
         games_path="csv/games.jl",
         matches_dir="results/arrow/matches",
-        output_dir="csv/game_stats",
+        stats_output_dir="csv/game_stats",
+        players_output_dir="csv/player_stats",
         remove_isolated_players=True,
         max_players=12,
         max_matches=None,

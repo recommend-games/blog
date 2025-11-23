@@ -218,7 +218,8 @@ def process_games() -> None:
     games_stats(
         games_path=csv_dir / "games.jl",
         matches_dir=matches_dir,
-        output_dir=csv_dir / "game_stats",
+        stats_output_dir=csv_dir / "game_stats",
+        players_output_dir=csv_dir / "player_stats",
         remove_isolated_players=True,
         max_players=12,
         max_matches=None,
