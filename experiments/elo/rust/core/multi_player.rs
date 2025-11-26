@@ -218,25 +218,18 @@ where
         &mut self.cfg
     }
 
-    fn expected_outcome(&self, players: &[Id], rank_payoffs: Option<&[f64]>) -> Vec<f64> {
+    fn expected_outcome(&self, players: &[Id]) -> Vec<f64> {
         let n = players.len();
         assert!(n >= 2, "At least 2 players are required");
 
         let pm = self.probability_matrix(players);
-        let payoffs_owned;
-        let pay = if let Some(p) = rank_payoffs {
-            assert_eq!(p.len(), n, "rank_payoffs must have length n");
-            p
-        } else {
-            // default descending payoffs: n-1, ..., 0
-            payoffs_owned = (0..n).rev().map(|i| i as f64).collect::<Vec<_>>();
-            &payoffs_owned
-        };
+        // Fixed descending payoffs: n-1, ..., 0
+        let payoffs: Vec<f64> = (0..n).rev().map(|i| i as f64).collect();
 
         let mut expected = vec![0.0_f64; n];
         for i in 0..n {
             let mut s = 0.0_f64;
-            for (k, &item) in pay.iter().enumerate().take(n) {
+            for (k, &item) in payoffs.iter().enumerate() {
                 s += pm[i][k] * item;
             }
             expected[i] = s;

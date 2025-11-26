@@ -43,11 +43,7 @@ where
         &mut self.cfg
     }
 
-    fn expected_outcome(&self, players: &[Id], rank_payoffs: Option<&[f64]>) -> Vec<f64> {
-        if rank_payoffs.is_some() {
-            // parity with your Python: ignore rank_payoffs for 2p
-            // (we could assert they are length 2 and equal to [1,0], but keep it flexible)
-        }
+    fn expected_outcome(&self, players: &[Id]) -> Vec<f64> {
         assert!(players.len() == 2, "TwoPlayerElo expects exactly 2 players");
         let a = &players[0];
         let b = &players[1];
@@ -58,7 +54,7 @@ where
     }
 
     fn probability_matrix(&self, players: &[Id]) -> Vec<Vec<f64>> {
-        let e = self.expected_outcome(players, None);
+        let e = self.expected_outcome(players);
         vec![vec![e[0], e[1]], vec![e[1], e[0]]]
     }
 }

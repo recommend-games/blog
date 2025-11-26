@@ -40,7 +40,7 @@ where
 
     /// Expected outcome vector for the given players.
     /// For n-player variants, `rank_payoffs` length must equal number of players.
-    fn expected_outcome(&self, players: &[Id], rank_payoffs: Option<&[f64]>) -> Vec<f64>;
+    fn expected_outcome(&self, players: &[Id]) -> Vec<f64>;
 
     /// Probability “matrix” for the given players.
     /// For 2p this is [[p, 1-p], [1-p, p]]. For n-player, implementors define semantics.
@@ -100,29 +100,41 @@ where
     }
 
     /// Shared path: compute diffs = (outcomes - expected) / max_outcome, then apply.
-    fn apply_diffs_from_outcomes(&mut self, ids: &[Id], outcomes: &[f64]) -> Vec<f64> {
+    fn apply_diffs_from_outcomes(&mut self, ids: &[Id], actual_outcome: &[f64]) -> Vec<f64> {
         assert!(ids.len() >= 2, "At least 2 players are required");
         assert!(
-            outcomes.iter().all(|&x| x >= 0.0),
+            actual_outcome.iter().all(|&x| x >= 0.0),
             "Payoffs must be non-negative"
         );
         assert!(
-            outcomes.iter().any(|&x| x > 0.0),
+            actual_outcome.iter().any(|&x| x > 0.0),
             "At least one payoff must be positive"
         );
-        assert_eq!(ids.len(), outcomes.len(), "Length mismatch");
+        assert_eq!(ids.len(), actual_outcome.len(), "Length mismatch");
 
-        let expected = self.expected_outcome(ids, Some(outcomes));
-        let max_payoff = outcomes.iter().cloned().fold(f64::NEG_INFINITY, f64::max);
-        let inv = if max_payoff > 0.0 {
-            1.0 / max_payoff
-        } else {
-            1.0
-        };
+        // Fixed-payoff semantics: outcomes must sum to sum([n-1, ..., 0])
+        let n = ids.len();
+        let expected_sum = ((n * (n - 1)) / 2) as f64;
+        let sum_outcomes: f64 = actual_outcome.iter().copied().sum();
+        assert!(
+            (sum_outcomes - expected_sum).abs() <= 1e-6,
+            "Payoffs must sum to {}, the sum of [n-1,...,0] (got {})",
+            expected_sum,
+            sum_outcomes
+        );
+
+        // Always compute expected under fixed-payoff scheme
+        let expected_outcome = self.expected_outcome(ids);
+        // Fixed scaling: max_payoff = n-1, inv = 1.0 / (n-1)
+        let max_payoff = (n - 1) as f64;
+        let inv = 1.0 / max_payoff;
         let k = self.config().elo_k;
 
         let mut diffs = Vec::with_capacity(ids.len());
-        for (id, (&obs, exp)) in ids.iter().zip(outcomes.iter().zip(expected.iter())) {
+        for (id, (&obs, exp)) in ids
+            .iter()
+            .zip(actual_outcome.iter().zip(expected_outcome.iter()))
+        {
             let d = (obs - exp) * inv;
             *self.rating_of_mut(id) += k * d;
             diffs.push(d);
