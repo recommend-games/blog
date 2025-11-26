@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import itertools
-import warnings
 from abc import ABC, abstractmethod
 from collections import defaultdict
 from collections.abc import Mapping
@@ -84,22 +83,12 @@ class EloRatingSystem[ID_TYPE](ABC):
     def expected_outcome(
         self,
         players: Iterable[ID_TYPE],
-        *,
-        rank_payoffs: npt.NDArray[np.float64] | None = None,
     ) -> npt.NDArray[np.float64]: ...
 
 
 class TwoPlayerElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
     @override
-    def expected_outcome(
-        self,
-        players: Iterable[ID_TYPE],
-        *,
-        rank_payoffs: npt.NDArray[np.float64] | None = None,
-    ) -> npt.NDArray[np.float64]:
-        if rank_payoffs is not None:
-            warnings.warn("rank_payoffs are ignored for two-player elo")
-
+    def expected_outcome(self, players: Iterable[ID_TYPE]) -> npt.NDArray[np.float64]:
         player_1, player_2 = players
         elo_1 = self.elo_ratings[player_1]
         elo_2 = self.elo_ratings[player_2]
@@ -122,12 +111,17 @@ class TwoPlayerElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
     ) -> npt.NDArray[np.float64]:
         if isinstance(players, Mapping):
             player_ids = tuple(players.keys())
-            outcomes = np.asarray(list(players.values()), dtype=np.float64)
+            actual_outcome = np.asarray(list(players.values()), dtype=np.float64)
+            assert np.all(actual_outcome >= 0), "Outcomes must be non-negative"
+            assert np.any(actual_outcome > 0), "At least one outcome must be positive"
+            assert np.allclose(actual_outcome.sum(), 1.0), (
+                "Outcomes for two players must sum to 1.0"
+            )
         else:
             player_ids = tuple(players)
-            outcomes = np.asarray([1.0, 0.0], dtype=np.float64)
+            actual_outcome = np.asarray([1.0, 0.0], dtype=np.float64)
 
-        diffs = outcomes - self.expected_outcome(player_ids)
+        diffs = actual_outcome - self.expected_outcome(player_ids)
         for player_id, diff in zip(player_ids, diffs):
             self.elo_ratings[player_id] += self.elo_k * diff
 
@@ -356,22 +350,11 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
         return self._calculate_probability_matrix_monte_carlo(players)
 
     @override
-    def expected_outcome(
-        self,
-        players: Iterable[ID_TYPE],
-        *,
-        rank_payoffs: npt.NDArray[np.float64] | None = None,
-    ) -> npt.NDArray[np.float64]:
+    def expected_outcome(self, players: Iterable[ID_TYPE]) -> npt.NDArray[np.float64]:
         players = tuple(players)
-        if rank_payoffs is None:
-            rank_payoffs = np.arange(len(players) - 1, -1, -1, dtype=np.float64)
-
-        assert rank_payoffs.ndim == 1, "Rank payoffs must be a 1D array"
-        assert len(rank_payoffs) == len(players), (
-            "Rank payoffs must be the same length as the number of players"
-        )
+        rank_payoff = np.arange(len(players) - 1, -1, -1, dtype=np.float64)
         probs = self.probability_matrix(players)
-        return probs @ rank_payoffs
+        return probs @ rank_payoff
 
     @override
     def update_elo_ratings(
@@ -380,17 +363,21 @@ class RankOrderedLogitElo[ID_TYPE](EloRatingSystem[ID_TYPE]):
     ) -> npt.NDArray[np.float64]:
         if isinstance(players, Mapping):
             player_ids = tuple(players.keys())
-            payoffs = np.asarray(list(players.values()), dtype=np.float64)
+            num_players = len(player_ids)
+            actual_outcome = np.asarray(list(players.values()), dtype=np.float64)
+            assert np.all(actual_outcome >= 0), "Payoffs must be non-negative"
+            assert np.any(actual_outcome > 0), "At least one payoff must be positive"
+            expected_sum = num_players * (num_players - 1) / 2
+            assert np.allclose(actual_outcome.sum(), expected_sum), (
+                f"Payoffs must sum to {expected_sum}, the sum of [n-1,...,0]"
+            )
         else:
             player_ids = tuple(players)
-            payoffs = np.arange(len(player_ids) - 1, -1, -1, dtype=np.float64)
+            actual_outcome = np.arange(len(player_ids) - 1, -1, -1, dtype=np.float64)
 
-        assert np.all(payoffs >= 0), "Payoffs must be non-negative"
-        assert np.any(payoffs > 0), "At least one payoff must be positive"
-
-        max_payoff = payoffs.max()
-        expected_payoffs = self.expected_outcome(player_ids, rank_payoffs=payoffs)
-        diffs = (payoffs - expected_payoffs) / max_payoff
+        max_outcome = np.float64((len(player_ids) - 1))
+        expected_outcome = self.expected_outcome(player_ids)
+        diffs = (actual_outcome - expected_outcome) / max_outcome
         for player_id, diff in zip(player_ids, diffs):
             self.elo_ratings[player_id] += self.elo_k * diff
 
