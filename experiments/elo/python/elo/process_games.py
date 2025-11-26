@@ -110,6 +110,80 @@ def dedupe_matches(partitions_dir: Path | str, *, delete: bool = False) -> None:
         _dedupe_matches_single_game(game_dir, delete=delete)
 
 
+def _merge_matches_single_game(match_dir: Path) -> pl.LazyFrame:
+    return (
+        pl.scan_ipc(match_dir / "matches-*.arrow")
+        .select("id", "players", "timestamp", "scraped_at")
+        .group_by("id")
+        .agg(pl.all().sort_by("timestamp", "scraped_at").last())
+        .sort("timestamp")
+        .select(
+            num_players=pl.col("players").list.len(),
+            player_ids=pl.col("players").list.eval(
+                pl.element().struct.field("player_id")
+            ),
+            places=pl.col("players").list.eval(pl.element().struct.field("place")),
+        )
+        .filter(
+            pl.col("num_players") >= 2,
+            pl.col("player_ids").list.eval(pl.element().is_not_null()).list.all(),
+            pl.col("player_ids").list.unique().list.len() == pl.col("num_players"),
+            pl.col("places")
+            .list.eval(
+                pl.element().is_not_null()
+                & pl.element().is_between(1, pl.col("num_players"))
+            )
+            .list.all(),
+        )
+        .with_row_index("match_idx")
+        .explode("player_ids", "places")
+        .rename({"player_ids": "player_id", "places": "place"})
+        .sort("match_idx", "place")
+        .with_columns(group_size=pl.len().over("match_idx", "place"))
+        .with_columns(
+            is_group_start=pl.col("place")
+            .ne(pl.col("place").shift().over("match_idx"))
+            .fill_null(True),
+        )
+        .with_columns(
+            group_start=(
+                pl.when(pl.col("is_group_start"))
+                .then(pl.col("group_size"))
+                .otherwise(0)
+                .cum_sum()
+                .over("match_idx")
+                - pl.col("group_size")
+            ),
+        )
+        .with_columns(
+            payoff=(
+                2 * pl.col("num_players")
+                - 1
+                - 2 * pl.col("group_start")
+                - pl.col("group_size")
+            )
+            / 2.0,
+        )
+        .group_by("match_idx")
+        .agg(
+            num_players=pl.col("num_players").first(),
+            player_ids=pl.col("player_id"),
+            places=pl.col("place"),
+            payoffs=pl.col("payoff"),
+        )
+        .drop("match_idx")
+        .filter(
+            pl.col("payoffs").list.eval(pl.element() >= 0).list.all(),
+            pl.col("payoffs").list.eval(pl.element() > 0).list.any(),
+            (
+                pl.col("payoffs").list.sum()
+                - (pl.col("num_players") * (pl.col("num_players") - 1) / 2)
+            ).abs()
+            <= 1e-6,
+        )
+    )
+
+
 def merge_matches(
     partitions_dir: Path | str,
     matches_dir: Path | str,
@@ -129,34 +203,8 @@ def merge_matches(
             match_path,
         )
 
-        (
-            pl.scan_ipc(match_dir / "matches-*.arrow")
-            .select("id", "players", "timestamp", "scraped_at")
-            .group_by("id")
-            .agg(pl.all().sort_by("timestamp", "scraped_at").last())
-            .sort("timestamp")
-            .select(
-                num_players=pl.col("players").list.len(),
-                player_ids=pl.col("players").list.eval(
-                    pl.element().struct.field("player_id")
-                ),
-                places=pl.col("players").list.eval(pl.element().struct.field("place")),
-            )
-            .filter(
-                pl.col("num_players") >= 2,
-                pl.col("player_ids").list.eval(pl.element().is_not_null()).list.all(),
-                pl.col("player_ids").list.unique().list.len() == pl.col("num_players"),
-                pl.col("places")
-                .list.eval(pl.element().is_not_null() & (pl.element() >= 1))
-                .list.all(),
-            )
-            .with_columns(payoffs=pl.col("places").list.eval(pl.len() - pl.element()))
-            .filter(
-                pl.col("payoffs").list.eval(pl.element() >= 0).list.all(),
-                pl.col("payoffs").list.eval(pl.element() > 0).list.any(),
-            )
-            .sink_ipc(match_path)
-        )
+        matches = _merge_matches_single_game(match_dir)
+        matches.sink_ipc(match_path)
 
 
 def process_games() -> None:
