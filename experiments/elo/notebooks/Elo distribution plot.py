@@ -23,10 +23,10 @@ from matplotlib import pyplot as plt
 jupyter_black.load()
 sns.set_style("dark")
 
-game_ids = ("snooker", "tennis_wta")
-names = ("Snooker", "Tennis (WTA)")
-colors = ("crimson", "purple", "darkblue")
-palette = dict(zip(names, colors))
+game_ids = ("snooker", "tennis_wta", "football_international")
+names = ("Snooker", "Tennis (WTA)", "Football (men's national teams)")
+colors = ("darkred", "darkorange", "darkgreen")
+color_palette = dict(zip(names, colors))
 
 threshold_regular = 25
 
@@ -67,7 +67,7 @@ sns.kdeplot(
     data=df,
     x="Elo rating",
     hue="Game",
-    palette=palette,
+    palette=color_palette,
     common_norm=False,
     clip=clip,
     ax=ax,
