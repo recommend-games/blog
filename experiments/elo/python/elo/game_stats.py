@@ -175,7 +175,7 @@ def _game_stats_and_elo_distribution(
             "player_id": list(elo_ratings.keys()),
             "elo_rating": list(elo_ratings.values()),
         },
-    )
+    ).with_columns(pl.col(pl.String).cast(pl.Categorical))
     matches_per_player = (
         data.select(pl.col("player_ids").explode().value_counts())
         .unnest("player_ids")
