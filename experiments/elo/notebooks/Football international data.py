@@ -80,7 +80,7 @@ matches.lazy().with_columns(
     .then(pl.concat_list("away_team", "home_team"))
     .otherwise(pl.concat_list("home_team", "away_team")),
     places=pl.when(pl.col("outcome") == 0).then([1, 1]).otherwise([1, 2]),
-    payoffs=pl.when(pl.col("outcome") == 0).then([1, 1]).otherwise([1, 0]),
+    payoffs=pl.when(pl.col("outcome") == 0).then([0.5, 0.5]).otherwise([1, 0]),
 ).sink_ipc(
     path=arrow_dir / "football_international.arrow",
 )
