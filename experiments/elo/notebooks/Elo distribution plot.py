@@ -23,8 +23,8 @@ from matplotlib import pyplot as plt
 jupyter_black.load()
 sns.set_style("dark")
 
-game_ids = ("snooker", "tennis_wta", "football_international")
-names = ("Snooker", "Tennis (WTA)", "Football (men's national teams)")
+game_ids = ("snooker", "tennis_wta") # "football_international"
+names = ("Snooker", "Tennis (WTA)") # "Football (men's national teams)"
 colors = ("darkred", "darkorange", "darkgreen")
 color_palette = dict(zip(names, colors))
 
