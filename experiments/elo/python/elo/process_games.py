@@ -130,8 +130,7 @@ def _merge_matches_single_game(match_dir: Path) -> pl.LazyFrame:
             pl.col("player_ids").list.unique().list.len() == pl.col("num_players"),
             pl.col("places")
             .list.eval(
-                pl.element().is_not_null()
-                & pl.element().is_between(1, pl.col("num_players"))
+                pl.element().is_not_null() & pl.element().is_between(1, pl.len())
             )
             .list.all(),
         )
