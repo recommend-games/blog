@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import math
+import random
 import re
 import time
 from datetime import datetime, timezone
@@ -153,7 +154,11 @@ class BgaSpider(Spider):
             if not isinstance(payload, dict) or "game_list" not in payload:
                 continue
 
-            for game in payload["game_list"]:
+            games = list(payload["game_list"])
+            random.shuffle(games)
+            self.logger.info("Scraping %d games", len(games))
+
+            for game in games:
                 game["type"] = "game"
                 game["scraped_at"] = now
                 yield funcy.project(game, self.game_keys) if self.game_keys else game  # type: ignore[arg-type]
@@ -175,13 +180,15 @@ class BgaSpider(Spider):
 
                 if self.scrape_matches:
                     games_played = int(game.get("games_played", 0))
-                    priority = games_played // (2 * self.max_matches_per_page)
+                    priority = (games_played * random.uniform(0.75, 1.25)) / (
+                        2 * self.max_matches_per_page
+                    )
                     yield Request(
                         url=self.build_match_url(response, game["id"]),
                         method="GET",
                         callback=self.parse_matches,
                         meta={"game_id": game["id"]},
-                        priority=priority,
+                        priority=int(priority),
                         headers={"X-Request-Token": self.request_token},
                     )
 
