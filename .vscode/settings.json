@@ -1,0 +1,7 @@
+{
+  "rust-analyzer.linkedProjects": [
+    "${workspaceFolder}/experiments/elo/Cargo.toml"
+  ],
+  "rust-analyzer.cargo.autoreload": true,
+  "rust-analyzer.procMacro.enable": true
+}
