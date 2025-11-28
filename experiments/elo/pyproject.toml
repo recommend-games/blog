@@ -1,39 +1,78 @@
-[tool.poetry]
+[project]
 name = "elo"
 version = "0.1.0"
-description = ""
-authors = ["Markus Shepherd <markus@recommend.games>"]
+description = "Elo implementation and experiments"
+authors = [
+    { name = "Markus Shepherd", email = "markus@recommend.games" },
+]
 
-[tool.poetry.dependencies]
-python = "3.12.*"
+requires-python = "==3.13.*"
+dependencies = [
+    "board-game-merger",
+    "funcy",
+    "jmespath",
+    "matplotlib",
+    "networkx",
+    "nevergrad",
+    "numpy",
+    "polars-io",
+    "polars[numpy,pandas,pyarrow]",
+    "requests",
+    "scikit-learn",
+    "scipy!=1.14.1",
+    "scrapy",
+    "scrapy-extensions>=1.0.1",
+    "seaborn",
+    "statsmodels",
+    "tabulate",
+    "tqdm",
+]
 
-board-game-merger = "*"
-matplotlib = "*"
-numpy = "*"
-polars = {version = "*", extras = ["numpy", "pandas", "pyarrow"]}
-requests = "*"
-scikit-learn = "*"
-scipy = "!= 1.14.1"
-scrapy = "*"
-seaborn = "*"
-statsmodels = "*"
-tabulate = "*"
-tqdm = "*"
+packages = [
+    { include = "elo", from = "python" }
+]
 
-[tool.poetry.group.dev.dependencies]
-jupyter-black = "*"
-jupyterlab = "*"
-jupytext = "*"
-mypy = "*"
-ruff = "*"
-types-tqdm = "*"
+[project.scripts]
+elo = "elo.__main__:main"
+p_deterministic = "elo.p_deterministic:main"
 
-[tool.ruff]
-target-version = "py312"
-
-[tool.mypy]
-python_version = "3.12"
+[dependency-groups]
+dev = [
+    "codetiming",
+    "funcy-typing",
+    "jupyter-black",
+    "jupyterlab",
+    "jupytext",
+    "maturin",
+    "mypy",
+    "ruff",
+    "scipy-stubs",
+    "types-jmespath",
+    "types-networkx",
+    "types-tqdm",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[tool.maturin]
+# "extension-module" tells pyo3 we want to build an extension module (skips linking against libpython.so)
+features = ["pyo3/extension-module"]
+module-name = "elo._rust"
+python-packages = ["elo"]
+python-source = "python"
+
+[tool.uv]
+cache-keys = [
+    { file = "pyproject.toml" },
+    { file = "src/**/*.rs" },
+    { file = "Cargo.toml" },
+    { file = "Cargo.lock" },
+]
+
+[tool.ruff]
+target-version = "py313"
+
+[tool.mypy]
+python_version = "3.13"

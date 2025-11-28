@@ -1,4 +1,5 @@
 .env
 .jobs/
-results/
-*.jl
+results*/
+/target
+/supplemental/
