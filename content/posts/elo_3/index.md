@@ -47,13 +47,11 @@ The basic assumption in DLO's approach is that \\(K\\) is optimally calibrated i
 
 \\[ K^\* = \argmin_K \frac{1}{T} \sum_{t=1}^T (s^{(t)} - p^{(t)})^2. \\]
 
-This kind of mean squared error is a standard target loss for training machine learning models, and in the case of probabilistic predictions, this is known as the *Brier loss*. This is a function depending on \\(K\\), and we can apply standard optimisation techniques to obtain \\(K^\*\\), i.e., the update factor which yields the most accurate predictions. Every game will have a different \\(K^\*\\); once we have those, we can compute the Elo distributions we were looking for.
+This kind of mean squared error is a standard target loss for training machine learning models, and in the case of probabilistic predictions, this is known as the *Brier loss*. This is a function depending on \\(K\\), and we can apply standard optimisation techniques to obtain \\(K^\*\\), i.e., the update factor which yields the most accurate predictions.[^snooker] Every game will have a different \\(K^\*\\); once we have those, we can compute the Elo distributions we were looking for.
 
 TODO: Is this a good measure of skill in and of itself? Why does it fall short?
 
 TODO: Mention the compute that goes into this?
-
-TODO: Footnote about snooker and K = 42
 
 
 - Methodology: summarising paper
@@ -75,3 +73,5 @@ TODO: Footnote about snooker and K = 42
   - Super duper expensive
     - Mention DP and MC alternatives to factorial explosion
   - Compare results for multi-player p-deterministic games to 2-player
+
+[^snooker]: Remember that \\(K=42\\) I've used in the [snooker article]({{<ref "posts/elo_2/index.md">}}#how-elo-predicts-the-winners)? I promised I'll explain in excruciating depth where it came from and I think I kept my promise.

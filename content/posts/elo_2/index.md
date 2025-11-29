@@ -34,7 +34,7 @@ As usual, we can calculate *B*'s chances via \\(p_B=1-p_A\\), so we won't need t
 
 \\[ r_A \leftarrow r_A + K (s_A - p_A), \\]
 
-where \\(K\\) is the update factor I've set to 42 for the purpose of this exercise since it's the value that yields the most accurate predictions.[^42] (*Much* more on this in the next article.)
+where \\(K\\) is the update factor I've set to 42 for the purpose of this exercise since it's the value that yields the most accurate predictions.[^42] (*Much* more on this in the [next article]({{<ref "posts/elo_3/index.md">}}).)
 
 
 ## Match by match: how ratings shift
