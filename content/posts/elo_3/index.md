@@ -49,9 +49,13 @@ The basic assumption in DLO's approach is that \\(K\\) is optimally calibrated i
 
 This kind of mean squared error is a standard target loss for training machine learning models, and in the case of probabilistic predictions, this is known as the *Brier loss*. This is a function depending on \\(K\\), and we can apply standard optimisation techniques to obtain \\(K^\*\\), i.e., the update factor which yields the most accurate predictions.[^snooker] Every game will have a different \\(K^\*\\); once we have those, we can compute the Elo distributions we were looking for.
 
-TODO: Is this a good measure of skill in and of itself? Why does it fall short?
+But before we go there, let's pause and consider what information \\(K^\*\\) carries in and of itself. Remember how I compared \\(K\\) to the step size in (stochastic) gradient descent in machine learning? If \\(K^\*\\) is large, it means that we take big steps in each update and every match result provides a strong signal about a player's skills. Isn't that exactly what we're trying to measure? Can we just use \\(K^\*\\) as our coveted metric?
 
-TODO: Mention the compute that goes into this?
+Not quite. First of all, as we've already discussed above, the optimal \\(K\\) will always crucially depend on the player population. Larger sets of matches will tend to have smaller \\(K^\*\\) even for players of exactly the same skill level. That's why we need to calibrate \\(K^\*\\) on the exact dataset we use for our evaluation.
+
+Second, two games might require the same skills, but still have very different learning curves: some slow and steady, others in one single "epiphany". The shape of the learning curve will influence \\(K^\*\\), implying there's no meaningful comparison between the values for different games.
+
+Luckily, the standard deviation of the Elo distribution is robust against all those concerns.
 
 
 - Methodology: summarising paper
