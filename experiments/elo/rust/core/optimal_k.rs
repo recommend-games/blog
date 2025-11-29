@@ -18,20 +18,28 @@ where
         return f64::INFINITY;
     };
 
-    let mut sum = 0.0f64;
-    let mut n = 0usize;
+    let mut sum_match_mse = 0.0f64;
+    let mut num_matches = 0usize;
+
     for diffs in all_diffs {
+        let mut sum_sq = 0.0f64;
+        let mut count = 0usize;
         for d in diffs {
             if d.is_finite() {
-                sum += d * d;
-                n += 1;
+                sum_sq += d * d;
+                count += 1;
             }
         }
+        if count > 0 {
+            sum_match_mse += sum_sq / (count as f64);
+            num_matches += 1;
+        }
     }
-    if n == 0 {
+
+    if num_matches == 0 {
         f64::INFINITY
     } else {
-        sum / (n as f64)
+        sum_match_mse / (num_matches as f64)
     }
 }
 
