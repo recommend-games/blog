@@ -122,6 +122,14 @@ So, does this mean the whole approach is doomed? Luckily, not quite. Most matche
 
 Second, you might wonder if it's really justified to call this a generalisation of two-player Elo since it looks somewhat esoteric at first glance. The best way to convince yourself that this is indeed doing "the right thing" is checking that the multi-player formulae collapse to Elo's original formulation when setting \\(n=2\\). I'll leave this as an exercise to you, dear reader. 🤓
 
+Right, after so much theory you deserve some real world applications … which will follow in the next article. For now, there's still one more thing to check: do the multi-player versions of the \\(p\\)-deterministic game yield the same distribution as the two-player game we've discussed before? The setup remains much the same, just that the outcome in the deterministic case is a ranking of the players based on that underlying ranking of strength, and in the chance case it is a random permutation of the players. With this, we can run similar simulations to the ones before for various player counts and obtain the same plot:
+
+{{< img src="p_deterministic_vs_sigma" alt="p_deterministic vs σ for various player counts" >}}
+
+I really hope that this plot convinces you that the multi-player system we've discussed above is indeed a useful generalisation of two-player Elo, and also that the spread of the Elo distribution is a really robust measure for skill and luck in games. Talking of the computational effort: the calculations for this last plot took almost two weeks on my laptop, so please don't let those have been in vain. 😅
+
+OK, finally I'll shut up about the theory and get to work on the really fun part: applying this whole aparatus to actual board games. I'll promise I won't keep you waiting for long. 🤓
+
 
 [^snooker]: Remember that \\(K=42\\) I've used in the [snooker article]({{<ref "posts/elo_2/index.md">}}#how-elo-predicts-the-winners)? I promised I'll explain in excruciating depth where it came from and I think I kept my promise.
 [^flexible-payoff]: Duersch et al use a flexible payoff structure, but I think it's more confusing than anything else (and looking at their code, they might have confused themselves).
