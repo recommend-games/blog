@@ -77,7 +77,11 @@ I hope you'll agree that this plot demonstrates a nice functional relationship b
 
 Unfortunately, before we get to the fun part, we need a few more technicalities out of the way.
 
-TODO: Multi-player generalisation.
+Elo's original paper was targeted at chess, so naturally it was only concerned with two-player games. Likewise, everything I've talked about assumed a pair around the table (or court). But if we want to examine a wider variety of games, including some of the most beloved modern board games, we need to generalise this concept to the multi-player setting.
+
+If you're like me and waste a lot of your time on [Board Game Arena](https://boardgamearena.com/), you might have noticed their Elo implementation. They simply treat multi-player games as a collection of 1-vs-1 battles. So, if Alice, Bob and Carol play a game, their Elo calculations treat this as *three* matches: Alice vs Bob, Alice vs Carol and Bob vs Carol. If Alice indeed won the game, Bob came in second and Carol last, Alice would win both her matches and Bob his against Carol. Elo ratings would then be updated according to the regular formula, with \\(K\\) "adjusted for player count" (I didn't find an up-to-date source as to the details).
+
+Note that for an \\(n\\) player game there are \\({n\choose2}=\frac{n(n+1)}{2}\\) pairings, so the number of updates grows quadratically. This kind of growing complexity can really come to bite one in the behind when it comes to compute, but (a) luckily we don't need to worry about matches with hundreds of players in tabletop gaming and (b) it could be *much* worse, as we shall see in a minute…
 
 
 - Generalise Elo to multi-player games
