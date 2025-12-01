@@ -57,6 +57,14 @@ Second, two games might require the same skills, but still have very different l
 
 Luckily, the standard deviation of the Elo distribution is robust against all those concerns.
 
+We've now got the theoretical foundation to compute those Elo distributions (and their standard deviation). What we need is actual game data in order to compute those Elo ratings. I've already teased how this applies to snooker and tennis, and we'll look at a lot more concrete examples in the next article. But first, I'd like to take a closer look at a synthetic example. There are two good reasons to take this extra step: first, it's a simple sandbox example which will help us understand what's going on and santiy check that the method we've described actually works. Second, it'll yield an excellent benchmark which will help us interpret those fairly abstract standard deviations.
+
+Let's start with the two most extreme scenarios: one game of pure chance, i.e., where a coin toss determines the outcome, and one of pure skill, i.e., where the outcome is completely determined by some underlying skill ranking and the stronger player will always defeat the weaker one. What would the Elo distributions look like in those two cases?
+
+In the totally random case no player would ever have any advantage over another, and hence the "skill chips" will just randomly be passed back and forth. Some winning streaks will occur, of course, but in the long run, those will give way to similar losing streaks. So in the limit every player's Elo rating will stay close to 0 and the overall standard deviation will converge to 0.
+
+In the converse case there is one player who will always dominate all other players. This best player will accumulate more and more rating points from other players and never converge to any value. The Elo update is constructed in such a way that large skill differences will result in a negligible point exchange, but in this particular game there's at least one player that will always provide "fresh points" when they face off each other: the second best player. They in turn accumulate an ever higher Elo rating by playing and winning the other players. By following this reasoning down the ranking one can prove that the Elo ratings for the top half of the ranking will grow without bounds, whilst the bottom half falls in a similar fashion, hence leading to an infinite spread in the limit.
+
 
 - Methodology: summarising paper
   - Recap 2-player Elo
