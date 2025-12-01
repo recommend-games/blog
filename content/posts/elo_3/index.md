@@ -65,19 +65,21 @@ In the totally random case no player would ever have any advantage over another,
 
 In the converse case there is one player who will always dominate all other players. This best player will accumulate more and more rating points from other players and never converge to any value. The Elo update is constructed in such a way that large skill differences will result in a negligible point exchange, but in this particular game there's at least one player that will always provide "fresh points" when they face off each other: the second best player. They in turn accumulate an ever higher Elo rating by playing and winning the other players. By following this reasoning down the ranking one can prove that the Elo ratings for the top half of the ranking will grow without bounds, whilst the bottom half falls in a similar fashion, hence leading to an infinite spread in the limit.
 
+With the extremes out of the way, we can consider an intermediate version of the two: the *\\(p\\)-deterministic game*. The idea is simple: with some probability \\(p\in\[0,1\]\\) the players will play a game of pure skill, and with \\(1-p\\) probability they will play a game of pure chance. In other words, before the match a weighted coin will decide if it's a deterministic game or a coin toss. In the former case, the skill ranking determines the outcome, in the latter case chance. This little *Gedankenspiel* is very easy to understand and reason about. It offers an idealised example of a game with "exactly \\(p\\) skill" involved and hence the benchmark I promised as something we'll be able to compare other games against. Moreover, it's so simple that we easily can run simulations of it and calculate their respective Elo distributions:
 
-- Methodology: summarising paper
-  - Recap 2-player Elo
-  - Elo: individual skill -> Elo distribution: measure of skill in the game (within the playing community)
-  - Crucial ingredient: Choosing the right update factor k*
-    - Explain optimisation
-    - Computationally really expensive!
-    - Is this a good measure of skill in and of itself?
-  - Use std dev of normalised Elo rating distribution as measure of skill!
-    - Where does it fall short?
-- Example and benchmark: p-deterministic games
-  - This should allow us to exactly quantify for a given game what % of its outcome is determined by skill and what % by luck
-  - Plot for 2-players
+TODO: Elo distribution plot with p=0% (?), 10%, …, 90%
+
+This illustrates nicely how games of skill have a much wider spread in their Elo ratings. We can calculate and plot the standard deviation in relation to \\(p\\):
+
+TODO: p vs sigma, two players only, for p=0%, 1%, …, 99% (?)
+
+I hope you'll agree that this plot demonstrates a nice functional relationship between \\(p\\) and the Elo standard deviation. We'll be able to exploit this relationship to translate those fairly abstract spreads into the more tangible \\(p\\) as a measure of luck and skill when we apply this method to real games — in the next article.
+
+Unfortunately, before we get to the fun part, we need a few more technicalities out of the way.
+
+TODO: Multi-player generalisation.
+
+
 - Generalise Elo to multi-player games
   - Explain their choice
   - Compare to classic 2-player
@@ -85,5 +87,6 @@ In the converse case there is one player who will always dominate all other play
   - Super duper expensive
     - Mention DP and MC alternatives to factorial explosion
   - Compare results for multi-player p-deterministic games to 2-player
+
 
 [^snooker]: Remember that \\(K=42\\) I've used in the [snooker article]({{<ref "posts/elo_2/index.md">}}#how-elo-predicts-the-winners)? I promised I'll explain in excruciating depth where it came from and I think I kept my promise.
