@@ -83,14 +83,45 @@ If you're like me and waste a lot of your time on [Board Game Arena](https://boa
 
 Note that for an \\(n\\) player game there are \\({n\choose2}=\frac{n(n+1)}{2}\\) pairings, so the number of updates grows quadratically. This kind of growing complexity can really come to bite one in the behind when it comes to compute, but (a) luckily we don't need to worry about matches with hundreds of players in tabletop gaming and (b) it could be *much* worse, as we shall see in a minute…
 
+Duersch et al chose a different multi-player Elo generalisation. Let \\(n\\) be the number of players in the match we're considering. Their basic premise is to compute an \\(n\times n\\) probability matrix that tells us for each of the players what's the predicted probability that they will end up in each of the positions:
 
-- Generalise Elo to multi-player games
-  - Explain their choice
-  - Compare to classic 2-player
-  - Compare to BGA
-  - Super duper expensive
-    - Mention DP and MC alternatives to factorial explosion
-  - Compare results for multi-player p-deterministic games to 2-player
+\\[ p_{ij} = P(\text{player $i$ in pos $j$}) \\]
+
+Much like we assigned 1 as the outcome for the winner and 0 for the loser of a two-player game, we associate payoffs[^flexible-payoff] of \\(n-1, …, 0\\) for the players from winner to loser in a multi-player game, where tied players receive the average payoff for the respective ranks. Then the expected outcome for player \\(i\\) is simply the weighted sum of the different rank payoffs:
+
+\\[ e_i = E\[\text{payoff for player $i$}\] = \sum_{j=0}^{n-1} p_{ij} \cdot (n - j - 1). \\]
+
+At this point the Elo update is exactly the same as for the two player case: we compare actual outcome \\(a_i\\) (from the ranking payoff) to the expected outcome (divided by the maximal payoff) and adjust the player's Elo according to whether they over or under performed:
+
+\\[ r_i \leftarrow r_i + \frac{K}{n-1} (a_i - e_i). \\]
+
+The crucial question is thus where said probability matrix comes from. For this we need to calculate the probability for each possible ranking, which we express by the permutation \\(\tau\\):
+
+\\[
+  P(\tau) = P(\text{players $\tau(0), …, \tau(n - 1)$ on pos $0, …, n - 1$}) \\\\ 
+  = \prod_{i=0}^{n-1} P(\text{player $\tau(i)$ on pos $i$} | \text{players $\tau(0), …, \tau(i - 1)$ on pos $0, …, i - 1$}),
+\\]
+
+which is simply the [chain rule of probability](https://en.wikipedia.org/wiki/Chain_rule_(probability)) applied. We obtain an estimate for those factors by applying the [softmax](https://en.wikipedia.org/wiki/Softmax_function) to the ratings of the relevant players:
+
+\\[
+  P(\text{$\tau(i)$ on $i$} | \text{$\tau(0), …, \tau(i - 1)$ on $0, …, i - 1$}) = \frac{10^{r_i / 400}}{\sum_{j=i}^{n-1} 10^{r_j / 400}}.
+\\]
+
+If you're not familiar with the softmax, you can just think of it as a generalisation of the logistic (or sigmoid) function for multiple dimensions. This is quite a lot, so if I've lost you along the way, just remember we have this formula to calculate the pre-match probability that a particular ranking / permutation \\(\tau\\) will be the result:
+
+\\[ P(\tau) = \prod_{i=0}^{n-1} \frac{10^{r_i / 400}}{\sum_{j=i}^{n-1} 10^{r_j / 400}}. \\]
+
+Now, in order to compute \\(p_{ij}\\), the probability that player \\(i\\) will end up in position \\(j\\), we "simply" need to sum up the probability of all such rankings:
+
+\\[ p_{ij} = \sum_\text{$\tau$ s.t. $\tau(i)=j$} P(\tau). \\]
+
+Uff. That really was a lot. A couple of more notes. First note something I've glossed over: in order to execute that sum over all permutations, i.e., possible rankings, we need to go through all of them — if you remember your combinatorics basics, you'll know that there are \\(n!\\) of them, a function which grows even faster than exponential. Or in other words: this whole calculation is computationally super expensive.
+
+So, does this mean the whole approach is doomed? Luckily, not quite. Most matches will have 6 or fewer players. Since \\(6!=720\\), this explosive growth doesn't really concern us in the majority of cases. Further, there are alternatives to those calculations (namely dynamic programming and Monte Carlo simulations) which make those calculations for higher player counts a little more managable. I'm not going to go into the details here; if you're curious, check out the implementation.
+
+Second, you might wonder if it's really justified to call this a generalisation of two-player Elo since it looks somewhat esoteric at first glance. The best way to convince yourself that this is indeed doing "the right thing" is checking that the multi-player formulae collapse to Elo's original formulation when setting \\(n=2\\). I'll leave this as an exercise to you, dear reader. 🤓
 
 
 [^snooker]: Remember that \\(K=42\\) I've used in the [snooker article]({{<ref "posts/elo_2/index.md">}}#how-elo-predicts-the-winners)? I promised I'll explain in excruciating depth where it came from and I think I kept my promise.
+[^flexible-payoff]: Duersch et al use a flexible payoff structure, but I think it's more confusing than anything else (and looking at their code, they might have confused themselves).
