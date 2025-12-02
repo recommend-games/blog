@@ -104,7 +104,7 @@ In the converse case there is one player who will always dominate all other play
 
 With the extremes out of the way, we can consider an intermediate version of the two: the *\\(p\\)-deterministic game*. The idea is simple: with some probability \\(p\in\[0,1\]\\) the players will play a game of pure skill, and with \\(1-p\\) probability they will play a game of pure chance. In other words, before the match a weighted coin will decide if it's a deterministic game or a coin toss. In the former case, the skill ranking determines the outcome, in the latter case chance. This little *Gedankenspiel* is very easy to understand and reason about. It offers an idealised example of a game with "exactly \\(p\\) skill" involved and hence the benchmark I promised as something we'll be able to compare other games against. Moreover, it's so simple that we easily can run simulations of it and calculate their respective Elo distributions:
 
-TODO: Elo distribution plot with p=0% (?), 10%, …, 90%
+{{< img src="elo_distribution_p_deterministic" alt="Elo distribution plots for various p_deterministic games" >}}
 
 
 ### What simulations tell us
