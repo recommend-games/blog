@@ -123,3 +123,31 @@ plt.tight_layout()
 plt.savefig(plot_dir / "p_deterministic_vs_log_sigma.png")
 plt.savefig(plot_dir / "p_deterministic_vs_log_sigma.svg")
 plt.show()
+
+# %%
+plot_data = (
+    results.filter(
+        pl.col("players_per_match") == 2,
+        pl.col("p_deterministic") <= 0.99,
+    )
+    .with_columns(pl.col("p_deterministic").round(2))
+    .group_by("p_deterministic")
+    .agg(pl.mean("std_dev").alias("σ"))
+    .sort("p_deterministic")
+)
+plot_data.shape
+
+# %%
+_, ax = plt.subplots()
+sns.scatterplot(
+    data=plot_data,
+    x="p_deterministic",
+    y="σ",
+    color="purple",
+)
+ax.grid(True)
+ax.set_title("p_deterministic vs σ")
+plt.tight_layout()
+plt.savefig(plot_dir / "p_deterministic_vs_sigma_two_players.png")
+plt.savefig(plot_dir / "p_deterministic_vs_sigma_two_players.svg")
+plt.show()
