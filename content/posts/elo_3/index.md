@@ -111,7 +111,7 @@ TODO: Elo distribution plot with p=0% (?), 10%, …, 90%
 
 This illustrates nicely how games of skill have a much wider spread in their Elo ratings. We can calculate and plot the standard deviation in relation to \\(p\\):
 
-TODO: p vs sigma, two players only, for p=0%, 1%, …, 99% (?)
+{{< img src="p_deterministic_vs_sigma_two_players" alt="p_deterministic vs σ for two players" >}}
 
 I hope you'll agree that this plot demonstrates a nice functional relationship between \\(p\\) and the Elo standard deviation. We'll be able to exploit this relationship to translate those fairly abstract spreads into the more tangible \\(p\\) as a measure of luck and skill when we apply this method to real games — in a later article.
 
