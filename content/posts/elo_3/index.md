@@ -39,17 +39,18 @@ According to this plot, the Elo ratings of snooker players are more tightly clus
 
 In order to answer these questions we need to properly dive into the science. 🧑‍🔬
 
-I'm going to follow closely the methodology by Peter Duersch, Marco Lambrecht and Jörg Oechssler, described and applied in their paper "[Measuring skill and chance in games](https://doi.org/10.1016/j.euroecorev.2020.103472)" (2020). They have an economics background, so obviously their motivation is money. When it comes to games, that means gambling. Most jurisdictions tightly regulate any form of gambling, but are more permissive when it comes to winning money, e.g., from sports tournaments. The legal argument usually goes that roulette, blackjack & co are predominantly "games of chance", whilst tennis and snooker would be considered "games of skill". The line between "chance" and "skill" is usually drawn arbitrarily — maybe as a matter of tradition, or whoever has the better lobby. Duersch et al use the Elo distribution of players in various games to obtain an objective measure of luck and skills in games. Exactly what we set out to achieve as well. As mentioned before, I'm not a fan of gambling, but luckily their method works even without the monetary motivation. 🤑
-
+I’m going to follow closely the methodology by Peter Duersch, Marco Lambrecht and Jörg Oechssler, described in their paper "[Measuring skill and chance in games](https://doi.org/10.1016/j.euroecorev.2020.103472)" (2020). They come from an economics background and look at games through the lens of gambling regulation: things like roulette or blackjack are usually treated as “games of chance”, while sports such as tennis or snooker are classified as “games of skill”, often on rather fuzzy or traditional grounds. Duersch et al use the *distribution* of Elo ratings in different games to pin down that fuzzy “skill vs chance” distinction with a single number — exactly what we’re trying to do here, just without the money on the line. 🤑
 
 ### From Elo ratings to Elo distributions
 
-So, what exactly did they do? Their starting point are the Elo ratings as measures of individual skills, as we've been discussing already ad nauseam. They then looked at the distribution of ratings for all players of a given game, and considered the spread of this distribution as a measure of skill. The wider the spread, the more skill is involved in a game. Entirely luck based games will have a distribution tightly clustered around 0.
+So what exactly did they do? Their starting point is the Elo rating as a measure of individual skill, as we’ve been discussing already ad nauseam. They then look at the distribution of ratings for all players of a given game and take the *spread* of that distribution as a measure of how much skill is involved: the wider the spread, the more skill. A game that is almost pure luck should have a distribution tightly clustered around 0.
 
 
 ### Standard deviation of Elo ratings
 
-The mathematical measure for the spread of a distribution is its *standard deviation* \\(\sigma\\). The wider the distribution, the larger its standard deviation. It measures the expected (quadratic) difference from the mean. For our use case this means it measures how far we'd expect the skills to deviate from that of an average player — exactly the kind of thing we want to examine.
+The mathematical measure for the spread of a distribution is its *standard deviation* \\(\sigma\\). The wider the distribution, the larger its standard deviation. Roughly speaking, it’s the root mean squared distance from the average. In our setting, that means \\(\sigma\\) tells us how far we should expect a random player’s skill to lie from the “average” player. You can think of it as the “height” of the skill mountain: a bigger \\(\sigma\\) means the top players sit much higher above the pack — exactly the sort of quantity we want to look at.
+
+So from now on, whenever I talk about the “amount of skill” we see in a game, I’ll use the standard deviation of its Elo ratings, \\(\sigma\\), as the proxy.
 
 
 ### The problem with K
