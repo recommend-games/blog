@@ -105,23 +105,23 @@ In the opposite extreme there is a fixed skill ranking, and the strongest player
 
 ### The p-deterministic game
 
-With the extremes out of the way, we can consider an intermediate version of the two: the *\\(p\\)-deterministic game*. The idea is simple: with some probability \\(p\in\[0,1\]\\) the players will play a game of pure skill, and with \\(1-p\\) probability they will play a game of pure chance. In other words, before the match a weighted coin will decide if it's a deterministic game or a coin toss. In the former case, the skill ranking determines the outcome, in the latter case chance. This little *Gedankenspiel* is very easy to understand and reason about. It offers an idealised example of a game with "exactly \\(p\\) skill" involved and hence the benchmark I promised as something we'll be able to compare other games against. Moreover, it's so simple that we easily can run simulations of it and calculate their respective Elo distributions:
+With the extremes out of the way, we can now blend them into an intermediate case: the *\\(p\\)-deterministic game*. The idea is simple. We fix an underlying skill ranking for all players. Before each match, we flip a weighted coin: with probability \\(p \in \[0,1\]\\) we play a game of pure skill, where that ranking decides the winner; with probability \\(1-p\\) we play a game of pure chance, where the winner is chosen at random. This little *Gedankenspiel* is easy to understand and reason about. It gives us an idealised example of a game with “roughly \\(p\\) parts skill and \\(1-p\\) parts luck”, and it serves as the benchmark I promised — something we can later compare real games against. And because the rules are so simple, we can easily run simulations and calculate the resulting Elo distributions:
 
 {{< img src="elo_distribution_p_deterministic" alt="Elo distribution plots for various p_deterministic games" >}}
 
 
 ### What simulations tell us
 
-This illustrates nicely how games of skill have a much wider spread in their Elo ratings. We can calculate and plot the standard deviation in relation to \\(p\\):
+The first plot already shows the basic pattern: as we turn up \\(p\\) and let skill matter more often, the Elo distribution gets wider and wider. To make this easier to see, we can just take the standard deviation \(\sigma\\) of each distribution and plot it against \\(p\\):
 
 {{< img src="p_deterministic_vs_sigma_two_players" alt="p_deterministic vs σ for two players" >}}
 
-I hope you'll agree that this plot demonstrates a nice functional relationship between \\(p\\) and the Elo standard deviation. We'll be able to exploit this relationship to translate those fairly abstract spreads into the more tangible \\(p\\) as a measure of luck and skill when we apply this method to real games — in a later article.
+The result is a smooth, monotone curve: higher \\(p\\) consistently leads to a larger Elo spread \\(\sigma\\). That gives us exactly what we wanted — a way to translate those abstract standard deviations into a more tangible “skill fraction” \\(p\\). Later on, when we look at real games, we’ll be able to say “this game behaves roughly like a \\(p=70%\\) world” by matching its Elo spread to this benchmark curve.
 
 
 ## What's next
 
-Before we get there, though, we still have to address one big limitation: everything so far assumed two-player games. In the next part of this series we'll extend Elo to proper multi-player tables, and only then move on to real-world data.
+Before we get there, though, we still have to address one big limitation: everything so far has assumed two-player games. In the next part of this series we’ll teach Elo to handle real multiplayer tables — the kind we actually have in modern board games — and only then move on to real-world data.
 
 
 [^snooker]: Remember that \\(K=42\\) I've used in the [snooker article]({{<ref "posts/elo_2/index.md">}}#how-elo-predicts-the-winners)? I promised I'll explain in excruciating depth where it came from and I think I kept my promise.
