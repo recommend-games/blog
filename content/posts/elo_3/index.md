@@ -79,15 +79,17 @@ This mean squared error is a standard loss for training machine learning models;
 
 ### Why K* is not our skill metric
 
-But before we go there, let's pause and consider what information \\(K^\*\\) carries in and of itself. Remember how I compared \\(K\\) to the step size in (stochastic) gradient descent in machine learning? If \\(K^\*\\) is large, it means that we take big steps in each update and every match result provides a strong signal about a player's skills. Isn't that exactly what we're trying to measure? Can we just use \\(K^\*\\) as our coveted metric?
+Before we happily run Elo with \\(K^\*\\) and stare at the resulting distributions, let’s pause and ask what \\(K^\*\\) itself is telling us. Earlier I compared \\(K\\) to a step size in an iterative learning process: a larger \\(K\\) means we take bigger steps on each update and let a single match pull the ratings around more. If the “optimal” \\(K^\*\\) is large, doesn’t that mean each game is very informative about the players’ skills? That sounds suspiciously close to what we’re trying to measure. Can we just use \\(K^\*\\) as our coveted luck–skill number?
 
-Not quite. First of all, as we've already discussed above, the optimal \\(K\\) will always crucially depend on the player population. Larger sets of matches will tend to have smaller \\(K^\*\\) even for players of exactly the same skill level. That's why we need to calibrate \\(K^\*\\) on the exact dataset we use for our evaluation.
+Not quite. First of all, as we’ve already discussed above, the optimal \\(K\\) depends strongly on the player population. Larger sets of matches will tend to have smaller \\(K^\*\\), even if the underlying skill levels are exactly the same, simply because with more data you don’t need to react as violently to each individual result. That’s why we have to calibrate \\(K^\*\\) on the exact dataset we’re using.
 
-Second, two games might require the same skills, but still have very different learning curves: some slow and steady, others in one single "epiphany". The shape of the learning curve will influence \\(K^\*\\), implying there's no meaningful comparison between the values for different games.
+Second, two games might demand the same underlying skills, but still have very different learning curves: some are slow and steady, others click after a single “epiphany”. That learning dynamics also feed into \\(K^\*\\): in a game where people improve in big jumps you’ll see a different “optimal” step size than in a game where everyone creeps up gradually. So even if two games are equally skill-based in the end, their \\(K^\*\\) values can be quite different, and comparing them would be misleading.
 
-Luckily, the standard deviation of the Elo distribution is much more robust to those issues than \\(K^\*\\) itself.
+Luckily, the standard deviation of the Elo distribution is much more robust to those issues than \\(K^\*\\) itself: it mostly cares about *where everyone ends up*, not about how fast they got there.
 
-We've now got the theoretical foundation to compute those Elo distributions (and their standard deviation). What we need is actual game data in order to compute those Elo ratings. I've already teased how this applies to snooker and tennis, and we'll look at a lot more concrete examples in the next article. But first, I'd like to take a closer look at a synthetic example. There are two good reasons to take this extra step: first, it's a simple sandbox example which will help us understand what's going on and santiy check that the method we've described actually works. Second, it'll yield an excellent benchmark which will help us interpret those fairly abstract standard deviations.
+We now have the theoretical foundation to compute Elo distributions and their standard deviation. What we still need is actual game data. I’ve already teased how this applies to snooker and tennis, and in the next article we’ll look at many more concrete examples.
+
+Before we get there, though, I want to take a closer look at a synthetic example. There are two good reasons for this extra step. First, it gives us a simple little sandbox where we can see what’s going on and sanity-check that the method behaves as we expect. Second, it lets us build an excellent benchmark that will help us interpret those fairly abstract standard deviations later on.
 
 
 ## A toy universe of luck and skill
