@@ -9,14 +9,14 @@ tags:
   - Elo rating
 ---
 
-**How can we quantify luck and skills in games?** This is the question I asked in the [first installment]({{<ref "posts/elo_1/index.md">}}) of this series on Elo ratings.
+**How can we quantify luck and skill in games?** That was the question in the [first instalment]({{<ref "posts/elo_1/index.md">}}) of this series on Elo ratings.
 
 
 ## From Elo ratings to skill distributions
 
-Our first approach to this topic was to go through the Elo rating system in quite some details. This assigns a number to each player, reflecting their individual strength. The rating difference between two players can then be converted via a simple formula into the respective win probabilities for the players. Based on the outcome ratings will be updated after the match, thus tending to track true skill over time.
+Our first approach was to go through the Elo rating system in some detail. Elo assigns each player a number that reflects their playing strength. The rating difference between two players can be fed into a simple formula to get their expected win probabilities. After each match, the ratings are updated based on the outcome, so over time they tend to track the players' underlying skill.
 
-[Part 2]({{<ref "posts/elo_2/index.md">}}) applied this system to predict the 2025 World Snooker Champion. The model's favourite, John Higgins, didn't manage to win his fifth title, but it did give eventual winner Zhao Xintong a 10.6% chance, whilst the bookies only gave him 5.9%. I'll take that as a personal win — and a sign that Elo indeed manages to capture players' indivual skills, at least to some degree.
+[Part 2]({{<ref "posts/elo_2/index.md">}}) applied this system to predict the 2025 World Snooker Champion. The model’s favourite, John Higgins, didn’t manage to win his fifth title, but it did give eventual winner Zhao Xintong a 10.6% chance when the bookies only gave him 5.9%. I’ll take that as a personal win — and as evidence that Elo isn’t just numerology, it really does capture something about players’ skills.
 
 
 ### Wider distributions, more skill
