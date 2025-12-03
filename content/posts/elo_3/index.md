@@ -55,26 +55,26 @@ So from now on, whenever I talk about the “amount of skill” we see in a game
 
 ### The problem with K
 
-There's an important caveat though: Elo ratings and their distribution crucial depend on \\(K\\), the update factor. If you recall the metaphor from the first article: \\(K\\) is the number of "skill chips" the players put as an ante into the pot. Higher stakes will lead to a wider spread in the distribution. Conversely, if no or very few chips change hands, everybody will end up with roughly the same number, so the spread will be very small.
+There’s an important caveat: Elo ratings and their distribution crucially depend on \\(K\\), the update factor. If you remember the metaphor from the first article, \\(K\\) is the number of “skill chips” the players put into the pot each game. Higher stakes lead to a wider spread; if almost no chips change hands, everyone ends up with roughly the same number and the spread stays tiny.
 
-One possible response would be to fix a choice of \\(K\\) for all games. Unfortunately, that won't work either. Imagine two ladders for exactly the same game with the same population of players: in ladder *A* everyone plays a handful of games per year, in ladder *B* the same people grind hundreds of games a month. We now run Elo with the same \\(K\\) on both datasets. In ladder *A*, only a few "skill chips" ever change hands before the season is over; ratings barely have time to drift apart, so the final distribution stays fairly tight. In ladder *B*, chips slosh back and forth for thousands of rounds; random streaks get amplified, the system has time to separate the strong from the weak, and the rating spread ends up much wider. The underlying game and the underlying skills are identical, yet the dispersion of Elo ratings depends heavily on how often people play and how long we observe them. Fixing \\(K\\) globally doesn’t make the spread an intrinsic property of the game — it just bakes in arbitrary design decisions about volume and time.
+A natural idea would be to just fix one \\(K\\) for all games. Unfortunately, that doesn’t work either. Imagine two ladders for exactly the same game with the same population of players. In ladder *A* everyone plays a handful of games per year; in ladder *B* the same people grind hundreds of games a month. We now run Elo with the same \\(K\\) on both datasets. In ladder *A* only a few “skill chips” ever change hands before the season is over, ratings barely have time to drift apart, and the final distribution stays fairly tight. In ladder *B*, chips slosh back and forth for thousands of rounds; random streaks get amplified, the system has time to separate the strong from the weak, and the rating spread ends up much wider. The underlying game and the underlying skills are identical, yet the dispersion of Elo ratings depends heavily on how often people play and how long we observe them. Fixing \\(K\\) globally doesn’t make the spread an intrinsic property of the game — it just bakes in arbitrary design decisions about volume and time.
 
 
 ### Calibrating K from the data
 
-What Duersch et al suggested instead is to calibrate \\(K\\) such that the resulting Elo ratings will be as good as possible at the task they were designed for: predicting the outcome of the matches. Remember how Elo works: we take the pre-match ratings \\(r_A\\) and \\(r_B\\) of two players *A* and *B*. The sigmoid function then turns the ratings difference \\(r_A-r_B\\) into \\(p_A\\), the probability that *A* will win the match:
+What Duersch et al suggest instead is to calibrate \\(K\\) from the data, so that the Elo ratings are as good as possible at the job they were designed for: predicting who wins. Remember how Elo works: we take the pre-match ratings \\(r_A\\) and \\(r_B\\) of two players *A* and *B*, and feed the difference into a logistic formula to get the predicted win probability for *A*:
 
 \\[ p_A = \frac{1}{1 + 10^{-(r_A - r_B) / 400}}. \\]
 
-After the match, we compare this prediction with \\(s_A\\), the actual outcome of the match (\\(s_A = 1\\) if *A* won, \\(s_A = 0\\) if they lost and \\(s_A = 0.5\\) in case of a tie). This yields the update rule:
+After the match, we compare this prediction with \\(s_A\\), the actual outcome of the match (\\(s_A = 1\\) if *A* won, \\(s_A = 0\\) if they lost and \\(s_A = 0.5\\) in case of a tie), and update:
 
 \\[ r_A \leftarrow r_A + K (s_A - p_A). \\]
 
-The basic assumption in DLO's approach is that \\(K\\) is optimally calibrated if those prediction errors \\(s_A - p_A\\) are as small as possible. In other words, for a given \\(K\\) and a fixed set of matches \\(t \in \{1, …, T\}\\), we compute the errors induced by that update rule, and try to minimise the mean of their squares:
+The basic assumption in DLO’s approach is that \\(K\\) is “optimal” if these prediction errors \\(s_A - p_A\\) are, on average, as small as possible. For a given \\(K\\) and a fixed set of matches \\(t \in \{1, …, T\}\\), we look at the squared errors and minimise their mean:
 
 \\[ K^\* = \argmin_K \frac{1}{T} \sum_{t=1}^T (s^{(t)} - p^{(t)})^2. \\]
 
-This kind of mean squared error is a standard target loss for training machine learning models, and in the case of probabilistic predictions, this is known as the *Brier loss*. This is a function depending on \\(K\\), and we can apply standard optimisation techniques to obtain \\(K^\*\\), i.e., the update factor which yields the most accurate predictions.[^snooker] Every game will have a different \\(K^\*\\) for the dataset we're looking at; once we have those, we can compute the Elo distributions we were looking for.
+This mean squared error is a standard loss for training machine learning models; when we apply it to probabilistic predictions like this, it’s known as the *Brier loss*. We can search over \\(K\\) to find \\(K^\*\\), the update factor that makes Elo’s predictions as accurate as possible on a given dataset.[^snooker] Different games (and different datasets) will generally end up with different \\(K^\*\\). Once we’ve found \\(K^\*\\), we can run Elo with that value and then look at the resulting rating distributions.
 
 
 ### Why K* is not our skill metric
