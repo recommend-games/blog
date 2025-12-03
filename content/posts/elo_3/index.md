@@ -14,7 +14,7 @@ tags:
 
 ## From Elo ratings to skill distributions
 
-Our first approach to this topic was to go through the Elo rating system in quite some details. This assigns a number to each player, reflecting their individual strength. The rating difference between two players can then be converted via a simple formula into the respective win probabilities for the players. Based on the outcome ratings will be updated after the match, thus converging over time to the players' true skills.
+Our first approach to this topic was to go through the Elo rating system in quite some details. This assigns a number to each player, reflecting their individual strength. The rating difference between two players can then be converted via a simple formula into the respective win probabilities for the players. Based on the outcome ratings will be updated after the match, thus tending to track true skill over time.
 
 [Part 2]({{<ref "posts/elo_2/index.md">}}) applied this system to predict the 2025 World Snooker Champion. The model's favourite, John Higgins, didn't manage to win his fifth title, but it did give eventual winner Zhao Xintong a 10.6% chance, whilst the bookies only gave him 5.9%. I'll take that as a personal win — and a sign that Elo indeed manages to capture players' indivual skills, at least to some degree.
 
@@ -49,7 +49,7 @@ So, what exactly did they do? Their starting point are the Elo ratings as measur
 
 ### Standard deviation of Elo ratings
 
-The mathematical measure for the spread of a distribution is its *standard deviation*. The wider the distribution, the larger its standard deviation. It measures the expected (quadratic) difference from the mean. For our use case this means it measures how far we'd expect the skills to deviate from that of an average player — exactly the kind of thing we want to examine.
+The mathematical measure for the spread of a distribution is its *standard deviation* \\(\sigma\\). The wider the distribution, the larger its standard deviation. It measures the expected (quadratic) difference from the mean. For our use case this means it measures how far we'd expect the skills to deviate from that of an average player — exactly the kind of thing we want to examine.
 
 
 ### The problem with K
@@ -69,11 +69,11 @@ After the match, we compare this prediction with \\(s_A\\), the actual outcome o
 
 \\[ r_A \leftarrow r_A + K (s_A - p_A). \\]
 
-The basic assumption in DLO's approach is that \\(K\\) is optimally calibrated if those prediction errors \\(s_A - r_A\\) are as small as possible. In other words, for a given \\(K\\) and a fixed set of matches \\(t \in \{1, …, T\}\\), we compute the errors induced by that update rule, and try to minimise the mean of their squares:
+The basic assumption in DLO's approach is that \\(K\\) is optimally calibrated if those prediction errors \\(s_A - p_A\\) are as small as possible. In other words, for a given \\(K\\) and a fixed set of matches \\(t \in \{1, …, T\}\\), we compute the errors induced by that update rule, and try to minimise the mean of their squares:
 
 \\[ K^\* = \argmin_K \frac{1}{T} \sum_{t=1}^T (s^{(t)} - p^{(t)})^2. \\]
 
-This kind of mean squared error is a standard target loss for training machine learning models, and in the case of probabilistic predictions, this is known as the *Brier loss*. This is a function depending on \\(K\\), and we can apply standard optimisation techniques to obtain \\(K^\*\\), i.e., the update factor which yields the most accurate predictions.[^snooker] Every game will have a different \\(K^\*\\); once we have those, we can compute the Elo distributions we were looking for.
+This kind of mean squared error is a standard target loss for training machine learning models, and in the case of probabilistic predictions, this is known as the *Brier loss*. This is a function depending on \\(K\\), and we can apply standard optimisation techniques to obtain \\(K^\*\\), i.e., the update factor which yields the most accurate predictions.[^snooker] Every game will have a different \\(K^\*\\) for the dataset we're looking at; once we have those, we can compute the Elo distributions we were looking for.
 
 
 ### Why K* is not our skill metric
@@ -84,7 +84,7 @@ Not quite. First of all, as we've already discussed above, the optimal \\(K\\) w
 
 Second, two games might require the same skills, but still have very different learning curves: some slow and steady, others in one single "epiphany". The shape of the learning curve will influence \\(K^\*\\), implying there's no meaningful comparison between the values for different games.
 
-Luckily, the standard deviation of the Elo distribution is robust against all those concerns.
+Luckily, the standard deviation of the Elo distribution is much more robust to those issues than \\(K^\*\\) itself.
 
 We've now got the theoretical foundation to compute those Elo distributions (and their standard deviation). What we need is actual game data in order to compute those Elo ratings. I've already teased how this applies to snooker and tennis, and we'll look at a lot more concrete examples in the next article. But first, I'd like to take a closer look at a synthetic example. There are two good reasons to take this extra step: first, it's a simple sandbox example which will help us understand what's going on and santiy check that the method we've described actually works. Second, it'll yield an excellent benchmark which will help us interpret those fairly abstract standard deviations.
 
@@ -95,7 +95,7 @@ We've now got the theoretical foundation to compute those Elo distributions (and
 
 Let's start with the two most extreme scenarios: one game of pure chance, i.e., where a coin toss determines the outcome, and one of pure skill, i.e., where the outcome is completely determined by some underlying skill ranking and the stronger player will always defeat the weaker one. What would the Elo distributions look like in those two cases?
 
-In the totally random case no player would ever have any advantage over another, and hence the "skill chips" will just randomly be passed back and forth. Some winning streaks will occur, of course, but in the long run, those will give way to similar losing streaks. So in the limit every player's Elo rating will stay close to 0 and the overall standard deviation will converge to 0.
+In the totally random case no player would ever have any advantage over another, and hence the "skill chips" will just randomly be passed back and forth. Some winning streaks will occur, of course, but in the long run, those will give way to similar losing streaks. So in the limit every player's Elo rating will stay close to 0 and \\(\sigma\\) collapse into a very narrow band around 0.
 
 In the converse case there is one player who will always dominate all other players. This best player will accumulate more and more rating points from other players and never converge to any value. The Elo update is constructed in such a way that large skill differences will result in a negligible point exchange, but in this particular game there's at least one player that will always provide "fresh points" when they face off each other: the second best player. They in turn accumulate an ever higher Elo rating by playing and winning the other players. By following this reasoning down the ranking one can prove that the Elo ratings for the top half of the ranking will grow without bounds, whilst the bottom half falls in a similar fashion, hence leading to an infinite spread in the limit.
 
