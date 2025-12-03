@@ -1,10 +1,10 @@
 ---
-title: Measuring Skill and Luck with Elo
-subtitle: "Elo, part 3: TODO"
-slug: measuring-skill-and-luck-with-elo
+title: Elo as a Skill-O-Meter
+subtitle: "Elo, part 3: What rating spreads in a toy universe tell us about luck and skill"
+slug: elo-as-a-skill-o-meter
 author: Markus Shepherd
 type: post
-date: 2025-11-12T12:00:00+02:00
+date: 2025-12-03T12:00:00+02:00
 tags:
   - Elo rating
 ---
