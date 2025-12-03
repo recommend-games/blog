@@ -7,6 +7,19 @@ type: post
 date: 2025-12-03T12:00:00+02:00
 tags:
   - Elo rating
+  - board games
+  - luck vs skill
+  - game analytics
+  - rating systems
+  - probability
+  - statistics
+  - skill measurement
+  - snooker
+  - tennis
+  - sports analytics
+  - simulation
+  - p-deterministic games
+  - machine learning
 ---
 
 **How can we quantify luck and skill in games?** That was the question in the [first instalment]({{<ref "posts/elo_1/index.md">}}) of this series on Elo ratings.
