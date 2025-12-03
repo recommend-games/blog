@@ -1,7 +1,7 @@
 ---
-title: "Bluey meets Homo Ludens"
-subtitle: "Huizinga, Magic Circle and TODO"
-slug: bluey-meets-homo-ludens-todo
+title: "Canis Ludens: Bluey meets Huizinga"
+subtitle: "TODO: Something, something, magic circle, something"
+slug: canis-ludens-bluey-meets-huizinga
 author: Markus Shepherd
 type: post
 date: 2026-01-01T00:00:00+02:00
@@ -13,6 +13,8 @@ tags:
 ---
 
 Bluey, Coco, and Snickers stand at the edge of a picnic lawn and change the rules of reality with a sentence: “Shadows are land, everything else is crocodiles.” The parents chat nearby, cupcakes glitter on a blanket, and the park is—as far as adults are concerned—just a park. But for the kids it’s become something else: not pretend in the flimsy sense, but a world with teeth. Step into the sun and you’re lunch.
+
+TODO: Introduce Bluey; embed Youtube clip of Shadowlands
 
 That little leap is the front door to Johan Huizinga. Long before Bluey, he argued that humans don’t merely play in the world; we make little worlds in order to play. He called the boundary around those worlds the “magic circle,” and it’s exactly what those children draw—not with chalk, but with agreement. You can almost see it snap into place when they nod. The grass didn’t change. Meaning did.
 
