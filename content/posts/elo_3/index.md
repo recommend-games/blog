@@ -21,18 +21,18 @@ Our first approach was to go through the Elo rating system in some detail. Elo a
 
 ### Wider distributions, more skill
 
-What we're trying to achieve though is to measure how much skill is involved in a game and compare games with one another. The individual skill that Elo is measuring is only a stepping stone towards the answer. What we need to do is to take a step back and consider the whole *distribution* of skills as measure by all players' Elo ratings.
+What we’re really after is a way to say *how much* skill is involved in a game, and to compare different games with each other. The individual Elo numbers are just a stepping stone. To get anywhere, we have to step back and look at the whole *distribution* of skills, as measured by all players’ Elo ratings.
 
-The basic idea is this: if a game's outcome is largely determined by luck and players' decisions don't significantly influence who will win or lose, nobody should be able to consistently win in the long run and acquire very high Elo ratings. All players' ratings should cluster around 0. In a game of true skill, the best players will consistently win more often than they lose, and thus reach higher ratings in the long run. We'd expect the whole distribution of Elo ratings to be spread much more widely.
+The basic idea is simple: if a game is mostly luck and players’ decisions don’t matter much, nobody can reliably stay ahead for long. You’ll see some winning streaks, but they’ll wash out again, and everyone’s ratings will cluster around 0. In a game where skill really matters, the strongest players win more often than they lose and slowly drift away from the pack. The result is a much wider Elo distribution: a long tail of very strong players and a long tail of weaker ones.
 
 
 ### A first look: snooker vs tennis
 
-Let's make this more concrete. We've already calculated the Elo ratings for snooker, so let's compare it to another English upper class sport played on a green surface: tennis. Can you tell whether snooker or tennis is the more skillful game? The approach we're suggesting here is to look at the respective Elo distributions and check which one is wider:
+Let’s make this more concrete. We’ve already calculated Elo ratings for snooker, so let’s compare it to another English upper-class sport played on a green surface: tennis. Which one *feels* more skill-based? Our idea is simple: look at the Elo distributions for both and see which one is wider:
 
 {{< img src="elo_distribution_snooker_tennis_wta" alt="The Elo distributions for Snooker and Tennis (WTA)" >}}
 
-At least according to this plot the Elo ratings of snooker players are more tightly clustered around 0 and hence the outcome is more determined by luck, whilst tennis seems to require more skill (at least on the WTA, the women's tour). But how can we be sure that those distributions are even comparable? And can we quantify exactly how much luck and how much skill is involved?
+According to this plot, the Elo ratings of snooker players are more tightly clustered around 0, which suggests that outcomes are more influenced by luck. Tennis — at least on the WTA, the women’s tour — seems to show a wider spread and therefore more room for skill. But how do we know these distributions are even comparable? And can we turn that vague “more luck, more skill” into an actual number?
 
 
 ## Turning spread into a skill measure
