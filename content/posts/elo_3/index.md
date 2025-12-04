@@ -45,7 +45,7 @@ The basic idea is simple: if a game is mostly luck and players' decisions don't 
 
 ### A first look: snooker vs tennis
 
-Let's make this more concrete. We've already calculated Elo ratings for snooker, so let's compare it to another English upper-class sport played on a green surface: tennis. Can you tell which one is more skill-based? To find an objective answer, we look at the Elo distributions for both and see which one is wider:
+Let's make this more concrete. We've already calculated Elo ratings for snooker, so let's compare it to another English upper-class sport played on a green surface: tennis. Can you tell which one is more skill-based? To get a more objective answer, we look at the Elo distributions for both and see which one is wider:
 
 {{< img src="elo_distribution_snooker_tennis_wta" alt="The Elo distributions for Snooker and Tennis (WTA)" >}}
 
@@ -75,7 +75,7 @@ So from now on, whenever I talk about the "amount of skill" we see in a game, I'
 
 There's an important caveat: Elo ratings and their distribution crucially depend on \\(K\\), the update factor. If you remember the metaphor from the first article, \\(K\\) is the number of "skill chips" the players put into the pot each game. Higher stakes lead to a wider spread; if almost no chips change hands, everyone ends up with roughly the same number and the spread stays tiny.
 
-A natural idea would be to just fix one \\(K\\) for all games. Unfortunately, that doesn't work either. Imagine two ladders for exactly the same game with the same population of players. In ladder *A*, everyone plays a handful of games per year; in ladder *B* the same people grind hundreds of games a month. We now run Elo with the same \\(K\\) on both datasets. In ladder *A* only a few "skill chips" ever change hands before the season is over, ratings barely have time to drift apart, and the final distribution stays fairly tight. In ladder *B*, chips slosh back and forth for thousands of rounds; random streaks get amplified, the system has time to separate the strong from the weak, and the rating spread ends up much wider. The underlying game and the underlying skills are identical, yet the dispersion of Elo ratings depends heavily on how often people play and how long we observe them. Fixing \\(K\\) globally doesn't make the spread an intrinsic property of the game — it just bakes in arbitrary design decisions about volume and time.
+A natural idea would be to just fix one \\(K\\) for all games. Unfortunately, that doesn't work either. Imagine two ladders for exactly the same game with the same population of players. In ladder *A*, everyone plays a handful of games per year; in ladder *B*, the same people grind hundreds of games a month. We now run Elo with the same \\(K\\) on both datasets. In ladder *A* only a few "skill chips" ever change hands before the season is over, ratings barely have time to drift apart, and the final distribution stays fairly tight. In ladder *B*, chips slosh back and forth for thousands of rounds; random streaks get amplified, the system has time to separate the strong from the weak, and the rating spread ends up much wider. The underlying game and the underlying skills are identical, yet the dispersion of Elo ratings depends heavily on how often people play and how long we observe them. Fixing \\(K\\) globally doesn't make the spread an intrinsic property of the game — it just bakes in arbitrary design decisions about volume and time.
 
 
 ### Calibrating K from the data
@@ -88,7 +88,7 @@ After the match, we compare this prediction with \\(s_A\\), the actual outcome o
 
 \\[ r_A \leftarrow r_A + K (s_A - p_A). \\]
 
-The basic assumption in DLO's approach is that \\(K\\) is "optimal" if these prediction errors \\(s_A - p_A\\) are, on average, as small as possible. For a given \\(K\\) and a fixed set of matches \\(t \in \{1, …, T\}\\), we look at the squared errors and minimise their mean:
+The basic assumption in DLO's approach is that \\(K\\) is "optimal" if these prediction errors \\(s_A - p_A\\) are, on average, as small as possible. For a given \\(K\\) and a set of matches \\(t \in \{1, …, T\}\\), we look at the squared errors and minimise their mean:
 
 \\[ K^\* = \argmin_K \frac{1}{T} \sum_{t=1}^T (s^{(t)} - p^{(t)})^2. \\]
 
@@ -124,7 +124,7 @@ In the opposite extreme, there is a fixed skill ranking, and the strongest playe
 
 ### The p-deterministic game
 
-With the extremes out of the way, we can now blend them into an intermediate case: the *\\(p\\)-deterministic game*. The idea is simple. We fix an underlying skill ranking for all players. Before each match, we flip a weighted coin: with probability \\(p \in \[0,1\]\\) we play a game of pure skill, where that ranking decides the winner; with probability \\(1-p\\) we play a game of pure chance, where the winner is chosen at random. This little *Gedankenspiel* is easy to understand and to reason about. It gives us an idealised example of a game with "roughly \\(p\\) parts skill and \\(1-p\\) parts luck", and it serves as the benchmark I promised — something we can later compare real games against. And because the rules are so simple, we can easily run simulations and calculate the resulting Elo distributions:
+With the extremes out of the way, we can now blend them into an intermediate case: the *\\(p\\)-deterministic game*. The idea is simple. We fix an underlying skill ranking for all players. Before each match, we flip a weighted coin: with probability \\(p \in \[0,1\]\\) we play a game of pure skill, where that ranking decides the winner; with probability \\(1-p\\) we play a game of pure chance, where the winner is chosen at random. This little *Gedankenspiel* is easy to understand and reason about. It gives us an idealised example of a game with "roughly \\(p\\) parts skill and \\(1-p\\) parts luck", and it serves as the benchmark I promised — something we can later compare real games against. And because the rules are so simple, we can easily run simulations and calculate the resulting Elo distributions:
 
 {{< img src="elo_distribution_p_deterministic" alt="Elo distribution plots for various p_deterministic games" >}}
 
@@ -140,7 +140,7 @@ The result is a smooth, monotone curve: higher \\(p\\) consistently leads to a l
 
 ## What's next
 
-There's still one big limitation left: everything so far has assumed two-player games. In the next part of this series we'll teach Elo to handle real multiplayer tables — the kind we actually have in modern board games — and only then move on to real-world data.
+There's still one big limitation left: everything so far has assumed two-player games. In the next part of this series, we'll teach Elo to handle real multiplayer tables — the kind we actually have in modern board games — and only then move on to real-world data.
 
 
 [^tennis-atp]: Interestingly, the Elo distribution for men's tennis (ATP) looks more similar to the one for snooker than women's tennis.
