@@ -22,14 +22,18 @@ tags:
   - machine learning
 ---
 
-**How can we quantify luck and skill in games?** That was the question in the [first instalment]({{<ref "posts/elo_1/index.md">}}) of this series on Elo ratings.
+Whether a game counts as “skill” or “chance” isn’t just a pub argument — in many countries it’s a legal distinction. Roulette and blackjack live on the “chance” side; tennis and chess are filed under “skill”. Different rules, different taxes, different ways for people to lose money.
+
+The trouble is that this line is usually drawn by tradition and gut feeling. Is poker really “more skill” than backgammon? Is snooker closer to roulette or closer to chess? A group of economists tried to answer that question more systematically: instead of arguing, measure how “skillful” a game behaves by looking at the Elo ratings of all its players. We’ll meet their work properly in a bit.
+
+In this article I want to steal that idea for board games. So far we’ve used Elo to track individual player strength; this time we’ll go one level up: instead of asking *who* is strong, we’ll look at the whole *distribution* of Elo ratings in a game and turn its spread into a kind of “skill-o-meter”.
 
 
 ## From Elo ratings to skill distributions
 
-Our first approach was to go through the Elo rating system in some detail. Elo assigns each player a number that reflects their playing strength. The rating difference between two players can be fed into a simple formula to get their expected win probabilities. After each match, the ratings are updated based on the outcome, so over time they tend to track the players' underlying skill.
+By now the [basics of Elo]({{<ref "posts/elo_1/index.md">}}) should be familiar: each player gets a rating that reflects their playing strength, rating differences go into a simple formula to give expected win probabilities, and after each match we update those ratings based on whether players beat expectations.
 
-[Part 2]({{<ref "posts/elo_2/index.md">}}) applied this system to predict the 2025 World Snooker Champion. The model’s favourite, John Higgins, didn’t manage to win his fifth title, but it did give eventual winner Zhao Xintong a 10.6% chance when the bookies only gave him 5.9%. I’ll take that as a personal win — and as evidence that Elo isn’t just numerology, it really does capture something about players’ skills.
+We then applied this system to predict the [2025 World Snooker Champion]({{<ref "posts/elo_2/index.md">}}). The model’s favourite, John Higgins, didn’t manage to win his fifth title, but it did give eventual winner Zhao Xintong a 10.6% chance when the bookies only gave him 5.9%. I’ll take that as a personal win — and as evidence that Elo isn’t just numerology, it really does capture something about players’ skills.
 
 
 ### Wider distributions, more skill
@@ -45,7 +49,7 @@ Let’s make this more concrete. We’ve already calculated Elo ratings for snoo
 
 {{< img src="elo_distribution_snooker_tennis_wta" alt="The Elo distributions for Snooker and Tennis (WTA)" >}}
 
-According to this plot, the Elo ratings of snooker players are more tightly clustered around 0, which suggests that outcomes are more influenced by luck. Tennis — at least on the WTA, the women’s tour — seems to show a wider spread and therefore more room for skill. But how do we know these distributions are even comparable? And can we turn that vague “more luck, more skill” into an actual number?
+According to this plot, the Elo ratings of snooker players are more tightly clustered around 0, which suggests that outcomes are more influenced by luck. Tennis — at least on the WTA, the women’s tour[^tennis-atp] — seems to show a wider spread and therefore more room for skill. But how do we know these distributions are even comparable? And can we turn that vague “more luck, more skill” into an actual number?
 
 
 ## Turning spread into a skill measure
@@ -137,4 +141,5 @@ The result is a smooth, monotone curve: higher \\(p\\) consistently leads to a l
 Before we get there, though, we still have to address one big limitation: everything so far has assumed two-player games. In the next part of this series we’ll teach Elo to handle real multiplayer tables — the kind we actually have in modern board games — and only then move on to real-world data.
 
 
+[^tennis-atp]: Interestingly, the Elo distribution for men's tennis (ATP) looks more similar to the one for snooker than women's tennis.
 [^snooker]: Remember that \\(K=42\\) I've used in the [snooker article]({{<ref "posts/elo_2/index.md">}}#how-elo-predicts-the-winners)? I promised I'll explain in excruciating depth where it came from and I think I kept my promise.
