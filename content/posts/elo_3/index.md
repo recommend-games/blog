@@ -24,7 +24,7 @@ tags:
 
 Whether a game counts as “skill” or “chance” isn’t just a pub argument — in many countries it’s a legal distinction. Roulette and blackjack live on the “chance” side; tennis and chess are filed under “skill”. Different rules, different taxes, different ways for people to lose money.
 
-The trouble is that this line is usually drawn by tradition and gut feeling. Is poker really “more skill” than backgammon? Is snooker closer to roulette or closer to chess? A group of economists tried to answer that question more systematically: instead of arguing, measure how “skill-heavy” a game behaves by looking at the Elo ratings of all its players. We’ll meet their work properly in a bit.
+The trouble is that this line is usually drawn by tradition and gut feeling. Is poker really “more skill” than backgammon? Is snooker closer to roulette or closer to chess? A group of economists tried to answer that question more systematically: instead of arguing, measure how “skill-heavy” a game is in practice by looking at the Elo ratings of all its players. We’ll meet their work properly in a bit.
 
 In this article I want to steal that idea for board games. So far we’ve used Elo to track individual player strength; this time we’ll go one level up. Instead of asking *who* is strong, we’ll look at the whole *distribution* of Elo ratings in a game and see what its spread can tell us about luck and skill — turning Elo into a kind of “skill-o-meter”.
 
@@ -54,7 +54,7 @@ According to this plot, the Elo ratings of snooker players are more tightly clus
 
 ## Turning spread into a skill measure
 
-In order to answer these questions we need to properly dive into the science. 🧑‍🔬
+In order to answer these questions, we need to properly dive into the science. 🧑‍🔬
 
 I’m going to lean on a neat idea by Peter Duersch, Marco Lambrecht and Jörg Oechssler, from their paper "[Measuring skill and chance in games](https://doi.org/10.1016/j.euroecorev.2020.103472)" (2020). They come from an economics background and originally cared about gambling regulation, but the trick itself is much more general: take the Elo ratings for all players in a game, look at their *distribution*, and from that pin down a single number that tells you where the game sits on the spectrum between “pure chance” and “pure skill”. That’s exactly what we’re trying to do here — just for board games instead of casinos. 🤑
 
@@ -100,7 +100,7 @@ Before we happily run Elo with \\(K^\*\\) and stare at the resulting distributio
 
 Not quite. First of all, as we’ve already discussed above, the optimal \\(K\\) depends strongly on the player population. Larger sets of matches will tend to have smaller \\(K^\*\\), even if the underlying skill levels are exactly the same, simply because with more data you don’t need to react as violently to each individual result. That’s why we have to calibrate \\(K^\*\\) on the exact dataset we’re using.
 
-Second, two games might demand the same underlying skills, but still have very different learning curves: some are slow and steady, others click after a single “epiphany”. That learning dynamics also feed into \\(K^\*\\): in a game where people improve in big jumps you’ll see a different “optimal” step size than in a game where everyone creeps up gradually. So even if two games are equally skill-based in the end, their \\(K^\*\\) values can be quite different, and comparing them would be misleading.
+Second, two games might demand the same underlying skills, but still have very different learning curves: some are slow and steady, others click after a single “epiphany”. Those learning dynamics also feed into \\(K^\*\\): in a game where people improve in big jumps, you’ll see a different “optimal” step size than in a game where everyone creeps up gradually. So even if two games are equally skill-based in the end, their \\(K^\*\\) values can be quite different, and comparing them would be misleading.
 
 Luckily, the standard deviation of the Elo distribution is much more robust to those issues than \\(K^\*\\) itself: it mostly cares about *where everyone ends up*, not about how fast they got there.
 
@@ -115,14 +115,14 @@ Before we get there, though, I want to take a closer look at a synthetic example
 
 Let’s start with two extreme scenarios. First, a game of pure chance, where the winner is literally decided by a coin toss. Second, a game of pure skill, where there is some fixed underlying skill ranking and the stronger player always beats the weaker one. What would the Elo distributions look like in those two imagined worlds?
 
-In the totally random case no player ever has any real advantage over another, so the “skill chips” just get tossed back and forth. Some winning streaks will occur, of course, but in the long run they’re balanced by losing streaks. Elo will keep nudging ratings back towards the middle, and everyone’s rating will hover near 0. The overall spread \\(\sigma\\) settles into a very narrow band around 0.
+In the totally random case, no player ever has any real advantage over another, so the “skill chips” just get tossed back and forth. Some winning streaks will occur, of course, but in the long run they’re balanced by losing streaks. Elo will keep nudging ratings back towards the middle, and everyone’s rating will hover near 0. The overall spread \\(\sigma\\) settles into a very narrow band around 0.
 
-In the opposite extreme there is a fixed skill ranking, and the strongest player always beats everyone else. This top player will keep siphoning rating points from their opponents and never really settle at a final value. Elo is designed so that very large skill differences lead to only tiny rating changes, but in a world of perfect skill there is always at least one opponent – the second-best player – who still gives them a little positive update every time they meet. The second-best player in turn keeps gaining points from everyone below them, and so on down the ladder. As a result, the strongest players drift further and further away from the pack, while the weakest ones sink lower and lower. In principle, the spread of ratings can grow without bound.
+In the opposite extreme there is a fixed skill ranking, and the strongest player always beats everyone else. This top player will keep siphoning rating points from their opponents and never really settle at a final value. Elo is designed so that very large skill differences lead to only tiny rating changes, but in a world of perfect skill, there is always at least one opponent – the second-best player – who still gives them a little positive update every time they meet. The second-best player in turn keeps gaining points from everyone below them, and so on down the ladder. As a result, the strongest players drift further and further away from the pack, while the weakest ones sink lower and lower. In principle, the spread of ratings can grow without bound.
 
 
 ### The p-deterministic game
 
-With the extremes out of the way, we can now blend them into an intermediate case: the *\\(p\\)-deterministic game*. The idea is simple. We fix an underlying skill ranking for all players. Before each match, we flip a weighted coin: with probability \\(p \in \[0,1\]\\) we play a game of pure skill, where that ranking decides the winner; with probability \\(1-p\\) we play a game of pure chance, where the winner is chosen at random. This little *Gedankenspiel* is easy to understand and reason about. It gives us an idealised example of a game with “roughly \\(p\\) parts skill and \\(1-p\\) parts luck”, and it serves as the benchmark I promised — something we can later compare real games against. And because the rules are so simple, we can easily run simulations and calculate the resulting Elo distributions:
+With the extremes out of the way, we can now blend them into an intermediate case: the *\\(p\\)-deterministic game*. The idea is simple. We fix an underlying skill ranking for all players. Before each match, we flip a weighted coin: with probability \\(p \in \[0,1\]\\) we play a game of pure skill, where that ranking decides the winner; with probability \\(1-p\\) we play a game of pure chance, where the winner is chosen at random. This little *Gedankenspiel* is easy to understand and to reason about. It gives us an idealised example of a game with “roughly \\(p\\) parts skill and \\(1-p\\) parts luck”, and it serves as the benchmark I promised — something we can later compare real games against. And because the rules are so simple, we can easily run simulations and calculate the resulting Elo distributions:
 
 {{< img src="elo_distribution_p_deterministic" alt="Elo distribution plots for various p_deterministic games" >}}
 
@@ -133,7 +133,7 @@ The first plot already shows the basic pattern: as we turn up \\(p\\) and let sk
 
 {{< img src="p_deterministic_vs_sigma_two_players" alt="p_deterministic vs σ for two players" >}}
 
-The result is a smooth, monotone curve: higher \\(p\\) consistently leads to a larger Elo spread \\(\sigma\\). That gives us exactly what we wanted — a way to translate those abstract standard deviations into a more tangible “skill fraction” \\(p\\). Later on, when we look at real games, we’ll be able to say “this game behaves roughly like a \\(p=70%\\) world” by matching its Elo spread to this benchmark curve.
+The result is a smooth, monotone curve: higher \\(p\\) consistently leads to a larger Elo spread \\(\sigma\\). That gives us exactly what we wanted — a way to translate those abstract standard deviations into a more tangible “skill fraction” \\(p\\). Later on, when we look at real games, we’ll be able to say “this game behaves roughly like a 70%-skill world” by matching its Elo spread to this benchmark curve.
 
 
 ## What's next
@@ -142,4 +142,4 @@ Before we get there, though, we still have to address one big limitation: everyt
 
 
 [^tennis-atp]: Interestingly, the Elo distribution for men's tennis (ATP) looks more similar to the one for snooker than women's tennis.
-[^snooker]: Remember that \\(K=42\\) I've used in the [snooker article]({{<ref "posts/elo_2/index.md">}}#how-elo-predicts-the-winners)? I promised I'll explain in excruciating depth where it came from and I think I kept my promise.
+[^snooker]: Remember that \\(K=42\\) I used in the [snooker article]({{<ref "posts/elo_2/index.md">}}#how-elo-predicts-the-winners)? I promised I'll explain in excruciating depth where it came from and I think I kept my promise.
