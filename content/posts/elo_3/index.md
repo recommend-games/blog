@@ -56,7 +56,7 @@ According to this plot, the Elo ratings of snooker players are more tightly clus
 
 In order to answer these questions we need to properly dive into the science. 🧑‍🔬
 
-I’m going to follow closely the methodology by Peter Duersch, Marco Lambrecht and Jörg Oechssler, described in their paper "[Measuring skill and chance in games](https://doi.org/10.1016/j.euroecorev.2020.103472)" (2020). They come from an economics background and look at games through the lens of gambling regulation: things like roulette or blackjack are usually treated as “games of chance”, while sports such as tennis or snooker are classified as “games of skill”, often on rather fuzzy or traditional grounds. Duersch et al use the *distribution* of Elo ratings in different games to pin down that fuzzy “skill vs chance” distinction with a single number — exactly what we’re trying to do here, just without the money on the line. 🤑
+I’m going to lean on a neat idea by Peter Duersch, Marco Lambrecht and Jörg Oechssler, from their paper "[Measuring skill and chance in games](https://doi.org/10.1016/j.euroecorev.2020.103472)" (2020). They come from an economics background and originally cared about gambling regulation, but the trick itself is much more general: take the Elo ratings for all players in a game, look at their *distribution*, and from that pin down a single number that tells you where the game sits on the spectrum between “pure chance” and “pure skill”. That’s exactly what we’re trying to do here — just for board games instead of casinos. 🤑
 
 ### From Elo ratings to Elo distributions
 
