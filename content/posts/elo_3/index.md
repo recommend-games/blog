@@ -24,16 +24,16 @@ tags:
 
 Whether a game counts as “skill” or “chance” isn’t just a pub argument — in many countries it’s a legal distinction. Roulette and blackjack live on the “chance” side; tennis and chess are filed under “skill”. Different rules, different taxes, different ways for people to lose money.
 
-The trouble is that this line is usually drawn by tradition and gut feeling. Is poker really “more skill” than backgammon? Is snooker closer to roulette or closer to chess? A group of economists tried to answer that question more systematically: instead of arguing, measure how “skillful” a game behaves by looking at the Elo ratings of all its players. We’ll meet their work properly in a bit.
+The trouble is that this line is usually drawn by tradition and gut feeling. Is poker really “more skill” than backgammon? Is snooker closer to roulette or closer to chess? A group of economists tried to answer that question more systematically: instead of arguing, measure how “skill-heavy” a game behaves by looking at the Elo ratings of all its players. We’ll meet their work properly in a bit.
 
-In this article I want to steal that idea for board games. So far we’ve used Elo to track individual player strength; this time we’ll go one level up: instead of asking *who* is strong, we’ll look at the whole *distribution* of Elo ratings in a game and turn its spread into a kind of “skill-o-meter”.
+In this article I want to steal that idea for board games. So far we’ve used Elo to track individual player strength; this time we’ll go one level up. Instead of asking *who* is strong, we’ll look at the whole *distribution* of Elo ratings in a game and see what its spread can tell us about luck and skill — turning Elo into a kind of “skill-o-meter”.
 
 
 ## From Elo ratings to skill distributions
 
-By now the [basics of Elo]({{<ref "posts/elo_1/index.md">}}) should be familiar: each player gets a rating that reflects their playing strength, rating differences go into a simple formula to give expected win probabilities, and after each match we update those ratings based on whether players beat expectations.
+By now the basics of Elo should be familiar: each player gets a rating that reflects their playing strength, rating differences go into a simple formula to give expected win probabilities, and after each match we update those ratings based on whether players beat expectations. If you want the full story (including all the maths and the logistic regression detour), [part 1]({{<ref "posts/elo_1/index.md">}}) has you covered; here we’ll treat Elo as a black box that turns match results into reasonable estimates of player skill.
 
-We then applied this system to predict the [2025 World Snooker Champion]({{<ref "posts/elo_2/index.md">}}). The model’s favourite, John Higgins, didn’t manage to win his fifth title, but it did give eventual winner Zhao Xintong a 10.6% chance when the bookies only gave him 5.9%. I’ll take that as a personal win — and as evidence that Elo isn’t just numerology, it really does capture something about players’ skills.
+In [part 2]({{<ref "posts/elo_2/index.md">}}) we applied this system to predict the 2025 World Snooker Champion. The model’s favourite, John Higgins, didn’t manage to win his fifth title, but it did give eventual winner Zhao Xintong a 10.6% chance when the bookies only gave him 5.9%. I’ll take that as a personal win — and as evidence that Elo isn’t just numerology, it really does capture something about players’ skills.
 
 
 ### Wider distributions, more skill
@@ -129,7 +129,7 @@ With the extremes out of the way, we can now blend them into an intermediate cas
 
 ### What simulations tell us
 
-The first plot already shows the basic pattern: as we turn up \\(p\\) and let skill matter more often, the Elo distribution gets wider and wider. To make this easier to see, we can just take the standard deviation \(\sigma\\) of each distribution and plot it against \\(p\\):
+The first plot already shows the basic pattern: as we turn up \\(p\\) and let skill matter more often, the Elo distribution gets wider and wider. To make this easier to see, we can just take the standard deviation \\(\sigma\\) of each distribution and plot it against \\(p\\):
 
 {{< img src="p_deterministic_vs_sigma_two_players" alt="p_deterministic vs σ for two players" >}}
 
