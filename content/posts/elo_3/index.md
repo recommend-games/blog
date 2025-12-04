@@ -38,14 +38,14 @@ In [part 2]({{<ref "posts/elo_2/index.md">}}) we applied this system to predict 
 
 ### Wider distributions, more skill
 
-What we’re really after is a way to say *how much* skill is involved in a game, and to compare different games with each other. The individual Elo numbers are just a stepping stone. To get anywhere, we have to step back and look at the whole *distribution* of skills, as measured by all players’ Elo ratings.
+What we’re really after is a way to say *how much* skill is involved in a game, and to compare different games with each other. The individual Elo numbers are just a stepping stone. To get anywhere, we have to zoom out and look at the whole *distribution* of skills, as measured by all players’ Elo ratings.
 
 The basic idea is simple: if a game is mostly luck and players’ decisions don’t matter much, nobody can reliably stay ahead for long. You’ll see some winning streaks, but they’ll wash out again, and everyone’s ratings will cluster around 0. In a game where skill really matters, the strongest players win more often than they lose and slowly drift away from the pack. The result is a much wider Elo distribution: a long tail of very strong players and a long tail of weaker ones.
 
 
 ### A first look: snooker vs tennis
 
-Let’s make this more concrete. We’ve already calculated Elo ratings for snooker, so let’s compare it to another English upper-class sport played on a green surface: tennis. Can you tell which one is more skill-based? In order to find an objective answer we look at the Elo distributions for both and see which one is wider:
+Let’s make this more concrete. We’ve already calculated Elo ratings for snooker, so let’s compare it to another English upper-class sport played on a green surface: tennis. Can you tell which one is more skill-based? To find an objective answer, we look at the Elo distributions for both and see which one is wider:
 
 {{< img src="elo_distribution_snooker_tennis_wta" alt="The Elo distributions for Snooker and Tennis (WTA)" >}}
 
@@ -54,10 +54,10 @@ According to this plot, the Elo ratings of snooker players have a much higher pe
 
 ## Turning spread into a skill measure
 
-In order to answer these questions, we need to properly dive into the science. 🧑‍🔬
+To answer these questions, we need to properly dive into the science. 🧑‍🔬
 
 
-### From Elo ratings to Elo distributions
+### The one neat trick economists use to measure skill (that gamers can steal)
 
 I’m going to lean on a neat idea by Peter Duersch, Marco Lambrecht and Jörg Oechssler, from their paper "[Measuring skill and chance in games](https://doi.org/10.1016/j.euroecorev.2020.103472)" (2020). They come from an economics background and originally cared about gambling regulation, but the trick itself is much more general: take the Elo ratings for all players in a game, look at their *distribution*, and from that pin down a single number that tells you where the game sits on the spectrum between “pure chance” and “pure skill”. That’s exactly what we’re trying to do here — just for board games instead of casinos. 🤑
 
@@ -75,7 +75,7 @@ So from now on, whenever I talk about the “amount of skill” we see in a game
 
 There’s an important caveat: Elo ratings and their distribution crucially depend on \\(K\\), the update factor. If you remember the metaphor from the first article, \\(K\\) is the number of “skill chips” the players put into the pot each game. Higher stakes lead to a wider spread; if almost no chips change hands, everyone ends up with roughly the same number and the spread stays tiny.
 
-A natural idea would be to just fix one \\(K\\) for all games. Unfortunately, that doesn’t work either. Imagine two ladders for exactly the same game with the same population of players. In ladder *A* everyone plays a handful of games per year; in ladder *B* the same people grind hundreds of games a month. We now run Elo with the same \\(K\\) on both datasets. In ladder *A* only a few “skill chips” ever change hands before the season is over, ratings barely have time to drift apart, and the final distribution stays fairly tight. In ladder *B*, chips slosh back and forth for thousands of rounds; random streaks get amplified, the system has time to separate the strong from the weak, and the rating spread ends up much wider. The underlying game and the underlying skills are identical, yet the dispersion of Elo ratings depends heavily on how often people play and how long we observe them. Fixing \\(K\\) globally doesn’t make the spread an intrinsic property of the game — it just bakes in arbitrary design decisions about volume and time.
+A natural idea would be to just fix one \\(K\\) for all games. Unfortunately, that doesn’t work either. Imagine two ladders for exactly the same game with the same population of players. In ladder *A*, everyone plays a handful of games per year; in ladder *B* the same people grind hundreds of games a month. We now run Elo with the same \\(K\\) on both datasets. In ladder *A* only a few “skill chips” ever change hands before the season is over, ratings barely have time to drift apart, and the final distribution stays fairly tight. In ladder *B*, chips slosh back and forth for thousands of rounds; random streaks get amplified, the system has time to separate the strong from the weak, and the rating spread ends up much wider. The underlying game and the underlying skills are identical, yet the dispersion of Elo ratings depends heavily on how often people play and how long we observe them. Fixing \\(K\\) globally doesn’t make the spread an intrinsic property of the game — it just bakes in arbitrary design decisions about volume and time.
 
 
 ### Calibrating K from the data
@@ -92,7 +92,7 @@ The basic assumption in DLO’s approach is that \\(K\\) is “optimal” if the
 
 \\[ K^\* = \argmin_K \frac{1}{T} \sum_{t=1}^T (s^{(t)} - p^{(t)})^2. \\]
 
-This mean squared error is a standard loss for training machine learning models; when we apply it to probabilistic predictions like this, it’s known as the *Brier loss*. We can search over \\(K\\) to find \\(K^\*\\), the update factor that makes Elo’s predictions as accurate as possible on a given dataset.[^snooker] Different games (and different datasets) will generally end up with different \\(K^\*\\). Once we’ve found \\(K^\*\\), we can run Elo with that value and then look at the resulting rating distributions.
+This mean squared error is a standard loss for training machine learning models; when we apply it to probabilistic predictions like this, it’s known as the *Brier loss*. We can search over \\(K\\) to find \\(K^\*\\), the update factor that makes Elo’s predictions as accurate as possible on that dataset.[^snooker] Different games (and different datasets) will generally end up with different \\(K^\*\\). Once we’ve found \\(K^\*\\), we can run Elo with that value and then look at the resulting rating distributions.
 
 
 ### Why K* is not our skill metric
@@ -105,7 +105,7 @@ Second, two games might demand the same underlying skills, but still have very d
 
 Luckily, the standard deviation of the Elo distribution is much more robust to those issues than \\(K^\*\\) itself: it mostly cares about *where everyone ends up*, not about how fast they got there.
 
-We now have the theoretical foundation to compute Elo distributions and their standard deviation. What we still need is actual game data. I’ve already teased how this applies to snooker and tennis, and in the next article we’ll look at many more concrete examples.
+We now have the theoretical foundation to compute Elo distributions and their standard deviation. What we still need is actual game data. I’ve already teased how this applies to snooker and tennis, and in a later article we’ll look at many more concrete examples.
 
 
 ## A toy universe of luck and skill
@@ -119,7 +119,7 @@ Let’s start with two extreme scenarios. First, a game of pure chance, where th
 
 In the totally random case, no player ever has any real advantage over another, so the “skill chips” just get tossed back and forth. Some winning streaks will occur, of course, but in the long run they’re balanced by losing streaks. Elo will keep nudging ratings back towards the middle, and everyone’s rating will hover near 0. The overall spread \\(\sigma\\) settles into a very narrow band around 0.
 
-In the opposite extreme there is a fixed skill ranking, and the strongest player always beats everyone else. This top player will keep siphoning rating points from their opponents and never really settle at a final value. Elo is designed so that very large skill differences lead to only tiny rating changes, but in a world of perfect skill, there is always at least one opponent – the second-best player – who still gives them a little positive update every time they meet. The second-best player in turn keeps gaining points from everyone below them, and so on down the ladder. As a result, the strongest players drift further and further away from the pack, while the weakest ones sink lower and lower. In principle, the spread of ratings can grow without bound.
+In the opposite extreme, there is a fixed skill ranking, and the strongest player always beats everyone else. This top player will keep siphoning rating points from their opponents and never really settle at a final value. Elo is designed so that very large skill differences lead to only tiny rating changes, but in a world of perfect skill, there is always at least one opponent – the second-best player – who still gives them a little positive update every time they meet. The second-best player in turn keeps gaining points from everyone below them, and so on down the ladder. As a result, the strongest players drift further and further away from the pack, while the weakest ones sink lower and lower. In principle, the spread of ratings can grow without bound.
 
 
 ### The p-deterministic game
@@ -140,7 +140,7 @@ The result is a smooth, monotone curve: higher \\(p\\) consistently leads to a l
 
 ## What's next
 
-Before we get there, though, we still have to address one big limitation: everything so far has assumed two-player games. In the next part of this series we’ll teach Elo to handle real multiplayer tables — the kind we actually have in modern board games — and only then move on to real-world data.
+There’s still one big limitation left: everything so far has assumed two-player games. In the next part of this series we’ll teach Elo to handle real multiplayer tables — the kind we actually have in modern board games — and only then move on to real-world data.
 
 
 [^tennis-atp]: Interestingly, the Elo distribution for men's tennis (ATP) looks more similar to the one for snooker than women's tennis.
