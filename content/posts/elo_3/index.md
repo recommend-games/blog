@@ -45,27 +45,28 @@ The basic idea is simple: if a game is mostly luck and players’ decisions don�
 
 ### A first look: snooker vs tennis
 
-Let’s make this more concrete. We’ve already calculated Elo ratings for snooker, so let’s compare it to another English upper-class sport played on a green surface: tennis. Which one *feels* more skill-based? Our idea is simple: look at the Elo distributions for both and see which one is wider:
+Let’s make this more concrete. We’ve already calculated Elo ratings for snooker, so let’s compare it to another English upper-class sport played on a green surface: tennis. Can you tell which one is more skill-based? In order to find an objective answer we look at the Elo distributions for both and see which one is wider:
 
 {{< img src="elo_distribution_snooker_tennis_wta" alt="The Elo distributions for Snooker and Tennis (WTA)" >}}
 
-According to this plot, the Elo ratings of snooker players are more tightly clustered around 0, which suggests that outcomes are more influenced by luck. Tennis — at least on the WTA, the women’s tour[^tennis-atp] — seems to show a wider spread and therefore more room for skill. But how do we know these distributions are even comparable? And can we turn that vague “more luck, more skill” into an actual number?
+According to this plot, the Elo ratings of snooker players have a much higher peak and shorter tails, which suggests that outcomes are more influenced by luck. Tennis — at least on the WTA, the women’s tour[^tennis-atp] — seems to show a wider spread and therefore more room for skill. But how do we know these distributions are even comparable? And can we turn that vague “more luck, more skill” into an actual number?
 
 
 ## Turning spread into a skill measure
 
 In order to answer these questions, we need to properly dive into the science. 🧑‍🔬
 
-I’m going to lean on a neat idea by Peter Duersch, Marco Lambrecht and Jörg Oechssler, from their paper "[Measuring skill and chance in games](https://doi.org/10.1016/j.euroecorev.2020.103472)" (2020). They come from an economics background and originally cared about gambling regulation, but the trick itself is much more general: take the Elo ratings for all players in a game, look at their *distribution*, and from that pin down a single number that tells you where the game sits on the spectrum between “pure chance” and “pure skill”. That’s exactly what we’re trying to do here — just for board games instead of casinos. 🤑
 
 ### From Elo ratings to Elo distributions
 
-So what exactly did they do? Their starting point is the Elo rating as a measure of individual skill, as we’ve been discussing already ad nauseam. They then look at the distribution of ratings for all players of a given game and take the *spread* of that distribution as a measure of how much skill is involved: the wider the spread, the more skill. A game that is almost pure luck should have a distribution tightly clustered around 0.
+I’m going to lean on a neat idea by Peter Duersch, Marco Lambrecht and Jörg Oechssler, from their paper "[Measuring skill and chance in games](https://doi.org/10.1016/j.euroecorev.2020.103472)" (2020). They come from an economics background and originally cared about gambling regulation, but the trick itself is much more general: take the Elo ratings for all players in a game, look at their *distribution*, and from that pin down a single number that tells you where the game sits on the spectrum between “pure chance” and “pure skill”. That’s exactly what we’re trying to do here — just for board games instead of casinos. 🤑
+
+So we’ll follow their lead and focus on the *spread* of the Elo distribution as our measure of how much skill shows up in a game.
 
 
 ### Standard deviation of Elo ratings
 
-The mathematical measure for the spread of a distribution is its *standard deviation* \\(\sigma\\). The wider the distribution, the larger its standard deviation. Roughly speaking, it’s the root mean squared distance from the average. In our setting, that means \\(\sigma\\) tells us how far we should expect a random player’s skill to lie from the “average” player. You can think of it as the “height” of the skill mountain: a bigger \\(\sigma\\) means the top players sit much higher above the pack — exactly the sort of quantity we want to look at.
+The mathematical measure for the spread of a distribution is its *standard deviation* \\(\sigma\\). The wider the distribution, the larger its standard deviation. Roughly speaking, it’s the expected (squared) difference from the mean. In our setting, that means \\(\sigma\\) tells us how far, on average, players’ skills lie from the “average” player: a bigger \\(\sigma\\) means the field is more spread out, with larger typical gaps between players — exactly the sort of quantity we want to look at.
 
 So from now on, whenever I talk about the “amount of skill” we see in a game, I’ll use the standard deviation of its Elo ratings, \\(\sigma\\), as the proxy.
 
@@ -106,10 +107,11 @@ Luckily, the standard deviation of the Elo distribution is much more robust to t
 
 We now have the theoretical foundation to compute Elo distributions and their standard deviation. What we still need is actual game data. I’ve already teased how this applies to snooker and tennis, and in the next article we’ll look at many more concrete examples.
 
-Before we get there, though, I want to take a closer look at a synthetic example. There are two good reasons for this extra step. First, it gives us a simple little sandbox where we can see what’s going on and sanity-check that the method behaves as we expect. Second, it lets us build an excellent benchmark that will help us interpret those fairly abstract standard deviations later on.
-
 
 ## A toy universe of luck and skill
+
+Before we get there, though, I want to take a closer look at a synthetic example. There are two good reasons for this extra step. First, it gives us a simple little sandbox where we can see what’s going on and sanity-check that the method behaves as we expect. Second, it lets us build an excellent benchmark that will help us interpret those fairly abstract standard deviations later on.
+
 
 ### Extreme worlds: pure chance vs pure skill
 
