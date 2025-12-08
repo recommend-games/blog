@@ -140,8 +140,6 @@ With this multiplayer version of the \\(p\\)-deterministic game in hand, we can 
 
 {{< img src="p_deterministic_vs_sigma" alt="p_deterministic vs σ for various player counts" >}}
 
-<!-- TODO: Better colour scheme (purple); add transparency to dots. -->
-
 All of these curves are smooth and strictly increasing: as we turn up \\(p\\) and let skill matter more often, the Elo spread \\(\\sigma\\) grows, just like in the two-player case. More interestingly, when we plot these player counts from 2 up to 15, the points for different player counts are essentially indistinguishable: for each value of \\(p\\), all the coloured dots sit almost exactly on top of each other. Any tiny visible wobble at very high \\(p\\) is well within the limits of simulation noise and numerical quirks.
 
 That's precisely the behaviour we were hoping to see. Empirically, in this toy universe \\(\\sigma\\) is effectively a function of \\(p\\) alone and — within our numerical precision — invariant to how many players sit at the table, even up to 15. In practical terms, this means that if we measure a standard deviation \\(\\sigma\\) in a real three-, four- or five-player game, we can safely read off a corresponding "\\(p\\)-skill world" from this benchmark without worrying about the exact player count.

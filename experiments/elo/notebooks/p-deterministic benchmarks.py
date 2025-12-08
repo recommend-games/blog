@@ -48,6 +48,9 @@ plot_data = results.filter(pl.col("p_deterministic") <= 0.9).select(
     pl.col("std_dev").alias("σ"),
     pl.col("players_per_match").cast(pl.String).alias("players per match"),
 )
+palette = sns.cubehelix_palette(
+    n_colors=plot_data.select(pl.n_unique("players per match")).item(),
+)
 plot_data.shape
 
 # %%
@@ -57,6 +60,7 @@ sns.scatterplot(
     x="p_deterministic",
     y="k*",
     hue="players per match",
+    palette=palette,
 )
 ax.grid(True)
 ax.set_title("p_deterministic vs k*")
@@ -72,6 +76,7 @@ sns.scatterplot(
     x="p_deterministic",
     y="σ",
     hue="players per match",
+    palette=palette,
 )
 ax.grid(True)
 ax.set_title("p_deterministic vs σ")
@@ -92,6 +97,9 @@ plot_data = (
         pl.col("players_per_match").cast(pl.String).alias("players per match"),
     )
 )
+palette = sns.cubehelix_palette(
+    n_colors=plot_data.select(pl.n_unique("players per match")).item(),
+)
 plot_data.shape
 
 # %%
@@ -101,6 +109,7 @@ sns.scatterplot(
     x="p_deterministic",
     y="log(k*)",
     hue="players per match",
+    palette=palette,
 )
 ax.grid(True)
 ax.set_title("p_deterministic vs log(k*)")
@@ -116,6 +125,7 @@ sns.scatterplot(
     x="p_deterministic",
     y="log(σ)",
     hue="players per match",
+    palette=palette,
 )
 ax.grid(True)
 ax.set_title("p_deterministic vs log(σ)")
