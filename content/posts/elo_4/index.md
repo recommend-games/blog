@@ -10,18 +10,13 @@ tags:
   - Elo rating
 ---
 
-TODO: Proper introduction
+At some point this year, I let my laptop run flat-out for almost two weeks just to answer one question: *how much of a four-player board game is “skill” and how much is “luck”?* That sounds excessive, but there was a catch: before I could even start those simulations, I had to fix a basic problem. Elo – the rating system we’ve been happily using so far – only really knows how to handle one-on-one duels.
 
-> - Hook
-> - Motivate this article, outline its scope
-> - Summarise the story so far (very briefly)
-> - Apologise for this being *even more* technical than part 3.
-> - Remind readers: part 3 gave us a 2-player skill-o-meter (σ and p-deterministic).
-> - Point out the missing piece: modern board games usually have 3–5 players.
-> - Pitch this article as:
-> > “teach Elo to handle real multiplayer tables and sanity-check that our skill-o-meter still works there.”
+This article is the missing technical chapter in the series. In [part 1]({{<ref "posts/elo_1/index.md">}}) we met Elo and learned how it turns match results into skill ratings. In [part 2]({{<ref "posts/elo_2/index.md">}}) we sent those ratings to the Crucible to predict the next World Snooker Champion. And in [part 3]({{<ref "posts/elo_3/index.md">}}) we stole a clever idea from Duersch, Lambrecht and Oechssler to turn the spread of Elo ratings in a two-player “toy universe” into a kind of skill-o-meter: a way to say whether a game behaves more like a 30%-skill world or an 80%-skill world.
 
-Before we can apply this method to real games, we need a few more technicalities out of the way.
+There’s one obvious gap left: most modern board games aren’t tidy head-to-head affairs. Around a real table you’ll usually find three, four, sometimes five players battling it out in CATAN, Brass, Gaia Project or whatever your current obsession is. If we want to use our shiny skill-o-meter on those games, we first have to teach Elo how to cope with real multiplayer tables instead of just faking them as a stack of two-player matches.
+
+Fair warning: this part is even more technical than part 3. We’ll talk about probability matrices, permutations and a slightly scary-looking formula or two. If that’s not your thing, you’re still very welcome to skim the maths-heavy bits – I’ll keep pointing out the important intuitions along the way. The payoff is worth it: by the end of this article, we’ll have a principled multiplayer Elo system and a checked-and-calibrated skill-o-meter that still works when three, four or five people sit down to play.
 
 
 ## Why two-player Elo isn’t enough for modern games
@@ -142,7 +137,7 @@ All of these curves are smooth and strictly increasing: as we turn up \\(p\\) an
 
 That’s exactly what we were hoping to see. Empirically, in this toy universe \\(\\sigma\\) is effectively a function of \\(p\\) alone and — within our numerical precision — invariant to how many players sit at the table, even up to 15. In practical terms, this means that if we measure a standard deviation \\(\\sigma\\) in a real three-, four- or five-player game, we can safely read off a corresponding “\\(p\\)-skill world” from this benchmark without worrying about the exact player count.
 
-Talking of the computational effort: the calculations for this last plot took almost two weeks on my laptop, so please don't let those have been in vain. 🔥😅🤓
+Talking of the computational effort: getting this last plot alone down to *only* about two weeks of wall-clock time on my laptop took a fair bit of optimisation. The result might look a little underwhelming after all that build-up, but that's exactly the point: after grinding through all those simulations, the curves stubbornly agree that player count basically doesn't matter. 🔥😅🤓
 
 
 ## Where this leaves us (and what’s next)
