@@ -109,35 +109,16 @@ If the formulae lost you at some point, that's OK — the story is simple: we as
 
 ### Does this really generalise two-player Elo?
 
-> Short reassurance subsection.
-> 
-> - Pose the doubt: “this looks nothing like classic Elo, is it really the same thing?”
-> - Say what you mean by “generalise”: “for n=2, you get back the normal win/loss model.”
-> - Either:
-> - hand-wave with one sentence (“if you set n=2 the matrix collapses to the 2×2 win/loss case and the update reduces to the usual formula”)
-> or
-> - give a very short algebra hint.
-> - Drop the “exercise to the reader” line or soften it; you’ve already made them eat a lot of equations.
-
-Second, you might wonder if it's really justified to call this a generalisation of two-player Elo since it looks somewhat esoteric at first glance. The best way to convince yourself that this is indeed doing "the right thing" is checking that the multi-player formulae collapse to Elo's original formulation when setting \\(n=2\\). I'll leave this as an exercise to you, dear reader. 🤓
+You might still wonder if it's really justified to call this a generalisation of two-player Elo, since it looks rather different at first glance. The crucial sanity check is that when we only have \\(n = 2\\) players at the table, all of this machinery collapses back to the usual head-to-head model: there are only two possible rankings, the probability matrix reduces to the familiar win–loss probabilities, the payoff vector \\((1, 0)\\) just scores win vs loss, and the update rule becomes exactly the original Elo formula again.[^exercise] You don't need to wade through the algebra – the important point is that for ordinary two-player encounters, this system behaves just like classic Elo.
 
 
 ### The price of doing it properly: combinatorics and compute
 
-> This is your n! section.
-> 
-> - Explain that summing over all permutations is O(n!) and explodes fast.
-> - Calm the reader:
-> - most board games have ≤ 6 players,
-> - 6! = 720 is big but manageable,
-> - for higher n you can use dynamic programming / Monte Carlo approximations (point to the code instead of explaining in detail).
-> - Optionally mention that this is why your implementation is the bottleneck for the simulations.
-> 
-> This section is where you’re honest about cost, but don’t lose the plot.
+There is one big catch we've glossed over so far. To calculate the entries of the probability matrix \\(p_{ij}\\), we have to sum \\(P(\\tau)\\) over all possible rankings \\(\\tau\\). If you remember your combinatorics basics, you'll know that there are \\(n!\\) permutations of \\(n\\) players – a function that grows even faster than exponential. In other words: a straightforward implementation of this model is computationally very expensive.
 
-A couple of more notes. First note something I've glossed over: in order to execute that sum over all permutations, i.e., possible rankings, we need to go through all of them — if you remember your combinatorics basics, you'll know that there are \\(n!\\) of them, a function which grows even faster than exponential. Or in other words: this whole calculation is computationally super expensive.
+Does this mean the whole approach is doomed? Luckily, not quite. Most board games have at most five or six players, and \\(6! = 720\\) is big but still perfectly manageable on a modern computer. That covers the vast majority of situations we care about in tabletop gaming.
 
-So, does this mean the whole approach is doomed? Luckily, not quite. Most matches will have 6 or fewer players. Since \\(6!=720\\), this explosive growth doesn't really concern us in the majority of cases. Further, there are alternatives to those calculations (namely dynamic programming and Monte Carlo simulations) which make those calculations for higher player counts a little more managable. I'm not going to go into the details here; if you're curious, check out the implementation.
+For higher player counts there are more efficient tricks (for example dynamic programming and Monte Carlo approximations) that avoid looping over all permutations explicitly. I'm not going to go into the details here; if you're curious, you can have a look at the implementation in the code for this article – but for our purposes it's enough to know that the full model is tractable for realistic games.
 
 
 ## Extending the toy universe: p-deterministic games with more players
@@ -188,4 +169,5 @@ I really hope that this plot convinces you that the multi-player system we've di
 OK, finally I'll shut up about the theory and get to work on the really fun part: applying this whole aparatus to actual board games. I'll promise I won't keep you waiting for long. 🤓
 
 
-[^flexible-payoff]: Duersch et al use a flexible payoff structure, but I think it's more confusing than anything else (and looking at their code, they might have confused themselves).
+[^flexible-payoff]: Duersch et al use a flexible payoff structure which makes the formulae and implementation more confusing. For our purposes, the fixed payoff based on ranks is enough, so I tried to keep things simple.
+[^exercise]: If you’re itching to do the algebra yourself, be my guest — that’s the unofficial “exercise to the reader” for this section. I decided you didn’t need to watch me juggle minus signs for a page.
