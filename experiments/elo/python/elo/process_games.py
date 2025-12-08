@@ -206,6 +206,73 @@ def merge_matches(
         matches.sink_ipc(match_path)
 
 
+def game_skills(
+    *,
+    csv_dir: Path | str,
+    threshold_regular: int = 25,
+) -> None:
+    csv_dir = Path(csv_dir).resolve()
+    logging.info("Processing game skills from CSVs in <%s>", csv_dir)
+
+    p_deterministic_df = (
+        pl.scan_csv(csv_dir / "p_deterministic.csv")
+        .group_by(pl.col("p_deterministic").round(2))
+        .agg(pl.col("std_dev").mean())
+        .sort("std_dev")
+    )
+
+    games_df = pl.scan_ndjson(csv_dir / "games.jl").select(
+        pl.col("id").alias("game_id"), "bgg_id", "display_name_en"
+    )
+
+    game_stats_df = (
+        pl.scan_csv(csv_dir / "game_stats" / "*.csv", include_file_paths="file_path")
+        .filter(pl.col("threshold_matches_regulars") == threshold_regular)
+        .with_columns(game_id_str=pl.col("file_path").str.extract(r"^.*/(.*)\.csv", 1))
+        .select(
+            "game_id_str",
+            pl.col("game_id_str").str.to_integer(strict=False).alias("game_id"),
+            "num_all_matches",
+            "num_connected_matches",
+            "num_all_players",
+            "num_connected_players",
+            "num_regular_players",
+            "num_max_matches",
+            "two_player_only",
+            "elo_k",
+            "std_dev",
+        )
+    )
+
+    result = (
+        games_df.join(game_stats_df, on="game_id", how="full", coalesce=True)
+        .sort("std_dev", nulls_last=True)
+        .join_asof(p_deterministic_df, on="std_dev", strategy="nearest")
+        .select(
+            pl.coalesce("game_id", "game_id_str"),
+            "bgg_id",
+            pl.coalesce(
+                "display_name_en", pl.col("game_id_str").str.to_titlecase()
+            ).alias("name"),
+            "num_all_matches",
+            "num_connected_matches",
+            "num_all_players",
+            "num_connected_players",
+            "num_regular_players",
+            "num_max_matches",
+            "two_player_only",
+            "elo_k",
+            "std_dev",
+            "p_deterministic",
+        )
+        .sort("std_dev", descending=True, nulls_last=True)
+        .collect()
+    )
+
+    logging.info("Writing game skills to <%s>", csv_dir / "game_skills.csv")
+    result.write_csv(csv_dir / "game_skills.csv")
+
+
 def process_games() -> None:
     """
     - Merge game data (all games JL)
@@ -273,7 +340,10 @@ def process_games() -> None:
         max_threshold_matches_regulars=100,
     )
 
-    # TODO: Update game_skills.csv
+    game_skills(
+        csv_dir=csv_dir,
+        threshold_regular=25,
+    )
 
 
 if __name__ == "__main__":
