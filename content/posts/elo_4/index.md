@@ -5,7 +5,6 @@ slug: teaching-elo-to-play-with-friends
 author: Markus Shepherd
 type: post
 date: 2025-12-12T12:00:00+02:00
-draft: true
 tags:
   - Elo rating
   - board games
