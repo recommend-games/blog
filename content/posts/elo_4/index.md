@@ -10,6 +10,13 @@ tags:
   - Elo rating
 ---
 
+TODO: Proper introduction
+
+* Hook
+* Motivate this article, outline its scope
+* Summarise the story so far (very briefly)
+* Apologise for this being *even more* technical than part 3.
+
 Before we can apply this method to real games, we need a few more technicalities out of the way.
 
 Elo's original paper was targeted at chess, so naturally it was only concerned with two-player games. Likewise, everything I've talked about assumed a pair around the table (or court). But if we want to examine a wider variety of games, including some of the most beloved modern board games, we need to generalise this concept to the multi-player setting.
