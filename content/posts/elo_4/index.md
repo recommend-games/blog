@@ -8,6 +8,17 @@ date: 2025-12-12T12:00:00+02:00
 draft: true
 tags:
   - Elo rating
+  - board games
+  - luck vs skill
+  - game analytics
+  - rating systems
+  - probability
+  - statistics
+  - skill measurement
+  - simulation
+  - p-deterministic games
+  - machine learning
+  - multiplayer games
 ---
 
 At some point this year, I let my laptop run flat-out for almost two weeks just to answer one question: *how much of a four-player board game is “skill” and how much is “luck”?* That sounds excessive, but there was a catch: before I could even start those simulations, I had to fix a basic problem. Elo – the rating system we’ve been happily using so far – only really knows how to handle one-on-one duels.
