@@ -74,42 +74,37 @@ The factor \\(1/(n-1)\\) just normalises things so that one whole game still cor
 
 ### From Elo ratings to ranking probabilities
 
-> This is where all the heavy probability machinery goes.
-> 
-> - Introduce permutations τ as possible finish orders.
-> - Give the chain-rule expression for P(\tau).
-> - Explain the softmax step in words first: “given the remaining players, assign probabilities proportional to 10^{rating/400}”.
-> - Then show the formal softmax formula.
-> - Then the compact product formula for P(\tau).
-> - Then define p_{ij} as the sum of P(\tau) over all τ with player i in position j.
-> 
-> Crucial: keep a “just remember” sentence above or below the maths:
-> 
-> > “If the formulas lose you at some point, the story is simple: we assign a probability to each possible ranking based on Elo, then sum those probabilities to get how likely each player is to finish in each position.”
+This is where things get a bit heavy. If you're mostly here for the big picture, feel free to skim or even skip the formulae in this section — I'll summarise the important part again at the end.
 
+Conceptually, what we want is simple: for a given set of Elo ratings, we assign a probability to each possible finishing order of the players. Stronger players should be more likely to end up near the top, weaker ones near the bottom. Once we have those probabilities, we can add them up to get the chance that a particular player finishes in a particular position.
 
-The crucial question is thus where said probability matrix comes from. For this we need to calculate the probability for each possible ranking, which we express by the permutation \\(\tau\\):
+Formally, we write a possible ranking as a permutation \\(\tau\\) of \\(\{0, \dots, n-1\}\\), where \\(\tau(j)\\) tells us *which player* ends up in position \\(j\\) (with \\(j=0\\) for the winner, \\(j=1\\) for second place, and so on). The probability of seeing a particular ranking \\(\tau\\) can be written using the [chain rule of probability](https://en.wikipedia.org/wiki/Chain_rule_(probability)):
 
 \\[
-  P(\tau) = P(\text{players $\tau(0), …, \tau(n - 1)$ on pos $0, …, n - 1$}) \\\\
-  = \prod_{i=0}^{n-1} P(\text{player $\tau(i)$ on pos $i$} | \text{players $\tau(0), …, \tau(i - 1)$ on pos $0, …, i - 1$}),
+  P(\tau) = P(\text{players $\tau(0), \dots, \tau(n - 1)$ on positions $0, \dots, n - 1$}) \\\\
+  = \prod_{j=0}^{n-1} P(\text{player $\tau(j)$ on position $j$} \mid \text{players $\tau(0), \dots, \tau(j - 1)$ fixed above}).
 \\]
 
-which is simply the [chain rule of probability](https://en.wikipedia.org/wiki/Chain_rule_(probability)) applied. We obtain an estimate for those factors by applying the [softmax](https://en.wikipedia.org/wiki/Softmax_function) to the ratings of the relevant players:
+To estimate those conditional probabilities, Duersch et al use the [softmax](https://en.wikipedia.org/wiki/Softmax_function) over Elo ratings. Softmax is just the multi-player cousin of the Elo win-probability formula: you take a "strength score" for each player, exponentiate it, and then divide by the sum so that everything adds up to 1. At each step \\(j\\), we look at the players who haven't been placed yet and assign probabilities proportional to \\(10^{r / 400}\\), just like in the two-player Elo formula. If we write \\(r_i\\) for the current rating of player \\(i\\), this gives:
 
 \\[
-  P(\text{$\tau(i)$ on $i$} | \text{$\tau(0), …, \tau(i - 1)$ on $0, …, i - 1$}) = \frac{10^{r_i / 400}}{\sum_{j=i}^{n-1} 10^{r_j / 400}}.
+  P(\text{player $\tau(j)$ on position $j$} \mid \text{players $\tau(0), \dots, \tau(j - 1)$ fixed above}) \\\\
+  = \frac{10^{r_{\tau(j)} / 400}}{\sum_{k=j}^{n-1} 10^{r_{\tau(k)} / 400}}.
 \\]
 
-If you're not familiar with the softmax, you can just think of it as a generalisation of the logistic (or sigmoid) function for multiple dimensions. This is quite a lot, so if I've lost you along the way, just remember we have this formula to calculate the pre-match probability that a particular ranking / permutation \\(\tau\\) will be the result:
+Plugging this into the chain rule expression yields a compact formula for the probability of a full ranking \\(\tau\\):
 
-\\[ P(\tau) = \prod_{i=0}^{n-1} \frac{10^{r_i / 400}}{\sum_{j=i}^{n-1} 10^{r_j / 400}}. \\]
+\\[
+  P(\tau) = \prod_{j=0}^{n-1} \frac{10^{r_{\tau(j)} / 400}}{\sum_{k=j}^{n-1} 10^{r_{\tau(k)} / 400}}.
+\\]
 
-Now, in order to compute \\(p_{ij}\\), the probability that player \\(i\\) will end up in position \\(j\\), we "simply" need to sum up the probability of all such rankings:
+Now, to get the entries of our probability matrix, we just have to sum over all rankings that put a given player in a given position. Remember that \\(p_{ij}\\) is the probability that player \\(i\\) finishes in position \\(j\\). With the convention \\(\tau(j) = i\\) meaning “player \\(i\\) sits in position \\(j\\)”, we have:
 
-\\[ p_{ij} = \sum_\text{$\tau$ s.t. $\tau(i)=j$} P(\tau). \\]
+\\[
+  p_{ij} = \sum_{\tau \text{ with } \tau(j) = i} P(\tau).
+\\]
 
-Uff. That really was a lot.
+If the formulae lost you at some point, that's OK — the story is simple: we assign a probability to each possible finishing order based on the Elo ratings, and then sum those probabilities to find out how likely each player is to end up in each position. That's all you really need to remember from this section.
 
 
 ### Does this really generalise two-player Elo?
