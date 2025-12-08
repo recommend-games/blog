@@ -26,13 +26,9 @@ Before we can apply this method to real games, we need a few more technicalities
 
 ## Why two-player Elo isn’t enough for modern games
 
-> Scope: short, scene-setting.
->
-> - Reuse your first two paragraphs (chess → 2p → need multiplayer).
-> - Explicitly connect to board games: “if we want to talk about Catan / Gaia Project / Brass etc, two-player Elo isn’t enough.”
-> - Keep it brief; this is just motivation.
+Elo's original paper was targeted at chess, so naturally it was only concerned with two-player games. Likewise, everything I've talked about in this series so far has assumed a simple head-to-head match: one player vs another, winner takes the Elo chips.
 
-Elo's original paper was targeted at chess, so naturally it was only concerned with two-player games. Likewise, everything I've talked about assumed a pair around the table (or court). But if we want to examine a wider variety of games, including some of the most beloved modern board games, we need to generalise this concept to the multi-player setting.
+But most modern board games don't work like that. Around a real table you'll usually find three, four, sometimes five players battling it out in CATAN, Brass, Gaia Project or whatever your current obsession is. If we want to apply our shiny “skill-o-meter” from part 3 to those games, we need to teach Elo how to handle true multiplayer tables instead of just faking them as a bunch of two-player matches.
 
 
 ## How people fake multiplayer Elo (and why it’s not quite right)
