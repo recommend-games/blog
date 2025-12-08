@@ -42,10 +42,10 @@ Note that for an \\(n\\)-player game there are \\({n \choose 2} = \frac{n(n-1)}{
 
 ## A more principled multiplayer Elo: ranking probabilities
 
+In [part 3]({{<ref "posts/elo_3/index.md">}}), we already leaned on a neat idea by Peter Duersch, Marco Lambrecht and Jörg Oechssler from their paper “[Measuring skill and chance in games](https://doi.org/10.1016/j.euroecorev.2020.103472)”. There we used their framework to turn the spread of Elo ratings into a “skill-o-meter” for two-player games. In this article, we’re going back to the same well: DLO also propose a way to run Elo on proper multiplayer tables, and that’s exactly the tool we need for modern board games.
+
 
 ### From table results to expected payoffs
-
-<!-- TODO: Introduce the paper and its authors before. -->
 
 Duersch et al suggest a more principled way to deal with multiplayer tables. Let \\(n\\) be the number of players in the match. Instead of pretending everyone played everyone else in separate duels, they directly model the whole finishing order at once.
 
