@@ -42,32 +42,34 @@ Note that for an \\(n\\)-player game there are \\({n \choose 2} = \frac{n(n-1)}{
 
 ## A more principled multiplayer Elo: ranking probabilities
 
-> This is the “big maths” section. I’d split it into subheadings so people can skim.
-
 
 ### From table results to expected payoffs
 
-> - Introduce DLO’s idea: n×n probability matrix p_{ij} = P(\text{player } i \text{ finishes in position } j).
-> - Introduce the rank-payoff vector (n-1, …, 0) and the expected payoff
-> e_i = \sum_j p_{ij} (n - 1 - j).
-> - Show the Elo update rule
-> r_i \leftarrow r_i + \frac{K}{n-1}(a_i - e_i).
-> - Emphasise intuition: “same logic as 2-player Elo, just scaled for n−1 possible ‘wins’ per game.”
-> 
-> This is the “what the model is doing” subsection.
+<!-- TODO: Introduce the paper and its authors before. -->
 
+Duersch et al suggest a more principled way to deal with multiplayer tables. Let \\(n\\) be the number of players in the match. Instead of pretending everyone played everyone else in separate duels, they directly model the whole finishing order at once.
 
-Duersch et al chose a different multi-player Elo generalisation. Let \\(n\\) be the number of players in the match we're considering. Their basic premise is to compute an \\(n\times n\\) probability matrix that tells us for each of the players what's the predicted probability that they will end up in each of the positions:
+The first ingredient is an \\(n\\times n\\) matrix of probabilities:
 
-\\[ p_{ij} = P(\text{player $i$ in pos $j$}) \\]
+\\[
+  p_{ij} = P(\text{player $i$ finishes in position $j$}).
+\\]
 
-Much like we assigned 1 as the outcome for the winner and 0 for the loser of a two-player game, we associate payoffs[^flexible-payoff] of \\(n-1, …, 0\\) for the players from winner to loser in a multi-player game, where tied players receive the average payoff for the respective ranks. Then the expected outcome for player \\(i\\) is simply the weighted sum of the different rank payoffs:
+You can read row \\(i\\) as "what's the chance player \\(i\\) finishes 1st, 2nd, …, last?" and column \\(j\\) as "who is most likely to end up in position \\(j\\)?".
 
-\\[ e_i = E\[\text{payoff for player $i$}\] = \sum_{j=0}^{n-1} p_{ij} \cdot (n - j - 1). \\]
+Just like in the two-player case, we need a numerical payoff to compare expectations with reality. For an \\(n\\)-player game we give the winner \\(n-1\\) points, the runner-up \\(n-2\\), all the way down to 0 for last place.[^flexible-payoff] If there are ties, we give each tied player the average of the payoffs they straddle. That gives us the expected payoff for player \\(i\\):
 
-At this point the Elo update is exactly the same as for the two player case: we compare actual outcome \\(a_i\\) (from the ranking payoff) to the expected outcome (divided by the maximal payoff) and adjust the player's Elo according to whether they over or under performed:
+\\[
+  e_i = E[\text{payoff for player $i$}] = \sum_{j=0}^{n-1} p_{ij} (n - 1 - j).
+\\]
 
-\\[ r_i \leftarrow r_i + \frac{K}{n-1} (a_i - e_i). \\]
+Once we have that, the Elo update looks exactly like before. Let \\(a_i\\) be the actual payoff (from the final ranking, scaled in the same way). We compare \\(a_i\\) to \\(e_i\\), and shift the rating in the direction of the surprise:
+
+\\[
+  r_i \leftarrow r_i + \frac{K}{n-1} (a_i - e_i).
+\\]
+
+The factor \\(1/(n-1)\\) just normalises things so that one whole game still corresponds to about \\(K\\) "chips" moving around, as in the two-player version.
 
 
 ### From Elo ratings to ranking probabilities
