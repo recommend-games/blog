@@ -33,17 +33,11 @@ But most modern board games don't work like that. Around a real table you'll usu
 
 ## How people fake multiplayer Elo (and why it’s not quite right)
 
-> This is where your BGA bit belongs.
-> 
-> - Explain BGA’s trick: treat an n-player game as all pairwise matchups.
-> - Mention the quadratic growth in pairings (n(n−1)/2).
-> - Briefly hint at conceptual issues (transitivity, everyone “plays everyone” even though they don’t, etc) – you don’t need a full critique, just “this is a hack”.
-> 
-> Goal: make the reader feel “ok, this is clever, but we can do better”.
+If you're like me and spend an unhealthy amount of your precious time on [Board Game Arena](https://boardgamearena.com/), you might have noticed their Elo implementation. They simply treat multi-player games as a collection of 1‑vs‑1 battles. So if Alice, Bob and Carol play a game, their Elo calculations treat this as *three* matches: Alice vs Bob, Alice vs Carol and Bob vs Carol. If Alice indeed won the game, Bob came in second and Carol last, Alice would win both her “virtual” matches and Bob his against Carol. Elo ratings would then be updated according to the regular formula, with \\(K\\) "adjusted for player count" (I didn't find an up-to-date source as to the details).
 
-If you're like me and waste a lot of your time on [Board Game Arena](https://boardgamearena.com/), you might have noticed their Elo implementation. They simply treat multi-player games as a collection of 1-vs-1 battles. So, if Alice, Bob and Carol play a game, their Elo calculations treat this as *three* matches: Alice vs Bob, Alice vs Carol and Bob vs Carol. If Alice indeed won the game, Bob came in second and Carol last, Alice would win both her matches and Bob his against Carol. Elo ratings would then be updated according to the regular formula, with \\(K\\) "adjusted for player count" (I didn't find an up-to-date source as to the details).
+Conceptually, this is a neat hack but not quite right: it pretends Alice actually played two independent duels against Bob and Carol, even though in reality all three interacted in the same shared game state and their decisions affected each other at the same time.
 
-Note that for an \\(n\\) player game there are \\({n\choose2}=\frac{n(n+1)}{2}\\) pairings, so the number of updates grows quadratically. This kind of growing complexity can really come to bite one in the behind when it comes to compute, but (a) luckily we don't need to worry about matches with hundreds of players in tabletop gaming and (b) it could be *much* worse, as we shall see in a minute…
+Note that for an \\(n\\)-player game there are \\({n \choose 2} = \frac{n(n-1)}{2}\\) pairings, so the number of updates grows quadratically with player count. This kind of growing complexity can really come back to bite you in the behind when it comes to compute, but (a) luckily we don't need to worry about matches with hundreds of players in tabletop gaming and (b) it could be *much* worse, as we shall see in a minute…
 
 
 ## A more principled multiplayer Elo: ranking probabilities
