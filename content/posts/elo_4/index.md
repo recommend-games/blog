@@ -1,7 +1,7 @@
 ---
-title: "TODO: Multi-player Elo"
-subtitle: "Elo, part 4: TODO"
-slug: elo-part-4-todo
+title: Teaching Elo to Play with Friends
+subtitle: "Elo, part 4: How to rate everyone round the table — and keep our skill-o-meter honest"
+slug: teaching-elo-to-play-with-friends
 author: Markus Shepherd
 type: post
 date: 2025-12-12T12:00:00+02:00
