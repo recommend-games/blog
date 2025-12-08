@@ -147,16 +147,15 @@ Talking of the computational effort: the calculations for this last plot took al
 
 ## Where this leaves us (and what’s next)
 
-> Short wrap-up.
-> 
-> - Recap the two main wins of this article:
-> - we now have a principled multiplayer Elo that reduces to the 2-player version;
-> - our σ-as-skill metric behaves nicely for 2–6 players in the p-deterministic universe.
-> - One sentence on “what this buys us”:
-> “Given real multiplayer game logs, we can now (a) fit Elo, (b) calibrate K, (c) read off σ and map it to a ‘skill fraction’ p.”
-> - Tease part 5: “Now we finally get to throw real board game data at this and see which games behave like 30% skill vs 80% skill etc.”
+We've covered a lot of ground in this article, but the pay-off is twofold.
 
-OK, finally I'll shut up about the theory and get to work on the really fun part: applying this whole aparatus to actual board games. I'll promise I won't keep you waiting for long. 🤓
+First, we now have a principled way to run Elo on real multiplayer tables. Instead of faking CATAN or Brass as a pile of head-to-head duels, we can model the whole finishing order at once, get sensible expected payoffs for each seat, and update ratings in a way that reduces to classic two-player Elo when there are only two people at the table.
+
+Second, we've stress-tested our "Elo-as-a-skill-o-meter" from part 3 in a richer toy universe. In those \\(p\\)-deterministic worlds, the standard deviation \\(\\sigma\\) of Elo ratings turns out to depend almost entirely on \\(p\\) and, within numerical accuracy, not on how many players sit down to play. That means \\(\\sigma\\) really does behave like a calibrated skill dial we can use for 2–6 player games.
+
+Put together, this gives us exactly the toolset we wanted: given real multiplayer game logs, we can (a) fit Elo using the multiplayer update, (b) calibrate \\(K\\) on predictive accuracy, (c) read off the resulting \\(\\sigma\\) and map it to a "skill fraction" \\(p\\) using our benchmark curve.
+
+Next time, we'll finally unleash this machinery on actual board games. We'll look at real play logs, see which games behave more like 30%-skill worlds and which ones look closer to 80% skill, and maybe settle a few pub arguments along the way. 🤓
 
 
 [^flexible-payoff]: Duersch et al use a flexible payoff structure which makes the formulae and implementation more confusing. For our purposes, the fixed payoff based on ranks is enough, so I tried to keep things simple.
