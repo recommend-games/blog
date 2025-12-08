@@ -123,36 +123,26 @@ For higher player counts there are more efficient tricks (for example dynamic pr
 
 ## Extending the toy universe: p-deterministic games with more players
 
-> Now you connect back to Part 3. This is the narrative payoff.
-
 ## Multiplayer p-deterministic games
 
-> - Restate the p-deterministic idea, but in the ranking language:
-> - fixed underlying skill ranking,
-> - with probability p → deterministic ranking by skill,
-> - with probability 1−p → random permutation.
-> - Emphasise that this is the same toy universe as last time, just with more than two players around the table.
+Right, after so much theory you deserve something a bit more concrete. Real-world applications will come in the next article; for now, there's still one more thing to check: do the multi-player versions of the \\(p\\)-deterministic game behave in the same way as the two-player toy world we built in part 3?
 
-Right, after so much theory you deserve some real world applications … which will follow in the next article. For now, there's still one more thing to check: do the multi-player versions of the \\(p\\)-deterministic game yield the same distribution as the two-player game we've discussed before? The setup remains much the same, just that the outcome in the deterministic case is a ranking of the players based on that underlying ranking of strength, and in the chance case it is a random permutation of the players.
+The setup remains almost the same. We fix an underlying skill ranking for all players. For each game, we flip a weighted coin: with probability \\(p\\) we play a game of pure skill, where players finish in order of their underlying strength; with probability \\(1-p\\) we play a game of pure chance, where the finishing order is just a random permutation of the players. It's the same toy universe as before, just with more than two players sitting at the table each time.
 
 
-### The σ vs p benchmark still holds for 2–6 players
+### The σ vs p benchmark still holds for up to 15 players
 
-> - Show / reference the p_deterministic_vs_sigma image.
-> - Explain the result in words:
-> - all the curves (2–6 players) are smooth and monotone;
-> - they lie very close together;
-> - the 2-player curve from part 3 is basically sitting on top of the others.
-> - Draw the conclusion explicitly:
-> - the σ vs p relationship is robust to player count;
-> - we can still interpret a measured σ in a real 3–5 player game as “about p ≈ … skill” using this benchmark.
-> - This is a good place for the “almost two weeks of CPU” anecdote.
-
-With this, we can run similar simulations to the ones before for various player counts and obtain the same plot:
+With this multiplayer version of the \\(p\\)-deterministic game in hand, we can run the same kind of simulations as before. For each choice of \\(p\\) and each player count between 2 and 6, we let lots of games play out, calibrate \\(K\\) on the simulated match data, compute the resulting Elo ratings and record their standard deviation \\(\\sigma\\). Plotting \\(\\sigma\\) against \\(p\\) for each player count gives us this family of curves:
 
 {{< img src="p_deterministic_vs_sigma" alt="p_deterministic vs σ for various player counts" >}}
 
-I really hope that this plot convinces you that the multi-player system we've discussed above is indeed a useful generalisation of two-player Elo, and also that the spread of the Elo distribution is a really robust measure for skill and luck in games. Talking of the computational effort: the calculations for this last plot took almost two weeks on my laptop, so please don't let those have been in vain. 😅
+<!-- TODO: Better colour scheme (purple); add transparency to dots. -->
+
+All of these curves are smooth and strictly increasing: as we turn up \\(p\\) and let skill matter more often, the Elo spread \\(\\sigma\\) grows, just like in the two-player case. More interestingly, when we plot player counts from 2 all the way up to 15, the points for different player counts are essentially indistinguishable: for each value of \\(p\\), all the coloured dots sit almost exactly on top of each other. Any tiny visible wobble at very high \\(p\\) is well within the limits of simulation noise and numerical quirks.
+
+That’s exactly what we were hoping to see. Empirically, in this toy universe \\(\\sigma\\) is effectively a function of \\(p\\) alone and — within our numerical precision — invariant to how many players sit at the table, even up to 15. In practical terms, this means that if we measure a standard deviation \\(\\sigma\\) in a real three-, four- or five-player game, we can safely read off a corresponding “\\(p\\)-skill world” from this benchmark without worrying about the exact player count.
+
+Talking of the computational effort: the calculations for this last plot took almost two weeks on my laptop, so please don't let those have been in vain. 🔥😅🤓
 
 
 ## Where this leaves us (and what’s next)
