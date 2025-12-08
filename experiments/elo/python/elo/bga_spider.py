@@ -105,6 +105,8 @@ class BgaSpider(Spider):
         )
     )
 
+    prioritise_popular_games = True
+
     ordinal_regex = re.compile(r"(\d+)(st|nd|rd|th)|winner|loser", re.IGNORECASE)
     integer_regex = re.compile(r"(\d+)")
 
@@ -180,8 +182,11 @@ class BgaSpider(Spider):
 
                 if self.scrape_matches:
                     games_played = int(game.get("games_played", 0))
-                    priority = (games_played * random.uniform(0.75, 1.25)) / (
-                        2 * self.max_matches_per_page
+                    priority = (
+                        (games_played * random.uniform(0.75, 1.25))
+                        / (2 * self.max_matches_per_page)
+                        if self.prioritise_popular_games
+                        else 0
                     )
                     yield Request(
                         url=self.build_match_url(response, game["id"]),
