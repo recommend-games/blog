@@ -39,7 +39,7 @@ If we want to apply our shiny “skill-o-meter” from part 3 to the games we ac
 
 ## How people fake multiplayer Elo (and why it’s not quite right)
 
-If you're like me and spend an unhealthy amount of your time on [Board Game Arena](https://boardgamearena.com/), you might have noticed their Elo implementation. They simply treat multiplayer games as a collection of 1‑vs‑1 battles. So if Alice, Bob and Carol play a game, their Elo calculations treat this as *three* matches: Alice vs Bob, Alice vs Carol and Bob vs Carol. If Alice indeed won the game, Bob came in second and Carol last, Alice would win both her “virtual” matches and Bob his against Carol. Elo ratings would then be updated according to the regular formula, with \\(K\\) "adjusted for player count" (I didn't find an up-to-date source as to the details).
+If you're like me and spend a slightly embarrassing amount of your free time on [Board Game Arena](https://boardgamearena.com/), you might have noticed their Elo implementation. They simply treat multiplayer games as a collection of 1‑vs‑1 battles. So if Alice, Bob and Carol play a game, their Elo calculations treat this as *three* matches: Alice vs Bob, Alice vs Carol and Bob vs Carol. If Alice indeed won the game, Bob came in second and Carol last, Alice would win both her “virtual” matches and Bob his against Carol. Elo ratings would then be updated according to the regular formula, with \\(K\\) "adjusted for player count" (I didn't find an up-to-date source as to the details).
 
 Conceptually, this is a neat hack but not quite right: it pretends Alice actually played two independent duels against Bob and Carol, even though in reality all three interacted in the same shared game state and their decisions affected each other at the same time.
 
@@ -127,12 +127,9 @@ Does this mean the whole approach is doomed? Luckily, not quite. Most board game
 For higher player counts there are more efficient tricks (for example dynamic programming and Monte Carlo approximations) that avoid looping over all permutations explicitly. I'm not going to go into the details here; if you're curious, you can have a look at the implementation in the code for this article – but for our purposes it's enough to know that the full model is tractable for realistic games.
 
 
-## Extending the toy universe: p-deterministic games with more players
+### Multiplayer p-deterministic games
 
 Right, after so much theory you deserve something a bit more concrete. Real-world applications will come in the next article; for now, there's still one more thing to check: do the multiplayer versions of the \\(p\\)-deterministic game behave in the same way as the two-player toy world we built in part 3?
-
-
-### Multiplayer p-deterministic games
 
 The setup remains almost the same. We fix an underlying skill ranking for all players. For each game, we flip a weighted coin: with probability \\(p\\) we play a game of pure skill, where players finish in order of their underlying strength; with probability \\(1-p\\) we play a game of pure chance, where the finishing order is just a random permutation of the players. It's the same toy universe as before, just with more than two players sitting at the table each time.
 
