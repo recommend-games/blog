@@ -14,7 +14,7 @@ from scrapy import FormRequest, Request, Selector, Spider
 from scrapy.http import Response, TextResponse
 
 if TYPE_CHECKING:
-    from collections.abc import Generator, Iterable
+    from collections.abc import Container, Generator, Iterable
 
 
 class BaseFilter:
@@ -93,7 +93,7 @@ class BgaSpider(Spider):
     scrape_matches = True
     base_match_url = "/message/board"
     match_path = jmespath.compile("data.news")
-    max_matches_per_page = 9500
+    max_matches_per_page = 5000
     match_keys: Iterable[str] | None = frozenset(
         (
             "id",
@@ -106,6 +106,7 @@ class BgaSpider(Spider):
     )
 
     prioritise_popular_games = True
+    allow_list_ids: Container[int] | None = None
 
     ordinal_regex = re.compile(r"(\d+)(st|nd|rd|th)|winner|loser", re.IGNORECASE)
     integer_regex = re.compile(r"(\d+)")
@@ -164,6 +165,9 @@ class BgaSpider(Spider):
                 game["type"] = "game"
                 game["scraped_at"] = now
                 yield funcy.project(game, self.game_keys) if self.game_keys else game  # type: ignore[arg-type]
+
+                if self.allow_list_ids and game["id"] not in self.allow_list_ids:
+                    continue
 
                 if self.scrape_rankings:
                     yield FormRequest(
