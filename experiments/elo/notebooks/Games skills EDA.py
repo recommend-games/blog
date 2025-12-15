@@ -43,6 +43,9 @@ columns = [
     "std_dev",
     "p_deterministic",
     "rank",
+    "avg_rating",
+    "bayes_rating",
+    "num_votes",
     "year",
     "complexity",
     "depth_to_complexity",
@@ -90,8 +93,9 @@ all_games.describe()
 
 # %%
 df = (
-    all_games.remove(pl.col("num_regular_players") < 100)
-    .remove(pl.col("bgg_id").is_null())
+    all_games.remove(pl.col("bgg_id").is_null())
+    .remove(pl.len().over("bgg_id") > 1)
+    .remove(pl.col("num_regular_players") < 100)
     .remove(pl.col("is_ranking_disabled") & pl.col("cooperative"))
 )
 df.shape
@@ -103,28 +107,38 @@ df.sample(10, seed=seed)
 df.describe()
 
 # %%
+plot_df = df.remove(pl.col("num_votes") < 1000)
+plot_df.shape
+
+# %%
 sns.scatterplot(
-    data=df,
+    data=plot_df,
     x="p_deterministic",
     y="complexity",
 )
 
 # %%
-df.sort("std_dev", descending=True, nulls_last=True).head(20)
+sns.scatterplot(
+    data=plot_df,
+    x="p_deterministic",
+    y="avg_rating",
+)
 
 # %%
-df.sort("std_dev", descending=False, nulls_last=True).head(20)
+sns.scatterplot(
+    data=plot_df,
+    x="p_deterministic",
+    y="bayes_rating",
+)
 
 # %%
-df.sort(
-    "depth_to_complexity",
-    descending=True,
-    nulls_last=True,
-).head(20)
+plot_df.sort("std_dev", descending=True, nulls_last=True).head(20)
 
 # %%
-df.sort(
-    "depth_to_complexity",
-    descending=False,
-    nulls_last=True,
-).head(20)
+plot_df.sort("std_dev", descending=False, nulls_last=True).head(20)
+
+# %%
+plot_df.sort("depth_to_complexity", descending=True, nulls_last=True).head(20)
+
+# %%
+plot_df.sort("depth_to_complexity", descending=False, nulls_last=True).head(20)
