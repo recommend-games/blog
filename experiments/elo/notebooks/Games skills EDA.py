@@ -69,8 +69,11 @@ bgg_types = (
     .explode("add_rank")
     .unnest("add_rank")
     .group_by("bgg_id")
-    .agg(pl.all().sort_by("rank", nulls_last=True).first())
-    .select("bgg_id", game_type="name")
+    .agg(
+        game_type=pl.col("name")
+        .sort_by("rank", "bayes_rating", descending=[False, True], nulls_last=True)
+        .first()
+    )
 )
 all_games = (
     bga.join(id_mapping, on="bga_id", how="left")
@@ -151,7 +154,7 @@ from bokeh.io import output_notebook
 from bokeh.plotting import figure, show
 from bokeh.models import ColumnDataSource, HoverTool, Slope
 from bokeh.transform import factor_cmap
-from bokeh.palettes import Category20
+from bokeh.palettes import Category10, Category20, Set1
 
 output_notebook()
 
@@ -163,20 +166,17 @@ bokeh_df = (
 
 # Scale marker size based on number of matches (num_all_matches)
 matches = bokeh_df["num_all_matches"].astype("float64")
-if matches.max() > matches.min():
-    bokeh_df["size"] = 6 + (matches - matches.min()) * (20 - 6) / (
-        matches.max() - matches.min()
-    )
-else:
-    bokeh_df["size"] = 10.0
+bokeh_df["size"] = 6 + (matches - matches.min()) * (20 - 6) / (
+    matches.max() - matches.min()
+)
 
-# Ensure game_type exists (will be filled later in the pipeline)
-if "game_type" not in bokeh_df.columns:
-    bokeh_df["game_type"] = "Unknown"
-
-game_types = sorted(bokeh_df["game_type"].unique().tolist())
+game_types = (
+    plot_df.group_by("game_type")
+    .agg(pl.len())
+    .sort("len", descending=True)["game_type"]
+)
 # Use up to 20 distinct colours; if there are more types, colours will repeat
-palette = Category20[20] if len(game_types) > 2 else Category20[3]
+palette = Category10[9]  # Set1[9]
 
 source = ColumnDataSource(bokeh_df)
 
@@ -204,22 +204,20 @@ p.scatter(
 )
 
 # Add a simple linear regression line: complexity ~ p_deterministic
-if len(bokeh_df) >= 2:
-    x_vals = bokeh_df["p_deterministic"].to_numpy(dtype=float)
-    y_vals = bokeh_df["complexity"].to_numpy(dtype=float)
-    # Filter out any NaNs that might have slipped through
-    mask = np.isfinite(x_vals) & np.isfinite(y_vals)
-    x_vals = x_vals[mask]
-    y_vals = y_vals[mask]
-    if len(x_vals) >= 2:
-        slope, intercept = np.polyfit(x_vals, y_vals, deg=1)
-        reg_line = Slope(
-            gradient=float(slope),
-            y_intercept=float(intercept),
-            line_width=2,
-            line_alpha=0.8,
-        )
-        p.add_layout(reg_line)
+x_vals = bokeh_df["p_deterministic"].to_numpy(dtype=float)
+y_vals = bokeh_df["complexity"].to_numpy(dtype=float)
+# Filter out any NaNs that might have slipped through
+mask = np.isfinite(x_vals) & np.isfinite(y_vals)
+x_vals = x_vals[mask]
+y_vals = y_vals[mask]
+slope, intercept = np.polyfit(x_vals, y_vals, deg=1)
+reg_line = Slope(
+    gradient=float(slope),
+    y_intercept=float(intercept),
+    line_width=2,
+    line_alpha=0.8,
+)
+p.add_layout(reg_line)
 
 hover = HoverTool(
     tooltips=[
@@ -239,7 +237,8 @@ hover = HoverTool(
 
 p.add_tools(hover)
 p.legend.location = "top_left"
-p.legend.click_policy = "hide"
+# Currently hides/mutes all the dots. Desirable policy would be to only show that type.
+# p.legend.click_policy = "mute"
 
 show(p)
 
