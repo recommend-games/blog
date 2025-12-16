@@ -156,25 +156,34 @@ sns.scatterplot(
 )
 
 # %%
-# Prepare data for Bokeh: filter, convert to pandas, and scale marker sizes
+min_size, max_size = 5, 15
 bokeh_df = (
     plot_df.drop_nulls(["p_deterministic", "complexity", "num_all_matches"])
-).to_pandas()
-
-# Scale marker size based on number of matches (num_all_matches)
-min_size, max_size = 5, 15
-matches = bokeh_df["num_all_matches"].astype("float64")
-log_matches = np.log10(matches.clip(lower=1))
-bokeh_df["size"] = min_size + (log_matches - log_matches.min()) * (
-    max_size - min_size
-) / (log_matches.max() - log_matches.min())
-
+    .with_columns(log_matches=pl.col("num_all_matches").clip(1).log10())
+    .with_columns(
+        size=min_size
+        + (pl.col("log_matches") - pl.col("log_matches").min())
+        * (max_size - min_size)
+        / (pl.col("log_matches").max() - pl.col("log_matches").min())
+    )
+    .drop("log_matches")
+)
 game_types = (
-    plot_df.group_by("game_type")
+    bokeh_df.group_by("game_type")
     .agg(pl.len())
     .sort("len", descending=True)["game_type"]
 )
+bokeh_df.shape, game_types.shape
 
+# %%
+# Add a simple linear regression line: complexity ~ p_deterministic
+x_vals = bokeh_df["p_deterministic"].to_numpy()
+y_vals = bokeh_df["complexity"].to_numpy()
+# Filter out any NaNs that might have slipped through
+slope, intercept = np.polyfit(x_vals, y_vals, deg=1)
+slope, intercept
+
+# %%
 # Use up to 10 distinct colours; if there are more types, colours will repeat
 palette = Category10[10]
 
@@ -188,6 +197,14 @@ p = figure(
     tools="pan,wheel_zoom,box_zoom,reset,save",
     title="Estimated skill fraction vs complexity (BGA games)",
 )
+
+reg_line = Slope(
+    gradient=slope,
+    y_intercept=intercept,
+    line_width=2,
+    line_alpha=0.8,
+)
+p.add_layout(reg_line)
 
 # One glyph per game_type with a CDSView so we can control legend order explicitly
 for i, gt in enumerate(game_types):
@@ -204,22 +221,6 @@ for i, gt in enumerate(game_types):
         color=palette[i % len(palette)],
         legend_label=gt,
     )
-
-# Add a simple linear regression line: complexity ~ p_deterministic
-x_vals = bokeh_df["p_deterministic"].to_numpy(dtype=float)
-y_vals = bokeh_df["complexity"].to_numpy(dtype=float)
-# Filter out any NaNs that might have slipped through
-mask = np.isfinite(x_vals) & np.isfinite(y_vals)
-x_vals = x_vals[mask]
-y_vals = y_vals[mask]
-slope, intercept = np.polyfit(x_vals, y_vals, deg=1)
-reg_line = Slope(
-    gradient=float(slope),
-    y_intercept=float(intercept),
-    line_width=2,
-    line_alpha=0.8,
-)
-p.add_layout(reg_line)
 
 hover = HoverTool(
     tooltips=[
