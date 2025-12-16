@@ -164,5 +164,5 @@ I also want to shift the view back from players' individual strengths to the ove
 
 
 [^no-acronym]: Please note that Elo is a proper name and not an acronym, so please never ever spell it in all caps – it's disrespectful to the person who invented the rating system.
-[^multiplayer]: Since the Elo system was developed for chess, it's been originally formulated for two player zero-sum games only. For simplicity, we stick with that case for this article. There are various ways to generalise to multiplayer settings and we shall examine those in future articles.
+[^multiplayer]: Since the Elo system was developed for chess, it's been originally formulated for two player zero-sum games only. For simplicity, we stick with that case for this article. There are various ways to generalise to multiplayer settings and we shall examine those in [future articles]({{<ref "posts/elo_4/index.md">}}).
 [^descent]: You'll find a lot more references for gradient *descent*. That's just the same method but for minimising a function and hence with the sign flipped.

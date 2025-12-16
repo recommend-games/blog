@@ -22,7 +22,7 @@ tags:
 
 At some point this year, I let my laptop run flat-out for almost two weeks just to answer one question: *how much of a four-player board game is "skill" and how much is "luck"?* That sounds excessive, but there was a catch: before I could even start those simulations, I had to fix a basic problem. Elo – the rating system we've been happily using so far – only really knows how to handle one-on-one duels.
 
-This article is the missing technical chapter in the series. In [part 1]({{<ref "posts/elo_1/index.md">}}) we met Elo and learned how it turns match results into skill ratings. In [part 2]({{<ref "posts/elo_2/index.md">}}) we sent those ratings to the Crucible to predict the next World Snooker Champion. And in [part 3]({{<ref "posts/elo_3/index.md">}}) we stole a clever idea from Duersch, Lambrecht and Oechssler to turn the spread of Elo ratings in a two-player "toy universe" into a kind of skill-o-meter: a way to say whether a game behaves more like a 30%-skill world or an 80%-skill world.
+This article is the missing technical chapter in the series. In [part 1]({{<ref "posts/elo_1/index.md">}}) we met Elo and learned how it turns match results into skill ratings. In [part 2]({{<ref "posts/elo_2/index.md">}}) we sent those ratings to the Crucible to predict the next World Snooker Champion. And in [part 3]({{<ref "posts/elo_3/index.md">}}) we stole a clever idea from Dürsch, Lambrecht and Oechssler to turn the spread of Elo ratings in a two-player "toy universe" into a kind of skill-o-meter: a way to say whether a game behaves more like a 30%-skill world or an 80%-skill world.
 
 There's one obvious gap left: most modern board games aren't tidy head-to-head affairs. Around a real table you'll usually find three, four, sometimes five players battling it out in CATAN, Brass, Gaia Project or whatever your current obsession is. If we want to use our shiny skill-o-meter on those games, we first have to teach Elo how to cope with real multiplayer tables instead of just faking them as a stack of two-player matches.
 
@@ -47,12 +47,12 @@ Note that for an \\(n\\)-player game there are \\({n \choose 2} = \frac{n(n-1)}{
 
 ## A more principled multiplayer Elo: ranking probabilities
 
-In [part 3]({{<ref "posts/elo_3/index.md">}}), we already leaned on a neat idea by Peter Duersch, Marco Lambrecht and Jörg Oechssler from their paper "[Measuring skill and chance in games](https://doi.org/10.1016/j.euroecorev.2020.103472)" (2020). There we used their framework to turn the spread of Elo ratings into a "skill-o-meter" for two-player games. In this article, we're going back to the same well: DLO also propose a way to run Elo on proper multiplayer tables, and that's exactly the tool we need for modern board games.
+In [part 3]({{<ref "posts/elo_3/index.md">}}), we already leaned on a neat idea by Peter Dürsch, Marco Lambrecht and Jörg Oechssler from their paper "[Measuring skill and chance in games](https://doi.org/10.1016/j.euroecorev.2020.103472)" (2020). There we used their framework to turn the spread of Elo ratings into a "skill-o-meter" for two-player games. In this article, we're going back to the same well: DLO also propose a way to run Elo on proper multiplayer tables, and that's exactly the tool we need for modern board games.
 
 
 ### From table results to expected payoffs
 
-Duersch et al suggest a more principled way to deal with multiplayer tables. Let \\(n\\) be the number of players in the match. Instead of pretending everyone played everyone else in separate duels, they directly model the whole finishing order at once.
+Dürsch et al suggest a more principled way to deal with multiplayer tables. Let \\(n\\) be the number of players in the match. Instead of pretending everyone played everyone else in separate duels, they directly model the whole finishing order at once.
 
 The first ingredient is an \\(n\\times n\\) matrix of probabilities:
 
@@ -90,7 +90,7 @@ Formally, we write a possible ranking as a permutation \\(\tau\\) of \\(\{0, \do
   = \prod_{j=0}^{n-1} P(\text{player $\tau(j)$ on position $j$} \mid \text{players $\tau(0), \dots, \tau(j - 1)$ fixed above}).
 \\]
 
-To estimate those conditional probabilities, Duersch et al use the [softmax](https://en.wikipedia.org/wiki/Softmax_function) over Elo ratings. Softmax is just the multiplayer cousin of the Elo win-probability formula: you take a "strength score" for each player, exponentiate it, and then divide by the sum so that everything adds up to 1. At each step \\(j\\), we look at the players who haven't been placed yet and assign probabilities proportional to \\(10^{r / 400}\\), just like in the two-player Elo formula. If we write \\(r_i\\) for the current rating of player \\(i\\), this gives:
+To estimate those conditional probabilities, Dürsch et al use the [softmax](https://en.wikipedia.org/wiki/Softmax_function) over Elo ratings. Softmax is just the multiplayer cousin of the Elo win-probability formula: you take a "strength score" for each player, exponentiate it, and then divide by the sum so that everything adds up to 1. At each step \\(j\\), we look at the players who haven't been placed yet and assign probabilities proportional to \\(10^{r / 400}\\), just like in the two-player Elo formula. If we write \\(r_i\\) for the current rating of player \\(i\\), this gives:
 
 \\[
   P(\text{player $\tau(j)$ on position $j$} \mid \text{players $\tau(0), \dots, \tau(j - 1)$ fixed above}) \\\\
@@ -159,5 +159,5 @@ Put together, this gives us the toolset we wanted: given real multiplayer game l
 Next time, we'll finally unleash this machinery on actual board games. We'll look at real play logs, see which games behave more like 30%-skill worlds and which ones look closer to 80% skill, and maybe settle a few pub arguments along the way. 🤓
 
 
-[^flexible-payoff]: Duersch et al use a flexible payoff structure which makes the formulae and implementation more confusing. For our purposes, the fixed payoff based on ranks is enough, so I tried to keep things simple.
+[^flexible-payoff]: Dürsch et al use a flexible payoff structure which makes the formulae and implementation more confusing. For our purposes, the fixed payoff based on ranks is enough, so I tried to keep things simple.
 [^exercise]: If you're itching to do the algebra yourself, be my guest — that's the unofficial "exercise to the reader" for this section. I decided you didn't need to watch me juggle minus signs for a page.

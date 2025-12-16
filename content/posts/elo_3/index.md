@@ -59,7 +59,7 @@ To answer these questions, we need to properly dive into the science. 🧑‍�
 
 ### The one neat trick economists use to measure skill (that gamers can steal)
 
-I'm going to lean on a neat idea by Peter Duersch, Marco Lambrecht and Jörg Oechssler, from their paper "[Measuring skill and chance in games](https://doi.org/10.1016/j.euroecorev.2020.103472)" (2020). They come from an economics background and originally cared about gambling regulation, but the trick itself is much more general: take the Elo ratings for all players in a game, look at their *distribution*, and from that pin down a single number that tells you where the game sits on the spectrum between "pure chance" and "pure skill". That's exactly what we're trying to do here — just for board games instead of casinos. 🤑
+I'm going to lean on a neat idea by Peter Dürsch, Marco Lambrecht and Jörg Oechssler, from their paper "[Measuring skill and chance in games](https://doi.org/10.1016/j.euroecorev.2020.103472)" (2020). They come from an economics background and originally cared about gambling regulation, but the trick itself is much more general: take the Elo ratings for all players in a game, look at their *distribution*, and from that pin down a single number that tells you where the game sits on the spectrum between "pure chance" and "pure skill". That's exactly what we're trying to do here — just for board games instead of casinos. 🤑
 
 So we'll follow their lead and focus on the *spread* of the Elo distribution as our measure of how much skill shows up in a game.
 
@@ -80,7 +80,7 @@ A natural idea would be to just fix one \\(K\\) for all games. Unfortunately, th
 
 ### Calibrating K from the data
 
-What Duersch et al suggest instead is to calibrate \\(K\\) from the data, so that the Elo ratings are as good as possible at the job they were designed for: predicting who wins. Remember how Elo works: we take the pre-match ratings \\(r_A\\) and \\(r_B\\) of two players *A* and *B*, and feed the difference into a logistic formula to get the predicted win probability for *A*:
+What Dürsch et al suggest instead is to calibrate \\(K\\) from the data, so that the Elo ratings are as good as possible at the job they were designed for: predicting who wins. Remember how Elo works: we take the pre-match ratings \\(r_A\\) and \\(r_B\\) of two players *A* and *B*, and feed the difference into a logistic formula to get the predicted win probability for *A*:
 
 \\[ p_A = \frac{1}{1 + 10^{-(r_A - r_B) / 400}}. \\]
 
