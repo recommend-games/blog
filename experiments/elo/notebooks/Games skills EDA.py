@@ -132,6 +132,84 @@ sns.scatterplot(
 )
 
 # %%
+from bokeh.io import output_notebook
+from bokeh.plotting import figure, show
+from bokeh.models import ColumnDataSource, HoverTool
+from bokeh.transform import factor_cmap
+from bokeh.palettes import Category20
+
+output_notebook()
+
+# %%
+# Prepare data for Bokeh: filter, convert to pandas, and scale marker sizes
+bokeh_df = (
+    plot_df.drop_nulls(["p_deterministic", "complexity", "num_all_matches"])
+).to_pandas()
+
+# Scale marker size based on number of matches (num_all_matches)
+matches = bokeh_df["num_all_matches"].astype("float64")
+if matches.max() > matches.min():
+    bokeh_df["size"] = 6 + (matches - matches.min()) * (20 - 6) / (
+        matches.max() - matches.min()
+    )
+else:
+    bokeh_df["size"] = 10.0
+
+# Ensure game_type exists (will be filled later in the pipeline)
+if "game_type" not in bokeh_df.columns:
+    bokeh_df["game_type"] = "Unknown"
+
+game_types = sorted(bokeh_df["game_type"].unique().tolist())
+# Use up to 20 distinct colours; if there are more types, colours will repeat
+palette = Category20[20] if len(game_types) > 2 else Category20[3]
+
+source = ColumnDataSource(bokeh_df)
+
+p = figure(
+    width=900,
+    height=550,
+    x_axis_label="Estimated skill fraction p (p_deterministic)",
+    y_axis_label="BGG complexity",
+    tools="pan,wheel_zoom,box_zoom,reset,save",
+    title="Estimated skill fraction vs complexity (BGA games)",
+)
+
+color_mapping = factor_cmap("game_type", palette=palette, factors=game_types)
+
+p.circle(
+    x="p_deterministic",
+    y="complexity",
+    size="size",
+    source=source,
+    fill_alpha=0.7,
+    line_color=None,
+    color=color_mapping,
+    legend_field="game_type",
+)
+
+hover = HoverTool(
+    tooltips=[
+        ("Game", "@display_name_en"),
+        ("Year", "@year"),
+        ("Rank", "@rank"),
+        ("BGG rating", "@avg_rating{0.00}"),
+        ("BGG bayes rating", "@bayes_rating{0.00}"),
+        ("BGA plays (games_played)", "@games_played"),
+        ("Matches in Elo data", "@num_all_matches"),
+        ("Regular players", "@num_regular_players"),
+        ("Skill fraction p", "@p_deterministic{0.00}"),
+        ("Complexity", "@complexity{0.0}"),
+        ("Game type", "@game_type"),
+    ]
+)
+
+p.add_tools(hover)
+p.legend.location = "bottom_right"
+p.legend.click_policy = "hide"
+
+show(p)
+
+# %%
 plot_df.sort("std_dev", descending=True, nulls_last=True).head(20)
 
 # %%
