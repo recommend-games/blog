@@ -51,6 +51,7 @@ columns = [
     "complexity",
     "depth_to_complexity",
     "cooperative",
+    "game_type",
 ]
 len(columns)
 
@@ -63,6 +64,14 @@ skills = (
     .drop_nulls("bga_id")
 )
 bgg = pl.scan_ndjson("~/Recommend.Games/board-game-data/scraped/bgg_GameItem.jl")
+bgg_types = (
+    bgg.select("bgg_id", "add_rank")
+    .explode("add_rank")
+    .unnest("add_rank")
+    .group_by("bgg_id")
+    .agg(pl.all().sort_by("rank", nulls_last=True).first())
+    .select("bgg_id", game_type="name")
+)
 all_games = (
     bga.join(id_mapping, on="bga_id", how="left")
     .with_columns(pl.coalesce("bgg_id_right", "bgg_id").alias("bgg_id"))
@@ -76,12 +85,17 @@ all_games = (
     .with_columns(pl.coalesce("bgg_id", "bgg_id_right"))
     .drop("bgg_id_right", "name_right")
     .join(bgg, how="left", on="bgg_id", coalesce=True)
+    .drop("game_type")
+    .join(bgg_types, how="left", on="bgg_id", coalesce=True)
     .with_columns(
         ratio=pl.col("num_all_matches").fill_null(0) / pl.col("games_played"),
         depth_to_complexity=pl.col("p_deterministic") / pl.col("complexity"),
     )
     .select(columns)
-    .with_columns(pl.col(pl.Boolean).fill_null(False))
+    .with_columns(
+        pl.col(pl.Boolean).fill_null(False),
+        pl.col("game_type").fill_null("Uncategorized"),
+    )
     .collect()
 )
 all_games.shape
