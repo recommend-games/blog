@@ -17,6 +17,7 @@
 import jupyter_black
 import polars as pl
 import seaborn as sns
+import numpy as np
 
 jupyter_black.load()
 
@@ -134,7 +135,7 @@ sns.scatterplot(
 # %%
 from bokeh.io import output_notebook
 from bokeh.plotting import figure, show
-from bokeh.models import ColumnDataSource, HoverTool
+from bokeh.models import ColumnDataSource, HoverTool, Slope
 from bokeh.transform import factor_cmap
 from bokeh.palettes import Category20
 
@@ -176,16 +177,35 @@ p = figure(
 
 color_mapping = factor_cmap("game_type", palette=palette, factors=game_types)
 
-p.circle(
+p.scatter(
     x="p_deterministic",
     y="complexity",
     size="size",
+    marker="circle",
     source=source,
     fill_alpha=0.7,
     line_color=None,
     color=color_mapping,
     legend_field="game_type",
 )
+
+# Add a simple linear regression line: complexity ~ p_deterministic
+if len(bokeh_df) >= 2:
+    x_vals = bokeh_df["p_deterministic"].to_numpy(dtype=float)
+    y_vals = bokeh_df["complexity"].to_numpy(dtype=float)
+    # Filter out any NaNs that might have slipped through
+    mask = np.isfinite(x_vals) & np.isfinite(y_vals)
+    x_vals = x_vals[mask]
+    y_vals = y_vals[mask]
+    if len(x_vals) >= 2:
+        slope, intercept = np.polyfit(x_vals, y_vals, deg=1)
+        reg_line = Slope(
+            gradient=float(slope),
+            y_intercept=float(intercept),
+            line_width=2,
+            line_alpha=0.8,
+        )
+        p.add_layout(reg_line)
 
 hover = HoverTool(
     tooltips=[
@@ -204,7 +224,7 @@ hover = HoverTool(
 )
 
 p.add_tools(hover)
-p.legend.location = "bottom_right"
+p.legend.location = "top_left"
 p.legend.click_policy = "hide"
 
 show(p)
