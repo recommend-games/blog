@@ -165,10 +165,12 @@ bokeh_df = (
 ).to_pandas()
 
 # Scale marker size based on number of matches (num_all_matches)
+min_size, max_size = 5, 15
 matches = bokeh_df["num_all_matches"].astype("float64")
-bokeh_df["size"] = 6 + (matches - matches.min()) * (20 - 6) / (
-    matches.max() - matches.min()
-)
+log_matches = np.log10(matches.clip(lower=1))
+bokeh_df["size"] = min_size + (log_matches - log_matches.min()) * (
+    max_size - min_size
+) / (log_matches.max() - log_matches.min())
 
 game_types = (
     plot_df.group_by("game_type")
