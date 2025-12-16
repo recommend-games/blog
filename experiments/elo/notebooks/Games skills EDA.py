@@ -19,8 +19,14 @@ import polars as pl
 import seaborn as sns
 import numpy as np
 
+from bokeh.io import output_notebook
+from bokeh.plotting import figure, show
+from bokeh.models import ColumnDataSource, HoverTool, Slope, CDSView, GroupFilter
+from bokeh.palettes import Category10
+
 jupyter_black.load()
 
+output_notebook()
 sns.set_style("dark")
 pl.Config.set_tbl_rows(100)
 pl.Config.set_tbl_width_chars(100)
@@ -150,15 +156,6 @@ sns.scatterplot(
 )
 
 # %%
-from bokeh.io import output_notebook
-from bokeh.plotting import figure, show
-from bokeh.models import ColumnDataSource, HoverTool, Slope
-from bokeh.transform import factor_cmap
-from bokeh.palettes import Category10, Category20, Set1
-
-output_notebook()
-
-# %%
 # Prepare data for Bokeh: filter, convert to pandas, and scale marker sizes
 bokeh_df = (
     plot_df.drop_nulls(["p_deterministic", "complexity", "num_all_matches"])
@@ -177,8 +174,9 @@ game_types = (
     .agg(pl.len())
     .sort("len", descending=True)["game_type"]
 )
-# Use up to 20 distinct colours; if there are more types, colours will repeat
-palette = Category10[9]  # Set1[9]
+
+# Use up to 10 distinct colours; if there are more types, colours will repeat
+palette = Category10[10]
 
 source = ColumnDataSource(bokeh_df)
 
@@ -191,19 +189,21 @@ p = figure(
     title="Estimated skill fraction vs complexity (BGA games)",
 )
 
-color_mapping = factor_cmap("game_type", palette=palette, factors=game_types)
-
-p.scatter(
-    x="p_deterministic",
-    y="complexity",
-    size="size",
-    marker="circle",
-    source=source,
-    fill_alpha=0.7,
-    line_color=None,
-    color=color_mapping,
-    legend_field="game_type",
-)
+# One glyph per game_type with a CDSView so we can control legend order explicitly
+for i, gt in enumerate(game_types):
+    view = CDSView(filter=GroupFilter(column_name="game_type", group=gt))
+    p.scatter(
+        x="p_deterministic",
+        y="complexity",
+        size="size",
+        marker="circle",
+        source=source,
+        view=view,
+        fill_alpha=0.7,
+        line_color=None,
+        color=palette[i % len(palette)],
+        legend_label=gt,
+    )
 
 # Add a simple linear regression line: complexity ~ p_deterministic
 x_vals = bokeh_df["p_deterministic"].to_numpy(dtype=float)
@@ -224,6 +224,8 @@ p.add_layout(reg_line)
 hover = HoverTool(
     tooltips=[
         ("Game", "@display_name_en"),
+        ("Skill fraction p", "@p_deterministic{0.00}"),
+        ("Complexity", "@complexity{0.0}"),
         ("Year", "@year"),
         ("Rank", "@rank"),
         ("BGG rating", "@avg_rating{0.00}"),
@@ -231,16 +233,13 @@ hover = HoverTool(
         ("BGA plays (games_played)", "@games_played"),
         ("Matches in Elo data", "@num_all_matches"),
         ("Regular players", "@num_regular_players"),
-        ("Skill fraction p", "@p_deterministic{0.00}"),
-        ("Complexity", "@complexity{0.0}"),
         ("Game type", "@game_type"),
     ]
 )
-
 p.add_tools(hover)
+
 p.legend.location = "top_left"
-# Currently hides/mutes all the dots. Desirable policy would be to only show that type.
-# p.legend.click_policy = "mute"
+p.legend.click_policy = "hide"
 
 show(p)
 
