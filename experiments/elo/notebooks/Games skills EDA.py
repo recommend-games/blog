@@ -155,6 +155,26 @@ sns.scatterplot(
     y="bayes_rating",
 )
 
+
+# %%
+def format_int_col(col: str) -> pl.Expr:
+    return (
+        pl.when(pl.col(col) >= 10_000)
+        .then(
+            (pl.col(col) // 1000).map_elements(
+                lambda v: f"{v:,}k",
+                return_dtype=pl.String,
+            ),
+        )
+        .otherwise(
+            pl.col(col).map_elements(
+                lambda v: f"{v:,}",
+                return_dtype=pl.String,
+            ),
+        )
+    )
+
+
 # %%
 min_size, max_size = 5, 18
 bokeh_columns = [
@@ -170,7 +190,8 @@ bokeh_columns = [
     "num_regular_players",
 ]
 bokeh_df = (
-    plot_df.drop_nulls(["p_deterministic", "complexity", "num_all_matches"])
+    plot_df.lazy()
+    .drop_nulls(["p_deterministic", "complexity", "num_all_matches"])
     .with_columns(log_matches=pl.col("num_all_matches").clip(1).log10())
     .with_columns(
         size=min_size
@@ -180,6 +201,11 @@ bokeh_df = (
     )
     .select(bokeh_columns)
     .sort("num_all_matches")
+    .with_columns(
+        num_all_matches=format_int_col("num_all_matches"),
+        num_regular_players=format_int_col("num_regular_players"),
+    )
+    .collect()
 )
 game_types = (
     bokeh_df.group_by("game_type")
@@ -263,7 +289,7 @@ quadrant_labels = [
     (x_left, y_top, "complex but swingy"),
     (x_right, y_top, "complex and skillful"),
     (x_left, y_bottom, "simple and swingy"),
-    (x_right, y_bottom, "simple and skillful"),
+    (x_right, y_bottom, "simple but skillful"),
 ]
 
 for x_q, y_q, text in quadrant_labels:
