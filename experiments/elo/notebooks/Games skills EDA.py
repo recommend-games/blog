@@ -21,7 +21,7 @@ import numpy as np
 
 from bokeh.io import output_notebook
 from bokeh.plotting import figure, show
-from bokeh.models import ColumnDataSource, HoverTool, Slope, Span, CDSView, GroupFilter
+from bokeh.models import ColumnDataSource, HoverTool, Slope, Span, CDSView, GroupFilter, Label
 from bokeh.palettes import Category10
 
 jupyter_black.load()
@@ -199,36 +199,74 @@ p = figure(
     title="Skill vs complexity for BGA games",
 )
 
-reg_line = Slope(
-    gradient=slope,
-    y_intercept=intercept,
-    line_color="black",
-    line_width=1.5,
-    line_alpha=0.5,
-    line_dash="dashed",
+p.add_layout(
+    Slope(
+        gradient=slope,
+        y_intercept=intercept,
+        line_color="black",
+        line_width=1.5,
+        line_alpha=0.5,
+        line_dash="dashed",
+    )
 )
-p.add_layout(reg_line)
 
-x_median = Span(
-    dimension="height",
-    location=bokeh_df.select(pl.median("p_deterministic")).item(),
-    line_color="black",
-    line_width=1.5,
-    line_alpha=0.25,
-    line_dash="dotted",
+# Median lines
+median_p = bokeh_df["p_deterministic"].median()
+median_c = bokeh_df["complexity"].median()
+
+p.add_layout(
+    Span(
+        dimension="height",
+        location=median_p,
+        line_color="black",
+        line_width=1.5,
+        line_alpha=0.25,
+        line_dash="dotted",
+    )
 )
-p.add_layout(x_median)
 
-y_median = Span(
-    dimension="width",
-    location=bokeh_df.select(pl.median("complexity")).item(),
-    line_color="black",
-    line_width=1.5,
-    line_alpha=0.25,
-    line_dash="dotted",
+p.add_layout(
+    Span(
+        dimension="width",
+        location=median_c,
+        line_color="black",
+        line_width=1.5,
+        line_alpha=0.25,
+        line_dash="dotted",
+    )
 )
-p.add_layout(y_median)
 
+# Quadrant labels
+x_min = bokeh_df["p_deterministic"].min()
+x_max = bokeh_df["p_deterministic"].max()
+y_min = bokeh_df["complexity"].min()
+y_max = bokeh_df["complexity"].max()
+
+x_left = 0.5 * (x_min + median_p)
+x_right = 0.5 * (median_p + x_max)
+y_bottom = y_min * 0.9
+y_top = y_max
+
+quadrant_labels = [
+    (x_left, y_top, "complex but swingy"),
+    (x_right, y_top, "complex and skillful"),
+    (x_left, y_bottom, "simple and swingy"),
+    (x_right, y_bottom, "simple and skillful"),
+]
+
+for x_q, y_q, text in quadrant_labels:
+    p.add_layout(
+        Label(
+            x=x_q,
+            y=y_q,
+            text=text,
+            text_align="center",
+            text_baseline="middle",
+            text_font_size="12pt",
+            text_font_style="bold italic",
+            text_alpha=0.25,
+        )
+    )
 
 # One glyph per game_type with a CDSView so we can control legend order explicitly
 for i, gt in enumerate(game_types):
