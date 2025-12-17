@@ -21,7 +21,16 @@ import numpy as np
 
 from bokeh.io import output_notebook
 from bokeh.plotting import figure, show
-from bokeh.models import ColumnDataSource, HoverTool, Slope, Span, CDSView, GroupFilter, Label
+from bokeh.models import (
+    ColumnDataSource,
+    HoverTool,
+    Slope,
+    Span,
+    CDSView,
+    GroupFilter,
+    Label,
+    NumeralTickFormatter,
+)
 from bokeh.palettes import Category10
 
 jupyter_black.load()
@@ -325,7 +334,7 @@ for i, gt in enumerate(game_types):
 hover = HoverTool(
     tooltips=[
         ("Game", "@display_name_en (@year)"),
-        ("Skill fraction p", "@p_deterministic{0.00}"),
+        ("Skill fraction p", "@p_deterministic{0%}"),
         ("Complexity", "@complexity{0.0}"),
         ("Game type", "@game_type"),
         ("BGG rank (rating)", "@rank (@bayes_rating{0.0})"),
@@ -338,6 +347,7 @@ p.add_tools(hover)
 
 p.legend.location = "top_left"
 p.legend.click_policy = "hide"
+p.xaxis.formatter = NumeralTickFormatter(format="0%")
 
 show(p)
 
