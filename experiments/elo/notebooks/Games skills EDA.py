@@ -21,7 +21,7 @@ import numpy as np
 
 from bokeh.io import output_notebook
 from bokeh.plotting import figure, show
-from bokeh.models import ColumnDataSource, HoverTool, Slope, CDSView, GroupFilter
+from bokeh.models import ColumnDataSource, HoverTool, Slope, Span, CDSView, GroupFilter
 from bokeh.palettes import Category10
 
 jupyter_black.load()
@@ -156,7 +156,7 @@ sns.scatterplot(
 )
 
 # %%
-min_size, max_size = 5, 15
+min_size, max_size = 5, 18
 bokeh_df = (
     plot_df.drop_nulls(["p_deterministic", "complexity", "num_all_matches"])
     .with_columns(log_matches=pl.col("num_all_matches").clip(1).log10())
@@ -167,11 +167,12 @@ bokeh_df = (
         / (pl.col("log_matches").max() - pl.col("log_matches").min())
     )
     .drop("log_matches")
+    .sort("num_all_matches")
 )
 game_types = (
     bokeh_df.group_by("game_type")
     .agg(pl.len())
-    .sort("len", descending=True)["game_type"]
+    .sort(pl.col("game_type") != "Uncategorized", "len", descending=True)["game_type"]
 )
 bokeh_df.shape, game_types.shape
 
@@ -192,19 +193,42 @@ source = ColumnDataSource(bokeh_df)
 p = figure(
     width=900,
     height=550,
-    x_axis_label="Estimated skill fraction p (p_deterministic)",
+    x_axis_label="Estimated skill fraction p",
     y_axis_label="BGG complexity",
     tools="pan,wheel_zoom,box_zoom,reset,save",
-    title="Estimated skill fraction vs complexity (BGA games)",
+    title="Skill vs complexity for BGA games",
 )
 
 reg_line = Slope(
     gradient=slope,
     y_intercept=intercept,
-    line_width=2,
-    line_alpha=0.8,
+    line_color="black",
+    line_width=1.5,
+    line_alpha=0.5,
+    line_dash="dashed",
 )
 p.add_layout(reg_line)
+
+x_median = Span(
+    dimension="height",
+    location=bokeh_df.select(pl.median("p_deterministic")).item(),
+    line_color="black",
+    line_width=1.5,
+    line_alpha=0.25,
+    line_dash="dotted",
+)
+p.add_layout(x_median)
+
+y_median = Span(
+    dimension="width",
+    location=bokeh_df.select(pl.median("complexity")).item(),
+    line_color="black",
+    line_width=1.5,
+    line_alpha=0.25,
+    line_dash="dotted",
+)
+p.add_layout(y_median)
+
 
 # One glyph per game_type with a CDSView so we can control legend order explicitly
 for i, gt in enumerate(game_types):
@@ -216,7 +240,7 @@ for i, gt in enumerate(game_types):
         marker="circle",
         source=source,
         view=view,
-        fill_alpha=0.7,
+        fill_alpha=0.75,
         line_color=None,
         color=palette[i % len(palette)],
         legend_label=gt,
