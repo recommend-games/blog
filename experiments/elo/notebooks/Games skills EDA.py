@@ -157,6 +157,18 @@ sns.scatterplot(
 
 # %%
 min_size, max_size = 5, 18
+bokeh_columns = [
+    "p_deterministic",
+    "complexity",
+    "size",
+    "display_name_en",
+    "year",
+    "game_type",
+    "rank",
+    "bayes_rating",
+    "num_all_matches",
+    "num_regular_players",
+]
 bokeh_df = (
     plot_df.drop_nulls(["p_deterministic", "complexity", "num_all_matches"])
     .with_columns(log_matches=pl.col("num_all_matches").clip(1).log10())
@@ -166,7 +178,7 @@ bokeh_df = (
         * (max_size - min_size)
         / (pl.col("log_matches").max() - pl.col("log_matches").min())
     )
-    .drop("log_matches")
+    .select(bokeh_columns)
     .sort("num_all_matches")
 )
 game_types = (
@@ -286,17 +298,14 @@ for i, gt in enumerate(game_types):
 
 hover = HoverTool(
     tooltips=[
-        ("Game", "@display_name_en"),
+        ("Game", "@display_name_en (@year)"),
         ("Skill fraction p", "@p_deterministic{0.00}"),
         ("Complexity", "@complexity{0.0}"),
-        ("Year", "@year"),
-        ("Rank", "@rank"),
-        ("BGG rating", "@avg_rating{0.00}"),
-        ("BGG bayes rating", "@bayes_rating{0.00}"),
-        ("BGA plays (games_played)", "@games_played"),
-        ("Matches in Elo data", "@num_all_matches"),
-        ("Regular players", "@num_regular_players"),
         ("Game type", "@game_type"),
+        ("BGG rank (rating)", "@rank (@bayes_rating{0.0})"),
+        # TODO: human parsable, e.g., 230k
+        ("Number of matches", "@num_all_matches"),
+        ("Number of players", "@num_regular_players"),
     ]
 )
 p.add_tools(hover)

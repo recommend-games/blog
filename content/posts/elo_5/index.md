@@ -26,10 +26,12 @@ tags:
   - Some games might attract "try and click around" players
   - Some players might not be as competitive as on other platforms
   - Others might be so competitive that they are willing to cheat (BGA locked down chess ranking because people clearly used bots)
+  - BGA has the concept of friendly / unranked match where no Elo will be updated; I used them for Elo calculations anyways
 - Remember that we benchmark against p-deterministic, which isn't the same as "skill fraction"
 - Also the subtlety about random generators in game (card, dice etc) vs random (unpredictable) outcome
   - Reminder: Tic Tac Toe is fully deterministic (no random elements or hidden information), but amongst an adult population will have 0 skill spread since it will always end in a draw
   - Likewise, a group of chess grandmasters just drawing all the time would look similarly noisy, even though chess is obv highly skill based
+- Most importantly: luck vs skill isn't really one-dimensional, and it certainly doesn't mean "better or worse"
 
 
 # Outline from Gippty
