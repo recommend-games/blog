@@ -18,9 +18,11 @@ import jupyter_black
 import polars as pl
 import seaborn as sns
 import numpy as np
+import json
 
 from bokeh.io import output_notebook
 from bokeh.plotting import figure, show
+from bokeh.embed import json_item
 from bokeh.models import (
     ColumnDataSource,
     HoverTool,
@@ -349,6 +351,15 @@ p.legend.click_policy = "hide"
 p.xaxis.formatter = NumeralTickFormatter(format="0%")
 
 show(p)
+
+
+# %%
+# Export interactive plot to JSON for embedding
+plot_json_path = "../plots/skill_vs_complexity.json"
+with open(plot_json_path, "w") as f:
+    json.dump(json_item(p, "skill-vs-complexity"), f, indent=4)
+print(f"Exported Bokeh plot JSON to {plot_json_path}")
+
 
 # %%
 plot_df.sort("std_dev", descending=True, nulls_last=True).head(20)
