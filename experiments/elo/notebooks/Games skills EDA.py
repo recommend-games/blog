@@ -240,7 +240,7 @@ source = ColumnDataSource(bokeh_df)
 p = figure(
     width=900,
     height=550,
-    x_axis_label="Estimated skill fraction p",
+    x_axis_label="Effective skill level p (p-deterministic index)",
     y_axis_label="BGG complexity",
     tools="pan,wheel_zoom,box_zoom,reset,save",
     title="Skill vs complexity for BGA games",
@@ -334,11 +334,10 @@ for i, gt in enumerate(game_types):
 hover = HoverTool(
     tooltips=[
         ("Game", "@display_name_en (@year)"),
-        ("Skill fraction p", "@p_deterministic{0%}"),
+        ("Effective skill level p", "@p_deterministic{0%}"),
         ("Complexity", "@complexity{0.0}"),
         ("Game type", "@game_type"),
         ("BGG rank (rating)", "@rank (@bayes_rating{0.0})"),
-        # TODO: human parsable, e.g., 230k
         ("Number of matches", "@num_all_matches"),
         ("Number of players", "@num_regular_players"),
     ]
