@@ -11,6 +11,11 @@ tags:
   - luck vs skill
 ---
 
+<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.8.1.min.js" ></script>
+<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.8.1.min.js" ></script>
+<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.8.1.min.js" ></script>
+<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-api-3.8.1.min.js" ></script>
+
 # Notes
 
 ## Criterion for games included in the analysis
@@ -32,6 +37,8 @@ tags:
   - Reminder: Tic Tac Toe is fully deterministic (no random elements or hidden information), but amongst an adult population will have 0 skill spread since it will always end in a draw
   - Likewise, a group of chess grandmasters just drawing all the time would look similarly noisy, even though chess is obv highly skill based
 - Most importantly: luck vs skill isn't really one-dimensional, and it certainly doesn't mean "better or worse"
+
+{{% bokeh "skill_vs_complexity.json" %}}
 
 
 # Outline from Gippty
