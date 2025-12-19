@@ -31,6 +31,7 @@ from bokeh.models import (
     CDSView,
     GroupFilter,
     Label,
+    LabelSet,
     NumeralTickFormatter,
 )
 from bokeh.palettes import Category10
@@ -226,6 +227,23 @@ game_types = (
 bokeh_df.shape, game_types.shape
 
 # %%
+# TODO: Better selection of games (top 10 most played, top 10 highest ranked, mentioned in article)
+# TODO: Could this be achieved with a CDSView instead?
+label_games = [
+    "Terraforming Mars",
+    "Wingspan",
+    "CATAN",
+    "Skat",
+]
+labels_df = (
+    bokeh_df.lazy()
+    .filter(pl.col("display_name_en").is_in(label_games))
+    .with_columns(label=pl.col("display_name_en"))  # text to show
+    .collect()
+)
+label_source = ColumnDataSource(labels_df)
+
+# %%
 # Add a simple linear regression line: complexity ~ p_deterministic
 x_vals = bokeh_df["p_deterministic"].to_numpy()
 y_vals = bokeh_df["complexity"].to_numpy()
@@ -332,6 +350,23 @@ for i, gt in enumerate(game_types):
         color=palette[i % len(palette)],
         legend_label=gt,
     )
+
+p.add_layout(
+    LabelSet(
+        x="p_deterministic",
+        y="complexity",
+        text="label",
+        x_offset=5,
+        y_offset=5,
+        text_font_size="9pt",
+        text_color="black",
+        text_font_style="bold",
+        text_alpha=0.25,
+        background_fill_color="white",
+        background_fill_alpha=0.25,
+        source=label_source,
+    )
+)
 
 hover = HoverTool(
     tooltips=[
