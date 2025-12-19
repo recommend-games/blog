@@ -3912,7 +3912,7 @@
                                 },
                                 "text_alpha": {
                                     "type": "value",
-                                    "value": 0.25
+                                    "value": 0.5
                                 },
                                 "text_font_size": {
                                     "type": "value",
@@ -3928,7 +3928,7 @@
                                 },
                                 "background_fill_alpha": {
                                     "type": "value",
-                                    "value": 0.25
+                                    "value": 0.5
                                 }
                             }
                         }

@@ -367,9 +367,9 @@ p.add_layout(
         text_font_size="9pt",
         text_color="black",
         text_font_style="bold",
-        text_alpha=0.25,
+        text_alpha=0.5,
         background_fill_color="white",
-        background_fill_alpha=0.25,
+        background_fill_alpha=0.5,
         source=label_source,
     )
 )
