@@ -258,17 +258,40 @@ beta, alpha = np.polyfit(x_vals, y_vals, deg=1)  # p = alpha + beta * complexity
 
 # Store "depth premium" residuals on the plotting DataFrame: how much more (or less)
 # skillful the game appears than expected for its complexity.
-plot_df = plot_df.with_columns(
-    depth_premium=pl.col("p_deterministic") - (alpha + beta * pl.col("complexity")),
-).with_columns(
-    depth_premium_z=(pl.col("depth_premium") - pl.col("depth_premium").mean())
-    / pl.col("depth_premium").std(),
+plot_df = (
+    plot_df.lazy()
+    .with_columns(
+        depth_premium=pl.col("p_deterministic") - (alpha + beta * pl.col("complexity")),
+    )
+    .with_columns(
+        depth_premium_z=(pl.col("depth_premium") - pl.col("depth_premium").mean())
+        / pl.col("depth_premium").std(),
+    )
+)
+
+# Within-band z-score of p (Option A) and percentile rank (Option B)
+std_expr = pl.col("p_deterministic").std().over("complexity_band")
+mean_expr = pl.col("p_deterministic").mean().over("complexity_band")
+count_expr = pl.len().over("complexity_band")
+rank_expr = pl.col("p_deterministic").rank(method="max").over("complexity_band")
+
+plot_df = (
+    plot_df.with_columns(complexity_band=pl.col("complexity").qcut(10))
+    .with_columns(
+        depth_z_local=pl.when(std_expr > 0).then(
+            (pl.col("p_deterministic") - mean_expr) / std_expr
+        ),
+        depth_pct_local=pl.when(count_expr > 1).then(
+            (rank_expr - 1) / (count_expr - 1)
+        ),
+    )
+    .collect()
 )
 
 # Convert p ~ complexity fit into a line in (p, complexity) coordinates for plotting:
 # complexity = (p - alpha) / beta = (1/beta) * p - alpha/beta
 slope, intercept = 1.0 / beta, -alpha / beta
-slope, intercept
+alpha, beta, slope, intercept, plot_df.shape
 
 # %%
 p = figure(
@@ -424,3 +447,15 @@ plot_df.sort("depth_premium_z", descending=True, nulls_last=True).head(20)
 
 # %%
 plot_df.sort("depth_premium_z", descending=False, nulls_last=True).head(20)
+
+# %%
+plot_df.sort("depth_z_local", descending=True, nulls_last=True).head(20)
+
+# %%
+plot_df.sort("depth_z_local", descending=False, nulls_last=True).head(20)
+
+# %%
+plot_df.sort("depth_pct_local", descending=True, nulls_last=True).head(20)
+
+# %%
+plot_df.sort("depth_pct_local", descending=False, nulls_last=True).head(20)
