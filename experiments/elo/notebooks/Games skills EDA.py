@@ -201,6 +201,8 @@ bokeh_columns = [
     "num_all_matches",
     "num_regular_players",
 ]
+label_games = ["Skat", "Chess", "Go", "Abalone", "CATAN", "7 Wonders", "Backgammon"]
+
 bokeh_df = (
     plot_df.lazy()
     .drop_nulls(["p_deterministic", "complexity", "num_all_matches"])
@@ -213,36 +215,41 @@ bokeh_df = (
     )
     .select(bokeh_columns)
     .sort("num_all_matches")
-    .with_columns(
-        num_all_matches=format_int_col("num_all_matches"),
-        num_regular_players=format_int_col("num_regular_players"),
-    )
-    .collect()
 )
+
 game_types = (
     bokeh_df.group_by("game_type")
     .agg(pl.len())
-    .sort(pl.col("game_type") != "Uncategorized", "len", descending=True)["game_type"]
+    .sort(pl.col("game_type") != "Uncategorized", "len", descending=True)
+    .collect()
+    .to_series()
 )
-source = ColumnDataSource(bokeh_df)
-bokeh_df.shape, game_types.shape
 
-# %%
-# TODO: Better selection of games (top 10 most played, top 10 highest ranked, mentioned in article)
-label_games = [
-    "Terraforming Mars",
-    "Wingspan",
-    "CATAN",
-    "Skat",
-]
+label_cols = ["p_deterministic", "complexity", "display_name_en"]
 labels_df = (
-    bokeh_df.lazy()
-    .filter(pl.col("display_name_en").is_in(label_games))
-    .with_columns(label=pl.col("display_name_en"))
+    pl.union(
+        [
+            bokeh_df.select(pl.col(label_cols).top_k_by("rank", 3, reverse=True)),
+            bokeh_df.select(pl.col(label_cols).top_k_by("num_all_matches", 10)),
+            bokeh_df.select(label_cols).filter(
+                pl.col("display_name_en").is_in(label_games)
+            ),
+        ]
+    )
+    .unique("display_name_en")
+    .sort("display_name_en")
     .collect()
 )
+
+bokeh_df = bokeh_df.with_columns(
+    num_all_matches=format_int_col("num_all_matches"),
+    num_regular_players=format_int_col("num_regular_players"),
+).collect()
+
+source = ColumnDataSource(bokeh_df)
 label_source = ColumnDataSource(labels_df)
-labels_df.shape
+
+bokeh_df.shape, game_types.shape, labels_df.shape
 
 # %%
 # Add a simple linear regression line: complexity ~ p_deterministic
@@ -354,7 +361,7 @@ p.add_layout(
     LabelSet(
         x="p_deterministic",
         y="complexity",
-        text="label",
+        text="display_name_en",
         x_offset=5,
         y_offset=5,
         text_font_size="9pt",

@@ -3811,10 +3811,10 @@
                                                         "type": "ndarray",
                                                         "array": {
                                                             "type": "bytes",
-                                                            "data": "H4sIAAEAAAAC/2NgYGBgBGImIGYGYgCpr44nEAAAAA=="
+                                                            "data": "H4sIAAEAAAAC/w3DBw6AIBAAsHMiQ0D//1japBERm7uHp5e3ycdssdp87Q6nn78L5BCkM0wAAAA="
                                                         },
                                                         "shape": [
-                                                            4
+                                                            19
                                                         ],
                                                         "dtype": "uint32",
                                                         "order": "little"
@@ -3826,10 +3826,10 @@
                                                         "type": "ndarray",
                                                         "array": {
                                                             "type": "bytes",
-                                                            "data": "H4sIAAEAAAAC/2NgAIEL9v2HvmrE9D+yX1Jgy3V98QX7QhBVcNceAIgqmrggAAAA"
+                                                            "data": "H4sIAAEAAAAC/+s/9FUjpv+S/TcgeejrDfvW14E75Fpf22uCuBpP7M+eAYE79oW2XNcXF5y1X1IAYlywNwaDw/ZgZTH37YNAugJf2AMVARU8tp81EwRe2jOAwQWoubfhfIj6B/Zg7f2P7LkgGqH6dtoDAKCn+wSYAAAA"
                                                         },
                                                         "shape": [
-                                                            4
+                                                            19
                                                         ],
                                                         "dtype": "float64",
                                                         "order": "little"
@@ -3841,25 +3841,10 @@
                                                         "type": "ndarray",
                                                         "array": {
                                                             "type": "bytes",
-                                                            "data": "H4sIAAEAAAAC/+vxesViMpHDYfkLD73/ilwO6ofalod7MTnYVUasMD3L7AAAvCO4UCAAAAA="
+                                                            "data": "H4sIAAEAAAAC/wGYAGf/o5I6AU2EAkDhC5OpgtEBQPvL7snDQgFAbef7qfFSDkBtVn2utmL8Pzy9UpYhDgBAJ8KGp1dKAkAFo5I6AU3yP7yWkA96Nv4/woanV8oyDUBcj8L1KJwRQOhqK/aXXQ9ABOeMKO0N8j+si9toAO8HQIxK6gQ0kQhA4umVsgxx/D+n6Egu/yEKQEcDeAskKP0/vAUSFD/G8j/TSy9tmAAAAA=="
                                                         },
                                                         "shape": [
-                                                            4
-                                                        ],
-                                                        "dtype": "float64",
-                                                        "order": "little"
-                                                    }
-                                                ],
-                                                [
-                                                    "size",
-                                                    {
-                                                        "type": "ndarray",
-                                                        "array": {
-                                                            "type": "bytes",
-                                                            "data": "H4sIAAEAAAAC/9PjPvMjx0feQZc9+sRLRl2HYpFw84xz+g4Xg/UdgmQMHAAU11KZIAAAAA=="
-                                                        },
-                                                        "shape": [
-                                                            4
+                                                            19
                                                         ],
                                                         "dtype": "float64",
                                                         "order": "little"
@@ -3870,126 +3855,28 @@
                                                     {
                                                         "type": "ndarray",
                                                         "array": [
-                                                            "Skat",
-                                                            "Terraforming Mars",
+                                                            "7 Wonders",
+                                                            "7 Wonders Duel",
+                                                            "Abalone",
+                                                            "Ark Nova",
+                                                            "Azul",
+                                                            "Backgammon",
                                                             "CATAN",
-                                                            "Wingspan"
-                                                        ],
-                                                        "shape": [
-                                                            4
-                                                        ],
-                                                        "dtype": "object",
-                                                        "order": "little"
-                                                    }
-                                                ],
-                                                [
-                                                    "year",
-                                                    {
-                                                        "type": "ndarray",
-                                                        "array": {
-                                                            "type": "bytes",
-                                                            "data": "H4sIAAEAAAAC/xNiZ2B4AMSngfgxEAMAZdR9VBAAAAA="
-                                                        },
-                                                        "shape": [
-                                                            4
-                                                        ],
-                                                        "dtype": "int32",
-                                                        "order": "little"
-                                                    }
-                                                ],
-                                                [
-                                                    "game_type",
-                                                    {
-                                                        "type": "ndarray",
-                                                        "array": [
-                                                            "Strategy Game",
-                                                            "Strategy Game",
-                                                            "Family Game",
-                                                            "Family Game"
-                                                        ],
-                                                        "shape": [
-                                                            4
-                                                        ],
-                                                        "dtype": "object",
-                                                        "order": "little"
-                                                    }
-                                                ],
-                                                [
-                                                    "rank",
-                                                    {
-                                                        "type": "ndarray",
-                                                        "array": {
-                                                            "type": "bytes",
-                                                            "data": "H4sIAAEAAAAC/6viZGAAIoYQJgYGNSANAGlzH+8QAAAA"
-                                                        },
-                                                        "shape": [
-                                                            4
-                                                        ],
-                                                        "dtype": "int32",
-                                                        "order": "little"
-                                                    }
-                                                ],
-                                                [
-                                                    "bayes_rating",
-                                                    {
-                                                        "type": "ndarray",
-                                                        "array": {
-                                                            "type": "bytes",
-                                                            "data": "H4sIAAEAAAAC/3vQ4sQi0yThYPrewtU9ScFh2YXK3thF0g5qT5rnnc2SdwAA7JXutSAAAAA="
-                                                        },
-                                                        "shape": [
-                                                            4
-                                                        ],
-                                                        "dtype": "float64",
-                                                        "order": "little"
-                                                    }
-                                                ],
-                                                [
-                                                    "num_all_matches",
-                                                    {
-                                                        "type": "ndarray",
-                                                        "array": [
-                                                            "41k",
-                                                            "2,740k",
-                                                            "6,591k",
-                                                            "7,508k"
-                                                        ],
-                                                        "shape": [
-                                                            4
-                                                        ],
-                                                        "dtype": "object",
-                                                        "order": "little"
-                                                    }
-                                                ],
-                                                [
-                                                    "num_regular_players",
-                                                    {
-                                                        "type": "ndarray",
-                                                        "array": [
-                                                            "530",
-                                                            "36k",
-                                                            "91k",
-                                                            "56k"
-                                                        ],
-                                                        "shape": [
-                                                            4
-                                                        ],
-                                                        "dtype": "object",
-                                                        "order": "little"
-                                                    }
-                                                ],
-                                                [
-                                                    "label",
-                                                    {
-                                                        "type": "ndarray",
-                                                        "array": [
+                                                            "Can't Stop",
+                                                            "Carcassonne",
+                                                            "Chess",
+                                                            "Gaia Project",
+                                                            "Go",
+                                                            "Lucky Numbers",
+                                                            "Race for the Galaxy",
                                                             "Skat",
+                                                            "Splendor",
                                                             "Terraforming Mars",
-                                                            "CATAN",
-                                                            "Wingspan"
+                                                            "Ticket to Ride",
+                                                            "Yahtzee"
                                                         ],
                                                         "shape": [
-                                                            4
+                                                            19
                                                         ],
                                                         "dtype": "object",
                                                         "order": "little"
@@ -4009,7 +3896,7 @@
                                 },
                                 "text": {
                                     "type": "field",
-                                    "field": "label"
+                                    "field": "display_name_en"
                                 },
                                 "x_offset": {
                                     "type": "value",
