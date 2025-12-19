@@ -224,11 +224,11 @@ game_types = (
     .agg(pl.len())
     .sort(pl.col("game_type") != "Uncategorized", "len", descending=True)["game_type"]
 )
+source = ColumnDataSource(bokeh_df)
 bokeh_df.shape, game_types.shape
 
 # %%
 # TODO: Better selection of games (top 10 most played, top 10 highest ranked, mentioned in article)
-# TODO: Could this be achieved with a CDSView instead?
 label_games = [
     "Terraforming Mars",
     "Wingspan",
@@ -238,10 +238,11 @@ label_games = [
 labels_df = (
     bokeh_df.lazy()
     .filter(pl.col("display_name_en").is_in(label_games))
-    .with_columns(label=pl.col("display_name_en"))  # text to show
+    .with_columns(label=pl.col("display_name_en"))
     .collect()
 )
 label_source = ColumnDataSource(labels_df)
+labels_df.shape
 
 # %%
 # Add a simple linear regression line: complexity ~ p_deterministic
@@ -252,11 +253,6 @@ slope, intercept = np.polyfit(x_vals, y_vals, deg=1)
 slope, intercept
 
 # %%
-# Use up to 10 distinct colours; if there are more types, colours will repeat
-palette = Category10[10]
-
-source = ColumnDataSource(bokeh_df)
-
 p = figure(
     width=900,
     height=550,
@@ -334,6 +330,9 @@ for x_q, y_q, text in quadrant_labels:
             text_alpha=0.25,
         )
     )
+
+# Use up to 10 distinct colours; if there are more types, colours will repeat
+palette = Category10[10]
 
 # One glyph per game_type with a CDSView so we can control legend order explicitly
 for i, gt in enumerate(game_types):

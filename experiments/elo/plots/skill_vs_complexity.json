@@ -61,12 +61,12 @@
                                 "data_source": {
                                     "type": "object",
                                     "name": "ColumnDataSource",
-                                    "id": "p1011",
+                                    "id": "p1008",
                                     "attributes": {
                                         "selected": {
                                             "type": "object",
                                             "name": "Selection",
-                                            "id": "p1012",
+                                            "id": "p1009",
                                             "attributes": {
                                                 "indices": [],
                                                 "line_indices": []
@@ -75,7 +75,7 @@
                                         "selection_policy": {
                                             "type": "object",
                                             "name": "UnionRenderers",
-                                            "id": "p1013"
+                                            "id": "p1010"
                                         },
                                         "data": {
                                             "type": "map",
@@ -2126,7 +2126,7 @@
                             "id": "p1078",
                             "attributes": {
                                 "data_source": {
-                                    "id": "p1011"
+                                    "id": "p1008"
                                 },
                                 "view": {
                                     "type": "object",
@@ -2273,7 +2273,7 @@
                             "id": "p1091",
                             "attributes": {
                                 "data_source": {
-                                    "id": "p1011"
+                                    "id": "p1008"
                                 },
                                 "view": {
                                     "type": "object",
@@ -2420,7 +2420,7 @@
                             "id": "p1104",
                             "attributes": {
                                 "data_source": {
-                                    "id": "p1011"
+                                    "id": "p1008"
                                 },
                                 "view": {
                                     "type": "object",
@@ -2567,7 +2567,7 @@
                             "id": "p1117",
                             "attributes": {
                                 "data_source": {
-                                    "id": "p1011"
+                                    "id": "p1008"
                                 },
                                 "view": {
                                     "type": "object",
@@ -2714,7 +2714,7 @@
                             "id": "p1130",
                             "attributes": {
                                 "data_source": {
-                                    "id": "p1011"
+                                    "id": "p1008"
                                 },
                                 "view": {
                                     "type": "object",
@@ -2861,7 +2861,7 @@
                             "id": "p1143",
                             "attributes": {
                                 "data_source": {
-                                    "id": "p1011"
+                                    "id": "p1008"
                                 },
                                 "view": {
                                     "type": "object",
@@ -3008,7 +3008,7 @@
                             "id": "p1156",
                             "attributes": {
                                 "data_source": {
-                                    "id": "p1011"
+                                    "id": "p1008"
                                 },
                                 "view": {
                                     "type": "object",
@@ -3155,7 +3155,7 @@
                             "id": "p1169",
                             "attributes": {
                                 "data_source": {
-                                    "id": "p1011"
+                                    "id": "p1008"
                                 },
                                 "view": {
                                     "type": "object",
@@ -3786,12 +3786,12 @@
                                 "source": {
                                     "type": "object",
                                     "name": "ColumnDataSource",
-                                    "id": "p1008",
+                                    "id": "p1011",
                                     "attributes": {
                                         "selected": {
                                             "type": "object",
                                             "name": "Selection",
-                                            "id": "p1009",
+                                            "id": "p1012",
                                             "attributes": {
                                                 "indices": [],
                                                 "line_indices": []
@@ -3800,7 +3800,7 @@
                                         "selection_policy": {
                                             "type": "object",
                                             "name": "UnionRenderers",
-                                            "id": "p1010"
+                                            "id": "p1013"
                                         },
                                         "data": {
                                             "type": "map",
