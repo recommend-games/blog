@@ -67,7 +67,6 @@ columns = [
     "num_votes",
     "year",
     "complexity",
-    "depth_to_complexity",
     "cooperative",
     "game_type",
 ]
@@ -110,7 +109,6 @@ all_games = (
     .join(bgg_types, how="left", on="bgg_id", coalesce=True)
     .with_columns(
         ratio=pl.col("num_all_matches").fill_null(0) / pl.col("games_played"),
-        depth_to_complexity=pl.col("p_deterministic") / pl.col("complexity"),
     )
     .select(columns)
     .with_columns(
@@ -252,11 +250,24 @@ label_source = ColumnDataSource(labels_df)
 bokeh_df.shape, game_types.shape, labels_df.shape
 
 # %%
-# Add a simple linear regression line: complexity ~ p_deterministic
-x_vals = bokeh_df["p_deterministic"].to_numpy()
-y_vals = bokeh_df["complexity"].to_numpy()
-# Filter out any NaNs that might have slipped through
-slope, intercept = np.polyfit(x_vals, y_vals, deg=1)
+# Fit effective skill level p as a function of complexity: p ~ complexity
+reg_df = bokeh_df.drop_nulls(subset=["p_deterministic", "complexity"])
+x_vals = reg_df["complexity"].to_numpy()
+y_vals = reg_df["p_deterministic"].to_numpy()
+beta, alpha = np.polyfit(x_vals, y_vals, deg=1)  # p = alpha + beta * complexity
+
+# Store "depth premium" residuals on the plotting DataFrame: how much more (or less)
+# skillful the game appears than expected for its complexity.
+plot_df = plot_df.with_columns(
+    depth_premium=pl.col("p_deterministic") - (alpha + beta * pl.col("complexity")),
+).with_columns(
+    depth_premium_z=(pl.col("depth_premium") - pl.col("depth_premium").mean())
+    / pl.col("depth_premium").std(),
+)
+
+# Convert p ~ complexity fit into a line in (p, complexity) coordinates for plotting:
+# complexity = (p - alpha) / beta = (1/beta) * p - alpha/beta
+slope, intercept = 1.0 / beta, -alpha / beta
 slope, intercept
 
 # %%
@@ -409,7 +420,7 @@ plot_df.sort("std_dev", descending=True, nulls_last=True).head(20)
 plot_df.sort("std_dev", descending=False, nulls_last=True).head(20)
 
 # %%
-plot_df.sort("depth_to_complexity", descending=True, nulls_last=True).head(20)
+plot_df.sort("depth_premium_z", descending=True, nulls_last=True).head(20)
 
 # %%
-plot_df.sort("depth_to_complexity", descending=False, nulls_last=True).head(20)
+plot_df.sort("depth_premium_z", descending=False, nulls_last=True).head(20)
