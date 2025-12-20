@@ -3811,10 +3811,10 @@
                                                         "type": "ndarray",
                                                         "array": {
                                                             "type": "bytes",
-                                                            "data": "H4sIAAEAAAAC/w3DBw6AIBAAsHMiQ0D//1japBERm7uHp5e3ycdssdp87Q6nn78L5BCkM0wAAAA="
+                                                            "data": "H4sIAAEAAAAC/w3DBQ6DABAAsIMhw935/ztpk0ZEJKb+zMwtLP1bWdvY2tk7ODo5u7i6uXt4enn7+PoBg3gEfHQAAAA="
                                                         },
                                                         "shape": [
-                                                            19
+                                                            29
                                                         ],
                                                         "dtype": "uint32",
                                                         "order": "little"
@@ -3826,10 +3826,10 @@
                                                         "type": "ndarray",
                                                         "array": {
                                                             "type": "bytes",
-                                                            "data": "H4sIAAEAAAAC/3sTuEOu9fVF+28aMf2Hvt6wb30NFrDXBHE1ntifPQMCd6D8M/ZLCmy5ri++YG8MBoftGcDggX0QSFfgC/vri0EKHtvPmgkCL6HyF6Dm3rYHK9txDqr+gT3I1Jj+R/ZcEI1QfTvtAdhTxMqYAAAA"
+                                                            "data": "H4sIAAEAAAAC//umEdN/6OsN+9bXgTvkWl/ba4K4Gk/sz54BgTtQ/hn7JQW2XNcXX7A3BoPD9gxg8MDe42GVyDr3l/ZASaCK4/ZBIFMCX9iDudcf24O5O/bZfwPb88J+1kwQWIkmf8++GmjKw6op9oUgawrOQu2DqX8Idd9t+zdgZx6E8yH6z9mngcEzuLkgV8f0P4KLAwCpqNhr6AAAAA=="
                                                         },
                                                         "shape": [
-                                                            19
+                                                            29
                                                         ],
                                                         "dtype": "float64",
                                                         "order": "little"
@@ -3841,10 +3841,10 @@
                                                         "type": "ndarray",
                                                         "array": {
                                                             "type": "bytes",
-                                                            "data": "H4sIAAEAAAAC/wGYAGf/o5I6AU2EAkDhC5OpgtEBQPvL7snDQgFAbef7qfFSDkBtVn2utmL8Pzy9UpYhDgBAJ8KGp1dKAkAFo5I6AU3yP7yWkA96Nv4/woanV8oyDUBcj8L1KJwRQOhqK/aXXQ9ABOeMKO0N8j+si9toAO8HQIxK6gQ0kQhA4umVsgxx/D+n6Egu/yEKQEcDeAskKP0/vAUSFD/G8j/TSy9tmAAAAA=="
+                                                            "data": "H4sIAAEAAAAC/wHoABf/4QuTqYLRAUD7y+7Jw0IBQG3n+6nxUg5AbVZ9rrZi/D88vVKWIQ4AQCfChqdXSgJABaOSOgFN8j+8lpAPejb+P7n8h/TbVw5AaQBvgQTF/D/ChqdXyjINQMe6uI0G8PI/ayv2l92T9j/gvg6cM6L/P8NkqmBUUvE/XI/C9SicEUC/DpwzorTzP65H4XoULgBASgwCK4cW8j+/DpwzorT0P0aU9gZfmPk/KjqSy3/IDkBtxf6ye3IDQKyL22gA7wdAjErqBDSRCEBXW7G/7J7wPw4tsp3vpwNAp+hILv8hCkBkzF1LyAf4P14KhtPoAAAA"
                                                         },
                                                         "shape": [
-                                                            19
+                                                            29
                                                         ],
                                                         "dtype": "float64",
                                                         "order": "little"
@@ -3855,7 +3855,6 @@
                                                     {
                                                         "type": "ndarray",
                                                         "array": [
-                                                            "7 Wonders",
                                                             "7 Wonders Duel",
                                                             "Abalone",
                                                             "Ark Nova",
@@ -3864,19 +3863,30 @@
                                                             "CATAN",
                                                             "Can't Stop",
                                                             "Carcassonne",
+                                                            "Caylus",
+                                                            "Challengers!",
                                                             "Chess",
+                                                            "Connect Four",
+                                                            "Coup",
+                                                            "Expeditions: Around the World",
+                                                            "Flip 7",
                                                             "Gaia Project",
-                                                            "Go",
-                                                            "Lucky Numbers",
+                                                            "Kingdomino",
+                                                            "Mini Rogue",
+                                                            "No Thanks!",
+                                                            "Panic Lab",
+                                                            "Patchwork",
+                                                            "Pax Pamir: Second Edition",
+                                                            "Poker Texas Hold'em",
                                                             "Race for the Galaxy",
                                                             "Skat",
-                                                            "Splendor",
+                                                            "Spot it",
+                                                            "Stone Age",
                                                             "Terraforming Mars",
-                                                            "Ticket to Ride",
-                                                            "Yahtzee"
+                                                            "Ubongo"
                                                         ],
                                                         "shape": [
-                                                            19
+                                                            29
                                                         ],
                                                         "dtype": "object",
                                                         "order": "little"
@@ -3904,7 +3914,7 @@
                                 },
                                 "y_offset": {
                                     "type": "value",
-                                    "value": 5
+                                    "value": 3
                                 },
                                 "text_color": {
                                     "type": "value",

@@ -199,7 +199,46 @@ bokeh_columns = [
     "num_all_matches",
     "num_regular_players",
 ]
-label_games = ["Skat", "Chess", "Go", "Abalone", "CATAN", "7 Wonders", "Backgammon"]
+label_games = (
+    "7 Wonders Duel",
+    "Abalone",
+    "Ark Nova",
+    "Azul",
+    "Backgammon",
+    "CATAN",
+    "Can't Stop",
+    "Carcassonne",
+    "Caylus",
+    "Challengers!",
+    "Chess",
+    "Connect Four",
+    # "Copenhagen",
+    "Coup",
+    "Expeditions: Around the World",
+    "Flip 7",
+    "Gaia Project",
+    # "Go",
+    # "Incan Gold",
+    "Kingdomino",
+    # "LLAMA",
+    # "Living Forest",
+    "Mini Rogue",
+    "No Thanks!",
+    "Panic Lab",
+    "Patchwork",
+    "Pax Pamir: Second Edition",
+    # "Photosynthesis",
+    "Poker Texas Hold'em",
+    "Race for the Galaxy",
+    "Skat",
+    # "Skull",
+    "Spot it",
+    "Stone Age",
+    "Terraforming Mars",
+    # "The Werewolves of Miller's Hollow",
+    # "Tichu",
+    "Ubongo",
+)
 
 bokeh_df = (
     plot_df.lazy()
@@ -225,15 +264,8 @@ game_types = (
 
 label_cols = ["p_deterministic", "complexity", "display_name_en"]
 labels_df = (
-    pl.union(
-        [
-            bokeh_df.select(pl.col(label_cols).top_k_by("rank", 3, reverse=True)),
-            bokeh_df.select(pl.col(label_cols).top_k_by("num_all_matches", 10)),
-            bokeh_df.select(label_cols).filter(
-                pl.col("display_name_en").is_in(label_games)
-            ),
-        ]
-    )
+    bokeh_df.select(label_cols)
+    .filter(pl.col("display_name_en").is_in(label_games))
     .unique("display_name_en")
     .sort("display_name_en")
     .collect()
@@ -397,7 +429,7 @@ p.add_layout(
         y="complexity",
         text="display_name_en",
         x_offset=5,
-        y_offset=5,
+        y_offset=3,
         text_font_size="9pt",
         text_color="black",
         text_font_style="bold",
