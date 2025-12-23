@@ -80,7 +80,7 @@ skills = (
     .with_columns(pl.col("game_id").str.to_integer(strict=False).alias("bga_id"))
     .drop_nulls("bga_id")
 )
-bgg = pl.scan_ndjson("~/Recommend.Games/board-game-data/scraped/bgg_GameItem.jl")
+bgg = pl.scan_ndjson("~/Recommend.Games/board-game-data/scraped/v3/bgg_GameItem.jl")
 bgg_types = (
     bgg.select("bgg_id", "add_rank")
     .explode("add_rank")
