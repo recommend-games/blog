@@ -16,8 +16,6 @@
 # %%
 import jupyter_black
 import polars as pl
-import seaborn as sns
-import numpy as np
 import json
 
 from bokeh.io import output_notebook
@@ -26,20 +24,18 @@ from bokeh.embed import json_item
 from bokeh.models import (
     ColumnDataSource,
     HoverTool,
-    Slope,
     Span,
     CDSView,
     GroupFilter,
     Label,
     LabelSet,
-    NumeralTickFormatter,
+    NumeralTickFormatter
 )
 from bokeh.palettes import Category10
 
 jupyter_black.load()
 
 output_notebook()
-sns.set_style("dark")
 pl.Config.set_tbl_rows(100)
 pl.Config.set_tbl_width_chars(100)
 pl.Config.set_fmt_str_lengths(100)
@@ -144,27 +140,6 @@ df.describe()
 plot_df = df.remove(pl.col("num_votes") < 1000)
 plot_df.shape
 
-# %%
-sns.scatterplot(
-    data=plot_df,
-    x="p_deterministic",
-    y="complexity",
-)
-
-# %%
-sns.scatterplot(
-    data=plot_df,
-    x="p_deterministic",
-    y="avg_rating",
-)
-
-# %%
-sns.scatterplot(
-    data=plot_df,
-    x="p_deterministic",
-    y="bayes_rating",
-)
-
 
 # %%
 def format_int_col(col: str) -> pl.Expr:
@@ -185,7 +160,6 @@ def format_int_col(col: str) -> pl.Expr:
     )
 
 
-# %%
 min_size, max_size = 5, 18
 bokeh_columns = [
     "p_deterministic",
@@ -282,50 +256,6 @@ label_source = ColumnDataSource(labels_df)
 bokeh_df.shape, game_types.shape, labels_df.shape
 
 # %%
-# Fit effective skill level p as a function of complexity: p ~ complexity
-reg_df = bokeh_df.drop_nulls(subset=["p_deterministic", "complexity"])
-x_vals = reg_df["complexity"].to_numpy()
-y_vals = reg_df["p_deterministic"].to_numpy()
-beta, alpha = np.polyfit(x_vals, y_vals, deg=1)  # p = alpha + beta * complexity
-
-# Store "depth premium" residuals on the plotting DataFrame: how much more (or less)
-# skillful the game appears than expected for its complexity.
-plot_df = (
-    plot_df.lazy()
-    .with_columns(
-        depth_premium=pl.col("p_deterministic") - (alpha + beta * pl.col("complexity")),
-    )
-    .with_columns(
-        depth_premium_z=(pl.col("depth_premium") - pl.col("depth_premium").mean())
-        / pl.col("depth_premium").std(),
-    )
-)
-
-# Within-band z-score of p (Option A) and percentile rank (Option B)
-std_expr = pl.col("p_deterministic").std().over("complexity_band")
-mean_expr = pl.col("p_deterministic").mean().over("complexity_band")
-count_expr = pl.len().over("complexity_band")
-rank_expr = pl.col("p_deterministic").rank(method="max").over("complexity_band")
-
-plot_df = (
-    plot_df.with_columns(complexity_band=pl.col("complexity").qcut(10))
-    .with_columns(
-        depth_z_local=pl.when(std_expr > 0).then(
-            (pl.col("p_deterministic") - mean_expr) / std_expr
-        ),
-        depth_pct_local=pl.when(count_expr > 1).then(
-            (rank_expr - 1) / (count_expr - 1)
-        ),
-    )
-    .collect()
-)
-
-# Convert p ~ complexity fit into a line in (p, complexity) coordinates for plotting:
-# complexity = (p - alpha) / beta = (1/beta) * p - alpha/beta
-slope, intercept = 1.0 / beta, -alpha / beta
-alpha, beta, slope, intercept, plot_df.shape
-
-# %%
 p = figure(
     width=900,
     height=550,
@@ -333,17 +263,6 @@ p = figure(
     y_axis_label="BGG complexity",
     tools="pan,wheel_zoom,box_zoom,reset,save",
     title="Skill vs complexity for BGA games",
-)
-
-p.add_layout(
-    Slope(
-        gradient=slope,
-        y_intercept=intercept,
-        line_color="black",
-        line_width=1.5,
-        line_alpha=0.5,
-        line_dash="dashed",
-    )
 )
 
 # Median lines
@@ -473,21 +392,3 @@ plot_df.sort("std_dev", descending=True, nulls_last=True).head(20)
 
 # %%
 plot_df.sort("std_dev", descending=False, nulls_last=True).head(20)
-
-# %%
-plot_df.sort("depth_premium_z", descending=True, nulls_last=True).head(20)
-
-# %%
-plot_df.sort("depth_premium_z", descending=False, nulls_last=True).head(20)
-
-# %%
-plot_df.sort("depth_z_local", descending=True, nulls_last=True).head(20)
-
-# %%
-plot_df.sort("depth_z_local", descending=False, nulls_last=True).head(20)
-
-# %%
-plot_df.sort("depth_pct_local", descending=True, nulls_last=True).head(20)
-
-# %%
-plot_df.sort("depth_pct_local", descending=False, nulls_last=True).head(20)

@@ -56,7 +56,7 @@
                         {
                             "type": "object",
                             "name": "GlyphRenderer",
-                            "id": "p1064",
+                            "id": "p1063",
                             "attributes": {
                                 "data_source": {
                                     "type": "object",
@@ -2068,12 +2068,12 @@
                                 "view": {
                                     "type": "object",
                                     "name": "CDSView",
-                                    "id": "p1056",
+                                    "id": "p1055",
                                     "attributes": {
                                         "filter": {
                                             "type": "object",
                                             "name": "GroupFilter",
-                                            "id": "p1055",
+                                            "id": "p1054",
                                             "attributes": {
                                                 "column_name": "game_type",
                                                 "group": "Family Game"
@@ -2084,7 +2084,7 @@
                                 "glyph": {
                                     "type": "object",
                                     "name": "Scatter",
-                                    "id": "p1061",
+                                    "id": "p1060",
                                     "attributes": {
                                         "x": {
                                             "type": "field",
@@ -2117,6 +2117,49 @@
                                     }
                                 },
                                 "nonselection_glyph": {
+                                    "type": "object",
+                                    "name": "Scatter",
+                                    "id": "p1061",
+                                    "attributes": {
+                                        "x": {
+                                            "type": "field",
+                                            "field": "p_deterministic"
+                                        },
+                                        "y": {
+                                            "type": "field",
+                                            "field": "complexity"
+                                        },
+                                        "size": {
+                                            "type": "field",
+                                            "field": "size"
+                                        },
+                                        "line_color": {
+                                            "type": "value",
+                                            "value": null
+                                        },
+                                        "line_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        },
+                                        "fill_color": {
+                                            "type": "value",
+                                            "value": "#1f77b4"
+                                        },
+                                        "fill_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        },
+                                        "hatch_color": {
+                                            "type": "value",
+                                            "value": "#1f77b4"
+                                        },
+                                        "hatch_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        }
+                                    }
+                                },
+                                "muted_glyph": {
                                     "type": "object",
                                     "name": "Scatter",
                                     "id": "p1062",
@@ -2139,49 +2182,6 @@
                                         },
                                         "line_alpha": {
                                             "type": "value",
-                                            "value": 0.1
-                                        },
-                                        "fill_color": {
-                                            "type": "value",
-                                            "value": "#1f77b4"
-                                        },
-                                        "fill_alpha": {
-                                            "type": "value",
-                                            "value": 0.1
-                                        },
-                                        "hatch_color": {
-                                            "type": "value",
-                                            "value": "#1f77b4"
-                                        },
-                                        "hatch_alpha": {
-                                            "type": "value",
-                                            "value": 0.1
-                                        }
-                                    }
-                                },
-                                "muted_glyph": {
-                                    "type": "object",
-                                    "name": "Scatter",
-                                    "id": "p1063",
-                                    "attributes": {
-                                        "x": {
-                                            "type": "field",
-                                            "field": "p_deterministic"
-                                        },
-                                        "y": {
-                                            "type": "field",
-                                            "field": "complexity"
-                                        },
-                                        "size": {
-                                            "type": "field",
-                                            "field": "size"
-                                        },
-                                        "line_color": {
-                                            "type": "value",
-                                            "value": null
-                                        },
-                                        "line_alpha": {
-                                            "type": "value",
                                             "value": 0.2
                                         },
                                         "fill_color": {
@@ -2207,7 +2207,7 @@
                         {
                             "type": "object",
                             "name": "GlyphRenderer",
-                            "id": "p1078",
+                            "id": "p1077",
                             "attributes": {
                                 "data_source": {
                                     "id": "p1008"
@@ -2215,12 +2215,12 @@
                                 "view": {
                                     "type": "object",
                                     "name": "CDSView",
-                                    "id": "p1070",
+                                    "id": "p1069",
                                     "attributes": {
                                         "filter": {
                                             "type": "object",
                                             "name": "GroupFilter",
-                                            "id": "p1069",
+                                            "id": "p1068",
                                             "attributes": {
                                                 "column_name": "game_type",
                                                 "group": "Strategy Game"
@@ -2231,7 +2231,7 @@
                                 "glyph": {
                                     "type": "object",
                                     "name": "Scatter",
-                                    "id": "p1075",
+                                    "id": "p1074",
                                     "attributes": {
                                         "x": {
                                             "type": "field",
@@ -2264,6 +2264,49 @@
                                     }
                                 },
                                 "nonselection_glyph": {
+                                    "type": "object",
+                                    "name": "Scatter",
+                                    "id": "p1075",
+                                    "attributes": {
+                                        "x": {
+                                            "type": "field",
+                                            "field": "p_deterministic"
+                                        },
+                                        "y": {
+                                            "type": "field",
+                                            "field": "complexity"
+                                        },
+                                        "size": {
+                                            "type": "field",
+                                            "field": "size"
+                                        },
+                                        "line_color": {
+                                            "type": "value",
+                                            "value": null
+                                        },
+                                        "line_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        },
+                                        "fill_color": {
+                                            "type": "value",
+                                            "value": "#ff7f0e"
+                                        },
+                                        "fill_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        },
+                                        "hatch_color": {
+                                            "type": "value",
+                                            "value": "#ff7f0e"
+                                        },
+                                        "hatch_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        }
+                                    }
+                                },
+                                "muted_glyph": {
                                     "type": "object",
                                     "name": "Scatter",
                                     "id": "p1076",
@@ -2286,49 +2329,6 @@
                                         },
                                         "line_alpha": {
                                             "type": "value",
-                                            "value": 0.1
-                                        },
-                                        "fill_color": {
-                                            "type": "value",
-                                            "value": "#ff7f0e"
-                                        },
-                                        "fill_alpha": {
-                                            "type": "value",
-                                            "value": 0.1
-                                        },
-                                        "hatch_color": {
-                                            "type": "value",
-                                            "value": "#ff7f0e"
-                                        },
-                                        "hatch_alpha": {
-                                            "type": "value",
-                                            "value": 0.1
-                                        }
-                                    }
-                                },
-                                "muted_glyph": {
-                                    "type": "object",
-                                    "name": "Scatter",
-                                    "id": "p1077",
-                                    "attributes": {
-                                        "x": {
-                                            "type": "field",
-                                            "field": "p_deterministic"
-                                        },
-                                        "y": {
-                                            "type": "field",
-                                            "field": "complexity"
-                                        },
-                                        "size": {
-                                            "type": "field",
-                                            "field": "size"
-                                        },
-                                        "line_color": {
-                                            "type": "value",
-                                            "value": null
-                                        },
-                                        "line_alpha": {
-                                            "type": "value",
                                             "value": 0.2
                                         },
                                         "fill_color": {
@@ -2354,7 +2354,7 @@
                         {
                             "type": "object",
                             "name": "GlyphRenderer",
-                            "id": "p1091",
+                            "id": "p1090",
                             "attributes": {
                                 "data_source": {
                                     "id": "p1008"
@@ -2362,12 +2362,12 @@
                                 "view": {
                                     "type": "object",
                                     "name": "CDSView",
-                                    "id": "p1083",
+                                    "id": "p1082",
                                     "attributes": {
                                         "filter": {
                                             "type": "object",
                                             "name": "GroupFilter",
-                                            "id": "p1082",
+                                            "id": "p1081",
                                             "attributes": {
                                                 "column_name": "game_type",
                                                 "group": "Abstract Game"
@@ -2378,7 +2378,7 @@
                                 "glyph": {
                                     "type": "object",
                                     "name": "Scatter",
-                                    "id": "p1088",
+                                    "id": "p1087",
                                     "attributes": {
                                         "x": {
                                             "type": "field",
@@ -2411,6 +2411,49 @@
                                     }
                                 },
                                 "nonselection_glyph": {
+                                    "type": "object",
+                                    "name": "Scatter",
+                                    "id": "p1088",
+                                    "attributes": {
+                                        "x": {
+                                            "type": "field",
+                                            "field": "p_deterministic"
+                                        },
+                                        "y": {
+                                            "type": "field",
+                                            "field": "complexity"
+                                        },
+                                        "size": {
+                                            "type": "field",
+                                            "field": "size"
+                                        },
+                                        "line_color": {
+                                            "type": "value",
+                                            "value": null
+                                        },
+                                        "line_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        },
+                                        "fill_color": {
+                                            "type": "value",
+                                            "value": "#2ca02c"
+                                        },
+                                        "fill_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        },
+                                        "hatch_color": {
+                                            "type": "value",
+                                            "value": "#2ca02c"
+                                        },
+                                        "hatch_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        }
+                                    }
+                                },
+                                "muted_glyph": {
                                     "type": "object",
                                     "name": "Scatter",
                                     "id": "p1089",
@@ -2433,49 +2476,6 @@
                                         },
                                         "line_alpha": {
                                             "type": "value",
-                                            "value": 0.1
-                                        },
-                                        "fill_color": {
-                                            "type": "value",
-                                            "value": "#2ca02c"
-                                        },
-                                        "fill_alpha": {
-                                            "type": "value",
-                                            "value": 0.1
-                                        },
-                                        "hatch_color": {
-                                            "type": "value",
-                                            "value": "#2ca02c"
-                                        },
-                                        "hatch_alpha": {
-                                            "type": "value",
-                                            "value": 0.1
-                                        }
-                                    }
-                                },
-                                "muted_glyph": {
-                                    "type": "object",
-                                    "name": "Scatter",
-                                    "id": "p1090",
-                                    "attributes": {
-                                        "x": {
-                                            "type": "field",
-                                            "field": "p_deterministic"
-                                        },
-                                        "y": {
-                                            "type": "field",
-                                            "field": "complexity"
-                                        },
-                                        "size": {
-                                            "type": "field",
-                                            "field": "size"
-                                        },
-                                        "line_color": {
-                                            "type": "value",
-                                            "value": null
-                                        },
-                                        "line_alpha": {
-                                            "type": "value",
                                             "value": 0.2
                                         },
                                         "fill_color": {
@@ -2501,7 +2501,7 @@
                         {
                             "type": "object",
                             "name": "GlyphRenderer",
-                            "id": "p1104",
+                            "id": "p1103",
                             "attributes": {
                                 "data_source": {
                                     "id": "p1008"
@@ -2509,12 +2509,12 @@
                                 "view": {
                                     "type": "object",
                                     "name": "CDSView",
-                                    "id": "p1096",
+                                    "id": "p1095",
                                     "attributes": {
                                         "filter": {
                                             "type": "object",
                                             "name": "GroupFilter",
-                                            "id": "p1095",
+                                            "id": "p1094",
                                             "attributes": {
                                                 "column_name": "game_type",
                                                 "group": "Party Game"
@@ -2525,7 +2525,7 @@
                                 "glyph": {
                                     "type": "object",
                                     "name": "Scatter",
-                                    "id": "p1101",
+                                    "id": "p1100",
                                     "attributes": {
                                         "x": {
                                             "type": "field",
@@ -2558,6 +2558,49 @@
                                     }
                                 },
                                 "nonselection_glyph": {
+                                    "type": "object",
+                                    "name": "Scatter",
+                                    "id": "p1101",
+                                    "attributes": {
+                                        "x": {
+                                            "type": "field",
+                                            "field": "p_deterministic"
+                                        },
+                                        "y": {
+                                            "type": "field",
+                                            "field": "complexity"
+                                        },
+                                        "size": {
+                                            "type": "field",
+                                            "field": "size"
+                                        },
+                                        "line_color": {
+                                            "type": "value",
+                                            "value": null
+                                        },
+                                        "line_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        },
+                                        "fill_color": {
+                                            "type": "value",
+                                            "value": "#d62728"
+                                        },
+                                        "fill_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        },
+                                        "hatch_color": {
+                                            "type": "value",
+                                            "value": "#d62728"
+                                        },
+                                        "hatch_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        }
+                                    }
+                                },
+                                "muted_glyph": {
                                     "type": "object",
                                     "name": "Scatter",
                                     "id": "p1102",
@@ -2580,49 +2623,6 @@
                                         },
                                         "line_alpha": {
                                             "type": "value",
-                                            "value": 0.1
-                                        },
-                                        "fill_color": {
-                                            "type": "value",
-                                            "value": "#d62728"
-                                        },
-                                        "fill_alpha": {
-                                            "type": "value",
-                                            "value": 0.1
-                                        },
-                                        "hatch_color": {
-                                            "type": "value",
-                                            "value": "#d62728"
-                                        },
-                                        "hatch_alpha": {
-                                            "type": "value",
-                                            "value": 0.1
-                                        }
-                                    }
-                                },
-                                "muted_glyph": {
-                                    "type": "object",
-                                    "name": "Scatter",
-                                    "id": "p1103",
-                                    "attributes": {
-                                        "x": {
-                                            "type": "field",
-                                            "field": "p_deterministic"
-                                        },
-                                        "y": {
-                                            "type": "field",
-                                            "field": "complexity"
-                                        },
-                                        "size": {
-                                            "type": "field",
-                                            "field": "size"
-                                        },
-                                        "line_color": {
-                                            "type": "value",
-                                            "value": null
-                                        },
-                                        "line_alpha": {
-                                            "type": "value",
                                             "value": 0.2
                                         },
                                         "fill_color": {
@@ -2648,7 +2648,7 @@
                         {
                             "type": "object",
                             "name": "GlyphRenderer",
-                            "id": "p1117",
+                            "id": "p1116",
                             "attributes": {
                                 "data_source": {
                                     "id": "p1008"
@@ -2656,12 +2656,12 @@
                                 "view": {
                                     "type": "object",
                                     "name": "CDSView",
-                                    "id": "p1109",
+                                    "id": "p1108",
                                     "attributes": {
                                         "filter": {
                                             "type": "object",
                                             "name": "GroupFilter",
-                                            "id": "p1108",
+                                            "id": "p1107",
                                             "attributes": {
                                                 "column_name": "game_type",
                                                 "group": "Children's Game"
@@ -2672,7 +2672,7 @@
                                 "glyph": {
                                     "type": "object",
                                     "name": "Scatter",
-                                    "id": "p1114",
+                                    "id": "p1113",
                                     "attributes": {
                                         "x": {
                                             "type": "field",
@@ -2705,6 +2705,49 @@
                                     }
                                 },
                                 "nonselection_glyph": {
+                                    "type": "object",
+                                    "name": "Scatter",
+                                    "id": "p1114",
+                                    "attributes": {
+                                        "x": {
+                                            "type": "field",
+                                            "field": "p_deterministic"
+                                        },
+                                        "y": {
+                                            "type": "field",
+                                            "field": "complexity"
+                                        },
+                                        "size": {
+                                            "type": "field",
+                                            "field": "size"
+                                        },
+                                        "line_color": {
+                                            "type": "value",
+                                            "value": null
+                                        },
+                                        "line_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        },
+                                        "fill_color": {
+                                            "type": "value",
+                                            "value": "#9467bd"
+                                        },
+                                        "fill_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        },
+                                        "hatch_color": {
+                                            "type": "value",
+                                            "value": "#9467bd"
+                                        },
+                                        "hatch_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        }
+                                    }
+                                },
+                                "muted_glyph": {
                                     "type": "object",
                                     "name": "Scatter",
                                     "id": "p1115",
@@ -2727,49 +2770,6 @@
                                         },
                                         "line_alpha": {
                                             "type": "value",
-                                            "value": 0.1
-                                        },
-                                        "fill_color": {
-                                            "type": "value",
-                                            "value": "#9467bd"
-                                        },
-                                        "fill_alpha": {
-                                            "type": "value",
-                                            "value": 0.1
-                                        },
-                                        "hatch_color": {
-                                            "type": "value",
-                                            "value": "#9467bd"
-                                        },
-                                        "hatch_alpha": {
-                                            "type": "value",
-                                            "value": 0.1
-                                        }
-                                    }
-                                },
-                                "muted_glyph": {
-                                    "type": "object",
-                                    "name": "Scatter",
-                                    "id": "p1116",
-                                    "attributes": {
-                                        "x": {
-                                            "type": "field",
-                                            "field": "p_deterministic"
-                                        },
-                                        "y": {
-                                            "type": "field",
-                                            "field": "complexity"
-                                        },
-                                        "size": {
-                                            "type": "field",
-                                            "field": "size"
-                                        },
-                                        "line_color": {
-                                            "type": "value",
-                                            "value": null
-                                        },
-                                        "line_alpha": {
-                                            "type": "value",
                                             "value": 0.2
                                         },
                                         "fill_color": {
@@ -2795,7 +2795,7 @@
                         {
                             "type": "object",
                             "name": "GlyphRenderer",
-                            "id": "p1130",
+                            "id": "p1129",
                             "attributes": {
                                 "data_source": {
                                     "id": "p1008"
@@ -2803,12 +2803,12 @@
                                 "view": {
                                     "type": "object",
                                     "name": "CDSView",
-                                    "id": "p1122",
+                                    "id": "p1121",
                                     "attributes": {
                                         "filter": {
                                             "type": "object",
                                             "name": "GroupFilter",
-                                            "id": "p1121",
+                                            "id": "p1120",
                                             "attributes": {
                                                 "column_name": "game_type",
                                                 "group": "Thematic"
@@ -2819,7 +2819,7 @@
                                 "glyph": {
                                     "type": "object",
                                     "name": "Scatter",
-                                    "id": "p1127",
+                                    "id": "p1126",
                                     "attributes": {
                                         "x": {
                                             "type": "field",
@@ -2852,6 +2852,49 @@
                                     }
                                 },
                                 "nonselection_glyph": {
+                                    "type": "object",
+                                    "name": "Scatter",
+                                    "id": "p1127",
+                                    "attributes": {
+                                        "x": {
+                                            "type": "field",
+                                            "field": "p_deterministic"
+                                        },
+                                        "y": {
+                                            "type": "field",
+                                            "field": "complexity"
+                                        },
+                                        "size": {
+                                            "type": "field",
+                                            "field": "size"
+                                        },
+                                        "line_color": {
+                                            "type": "value",
+                                            "value": null
+                                        },
+                                        "line_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        },
+                                        "fill_color": {
+                                            "type": "value",
+                                            "value": "#8c564b"
+                                        },
+                                        "fill_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        },
+                                        "hatch_color": {
+                                            "type": "value",
+                                            "value": "#8c564b"
+                                        },
+                                        "hatch_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        }
+                                    }
+                                },
+                                "muted_glyph": {
                                     "type": "object",
                                     "name": "Scatter",
                                     "id": "p1128",
@@ -2874,49 +2917,6 @@
                                         },
                                         "line_alpha": {
                                             "type": "value",
-                                            "value": 0.1
-                                        },
-                                        "fill_color": {
-                                            "type": "value",
-                                            "value": "#8c564b"
-                                        },
-                                        "fill_alpha": {
-                                            "type": "value",
-                                            "value": 0.1
-                                        },
-                                        "hatch_color": {
-                                            "type": "value",
-                                            "value": "#8c564b"
-                                        },
-                                        "hatch_alpha": {
-                                            "type": "value",
-                                            "value": 0.1
-                                        }
-                                    }
-                                },
-                                "muted_glyph": {
-                                    "type": "object",
-                                    "name": "Scatter",
-                                    "id": "p1129",
-                                    "attributes": {
-                                        "x": {
-                                            "type": "field",
-                                            "field": "p_deterministic"
-                                        },
-                                        "y": {
-                                            "type": "field",
-                                            "field": "complexity"
-                                        },
-                                        "size": {
-                                            "type": "field",
-                                            "field": "size"
-                                        },
-                                        "line_color": {
-                                            "type": "value",
-                                            "value": null
-                                        },
-                                        "line_alpha": {
-                                            "type": "value",
                                             "value": 0.2
                                         },
                                         "fill_color": {
@@ -2942,7 +2942,7 @@
                         {
                             "type": "object",
                             "name": "GlyphRenderer",
-                            "id": "p1143",
+                            "id": "p1142",
                             "attributes": {
                                 "data_source": {
                                     "id": "p1008"
@@ -2950,12 +2950,12 @@
                                 "view": {
                                     "type": "object",
                                     "name": "CDSView",
-                                    "id": "p1135",
+                                    "id": "p1134",
                                     "attributes": {
                                         "filter": {
                                             "type": "object",
                                             "name": "GroupFilter",
-                                            "id": "p1134",
+                                            "id": "p1133",
                                             "attributes": {
                                                 "column_name": "game_type",
                                                 "group": "War Game"
@@ -2966,7 +2966,7 @@
                                 "glyph": {
                                     "type": "object",
                                     "name": "Scatter",
-                                    "id": "p1140",
+                                    "id": "p1139",
                                     "attributes": {
                                         "x": {
                                             "type": "field",
@@ -2999,6 +2999,49 @@
                                     }
                                 },
                                 "nonselection_glyph": {
+                                    "type": "object",
+                                    "name": "Scatter",
+                                    "id": "p1140",
+                                    "attributes": {
+                                        "x": {
+                                            "type": "field",
+                                            "field": "p_deterministic"
+                                        },
+                                        "y": {
+                                            "type": "field",
+                                            "field": "complexity"
+                                        },
+                                        "size": {
+                                            "type": "field",
+                                            "field": "size"
+                                        },
+                                        "line_color": {
+                                            "type": "value",
+                                            "value": null
+                                        },
+                                        "line_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        },
+                                        "fill_color": {
+                                            "type": "value",
+                                            "value": "#e377c2"
+                                        },
+                                        "fill_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        },
+                                        "hatch_color": {
+                                            "type": "value",
+                                            "value": "#e377c2"
+                                        },
+                                        "hatch_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        }
+                                    }
+                                },
+                                "muted_glyph": {
                                     "type": "object",
                                     "name": "Scatter",
                                     "id": "p1141",
@@ -3021,49 +3064,6 @@
                                         },
                                         "line_alpha": {
                                             "type": "value",
-                                            "value": 0.1
-                                        },
-                                        "fill_color": {
-                                            "type": "value",
-                                            "value": "#e377c2"
-                                        },
-                                        "fill_alpha": {
-                                            "type": "value",
-                                            "value": 0.1
-                                        },
-                                        "hatch_color": {
-                                            "type": "value",
-                                            "value": "#e377c2"
-                                        },
-                                        "hatch_alpha": {
-                                            "type": "value",
-                                            "value": 0.1
-                                        }
-                                    }
-                                },
-                                "muted_glyph": {
-                                    "type": "object",
-                                    "name": "Scatter",
-                                    "id": "p1142",
-                                    "attributes": {
-                                        "x": {
-                                            "type": "field",
-                                            "field": "p_deterministic"
-                                        },
-                                        "y": {
-                                            "type": "field",
-                                            "field": "complexity"
-                                        },
-                                        "size": {
-                                            "type": "field",
-                                            "field": "size"
-                                        },
-                                        "line_color": {
-                                            "type": "value",
-                                            "value": null
-                                        },
-                                        "line_alpha": {
-                                            "type": "value",
                                             "value": 0.2
                                         },
                                         "fill_color": {
@@ -3089,7 +3089,7 @@
                         {
                             "type": "object",
                             "name": "GlyphRenderer",
-                            "id": "p1156",
+                            "id": "p1155",
                             "attributes": {
                                 "data_source": {
                                     "id": "p1008"
@@ -3097,12 +3097,12 @@
                                 "view": {
                                     "type": "object",
                                     "name": "CDSView",
-                                    "id": "p1148",
+                                    "id": "p1147",
                                     "attributes": {
                                         "filter": {
                                             "type": "object",
                                             "name": "GroupFilter",
-                                            "id": "p1147",
+                                            "id": "p1146",
                                             "attributes": {
                                                 "column_name": "game_type",
                                                 "group": "Customizable"
@@ -3113,7 +3113,7 @@
                                 "glyph": {
                                     "type": "object",
                                     "name": "Scatter",
-                                    "id": "p1153",
+                                    "id": "p1152",
                                     "attributes": {
                                         "x": {
                                             "type": "field",
@@ -3146,6 +3146,49 @@
                                     }
                                 },
                                 "nonselection_glyph": {
+                                    "type": "object",
+                                    "name": "Scatter",
+                                    "id": "p1153",
+                                    "attributes": {
+                                        "x": {
+                                            "type": "field",
+                                            "field": "p_deterministic"
+                                        },
+                                        "y": {
+                                            "type": "field",
+                                            "field": "complexity"
+                                        },
+                                        "size": {
+                                            "type": "field",
+                                            "field": "size"
+                                        },
+                                        "line_color": {
+                                            "type": "value",
+                                            "value": null
+                                        },
+                                        "line_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        },
+                                        "fill_color": {
+                                            "type": "value",
+                                            "value": "#7f7f7f"
+                                        },
+                                        "fill_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        },
+                                        "hatch_color": {
+                                            "type": "value",
+                                            "value": "#7f7f7f"
+                                        },
+                                        "hatch_alpha": {
+                                            "type": "value",
+                                            "value": 0.1
+                                        }
+                                    }
+                                },
+                                "muted_glyph": {
                                     "type": "object",
                                     "name": "Scatter",
                                     "id": "p1154",
@@ -3168,49 +3211,6 @@
                                         },
                                         "line_alpha": {
                                             "type": "value",
-                                            "value": 0.1
-                                        },
-                                        "fill_color": {
-                                            "type": "value",
-                                            "value": "#7f7f7f"
-                                        },
-                                        "fill_alpha": {
-                                            "type": "value",
-                                            "value": 0.1
-                                        },
-                                        "hatch_color": {
-                                            "type": "value",
-                                            "value": "#7f7f7f"
-                                        },
-                                        "hatch_alpha": {
-                                            "type": "value",
-                                            "value": 0.1
-                                        }
-                                    }
-                                },
-                                "muted_glyph": {
-                                    "type": "object",
-                                    "name": "Scatter",
-                                    "id": "p1155",
-                                    "attributes": {
-                                        "x": {
-                                            "type": "field",
-                                            "field": "p_deterministic"
-                                        },
-                                        "y": {
-                                            "type": "field",
-                                            "field": "complexity"
-                                        },
-                                        "size": {
-                                            "type": "field",
-                                            "field": "size"
-                                        },
-                                        "line_color": {
-                                            "type": "value",
-                                            "value": null
-                                        },
-                                        "line_alpha": {
-                                            "type": "value",
                                             "value": 0.2
                                         },
                                         "fill_color": {
@@ -3236,7 +3236,7 @@
                         {
                             "type": "object",
                             "name": "GlyphRenderer",
-                            "id": "p1169",
+                            "id": "p1168",
                             "attributes": {
                                 "data_source": {
                                     "id": "p1008"
@@ -3244,12 +3244,12 @@
                                 "view": {
                                     "type": "object",
                                     "name": "CDSView",
-                                    "id": "p1161",
+                                    "id": "p1160",
                                     "attributes": {
                                         "filter": {
                                             "type": "object",
                                             "name": "GroupFilter",
-                                            "id": "p1160",
+                                            "id": "p1159",
                                             "attributes": {
                                                 "column_name": "game_type",
                                                 "group": "Uncategorized"
@@ -3260,7 +3260,7 @@
                                 "glyph": {
                                     "type": "object",
                                     "name": "Scatter",
-                                    "id": "p1166",
+                                    "id": "p1165",
                                     "attributes": {
                                         "x": {
                                             "type": "field",
@@ -3295,7 +3295,7 @@
                                 "nonselection_glyph": {
                                     "type": "object",
                                     "name": "Scatter",
-                                    "id": "p1167",
+                                    "id": "p1166",
                                     "attributes": {
                                         "x": {
                                             "type": "field",
@@ -3338,7 +3338,7 @@
                                 "muted_glyph": {
                                     "type": "object",
                                     "name": "Scatter",
-                                    "id": "p1168",
+                                    "id": "p1167",
                                     "attributes": {
                                         "x": {
                                             "type": "field",
@@ -3476,7 +3476,7 @@
                                 {
                                     "type": "object",
                                     "name": "HoverTool",
-                                    "id": "p1177",
+                                    "id": "p1176",
                                     "attributes": {
                                         "renderers": "auto",
                                         "tooltips": [
@@ -3568,7 +3568,7 @@
                                 "formatter": {
                                     "type": "object",
                                     "name": "NumeralTickFormatter",
-                                    "id": "p1178",
+                                    "id": "p1177",
                                     "attributes": {
                                         "format": "0%"
                                     }
@@ -3606,22 +3606,8 @@
                         },
                         {
                             "type": "object",
-                            "name": "Slope",
-                            "id": "p1048",
-                            "attributes": {
-                                "gradient": 6.547409974477946,
-                                "y_intercept": -0.9590311413857954,
-                                "line_alpha": 0.5,
-                                "line_width": 1.5,
-                                "line_dash": [
-                                    6
-                                ]
-                            }
-                        },
-                        {
-                            "type": "object",
                             "name": "Span",
-                            "id": "p1049",
+                            "id": "p1048",
                             "attributes": {
                                 "location": 0.51,
                                 "dimension": "height",
@@ -3636,7 +3622,7 @@
                         {
                             "type": "object",
                             "name": "Span",
-                            "id": "p1050",
+                            "id": "p1049",
                             "attributes": {
                                 "location": 2.0201000000000002,
                                 "line_alpha": 0.25,
@@ -3650,7 +3636,7 @@
                         {
                             "type": "object",
                             "name": "Label",
-                            "id": "p1051",
+                            "id": "p1050",
                             "attributes": {
                                 "text": "complex but swingy",
                                 "text_alpha": 0.25,
@@ -3665,7 +3651,7 @@
                         {
                             "type": "object",
                             "name": "Label",
-                            "id": "p1052",
+                            "id": "p1051",
                             "attributes": {
                                 "text": "complex and skillful",
                                 "text_alpha": 0.25,
@@ -3680,7 +3666,7 @@
                         {
                             "type": "object",
                             "name": "Label",
-                            "id": "p1053",
+                            "id": "p1052",
                             "attributes": {
                                 "text": "simple and swingy",
                                 "text_alpha": 0.25,
@@ -3695,7 +3681,7 @@
                         {
                             "type": "object",
                             "name": "Label",
-                            "id": "p1054",
+                            "id": "p1053",
                             "attributes": {
                                 "text": "simple but skillful",
                                 "text_alpha": 0.25,
@@ -3710,7 +3696,7 @@
                         {
                             "type": "object",
                             "name": "Legend",
-                            "id": "p1067",
+                            "id": "p1066",
                             "attributes": {
                                 "location": "top_left",
                                 "click_policy": "hide",
@@ -3718,7 +3704,7 @@
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1068",
+                                        "id": "p1067",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -3726,7 +3712,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1064"
+                                                    "id": "p1063"
                                                 }
                                             ]
                                         }
@@ -3734,7 +3720,7 @@
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1081",
+                                        "id": "p1080",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -3742,7 +3728,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1078"
+                                                    "id": "p1077"
                                                 }
                                             ]
                                         }
@@ -3750,7 +3736,7 @@
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1094",
+                                        "id": "p1093",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -3758,7 +3744,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1091"
+                                                    "id": "p1090"
                                                 }
                                             ]
                                         }
@@ -3766,7 +3752,7 @@
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1107",
+                                        "id": "p1106",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -3774,7 +3760,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1104"
+                                                    "id": "p1103"
                                                 }
                                             ]
                                         }
@@ -3782,7 +3768,7 @@
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1120",
+                                        "id": "p1119",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -3790,7 +3776,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1117"
+                                                    "id": "p1116"
                                                 }
                                             ]
                                         }
@@ -3798,7 +3784,7 @@
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1133",
+                                        "id": "p1132",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -3806,7 +3792,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1130"
+                                                    "id": "p1129"
                                                 }
                                             ]
                                         }
@@ -3814,7 +3800,7 @@
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1146",
+                                        "id": "p1145",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -3822,7 +3808,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1143"
+                                                    "id": "p1142"
                                                 }
                                             ]
                                         }
@@ -3830,7 +3816,7 @@
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1159",
+                                        "id": "p1158",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -3838,7 +3824,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1156"
+                                                    "id": "p1155"
                                                 }
                                             ]
                                         }
@@ -3846,7 +3832,7 @@
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1172",
+                                        "id": "p1171",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -3854,7 +3840,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1169"
+                                                    "id": "p1168"
                                                 }
                                             ]
                                         }
@@ -3865,7 +3851,7 @@
                         {
                             "type": "object",
                             "name": "LabelSet",
-                            "id": "p1173",
+                            "id": "p1172",
                             "attributes": {
                                 "source": {
                                     "type": "object",
