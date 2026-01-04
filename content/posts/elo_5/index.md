@@ -16,6 +16,42 @@ tags:
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.8.1.min.js" ></script>
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-api-3.8.1.min.js" ></script>
 
+TODO: Intro + Hook
+
+# The story so far
+
+TODO: Recap of parts 1, 3 and 4 with the focus of a very brief summary of the methodology.
+
+# Methodology: what we're trying to measure
+
+TODO: What is skill in a game? Fundamental assumption going into Elo. What it measures and what it doesn't.
+
+TODO: Describe exactly what we're measuring, define skill sensitivity.
+
+TODO: Source of data: BGA. Only consider competitive games with enough regulars etc.
+
+TODO: We only look at outcomes, the games themselves remain blackboxes (no action spaces or decision trees etc). Do people even care to win? Magic circle, Knizia quote etc.
+
+# Results
+
+## Skill sensitivity vs complexity
+
+{{% bokeh "skill_vs_complexity.json" %}}
+
+TODO: Complexity has its own issues. Many 'geeks rate a game heavy based on its depth rather than rules overhead (cf go).
+
+## Most skill sensitive games
+
+TODO: Table
+
+### Games that punch above their weight
+
+TODO: Most skill sensitive games within complexity band. (Quantiles?)
+
+## Least skill sensitive games
+
+TODO: Table
+
 # Notes
 
 ## Criterion for games included in the analysis
@@ -38,7 +74,6 @@ tags:
   - Likewise, a group of chess grandmasters just drawing all the time would look similarly noisy, even though chess is obv highly skill based
 - Most importantly: luck vs skill isn't really one-dimensional, and it certainly doesn't mean "better or worse"
 
-{{% bokeh "skill_vs_complexity.json" %}}
 
 
 # Outline from Gippty
