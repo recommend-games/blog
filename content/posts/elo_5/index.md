@@ -18,11 +18,28 @@ tags:
 
 TODO: Intro + Hook
 
-# The story so far
 
-TODO: Recap of parts 1, 3 and 4 with the focus of a very brief summary of the methodology.
+# Method: what we're trying to measure (and what not)
 
-# Methodology: what we're trying to measure
+First, we need to take a closer look into what exactly we're trying measure and how. I'll try to keep it fairly high level here, but if even a hint of theory is too much for you, feel free to skip straight to the results.
+
+
+## The story so far
+
+This is part 5 of our series on Elo and measuring "skills" in games, so I'll lay out the overall methodology here in the form of a brief recap.
+
+The data basis are matches from Board Game Arena, or more precisely: the outcomes (final rankings) of matches. We use the Elo system to turn those match results into ratings. Elo gives every player a *relative* rating: a number that moves up when they beat expectations and down when they don’t. (If you want the full “how does Elo do that?” story, that’s [part 1]({{<ref "posts/elo_1/index.md">}}). If you want to see Elo on real data before we touch board games, that’s [part 2]({{<ref "posts/elo_2/index.md">}}).) Important caveat: Classic Elo only handles two-player games. But board games aren’t all chess, and most matches aren’t 1‑vs‑1. So I use the multiplayer Elo generalisation from [part 4]({{<ref "posts/elo_4/index.md">}}), which models the whole finishing order.
+
+Either way, Elo uses one important dial: the update factor \\(K\\) which controls how much ratings move after each match. Following Dürsch/Lambrecht/Oechssler (DLO), I calibrate \\(K*\\) per game by minimising prediction error on that game’s match log (Brier loss). That’s the core trick we borrowed in [part 3]({{<ref "posts/elo_3/index.md">}}). Using this calibrated updated factor, we can calculate the Elo ratings of all players per game.
+
+The basic idea of "measuring skill" is that games which allow some form of "mastery" (like chess) should have a strong separation between players and hence a wide spread of players' Elo ratings. On the other hand, predominantly luck based games (like TODO) won't have much of a difference in players' skills and hence a very narrow spread. The mathematical measure of this spread, the standard deviation \\(\sigma\\) of Elo ratings, is our primary measure of "skill", our "skill‑o‑meter" from [part 3]({{<ref "posts/elo_3/index.md">}}).
+
+We then take one extra step: The raw \\(\sigma\\) is hard to interpret. This is why I map it onto the benchmark “toy universes” from [part 3]({{<ref "posts/elo_3/index.md">}}) and [part 4]({{<ref "posts/elo_4/index.md">}}): **\\(p\\)‑deterministic games**, where outcomes behave like “the better player wins with probability \\(p\\)”.
+
+**That gives a single headline number per game: *skill sensitivity* \\(p\\) (higher \\(p\\) ≈ results behave more like “better player wins”; lower \\(p\\) ≈ results are more swingy).**
+
+
+## Some more details: assumptions, simplifications, known limitations
 
 TODO: What is skill in a game? Fundamental assumption going into Elo. What it measures and what it doesn't.
 
