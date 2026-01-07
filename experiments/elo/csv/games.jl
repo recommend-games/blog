@@ -913,7 +913,7 @@
 {"average_duration":2,"bgg_id":200632,"display_name_en":"Qango","games_played":8746,"id":2064,"name":"qango","published_on":"2024-07-03","status":"beta","weight":4}
 {"average_duration":20,"bgg_id":414107,"display_name_en":"Ratjack","games_played":19203,"id":2066,"name":"ratjack","published_on":"2024-11-11","status":"public","weight":41}
 {"average_duration":19,"bgg_id":403209,"display_name_en":"Belladone Bluff","games_played":2564,"id":2067,"name":"belladonebluff","published_on":"2025-12-04","status":"public","weight":20}
-{"average_duration":8,"bgg_id":414944,"display_name_en":"Park Life","games_played":2113,"id":2068,"name":"parklife","priority":-999,"published_on":"2025-03-06","status":"public","weight":4}
+{"average_duration":8,"bgg_id":414944,"display_name_en":"Park Life","games_played":2118,"id":2068,"name":"parklife","priority":-999,"published_on":"2025-03-06","status":"public","weight":5}
 {"average_duration":9,"bgg_id":306032,"display_name_en":"Cookie Addict!","games_played":7797,"id":2069,"name":"cookieaddict","published_on":"2025-12-13","status":"public","weight":54}
 {"average_duration":42,"bgg_id":210296,"display_name_en":"DinoGenics","games_played":19677,"id":2071,"name":"dinogenics","published_on":"2025-08-24","status":"public","weight":469}
 {"average_duration":37,"bgg_id":17104,"display_name_en":"Canasta","games_played":59691,"id":2073,"name":"canasta","published_on":"2025-01-06","status":"public","weight":921}
