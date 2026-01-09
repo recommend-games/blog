@@ -38,7 +38,7 @@
 {"average_duration":9,"bgg_id":54137,"display_name_en":"Battle Sheep","games_played":423067,"id":47,"name":"splits","published_on":"2014-02-10","status":"public","weight":64}
 {"average_duration":7,"bgg_id":2243,"display_name_en":"Yahtzee","games_played":16227318,"id":49,"name":"yatzy","published_on":"2013-05-27","status":"public","weight":4620}
 {"average_duration":9,"bgg_id":87288,"display_name_en":"Cinco","games_played":97903,"id":51,"name":"cinco","published_on":"2013-07-09","status":"public","weight":25}
-{"average_duration":16,"bgg_id":2397,"display_name_en":"Backgammon","games_played":7050581,"id":53,"name":"backgammon","published_on":"2014-09-09","status":"public","weight":2118}
+{"average_duration":16,"bgg_id":2397,"display_name_en":"Backgammon","games_played":7053565,"id":53,"name":"backgammon","published_on":"2014-09-09","status":"public","weight":2171}
 {"average_duration":12,"bgg_id":2399,"display_name_en":"Senet","games_played":117685,"id":54,"name":"senet","published_on":"2013-03-30","status":"public","weight":39}
 {"average_duration":16,"bgg_id":152359,"display_name_en":"Machiavelli","games_played":418902,"id":55,"name":"machiavelli","published_on":"2013-10-20","status":"public","weight":141}
 {"average_duration":17,"bgg_id":125618,"display_name_en":"Libertalia","games_played":214846,"id":56,"name":"libertalia","premium":true,"published_on":"2013-03-04","status":"public","weight":21}
