@@ -32,6 +32,8 @@ from sklearn.manifold import TSNE
 jupyter_black.load()
 output_notebook()
 
+seed = 13
+
 # %%
 data_dir = Path("../data").resolve()
 plot_dir = Path("../plots/games_by_latent_vectors").resolve()
@@ -115,7 +117,7 @@ umap_embedding = umap.UMAP(
     negative_sample_rate=5,
     output_metric="euclidean",
     output_metric_kwds=None,
-    random_state=None,
+    random_state=seed,
 )
 
 # %%
