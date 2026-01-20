@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.16.1
+#       jupytext_version: 1.19.0
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -15,24 +15,26 @@
 
 # %%
 import json
-from pathlib import Path
 import jupyter_black
 import polars as pl
+import polars.selectors as cs
 import umap
+
+from board_game_map.data import load_latent_vectors, process_game_data
+from board_game_map.plots import plot_embedding
 from bokeh.embed import json_item
 from bokeh.io import output_notebook
 from bokeh.plotting import show
+from pathlib import Path
 from sklearn.decomposition import PCA
 from sklearn.manifold import TSNE
-from board_game_map.data import load_latent_vectors, process_game_data
-from board_game_map.plots import plot_embedding
 
 jupyter_black.load()
 output_notebook()
 
 # %%
-data_dir = (Path(".") / "data").resolve()
-plot_dir = (Path(".") / "plots" / "games_by_latent_vectors").resolve()
+data_dir = Path("../data").resolve()
+plot_dir = Path("../plots/games_by_latent_vectors").resolve()
 plot_dir.mkdir(parents=True, exist_ok=True)
 data_dir, plot_dir
 
@@ -40,7 +42,11 @@ data_dir, plot_dir
 # ## Game types
 
 # %%
-rankings = pl.read_csv(data_dir / "boardgames_ranks.csv")
+rankings = (
+    pl.scan_csv(data_dir / "boardgames_ranks.csv")
+    .with_columns(cs.ends_with("_rank").cast(pl.Int64))
+    .collect()
+)
 rankings.shape
 
 # %%
