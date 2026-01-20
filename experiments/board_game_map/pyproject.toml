@@ -1,40 +1,49 @@
-[tool.poetry]
+[project]
 name = "board-game-map"
 version = "0.1.0"
 description = "Board game embeddings and maps"
-authors = ["Markus Shepherd <markus@recommend.games>"]
+authors = [
+    { name = "Markus Shepherd", email = "markus@recommend.games" },
+]
 
-[tool.poetry.dependencies]
-python = "3.12.*"
+requires-python = "==3.14.*"
 
-bokeh = "*"
-dask = {version = "*", extras = ["dataframe"]}
-matplotlib = "*"
-numpy = "*"
-pandas = "*"
-polars = {version = "*", extras = ["pandas"]}
-scikit-learn = "*"
-scipy = "*"
-seaborn = "*"
-tqdm = "*"
-umap-learn = {extras = ["plot"], version = "*"}
+packages = [
+    { include = "board_game_map", from = "python" },
+]
 
-[tool.poetry.group.dev.dependencies]
-jupyter-black = "*"
-jupyter-bokeh = "*"
-jupyterlab = "*"
-jupytext = "*"
-mypy = "*"
-ruff = "*"
-types-seaborn = "*"
-types-tqdm = "*"
+dependencies = [
+    "bokeh",
+    "matplotlib",
+    "numpy",
+    "polars[pandas]",
+    "scikit-learn",
+    "scipy",
+    "seaborn",
+    "tqdm",
+    "umap-learn[plot]",
+]
+
+[dependency-groups]
+dev = [
+    "jupyter-black",
+    "jupyter-bokeh",
+    "jupyterlab",
+    "jupytext",
+    "mypy",
+    "ruff",
+    "ty",
+    "types-seaborn",
+    "types-tqdm",
+]
+
+[tool.uv]
+cache-keys = [
+    { file = "pyproject.toml" },
+]
 
 [tool.ruff]
-target-version = "py312"
+target-version = "py314"
 
 [tool.mypy]
-python_version = "3.12"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+python_version = "3.14"
