@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "sdj_2024"
+version = "0.1.0"
+description = "Spiel des Jahres 2024 predictions"
+authors = ["Markus Shepherd <markus@recommend.games>"]
+
+[tool.poetry.dependencies]
+python = "3.12.*"
+
+board-game-utils = "*"
+joblib = "*"
+matplotlib = "*"
+numpy = "*"
+pandas = "*"
+polars = "*"
+pytility = "*"
+pyyaml = "*"
+scikit-learn = "*"
+scipy = "*"
+seaborn = "*"
+tabulate = "*"
+tqdm = "*"
+
+[tool.poetry.group.dev.dependencies]
+jupyter-black = "*"
+jupyterlab = "*"
+jupytext = "*"
+mypy = "*"
+ruff = "*"
+types-tqdm = "*"
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

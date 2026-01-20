@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "sdj-designers"
+version = "0.1.0"
+description = "Overview of Spiel des Jahres winning designers"
+authors = ["Markus Shepherd <markus@recommend.games>"]
+
+[tool.poetry.dependencies]
+python = "3.12.*"
+
+more-itertools = "*"
+pandas = "*"
+pytility = "*"
+tabulate = "*"
+
+[tool.poetry.group.dev.dependencies]
+jupyter-black = "*"
+jupyterlab = "*"
+jupytext = "*"
+mypy = "*"
+ruff = "*"
+types-tqdm = "*"
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

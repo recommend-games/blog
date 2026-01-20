@@ -1,0 +1,336 @@
+from __future__ import annotations
+
+import json
+import math
+import random
+import re
+import time
+from datetime import datetime, timezone
+from typing import Any, TYPE_CHECKING
+
+import funcy
+import jmespath
+from scrapy import FormRequest, Request, Selector, Spider
+from scrapy.http import Response, TextResponse
+
+if TYPE_CHECKING:
+    from collections.abc import Generator, Iterable
+
+
+class BaseFilter:
+    type_name: str
+
+    def __init__(self, feed_options: dict[str, Any] | None) -> None:
+        self.feed_options = feed_options
+
+    def accepts(self, item: Any) -> bool:
+        if "type" in item and item["type"] == self.type_name:
+            return True
+        return False
+
+
+class GameFilter(BaseFilter):
+    type_name = "game"
+
+
+class RankingFilter(BaseFilter):
+    type_name = "ranking"
+
+
+class MatchFilter(BaseFilter):
+    type_name = "match"
+
+
+class BgaSpider(Spider):
+    name = "bga"
+    base_url = "https://en.boardgamearena.com/"
+    start_urls = [base_url]
+
+    custom_settings = {
+        "COOKIES_ENABLED": True,
+        "COOKIES_DEBUG": False,
+        "DOWNLOAD_DELAY": 10,
+        "CONCURRENT_REQUESTS_PER_DOMAIN": 16,
+        "LOG_FORMATTER": "scrapy_extensions.QuietLogFormatter",
+        "FEED_EXPORT_BATCH_ITEM_COUNT": 100_000,
+        "FEEDS": {
+            "results/games-%(time)s-%(batch_id)05d.jl": {
+                "format": "jsonlines",
+                "item_filter": GameFilter,
+                "overwrite": False,
+                "store_empty": False,
+            },
+            "results/rankings-%(time)s-%(batch_id)05d.jl": {
+                "format": "jsonlines",
+                "item_filter": RankingFilter,
+                "overwrite": False,
+                "store_empty": False,
+            },
+            "results/matches-%(time)s-%(batch_id)05d.jl": {
+                "format": "jsonlines",
+                "item_filter": MatchFilter,
+                "overwrite": False,
+                "store_empty": False,
+            },
+        },
+        "JOBDIR": ".jobs",
+    }
+
+    request_token_url = "/account/auth/getRequestToken.html"
+    request_token_path = jmespath.compile("data.request_token")
+    request_token: str | None = None
+
+    game_list_url = "/gamelist?allGames="
+    game_list_regex = re.compile("globalUserInfos=(.+);$", flags=re.MULTILINE)
+    game_keys: Iterable[str] | None = None
+
+    scrape_rankings = False
+    ranking_url = "/gamepanel/gamepanel/getRanking.html"
+    ranking_path = jmespath.compile("data.ranks")
+    max_rank_scraped = None
+    ranking_keys: Iterable[str] | None = None
+
+    scrape_matches = True
+    base_match_url = "/message/board"
+    match_path = jmespath.compile("data.news")
+    max_matches_per_page = 9500
+    match_keys: Iterable[str] | None = frozenset(
+        (
+            "id",
+            "timestamp",
+            "game_id",
+            "players",
+            "scraped_at",
+            "type",
+        )
+    )
+
+    ordinal_regex = re.compile(r"(\d+)(st|nd|rd|th)|winner|loser", re.IGNORECASE)
+    integer_regex = re.compile(r"(\d+)")
+
+    def parse(self, response: Response) -> Request:
+        return FormRequest(
+            url=response.urljoin(self.request_token_url),
+            formdata={"bgapp": "bga"},
+            callback=self.parse_request_token,
+            method="POST",
+        )
+
+    def parse_request_token(self, response: Response) -> Request | None:
+        if not isinstance(response, TextResponse):
+            self.logger.warning("Response <%s> is not a TextResponse", response.url)
+            return None
+
+        payload = response.json()
+        request_token = self.request_token_path.search(payload)
+
+        if not request_token:
+            self.logger.error("Request token not found in response <%s>", response.url)
+            return None
+
+        self.request_token = request_token
+
+        return Request(
+            url=response.urljoin(self.game_list_url),
+            callback=self.parse_games,
+            headers={"X-Request-Token": request_token},
+        )
+
+    def parse_games(self, response: Response) -> Generator[dict | Request]:
+        now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+        for text in response.xpath(
+            "//script[@type = 'text/javascript']/text()"
+        ).getall():
+            match = self.game_list_regex.search(text)
+            if not match:
+                continue
+
+            try:
+                payload = json.loads(match.group(1))
+            except json.JSONDecodeError:
+                continue
+
+            if not isinstance(payload, dict) or "game_list" not in payload:
+                continue
+
+            games = list(payload["game_list"])
+            random.shuffle(games)
+            self.logger.info("Scraping %d games", len(games))
+
+            for game in games:
+                game["type"] = "game"
+                game["scraped_at"] = now
+                yield funcy.project(game, self.game_keys) if self.game_keys else game  # type: ignore[arg-type]
+
+                if self.scrape_rankings:
+                    yield FormRequest(
+                        url=response.urljoin(self.ranking_url),
+                        method="POST",
+                        formdata={
+                            "game": str(game["id"]),
+                            "start": "0",
+                            "mode": "elo",
+                        },
+                        callback=self.parse_ranking,
+                        meta={"game_id": game["id"]},
+                        priority=0,
+                        headers={"X-Request-Token": self.request_token},
+                    )
+
+                if self.scrape_matches:
+                    games_played = int(game.get("games_played", 0))
+                    priority = (games_played * random.uniform(0.75, 1.25)) / (
+                        2 * self.max_matches_per_page
+                    )
+                    yield Request(
+                        url=self.build_match_url(response, game["id"]),
+                        method="GET",
+                        callback=self.parse_matches,
+                        meta={"game_id": game["id"]},
+                        priority=int(priority),
+                        headers={"X-Request-Token": self.request_token},
+                    )
+
+    def parse_ranking(self, response: Response) -> Generator[dict | Request]:
+        if not isinstance(response, TextResponse):
+            self.logger.warning("Response <%s> is not a TextResponse", response.url)
+            return
+
+        now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+        game_id = response.meta["game_id"]
+        payload = response.json()
+
+        entries = self.ranking_path.search(payload)
+
+        if not entries:
+            self.logger.error("Ranking not found in response <%s>", response.url)
+            return
+
+        rank_nos = []
+
+        for entry in entries:
+            entry["game_id"] = game_id
+            entry["type"] = "ranking"
+            entry["scraped_at"] = now
+            yield (
+                funcy.project(entry, self.ranking_keys) if self.ranking_keys else entry  # type: ignore[arg-type]
+            )
+            rank_nos.append(int(entry["rank_no"]))
+
+        max_rank_no = max(rank_nos, default=math.inf)
+
+        if not self.max_rank_scraped or max_rank_no < self.max_rank_scraped:
+            assert response.request is not None
+            yield response.request.replace(
+                formdata={
+                    "game": str(game_id),
+                    "start": str(max_rank_no),
+                    "mode": "elo",
+                },
+                meta={"game_id": game_id},
+                priority=response.request.priority - 1,
+            )
+
+    def build_match_url(
+        self,
+        response: Response,
+        game_id: int,
+        from_time: int | None = None,
+        from_id: int | None = None,
+    ) -> str:
+        params = {
+            "type": "lastresult",
+            "id": str(game_id),
+            "social": "false",
+            "per_page": str(self.max_matches_per_page),
+            "dojo.preventCache": str(int(time.time() * 1000)),
+        }
+
+        if from_time is not None and from_id is not None:
+            params["page"] = "0"
+            params["from_time"] = str(from_time)
+            params["from_id"] = str(from_id)
+
+        query = "&".join(f"{k}={v}" for k, v in params.items())
+        url = f"{self.base_match_url}?{query}"
+        return response.urljoin(url)
+
+    def parse_matches(self, response: Response) -> Generator[dict[str, Any] | Request]:
+        if not isinstance(response, TextResponse):
+            self.logger.warning("Response <%s> is not a TextResponse", response.url)
+            return
+
+        now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+        game_id = response.meta["game_id"]
+        payload = response.json()
+
+        matches = self.match_path.search(payload)
+
+        if not matches:
+            self.logger.error("Matches not found in response <%s>", response.url)
+            return
+
+        last_id = None
+        last_timestamp = None
+
+        for match in matches:
+            match["game_id"] = game_id
+            match["type"] = "match"
+            match["scraped_at"] = now
+            try:
+                match["players"] = list(self.parse_match_html(match["html"]))
+            except Exception:
+                match["players"] = None
+            last_id = match.get("id")
+            last_timestamp = match.get("timestamp")
+            yield funcy.project(match, self.match_keys) if self.match_keys else match  # type: ignore[arg-type]
+
+        if last_id and last_timestamp:
+            assert response.request is not None
+            yield Request(
+                url=self.build_match_url(response, game_id, last_timestamp, last_id),
+                method="GET",
+                callback=self.parse_matches,
+                meta={"game_id": game_id},
+                priority=response.request.priority - 1,
+                headers={"X-Request-Token": self.request_token},
+            )
+
+    def parse_match_html(self, html: str) -> Generator[dict[str, Any]]:
+        selector = Selector(text=html, type="html")
+
+        player_divs = selector.css("div.board-score-entry")
+        num_players = len(player_divs)
+
+        for player_div in player_divs:
+            rank_text = player_div.xpath("text()[1]").get() or ""
+            match = self.ordinal_regex.search(rank_text)
+            if not match:
+                place = None
+            elif match.group(1):
+                place = int(match.group(1))
+            elif match.group(0).lower() == "winner":
+                place = 1
+            elif match.group(0).lower() == "loser":
+                place = num_players
+            else:
+                raise ValueError(f"Invalid place: {place}")
+
+            player_link = player_div.css("a.playername")
+            player_href = player_link.xpath("@href").get() or ""
+            player_id = int(player_href.split("=")[-1]) if "=" in player_href else None
+
+            player_name = player_link.xpath("text()").get()
+            score_text = player_link.xpath("following-sibling::text()[1]").get() or ""
+            match = self.integer_regex.search(score_text)
+            score = int(match.group(1)) if match else None
+
+            yield {
+                "player_id": player_id,
+                "player_name": player_name,
+                "place": place,
+                "score": score,
+            }

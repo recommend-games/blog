@@ -1,0 +1,19 @@
+[package]
+name = "elo"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "elo"
+path = "rust/lib.rs"
+# "cdylib" is necessary to produce a shared library for Python to import from.
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+argmin = "0.11"
+ndarray = "0.16.1"
+numpy = "0.27.0"
+pyo3 = { version = "0.27.0", features = ["extension-module", "abi3-py312"] }
+
+[lints.clippy]
+too_many_arguments = "allow"

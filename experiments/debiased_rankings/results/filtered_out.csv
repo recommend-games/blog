@@ -1,0 +1,2942 @@
+rank,bgg_id,name,year,complexity,min_time
+5,233078,Twilight Imperium: Fourth Edition,2017,4.320,240
+47,521,Crokinole,1876,1.230,30
+206,188,Go,-2200,3.931,30
+226,91,Paths of Glory,1999,3.851,480
+336,5,Acquire,1963,2.497,90
+404,40354,Maria,2009,3.564,210
+410,1,Die Macher,1986,4.315,240
+432,71,Civilization,1980,3.647,360
+445,171,Chess,1475,3.656,
+602,875,Roads & Boats,1999,4.196,240
+627,130960,Triumph & Tragedy: European Balance of Power 1936-1945,2015,3.389,240
+687,1513,The Republic of Rome,1990,4.361,300
+705,2398,Cribbage,1630,1.904,30
+773,483,Diplomacy,1959,3.340,360
+784,11825,Empire of the Sun,2005,4.360,360
+823,45,Perudo,1800,1.256,15
+911,12891,Friedrich,2004,3.137,210
+933,2093,Mahjong,1850,2.574,120
+994,2181,Bridge,1925,3.891,60
+998,41066,Virgin Queen,2012,4.436,420
+1125,35052,Axis & Allies Anniversary Edition,2008,3.104,360
+1156,221,Ikusa,1986,2.952,240
+1165,91080,Andean Abyss,2012,3.783,360
+1196,68264,No Retreat! The Russian Front,2011,3.132,360
+1197,833,For the People,1998,3.728,360
+1223,1115,Poker,1810,2.425,60
+1295,1540,BattleTech,1985,3.413,
+1333,61692,Axis & Allies: Europe 1940,2010,3.503,360
+1444,184424,Mega Civilization,2015,3.687,360
+1468,30618,Eat Poop You Cat,,1.109,20
+1472,2397,Backgammon,-3000,2.014,30
+1492,55829,Axis & Allies: Pacific 1940,2009,3.591,360
+1570,242,Junta,1979,2.861,240
+1573,2065,Shogi,1587,3.758,60
+1605,1829,Risk 2210 A.D.,2001,2.717,240
+1605,7480,"Sword of Rome: Conquest of Italy, 362-272 BC",2004,3.327,360
+1634,63170,1817,2010,4.771,360
+1640,423,1856: Railroading in Upper Canada from 1856,1995,4.257,300
+1688,10093,Axis & Allies,2004,3.221,240
+1711,38718,Normandy '44,2010,3.373,420
+1733,325555,Cantaloop: Book 1 – Breaking into Prison,2020,2.100,300
+1742,701,A House Divided: War Between the States 1861-65,1981,2.632,240
+1785,2251,Strat-O-Matic Baseball,1962,2.362,45
+1793,5072,Carrom,,1.457,60
+1808,2808,The Russian Campaign,1974,2.843,360
+1819,2393,Xiangqi,762,3.578,60
+1842,207572,Holland '44: Operation Market-Garden,2017,3.833,240
+1871,19622,A Victory Lost: Crisis in Ukraine 1942-1943,2006,2.567,360
+1872,21551,SPQR (Deluxe Edition),2008,3.904,240
+1880,730,Breakout: Normandy,1992,3.391,240
+1899,6901,Euchre,1848,1.693,45
+1915,148203,Dutch Blitz,1960,1.257,1
+1982,41863,Axis & Allies: 1942,2009,3.147,240
+1983,592,Spades,1938,2.022,60
+1999,140,Pit,1903,1.156,30
+2004,6205,Europe Engulfed: WWII European Theatre Block Game,2003,3.762,720
+2038,7858,Ardennes '44: The Battle of the Bulge,2003,3.679,360
+2061,6887,Hearts,1850,1.744,30
+2090,3353,World War II: Barbarossa to Berlin,2002,3.527,420
+2103,424,1870: Railroading Across the Trans Mississippi from 1870,1992,4.189,360
+2115,3720,Subbuteo,1947,1.797,20
+2129,81640,Florenza,2010,3.737,200
+2165,320,Scrabble,1948,2.068,90
+2175,1442,Victory in the Pacific,1977,2.383,300
+2197,1563,Rise and Decline of the Third Reich,1974,4.333,1440
+2209,130,Iron Dragon,1994,2.933,240
+2225,6819,Skat,1810,3.067,30
+2315,193867,1822: The Railways of Great Britain,2016,4.429,300
+2323,36399,The Napoleonic Wars (Second Edition),2008,3.396,240
+2381,163841,18CZ,2017,4.226,250
+2385,8730,Flying Colors,2003,3.027,240
+2447,9364,Doppelkopf,1895,2.921,120
+2462,369646,Disney Lorcana,2023,2.062,
+2465,183685,"Mr. President: The American Presidency, 2001-2020",2023,4.200,360
+2466,325348,Successors (Fourth Edition),2022,4.000,300
+2515,9215,Revolution: The Dutch Revolt 1568-1648,2004,4.242,240
+2517,11057,The Great Battles of Alexander: Deluxe Edition,1995,3.608,240
+2520,4192,Warhammer: The Mass Combat Fantasy Roleplaying Game (1st Edition),1983,3.684,240
+2531,22143,EastFront: The War in Russia 1941-45 – Second Edition,2006,3.484,240
+2543,987,Kingmaker,1974,3.056,240
+2553,949,Twixt,1962,2.495,30
+2581,1116,Oh Hell!,1930,1.729,30
+2590,2529,Flat Top,1977,4.230,360
+2685,286,Machiavelli,1977,3.196,480
+2696,3870,7 Ages,2004,3.930,480
+2700,714,Talisman,1983,2.183,240
+2708,77,"EastFront: The War in Russia, 1941-45",1991,3.600,240
+2727,18485,18MEX,2005,3.857,210
+2755,4688,Angola,1988,3.170,480
+2764,1262,Axis & Allies: Pacific,2001,2.875,240
+2765,18748,Unhappy King Charles!,2008,3.291,240
+2774,1423,Storm over Arnhem,1981,2.913,300
+2779,1260,Rook,1906,1.861,45
+2787,69601,1880: China,2010,4.206,300
+2808,32424,1848: Australia,2007,3.893,200
+2865,1917,Stratego,1946,1.848,45
+2871,520,Axis & Allies: Europe,1999,2.841,210
+2891,12350,Battlestations,2004,3.399,240
+2900,108018,Riichi Mahjong,,3.471,60
+2904,17393,Pax Romana,2006,3.667,600
+2930,287,Bazaar,1967,2.028,45
+2936,23418,Pursuit of Glory,2008,3.926,360
+2965,2932,Hnefatafl,400,2.514,20
+2977,5620,Vietnam 1965-1975,1984,4.311,360
+2995,20133,FAB: The Bulge,2008,3.072,240
+3048,6866,Mus,1745,2.269,10
+3067,4583,Pinochle,1864,2.303,45
+3133,2389,Othello,1883,2.075,30
+3186,3263,Ukraine '43,2000,3.559,360
+3188,21804,Traditional Card Games,,1.934,
+3289,18291,Unpublished Prototype,,2.533,
+3324,329,Russian Front,1985,3.309,480
+3390,3605,The Third World War: Battle for Germany,1984,3.463,360
+3396,183308,1844/1854,2016,4.452,300
+3402,422,1835,1990,3.990,360
+3406,99358,Stonewall Jackson's Way II: Battles of Bull Run,2013,3.667,240
+3416,35614,Where There Is Discord: War in the South Atlantic,2009,3.110,240
+3421,66855,The Dark Valley,2013,3.390,500
+3434,11949,Shifting Sands: The Campaign for North Africa 1940-1943,2006,3.183,240
+3436,6613,"Downtown: Air War Over Hanoi, 1965-1972",2004,4.090,240
+3437,4090,2nd Fleet: Modern Naval Combat in the North Atlantic,1986,3.424,240
+3501,5451,Hanafuda,1701,1.710,60
+3503,3409,The Napoleonic Wars,2002,3.486,240
+3574,1430,Caesar: Epic Battle of Alesia,1976,2.947,360
+3592,10788,Hellenes: Campaigns of the Peloponnesian War,2009,3.000,240
+3597,4505,Tarot,1425,2.469,30
+3600,1444,SPQR,1992,3.676,240
+3620,713,Nuclear War,1965,1.443,60
+3741,15889,Scopa,1600,1.473,30
+3755,1447,1841: Railways in Northern Italy,1994,4.452,300
+3765,33003,The Caucasus Campaign,2009,2.958,360
+3792,17104,Canasta,1939,2.124,45
+3858,5684,18EU,2001,4.243,300
+3893,3406,Lines of Action,1969,2.720,20
+3911,3553,Close Action: The Age of Fighting Sail Vol. 1,1997,3.500,240
+3937,20609,Asia Engulfed,2007,3.800,480
+3938,282291,Escape Tales: Low Memory,2019,2.542,360
+3943,1209,Pax Britannica: The Colonial Era 1880 to the Great War,1985,3.853,300
+3950,2998,Reds! The Russian Civil War 1918-1921,2001,3.081,360
+3950,24070,Afrika: 2nd Edition,2006,2.729,360
+3955,782,"Win, Place & Show",1966,2.084,120
+3972,1666,Battle Hymn,1986,3.298,240
+3972,125993,France '40,2013,2.896,240
+3987,25574,Gin Rummy,1909,1.704,30
+4006,14080,The Mighty Endeavor,2005,2.866,360
+4028,1710,The Siege of Jerusalem (Third Edition),1989,3.881,300
+4040,4204,Tunisia,1995,4.083,360
+4058,299800,Escape Tales: Children of Wyrmwoods,2020,2.454,450
+4102,2448,Kalah,700,1.604,10
+4113,96026,18OE: On the Rails of the Orient Express,2014,4.560,720
+4131,2250,Midway,1964,2.440,120
+4168,3577,Terrible Swift Sword: Battle of Gettysburg Game,1976,4.163,420
+4182,23,Divine Right,1979,3.200,360
+4210,196217,18Ireland,2017,4.235,240
+4225,29285,Case Blue,2007,4.580,
+4227,2748,"Thirty Years War: Europe in Agony, 1618-1648",2001,3.146,360
+4252,13123,500,1904,2.018,30
+4258,17394,"The Burning Blue: The Battle of Britain, 1940",2006,4.043,300
+4290,17651,Under the Lily Banners,2005,3.618,
+4291,12896,La Bataille des Quatre Bras,1991,4.045,360
+4296,94373,Dien Bien Phu: The Final Gamble,2014,3.037,360
+4297,13532,Guderian's Blitzkrieg II,2001,4.382,4500
+4298,4112,Hex,1942,3.158,20
+4305,23953,Outside the Scope of BGG,,1.700,
+4312,35669,Bastogne: Screaming Eagles Under Siege 18-27 Dec' 44,2009,2.627,300
+4324,130006,Mini Kubb,,1.250,15
+4354,277538,1822MX,2019,4.308,240
+4375,103339,Reluctant Enemies: Operation Exporter,2014,3.546,750
+4379,911,Empires of the Middle Ages,1980,3.544,240
+4401,12234,"DAK2: The Campaign in North Africa, 1940-1942",2004,4.371,360
+4402,26055,Twilight Imperium: Second Edition,2000,3.463,240
+4457,14188,Bughouse Chess,1960,2.795,10
+4461,789,Focus,1963,2.384,45
+4484,816,2038: Tycoons of the Asteroid Belt,1995,4.020,360
+4500,4173,Anzio: The Struggle for Italy – 1943-1945,1969,3.197,120
+4510,5445,Rod Hockey,1932,1.469,20
+4522,1883,Cataphract,1999,3.425,360
+4536,31954,"A Victory Denied: Crisis at Smolensk, July-September, 1941",2009,2.542,240
+4559,2073,Sixth Fleet: Modern Naval Combat in the Mediterranean,1985,3.296,360
+4570,4258,Totaler Krieg!,1999,4.014,360
+4585,23995,No Peace Without Spain!: The War of the Spanish Succession 1702-1713,2011,2.766,240
+4597,6817,Schafkopf,1780,2.657,30
+4605,341519,The Light in the Mist,2022,2.909,300
+4608,299371,The Emerald Flame,2021,3.200,270
+4629,7935,1844: Schweiz,2003,4.316,300
+4635,755,Thunder at Cassino,1987,3.119,360
+4644,27969,"A Most Dangerous Time: Japan in Chaos, 1570-1584",2009,3.121,240
+4646,15826,Triumph of Chaos,2005,4.354,360
+4655,24,Twilight Imperium,1997,3.444,240
+4676,39328,Baltic Gap: Summer 1944,2009,4.174,240
+4677,18746,Gustav Adolf the Great: With God and Victorious Arms,2006,3.788,300
+4682,1206,Venture,1969,1.971,45
+4688,5740,Strat-O-Matic Pro Football,1968,2.850,120
+4698,2077,Hell's Highway: Operation Market Garden,1983,3.688,360
+4699,4050,Fortress Europa,1978,3.168,240
+4704,1535,Formula 1,1962,1.700,30
+4710,142889,Enemy Coast Ahead: Operation Chastise – The Dambuster Raid,2014,3.171,
+4734,13855,"Carthage: The First Punic War – The Ancient World, Vol. II",2005,4.000,1800
+4753,5651,The Longest Day,1979,4.158,5400
+4792,3408,This Accursed Civil War,2002,3.552,240
+4800,157323,MBT (Second Edition),2016,3.944,360
+4856,39019,Nothing Gained But Glory,2010,3.717,300
+4875,1506,Conquistador: The Age of Exploration,1976,3.293,360
+4887,10174,Bitter Woods Deluxe Edition,2003,3.118,240
+4900,240905,Death Valley: Battles for the Shenandoah,2019,4.333,300
+4926,101682,Saints in Armor,2012,3.618,300
+4935,248,Blood Royale,1987,3.323,240
+4935,8993,Fire in the East,1984,4.419,3000
+4965,7843,Caesar: Conquest of Gaul,1998,3.537,240
+4990,2079,NATO: The Next War in Europe,1983,3.214,240
+4997,3414,"Yom Kippur: The Battle for the Sinai, October, 1973",1995,2.596,240
+5000,6930,Sweden Fights On,2003,3.565,240
+5011,22303,Celebrities,,1.188,90
+5015,249582,The Dark Summer: Normandy 1944,2021,2.867,480
+5031,1496,Imperium Romanum II,1985,3.781,240
+5033,7614,A World at War,2003,4.852,1440
+5034,23685,1805: Sea of Glory,2009,3.717,480
+5088,65936,"The Blitzkrieg Legend: The Battle for France, 1940",2012,3.889,2880
+5142,99630,Rolling Stock,2011,3.895,240
+5178,10156,The Russian Campaign: 4th edition,2003,2.902,240
+5190,6203,Enemy at the Gates,1994,4.400,240
+5217,3218,The Arab-Israeli Wars: Tank Battles in the Mideast,1977,3.218,240
+5221,249750,"Brazen Chariots: Battles for Tobruk, 1941",2019,3.615,
+5227,847,Feudal,1967,2.312,90
+5227,3518,Napoleon in Europe,2001,3.462,360
+5241,26447,Clash of Monarchs,2008,4.045,360
+5256,176596,The Great Battles of Alexander: Macedonian Art of War,2014,3.833,240
+5283,8521,Whistling Death,2003,4.343,240
+5295,13709,Clash of Giants II: 1st Ypres & Galicia 1914,2006,2.367,300
+5296,4974,"Wellington's Victory: Battle of Waterloo Game – June 18th, 1815",1976,4.109,240
+5321,150761,Next War: India-Pakistan,2015,4.154,240
+5339,149620,Decision at Elst: An Advanced Squad Leader Starter Kit Historical Module,2014,3.824,360
+5348,11865,Koi-Koi,,1.762,15
+5356,4984,Jutland,1967,2.913,60
+5382,2579,Arctic Front: Battle for Norway,1985,3.467,240
+5394,2259,Afrika Korps,1964,2.234,180
+5396,20078,Monmouth,2007,2.585,240
+5408,272538,1828,2018,4.167,210
+5416,207568,Baptism By Fire: The Battle of Kasserine,2017,4.000,240
+5455,1894,War Galley,1999,3.125,360
+5456,86177,Genesis: Empires and Kingdoms of the Ancient Middle East,2015,3.107,450
+5462,5071,Sjoelen,1870,1.161,30
+5470,1708,Stellar Conquest,1975,3.053,240
+5490,300323,Conquest & Consequence,2021,3.850,240
+5514,29875,"Barbarossa: Kiev to Rostov, 1941",2008,4.255,240
+5517,5833,CAESAR: The Great Battles of Julius Caesar – The Civil Wars 48-45 B.C.,1994,3.500,360
+5528,11582,Schnapsen,1715,2.067,20
+5564,94396,It Never Snows,2012,2.537,540
+5568,1549,Password,1962,1.513,30
+5613,68260,FAB: Sicily,2011,3.122,240
+5700,766,Regatta,1967,2.067,60
+5703,923,Breakaway Rider,1963,1.277,20
+5707,13337,Whist,1663,2.000,60
+5708,374145,Dungeon Pages: Core Set,2023,1.875,
+5727,21779,1914: Twilight in the East,2007,4.361,720
+5737,219717,18USA,2017,4.737,420
+5739,85424,La Bataille de la Moscowa (Third Edition),2011,4.229,1000
+5774,246873,"Königsberg: The Soviet Attack on East Prussia, 1945",2018,2.250,240
+5780,7263,Nertz,1930,1.258,60
+5807,5511,Southern Front: Race for the Turkish Straits,1984,3.393,360
+5848,5452,"DAK: The Campaign in North Africa, 1940-1942",1997,4.042,360
+5848,12897,La Bataille de Ligny,1991,3.870,360
+5865,1233,Facts in Five,1964,1.658,30
+5878,10641,"Barbarossa: Army Group South, 1941",1996,4.176,240
+5881,11274,Devil's Horsemen,2004,3.452,240
+5881,163097,Beyond the Rhine: The Campaign for Northwest Europe,2015,4.429,3000
+5886,5217,Eleusis,1956,2.933,20
+5889,10226,"Thunder at the Crossroads: The Battle of Gettysburg, July 1-3, 1863 (Second Edition)",1993,3.424,360
+5891,82,Bobby Lee: The Civil War in Virginia 1861-1865,1993,2.922,240
+5902,21358,Savage Worlds,2003,2.947,240
+5908,25775,"Elusive Victory: The Air War over the Suez Canal, 1967-1973",2009,3.950,240
+5917,157653,Illusions of Glory: The Great War on the Eastern Front,2017,3.389,360
+5919,3044,Air Assault on Crete / Invasion of Malta: 1942,1977,3.179,240
+5923,209951,Thunder in the East,2018,4.056,480
+5925,37672,"Warhammer 40,000: Assault On Black Reach",2008,3.125,240
+5936,367820,Dungeons & Dragons: The Yawning Portal,2023,2.000,
+5974,87907,1865: Sardinia,2011,3.850,240
+5990,11733,Briscola,1800,1.500,30
+5995,1644,Tipp-Kick,1921,1.224,10
+6020,22161,WestFront II: The War in Europe 1943-45 – Second Edition,2006,3.343,240
+6053,2583,18GA,1998,4.074,240
+6058,39941,Legion of Honor,2014,2.727,240
+6073,250,Colonial Diplomacy,1994,2.800,360
+6075,895,APBA Pro Baseball,1951,1.885,30
+6081,22677,Stalin's War,2010,3.077,240
+6085,2447,World War II: European Theater of Operations,1985,3.980,240
+6114,21947,RAN,2007,3.744,240
+6120,8719,The Next War: Modern Conflict in Europe,1978,4.167,360
+6128,10789,Pitch,1600,1.773,30
+6181,368036,Unlock!: Short Adventures – The Flight of the Angel,2022,2.000,
+6196,2168,Hitler's War,1981,2.973,300
+6196,27968,"Red Star Rising: The War in Russia, 1941-1944",2007,3.296,1200
+6201,34659,The Spanish Civil War 1936-1939,2010,3.114,360
+6202,28302,Oware,550,2.083,20
+6207,2076,Gulf Strike,1983,4.398,360
+6219,917,Rack-O,1956,1.190,45
+6240,26459,PQ-17: Arctic Naval Operations 1941-1943,2009,4.125,210
+6247,25314,Bowling Solitaire,1969,1.548,30
+6255,3412,Brandywine,2000,2.667,240
+6289,315196,Dungeons & Dragons: Adventure Begins,2020,1.367,
+6291,207230,"Thunder in the Ozarks: Battle for Pea Ridge, March 1862",2016,3.300,900
+6329,10642,"Barbarossa: Army Group North, 1941",2000,4.154,300
+6371,5614,Achtung: Spitfire!,1995,4.086,240
+6376,4346,"Cedar Mountain: Prelude to Bull Run, August 9, 1862",1981,3.097,360
+6400,32990,"Axis Empires: Dai Senso! – World War II in Asia & the Pacific, 1937-45",2011,4.111,900
+6414,41612,Struggle for the Galactic Empire,2009,2.977,240
+6415,27965,"The Tide at Sunrise: The Russo-Japanese War, 1904-1905",2010,2.406,240
+6423,4102,Europa Universalis,1993,4.816,3600
+6435,6202,The Rise of the Roman Republic,2003,3.754,240
+6450,25008,Italia,2006,3.189,240
+6466,5985,Miscellaneous Game Accessory,,3.217,
+6479,12282,"Grand Illusion: Mirage of Glory, 1914",2004,3.193,240
+6487,5233,The Great Battles of Alexander,1991,3.405,240
+6508,129348,FAB: Golan '73,2016,3.429,240
+6532,30216,The Great War in Europe: Deluxe Edition,2007,3.625,600
+6547,5508,La Bataille de Mont Saint Jean,1993,4.045,360
+6557,12898,La Bataille d'Auerstædt,1977,3.905,330
+6572,20646,1824: Austria-Hungary,2005,3.778,300
+6582,1475,Careers,1955,1.491,60
+6586,15878,Rummy,1887,1.418,60
+6599,288539,The Jaws of Victory: Battle of Korsun-Cherkassy Pocket – January/February 1944,2020,3.929,360
+6609,164655,Don't Tread on Me: The American Revolution Solitaire Board Game,2014,2.792,240
+6656,13597,Big Two,,1.743,30
+6679,5306,Harry's Grand Slam Baseball Game,1962,1.121,20
+6679,160606,Day of Days: The Invasion of Normandy 1944,2015,2.706,240
+6682,38805,Rebel Raiders on the High Seas,2013,2.667,360
+6710,84834,Heights of Courage: The Battle for the Golan Heights,2013,2.333,240
+6712,4884,"The Legend Begins: North Africa, 1940-42",1991,3.217,240
+6725,20077,"Kutuzov: The War in Russia, 1812",2008,3.388,360
+6735,12131,42,1885,2.238,30
+6739,253607,1822CA,2018,4.300,360
+6756,951,Football Strategy,1959,1.553,150
+6776,29379,"Ici, c'est la France! The Algerian War of Independence 1954 - 1962",2009,2.870,300
+6786,4275,Pea Ridge: The Gettysburg of the West March 7-8 1862,1980,3.235,240
+6804,2780,Tarock,1425,3.625,30
+6827,355200,Marvel Zombies: X-Men Resistance,2023,2.667,
+6844,1602,The Royal Game of Ur,-2600,1.279,30
+6887,316410,The Third World War: Designer Signature Edition,2022,3.800,360
+6898,1509,Dogfight,1962,1.453,45
+6923,4368,In their Quiet Fields II,1995,3.182,240
+6925,116046,18NY,2011,3.571,300
+6938,15722,Belote,1930,2.550,20
+6942,7218,18VA,2001,4.308,210
+6947,5251,Camelot,1930,2.400,15
+6981,35476,Barbarossa: Crimea,2010,4.212,240
+6986,7138,The Killing Ground,2002,4.154,300
+6988,308368,Digimon Card Game,2020,2.000,
+6989,23421,1832: The South,2006,3.750,270
+7013,1823,1829,1974,3.762,360
+7024,154394,Sheepshead,1830,2.750,30
+7033,36,Federation & Empire,1986,4.403,300
+7043,12747,Scarabeo,1963,2.037,90
+7072,331953,Unlock!: Timeless Adventures – Verloren im Zeitstrudel!,2019,,45
+7072,362505,One Piece Card Game,2022,2.500,
+7074,5504,Napoleon's Battles,1989,3.421,360
+7080,26458,"Chandragupta: Great Battles of the Mauryan Empire – India, 319-261 BC",2008,3.783,240
+7081,1313,1826: Railroading in France and Belgium from 1826,2000,3.800,210
+7086,11437,La Bataille de Lützen,1999,3.900,240
+7094,70532,Tonkin: The First Indochina War (Second Edition),2012,3.316,240
+7100,17536,Lobositz: First Battle of the Seven Years War,2005,3.966,360
+7130,6861,Red Badge of Courage,2001,3.844,360
+7131,747,Bitter Woods: The Battle of the Bulge,1998,3.000,240
+7158,1520,Monad,1969,2.029,45
+7170,144607,Bitter Woods: Designer Edition,2014,2.875,240
+7212,29383,GD '42: Grossdeutschland,2009,3.885,360
+7226,5635,Second World War at Sea: Bomb Alley,2002,3.061,360
+7231,133518,"Blue Cross, White Ensign",2014,3.546,240
+7238,23917,Not War But Murder,2007,2.838,240
+7278,29351,Durak,,1.500,15
+7302,12134,This Hallowed Ground,1998,4.136,360
+7320,12899,La Bataille de Preussisch-Eylau,1978,3.895,360
+7326,17863,The Western Front: 1914 to 1918,2004,3.417,360
+7363,27817,Marne 1918: Friedensturm,2006,3.227,210
+7402,476,Mr. President,1967,2.161,60
+7420,4244,Highway to the Reich: Operation Market-Garden 17-26 September 1944,1977,4.387,360
+7439,156878,tummple!,,1.000,20
+7461,18747,"Onward, Christian Soldiers: The Crusades",2006,3.607,300
+7463,1145,City of Chaos,1996,2.792,300
+7464,36480,Crown of Roses,2012,4.000,300
+7469,7844,"Operation Typhoon: The German Assault on Moscow, 1941",1978,3.520,1500
+7472,5476,A Gleam of Bayonets: The Battle of Antietam,1983,3.720,420
+7475,46669,1914: Offensive à outrance,2013,4.158,
+7486,14007,"The Siege of Alesia: Gaul, 52 B.C.",2005,3.188,300
+7492,7215,"To the Green Fields Beyond: The Battle of Cambrai, 1917",1978,3.667,240
+7502,149793,Twin Peaks,2014,4.154,360
+7526,23928,Glory III,2007,2.763,240
+7539,19969,Truco,,1.944,15
+7542,28944,Harzbahn 1873,2011,4.250,300
+7549,17530,Go Stop,1889,2.286,60
+7578,5394,"Kolin: Frederick's First Defeat – June 18, 1757",1994,3.947,360
+7578,6642,Western Front Tank Leader,1987,3.100,240
+7630,18121,Casino,1800,1.387,30
+7642,11330,Jass,1796,2.846,45
+7660,273655,Shadows of Brimstone: Gates of Valhalla,2023,3.000,
+7680,5042,Flashpoint: Golan – The Fifth Arab-Israeli War,1991,3.731,360
+7712,303036,Funkoverse Strategy Game: Jaws 100,2020,,20
+7728,11122,Proud Monster: The Barbarossa Campaign,1994,3.074,660
+7738,18401,Wacht Am Rhein,2005,4.516,240
+7739,31821,Goita,1860,1.692,30
+7740,15274,La Bataille de la Moscowa,1975,3.875,360
+7744,6767,Attack Vector: Tactical,2004,4.102,240
+7746,2574,Classic Warlord,2012,2.262,360
+7756,327913,Unlock!: Timeless Adventures – Arsène Lupin und der große weiße Diamant,2019,,60
+7767,165694,The Cones of Dunshire,,4.732,
+7769,289,Chariot Lords,1999,2.750,360
+7770,1713,Maharaja,1994,2.673,240
+7781,8812,No Better Place to Die: The Battle of Murfreesboro,1994,3.182,360
+7787,91010,Phantom Fury,2011,2.913,240
+7815,7453,Hube's Pocket,1995,3.684,360
+7823,316494,The Last Hundred Yards: Volume 3 – The Solomon Islands,2022,3.857,
+7831,4228,1918: Storm in the West,1992,2.667,240
+7851,304983,Key Enigma: Hack Forward,2021,3.000,480
+7859,275849,Musket & Pike Dual Pack,2022,3.750,240
+7864,60029,A Week In Hell: The Battle of Hue,2010,2.406,240
+7868,11929,Go-Moku,700,1.859,5
+7870,7176,Battle of the Bulge: Platoon Level Combat in World War II – A Panzer Grenadier Game,2002,2.743,360
+7874,10679,A Fearful Slaughter: The Battle of Shiloh,2004,3.962,300
+7879,4613,1854,2002,4.200,300
+7885,2422,Bismarck,1962,2.758,120
+7896,52,Mighty Empires,1990,2.609,300
+7905,361918,BattleTech: Alpha Strike Box Set,2022,2.333,
+7906,387866,Star Wars: Unlimited – Spark of Rebellion,2024,2.250,
+7910,274178,"Poland Defiant: The German Invasion, September 1939",2019,2.727,240
+7917,327723,Across the Bug River: Volodymyr-Volynskyi 1941,2021,3.091,240
+7923,4207,"Kharkov: The Soviet Spring Offensive, 1942",1978,2.571,240
+7949,3656,Score Four,1967,1.784,30
+7958,134283,1914: Serbien Muss Sterbien,2015,4.062,360
+7959,363242,Donnerschlag: Escape from Stalingrad,2022,2.889,300
+7989,7755,Victory in Normandy,1992,2.276,300
+7989,10964,"April's Harvest: The Battle of Shiloh, April 6 & 7, 1862",1995,3.367,240
+8013,78,"WestFront: The War in Europe, 1943-45",1992,3.471,240
+8034,22604,The Halls of Montezuma,2009,3.139,240
+8047,12567,Russia Besieged,2004,3.138,360
+8059,2904,John Prados' Third Reich,2001,4.000,360
+8059,232267,"Red Typhoon: The Soviet Winter Counter-Offensive, 1942",2017,1.857,240
+8062,9132,18C2C: Manifest Destiny,2003,4.182,600
+8089,16444,The Battle of the Bulge,1965,2.212,120
+8090,18115,Four Lost Battles,2005,2.963,240
+8116,341080,Warhammer Age of Sigmar (Third Edition),2021,4.000,
+8122,4287,Onslaught,1987,2.500,240
+8126,20266,"Bitter End: Attack to Budapest, 1945",1983,3.000,240
+8132,13016,"White Death: Velikiye Luki, The Stalingrad of the North",1979,3.095,240
+8143,4201,GD '40,1993,3.444,360
+8143,26468,Klaverjassen,1890,2.824,75
+8152,17654,18GL,2005,4.214,300
+8162,5698,The Emperor Returns,1986,3.125,240
+8187,21182,1850: The MidWest,2005,3.417,300
+8195,315,Bagh Chal,1000,2.333,20
+8202,197076,Nemesis: Burma 1944,2018,3.583,360
+8218,22377,Spartacus: Crisis in the Roman Republic 80-71 B.C.,2008,3.233,300
+8223,2524,StarForce 'Alpha Centauri': Interstellar Conflict in the 25th Century,1974,3.454,240
+8228,3411,Drive on Paris,2000,2.652,300
+8258,6928,"Typhoon! The Drive on Moscow, 1941",1995,4.125,360
+8266,8976,World War II: Pacific Theater of Operations,1991,4.046,360
+8282,753,Panzerkrieg: von Manstein & HeeresGruppe Süd,1978,3.071,240
+8304,5410,La Grande Guerre 14-18,1999,4.750,360
+8304,7365,"Wilson's Creek: The West's First Fight, August 10, 1861",1980,3.323,300
+8314,26952,International Checkers,1600,2.500,40
+8316,7831,Risorgimento 1859: the Second Italian War of Independence,2000,3.267,240
+8319,7823,1837: Rail Building in the Austro-Hungarian Empire,1994,4.167,360
+8333,1508,Broadside,1962,1.780,45
+8340,310726,"Iron Curtain: Central Europe, 1945-1989",2020,2.667,
+8347,590,Mille Bornes,1954,1.249,45
+8348,207398,Hungarian Rhapsody: The Eastern Front in Hungary,2020,4.429,240
+8357,2607,Totopoly,1938,1.933,90
+8360,59008,Canadian Crucible: Brigade Fortress at Norrey,2013,3.900,240
+8361,11091,Leuthen: Frederick's Greatest Victory,1997,4.000,360
+8363,91739,Somme 1918: Bloody Spring,2012,3.600,240
+8390,6495,Iron Tide: Panzers in the Ardennes,2003,3.121,360
+8396,348425,The Book of Rituals,2021,3.636,240
+8458,329962,Cantaloop: Book 2 – A Hack of a Plan,2021,2.250,360
+8475,11967,The Seven Days of 1809: Napoleon and the Archduke Charles,2004,3.056,480
+8488,6253,"'Wacht am Rhein': The Battle of the Bulge, 16 Dec 44 – 2 Jan 45",1977,3.615,360
+8489,313834,Blockbuster Returns,2020,2.000,
+8490,8722,BAOR,1981,2.929,240
+8522,32288,Dou Dizhu,,2.333,30
+8530,8250,Patton's 3rd Army: The Lorraine Campaign,1980,2.658,240
+8554,113971,La Bataille de Dresde,2015,4.333,720
+8562,3572,Invasion: America – Death Throes of the Superpower,1976,3.179,240
+8568,4934,Battling Tops,1968,1.205,45
+8597,232956,Omen: Fires in the East,2019,,30
+8600,2844,Throneworld,1997,3.524,270
+8604,4386,Fanorona,1680,2.591,20
+8620,5482,Devil's Den,1980,3.207,360
+8664,202096,Marvel Dice Masters: Iron Man and War Machine Starter Set,2017,,15
+8667,404170,France '40: 2nd Edition,2024,3.429,240
+8673,5060,Caesar in Alexandria,2001,3.059,300
+8679,13520,La Bataille d'Albuera: Espagnol,1987,3.812,900
+8689,62214,Aspern-Essling 1809,2009,2.783,240
+8712,38870,Pensacola,2010,3.300,360
+8718,30771,18West,2007,3.875,360
+8721,5242,The Game of Y,1953,3.057,20
+8722,62291,Fatal Alliances: The Great War 1914-1918,2016,4.133,240
+8746,7662,Bar-Lev: The Yom-Kippur War of 1973,1974,3.046,360
+8748,99696,Briscola Chiamata,1800,2.000,10
+8760,376966,Task Force: Carrier Battles in the Pacific,2023,2.429,
+8761,369,5ive Straight,1958,1.677,20
+8775,29278,18Rhl: Rhineland,2007,3.500,240
+8794,2494,Hispania,1994,3.059,300
+8798,13995,La Bataille d'Espagnol: Talavera,1979,3.923,300
+8809,5171,War Without Mercy,1998,3.423,360
+8828,210292,Moonstone,,2.000,40
+8828,331267,Die Firmenfeier: Das letzte Fest des Oliver Borgmann,2021,2.500,240
+8852,4168,Blitzkrieg,1965,2.709,90
+8858,4113,Tigers in the Mist: Ardennes Offensive,1999,2.594,300
+8865,8285,"Boots & Saddles, An Assault Series Module",1984,3.483,240
+8874,11093,Zorndorf,1996,4.115,360
+8900,72050,Freebooter's Fate,2010,,60
+8930,17397,Savannah,2005,2.850,240
+8935,288572,The Third Winter: The Battle for the Ukraine September 1943-April 1944,2021,3.857,3000
+8944,3600,Fifth Frontier War,1981,3.094,240
+8958,208918,DC Comics Dice Masters: Superman and Wonder Woman Starter Set,2017,,30
+8960,6926,Viking Raiders,1987,2.412,240
+8981,22606,Won by the Sword,2014,2.684,360
+9003,13924,1829 Mainline,2005,4.000,240
+9003,39066,"The Supreme Commander: World War II in Europe, 1939-1945",2013,3.258,300
+9013,5021,The Struggle of Nations,1982,4.275,360
+9014,7753,When Eagles Fight,1993,2.727,240
+9017,7975,Triumph & Glory: Battles of the Napoleonic Wars 1796-1809,2000,2.767,360
+9029,5485,Atlantic Wall: The Invasion of Europe June 1944,1978,3.963,360
+9029,43845,18Ardennes,2010,3.778,300
+9044,5827,A Winter War,1992,3.500,360
+9045,223669,Premières Gloires,2017,3.400,
+9053,88190,Hurtgen: Hell's Forest,2012,4.500,1000
+9059,40004,Contract Rummy,1930,1.846,120
+9079,4362,"Champion Hill: May 16th, 1863 – The Road to Vicksburg",1996,3.400,360
+9085,108430,Fuentes de Onoro 1811,2011,2.714,240
+9086,2997,Soldier Kings: The Seven Years War Worldwide,2002,2.465,240
+9110,5235,Samurai Blades: The Game of Man-to-Man Combat in Feudal Japan,1984,2.333,240
+9120,245823,Napoleon's Resurgence,2018,3.667,
+9143,24207,Burger Quiz,,1.714,30
+9156,5826,"Victory in the West: Plan Yellow, The French Campaign 1940",1993,3.522,360
+9165,260465,"Across The Narva: The Soviet Assault on Estonia, February 1944",2018,2.667,480
+9188,3966,The Succession Wars,1987,2.967,240
+9193,373084,Warhammer Underworlds: Gnarlwood,2022,3.000,
+9202,8208,Trial of Strength: War on the Eastern Front 1941-45,1985,3.696,360
+9216,9476,L'Armeé du Nord: the Belgian Campaign 1815,1993,2.821,300
+9236,359835,Dungeons & Dragons: Onslaught,2023,3.000,
+9260,6540,Fear God & Dread Nought,2001,4.292,360
+9284,344194,"The Day Was Ours: First Bull Run (July 21, 1861)",2021,3.000,240
+9290,8954,The Battles of Waterloo,1994,3.393,300
+9290,240902,1918/1919: Storm in the West,2020,2.286,240
+9291,2553,Bali,1954,1.750,30
+9291,198029,Flip City: Wilderness,2016,,30
+9298,2994,Guderian's Blitzkrieg: The Drive on Moscow,1992,3.867,360
+9302,2699,Fire Team,1987,3.095,240
+9304,7970,Arctic Storm: The Russo-Finnish Winter War 1939-40,1992,3.259,360
+9313,361084,Yoxii,2022,,15
+9324,203087,Nine Years: The War of the Grand Alliance 1688-1697,2017,2.917,225
+9332,6974,Barbu,1930,2.286,180
+9340,4278,Battle Over Britain,1983,3.939,300
+9340,7502,Leros,1996,3.809,240
+9368,137626,The Road to Cheren,2013,2.250,240
+9385,3663,"Outreach: The Conquest of the Galaxy, 3000AD",1976,3.344,960
+9400,6976,St-Lô: Normandy 1944 – The Breakout Begins,1986,3.118,360
+9400,22378,Red Storm over the Reich: The Last Days of the Third Reich,2007,3.520,480
+9401,1251,New World,1990,2.619,240
+9426,240906,The Battles of Rhode Island & Newport,2020,3.286,
+9429,8702,1807: The Eagles Turn East,1994,3.412,360
+9438,4342,"Screaming Eagles in Holland: The 101st Airborne Division's Defense of Hell's Highway, 22-23 September, 1944",2002,3.769,240
+9440,7008,Preference,1802,3.353,120
+9463,18103,Tien Len,,1.875,20
+9479,10149,The Great War in Europe,1995,3.640,360
+9486,10579,The War for the Union,1992,3.737,360
+9493,1757,Yacht Race,1960,2.000,60
+9494,5142,Fighting Sail: Sea Combat in the Age of Canvas and Shot 1775-1815,1981,2.789,240
+9494,329812,The Genius Star,2020,1.667,
+9536,240901,"A Time for Trumpets: The Battle of the Bulge, December 1944",2020,4.286,
+9551,1572,Situation 4,1968,1.643,30
+9567,19903,The Battle of Monmouth,2008,3.867,240
+9577,7748,The Italian Front: 1915-1918,2003,3.100,360
+9597,97377,Hail Caesar: Battles with Model Soldiers in the Ancient Era,2011,3.000,240
+9612,66896,American Carrom,1892,1.222,60
+9614,3724,1809: Napoleon's Danube Campaign,1984,3.500,240
+9615,291951,The Everdeck,2019,4.000,
+9618,26203,Star Fleet Battles Silver Anniversary Master Rulebook,2004,4.857,
+9621,5751,"Operation Mercury: The German Airborne Assault on Crete, 1941",1992,3.529,360
+9632,26906,South Mountain,2008,3.600,360
+9633,671,Bull Run: The First Major Battle of the American Civil War,1983,2.871,240
+9643,23761,Guadalajara,2006,2.929,
+9658,6641,Desert Steel,1989,3.050,240
+9664,10376,"Ring of Fire: The Fourth Battle for Kharkov, August 1943",1994,3.000,240
+9675,322169,Picto Rush,2020,,20
+9680,26736,Ukraine '44,2006,2.364,240
+9708,7114,SOPAC: Naval Action in the South Pacific 1942–1943,1999,3.091,240
+9709,291434,Axis Empires: Ultimate Edition,2023,4.588,900
+9724,3237,Against the Reich,1986,3.125,480
+9726,3887,Stock Market Game,1963,1.949,180
+9761,6860,"River of Death: Battle of Chickamauga, September 19-20, 1863",1999,3.556,360
+9783,322451,RisiKo!,1968,1.765,60
+9787,12266,Barren Victory,1991,3.273,240
+9788,273482,A Song of Ice & Fire: Tabletop Miniatures Game – Free Folk Starter Set,2018,,45
+9792,5400,Changgi,,3.333,60
+9805,14186,Bao,,3.353,40
+9805,22203,Face to the Mat,2000,1.833,
+9809,373489,Waterloo 1815: Fallen Eagles II,2022,3.667,
+9813,4121,Road to the Rhine,1979,3.167,360
+9816,314461,The Deadly Woods: The Battle of the Bulge,2021,2.900,360
+9830,75674,Julian: Triumph Before the Storm,2010,2.600,240
+9832,17895,For Whom the Bell Tolls,1995,3.857,480
+9833,6516,Titan Legions,1994,2.583,240
+9835,9237,Perryville,1992,3.357,240
+9839,5992,Operation Grenade: The Battle for the Rhineland 23 Feb. - 5 Mar. '45,1981,2.667,240
+9841,31553,COBRA: The Normandy Campaign,2008,3.091,600
+9850,5769,"Edelweiss: The Struggle in the Caucasus, 1942",1989,4.455,360
+9850,160950,The Badger Deck,2014,1.000,
+9855,2060,Probe,1964,1.550,60
+9875,99313,Proud Monster Deluxe,2011,3.526,1500
+9875,245206,The X-Files: Circle of Truth,2018,1.250,
+9879,276431,20 Second Showdown,2019,1.000,
+9899,38837,The Pocket at Falaise,2009,2.778,240
+9905,326985,Stargard Solstice,2021,2.375,480
+9907,2399,Senet,-3500,1.463,30
+9934,6121,Tablut,1700,2.500,45
+9939,186974,Khe Sanh '68,2015,1.800,
+9978,1187,The Fellowship of the Ring,1983,3.575,240
+9990,2885,C.V.: A Game of the Battle of Midway,1979,3.815,300
+9992,154,Union vs. Central,1999,3.750,360
+9998,7637,The Fall of France,1981,4.053,240
+10022,12414,La Batalla de los Arapiles,1995,3.769,210
+10027,165521,Rory's Story Cubes: Medic,2014,,20
+10031,312958,Ascension: Curse of the Golden Isles,2021,2.500,
+10059,4358,The Guns of August,1981,3.412,360
+10065,109285,Nations in Arms: Valmy to Waterloo,2012,4.053,3000
+10069,387836,Star Wars Villainous: Scum and Villainy,2023,,50
+10074,22843,War in the Pacific (Second Edition),2006,4.786,480
+10103,365752,MonsDRAWsity: Top Secret,2022,,20
+10114,131017,La Bérézina 1812,2012,2.750,240
+10121,86445,"A Victory Complete: The Battle of Tannenberg, 1914",2011,2.333,210
+10132,1294,Clue,1949,1.650,45
+10140,358663,Pocket Book Adventures,,2.000,5
+10159,4436,Cityfight: Modern Combat in the Urban Environment,1979,4.273,360
+10216,11166,Brandywine & Germantown,2000,4.167,360
+10217,5831,Britain Stands Alone,1994,3.200,360
+10222,5241,"Sinai: The Arab-Israeli Wars – '56, '67 and '73",1973,2.606,210
+10225,9135,Advanced European Theater of Operations,2001,4.833,360
+10229,218007,Napoleon's Quagmire,2017,3.750,
+10233,17537,"The Battle of Corinth: Standoff at the Tennessee, October 3-4, 1862",1981,3.538,240
+10243,3523,Decision At Kasserine: Rommel's Last Chance,1983,2.889,300
+10249,1189,The King's War: The First English Civil War 1642-1646,1989,3.400,240
+10251,332018,Funkoverse Strategy Game: Alice in Wonderland 100,2021,,20
+10255,12459,Fortress Berlin,2004,3.652,720
+10269,2174,Coup d'État,1966,2.214,30
+10272,4363,Seven Pines,1998,3.333,240
+10279,470,Road to the White House,1992,3.531,240
+10279,177861,"Paths to Hell: Operation Barbarossa, June – December 1941",2016,3.400,
+10291,5480,Drive on Stalingrad: Battle for Southern Russia Game,1977,3.440,1200
+10313,96602,Footy Manager,2011,2.000,
+10320,8843,June 6,1999,3.208,240
+10340,207899,Knights Club: The Bands of Bravery,2012,1.500,
+10352,259970,The Lord of the Rings: The Card Game – Two-Player Limited Edition Starter,2018,3.000,
+10368,7501,Hunters from the Sky,1994,3.250,240
+10371,16197,Rivoli 1797,1997,3.400,240
+10377,2173,4 Player Chess,1881,2.938,45
+10385,285992,Pac-Man: The Board Game,2019,1.000,
+10395,34139,Death Wears White,2001,2.167,300
+10410,7382,Chickamauga: The Confederacy's Last Hope,1986,3.062,240
+10423,12736,The Battle for Dresden 1813,1995,2.913,300
+10423,15049,Ulti,,3.267,
+10452,4651,Stalingrad,1963,2.279,120
+10466,265947,"Battle of Issy, 1815",2018,2.857,
+10495,340473,"Thunder At Dawn: The Battle of Wilson's Creek (August 10, 1861)",2021,3.000,240
+10496,149286,Hanau 1813,2013,3.083,
+10499,5333,Invasion: Norway,1995,3.600,360
+10515,284,Lords of the Sierra Madre (Second Edition),1995,3.478,240
+10522,25972,Victory at Sea: World War II Naval Combat Game,2006,2.462,360
+10538,2538,Viceroys,1986,3.296,240
+10545,2078,"Aegean Strike: Land, Air, and Sea Combat in the Eastern Mediterranean",1986,4.229,360
+10545,6559,Glory II: Across the Rappahannock,2002,2.792,360
+10550,9663,Napoleon on the Danube,1992,2.462,240
+10554,9640,"Bloody Roads South: The Battle of the Wilderness May 5-7, 1864 – The South's Last Chance",1992,3.333,240
+10556,372037,Planet etuC,2023,,20
+10577,132456,18Ruhr,2012,4.000,300
+10580,11581,King,,2.222,40
+10580,337726,Holiday Hijinks #2: The Independence Incident,2021,,30
+10600,28574,Magiczny Miecz,1993,2.000,240
+10606,41624,Osmanli Harbi: The Ottoman Fronts – 1914 to 1918,2009,3.111,360
+10607,10186,JENA!,1996,2.850,300
+10636,5768,"Matanikau: Battles on the Matanikau River, Guadalcanal, 1942",1993,3.333,360
+10639,25462,German Whist,,2.000,20
+10649,247950,Campaigns of 1777,2019,3.429,
+10653,167580,Montmirail & Vauchamps 1814,2014,3.000,240
+10663,106560,American Mah Jongg,1937,2.500,45
+10674,183780,Heart of Darkness: An Adventure Game of African Exploration,2021,2.909,240
+10687,9112,Omaha: The Bloody Beach,1991,4.200,480
+10689,8757,Nordkapp,1983,3.231,240
+10695,2300,Invasion Sicily,1998,2.583,360
+10711,11139,"Bloody April: The Battle of Shiloh, 1862",1979,4.294,1200
+10719,345046,Holiday Hijinks #4: The Cupid Crisis,2022,,30
+10720,260131,Race For Bastogne,2022,3.800,
+10723,5834,Campaign to Stalingrad: Southern Russia 1942,1992,3.062,360
+10728,332804,Cantaloop: Book 3 – Against All Odds,2023,,360
+10733,13182,Korsun Pocket: Little Stalingrad on the Dnepr,1979,4.538,360
+10760,7177,Guadalcanal: Semper Fi Series,2003,2.524,360
+10773,162383,"Festung Europa: The Campaign for Western Europe, 1943-1945",2016,3.000,240
+10774,246895,DC Comics Dice Masters: Justice Campaign Box,2019,,30
+10799,208340,Congo: Adventures in the Heart of Africa,2016,,60
+10800,4510,Johnny Reb III: Regimental Grand Tactical American Civil War Miniatures Rules,1996,3.727,360
+10800,6240,The Crusades: Western Invasions of the Holy Land 1097-1191 A.D.,1978,2.905,240
+10802,190700,Team Yankee,2015,,120
+10803,279727,Harakiri: Blades of Honor,,3.333,60
+10805,225303,Gamer Over! A Game Fair Murder Mystery,2017,,120
+10820,3084,Buccaneer,1938,1.390,90
+10840,14559,"Malvern Hill: The Battles of the Seven Days, Volume III",1999,3.636,240
+10844,264685,Grimdark Future: Firefight,2018,,30
+10864,25768,Long Live the King,2006,3.000,240
+10889,260269,Eco-Links,2018,,20
+10938,165523,Rory's Story Cubes: Score,2014,,20
+10944,13224,The Conquerors: Alexander the Great,2006,2.839,240
+10944,374336,Trick Raiders,2022,,15
+10954,180050,Star Wars Death Star Perplexus,2015,1.667,
+10973,17538,"Jackson at the Crossroads: Cross Keys & Port Republic, June 8-9, 1862",1981,3.750,240
+10977,2335,Rome & Carthage,1954,2.048,60
+10993,288,Rossyïa 1917,1995,4.000,300
+10993,209095,UNO: Super Mario,2016,1.000,
+10999,158492,Quatre Batailles en Espagne,2015,3.167,
+11021,5058,Operation Crusader,1978,3.786,300
+11026,5183,Austerlitz,1993,3.316,1080
+11026,177142,Tornio '44,2015,2.889,360
+11029,367625,Set A Watch: Forsaken Isles,2024,,60
+11045,162677,1893: Cologne,2014,3.333,240
+11049,92759,Russian Civil War 1918-1922 (Second Edition),2011,3.125,240
+11052,20528,Palace,,1.087,20
+11062,2199,Thinking Man's Golf,1966,1.783,45
+11072,189663,Dungeon Solitaire: Labyrinth of Souls,2016,1.800,
+11089,188051,Deadfall,2016,,20
+11093,383701,Tricky Time Crisis,2023,,25
+11099,10581,Summer Storm: The Battle of Gettysburg,1998,4.100,480
+11106,6039,Antietam: Burnished Rows of Steel,1993,2.333,240
+11111,135577,The Invasion of Russia (1812),2014,2.778,960
+11112,209863,The Fall Of The Third Reich,2016,3.000,360
+11115,8717,The Schlieffen Plan,1997,3.273,360
+11118,388554,"Valley of Tears: The Yom Kippur War, 1973",2023,3.714,
+11123,2366,Quinto,1964,1.826,30
+11123,24264,Button Soccer,1911,1.812,50
+11132,43196,Yalu: The Chinese Counteroffensive in Korea: November 1950-May 1951 (Second Edition),2009,2.762,300
+11135,199418,Skeptics,,2.500,30
+11139,109635,Washington's Crossing,2012,3.000,480
+11152,244502,Barbarian Vince,2012,1.500,
+11158,10168,Citadel: The Battle of Dien Bien Phu,1977,3.083,360
+11170,210428,Ligny & Wavre 1815: The Empire's Last Victories,2016,3.750,
+11177,145390,End of Empire: 1744-1782,2014,2.923,360
+11198,42783,What Price Glory?,2013,2.091,240
+11224,291334,Tanto Monta: The Rise of Ferdinand and Isabella,2023,4.000,240
+11224,335017,The Silver Bayonet: A Wargame of Napoleonic Gothic Horror,2021,2.500,
+11226,7639,Their Finest Hour,1976,4.300,240
+11240,6937,1829 Northern Board,1981,3.857,360
+11241,3985,Crisis: Korea 1995,1992,4.333,360
+11268,8679,Days of Decision III,2004,4.176,360
+11279,232166,Frostgrave: Ghost Archipelago,2017,2.667,
+11285,2121,The Sword and the Stars,1981,3.053,240
+11287,5700,"Air Bridge to Victory: Operation Market-Garden, 1944",1990,3.360,240
+11301,4235,Fulda Gap: The First Battle of the Next War,1977,3.179,300
+11303,12501,The Franco-Prussian War,1992,3.091,360
+11306,5296,Waterloo,1962,2.186,120
+11311,239262,Platoon Commander Deluxe: The Battle of Kursk,2018,3.000,
+11360,329121,Call of Kilforth: A Fantasy Quest Game,2023,,45
+11366,28289,First to Fight,1991,3.857,240
+11372,362830,Roulette-Taking Game,2022,,20
+11383,358607,Bonaparte in the Quadrilateral,2022,3.400,
+11389,13978,"War in the East: The Russo-German Conflict, 1941-45",1974,3.231,480
+11390,310267,Mother of Frankenstein,2023,2.667,480
+11404,246568,Z War One: Exodus,2018,,60
+11429,175230,Crete 1941: Operation Mercury,2016,2.333,
+11438,12699,"The Army of the Heartland: The Army of Tennessee's Campaigns, 1861-1863",1996,3.667,
+11488,348874,50 Missions: Ça se complique,2021,,20
+11489,4222,War Between The States 1861-1865,1977,3.500,360
+11494,349692,1985: Sacred Oil,2021,4.500,300
+11500,337117,RATS: High Tea at Sea,2021,2.000,
+11524,10829,Krieg! World War II in Europe,1996,3.458,300
+11525,162022,6 nimmt! Schnupperspiel,1994,,30
+11529,101118,"Borodino: Napoleon in Russia, 1812",2012,2.300,210
+11530,6021,"Hastings, 1066",1987,2.529,300
+11539,3070,Red Parachutes: Soviet Airborne Assault Across the Dnepr,1995,3.046,360
+11541,182409,Midway Solitaire,2017,3.571,
+11547,9650,"War in the Pacific: The Campaign Against Imperial Japan, 1941-45",1978,4.786,360
+11562,392492,Stupor Mundi,2024,,90
+11576,2082,Shell Shock!,1990,3.179,240
+11582,193697,The Men Who Would Be Kings: Colonial Wargaming Rules,2016,2.200,
+11618,5997,Pleasant Hill: The Red River Campaign,1986,3.294,300
+11634,142205,Ronin: Skirmish Wargames in the Age of the Samurai,2013,2.250,
+11636,5830,Bloody 110,1989,3.909,360
+11640,43801,"Afrikakorps: Decision in the Desert, 1941-42",2010,2.375,240
+11648,5479,"Drive on Washington: The Battle of Monocacy Junction, July 9, 1864",1980,2.765,360
+11654,22600,1831,1996,4.500,600
+11658,237798,The Wilson Wolfe Affair,2017,3.000,
+11658,253318,London & Northwestern,2018,,60
+11659,12895,La Bataille de Wavre,1994,3.818,
+11700,348849,"Burma: The Forgotten War, 1943–1944",2022,4.333,360
+11702,9356,Pacific Fleet,1983,4.000,360
+11702,357992,Disney Return of the Headless Horseman Game,2022,,15
+11728,3901,Sturm Nach Osten,1980,2.688,360
+11732,294756,A Song of Ice & Fire: Tabletop Miniatures Game – Targaryen Starter Set,2020,,45
+11737,300076,PARKS Memories: Plains Walker,2021,,30
+11739,8307,Killer,1981,2.071,360
+11739,9117,"Embrace an Angry Wind: The Battles of Spring Hill & Franklin, 29-30 November 1864",1992,3.000,240
+11745,106978,World at War: America Conquered,2013,2.833,240
+11756,118688,Sleepers,2012,,30
+11761,1590,Stocks & Bonds,1964,2.025,60
+11761,381248,Nemesis: Retaliation,2025,3.667,120
+11769,7750,Tannenberg: Eagles in the East / Galicia: The Forgotten Cauldron,1999,3.111,360
+11771,350081,Rainforest City,2021,2.000,
+11774,355786,Funkoverse Strategy Game: Universal Monsters 100,2022,,20
+11793,9104,The Three Days of Gettysburg (Second Edition),2000,3.933,360
+11814,244166,Sherlock Holmes & Moriarty: Associates,2015,1.000,
+11815,24209,Kaleidos Junior,1997,,30
+11816,268134,Oathmark: Battles of the Lost Age,2020,3.500,
+11820,6942,Drang Nach Osten!,1973,4.071,12000
+11830,26919,The War Game: World War II,2005,3.379,240
+11852,4366,"Remember the Maine! The Spanish-American War, 1898",1986,2.812,240
+11865,29376,"The Battle of Adobe Walls, November 25, 1864",2009,2.700,360
+11865,217197,Lucky Forward: Patton's Third Army in Lorraine,2020,4.857,
+11866,4343,Semper Fi!,1997,3.375,240
+11886,9858,The Russo-Japanese War: Dawn of the Rising Sun,2004,4.091,360
+11918,6270,Objective Moscow: The Death of Soviet Communism,1978,3.733,360
+11925,64777,Dominion,2004,,30
+11958,2334,Square Mile,1962,2.154,60
+11970,158589,18Africa,2014,3.889,240
+11974,327295,18CO: Rock & Stock,2020,4.000,240
+11975,2947,Broker,1961,2.065,75
+12007,31021,Shuffleboard Game,,1.000,20
+12035,39278,Medina de Rioseco 1808,2008,2.750,240
+12043,212663,Biberbande Schnupperspiel,,1.000,
+12053,344290,Kneipenquiz: Family & Friends Spezial,2021,,30
+12061,356885,Library Labyrinth,2023,,30
+12065,208887,Avec Infini Regret II,2016,3.000,
+12068,5279,Sagunto: The Battle for Valencia,1993,3.909,240
+12069,11465,48th Panzer Korps: Battles on the River Chir,1991,2.643,240
+12076,335,Breakthru,1965,2.000,15
+12082,205877,Bolt Action: Band of Brothers,2016,2.000,
+12092,218491,Gorizia 1916: La sesta battaglia dell'Isonzo,2016,2.750,
+12093,5752,Black Sea Black Death,1982,3.917,360
+12101,9044,All Quiet on the Western Front,1997,2.875,360
+12114,11997,*Star,1999,2.700,
+12124,68816,Storming the Reich: D-Day to the Ruhr,2010,3.067,400
+12136,11030,Sherco's Grand Slam Baseball Game,1968,2.333,60
+12148,253564,Marvel Dice Masters: X-Men Forever Campaign Box,2019,,30
+12152,12269,Manassas,1980,3.250,240
+12156,40411,Flames of War: Open Fire,2009,2.750,
+12159,136606,Sergeants Miniatures Game: Red Devils,2013,3.250,
+12165,7749,Serbia the Defiant / Romania: Transylvanian Gambit,2000,3.444,360
+12166,293387,A Song of Ice & Fire: Tabletop Miniatures Game – Baratheon Starter Set,2019,,45
+12168,5656,France 1944: The Allied Crusade in Europe,1986,2.939,360
+12178,7487,Flutter,1950,1.667,60
+12201,296570,Hannut: France 1940,2021,3.200,
+12204,4254,"Iwo Jima: Valor of Arms, 19 Feb. – 25 March 1945",1983,2.769,240
+12217,1970,Oh-Wah-Ree,1962,1.538,30
+12245,218,High-Bid,1963,1.818,25
+12250,245060,Outfoxed!,2017,,20
+12257,267506,Gloom of Thrones,2019,,60
+12260,32907,Eylau 1807,2007,2.900,240
+12274,2480,Tribes,1998,2.077,240
+12277,163319,"Gallipoli, 1915: Churchill's Greatest Gamble",2018,4.000,240
+12304,11646,Piquet,1534,2.467,30
+12319,322865,Knockdown: Volume II,2022,,15
+12320,11978,The Great War in the Near East,1996,3.077,360
+12334,67421,ASG Golf,2009,2.857,
+12342,26999,China: The Middle Kingdom,2008,2.933,
+12346,5023,Conquerors,1977,3.231,240
+12354,370671,"Warhammer 40,000: Kill Team – Into the Dark",2022,,60
+12364,745,War of Resistance,1998,4.500,
+12364,42255,"The Kaiser's War: World War I, 1918-19",2010,2.667,240
+12366,4031,Jungle,,1.763,20
+12369,316850,Gloomier: A Night at Hemlock Hall,2022,,45
+12378,7739,America in Flames,1998,4.562,360
+12383,11284,1862,2000,3.714,360
+12418,99042,The American Revolution: Decision in North America,2011,2.375,300
+12425,7503,"A Frozen Hell: The Battle of Tolvajärvi, Russo-Finnish War, 1939",2000,3.714,240
+12430,238065,Sherlock Holmes Consulting Detective: Vanishing from Hyde Park,2017,2.000,
+12444,26620,Tannenberg 1914,1990,3.454,240
+12446,12900,"War in the East: The Russo-German Conflict, 1941-45 (Second Edition)",1976,3.546,480
+12449,17073,Watten,,2.125,30
+12451,74311,The Hardest Days,2011,2.667,240
+12454,12139,The Three Days Of Gettysburg,1995,4.154,420
+12463,4178,Kaliko,1968,2.300,90
+12468,21915,Le Vol de l'Aigle,2005,2.923,600
+12470,265585,Linkee 3,2018,1.000,
+12492,2080,Central America,1987,4.214,360
+12492,11708,War Between The States 1861-1865 (Second Edition),2004,3.538,360
+12493,2405,Bezique,1860,2.300,30
+12494,6700,Command Decision 2nd Edition,1992,3.750,360
+12506,5637,APBA Pro Football,1958,2.250,120
+12508,289055,KAITŌ,2019,2.000,
+12512,376610,Blueprints of Mad King Ludwig,2024,2.500,
+12518,172493,Tannenberg: The Introductory Game,2015,3.167,
+12522,103039,Beyond Waterloo,2012,3.300,960
+12531,25617,Korona,,1.182,15
+12533,143073,Tute,,2.200,20
+12535,67339,Command at Sea: 4th Edition – War at Sea 1926-1955,2008,4.385,
+12537,386775,Iskra,2023,2.333,480
+12541,1477,Days of Decision II,1994,3.688,300
+12546,379164,"Smash Up: Excellent Movies, Dudes!",2023,,30
+12549,12168,D-Day,1961,2.500,120
+12563,17821,Connection Games,2005,3.333,
+12568,8626,Assyrian Wars,2005,3.920,240
+12569,307996,6x6 TALES,2020,,40
+12570,333775,Meridians,2021,,20
+12582,193696,Rogue Stars: Skirmish Wargaming in a Science Fiction Underworld,2016,3.000,
+12588,6374,Napoleon at the Berezina,2003,3.182,300
+12592,2138,Crisis: Sinai 1973,1995,3.485,360
+12596,17557,Super Farmer,1943,1.139,20
+12600,137958,Wild West Exodus,2013,3.000,
+12616,192324,Rory's Story Cubes: Medieval,2016,,10
+12628,199882,Risk: Star Trek 50th Anniversary Edition,2016,2.333,
+12644,26004,Bitter Woods Deluxe Edition Expansion Kit,2004,3.231,240
+12647,16325,Strike Them a Blow: 1864 North Anna River,2006,3.333,600
+12647,351851,ハーメルンケイブ (HAMELN CAVE),2021,,10
+12651,15990,Storm Over Scandinavia,1998,4.000,480
+12656,183452,Quickpick: Island of Monster Masks,2015,1.000,
+12685,378395,One Card: Cereal Killer,2023,,10
+12700,64331,Bar-Lev: The 1973 Arab-Israeli War,1977,3.500,360
+12706,1161,Perquackey,1956,1.611,20
+12717,6847,South Mountain,1984,2.750,360
+12730,226264,Ponkotsu Factory (ぽんこつファクトリー),2014,,15
+12737,5383,MechWar '77: Tactical Armored Combat in the 1970's,1975,3.179,270
+12750,16271,No Trumpets No Drums: The Vietnam War 1965-1975,1982,3.154,240
+12751,42660,1886,2009,4.111,
+12753,385316,Unlock! Mythic Adventures: Professor Noside's Animal-o-matic,2023,,45
+12758,6909,Fief,1981,3.000,360
+12772,25,Battlemist,1998,3.200,200
+12773,238506,Magic: The Gathering – Duel Decks: Merfolk Vs. Goblins,2017,3.000,
+12785,5488,TaskForce: Naval Tactics and Operations in the 1980's,1981,3.267,360
+12797,75587,1858: The Railways of Iberia,2011,3.833,240
+12803,284261,Conquest: The Last Argument of Kings,2019,3.000,
+12804,11278,Trajan: Ancient Wars Series,2004,3.667,240
+12822,367030,Quests Over Coffee,2022,1.000,
+12829,8362,Strategy I: Strategic Warfare 350BC to 1984,1971,3.077,360
+12831,17041,La Bataille d'Austerlitz,1980,3.571,400
+12832,25993,"Drive on Moscow: Operation Typhoon, 1941",2007,2.385,240
+12843,254157,Last Days: Zombie Apocalypse,2018,2.000,
+12858,128794,"Toulon, 1793",2014,3.500,540
+12867,73361,Partizan!,2011,2.500,240
+12868,390094,FTW?!,2023,,25
+12872,4087,1812: The Campaign of Napoleon in Russia,1972,2.308,
+12873,9238,"War in the Ice: The Battle for the Seventh Continent, 1991-92",1978,2.765,360
+12877,2510,Playboss,1969,2.529,180
+12878,383791,Savage Bowl: Trick Taking Game,2023,,30
+12886,323352,Timeline: España,2020,,15
+12897,244164,Hocus & Pocus: L'épreuve des Fabulins,2016,1.333,
+12898,7752,Over There,2000,4.385,720
+12904,367679,"Grand Havoc: Perryville, October 8, 1862",2023,,60
+12910,12054,Oosterbeek Perimeter,2006,3.250,300
+12912,244162,Mystery,2016,1.400,
+12917,4293,The Great Redoubt: A Game of the Battle of Borodino – 1812,1979,3.467,240
+12917,415921,Backstories: Alone under the Ice,2024,,50
+12931,354628,Death of an Army: Ypres 1914,2022,2.600,240
+12933,16957,The von Reisswitz Kriegsspiel: The Prussian Army Wargame,1824,3.700,300
+12935,360366,Tainted Grail: Kings of Ruin,2023,,90
+12949,368037,Unlock!: Short Adventures – The Awakening of the Mummy,2022,2.000,
+12952,349242,Ghosts Love Candy Too,2022,,20
+12953,285204,My Hero Academia Collectible Card Game,2021,2.000,
+12961,368975,Cuzco,2023,4.000,
+12964,337712,Guiscard 2: The Varangian Guard,2021,,90
+12973,16030,Volley & Bayonet,1994,2.500,240
+12977,1907,International Movie Maker,1968,1.385,90
+12982,2666,A Mighty Fortress,1977,3.250,240
+13004,192355,Rory's Story Cubes: Powers,2016,,10
+13012,5483,"Kursk: History's Greatest Tank Battle, July 1943",1980,3.647,360
+13014,12067,Little Wars,1913,2.375,90
+13020,210414,Magic: The Gathering – Duel Decks: Nissa vs. Ob Nixilis,2016,,
+13022,155257,Captain's Sea,2021,3.200,
+13023,26686,"Battle for Galicia, 1914",2006,2.167,
+13025,8666,Days of Decision,1990,3.800,360
+13028,76352,Bid Euchre,,1.667,30
+13028,368040,Unlock!: Short Adventures – In Pursuit of Cabrakan,2022,2.000,
+13041,338075,Cupid: Tricks & Tactics,2021,,20
+13055,74312,"The Rhineland War, 1936-37",2011,3.200,240
+13064,139390,Perplexus Twist,2013,2.000,
+13066,40385,The Bulge,2008,2.182,240
+13073,28553,Fictionary,,1.333,60
+13075,3359,Anagrams,1875,2.000,45
+13085,262479,Pucket,2011,1.000,
+13092,118561,Sequence,,,25
+13101,157528,The Dauphin and the Sword,2014,2.538,
+13121,320061,Death in the Trenches: The Great War 1914-1918 (Second Edition),2022,3.800,300
+13128,5822,"Brute Force: The War in the West, 1940-1945",2003,3.286,360
+13133,6826,The Campaigns of Robert E. Lee,1988,3.840,240
+13150,9192,Justinian,1999,2.538,240
+13150,11821,Jotto,1956,1.600,20
+13152,193792,Arcole 1796,2016,2.667,
+13153,247952,Constantinople,2019,3.143,
+13164,13980,"Into a Bear Trap: The Battle for Grozny, January 1995",2004,2.917,360
+13190,15678,Hoyle's Games,1742,3.000,
+13192,349408,Lielow,2021,,30
+13200,37731,Manille,,2.375,60
+13201,10102,"Ignorant Armies: The Iran-Iraq War, 1980-88",2003,2.546,240
+13206,102346,Guns of the Askari,2012,2.636,360
+13209,354402,Old School Tactical: Volume 1 – 2nd Edition,2022,3.000,
+13212,65061,Sa Battalla,2010,3.111,
+13220,375439,Middle-Earth Strategy Battle Game: The Lord of the Rings – Battle of Osgiliath,2022,,90
+13246,73363,When Lions Sailed,2011,2.778,240
+13256,27480,Command Decision: Test of Battle,2006,3.071,240
+13263,114139,1761: From Canal to Rail,2011,4.000,300
+13267,303552,Magic: The Gathering – Unsanctioned,2020,,20
+13273,16972,"Alexandria, 1801",1996,3.000,240
+13277,11756,Objective: Schmidt,1990,3.625,240
+13292,67891,Hungarian Nightmare,2011,3.417,300
+13297,351572,Pastiche: The Birth of a Masterpiece,2016,,30
+13303,379773,Transformers Deck-Building Game: War on Cybertron,2023,,45
+13305,5835,Command Decision,1986,3.546,360
+13306,31605,Drive on Kursk: July 1943,2008,2.615,
+13311,322750,Star Wars: Armada – Galactic Republic Fleet Starter,2020,,120
+13314,6,Mare Mediterraneum,1989,3.000,240
+13320,33541,Friedland 1807,2007,2.900,
+13320,87428,Wagram 1809,2012,2.538,
+13322,3603,The Normandy Campaign,1983,2.895,240
+13334,12369,APBA Professional Golf,1962,1.667,120
+13336,7966,Nomad Gods,1977,2.750,300
+13338,10890,Behind,2003,2.667,
+13340,5993,The Tigers Are Burning,1988,2.429,240
+13341,109019,Caldera,2011,2.000,
+13347,30684,Johnny Reb,1983,3.111,
+13348,23733,Great War at Sea / Second World War at Sea: Cone of Fire,2008,2.909,
+13348,143023,Alea Iacta Est,2013,3.125,
+13350,8037,Patrol!: Man-to-Man Combat in the 20th Century,1974,3.312,240
+13351,4970,Decision in France,1994,2.786,360
+13363,355208,Q-less,2018,1.333,
+13374,705,Caesar in Gallia: Conquest on the Ancient Frontier,1993,3.067,300
+13374,304509,Victory at Sea: Battle for the Pacific,2020,2.600,
+13376,64431,Buraco,,2.000,60
+13381,64570,1843,2011,4.000,360
+13384,107917,A Call to Arms: Star Fleet,2011,3.571,
+13390,11889,End of the Iron Dream,1985,2.600,
+13398,17482,Amirauté,1979,3.000,
+13411,322626,Àiyé,2023,2.700,
+13414,268899,Foreign Legion Paratroopers: Rapid Response Force,2020,3.167,
+13419,18776,The Mediterranean,2005,3.308,480
+13433,11964,Bloody Ridge,2005,3.400,240
+13433,19257,Le Truc,,1.750,20
+13437,97433,Les victoires du Maréchal de Saxe: Fontenoy 1745 – Lauffeld 1747,2011,2.438,200
+13456,67084,The War: Europe 1939-1945,2012,4.000,1080
+13476,120509,Olympic & Coronet,2012,2.800,
+13478,359927,The Breach,2023,,60
+13485,235254,Finn Billiards,2017,,15
+13492,264948,LANDER,,3.333,115
+13494,209452,Epic PVP: Magic,2018,,10
+13495,238510,Farkle,,1.000,30
+13512,3054,Sideshow: The Campaign for German East Africa 1914-1918,1990,2.833,360
+13520,134834,Voldétour,2012,,30
+13527,254125,The Tale of Ord,2018,3.500,600
+13528,80044,Fury in the East,2010,2.444,360
+13537,4802,Holy Roman Empire,1984,2.571,240
+13545,6862,Laska,1911,2.571,30
+13545,341192,Oh Really?,2019,,30
+13547,6638,Fight in the Skies,1966,2.454,30
+13551,193699,Konflikt '47,2016,2.500,
+13557,207653,"Warhammer 40,000: Kill Team",2016,,
+13595,5541,Barbarossa: The Russo-German War 1941-45,1969,2.412,360
+13628,364020,Holiday Hijinks #5: The Birthday Burglary,2022,,60
+13633,245483,Affinity,2018,,20
+13636,36911,"Barbarossa: The Russo-German War, 1941-45",2008,2.667,600
+13642,3727,Carla Cat,1955,1.020,15
+13647,63906,Collusion,,2.000,
+13660,130042,In Country: Vietnam 1965-1975,2013,3.454,
+13667,8727,"U.S.N.: The Game of War in the Pacific, 1941-43",1971,3.546,360
+13670,17691,Djambi,1968,2.571,60
+13687,210411,Magic: The Gathering – Duel Decks: Jace vs. Vraska,2014,,
+13687,359291,Midhalla,,3.429,90
+13691,401216,Cascadero,2024,,45
+13698,336831,PinPoint,2022,,30
+13712,11179,Semper Victor,2004,2.909,1200
+13717,370598,Trailblazers: Super Travel Edition,2023,,30
+13730,174046,Dropzone Commander 2 Player Starter Set,2013,,120
+13741,13667,WarGods of Ægyptus,2002,3.200,
+13759,3471,Le Mans,1961,2.182,60
+13767,168429,Foldable Table Curling,2013,,10
+13788,1920,The Business Game,1965,2.079,90
+13789,280472,WWE Dice Masters: Campaign Box,2020,,30
+13797,21935,Chu Shogi,1300,4.250,120
+13799,10300,Group of Soviet Forces Germany,2003,2.500,240
+13818,3157,All-Star Baseball,1941,1.308,60
+13822,25841,Le Grand Empire,2007,3.727,300
+13838,189427,Iron Bottom Sound III,2015,2.667,
+13840,42415,Dungeon Crawl,,,120
+13843,357116,Steve Jackson's Munchkin Presents Batman,2023,,60
+13848,143048,"Goeben, 1914",2014,2.167,
+13852,11957,InterSpace,2004,3.154,360
+13861,9339,Alexander at Tyre,1993,2.333,240
+13866,8742,1815: The Waterloo Campaign,1975,2.462,360
+13877,135194,The Grand Campaign,2013,4.143,360
+13878,3705,Contraband,1950,1.353,20
+13881,9093,1777: The Year of the Hangman,2002,3.400,300
+13886,5186,King Arthur and the Knights of the Round Table,1986,2.900,240
+13889,8402,The Great Pacific War: The Second World War in the Pacific 1937-1945,2003,4.000,240
+13892,377506,Critical: Sanctuary – Season 1,2023,,30
+13903,7941,NATO: Operational Combat in Europe in the 1970's,1973,2.750,240
+13926,337261,Forbidden Psalm,2021,1.800,
+13932,16169,Gettysburg: High Tide of the Confederacy,1982,3.000,600
+13932,386270,Unboxed,2023,,30
+13950,367469,Ghosts Love Candy Too Roll and Fright,2022,,15
+13958,244163,Sherlock Holmes: The Challenge Of Irene Adler,2016,1.500,
+13965,41247,Mia,600,1.143,20
+13980,339619,Reign in Hell: Demonic Skirmish Combat,2021,2.000,
+13994,260711,BARPIG: After Hours,2019,,30
+14001,63823,Salerno: The 1943 Allied Invasion of Italy,2015,3.000,
+14003,286210,"Campaigns of Montrose: A Year of Living Dangerously, 1644-1645",2019,2.250,
+14009,210402,Magic: The Gathering – Duel Decks: Ajani vs. Nicol Bolas,2011,4.000,
+14021,374868,Welcome to Reckoning,2023,2.000,
+14040,7861,Soldier Emperor: Napoleon's Wars 1803-1815,2003,2.783,240
+14040,394217,Shadows of Brimstone: The Impossible Hell Train,2025,3.000,120
+14043,11110,A Famous Victory,1994,3.400,
+14044,343309,Escape Room: The Game – Family Edition: Time Travel,2021,,60
+14053,363486,Sherlock: Das Collier,2022,,60
+14061,209774,100 Swords: The Silver Queen's Dungeon,2017,1.500,
+14067,157529,The Truce or the Sword,2014,3.000,
+14069,42641,Slouch Hats and Eggshells: The Allied Invasion of Syria & Lebanon – 1941,2011,3.300,240
+14072,191095,Scoundrel,2011,1.000,
+14073,8056,"Operation Shoestring: The Guadalcanal Campaign, 1942",1990,3.438,240
+14074,9143,War in Europe (Second Edition),1999,4.000,360
+14079,20834,Husarengolf,1997,,15
+14101,80484,APBA Golf Game,2010,2.800,
+14110,26945,The Battle of Rosebud Creek,2007,2.571,
+14112,217210,Banana Wars: US Intervention in the Caribbean 1897-1933,2020,2.250,
+14125,11132,Hitler's Last Gamble,1989,3.857,
+14127,8758,Red Sun Rising: The Russo-Japanese War 1904-05,1977,3.500,240
+14135,405772,Blooming Field,2024,,20
+14137,418238,Ker Nethalas: Into the Midnight Throne,2024,4.000,
+14145,4217,Alexandros,1991,2.294,240
+14147,8304,So Long Sucker,1964,1.833,20
+14156,210465,Magic: The Gathering – Duel Decks: Mind vs. Might,2017,3.000,
+14159,248927,Magic: The Gathering – Duel Decks: Elves vs. Inventors,2018,,30
+14161,1411,"Fugger, Welser, Medici",1994,3.571,360
+14166,22182,Stonne Heights,2007,3.833,240
+14169,14814,Fields of Glory: Oudenarde & Malplaquet,1996,3.222,240
+14180,38836,"""Tarleton's Quarter!""",2010,2.769,240
+14202,112995,Leipzig 20,2011,2.182,
+14210,70499,The Island,2010,,
+14210,273009,"Bar-Lev: The 1973 Arab-Israeli War, Deluxe Edition",2019,3.889,300
+14215,11764,The Last Victory: Von Manstein's Backhand Blow,1987,3.857,420
+14221,11930,Renju,,2.556,10
+14228,357928,Key Enigma: Kalinasu Adventure,2022,,240
+14229,17239,Gutshot,2005,2.889,240
+14232,200111,Ager Sanguinis,2017,,90
+14239,28096,De Bellis Magistrorum Militum: Wargame Rules for Ancient and Medieval Battle from 3000 BC to 1525 AD,2007,3.800,240
+14242,210412,Magic: The Gathering – Duel Decks: Elspeth vs. Kiora,2015,3.000,
+14243,149129,La Bataille de Vauchamps,2014,3.615,240
+14244,11241,"The Cossacks Are Coming!: The Tannenberg Campaign, 1914",1982,4.273,360
+14246,132601,Bellum Gallicum II,2012,2.786,
+14258,22406,Twilight of the Ottomans: World War I in the Middle East,2007,2.875,360
+14297,267250,Blade Rondo: Night Theater,2018,,10
+14299,292707,Fjordar,2025,3.000,40
+14311,14881,Rebel Sabers: Civil War Cavalry Battles,1986,3.333,240
+14325,362959,Necromunda: Ash Wastes,2022,,60
+14337,19253,Mate,1915,2.375,15
+14357,298345,Dungeons & Dragons Dice Masters: Trouble in Waterdeep Campaign Box,2019,,15
+14362,278322,Pinnacle,2019,,15
+14381,3130,1899,1994,4.167,240
+14381,6699,Command Decision III,1998,3.667,360
+14400,29380,"Saipan & Tinian: Island War Series, Volume I",2010,2.714,
+14401,6009,Soldiers of the Queen: Battles at Isandhlwana and Omdurman,1984,2.769,240
+14406,10307,The Rules With No Name,,2.143,30
+14426,313636,LEGACY: Quest for a Family Treasure,2021,,180
+14430,394218,Shadows of Brimstone: Cursed Tombs of Khamuntet,2025,3.000,120
+14439,59031,In their Quiet fields,1988,3.167,360
+14439,231036,"Warhammer 40,000: Know No Fear",2017,,90
+14440,5843,Royalty,1959,1.800,10
+14441,369764,Clash of Decks: Resistance,2022,,30
+14442,363489,Sherlock: Zimmer 208,2022,,60
+14458,262566,Dubbe,2018,,45
+14469,197635,The War of Jenkins' Ear,2017,3.000,
+14475,10971,Board and Table Games from Many Civilizations,1960,2.333,
+14477,25253,Battlefield Evolution: Ultra-Modern Tabletop Combat,2007,2.750,
+14481,8577,Home Before the Leaves Fall: The Marne Campaign 1914,1997,4.412,360
+14481,8834,"Dynamo: Dunkirk, 1940",1986,2.375,360
+14485,368041,Unlock!: Short Adventures – Doo-Arann's Dungeon,2022,2.000,
+14496,125400,Nieuport 1600,2012,2.250,240
+14498,207905,Magic: The Gathering – Duel Decks: Speed vs. Cunning,2014,,
+14512,11113,Rommel in North Africa: The War in the Desert 1941-42,1986,3.333,
+14515,381629,Holiday Hijinks #7: The Turkey Trial,2023,,60
+14517,5364,Makruk,,3.778,60
+14518,1869,Jägersro,1945,1.944,180
+14526,241068,Cysmic,2025,3.000,60
+14530,231983,Debrecen 1944: Storms in the East 2 – Hungary,2017,2.000,
+14539,285028,Geek Out! Disney,2019,,30
+14565,32327,Waterloo 1815,1996,4.167,720
+14566,17529,Haggle,1963,2.100,120
+14581,219985,DC Comics Dice Masters: War of Light – Collector's Box,2015,,30
+14583,300033,Kneipenquiz: Fußball-Spezial,2020,2.000,
+14596,315276,Lucha Wars,2022,,15
+14601,148356,Altar of Freedom: Grand Tactical Battles in the American Civil War,2013,2.200,240
+14601,412997,Isle of Night,2024,,10
+14603,41611,Advanced Pacific Theater of Operations,2009,4.636,360
+14604,176560,Mechwarrior: Age of Destruction Starter Pack,,,
+14613,176826,Yashima: Legends from Fairytale,2016,,30
+14616,12936,Mentalis,1977,2.333,
+14618,285902,Riot Quest: Single-Player Starter Set,2019,2.000,
+14622,25937,Galactic Destiny,2007,3.435,240
+14636,190115,King of New Tokyo,2015,,30
+14644,210410,Magic: The Gathering – Duel Decks: Heroes vs. Monsters,2013,3.000,
+14651,5418,Victory by Any Means: Campaign Guide,2004,3.857,300
+14680,27944,"Schleiz, Saalfeld, Auerstaedt 1806",2007,2.778,
+14688,250348,Stock hold'em,2018,,40
+14688,378646,"Winter's Victory: The Battle of Preussisch-Eylau, 7-8 February 1807",2024,4.429,720
+14689,401309,Oh! Meow! Bow!,2023,,15
+14707,11388,Armati 2nd Edition: Rules and Lists for Ancient and Medieval Wargaming,2004,3.000,
+14714,16328,Task Force: Carrier Battles in the Pacific,1982,2.273,360
+14717,375378,Le grand méchant Monstre,2023,,20
+14731,308533,Four Against Mars,2020,,30
+14731,413246,Bomb Busters,2024,,30
+14735,385546,Dungeons & Dragons: Trials of Tempus,2023,3.500,
+14747,368467,Doomensions: Pop-Up Mystery Manor,2023,2.333,300
+14758,5728,Grand siècle,1993,4.222,360
+14766,2721,Wembley,1952,1.250,60
+14766,292962,The Suits: Season 3,2019,,10
+14768,1047,MeM,1968,3.625,20
+14779,182410,First Crusade 1097–1099,2016,2.400,
+14780,4853,Tripoley,1937,1.484,60
+14794,182135,iKNOW: Amazing Earth,2014,,30
+14811,317865,"Warhammer 40,000: Recruit Edition",2020,,60
+14821,17649,First Blood: The 1st and 2nd Battles of Manassas,1989,3.667,480
+14821,287219,Hurlyburly,2019,,5
+14832,42591,Summer Lightning: The Invasion of Poland 1939,2011,2.900,240
+14837,218615,Tropico,2017,1.000,
+14853,143843,Spot it! Party,2013,1.000,
+14853,301083,"An Impossible War: The First Carlist War in the North, 1834-1838",,3.000,180
+14856,319794,Timeline: Chile,2020,,15
+14866,29146,Okey,,1.667,15
+14870,327402,DreamQuest,2021,,30
+14874,18343,Wargame Design,1977,2.333,
+14879,360740,Jenga Maker,2022,1.000,
+14886,10716,Kemps,,1.167,30
+14906,12336,"Bitter End: A Relief of the Besieged City, 1945",1983,3.400,360
+14912,264089,Rebels and Patriots: Wargaming Rules for North America,2019,2.167,
+14914,17779,Kaiser,1965,1.800,60
+14917,218045,Mike Force,2018,2.500,
+14918,29262,La Bataille de Deutsch-Wagram,1981,4.286,480
+14919,7378,Sprouts,1967,1.643,10
+14920,9794,Rummoli,1940,1.200,60
+14929,9095,Diplomacy: Classical Variant,1998,2.667,360
+14936,367089,Clash of Decks: Deliquescence,2022,,15
+14948,2232,Wu Hsing,1969,2.333,30
+14952,24704,Stratego: Marvel Heroes,2007,2.000,
+14953,33969,A Splendid Little War: The 1898 Santiago Campaign,2009,2.333,720
+14954,250463,Stadt Land Vollpfosten: Classic Edition,2016,1.111,
+14955,36550,Bashni,1875,3.000,20
+14961,10470,March to Victory: West Front 1914-1916,1997,4.357,360
+14961,267404,Warlords of Erehwon Rulebook,2019,2.750,
+14966,26621,Kircholm 1605,1994,3.333,
+14973,31846,Liberia: Descent Into Hell – The Liberian Civil War 1989-1996,2008,3.083,300
+14976,9259,Combined Arms: Command Decision Series Game,1988,3.000,240
+14981,10361,"Dead of Winter: The Battle of Stones River – Murfreesboro, Tennessee",1989,4.375,360
+14992,368039,Unlock!: Short Adventures – Secret Recipes of Yore,2022,2.000,
+14993,111275,Fauna Kompakt,2011,,30
+14993,219926,Pemberton & Grant: Vicksburg Campaign of 1863,2017,2.286,
+15003,29377,Decisive Victory 1918: Volume One – Soissons,2021,2.500,480
+15006,282300,Pitt's War,2019,2.714,
+15017,325507,ロールライト ⚅富豪 (Roll Write Daifugō),2020,,30
+15031,627,Royal Tank Corps,2000,2.706,
+15033,409581,Rivages,2024,,20
+15040,84470,Field of Glory Renaissance,2010,2.625,
+15040,355346,Tolling of the Bell,2022,3.000,480
+15050,209653,Gameception,2017,,5
+15058,15391,"Death in the Trenches: The Great War, 1914-1918",2005,3.000,960
+15062,13290,Byzantium Reborn,2004,2.929,240
+15062,18785,Miscellaneous Game Magazine,,2.600,
+15072,94371,"The Battle of Blenheim, 1704",2018,3.143,
+15073,313649,Excalibohn,2020,,45
+15084,362992,Rankster,2022,,15
+15085,24999,Ardeny 1944,1992,3.200,240
+15086,11452,Suez '73,1981,3.091,480
+15086,210405,Magic: The Gathering – Duel Decks: Izzet vs. Golgari,2012,,
+15103,30264,Ultimus Romanorum: La Chute de Rome,2007,3.000,480
+15104,140626,Target: Iran,2014,2.400,
+15122,220541,Museum Heist,2017,,20
+15127,18536,Nok-Hockey,1942,1.000,10
+15135,368045,Too Many Cooks,2022,,20
+15154,235926,Empires & Alliances,2018,3.000,
+15169,210065,SLAPZI,2015,1.000,
+15171,204578,Cattack! No.1,2016,,15
+15174,2474,Götterdämmerung,2001,3.000,360
+15174,123223,Pike & Shotte,2012,2.500,
+15179,8353,"Triumphant Return: The Soviet Liberation of Kiev, November 1943",1998,2.700,240
+15184,313241,Micons,2020,,20
+15187,249304,Heroes & Kings,2018,3.000,
+15190,7694,Krypto,1963,1.857,10
+15191,16332,The Battle of Tanga 1914,2015,2.500,360
+15195,336632,Funkoverse Strategy Game: Space Jam A New Legacy 100,2021,,20
+15199,182408,Commandos: Europe,2017,,
+15200,14765,Tuppi,1900,2.600,10
+15201,6088,Rommel: The Last Glory in Kasserine,1981,3.385,360
+15217,194097,Catan: Big Game Event Kit,2016,,90
+15222,8101,Team Yankee,1987,1.917,360
+15227,17433,Rezolution: A Dark Tomorrow,2005,2.727,
+15227,205478,Covenant,2016,,20
+15248,8358,East Front Battles I: Blitzkrieg in the South,1993,3.000,300
+15248,17615,1792: La Patrie en Danger,1991,2.889,
+15250,194640,Under My Bed,2016,,5
+15288,379186,Tic Tac K.O.: Cute vs Evil,2023,,30
+15289,2751,Lawrence of Arabia: The British Offensive – September-October 1918,1983,2.312,360
+15289,369571,CGT: Card Game Traders,2023,,20
+15291,155412,Red Tide West: The Cold War & World War III in Europe,2014,3.500,
+15293,210406,Magic: The Gathering – Duel Decks: Sorin vs. Tibalt,2013,,
+15295,142219,All Quiet on the Martian Front,2014,2.286,
+15298,25999,Hus,,1.667,40
+15301,707,When Tigers Fight,1994,2.941,300
+15302,4962,1914,1968,3.625,360
+15314,12049,Wintergewitter,2007,3.200,300
+15329,284650,Trois Batailles en Allemagne,2020,3.000,
+15330,322759,Безумная кухня,2020,,20
+15335,15211,Poland '39: The Nightmare Begins,1992,2.500,360
+15339,115370,Cuttle,,2.400,5
+15373,18876,Gazala 1942,2005,2.333,240
+15378,16829,"La Bataille de l'Ebre, 1938",2005,2.625,240
+15380,11477,The First Arab-Israeli War,1997,2.600,
+15383,418826,Dark Blood,2025,3.000,60
+15385,155414,Angola: Cold War Struggle in Africa,2014,3.250,360
+15386,341713,Power Rangers: Deck-Building Game – Zeo: Stronger Than Before,2021,,30
+15394,251434,Blenheim 1704 AD,2019,2.500,
+15399,7142,Zitadelle: Duel for Kursk,1992,2.667,240
+15401,3161,Port Stanley: Battle for the Falklands,1984,3.000,360
+15402,366267,The Real Truth,2022,2.500,
+15405,15399,Kharkov 1943: le coup de maître de Von Manstein,1992,3.167,240
+15413,218683,Alesia: Last Stand of the Gauls,2018,1.900,
+15417,342283,Unsolved Case Files: Avery & Zoey Gardner,2021,,180
+15426,4815,The Campaign for North Africa: The Desert War 1940-43,1979,4.752,60000
+15443,210401,Magic: The Gathering – Duel Decks: Knights vs. Dragons,2011,,
+15445,310990,Revelations,2020,,30
+15449,297958,"The Korean War: June 1950 – May 1951, Designer Signature Edition",2021,3.778,240
+15451,349767,Aban!,2022,,15
+15458,9197,The Seven Years War,1993,2.929,240
+15458,10822,The Seven Years World War,2004,3.100,240
+15466,33692,Brandubh,,3.167,20
+15472,400166,RIP,2023,,15
+15474,956,Azteca,1998,3.385,240
+15484,11050,Bastogne or Bust (Second Edition),1995,3.000,600
+15484,415845,Grimcoven,2025,,90
+15486,12505,Clash of the Eagles: Borodino & Friedland,1999,2.333,
+15491,254263,Avec Honneur et Panache: Volume 1 – Turenne,2018,2.500,
+15496,20610,Rapid Fire! (Second Edition): Fast Play World War Two Wargames Rules,2005,2.143,240
+15497,385417,Walking in Burano: Roll & Write,2023,,30
+15511,6085,East & West: The Third Mondial War,1981,3.333,360
+15512,349134,Save: South Vietnam!,2022,2.400,250
+15513,218612,Face de bouc,2017,1.000,
+15523,11373,Autumn of Glory,1995,2.700,
+15555,226,Isi,1999,,30
+15565,6360,"Antietam: The Bloodiest Day, 17 September 1862",1975,2.143,240
+15568,351622,Key Enigma: Calling Card,2021,2.000,480
+15573,379350,ADAPTOID 24,2023,,15
+15574,123399,Dragon Quest: Slime Race,,1.333,
+15574,387561,Uchronicle,2023,,30
+15582,294710,Outrun,2021,,10
+15584,374212,Nuts a GoGo!,2021,,10
+15587,7735,Fatal Alliances II,1994,3.778,240
+15587,10880,Calciomania,1985,1.091,
+15589,22061,TEG: La Revancha,1990,2.643,240
+15592,257599,Invasions: Volume 1 – 350-650 AD,2020,4.333,240
+15609,22427,Miscellaneous Game Book,,2.800,
+15610,361862,Pass the Party Food,2023,,30
+15612,15683,War For the Motherland,1994,3.429,360
+15615,210390,Magic: The Gathering – Duel Decks: Elves vs. Goblins,2007,3.000,
+15622,25516,A Fatal Attraction: The Gallipoli Campaign,2007,2.857,360
+15636,4172,Veracruz: U.S. Invasion of Mexico 1847,1977,3.046,360
+15661,187199,MiG Alley: Air War Over Korea 1951,2015,2.250,
+15671,246751,Corpo Truppe Volontarie: Santander 1937,2018,2.000,
+15689,7112,NATO Division Commander,1980,4.133,360
+15694,292961,The Suits: Season 2,2019,,10
+15695,334353,1849: Kingdom of the Two Sicilies,,,180
+15698,133535,Foosball tabletop soccer,,1.250,
+15700,931,Corner,1974,1.500,
+15706,7754,Smithereens: The End of World War II in Europe,1993,2.182,360
+15715,8544,Battle for China,1999,2.875,360
+15715,377898,Ardennes II,2023,2.857,
+15728,18342,The Best of Board Wargaming,1980,2.750,
+15741,244172,Sherlock Holmes: The Beginning,2013,2.000,
+15756,371836,OCEAN: Great Barrier Reef,2022,,25
+15762,116737,Six Day War: 1967,2012,3.500,
+15764,294773,La Résistance,2020,2.167,
+15767,54707,Fantom Staré Prahy,,2.250,45
+15767,391084,Nine Tiles Extreme,2023,,
+15769,11011,Ancient Conquest,1975,2.333,300
+15793,276,"La Guerre de l'Empereur: The Emperor's War, 1805-1815",1997,3.385,240
+15810,380051,Investigation Express,2023,,30
+15815,342097,Blokus Shuffle: UNO Edition,2021,,30
+15817,158586,"Rampage: The Allied Drive on Germany, August - September, 1944",2015,2.500,
+15820,363625,Fateforge: Chronicles of Kaan,2024,,
+15822,358807,Glitch Squad,2023,,10
+15826,38825,Chosin: X Corps Escapes the Trap,2009,3.250,240
+15831,346800,Forsaken,2024,,90
+15837,2605,Tri-Tactics,1925,2.500,240
+15837,11640,Klabberjass,1930,2.500,45
+15837,379554,Timeline Twist: Pop Culture Edition,2023,,20
+15840,12562,Sunrise of Victory: The 1942 Campaign in Russia,1990,2.571,300
+15859,9636,Winter Storm: Decision at Stalingrad,1980,4.091,240
+15865,13240,Panzer Miniatures Rules: A Tactical Game of Armored Combat,2004,3.273,240
+15865,377162,Cartaventura Odyssey: The Treasure of Libertalia,2022,,45
+15884,3954,Baseball Strategy,1960,1.905,60
+15890,5346,Skittle-Bowl,1783,1.200,30
+15910,89807,Bradley's D-Day,2011,3.333,240
+15914,340030,Les Apaches de Paris,2021,,40
+15917,7095,Call My Bluff,1965,,60
+15917,212298,Magic: The Gathering – Duel Decks: Zendikar vs. Eldrazi,2015,,
+15927,307172,Kingdom Maps,2020,,20
+15928,39279,Somosierra 1808,2008,1.923,
+15935,158416,Kircholm 1605,2014,2.500,240
+15936,14709,Gangs of Mega-City One,2005,2.600,
+15939,16432,Vinegar Joe's War: CBI,2005,3.375,240
+15940,10968,Crash Canyon,1989,1.444,
+15945,165946,Green Beret: Vietnam,2015,2.167,
+15962,5173,Avalanche: The Invasion of Italy,1994,3.000,240
+15962,381716,UNO Ultimate Marvel: 2nd Edition,2023,,10
+15966,5828,Aachen,1983,3.667,360
+15968,107012,The Sun Never Sets volume II,2012,2.667,
+15971,31067,Luftwaffe: Aerial Combat – Germany 1943-45,2007,2.833,240
+15976,7470,BattleSpace: The BattleTech Game of Space Combat,1993,2.909,360
+15977,14514,Metric Mile,1986,2.000,
+15977,16439,Loot,1993,1.000,
+15987,188759,Invasion Afghanistan: The Soviet-Afghan War 1979-1989,2016,2.667,
+15996,13498,Epic of the Peloponnesian War,2006,3.954,300
+16007,18061,Chennault's First Fight,2005,2.923,300
+16017,234657,TRUT,1600,1.667,5
+16031,6890,The Last Blitzkrieg,1994,3.000,360
+16034,26786,Number Rumba!,1991,2.200,
+16040,293708,Panic in the Air,2019,,10
+16044,25313,An Evening With Bram Stoker's Dracula,1992,1.000,
+16049,7588,Principles of War: Napoleonic – Wars Between 1792 and 1815,1996,3.000,360
+16052,10946,The American Civil War,1974,2.762,240
+16065,12218,"Lille: The Classic Vauban Siege, 1708",1978,3.286,
+16074,23605,Les Dieux Nomades,1994,3.667,300
+16082,11435,Lee Takes Command,1993,2.778,300
+16096,7003,The Battle of Britain,1968,2.571,120
+16115,368974,Vienna,2023,3.000,
+16120,27665,Korsoun 1944,2007,2.833,
+16140,381984,Cover Your Cookies,2023,1.000,
+16143,85124,The Battle of Stalingrad,2012,2.200,
+16145,200696,1631: Un Empire en Flammes,2016,3.000,
+16150,39708,Roliça et Vimeiro 1808,2008,2.571,
+16151,178517,Black Ops: Tactical Espionage Wargaming,2015,2.500,
+16172,5755,Guadalcanal,1966,2.454,360
+16179,286927,One Night Ultimate Super Heroes,2019,,10
+16182,150424,Ghost Division: The 7th Panzer Division's Drive to the Sea,2014,2.333,
+16186,17939,18US,2005,4.400,240
+16197,323873,Rise of the Metro,2020,,30
+16199,16110,Il Cucco,,1.250,2
+16200,368906,Spaceship Unity: Episode 0,2022,,50
+16212,118539,Medieval Conspiracy,2015,2.500,240
+16215,2263,Crusades II,1994,2.000,240
+16223,284690,Son of Doctor Esker's Notebook,2019,,60
+16236,6007,Fortress Stalingrad,1988,2.454,240
+16246,192322,Rory's Story Cubes: Looney Tunes,2016,,10
+16260,97747,Electronic Taboo,2001,1.000,
+16261,88045,From Overlord to Berlin,2010,2.214,360
+16266,13593,Drive on Damascus,1981,2.750,600
+16266,302725,Rory's Story Cubes: Star Wars,2020,,10
+16271,208134,Danger the Game,2018,1.500,
+16275,90162,Carrom Shuffle Board Game,,,15
+16278,258818,Connect 4: Shots,2018,1.000,
+16281,37391,Scotland Yard,1982,1.400,
+16289,202177,Gardens of Io,2016,,30
+16292,5321,The Battle of the Little Big Horn,1962,1.182,45
+16298,6086,Okinawa: The Bloodiest Battle of the Pacific Ocean,1979,3.053,240
+16322,301442,Froggit,2020,1.500,
+16323,324522,Happy Dim Sum,2021,,15
+16324,234614,Rory's Story Cubes: Explore,2017,,15
+16334,27373,Guillotine,1987,,90
+16336,272711,Monsters vs. Heroes: Volume 2 – Cthulhu Mythos,2019,,10
+16342,9084,Grunwald 1410,1992,3.375,300
+16347,153056,The War for Turkish Liberation,2018,2.750,
+16353,23614,Imperial Sunset: The Battle of Leyte Gulf 1944,2006,3.250,240
+16356,17684,"Operation Star: The Soviet Winter Offensive, 1943",1979,2.286,
+16362,205345,Anno Domini: Essen & Trinken,2016,,30
+16370,23724,Dragon Chess,2005,,30
+16373,297510,"Kingdoms Forlorn: Dragons, Devils and Kings",2024,4.250,
+16385,513,WarChest,1999,2.000,
+16386,354727,Pengo Jump,2022,,15
+16389,400570,Odd Shop,2023,,30
+16390,446,Avalanche,1965,1.192,30
+16393,75668,Whist 22,,1.333,20
+16395,362106,Keepers,2022,,15
+16415,279477,Madrino,2019,,20
+16421,7703,Principles of War: 19th Century,1995,,180
+16439,204496,Villannex (2nd Edition + expansions),2016,,5
+16455,90002,Meatgrinder: Battle for Xuân Lộc 1975,2011,2.875,280
+16467,272803,Monopoly Gamer: Overwatch Collector's Edition,2019,1.500,
+16475,36513,Tien Gow (Sky Nine),1120,1.500,
+16475,116736,Somali Pirates,2012,3.000,
+16489,17591,Mohawk,1983,2.222,240
+16495,170555,Who Knows Where?,2014,1.500,
+16496,247951,"Moscow: The Advance of Army Group Center, Autumn 1941",2019,2.375,
+16507,28017,Bleff,,1.000,45
+16511,4778,Sinaí,,1.454,45
+16511,10914,Hannibal: Rome and Carthage in The Second Punic War 219-202 B.C.,1983,2.500,
+16514,219208,Poison,2017,,20
+16521,263214,Stella,2018,,5
+16528,305564,Anchorman: The Game – Improper Teleprompter,2020,1.000,
+16535,7657,Astron,1954,1.000,30
+16535,204397,Warhammer Age of Sigmar: Storm of Sigmar,2016,2.333,
+16539,305855,Napoleon's Imperium,2021,2.250,240
+16552,17352,Subbuteo Cricket,1949,2.000,30
+16555,234886,Wer weiß das!?,2017,,40
+16572,384173,Indiana Jones: Cryptic – A Puzzles and Pathways Adventure,2023,,60
+16578,299857,Atlantic Wolves,2020,2.333,
+16586,305911,Sherlock Holmes: The Shadow of Jack the Ripper,2018,1.000,
+16591,328926,Tiny Fluxx,2021,,10
+16591,361089,Marching Order,2021,,15
+16597,8571,Austerlitz 1805: Napoleon's Greatest Victory,2000,3.200,240
+16622,12123,18FR,1997,4.250,360
+16626,11674,"The Lost Battalion: The Meuse-Argonne Offensive, 1918",2003,2.900,
+16627,20300,Chickamauga River of Death,1983,2.857,240
+16629,234616,Rory's Story Cubes: Strange,2017,,15
+16632,127572,Battleship Live,2010,1.750,
+16636,364760,Bunker,2020,1.125,
+16638,268251,Praise,2019,1.000,
+16658,342987,Antarctica,2021,2.000,300
+16663,12676,Mini Car Wars,1987,2.000,
+16664,12146,Gonnect,2000,3.500,
+16664,286706,Word Bank,2019,,15
+16670,387263,Virtual Revolution,2023,,90
+16671,407454,Bite and Treaty,2024,3.000,
+16676,13994,Alsace 1944,2004,2.333,
+16682,10589,"Bittereinder: The Second Anglo-Boer War, 1899-1902",2000,2.692,480
+16682,11993,"The Cossacks Are Coming!: The Tannenberg Campaign August and September, 1914 – 2nd Edition",2004,4.308,300
+16692,1637,Situation 7,1969,1.000,20
+16696,250051,The Seals of Cthulhu,2019,,15
+16701,12520,"Bélisaire, la gloire de Byzance",1995,2.875,
+16709,6008,Ruweisat Ridge: The First Battle of El Alamein,1985,2.222,240
+16709,10394,Avalanche: The Salerno Landings,1976,3.333,360
+16713,178157,Fighting Sail: Fleet Actions 1775–1815,2015,1.333,
+16717,13715,Surakarta,,1.571,30
+16717,174895,"North Cape: Convoy Battles in the Arctic, 1942-45",2015,3.000,
+16736,29447,Guerra a Muerte,2008,2.824,360
+16745,392008,Kings of Chicago,2023,,30
+16747,320781,YOMEN,2017,,15
+16748,243191,Animale Tattica,2017,,10
+16753,388394,The Choice,2023,,20
+16757,26795,Day of the Chariot: Kadesh,2008,3.000,240
+16761,17582,Mein Panzer,1998,3.167,
+16762,63671,Gangsta,2010,,30
+16782,291380,Rory's Story Cubes: Heroes,2019,,20
+16789,209566,Snippets,2016,,45
+16801,101723,Hungarian Tarokk,1870,3.167,30
+16806,11855,"Tamburlaine the Great: The Battle of Angorra, 1402",1979,2.333,
+16810,314543,Clue: Card Game,2018,1.000,
+16815,38829,Greater East Asia War,2009,2.778,360
+16830,8909,Lu Zhan Jun Qi,,2.150,20
+16831,158341,Zaginione Dziedzictwo: Wieża Białozłota,2015,,10
+16841,322229,"War for America: The American Revolution, 1775-1782",2022,3.143,480
+16846,322448,Bremen,2016,,20
+16847,370129,Piazza Rabazza,2022,,30
+16862,11129,"Krim: von Manstein's Battles for Sevastopol, 1941-1942",1990,2.444,
+16864,195535,The Architect,,2.000,20
+16869,24805,Tori Shogi,1799,3.500,60
+16883,17102,"War in the West: WWII in Western Europe, 1939-1945",1976,3.500,360
+16896,5343,Hang on Harvey!,1969,1.200,10
+16902,220137,Scurvy Dice,2017,,30
+16903,273007,Rory's Story Cubes: Primal,2019,,20
+16908,6615,Napoleon at Austerlitz,1981,2.454,300
+16908,11357,Brewhouse Bash,1998,1.546,
+16909,84609,ROLLICK! The Hysterical Game of Clues and Collaboration,2010,,20
+16913,14590,War of the Rebellion,1993,3.167,360
+16914,385315,Unlock! Mythic Adventures: In den Fängen des Hades,2023,,45
+16920,386831,Pigs on Trampolines,2023,1.000,
+16921,163062,Mare Nostrum: War in the Mediterranean,2015,3.500,360
+16922,11185,Grant Moves South,1983,3.000,
+16925,215110,Kingdom of Aer: Kingmaker,2018,,10
+16928,183453,Carcassonne: Demo-Spiel,2015,,15
+16936,197414,Moop's Monster Mashup,2016,,60
+16954,363093,Mazescape Kids: Hipnos,2022,,15
+16965,168383,"Panzers East Solitaire: Army Group Center, June-August 1941",2015,2.333,
+16971,38299,Borkowo 1806,2008,2.222,
+16976,370771,Absolute Balderdash,2007,,
+17006,42256,Cold War Battles 2: Pentomic Wurzburg & Kabul '79,2010,3.333,240
+17028,18841,Joffre,,1.600,20
+17031,16874,Vince Lombardi's Game,1970,2.000,
+17045,1029,Lieber bairisch sterben,1988,3.000,210
+17049,104239,bezzerwizzer kompakt,2010,1.750,
+17060,10472,The East is Red: The Sino Soviet War,1974,2.591,360
+17065,59650,Hatalom Kártyái Kártyajáték,1995,3.625,
+17067,261491,Takla,2018,,10
+17074,8990,Bantu,1955,2.000,30
+17075,209488,The Game of Things: Travel/Expansion,2014,1.000,
+17087,70451,Zheng Fen,,2.667,30
+17089,16673,Over the Top: Command Decision Series Game,1990,3.000,
+17090,12672,It Came to Pass,2001,1.222,
+17090,388082,Demon Ship,2023,2.500,
+17097,46991,À la charge: Normands et Byzantins,2009,1.889,
+17098,130017,"War of the Pacific, Chile vs. Perú and Bolivia, 1879-1883",2013,2.400,300
+17107,247949,Red Tide South,2019,3.400,
+17126,219348,Trivial Pursuit: Star Wars – The Black Series Edition,2016,1.000,
+17131,6456,Lodz 1914: First Blitzkrieg,1998,3.600,360
+17134,239159,Totem: The Feel Good Game,2015,,15
+17135,264672,ジャンキー (Junkie),2018,,3
+17136,372577,The Year of the 5 Emperors,2022,,30
+17141,286269,"Heroes of Telemark: Commando Raids in Norway, 1942-43",2019,1.750,
+17150,73536,The Chinese Civil War of 1930,2010,2.857,
+17154,6024,"Warsaw Rising: Revolt of the Polish Underground, 1944",1986,3.000,300
+17161,323538,Hunt A Killer: Curtain Call,2020,,30
+17172,197551,Hall of Fame,2016,,15
+17188,361600,Roman Disaster at Teutoburg,2022,1.500,
+17194,155577,Jungle Speed: 20 Years,2014,1.000,
+17212,257743,Say Whaaat?!,2018,,30
+17221,11510,"Robert at Bannockburn: The Battle of Bannockburn, 1314",1979,2.667,
+17229,20111,The Golf Game: Par Excellence,1985,1.333,
+17229,20533,Daihinmin,,1.400,10
+17229,196342,Word Porters,2016,,20
+17231,55686,Double Series,1996,1.000,
+17235,191529,Chefs,,1.500,25
+17252,318074,Clue: Scooby-Doo 50th Anniversary Edition,2019,1.667,
+17253,5964,American Civil War 1861-1865,1983,2.917,720
+17259,17967,Origins of World War I,1969,2.125,60
+17261,127093,Stormy Seas,,1.000,15
+17264,371842,QUARZ,2025,2.750,60
+17276,29286,Stratego: America's Civil War Collector's Edition,2007,2.286,
+17288,142996,Dragon vs Bear: China vs Russia in the 21st Century,2014,3.200,
+17303,12662,To the Wolf's Lair!,1983,3.375,
+17306,277064,Trivial Pursuit: 40th Anniversary Ruby Edition,2018,1.667,
+17308,266019,Animalcatraz,2023,,90
+17319,147465,Scribe's Arena,,1.667,20
+17331,406454,En Route,2024,,20
+17333,181808,Honours of War: Wargames Rules for the Seven Years' War,2015,1.000,
+17336,328302,Avec Infini Regret III: Moncontour 1569,2021,2.500,
+17342,16632,GOPS,,1.556,10
+17351,6053,Little Big Horn,1981,3.429,360
+17360,218044,Opaque War: Ukraine 2014,2018,3.800,
+17365,313539,Something Wild! Villains,2020,,15
+17365,403061,Unlock! Epic Adventures: Die sieben Prüfungen des Drachen,2020,,60
+17377,34311,"First Battle of Britain: The Air War Over England, 1917-18",2009,2.500,240
+17387,7562,Monty's D-Day,1985,2.556,360
+17398,3099,Gettysburg,1958,2.250,120
+17405,221059,Little Action,,1.000,10
+17410,242186,Catch Phrase: Uncensored,2017,,5
+17439,10038,Fateful Lightning,1994,3.000,240
+17463,3815,"World War II: European Theater of Operations, 1939-45",1973,2.500,240
+17472,4012,"Army Group Center: June 22-28, 1941",1993,3.125,300
+17476,14698,Keep Cool,2004,2.000,
+17476,31797,Classic BattleTech RPG,1999,2.000,
+17477,22407,1066: End of the Dark Ages,2006,2.600,240
+17478,183474,Tressette,,2.833,10
+17479,41305,Orchard: The Card Game,2009,1.000,
+17482,365235,Noggin,2022,,10
+17501,6022,13: The Colonies in Revolt,1985,3.333,360
+17501,221398,Eternal Kings,2019,,60
+17514,16617,"The Wilderness Campaign: Lee vs. Grant, 1864",1972,2.273,240
+17516,216360,Karty Dżentelmenów: Epizod Drugi,2016,1.000,
+17522,22145,1842: Schleswig Holstein,1992,4.000,200
+17524,42499,1000,,2.000,60
+17527,145586,sQuizz,2013,,20
+17529,358924,UNO: 50th Anniversary Premium,2020,,
+17530,9062,Borodino '41,1995,3.125,300
+17531,38827,"Battle for China, 1937-1941 (Second Edition)",2009,2.833,240
+17534,27852,Taifa,1998,2.143,
+17538,282287,Rescue Animals,2019,,15
+17550,12169,Henry V,1993,2.800,
+17553,1268,What's That on My Head?,1963,2.250,60
+17555,130670,Acre: The Third Crusade Opens,2012,2.333,
+17559,19297,Verdun: A Dagger at the Heart of France,1978,2.429,240
+17559,350945,Class War: The Jacobin Board Game,2022,2.000,
+17561,398059,The Chameleon: Picture Edition,2023,,20
+17573,214849,Build or BOOM,2016,1.250,
+17578,29691,Look Away!,2007,3.786,810
+17579,194593,Painter Detective,2015,,40
+17582,11937,Red Army: The Destruction of Army Group Center,1982,2.286,360
+17591,255335,Shit Happens: Too Shitty for Work,2018,,20
+17597,18683,Salta,1899,2.667,50
+17611,19246,Catherine the Great,2005,2.700,
+17621,9111,War of 1812,2001,3.000,240
+17623,9204,Cherkassy Pocket: Encirclement at Korsun,2001,2.300,240
+17624,265099,Escoba,,1.250,10
+17627,3276,Skittles,1801,1.000,30
+17632,269749,Knights Club: The Message of Destiny,2013,2.000,
+17633,1993,Troke,1956,2.125,30
+17633,20240,Écarté,1825,2.111,30
+17636,151801,Oddly Obvious!,2013,1.000,
+17641,283700,Crazy Theory,2019,,30
+17651,308028,Drop Drive,2023,,45
+17663,4554,Phalanx,1964,2.333,90
+17668,354242,Yuncos: El lado oscuro de la luz,2022,,10
+17673,19186,The French & Indian War: Struggle for the New World,2005,3.556,
+17678,190104,Activity Family Classic,2014,1.000,
+17684,13654,Yut Nori,500,1.333,30
+17688,157416,Brazilian Checkers,1930,1.000,20
+17689,360214,Metz,2023,,30
+17690,311658,Magic Money,2020,,20
+17706,2159,Kimbo,1960,1.750,45
+17709,5897,Lie Detector,1960,1.308,60
+17709,324602,Firebase Vietnam,2020,1.667,
+17710,18011,Chaturanga,550,2.250,30
+17711,7522,Wave of Terror,1997,2.867,360
+17712,420311,Blood,2025,,90
+17719,144486,Them's Fightin' Words!,2013,,5
+17729,2503,Godsfire,1976,3.176,300
+17734,265276,The Crystal Maze,2018,1.000,
+17743,182136,iKNOW: Innovations,2014,,30
+17747,283354,Operation Ichi-Go: Japan's Massive 1944 Offensive Across China,2020,3.667,240
+17752,144420,Nichtlustig: Noch mehr Labor Chaos,2013,,20
+17756,116739,Decision: Iraq,2013,2.333,240
+17758,313540,Something Wild! Tim Burton's The Nightmare Before Christmas,2020,,15
+17766,356752,Blockbuster and Chill,2021,,20
+17767,199007,Adventure Time Card Wars: Doubles Tournament,2016,,30
+17771,19127,Chinese Poker,,1.900,5
+17774,324461,Murder Mystery Party Case Files: Underwood Cellars,2020,,180
+17783,105280,Können Schweine fliegen? Mitbring-Spiel,2007,,
+17788,291381,Rory's Story Cubes: Emergency,2019,,20
+17795,99044,The Battle of Lepanto,2011,2.625,
+17802,104769,Jungle Speed: Electronique,2011,,15
+17805,100278,Tripolo,2011,1.000,
+17806,13361,Spaceopoly,1997,1.714,
+17808,333693,Monopoly: The Lord of The Rings Edition,2021,1.600,
+17817,2606,Dover Patrol,1919,2.111,180
+17828,268254,Don't Get Got!: A Christmas Party Game,2018,,
+17833,417429,Encounters: BattleTech,2024,1.750,
+17835,12583,Kursk 1943,1993,2.571,240
+17838,91313,Ataxx,1990,2.222,
+17850,5396,Trade Winds,1960,1.600,90
+17851,21036,Stratego: Star Wars Saga Edition,2005,1.500,
+17854,362484,Mimic Octopus,2022,,30
+17855,11289,Operation Whirlwind: Budapest – November 1956,2002,2.714,
+17889,130015,Norway 1940,2013,2.429,
+17894,12629,Marching Through Georgia,1990,2.833,240
+17902,40102,Verdun: A Generation Lost,2009,3.167,240
+17913,353880,Moly Atrapa,2022,,10
+17918,16741,System 7 Napoleonics,1978,2.000,240
+17922,133992,Sorcerers of the Magic Kingdom,2012,1.250,
+17923,4060,Undead,1981,1.667,240
+17925,23570,Napoleon,1800,2.222,60
+17928,31255,Knaves,,1.400,60
+17928,113337,Global War 1939,2011,3.200,480
+17936,265715,METAL,2019,1.000,
+17942,364622,Mine Your Business,2023,,20
+17944,16018,A Greek Tragedy: The Italian Invasion of Greece 1940-1941,2001,2.571,360
+17949,182137,iKNOW: Lifestyle,2014,,30
+17952,177076,ゴリティア (Goritaire),2014,1.000,
+17956,217378,BABEL,2016,,15
+17960,20828,Decipher,1972,,20
+17961,5994,Tsushima,1989,2.556,240
+17962,310888,Bobail,,1.500,15
+17969,200888,Med Sirocco,2017,2.000,
+17972,378256,Tell Me More,2023,,10
+17976,13299,1918: Imperial Germany's Last Chance,2004,2.900,
+17983,323552,Sheep & Garden,2020,,15
+17994,27227,Contrario 2,2006,1.000,
+17995,337958,Crimes & Capers: High School Hijinks,2021,,90
+18004,15676,Terrace 6x6,1997,3.000,
+18019,225828,Hot Seat,,1.000,20
+18026,370077,Homeworld Fleet Command,2023,3.500,
+18027,36431,Time Line,2002,2.000,
+18031,5860,Descent on Crete: May 1941,1978,4.000,240
+18033,200314,Jack the Ripper,2016,,2
+18043,688,Manchu: The Taiping Rebellion – 1852-1868,1988,2.500,240
+18046,30945,La Bataille d'Orël Octobre 1919,2007,3.000,600
+18054,416850,Piggy Piggy,2024,,15
+18062,21488,Petteia,-100,2.167,20
+18071,217430,Bellum,2017,2.750,
+18072,401779,Port Royal: The Dice Game,2023,,20
+18075,6896,MechWar 2: Red Star / White Star Modern Mechanized Combat in Europe,1979,4.333,360
+18087,26947,Italian Checkers,1400,1.667,30
+18098,15430,Marignan 1515,1995,2.818,
+18118,148280,8-Bit Mafia/Werewolf,2014,,15
+18125,370095,FORK,2023,,15
+18130,6897,The '45: The Jacobite Rebellion of 1745,1995,3.571,240
+18133,353426,Clue: Disney Villains,2020,,
+18136,386660,Boss Monster: 10th Anniversary Edition,2023,,30
+18152,402503,Primal Hex: The Eternal Clash,2024,,30
+18155,13885,The Guns of Cedar Creek,1989,3.500,
+18165,6125,Austerlitz: The Battle of the 3 Emperors,1981,2.600,360
+18168,140593,War by Television: Kosovo 1999,2014,2.667,
+18174,187769,Rolling World,2015,1.000,
+18178,121031,Franco-Prussian War 40: August 1870 - March 1871,2012,2.444,
+18202,6054,Norge: the first battle between the Germans and the Allies,1981,3.000,360
+18206,137431,Of Gods And Mortals: Mythological Wargame Rules,2013,2.000,
+18209,17183,1001,1900,2.000,60
+18212,312541,Recipe for Disaster,2020,1.500,
+18214,165585,TrakkX,2014,,40
+18216,401182,The Sixth Realm,2025,3.875,90
+18218,64877,Flashpoint,,,
+18232,151952,Gathering Storm,2015,4.000,360
+18232,290557,Trivial Pursuit: Netflix's Stranger Things – Back to The 80s Edition,2019,,
+18238,291100,Bob's Burgers: Belcher Family Food Fight,2019,,10
+18240,26794,LOGacta Chart Soccer,1976,1.333,
+18248,237501,Klattschen,,1.000,35
+18256,256214,Trivial Pursuit: Friends,2018,1.000,
+18260,116735,Oil War: Iran Strikes,2012,2.250,
+18271,56208,The Lash of the Turk,2011,3.000,360
+18281,9152,The Damned Die Hard: Philippines '41,1999,3.889,360
+18284,378709,Ploc,2023,,15
+18300,180210,tak•tak,2015,,20
+18309,321680,Papua,2020,,25
+18312,11534,Risorgimento: Italy's Wars of Liberation 1848-1866,1997,3.300,
+18313,63497,Pochspiel,1441,1.333,
+18315,24020,Blitzwar,2006,2.500,600
+18318,40911,Ardeny 1944-45,2005,3.250,360
+18327,43802,1940: What If Germany Went East?,2010,2.000,240
+18332,140960,Raccoon Rumpus,2013,1.000,
+18333,13996,L'Aigle Foudroyé,2001,2.125,
+18333,277892,The Great Escape,2019,1.250,
+18360,6988,Nile,1967,1.778,60
+18363,12506,"La Bataille du Matz, 9-12 juin 1918",1999,3.167,
+18370,288654,Tipsy,2019,1.200,
+18379,117582,"Tobruk, Operation Crusader, Nov-Dec 1941",2013,2.800,
+18385,11512,Leipzig: The Battle of Nations – Napoleon vs. Europe,1969,2.714,
+18391,21269,Finger Football,2005,1.500,
+18391,364451,The Magical World of Disney Trivia,2022,2.000,
+18392,155836,Hollywood Game Night Party Game,2014,1.333,
+18392,175921,Gates of Vienna: 1683,2015,2.500,240
+18396,6759,Dispatcher,1958,2.556,360
+18400,16471,Great Medieval Battles Bannockburn and Angorra,1999,2.333,360
+18424,354768,The Dark Quarter,2024,,120
+18428,4036,Anzio Beachhead,1969,2.857,60
+18435,42275,Black Prince: Crecy & Navarette,2009,2.833,240
+18436,34291,Tridom,,1.000,60
+18445,2680,Stock Ticker,1937,1.484,45
+18448,319889,Artefacts,2025,4.333,45
+18458,12870,Film Frenzy,2003,1.000,
+18466,326970,Linkee!,2020,,
+18477,226596,FocusX,2017,,15
+18481,258610,Munchkin Crazy Cooks,2018,,60
+18484,287658,The Climbers: Family Edition,2019,,20
+18488,31558,"First Blood: Second Marne, 15 July 1918",2008,2.000,
+18490,97582,Kwizniac,2009,1.333,
+18500,209812,Calabozo: La aventura de los anillos,,1.500,45
+18509,547,Flohzirkus,1997,1.000,
+18512,362503,Bug Off!,2022,,15
+18524,879,Tacara,2000,,60
+18525,7847,Blood on the Snow: The Battle of Suomussalmi,1995,2.722,240
+18527,151070,Gladiatoris,,2.800,30
+18527,237171,Last One Standing: The Battle Royale Board Game,2018,,30
+18532,159455,Galactic Sabacc,2002,1.000,
+18540,47994,Five-up,1959,1.667,30
+18541,41354,Sueca,,1.750,30
+18544,104285,Bluff,1963,,
+18546,158818,Politiko (2nd Ed),2013,,45
+18548,309352,Shadow of the Obelisk,2020,,15
+18556,156406,The Chronicles of Dragon Wing,2011,3.000,
+18589,57409,Shashki,1680,1.667,30
+18590,375707,Suspects: Ewiger Fluch,2022,,90
+18598,285040,Open-face Chinese Poker,2005,2.000,
+18600,80833,Michigan Rummy,1939,1.500,
+18609,137841,Tic Stac Toe,2013,1.000,
+18613,376479,Exit: The Game – Kids: Riddles in Monsterville,2023,,45
+18631,6912,Cinch,,2.333,60
+18631,12811,Strat-O-Matic College Football,1976,2.500,
+18649,227150,Zone Runners,2017,,15
+18653,20510,Mahjong Rummy,,2.000,20
+18655,13495,High Finance,1968,1.500,45
+18662,130668,Breitenfeld: Enter the Lion of the North,2012,2.000,
+18663,380300,UNO Flex!,2023,2.500,
+18680,282,Vikingatid,1997,3.300,300
+18703,11149,It from the Pit,1992,1.000,
+18706,260749,Super Secret Stealthy Spies,2018,,15
+18716,231,Geronimo,1995,3.193,480
+18716,7622,Morsecode ···–,2001,3.546,360
+18743,12569,Fletcher Pratt's Naval War Game,1943,2.333,
+18749,12856,Shove Ha'penny,1840,1.250,1
+18751,165884,The Festivals,2017,,30
+18752,10304,Julius Caesar: Game of the Gallic Wars,1985,3.333,300
+18760,66277,Sync Up!,2009,1.000,
+18761,224635,Dragoborne: Rise to Supremacy,2017,,
+18762,20708,Alamein: History's Turning Point 1942,2006,4.000,240
+18768,6124,Waterloo: The Last Great Battle,1981,2.500,240
+18776,11131,Hell Before Night: The Battle of Shiloh,1997,3.000,
+18779,31556,The Russo-Swedish War,2008,2.571,300
+18790,6044,Attila: The Huns Invasion,1981,3.250,360
+18794,403257,Apropos: Of Movies,2023,,15
+18807,320540,EXIT Adventskalender: Das geheimnisvolle Schloss,2019,,
+18809,365106,Junior Detective,2022,,20
+18813,3731,Stock Market Guru,1997,2.529,240
+18823,270327,"PENNY DREADFUN: Duchy, Demony, Dickensy",2018,,120
+18833,666,Stump,1968,1.000,30
+18841,1385,Aber Hallo!,2000,1.833,
+18883,323290,The Initials Game,2020,,
+18885,249299,F28: War Always Changes,2018,,
+18889,9496,Burma,1976,3.222,240
+18891,17918,The Transformation Game,1987,2.250,
+18895,8132,Winter Fury: The Battle of Tolvajärvi 1939,2001,2.750,360
+18915,11562,Crimean War,1998,2.571,
+18944,2299,Lords of the Renaissance,1996,3.333,300
+18947,205542,Dark Castle,2016,,15
+18978,5350,Hegemon,2002,3.667,360
+18984,3360,Lexicon,1932,1.454,30
+18985,302089,Штука,2017,1.000,
+19006,17379,WWII Micro Armour: The Game,2001,2.800,
+19007,10471,"The Franco-Prussian War: August 1 to September 2, 1870",1972,2.353,360
+19015,256399,Game to Pick a Game: The Gateway Edition,2018,,5
+19019,262390,Li-La-Laut,2018,,10
+19024,367197,Connected Clues,2022,,10
+19027,269148,Pig Hole,,1.000,15
+19036,358666,Judge Domino,2021,,5
+19039,109239,Imago,2011,1.000,
+19050,2260,Blood and Iron,1992,2.667,300
+19050,3983,Sabotage,1963,1.200,30
+19058,2970,Squatter,1962,1.467,90
+19058,39545,"Reconquista! The Struggle for Iberia, 850-1250 AD",2013,2.800,240
+19064,198142,TMNT HeroClix: Mouser Mayhem Starter Set,2016,,
+19065,7981,Paradux,,2.250,20
+19076,26920,Turkish Checkers,1400,2.500,30
+19084,231611,You've got problems,2017,1.667,
+19086,6130,Wohrom: Swords and Magic Against Evil Forces,1981,3.400,360
+19088,83378,King Maker,,2.000,
+19093,245086,Sau Mau Mau,2018,,20
+19096,217827,Battle Yahtzee: Deadpool,2016,1.000,
+19116,11339,Korea '95,1993,3.000,
+19137,2756,Alien Contact: Extraterrestrial Empires in Conflict,1983,2.400,240
+19156,25168,Magellan,1966,2.500,45
+19156,31557,The Egyptian Campaign,2008,2.400,300
+19158,390478,Gloomhaven: Second Edition,2024,,60
+19162,810,Amoeba,1975,1.800,
+19162,10533,Central Command: Superpower Confrontation in the Straits of Hormuz,1984,3.143,240
+19167,5174,Lingua,1969,2.000,60
+19173,32784,Russian Bank,,1.200,30
+19176,186421,Guju Guju,2015,,5
+19183,8044,"Renaissance of Infantry: Tactical Warfare, 1250 A.D-1550 A.D",1970,3.250,240
+19212,1727,Summit,1961,2.077,60
+19217,2372,Goal!,1960,1.071,30
+19217,164619,Idiom Addict,2013,,30
+19223,38425,Spy Gear: Spy Trackdown,2008,1.800,
+19234,14394,"Alma: The First Battle, 20 September 1854",1978,2.250,
+19236,250905,カゲロウ (Mayfly),2016,,15
+19261,36332,Field Command: Singapore 1942,2009,1.667,240
+19262,33664,"Red Dragon, Blue Dragon: The Huaihai, 1948-1949",2016,2.750,
+19266,178028,Sort it Out!,2009,1.000,
+19273,26067,Kropki,,2.333,30
+19292,166333,Primiera,2014,1.333,
+19306,253835,Air Flix,2021,,20
+19309,342736,Detecteam Family: A Pie Gone Missing,2021,,20
+19318,361186,Exhaust,2022,,15
+19323,18122,The Battle of Roark's Drift,1978,2.167,240
+19330,9784,Cold Days in Hell,2000,3.444,300
+19365,172168,Tschakka Lakka: Die rasante Würfeljagd nach dem Tempelschatz,2015,,20
+19378,3499,3-D Chess,1851,4.071,90
+19401,75877,TEG Independencia,2010,2.800,240
+19442,11124,Operation Sea Lion,1997,3.000,240
+19443,22644,La Guerra Civil Española (1936),1981,2.562,240
+19455,308589,Chicken War,2020,,30
+19459,378922,Till the Last Gasp,2023,,60
+19464,3634,Iberos: Overlords of the Ancient Peninsula,2002,2.900,360
+19464,363273,Copan: Dying City,,3.667,60
+19473,136032,A Thunder Upon the Land: The Battles of Narva and Poltava,2013,2.750,240
+19478,40567,Chinese Dominoes,1120,2.000,
+19478,368309,DANTE: Inferno,2025,,90
+19479,11689,Noble Armada,1998,2.750,
+19486,131895,Holyland: Full Spectrum Warfare in the Middle East,2013,3.000,
+19508,153820,Spot it! Freeze,2014,1.000,
+19510,169465,Shinobi: El Juego del Asesino,,1.667,20
+19510,327612,Jenga: Super Mario,2020,1.333,
+19518,19432,Hexagonal Chess,1936,3.857,40
+19526,1884,Fireside Football,1996,1.667,240
+19528,67368,"Guards Tank: Prochorovka, 1943",2010,3.000,240
+19528,99045,"Reichswehr & Freikorps: If the Red Army Invaded Germany, 1920",2012,2.286,
+19531,10348,Second Front Now!,1997,2.714,240
+19548,3423,Equations,1963,3.000,30
+19562,256398,Game to Pick a Game: Orc Council,2018,,5
+19562,346092,Speedy Ants,2022,,20
+19577,7267,"Warlords: China in Disarray, 1916-1950",1986,3.000,360
+19580,310957,SlingPuck,2020,1.000,
+19595,297386,Shot in the Dark: The Ultimate Unorthodox Quiz Game,2019,1.000,
+19596,201973,Trivial Pursuit: Star Trek 50th Anniversary Edition,2016,1.000,
+19621,262407,Fantasy Pug Quest,2019,,30
+19625,36352,Stalingrad 1942-43,2004,2.250,
+19643,301637,Crazy Fishing,2020,,15
+19653,6805,Air Empire,1961,2.000,120
+19657,13378,Mukden: Climax of the Russo-Japanese War,1996,3.333,
+19670,410655,Star Wars: Bounty Hunters,2024,,20
+19674,6342,Switchboard,1966,1.833,45
+19674,104809,Kleiner Obstgarten,2011,1.000,
+19681,35610,3·4 = Klatsch!,2008,,10
+19690,131474,Nacht der magischen Schatten,2012,,15
+19695,11126,Moscow 1941: The Enemy at the Gates,1987,2.692,240
+19699,150422,"Bloody Ridge: Guadalcanal, 12-14 September 1942",2014,2.400,
+19707,235293,Apocalypse Z: The Board Game,2017,2.500,
+19724,236184,The Reaper,2017,,30
+19727,236202,Das Rotkäppchen Duell,2017,,10
+19730,260588,"Tanks, but no thanks!",2018,,30
+19732,130837,SpidMonsters,,1.000,15
+19740,9512,"Chancellorsville: Pinnacle of Victory, April 30 - May 5, 1863",1992,3.083,360
+19756,281523,Monopoly: Marvel Avengers,2019,1.333,
+19760,8122,Konane,1775,2.000,20
+19772,3677,Ultimatum: A Game of Nuclear Confrontation,1979,3.050,240
+19773,231559,Quirk!,2017,,15
+19784,39492,Mangala,,1.000,
+19788,170586,Sedma,,1.667,
+19801,6003,Donau Front,1989,2.500,300
+19804,14117,Soldier Raj,2004,2.300,
+19813,17037,100 Strategic Games for Pen and Paper,2002,2.000,
+19828,10757,Marco Polo: Dragonda,1982,1.667,
+19828,25665,Red Russia,2008,3.000,240
+19834,403639,Floats McGoats,2023,,15
+19836,7680,The Match Game,1963,1.000,30
+19839,398769,Volles Fass voraus,2023,,30
+19843,9379,Escalado,1929,1.333,20
+19850,3049,Blood on the Tigris,1995,3.000,360
+19851,22176,"Lest Darkness Fall: Rome in Crisis, AD 235 – 285",2006,2.750,240
+19872,34065,Scrabble Me,2008,1.500,
+19886,11527,Friedland,1992,2.900,
+19886,223223,Midnight Outburst,2016,1.000,
+19902,6023,"Thunder at Luetzen: Opening Battles for Germany, 1813",1985,2.556,240
+19927,23081,HeroCard Cyberspace,2006,1.500,
+19928,258334,Staka,2018,,20
+19929,240134,I Spy Dig In,2017,1.000,
+19949,130669,Pavia: Climax of the Italian Wars,2012,2.000,
+19963,370963,Living Well Is the Best Revenge,2022,,15
+19964,376555,Featherweight Fiesta,2023,,20
+19976,349769,Risk: Shadow Forces,2022,3.000,
+19978,210937,Dia de los Muertos,2016,,10
+19984,342232,UNO: Mario Kart,2020,,10
+19991,219564,Final War,2016,2.000,
+20009,329883,World Auto Racing,2022,,15
+20013,2487,Why,1958,1.222,45
+20025,139640,Caribbean Pirates Dice Game,2013,,10
+20042,13745,Puluc,,1.667,
+20043,218318,Gangs of Commorragh,2017,1.000,
+20048,416832,Khiva,2024,,30
+20057,6938,"Global War: The War Against Germany and Japan, 1939-45",1975,3.118,360
+20059,309852,The Treasure of Montecristo Island,2021,,60
+20064,209667,Golden Snitch: Snitch Snatcher – The Quidditch Game,,2.500,
+20092,3046,"Red Sun/Red Star: The Nomonhan Campaign, 1939",1993,2.643,360
+20094,4625,Millennium: The Era of Invasion,1981,3.100,300
+20097,8740,Imperium Romanum: The Clash of Legions,1979,3.500,300
+20100,42882,"World War IV: One World, One King",2009,2.600,240
+20104,135794,Méchanlou,,1.200,15
+20111,123828,Battleship Movie Edition,2012,1.538,
+20121,12519,Fontenoy 1745,1996,2.600,
+20122,4285,Chattanooga,1997,2.778,300
+20144,230885,"Guardians of the Galaxy, Vol. 2: Gear Up and Rock Out! An Awesome Mix Card Game",2017,1.000,
+20151,218685,"Last Stand at Isandlwana, 22 January 1879",2018,2.200,
+20165,13388,The Moscow Option: Guderian's Gambit,1996,2.286,
+20166,31453,"Holy Roman Empire: Wars of the Reformation, 1524-38",2007,3.286,
+20176,154537,Minnesota Whist,,3.000,
+20181,76085,Unauthorized Production,,1.000,
+20182,126464,Array,2012,1.000,
+20186,8382,Light Division,1989,3.667,240
+20189,277671,RisiKo! Edizione Torneo,1993,1.750,
+20232,22205,Trapture,2006,1.167,
+20242,22299,Marlborough: War of the Spanish Succession,2006,3.250,240
+20254,25988,Asalto,1803,1.667,20
+20269,11136,End of Empire: The French and Indian War and the American Revolution,1997,3.125,
+20272,18780,El Día Más Largo,1982,2.667,240
+20280,5201,Trailblazer,1981,3.286,240
+20287,355274,Die Villa der Vampire,2022,,15
+20294,221208,MBL Pocket Pro Tour,2017,1.200,
+20295,351067,Polar Smash,2016,,15
+20297,314746,Trivial Pursuit: Domówka,2019,,
+20299,8945,Stadium Checkers,1952,1.333,30
+20309,5338,Ocean,1998,,90
+20312,321118,Battle of Shanghai 1937,2021,2.000,
+20316,11464,Alquerque,1000,1.833,10
+20318,88900,Yaniv,,1.333,20
+20323,163077,Dien Bien Phu,2015,2.200,
+20329,2383,Blue Line Hockey,1968,1.846,45
+20335,313833,MTV: The Throwback Music Party Game,2020,1.500,
+20355,218460,Giant UNO,2015,1.000,
+20358,374209,Five Nights at Freddy's: Night of Frights! Game,2022,,30
+20363,19442,Tally-Ho,1998,1.000,
+20386,4479,Ratrace,1967,1.556,90
+20398,9418,"Eastwall: Battles for the Dnepr, September 1943 - February 1944",1997,3.000,360
+20403,19971,Tuppen,,1.571,5
+20403,255171,Pirates: The Great Chase,2012,1.500,
+20413,93039,The Racing Horse Game,,1.000,20
+20418,3354,Tide of Fortune,1993,3.143,360
+20422,16970,Fanhunter Batallitas,1997,2.250,
+20424,53,Brauerei,1996,2.500,
+20425,21861,Three Musketeers,1969,1.667,10
+20447,9246,L'Attaque,1909,1.250,20
+20455,2749,The American Civil War,2001,2.651,240
+20463,37332,Pietjesbak,,1.000,30
+20476,283157,Dungeon Doors,,,30
+20478,2320,Worldbeater,1975,1.250,240
+20484,5348,"Khe Sanh, 1968",2002,2.857,360
+20502,41326,Curious George: Discovery Beach Game,2008,1.000,
+20514,3374,Scrabble Crossword Cubes Game,1964,1.000,10
+20518,25460,"Kasserine: Baptism of Fire, February 1943",1976,2.100,240
+20520,23402,Die unendliche Geschichte,1987,1.833,
+20534,352599,Exploring Galapagos,2022,,20
+20540,28296,Gruble,1989,1.200,
+20541,236903,Snollygoster,2018,1.667,
+20550,266353,Oh Fruck!,2018,,10
+20555,152359,Machiavelli,1940,1.625,20
+20556,12521,Moscou 1941: Aux Portes du Kremlin,1995,2.286,
+20560,8361,Crimean Shield,1994,3.167,240
+20566,417491,Odalin: Dungeons of Doom,2025,,90
+20572,30000,Stratego: Transformers,2007,1.571,
+20589,9248,Taxi!,,1.667,120
+20591,4851,Civil War Game 1863,1961,1.600,30
+20593,257958,Storiez,2018,,15
+20596,9385,Yoté,,1.500,10
+20598,7006,Management,1960,2.429,60
+20598,20833,Code Sudoku,2005,2.714,
+20599,187200,Germantown: Washington Strikes,2015,2.000,
+20612,33782,Bonanza,1964,1.000,60
+20620,4213,Mao,,1.971,5
+20628,8388,Napoleon's Later Battles I,1992,2.750,240
+20632,305872,"Coalition: The Napoleonic Wars, 1805-1815",2021,2.500,240
+20648,14934,Mr. Lincoln's War: Army of the Potomac,1983,3.200,
+20653,65796,Big Pirate,,1.250,20
+20654,12496,Over the Top! Mons & The Marne,1997,2.800,
+20656,63788,Freecell,,1.714,20
+20670,17683,"Korsun: The German Pocket on the Dniepr, 1944",1979,2.857,
+20692,8835,Stars and Bars,1984,3.167,240
+20697,2097,Middle Sea: Empires of the Feudal Age,1979,2.333,240
+20704,106821,Koniggratz: Blood & Iron Triumphant,2012,3.500,
+20706,6129,Jena,1981,2.857,240
+20715,29433,Buen Viaje,,1.375,60
+20716,263992,Dodgy Dogs,2018,,5
+20726,36250,Spanish Checkers,1400,1.333,30
+20735,107402,Keren: East Africa 1941,2012,2.000,
+20739,132717,Words with Friends,2012,1.000,
+20744,222879,UNIMO,2017,,5
+20751,335324,All of Us,2020,,30
+20756,271692,Thirty-One,,1.333,10
+20778,202516,Blank Marry Kill,2017,1.000,
+20780,38286,The Solomons Campaign (Second Edition),2008,3.000,
+20805,274034,UNO: Jurassic World,2017,,30
+20810,18908,Cactus Throne: The Mexican War of 1862-1867,2005,2.857,360
+20811,130041,"Soldiers: Decision in the Trenches, 1918",2013,2.000,
+20817,239982,The Enigma Box,2018,3.857,6000
+20833,2943,Lepanto,,1.800,10
+20838,102750,Math Dice Jr.,,1.000,10
+20843,37142,There Must Be a Victory,2009,2.400,360
+20852,794,Foil,1968,1.500,60
+20869,6005,Korea: The Mobile War,1987,3.167,240
+20876,172259,Panik Pilze,2015,,15
+20880,19957,Blitz,,1.143,10
+20881,345475,Candy Crush DUEL: Pocket Edition,2021,,15
+20890,300379,Battleship Shots,2019,1.000,
+20911,2428,Battle-Cry,1961,1.641,60
+20916,113995,Jask,2010,1.667,
+20921,131000,Lovci pokladů,1987,2.000,
+20931,19916,Cups,1969,2.000,20
+20932,205769,ButterKO,2016,,10
+20934,304340,Your Theme Park,2019,2.000,
+20952,20888,Assault on Narvik,2005,3.000,240
+20958,11116,Yarmuk,1997,2.556,
+20982,310774,Burn the Witch,,2.750,45
+20985,18945,"Downfall: If the U.S. Invaded Japan, 1945",2005,2.571,360
+20996,22674,Mława 1939,1999,2.833,
+21001,13535,Boy Scouts,1912,1.000,45
+21003,8220,Civil War,1961,1.647,90
+21005,34310,Hannibal's War,2008,3.143,240
+21010,2581,Kismet,1963,1.333,30
+21024,282587,(May Cause) Side Effects,2019,,15
+21032,127823,Terrible Swift Swordfish,2012,1.556,
+21038,8032,4 CYTE (Foresight),1962,2.400,30
+21058,1984,Material World,1995,2.900,240
+21059,2116,Cartino,1969,1.125,45
+21074,153380,Tangrams Competitive Party Game,1930,1.000,30
+21106,18613,"Khan: The Rise of the Mongol Empire, A.D. 1206-1295",2005,2.583,360
+21107,25461,Pai Gow,,1.800,10
+21110,14163,Foto-Electric Football,1941,1.111,
+21110,16760,Richthofen,2002,1.438,
+21111,727,Chinese Civil War: 1946-1949,1979,2.857,240
+21115,315066,Dirty Money: The Money Laundering Game,2021,,30
+21140,159843,Deluxe Battleship Movie Edition,2006,2.000,
+21143,25223,¿Resiste Stalingrado?,1984,2.778,
+21145,11071,Austin Poker,2004,2.400,
+21157,13614,Chancellorsville,1961,2.667,120
+21164,3144,High Hand,1963,1.833,60
+21170,11402,Antietam Campaign,1995,2.556,
+21171,11112,Rommel at Gazala,1995,2.400,
+21173,1351,Legend of Heroes,1987,1.333,
+21184,347616,Manda Huevos!,2021,,10
+21189,28068,Four Twenty-one,,1.000,5
+21191,73360,Soft Underbelly: The War in Southern Italy 1943,2010,3.250,240
+21221,67477,Sequence Num6ers,2008,1.000,
+21231,3425,Skunk,1953,1.000,30
+21233,327297,Monopoly: Super Electronic Banking,2020,,
+21236,27899,Chain Reaction,,1.000,
+21250,41532,Million Dollar Password,2008,1.000,
+21261,74309,"The South Seas Campaign, 1942-43",2011,2.750,240
+21269,26292,Bzura 1939,1992,3.143,
+21271,195255,Don't Drink and Draw,2010,,
+21287,376656,The Traitors,2022,,40
+21288,253095,TOPPEN,2013,,5
+21288,305211,Scriptoria,,2.500,30
+21289,313603,Trailz,2019,1.333,
+21297,14567,Pro Foto-Football,1977,1.167,
+21297,355034,Valhalla Lemmings,2021,1.000,
+21298,293522,UNO Express,2018,1.000,
+21301,207203,War Titans: Invaders Must Die!,,2.750,60
+21306,11726,Knucklebones,-3000,1.000,
+21322,15877,Abbeville 1940,1996,2.833,
+21333,6087,Sicily '43: The Beginning of the End,1981,2.750,240
+21339,151947,Trivial Pursuit: Doctor Who,2013,1.000,
+21339,267565,Brain Fart,2018,,
+21355,11351,Demyansk Pocket,1991,2.000,
+21368,35312,Repeat Pete!,2008,1.000,
+21378,272578,Scrabble: Harry Potter,2019,1.000,
+21385,380229,Moose Master,2019,,30
+21386,143200,Jungle Speed: Silver,2013,1.167,
+21388,9263,The Forgotten War: Korea,1996,2.333,240
+21388,290163,Shit Happens: Full of Shit,2016,,20
+21396,13024,James Bond 007,1965,1.250,45
+21398,129465,Black Stories 8,2012,,20
+21408,25255,El Duelo de las Águilas,1984,2.667,
+21410,147015,Monopoly: Go,,2.000,180
+21419,144135,Sparta vs. Athens,2014,2.833,240
+21427,233308,Tetris Dual,2017,1.000,
+21428,13440,Horrific,2004,3.125,
+21443,266525,Yoz,2019,1.125,
+21451,18128,Solferino: 24 Juin 1859,1978,2.600,
+21461,336,Jumpin,1964,1.591,15
+21464,16914,Shrieks & Creaks,1988,1.400,
+21465,2561,Pollyanna,1915,1.000,30
+21466,19254,Blue and Gray,1903,1.600,20
+21469,1729,Wide World,1956,1.250,45
+21469,9488,Mancala 4,,1.333,30
+21470,421203,Alpha Clash: Cosmic Conquest,2024,,45
+21475,10354,All-Pro Football,1967,1.333,60
+21479,19647,Wir sind schwanger,2005,1.000,
+21479,286703,Kameleo,2019,1.000,
+21488,268921,The Goblin King is Angry,,2.333,45
+21499,3963,Tryce,1969,1.600,10
+21512,148442,nullern,2013,1.667,
+21525,378626,PuzzLegend: Sherlock Holmes,2023,,30
+21533,356245,Mansplaining,2022,,30
+21538,40615,Ki az úr a tengeren?,1985,2.500,
+21541,17892,Mr. Lincoln's War: Army of the Tennessee,1983,3.546,
+21542,14354,2ème D.B. 'I' Normandie,1983,3.143,
+21552,5168,Queen's Guard,1842,2.333,30
+21557,90735,Chaos,2010,1.500,
+21574,16539,Word Wheel,1974,1.000,
+21578,295824,Monopoly Speed,2019,,10
+21579,19498,Kille,1741,1.000,
+21596,13912,"The Sedan Campaign, 1870",2004,2.375,240
+21602,23613,La vallée de la mort,2006,3.000,240
+21603,157696,What the Fake?!,2014,1.000,
+21610,63712,Accordion,,2.000,
+21612,32324,Szczury Pustyni,1996,3.375,480
+21622,17830,Miskatonic Madness,2005,1.333,
+21630,165711,Pizzeria Italia,2014,1.000,
+21631,322087,Monopoly: Disney Villains,,1.000,
+21661,10192,5000,1963,1.000,20
+21666,254814,UNO: The Legend of Zelda,2017,1.333,
+21674,29080,Twelve Men's Morris,,2.250,20
+21682,100470,Killer Party,2010,1.000,240
+21685,18840,Wissens-Spektrum,1984,1.875,
+21688,266747,Challenge of the Superfriends Card Game,2019,1.200,
+21693,105434,Dingbats,2003,1.000,
+21696,11347,Seega,,2.000,20
+21698,7208,Guadalcanal,1983,2.143,240
+21711,270628,Mount Rushmore,2019,,10
+21712,13026,Strato Chess,1973,3.333,
+21714,88704,Oudordodo,,1.000,10
+21719,258946,UNO: UNOcorns,2017,1.000,
+21728,302452,Beard Wizards,2019,,10
+21729,18050,Argue!,2005,1.000,
+21733,267884,Silicon Valley Startups,2018,1.000,
+21745,11552,French Foreign Legion,2000,2.000,
+21746,226511,Arrogance,2015,1.000,
+21753,12226,Minestrone,2003,1.429,
+21754,18288,Psychologizer,,1.250,
+21772,7269,Monopoly: The Heirloom Edition,1997,1.667,300
+21776,2806,U-Boat,1959,2.182,30
+21795,135581,Pointless: The Travel Game,2012,1.000,
+21809,133246,Bop-It Extreme,1998,1.000,
+21815,215919,Oh! Sushi Game,2016,,15
+21819,40853,Trivial Pursuit: Genus VI,2006,1.700,240
+21826,165651,Merry Yard,2014,1.000,
+21831,11121,"Operation Shock Troop: The Israeli Counterstroke Against Syria, 1973",1994,2.833,
+21833,21435,Shoot The Moon,2004,1.200,
+21841,3575,The Plot to Assassinate Hitler,1976,2.862,300
+21848,8519,How to Host a Mystery: Star Trek – The Next Generation,1992,1.800,360
+21854,81263,My First Triominos,,1.000,30
+21855,388392,Durchmarsch,2023,,15
+21886,116738,Drive on Pyongyang,2013,2.500,
+21889,200290,Draw What?!,2015,2.000,
+21889,265571,Monopoly: Game of Thrones,2018,1.750,
+21899,10392,Campaigns of Napoleon,1980,4.200,360
+21907,269038,Limite Limite: Limite,2017,,30
+21921,7711,Hats Off,1968,1.000,10
+21924,14424,Emperor's First Battles,1995,2.333,
+21939,6184,Fury on Champlain,1994,2.800,240
+21963,274174,4-Bidden Words,2018,,30
+21964,17869,Heroes of Might & Magic IV Collectible Card & Tile Game,2005,2.750,
+21964,185024,Fruit Mix,2015,,10
+21969,7097,Go: The International Travel Game,1961,1.722,60
+21986,98426,Super Tock 6,,1.500,45
+21991,312698,Escape from the Mall,2020,,45
+22013,33383,WobBally,2007,1.000,
+22025,24180,Las siete y media,,1.333,
+22026,32330,Arnhem 1944,1996,3.429,240
+22031,29985,"Land Without End: The Barbarossa Campaign, 1941",2007,3.000,
+22035,5000,Tuf-abet,1969,1.429,45
+22035,8193,Chainmail,1971,2.333,360
+22036,41955,Eurooppa Tietopeli,,1.667,45
+22067,2873,Siege,1966,1.500,30
+22068,368294,Wastelandia: A Co-op & Solo Boss Battler,2025,,30
+22071,113544,Monopoly: Klingon Edition,2011,2.500,
+22082,21563,Avista,,1.000,15
+22089,10805,A Dark and Bloody Ground,2004,2.846,
+22091,39549,Destination Hogwarts,2008,1.250,
+22110,14606,Yu Yu Hakusho CCG,2004,2.000,
+22110,200184,Monopoly: Super Mario Bros,2016,2.000,
+22111,19044,Holidays,2005,1.000,
+22117,12818,Cubilete,,1.000,
+22118,188493,Sequence Cats,2013,1.250,
+22153,27950,Paukenschlag,2008,2.636,240
+22164,320534,Monopoly: Star Wars The Mandalorian,2020,1.833,
+22167,8502,Big League Baseball,1967,1.857,90
+22172,21,Gateway to the Stars,1994,3.000,
+22191,38141,Bitwy II wojny światowej,1997,4.556,
+22209,40072,Domo Caption This! Game,2008,1.667,
+22220,989,1848,1998,3.000,
+22228,10718,The Garden Game,1980,1.667,
+22238,3047,Rails Through the Rockies,1981,3.125,240
+22242,154252,Sergeant Major,,1.857,60
+22252,343130,Detective Rummy,2022,,45
+22255,23456,Trivial Pursuit: Star Wars – Bite Size,2005,1.600,
+22256,325388,Trip 1907: Interactive Escape the Book Game,2018,2.333,
+22298,73563,UNO: Toy Story 3,2010,1.000,
+22322,196953,Battle Yahtzee: Alien vs. Predator,2016,1.000,
+22325,1537,C&O/B&O,1969,2.100,360
+22331,5799,Mattix,1968,2.000,20
+22334,1941,Sjörövarön,1955,1.333,60
+22334,191203,Commander Chess,2010,,
+22335,7541,Killer Angels,1984,4.556,300
+22340,17005,Bonaparte: The Napoleonic Campaigns,1982,3.250,360
+22349,18913,Tabu Body Talk,2001,1.500,
+22353,11873,AMC Reel Clues,2002,1.833,
+22362,5349,Kesselschlacht: Ukraine Spring 1944,1992,3.083,360
+22364,327299,Monopoly for Sore Losers,2020,2.000,
+22372,168199,Black Stories 10,2014,1.500,
+22373,189806,Rocket Squad,,1.333,10
+22375,18907,War in the Aegean,2005,3.727,300
+22383,145632,NFL Game Day,2013,1.333,
+22399,11205,All-American Football,1958,1.000,60
+22400,281429,Mammalath,2019,1.000,
+22405,328586,HeroQuest: The Card Game,2021,1.000,
+22420,23485,"Dice 10,000",,1.000,45
+22429,13392,"Perfidious Albion: Napoleon's (Hypothetical) Invasion of England, 1814",1997,2.571,
+22436,285599,3 Things,2019,1.000,
+22441,205787,Sky Heist,2016,,15
+22442,7651,Europe at War,1993,3.273,300
+22454,5236,Yin Yang,1997,,20
+22468,265210,Monopoly: Sailor Moon,2018,1.667,
+22487,177437,YAK,2015,1.000,
+22488,191928,Music IQ,2016,,30
+22490,15109,Tegn og gæt,,1.000,
+22499,183612,Bop It! R2-D2,2015,1.000,
+22499,220226,Sapphiro,2016,1.000,
+22506,16314,Party Scrabble,2004,2.000,
+22507,26687,The Really Nasty Motor Racing Game,2006,1.417,
+22509,23196,Battaglia Navale,1969,1.400,
+22513,214276,Bounce-Off Rock 'N' Rollz!,2014,1.000,
+22519,2326,Pirate and Traveler,1908,1.286,60
+22534,19036,Villainy: The Supervillainous Card Game,2005,1.600,
+22537,11483,Vittoria,1992,2.667,
+22546,4025,Lankhmar,1976,2.000,240
+22547,17521,Golf,,1.310,45
+22547,159537,Ad-Lib Crossword Cubes,1963,1.000,20
+22559,93275,Conquian,1897,1.750,10
+22587,308572,Cinderella,2019,,10
+22595,2974,Scoop,1953,1.500,45
+22601,3189,BAS-KET,1938,1.000,30
+22605,283796,Die Schule der magischen Tiere: Nicht zu fassen!,2018,,20
+22606,10544,Master Quiz,,1.429,90
+22633,23552,Totally Dingbats,1990,1.667,
+22634,15090,Scrabble Dice,1989,1.556,
+22635,345940,Monopoly: Target Edition,2021,1.000,
+22636,172063,Tap A Bell'O,2015,1.000,
+22641,6892,Tarawa: Bloody Betio,1992,2.333,360
+22642,14001,Speed,1938,1.091,30
+22642,295439,Jenga Mini,2016,,10
+22657,6004,The Indian Mutiny,1988,2.600,300
+22661,27982,Operation Rescue Kit,2006,1.000,
+22680,4277,Heroes of Olympus,1981,3.000,360
+22685,156567,Would I Lie to You?,2011,1.000,
+22691,52276,Captain Pirate,2009,1.250,
+22695,2513,Colony,2001,2.500,360
+22700,296250,Unlocking Insanity: Dice Vermiis Mysteriis,2020,,30
+22706,1774,Sale of the Century,1969,2.000,30
+22708,11600,Table Soccer,1965,1.000,30
+22720,277779,I should have known that!,2011,1.000,
+22722,18163,Balancing Moon,,1.000,10
+22729,25271,Das Jagdspiel,1954,1.000,45
+22733,2489,Chaos Tiles,1999,1.800,
+22738,202624,80's 90's Trivia Game,2014,1.000,
+22745,317290,Drinkopoly,2014,1.000,
+22746,370874,Koala Kart,2020,,25
+22746,374521,"Planes, Trains and Automobiles",2022,,20
+22764,269978,Catan Junior Mitbringspiel,2019,,15
+22781,128282,Party & Co Disney,,1.000,30
+22781,230881,Rollers Deluxe,2017,1.250,
+22786,25984,Trivial Pursuit: Genus IV – Canadian Edition,1997,1.000,
+22812,26207,Dicewords,2006,1.000,
+22813,13716,Hasami Shogi,,1.875,30
+22815,168236,My Little Pony Rainbow Magic Game,2014,1.000,
+22822,242756,Deal or Duel,2017,1.333,
+22826,92646,The Million Pound Drop,2010,1.250,
+22833,397912,Mischief & Malice TCG,2024,,10
+22841,2854,Exploration,1967,1.400,45
+22842,3554,Rich Uncle,1946,1.250,30
+22845,12133,"Last Battles: East Prussia, 1945",1994,3.667,300
+22845,15654,Blizzard of '77 Travel Game,1977,1.750,
+22854,319046,Icons: Women Who Play to Win,2020,1.000,
+22856,192092,Catch Phrase,2015,,20
+22857,56244,Honfoglaló,,1.833,
+22869,344814,Harry Potter: Catch the Golden Snitch,2021,,5
+22887,11496,"Bastogne ...and the Battle of the Ardennes December, 1944",1969,2.500,
+22914,170034,Simon Swipe,2014,2.000,
+22922,400790,Dubious: New Realms,2023,,30
+22925,5819,Star Reporter,1937,1.800,60
+22927,38950,Halma,1884,1.842,30
+22932,18199,What's GNU?,2004,1.143,
+22940,21746,Pionjär,1960,2.167,110
+22943,14935,Slow Freight,2004,1.625,
+22988,15563,Double Sens,,1.000,10
+22988,122820,Mistrz Słowa,,2.250,30
+22991,260815,kNOW!,2018,1.000,
+23000,5998,The Italian Campaign: Sicily,1991,3.400,240
+23000,266971,Llama Drama,2018,1.000,
+23012,15009,Humm Bug,,1.000,30
+23041,3566,Thinking Man's Football,1966,2.300,90
+23063,19062,CardChess,2001,2.333,
+23074,351494,TriATri,2021,,20
+23079,4737,Numble,1965,2.000,45
+23085,11529,Olustee,1993,2.250,
+23089,43799,Coral Sea Solitaire,2010,2.900,240
+23095,116938,Pictureka: Disney Edition,2009,1.000,
+23102,6395,Combat,1963,1.167,60
+23104,6588,Radar Search,1969,1.200,30
+23108,260926,Collecto,2018,,15
+23110,151409,Bedlam,2014,,30
+23114,1368,Tuf,1967,1.714,10
+23119,172494,Gruffalo Deep Dark Wood Game,2014,,5
+23139,1393,Basta!,1994,1.000,
+23157,10744,Corx,1999,1.000,
+23176,20525,Knock Out Whist,,1.500,15
+23179,9633,Barbie Queen of the Prom Game,1960,1.000,20
+23203,383483,Bloxo,2023,,10
+23206,310883,Monopoly: Rivals Edition,2020,1.000,
+23207,352164,Trivial Pursuit: Decades – 2010 to 2020,2021,1.000,
+23218,209857,PJ Masks: Night Sight,2016,1.000,
+23223,13714,Qubic,1947,1.579,15
+23234,187127,Monopoly: Back to the Future,2015,1.000,
+23238,33406,Who Am I?,,1.333,20
+23241,2311,Wild Life,1964,1.478,90
+23242,372382,Biyi,,1.000,20
+23245,344533,En la mente de Sherlock,2021,2.750,300
+23247,297635,Top of Mind,2016,,15
+23265,236112,60-Second Slam,2016,1.000,
+23275,214030,Rally Roll,2016,,
+23278,11511,Savage Station,1993,2.250,
+23284,10570,To the Far Shore,1994,2.875,240
+23288,195195,Monster Rejects,2016,1.000,
+23293,170779,Press Here,2014,1.000,
+23295,5999,The Italian Campaign: Salerno,1992,3.300,240
+23328,202660,Run Bunny Run,2015,,20
+23338,10575,Lightning Reaction,,1.143,10
+23346,127304,Herooj,,1.500,30
+23349,14034,Autobridge,1938,2.400,10
+23350,13154,Monopoly: Popular Edition,1954,1.000,60
+23351,6789,Die grosse Auktion,1959,1.444,60
+23355,268588,The Awkward Storyteller,2017,1.000,
+23361,343687,Alveole,2005,,30
+23362,344404,Canopéa,2021,,20
+23365,2331,Spill and Spell,1956,1.263,20
+23365,9251,Whot,1935,1.200,10
+23380,283544,25 Outlaws,2019,2.500,
+23382,279646,Your Worst Nightmare,2017,1.000,
+23388,26595,Word Sweep!,2006,1.000,
+23392,1473,Barbarians: 70 BC - 260 AD,1994,2.846,240
+23393,38665,Don't Say It,2008,1.333,
+23408,240130,Rubik's Battle,2017,1.000,
+23419,6006,Iron Cross,1990,2.700,240
+23427,5663,WFF 'N PROOF,1962,3.800,45
+23440,5646,Stap op,1950,1.059,20
+23445,181471,Catan: Chocolate Edition,2015,2.400,
+23453,109732,Three Little Pigs,2010,1.000,
+23455,153810,The Simpsons Trivia Game: Fan Edition,2013,1.000,
+23457,34575,Sea Monsters,2007,1.000,
+23459,3016,"Stand & Die: The Battle of Borodino, 1941",1991,3.300,240
+23462,4519,Yum,1959,1.125,30
+23463,253048,Legends of Signum: Battle for Vallor,2018,,30
+23465,3427,Blockhead!,1952,1.044,10
+23477,10949,La Maldición del Templo Cristal,,1.000,30
+23478,19842,Alpen Roulette,1965,1.000,5
+23513,4509,Funny Bones,1968,1.182,60
+23513,11052,BRIDG-IT,1960,1.714,15
+23521,8966,Raid on Richmond,1991,2.500,360
+23527,166567,Sequence Letters,2009,1.000,
+23528,16723,Crystal Maze,1991,1.250,
+23535,2924,Mr. Ree!: The Fireside Detective,1937,2.000,60
+23536,19349,Zahlemann und Söhne,1994,1.000,
+23536,156580,The Chase,2012,1.000,
+23555,189833,Monopoly: Cthulhu,2016,1.000,
+23563,33701,Wahoo,1930,1.167,45
+23572,17580,Koffer packen,1967,1.333,15
+23581,25455,Mercante in Fiera,1755,1.250,30
+23595,211701,World At War 85: Blood and Fury,,2.000,60
+23606,107029,Simon Flash,2011,1.333,
+23610,159817,Bitwy XXI Wieku,2014,3.250,
+23618,240135,Catch the Fox,2017,1.000,
+23622,161130,Pig,1945,1.000,10
+23624,9357,East Wind Rain: The War in the Pacific 1941-1945,1985,3.300,360
+23630,349192,Grounded For Life,2020,,30
+23631,2643,Target: Libya,1986,2.300,360
+23652,6000,The Italian Campaign: Anzio,1992,3.583,240
+23668,74310,Falklands Showdown: The 1982 Anglo-Argentine War,2011,2.286,240
+23669,1269,Skip-Bo,1967,1.208,20
+23688,263186,Dice of Dragons,,1.000,30
+23692,3203,Contack,1939,1.400,10
+23704,5616,James Bond Secret Agent 007 Game,1964,1.600,45
+23707,224132,Monopoly: Ghostbusters edition,2016,,60
+23719,19694,GEOMAG Magnetic Challenge,2005,1.667,
+23726,34825,4-mation,2007,1.000,
+23728,218639,Eye 'N Seek,2017,1.000,
+23750,11115,Saipan,1993,2.667,
+23753,25471,Five Field Kono,,1.667,10
+23757,2517,Ulcers,1969,1.059,90
+23774,37168,El Palé,1935,1.667,60
+23778,83453,Best of British,2010,1.000,
+23780,5878,Loteria,1887,1.177,10
+23809,27981,Candy Land Castle,2007,1.000,
+23821,12237,Oil: The Great Adventure,1960,2.000,60
+23830,10952,Bells of War: Conquest Series,1997,5.000,1500
+23832,762,Formula C Minus,2000,1.000,
+23833,4353,Vector 3: Tactical Space Combat in Three Dimensions,1979,2.333,
+23835,58678,Ezelen,,,30
+23841,13106,Dad's Army,1974,1.200,
+23844,4325,Conflict,1940,1.357,30
+23847,94958,Drôles de petites bêtes Domino,,1.000,20
+23852,2394,Dominoes,1500,1.371,30
+23866,256861,"Yeti, Set, Go!",2018,1.000,
+23870,320456,Farting Frenchies,2020,,15
+23874,140480,Pyramid,,1.000,10
+23882,136588,Bejeweled Frenzy,2013,1.000,
+23893,26176,"It's the Great Pumpkin, Charlie Brown",2006,1.000,
+23894,36866,Link-O,2007,1.000,
+23911,2430,Phlounder,1962,1.200,10
+23930,334824,Gopher,2021,1.500,
+23952,22380,CSI: Senses,2006,1.333,
+23962,295178,Monopoly: Longest Game Ever,2019,1.333,
+23963,327722,Monopoly: Star Wars – The Child Edition,2020,,
+23968,204069,Cranium Dark,2016,1.000,
+23976,252501,Monopoly: Star Wars,2015,2.000,
+23980,126463,Spectrix,2012,1.500,
+23981,190409,Star Wars: Duels Card Game,2015,1.200,
+23987,31136,1 vs. 100 Board Game,2006,2.000,
+23988,85562,LineUp,2010,1.600,
+23993,246,Politika,1996,1.500,
+23993,11563,Forgotten Axis: The Finnish Campaign,1999,2.750,
+24003,4866,Park and Shop,1950,1.333,30
+24009,120264,Turista Mundial,,1.000,45
+24012,161720,Rumplestiltskin!,2014,1.000,
+24013,296960,Divercité,2019,,20
+24022,104768,Scrabble Alphabet Scoop,2011,1.000,
+24025,344040,Don Juan,2021,,10
+24026,26768,Stixx,2006,1.333,
+24026,104770,Monopoly: Crazy Cash,2009,1.000,
+24033,266079,Galactiquest,2019,1.571,
+24043,243093,5 Second Rule Mini Game,2016,1.000,
+24047,19456,Frog Game,,1.000,20
+24049,349219,ANTIFA: Le Jeu,2021,,20
+24054,4577,Hollywood Squares,1967,1.000,30
+24054,34974,Pasapalabra,2001,1.333,
+24059,19087,Build-A-Burger,,1.000,30
+24078,182252,Darkness Sabotage,,1.000,45
+24082,14617,Mikado Magnetico,1988,1.000,
+24082,148040,Monopoly: The Walking Dead – Survival Edition,2013,1.000,
+24090,403133,Festi'vibes,2024,,15
+24099,141059,Shelby's Snack Shack Game,,1.000,
+24101,43044,Black Stories Junior: Pink Stories,2009,,2
+24108,28292,Deluxe Weed!,,1.000,20
+24124,31271,French Military Game,1886,2.200,5
+24125,3080,RSVP: Vertical Crossword Game,1958,2.200,60
+24136,152641,Bulls & Cows,,2.000,20
+24142,26578,Tumbling Tower: Rainbow!,,1.000,5
+24148,239807,Ship of Treasures,2017,1.000,
+24157,154889,Toasted or Roasted,2014,1.000,
+24165,223094,Burgermania,,,
+24183,320538,Escape Advent Calendar: The Sunken Submarine,2020,1.000,
+24188,256375,Star Wars: I've Got a Bad Feeling About This!,2018,1.000,
+24189,11214,Pop Smarts,2001,1.000,
+24199,15542,Orangino,2002,1.000,
+24200,8057,1944: Second Front – From D-Day to Victory in the West,1990,4.000,300
+24214,28371,Monopoly: My Marvel Heroes,,1.500,120
+24216,14422,Pride and Prejudice: The Game,2002,1.250,
+24217,324238,Guess in 10: Animal Planet,,1.000,
+24224,12822,Weltreise,1930,1.118,45
+24227,154085,How to Human,2014,1.000,
+24229,151468,Downton Abbey: The Board Game,2013,1.000,
+24236,227847,"Brezhnev's War: NATO vs. the Warsaw Pact in Germany, 1980",2018,2.000,240
+24246,3606,The Game of Shakespeare,1966,1.714,60
+24246,13350,Jeu du Nain Jaune,1760,1.500,1
+24249,39431,Name Chase: Historical Figures Edition,2008,1.000,
+24253,5996,"The Battle for Cassino: Assaulting the Gustav Line, 1944",1978,3.167,240
+24258,67364,3D Tic Tac Toe,,1.000,10
+24269,3324,Railroader,1963,1.478,60
+24283,3342,Soccerama,1968,1.500,60
+24296,11519,Bear Buddies,1997,1.000,
+24311,23228,Evo,,1.600,30
+24313,21095,Mage Master,2005,2.000,240
+24313,23049,Hedbanz for Kids,,1.000,30
+24319,167505,Star Wars Force Grab,2014,1.167,
+24324,411934,Battle Spirits Saga,2023,,30
+24325,25270,Stop & Go,1960,1.125,30
+24330,9426,Long Cours,1959,1.667,60
+24333,107435,Campbell's Alphabet Dice Game,2011,1.143,
+24347,11673,Spanish Civil War Battles: Vol. 2 – Guadalajara & Penarroya,2003,3.375,
+24347,17745,Cogno: The Alien Adventure Game,2004,1.200,
+24353,155435,Disney Princess Pop-Up Magic Castle Game,2014,1.000,
+24369,22209,Muumipeli,,1.000,30
+24373,270732,Amoeba,2019,,30
+24376,30253,Polly the Porcupine,2007,1.000,
+24378,139162,Zingo! Sight Words,2012,1.000,
+24394,82208,Monopoly: Deutschland,2007,,
+24395,13657,Mu Torere,,1.000,30
+24402,135329,Disruptus,2013,1.333,
+24417,1574,Tactics II,1958,2.019,120
+24434,11784,Instant Recall,1965,1.000,15
+24445,144066,Family Feud Strikeout Card Game,2011,1.000,
+24448,18543,Senior Moments,,1.000,
+24464,2421,Tell Me: The Grand Quiz Game,1933,1.129,20
+24472,22289,Geni!,,1.571,
+24483,9091,The Newlywed Game,1967,1.375,30
+24484,5259,Oh Snap!,1965,1.035,20
+24498,13165,Owzthat,1932,1.000,10
+24506,11556,Money Bags,,1.000,20
+24510,42572,The Game of Life: Family Guy Collector's Edition,,1.000,
+24514,39778,Big Brain Academy Cardgame,2008,1.000,
+24534,26700,Monopoly: Dutch Edition,1961,1.500,180
+24548,181,Risk,1959,2.070,120
+24550,7710,Tip-It,1965,1.067,20
+24553,12314,Newmarket,,1.000,
+24559,265026,The Floor is Lava,2018,1.000,
+24562,11561,Forgotten Axis: Murmansk 1941,1999,2.800,
+24571,167465,Laser Cat Attack!,2014,1.500,
+24572,15791,Alerta Roja,1986,1.700,
+24585,50444,Pop to the Shops,,1.000,
+24589,4460,Green Ghost,1965,1.000,30
+24601,8097,Ten Commandments Bible Game,1960,1.167,150
+24616,39145,GemBlo Pyramid,,1.833,5
+24624,38678,Novem,2008,1.000,
+24625,2322,Malefiz,1960,1.204,60
+24627,282594,The Misery Index,2019,1.000,
+24629,2429,Barnabas Collins Dark Shadows Game,1969,1.600,60
+24634,345435,Fireball Island: Race to Adventure,2021,1.000,
+24636,3758,Triopoly,1997,1.870,240
+24638,240133,Soggy Doggy,2017,1.000,
+24652,325179,What Do You Meme?: TikTok Edition,2020,,30
+24653,11753,Nim,,1.500,
+24658,272991,The Original Tiny Hands Challenge Game,2017,1.000,
+24659,13944,Escape The Mad Mummy,2004,1.000,
+24663,4779,Easy Money,1935,1.421,120
+24677,246704,Mixtape,2018,1.000,
+24690,369336,Herd,2022,1.000,
+24693,101420,Ninety-Nine,,1.333,20
+24697,120533,Redstone,2012,,45
+24702,16990,Blue's Clues Game,1998,1.000,
+24703,16232,Flying Hats,1890,1.000,10
+24725,27675,Monster Maker,2007,1.000,
+24739,2294,Flinch,1903,1.133,20
+24741,22818,Tock 6,,1.000,60
+24747,13239,Dragon Master,1987,1.125,
+24748,16158,Wangaratta,1956,2.000,60
+24748,220546,Speak Out: Kids vs Parents,2017,1.000,
+24751,12043,Stadt - Land - Fluss,,1.167,15
+24773,158947,Fantasy Dice Battles,,1.800,30
+24787,21257,Eat It!,2007,1.000,
+24788,265802,Crypt X,2020,3.000,480
+24789,5729,Squadron Scramble,1942,1.000,10
+24803,265316,Black Mirror: NOSEDIVE,2018,1.800,
+24806,58698,Pickles to Penguins,2009,1.000,
+24811,14146,Blow Football,1910,1.000,
+24824,63898,UFO Attack,2010,,15
+24826,2635,Finance and Fortune,1932,1.143,120
+24827,5122,Charades,1550,1.109,30
+24849,33169,The Wrong Game,2006,1.333,
+24860,14000,Dog-opoly,,1.250,120
+24860,16387,3D Tic Tac Toe,1953,1.200,1
+24861,216659,Toilet Trouble,2016,1.000,
+24864,67629,U-Build Connect 4,2010,2.000,
+24865,15832,Cheat,,1.121,10
+24869,2086,Elfer raus!,1925,1.111,30
+24874,5675,The Rolling Moon,1959,1.125,30
+24878,23308,Pirates of the Caribbean: Trading Card Game,2006,1.571,
+24882,2426,Hit the Beach,1965,1.125,60
+24887,2740,Jumbo Jet,1975,1.538,240
+24889,294321,Baker Street: L'héritage de Sherlock Holmes,2019,1.000,
+24901,193049,Mau Mau!!,,1.000,
+24906,18399,Fan Tan,,1.286,25
+24916,1730,Trap the Cap,1927,1.094,30
+24919,6228,Rolling Thunder,1979,4.250,360
+24921,3753,Estanciero,1937,2.000,60
+24925,40514,Scrabble Apple,2009,1.333,
+24927,10213,Fox and Geese,1400,1.478,20
+24930,2766,Jeopardy!,1964,1.235,45
+24930,67630,U-Build Sorry!,2010,1.000,
+24933,15783,Whoville-opoly,2000,1.000,
+24941,134255,Angry Birds: Star Wars – Jenga Death Star Game,2012,1.000,
+24943,3886,Nine Men's Morris,-1400,1.818,20
+24944,2484,Explore Europe,1954,1.385,30
+24953,9921,Headache,1968,1.083,20
+24965,6787,Deutschlandreise,1935,1.179,45
+24965,11670,The Game of Authors,1861,1.030,5
+24966,27443,Baccarat,1890,1.333,
+24967,147112,Monopoly: My Little Pony,2013,1.000,
+24972,92960,S'mores Card Game,2009,1.000,
+24989,21389,Happy Families,1851,1.046,10
+24993,24323,Yahtzee Turbo,2006,1.000,
+24995,3074,Uncle Wiggily,1916,1.030,30
+24996,17755,Schnipp Schnapp,1900,1.000,20
+24999,108176,Over Under Game,2011,1.000,
+25001,17106,Boxes,1889,1.585,15
+25002,7262,Top Trumps,1968,1.048,20
+25019,73288,Dumb Ass,2010,1.000,
+25020,7972,Crocodile Pool Party,1968,1.290,30
+25020,15393,Jacks,,1.107,1
+25020,218358,Harry Potter: Magical Beasts Board Game,2016,1.000,
+25034,173387,Urban Dictionary Game,2015,1.000,
+25035,10502,Poker Dice,,1.263,10
+25036,10625,Håtunaleken,1977,2.500,
+25038,207274,Great Shakespearean Deaths: Card Game,2016,,20
+25041,295924,Elf: Card Scramble,,1.000,90
+25053,6474,L-Game,1968,1.929,10
+25054,28650,The Transformers Game,1986,1.200,
+25057,6798,Concentration,1958,1.556,30
+25066,10400,Patience,1783,1.224,10
+25068,22525,Schweine-Würfeln,,1.000,5
+25070,331666,Zola,2021,1.667,
+25077,8487,Ants in the Pants,1969,1.061,10
+25079,22501,See Sek,,1.833,10
+25081,6703,The Amazing Spider Man Game with the Fantastic Four!,1967,1.000,30
+25081,238761,Get a Grip: The No Thumbs Challenge Game,2017,1.000,
+25082,26617,Hatch: The Dragonology Card Game,2006,1.444,
+25084,38558,Pogs,1920,1.278,1
+25092,282080,Posing Pandas,2018,1.000,
+25096,18755,Pie Face,1964,1.000,15
+25106,11028,Lotto,1530,1.231,30
+25107,42686,Pictureka! Flipper,2009,1.000,
+25111,2770,Stay Alive,1965,1.206,30
+25112,328053,Jumanji,2019,1.000,
+25122,122499,Find It Deluxe Edition,2002,,
+25122,123417,Bagatelle,1819,1.000,10
+25122,240355,Tavern Trouble,2021,,8
+25123,18679,Morgan's Revenge,1996,1.000,
+25124,7308,Rock 'Em Sock 'Em Robots,1967,1.059,10
+25130,11248,The Vampire Game,1986,1.286,
+25132,9851,Shut the Box,1750,1.083,30
+25132,40350,XLR8,2008,1.167,
+25135,327883,Matador,,,
+25143,1556,Tenjo,2001,3.647,360
+25148,256406,"Monopoly: Warhammer 40,000",2018,1.000,
+25149,6932,Hi Ho! Cherry-O,1960,1.025,10
+25157,19915,Three Men's Morris,-1400,1.222,5
+25158,9812,Gone Fishin',1890,1.000,10
+25158,20028,"The Chronicles of Narnia The Lion, The Witch and The Wardrobe Game",2005,1.182,
+25159,124160,The Strategy Game,,1.200,20
+25171,13982,Sorry!: Pokémon,2000,1.000,
+25181,19478,XIG: The Four Elements,2005,1.400,
+25182,4888,Don't Break the Ice,1968,1.131,20
+25184,3343,Go For Broke,1965,1.126,45
+25184,5116,Kreskin's ESP,1967,1.000,10
+25185,14459,Monopoly: New Zealand,1960,1.500,180
+25187,13713,Solitaire,1687,1.505,15
+25190,3728,Ker Plunk,1967,1.038,20
+25191,4792,Tiddledy Winks,1888,1.097,10
+25191,6546,Labyrinth,1940,1.308,20
+25193,69796,The Price Is Right Game: DVD Edition,2005,1.000,
+25195,2386,Chinese Checkers,1893,1.599,30
+25196,133425,Quartett,,1.000,
+25197,7584,Electric Football,1948,1.429,120
+25198,5130,Afrikan tähti,1951,1.094,45
+25206,21546,The Original Sudoku Game,2005,2.000,
+25207,2785,Game of Goose,1587,1.062,20
+25210,145764,Zero Hour: Survival Horror Card Game,2014,1.500,
+25215,4149,Barrel of Monkeys,1965,1.056,10
+25216,11017,Crazy Eights,,1.068,20
+25217,337023,Dog Man: The Hot Dog Card Game,2020,1.000,
+25218,10816,Blackjack,1700,1.474,30
+25219,5894,Twister,1966,1.083,10
+25219,14705,Totally Gross,2002,1.333,
+25220,15549,Roulette,1796,1.123,1
+25221,32828,The Really Nasty Golf Game,2007,1.667,
+25222,6424,Pick Up Sticks,1850,1.042,10
+25224,170674,Prison Run,2015,1.000,
+25225,2799,Arabian Nightmare: The Kuwait War,1990,3.579,360
+25226,2272,Aggravation,1962,1.200,45
+25226,42785,Soccer Dice,,1.000,
+25228,2679,Mouse Trap,1963,1.105,30
+25229,10799,Old Maid,1874,1.046,5
+25230,7682,Go Fish,,1.057,20
+25231,3737,Operation,1965,1.114,10
+25240,2425,Battleship,1931,1.212,30
+25240,11901,Tic-Tac-Toe,-1300,1.281,1
+25241,7316,Bingo,1530,1.040,60
+25242,2136,Pachisi,400,1.189,30
+25242,5048,Candy Land,1949,1.102,30
+25242,188576,GG,2016,1.400,
+25243,5432,Chutes and Ladders,-200,1.030,30
+25251,2573,"Rivers, Roads & Rails",1969,1.154,30
+25258,2083,Checkers,1150,1.730,30
+25270,9079,Das kaufmännische Talent,1936,1.333,90
+25271,39320,Potions,2008,1.250,
+25277,6011,Disneyland Monorail Game,1960,1.000,20
+25277,8784,Po-Ke-No,1930,1.048,10
+25285,2921,The Game of Life,1960,1.167,60
+25291,1406,Monopoly,1935,1.629,60
+25296,23243,Pirate's Cove: Search for the Treasure Game,2005,1.000,
+25298,15855,Resan,,1.000,
+25300,246015,Hearing Things,2017,1.000,
+25305,9082,Go Tell the Spartans,2003,2.800,240
+25325,294969,Dog Man: Attack of The Fleas,2019,1.222,
+25325,400859,The way to Juliet,,1.000,10
+25326,24857,Deal or No Deal Card Game,2006,1.000,
+25327,5051,"La Grande Armee: Campaigns of Napoleon, 1805-1815",1987,3.667,240
+25334,136494,Jake and the Never Land Pirates: Who Shook Hook?,2012,1.000,
+25353,67627,U-Build Mouse Trap,2010,1.000,
+25366,194575,Loża Szyderców,2015,1.200,
+25367,382194,The Great American Fox Hunt,2023,,5
+25370,18657,Test Match,1955,1.000,30
+25377,155582,ERA,,1.500,30
+25382,89071,Saturday Night Live: The Game,2010,1.000,
+25384,5546,Marbles,-3000,1.100,10
+25401,7709,Hands Down,1964,1.062,10
+25408,2253,Touring,1906,1.210,30
+25408,11737,Curious George Match-a-Balloon Game,1957,1.000,10
+25426,1648,Kan-U-Go,1934,1.500,30
+25429,5253,Jack Straws,1888,1.000,10
+25445,8689,Bunco,1855,1.077,45
+25452,18905,Slap Jack,1934,1.000,30
+25456,246345,Ninja Rush,2018,1.000,
+25476,104287,Batanimo,,1.000,10
+25494,367033,Wordle: The Party Game,2022,1.200,
+25499,17520,The Game of Crown and Anchor,1850,1.200,10
+25500,27296,The Game of Life: Fame Edition,2002,1.000,
+25502,2485,Game of the States,1940,1.389,30
+25503,67628,U-Build Battleship,2010,1.375,
+25513,88957,Avatar: The Board Game,2010,1.333,
+25519,38353,Monopol: Sverige,2008,1.000,
+25523,3610,Word Power,1963,1.222,60
+25526,359061,Rive,2010,,15
+25548,4378,Cootie,1927,1.023,20
+25550,315534,Goal 10,2019,1.000,
+25563,3640,Spy Ring,1965,1.467,30
+25571,17568,Magic Robot Quiz Game,1935,1.000,
+25577,6898,Toss Across,1969,1.000,20
+25606,12889,Steeplechase,1899,1.000,30
+25611,302584,Guess Who?: Card Game,2018,1.000,
+25627,12532,Abuse: The Final Insult,2004,1.273,
+25643,7314,Mystery Date,1965,1.167,30
+25645,148180,Fox and Hounds,,1.000,5
+25649,23346,10,2006,1.714,
+25649,230864,WTF: (What the Fish!),2017,1.000,
+25653,12746,Dreidel,1500,1.000,10
+25654,19378,Doctor Who: The Interactive Electronic Board Game,2005,1.375,
+25654,20182,Maxi Yatzy,,1.000,30
+25666,63901,Oh No... Zombies!,2009,1.200,
+25668,137969,Geek Dice,2013,1.000,
+25679,10712,Bondespelet,1953,1.524,90
+25679,24105,The Da Vinci Code Game,2006,2.500,
+25699,299654,Harry Potter: Potions Challenge Game,2019,,
+25720,344017,Dodo,2021,1.500,
+25731,12557,APBA Basketball,1965,3.000,
+25736,10815,Craps,1125,1.791,20
+25742,137168,Klugscheisser 2: Edition Krasses Wissen,,1.000,
+25743,4041,Go to the Head of the Class,1936,1.212,45
+25744,22042,Da Vinci's Challenge Card Game,2005,1.143,
+25745,5015,Don't Spill the Beans,1957,1.148,10
+25760,180740,Shopkins Supermarket Scramble Game,2014,1.000,
+25761,70502,Doctor Who: The Time Wars Family Board Game,2010,1.800,
+25763,12511,Artifact,2004,1.900,
+25764,8499,Bowl and Score,1962,1.000,15
+25768,5040,Operation Crusader: The 8th Army's Forgotten Victory,1991,3.600,240
+25788,231082,Hatchimals CollEGGtibles EGGventure Game,2017,1.000,
+25792,15852,Electro,1910,1.250,45
+25819,20306,Brew-opoly,,1.333,120
+25824,31615,Fred,2007,1.000,
+25832,18574,Dark Force,1994,2.546,
+25835,357973,Rift Valley Reserve,,1.000,20
+25844,18618,Capitaly,1935,1.500,60
+25859,39372,The Crazy Cat Lady Game,2008,1.000,
+25862,2318,Scrabble Junior,1958,1.372,30
+25879,8842,Eselspiel,,1.286,20
+25887,281457,Manchukuo,,2.250,60
+25891,368118,Hadron,2022,1.667,
+25906,10793,"Civil War Classics, Volume 1: The Battles of Pea Ridge & Shiloh",1991,3.000,240
+25908,8676,The Merry Game of Floundering,1952,1.000,20
+25927,360266,Draft Cider,2022,1.000,
+25933,416557,Circle Of Life: on the Savannah,2024,,20
+25942,30947,Splice Pirateology Card Game,2007,1.500,
+25956,89423,Garbage,,1.000,30
+25958,242994,Onimaru,,2.500,60
+25972,61916,Quelf Card Game,2009,1.333,
+25992,251208,Game Box: Family Feud – Disney Edition,2016,1.000,
+25993,2243,Yahtzee,1956,1.177,30
+25997,27181,"1,000 Places to See Before You Die",2006,1.111,
+26002,265832,WTF?,2017,1.167,
+26007,187801,Star Wars Trivia Game,2015,1.000,
+26010,213871,Yippie Yippie Yeti,2016,1.000,
+26024,134815,The Hobbit: An Unexpected Journey – Adventure Board Game,2012,3.000,
+26031,372811,BIKIDO,2022,,20
+26033,6614,Finans,1949,2.062,60
+26058,3645,History of the Second World War: Part 1 – Hitler Turns Against Russia,1985,2.375,360
+26073,265297,Monopoly for Millennials,2018,1.000,
+26081,392494,The Grand Siberian,2024,,45
+26085,2303,Blast-Off!,1969,1.312,240
+26110,31111,Picture Dominoes,,1.000,10
+26118,37698,The Laughing Pig,1932,1.000,15
+26123,213787,The Terminator: The Official Board Game,,1.000,
+26128,4852,Armada: The War With Spain 1585-1604,1978,3.000,480
+26137,30456,Touring England,1935,1.000,45
+26148,21980,A Christmas Story Board Game,2005,1.000,
+26157,59451,Candyland Sweet Celebration Game,2009,1.000,
+26159,14708,Battle of the Sexes: IQ Test,2003,1.000,
+26172,7473,Drag Strip!,1965,1.000,10
+26172,19272,Go Fish!,1997,1.000,
+26179,3584,World War 3: 1976-1984,1975,3.250,360
+26190,17003,Snap,1866,1.125,10
+26194,2407,Sorry!,1929,1.154,30
+26198,250448,Relative Insanity,2018,1.000,
+26209,6020,Borodino: Doomed Victory,1990,3.200,240
+26219,172237,UNO Dare!,2014,1.000,
+26220,214897,Mouthguard Challenge,2016,1.000,
+26240,7688,Memory,1959,1.149,30
+26241,404427,Mensch ärgere Dich nicht,1910,1.000,
+26246,24782,The Amazing Race: DVD Board Game,2006,1.200,
+26277,135801,The Hobbit: An Unexpected Journey – The Board Game,2012,1.000,
+26283,13416,Tim Burton's The Nightmare Before Christmas Game,2004,1.143,
+26289,154174,The Big Bang Theory: Rock! Paper! Scissors! Lizard! Spock! Dice Game,,1.167,30
+26298,157581,Makin' Bacon,2012,1.000,
+26300,24249,3D Action Snakes and Ladders,,1.000,10
+26330,16398,War,,1.000,30
+26336,9704,Cat-opoly,,1.400,60
+26338,420517,Monumental Duel: Exploration,2024,,45
+26341,221641,Wild Kratts Race Around the World,2015,1.000,
+26361,376574,Splash Down,2022,,5
+26371,24783,24 DVD Board Game,2006,1.000,
+26396,89550,Battle of the Sexes: The Battle Continues,2008,1.400,
+26400,11824,Spejle Æg,,1.000,15
+26405,289363,Ms. Monopoly,2019,1.000,
+26407,4040,Tri-Ominos,1965,1.379,30
+26410,14538,Fei Xing Qi,,1.294,90
+26416,258855,Stupid Deaths,2018,1.000,
+26424,11370,The Civil War: The War That Pitted Brother Against Brother,1991,3.111,1200
+26435,13447,Harry Potter and the Sorcerer's Stone The Game,2000,2.286,
+26462,247493,Don't Step In It!,2017,1.000,
+26502,420522,Monumental Duel: Espionage,2024,,45
+26507,11863,Rock Paper Scissors,1968,1.000,
+26515,9392,Nya Finans,,1.800,90
+26536,203739,Evil Dead 2: The Official Board Game,,1.500,60
+26540,99918,W.W.B,2011,3.000,
+26569,286264,The Office: Downsizing Game,2019,1.667,
+26608,4165,Spare Time Bowling,1940,1.083,60
+26614,5650,Pass-out,1962,1.100,240
+26657,420523,Monumental Duel: Trade,2024,,45
+26666,1410,Trouble,1965,1.071,45
+26667,152488,Funny or Die,2013,1.111,
+26690,231954,Legends of the Hidden Temple,2017,1.250,
+26691,27190,Battleships,1931,1.000,60
+26696,10709,Tjuv och polis,1943,1.546,60
+26758,240624,Overturn: Rising Sands,,,90
+26865,18686,Gazdálkodj Okosan!,1960,1.250,45
