@@ -22,7 +22,9 @@ def process_game_data(rankings_data: pl.DataFrame) -> pl.DataFrame:
             bgg_id=pl.col("id").cast(pl.Int64),
             name="name",
             num_ratings=pl.col("usersrated").cast(pl.Int64),
-            game_type=pl.concat_list(rank_columns).list.arg_min().replace(columns_map),
+            game_type=pl.concat_list(rank_columns)
+            .list.arg_min()
+            .replace_strict(columns_map, return_dtype=pl.String),
         )
     )
 
