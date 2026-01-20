@@ -8,10 +8,6 @@ authors = [
 
 requires-python = "==3.14.*"
 
-packages = [
-    { include = "board_game_map", from = "python" },
-]
-
 dependencies = [
     "bokeh",
     "matplotlib",
@@ -42,8 +38,16 @@ cache-keys = [
     { file = "pyproject.toml" },
 ]
 
+[tool.uv.build-backend]
+module-name = "board_game_map"
+module-root = "python"
+
 [tool.ruff]
 target-version = "py314"
 
 [tool.mypy]
 python_version = "3.14"
+
+[build-system]
+requires = ["uv_build>=0.9.26,<0.10.0"]
+build-backend = "uv_build"
