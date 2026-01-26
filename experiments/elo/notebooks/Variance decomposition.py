@@ -26,52 +26,47 @@ import jupyter_black
 
 jupyter_black.load()
 
-
 pl.Config.set_tbl_rows(20)
 pl.Config.set_tbl_width_chars(120)
 
-# %%
-df = pl.read_ipc("../results/arrow/matches/1081.arrow")
-df.shape
+seed = 13
 
 # %%
-# Expectation: you already have df loaded (like in your example).
-# If not, load an Arrow/IPC file like:
-# df = pl.read_ipc(".../go.arrow")
-
-assert set(df.columns) >= {"num_players", "player_ids", "payoffs"}, df.columns
-
 # Keep only 2-player matches and sanity-check payoffs
-df2 = (
-    df.filter(pl.col("num_players") == 2)
+df = (
+    pl.scan_ipc(
+        "~/Recommend.Games/recommend-games-blog/experiments/elo/results/arrow/matches/1081.arrow"
+    )
+    .filter(pl.col("num_players") == 2)
     .select(
         pl.col("player_ids").list.get(0).cast(pl.Int64).alias("p0"),
         pl.col("player_ids").list.get(1).cast(pl.Int64).alias("p1"),
         pl.col("payoffs").list.get(0).cast(pl.Float64).alias("y0"),
         pl.col("payoffs").list.get(1).cast(pl.Float64).alias("y1"),
     )
+    .filter(pl.col("y0") + pl.col("y1") == 1.0)
+    .filter(pl.col("y0").is_in([0.0, 1.0]))
+    .filter(pl.col("y1").is_in([0.0, 1.0]))
     .with_row_index("match_idx")
+    .collect()
 )
-
-# No ties assumption: each match has one winner (1.0) and one loser (0.0)
-# (Relax if needed.)
-bad = df2.filter(
-    (pl.col("y0") + pl.col("y1") != 1.0)
-    | (~pl.col("y0").is_in([0.0, 1.0]))
-    | (~pl.col("y1").is_in([0.0, 1.0]))
-)
-assert bad.is_empty(), bad.head()
-
-df2.head()
+df.shape
 
 # %%
-def iter_match_dicts(df2: pl.DataFrame) -> "list[dict[int, float]] | object":
+df.sample(10, seed=seed)
+
+# %%
+df.describe()
+
+
+# %%
+def iter_match_dicts(df: pl.DataFrame) -> "list[dict[int, float]] | object":
     """
     Generator of matches in the format expected by your Elo code:
     {player_id: payoff, ...} where payoffs sum to 1.0 in the 2p case.
     """
     # Keep it as a generator to avoid big Python lists if you have tons of matches.
-    for p0, p1, y0, y1 in df2.select(["p0", "p1", "y0", "y1"]).iter_rows():
+    for p0, p1, y0, y1 in df.select(["p0", "p1", "y0", "y1"]).iter_rows():
         yield {int(p0): float(y0), int(p1): float(y1)}
 
 
@@ -81,7 +76,7 @@ def iter_match_dicts(df2: pl.DataFrame) -> "list[dict[int, float]] | object":
 elo_scale = 400.0
 k_star = float(
     approximate_optimal_k(
-        matches=iter_match_dicts(df2),
+        matches=iter_match_dicts(df),
         two_player_only=True,
         min_elo_k=0.0,
         max_elo_k=elo_scale / 2,
@@ -95,7 +90,7 @@ k_star
 
 # %%
 def collect_predictions_two_player_no_ties(
-    df2: pl.DataFrame,
+    df: pl.DataFrame,
     *,
     elo_k: float,
     elo_scale: float = 400.0,
@@ -112,7 +107,7 @@ def collect_predictions_two_player_no_ties(
 
     rows: list[dict[str, object]] = []
 
-    for match_idx, p0, p1, y0, y1 in df2.select(
+    for match_idx, p0, p1, y0, y1 in df.select(
         ["match_idx", "p0", "p1", "y0", "y1"]
     ).iter_rows():
         p0 = int(p0)
@@ -168,14 +163,17 @@ def collect_predictions_two_player_no_ties(
     preds = pl.DataFrame(rows).sort("match_idx")
 
     ratings_df = pl.DataFrame(
-        {"player_id": list(elo.elo_ratings.keys()), "elo_rating": list(elo.elo_ratings.values())}
+        {
+            "player_id": list(elo.elo_ratings.keys()),
+            "elo_rating": list(elo.elo_ratings.values()),
+        }
     )
 
     return preds, ratings_df
 
 
 preds, final_ratings = collect_predictions_two_player_no_ties(
-    df2,
+    df,
     elo_k=k_star,
     elo_scale=elo_scale,
     elo_initial=0.0,
@@ -216,6 +214,16 @@ plug_in = variance_decomp_plug_in_binary(preds)
 plug_in
 
 # %%
+y_mean = float(preds["y_hi"].mean())
+p_mean = float(preds["p_hi"].mean())
+
+print("mean(y_hi) =", y_mean)
+print("mean(p_hi) =", p_mean)
+print("Var(y_hi)  =", y_mean * (1 - y_mean))
+print("E[p](1-E[p]) =", p_mean * (1 - p_mean))
+
+
+# %%
 def variance_decomp_binned(
     preds: pl.DataFrame,
     *,
@@ -244,18 +252,17 @@ def variance_decomp_binned(
         # Rank-based equal-count binning
         N = df.height
         dfb = (
-            df.with_columns((pl.col(m_col).rank("ordinal") - 1).cast(pl.Int64).alias("_r"))
+            df.with_columns(
+                (pl.col(m_col).rank("ordinal") - 1).cast(pl.Int64).alias("_r")
+            )
             .with_columns((pl.col("_r") * n_bins // N).alias("bin"))
             .drop("_r")
         )
 
-    g = (
-        dfb.group_by("bin")
-        .agg(
-            n=pl.len(),
-            y_mean=pl.col(y_col).mean(),
-            y_var=pl.col(y_col).var(ddof=0),
-        )
+    g = dfb.group_by("bin").agg(
+        n=pl.len(),
+        y_mean=pl.col(y_col).mean(),
+        y_var=pl.col(y_col).var(ddof=0),
     )
 
     N = float(g["n"].sum())
@@ -284,8 +291,8 @@ binned
 
 # match counts per player
 match_counts = (
-    df2.select(pl.col("p0").alias("player_id"))
-    .vstack(df2.select(pl.col("p1").alias("player_id")))
+    df.select(pl.col("p0").alias("player_id"))
+    .vstack(df.select(pl.col("p1").alias("player_id")))
     .group_by("player_id")
     .agg(num_matches=pl.len())
 )
@@ -295,10 +302,16 @@ players = match_counts.join(final_ratings, on="player_id", how="inner")
 threshold = 25  # adjust
 sigma_all = float(players.select(pl.col("elo_rating").std(ddof=0)).item())
 sigma_regulars = float(
-    players.filter(pl.col("num_matches") >= threshold).select(pl.col("elo_rating").std(ddof=0)).item()
+    players.filter(pl.col("num_matches") >= threshold)
+    .select(pl.col("elo_rating").std(ddof=0))
+    .item()
 )
 
-{"k_star": k_star, "sigma_all": sigma_all, f"sigma_matches>={threshold}": sigma_regulars}
+{
+    "k_star": k_star,
+    "sigma_all": sigma_all,
+    f"sigma_matches>={threshold}": sigma_regulars,
+}
 
 # %%
 # Quick one-line summary for your writeup:
