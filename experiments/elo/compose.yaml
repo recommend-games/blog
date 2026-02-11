@@ -1,0 +1,10 @@
+services:
+  bga-spider:
+    image: registry.gitlab.com/recommend.games/blog:0.1.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: elo-bga-spider
+    # Mount local results so spider output persists on the host.
+    volumes:
+      - ./results:/app/results
