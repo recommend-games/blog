@@ -52,11 +52,13 @@ def matches_jl_to_ipc(
     )
 
     for path in iterator:
-        p_key = pl.PartitionByKey(
+        p_key = pl.PartitionBy(
             base_path=out_dir,
-            file_path=lambda ctx: f"{ctx.keys[0].str_value}/{path.stem}.arrow",
-            by="game_id",
+            key="game_id",
             include_key=True,
+            file_path_provider=lambda args: (
+                f"{args.partition_keys['game_id'][0]}/{path.stem}.arrow"
+            ),
         )
 
         (
