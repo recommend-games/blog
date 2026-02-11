@@ -382,7 +382,6 @@
 {"average_duration":19,"bgg_id":235375,"display_name_en":"Spirits of the Forest","games_played":12297,"id":1423,"name":"spiritsoftheforest","published_on":"2023-12-26","status":"public","weight":6}
 {"average_duration":6,"bgg_id":146130,"display_name_en":"Coin Age","games_played":2874,"id":1424,"name":"coinage","published_on":"2023-09-01","status":"beta","weight":2}
 {"average_duration":3,"bgg_id":337503,"display_name_en":"Cardiceo","games_played":177000,"id":1425,"name":"cardiceo","published_on":"2021-08-20","status":"public","weight":65}
-{"average_duration":3,"bgg_id":302260,"display_name_en":"Abandon All Artichokes","games_played":1109797,"id":1426,"name":"abandonallartichokes","published_on":"2021-08-30","status":"public","weight":231}
 {"average_duration":51,"bgg_id":240567,"display_name_en":"Chocolate Factory","games_played":40202,"id":1427,"name":"chocolatefactory","published_on":"2021-11-10","status":"public","weight":45}
 {"average_duration":13,"bgg_id":242302,"display_name_en":"Space Base","games_played":3427229,"id":1428,"name":"spacebase","premium":true,"published_on":"2022-03-23","status":"public","weight":10317}
 {"average_duration":16,"bgg_id":329641,"display_name_en":"King of the Pitch","games_played":3099,"id":1429,"name":"kingofthepitch","published_on":"2021-08-28","status":"public"}
@@ -444,7 +443,6 @@
 {"average_duration":11,"bgg_id":347086,"display_name_en":"Lady's Choice","games_played":6667,"id":1499,"name":"ladyschoice","published_on":"2021-10-17","status":"beta","weight":2}
 {"average_duration":5,"bgg_id":1295,"display_name_en":"Pente","games_played":56391,"id":1500,"name":"pente","published_on":"2022-01-25","status":"public","weight":11}
 {"average_duration":7,"display_name_en":"Silo","games_played":6537,"id":1501,"name":"silo","published_on":"2021-11-16","status":"public"}
-{"average_duration":24,"bgg_id":205398,"display_name_en":"Citadels","games_played":99214,"id":1503,"name":"citadels","published_on":"2024-04-23","status":"beta","weight":346}
 {"average_duration":8,"bgg_id":331666,"display_name_en":"Zola","games_played":3856,"id":1504,"name":"zola","published_on":"2021-11-16","status":"public"}
 {"average_duration":17,"bgg_id":13328,"display_name_en":"Chromino","games_played":323363,"id":1505,"name":"chromino","published_on":"2022-07-27","status":"public","weight":509}
 {"average_duration":13,"bgg_id":339107,"display_name_en":"Kmakici Family's greatest teatime","games_played":9124,"id":1506,"name":"kmakici","published_on":"2023-12-27","status":"public"}
@@ -625,7 +623,6 @@
 {"average_duration":63,"bgg_id":375553,"display_name_en":"Diceathlon","games_played":43691,"id":1716,"name":"diceathlon","published_on":"2023-12-09","status":"public","weight":56}
 {"average_duration":54,"bgg_id":185343,"display_name_en":"Anachrony","games_played":46194,"id":1717,"name":"anachrony","published_on":"2023-06-14","status":"public","weight":347}
 {"average_duration":42,"bgg_id":373190,"display_name_en":"Maps of Misterra","games_played":3947,"id":1718,"name":"mapsofmisterra","premium":true,"published_on":"2023-10-04","status":"public","weight":17}
-{"average_duration":3,"bgg_id":378082,"display_name_en":"Bamboozle","games_played":3415,"id":1719,"name":"bamboozle","published_on":"2023-09-01","status":"beta"}
 {"average_duration":14,"bgg_id":25182,"display_name_en":"24/7: The Game","games_played":23970,"id":1720,"name":"twentyfourseven","published_on":"2023-12-08","status":"public","weight":6}
 {"average_duration":11,"bgg_id":344685,"display_name_en":"Go Goa","games_played":29732,"id":1721,"name":"gogoa","published_on":"2023-03-13","status":"public","weight":6}
 {"average_duration":16,"bgg_id":221965,"display_name_en":"The Fox in the Forest","games_played":28835,"id":1722,"name":"thefoxintheforest","premium":true,"published_on":"2024-08-26","status":"public","weight":34}
@@ -1194,7 +1191,6 @@
 {"average_duration":41,"bgg_id":383117,"display_name_en":"Cathood","games_played":4210,"id":2477,"name":"cathood","published_on":"2025-12-20","status":"public","weight":593}
 {"average_duration":7,"bgg_id":8766280,"display_name_en":"Booty Dice","games_played":52276,"id":2482,"name":"bootydice","published_on":"2026-01-12","status":"public","weight":1018}
 {"average_duration":41,"bgg_id":336933,"display_name_en":"Elongo","games_played":2382,"id":2484,"name":"elongo","published_on":"2025-11-24","status":"public","weight":21}
-{"average_duration":52,"bgg_id":443297,"display_name_en":"Map Masters","games_played":897,"id":2493,"locked":true,"name":"mapmasters","published_on":"2025-10-23","status":"beta"}
 {"average_duration":5,"bgg_id":453906,"display_name_en":"Strategic Reserve","games_played":416,"id":2497,"name":"strategicreserve","priority":-999,"published_on":"2025-11-07","status":"public"}
 {"average_duration":6,"bgg_id":429439,"display_name_en":"Amoriax","games_played":694,"id":2498,"name":"amoriax","published_on":"2025-11-06","status":"beta","weight":2}
 {"average_duration":15,"display_name_en":"Dr\u00f4les de Z\u00e8bres","games_played":524,"id":2500,"name":"drolesdezebres","premium":true,"published_on":"2026-01-14","status":"beta","weight":2}
