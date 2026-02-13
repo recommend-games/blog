@@ -1,0 +1,29 @@
+# Local env and caches (recreate in image).
+.env
+.venv
+.jobs
+__pycache__
+*.pyc
+.pytest_cache
+.mypy_cache
+.ruff_cache
+
+# Results stay on host via volume; do not bake into image.
+results/
+
+# Rust build artifacts.
+target/
+
+# Git and IDE.
+.git
+.gitignore
+.cursorignore
+*.swp
+*.swo
+
+# Docs and non-runtime (optional; keeps image smaller).
+*.md
+notebooks/
+plots/
+csv/
+supplemental/
