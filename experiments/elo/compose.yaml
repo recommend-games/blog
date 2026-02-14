@@ -1,6 +1,6 @@
 services:
   bga-spider:
-    image: registry.gitlab.com/recommend.games/blog:0.1.0
+    image: registry.gitlab.com/recommend.games/blog
     build:
       context: .
       dockerfile: Dockerfile
