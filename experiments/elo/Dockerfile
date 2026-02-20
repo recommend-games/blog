@@ -1,21 +1,29 @@
-# target: scraper — deps from uv.lock only, no project/Rust. For bga-spider.
-FROM ghcr.io/astral-sh/uv:python3.13-trixie AS python
+################################################################################
+# Shared base.
+FROM ghcr.io/astral-sh/uv:python3.13-trixie AS base
 
 ENV UV_NO_DEV=1
 ENV UV_LINK_MODE=copy
 
 WORKDIR /app
+################################################################################
+
+################################################################################
+# target: Python only (lightweight).
+FROM base AS python
+
 COPY pyproject.toml uv.lock ./
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --locked --no-install-project
 
 COPY python ./python
 
-# Don't use `uv run` — it would try to build the project (maturin). Use the venv directly.
 CMD [".venv/bin/scrapy", "runspider", "python/elo/bga_spider.py"]
+################################################################################
 
-# target: full — scraper + Rust + project (maturin). For code that uses elo._rust.
-FROM python AS rust
+################################################################################
+# Helper: Rust.
+FROM base AS rust-base
 
 ENV PATH="/root/.cargo/bin:$PATH"
 
@@ -25,8 +33,14 @@ RUN apt-get update \
     && apt-get purge -y curl \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
+################################################################################
+
+################################################################################
+# target: Rust & Python (full).
+FROM rust-base AS rust
 
 COPY Cargo.toml Cargo.lock* ./
+COPY pyproject.toml uv.lock ./
 COPY rust ./rust
 COPY python ./python
 
@@ -36,3 +50,4 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --locked
 
 CMD ["uv", "run", "scrapy", "runspider", "python/elo/bga_spider.py"]
+################################################################################
