@@ -8,6 +8,8 @@ services:
     container_name: elo-bga-spider
     volumes:
       - ./results:/app/results
+    stop_grace_period: 15m
+    stop_signal: SIGINT
 
   elo-full:
     image: registry.gitlab.com/recommend.games/blog:rust
