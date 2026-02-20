@@ -11,7 +11,8 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 
 COPY python ./python
 
-CMD ["uv", "run", "scrapy", "runspider", "python/elo/bga_spider.py"]
+# Don't use `uv run` — it would try to build the project (maturin). Use the venv directly.
+CMD [".venv/bin/scrapy", "runspider", "python/elo/bga_spider.py"]
 
 # target: full — scraper + Rust + project (maturin). For code that uses elo._rust.
 FROM python AS rust
