@@ -1,6 +1,8 @@
 services:
   bga-spider:
     image: registry.gitlab.com/recommend.games/blog:python
+    env_file:
+      - .env
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,6 +15,8 @@ services:
 
   elo-full:
     image: registry.gitlab.com/recommend.games/blog:rust
+    env_file:
+      - .env
     build:
       context: .
       dockerfile: Dockerfile
