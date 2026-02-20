@@ -11,15 +11,17 @@ ENV PATH="/root/.cargo/bin:$PATH"
 
 WORKDIR /app
 
-# Copy dependency manifests first for better layer caching.
+# Install dependencies only (no project). This layer is cached until pyproject.toml/uv.lock change.
 COPY pyproject.toml uv.lock ./
+ENV UV_NO_DEV=1
+ENV UV_LINK_MODE=copy
+RUN --mount=type=cache,target=/root/.cache/uv \
+    uv sync --locked --no-install-project
+
+# Copy project source; then install project (maturin build). Only this layer reruns on code changes.
 COPY Cargo.toml Cargo.lock* ./
 COPY rust ./rust
 COPY python ./python
-
-# Install project (no dev deps). Uses cache mount for uv when available.
-ENV UV_NO_DEV=1
-ENV UV_LINK_MODE=copy
 RUN --mount=type=cache,target=/root/.cache/uv \
     --mount=type=cache,target=/root/.cargo/registry \
     --mount=type=cache,target=/root/.cargo/git \
