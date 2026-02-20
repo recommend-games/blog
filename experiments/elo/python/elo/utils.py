@@ -1,8 +1,47 @@
 from __future__ import annotations
 
+import os
 from collections.abc import Mapping
 import itertools
 from typing import TYPE_CHECKING
+
+
+def _env_bool(name: str, default: bool) -> bool:
+    val = os.environ.get(name)
+    if val is None:
+        return default
+    return val.strip().lower() in ("1", "true", "yes")
+
+
+def _env_int(name: str, default: int) -> int:
+    val = os.environ.get(name)
+    if val is None or not val.strip():
+        return default
+    try:
+        return int(val.strip())
+    except ValueError:
+        return default
+
+
+def _env_int_optional(name: str) -> int | None:
+    val = os.environ.get(name)
+    if val is None or not val.strip():
+        return None
+    try:
+        return int(val.strip())
+    except ValueError:
+        return None
+
+
+def _env_allow_list_ids(name: str) -> frozenset[int] | None:
+    val = os.environ.get(name)
+    if val is None or not val.strip():
+        return None
+    try:
+        return frozenset(int(x.strip()) for x in val.split(",") if x.strip())
+    except ValueError:
+        return None
+
 
 import numpy as np
 from numpy import typing as npt
