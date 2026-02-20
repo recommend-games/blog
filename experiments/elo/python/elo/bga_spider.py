@@ -2,11 +2,20 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import random
 import re
 import time
 from datetime import datetime, timezone
 from typing import Any, TYPE_CHECKING
+
+
+def _env_bool(name: str, default: bool) -> bool:
+    val = os.environ.get(name)
+    if val is None:
+        return default
+    return val.strip().lower() in ("1", "true", "yes")
+
 
 import funcy
 import jmespath
@@ -46,10 +55,11 @@ class BgaSpider(Spider):
     base_url = "https://en.boardgamearena.com/"
     start_urls = [base_url]
 
+    _download_delay = float(os.environ.get("DOWNLOAD_DELAY", "10"))
     custom_settings = {
         "COOKIES_ENABLED": True,
         "COOKIES_DEBUG": False,
-        "DOWNLOAD_DELAY": 10,
+        "DOWNLOAD_DELAY": _download_delay,
         "CONCURRENT_REQUESTS_PER_DOMAIN": 16,
         "LOG_FORMATTER": "scrapy_extensions.QuietLogFormatter",
         "FEED_EXPORT_BATCH_ITEM_COUNT": 100_000,
@@ -84,13 +94,13 @@ class BgaSpider(Spider):
     game_list_regex = re.compile("globalUserInfos=(.+);$", flags=re.MULTILINE)
     game_keys: Iterable[str] | None = None
 
-    scrape_rankings = False
+    scrape_rankings = _env_bool("SCRAPE_RANKINGS", False)
     ranking_url = "/gamepanel/gamepanel/getRanking.html"
     ranking_path = jmespath.compile("data.ranks")
     max_rank_scraped = None
     ranking_keys: Iterable[str] | None = None
 
-    scrape_matches = True
+    scrape_matches = _env_bool("SCRAPE_MATCHES", True)
     base_match_url = "/message/board"
     match_path = jmespath.compile("data.news")
     max_matches_per_page = 5000
@@ -105,7 +115,7 @@ class BgaSpider(Spider):
         )
     )
 
-    prioritise_popular_games = True
+    prioritise_popular_games = _env_bool("PRIORITISE_POPULAR_GAMES", True)
     allow_list_ids: Container[int] | None = None
 
     ordinal_regex = re.compile(r"(\d+)(st|nd|rd|th)|winner|loser", re.IGNORECASE)

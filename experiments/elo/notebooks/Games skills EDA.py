@@ -29,7 +29,7 @@ from bokeh.models import (
     GroupFilter,
     Label,
     LabelSet,
-    NumeralTickFormatter
+    NumeralTickFormatter,
 )
 from bokeh.palettes import Category10
 
