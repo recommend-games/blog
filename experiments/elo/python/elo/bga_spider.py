@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import random
 import re
 import time
@@ -14,7 +15,44 @@ from scrapy import FormRequest, Request, Selector, Spider
 from scrapy.http import Response, TextResponse
 
 if TYPE_CHECKING:
-    from collections.abc import Generator, Iterable
+    from collections.abc import Container, Generator, Iterable
+
+
+def _env_bool(name: str, default: bool) -> bool:
+    val = os.environ.get(name)
+    if val is None:
+        return default
+    return val.strip().lower() in ("1", "true", "yes")
+
+
+def _env_int(name: str, default: int) -> int:
+    val = os.environ.get(name)
+    if val is None or not val.strip():
+        return default
+    try:
+        return int(val.strip())
+    except ValueError:
+        return default
+
+
+def _env_int_optional(name: str) -> int | None:
+    val = os.environ.get(name)
+    if val is None or not val.strip():
+        return None
+    try:
+        return int(val.strip())
+    except ValueError:
+        return None
+
+
+def _env_allow_list_ids(name: str) -> frozenset[int] | None:
+    val = os.environ.get(name)
+    if val is None or not val.strip():
+        return None
+    try:
+        return frozenset(int(x.strip()) for x in val.split(",") if x.strip())
+    except ValueError:
+        return None
 
 
 class BaseFilter:
@@ -46,34 +84,39 @@ class BgaSpider(Spider):
     base_url = "https://en.boardgamearena.com/"
     start_urls = [base_url]
 
+    _download_delay = float(os.environ.get("DOWNLOAD_DELAY", "10"))
+    _results_dir = os.environ.get("RESULTS_DIR", "results")
+    _jobdir = os.environ.get("JOBDIR", ".jobs")
+    _concurrent_requests = _env_int("CONCURRENT_REQUESTS_PER_DOMAIN", 16)
+    _feed_batch_count = _env_int("FEED_EXPORT_BATCH_ITEM_COUNT", 100_000)
     custom_settings = {
         "COOKIES_ENABLED": True,
         "COOKIES_DEBUG": False,
-        "DOWNLOAD_DELAY": 10,
-        "CONCURRENT_REQUESTS_PER_DOMAIN": 16,
+        "DOWNLOAD_DELAY": _download_delay,
+        "CONCURRENT_REQUESTS_PER_DOMAIN": _concurrent_requests,
         "LOG_FORMATTER": "scrapy_extensions.QuietLogFormatter",
-        "FEED_EXPORT_BATCH_ITEM_COUNT": 100_000,
+        "FEED_EXPORT_BATCH_ITEM_COUNT": _feed_batch_count,
         "FEEDS": {
-            "results/games-%(time)s-%(batch_id)05d.jl": {
+            f"{_results_dir}/games-%(time)s-%(batch_id)05d.jl": {
                 "format": "jsonlines",
                 "item_filter": GameFilter,
                 "overwrite": False,
                 "store_empty": False,
             },
-            "results/rankings-%(time)s-%(batch_id)05d.jl": {
+            f"{_results_dir}/rankings-%(time)s-%(batch_id)05d.jl": {
                 "format": "jsonlines",
                 "item_filter": RankingFilter,
                 "overwrite": False,
                 "store_empty": False,
             },
-            "results/matches-%(time)s-%(batch_id)05d.jl": {
+            f"{_results_dir}/matches-%(time)s-%(batch_id)05d.jl": {
                 "format": "jsonlines",
                 "item_filter": MatchFilter,
                 "overwrite": False,
                 "store_empty": False,
             },
         },
-        "JOBDIR": ".jobs",
+        "JOBDIR": _jobdir,
     }
 
     request_token_url = "/account/auth/getRequestToken.html"
@@ -84,16 +127,16 @@ class BgaSpider(Spider):
     game_list_regex = re.compile("globalUserInfos=(.+);$", flags=re.MULTILINE)
     game_keys: Iterable[str] | None = None
 
-    scrape_rankings = False
+    scrape_rankings = _env_bool("SCRAPE_RANKINGS", False)
     ranking_url = "/gamepanel/gamepanel/getRanking.html"
     ranking_path = jmespath.compile("data.ranks")
-    max_rank_scraped = None
+    max_rank_scraped = _env_int_optional("MAX_RANK_SCRAPED")
     ranking_keys: Iterable[str] | None = None
 
-    scrape_matches = True
+    scrape_matches = _env_bool("SCRAPE_MATCHES", True)
     base_match_url = "/message/board"
     match_path = jmespath.compile("data.news")
-    max_matches_per_page = 9500
+    max_matches_per_page = _env_int("MAX_MATCHES_PER_PAGE", 5000)
     match_keys: Iterable[str] | None = frozenset(
         (
             "id",
@@ -104,6 +147,9 @@ class BgaSpider(Spider):
             "type",
         )
     )
+
+    prioritise_popular_games = _env_bool("PRIORITISE_POPULAR_GAMES", True)
+    allow_list_ids: Container[int] | None = _env_allow_list_ids("ALLOW_LIST_IDS")
 
     ordinal_regex = re.compile(r"(\d+)(st|nd|rd|th)|winner|loser", re.IGNORECASE)
     integer_regex = re.compile(r"(\d+)")
@@ -163,6 +209,9 @@ class BgaSpider(Spider):
                 game["scraped_at"] = now
                 yield funcy.project(game, self.game_keys) if self.game_keys else game  # type: ignore[arg-type]
 
+                if self.allow_list_ids and game["id"] not in self.allow_list_ids:
+                    continue
+
                 if self.scrape_rankings:
                     yield FormRequest(
                         url=response.urljoin(self.ranking_url),
@@ -180,8 +229,11 @@ class BgaSpider(Spider):
 
                 if self.scrape_matches:
                     games_played = int(game.get("games_played", 0))
-                    priority = (games_played * random.uniform(0.75, 1.25)) / (
-                        2 * self.max_matches_per_page
+                    priority = (
+                        (games_played * random.uniform(0.75, 1.25))
+                        / (2 * self.max_matches_per_page)
+                        if self.prioritise_popular_games
+                        else 0
                     )
                     yield Request(
                         url=self.build_match_url(response, game["id"]),

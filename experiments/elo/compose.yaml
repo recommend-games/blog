@@ -1,0 +1,23 @@
+services:
+  bga-spider:
+    image: registry.gitlab.com/recommend.games/blog:python
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: python
+    container_name: elo-bga-spider
+    volumes:
+      - ./results:/app/results
+    stop_grace_period: 15m
+    stop_signal: SIGINT
+
+  elo-full:
+    image: registry.gitlab.com/recommend.games/blog:rust
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: rust

@@ -1,12 +1,11 @@
 from __future__ import annotations
 
-from collections.abc import Mapping
 import itertools
+from collections.abc import Mapping
 from typing import TYPE_CHECKING
 
 import numpy as np
 from numpy import typing as npt
-
 
 if TYPE_CHECKING:
     from collections.abc import Iterable
