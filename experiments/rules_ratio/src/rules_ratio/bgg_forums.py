@@ -14,11 +14,28 @@ class BggForumsSpider(Spider):
     allowed_domains = (base_domain,)
     base_api_url = f"https://{base_domain}/xmlapi2"
 
+    _download_delay = parse_float(os.getenv("DOWNLOAD_DELAY")) or 10.0
+    _results_dir = os.getenv("RESULTS_DIR", "results")
+    _jobdir = os.getenv("JOBDIR", ".jobs")
+    _concurrent_requests = parse_int(os.getenv("CONCURRENT_REQUESTS_PER_DOMAIN")) or 8
+    _feed_batch_count = parse_int(os.getenv("FEED_EXPORT_BATCH_ITEM_COUNT")) or 10_000
+
     custom_settings = {
-        "DOWNLOAD_DELAY": 10,
+        "DOWNLOAD_DELAY": _download_delay,
+        "CONCURRENT_REQUESTS_PER_DOMAIN": _concurrent_requests,
+        "LOG_FORMATTER": "scrapy_extensions.QuietLogFormatter",
         "DOWNLOADER_MIDDLEWARES": {
             "scrapy_extensions.middlewares.AuthHeaderMiddleware": 301,
         },
+        "FEED_EXPORT_BATCH_ITEM_COUNT": _feed_batch_count,
+        "FEEDS": {
+            f"{_results_dir}/games-%(time)s-%(batch_id)05d.jl": {
+                "format": "jsonlines",
+                "overwrite": False,
+                "store_empty": False,
+            },
+        },
+        "JOBDIR": _jobdir,
         "AUTH_HEADER_ENABLED": True,
         "AUTH_HEADER_NAME": "Authorization",
         "AUTH_TOKEN_ATTR": "auth_token",
