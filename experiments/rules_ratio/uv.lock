@@ -585,7 +585,7 @@ wheels = [
 
 [[package]]
 name = "ipython"
-version = "9.10.0"
+version = "9.11.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "colorama", marker = "sys_platform == 'win32'" },
@@ -599,9 +599,9 @@ dependencies = [
     { name = "stack-data" },
     { name = "traitlets" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a6/60/2111715ea11f39b1535bed6024b7dec7918b71e5e5d30855a5b503056b50/ipython-9.10.0.tar.gz", hash = "sha256:cd9e656be97618a0676d058134cd44e6dc7012c0e5cb36a9ce96a8c904adaf77", size = 4426526, upload-time = "2026-02-02T10:00:33.594Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/86/28/a4698eda5a8928a45d6b693578b135b753e14fa1c2b36ee9441e69a45576/ipython-9.11.0.tar.gz", hash = "sha256:2a94bc4406b22ecc7e4cb95b98450f3ea493a76bec8896cda11b78d7752a6667", size = 4427354, upload-time = "2026-03-05T08:57:30.549Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/3d/aa/898dec789a05731cd5a9f50605b7b44a72bd198fd0d4528e11fc610177cc/ipython-9.10.0-py3-none-any.whl", hash = "sha256:c6ab68cc23bba8c7e18e9b932797014cc61ea7fd6f19de180ab9ba73e65ee58d", size = 622774, upload-time = "2026-02-02T10:00:31.503Z" },
+    { url = "https://files.pythonhosted.org/packages/b2/90/45c72becc57158facc6a6404f663b77bbcea2519ca57f760e2879ae1315d/ipython-9.11.0-py3-none-any.whl", hash = "sha256:6922d5bcf944c6e525a76a0a304451b60a2b6f875e86656d8bc2dfda5d710e19", size = 624222, upload-time = "2026-03-05T08:57:28.94Z" },
 ]
 
 [[package]]
@@ -1674,6 +1674,15 @@ wheels = [
 ]
 
 [[package]]
+name = "pytility"
+version = "0.3.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/58/6d/c31f7b17bd53b8a32fced2c82260ac3e4f6e84430a3abdb3edb3a4d12cf7/pytility-0.3.0.tar.gz", hash = "sha256:dc1b1f6f23c3d5ad2128ae21aff8cdc2f6117c486af6b2148ec2691d20dbfe92", size = 6369, upload-time = "2021-05-24T09:43:27.499Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b5/c0/e1f8721c4b63bff1e45e6d4e355823b233273a559368298dd8e8838124af/pytility-0.3.0-py2.py3-none-any.whl", hash = "sha256:3792f994a2d84acf3531aaf5ac6f71dea43afbdc2fd5b17d2ba9f027e33fadc2", size = 6185, upload-time = "2021-05-24T09:43:26.209Z" },
+]
+
+[[package]]
 name = "pytokens"
 version = "0.4.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1913,6 +1922,7 @@ dependencies = [
     { name = "matplotlib" },
     { name = "numpy" },
     { name = "polars" },
+    { name = "pytility" },
     { name = "scikit-learn" },
     { name = "scipy" },
     { name = "scrapy" },
@@ -1938,6 +1948,7 @@ requires-dist = [
     { name = "matplotlib" },
     { name = "numpy" },
     { name = "polars" },
+    { name = "pytility" },
     { name = "scikit-learn" },
     { name = "scipy" },
     { name = "scrapy" },
