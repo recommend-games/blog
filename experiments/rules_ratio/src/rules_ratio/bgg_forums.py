@@ -2,14 +2,20 @@ from collections.abc import Generator
 import csv
 import os
 import scrapy
+from pytility import parse_int
 from scrapy import Request, Response
 
 
 class BggForumsSpider(scrapy.Spider):
     name = "bgg-forums"
-    allowed_domains = ("boardgamegeek.com",)
+    base_domain = "boardgamegeek.com"
+    allowed_domains = (base_domain,)
+    base_api_url = f"https://{base_domain}/xmlapi2"
 
     custom_settings = {
+        "DOWNLOAD_DELAY": 10,
+        "CONCURRENT_REQUESTS_PER_DOMAIN": 8,
+        "CONCURRENT_REQUESTS_PER_IP": 8,
         "DOWNLOADER_MIDDLEWARES": {
             "scrapy_extensions.middlewares.AuthHeaderMiddleware": 301,
         },
@@ -36,9 +42,22 @@ class BggForumsSpider(scrapy.Spider):
             with open(self.games_file, "r") as f:
                 reader = csv.DictReader(f)
                 for row in reader:
-                    game_id = row.get("game_id")
-                    self.logger.info(f"Scheduling forums request for game ID {game_id}")
-                    # TODO: yield
+                    bgg_id = parse_int(row.get("bgg_id"))
+                    if not bgg_id:
+                        self.logger.warning("Skipping row with invalid bgg_id: %s", row)
+                        continue
+                    num_votes = parse_int(row.get("num_votes")) or 0
+                    self.logger.debug(
+                        "Scheduling forums request for game ID <%s> (%d votes)",
+                        bgg_id,
+                        num_votes,
+                    )
+                    yield Request(
+                        url=f"{self.base_api_url}/forumlist?id={bgg_id}&type=thing",
+                        callback=self.parse,
+                        priority=num_votes,
+                    )
+
         except Exception as e:
             self.logger.error("Error reading games file <%s>", self.games_file)
 
