@@ -26,53 +26,58 @@ seed = 13
 
 # %%
 forums = (
-    pl.scan_ndjson("results/*.jl", schema_overrides={"last_post_date": pl.Datetime})
+    pl.scan_ndjson("results/*.jl")
     .unique("forum_id", keep="any")
-    .collect()
+    .select("bgg_id", "title", "num_threads")
 )
-forums.shape
-
-# %%
-forums.sample(10, seed=seed)
-
-# %%
-forums.describe()
-
-# %%
-forums.group_by("title").agg(pl.len()).sort("len", "title", descending=[True, False])
-
-# %%
 rules_ratios = (
-    forums.lazy()
-    .group_by("bgg_id")
+    forums.group_by("bgg_id")
     .agg(
+        num_forums=pl.len(),
         num_threads_rules=pl.when(title="Rules").then("num_threads").otherwise(0).sum(),
         num_threads_total=pl.col("num_threads").sum(),
     )
+    .remove(pl.col("num_forums") < 10)
+    .remove(pl.col("num_threads_total") < 10)
     .with_columns(rules_ratio=pl.col("num_threads_rules") / pl.col("num_threads_total"))
-    .sort("num_threads_total", descending=True)
-    .collect()
 )
-rules_ratios.shape
-
-# %%
-rules_ratios.head(100)
-
-# %%
-games = pl.scan_ndjson(
-    "/Users/markus/Recommend.Games/board-game-data/scraped/bgg_GameItem.jl",
-).select("bgg_id", "name", "year", "num_votes", "complexity")
+games = (
+    pl.scan_ndjson(
+        "/Users/markus/Recommend.Games/board-game-data/scraped/bgg_GameItem.jl",
+        infer_schema_length=10_000,
+    )
+    .remove(pl.col("compilation"))
+    .select("bgg_id", "name", "year", "num_votes", "complexity")
+    .remove(pl.col("num_votes") < 100)
+)
 rrw = (
-    rules_ratios.lazy()
-    .join(games, on="bgg_id", how="left")
+    rules_ratios.join(games, on="bgg_id", how="inner")
     .with_columns(rules_ratio_by_weight=pl.col("rules_ratio") / pl.col("complexity"))
-    .sort("rules_ratio_by_weight", descending=True)
+    .sort(
+        "rules_ratio_by_weight",
+        "rules_ratio",
+        "num_threads_total",
+        descending=[True, True, False],
+    )
     .collect()
 )
 rrw.shape
 
 # %%
-rrw.head(100)
+forums.group_by("title").agg(pl.len()).sort(
+    "len",
+    "title",
+    descending=[True, False],
+).collect()
 
 # %%
-rrw.tail(100)
+rrw.sample(10, seed=seed)
+
+# %%
+rrw.describe()
+
+# %%
+rrw.head(10)
+
+# %%
+rrw.tail(10)
