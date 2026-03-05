@@ -1,6 +1,7 @@
-from collections.abc import Generator
+from collections.abc import AsyncGenerator, Generator
 import csv
 import os
+from typing import Any
 from pytility import parse_date, parse_float
 from pytility import parse_int
 from scrapy import Spider
@@ -15,8 +16,6 @@ class BggForumsSpider(Spider):
 
     custom_settings = {
         "DOWNLOAD_DELAY": 10,
-        "CONCURRENT_REQUESTS_PER_DOMAIN": 8,
-        "CONCURRENT_REQUESTS_PER_IP": 8,
         "DOWNLOADER_MIDDLEWARES": {
             "scrapy_extensions.middlewares.AuthHeaderMiddleware": 301,
         },
@@ -34,7 +33,7 @@ class BggForumsSpider(Spider):
 
         self.games_file = os.getenv("BGG_GAMES_FILE")
 
-    def start_requests(self) -> Generator[Request]:
+    async def start(self) -> AsyncGenerator[Request]:
         if not self.games_file:
             self.logger.error("No games file configured, cannot start spider")
             return
@@ -49,11 +48,6 @@ class BggForumsSpider(Spider):
                         continue
                     num_votes = parse_int(row.get("num_votes")) or 0
                     complexity = parse_float(row.get("complexity"))
-                    self.logger.debug(
-                        "Scheduling forums request for game ID <%s> (%d votes)",
-                        bgg_id,
-                        num_votes,
-                    )
                     yield Request(
                         url=f"{self.base_api_url}/forumlist?id={bgg_id}&type=thing",
                         callback=self.parse,
@@ -68,7 +62,7 @@ class BggForumsSpider(Spider):
         except Exception as e:
             self.logger.error("Error reading games file <%s>", self.games_file)
 
-    def parse(self, response: TextResponse) -> Generator[dict]:
+    def parse(self, response: TextResponse) -> Generator[dict[str, Any]]:
         meta = response.meta.copy()
         bgg_id = parse_int(meta.get("bgg_id")) or parse_int(
             response.xpath("/forums/@id").get()
@@ -79,7 +73,6 @@ class BggForumsSpider(Spider):
                 response.url,
             )
             return
-        self.logger.debug("Parsing forums for game ID <%s>", bgg_id)
         for forum in response.xpath("/forums/forum"):
             forum_id = parse_int(forum.xpath("@id").get())
             if not forum_id:
