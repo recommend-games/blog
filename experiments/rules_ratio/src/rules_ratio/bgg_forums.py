@@ -1,6 +1,7 @@
+import asyncio
 import csv
 import os
-from collections.abc import AsyncGenerator, Generator
+from collections.abc import AsyncGenerator, Generator, Iterable
 from pathlib import Path
 from typing import Any
 
@@ -14,6 +15,10 @@ class BggForumsSpider(Spider):
     base_domain = "boardgamegeek.com"
     allowed_domains = (base_domain,)
     base_api_url = f"https://{base_domain}/xmlapi2"
+
+    start_request_yield_interval = 100
+    """Max distinct request priorities (Scrapy opens one disk queue per priority; caps open FDs)."""
+    max_priority_buckets = 32
 
     _download_delay = parse_float(os.getenv("DOWNLOAD_DELAY")) or 10.0
     _results_dir = os.getenv("RESULTS_DIR", "results")
@@ -30,7 +35,7 @@ class BggForumsSpider(Spider):
         },
         "FEED_EXPORT_BATCH_ITEM_COUNT": _feed_batch_count,
         "FEEDS": {
-            f"{_results_dir}/games-%(time)s-%(batch_id)05d.jl": {
+            f"{_results_dir}/forums-%(time)s-%(batch_id)05d.jl": {
                 "format": "jsonlines",
                 "overwrite": False,
                 "store_empty": False,
@@ -59,6 +64,11 @@ class BggForumsSpider(Spider):
         games_file = Path(self.games_file).resolve()
         self.logger.info("Reading games from file <%s>", games_file)
 
+        requests = self._requests_from_games_file(games_file)
+        async for request in self._yield_start_requests(requests):
+            yield request
+
+    def _requests_from_games_file(self, games_file: Path) -> Generator[Request]:
         try:
             with games_file.open("r", encoding="utf-8") as f:
                 reader = csv.DictReader(f)
@@ -71,11 +81,27 @@ class BggForumsSpider(Spider):
                     yield Request(
                         url=f"{self.base_api_url}/forumlist?id={bgg_id}&type=thing",
                         callback=self.parse,
-                        priority=num_votes,
+                        priority=self._priority_bucket(num_votes),
                     )
 
         except Exception:
             self.logger.error("Error reading games file <%s>", self.games_file)
+
+    def _priority_bucket(self, num_votes: int) -> int:
+        """Map num_votes to a bounded priority in [0, max_priority_buckets) to limit open queue FDs."""
+        if num_votes <= 0:
+            return 0
+        return min(self.max_priority_buckets - 1, max(0, num_votes.bit_length() - 1))
+
+    async def _yield_start_requests(
+        self,
+        requests: Iterable[Request],
+    ) -> AsyncGenerator[Request]:
+        chunk_size = self.start_request_yield_interval
+        for index, request in enumerate(requests, start=1):
+            yield request
+            if chunk_size > 0 and index % chunk_size == 0:
+                await asyncio.sleep(0)
 
     def parse(self, response: TextResponse) -> Generator[dict[str, Any]]:
         bgg_id = parse_int(response.xpath("/forums/@id").get())
