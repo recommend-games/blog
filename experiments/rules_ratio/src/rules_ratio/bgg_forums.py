@@ -64,32 +64,24 @@ class BggForumsSpider(Spider):
                         self.logger.warning("Skipping row with invalid bgg_id: %s", row)
                         continue
                     num_votes = parse_int(row.get("num_votes")) or 0
-                    complexity = parse_float(row.get("complexity"))
                     yield Request(
                         url=f"{self.base_api_url}/forumlist?id={bgg_id}&type=thing",
                         callback=self.parse,
                         priority=num_votes,
-                        meta={
-                            "bgg_id": bgg_id,
-                            "complexity": complexity,
-                            "num_votes": num_votes,
-                        },
                     )
 
         except Exception as e:
             self.logger.error("Error reading games file <%s>", self.games_file)
 
     def parse(self, response: TextResponse) -> Generator[dict[str, Any]]:
-        meta = response.meta.copy()
-        bgg_id = parse_int(meta.get("bgg_id")) or parse_int(
-            response.xpath("/forums/@id").get()
-        )
+        bgg_id = parse_int(response.xpath("/forums/@id").get())
         if not bgg_id:
             self.logger.error(
                 "Could not determine bgg_id for forums response: %s",
                 response.url,
             )
             return
+
         for forum in response.xpath("/forums/forum"):
             forum_id = parse_int(forum.xpath("@id").get())
             if not forum_id:
@@ -99,7 +91,8 @@ class BggForumsSpider(Spider):
                     forum.get(),
                 )
                 continue
-            yield meta | {
+
+            yield {
                 "bgg_id": bgg_id,
                 "forum_id": forum_id,
                 "title": forum.xpath("@title").get(),
