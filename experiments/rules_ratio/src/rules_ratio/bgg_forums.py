@@ -1,12 +1,13 @@
 from collections.abc import Generator
 import csv
 import os
-import scrapy
+from pytility import parse_date, parse_float
 from pytility import parse_int
-from scrapy import Request, Response
+from scrapy import Spider
+from scrapy.http import Request, TextResponse
 
 
-class BggForumsSpider(scrapy.Spider):
+class BggForumsSpider(Spider):
     name = "bgg-forums"
     base_domain = "boardgamegeek.com"
     allowed_domains = (base_domain,)
@@ -47,6 +48,7 @@ class BggForumsSpider(scrapy.Spider):
                         self.logger.warning("Skipping row with invalid bgg_id: %s", row)
                         continue
                     num_votes = parse_int(row.get("num_votes")) or 0
+                    complexity = parse_float(row.get("complexity"))
                     self.logger.debug(
                         "Scheduling forums request for game ID <%s> (%d votes)",
                         bgg_id,
@@ -56,10 +58,42 @@ class BggForumsSpider(scrapy.Spider):
                         url=f"{self.base_api_url}/forumlist?id={bgg_id}&type=thing",
                         callback=self.parse,
                         priority=num_votes,
+                        meta={
+                            "bgg_id": bgg_id,
+                            "complexity": complexity,
+                            "num_votes": num_votes,
+                        },
                     )
 
         except Exception as e:
             self.logger.error("Error reading games file <%s>", self.games_file)
 
-    def parse(self, response: Response) -> Generator[dict]:
-        pass
+    def parse(self, response: TextResponse) -> Generator[dict]:
+        meta = response.meta.copy()
+        bgg_id = parse_int(meta.get("bgg_id")) or parse_int(
+            response.xpath("/forums/@id").get()
+        )
+        if not bgg_id:
+            self.logger.error(
+                "Could not determine bgg_id for forums response: %s",
+                response.url,
+            )
+            return
+        self.logger.debug("Parsing forums for game ID <%s>", bgg_id)
+        for forum in response.xpath("/forums/forum"):
+            forum_id = parse_int(forum.xpath("@id").get())
+            if not forum_id:
+                self.logger.warning(
+                    "Skipping forum with invalid ID for game <%s>: %s",
+                    bgg_id,
+                    forum.get(),
+                )
+                continue
+            yield meta | {
+                "bgg_id": bgg_id,
+                "forum_id": forum_id,
+                "title": forum.xpath("@title").get(),
+                "num_threads": parse_int(forum.xpath("@numthreads").get()) or 0,
+                "num_posts": parse_int(forum.xpath("@numposts").get()) or 0,
+                "last_post_date": parse_date(forum.xpath("@lastpostdate").get()),
+            }
