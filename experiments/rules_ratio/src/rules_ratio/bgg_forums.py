@@ -1,9 +1,10 @@
-from collections.abc import AsyncGenerator, Generator
 import csv
 import os
+from collections.abc import AsyncGenerator, Generator
+from pathlib import Path
 from typing import Any
-from pytility import parse_date, parse_float
-from pytility import parse_int
+
+from pytility import parse_date, parse_float, parse_int
 from scrapy import Spider
 from scrapy.http import Request, TextResponse
 
@@ -55,8 +56,11 @@ class BggForumsSpider(Spider):
             self.logger.error("No games file configured, cannot start spider")
             return
 
+        games_file = Path(self.games_file).resolve()
+        self.logger.info("Reading games from file <%s>", games_file)
+
         try:
-            with open(self.games_file, "r") as f:
+            with games_file.open("r", encoding="utf-8") as f:
                 reader = csv.DictReader(f)
                 for row in reader:
                     bgg_id = parse_int(row.get("bgg_id"))
@@ -70,7 +74,7 @@ class BggForumsSpider(Spider):
                         priority=num_votes,
                     )
 
-        except Exception as e:
+        except Exception:
             self.logger.error("Error reading games file <%s>", self.games_file)
 
     def parse(self, response: TextResponse) -> Generator[dict[str, Any]]:
