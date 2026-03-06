@@ -20,6 +20,9 @@ import polars as pl
 import statsmodels.api as sm
 from pathlib import Path
 
+from bokeh.plotting import figure, show
+from bokeh.models import HoverTool, ColumnDataSource
+
 jupyter_black.load()
 
 pl.Config.set_tbl_cols(100)
@@ -105,8 +108,8 @@ model = sm.GLM(y, X, family=sm.families.Binomial(), freq_weights=w).fit()
 print(model.summary())
 rr_hat = model.predict(X)
 
-rrw = rrw.with_columns(
-    residual_rules_ratio=pl.col("rules_ratio") - pl.Series("rr_hat", rr_hat),
+rrw = rrw.with_columns(rr_hat=pl.Series(rr_hat)).with_columns(
+    residual_rules_ratio=pl.col("rules_ratio") - pl.col("rr_hat"),
 )
 rrw.shape
 
@@ -115,3 +118,46 @@ rrw.sort("residual_rules_ratio", descending=True).head(10)
 
 # %%
 rrw.sort("residual_rules_ratio", descending=False).head(10)
+
+# %%
+# Bokeh scatter: complexity vs rules_ratio with GLM fit
+source = ColumnDataSource(rrw.to_pandas())
+p = figure(
+    width=600,
+    height=400,
+    title="Rules ratio vs complexity",
+    x_axis_label="complexity",
+    y_axis_label="rules_ratio",
+    tools="pan,wheel_zoom,box_zoom,reset,save",
+)
+p.add_tools(
+    HoverTool(
+        tooltips=[
+            ("name", "@name"),
+            ("complexity", "@complexity{0.2f}"),
+            ("rules_ratio", "@rules_ratio{0.3f}"),
+            ("num_votes", "@num_votes"),
+            ("num_forums", "@num_forums"),
+            ("num_threads_total", "@num_threads_total"),
+        ]
+    )
+)
+p.scatter(
+    source=source,
+    x="complexity",
+    y="rules_ratio",
+    size=6,
+    alpha=0.6,
+)
+# Fitted curve: sort by complexity for clean line
+rrw_sorted = rrw.sort("complexity")
+p.line(
+    rrw_sorted["complexity"].to_list(),
+    rrw_sorted["rr_hat"].to_list(),
+    line_dash="dashed",
+    line_width=2,
+    color="firebrick",
+    legend_label="GLM fit",
+)
+p.legend.location = "top_right"
+show(p)
