@@ -95,77 +95,23 @@ rrw.head(10)
 # %%
 rrw.tail(10)
 
+# %%
+# Fit Binomial GLM using smoothed proportion with frequency weights
+y = rrw["rules_ratio"].to_pandas()
+X = sm.add_constant(rrw.select("complexity").to_pandas())
+w = rrw["num_votes"].to_pandas() + alpha + beta
+
+model = sm.GLM(y, X, family=sm.families.Binomial(), freq_weights=w).fit()
+print(model.summary())
+rr_hat = model.predict(X)
+
+rrw = rrw.with_columns(
+    residual_rules_ratio=pl.col("rules_ratio") - pl.Series("rr_hat", rr_hat),
+)
+rrw.shape
 
 # %%
-def add_residual_metric(df: pl.DataFrame) -> pl.DataFrame:
-    # Basic hygiene
-    d = (
-        df.lazy()
-        .filter(
-            (pl.col("num_threads_total") >= 10)  # kill small-number chaos; tune this
-            & (pl.col("complexity") > 0)
-            & (pl.col("num_votes") > 0)
-        )
-        # shrink away from exact 0/1 so logit doesn't explode
-        .select(
-            "bgg_id",
-            rr=pl.col("rules_ratio").clip(1e-6, 1 - 1e-6),
-            w=pl.col("complexity"),
-            log_votes=(pl.col("num_votes") + 1).log(),
-            log_total_threads=(pl.col("num_threads_total") + 1).log(),
-            # centre year to make intercept saner
-            year_c=(pl.col("year") - pl.col("year").median()),
-        )
-        # logit(rr) = log(rr / (1-rr))
-        .with_columns(y=(pl.col("rr") / (1 - pl.col("rr"))).log())
-        .collect()
-    )
-
-    # Pull to numpy for statsmodels
-    y = d["y"].to_pandas()
-    X = d.select(
-        "w",
-        # "log_votes",
-        # "year_c",
-    ).to_pandas()
-    # np.column_stack(
-    #     [
-    #         d["w"].to_numpy(),
-    #         d["log_votes"].to_numpy(),
-    #         d["log_total_threads"].to_numpy(),
-    #         d["year_c"].to_numpy(),
-    #     ]
-    # )
-    X = sm.add_constant(X)
-
-    model = sm.OLS(y, X).fit()
-
-    y_hat = model.predict(X)
-    resid = y - y_hat  # residuals in logit space
-
-    # Attach back: residual > 0 means "more rules-chatter than expected"
-    out = d.with_columns(
-        pl.Series("rr_hat_logit", y_hat),
-        pl.Series("rr_resid_logit", resid),
-    )
-
-    # Optional: map prediction back to ratio space for interpretability
-    # sigmoid(z) = 1/(1+exp(-z))
-    out = out.with_columns(
-        (1 / (1 + (-pl.col("rr_hat_logit")).exp())).alias("rr_hat"),
-    ).with_columns(
-        (pl.col("rr") - pl.col("rr_hat")).alias("rr_resid"),
-    )
-
-    print(model.summary())
-    return out
-
+rrw.sort("residual_rules_ratio", descending=True).head(10)
 
 # %%
-rrrw = add_residual_metric(rrw)
-
-# %%
-rrrw.sort("rr_resid", descending=True).head(10)
-
-# %%
-rrrw.sort("rr_resid", descending=False).head(10)
+rrw.sort("residual_rules_ratio", descending=False).head(10)
