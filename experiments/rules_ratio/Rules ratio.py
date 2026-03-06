@@ -18,6 +18,7 @@ import jupyter_black
 import numpy as np
 import polars as pl
 import statsmodels.api as sm
+from pathlib import Path
 
 jupyter_black.load()
 
@@ -27,8 +28,17 @@ pl.Config.set_tbl_rows(100)
 seed = 13
 
 # %%
+# Additive smoothing
+alpha = 0.5
+beta = 0.5
+# File paths
+results_dir = Path("./results").resolve()
+data_dir = Path("../../../board-game-data").resolve()
+results_dir, data_dir
+
+# %%
 forums = (
-    pl.scan_ndjson("results/*.jl")
+    pl.scan_ndjson(results_dir / "*.jl")
     .unique("forum_id", keep="any")
     .select("bgg_id", "title", "num_threads")
 )
@@ -41,16 +51,17 @@ rules_ratios = (
     )
     .remove(pl.col("num_forums") < 10)
     .remove(pl.col("num_threads_total") < 10)
-    .with_columns(rules_ratio=pl.col("num_threads_rules") / pl.col("num_threads_total"))
+    .with_columns(
+        rules_ratio=(pl.col("num_threads_rules") + alpha)
+        / (pl.col("num_threads_total") + alpha + beta)
+    )
 )
 games = (
-    pl.scan_ndjson(
-        "/Users/markus/Recommend.Games/board-game-data/scraped/bgg_GameItem.jl",
-        infer_schema_length=10_000,
-    )
+    pl.scan_ndjson(data_dir / "scraped" / "bgg_GameItem.jl", infer_schema_length=10_000)
     .remove(pl.col("compilation"))
     .select("bgg_id", "name", "year", "num_votes", "complexity")
     .remove(pl.col("num_votes") < 100)
+    .remove(pl.col("complexity").is_null())
 )
 rrw = (
     rules_ratios.join(games, on="bgg_id", how="inner")
