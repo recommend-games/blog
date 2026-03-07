@@ -18,6 +18,7 @@ import jupyter_black
 import numpy as np
 import polars as pl
 import statsmodels.api as sm
+from datetime import date
 from pathlib import Path
 
 from bokeh.plotting import figure, show
@@ -32,9 +33,11 @@ seed = 13
 
 # %%
 # Filter values
-min_votes = 100
-min_threads = 10
+min_votes = 250
+min_threads = 25
 min_forums = 10
+min_year = 1950
+max_year = date.today().year
 # Additive smoothing
 alpha = 0.5
 beta = 0.5
@@ -52,9 +55,11 @@ forums = (
 games = (
     pl.scan_ndjson(data_dir / "scraped" / "bgg_GameItem.jl", infer_schema_length=10_000)
     .remove(pl.col("compilation"))
-    .select("bgg_id", "name", "year", "num_votes", "complexity")
+    .select("bgg_id", "name", "year", "rank", "num_votes", "complexity")
+    .remove(pl.col("rank").is_null())
     .remove(pl.col("num_votes") < min_votes)
     .remove(pl.col("complexity").is_null())
+    .filter(pl.col("year").is_between(min_year, max_year))
 )
 forums.group_by("title").agg(pl.len()).sort(
     "len",
@@ -113,6 +118,12 @@ rules_ratios.sample(10, seed=seed)
 
 # %%
 rules_ratios.describe()
+
+# %%
+rules_ratios.sort("rank", descending=False).head(10)
+
+# %%
+rules_ratios.sort("num_votes", descending=True).head(10)
 
 # %%
 rules_ratios.sort("rules_ratio", descending=True).head(10)
