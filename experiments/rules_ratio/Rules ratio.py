@@ -58,12 +58,29 @@ forums = (
 games = (
     pl.scan_ndjson(data_dir / "scraped" / "bgg_GameItem.jl", infer_schema_length=10_000)
     .remove(pl.col("compilation"))
-    .select("bgg_id", "name", "year", "rank", "num_votes", "complexity")
+    .select("bgg_id", "name", "year", "rank", "num_votes", "complexity", "add_rank")
     .remove(pl.col("rank").is_null())
     .remove(pl.col("num_votes") < min_votes)
     .remove(pl.col("complexity").is_null())
     .filter(pl.col("year").is_between(min_year, max_year))
 )
+game_types = (
+    games.select("bgg_id", "add_rank")
+    .explode("add_rank")
+    .unnest("add_rank")
+    .group_by("bgg_id")
+    .agg(
+        game_type=pl.col("name")
+        .sort_by("rank", "bayes_rating", descending=[False, True], nulls_last=True)
+        .first()
+    )
+)
+games = (
+    games.drop("add_rank")
+    .join(game_types, on="bgg_id", how="left")
+    .with_columns(pl.col("game_type").fill_null("Uncategorized"))
+)
+
 forums.group_by("title").agg(pl.len()).sort(
     "len",
     "title",
