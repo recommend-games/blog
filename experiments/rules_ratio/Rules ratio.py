@@ -129,9 +129,23 @@ print(model.summary())
 rr_hat = model.predict(X)
 
 rules_ratios = (
-    rules_ratios.with_columns(rr_hat=pl.Series(rr_hat))
-    .with_columns(
-        residual_rules_ratio=pl.col("rules_ratio") - pl.col("rr_hat"),
+    rules_ratios.with_columns(
+        residual_rules_ratio=pl.col("rules_ratio") - pl.Series(rr_hat),
+    )
+    .select(
+        "bgg_id",
+        "name",
+        "year",
+        "game_type",
+        "rank",
+        "bayes_rating",
+        "num_votes",
+        "complexity",
+        "num_threads_total",
+        "num_threads_rules",
+        "rules_ratio",
+        "rules_ratio_by_weight",
+        "residual_rules_ratio",
     )
     .sort(
         "rules_ratio",
