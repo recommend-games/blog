@@ -31,6 +31,10 @@ pl.Config.set_tbl_rows(100)
 seed = 13
 
 # %%
+# Filter values
+min_votes = 100
+min_threads = 10
+min_forums = 10
 # Additive smoothing
 alpha = 0.5
 beta = 0.5
@@ -45,41 +49,13 @@ forums = (
     .unique("forum_id", keep="any")
     .select("bgg_id", "title", "num_threads")
 )
-rules_ratios = (
-    forums.group_by("bgg_id")
-    .agg(
-        num_forums=pl.len(),
-        num_threads_rules=pl.when(title="Rules").then("num_threads").otherwise(0).sum(),
-        num_threads_total=pl.col("num_threads").sum(),
-    )
-    .remove(pl.col("num_forums") < 10)
-    .remove(pl.col("num_threads_total") < 10)
-    .with_columns(
-        rules_ratio=(pl.col("num_threads_rules") + alpha)
-        / (pl.col("num_threads_total") + alpha + beta)
-    )
-)
 games = (
     pl.scan_ndjson(data_dir / "scraped" / "bgg_GameItem.jl", infer_schema_length=10_000)
     .remove(pl.col("compilation"))
     .select("bgg_id", "name", "year", "num_votes", "complexity")
-    .remove(pl.col("num_votes") < 100)
+    .remove(pl.col("num_votes") < min_votes)
     .remove(pl.col("complexity").is_null())
 )
-rrw = (
-    rules_ratios.join(games, on="bgg_id", how="inner")
-    .with_columns(rules_ratio_by_weight=pl.col("rules_ratio") / pl.col("complexity"))
-    .sort(
-        "rules_ratio_by_weight",
-        "rules_ratio",
-        "num_threads_total",
-        descending=[True, True, False],
-    )
-    .collect()
-)
-rrw.shape
-
-# %%
 forums.group_by("title").agg(pl.len()).sort(
     "len",
     "title",
@@ -87,41 +63,78 @@ forums.group_by("title").agg(pl.len()).sort(
 ).collect()
 
 # %%
-rrw.sample(10, seed=seed)
-
-# %%
-rrw.describe()
-
-# %%
-rrw.head(10)
-
-# %%
-rrw.tail(10)
+rules_ratios = (
+    forums.group_by("bgg_id")
+    .agg(
+        num_forums=pl.len(),
+        num_threads_rules=pl.when(title="Rules").then("num_threads").otherwise(0).sum(),
+        num_threads_total=pl.col("num_threads").sum(),
+    )
+    .remove(pl.col("num_forums") < min_forums)
+    .remove(pl.col("num_threads_total") < min_threads)
+    .with_columns(
+        rules_ratio=(pl.col("num_threads_rules") + alpha)
+        / (pl.col("num_threads_total") + alpha + beta)
+    )
+    .join(games, on="bgg_id", how="inner")
+    .with_columns(rules_ratio_by_weight=pl.col("rules_ratio") / pl.col("complexity"))
+    .collect()
+)
+rules_ratios.shape
 
 # %%
 # Fit Binomial GLM using smoothed proportion with frequency weights
-y = rrw["rules_ratio"].to_pandas()
-X = sm.add_constant(rrw.select("complexity").to_pandas())
-w = rrw["num_votes"].to_pandas() + alpha + beta
+y = rules_ratios["rules_ratio"].to_pandas()
+X = sm.add_constant(rules_ratios.select("complexity").to_pandas())
+w = rules_ratios["num_votes"].to_pandas() + alpha + beta
 
 model = sm.GLM(y, X, family=sm.families.Binomial(), freq_weights=w).fit()
 print(model.summary())
 rr_hat = model.predict(X)
 
-rrw = rrw.with_columns(rr_hat=pl.Series(rr_hat)).with_columns(
-    residual_rules_ratio=pl.col("rules_ratio") - pl.col("rr_hat"),
+rules_ratios = (
+    rules_ratios.with_columns(rr_hat=pl.Series(rr_hat))
+    .with_columns(
+        residual_rules_ratio=pl.col("rules_ratio") - pl.col("rr_hat"),
+    )
+    .sort(
+        "rules_ratio",
+        "residual_rules_ratio",
+        "rules_ratio_by_weight",
+        "num_threads_total",
+        descending=[True, True, True, False],
+    )
 )
-rrw.shape
+
+rules_ratios.shape
 
 # %%
-rrw.sort("residual_rules_ratio", descending=True).head(10)
+rules_ratios.sample(10, seed=seed)
 
 # %%
-rrw.sort("residual_rules_ratio", descending=False).head(10)
+rules_ratios.describe()
+
+# %%
+rules_ratios.sort("rules_ratio", descending=True).head(10)
+
+# %%
+rules_ratios.sort("rules_ratio", descending=False).head(10)
+
+# %%
+rules_ratios.sort("rules_ratio_by_weight", descending=True).head(10)
+
+# %%
+rules_ratios.sort("rules_ratio_by_weight", descending=False).head(10)
+
+# %%
+rules_ratios.sort("residual_rules_ratio", descending=True).head(10)
+
+# %%
+rules_ratios.sort("residual_rules_ratio", descending=False).head(10)
 
 # %%
 # Bokeh scatter: complexity vs rules_ratio with GLM fit
-source = ColumnDataSource(rrw.to_pandas())
+source = ColumnDataSource(rules_ratios.to_pandas())
 p = figure(
     width=600,
     height=400,
@@ -150,7 +163,7 @@ p.scatter(
     alpha=0.6,
 )
 # Fitted curve: sort by complexity for clean line
-rrw_sorted = rrw.sort("complexity")
+rrw_sorted = rules_ratios.sort("complexity")
 p.line(
     rrw_sorted["complexity"].to_list(),
     rrw_sorted["rr_hat"].to_list(),
