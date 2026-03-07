@@ -22,7 +22,8 @@ import statsmodels.api as sm
 from bokeh.io import output_notebook
 from bokeh.plotting import figure, show
 from bokeh.embed import json_item
-from bokeh.models import HoverTool, ColumnDataSource
+from bokeh.models import ColumnDataSource, HoverTool, NumeralTickFormatter
+from bokeh.palettes import Category10
 from datetime import date
 from pathlib import Path
 
@@ -58,7 +59,16 @@ forums = (
 games = (
     pl.scan_ndjson(data_dir / "scraped" / "bgg_GameItem.jl", infer_schema_length=10_000)
     .remove(pl.col("compilation"))
-    .select("bgg_id", "name", "year", "rank", "num_votes", "complexity", "add_rank")
+    .select(
+        "bgg_id",
+        "name",
+        "year",
+        "rank",
+        "bayes_rating",
+        "num_votes",
+        "complexity",
+        "add_rank",
+    )
     .remove(pl.col("rank").is_null())
     .remove(pl.col("num_votes") < min_votes)
     .remove(pl.col("complexity").is_null())
@@ -167,37 +177,62 @@ rules_ratios.sort("residual_rules_ratio", descending=False).head(10)
 # TODO: Export results to CSV
 
 # %%
-# Bokeh scatter: complexity vs rules_ratio with GLM fit
-source = ColumnDataSource(rules_ratios.filter(pl.col("num_votes") >= 1000).to_pandas())
+# Bokeh scatter: complexity vs rules_ratio
+min_size, max_size = 5, 18
+bokeh_df = (
+    rules_ratios.filter((pl.col("rank") <= 1000) | (pl.col("num_votes") >= 10_000))
+    .with_columns(log_num_votes=pl.col("num_votes").clip(1).log10())
+    .with_columns(
+        size=min_size
+        + (pl.col("log_num_votes") - pl.col("log_num_votes").min())
+        * (max_size - min_size)
+        / (pl.col("log_num_votes").max() - pl.col("log_num_votes").min())
+    )
+    .to_pandas()
+)
+source = ColumnDataSource(bokeh_df)
 p = figure(
-    width=600,
-    height=400,
+    width=900,
+    height=550,
     title="Rules ratio vs complexity",
-    x_axis_label="complexity",
-    y_axis_label="rules_ratio",
+    x_axis_label="BGG complexity",
+    y_axis_label="Rules ratio (RR)",
     tools="pan,wheel_zoom,box_zoom,reset,save",
 )
-p.add_tools(
-    HoverTool(
-        tooltips=[
-            ("name", "@name"),
-            ("complexity", "@complexity{0.2f}"),
-            ("rules_ratio", "@rules_ratio{0.3f}"),
-            ("num_votes", "@num_votes"),
-            ("num_forums", "@num_forums"),
-            ("num_threads_total", "@num_threads_total"),
-        ]
-    )
-)
+
+# palette = Category10[10]
 p.scatter(
     source=source,
     x="complexity",
     y="rules_ratio",
-    size=6,
-    alpha=0.6,
+    size="size",
+    marker="circle",
+    fill_alpha=0.5,
+    line_color=None,
+    # TODO: Colour games by type; size by popularity
+    legend_label="game_type",
 )
-# TODO: Colour games by type; size by popularity
-# p.legend.location = "top_right"
+
+hover = HoverTool(
+    tooltips=[
+        ("Game", "@name (@year)"),
+        (
+            "Rules ratio (RR)",
+            "@rules_ratio{0%} (@num_threads_rules / @num_threads_total)",
+        ),
+        ("Rules ratio by weight (RRW)", "@rules_ratio_by_weight{0%}"),
+        ("Residual rules ratio (RRR)", "@residual_rules_ratio{0%}"),
+        ("Complexity", "@complexity{0.0}"),
+        ("BGG rank (rating)", "@rank (@bayes_rating{0.0})"),
+        ("Number of ratings", "@num_votes"),
+        ("Game type", "@game_type"),
+    ]
+)
+p.add_tools(hover)
+
+p.legend.location = "bottom_right"
+p.yaxis.formatter = NumeralTickFormatter(format="0%")
+
 show(p)
 
 # %%
