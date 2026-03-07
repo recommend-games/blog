@@ -1,18 +1,18 @@
 {
-    "target_id": "rules-ratio-vs-complexity",
-    "root_id": "p1011",
+    "target_id": "residual-rules-ratio-vs-complexity",
+    "root_id": "p1083",
     "doc": {
         "version": "3.8.2",
         "title": "",
         "config": {
             "type": "object",
             "name": "DocumentConfig",
-            "id": "p1152",
+            "id": "p1166",
             "attributes": {
                 "notifications": {
                     "type": "object",
                     "name": "Notifications",
-                    "id": "p1153"
+                    "id": "p1167"
                 }
             }
         },
@@ -20,53 +20,53 @@
             {
                 "type": "object",
                 "name": "Figure",
-                "id": "p1011",
+                "id": "p1083",
                 "attributes": {
                     "width": 900,
                     "height": 550,
                     "x_range": {
                         "type": "object",
                         "name": "DataRange1d",
-                        "id": "p1012"
+                        "id": "p1084"
                     },
                     "y_range": {
                         "type": "object",
                         "name": "DataRange1d",
-                        "id": "p1013"
+                        "id": "p1085"
                     },
                     "x_scale": {
                         "type": "object",
                         "name": "LinearScale",
-                        "id": "p1021"
+                        "id": "p1093"
                     },
                     "y_scale": {
                         "type": "object",
                         "name": "LinearScale",
-                        "id": "p1022"
+                        "id": "p1094"
                     },
                     "title": {
                         "type": "object",
                         "name": "Title",
-                        "id": "p1014",
+                        "id": "p1086",
                         "attributes": {
-                            "text": "Rules ratio vs complexity"
+                            "text": "Residual rules ratio vs complexity"
                         }
                     },
                     "renderers": [
                         {
                             "type": "object",
                             "name": "GlyphRenderer",
-                            "id": "p1052",
+                            "id": "p1124",
                             "attributes": {
                                 "data_source": {
                                     "type": "object",
                                     "name": "ColumnDataSource",
-                                    "id": "p1008",
+                                    "id": "p1080",
                                     "attributes": {
                                         "selected": {
                                             "type": "object",
                                             "name": "Selection",
-                                            "id": "p1009",
+                                            "id": "p1081",
                                             "attributes": {
                                                 "indices": [],
                                                 "line_indices": []
@@ -75,7 +75,7 @@
                                         "selection_policy": {
                                             "type": "object",
                                             "name": "UnionRenderers",
-                                            "id": "p1010"
+                                            "id": "p1082"
                                         },
                                         "data": {
                                             "type": "map",
@@ -2425,19 +2425,19 @@
                                 "view": {
                                     "type": "object",
                                     "name": "CDSView",
-                                    "id": "p1053",
+                                    "id": "p1125",
                                     "attributes": {
                                         "filter": {
                                             "type": "object",
                                             "name": "AllIndices",
-                                            "id": "p1054"
+                                            "id": "p1126"
                                         }
                                     }
                                 },
                                 "glyph": {
                                     "type": "object",
                                     "name": "Scatter",
-                                    "id": "p1049",
+                                    "id": "p1121",
                                     "attributes": {
                                         "x": {
                                             "type": "field",
@@ -2445,7 +2445,7 @@
                                         },
                                         "y": {
                                             "type": "field",
-                                            "field": "rules_ratio"
+                                            "field": "residual_rules_ratio"
                                         },
                                         "size": {
                                             "type": "field",
@@ -2461,7 +2461,7 @@
                                             "transform": {
                                                 "type": "object",
                                                 "name": "CategoricalColorMapper",
-                                                "id": "p1045",
+                                                "id": "p1117",
                                                 "attributes": {
                                                     "palette": [
                                                         "#1f77b4",
@@ -2497,7 +2497,7 @@
                                 "nonselection_glyph": {
                                     "type": "object",
                                     "name": "Scatter",
-                                    "id": "p1050",
+                                    "id": "p1122",
                                     "attributes": {
                                         "x": {
                                             "type": "field",
@@ -2505,7 +2505,7 @@
                                         },
                                         "y": {
                                             "type": "field",
-                                            "field": "rules_ratio"
+                                            "field": "residual_rules_ratio"
                                         },
                                         "size": {
                                             "type": "field",
@@ -2523,7 +2523,7 @@
                                             "type": "field",
                                             "field": "game_type",
                                             "transform": {
-                                                "id": "p1045"
+                                                "id": "p1117"
                                             }
                                         },
                                         "fill_alpha": {
@@ -2539,7 +2539,7 @@
                                 "muted_glyph": {
                                     "type": "object",
                                     "name": "Scatter",
-                                    "id": "p1051",
+                                    "id": "p1123",
                                     "attributes": {
                                         "x": {
                                             "type": "field",
@@ -2547,7 +2547,7 @@
                                         },
                                         "y": {
                                             "type": "field",
-                                            "field": "rules_ratio"
+                                            "field": "residual_rules_ratio"
                                         },
                                         "size": {
                                             "type": "field",
@@ -2565,7 +2565,7 @@
                                             "type": "field",
                                             "field": "game_type",
                                             "transform": {
-                                                "id": "p1045"
+                                                "id": "p1117"
                                             }
                                         },
                                         "fill_alpha": {
@@ -2584,18 +2584,18 @@
                     "toolbar": {
                         "type": "object",
                         "name": "Toolbar",
-                        "id": "p1020",
+                        "id": "p1092",
                         "attributes": {
                             "tools": [
                                 {
                                     "type": "object",
                                     "name": "PanTool",
-                                    "id": "p1033"
+                                    "id": "p1105"
                                 },
                                 {
                                     "type": "object",
                                     "name": "WheelZoomTool",
-                                    "id": "p1034",
+                                    "id": "p1106",
                                     "attributes": {
                                         "renderers": "auto"
                                     }
@@ -2603,13 +2603,13 @@
                                 {
                                     "type": "object",
                                     "name": "BoxZoomTool",
-                                    "id": "p1035",
+                                    "id": "p1107",
                                     "attributes": {
                                         "dimensions": "both",
                                         "overlay": {
                                             "type": "object",
                                             "name": "BoxAnnotation",
-                                            "id": "p1036",
+                                            "id": "p1108",
                                             "attributes": {
                                                 "syncable": false,
                                                 "line_color": "black",
@@ -2646,12 +2646,12 @@
                                                 "handles": {
                                                     "type": "object",
                                                     "name": "BoxInteractionHandles",
-                                                    "id": "p1042",
+                                                    "id": "p1114",
                                                     "attributes": {
                                                         "all": {
                                                             "type": "object",
                                                             "name": "AreaVisuals",
-                                                            "id": "p1041",
+                                                            "id": "p1113",
                                                             "attributes": {
                                                                 "fill_color": "white",
                                                                 "hover_fill_color": "lightgray"
@@ -2666,17 +2666,17 @@
                                 {
                                     "type": "object",
                                     "name": "ResetTool",
-                                    "id": "p1043"
+                                    "id": "p1115"
                                 },
                                 {
                                     "type": "object",
                                     "name": "SaveTool",
-                                    "id": "p1044"
+                                    "id": "p1116"
                                 },
                                 {
                                     "type": "object",
                                     "name": "HoverTool",
-                                    "id": "p1064",
+                                    "id": "p1136",
                                     "attributes": {
                                         "renderers": "auto",
                                         "tooltips": [
@@ -2723,12 +2723,12 @@
                         {
                             "type": "object",
                             "name": "LinearAxis",
-                            "id": "p1028",
+                            "id": "p1100",
                             "attributes": {
                                 "ticker": {
                                     "type": "object",
                                     "name": "BasicTicker",
-                                    "id": "p1029",
+                                    "id": "p1101",
                                     "attributes": {
                                         "mantissas": [
                                             1,
@@ -2740,16 +2740,16 @@
                                 "formatter": {
                                     "type": "object",
                                     "name": "NumeralTickFormatter",
-                                    "id": "p1065",
+                                    "id": "p1137",
                                     "attributes": {
                                         "format": "0%"
                                     }
                                 },
-                                "axis_label": "Rules ratio (RR)",
+                                "axis_label": "Residual rules ratio (RRR)",
                                 "major_label_policy": {
                                     "type": "object",
                                     "name": "AllLabels",
-                                    "id": "p1031"
+                                    "id": "p1103"
                                 }
                             }
                         }
@@ -2758,12 +2758,12 @@
                         {
                             "type": "object",
                             "name": "LinearAxis",
-                            "id": "p1023",
+                            "id": "p1095",
                             "attributes": {
                                 "ticker": {
                                     "type": "object",
                                     "name": "BasicTicker",
-                                    "id": "p1024",
+                                    "id": "p1096",
                                     "attributes": {
                                         "mantissas": [
                                             1,
@@ -2775,13 +2775,13 @@
                                 "formatter": {
                                     "type": "object",
                                     "name": "BasicTickFormatter",
-                                    "id": "p1025"
+                                    "id": "p1097"
                                 },
                                 "axis_label": "BGG complexity",
                                 "major_label_policy": {
                                     "type": "object",
                                     "name": "AllLabels",
-                                    "id": "p1026"
+                                    "id": "p1098"
                                 }
                             }
                         }
@@ -2790,35 +2790,35 @@
                         {
                             "type": "object",
                             "name": "Grid",
-                            "id": "p1027",
+                            "id": "p1099",
                             "attributes": {
                                 "axis": {
-                                    "id": "p1023"
+                                    "id": "p1095"
                                 }
                             }
                         },
                         {
                             "type": "object",
                             "name": "Grid",
-                            "id": "p1032",
+                            "id": "p1104",
                             "attributes": {
                                 "dimension": 1,
                                 "axis": {
-                                    "id": "p1028"
+                                    "id": "p1100"
                                 }
                             }
                         },
                         {
                             "type": "object",
                             "name": "Legend",
-                            "id": "p1055",
+                            "id": "p1127",
                             "attributes": {
                                 "location": "bottom_right",
                                 "items": [
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1056",
+                                        "id": "p1128",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -2826,7 +2826,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1052"
+                                                    "id": "p1124"
                                                 }
                                             ],
                                             "index": 225
@@ -2835,7 +2835,7 @@
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1057",
+                                        "id": "p1129",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -2843,7 +2843,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1052"
+                                                    "id": "p1124"
                                                 }
                                             ],
                                             "index": 46
@@ -2852,7 +2852,7 @@
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1058",
+                                        "id": "p1130",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -2860,7 +2860,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1052"
+                                                    "id": "p1124"
                                                 }
                                             ],
                                             "index": 150
@@ -2869,7 +2869,7 @@
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1059",
+                                        "id": "p1131",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -2877,7 +2877,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1052"
+                                                    "id": "p1124"
                                                 }
                                             ],
                                             "index": 6
@@ -2886,7 +2886,7 @@
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1060",
+                                        "id": "p1132",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -2894,7 +2894,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1052"
+                                                    "id": "p1124"
                                                 }
                                             ],
                                             "index": 5
@@ -2903,7 +2903,7 @@
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1061",
+                                        "id": "p1133",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -2911,7 +2911,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1052"
+                                                    "id": "p1124"
                                                 }
                                             ],
                                             "index": 0
@@ -2920,7 +2920,7 @@
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1062",
+                                        "id": "p1134",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -2928,7 +2928,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1052"
+                                                    "id": "p1124"
                                                 }
                                             ],
                                             "index": 11
@@ -2937,7 +2937,7 @@
                                     {
                                         "type": "object",
                                         "name": "LegendItem",
-                                        "id": "p1063",
+                                        "id": "p1135",
                                         "attributes": {
                                             "label": {
                                                 "type": "value",
@@ -2945,7 +2945,7 @@
                                             },
                                             "renderers": [
                                                 {
-                                                    "id": "p1052"
+                                                    "id": "p1124"
                                                 }
                                             ],
                                             "index": 9

@@ -192,10 +192,11 @@ rules_ratios.sort("residual_rules_ratio", descending=False).head(10)
 rules_ratios.sort("rank").write_csv("csv/rules_ratios.csv", float_precision=3)
 
 # %%
-# Bokeh scatter: complexity vs rules_ratio
+# Bokeh scatter: complexity vs rules_ratio / residual_rules_ratio
 min_size, max_size = 5, 18
 bokeh_df = (
     rules_ratios.filter((pl.col("rank") <= 1000) | (pl.col("num_votes") >= 10_000))
+    .with_columns(residual_rules_ratio=pl.col("residual_rules_ratio") * 100)
     .with_columns(log_num_votes=pl.col("num_votes").clip(1).log10())
     .with_columns(
         size=min_size
@@ -203,61 +204,113 @@ bokeh_df = (
         * (max_size - min_size)
         / (pl.col("log_num_votes").max() - pl.col("log_num_votes").min())
     )
+    .select(
+        "name",
+        "year",
+        "num_threads_rules",
+        "num_threads_total",
+        "rules_ratio",
+        "rules_ratio_by_weight",
+        "residual_rules_ratio",
+        "complexity",
+        "rank",
+        "bayes_rating",
+        "num_votes",
+        "game_type",
+        "size",
+    )
     .to_pandas()
 )
-source = ColumnDataSource(bokeh_df)
-game_types_unique = sorted(bokeh_df["game_type"].unique())
 
-p = figure(
-    width=900,
-    height=550,
-    title="Rules ratio vs complexity",
-    x_axis_label="BGG complexity",
-    y_axis_label="Rules ratio (RR)",
-    tools="pan,wheel_zoom,box_zoom,reset,save",
-)
-
-p.scatter(
-    source=source,
-    x="complexity",
-    y="rules_ratio",
-    size="size",
-    marker="circle",
-    fill_alpha=0.75,
-    line_color=None,
-    fill_color=factor_cmap(
-        "game_type",
-        palette=Category10[10],
-        factors=game_types_unique,
+HOVER_TOOLTIPS = [
+    ("Game", "@name (@year)"),
+    (
+        "Rules ratio (RR)",
+        "@rules_ratio{0%} (@num_threads_rules / @num_threads_total)",
     ),
-    legend_group="game_type",
-)
+    ("Rules ratio by weight (RRW)", "@rules_ratio_by_weight{0%}"),
+    ("Residual rules ratio (RRR)", "@residual_rules_ratio{+0} WEM"),
+    ("Complexity", "@complexity{0.0}"),
+    ("BGG rank (rating)", "@rank (@bayes_rating{0.0})"),
+    ("Number of ratings", "@num_votes"),
+    ("Game type", "@game_type"),
+]
 
-hover = HoverTool(
-    tooltips=[
-        ("Game", "@name (@year)"),
-        (
-            "Rules ratio (RR)",
-            "@rules_ratio{0%} (@num_threads_rules / @num_threads_total)",
+
+def make_rules_scatter(
+    *,
+    bokeh_df,
+    y_col,
+    title,
+    y_axis_label,
+    hover_tooltips=HOVER_TOOLTIPS,
+):
+    """Build a Bokeh scatter of complexity vs the given y column, coloured by game_type."""
+    source = ColumnDataSource(bokeh_df)
+    game_types_unique = sorted(bokeh_df["game_type"].unique())
+
+    p = figure(
+        width=900,
+        height=550,
+        title=title,
+        x_axis_label="BGG complexity",
+        y_axis_label=y_axis_label,
+        tools="pan,wheel_zoom,box_zoom,reset,save",
+    )
+
+    p.scatter(
+        source=source,
+        x="complexity",
+        y=y_col,
+        size="size",
+        marker="circle",
+        fill_alpha=0.75,
+        line_color=None,
+        fill_color=factor_cmap(
+            "game_type",
+            palette=Category10[10],
+            factors=game_types_unique,
         ),
-        ("Rules ratio by weight (RRW)", "@rules_ratio_by_weight{0%}"),
-        ("Residual rules ratio (RRR)", "@residual_rules_ratio{0%}"),
-        ("Complexity", "@complexity{0.0}"),
-        ("BGG rank (rating)", "@rank (@bayes_rating{0.0})"),
-        ("Number of ratings", "@num_votes"),
-        ("Game type", "@game_type"),
-    ]
-)
-p.add_tools(hover)
+        legend_group="game_type",
+    )
 
-p.legend.location = "bottom_right"
-p.yaxis.formatter = NumeralTickFormatter(format="0%")
+    p.add_tools(HoverTool(tooltips=HOVER_TOOLTIPS))
+    p.legend.location = "bottom_right"
+    p.yaxis.formatter = NumeralTickFormatter(format="0%")
 
-show(p)
+    return p
+
 
 # %%
-# Export interactive plot to JSON for embedding
-plot_json_path = "plots/rules_ratio_vs_complexity.json"
-with open(plot_json_path, "w") as f:
-    json.dump(json_item(p, "rules-ratio-vs-complexity"), f, indent=4)
-print(f"Exported Bokeh plot JSON to {plot_json_path}")
+# Plot 1: Rules ratio vs complexity
+p_rr = make_rules_scatter(
+    bokeh_df=bokeh_df,
+    y_col="rules_ratio",
+    title="Rules ratio vs complexity",
+    y_axis_label="Rules ratio (RR)",
+)
+show(p_rr)
+
+# %%
+# Plot 2: Residual rules ratio vs complexity
+p_rrr = make_rules_scatter(
+    bokeh_df=bokeh_df,
+    y_col="residual_rules_ratio",
+    title="Residual rules ratio vs complexity",
+    y_axis_label="Residual rules ratio (RRR)",
+)
+show(p_rrr)
+
+# %%
+# Export interactive plots to JSON for embedding
+for p, filename, target_id in [
+    (p_rr, "plots/rules_ratio_vs_complexity.json", "rules-ratio-vs-complexity"),
+    (
+        p_rrr,
+        "plots/residual_rules_ratio_vs_complexity.json",
+        "residual-rules-ratio-vs-complexity",
+    ),
+]:
+    with open(filename, "w") as f:
+        json.dump(json_item(p, target_id), f, indent=4)
+    print(f"Exported Bokeh plot JSON to {filename}")
