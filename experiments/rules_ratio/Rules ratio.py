@@ -24,6 +24,7 @@ from bokeh.plotting import figure, show
 from bokeh.embed import json_item
 from bokeh.models import ColumnDataSource, HoverTool, NumeralTickFormatter
 from bokeh.palettes import Category10
+from bokeh.transform import factor_cmap
 from datetime import date
 from pathlib import Path
 
@@ -191,6 +192,8 @@ bokeh_df = (
     .to_pandas()
 )
 source = ColumnDataSource(bokeh_df)
+game_types_unique = sorted(bokeh_df["game_type"].unique())
+
 p = figure(
     width=900,
     height=550,
@@ -200,17 +203,20 @@ p = figure(
     tools="pan,wheel_zoom,box_zoom,reset,save",
 )
 
-# palette = Category10[10]
 p.scatter(
     source=source,
     x="complexity",
     y="rules_ratio",
     size="size",
     marker="circle",
-    fill_alpha=0.5,
+    fill_alpha=0.75,
     line_color=None,
-    # TODO: Colour games by type; size by popularity
-    legend_label="game_type",
+    fill_color=factor_cmap(
+        "game_type",
+        palette=Category10[10],
+        factors=game_types_unique,
+    ),
+    legend_group="game_type",
 )
 
 hover = HoverTool(
