@@ -244,6 +244,8 @@ def make_rules_scatter(
     title,
     y_axis_label,
     hover_tooltips=HOVER_TOOLTIPS,
+    legend_location="bottom_right",
+    tick_format="0%",
 ):
     """Build a Bokeh scatter of complexity vs the given y column, coloured by game_type."""
     source = ColumnDataSource(bokeh_df)
@@ -275,8 +277,8 @@ def make_rules_scatter(
     )
 
     p.add_tools(HoverTool(tooltips=HOVER_TOOLTIPS))
-    p.legend.location = "bottom_right"
-    p.yaxis.formatter = NumeralTickFormatter(format="0%")
+    p.legend.location = legend_location
+    p.yaxis.formatter = NumeralTickFormatter(format=tick_format)
 
     return p
 
@@ -286,7 +288,7 @@ def make_rules_scatter(
 p_rr = make_rules_scatter(
     bokeh_df=bokeh_df,
     y_col="rules_ratio",
-    title="Rules ratio vs complexity",
+    title="Rules ratio (RR) vs complexity",
     y_axis_label="Rules ratio (RR)",
 )
 show(p_rr)
@@ -296,8 +298,10 @@ show(p_rr)
 p_rrr = make_rules_scatter(
     bokeh_df=bokeh_df,
     y_col="residual_rules_ratio",
-    title="Residual rules ratio vs complexity",
-    y_axis_label="Residual rules ratio (RRR)",
+    title="Residual rules ratio (RRR) vs complexity",
+    y_axis_label="Residual rules ratio (RRR in WEM)",
+    legend_location="top_right",
+    tick_format="0",
 )
 show(p_rrr)
 
