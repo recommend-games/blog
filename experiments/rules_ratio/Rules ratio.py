@@ -15,17 +15,20 @@
 
 # %%
 import jupyter_black
+import json
 import numpy as np
 import polars as pl
 import statsmodels.api as sm
+from bokeh.io import output_notebook
+from bokeh.plotting import figure, show
+from bokeh.embed import json_item
+from bokeh.models import HoverTool, ColumnDataSource
 from datetime import date
 from pathlib import Path
 
-from bokeh.plotting import figure, show
-from bokeh.models import HoverTool, ColumnDataSource
-
 jupyter_black.load()
 
+output_notebook()
 pl.Config.set_tbl_cols(100)
 pl.Config.set_tbl_rows(100)
 
@@ -144,8 +147,11 @@ rules_ratios.sort("residual_rules_ratio", descending=True).head(10)
 rules_ratios.sort("residual_rules_ratio", descending=False).head(10)
 
 # %%
+# TODO: Export results to CSV
+
+# %%
 # Bokeh scatter: complexity vs rules_ratio with GLM fit
-source = ColumnDataSource(rules_ratios.to_pandas())
+source = ColumnDataSource(rules_ratios.filter(pl.col("num_votes") >= 1000).to_pandas())
 p = figure(
     width=600,
     height=400,
@@ -173,15 +179,13 @@ p.scatter(
     size=6,
     alpha=0.6,
 )
-# Fitted curve: sort by complexity for clean line
-rrw_sorted = rules_ratios.sort("complexity")
-p.line(
-    rrw_sorted["complexity"].to_list(),
-    rrw_sorted["rr_hat"].to_list(),
-    line_dash="dashed",
-    line_width=2,
-    color="firebrick",
-    legend_label="GLM fit",
-)
-p.legend.location = "top_right"
+# TODO: Colour games by type; size by popularity
+# p.legend.location = "top_right"
 show(p)
+
+# %%
+# Export interactive plot to JSON for embedding
+plot_json_path = "plots/rules_ratio_vs_complexity.json"
+with open(plot_json_path, "w") as f:
+    json.dump(json_item(p, "rules-ratio-vs-complexity"), f, indent=4)
+print(f"Exported Bokeh plot JSON to {plot_json_path}")
