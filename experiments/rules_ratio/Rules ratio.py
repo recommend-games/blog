@@ -49,7 +49,10 @@ beta = 0.5
 # File paths
 results_dir = Path("./results").resolve()
 data_dir = Path("../../../board-game-data").resolve()
-results_dir, data_dir
+tables_md_dir = Path(
+    "./results/tables"
+).resolve()  # folder for top/bottom 10 .md tables
+results_dir, data_dir, tables_md_dir
 
 # %%
 forums = (
@@ -187,6 +190,65 @@ rules_ratios.sort("residual_rules_ratio", descending=True).head(10)
 
 # %%
 rules_ratios.sort("residual_rules_ratio", descending=False).head(10)
+
+# %%
+def _df_to_markdown(df: pl.DataFrame, title: str) -> str:
+    """Convert a Polars DataFrame to a markdown table string with an optional title."""
+    lines = []
+    if title:
+        lines.append(f"# {title}\n")
+    cols = df.columns
+    lines.append("| " + " | ".join(cols) + " |")
+    lines.append("| " + " | ".join("---" for _ in cols) + " |")
+    for row in df.iter_rows():
+        cells = [str(v) if v is not None else "" for v in row]
+        lines.append("| " + " | ".join(cells) + " |")
+    return "\n".join(lines)
+
+
+def save_table_md(df: pl.DataFrame, filename: str, title: str) -> Path:
+    """Save a DataFrame as markdown in tables_md_dir. Creates directory if needed."""
+    tables_md_dir.mkdir(parents=True, exist_ok=True)
+    path = tables_md_dir / filename
+    path.write_text(_df_to_markdown(df, title), encoding="utf-8")
+    return path
+
+
+# Save top/bottom 10 tables as markdown
+_table_specs = [
+    ("Top 10 by BGG rank", "rank", False, "top10_by_rank.md"),
+    ("Top 10 by number of votes", "num_votes", True, "top10_by_num_votes.md"),
+    ("Top 10 by rules ratio", "rules_ratio", True, "top10_rules_ratio.md"),
+    ("Bottom 10 by rules ratio", "rules_ratio", False, "bottom10_rules_ratio.md"),
+    (
+        "Top 10 by rules ratio (by weight)",
+        "rules_ratio_by_weight",
+        True,
+        "top10_rules_ratio_by_weight.md",
+    ),
+    (
+        "Bottom 10 by rules ratio (by weight)",
+        "rules_ratio_by_weight",
+        False,
+        "bottom10_rules_ratio_by_weight.md",
+    ),
+    (
+        "Top 10 by residual rules ratio",
+        "residual_rules_ratio",
+        True,
+        "top10_residual_rules_ratio.md",
+    ),
+    (
+        "Bottom 10 by residual rules ratio",
+        "residual_rules_ratio",
+        False,
+        "bottom10_residual_rules_ratio.md",
+    ),
+]
+for title, sort_col, descending, filename in _table_specs:
+    tbl = rules_ratios.sort(sort_col, descending=descending).head(10)
+    save_table_md(tbl, filename, title)
+print(f"Saved {len(_table_specs)} tables to {tables_md_dir}")
 
 # %%
 rules_ratios.sort("rank").write_csv("csv/rules_ratios.csv", float_precision=3)
