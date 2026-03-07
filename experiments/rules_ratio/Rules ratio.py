@@ -189,7 +189,7 @@ rules_ratios.sort("residual_rules_ratio", descending=True).head(10)
 rules_ratios.sort("residual_rules_ratio", descending=False).head(10)
 
 # %%
-# TODO: Export results to CSV
+rules_ratios.sort("rank").write_csv("csv/rules_ratios.csv", float_precision=3)
 
 # %%
 # Bokeh scatter: complexity vs rules_ratio
