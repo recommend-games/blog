@@ -26,6 +26,7 @@ from bokeh.palettes import Category10
 from bokeh.transform import factor_cmap
 from datetime import date
 from pathlib import Path
+from tabulate import tabulate
 
 jupyter_black.load()
 
@@ -168,28 +169,18 @@ rules_ratios.describe()
 
 
 # %%
-def _df_to_markdown(df: pl.DataFrame, title: str) -> str:
-    """Convert a Polars DataFrame to a markdown table string with an optional title."""
-    lines = []
-    if title:
-        lines.append(f"# {title}\n")
-    cols = df.columns
-    lines.append("| " + " | ".join(cols) + " |")
-    lines.append("| " + " | ".join("---" for _ in cols) + " |")
-    for row in df.iter_rows():
-        cells = [str(v) if v is not None else "" for v in row]
-        lines.append("| " + " | ".join(cells) + " |")
-    return "\n".join(lines)
-
-
 def save_table_md(df: pl.DataFrame, filename: str, title: str) -> Path:
     """Save a DataFrame as markdown in tables_md_dir. Creates directory if needed."""
     tables_md_dir.mkdir(parents=True, exist_ok=True)
+    md = tabulate(df.iter_rows(), headers=df.columns, tablefmt="github")
+    if title:
+        md = f"# {title}\n\n{md}"
     path = tables_md_dir / filename
-    path.write_text(_df_to_markdown(df, title), encoding="utf-8")
+    path.write_text(md, encoding="utf-8")
     return path
 
 
+# %%
 # Save top/bottom 10 tables as markdown
 _table_specs = [
     ("Top 10 by rank", "rank", False, "top_10_rank.md"),
@@ -221,11 +212,48 @@ _table_specs = [
         "bottom_10_residual_rules_ratio.md",
     ),
 ]
+
 for title, sort_col, descending, filename in _table_specs:
     print(title)
-    tbl = rules_ratios.sort(sort_col, descending=descending).head(10)
+    tbl = (
+        rules_ratios.sort(sort_col, descending=descending)
+        .head(10)
+        .with_columns(
+            (pl.col("rules_ratio") * 100).round(0).cast(pl.Int64),
+            (pl.col("rules_ratio_by_weight") * 100).round(0).cast(pl.Int64),
+            (pl.col("residual_rules_ratio") * 100).round(0).cast(pl.Int64),
+        )
+        .select(
+            Game=pl.format(
+                "{{% game {} %}}{}{{% /game %}} ({})",
+                "bgg_id",
+                "name",
+                "year",
+            ),
+            RR=pl.format(
+                "{}% ({} / {})",
+                "rules_ratio",
+                "num_threads_rules",
+                "num_threads_total",
+            ),
+            RRW=pl.format(
+                "{}% ({}% / {})",
+                "rules_ratio_by_weight",
+                "rules_ratio",
+                pl.col("complexity").round(1),
+            ),
+            RRR=pl.format(
+                "{}{} wem",
+                pl.when(pl.col("residual_rules_ratio") < 0)
+                .then(pl.lit(""))
+                .otherwise(pl.lit("+")),
+                "residual_rules_ratio",
+            ),
+        )
+    )
     display(tbl)
     save_table_md(tbl, filename, title)
+
 print(f"Saved {len(_table_specs)} tables to {tables_md_dir}")
 
 # %%
