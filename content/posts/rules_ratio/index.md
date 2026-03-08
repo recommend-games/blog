@@ -21,7 +21,9 @@ tags:
 
 The basic idea behind the Rules Ratio is to look at how many rules question a game generates. It stands to reason that a game with clear concepts and well written instructions will leave players less confused than a poorly written rulebook. BGG offers a direct proxy for number of rules questions via its forums. Every game listing has a variety of such forums attached, including one titled *Rules*. Depending on the game, this particular forum might be the busiest, or completly void of any traffic. WEM proposes the share of rules threads[^threads] of all threads as the Rules Ratio[^ratio] (RR):
 
-\\[ TODO: LaTeX formula \\]
+\\[
+  \text{RR} = \frac{\text{rules threads}}{\text{total threads}}.
+\\]
 
 Concretely, let's look at one of my favourite games: {{% game 51 %}}Ricochet Robots{{% /game %}}. As of the time of writing, there are a total of [183 forum threads](https://boardgamegeek.com/boardgame/51/ricochet-robots/forums/0), 22 of which concern rules:
 
@@ -36,7 +38,9 @@ As it turns out: a little too simple. WEM's examples are all massively popular g
 
 Mathematically speaking, we're trying to estimate the probability that a forum thread will be posted in the rules section. There's a simple and well established trick known as [additive smoothing](https://en.wikipedia.org/wiki/Additive_smoothing) (or Laplace's [rule of succession](https://en.wikipedia.org/wiki/Rule_of_succession)) for scenarios like this. The idea is to pretend there are two more threads than there really are: one with a rules question and one without.[^3b1b] In other words: we increase the number of rules threads by 1 and that of all threads by 2. But since this is a little too opinionated and can skew the metric a bit too much, we're actually using 0.5 and 1 instead:
 
-\\[ TODO: LaTeX formula incl smoothing \\]
+\\[
+  \text{RR} = \frac{\text{rules threads} + 0.5}{\text{total threads} + 1}.
+\\]
 
 This is the formula we'll use for all the calculations that follow. In popular games, this will be no more than a rounding error, but it'll make a meaningful difference in titles with less forum activity.
 
