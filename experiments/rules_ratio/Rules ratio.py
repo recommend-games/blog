@@ -292,8 +292,8 @@ def make_rules_scatter(
     game_types_unique = sorted(bokeh_df["game_type"].unique())
 
     p = figure(
-        width=900,
-        height=550,
+        width=750,
+        height=500,
         title=title,
         x_axis_label="BGG complexity",
         y_axis_label=y_axis_label,
