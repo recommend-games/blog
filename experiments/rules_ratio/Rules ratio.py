@@ -49,9 +49,7 @@ beta = 0.5
 # File paths
 results_dir = Path("./results").resolve()
 data_dir = Path("../../../board-game-data").resolve()
-tables_md_dir = Path(
-    "./results/tables"
-).resolve()  # folder for top/bottom 10 .md tables
+tables_md_dir = Path("./md").resolve()
 results_dir, data_dir, tables_md_dir
 
 # %%
