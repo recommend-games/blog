@@ -16,7 +16,6 @@
 # %%
 import jupyter_black
 import json
-import numpy as np
 import polars as pl
 import statsmodels.api as sm
 from bokeh.io import output_notebook
@@ -167,29 +166,6 @@ rules_ratios.sample(10, seed=seed)
 # %%
 rules_ratios.describe()
 
-# %%
-rules_ratios.sort("rank", descending=False).head(10)
-
-# %%
-rules_ratios.sort("num_votes", descending=True).head(10)
-
-# %%
-rules_ratios.sort("rules_ratio", descending=True).head(10)
-
-# %%
-rules_ratios.sort("rules_ratio", descending=False).head(10)
-
-# %%
-rules_ratios.sort("rules_ratio_by_weight", descending=True).head(10)
-
-# %%
-rules_ratios.sort("rules_ratio_by_weight", descending=False).head(10)
-
-# %%
-rules_ratios.sort("residual_rules_ratio", descending=True).head(10)
-
-# %%
-rules_ratios.sort("residual_rules_ratio", descending=False).head(10)
 
 # %%
 def _df_to_markdown(df: pl.DataFrame, title: str) -> str:
@@ -216,37 +192,39 @@ def save_table_md(df: pl.DataFrame, filename: str, title: str) -> Path:
 
 # Save top/bottom 10 tables as markdown
 _table_specs = [
-    ("Top 10 by BGG rank", "rank", False, "top10_by_rank.md"),
-    ("Top 10 by number of votes", "num_votes", True, "top10_by_num_votes.md"),
-    ("Top 10 by rules ratio", "rules_ratio", True, "top10_rules_ratio.md"),
-    ("Bottom 10 by rules ratio", "rules_ratio", False, "bottom10_rules_ratio.md"),
+    ("Top 10 by rank", "rank", False, "top_10_rank.md"),
+    ("Top 10 by popularity", "num_votes", True, "top_10_num_votes.md"),
+    ("Top 10 by RR", "rules_ratio", True, "top_10_rules_ratio.md"),
+    ("Bottom 10 by RR", "rules_ratio", False, "bottom_10_rules_ratio.md"),
     (
-        "Top 10 by rules ratio (by weight)",
+        "Top 10 by RRW",
         "rules_ratio_by_weight",
         True,
-        "top10_rules_ratio_by_weight.md",
+        "top_10_rules_ratio_by_weight.md",
     ),
     (
-        "Bottom 10 by rules ratio (by weight)",
+        "Bottom 10 by RRW",
         "rules_ratio_by_weight",
         False,
-        "bottom10_rules_ratio_by_weight.md",
+        "bottom_10_rules_ratio_by_weight.md",
     ),
     (
-        "Top 10 by residual rules ratio",
+        "Top 10 by RRR",
         "residual_rules_ratio",
         True,
-        "top10_residual_rules_ratio.md",
+        "top_10_residual_rules_ratio.md",
     ),
     (
-        "Bottom 10 by residual rules ratio",
+        "Bottom 10 by RRR",
         "residual_rules_ratio",
         False,
-        "bottom10_residual_rules_ratio.md",
+        "bottom_10_residual_rules_ratio.md",
     ),
 ]
 for title, sort_col, descending, filename in _table_specs:
+    print(title)
     tbl = rules_ratios.sort(sort_col, descending=descending).head(10)
+    display(tbl)
     save_table_md(tbl, filename, title)
 print(f"Saved {len(_table_specs)} tables to {tables_md_dir}")
 
@@ -291,7 +269,7 @@ HOVER_TOOLTIPS = [
         "@rules_ratio{0%} (@num_threads_rules / @num_threads_total)",
     ),
     ("Rules ratio by weight (RRW)", "@rules_ratio_by_weight{0%}"),
-    ("Residual rules ratio (RRR)", "@residual_rules_ratio{+0} WEM"),
+    ("Residual rules ratio (RRR)", "@residual_rules_ratio{+0} wem"),
     ("Complexity", "@complexity{0.0}"),
     ("BGG rank (rating)", "@rank (@bayes_rating{0.0})"),
     ("Number of ratings", "@num_votes"),
@@ -361,7 +339,7 @@ p_rrr = make_rules_scatter(
     bokeh_df=bokeh_df,
     y_col="residual_rules_ratio",
     title="Residual rules ratio (RRR) vs complexity",
-    y_axis_label="Residual rules ratio (RRR in WEM)",
+    y_axis_label="Residual rules ratio (RRR in wem)",
     legend_location="top_right",
     tick_format="0",
 )
