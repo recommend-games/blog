@@ -1997,6 +1997,7 @@ dependencies = [
     { name = "scrapy-extensions" },
     { name = "seaborn" },
     { name = "statsmodels" },
+    { name = "tabulate" },
     { name = "tqdm" },
 ]
 
@@ -2025,6 +2026,7 @@ requires-dist = [
     { name = "scrapy-extensions", specifier = ">=1.0.1" },
     { name = "seaborn" },
     { name = "statsmodels" },
+    { name = "tabulate" },
     { name = "tqdm" },
 ]
 
@@ -2098,14 +2100,14 @@ wheels = [
 
 [[package]]
 name = "scipy-stubs"
-version = "1.17.1.0"
+version = "1.17.1.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "optype", extra = ["numpy"] },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d9/ad/413b0d18efca7bb48574d28e91253409d91ee6121e7937022d0d380dfc6a/scipy_stubs-1.17.1.0.tar.gz", hash = "sha256:5dc51c21765b145c2d132b96b63ff4f835dd5fb768006876d1554e7a59c61571", size = 381420, upload-time = "2026-02-23T10:33:04.742Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ec/c1/bf50e1cbf4015d4077835ffebea9a45dba7f5bf1cd781e931baff358cb20/scipy_stubs-1.17.1.1.tar.gz", hash = "sha256:e8f812a6eb298cfa3dd6b79a4af2b00fb4045f2ee28eadcc0eee8882208b5f1a", size = 383682, upload-time = "2026-03-08T21:49:40.976Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/6c/ee/c6811e04ff9d5dd1d92236e8df7ebc4db6aa65c70b9938cec293348b8ec4/scipy_stubs-1.17.1.0-py3-none-any.whl", hash = "sha256:5c9c84993d36b104acb2d187b05985eb79f73491c60d83292dd738093d53d96a", size = 587059, upload-time = "2026-02-23T10:33:02.845Z" },
+    { url = "https://files.pythonhosted.org/packages/f6/23/15d568084d57cc99ba9f662f06c0fa647348b809df28bef1907aa8149eec/scipy_stubs-1.17.1.1-py3-none-any.whl", hash = "sha256:26576c5ed0f9007a07f4f4582f984c9bfac00ac93c268c6e558ad5ead0312b43", size = 589301, upload-time = "2026-03-08T21:49:38.794Z" },
 ]
 
 [[package]]
@@ -2251,6 +2253,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/34/0e/2408735aca9e764643196212f9069912100151414dd617d39ffc72d77eee/statsmodels-0.14.6-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:3414e40c073d725007a6603a18247ab7af3467e1af4a5e5a24e4c27bc26673b4", size = 10337587, upload-time = "2025-12-05T23:13:37.597Z" },
     { url = "https://files.pythonhosted.org/packages/0f/36/4d44f7035ab3c0b2b6a4c4ebb98dedf36246ccbc1b3e2f51ebcd7ac83abb/statsmodels-0.14.6-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:a518d3f9889ef920116f9fa56d0338069e110f823926356946dae83bc9e33e19", size = 10363350, upload-time = "2025-12-05T23:13:53.08Z" },
     { url = "https://files.pythonhosted.org/packages/26/33/f1652d0c59fa51de18492ee2345b65372550501ad061daa38f950be390b6/statsmodels-0.14.6-cp314-cp314-win_amd64.whl", hash = "sha256:151b73e29f01fe619dbce7f66d61a356e9d1fe5e906529b78807df9189c37721", size = 9588010, upload-time = "2025-12-05T23:14:07.28Z" },
+]
+
+[[package]]
+name = "tabulate"
+version = "0.10.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/46/58/8c37dea7bbf769b20d58e7ace7e5edfe65b849442b00ffcdd56be88697c6/tabulate-0.10.0.tar.gz", hash = "sha256:e2cfde8f79420f6deeffdeda9aaec3b6bc5abce947655d17ac662b126e48a60d", size = 91754, upload-time = "2026-03-04T18:55:34.402Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/99/55/db07de81b5c630da5cbf5c7df646580ca26dfaefa593667fc6f2fe016d2e/tabulate-0.10.0-py3-none-any.whl", hash = "sha256:f0b0622e567335c8fabaaa659f1b33bcb6ddfe2e496071b743aa113f8774f2d3", size = 39814, upload-time = "2026-03-04T18:55:31.284Z" },
 ]
 
 [[package]]
