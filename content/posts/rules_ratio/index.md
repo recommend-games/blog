@@ -14,7 +14,7 @@ tags:
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.8.2.min.js" ></script>
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-api-3.8.2.min.js" ></script>
 
-[W. Eric Martin](https://www.wericmartin.com) (WEM), known for having run the BoardGameGeek (BGG) [news section](https://boardgamegeek.com/blog/1/boardgamegeek-news) for over a decade, recently launched his own outlet called [Board Game Beat](https://www.boardgamebeat.com).[^fediverse] In between his signature game release updates, he writes entertaining and insightful analyses of the broader hobby. In one of his [recent articles](https://www.wericmartin.com/the-rules-ratio-a-new-stat-to-geek-out-about/), he proposed the **Rules Ratio**. In his title, he invites us to geek out about it, so geek out we shall! 🤓
+[W. Eric Martin](https://www.wericmartin.com) (WEM), known for having run the BoardGameGeek (BGG) [news section](https://boardgamegeek.com/blog/1/boardgamegeek-news) for over a decade, launched his own outlet called [Board Game Beat](https://www.boardgamebeat.com) a couple of weeks ago.[^fediverse] In between his signature game release updates, he writes entertaining and insightful analyses of the broader hobby. In one of his [recent articles](https://www.wericmartin.com/the-rules-ratio-a-new-stat-to-geek-out-about/), he proposed the **Rules Ratio**. The title invites us to geek out about it, so geek out we shall! 🤓
 
 
 # What is the Rules Ratio?
@@ -30,13 +30,15 @@ Concretely, let's look at one of my favourite games: {{% game 51 %}}Ricochet Rob
 So its RR is \\(22 / 183 \approx 12\\%\\). Simple and to the point.
 
 
-## A smoother version of the RR
+## Make it smootheRR…
 
 As it turns out: a little too simple. WEM's examples are all massively popular games with hundreds of forum posts. But if we want to expand this metric to the long tail of games, we need to make sure that we don't get "this game has 0 rules questions out of 3 posts" noise.
 
 Mathematically speaking, we're trying to estimate the probability that a forum thread will be posted in the rules section. There's a simple and well established trick known as [additive smoothing](https://en.wikipedia.org/wiki/Additive_smoothing) (or Laplace's [rule of succession](https://en.wikipedia.org/wiki/Rule_of_succession)) for scenarios like this. The idea is to pretend there are two more threads than there really are: one with a rules question and one without.[^3b1b] In other words: we increase the number of rules threads by 1 and that of all threads by 2. But since this is a little too opinionated and can skew the metric a bit too much, we're actually using 0.5 and 1 instead:
 
 \\[ TODO: LaTeX formula incl smoothing \\]
+
+This is the formula we'll use for all the calculations that follow. In popular games, this will be no more than a rounding error, but it'll make a meaningful difference in titles with less forum activity.
 
 You might recognise this idea of "adding pseudo counts to stabilise estimates based on small samples" from our discussion of the BGG rankings and their usage of a Bayesian average of ratings. It's the same principle: pick a prior and update it as more and more data comes in.
 
