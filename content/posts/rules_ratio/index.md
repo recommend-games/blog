@@ -44,7 +44,7 @@ Mathematically speaking, we're trying to estimate the probability that a forum t
 
 This is the formula we'll use for all the calculations that follow. In popular games, this will be no more than a rounding error, but it'll make a meaningful difference in titles with less forum activity.
 
-You might recognise this idea of "adding pseudo counts to stabilise estimates based on small samples" from our discussion of the BGG rankings and their usage of a Bayesian average of ratings. It's the same principle: pick a prior and update it as more and more data comes in.
+You might recognise this idea of "adding pseudo counts to stabilise estimates based on small samples" from our discussion of the [BGG rankings]({{<ref "posts/reverse_engineer_bgg/index.md">}}) and their usage of a Bayesian average of ratings. It's the same principle: pick a prior and update it as more and more data comes in.
 
 
 # RR in the wild
@@ -55,14 +55,63 @@ The perhaps most surprisingly high RR belongs to {{% game 399088 %}}UNO: Show 'E
 
 The highest RR amongst the highly rated games (ranked amongst the top 1000 games) is that of {{% game 408180 %}}Shackleton Base{{% /game %}} at 69%. When looking at very popular games (more than 10k ratings), we find another unexpected title in this field: {{% game 234190 %}}Unstable Unicorns{{% /game %}} at a whooping 64%. Apparently players really struggle with *neighing* — and now I feel like I need to play the game just to find out what that means. 🦄
 
+TODO: Low RR example. Mention TseuQuesT and how a low RR can be a negative.
+
 
 # RR vs complexity: the Residual Rules Ratio
 
+Undoubtedly, readers of this blog will be familiar with the *complexity* or *weight* rating at BGG: a numerical value between 1 (*light complexity*) and 5 (*heavy complexity*), based on users' votes. This metric has its own issues, but it's still an interesting and widely quoted datapoint to characterise a game. As far as this article is concerned, it stands to reason that more complex games will generate more rules questions. Designers frequently talk about a game's complexity budget: depending on the target audience and its appetite for complexity, a game can afford more mechanisms, elements and their interactions. The more details one needs to understand in order to play the game, the more rules clarifications might be required — at least intuitively this should hold true.
+
+Let's visualise this:
+
 {{% bokeh "rules_ratio_vs_complexity.json" %}}
+
+Every dot represents a game, positioned by its complexity (x-axis) and RR (y-axis). Games with more ratings will be larger, whilst the colour encodes the game type. This is an interactive plot, so I'll invite you to explore it by hovering over the dots and find your favourite game.
+
+This plot supports our intuition well: more complex games tend to have higher RR, though the spread is considerable.
+
+WEM's suggestion to account for the complexity budget when reasoning about RR is the RRW: **Rules Ratio by Weight**, i.e., the game's RR divided by its weight:
+
+\\[
+  \text{RRW} = \frac{\text{RR}}{\text{complexity}}.
+\\]
+
+As discussed, taking complexity into account is the right instinct, but simply dividing would make only sense if complexity was a multiplicative measure. But while BGG is intentionally vague about what their complexity metric means, it should be clear that a game of weight 4 isn't "twice as heavy" as a game of weight 2.
+
+Instead, I suggest the RRR: the Residual Rules Ratio. The idea is to estimate the "typical RR" of a game of a certain complexity, then compare the actual RR to this "typical RR". Their difference is the RRR.
+
+Let's take this step by step. First we need to find said "typical RR" for a given weight. As usually, regression is our friend: we fit a simple model to explain RR in relationship to complexity. Since RR is a fraction between 0 and 1 (because of the smoothing *strictly* between those values), we'll use a logistic model. Feeding the data into the statistical software of your choice yields this formula:
+
+\\[
+  \widehat\text{RR} = \sigma(0.3373 \cdot \text{complexity} - 1.6073),
+\\]
+
+where \\(\sigma\\) is the [sigmoid function](https://en.wikipedia.org/wiki/Sigmoid_function) we most recently encountered in the context of the [Elo ratings]({{<ref "posts/elo_1/index.md">}}).
+
+TODO: What does this mean? Odds ratio interpretation / example values.
+
+Equipped with this estimator, we can define the **Residual Rules Ratio** (RRR):
+
+\\[
+  \text{RRR} = \text{RR} - \widehat\text{RR}.
+\\]
+
+The intuition behind RRR is that we measure how much more or less confusing a rulebook is than the peers in its "weight class". Since both constituent values are in %, RRR itself would be naturally denoted in percentage points. In a time-honoured scientific tradition, I suggest naming its unit **wem**:
+
+> **1 wem = 1 percentage point of RRR**.
+
+RRR can range from +100 wem (a game with lots more rules questions than expected) to -100 wem (a game much clearer than expected).
+
+What does this look like in practice? First, let's do the same plot as before, but with RRR instead of RR:
+
+{{% bokeh "residual_rules_ratio_vs_complexity.json" %}}
+
+Note how the upward trend has turned into a horizontal line. This is the same idea we used to [debias the BGG rankings]({{<ref "posts/debiased_rankings/index.md">}}).
+
+TODO: Noteworthy dots, e.g., Unstable Unicorns (again) and Terra Mystica.
 
 TODO: RRW is right instinct (a higher complexity budget prices in more rules questions), but BGG complexity is not multiplicative. Instead: Regression model, residuals, more lists, plot. Unit: wem.
 
-{{% bokeh "residual_rules_ratio_vs_complexity.json" %}}
 
 
 # Summary / conclusion
