@@ -49,12 +49,16 @@ You might recognise this idea of "adding pseudo counts to stabilise estimates ba
 
 # RR in the wild
 
-TODO: Examples / top / bottom lists, plot
+WEM already gave quite a few interesting examples of RRs, especially for popular and highly rated games. Here are some more games that stuck out. The highest RR of all games in my sample belongs to {{% game 182094 %}}BANG! The Duel{{% /game %}}: a staggering 87 out of the 99 threads are about rules, for an RR of 88%. Looks like there's a rulebook in desperate need of an editor.
 
-{{% bokeh "rules_ratio_vs_complexity.json" %}}
+The perhaps most surprisingly high RR belongs to {{% game 399088 %}}UNO: Show 'Em No Mercy{{% /game %}}: 24 out of the 31 threads (RR: 77%) are about the rules. I don't know what's more surprising: that the 'geeks take such an interest in an UNO variant at all, or how much they seem to struggle with its rules.
+
+The highest RR amongst the highly rated games (ranked amongst the top 1000 games) is that of {{% game 408180 %}}Shackleton Base{{% /game %}} at 69%. When looking at very popular games (more than 10k ratings), we find another unexpected title in this field: {{% game 234190 %}}Unstable Unicorns{{% /game %}} at a whooping 64%. Apparently players really struggle with *neighing* — and now I feel like I need to play the game just to find out what that means. 🦄
 
 
 # RR vs complexity: the Residual Rules Ratio
+
+{{% bokeh "rules_ratio_vs_complexity.json" %}}
 
 TODO: RRW is right instinct (a higher complexity budget prices in more rules questions), but BGG complexity is not multiplicative. Instead: Regression model, residuals, more lists, plot. Unit: wem.
 
@@ -71,7 +75,7 @@ Does it mean anything? I really hope it never will be taken serious enough just 
 TODO: data etc.
 
 
-[^fediverse]: TODO: [No tracking](https://www.wericmartin.com/board-game-beat-policies/). [Fediverse first](https://www.wericmartin.com/federated-social-media-video/).
+[^fediverse]: Come for the board game news, stay for their policy of [not tracking users](https://www.wericmartin.com/board-game-beat-policies/) and their [Fediverse first](https://www.wericmartin.com/federated-social-media-video/) approach. 🤓
 [^threads]: WEM talks about forum posts in his article, but from the screenshot and numbers it's evident he's using threads. I think this is the correct choice for what we're interested in: every distinct rules question typically goes into its own thread, and we want to know how many rules questions a given game triggers, not how many posts it takes to resolve them.
 [^ratio]: Ackshually… 🤓 Calling this metric a "ratio" isn't technically wrong, but "share", "proportion" or "fraction" would be more accurate. WEM told us to geek out, so please indulge me in this little pedantry.
 [^3b1b]: If you want to learn more about this technique, I highly recommend the always excellent Grant Sanderson and his [3blue1brown video](https://youtu.be/8idr1WZ1A7Q) on the topic.
