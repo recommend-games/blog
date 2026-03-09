@@ -1,6 +1,6 @@
 bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_total,num_threads_rules,rules_ratio,rules_ratio_by_weight,residual_rules_ratio
 224517,Brass: Birmingham,2018,Strategy Game,1,8.398,56330,3.865,1684,662,0.393,0.102,-0.031
-342942,Ark Nova,2021,Strategy Game,2,8.354,58451,3.793,2690,1378,0.512,0.135,0.094
+342942,Ark Nova,2021,Strategy Game,2,8.354,58451,3.793,2691,1379,0.512,0.135,0.094
 161936,Pandemic Legacy: Season 1,2015,Thematic,3,8.351,56901,2.828,3388,1365,0.403,0.142,0.061
 174430,Gloomhaven,2017,Thematic,4,8.307,66467,3.917,16006,6837,0.427,0.109,-0.002
 316554,Dune: Imperium,2020,Strategy Game,5,8.223,56641,3.075,2766,1017,0.368,0.120,0.007
@@ -27,7 +27,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 169786,Scythe,2016,Strategy Game,26,7.949,92383,3.453,4290,1189,0.277,0.080,-0.114
 177736,A Feast for Odin,2016,Strategy Game,27,7.943,32716,3.866,1534,528,0.344,0.089,-0.080
 266507,Clank! Legacy: Acquisitions Incorporated,2019,Thematic,28,7.940,11072,2.739,1036,419,0.405,0.148,0.069
-124361,Concordia,2013,Strategy Game,29,7.928,44582,2.989,790,154,0.195,0.065,-0.159
+124361,Concordia,2013,Strategy Game,29,7.928,44582,2.989,792,154,0.195,0.065,-0.160
 312484,Lost Ruins of Arnak,2020,Strategy Game,30,7.914,55765,2.932,1299,454,0.350,0.119,-0.001
 341169,Great Western Trail: Second Edition,2021,Strategy Game,31,7.904,17232,3.706,491,183,0.373,0.101,-0.039
 205637,Arkham Horror: The Card Game,2016,Customizable,32,7.893,47157,3.564,12821,5384,0.420,0.118,0.020
@@ -42,7 +42,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 321608,Hegemony: Lead Your Class to Victory,2023,Strategy Game,41,7.818,11305,4.250,1600,823,0.514,0.121,0.058
 199792,Everdell,2018,Family Game,42,7.813,66430,2.834,2666,926,0.347,0.123,0.005
 324856,The Crew: Mission Deep Sea,2021,Family Game,43,7.812,24439,2.048,207,88,0.425,0.208,0.140
-366013,Heat: Pedal to the Metal,2022,Family Game,46,7.793,38206,2.207,2097,824,0.393,0.178,0.096
+366013,Heat: Pedal to the Metal,2022,Family Game,46,7.793,38206,2.207,2099,824,0.393,0.178,0.096
 284378,Kanban EV,2020,Strategy Game,47,7.793,9854,4.299,608,357,0.587,0.137,0.126
 285774,Marvel Champions: The Card Game,2019,Customizable,48,7.789,27199,2.954,8054,3761,0.467,0.158,0.115
 247763,Underwater Cities,2018,Strategy Game,50,7.774,22659,3.585,675,283,0.419,0.117,0.018
@@ -126,7 +126,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 40834,Dominion: Intrigue,2009,Strategy Game,127,7.510,34211,2.414,507,116,0.229,0.095,-0.082
 18602,Caylus,2005,Strategy Game,128,7.504,29572,3.793,1219,344,0.282,0.074,-0.136
 73439,Troyes,2010,Strategy Game,130,7.501,24283,3.453,992,537,0.541,0.157,0.150
-42,Tigris & Euphrates,1997,Strategy Game,130,7.507,29836,3.479,1186,281,0.237,0.068,-0.156
+42,Tigris & Euphrates,1997,Strategy Game,130,7.507,29836,3.479,1187,281,0.237,0.068,-0.156
 203993,Lorenzo il Magnifico,2016,Strategy Game,131,7.500,14563,3.288,485,257,0.530,0.161,0.152
 146021,Eldritch Horror,2013,Thematic,132,7.499,37831,3.319,5167,2093,0.405,0.122,0.025
 310100,Nemesis: Lockdown,2022,Thematic,133,7.494,7007,3.900,1417,588,0.415,0.106,-0.013
@@ -277,7 +277,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 300322,Hallertau,2020,Strategy Game,278,7.219,6435,3.297,271,79,0.292,0.089,-0.086
 19857,Glory to Rome,2005,Strategy Game,278,7.219,14595,2.932,1182,298,0.252,0.086,-0.098
 3,Samurai,1998,Strategy Game,282,7.222,17069,2.441,405,39,0.097,0.040,-0.216
-232405,Western Legends,2018,Thematic,283,7.220,12868,2.849,1738,669,0.385,0.135,0.041
+232405,Western Legends,2018,Thematic,283,7.220,12868,2.849,1739,669,0.385,0.135,0.041
 286096,Tapestry,2019,Strategy Game,285,7.209,21637,2.954,2086,887,0.425,0.144,0.073
 176189,Zombicide: Black Plague,2015,Thematic,286,7.219,17284,2.474,2865,822,0.287,0.116,-0.029
 329839,So Clover!,2021,Party Game,290,7.201,10022,1.116,67,13,0.199,0.178,-0.027
@@ -324,7 +324,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 246784,Cryptid,2018,Family Game,322,7.171,15821,2.262,196,32,0.165,0.073,-0.136
 206718,Ethnos,2017,Strategy Game,323,7.168,14172,2.099,284,65,0.230,0.109,-0.059
 302723,Forgotten Waters,2020,Thematic,324,7.168,6612,2.095,519,150,0.289,0.138,0.001
-139976,Cthulhu Wars,2015,Thematic,327,7.162,6533,3.144,4746,832,0.175,0.056,-0.191
+139976,Cthulhu Wars,2015,Thematic,327,7.162,6533,3.144,4747,832,0.175,0.056,-0.191
 92828,Dixit: Odyssey,2011,Party Game,328,7.160,22025,1.166,116,12,0.107,0.092,-0.122
 108745,Seasons,2012,Strategy Game,329,7.160,25818,2.782,692,283,0.409,0.147,0.070
 277085,Love Letter,2019,Party Game,330,7.153,12770,1.117,76,25,0.331,0.296,0.105
@@ -361,7 +361,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 143693,Glass Road,2013,Strategy Game,361,7.114,12300,2.953,467,120,0.257,0.087,-0.094
 5,Acquire,1963,Strategy Game,361,7.129,21995,2.490,701,103,0.147,0.059,-0.170
 245655,The King's Dilemma,2019,Thematic,362,7.114,6609,2.244,773,325,0.421,0.187,0.121
-184921,Bunny Kingdom,2017,Family Game,363,7.113,13983,2.294,255,94,0.369,0.161,0.066
+184921,Bunny Kingdom,2017,Family Game,363,7.113,13983,2.294,256,94,0.368,0.160,0.065
 136888,Bruges,2013,Strategy Game,367,7.110,12014,2.750,358,118,0.330,0.120,-0.006
 163967,Tiny Epic Galaxies,2015,Strategy Game,368,7.109,21499,2.154,660,294,0.446,0.207,0.153
 227789,Heaven & Ale,2017,Strategy Game,369,7.109,8897,3.181,170,65,0.383,0.120,0.014
@@ -445,7 +445,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 9217,Saint Petersburg,2004,Strategy Game,446,7.030,16300,2.430,534,75,0.141,0.058,-0.172
 250458,Gùgōng,2018,Strategy Game,448,7.029,9305,3.082,408,182,0.446,0.145,0.084
 357563,Akropolis,2022,Family Game,449,7.037,9664,1.805,135,45,0.335,0.185,0.065
-284742,Honey Buzz,2020,Family Game,450,7.023,7606,2.732,339,126,0.372,0.136,0.037
+284742,Honey Buzz,2020,Family Game,450,7.023,7606,2.732,340,126,0.371,0.136,0.036
 15987,Arkham Horror,2005,Thematic,451,7.023,39989,3.585,8145,2916,0.358,0.100,-0.044
 368173,Let's Go! To Japan,2024,Family Game,453,7.033,6207,2.244,238,79,0.333,0.148,0.033
 234,Hannibal: Rome vs. Carthage,1996,War Game,455,7.029,5042,3.454,1235,474,0.384,0.111,-0.007
@@ -455,7 +455,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 177478,IKI,2015,Strategy Game,461,7.026,6511,3.068,323,157,0.486,0.158,0.125
 39683,At the Gates of Loyang,2009,Strategy Game,462,7.026,11591,3.114,549,219,0.399,0.128,0.035
 163745,Star Wars: Armada,2015,War Game,462,7.029,5695,3.159,1748,289,0.166,0.052,-0.202
-318182,Imperium: Legends,2021,Strategy Game,465,7.022,4707,3.756,473,284,0.600,0.160,0.184
+318182,Imperium: Legends,2021,Strategy Game,465,7.022,4707,3.756,473,284,0.600,0.160,0.185
 322708,Descent: Legends of the Dark,2021,Thematic,467,7.022,5645,2.697,1360,470,0.346,0.128,0.013
 290484,Unsettled,2021,Thematic,471,7.019,3701,3.279,757,312,0.412,0.126,0.035
 334986,Daybreak,2023,Strategy Game,472,7.018,5762,2.853,360,151,0.420,0.147,0.076
@@ -546,7 +546,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 144189,Fire in the Lake,2014,War Game,549,6.953,3278,4.169,2146,1253,0.584,0.140,0.134
 175095,Dawn of the Zeds (Third Edition),2016,Thematic,551,6.951,3032,3.800,912,496,0.544,0.143,0.125
 194607,Mystic Vale,2016,Strategy Game,551,6.938,12263,2.262,405,109,0.270,0.119,-0.031
-416851,Castle Combo,2024,Family Game,552,6.937,5039,1.703,141,36,0.257,0.151,-0.006
+416851,Castle Combo,2024,Family Game,552,6.937,5039,1.703,141,36,0.257,0.151,-0.005
 503,Through the Desert,1998,Abstract Game,552,6.936,15305,2.166,514,66,0.129,0.060,-0.165
 342900,Earthborne Rangers,2023,Customizable,554,6.947,3460,3.479,1563,766,0.490,0.141,0.097
 478,Citadels,2000,Family Game,554,6.935,56031,2.047,1113,296,0.266,0.130,-0.019
@@ -609,7 +609,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 157969,Sheriff of Nottingham,2014,Party Game,604,6.909,37723,1.659,437,110,0.252,0.152,-0.007
 21790,Thurn and Taxis,2006,Family Game,605,6.908,20798,2.256,419,111,0.265,0.118,-0.035
 117959,Las Vegas,2012,Family Game,607,6.892,11882,1.174,129,16,0.127,0.108,-0.103
-13,Catan,1995,Family Game,610,6.905,140886,2.283,2915,464,0.159,0.070,-0.143
+13,Catan,1995,Family Game,610,6.905,140886,2.283,2916,464,0.159,0.070,-0.143
 284435,Nova Luna,2019,Abstract Game,612,6.890,9330,1.875,94,26,0.279,0.149,0.005
 318009,Dinosaur Island: Rawr 'n Write,2021,Strategy Game,613,6.899,4417,2.841,228,71,0.312,0.110,-0.031
 348450,Lacrimosa,2022,Strategy Game,614,6.889,4295,3.164,244,122,0.500,0.158,0.132
@@ -928,7 +928,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 367518,Imperium: Horizons,2024,Strategy Game,945,6.672,1586,3.956,895,454,0.507,0.128,0.075
 156943,Saint Petersburg (Second Edition),2014,Strategy Game,945,6.675,3558,2.672,154,56,0.365,0.136,0.034
 434906,Tag Team,2025,Family Game,946,6.679,2962,2.062,178,60,0.338,0.164,0.051
-231218,Black Sonata,2017,Strategy Game,948,6.673,3646,2.093,235,89,0.379,0.181,0.090
+231218,Black Sonata,2017,Strategy Game,948,6.673,3646,2.093,235,89,0.379,0.181,0.091
 285984,Last Bastion,2019,Strategy Game,951,6.670,3910,2.593,210,100,0.476,0.184,0.152
 338760,Imperial Steam,2021,Strategy Game,951,6.660,2373,4.200,197,88,0.447,0.106,-0.005
 171273,FUSE,2015,Family Game,952,6.670,9184,1.663,197,70,0.356,0.214,0.096
@@ -1029,7 +1029,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 163602,XCOM: The Board Game,2015,Thematic,1027,6.634,9408,2.912,567,248,0.438,0.150,0.089
 24800,Conflict of Heroes: Awakening the Bear! – Russia 1941-42,2008,War Game,1028,6.611,3086,2.996,1654,665,0.402,0.134,0.047
 28181,Combat Commander: Pacific,2008,War Game,1029,6.623,1805,3.249,857,431,0.503,0.155,0.128
-79127,Star Trek: Fleet Captains,2011,Thematic,1029,6.623,3394,3.059,1245,501,0.402,0.132,0.042
+79127,Star Trek: Fleet Captains,2011,Thematic,1029,6.623,3394,3.059,1245,501,0.402,0.132,0.043
 160851,Lanterns: The Harvest Festival,2015,Family Game,1029,6.610,11720,1.544,129,16,0.127,0.082,-0.125
 148575,Marvel Dice Masters: Avengers vs. X-Men,2014,Customizable,1031,6.610,5701,2.298,2648,628,0.237,0.103,-0.066
 1345,Genoa,2001,Strategy Game,1032,6.608,6240,3.072,318,78,0.246,0.080,-0.115
@@ -1118,14 +1118,14 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 41066,Virgin Queen,2012,War Game,1116,6.582,1851,4.441,1763,1016,0.576,0.130,0.104
 340041,Kingdomino Origins,2021,Family Game,1117,6.567,2696,1.906,76,30,0.396,0.208,0.120
 27588,Zooloretto,2007,Family Game,1117,6.588,15660,1.857,390,80,0.206,0.111,-0.067
-245476,CuBirds,2018,Family Game,1119,6.566,8109,1.320,58,14,0.246,0.186,0.007
+245476,CuBirds,2018,Family Game,1119,6.566,8109,1.320,58,14,0.246,0.186,0.008
 352574,Fit to Print,2023,Family Game,1120,6.564,3192,2.090,105,43,0.410,0.196,0.122
 279254,Ecos: First Continent,2019,Family Game,1121,6.570,4592,2.574,203,92,0.453,0.176,0.130
 177678,Signorie,2015,Strategy Game,1122,6.586,3289,3.512,126,52,0.413,0.118,0.018
 195314,Herbaceous,2017,Family Game,1122,6.564,6021,1.204,121,26,0.217,0.180,-0.014
 681,Quarto,1991,Abstract Game,1124,6.564,8403,1.880,81,6,0.079,0.042,-0.195
 229892,Container: 10th Anniversary Jumbo Edition!,2018,Strategy Game,1125,6.563,2131,2.943,187,44,0.237,0.080,-0.114
-368017,Point City,2023,Family Game,1127,6.577,4389,1.667,112,45,0.403,0.242,0.142
+368017,Point City,2023,Family Game,1127,6.577,4389,1.667,112,45,0.403,0.242,0.143
 191300,Archaeology: The New Expedition,2016,Family Game,1129,6.561,4447,1.274,89,17,0.194,0.153,-0.041
 491,Web of Power,2000,Family Game,1129,6.576,3629,2.307,187,9,0.051,0.022,-0.253
 177524,ICECOOL,2016,Children's Game,1130,6.559,11753,1.054,120,20,0.169,0.161,-0.053
@@ -1732,7 +1732,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 181810,Kodama: The Tree Spirits,2016,Family Game,1759,6.313,6106,1.636,121,50,0.414,0.253,0.156
 175549,Salem 1692,2015,Party Game,1760,6.304,2882,2.098,150,67,0.447,0.213,0.158
 351476,My City: Roll & Build,2022,Family Game,1763,6.302,2366,1.478,64,23,0.362,0.245,0.113
-349463,"Dungeons, Dice & Danger",2022,Family Game,1764,6.302,2634,1.915,121,56,0.463,0.242,0.186
+349463,"Dungeons, Dice & Danger",2022,Family Game,1764,6.302,2634,1.915,121,56,0.463,0.242,0.187
 350736,Voyages,2021,Family Game,1765,6.321,1862,1.794,211,69,0.328,0.183,0.059
 94104,Omen: A Reign of War,2011,Strategy Game,1765,6.302,1833,2.337,500,160,0.320,0.137,0.014
 246200,Piepmatz,2018,Family Game,1766,6.302,2701,2.106,62,28,0.452,0.215,0.163
@@ -2315,7 +2315,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 342372,The Elder Scrolls V: Skyrim – The Adventure Game,2022,Thematic,2373,6.137,1209,3.232,1127,505,0.448,0.139,0.075
 295192,Tinderblox,2020,Family Game,2375,6.151,2790,1.000,43,5,0.125,0.125,-0.094
 335427,Wild: Serengeti,2022,Family Game,2376,6.136,1850,2.594,122,36,0.297,0.114,-0.028
-84,Rommel in the Desert,1982,War Game,2377,6.156,1139,3.413,398,184,0.462,0.135,0.074
+84,Rommel in the Desert,1982,War Game,2377,6.156,1139,3.413,398,184,0.462,0.135,0.075
 262547,Don't Get Got!,2018,Party Game,2378,6.136,1784,1.086,40,2,0.061,0.056,-0.163
 156496,March of the Ants,2015,Strategy Game,2380,6.144,1615,2.716,266,122,0.459,0.169,0.125
 383469,Unmatched: Sun's Origin,2024,Strategy Game,2381,6.135,709,2.000,40,15,0.378,0.189,0.096
@@ -3536,7 +3536,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 10081,Axis & Allies: D-Day,2004,War Game,3748,5.906,2206,2.356,175,45,0.259,0.110,-0.049
 386538,Astro Knights: Eternity,2024,Uncategorized,3748,5.892,389,2.889,137,29,0.214,0.074,-0.133
 368465,Qawale,2022,Abstract Game,3748,5.904,964,1.133,25,4,0.173,0.153,-0.054
-155451,Guild Ball,2015,Customizable,3749,5.892,499,3.800,77,9,0.122,0.032,-0.298
+155451,Guild Ball,2015,Customizable,3749,5.892,499,3.800,77,9,0.122,0.032,-0.297
 142124,Tsukiji,2017,Family Game,3750,5.900,768,1.938,29,8,0.283,0.146,0.005
 367351,Planet B,2022,Strategy Game,3750,5.891,701,3.200,30,7,0.242,0.076,-0.129
 173341,Loopin' Chewie,2014,Children's Game,3751,5.891,1936,1.000,28,0,0.017,0.017,-0.202
@@ -4197,7 +4197,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 320698,Blitz Bowl: Season 2,2020,Uncategorized,4541,5.802,318,2.375,50,21,0.422,0.178,0.113
 227127,Europe in Turmoil: Prelude to the Great War,2018,War Game,4542,5.802,326,2.957,266,168,0.631,0.213,0.279
 267,Tycoon,1998,Strategy Game,4542,5.801,714,2.638,38,12,0.321,0.122,-0.007
-310442,Feierabend,2020,Strategy Game,4545,5.801,510,2.600,50,26,0.520,0.200,0.194
+310442,Feierabend,2020,Strategy Game,4545,5.801,510,2.600,50,26,0.520,0.200,0.195
 14080,The Mighty Endeavor,2005,War Game,4545,5.801,461,2.866,148,67,0.453,0.158,0.108
 289550,Lions of Lydia,2021,Family Game,4547,5.816,712,1.947,49,21,0.430,0.221,0.151
 357271,San Francisco,2022,Family Game,4550,5.801,789,2.192,32,5,0.167,0.076,-0.129
@@ -4725,7 +4725,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 287780,Squire for Hire,2019,Family Game,5270,5.742,621,1.632,63,36,0.570,0.350,0.312
 3475,Shadowfist,1995,Customizable,5271,5.742,435,2.622,110,15,0.140,0.053,-0.187
 156840,Clinic,2014,Strategy Game,5272,5.748,440,4.079,130,67,0.515,0.126,0.073
-25491,Alhambra: The Dice Game,2006,Family Game,5273,5.742,1226,1.733,44,22,0.500,0.288,0.235
+25491,Alhambra: The Dice Game,2006,Family Game,5273,5.742,1226,1.733,44,22,0.500,0.288,0.236
 10653,Pirates of the Spanish Main,2004,Customizable,5275,5.742,2876,1.779,803,75,0.094,0.053,-0.174
 6778,The Settlers of Zarahemla,2003,Family Game,5280,5.741,584,2.540,25,1,0.058,0.023,-0.263
 194232,Rick and Morty: Total Rickall Card Game,2016,Party Game,5281,5.747,2438,1.486,55,30,0.545,0.367,0.296
@@ -5052,12 +5052,12 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 247106,Space Marine Adventures: Labyrinth of the Necrons,2018,Uncategorized,5766,5.720,550,1.784,152,38,0.252,0.141,-0.016
 218161,Pit Crew,2017,Party Game,5767,5.711,680,1.200,26,10,0.389,0.324,0.158
 351991,Worldbreakers: Advent of the Khanate,2023,Uncategorized,5772,5.721,322,2.500,199,21,0.107,0.043,-0.210
-1576,Gettysburg (125th Anniversary Edition),1988,War Game,5773,5.714,588,1.960,93,31,0.335,0.171,0.055
+1576,Gettysburg (125th Anniversary Edition),1988,War Game,5773,5.714,588,1.960,93,31,0.335,0.171,0.056
 870,Empires of the Ancient World,2000,Strategy Game,5774,5.710,550,2.976,53,21,0.398,0.134,0.045
 191877,Touria,2016,Family Game,5776,5.721,563,1.938,35,16,0.458,0.237,0.180
 371140,Ticket to Ride: Northern Lights,2022,Family Game,5776,5.710,252,1.750,36,11,0.311,0.178,0.045
 3061,Samurai: Warfare in the 16th Century Japan,1996,War Game,5777,5.710,361,3.393,59,25,0.425,0.125,0.039
-49276,"Battle for Moscow: Operation Typhoon, 1941",2009,War Game,5780,5.710,408,1.580,90,39,0.434,0.275,0.179
+49276,"Battle for Moscow: Operation Typhoon, 1941",2009,War Game,5780,5.710,408,1.580,90,39,0.434,0.275,0.180
 283748,Dragonscales,2019,Uncategorized,5781,5.710,389,2.000,35,22,0.625,0.312,0.343
 332070,ONUS! Traianus,2023,War Game,5783,5.710,251,2.842,225,85,0.378,0.133,0.035
 319263,One Card Dungeon,2021,Strategy Game,5784,5.710,612,1.619,91,37,0.408,0.252,0.151
@@ -5638,7 +5638,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 150298,One Zero One,2013,Abstract Game,6968,5.654,465,1.840,36,15,0.419,0.228,0.147
 2316,X-Bugs,2001,Family Game,6970,5.654,545,1.343,46,9,0.202,0.150,-0.038
 306676,Tales from the Loop: The Board Game,2022,Thematic,6971,5.654,367,3.375,198,117,0.590,0.175,0.206
-34169,Potion-Making: Practice,2005,Family Game,6972,5.654,981,1.726,58,19,0.331,0.192,0.066
+34169,Potion-Making: Practice,2005,Family Game,6972,5.654,981,1.726,58,19,0.331,0.192,0.067
 110870,Cavemen: The Quest for Fire,2012,Family Game,6974,5.654,542,1.880,32,13,0.409,0.218,0.135
 131568,Codinca,2012,Abstract Game,6981,5.654,794,1.400,26,11,0.426,0.304,0.183
 4318,"Cannes: Stars, Scripts and Screens",2002,Strategy Game,6982,5.654,515,2.500,31,10,0.328,0.131,0.010
@@ -5958,7 +5958,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 235533,Beta Colony,2018,Uncategorized,8188,5.616,272,2.700,29,8,0.283,0.105,-0.049
 168537,Pandemonium,2017,Thematic,8190,5.618,338,3.077,89,32,0.361,0.117,-0.000
 247733,KOI,2018,Uncategorized,8194,5.615,410,2.000,53,29,0.546,0.273,0.264
-1633,Spies!,1981,Strategy Game,8196,5.615,341,2.405,59,27,0.458,0.191,0.147
+1633,Spies!,1981,Strategy Game,8196,5.615,341,2.405,59,27,0.458,0.191,0.148
 61028,D-Day Dice: Free Trial Version,2009,Thematic,8220,5.619,278,1.816,152,47,0.310,0.171,0.041
 5035,"PanzerArmee Afrika: Rommel in the Desert, April 1941 - November 1942",1973,War Game,8226,5.616,382,2.549,68,40,0.587,0.230,0.266
 170223,Centauri Saga,2016,Strategy Game,8229,5.619,340,2.941,261,98,0.376,0.128,0.025
@@ -5998,7 +5998,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 171037,Doctor Panic,2016,Party Game,8365,5.611,496,1.273,28,0,0.017,0.014,-0.218
 287673,Baron Voodoo,2019,Uncategorized,8367,5.611,342,2.454,28,18,0.638,0.260,0.323
 2422,Bismarck,1962,War Game,8392,5.611,334,2.758,30,7,0.242,0.088,-0.095
-299178,Small Railroad Empires,2021,Uncategorized,8395,5.611,266,2.333,72,42,0.582,0.250,0.276
+299178,Small Railroad Empires,2021,Uncategorized,8395,5.611,266,2.333,72,42,0.582,0.250,0.277
 165404,Dragonscroll,2014,Thematic,8397,5.611,298,2.105,66,12,0.187,0.089,-0.103
 194233,Cartoon Network Crossover Crisis Deck-Building Game,2016,Uncategorized,8401,5.615,305,1.800,30,15,0.500,0.278,0.231
 99097,Food Fight,2011,Family Game,8403,5.610,740,1.756,37,16,0.434,0.247,0.168
@@ -6298,7 +6298,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 5195,The Farming Game,1979,Family Game,11011,5.566,1011,1.675,26,5,0.204,0.122,-0.057
 1919,D-Day (3rd Edition),1977,War Game,11014,5.566,415,2.491,84,22,0.265,0.106,-0.052
 56835,Train of Thought,2011,Party Game,11028,5.566,431,1.286,32,3,0.106,0.082,-0.130
-9792,Oriente,2004,Party Game,11039,5.565,688,2.158,40,22,0.549,0.254,0.255
+9792,Oriente,2004,Party Game,11039,5.565,688,2.158,40,22,0.549,0.254,0.256
 258,Fluxx,1997,Party Game,11060,5.565,18352,1.389,227,40,0.178,0.128,-0.065
 22826,Mutant Chronicles Collectible Miniatures Game,2008,Customizable,11067,5.567,348,2.442,125,17,0.139,0.057,-0.175
 187777,Endure the Stars,2017,Thematic,11069,5.569,273,2.250,186,65,0.350,0.156,0.051
@@ -6438,7 +6438,7 @@ bgg_id,name,year,game_type,rank,bayes_rating,num_votes,complexity,num_threads_to
 3921,Street Illegal,2002,Strategy Game,17026,5.524,447,1.815,32,8,0.258,0.142,-0.012
 211128,Coma Ward,2018,Uncategorized,17151,5.524,303,3.167,118,41,0.349,0.110,-0.020
 1146,Shadowlord!,1983,Strategy Game,17206,5.524,429,2.268,31,9,0.297,0.131,-0.004
-533,Labyrinth: The Card Game,2000,Children's Game,17338,5.524,1641,1.213,34,7,0.214,0.177,-0.018
+533,Labyrinth: The Card Game,2000,Children's Game,17338,5.524,1641,1.213,34,7,0.214,0.177,-0.017
 298477,Tellstones: King's Gambit,2020,Uncategorized,17553,5.522,537,1.207,26,2,0.093,0.077,-0.139
 33581,Mwahahaha!,2008,Thematic,18002,5.521,451,2.560,39,15,0.388,0.151,0.065
 88402,Crappy Birthday,2011,Party Game,18091,5.520,472,1.048,29,0,0.017,0.016,-0.205
