@@ -54,9 +54,19 @@ results_dir, data_dir, tables_md_dir
 
 # %%
 forums = (
-    pl.scan_ndjson(results_dir / "*.jl")
-    .unique("forum_id", keep="any")
-    .select("bgg_id", "title", "num_threads")
+    pl.scan_ndjson(results_dir / "*.jl", include_file_paths="path")
+    .select(
+        "bgg_id",
+        "forum_id",
+        "title",
+        "num_threads",
+        scraped_at=pl.col("path")
+        .str.extract(r"^.*(\d{4}-\d{2}-\d{2}T\d{2}-\d{2}-\d{2}).*$", 1)
+        .str.strptime(pl.Datetime, "%Y-%m-%dT%H-%M-%S"),
+    )
+    .sort("scraped_at", descending=True)
+    .unique("forum_id", keep="first")
+    .drop("forum_id", "scraped_at")
 )
 games = (
     pl.scan_ndjson(data_dir / "scraped" / "bgg_GameItem.jl", infer_schema_length=10_000)
