@@ -96,7 +96,7 @@ Equipped with this estimator, we can define the **Residual Rules Ratio** (RRR):
   \text{RRR} = \text{RR} - \widehat\text{RR}.
 \\]
 
-The intuition behind RRR is that we measure how much more or less confusing a rulebook is than the peers in its "weight class". Since both constituent values are in %, RRR itself would be naturally denoted in percentage points. In a time-honoured scientific tradition, I suggest naming its unit **wem**:
+The intuition behind RRR is that we measure how much more or less confusing a rulebook is than the peers in its "weight class". Since both constituent values are in %, RRR itself would be naturally denoted in percentage points. In a time-honoured scientific tradition, I suggest naming the unit **wem**:
 
 > **1 wem = 1 percentage point of RRR**.
 
@@ -107,6 +107,14 @@ What does this look like in practice? First, let's do the same plot as before, b
 {{% bokeh "residual_rules_ratio_vs_complexity.json" %}}
 
 Note how the upward trend has turned into a horizontal line. This is the same idea we used to [debias the BGG rankings]({{<ref "posts/debiased_rankings/index.md">}}).
+
+One of the dots that immediately sticks out is (again) {{% game 234190 %}}Unstable Unicorns{{% /game %}}. While it didn't have the highest RR in the plot above, it does raise a lot more rules questions than a typical light game and hence takes the somewhat questionable lead in this plot at +39 wem RRR. Another light game with a high RRR is {{% game 1111 %}}Taboo{{% /game %}} at +33 wem. Most of the rules questions seem be disputes about allowed or forbidden clues, which isn't your typical rules question, but then again it does show that the system has some fuzziness about it that requires interpretation, which does hit the core of RR / RRR.
+
+On the other end of the spectrum we see the three original EXIT games which one the 2017 {{% kdj %}}Kennerspiel{{% /kdj %}} award with RRR of -31 to -28 wem. I don't know if the rules are written so well, or if it's their real-time one-and-done nature that makes few people stop and post rules questions. {{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}} has a similarly low RRR of -28 wem. Apparently, it pays off when the rules are in the story you're experiencing.
+
+It's also interesting to see that WEM's poster child {{% game 318977 %}}MicroMacro{{% /game %}} isn't so exceptional anymore: its RRR of -22 wem is comparable to the -21 wem of the heavyweight {{% game 120677 %}}Terra Mystica{{% /game %}}. The latter's rule clarity is even more remarkable when you remember that significant portion of its appeal is due to the asymmetric factions, which is usually a receipt for a crowded rules forum.
+
+{{% game  %}}{{% /game %}}
 
 TODO: Noteworthy dots, e.g., Unstable Unicorns (again) and Terra Mystica.
 
