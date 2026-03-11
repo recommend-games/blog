@@ -221,7 +221,9 @@ Time to look at some top 10 lists! Across 6596 games in the sample (min 25 threa
 
 # A proxy, not a verdict
 
-Does it mean anything? Perhaps not as a definitive quality metric, but it's a fascinating proxy for *game clarity*. A heavyweight like {{% game 120677 %}}Terra Mystica{{% /game %}} (-21 wem) sitting well below the regression line suggests its rules, despite asymmetric factions and depth, are remarkably coherent. Conversely, a light game like {{% game 234190 %}}Unstable Unicorns{{% /game %}} (+39 wem) has a high "rulebook debt" — it triggers far more rules questions than other games in its weight class.
+Does it mean anything? Perhaps not as a definitive quality metric, but it's a fascinating proxy for *rules friction*. A heavyweight like {{% game 120677 %}}Terra Mystica{{% /game %}} (-21 wem) sitting well below the regression line suggests its rules, despite asymmetric factions and depth, are remarkably coherent. Conversely, a light game like {{% game 234190 %}}Unstable Unicorns{{% /game %}} (+39 wem) has a high "rulebook debt" — it triggers far more rules questions than its weight peers.
+
+I mostly like RR and RRR as *outlier detectors*: they point at games that might have unusually clear rules, unusually fuzzy edge cases or simply unusually passionate forum cultures.
 
 I hope WEM will be proud of how seriously I took his advice to geek out about his RR. It might be a toy metric, but I certainly found it very interesting to dive deep. Let's just hope nobody starts "ratio-bombing" BGG threads to mess with the stats! 😅
 
