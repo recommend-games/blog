@@ -87,7 +87,7 @@ Instead, I suggest the RRR: the Residual Rules Ratio. The idea is to estimate th
 Let's take this step by step. First we need to find said "typical RR" for a given weight. As usually, regression is our friend: we fit a simple model to explain RR in relationship to complexity. Since RR is a fraction between 0 and 1 (because of the smoothing *strictly* between those values), we'll use a logistic model. Feeding the data into the statistical software of your choice yields this formula:
 
 \\[
-  \widehat\text{RR} = \sigma(0.3373 \cdot \text{complexity} - 1.6073),
+  \widehat\text{RR} = \sigma(0.3381 \cdot \text{complexity} - 1.6104),
 \\]
 
 where \\(\sigma\\) is the [sigmoid function](https://en.wikipedia.org/wiki/Sigmoid_function) we most recently encountered in the context of the [Elo ratings]({{<ref "posts/elo_1/index.md">}}).
@@ -112,7 +112,7 @@ What does this look like in practice? First, let's do the same plot as before, b
 
 Note how the upward trend has turned into a horizontal line. This is the same idea we used to [debias the BGG rankings]({{<ref "posts/debiased_rankings/index.md">}}).
 
-One of the dots that immediately sticks out is (again) {{% game 234190 %}}Unstable Unicorns{{% /game %}}. While it didn't have the highest RR in the plot above, it does raise a lot more rules questions than a typical light game and hence takes the somewhat questionable lead in this plot at +39 wem RRR. Another light game with a high RRR is {{% game 1111 %}}Taboo{{% /game %}} at +33 wem. Most of the rules questions seem be disputes about allowed or forbidden clues, which isn't your typical rules question, but then again it does show that the system has some fuzziness about it that requires interpretation, which does hit the core of RR / RRR.
+One of the dots that immediately sticks out is (again) {{% game 234190 %}}Unstable Unicorns{{% /game %}}. While it didn't have the highest RR in the plot above, it does raise a lot more rules questions than a typical light game and hence takes the somewhat questionable lead in this plot at +39 wem RRR. Another light game with a high RRR is {{% game 1111 %}}Taboo{{% /game %}} at +33 wem. Most of the rules questions seem be disputes about allowed or forbidden clues, which isn't your typical rules question, but then again it does show that the system has some fuzziness about it that requires interpretation, which does hit the core of RR.
 
 On the other end of the spectrum we see the three original EXIT games which one the 2017 {{% kdj %}}Kennerspiel{{% /kdj %}} award with RRR of -31 to -28 wem. I don't know if the rules are written so well, or if it's their real-time one-and-done nature that makes few people stop and post rules questions. {{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}} has a similarly low RRR of -28 wem. Apparently, it pays off when the rules are in the story you're experiencing.
 
