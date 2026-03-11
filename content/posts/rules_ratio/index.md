@@ -126,7 +126,72 @@ On the other end of the spectrum we see the three original EXIT games which one 
 
 It's also interesting to see that WEM's poster child {{% game 318977 %}}MicroMacro{{% /game %}} isn't so exceptional anymore: its RRR of -22 wem is comparable to the -21 wem of the heavyweight {{% game 120677 %}}Terra Mystica{{% /game %}}. The latter's rule clarity is even more remarkable when you remember that significant portion of its appeal is due to the asymmetric factions, which is usually a receipt for a crowded rules forum.
 
-TODO: Top / bottom 10 lists, link to CSV.
+Time to look at some top 10 lists! You can also download the [full results](rules_ratios.csv).
+
+
+### Top 10 by popularity
+
+| Game                                                     | RR                | RRW             | RRR     |
+|----------------------------------------------------------|-------------------|-----------------|---------|
+| {{% game 13 %}}Catan{{% /game %}} (1995)                 | 16% (464 / 2916)  | 7% (16% / 2.3)  | -14 wem |
+| {{% game 822 %}}Carcassonne{{% /game %}} (2000)          | 19% (539 / 2891)  | 10% (19% / 1.9) | -9 wem  |
+| {{% game 30549 %}}Pandemic{{% /game %}} (2008)           | 19% (544 / 2887)  | 8% (19% / 2.4)  | -12 wem |
+| {{% game 167791 %}}Terraforming Mars{{% /game %}} (2016) | 26% (1512 / 5742) | 8% (26% / 3.3)  | -11 wem |
+| {{% game 266192 %}}Wingspan{{% /game %}} (2019)          | 28% (719 / 2596)  | 11% (28% / 2.5) | -4 wem  |
+| {{% game 68448 %}}7 Wonders{{% /game %}} (2010)          | 24% (413 / 1703)  | 10% (24% / 2.3) | -6 wem  |
+| {{% game 173346 %}}7 Wonders Duel{{% /game %}} (2015)    | 36% (321 / 896)   | 16% (36% / 2.2) | +6 wem  |
+| {{% game 230802 %}}Azul{{% /game %}} (2017)              | 21% (144 / 683)   | 12% (21% / 1.8) | -6 wem  |
+| {{% game 178900 %}}Codenames{{% /game %}} (2015)         | 17% (134 / 803)   | 13% (17% / 1.3) | -7 wem  |
+| {{% game 9209 %}}Ticket to Ride{{% /game %}} (2004)      | 8% (148 / 1877)   | 4% (8% / 1.8)   | -19 wem |
+
+
+### Top 10 by rank
+
+| Game                                                                     | RR                 | RRW             | RRR     |
+|--------------------------------------------------------------------------|--------------------|-----------------|---------|
+| {{% game 224517 %}}Brass: Birmingham{{% /game %}} (2018)                 | 39% (662 / 1687)   | 10% (39% / 3.9) | -3 wem  |
+| {{% game 342942 %}}Ark Nova{{% /game %}} (2021)                          | 51% (1379 / 2693)  | 14% (51% / 3.8) | +9 wem  |
+| {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}} (2015)         | 40% (1365 / 3388)  | 14% (40% / 2.8) | +6 wem  |
+| {{% game 174430 %}}Gloomhaven{{% /game %}} (2017)                        | 43% (6838 / 16008) | 11% (43% / 3.9) | +0 wem  |
+| {{% game 316554 %}}Dune: Imperium{{% /game %}} (2020)                    | 37% (1018 / 2771)  | 12% (37% / 3.1) | +1 wem  |
+| {{% game 233078 %}}Twilight Imperium: Fourth Edition{{% /game %}} (2017) | 38% (1769 / 4671)  | 9% (38% / 4.4)  | -9 wem  |
+| {{% game 397598 %}}Dune: Imperium – Uprising{{% /game %}} (2023)         | 36% (555 / 1547)   | 10% (36% / 3.5) | -4 wem  |
+| {{% game 115746 %}}War of the Ring: Second Edition{{% /game %}} (2011)   | 41% (1920 / 4692)  | 10% (41% / 4.2) | -5 wem  |
+| {{% game 167791 %}}Terraforming Mars{{% /game %}} (2016)                 | 26% (1512 / 5742)  | 8% (26% / 3.3)  | -11 wem |
+| {{% game 187645 %}}Star Wars: Rebellion{{% /game %}} (2016)              | 44% (1719 / 3891)  | 12% (44% / 3.8) | +3 wem  |
+
+
+### Highest RRR
+
+| Game                                                                                                     | RR              | RRW             | RRR     |
+|----------------------------------------------------------------------------------------------------------|-----------------|-----------------|---------|
+| {{% game 182094 %}}BANG! The Duel{{% /game %}} (2015)                                                    | 88% (87 / 99)   | 46% (88% / 1.9) | +60 wem |
+| {{% game 399088 %}}UNO: Show 'Em No Mercy{{% /game %}} (2023)                                            | 77% (24 / 31)   | 50% (77% / 1.5) | +52 wem |
+| {{% game 301441 %}}Drawn to Adventure{{% /game %}} (2021)                                                | 77% (57 / 74)   | 37% (77% / 2.1) | +48 wem |
+| {{% game 173200 %}}Epic Spell Wars of the Battle Wizards: Rumble at Castle Tentakill{{% /game %}} (2015) | 72% (48 / 66)   | 45% (72% / 1.6) | +47 wem |
+| {{% game 339302 %}}Winterhaven Woods{{% /game %}} (2022)                                                 | 72% (44 / 61)   | 46% (72% / 1.6) | +47 wem |
+| {{% game 392513 %}}Mindbug: Beyond Eternity{{% /game %}} (2023)                                          | 76% (33 / 43)   | 34% (76% / 2.2) | +46 wem |
+| {{% game 278120 %}}God of War: The Card Game{{% /game %}} (2019)                                         | 78% (118 / 151) | 31% (78% / 2.5) | +46 wem |
+| {{% game 385833 %}}Freaky Frogs From Outaspace{{% /game %}} (2023)                                       | 75% (40 / 53)   | 35% (75% / 2.2) | +46 wem |
+| {{% game 256728 %}}Raiatea{{% /game %}} (2018)                                                           | 82% (24 / 29)   | 27% (82% / 3.1) | +46 wem |
+| {{% game 358812 %}}Basketboss{{% /game %}} (2022)                                                        | 73% (39 / 53)   | 38% (73% / 1.9) | +46 wem |
+
+
+### Lowest RRR
+
+| Game                                                                                         | RR           | RRW           | RRR     |
+|----------------------------------------------------------------------------------------------|--------------|---------------|---------|
+| {{% game 1589 %}}Star Fleet Battles{{% /game %}} (1979)                                      | 5% (4 / 98)  | 1% (5% / 4.2) | -41 wem |
+| {{% game 99630 %}}Rolling Stock{{% /game %}} (2011)                                          | 3% (2 / 92)  | 1% (3% / 3.9) | -40 wem |
+| {{% game 147537 %}}Malifaux (Second Edition){{% /game %}} (2013)                             | 1% (0 / 45)  | 0% (1% / 3.7) | -40 wem |
+| {{% game 29663 %}}Star Fleet Battles: Captain's Edition Basic Set{{% /game %}} (1990)        | 6% (8 / 130) | 2% (6% / 4.3) | -40 wem |
+| {{% game 2162 %}}Warhammer 40,000 (Third Edition){{% /game %}} (1998)                        | 4% (5 / 154) | 1% (4% / 3.5) | -36 wem |
+| {{% game 345976 %}}System Gateway (fan expansion for Android: Netrunner){{% /game %}} (2021) | 3% (2 / 73)  | 1% (3% / 3.4) | -36 wem |
+| {{% game 126613 %}}Warhammer 40,000 (Sixth Edition){{% /game %}} (2012)                      | 4% (1 / 33)  | 1% (4% / 3.5) | -35 wem |
+| {{% game 299371 %}}The Emerald Flame{{% /game %}} (2021)                                     | 4% (2 / 55)  | 1% (4% / 3.5) | -35 wem |
+| {{% game 12166 %}}Funkenschlag{{% /game %}} (2001)                                           | 6% (2 / 39)  | 2% (6% / 3.6) | -34 wem |
+| {{% game 4154 %}}Yu-Gi-Oh! Trading Card Game{{% /game %}} (1999)                             | 1% (0 / 46)  | 0% (1% / 2.9) | -33 wem |
+
 
 
 # Summary / conclusion
