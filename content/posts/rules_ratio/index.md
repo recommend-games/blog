@@ -118,17 +118,14 @@ On the other end of the spectrum we see the three original EXIT games which one 
 
 It's also interesting to see that WEM's poster child {{% game 318977 %}}MicroMacro{{% /game %}} isn't so exceptional anymore: its RRR of -22 wem is comparable to the -21 wem of the heavyweight {{% game 120677 %}}Terra Mystica{{% /game %}}. The latter's rule clarity is even more remarkable when you remember that significant portion of its appeal is due to the asymmetric factions, which is usually a receipt for a crowded rules forum.
 
-{{% game  %}}{{% /game %}}
-
-TODO: Noteworthy dots, e.g., Unstable Unicorns (again) and Terra Mystica.
-
-TODO: RRW is right instinct (a higher complexity budget prices in more rules questions), but BGG complexity is not multiplicative. Instead: Regression model, residuals, more lists, plot. Unit: wem.
-
+TODO: Top / bottom 10 lists, link to CSV.
 
 
 # Summary / conclusion
 
-Does it mean anything? I really hope it never will be taken serious enough just so the same people who do 1/10 rating bombs will create rules questions with the sole purpose of messing with games' RRs/RRRs.
+Does it mean anything? Perhaps not as a definitive quality metric, but it’s a fascinating proxy for *game clarity*. A game like {{% game 224517 %}}Brass: Birmingham{{% /game %}} (-3 wem) sitting below the regression line suggests its rules, while heavy, are remarkably coherent. Conversely, {{% game 342942 %}}Ark Nova{{% /game %}} (+9 wem) has a high "rulebook debt", likely due to the massive variety of unique card effects.
+
+The goal isn't to punish complex games, but to celebrate the ones that manage to stay intuitive despite their depth. Let's just hope nobody starts "ratio-bombing" BGG threads to mess with the stats! 😅
 
 
 # Appendix: Methodology
