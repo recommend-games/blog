@@ -145,7 +145,7 @@ The intuition behind RRR is that it measures how much more (or less) rules-focus
 In theory, RRR ranges from −100 to +100 wem (a game can’t have less than 0% or more than 100% rules threads). In practice, values are much less extreme — and should be interpreted as a behavioural proxy, not a definitive verdict on rulebook quality.
 
 
-### RRR in the wild
+### Above and below the line
 
 What does this look like in practice? First, let's do the same plot as before, but with RRR instead of RR:
 
@@ -153,11 +153,17 @@ What does this look like in practice? First, let's do the same plot as before, b
 
 Note how the upward trend has turned into a horizontal line. This is the same idea we used to [debias the BGG rankings]({{<ref "posts/debiased_rankings/index.md">}}).
 
-One of the dots that immediately sticks out is (again) {{% game 234190 %}}Unstable Unicorns{{% /game %}}. While it didn't have the highest RR in the plot above, it does raise a lot more rules questions than a typical light game and hence takes the somewhat questionable lead in this plot at +39 wem RRR. Another light game with a high RRR is {{% game 1111 %}}Taboo{{% /game %}} at +33 wem. Most of the rules questions seem be disputes about allowed or forbidden clues, which isn't your typical rules question, but then again it does show that the system has some fuzziness about it that requires interpretation, which does hit the core of RR.
 
-On the other end of the spectrum we see the three original EXIT games which one the 2017 {{% kdj %}}Kennerspiel{{% /kdj %}} award with RRR of -31 to -28 wem. I don't know if the rules are written so well, or if it's their real-time one-and-done nature that makes few people stop and post rules questions. {{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}} has a similarly low RRR of -28 wem. Apparently, it pays off when the rules are in the story you're experiencing.
+#### High RRR
 
-It's also interesting to see that WEM's poster child {{% game 318977 %}}MicroMacro{{% /game %}} isn't so exceptional anymore: its RRR of -22 wem is comparable to the -21 wem of the heavyweight {{% game 120677 %}}Terra Mystica{{% /game %}}. The latter's rule clarity is even more remarkable when you remember that significant portion of its appeal is due to the asymmetric factions, which is usually a receipt for a crowded rules forum.
+One of the dots that immediately sticks out is (again) {{% game 234190 %}}Unstable Unicorns{{% /game %}}. While it didn't have the highest RR in the plot above, it does raise a lot more rules questions than a typical light game and hence takes the somewhat unexpected lead in this plot at +39 wem RRR. Another light game with a high RRR is {{% game 1111 %}}Taboo{{% /game %}} at +33 wem. Most of the rules questions seem to be disputes about allowed or forbidden clues, which isn't your typical rules question, but then again it does show that the system has some fuzziness about it that requires interpretation, which does hit the core of RR.
+
+
+#### Low RRR
+
+On the other end of the spectrum we see the three original EXIT games which won the 2017 {{% kdj %}}Kennerspiel{{% /kdj %}} award with RRRs from -31 to -28 wem. I don't know if the rules are written so well, or if it's their real-time one-and-done nature that makes few people stop and post rules questions. {{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}} has a similarly low RRR of -28 wem. Apparently, it pays off when the rules are in the story you're experiencing.
+
+It's also interesting to see that WEM's poster child {{% game 318977 %}}MicroMacro{{% /game %}} isn't so exceptional anymore: its RRR of -22 wem is comparable to the -21 wem of the heavyweight {{% game 120677 %}}Terra Mystica{{% /game %}}. The latter's rule clarity is even more remarkable when you remember that significant portion of its appeal is due to the asymmetric factions, which is usually a recipe for a crowded *Rules* forum.
 
 
 ## Leaderboards
