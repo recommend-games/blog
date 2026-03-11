@@ -84,20 +84,20 @@ Let's visualise this:
 
 {{% bokeh "rules_ratio_vs_complexity.json" %}}
 
-Every dot represents a game, positioned by its complexity (x-axis) and RR (y-axis). Games with more ratings will be larger, whilst the colour encodes the game type. This is an interactive plot, so I'll invite you to explore it by hovering over the dots and finding your favourite game. (For readability, the plot only includes games in the BGG top 1000 or with ≥10k ratings.)
+Every dot represents a game, positioned by its complexity (x-axis) and RR (y-axis). Games with more ratings will be larger, while the colour encodes the game type. This is an interactive plot, so I'll invite you to explore it by hovering over the dots and finding your favourite game. (For readability, the plot only includes games in the BGG top 1000 or with ≥10k ratings.)
 
 The trend is clear: higher complexity tends to mean higher RR — but with plenty of spread.
 
 
 ## WEM's RRW (and why I’m not dividing by weight)
 
-WEM's suggestion to account for the complexity budget when reasoning about RR is the RRW: **Rules Ratio by Weight**, i.e., the game's RR divided by its weight:
+WEM’s suggestion to account for complexity when reasoning about RR is RRW: **Rules Ratio by Weight**, i.e. RR divided by BGG weight:
 
 \\[
   \text{RRW} = \frac{\text{RR}}{\text{complexity}}.
 \\]
 
-As discussed, taking complexity into account is the right instinct, but simply dividing would make only sense if complexity was a multiplicative measure. But while BGG is intentionally vague about what their complexity metric means, it should be clear that a game of weight 4 isn't "twice as heavy" as a game of weight 2.
+Taking complexity into account is exactly the right instinct — I just don’t love plain division here. BGG weight is a bounded, subjective 1–5 score; it’s useful, but it’s not a ratio scale where “4” is meaningfully “twice” a “2”. Dividing RR by weight implicitly assumes that kind of multiplicative structure, and I’d rather avoid baking that assumption into the metric.
 
 
 ## RRR: Residual Rules Ratio
