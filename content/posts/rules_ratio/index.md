@@ -233,25 +233,26 @@ I hope WEM will be proud of how seriously I took his advice to geek out about hi
 
 ## Data sources
 
-Forum thread counts come from scraped BGG forum listings: for each game we have the number of threads per forum section (e.g. *Rules*, *Strategy*, *Sessions*). Only forums titled *Rules* are counted as rules threads. (Note: almost all games have exactly 10 standard subforums, but a handful — like {{% game 3076 %}}Puerto Rico{{% /game %}} — have special additional forums. Have fun finding them all! 😎)
+Forum thread counts come from scraped BGG forum listings: for each game we have the number of threads per forum section (e.g. *Rules*, *Strategy*, *Sessions*). Only forums titled *Rules* are counted as rules threads.[^forums]
 
 
 ## Inclusion criteria
 
-A game is included only if it has at least 250 ratings, a non-null BGG complexity, and at least 25 total forum threads. Publication year is restricted to 1950–present. Compilations are excluded. The criteria were chose to obtain a large and representative dataset without too much noise or anomalies.
+A game is included only if it has at least 250 ratings, a non-null BGG complexity, and at least 25 total forum threads. Publication year is restricted to 1950–present. Compilations are excluded. The criteria were chosen to keep a large, reasonably representative dataset while avoiding extreme small-sample noise.
 
 
 ## Regression model
 
-The expected RR for a given complexity is estimated with a binomial (logistic) GLM: the response is the smoothed RR and the single predictor is BGG complexity. Observations are weighted by the number of ratings so that games with more ratings (and thus more stable RR estimates) have greater influence. The fitted model gives the expected RR curve; the residual (actual RR minus fitted RR) is the RRR in percentage points (wem).
+The expected RR for a given complexity is estimated with a binomial (logistic) GLM: the response is the smoothed RR and the single predictor is BGG complexity. Observations are weighted by number of ratings so that the fitted curve reflects the behaviour of more widely played/discussed games. The fitted model gives the expected RR curve; the residual (actual RR minus fitted RR) is the RRR in percentage points (wem). Note that RR/RRR measure forum behaviour, not rulebook quality directly.
 
 
 ## Visualisation
 
-The scatter plots show only games that are either in the BGG top 1000 by rank or have at least 10,000 ratings.
+The scatter plots show a readability subset (top 1000 by rank or ≥10k ratings), but all summary statistics and leaderboards use the full sample.
 
 
 [^fediverse]: Come for the board game news, stay for their policy of [not tracking users](https://www.wericmartin.com/board-game-beat-policies/) and their [Fediverse first](https://www.wericmartin.com/federated-social-media-video/) approach. 🤓
 [^threads]: WEM mentions forum posts in his article, but from the screenshot and numbers it's evident he's using threads. I think this is the correct choice for what we're interested in: every distinct rules question typically goes into its own thread, and we want to know how many rules questions a given game triggers, not how many posts it takes to resolve them.
 [^ratio]: Ackshually… 🤓 Calling this metric a "ratio" isn't technically wrong, but "share", "proportion" or "fraction" would be more accurate. WEM told us to geek out, so please indulge me in this little pedantry.
 [^3b1b]: If you want to learn more about this technique, I highly recommend the always excellent Grant Sanderson and his [3blue1brown video](https://youtu.be/8idr1WZ1A7Q) on the topic.
+[^forums]: Almost all games have exactly 10 standard subforums, but a handful — like {{% game 3076 %}}Puerto Rico{{% /game %}} — have special additional forums. Have fun finding them all! 😎
