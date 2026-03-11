@@ -125,12 +125,14 @@ TODO: Top / bottom 10 lists, link to CSV.
 
 Does it mean anything? Perhaps not as a definitive quality metric, but it’s a fascinating proxy for *game clarity*. A game like {{% game 224517 %}}Brass: Birmingham{{% /game %}} (-3 wem) sitting below the regression line suggests its rules, while heavy, are remarkably coherent. Conversely, {{% game 342942 %}}Ark Nova{{% /game %}} (+9 wem) has a high "rulebook debt", likely due to the massive variety of unique card effects.
 
+TODO: Those examples are rubbish.
+
 The goal isn't to punish complex games, but to celebrate the ones that manage to stay intuitive despite their depth. Let's just hope nobody starts "ratio-bombing" BGG threads to mess with the stats! 😅
 
 
 # Appendix: Methodology
 
-TODO: data etc.
+TODO: data source, regression details, chose thresholds etc.
 
 
 [^fediverse]: Come for the board game news, stay for their policy of [not tracking users](https://www.wericmartin.com/board-game-beat-policies/) and their [Fediverse first](https://www.wericmartin.com/federated-social-media-video/) approach. 🤓
