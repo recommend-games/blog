@@ -102,9 +102,9 @@ Taking complexity into account is exactly the right instinct — I just don’t 
 
 ## RRR: Residual Rules Ratio
 
-Instead, I suggest the RRR: the Residual Rules Ratio. The idea is to estimate the "typical RR" of a game of a certain complexity, then compare the actual RR to this "typical RR". Their difference is the RRR.
+Instead, I suggest RRR: Residual Rules Ratio. The idea is to estimate the *expected RR* of a game of a certain complexity, then compare the actual RR to this expected RR. Their difference is the RRR.
 
-Let's take this step by step. First we need to find said "typical RR" for a given weight. As usually, regression is our friend: we fit a simple model to explain RR in relationship to complexity. Since RR is a fraction between 0 and 1 (because of the smoothing *strictly* between those values), we'll use a logistic model. Feeding the data into the statistical software of your choice yields this formula:
+Let's take this step by step. First we need to find said expected RR for a given weight. As usual, regression is our friend: we fit a simple model to explain RR in relationship to complexity. Since RR is a fraction between 0 and 1, we'll use a logistic model. Feeding the data into your favourite statistical software yields the fitted curve for the expected RR:
 
 \\[
   \widehat\text{RR} = \sigma(0.3381 \cdot \text{complexity} - 1.6104),
@@ -115,15 +115,15 @@ where \\(\sigma\\) is the [sigmoid function](https://en.wikipedia.org/wiki/Sigmo
 
 ### Interpreting the fitted curve
 
-Let's take a moment to develop an intuition about this formula. Mathematically speaking, we're modelling the *log-odds* of a thread being rules-related: \\(\log(\text{odds}) = 0.3381 \cdot \text{complexity} - 1.6104\\). The coefficient on complexity tells us that for each step up on the BGG weight scale (e.g. from 2 to 3), the *odds* that a random thread is about rules are multiplied by \\(e^{0.3381} \approx 1.40\\). If you're not used to thinking in odds, it might be easier to look at some concrete values of "typical RR":
+Let's take a moment to develop an intuition about this formula. Mathematically speaking, we're modelling the *log-odds* of a thread being rules-related: \\(\log(\text{odds}) = 0.3381 \cdot \text{complexity} - 1.6104\\). The coefficient on complexity tells us that for each step up on the BGG weight scale (e.g. from 2 to 3), the *odds* that a random thread is about rules are multiplied by \\(e^{0.3381} \approx 1.40\\). If you're not used to thinking in odds, it might be easier to look at some concrete values of expected RR:
 
-| Complexity | Typical RR |
-|:----------:|:----------:|
-| 1 (light)  | 22%        |
-| 2          | 28%        |
-| 3          | 36%        |
-| 4          | 44%        |
-| 5 (heavy)  | 52%        |
+| Complexity | Rxpected RR |
+|:----------:|:-----------:|
+| 1 (light)  | 22%         |
+| 2          | 28%         |
+| 3          | 36%         |
+| 4          | 44%         |
+| 5 (heavy)  | 52%         |
 
 So we'd expect a light game to have roughly a fifth of its threads about rules, and a heavy game about half. Equipped with this estimator, we can define the **Residual Rules Ratio** (RRR):
 
@@ -228,7 +228,7 @@ A game is included only if it has at least 250 ratings, a non-null BGG complexit
 
 ## Regression model
 
-The “typical RR” for a given complexity is estimated with a binomial (logistic) GLM: the response is the smoothed RR and the single predictor is BGG complexity. Observations are weighted by the number of ratings so that games with more ratings (and thus more stable RR estimates) have greater influence. The fitted model gives the expected RR curve; the residual (actual RR minus fitted RR) is the RRR in percentage points (wem).
+The expected RR for a given complexity is estimated with a binomial (logistic) GLM: the response is the smoothed RR and the single predictor is BGG complexity. Observations are weighted by the number of ratings so that games with more ratings (and thus more stable RR estimates) have greater influence. The fitted model gives the expected RR curve; the residual (actual RR minus fitted RR) is the RRR in percentage points (wem).
 
 
 ## Visualisation
