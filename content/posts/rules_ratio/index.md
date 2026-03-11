@@ -92,9 +92,17 @@ Let's take this step by step. First we need to find said "typical RR" for a give
 
 where \\(\sigma\\) is the [sigmoid function](https://en.wikipedia.org/wiki/Sigmoid_function) we most recently encountered in the context of the [Elo ratings]({{<ref "posts/elo_1/index.md">}}).
 
-TODO: What does this mean? Odds ratio interpretation / example values.
+Let's take a moment to develop an intuition about this formula. Mathematically speaking, we're modelling the *log-odds* of a thread being rules-related: \\(\log(\text{odds}) = 0.3381 \cdot \text{complexity} - 1.6104\\). The coefficient on complexity tells us that for each step up on the BGG weight scale (e.g. from 2 to 3), the *odds* that a random thread is about rules are multiplied by \\(e^{0.3381} \approx 1.40\\). If you're not used to thinking in odds, it might be easier to look at some concrete values of "typical RR":
 
-Equipped with this estimator, we can define the **Residual Rules Ratio** (RRR):
+| Complexity | Typical RR |
+|:----------:|:----------:|
+| 1 (light)  | 22%        |
+| 2          | 28%        |
+| 3          | 36%        |
+| 4          | 44%        |
+| 5 (heavy)  | 52%        |
+
+So we'd expect a light game to have roughly a fifth of its threads about rules, and a heavy game about half. Equipped with this estimator, we can define the **Residual Rules Ratio** (RRR):
 
 \\[
   \text{RRR} = \text{RR} - \widehat\text{RR}.
