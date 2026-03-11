@@ -68,7 +68,7 @@ Most other games with low RR are fairly simple party or storytelling games, but 
 
 ## A quick intuition for smoothing
 
-Low RRs demonstrate the effect of smoothing well: Whilst said war game {{% game 36241 %}}Israeli Independence{{% /game %}} doesn't have a single rule question, its (smoothed) RR is still (0 + 0.5) / (35 + 1) = 1.4%. So there are some games with more rules threads, but lower RR. Take, for instance, the classic party game {{% game 74 %}}Apples to Apples{{% /game %}}: 2 out of 200 threads deal with rules, for an RR of (2 + 0.5) / (200 + 1) = 1.2%. This might be somewhat counterintuitive, but the important assumption is that we don't trust values based on sparse data too much.
+Low RRs are where smoothing matters most. While said war game {{% game 36241 %}}Israeli Independence{{% /game %}} doesn't have a single rules question, its (smoothed) RR is still (0 + 0.5) / (35 + 1) = 1.4%. So there are some games with more rules threads, but lower RR. Take, for instance, the classic party game {{% game 74 %}}Apples to Apples{{% /game %}}: 2 out of 200 threads deal with rules, for an RR of (2 + 0.5) / (200 + 1) = 1.2%. This can look counterintuitive, but that’s the point: we distrust ratios based on tiny samples.
 
 
 # RR vs complexity
