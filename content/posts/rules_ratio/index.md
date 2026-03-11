@@ -168,7 +168,7 @@ It's also interesting to see that WEM's poster child {{% game 318977 %}}MicroMac
 
 ## Leaderboards
 
-Time to look at some top 10 lists! You can also download the [full results](rules_ratios.csv).
+Time to look at some top 10 lists! Across 6596 games in the sample (min 25 threads, 250 ratings), RRR ranges from −41 to +60 wem (mean and median around 5 wem), and RR ranges from 0% to 88% (mean and median around 36%). You can also download the [full results](rules_ratios.csv).
 
 
 ### Most popular games
