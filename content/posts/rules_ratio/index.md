@@ -4,9 +4,14 @@ subtitle: From WEM's geeky stat to smoothing, residuals and the new unit "wem"
 slug: rules-ratio
 author: Markus Shepherd
 type: post
-date: 2026-03-08T12:00:00+02:00
+date: 2026-03-12T00:00:00+02:00
 tags:
   - Rules ratio
+  - W. Eric Martin
+  - Board Game Beat
+  - BoardGameGeek
+  - Rulebooks
+  - Regression
 ---
 
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.8.2.min.js" ></script>
