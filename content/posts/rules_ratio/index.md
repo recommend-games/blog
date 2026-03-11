@@ -1,6 +1,6 @@
 ---
-title: TODO
-subtitle: TODO
+title: Rules Ratio
+subtitle: From WEM's geeky stat to smoothing, residuals and the new unit "wem"
 slug: rules-ratio
 author: Markus Shepherd
 type: post
@@ -49,20 +49,29 @@ You might recognise this idea of "adding pseudo counts to stabilise estimates ba
 
 # RR in the wild
 
+
+## High RR: when rules dominate
+
 WEM already gave quite a few interesting examples of RRs, especially for popular and highly rated games. Here are some more games that stuck out. The highest RR of all games in my sample belongs to {{% game 182094 %}}BANG! The Duel{{% /game %}}: a staggering 87 out of the 99 threads are about rules, for an RR of 88%. Looks like there's a rulebook in desperate need of an editor.
 
 The perhaps most surprisingly high RR belongs to {{% game 399088 %}}UNO: Show 'Em No Mercy{{% /game %}}: 24 out of the 31 threads (RR: 77%) are about the rules. I don't know what's more surprising: that the 'geeks take such an interest in an UNO variant at all, or how much they seem to struggle with its rules.
 
 The highest RR amongst the highly rated games (ranked amongst the top 1000 games) is that of {{% game 408180 %}}Shackleton Base{{% /game %}} at 69%. When looking at very popular games (more than 10k ratings), we find another unexpected title in this field: {{% game 234190 %}}Unstable Unicorns{{% /game %}} at a whooping 64%. Apparently players really struggle with *neighing* — and now I feel like I need to play the game just to find out what that means. 🦄
 
+
+## Low RR: when rules barely show up
+
 The other extreme — extremely low RRs — is dominated by games without any rules questions. WEM already mentioned one example ({{% game 318977 %}}MicroMacro{{% /game %}}, which is also the highest ranked and most popular game with such a low RR), but there is one game with an even lower RR after smoothing: {{% game 155250 %}}TseuQuesT{{% /game %}}. Of its 221 threads, not a single one deals with rules questions. What sounds like a great achievement at first sight is actually quite the opposite: almost all that forum chatter is about its unfulfilled crowdfunding campaign — a typical Kickstarter drama. Note: consume RR values with caution.
 
 Most other games with low RR are fairly simple party or storytelling games, but there are also war games without rules questions (who would've thought?!), e.g., {{% game 36241 %}}Israeli Independence: The First Arab-Israeli War{{% /game %}} (0 rules questions out of 35 threads).
 
+
+## A quick intuition for smoothing
+
 Low RRs demonstrate the effect of smoothing well: Whilst said war game {{% game 36241 %}}Israeli Independence{{% /game %}} doesn't have a single rule question, its (smoothed) RR is still (0 + 0.5) / (35 + 1) = 1.4%. So there are some games with more rules threads, but lower RR. Take, for instance, the classic party game {{% game 74 %}}Apples to Apples{{% /game %}}: 2 out of 200 threads deal with rules, for an RR of (2 + 0.5) / (200 + 1) = 1.2%. This might be somewhat counterintuitive, but the important assumption is that we don't trust values based on sparse data too much.
 
 
-# RR vs complexity: the Residual Rules Ratio
+# RR vs complexity
 
 Undoubtedly, readers of this blog will be familiar with the *complexity* or *weight* rating at BGG: a numerical value between 1 (*light complexity*) and 5 (*heavy complexity*), based on users' votes. This metric has its own issues, but it's still an interesting and widely quoted datapoint to characterise a game. As far as this article is concerned, it stands to reason that more complex games will generate more rules questions. Designers frequently talk about a game's complexity budget: depending on the target audience and its appetite for complexity, a game can afford more mechanisms, elements and their interactions. The more details one needs to understand in order to play the game, the more rules clarifications might be required — at least intuitively this should hold true.
 
@@ -74,6 +83,9 @@ Every dot represents a game, positioned by its complexity (x-axis) and RR (y-axi
 
 This plot supports our intuition well: more complex games tend to have higher RR, though the spread is considerable.
 
+
+## WEM's RRW (and why I’m not dividing by weight)
+
 WEM's suggestion to account for the complexity budget when reasoning about RR is the RRW: **Rules Ratio by Weight**, i.e., the game's RR divided by its weight:
 
 \\[
@@ -81,6 +93,9 @@ WEM's suggestion to account for the complexity budget when reasoning about RR is
 \\]
 
 As discussed, taking complexity into account is the right instinct, but simply dividing would make only sense if complexity was a multiplicative measure. But while BGG is intentionally vague about what their complexity metric means, it should be clear that a game of weight 4 isn't "twice as heavy" as a game of weight 2.
+
+
+## RRR: Residual Rules Ratio
 
 Instead, I suggest the RRR: the Residual Rules Ratio. The idea is to estimate the "typical RR" of a game of a certain complexity, then compare the actual RR to this "typical RR". Their difference is the RRR.
 
@@ -91,6 +106,9 @@ Let's take this step by step. First we need to find said "typical RR" for a give
 \\]
 
 where \\(\sigma\\) is the [sigmoid function](https://en.wikipedia.org/wiki/Sigmoid_function) we most recently encountered in the context of the [Elo ratings]({{<ref "posts/elo_1/index.md">}}).
+
+
+### Interpreting the fitted curve
 
 Let's take a moment to develop an intuition about this formula. Mathematically speaking, we're modelling the *log-odds* of a thread being rules-related: \\(\log(\text{odds}) = 0.3381 \cdot \text{complexity} - 1.6104\\). The coefficient on complexity tells us that for each step up on the BGG weight scale (e.g. from 2 to 3), the *odds* that a random thread is about rules are multiplied by \\(e^{0.3381} \approx 1.40\\). If you're not used to thinking in odds, it might be easier to look at some concrete values of "typical RR":
 
@@ -103,6 +121,9 @@ Let's take a moment to develop an intuition about this formula. Mathematically s
 | 5 (heavy)  | 52%        |
 
 So we'd expect a light game to have roughly a fifth of its threads about rules, and a heavy game about half. Equipped with this estimator, we can define the **Residual Rules Ratio** (RRR):
+
+
+### From expected RR to residuals
 
 \\[
   \text{RRR} = \text{RR} - \widehat\text{RR}.
@@ -126,10 +147,13 @@ On the other end of the spectrum we see the three original EXIT games which one 
 
 It's also interesting to see that WEM's poster child {{% game 318977 %}}MicroMacro{{% /game %}} isn't so exceptional anymore: its RRR of -22 wem is comparable to the -21 wem of the heavyweight {{% game 120677 %}}Terra Mystica{{% /game %}}. The latter's rule clarity is even more remarkable when you remember that significant portion of its appeal is due to the asymmetric factions, which is usually a receipt for a crowded rules forum.
 
+
+## Leaderboards
+
 Time to look at some top 10 lists! You can also download the [full results](rules_ratios.csv).
 
 
-### Top 10 by popularity
+### Most popular games
 
 | Game                                                     | RR                | RRW             | RRR     |
 |----------------------------------------------------------|-------------------|-----------------|---------|
@@ -143,22 +167,6 @@ Time to look at some top 10 lists! You can also download the [full results](rule
 | {{% game 230802 %}}Azul{{% /game %}} (2017)              | 21% (144 / 683)   | 12% (21% / 1.8) | -6 wem  |
 | {{% game 178900 %}}Codenames{{% /game %}} (2015)         | 17% (134 / 803)   | 13% (17% / 1.3) | -7 wem  |
 | {{% game 9209 %}}Ticket to Ride{{% /game %}} (2004)      | 8% (148 / 1877)   | 4% (8% / 1.8)   | -19 wem |
-
-
-### Top 10 by rank
-
-| Game                                                                     | RR                 | RRW             | RRR     |
-|--------------------------------------------------------------------------|--------------------|-----------------|---------|
-| {{% game 224517 %}}Brass: Birmingham{{% /game %}} (2018)                 | 39% (662 / 1687)   | 10% (39% / 3.9) | -3 wem  |
-| {{% game 342942 %}}Ark Nova{{% /game %}} (2021)                          | 51% (1379 / 2693)  | 14% (51% / 3.8) | +9 wem  |
-| {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}} (2015)         | 40% (1365 / 3388)  | 14% (40% / 2.8) | +6 wem  |
-| {{% game 174430 %}}Gloomhaven{{% /game %}} (2017)                        | 43% (6838 / 16008) | 11% (43% / 3.9) | +0 wem  |
-| {{% game 316554 %}}Dune: Imperium{{% /game %}} (2020)                    | 37% (1018 / 2771)  | 12% (37% / 3.1) | +1 wem  |
-| {{% game 233078 %}}Twilight Imperium: Fourth Edition{{% /game %}} (2017) | 38% (1769 / 4671)  | 9% (38% / 4.4)  | -9 wem  |
-| {{% game 397598 %}}Dune: Imperium – Uprising{{% /game %}} (2023)         | 36% (555 / 1547)   | 10% (36% / 3.5) | -4 wem  |
-| {{% game 115746 %}}War of the Ring: Second Edition{{% /game %}} (2011)   | 41% (1920 / 4692)  | 10% (41% / 4.2) | -5 wem  |
-| {{% game 167791 %}}Terraforming Mars{{% /game %}} (2016)                 | 26% (1512 / 5742)  | 8% (26% / 3.3)  | -11 wem |
-| {{% game 187645 %}}Star Wars: Rebellion{{% /game %}} (2016)              | 44% (1719 / 3891)  | 12% (44% / 3.8) | +3 wem  |
 
 
 ### Highest RRR
@@ -193,7 +201,7 @@ Time to look at some top 10 lists! You can also download the [full results](rule
 | {{% game 4154 %}}Yu-Gi-Oh! Trading Card Game{{% /game %}} (1999)                             | 1% (0 / 46)  | 0% (1% / 2.9) | -33 wem |
 
 
-# Summary / conclusion
+# A proxy, not a verdict
 
 Does it mean anything? Perhaps not as a definitive quality metric, but it's a fascinating proxy for *game clarity*. A heavyweight like {{% game 120677 %}}Terra Mystica{{% /game %}} (-21 wem) sitting well below the regression line suggests its rules, despite asymmetric factions and depth, are remarkably coherent. Conversely, a light game like {{% game 234190 %}}Unstable Unicorns{{% /game %}} (+39 wem) has a high "rulebook debt" — it triggers far more rules questions than other games in its weight class.
 
@@ -202,16 +210,28 @@ I hope WEM will be proud of how seriously I took his advice to geek out about hi
 
 # Appendix: Methodology
 
-**Data.** Forum thread counts come from scraped BGG forum listings: for each game we have the number of threads per forum section (e.g. *Rules*, *Strategy*, *Sessions*). Only forums titled *Rules* are counted as rules threads. (Note: almost all games have exactly 10 standard subforums, but a handful — like {{% game 3076 %}}Puerto Rico{{% /game %}} — have special additional forums. Have fun finding them all! 😎)
 
-**Inclusion criteria.** A game is included only if it has at least 250 ratings, a non-null BGG complexity, and at least 25 total forum threads. Publication year is restricted to 1950–present. Compilations are excluded. The criteria were chose to obtain a large and representative dataset without too much noise or anomalies.
+## Data sources
 
-**Regression.** The “typical RR” for a given complexity is estimated with a binomial (logistic) GLM: the response is the smoothed RR and the single predictor is BGG complexity. Observations are weighted by the number of ratings so that games with more ratings (and thus more stable RR estimates) have greater influence. The fitted model gives the expected RR curve; the residual (actual RR minus fitted RR) is the RRR in percentage points (wem).
+Forum thread counts come from scraped BGG forum listings: for each game we have the number of threads per forum section (e.g. *Rules*, *Strategy*, *Sessions*). Only forums titled *Rules* are counted as rules threads. (Note: almost all games have exactly 10 standard subforums, but a handful — like {{% game 3076 %}}Puerto Rico{{% /game %}} — have special additional forums. Have fun finding them all! 😎)
 
-**Plots.** The scatter plots show only games that are either in the BGG top 1000 by rank or have at least 10,000 ratings.
+
+## Inclusion criteria
+
+A game is included only if it has at least 250 ratings, a non-null BGG complexity, and at least 25 total forum threads. Publication year is restricted to 1950–present. Compilations are excluded. The criteria were chose to obtain a large and representative dataset without too much noise or anomalies.
+
+
+## Regression model
+
+The “typical RR” for a given complexity is estimated with a binomial (logistic) GLM: the response is the smoothed RR and the single predictor is BGG complexity. Observations are weighted by the number of ratings so that games with more ratings (and thus more stable RR estimates) have greater influence. The fitted model gives the expected RR curve; the residual (actual RR minus fitted RR) is the RRR in percentage points (wem).
+
+
+## Visualisation
+
+The scatter plots show only games that are either in the BGG top 1000 by rank or have at least 10,000 ratings.
 
 
 [^fediverse]: Come for the board game news, stay for their policy of [not tracking users](https://www.wericmartin.com/board-game-beat-policies/) and their [Fediverse first](https://www.wericmartin.com/federated-social-media-video/) approach. 🤓
-[^threads]: WEM talks about forum posts in his article, but from the screenshot and numbers it's evident he's using threads. I think this is the correct choice for what we're interested in: every distinct rules question typically goes into its own thread, and we want to know how many rules questions a given game triggers, not how many posts it takes to resolve them.
+[^threads]: WEM mentions forum posts in his article, but from the screenshot and numbers it's evident he's using threads. I think this is the correct choice for what we're interested in: every distinct rules question typically goes into its own thread, and we want to know how many rules questions a given game triggers, not how many posts it takes to resolve them.
 [^ratio]: Ackshually… 🤓 Calling this metric a "ratio" isn't technically wrong, but "share", "proportion" or "fraction" would be more accurate. WEM told us to geek out, so please indulge me in this little pedantry.
 [^3b1b]: If you want to learn more about this technique, I highly recommend the always excellent Grant Sanderson and his [3blue1brown video](https://youtu.be/8idr1WZ1A7Q) on the topic.
