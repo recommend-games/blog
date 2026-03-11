@@ -138,11 +138,14 @@ Equipped with this baseline, we can define the **Residual Rules Ratio** (RRR):
   \text{RRR} = \text{RR} - \widehat\text{RR}.
 \\]
 
-The intuition behind RRR is that we measure how much more or less confusing a rulebook is than the peers in its "weight class". Since both constituent values are in %, RRR itself would be naturally denoted in percentage points. In a time-honoured scientific tradition, I suggest naming the unit **wem**:
+The intuition behind RRR is that it measures how much more (or less) rules-focused forum activity a game attracts than its peers in the same “weight class”. Since both RR and \\(\widehat{\text{RR}}\\) are proportions, their difference is naturally expressed in percentage points. In a time-honoured scientific tradition, I suggest naming this unit **wem**:
 
 > **1 wem = 1 percentage point of RRR**.
 
-RRR can range from +100 wem (a game with lots more rules questions than expected) to -100 wem (a game much clearer than expected).
+In theory, RRR ranges from −100 to +100 wem (a game can’t have less than 0% or more than 100% rules threads). In practice, values are much less extreme — and should be interpreted as a behavioural proxy, not a definitive verdict on rulebook quality.
+
+
+### RRR in the wild
 
 What does this look like in practice? First, let's do the same plot as before, but with RRR instead of RR:
 
