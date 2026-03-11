@@ -193,14 +193,11 @@ Time to look at some top 10 lists! You can also download the [full results](rule
 | {{% game 4154 %}}Yu-Gi-Oh! Trading Card Game{{% /game %}} (1999)                             | 1% (0 / 46)  | 0% (1% / 2.9) | -33 wem |
 
 
-
 # Summary / conclusion
 
-Does it mean anything? Perhaps not as a definitive quality metric, but it’s a fascinating proxy for *game clarity*. A game like {{% game 224517 %}}Brass: Birmingham{{% /game %}} (-3 wem) sitting below the regression line suggests its rules, while heavy, are remarkably coherent. Conversely, {{% game 342942 %}}Ark Nova{{% /game %}} (+9 wem) has a high "rulebook debt", likely due to the massive variety of unique card effects.
+Does it mean anything? Perhaps not as a definitive quality metric, but it's a fascinating proxy for *game clarity*. A heavyweight like {{% game 120677 %}}Terra Mystica{{% /game %}} (-21 wem) sitting well below the regression line suggests its rules, despite asymmetric factions and depth, are remarkably coherent. Conversely, a light game like {{% game 234190 %}}Unstable Unicorns{{% /game %}} (+39 wem) has a high "rulebook debt" — it triggers far more rules questions than other games in its weight class.
 
-TODO: Those examples are rubbish.
-
-The goal isn't to punish complex games, but to celebrate the ones that manage to stay intuitive despite their depth. Let's just hope nobody starts "ratio-bombing" BGG threads to mess with the stats! 😅
+I hope WEM will be proud of how seriously I took his advice to geek out about his RR. It might be a toy metric, but I certainly found it very interesting to dive deep. Let's just hope nobody starts "ratio-bombing" BGG threads to mess with the stats! 😅
 
 
 # Appendix: Methodology
