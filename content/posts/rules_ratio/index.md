@@ -19,13 +19,13 @@ tags:
 
 # What is the Rules Ratio?
 
-The basic idea behind the Rules Ratio is to look at how many rules question a game generates. It stands to reason that a game with clear concepts and well written instructions will leave players less confused than a poorly written rulebook. BGG offers a direct proxy for number of rules questions via its forums. Every game listing has a variety of such forums attached, including one titled *Rules*. Depending on the game, this particular forum might be the busiest, or completly void of any traffic. WEM proposes the share of rules threads[^threads] of all threads as the Rules Ratio[^ratio] (RR):
+The basic idea behind the Rules Ratio is to look at how many rules questions a game generates. It stands to reason that a game with clear concepts and well-written instructions will leave players less confused than a poorly written rulebook. BGG offers a direct proxy for number of rules questions via its forums. Every game listing has a variety of such forums attached, including one titled *Rules*. Depending on the game, this particular forum might be the busiest, or completely void of any traffic. WEM proposes defining the Rules Ratio[^ratio] (RR) as the share of *Rules* threads[^threads] among all forum threads:
 
 \\[
   \text{RR} = \frac{\text{rules threads}}{\text{total threads}}.
 \\]
 
-Concretely, let's look at one of my favourite games: {{% game 51 %}}Ricochet Robots{{% /game %}}. As of the time of writing, there are a total of [183 forum threads](https://boardgamegeek.com/boardgame/51/ricochet-robots/forums/0), 22 of which concern rules:
+Concretely, consider one of my favourite games: {{% game 51 %}}Ricochet Robots{{% /game %}}. As of the time of writing, there are a total of [183 forum threads](https://boardgamegeek.com/boardgame/51/ricochet-robots/forums/0), 22 of which concern rules:
 
 {{% img src="ricochet_robots" alt="Screenshot of Ricochet Robots forums, highlighting the total thread count (183) and the number of rules questions (22)." %}}
 
