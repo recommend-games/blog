@@ -14,7 +14,7 @@ tags:
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.8.2.min.js" ></script>
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-api-3.8.2.min.js" ></script>
 
-[W. Eric Martin](https://www.wericmartin.com) (WEM), known for having run the BoardGameGeek (BGG) [news section](https://boardgamegeek.com/blog/1/boardgamegeek-news) for over a decade, launched his own outlet called [Board Game Beat](https://www.boardgamebeat.com) a couple of weeks ago.[^fediverse] In between his signature game release updates, he writes entertaining and insightful analyses of the broader hobby. In one of his [recent articles](https://www.wericmartin.com/the-rules-ratio-a-new-stat-to-geek-out-about/), he proposed the **Rules Ratio**. The title invites us to geek out about it, so geek out we shall! 🤓
+[W. Eric Martin](https://www.wericmartin.com) (WEM) ran the BoardGameGeek (BGG) [news section](https://boardgamegeek.com/blog/1/boardgamegeek-news) for 15 years. Earlier this year, he launched his own outlet[^fediverse] called [Board Game Beat](https://www.boardgamebeat.com). In between his signature game release updates, he writes entertaining and insightful analyses of the broader hobby. In one of his [recent articles](https://www.wericmartin.com/the-rules-ratio-a-new-stat-to-geek-out-about/), he proposed the **Rules Ratio**. The title invites us to geek out about it, so geek out we shall! 🤓
 
 
 # What is the Rules Ratio?
