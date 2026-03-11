@@ -52,16 +52,16 @@ You might recognise this idea of "adding pseudo counts to stabilise estimates ba
 
 ## High RR: when rules dominate
 
-WEM already gave quite a few interesting examples of RRs, especially for popular and highly rated games. Here are some more games that stuck out. The highest RR of all games in my sample belongs to {{% game 182094 %}}BANG! The Duel{{% /game %}}: a staggering 87 out of the 99 threads are about rules, for an RR of 88%. Looks like there's a rulebook in desperate need of an editor.
+WEM already gave quite a few interesting examples of RRs, especially for popular and highly rated games. Here are some more games that stuck out. The highest RR of all games in my sample belongs to {{% game 182094 %}}BANG! The Duel{{% /game %}}: a staggering 87 out of the 99 threads are about rules, for an RR of 88%. That’s… a lot of clarifications.
 
-The perhaps most surprisingly high RR belongs to {{% game 399088 %}}UNO: Show 'Em No Mercy{{% /game %}}: 24 out of the 31 threads (RR: 77%) are about the rules. I don't know what's more surprising: that the 'geeks take such an interest in an UNO variant at all, or how much they seem to struggle with its rules.
+One surprisingly high RR belongs to {{% game 399088 %}}UNO: Show 'Em No Mercy{{% /game %}}: 24 out of the 31 threads (RR: 77%) are about the rules. I don't know what's more surprising: that the 'geeks take such an interest in an UNO variant at all, or how much they seem to struggle with its rules.
 
-The highest RR amongst the highly rated games (ranked amongst the top 1000 games) is that of {{% game 408180 %}}Shackleton Base{{% /game %}} at 69%. When looking at very popular games (more than 10k ratings), we find another unexpected title in this field: {{% game 234190 %}}Unstable Unicorns{{% /game %}} at a whooping 64%. Apparently players really struggle with *neighing* — and now I feel like I need to play the game just to find out what that means. 🦄
+The highest RR amongst the highly rated games (ranked amongst the top 1000 games) is that of {{% game 408180 %}}Shackleton Base{{% /game %}} at 69%. When looking at very popular games (more than 10k ratings), we find another unexpected title in this field: {{% game 234190 %}}Unstable Unicorns{{% /game %}} at a whopping 64%. Apparently players really struggle with *neighing* — and now I feel like I need to play the game just to find out what that means. 🦄
 
 
 ## Low RR: when rules barely show up
 
-The other extreme — extremely low RRs — is dominated by games without any rules questions. WEM already mentioned one example ({{% game 318977 %}}MicroMacro{{% /game %}}, which is also the highest ranked and most popular game with such a low RR), but there is one game with an even lower RR after smoothing: {{% game 155250 %}}TseuQuesT{{% /game %}}. Of its 221 threads, not a single one deals with rules questions. What sounds like a great achievement at first sight is actually quite the opposite: almost all that forum chatter is about its unfulfilled crowdfunding campaign — a typical Kickstarter drama. Note: consume RR values with caution.
+The other extreme — extremely low RRs — is dominated by games without any rules questions. WEM already mentioned one example ({{% game 318977 %}}MicroMacro{{% /game %}}, which is also the highest ranked and most popular game with such a low RR), but there is one game with an even lower RR after smoothing: {{% game 155250 %}}TseuQuesT{{% /game %}}. Of its 221 threads, not a single one deals with rules questions. What sounds like a great achievement is actually quite the opposite: almost all that forum chatter is about its unfulfilled crowdfunding campaign — a typical Kickstarter drama. Note: treat extreme RRs with caution.
 
 Most other games with low RR are fairly simple party or storytelling games, but there are also war games without rules questions (who would've thought?!), e.g., {{% game 36241 %}}Israeli Independence: The First Arab-Israeli War{{% /game %}} (0 rules questions out of 35 threads).
 
