@@ -34,9 +34,9 @@ So its RR is \\(22 / 183 \approx 12\\%\\). Simple and to the point.
 
 ## Make it smootheRR…
 
-As it turns out: a little too simple. WEM's examples are all massively popular games with hundreds of forum posts. But if we want to expand this metric to the long tail of games, we need to make sure that we don't get "this game has 0 rules questions out of 3 posts" noise.
+As it turns out: a little too simple. WEM's examples are all massively popular games with hundreds of forum threads. But if we want to expand this metric to the long tail of games, we need to make sure that we don’t get noisy extremes like "0 out of 3".
 
-Mathematically speaking, we're trying to estimate the probability that a forum thread will be posted in the rules section. There's a simple and well established trick known as [additive smoothing](https://en.wikipedia.org/wiki/Additive_smoothing) (or Laplace's [rule of succession](https://en.wikipedia.org/wiki/Rule_of_succession)) for scenarios like this. The idea is to pretend there are two more threads than there really are: one with a rules question and one without.[^3b1b] In other words: we increase the number of rules threads by 1 and that of all threads by 2. But since this is a little too opinionated and can skew the metric a bit too much, we're actually using 0.5 and 1 instead:
+Mathematically speaking, we're trying to estimate the probability that a forum thread will be posted in the rules section. There's a simple and well-established trick known as [additive smoothing](https://en.wikipedia.org/wiki/Additive_smoothing) (or Laplace's rule of succession) for scenarios like this. The idea is to pretend there are two more threads than there really are: one with a rules question and one without.[^3b1b] In other words: we increase the number of rules threads by 1 and that of all threads by 2. But since this is a bit too opinionated and can skew the metric too much, we're actually using 0.5 and 1 (Jeffreys prior) instead:
 
 \\[
   \text{RR} = \frac{\text{rules threads} + 0.5}{\text{total threads} + 1}.
