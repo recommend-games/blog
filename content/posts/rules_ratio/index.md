@@ -115,9 +115,11 @@ where \\(\sigma\\) is the [sigmoid function](https://en.wikipedia.org/wiki/Sigmo
 
 ### Interpreting the fitted curve
 
-Let's take a moment to develop an intuition about this formula. Mathematically speaking, we're modelling the *log-odds* of a thread being rules-related: \\(\log(\text{odds}) = 0.3381 \cdot \text{complexity} - 1.6104\\). The coefficient on complexity tells us that for each step up on the BGG weight scale (e.g. from 2 to 3), the *odds* that a random thread is about rules are multiplied by \\(e^{0.3381} \approx 1.40\\). If you're not used to thinking in odds, it might be easier to look at some concrete values of expected RR:
+Let’s build an intuition for what this fitted curve is saying. The model works in *odds*: for each +1 step on the BGG weight scale (say, from 2 to 3), the odds that a random forum thread is about rules are multiplied by \\(e^{0.3381} \approx 1.40\\) — about a 40% increase.
 
-| Complexity | Rxpected RR |
+Odds aren’t everyone’s favourite unit, so here are a few concrete values of the expected RR implied by the curve:
+
+| Complexity | Expected RR |
 |:----------:|:-----------:|
 | 1 (light)  | 22%         |
 | 2          | 28%         |
@@ -125,10 +127,12 @@ Let's take a moment to develop an intuition about this formula. Mathematically s
 | 4          | 44%         |
 | 5 (heavy)  | 52%         |
 
-So we'd expect a light game to have roughly a fifth of its threads about rules, and a heavy game about half. Equipped with this estimator, we can define the **Residual Rules Ratio** (RRR):
+In other words: the model expects a light game to have roughly a fifth of its threads about rules, and a heavy game about half.
 
 
 ### From expected RR to residuals
+
+Equipped with this baseline, we can define the **Residual Rules Ratio** (RRR):
 
 \\[
   \text{RRR} = \text{RR} - \widehat\text{RR}.
