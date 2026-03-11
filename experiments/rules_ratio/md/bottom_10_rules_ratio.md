@@ -11,4 +11,4 @@
 | {{% game 302098 %}}Chronicles of Crime: 1900{{% /game %}} (2021)                                     | 1% (0 / 59)  | 0% (1% / 1.9) | -27 wem |
 | {{% game 192 %}}Nicht die Bohne!{{% /game %}} (1999)                                                 | 1% (0 / 59)  | 1% (1% / 1.3) | -23 wem |
 | {{% game 230305 %}}Unlock!: Mystery Adventures – The Tonipal's Treasure{{% /game %}} (2017)          | 1% (0 / 50)  | 0% (1% / 2.5) | -30 wem |
-| {{% game 4154 %}}Yu-Gi-Oh! Trading Card Game{{% /game %}} (1999)                                     | 1% (0 / 46)  | 0% (1% / 2.8) | -33 wem |
+| {{% game 4154 %}}Yu-Gi-Oh! Trading Card Game{{% /game %}} (1999)                                     | 1% (0 / 46)  | 0% (1% / 2.9) | -33 wem |

@@ -11,4 +11,4 @@
 | {{% game 126613 %}}Warhammer 40,000 (Sixth Edition){{% /game %}} (2012)                      | 4% (1 / 33)  | 1% (4% / 3.5) | -35 wem |
 | {{% game 299371 %}}The Emerald Flame{{% /game %}} (2021)                                     | 4% (2 / 55)  | 1% (4% / 3.5) | -35 wem |
 | {{% game 12166 %}}Funkenschlag{{% /game %}} (2001)                                           | 6% (2 / 39)  | 2% (6% / 3.6) | -34 wem |
-| {{% game 4154 %}}Yu-Gi-Oh! Trading Card Game{{% /game %}} (1999)                             | 1% (0 / 46)  | 0% (1% / 2.8) | -33 wem |
+| {{% game 4154 %}}Yu-Gi-Oh! Trading Card Game{{% /game %}} (1999)                             | 1% (0 / 46)  | 0% (1% / 2.9) | -33 wem |

@@ -8,7 +8,7 @@
 | {{% game 174430 %}}Gloomhaven{{% /game %}} (2017)                        | 43% (6838 / 16008) | 11% (43% / 3.9) | +0 wem  |
 | {{% game 316554 %}}Dune: Imperium{{% /game %}} (2020)                    | 37% (1018 / 2771)  | 12% (37% / 3.1) | +1 wem  |
 | {{% game 233078 %}}Twilight Imperium: Fourth Edition{{% /game %}} (2017) | 38% (1769 / 4671)  | 9% (38% / 4.4)  | -9 wem  |
-| {{% game 397598 %}}Dune: Imperium – Uprising{{% /game %}} (2023)         | 36% (555 / 1546)   | 10% (36% / 3.5) | -4 wem  |
+| {{% game 397598 %}}Dune: Imperium – Uprising{{% /game %}} (2023)         | 36% (555 / 1547)   | 10% (36% / 3.5) | -4 wem  |
 | {{% game 115746 %}}War of the Ring: Second Edition{{% /game %}} (2011)   | 41% (1920 / 4692)  | 10% (41% / 4.2) | -5 wem  |
 | {{% game 167791 %}}Terraforming Mars{{% /game %}} (2016)                 | 26% (1512 / 5742)  | 8% (26% / 3.3)  | -11 wem |
 | {{% game 187645 %}}Star Wars: Rebellion{{% /game %}} (2016)              | 44% (1719 / 3891)  | 12% (44% / 3.8) | +3 wem  |
