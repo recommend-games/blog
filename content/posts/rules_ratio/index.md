@@ -202,7 +202,13 @@ I hope WEM will be proud of how seriously I took his advice to geek out about hi
 
 # Appendix: Methodology
 
-TODO: data source, regression details, chose thresholds etc.
+**Data.** Forum thread counts come from scraped BGG forum listings: for each game we have the number of threads per forum section (e.g. *Rules*, *Strategy*, *Sessions*). Only forums titled *Rules* are counted as rules threads. (Note: almost all games have exactly 10 standard subforums, but a handful — like {{% game 3076 %}}Puerto Rico{{% /game %}} — have special additional forums. Have fun finding them all! 😎)
+
+**Inclusion criteria.** A game is included only if it has at least 250 ratings, a non-null BGG complexity, and at least 25 total forum threads. Publication year is restricted to 1950–present. Compilations are excluded. The criteria were chose to obtain a large and representative dataset without too much noise or anomalies.
+
+**Regression.** The “typical RR” for a given complexity is estimated with a binomial (logistic) GLM: the response is the smoothed RR and the single predictor is BGG complexity. Observations are weighted by the number of ratings so that games with more ratings (and thus more stable RR estimates) have greater influence. The fitted model gives the expected RR curve; the residual (actual RR minus fitted RR) is the RRR in percentage points (wem).
+
+**Plots.** The scatter plots show only games that are either in the BGG top 1000 by rank or have at least 10,000 ratings.
 
 
 [^fediverse]: Come for the board game news, stay for their policy of [not tracking users](https://www.wericmartin.com/board-game-beat-policies/) and their [Fediverse first](https://www.wericmartin.com/federated-social-media-video/) approach. 🤓
