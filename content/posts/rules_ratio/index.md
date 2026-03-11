@@ -73,15 +73,20 @@ Low RRs are where smoothing matters most. While said war game {{% game 36241 %}}
 
 # RR vs complexity
 
-Undoubtedly, readers of this blog will be familiar with the *complexity* or *weight* rating at BGG: a numerical value between 1 (*light complexity*) and 5 (*heavy complexity*), based on users' votes. This metric has its own issues, but it's still an interesting and widely quoted datapoint to characterise a game. As far as this article is concerned, it stands to reason that more complex games will generate more rules questions. Designers frequently talk about a game's complexity budget: depending on the target audience and its appetite for complexity, a game can afford more mechanisms, elements and their interactions. The more details one needs to understand in order to play the game, the more rules clarifications might be required — at least intuitively this should hold true.
+Readers of this blog will be familiar with BGG's *complexity* (or *weight*) rating: a number between 1 (*light*) and 5 (*heavy*) based on user votes. It’s an imperfect measure, but it's still an interesting and widely quoted data point to characterise a game.
+
+For this article, the intuition is simple: heavier games should generate more rules questions. Designers sometimes talk about a game’s complexity budget — depending on the intended audience, you can “spend” complexity on more mechanisms, more edge cases and more interactions. The more moving parts players have to keep straight, the more clarifications they may need.
+
+
+## The trend: heavier games, more rules threads
 
 Let's visualise this:
 
 {{% bokeh "rules_ratio_vs_complexity.json" %}}
 
-Every dot represents a game, positioned by its complexity (x-axis) and RR (y-axis). Games with more ratings will be larger, whilst the colour encodes the game type. This is an interactive plot, so I'll invite you to explore it by hovering over the dots and find your favourite game.
+Every dot represents a game, positioned by its complexity (x-axis) and RR (y-axis). Games with more ratings will be larger, whilst the colour encodes the game type. This is an interactive plot, so I'll invite you to explore it by hovering over the dots and finding your favourite game. (For readability, the plot only includes games in the BGG top 1000 or with ≥10k ratings.)
 
-This plot supports our intuition well: more complex games tend to have higher RR, though the spread is considerable.
+The trend is clear: higher complexity tends to mean higher RR — but with plenty of spread.
 
 
 ## WEM's RRW (and why I’m not dividing by weight)
