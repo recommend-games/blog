@@ -1,0 +1,42 @@
+[project]
+name = "rules-ratio"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Markus Shepherd", email = "markus@recommend.games" }
+]
+
+requires-python = "==3.14.*"
+
+dependencies = [
+    "bokeh>=3.8.1",
+    "matplotlib",
+    "numpy",
+    "polars[pandas, pyarrow]",
+    "pytility[dates]",
+    "python-dateutil",
+    "scikit-learn",
+    "scipy",
+    "scrapy",
+    "scrapy-extensions>=1.0.1",
+    "seaborn",
+    "statsmodels",
+    "tabulate",
+    "tqdm",
+]
+
+[dependency-groups]
+dev = [
+    "jupyter-black",
+    "jupyterlab",
+    "jupytext",
+    "mypy",
+    "ruff",
+    "scipy-stubs",
+    "types-tqdm",
+]
+
+[build-system]
+requires = ["uv_build>=0.10.8,<0.11.0"]
+build-backend = "uv_build"

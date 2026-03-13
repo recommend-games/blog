@@ -1,0 +1,14 @@
+services:
+  bgg-forums:
+    build: .
+    env_file: .env
+    environment:
+      - RESULTS_DIR=/data/results
+      - JOBDIR=.jobs
+      - BGG_GAMES_FILE=/data/bgg_GameItem.csv
+    volumes:
+      - ./results:/data/results
+      # Mount games CSV; set BGG_GAMES_FILE=/data/bgg_GameItem.csv
+      - ../../../board-game-data/scraped:/data
+    stop_grace_period: 15m
+    stop_signal: SIGINT
