@@ -4,7 +4,7 @@ subtitle: From WEM's geeky stat to smoothing, residuals and the new unit "wem"
 slug: rules-ratio
 author: Markus Shepherd
 type: post
-date: 2026-03-12T00:00:00+02:00
+date: 2026-03-12T00:41:55+02:00
 tags:
   - Rules ratio
   - W. Eric Martin
