@@ -977,7 +977,7 @@
 {"average_duration":55,"bgg_id":332772,"display_name_en":"Revive","games_played":67349,"id":2154,"name":"revive","premium":true,"published_on":"2025-07-30","status":"public","weight":1548}
 {"average_duration":10,"bgg_id":427063,"display_name_en":"Ekko","games_played":13080,"id":2157,"name":"ekko","published_on":"2025-02-10","status":"public","weight":17}
 {"average_duration":179,"bgg_id":396375,"display_name_en":"Gems of Iridescia","games_played":2296,"id":2159,"name":"gemsofiridescia","published_on":"2025-01-14","status":"beta","weight":16}
-{"average_duration":41,"bgg_id":203993,"display_name_en":"Lorenzo il Magnifico","games_played":15381,"id":2160,"name":"lorenzo","published_on":"2025-05-05","status":"beta","weight":237}
+{"average_duration":41,"bgg_id":203993,"display_name_en":"Lorenzo il Magnifico","games_played":15473,"id":2160,"name":"lorenzo","published_on":"2025-05-05","status":"beta","weight":289}
 {"average_duration":4,"bgg_id":94746,"display_name_en":"Coffee","games_played":2846,"id":2161,"name":"coffee","published_on":"2025-01-29","status":"beta"}
 {"average_duration":44,"bgg_id":425428,"display_name_en":"Survive The Island","games_played":62470,"id":2162,"name":"survive","published_on":"2024-12-18","status":"public","weight":460}
 {"average_duration":41,"bgg_id":372831,"display_name_en":"Potions of Azerland","games_played":4079,"id":2163,"name":"potionsofazerland","premium":true,"published_on":"2025-02-28","status":"public"}
@@ -1202,7 +1202,7 @@
 {"average_duration":30,"bgg_id":448416,"display_name_en":"Beasts","games_played":513,"id":2499,"is_ranking_disabled":true,"name":"beasts","published_on":"2026-03-23","status":"beta","weight":33}
 {"average_duration":17,"display_name_en":"Dr\u00f4les de Z\u00e8bres","games_played":624,"id":2500,"name":"drolesdezebres","premium":true,"published_on":"2026-01-14","status":"beta","weight":7}
 {"average_duration":4,"bgg_id":422732,"display_name_en":"Agent Avenue","games_played":226319,"id":2501,"name":"agentavenue","premium":true,"published_on":"2026-01-07","status":"public","weight":650}
-{"average_duration":31,"bgg_id":450337,"display_name_en":"Rowdy Partners","games_played":428,"id":2505,"name":"rowdypartners","published_on":"2026-01-23","status":"beta"}
+{"average_duration":32,"bgg_id":450337,"display_name_en":"Rowdy Partners","games_played":436,"id":2505,"name":"rowdypartners","published_on":"2026-01-23","status":"beta","weight":8}
 {"average_duration":10,"bgg_id":446519,"display_name_en":"Miams","games_played":137977,"id":2506,"name":"miams","premium":true,"published_on":"2025-12-22","status":"public","weight":1721}
 {"average_duration":21,"bgg_id":453781,"display_name_en":"Cry Baby","games_played":372,"id":2508,"name":"crybaby","published_on":"2025-12-15","status":"beta","weight":25}
 {"average_duration":13,"display_name_en":"Carnuta","games_played":36120,"id":2509,"name":"carnuta","published_on":"2026-01-19","status":"public","weight":687}
