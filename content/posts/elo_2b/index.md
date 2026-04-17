@@ -12,9 +12,9 @@ tags:
 
 # A year in the making
 
-[Last April]({{<ref "posts/elo_2/index.md">}}), we ran the Elo model over five decades of snooker results, simulated the World Championship ten million times, and came up with John Higgins as our top pick at 13.14%. He didn't win. Fourth on our list did – Zhao Xintong, whose 10.58% probability turned out to capture something real: he won the 2025 World Championship and in doing so shot to the top of the Elo rankings, where he has largely remained ever since.
+The 2026 World Snooker Championship is under way at the Crucible in Sheffield — a natural point to rerun the forecast from [last April]({{<ref "posts/elo_2/index.md">}}), when we put Elo on five decades of results and ran ten million tournament simulations. John Higgins led our list at 13.14%; Zhao Xintong was fourth at 10.58% but took the 2025 title and has stayed at or near the top of the ratings since.
 
-The methodology hasn't changed – same formula, same simulation procedure, all described in [the original article]({{<ref "posts/elo_2/index.md">}}). One small update: with another year of data the optimal \\(K\\) – the learning-rate parameter controlling how fast ratings respond to results – has nudged from 42 to 44.6.[^k-update] What has changed more substantially is another twelve months of matches, several headline results, and one dominant figure. As the 2026 edition opens today at Sheffield's Crucible Theatre, let's take stock.
+The methodology is unchanged — same formula, same full-draw simulation — with the working still laid out in the piece linked above. With another year of data the optimiser now prefers \\(K = 44.6\\) instead of 42, a nudge that barely shifts the picture.[^k-update] What *has* moved is twelve more months of results and the shape of the field. Here is where things stand.
 
 
 # The updated rankings
