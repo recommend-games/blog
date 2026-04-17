@@ -14,7 +14,7 @@ tags:
 
 [Last April]({{<ref "posts/elo_2/index.md">}}), we ran the Elo model over five decades of snooker results, simulated the World Championship ten million times, and came up with John Higgins as the narrow favourite at 13.14%. He didn't win. Fourth on our list did – Zhao Xintong, whose 10.58% probability turned out to capture something real: he won the 2025 World Championship and in doing so shot to the top of the Elo rankings, where he has largely remained ever since.
 
-The methodology hasn't changed – same formula, same simulation procedure, all described in [the original article]({{<ref "posts/elo_2/index.md">}}). One small update: with another year of data the optimal K has nudged from 42 to 44.6.[^k-update] What has changed more substantially is another twelve months of matches, several headline results, and one dominant figure. Let's take stock.
+The methodology hasn't changed – same formula, same simulation procedure, all described in [the original article]({{<ref "posts/elo_2/index.md">}}). One small update: with another year of data the optimal \\(K\\) has nudged from 42 to 44.6.[^k-update] What has changed more substantially is another twelve months of matches, several headline results, and one dominant figure. Let's take stock.
 
 
 # The updated rankings
@@ -34,11 +34,11 @@ Here are the ten highest-rated players heading into the 2026 World Championship:
 |    9 | Mark Allen        | 628.8 |    1098 |  2005-07-20 |
 |   10 | Barry Hawkins     | 621.5 |    1206 |  1997-03-25 |
 
-Zhao Xintong's rise is the defining story of the past year. Twelve months ago he was fifth at 687.6. He now leads by some margin at 817.4 – a gain of nearly 130 points. Compare that to Judd Trump in second, 50 points back at 768.3. At the height of Trump's dominance, in early 2021, he reached an Elo of around 855; Zhao's current 817 is already approaching that territory, accumulated in roughly half as many career matches.
+Zhao Xintong's rise is the defining story of the past year. Twelve months ago he was fifth at 687.6. He now leads by some margin at 817.4 – a gain of nearly 130 points. Compare that to Judd Trump in second, 50 points back at 768.3. At the height of Trump's dominance, in early 2021, he reached an Elo of around 855; Zhao's current 817 is already approaching that territory, accumulated in roughly a third as many career matches.
 
 {{< img src="elo_timeseries_2020" alt="The evolution of the Elo ratings of the best three players of the 2020s: Judd Trump, Zhao Xintong, and Mark Selby" >}}
 
-Zhao's curve tells the story of the decade so far: a rapid climb in 2021–22, then the near-flatlining of his two-year ban, then an even steeper ascent on his return. The suspension is written into his match count (511) as much as his rating; the curve makes clear he picked up exactly where he left off – and then some.
+Zhao's curve tells the story of the decade so far: a rapid climb in 2021–22, then the flatlining of his two-year ban, then an even steeper ascent on his return. The suspension is written into his match count (511) as much as his rating; the curve makes clear he picked up exactly where he left off – and then some.
 
 [Last year we noted]({{<ref "posts/elo_2/index.md">}}) that Ronnie O'Sullivan's rating had collapsed to 345.2 – dead last among all participants – because withdrawals count as losses in our model. He's now seventh at 631.7. The rehabilitation is real, though it still leaves him well below his career peak. The gap between his model and market valuations remains one of the most interesting features of the comparison below.
 
@@ -90,15 +90,15 @@ The headline this year is that **model and market agree** on the favourite. Zhao
 
 The most persistent disagreement continues to involve **Ronnie O'Sullivan**. Our model now puts him at 3.77% (simulation odds 26.49); the market has him as third favourite at 8.45. Last year the gap was even more extreme: the model rated him last of 32 at odds of over 3,700, while bookmakers offered around 8.5 – almost exactly the same price as today. The market has consistently pegged Ronnie as a genuine Crucible contender regardless of recent results, and last year they were clearly right to do so. It's hard to argue with a seven-time world champion's track record at Sheffield.
 
-The reverse problem afflicts **Zhou Yuelong**: simulation odds of 21.78 (roughly a one-in-22 shot), betting odds of 186. The model rates him fifth in the world and gives him a favourable draw path; the market is barely interested. Whether that reflects genuine scepticism about his big-match temperament or simply unfamiliarity outside the circuit, something is being priced very differently by our two forecasters.
+The reverse problem afflicts **Zhou Yuelong**: simulation odds of 21.78, betting odds of 186. The model rates him fifth in the world and gives him a favourable draw path; the market is barely interested. Whether that reflects genuine scepticism about his big-match temperament or simply unfamiliarity outside the circuit, something is being priced very differently by our two forecasters.
 
 Mark Selby (simulation 33.24, market 11.0), Kyren Wilson (26.02, 15.2), Shaun Murphy (42.17, 26.0), and Neil Robertson (47.99, 27.0) all attract considerably more money than the model suggests – a consistent pattern across both years, where established Crucible performers carry a Crucible premium that pure Elo doesn't price in.
 
 
 # Final frame 🎱
 
-The draw is set, the baize is freshly ironed, and for once the maths and the money agree: Zhao Xintong is the man to beat. We'll know by early May whether the simulations hold up better in 2026 than they did in 2025 – or whether another name we've underrated is already plotting its way to the title.
+The draw is set, the baize is freshly ironed, and for once the maths and the money agree: Zhao Xintong is the man to beat. We'll know on May 4 whether the simulations hold up better in 2026 than they did in 2025 – or whether another name we've underrated is already plotting his way to the title.
 
 *All code and data remain available on [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/elo).*
 
-[^k-update]: As the dataset grows, the optimal K shifts slightly. With ~year's more data the optimiser now returns 44.6 rather than 42 – a small change that has no material effect on the rankings or predictions.
+[^k-update]: As the dataset grows, the optimal \\(K\\) shifts slightly. With one more year's data the optimiser now returns 44.6 rather than 42 – a small change that has no material effect on the rankings or predictions.
