@@ -14,7 +14,7 @@ tags:
 
 [Last April]({{<ref "posts/elo_2/index.md">}}), we ran the Elo model over five decades of snooker results, simulated the World Championship ten million times, and came up with John Higgins as the narrow favourite at 13.14%. He didn't win. Fourth on our list did – Zhao Xintong, whose 10.58% probability turned out to capture something real: he won the 2025 World Championship and in doing so shot to the top of the Elo rankings, where he has largely remained ever since.
 
-The methodology hasn't changed – same formula, same K=42, same simulation procedure, all described in [the original article]({{<ref "posts/elo_2/index.md">}}). What has changed is another twelve months of matches, several headline results, and one dominant figure. Let's take stock.
+The methodology hasn't changed – same formula, same simulation procedure, all described in [the original article]({{<ref "posts/elo_2/index.md">}}). One small update: with another year of data the optimal K has nudged from 42 to 44.6.[^k-update] What has changed more substantially is another twelve months of matches, several headline results, and one dominant figure. Let's take stock.
 
 
 # The updated rankings
@@ -96,3 +96,5 @@ Mark Selby (simulation 33.24, market 11.0), Kyren Wilson (26.02, 15.2), Shaun Mu
 The draw is set, the baize is freshly ironed, and for once the maths and the money agree: Zhao Xintong is the man to beat. We'll know by early May whether the simulations hold up better in 2026 than they did in 2025 – or whether another name we've underrated is already plotting its way to the title.
 
 *All code and data remain available on [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/elo).*
+
+[^k-update]: As the dataset grows, the optimal K shifts slightly. With ~year's more data the optimiser now returns 44.6 rather than 42 – a small change that has no material effect on the rankings or predictions.
