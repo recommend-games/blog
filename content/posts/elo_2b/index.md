@@ -34,20 +34,20 @@ Here are the ten highest-rated players heading into the 2026 World Championship:
 |    9 | Mark Allen        | 628.8 |    1098 |  2005-07-20 |
 |   10 | Barry Hawkins     | 621.5 |    1206 |  1997-03-25 |
 
-Zhao Xintong's rise is the defining story of the past year. Twelve months ago he was fifth at 687.6. He now leads by some margin at 817.4 – a gain of nearly 130 points. Compare that to Judd Trump in second, 50 points back at 768.3. At the height of Trump's dominance, in early 2021, he reached an Elo of around 855; Zhao's current 817 is already approaching that territory, accumulated in roughly a third as many career matches.
+Zhao Xintong's rise is the defining story of the past year. Twelve months ago he was fifth at 687.6. He now leads by some margin at 817.4 — a gain of nearly 130 points. Compare that to Judd Trump in second, 50 points back at 768.3. At the height of Trump's dominance, in early 2021, he reached an Elo of around 855; Zhao's current 817 is already approaching that territory, accumulated in roughly a third as many career matches.
 
 {{< img src="elo_timeseries_2020" alt="The evolution of Elo ratings since 2020 for Judd Trump, Zhao Xintong, and Mark Selby" >}}
 
-Zhao's curve tells the story of the decade so far: a rapid climb in 2021–22, then the flatlining of his two-year ban for match-fixing, then an even steeper ascent on his return. The suspension is written into his match count (511) as much as his rating; the curve makes clear he picked up exactly where he left off – and then some.
+Zhao's curve tells the story of the decade so far: a rapid climb in 2021–22, then the flatlining of his two-year ban for match-fixing, then an even steeper ascent on his return. The suspension is written into his match count (511) as much as his rating; the curve makes clear he picked up exactly where he left off — and then some.
 
-[Last year we noted]({{<ref "posts/elo_2/index.md">}}) that Ronnie O'Sullivan's rating had collapsed to 345.2 – dead last among all participants – because withdrawals count as losses in our model. He's now seventh at 631.7. The rehabilitation is real, though it still leaves him well below his career peak. The gap between his model and market valuations remains one of the most interesting features of the comparison below.
+[Last year we noted]({{<ref "posts/elo_2/index.md">}}) that Ronnie O'Sullivan's rating had collapsed to 345.2 — dead last among all participants — because withdrawals count as losses in our model. He's now seventh at 631.7. The rehabilitation is real, though it still leaves him well below his career peak. The gap between his model and market valuations remains one of the most interesting features of the comparison below.
 
 Also worth noting: Wu Yize (4th, a mere 240 career matches to his name) and Zhou Yuelong (5th) are the next wave of Chinese talent following Zhao into the top five. Joe O'Connor, who was sixth last year, has dropped well outside the top ten.
 
 
 # 10 million simulations, again
 
-Same as last year: following the actual draw, for each match I compare the two players' Elo ratings, convert them into a win probability, and simulate who goes through; that repeats for every round of the 32-player knockout until the final produces a champion. I ran 10 million such full tournaments. Because the simulation follows the actual draw, bracket position matters: two players with similar Elo can end up with very different win probabilities depending on their path – which is why Hawkins (10th by Elo) simulates slightly ahead of Wilson (6th).
+Same as last year: following the actual draw, for each match I compare the two players' Elo ratings, convert them into a win probability, and simulate who goes through; that repeats for every round of the 32-player knockout until the final produces a champion. I ran 10 million such full tournaments. Because the simulation follows the actual draw, bracket position matters: two players with similar Elo can end up with very different win probabilities depending on their path — which is why Hawkins (10th by Elo) simulates slightly ahead of Wilson (6th).
 
 > **Disclaimer**: This section discusses betting odds for the purpose of statistical comparison and analysis. It is not intended to promote gambling or serve as betting advice. Please gamble responsibly and be aware of your local laws and age restrictions.
 
@@ -92,21 +92,21 @@ Here are the results. In the Difference column, a negative value means the marke
 
 ## Model and market
 
-The headline this year is that **model and market agree** on the favourite. Zhao Xintong's simulation odds of 3.46 sit almost exactly on the best available betting price of 3.4. When serious maths and serious money converge on the same answer, it's worth paying attention – and it's a welcome change from last year's more fractious disagreements.
+The headline this year is that **model and market agree** on the favourite. Zhao Xintong's simulation odds of 3.46 sit almost exactly on the best available betting price of 3.4. When serious maths and serious money converge on the same answer, it's worth paying attention — and it's a welcome change from last year's more fractious disagreements.
 
-The most persistent disagreement continues to involve **Ronnie O'Sullivan**. Our model now puts him at 3.77% (simulation odds 26.49); the market has him as third favourite at 8.45. Last year the gap was even more extreme: the model rated him last of 32 at odds of over 3,700, while bookmakers offered around 8.5 – almost exactly the same price as today. The market has consistently pegged Ronnie as a genuine Crucible contender regardless of recent results, and last year they were clearly right to do so. It's hard to argue with a seven-time world champion's track record at Sheffield.
+The most persistent disagreement continues to involve **Ronnie O'Sullivan**. Our model now puts him at 3.77% (simulation odds 26.49); the market has him as third favourite at 8.45. Last year the gap was even more extreme: the model rated him last of 32 at odds of over 3,700, while bookmakers offered around 8.5 — almost exactly the same price as today. The market has consistently pegged Ronnie as a genuine Crucible contender regardless of recent results, and last year they were clearly right to do so. It's hard to argue with a seven-time world champion's track record at Sheffield.
 
-The reverse problem afflicts **Zhou Yuelong**: simulation odds of 21.78, betting odds of 186 – the largest positive gap in the table at +164. The model rates him fifth in the world and gives him a favourable draw path; the market is barely interested. Whether that reflects genuine scepticism about his big-match temperament or simply unfamiliarity outside the circuit, something is being priced very differently by our two forecasters.
+The reverse problem afflicts **Zhou Yuelong**: simulation odds of 21.78, betting odds of 186 — the largest positive gap in the table at +164. The model rates him fifth in the world and gives him a favourable draw path; the market is barely interested. Whether that reflects genuine scepticism about his big-match temperament or simply unfamiliarity outside the circuit, something is being priced very differently by our two forecasters.
 
 Mark Selby (simulation 33.24, market 11.0), Kyren Wilson (26.02, 15.2), Shaun Murphy (42.17, 26.0), and Neil Robertson (47.99, 27.0) all attract considerably more money than the model suggests. This is a consistent pattern across both years: established Crucible performers carry a premium that pure Elo doesn't price in. The one-table arena, long match formats, and Sheffield's unique atmosphere tend to favour experience and composure over raw recent form.
 
 
 # Final frame 🎱
 
-The draw is set, the baize is freshly ironed, and for once the maths and the money agree: Zhao Xintong is the man to beat. We'll know on May 4 whether the simulations hold up better in 2026 than they did in 2025 – or whether another name we've underrated is already plotting his way to the title.
+The draw is set, the baize is freshly ironed, and for once the maths and the money agree: Zhao Xintong is the man to beat. We'll know on May 4 whether the simulations hold up better in 2026 than they did in 2025 — or whether another name we've underrated is already plotting his way to the title.
 
 *All code and data remain available on [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/elo).*
 
-[^k-update]: As the dataset grows, the optimal \\(K\\) shifts slightly. With one more year's data the optimiser now returns 44.6 rather than 42 – a small change that has no material effect on the rankings or predictions.
+[^k-update]: As the dataset grows, the optimal \\(K\\) shifts slightly. With one more year's data the optimiser now returns 44.6 rather than 42 — a small change that has no material effect on the rankings or predictions.
 [^odds-quotes]: There are different ways to quote odds. The one I'm using for this article is called the decimal or European style, which most easily translates to probabilities. The fractional or British style (which is more common in snooker bets for obvious reasons) quotes the potential win as a fraction. E.g., decimal odds of 5.00 would be quoted as 4/1 (or simply 4) in fractional style.
-[^max-and-vig]: Note that I've only used the highest odds offered by any broker. If you were to place a bet, you'd always want to go with the provider who offers you the highest payout, so that number is the most relevant. It's also worth pointing out that when you sum up the probabilities implied by the odds, they will usually exceed 100%. That's because the odds are slightly shorter than fair value – the bookmaker takes their cut (also known as vigorish). Remember: the house always wins.
+[^max-and-vig]: Note that I've only used the highest odds offered by any broker. If you were to place a bet, you'd always want to go with the provider who offers you the highest payout, so that number is the most relevant. It's also worth pointing out that when you sum up the probabilities implied by the odds, they will usually exceed 100%. That's because the odds are slightly shorter than fair value — the bookmaker takes their cut (also known as vigorish). Remember: the house always wins.
