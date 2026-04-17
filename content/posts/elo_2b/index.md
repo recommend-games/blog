@@ -30,7 +30,7 @@ Here are the ten highest-rated players heading into the 2026 World Championship:
 |    5 | Zhou Yuelong      | 663.5 |     580 |  2012-02-27 |
 |    6 | Kyren Wilson      | 641.7 |    1110 |  2010-06-27 |
 |    7 | Ronnie O'Sullivan | 631.7 |    1118 |  1992-09-24 |
-|    8 | Mark Selby        | 628.9 |    1519 |  1999-09-19 |
+|    8 | Mark Selby        | 629.0 |    1519 |  1999-09-19 |
 |    9 | Mark Allen        | 628.8 |    1098 |  2005-07-20 |
 |   10 | Barry Hawkins     | 621.5 |    1206 |  1997-03-25 |
 
@@ -47,7 +47,13 @@ Also worth noting: Wu Yize (4th, a mere 240 career matches to his name) and Zhou
 
 # 10 million simulations, again
 
-Same as last year: for each first-round pairing I converted Elo ratings into head-to-head win probabilities and ran 10 million simulated tournaments. Here are the results alongside the best available betting odds:
+Same as last year: for each first-round pairing I converted Elo ratings into head-to-head win probabilities and ran 10 million simulated tournaments.
+
+> **Disclaimer**: This section discusses betting odds for the purpose of statistical comparison and analysis. It is not intended to promote gambling or serve as betting advice. Please gamble responsibly and be aware of your local laws and age restrictions.
+
+The **betting odds** are **decimal** (European) quotes: the figure is the total return per unit stake if the bet wins (stake included), so a probability \\(p\\) corresponds to fair decimal odds \\(1/p\\).[^odds-quotes] I pulled **outright winner** prices from [oddschecker.com](https://www.oddschecker.com/snooker/world-championship/winner) and, for each player, used the **best** (highest) odds shown across the listed bookmakers.[^max-and-vig] **Simulation odds** apply the same recipe to our simulated win percentages.
+
+Here are the results:
 
 | Player            |   Elo | Simulation | Simulation odds | Betting odds | Difference |
 |:------------------|------:|-----------:|----------------:|-------------:|-----------:|
@@ -102,3 +108,5 @@ The draw is set, the baize is freshly ironed, and for once the maths and the mon
 *All code and data remain available on [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/elo).*
 
 [^k-update]: As the dataset grows, the optimal \\(K\\) shifts slightly. With one more year's data the optimiser now returns 44.6 rather than 42 – a small change that has no material effect on the rankings or predictions.
+[^odds-quotes]: There are different ways to quote odds. The one I'm using for this article is called the decimal or European style, which most easily translates to probabilities. The fractional or British style (which is more common in snooker bets for obvious reasons) quotes the potential win as a fraction. E.g., decimal odds of 5.00 would be quoted as 4/1 (or simply 4) in fractional style.
+[^max-and-vig]: Note that I've only used the highest odds offered by any broker. If you were to place a bet, you'd always want to go with the provider who offers you the highest payout, so that number is the most relevant. It's also worth pointing out that when you sum up the probabilities implied by the odds, they will usually exceed 100%. That's because the odds are slightly shorter than they should be because the brooker wants their cut (also know as vigorish) too. Remember: the house always wins.
