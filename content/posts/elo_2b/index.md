@@ -47,7 +47,7 @@ Also worth noting: Wu Yize (4th, a mere 240 career matches to his name) and Zhou
 
 # 10 million simulations, again
 
-Same as last year: for each first-round pairing I converted Elo ratings into head-to-head win probabilities and ran 10 million simulated tournaments.
+Same as last year: following the actual draw, for each match I compare the two players' Elo ratings, convert them into a win probability, and simulate who goes through; that repeats for every round until the final produces a champion. I ran 10 million such full tournaments.
 
 > **Disclaimer**: This section discusses betting odds for the purpose of statistical comparison and analysis. It is not intended to promote gambling or serve as betting advice. Please gamble responsibly and be aware of your local laws and age restrictions.
 
