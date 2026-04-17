@@ -36,6 +36,10 @@ Here are the ten highest-rated players heading into the 2026 World Championship:
 
 Zhao Xintong's rise is the defining story of the past year. Twelve months ago he was fifth at 687.6. He now leads by some margin at 817.4 – a gain of nearly 130 points. Compare that to Judd Trump in second, 50 points back at 768.3. At the height of Trump's dominance, in early 2021, he reached an Elo of around 855; Zhao's current 817 is already approaching that territory, accumulated in roughly half as many career matches.
 
+{{< img src="elo_timeseries_2020" alt="The evolution of the Elo ratings of the best three players of the 2020s: Judd Trump, Zhao Xintong, and Mark Selby" >}}
+
+Zhao's curve tells the story of the decade so far: a rapid climb in 2021–22, then the near-flatlining of his two-year ban, then an even steeper ascent on his return. The suspension is written into his match count (511) as much as his rating; the curve makes clear he picked up exactly where he left off – and then some.
+
 [Last year we noted]({{<ref "posts/elo_2/index.md">}}) that Ronnie O'Sullivan's rating had collapsed to 345.2 – dead last among all participants – because withdrawals count as losses in our model. He's now seventh at 631.7. The rehabilitation is real, though it still leaves him well below his career peak. The gap between his model and market valuations remains one of the most interesting features of the comparison below.
 
 Also worth noting: Wu Yize (4th, a mere 240 career matches to his name) and Zhou Yuelong (5th) are the next wave of Chinese talent following Zhao into the top five. Joe O'Connor, who was sixth last year, has dropped well outside the top ten.
