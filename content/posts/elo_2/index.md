@@ -175,7 +175,7 @@ First, we need briefly discuss how to convert those probabilities to odds. Let's
 
 The same basic idea applies to the odds quoted[^odds-quotes] in sport betting: The broker will quote odds like 5, meaning I could win €5 if I bet €1 (for a potential gain of €4). If I believe the event will occur with a 20% probability, my expected payout is exactly 1 – I should only take the bet if my belief in that event is higher (if you must take the bet at all). In other words: in order to convert between probabilities and odds, you just take the reciprocal. E.g., the win probability of 13.14% for John Higgins corresponds to odds of \\(1/0.1314=7.61\\), i.e., I'd expect to make money if someone offered longer odds and might be inclined to take the bet.
 
-So, I've taken a look at [oddschecker.com](https://www.oddschecker.com/snooker/world-championship/winner) to see what odds different brokers offer for different players to win the World Championship. These are the odds[^max-and-vig] as offered and how they compare to the odds implied by our simulations:
+So, I've taken a look at [oddschecker.com](https://www.oddschecker.com/snooker/world-championship/winner) [🗄️](https://web.archive.org/web/https://www.oddschecker.com/snooker/world-championship/winner) to see what odds different brokers offer for different players to win the World Championship. These are the odds[^max-and-vig] as offered and how they compare to the odds implied by our simulations:
 
 | Player            |   Simulation odds |   Betting odds |   Difference |
 |:------------------|------------------:|---------------:|-------------:|

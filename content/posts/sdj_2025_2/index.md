@@ -33,7 +33,7 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-[Nominations are out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2025/)! The jury selected a total of sixteen games for their longlist, nine for {{% sdj / %}} and seven for {{% kdj / %}}. Out of these games, three games each are nominated for the two awards and can hope to get the coveted meeple added to their covers on July 13.
+[Nominations are out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2025/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/aktuelle-preistraeger-2025/)! The jury selected a total of sixteen games for their longlist, nine for {{% sdj / %}} and seven for {{% kdj / %}}. Out of these games, three games each are nominated for the two awards and can hope to get the coveted meeple added to their covers on July 13.
 
 Let's dive straight into the nominations and recommendations, before we discuss how good (or bad) [my predictions]({{<ref "posts/sdj_2025/index.md">}}) were and if the agreed with our [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}}).
 
@@ -110,7 +110,7 @@ Interestingly, this is a re-re-implementation of {{% game 33160 %}}Endeavor{{% /
 
 *Explore a mysterious land and fulfill quests on your way back.*
 
-The nomination that allows you to tick off the "that's supposed to be a {{% kdj %}}Kennerspiel{{% /kdj %}}?" on your [bingo card](https://lidude.net/sdj-comment-bingo/).
+The nomination that allows you to tick off the "that's supposed to be a {{% kdj %}}Kennerspiel{{% /kdj %}}?" on your [bingo card](https://lidude.net/sdj-comment-bingo/) [🗄️](https://web.archive.org/web/https://lidude.net/sdj-comment-bingo/).
 
 
 ## {{% game 410991 %}}Looot{{% /game %}}
