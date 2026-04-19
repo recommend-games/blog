@@ -27,7 +27,7 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/spiel-des-jahres-und-kennerspiel-des-jahres-2021-stehen-fest/)! This article is more than a week overdue, but I've been on my first trip[^livestream] abroad since, you know… (In a sense that was the first time in a year and a half I *wasn't* abroad. 🤷) So without further delays, here are the winners of {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}!
+The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/spiel-des-jahres-und-kennerspiel-des-jahres-2021-stehen-fest/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/spiel-des-jahres-und-kennerspiel-des-jahres-2021-stehen-fest/)! This article is more than a week overdue, but I've been on my first trip[^livestream] abroad since, you know… (In a sense that was the first time in a year and a half I *wasn't* abroad. 🤷) So without further delays, here are the winners of {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}!
 
 
 # {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}
