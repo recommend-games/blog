@@ -2,6 +2,7 @@
 title: Debiasing the BoardGameGeek ranking
 # subtitle: "Applying the Gini coefficient to BoardGameGeek ratings"
 slug: debiasing-boardgamegeek-ranking
+share_img: /posts/debiasing-boardgamegeek-ranking/plot_reg_complexity.png
 author: Markus Shepherd
 type: post
 date: 2024-09-20T22:34:11+03:00

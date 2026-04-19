@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2021 predictions
 slug: spiel-des-jahres-2021-predictions
+share_img: /posts/spiel-des-jahres-2021-predictions/sdj-all.png
 author: Markus Shepherd
 type: post
 date: 2021-05-14T02:30:00+03:00

@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2025 predictions – Part 2!
 slug: spiel-des-jahres-2025-predictions-part-2
+share_img: /posts/spiel-des-jahres-2025-predictions-part-2/sdj-all.png
 author: Markus Shepherd
 type: post
 date: 2025-07-10T23:21:26+03:00

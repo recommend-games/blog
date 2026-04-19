@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2021 winners
 slug: spiel-des-jahres-2021-winners
+share_img: /posts/spiel-des-jahres-2021-winners/318977.jpg
 author: Markus Shepherd
 type: post
 date: 2021-07-27T00:00:00+03:00

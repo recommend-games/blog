@@ -2,6 +2,7 @@
 title: Elo as a Skill-O-Meter
 subtitle: "Elo, part 3: What rating spreads in a toy universe tell us about luck and skill"
 slug: elo-as-a-skill-o-meter
+share_img: /posts/elo-as-a-skill-o-meter/elo_distribution_snooker_tennis_wta.svg
 author: Markus Shepherd
 type: post
 date: 2025-12-05T12:00:00+02:00

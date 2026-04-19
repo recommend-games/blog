@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2025 winners
 slug: spiel-des-jahres-2025-winners
+share_img: /posts/spiel-des-jahres-2025-winners/413246.png
 author: Markus Shepherd
 type: post
 date: 2025-07-13T21:00:00+03:00

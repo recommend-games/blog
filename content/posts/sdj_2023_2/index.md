@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2023 nominations
 slug: spiel-des-jahres-2023-nominations
+share_img: /posts/spiel-des-jahres-2023-nominations/sdj-all.png
 author: Markus Shepherd
 type: post
 date: 2023-07-02T23:20:42+03:00

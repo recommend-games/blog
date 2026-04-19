@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2023 predictions
 slug: spiel-des-jahres-2023-predictions
+share_img: /posts/spiel-des-jahres-2023-predictions/sdj-all.png
 author: Markus Shepherd
 type: post
 date: 2023-05-20T22:24:54+03:00

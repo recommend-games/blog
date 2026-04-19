@@ -2,6 +2,7 @@
 title: Rules Ratio
 subtitle: From WEM's geeky stat to smoothing, residuals and the new unit "wem"
 slug: rules-ratio
+share_img: /posts/rules-ratio/residual_rules_ratio_vs_complexity.png
 author: Markus Shepherd
 type: post
 date: 2026-03-12T00:41:55+02:00

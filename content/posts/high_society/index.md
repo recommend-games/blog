@@ -1,6 +1,7 @@
 ---
 title: "How long is a game of High Society?"
 slug: high-society
+share_img: /posts/high-society/high_society_cover.jpg
 author: Markus Shepherd
 type: post
 date: 2024-02-27T22:37:01+02:00

@@ -1,6 +1,7 @@
 ---
 title: Recommend.Games ranking explained
 slug: recommend-games-ranking
+share_img: /posts/recommend-games-ranking/history_crop.png
 author: Markus Shepherd
 type: post
 date: 2022-02-22T22:02:22+02:00

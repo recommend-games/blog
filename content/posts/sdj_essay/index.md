@@ -2,6 +2,7 @@
 title: Thoughts on Spiel des Jahres
 subtitle: "What it is and what it isn't"
 slug: thoughts-on-spiel-des-jahres
+share_img: /posts/thoughts-on-spiel-des-jahres/sdj-all.png
 author: Markus Shepherd
 type: post
 date: 2024-06-26T12:00:00+03:00
