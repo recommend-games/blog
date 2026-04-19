@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2022 winners
 slug: spiel-des-jahres-2022-winners
+share_img: /posts/spiel-des-jahres-2022-winners/295947.jpg
 author: Markus Shepherd
 type: post
 date: 2022-07-16T19:00:00+02:00

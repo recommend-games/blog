@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2023 winners
 slug: spiel-des-jahres-2023-winners
+share_img: /posts/spiel-des-jahres-2023-winners/370591.jpg
 author: Markus Shepherd
 type: post
 date: 2023-07-31T16:25:13+03:00

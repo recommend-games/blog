@@ -1,6 +1,7 @@
 ---
 title: And the Spiel des Jahres 2020 goes to…
 slug: and-the-spiel-des-jahres-2020-goes-to
+share_img: /posts/and-the-spiel-des-jahres-2020-goes-to/sdj-2020.png
 author: Markus Shepherd
 type: post
 date: 2020-05-15T15:35:00+03:00

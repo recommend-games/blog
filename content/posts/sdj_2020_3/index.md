@@ -1,6 +1,7 @@
 ---
 title: And the Spiel des Jahres 2020 goes to… Part 3!
 slug: and-the-spiel-des-jahres-2020-goes-to-part-3
+share_img: /posts/and-the-spiel-des-jahres-2020-goes-to-part-3/sdj-2020.png
 author: Markus Shepherd
 type: post
 date: 2020-07-18T10:15:00+03:00

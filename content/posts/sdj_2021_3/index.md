@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2021 predictions – Part 2!
 slug: spiel-des-jahres-2021-predictions-part-2
+share_img: /posts/spiel-des-jahres-2021-predictions-part-2/sdj-all.png
 author: Markus Shepherd
 type: post
 date: 2021-07-14T00:00:00+03:00

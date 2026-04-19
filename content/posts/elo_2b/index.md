@@ -2,6 +2,7 @@
 title: "Back to the Crucible: predicting snooker's 2026 champion"
 subtitle: "Elo, part 2b: one year on, the rankings look very different"
 slug: world-snooker-champion-2026
+share_img: /posts/world-snooker-champion-2026/elo_timeseries_2020.svg
 author: Markus Shepherd
 type: post
 date: 2026-04-18T12:00:00+03:00

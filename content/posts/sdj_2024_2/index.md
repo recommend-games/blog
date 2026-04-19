@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2024 nominations
 slug: spiel-des-jahres-2024-nominations
+share_img: /posts/spiel-des-jahres-2024-nominations/sdj-all.png
 author: Markus Shepherd
 type: post
 date: 2024-06-11T17:00:00+02:00

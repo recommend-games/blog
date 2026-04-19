@@ -2,6 +2,7 @@
 title: The world of board games
 subtitle: Board game rankings by country
 slug: world-of-board-games
+share_img: /posts/world-of-board-games/board_games_world_map.png
 author: Markus Shepherd
 type: post
 date: 2024-04-25T23:02:24+03:00

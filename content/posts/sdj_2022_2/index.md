@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2022 nominations
 slug: spiel-des-jahres-2022-nominations
+share_img: /posts/spiel-des-jahres-2022-nominations/sdj-all.png
 author: Markus Shepherd
 type: post
 date: 2022-05-24T17:04:17+03:00
