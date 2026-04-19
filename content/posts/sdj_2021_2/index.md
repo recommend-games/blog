@@ -33,7 +33,7 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-[Nominations are out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2021/)! The jury selected a total of fifteen games for their longlist, eight for {{% sdj / %}} and seven for {{% kdj / %}}. Out of these games, three games each are nominated for both awards and can hope to get the coveted meeple added to their covers on July 19.
+[Nominations are out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2021/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/aktuelle-preistraeger-2021/)! The jury selected a total of fifteen games for their longlist, eight for {{% sdj / %}} and seven for {{% kdj / %}}. Out of these games, three games each are nominated for both awards and can hope to get the coveted meeple added to their covers on July 19.
 
 Let's dive straight into the nominations and recommendations, before we discuss how good (or bad) [my predictions]({{<ref "posts/sdj_2021/index.md">}}) were and if the [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}}) is any good.
 
@@ -118,7 +118,7 @@ Not to brag, but I called this one [months ago](https://twitter.com/recommend_ga
 ## {{% kdj / %}} recommendations
 
 * {{% game 191189 %}}Aeon's End{{% /game %}}: This game has been around for some time and earned itself a strong fan base, so a recommendation by the jury was a fairly safe bet.
-* {{% game 251247 %}}Barrage{{% /game %}}: Definitely on the *very* heavy side even for a {{% kdj %}}Kennerspiel{{% /kdj %}}, yet [Udo Bartsch's high praises](https://rezensionen-fuer-millionen.blogspot.com/2021/02/wasserkraft.html) left no doubt about a recommendation.
+* {{% game 251247 %}}Barrage{{% /game %}}: Definitely on the *very* heavy side even for a {{% kdj %}}Kennerspiel{{% /kdj %}}, yet [Udo Bartsch's high praises](https://rezensionen-fuer-millionen.blogspot.com/2021/02/wasserkraft.html) [🗄️](https://web.archive.org/web/https://rezensionen-fuer-millionen.blogspot.com/2021/02/wasserkraft.html) left no doubt about a recommendation.
 * {{% game 291457 %}}Gloomhaven: Jaws of the Lion{{% /game %}}: Similar to the previous entry, I had a good feeling about a recommendation, but didn't think it'd be actually considered for the award.
 * {{% game 291859 %}}Riftforce{{% /game %}}: I completely missed this one, as did the algorithm, placing it at position 81. At least it classified it correctly as a {{% kdj %}}Kennerspiel{{% /kdj %}} – with 51% confidence. 😰 The only pure two-player-game on either list, this proves how hard it is for lower player counts, even during a pandemic induced shortage of playmates.
 
