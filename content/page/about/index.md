@@ -22,7 +22,7 @@ This blog takes the data we collect for [Recommend.Games](https://recommend.game
 
 {{< img src="markus" size="x300" alt="Markus Shepherd" style="border-radius: 50%;" >}}
 
-My name is [Markus Shepherd](https://www.riemannhypothesis.info/about/me/) (né Schepke) and I'm a mathematician 🧮 turned AI developer 👨‍🔬 and board game enthusiast 🎲 from 🇩🇪 Germany living in 🇫🇮 Finland with my wife 👩‍⚕️ and our daughters Stella ✨ und Luna 🌝.
+My name is [Markus Shepherd](https://primes.recommend.games/about/me/) (né Schepke) and I'm a mathematician 🧮 turned AI developer 👨‍🔬 and board game enthusiast 🎲 from 🇩🇪 Germany living in 🇫🇮 Finland with my wife 👩‍⚕️ and our daughters Stella ✨ und Luna 🌝.
 
 I'm all over the internet, so if you want to get in touch, you have a choice of platforms where I will probably forget to respond. Please don't take it personally. 🤷
 
