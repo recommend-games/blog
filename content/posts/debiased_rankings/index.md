@@ -14,11 +14,11 @@ tags:
   - alternative rankings
 ---
 
-*Bias* is a bit of an ugly word, isn't it? It certainly has become one of those battle phrases in the culture war, where both sides of the argument accuse the other of forcing their biases onto society. Board game reviews frequently need to justify themselves for their biases affecting their views. [Dan Thurot](https://spacebiff.com/2024/08/20/talking-about-games-18/) recently wrote a very eloquent piece on the matter, diving deeper into different kinds of biases.
+*Bias* is a bit of an ugly word, isn't it? It certainly has become one of those battle phrases in the culture war, where both sides of the argument accuse the other of forcing their biases onto society. Board game reviews frequently need to justify themselves for their biases affecting their views. [Dan Thurot](https://spacebiff.com/2024/08/20/talking-about-games-18/) [🗄️](https://web.archive.org/web/https://spacebiff.com/2024/08/20/talking-about-games-18/) recently wrote a very eloquent piece on the matter, diving deeper into different kinds of biases.
 
 But *bias* also has a well defined [meaning in statistics](https://en.wikipedia.org/wiki/Bias_(statistics)). Moving from emotions to cold hard numbers, the word *bias* loses its antagonistic nature and simply becomes a measurement one might want to minimise or remove entirely. Hence, *debiasing* the BoardGameGeek (BGG) ranking is about asking the question what it would look like if we removed the influence of a particular parameter. One such parameter is a game's age: we've seen in the [previous article]({{<ref "posts/highest_rated_year/index.md">}}) that ratings have gone up over time, so removing the age bias from the BGG ranking means correcting for this trend.
 
-This is by no means a new idea: [Dinesh Vatvani](https://dvatvani.com/blog/bgg-analysis-part-2) published an often referenced article back in 2018 focussing on removing the complexity bias from the ratings. This article is an update to and an extension of his work.
+This is by no means a new idea: [Dinesh Vatvani](https://dvatvani.com/blog/bgg-analysis-part-2) [🗄️](https://web.archive.org/web/https://dvatvani.com/blog/bgg-analysis-part-2) published an often referenced article back in 2018 focussing on removing the complexity bias from the ratings. This article is an update to and an extension of his work.
 
 
 # Removing the age bias
@@ -33,7 +33,7 @@ That trend line has a slope of 0.03, which means that overall, a game's average 
 
 {{< img src="plot_reg_age_animated" alt="Animation: removing the age bias from games' ratings" >}}
 
-(Again, credit to Dinesh Vatvani for introducing this kind of visualisation in [his article](https://dvatvani.com/blog/bgg-analysis-part-2).)
+(Again, credit to Dinesh Vatvani for introducing this kind of visualisation in [his article](https://dvatvani.com/blog/bgg-analysis-part-2) [🗄️](https://web.archive.org/web/https://dvatvani.com/blog/bgg-analysis-part-2).)
 
 Next, we can use those adjusted average ratings to calculate a new, debiased ranking. In order to do this, we recreate the [BGG ranking]({{<ref "posts/reverse_engineer_bgg/index.md">}}) by taking the Bayesian average, i.e., adding 2311 dummy ratings ([one for every 10,000 ratings]({{<ref "posts/reverse_engineer_bgg_2/index.md">}}) in total) of 5.5.
 
@@ -57,7 +57,7 @@ As designed, older games are the big winners of this adjustment, with former BGG
 
 # Removing the complexity bias
 
-Obviously, we can apply the exact same idea to other features, e.g., a game's complexity (or weight) as Dinesh Vatvani did in his [original article](https://dvatvani.com/blog/bgg-analysis-part-2). Again, we start by looking at the spread of the data points, from the lightest games on the left to the heaviest on the right:
+Obviously, we can apply the exact same idea to other features, e.g., a game's complexity (or weight) as Dinesh Vatvani did in his [original article](https://dvatvani.com/blog/bgg-analysis-part-2) [🗄️](https://web.archive.org/web/https://dvatvani.com/blog/bgg-analysis-part-2). Again, we start by looking at the spread of the data points, from the lightest games on the left to the heaviest on the right:
 
 {{< img src="plot_reg_complexity" alt="Scatter plot: a game's complexity vs its rating" >}}
 
@@ -133,7 +133,7 @@ We can go through the exercise of debiasing the ratings and calculating a new ra
 
 # Removing *all* the biases
 
-OK, so you might be wondering by now why I went through all that trouble, in particular since complexity, playing time and game types are all so strongly correlated. You've probably also been thinking *association isn't causation*. You'd be right: viewing those different features *individually*, this approach yields nothing but correlations. But take them all *together* and we get a shot at a bit of [causal inference](https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html).
+OK, so you might be wondering by now why I went through all that trouble, in particular since complexity, playing time and game types are all so strongly correlated. You've probably also been thinking *association isn't causation*. You'd be right: viewing those different features *individually*, this approach yields nothing but correlations. But take them all *together* and we get a shot at a bit of [causal inference](https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html) [🗄️](https://web.archive.org/web/https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html).
 
 How does it work? So far, I've calculated those trend lines using simple linear regression (also known as the ordinary least squares method) in a single explanatory variable. But the maths works just the same in higher dimensions and we can throw *all* the features discussed above at once into a single model, predicting again the game's rating, but now with much more information. The outcome is this:
 
@@ -214,6 +214,6 @@ Those are the highest ranked exclusions. While it's definitely sad to miss out o
 
 # Conclusion
 
-So that's a wrap on our quest for debiased rankings. It's important to remember that *bias* isn't a negative term in this context – we're simply interested in the tendencies that pertain to the BGG user ratings and try to imagine counterfactual rankings if those tendencies didn't exist. By considering not just a single feature like age or complexity, but throwing those two as well as playing time, game type and cooperative into one model, we hope to explain the way those features influence ratings beyond mere correlations. If you're interested in the mathematical background to this method, I highly recommend the [article](https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html) I've already linked above.
+So that's a wrap on our quest for debiased rankings. It's important to remember that *bias* isn't a negative term in this context – we're simply interested in the tendencies that pertain to the BGG user ratings and try to imagine counterfactual rankings if those tendencies didn't exist. By considering not just a single feature like age or complexity, but throwing those two as well as playing time, game type and cooperative into one model, we hope to explain the way those features influence ratings beyond mere correlations. If you're interested in the mathematical background to this method, I highly recommend the [article](https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html) [🗄️](https://web.archive.org/web/https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html) I've already linked above.
 
 *As always, you can find the full analysis code and notebooks on [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/debiased_rankings).*
