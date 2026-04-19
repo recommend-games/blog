@@ -34,7 +34,7 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-[Nominations are out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2023/)! The jury selected a total of fifteen games for their longlist, ten for {{% sdj / %}} and five for {{% kdj / %}}. Out of these games, three games each are nominated for the two awards and can hope to get the coveted meeple added to their covers on July 16.
+[Nominations are out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2023/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/aktuelle-preistraeger-2023/)! The jury selected a total of fifteen games for their longlist, ten for {{% sdj / %}} and five for {{% kdj / %}}. Out of these games, three games each are nominated for the two awards and can hope to get the coveted meeple added to their covers on July 16.
 
 Let's dive straight into the nominations and recommendations, before we discuss how good (or bad) [my predictions]({{<ref "posts/sdj_2023/index.md">}}) were and if the agreed with our [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}}).
 
