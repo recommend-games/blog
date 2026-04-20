@@ -10,11 +10,9 @@ staticDir: static
 themesDir: themes
 
 title: Analysis Paralysis
-canonifyurls: true
 
 DefaultContentLanguage: en
 theme: beautifulhugo
-metaDataFormat: yaml
 enableRobotsTXT: true
 
 Params:
@@ -33,25 +31,25 @@ Params:
   useHLJS: true
   socialShare: true
   showRelatedPosts: true
+  author:
+    name: Recommend.Games
+    email: contact@recommend.games
+    website: https://recommend.games/
+    gitlab: recommend.games
+    github: recommend-games
+    twitter: recommend_games
+    mastodon: 'tabletop.social/@markus'
+    linkedin: markusschepke
+    stackoverflow: users/2634131/markus-shepherd
+    youtube: user/MarkusSchepke
+    paypal: mschepke
+    kaggle: mshepherd
 
 markup:
   goldmark:
     renderer:
       unsafe: true
 
-Author:
-  name: Recommend.Games
-  email: contact@recommend.games
-  website: https://recommend.games/
-  gitlab: recommend.games
-  github: recommend-games
-  twitter: recommend_games
-  mastodon: 'tabletop.social/@markus'
-  linkedin: markusschepke
-  stackoverflow: users/2634131/markus-shepherd
-  youtube: user/MarkusSchepke
-  paypal: mschepke
-  kaggle: mshepherd
 
 menu:
   main:

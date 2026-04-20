@@ -1,7 +1,7 @@
 ---
 title: Spiel des Jahres 2021 nominations
 slug: spiel-des-jahres-2021-nominations
-share_img: /posts/spiel-des-jahres-2021-nominations/sdj-all.png
+share_img: /posts/spiel-des-jahres-2021-nominations/sdj-all.webp
 author: Markus Shepherd
 type: post
 date: 2021-05-18T23:25:00+03:00

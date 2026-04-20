@@ -1,7 +1,7 @@
 ---
 title: Spiel des Jahres 2025 nominations
 slug: spiel-des-jahres-2025-nominations
-share_img: /posts/spiel-des-jahres-2025-nominations/sdj-all.png
+share_img: /posts/spiel-des-jahres-2025-nominations/sdj-all.webp
 author: Markus Shepherd
 type: post
 date: 2025-05-20T17:00:00+02:00

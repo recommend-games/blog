@@ -133,6 +133,9 @@ sitepackages/
 .stfolder/
 .stignore
 
+# Claude
+**/.claude/settings.local.json
+
 # others
 .~*
 *.bk

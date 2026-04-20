@@ -1,7 +1,7 @@
 ---
 title: Spiel des Jahres 2025 predictions
 slug: spiel-des-jahres-2025-predictions
-share_img: /posts/spiel-des-jahres-2025-predictions/sdj-all.png
+share_img: /posts/spiel-des-jahres-2025-predictions/sdj-all.webp
 author: Markus Shepherd
 type: post
 date: 2025-05-17T00:05:57+03:00

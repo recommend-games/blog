@@ -1,11 +1,15 @@
-# All available Hugo versions are listed here: https://gitlab.com/pages/hugo/container_registry
-image: registry.gitlab.com/pages/hugo:0.122.0
+image: hugomods/hugo:dart-sass-go-git-0.160.1
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
+before_script:
+  - wget -qO- https://astral.sh/uv/install.sh | sh
+  - source $HOME/.local/bin/env
+
 test:
   script:
+  - uv run sync_assets.py
   - hugo
   artifacts:
     expire_in: 1 hour
@@ -14,6 +18,7 @@ test:
 
 pages:
   script:
+  - uv run sync_assets.py
   - hugo
   artifacts:
     paths:
