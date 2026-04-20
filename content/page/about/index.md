@@ -6,8 +6,6 @@ comments: false
 
 # Recommend.Games
 
-{{< img src="logo" size="x300" alt="Recommend.Games" style="background-color: white; border-radius: 50%;" >}}
-
 [**Recommend.Games**](https://recommend.games/) strives to recommend the best board games for you. We take the user ratings from [BoardGameGeek](https://boardgamegeek.com/) (BGG), apply some black magic, and present recommendations that suit you. Check out its own [About page](https://recommend.games/#/about) to learn more about the details!
 
 If you enjoy our work, please check out the [Donations]({{<ref "page/donations/index.md">}}) page or tell your friends about us.
