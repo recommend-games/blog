@@ -1,7 +1,7 @@
 ---
 title: Reverse engineering the BoardGameGeek ranking
 slug: reverse-engineering-boardgamegeek-ranking
-share_img: /posts/reverse-engineering-boardgamegeek-ranking/num_dummies_hist.svg
+share_img: /posts/reverse-engineering-boardgamegeek-ranking/num_dummies_hist.png
 author: Markus Shepherd
 type: post
 date: 2020-10-03T08:42:51+03:00

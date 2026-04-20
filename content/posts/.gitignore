@@ -70,6 +70,7 @@
 /kennerspiel/shap_6249.svg
 /kennerspiel/shap_9209.svg
 /kennerspiel/shap_summary.svg
+/kennerspiel/shap_summary.png
 /kennerspiel/shap_summary_full.svg
 /orchard/game_length_first.svg
 /orchard/game_length_original.svg
@@ -79,6 +80,7 @@
 /rankings_by_country/rankings
 /reverse_engineer_bgg_2/games.svg
 /reverse_engineer_bgg_2/ratings.svg
+/reverse_engineer_bgg_2/ratings.png
 /rules_ratio/residual_rules_ratio_vs_complexity.json
 /rules_ratio/rules_ratio_vs_complexity.json
 /rules_ratio/rules_ratios.csv
@@ -254,6 +256,7 @@
 /susd_effect/332686_susd_effect.svg
 /susd_effect/332686_susd_effect_fisher.svg
 /susd_effect/332686_synthetic_control.svg
+/susd_effect/332686_synthetic_control.png
 /susd_effect/350184_synthetic_control.svg
 /susd_effect/350205_synthetic_control.svg
 /susd_effect/351538_synthetic_control.svg

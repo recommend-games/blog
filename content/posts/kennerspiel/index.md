@@ -1,7 +1,7 @@
 ---
 title: What makes a Kennerspiel?
 slug: what-makes-kennerspiel
-share_img: /posts/what-makes-kennerspiel/shap_summary.svg
+share_img: /posts/what-makes-kennerspiel/shap_summary.png
 author: Markus Shepherd
 type: post
 date: 2021-02-22T22:34:57+02:00
