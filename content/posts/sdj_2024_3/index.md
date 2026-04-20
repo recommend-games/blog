@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2024 predictions – Part 2!
 slug: spiel-des-jahres-2024-predictions-part-2
+share_img: /posts/spiel-des-jahres-2024-predictions-part-2/sdj-all.webp
 author: Markus Shepherd
 type: post
 date: 2024-07-08T12:00:00+03:00
@@ -60,7 +61,7 @@ Obviously, {{% game 373106 %}}Sky Team{{% /game %}} is the high favourite accord
 
 *Hoist your flag, recruit a colorful crew, and earn as many gold coins as you can.*
 
-The first release by [PlayPunk](https://boardgamewire.com/index.php/2023/06/20/7-wonders-creator-repos-productions-co-founder-launch-new-publishing-company-playpunk/), co-founded by [hall of fame]({{<ref "posts/designer_hall_of_fame/index.md">}}) member [Antoine Bauza](https://recommend.games/#/?designer=9714), immediately landed them their first nomination. This game is doing to [Paolo Mori](https://recommend.games/#/?designer=7640)'s {{% game 125618 %}}Libertalia{{% /game %}} what {{% game 264055 %}}Draftosaurus{{% /game %}} did to {{% game 68448 %}}7 Wonders{{% /game %}}. That's a lot of {{% sdj / %}} cred in just two sentences.
+The first release by [PlayPunk](https://boardgamewire.com/index.php/2023/06/20/7-wonders-creator-repos-productions-co-founder-launch-new-publishing-company-playpunk/) [🗄️](https://web.archive.org/web/https://boardgamewire.com/index.php/2023/06/20/7-wonders-creator-repos-productions-co-founder-launch-new-publishing-company-playpunk/), co-founded by [hall of fame]({{<ref "posts/designer_hall_of_fame/index.md">}}) member [Antoine Bauza](https://recommend.games/#/?designer=9714), immediately landed them their first nomination. This game is doing to [Paolo Mori](https://recommend.games/#/?designer=7640)'s {{% game 125618 %}}Libertalia{{% /game %}} what {{% game 264055 %}}Draftosaurus{{% /game %}} did to {{% game 68448 %}}7 Wonders{{% /game %}}. That's a lot of {{% sdj / %}} cred in just two sentences.
 
 On the surface, there isn't all that much to this game of flipping tiles and filling your ship with a colourful set of characters. It's quite random and solitaire – yet this design somehow manages to pull the magic trick of keeping everyone around the table invested in every single draw and flip of a tile. It's fast, it's immediate, it's fun – in other words: it's perfect {{% sdj / %}} material.
 

@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2023 winners
 slug: spiel-des-jahres-2023-winners
+share_img: /posts/spiel-des-jahres-2023-winners/370591.jpg
 author: Markus Shepherd
 type: post
 date: 2023-07-31T16:25:13+03:00
@@ -23,7 +24,7 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/en/spiel-des-jahres-2023-dorfromantik/)!
+The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/en/spiel-des-jahres-2023-dorfromantik/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/en/spiel-des-jahres-2023-dorfromantik/)!
 
 This year's show was… long… On the one hand, it's nice to have all three awards (including the {{% kindersdj %}}Kinderspiel{{% /kindersdj %}}) back together in one announcement, but on the other hand, once you add special awards, the review of the 1983 awards, interviews etc, even die hard fans (and obviously I'm one of them) have a hard time keeping their attention up. The jury is clearly actively trying to improve the award ceremony, so hopefully next year everything will be a bit snappier.
 

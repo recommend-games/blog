@@ -1,6 +1,7 @@
 ---
 title: "Beyond games: Visualising the Riemann Hypothesis"
 slug: visualising-riemann-hypothesis
+share_img: /posts/visualising-riemann-hypothesis/zeta_50.png
 author: Markus Shepherd
 type: post
 date: 2024-10-23T12:00:00+03:00

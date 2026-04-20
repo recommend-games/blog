@@ -2,6 +2,7 @@
 title: "Back to the Crucible: predicting snooker's 2026 champion"
 subtitle: "Elo, part 2b: one year on, the rankings look very different"
 slug: world-snooker-champion-2026
+share_img: /posts/world-snooker-champion-2026/elo_timeseries_2020.png
 author: Markus Shepherd
 type: post
 date: 2026-04-18T12:00:00+03:00
@@ -51,7 +52,7 @@ Same as last year: following the actual draw, for each match I compare the two p
 
 > **Disclaimer**: This section discusses betting odds for the purpose of statistical comparison and analysis. It is not intended to promote gambling or serve as betting advice. Please gamble responsibly and be aware of your local laws and age restrictions.
 
-The **betting odds** are **decimal** (European) quotes: the figure is the total return per unit stake if the bet wins (stake included), so a probability \\(p\\) corresponds to fair decimal odds \\(1/p\\).[^odds-quotes] I pulled **outright winner** prices from [oddschecker.com](https://www.oddschecker.com/snooker/world-championship/winner) and, for each player, used the **best** (highest) odds shown across the listed bookmakers.[^max-and-vig] **Simulation odds** apply the same recipe to our simulated win percentages.
+The **betting odds** are **decimal** (European) quotes: the figure is the total return per unit stake if the bet wins (stake included), so a probability \\(p\\) corresponds to fair decimal odds \\(1/p\\).[^odds-quotes] I pulled **outright winner** prices from [oddschecker.com](https://www.oddschecker.com/snooker/world-championship/winner) [🗄️](https://web.archive.org/web/https://www.oddschecker.com/snooker/world-championship/winner) and, for each player, used the **best** (highest) odds shown across the listed bookmakers.[^max-and-vig] **Simulation odds** apply the same recipe to our simulated win percentages.
 
 Here are the results. In the Difference column, a negative value means the market assigns shorter (more favourable) odds than the model; positive means the market is longer (more sceptical):
 

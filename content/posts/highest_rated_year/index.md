@@ -2,6 +2,7 @@
 title: "What was the best year for board games?"
 subtitle: The highest rated years on BoardGameGeek
 slug: highest-rated-year
+share_img: /posts/highest-rated-year/avg_ratings_from_ratings_reg.png
 author: Markus Shepherd
 type: post
 date: 2024-08-22T12:00:00+03:00

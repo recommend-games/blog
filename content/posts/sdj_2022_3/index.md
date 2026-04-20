@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2022 predictions – Part 2!
 slug: spiel-des-jahres-2022-predictions-part-2
+share_img: /posts/spiel-des-jahres-2022-predictions-part-2/sdj-all.webp
 author: Markus Shepherd
 type: post
 date: 2022-07-14T00:00:00+03:00
@@ -62,7 +63,7 @@ As mentioned, {{% game 295947 %}}Cascadia{{% /game %}} was high on everybody's l
 
 Despite these high praises and the strong numbers, I feel like there are a lot of caveats here. First, our {{% kdj %}}Kennerspiel{{% /kdj %}} score was a little undecided as to what award it should be nominted in, so that speaks for a {{% sdj %}}Spiel{{% /sdj %}} on the heavier side. Not a negative per se, but the jury did favour very light games over the past years for the family award. Also that classification as an abstract game isn't particularly favourable: it exposes the fact that the setting is nothing but an excuse to draw cute animals on the tiles.
 
-None of this matters if the gameplay was an overwhelming experience. But when reading through the [jury's reviews](https://www.spiel-des-jahres.de/kritikenrundschau-cascadia-wo-fuchs-und-lachs-sich-gute-nacht-sagen/), the tone isn't exactly enthusiastic. While everybody seems to have a good time, {{% game 295947 %}}Cascadia{{% /game %}} doesn't leave a lasting impression.
+None of this matters if the gameplay was an overwhelming experience. But when reading through the [jury's reviews](https://www.spiel-des-jahres.de/kritikenrundschau-cascadia-wo-fuchs-und-lachs-sich-gute-nacht-sagen/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/kritikenrundschau-cascadia-wo-fuchs-und-lachs-sich-gute-nacht-sagen/), the tone isn't exactly enthusiastic. While everybody seems to have a good time, {{% game 295947 %}}Cascadia{{% /game %}} doesn't leave a lasting impression.
 
 When you think of {{% sdj / %}} as an ambassador for the hobby board gaming, I don't think {{% game 295947 %}}Cascadia{{% /game %}} is the best game for this job. Overall, it might be a fun, clever puzzle, but it also has a slightly dry and geeky aura to it that might fail to pull in new players.
 
@@ -86,7 +87,7 @@ Still, I would consider this to be the dark horse in this year's race, though it
 
 {{< img src="300905" size="x300" alt="Top Ten" >}}
 
-{{% game 300905 %}}Top Ten{{% /game %}} was the nominee that filled the "not another party game" square in the annual {{% sdj / %}} bullshit bingo. I got the impression most geeks saw this as another variation of {{% game 262543 %}}Wavelength{{% /game %}} and glanced over it. But when reading through the [reviews](https://www.spiel-des-jahres.de/kritikenrundschau-top-ten/), they're full of testimonies of joy and laughter. What better motivation to get people to the table?
+{{% game 300905 %}}Top Ten{{% /game %}} was the nominee that filled the "not another party game" square in the annual {{% sdj / %}} bullshit bingo. I got the impression most geeks saw this as another variation of {{% game 262543 %}}Wavelength{{% /game %}} and glanced over it. But when reading through the [reviews](https://www.spiel-des-jahres.de/kritikenrundschau-top-ten/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/kritikenrundschau-top-ten/), they're full of testimonies of joy and laughter. What better motivation to get people to the table?
 
 Of course, there are always caveats. Maybe most importantly, a game like this requires the group to come together and bring the game alive with their creativity. That's not to everyone's liking, but the fact that the people around the table matter more than the mechanics is still a plus in my book.
 
@@ -147,7 +148,7 @@ In the end what we have is a fairly complex game with lots of high praises that 
 
 {{< img src="328479" size="x300" alt="Living Forest" >}}
 
-{{% game 328479 %}}Living Forest{{% /game %}} has received wider distribution only quite recently, so hasn't gathered too many ratings and is hence not strongly represented in the recommendations yet. But the jury has given almost unanimously [high praises](https://www.spiel-des-jahres.de/living-forest-waldgeister-gegen-waldbrand/), so don't make the mistake of overlooking this one.
+{{% game 328479 %}}Living Forest{{% /game %}} has received wider distribution only quite recently, so hasn't gathered too many ratings and is hence not strongly represented in the recommendations yet. But the jury has given almost unanimously [high praises](https://www.spiel-des-jahres.de/living-forest-waldgeister-gegen-waldbrand/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/living-forest-waldgeister-gegen-waldbrand/), so don't make the mistake of overlooking this one.
 
 The mixture of deck building and push-your-luck isn't particularly new – it's the same receipe behind {{% kdj %}}Kennerspiel des Jahres 2018{{% /kdj %}} winner {{% game 244521 %}}The Quacks of Quedlinburg{{% /game %}}. But {{% game 328479 %}}Living Forest{{% /game %}} still manages to create its very distinct spin on those ingredients and adds a pleasant dose of player interaction on top of that.
 

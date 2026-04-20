@@ -2,6 +2,7 @@
 title: Elo ratings explained
 subtitle: "Elo, part 1: How to measure players' skills in games"
 slug: elo-ratings-explained
+share_img: /posts/elo-ratings-explained/elo_probabilities.png
 author: Markus Shepherd
 type: post
 date: 2025-04-14T23:07:10+03:00
@@ -11,7 +12,7 @@ tags:
 ---
 
 > Chance in games is like seasoning in food — it's all about the right amount. Just imagine a life without chance, where everything could be planned out strategically. That would get boring over time. In a game, I want to have experiences — I want adventure. A good game is like a miniature life, one where I can make mistakes, enjoy a streak of bad or good luck, and still recover. But you shouldn't be at the mercy of randomness. There should be ways to compensate — like a friend of mine in CATAN, who always complains about his bad luck, prompting others to treat him more kindly and rarely target him with the robber. In the end, he often wins — to everyone's surprise. \
-> — **Klaus Teuber** on the importance of randomness in games in [CATAN-News 1/2000](https://www.catan.de/sites/default/files/2021-11/dl_Catan-News-2000-1.pdf)
+> — **Klaus Teuber** on the importance of randomness in games in [CATAN-News 1/2000](https://www.catan.de/sites/default/files/2021-11/dl_Catan-News-2000-1.pdf) [🗄️](https://web.archive.org/web/https://www.catan.de/sites/default/files/2021-11/dl_Catan-News-2000-1.pdf)
 
 The balance between luck and skill in games can sometimes feel like a magic trick: as the winner, you might attribute your victory to your great skills, whilst as the loser, you can blame your misfortune on unlucky dice rolls. Striking that balance right will have a major impact on the target audience of a game: if a game is totally random and offers no meaningful choices, it won't be interesting for anyone above a certain age (I'm still waiting for my kids to outgrow that phase 😅); if its learning curve is too steep, the upfront investment of navigating the strategic depths might put off many people who have an overflowing shelf of shame waiting to be played.
 

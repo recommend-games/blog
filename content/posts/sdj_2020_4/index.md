@@ -1,6 +1,7 @@
 ---
 title: And the Spiel des Jahres 2020 goes to… Part 4!
 slug: and-the-spiel-des-jahres-2020-goes-to-part-4
+share_img: /posts/and-the-spiel-des-jahres-2020-goes-to-part-4/284108.jpg
 author: Markus Shepherd
 type: post
 date: 2020-07-22T14:42:00+03:00
@@ -24,7 +25,7 @@ tags:
   - Christian Stöhr
 ---
 
-After months of waiting, we finally [know what games won](https://www.spiel-des-jahres.de/die-gewinner-2020-stehen-fest/) this year's {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} and {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}}! Without further ado, I'll present the winners along with a comment on how the predictions went.
+After months of waiting, we finally [know what games won](https://www.spiel-des-jahres.de/die-gewinner-2020-stehen-fest/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/die-gewinner-2020-stehen-fest/) this year's {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} and {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}}! Without further ado, I'll present the winners along with a comment on how the predictions went.
 
 
 # {{% color "#E30613" %}}*Spiel des Jahres 2020*{{% /color %}}

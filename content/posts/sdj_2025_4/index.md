@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2025 winners
 slug: spiel-des-jahres-2025-winners
+share_img: /posts/spiel-des-jahres-2025-winners/413246.png
 author: Markus Shepherd
 type: post
 date: 2025-07-13T21:00:00+03:00
@@ -22,7 +23,7 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/en/the-spiel-des-jahres-2025-is-bomb-busters/)!
+The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/en/the-spiel-des-jahres-2025-is-bomb-busters/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/en/the-spiel-des-jahres-2025-is-bomb-busters/)!
 
 After [two]({{<ref "posts/sdj_2023_4/index.md">}}) [year]({{<ref "posts/sdj_2024_4/index.md">}}) of complaining how the ceremonies went on for too long, it appears the jury finally listened to me and made it snappier, while still retaining the sections highlighting all the various facets of the hobby. Kudos! I don't know if the presenters gained more experience in hosting the show, or if their non-polished charm is simply growing on me, but I definitely found the whole thing more enjoyable. (Don't forget the *Empfehlungsliste* really had me cracking up…)
 

@@ -2,6 +2,7 @@
 title: "Measuring the Shut Up & Sit Down effect"
 subtitle: "Using synthetic control to make up our own counterfactual world"
 slug: susd-effect
+share_img: /posts/susd-effect/332686_synthetic_control.png
 author: Markus Shepherd
 type: post
 date: 2024-03-17T21:37:46+02:00
@@ -170,7 +171,7 @@ Still, after spending a lot of time looking at the data, I'm convinced that the 
 
 ## Postscriptum: the technical details
 
-I've cut a great deal of details about the data and the method from this article as I wanted to focus on the outcome and not get bogged down in how we got there. If you want to learn more about synthetic control, I highly recommend the [corresponding chapter](https://matheusfacure.github.io/python-causality-handbook/15-Synthetic-Control.html) of [Causal Inference for the Brave and True](https://matheusfacure.github.io/python-causality-handbook/index.html), which directly inspired the method and plots of this article. If the book can't convince you of synthetic control, maybe the [Washington Post](https://www.washingtonpost.com/news/wonk/wp/2015/10/30/how-to-measure-things-in-a-world-of-competing-claims/) can.
+I've cut a great deal of details about the data and the method from this article as I wanted to focus on the outcome and not get bogged down in how we got there. If you want to learn more about synthetic control, I highly recommend the [corresponding chapter](https://matheusfacure.github.io/python-causality-handbook/15-Synthetic-Control.html) [🗄️](https://web.archive.org/web/https://matheusfacure.github.io/python-causality-handbook/15-Synthetic-Control.html) of [Causal Inference for the Brave and True](https://matheusfacure.github.io/python-causality-handbook/index.html) [🗄️](https://web.archive.org/web/https://matheusfacure.github.io/python-causality-handbook/index.html), which directly inspired the method and plots of this article. If the book can't convince you of synthetic control, maybe the [Washington Post](https://www.washingtonpost.com/news/wonk/wp/2015/10/30/how-to-measure-things-in-a-world-of-competing-claims/) [🗄️](https://web.archive.org/web/https://www.washingtonpost.com/news/wonk/wp/2015/10/30/how-to-measure-things-in-a-world-of-competing-claims/) can.
 
 If you want to verify the model and run the code yourself, as always you can find the complete code from [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/synthetic_control).
 

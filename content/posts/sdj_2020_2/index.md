@@ -1,6 +1,7 @@
 ---
 title: And the Spiel des Jahres 2020 goes to… Part 2!
 slug: and-the-spiel-des-jahres-2020-goes-to-part-2
+share_img: /posts/and-the-spiel-des-jahres-2020-goes-to-part-2/sdj-2020.png
 author: Markus Shepherd
 type: post
 date: 2020-05-21T18:31:00+03:00
@@ -22,7 +23,7 @@ tags:
   - King's Dilemma
 ---
 
-With {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} and {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} [nominations out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2020/) (setting aside the {{% color "#009FE3" %}}***Kinderspiel***{{% /color %}} again), it's time to look at the nominees and to check how I did in [my predictions]({{<ref "posts/sdj_2020/index.md">}}).
+With {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} and {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}} [nominations out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2020/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/aktuelle-preistraeger-2020/) (setting aside the {{% color "#009FE3" %}}***Kinderspiel***{{% /color %}} again), it's time to look at the nominees and to check how I did in [my predictions]({{<ref "posts/sdj_2020/index.md">}}).
 
 
 # Nominated for {{% color "#E30613" %}}*Spiel des Jahres*{{% /color %}}
@@ -110,7 +111,7 @@ I'll be honest, I'm probably more excited about this nomination that any other, 
 
 There's three more games that didn't make the cut, but that received a recommendation.
 
-* {{% game 266810 %}}Paladins of the West Kingdom{{% /game %}}: I was confident that this one would receive a recommendation because of [Udo Bartsch's glowing review](https://rezensionen-fuer-millionen.blogspot.com/2020/03/paladine-des-westfrankenreichs.html), but also confident it's too complex for a nomination.
+* {{% game 266810 %}}Paladins of the West Kingdom{{% /game %}}: I was confident that this one would receive a recommendation because of [Udo Bartsch's glowing review](https://rezensionen-fuer-millionen.blogspot.com/2020/03/paladine-des-westfrankenreichs.html) [🗄️](https://web.archive.org/web/https://rezensionen-fuer-millionen.blogspot.com/2020/03/paladine-des-westfrankenreichs.html), but also confident it's too complex for a nomination.
 * {{% game 262712 %}}Res Arcana{{% /game %}}: One of the hottest candidate, no surprise to see it on the list.
 * {{% game 247763 %}}Underwater Cities{{% /game %}}: This one slipped under my radar as a release from the previous year. Also pretty heavy, so a recommendation is the best possible outcome.
 

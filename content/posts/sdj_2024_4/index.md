@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2024 winners
 slug: spiel-des-jahres-2024-winners
+share_img: /posts/spiel-des-jahres-2024-winners/373106.jpg
 author: Markus Shepherd
 type: post
 date: 2024-07-21T22:54:32+03:00
@@ -22,7 +23,7 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/spiel-des-jahres-2024-sky-team/)!
+The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/spiel-des-jahres-2024-sky-team/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/spiel-des-jahres-2024-sky-team/)!
 
 This year’s show was… even longer… 😅 After [last year]({{<ref "posts/sdj_2023_4/index.md">}}) I've hoped for a snappier show – instead it was further extended. As much as I appreciate the jury's work (which I've expressed [at length]({{<ref "posts/sdj_essay/index.md">}})), the stage isn't where they shine, so I don't understand why we need two awkward hours of their presence. It's understandable they want to highlight various aspects of board gaming and their activities, since those are the only two hours of attention they get all year, but just as an endless recommendation list would water down the award, the rule in showbiz is to make every minute count.
 

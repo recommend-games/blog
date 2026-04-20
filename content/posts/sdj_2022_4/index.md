@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2022 winners
 slug: spiel-des-jahres-2022-winners
+share_img: /posts/spiel-des-jahres-2022-winners/295947.jpg
 author: Markus Shepherd
 type: post
 date: 2022-07-16T19:00:00+02:00
@@ -26,7 +27,7 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/cascadia-ist-das-spiel-des-jahres-2022/)! As mentioned before, this year was the first time the ceremony was held on a Saturday evening and I had the immense pleasure of attending it in person. In case you missed my very profesional live coverage on Twitter, here's a [summary](https://twitter.com/MarkusRShepherd/status/1553060952559452160?s=20&t=cr68YeOuUltbs57V050Umg) of the event.
+The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/cascadia-ist-das-spiel-des-jahres-2022/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/cascadia-ist-das-spiel-des-jahres-2022/)! As mentioned before, this year was the first time the ceremony was held on a Saturday evening and I had the immense pleasure of attending it in person. In case you missed my very profesional live coverage on Twitter, here's a [summary](https://twitter.com/MarkusRShepherd/status/1553060952559452160?s=20&t=cr68YeOuUltbs57V050Umg) of the event.
 
 But without further ado, here are the winners of {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}!
 

@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2024 nominations
 slug: spiel-des-jahres-2024-nominations
+share_img: /posts/spiel-des-jahres-2024-nominations/sdj-all.webp
 author: Markus Shepherd
 type: post
 date: 2024-06-11T17:00:00+02:00
@@ -32,7 +33,7 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-[Nominations are out](https://www.spiel-des-jahres.de/en/award-winners-2024/)! The jury selected a total of sixteen games for their longlist, nine for {{% sdj / %}} and seven for {{% kdj / %}}. Out of these games, three games each are nominated for the two awards and can hope to get the coveted meeple added to their covers on July 21.
+[Nominations are out](https://www.spiel-des-jahres.de/en/award-winners-2024/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/en/award-winners-2024/)! The jury selected a total of sixteen games for their longlist, nine for {{% sdj / %}} and seven for {{% kdj / %}}. Out of these games, three games each are nominated for the two awards and can hope to get the coveted meeple added to their covers on July 21.
 
 Let's dive straight into the nominations and recommendations, before we discuss how good (or bad) [my predictions]({{<ref "posts/sdj_2024/index.md">}}) were and if the agreed with our [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}}).
 

@@ -1,23 +1,29 @@
-# All available Hugo versions are listed here: https://gitlab.com/pages/hugo/container_registry
-image: registry.gitlab.com/pages/hugo:0.122.0
+image: hugomods/hugo:git-0.160.1
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
+before_script:
+  - wget -qO- https://astral.sh/uv/install.sh | sh
+  - source $HOME/.local/bin/env
+  - hugo version
+
 test:
   script:
-  - hugo
+    - uv run sync_assets.py
+    - hugo --minify
   artifacts:
     expire_in: 1 hour
   except:
-  - master
+    - master
 
 pages:
   script:
-  - hugo
+    - uv run sync_assets.py
+    - hugo --minify
   artifacts:
     paths:
-    - public
+      - public
     expire_in: 48 hours
   only:
-  - master
+    - master

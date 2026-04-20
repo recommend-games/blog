@@ -2,6 +2,7 @@
 title: Rules Ratio
 subtitle: From WEM's geeky stat to smoothing, residuals and the new unit "wem"
 slug: rules-ratio
+share_img: /posts/rules-ratio/residual_rules_ratio_vs_complexity.png
 author: Markus Shepherd
 type: post
 date: 2026-03-12T00:41:55+02:00
@@ -19,7 +20,7 @@ tags:
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.8.2.min.js" ></script>
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-api-3.8.2.min.js" ></script>
 
-[W. Eric Martin](https://www.wericmartin.com) (WEM) ran the BoardGameGeek (BGG) [news section](https://boardgamegeek.com/blog/1/boardgamegeek-news) for 15 years. Earlier this year, he launched his own outlet[^fediverse] called [Board Game Beat](https://www.boardgamebeat.com). In between his signature game release updates, he writes entertaining and insightful analyses of the broader hobby. In one of his [recent articles](https://www.wericmartin.com/the-rules-ratio-a-new-stat-to-geek-out-about/), he proposed the **Rules Ratio**. The title invites us to geek out about it, so geek out we shall! 🤓
+[W. Eric Martin](https://www.wericmartin.com) (WEM) ran the BoardGameGeek (BGG) [news section](https://boardgamegeek.com/blog/1/boardgamegeek-news) for 15 years. Earlier this year, he launched his own outlet[^fediverse] called [Board Game Beat](https://www.boardgamebeat.com). In between his signature game release updates, he writes entertaining and insightful analyses of the broader hobby. In one of his [recent articles](https://www.wericmartin.com/the-rules-ratio-a-new-stat-to-geek-out-about/) [🗄️](https://web.archive.org/web/https://www.wericmartin.com/the-rules-ratio-a-new-stat-to-geek-out-about/), he proposed the **Rules Ratio**. The title invites us to geek out about it, so geek out we shall! 🤓
 
 
 # What is the Rules Ratio?
@@ -256,7 +257,7 @@ The expected RR for a given complexity is estimated with a binomial (logistic) G
 The scatter plots show a readability subset (top 1000 by rank or ≥10k ratings), but all summary statistics and leaderboards use the full sample.
 
 
-[^fediverse]: Come for the board game news, stay for their policy of [not tracking users](https://www.wericmartin.com/board-game-beat-policies/) and their [Fediverse first](https://www.wericmartin.com/federated-social-media-video/) approach. 🤓
+[^fediverse]: Come for the board game news, stay for their policy of [not tracking users](https://www.wericmartin.com/board-game-beat-policies/) [🗄️](https://web.archive.org/web/https://www.wericmartin.com/board-game-beat-policies/) and their [Fediverse first](https://www.wericmartin.com/federated-social-media-video/) [🗄️](https://web.archive.org/web/https://www.wericmartin.com/federated-social-media-video/) approach. 🤓
 [^threads]: WEM mentions forum posts in his article, but from the screenshot and numbers it's evident he's using threads. I think this is the correct choice for what we're interested in: every distinct rules question typically goes into its own thread, and we want to know how many rules questions a given game triggers, not how many posts it takes to resolve them.
 [^ratio]: Ackshually… 🤓 Calling this metric a "ratio" isn't technically wrong, but "share", "proportion" or "fraction" would be more accurate. WEM told us to geek out, so please indulge me in this little pedantry.
 [^3b1b]: If you want to learn more about this technique, I highly recommend the always excellent Grant Sanderson and his [3blue1brown video](https://youtu.be/8idr1WZ1A7Q) on the topic.

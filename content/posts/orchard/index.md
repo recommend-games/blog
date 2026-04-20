@@ -1,6 +1,7 @@
 ---
 title: "Child's play: How hard is Orchard?"
 slug: orchard
+share_img: /posts/orchard/orchard_in_orchard.jpg
 author: Markus Shepherd
 type: post
 date: 2024-01-24T21:42:58+02:00

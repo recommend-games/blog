@@ -1,6 +1,7 @@
 ---
 title: Spiel des Jahres 2022 predictions
 slug: spiel-des-jahres-2022-predictions
+share_img: /posts/spiel-des-jahres-2022-predictions/sdj-all.webp
 author: Markus Shepherd
 type: post
 date: 2022-05-16T18:40:51+03:00

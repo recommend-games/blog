@@ -1,6 +1,7 @@
 ---
 title: Reverse engineering the BoardGameGeek ranking
 slug: reverse-engineering-boardgamegeek-ranking
+share_img: /posts/reverse-engineering-boardgamegeek-ranking/num_dummies_hist.png
 author: Markus Shepherd
 type: post
 date: 2020-10-03T08:42:51+03:00
@@ -22,7 +23,7 @@ tags:
 
 I often describe [BoardGameGeek (BGG)](https://boardgamegeek.com/) as "the [Internet Movie Database (IMDb)](https://www.imdb.com/) for games". Much like its cinematic counterpart, the biggest board game database not only collects all sorts of information obsessively, but also allows users to rate games on a scale from 1 (*awful - defies game description*) to 10 (*outstanding - will always enjoy playing*). These ratings are then used to rank games, with {{% game 174430 %}}Gloomhaven{{% /game %}} occupying the top spot since December 2017.
 
-While BGG founder Scott Alden admitted in a recent interview on the excellent [Five Games For Doomsday](https://fivegamesfordoomsday.com/2020/07/06/scott-alden/) podcast that he doesn't care all that much about the rankings, gamers around the world certainly do. They would discuss heatedly any movement in the rankings, question why games *X* is up there while game *Y* is missing, and generally criticise the selection for either having *too many* or *not enough* recent releases.
+While BGG founder Scott Alden admitted in a recent interview on the excellent [Five Games For Doomsday](https://fivegamesfordoomsday.com/2020/07/06/scott-alden/) [🗄️](https://web.archive.org/web/https://fivegamesfordoomsday.com/2020/07/06/scott-alden/) podcast that he doesn't care all that much about the rankings, gamers around the world certainly do. They would discuss heatedly any movement in the rankings, question why games *X* is up there while game *Y* is missing, and generally criticise the selection for either having *too many* or *not enough* recent releases.
 
 Reason enough for me to take a closer look at how the rankings work and some of the maths behind it.
 
@@ -162,7 +163,7 @@ The effects of more, but higher dummy ratings seem to almost cancel each other o
 
 ***PS***: You can find the notebook I used to do all the calculations [on Kaggle](https://www.kaggle.com/mshepherd/reverse-engineering-the-boardgamegeek-ranking).
 
-***PPS***: Turns out that [GoDataDriven did almost the same calculation](https://godatadriven.com/blog/reverse-engineering-boardgamegeek/) three years ago – even with the same title! Back then, they estimated that BGG added 725 dummy ratings. [Jorge Nieva replicated their analysis](https://www.kaggle.com/jorgenieva/bayes-algorithm) with a more recent dataset, which thankfully yielded a very close match to our result: 1594 dummy ratings.
+***PPS***: Turns out that [GoDataDriven did almost the same calculation](https://godatadriven.com/blog/reverse-engineering-boardgamegeek/) [🗄️](https://web.archive.org/web/https://godatadriven.com/blog/reverse-engineering-boardgamegeek/) three years ago – even with the same title! Back then, they estimated that BGG added 725 dummy ratings. [Jorge Nieva replicated their analysis](https://www.kaggle.com/jorgenieva/bayes-algorithm) with a more recent dataset, which thankfully yielded a very close match to our result: 1594 dummy ratings.
 
 [^min-votes]: Throughout this article I only considered games with at least 100 ratings, mostly to ensure that the very long tail of games with few ratings won't unduely skew the results. However, most of the calculations would only change in some negligible decimals when including all games.
 [^jotl]: {{% game 291457 %}}Jaws of the Lion{{% /game %}} is something of an exception here and will undoubtably shoot into the BGG top 10 very soon. In fact, it might be the only game with the potential to unseat {{% game 174430 %}}Gloomhaven{{% /game %}} as the number 1.
