@@ -1,7 +1,7 @@
 ---
 title: Reverse engineering the BoardGameGeek ranking – Part 2!
 slug: reverse-engineering-boardgamegeek-ranking-part-2
-share_img: /posts/reverse-engineering-boardgamegeek-ranking-part-2/ratings.svg
+share_img: /posts/reverse-engineering-boardgamegeek-ranking-part-2/ratings.png
 author: Markus Shepherd
 type: post
 date: 2021-01-26T22:24:00+02:00

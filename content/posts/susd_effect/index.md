@@ -2,7 +2,7 @@
 title: "Measuring the Shut Up & Sit Down effect"
 subtitle: "Using synthetic control to make up our own counterfactual world"
 slug: susd-effect
-share_img: /posts/susd-effect/332686_synthetic_control.svg
+share_img: /posts/susd-effect/332686_synthetic_control.png
 author: Markus Shepherd
 type: post
 date: 2024-03-17T21:37:46+02:00

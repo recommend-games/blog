@@ -2,7 +2,7 @@
 title: Elo ratings explained
 subtitle: "Elo, part 1: How to measure players' skills in games"
 slug: elo-ratings-explained
-share_img: /posts/elo-ratings-explained/elo_probabilities.svg
+share_img: /posts/elo-ratings-explained/elo_probabilities.png
 author: Markus Shepherd
 type: post
 date: 2025-04-14T23:07:10+03:00

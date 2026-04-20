@@ -2,7 +2,7 @@
 title: "Has board game rating inequality increased over the years?"
 subtitle: "Applying the Gini coefficient to BoardGameGeek ratings"
 slug: rating-inequality-gini-coefficient
-share_img: /posts/rating-inequality-gini-coefficient/gini_coefficient.svg
+share_img: /posts/rating-inequality-gini-coefficient/gini_coefficient.png
 author: Markus Shepherd
 type: post
 date: 2024-04-14T18:20:45+03:00
