@@ -2,7 +2,7 @@
 title: Teaching Elo to Play with Friends
 subtitle: "Elo, part 4: How to rate everyone round the table — and keep our skill-o-meter honest"
 slug: teaching-elo-to-play-with-friends
-share_img: /posts/teaching-elo-to-play-with-friends/p_deterministic_vs_sigma.svg
+share_img: /posts/teaching-elo-to-play-with-friends/p_deterministic_vs_sigma.png
 author: Markus Shepherd
 type: post
 date: 2025-12-12T12:00:00+02:00
