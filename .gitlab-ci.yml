@@ -1,11 +1,10 @@
-# All available Hugo versions are listed here: https://gitlab.com/pages/hugo/container_registry
-image: hugomods/hugo:debian-reg-dart-sass-go-git-0.160.1
+image: hugomods/hugo:dart-sass-go-git-0.160.1
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
 before_script:
-  - curl -LsSf https://astral.sh/uv/install.sh | sh
+  - wget -qO- https://astral.sh/uv/install.sh | sh
   - source $HOME/.local/bin/env
 
 test:
