@@ -2,7 +2,7 @@
 title: Game Designer Hall of Fame
 subtitle: The best board game designers of all times – according to Spiel des Jahres
 slug: game-designer-hall-of-fame
-share_img: /posts/game-designer-hall-of-fame/sdj-all.png
+share_img: /posts/game-designer-hall-of-fame/sdj-all.webp
 author: Markus Shepherd
 type: post
 date: 2024-05-17T12:00:00+03:00

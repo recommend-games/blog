@@ -1,7 +1,7 @@
 ---
 title: Spiel des Jahres 2024 predictions – Part 2!
 slug: spiel-des-jahres-2024-predictions-part-2
-share_img: /posts/spiel-des-jahres-2024-predictions-part-2/sdj-all.png
+share_img: /posts/spiel-des-jahres-2024-predictions-part-2/sdj-all.webp
 author: Markus Shepherd
 type: post
 date: 2024-07-08T12:00:00+03:00

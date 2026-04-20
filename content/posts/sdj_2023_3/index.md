@@ -1,7 +1,7 @@
 ---
 title: Spiel des Jahres 2023 predictions – Part 2!
 slug: spiel-des-jahres-2023-predictions-part-2
-share_img: /posts/spiel-des-jahres-2023-predictions-part-2/sdj-all.png
+share_img: /posts/spiel-des-jahres-2023-predictions-part-2/sdj-all.webp
 author: Markus Shepherd
 type: post
 date: 2023-07-13T15:32:50+03:00
