@@ -1,4 +1,4 @@
-image: hugomods/hugo:dart-sass-go-git-0.160.1
+image: hugomods/hugo:git-0.160.1
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
@@ -9,20 +9,20 @@ before_script:
 
 test:
   script:
-  - uv run sync_assets.py
-  - hugo
+    - uv run sync_assets.py
+    - hugo
   artifacts:
     expire_in: 1 hour
   except:
-  - master
+    - master
 
 pages:
   script:
-  - uv run sync_assets.py
-  - hugo
+    - uv run sync_assets.py
+    - hugo
   artifacts:
     paths:
-    - public
+      - public
     expire_in: 48 hours
   only:
-  - master
+    - master
