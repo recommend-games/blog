@@ -260,11 +260,11 @@ This year, there's quite a few games with pretty strong buzz and good chances of
 
 # Conclusion
 
-Another year full of wonderful games – let's enjoy being spoiled for choice until the trade wars dry up the supplies. 🙈
+Another year full of wonderful games – let's enjoy being spoiled for choice before the AI-generated slop drowns it all out. 🙈
 
-Also, let's not forget {{% kindersdj / %}} – my daughters are now 5 and 6 years old, and we've already played through most of the back catalogue of past winners, so the whole family is looking forward to more great recommendations.
+Also, let's not forget {{% kindersdj / %}} – my daughters are now 5 and 6 years old, and we've already played through most of the back catalogue of past winners, so the whole family is looking forward to more great recommendations. 🥰 I even have an idea for predicting the {{% kindersdj / %}} winner once the nominations are announced!
 
-Stay tuned for the announcement on May 19th! 🤩
+Stay tuned for May 19th! 🤩
 
 
-[^eligible]: As every year, it's not straightforward to determine what games are eligible for the awards. Generally speaking, it'd be those games release between April 2025 and March 2026 into German retail. Hence, filtering by BGG release year will exclude games that were released earlier elsewhere, but only recently in Germany, and likewise let some games pass that have not seen a German release in that time window. I did my best to catch what I could, but there's always some that get away.
+[^eligible]: As every year, it's not straightforward to determine what games are eligible for the awards. Generally speaking, it'd be those games released between April 2025 and March 2026 into German retail. Hence, filtering by BGG release year will exclude games that were released earlier elsewhere, but only recently in Germany, and likewise let some games pass that have not seen a German release in that time window. I did my best to catch what I could, but there's always some that get away.
