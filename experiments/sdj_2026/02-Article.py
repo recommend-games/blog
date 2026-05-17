@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.17.1
+#       jupytext_version: 1.19.3
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -73,7 +73,7 @@ descriptions = pl.scan_csv(DESCRIPTIONS_PATH, infer_schema_length=None).select(
 predictions = (
     predictions.join(descriptions, on="bgg_id", how="left")
     .with_columns(
-        pl.format(
+        literal=pl.format(
             template,
             "sdj_rank",
             "bgg_id",
