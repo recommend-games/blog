@@ -248,12 +248,14 @@ It's time for my picks for the nominations. The algorithms determined the longli
 
 ## Honourable mentions
 
-* Boss Fighters QR
-* Cozy Sticker Ville
-* Dewan
-* Hot Streak
-* Limit
-* Moon Colony Bloodbath
+This year, there's quite a few games with pretty strong buzz and good chances of a place on the longlist (or more), but which were missed by the algorithm, so I like to squeeze them in to this section.
+
+* {{% game 454672 %}}Boss Fighters QR{{% /game %}}
+* {{% game 456440 %}}Cozy Stickerville{{% /game %}}
+* {{% game 439742 %}}Dewan{{% /game %}}
+* {{% game 446497 %}}Hot Streak{{% /game %}}
+* {{% game 439306 %}}Limit{{% /game %}}
+* {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}}
 
 
 # Conclusion
