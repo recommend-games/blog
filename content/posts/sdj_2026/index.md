@@ -40,7 +40,96 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 {{< img src="sdj-2026" size="x300" alt="Spiel des Jahres 2026" >}}
 
-<!-- TODO: Insert generated candidates from predictions.md here -->
+
+## #1: {{% game 447384 %}}Meister Makatsu{{% /game %}}
+
+*2–6 players, 20–30 minutes, 8+ years, light (1.3), 97% {% sdj %}Spiel{% /sdj %}*
+
+{{< img src="447384" size="x300" alt="Meister Makatsu" >}}
+
+*Play your ninjas wisely so that they go unnoticed.*
+
+
+## #2: {{% game 434654 %}}Toy Battle{{% /game %}}
+
+*2 players, 15 minutes, 8+ years, light (1.5), 99% {% sdj %}Spiel{% /sdj %}*
+
+{{< img src="434654" size="x300" alt="Toy Battle" >}}
+
+*Send forth an army of toys to conquer territories.*
+
+
+## #3: {{% game 431280 %}}2 Win{{% /game %}}
+
+*2–6 players, 15 minutes, 7+ years, light (1.2), 98% {% sdj %}Spiel{% /sdj %}*
+
+{{< img src="431280" size="x300" alt="2 Win" >}}
+
+*Play the right balance of cards to get more cards and keep playing.*
+
+
+## #4: {{% game 440540 %}}Take Time{{% /game %}}
+
+*2–4 players, 30 minutes, 10+ years, medium light (1.8), 73% {% sdj %}Spiel{% /sdj %}*
+
+{{< img src="440540" size="x300" alt="Take Time" >}}
+
+*Time beckons you to discover a multitude of challenging universes.*
+
+
+## #5: {{% game 436507 %}}Under the Mango Tree{{% /game %}}
+
+*2–4 players, 15–20 minutes, 7+ years, medium light (1.5), 100% {% sdj %}Spiel{% /sdj %}*
+
+{{< img src="436507" size="x300" alt="Under the Mango Tree" >}}
+
+*Revive your own little patch of Australian wilderness by drafting two-part cards.*
+
+
+## #6: {{% game 424975 %}}Wilmot's Warehouse{{% /game %}}
+
+*2–6 players, 30 minutes, 8+ years, light (1.2), 100% {% sdj %}Spiel{% /sdj %}*
+
+{{< img src="424975" size="x300" alt="Wilmot's Warehouse" >}}
+
+*Stack products in the warehouse, telling a story to remember where to find them.*
+
+
+## #7: {{% game 438195 %}}Volle Kanne!{{% /game %}}
+
+*1–4 players, 20 minutes, 8+ years, light (1.3), 99% {% sdj %}Spiel{% /sdj %}*
+
+{{< img src="438195" size="x300" alt="Volle Kanne!" >}}
+
+*Manage your random water supply to satisfy your plants.*
+
+
+## #8: {{% game 434442 %}}13 Leaves{{% /game %}}
+
+*3–6 players, 20 minutes, 8+ years, light (1.2), 98% {% sdj %}Spiel{% /sdj %}*
+
+{{< img src="434442" size="x300" alt="13 Leaves" >}}
+
+*Play into the row to empty your hand.*
+
+
+## #9: {{% game 423787 %}}Behind{{% /game %}}
+
+*1–99 players, 45–90 minutes, 10+ years, medium light (1.6), 93% {% sdj %}Spiel{% /sdj %}*
+
+{{< img src="423787" size="x300" alt="Behind" >}}
+
+*Solve the three scenes In this puzzle/deduction/observation game.*
+
+
+## #10: {{% game 435652 %}}Easy Peasy{{% /game %}}
+
+*2–6 players, 15 minutes, 8+ years, medium light (1.7), 73% {% sdj %}Spiel{% /sdj %}*
+
+{{< img src="435652" size="x300" alt="Easy Peasy" >}}
+
+*Get rid of your cards and end the round when you think you have the lowest score.*
+
 
 
 # Candidates for {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}
