@@ -238,9 +238,22 @@ It's time for my picks for the nominations. The algorithms determined the longli
 * {{% game 440540 %}}Take Time{{% /game %}}
 * {{% game 434654 %}}Toy Battle{{% /game %}}
 
+
 ## My predictions for nominees for {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}
 
-* TODO
+* {{% game 436217 %}}The Lord of the Rings: Fate of the Fellowship{{% /game %}}
+* {{% game 417197 %}}Rebirth{{% /game %}}
+* {{% game 422674 %}}Saltfjord{{% /game %}}
+
+
+## Honourable mentions
+
+* Boss Fighters QR
+* Cozy Sticker Ville
+* Dewan
+* Hot Streak
+* Limit
+* Moon Colony Bloodbath
 
 
 # Conclusion
