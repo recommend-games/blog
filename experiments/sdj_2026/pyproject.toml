@@ -5,7 +5,7 @@ description = ""
 authors = [{name = "Markus Shepherd", email = "markus@recommend.games"}]
 requires-python = ">=3.13"
 dependencies = [
-    "spiel-des-jahres[kennerspiel,predictions]>=0.5.1,<1.0.0",
+    "spiel-des-jahres[kennerspiel,predictions] @ file:///Users/markus/Recommend.Games/recommend-games-blog/spiel-des-jahres",
 ]
 
 [project.optional-dependencies]
