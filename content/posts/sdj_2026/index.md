@@ -43,7 +43,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #1: {{% game 447384 %}}Meister Makatsu{{% /game %}}
 
-*2–6 players, 20–30 minutes, 8+ years, light (1.3), 97% {% sdj %}Spiel{% /sdj %}*
+*2–6 players, 20–30 minutes, 8+ years, light (1.3), 97% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="447384" size="x300" alt="Meister Makatsu" >}}
 
@@ -52,7 +52,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #2: {{% game 434654 %}}Toy Battle{{% /game %}}
 
-*2 players, 15 minutes, 8+ years, light (1.5), 99% {% sdj %}Spiel{% /sdj %}*
+*2 players, 15 minutes, 8+ years, light (1.5), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="434654" size="x300" alt="Toy Battle" >}}
 
@@ -61,7 +61,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #3: {{% game 431280 %}}2 Win{{% /game %}}
 
-*2–6 players, 15 minutes, 7+ years, light (1.2), 98% {% sdj %}Spiel{% /sdj %}*
+*2–6 players, 15 minutes, 7+ years, light (1.2), 98% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="431280" size="x300" alt="2 Win" >}}
 
@@ -70,7 +70,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #4: {{% game 440540 %}}Take Time{{% /game %}}
 
-*2–4 players, 30 minutes, 10+ years, medium light (1.8), 73% {% sdj %}Spiel{% /sdj %}*
+*2–4 players, 30 minutes, 10+ years, medium light (1.8), 73% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="440540" size="x300" alt="Take Time" >}}
 
@@ -79,7 +79,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #5: {{% game 436507 %}}Under the Mango Tree{{% /game %}}
 
-*2–4 players, 15–20 minutes, 7+ years, medium light (1.5), 100% {% sdj %}Spiel{% /sdj %}*
+*2–4 players, 15–20 minutes, 7+ years, medium light (1.5), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="436507" size="x300" alt="Under the Mango Tree" >}}
 
@@ -88,7 +88,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #6: {{% game 424975 %}}Wilmot's Warehouse{{% /game %}}
 
-*2–6 players, 30 minutes, 8+ years, light (1.2), 100% {% sdj %}Spiel{% /sdj %}*
+*2–6 players, 30 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="424975" size="x300" alt="Wilmot's Warehouse" >}}
 
@@ -97,7 +97,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #7: {{% game 438195 %}}Volle Kanne!{{% /game %}}
 
-*1–4 players, 20 minutes, 8+ years, light (1.3), 99% {% sdj %}Spiel{% /sdj %}*
+*1–4 players, 20 minutes, 8+ years, light (1.3), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="438195" size="x300" alt="Volle Kanne!" >}}
 
@@ -106,7 +106,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #8: {{% game 434442 %}}13 Leaves{{% /game %}}
 
-*3–6 players, 20 minutes, 8+ years, light (1.2), 98% {% sdj %}Spiel{% /sdj %}*
+*3–6 players, 20 minutes, 8+ years, light (1.2), 98% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="434442" size="x300" alt="13 Leaves" >}}
 
@@ -115,7 +115,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #9: {{% game 423787 %}}Behind{{% /game %}}
 
-*1–99 players, 45–90 minutes, 10+ years, medium light (1.6), 93% {% sdj %}Spiel{% /sdj %}*
+*1–99 players, 45–90 minutes, 10+ years, medium light (1.6), 93% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="423787" size="x300" alt="Behind" >}}
 
@@ -124,7 +124,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #10: {{% game 435652 %}}Easy Peasy{{% /game %}}
 
-*2–6 players, 15 minutes, 8+ years, medium light (1.7), 73% {% sdj %}Spiel{% /sdj %}*
+*2–6 players, 15 minutes, 8+ years, medium light (1.7), 73% {{% sdj %}}Spiel{{% /sdj %}}*
 
 {{< img src="435652" size="x300" alt="Easy Peasy" >}}
 
@@ -139,7 +139,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #1: {{% game 417197 %}}Rebirth{{% /game %}}
 
-*2–4 players, 45–60 minutes, 10+ years, medium light (2.0), 70% {% kdj %}Kennerspiel{% /kdj %}*
+*2–4 players, 45–60 minutes, 10+ years, medium light (2.0), 70% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="417197" size="x300" alt="Rebirth" >}}
 
@@ -148,7 +148,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #2: {{% game 384213 %}}Fromage{{% /game %}}
 
-*1–4 players, 30–45 minutes, 14+ years, medium light (2.4), 97% {% kdj %}Kennerspiel{% /kdj %}*
+*1–4 players, 30–45 minutes, 14+ years, medium light (2.4), 97% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="384213" size="x300" alt="Fromage" >}}
 
@@ -157,7 +157,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #3: {{% game 436217 %}}The Lord of the Rings: Fate of the Fellowship{{% /game %}}
 
-*1–5 players, 60–150 minutes, 14+ years, medium (3.1), 100% {% kdj %}Kennerspiel{% /kdj %}*
+*1–5 players, 60–150 minutes, 14+ years, medium (3.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="436217" size="x300" alt="The Lord of the Rings: Fate of the Fellowship" >}}
 
@@ -166,7 +166,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #4: {{% game 437337 %}}Abroad{{% /game %}}
 
-*1–5 players, 90 minutes, 12+ years, medium (2.7), 100% {% kdj %}Kennerspiel{% /kdj %}*
+*1–5 players, 90 minutes, 12+ years, medium (2.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="437337" size="x300" alt="Abroad" >}}
 
@@ -175,7 +175,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #5: {{% game 436126 %}}Finspan{{% /game %}}
 
-*1–5 players, 45–60 minutes, 10+ years, medium light (2.3), 98% {% kdj %}Kennerspiel{% /kdj %}*
+*1–5 players, 45–60 minutes, 10+ years, medium light (2.3), 98% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="436126" size="x300" alt="Finspan" >}}
 
@@ -184,7 +184,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #6: {{% game 400366 %}}Wondrous Creatures{{% /game %}}
 
-*1–4 players, 40–80 minutes, 14+ years, medium (3.0), 100% {% kdj %}Kennerspiel{% /kdj %}*
+*1–4 players, 40–80 minutes, 14+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="400366" size="x300" alt="Wondrous Creatures" >}}
 
@@ -193,7 +193,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #7: {{% game 422674 %}}Saltfjord{{% /game %}}
 
-*1–4 players, 45–90 minutes, 14+ years, medium (3.0), 100% {% kdj %}Kennerspiel{% /kdj %}*
+*1–4 players, 45–90 minutes, 14+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="422674" size="x300" alt="Saltfjord" >}}
 
@@ -202,7 +202,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #8: {{% game 422042 %}}Tea Garden{{% /game %}}
 
-*2–4 players, 90–120 minutes, 12+ years, medium (3.0), 100% {% kdj %}Kennerspiel{% /kdj %}*
+*2–4 players, 90–120 minutes, 12+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="422042" size="x300" alt="Tea Garden" >}}
 
@@ -211,7 +211,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #9: {{% game 298231 %}}Skyrise{{% /game %}}
 
-*2–4 players, 30–90 minutes, 14+ years, medium light (2.2), 92% {% kdj %}Kennerspiel{% /kdj %}*
+*2–4 players, 30–90 minutes, 14+ years, medium light (2.2), 92% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="298231" size="x300" alt="Skyrise" >}}
 
@@ -220,7 +220,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 ## #10: {{% game 371932 %}}Explorers of Navoria{{% /game %}}
 
-*2–4 players, 40–80 minutes, 12+ years, medium light (2.3), 96% {% kdj %}Kennerspiel{% /kdj %}*
+*2–4 players, 40–80 minutes, 12+ years, medium light (2.3), 96% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
 {{< img src="371932" size="x300" alt="Explorers of Navoria" >}}
 
