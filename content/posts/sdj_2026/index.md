@@ -234,7 +234,9 @@ It's time for my picks for the nominations. The algorithms determined the longli
 
 ## My predictions for nominees for {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}
 
-* TODO
+* {{% game 447384 %}}Meister Makatsu{{% /game %}}
+* {{% game 440540 %}}Take Time{{% /game %}}
+* {{% game 434654 %}}Toy Battle{{% /game %}}
 
 ## My predictions for nominees for {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}
 
