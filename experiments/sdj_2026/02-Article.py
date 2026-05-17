@@ -67,7 +67,7 @@ if not DESCRIPTIONS_PATH.exists():
 # %%
 descriptions = pl.scan_csv(DESCRIPTIONS_PATH, infer_schema_length=None).select(
     "bgg_id",
-    "description",
+    pl.col("description").str.strip_chars(),
 )
 
 predictions = (
