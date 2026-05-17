@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.19.2
+#       jupytext_version: 1.19.3
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -36,10 +36,10 @@ predictions = sdj_predictions(
 predictions.shape
 
 # %%
-predictions.remove(pl.col("kennerspiel")).head(100)
+predictions.remove(pl.col("kennerspiel")).head(25)
 
 # %%
-predictions.filter(pl.col("kennerspiel")).head(100)
+predictions.filter(pl.col("kennerspiel")).head(25)
 
 # %%
 predictions.write_csv("predictions.csv", float_precision=3)
