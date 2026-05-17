@@ -90,13 +90,13 @@ predictions = (
             pl.when(pl.col("kennerspiel"))
             .then(
                 pl.format(
-                    "{}% {{% kdj %}}Kennerspiel{{% /kdj %}}",
+                    "{}% {{{{% kdj %}}}}Kennerspiel{{{{% /kdj %}}}}",
                     (pl.col("kennerspiel_score") * 100).round().cast(pl.Int64),
                 ),
             )
             .otherwise(
                 pl.format(
-                    "{}% {{% sdj %}}Spiel{{% /sdj %}}",
+                    "{}% {{{{% sdj %}}}}Spiel{{{{% /sdj %}}}}",
                     ((1 - pl.col("kennerspiel_score")) * 100).round().cast(pl.Int64),
                 ),
             ),
