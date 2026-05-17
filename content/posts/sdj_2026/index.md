@@ -31,9 +31,9 @@ tags:
 
 As every year, I'll let the algorithms speak, and I'm once again using the methodology [established last year]({{<ref "posts/sdj_2025/index.md">}}): 50% of the weight goes on the individual recommendations for the 14 jury members, and 50% on the ["recommendations to the jury"](https://recommend.games/#/?for=S_d_J&excludeRated=false&yearMin=2025&yearMax=2026). This way, I was able to calculate a score for all eligible[^eligible] games using our [recommendation algorithm]({{<ref "posts/rg_collaborative_filtering/index.md">}}) to fill in gaps where jury members haven't rated a game. Our very own [Kennerspiel score]({{<ref "posts/kennerspiel/index.md">}}) is then used to sort those into their respective list of the top 10 contenders for either award. As always, you can find the complete code on [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/sdj_2026) and the [complete results here](predictions.csv).
 
-We have another year with some strong contenders. TODO: intro. I think there's one clear nomination (though it's less clear on what list, more on that later), with the rest of the field pretty wide open. My predictions last year weren't particularly good, so the only way is up… 📈
+This year might be the most open field since I started doing these predictions. In the past six years, there's always been at least one clear favourite beforehand who would indeed go on to win an award, but this year I don't see any real frontrunners. My predictions weren't great last year, so none of this bodes well for this year's predictions… 😅
 
-But without further ado, here are the favourite games to win {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}.
+Anyway, without further ado, here are the favourite games to win {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}.
 
 
 # Candidates for {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}
