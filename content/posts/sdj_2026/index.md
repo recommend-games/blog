@@ -136,7 +136,95 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 {{< img src="ksdj-2026" size="x300" alt="Kennerspiel des Jahres 2026" >}}
 
-<!-- TODO: Insert generated candidates from predictions.md here -->
+
+## #1: {{% game 417197 %}}Rebirth{{% /game %}}
+
+*2–4 players, 45–60 minutes, 10+ years, medium light (2.0), 70% {% kdj %}Kennerspiel{% /kdj %}*
+
+{{< img src="417197" size="x300" alt="Rebirth" >}}
+
+*Rebuild old lands in a lush, hopeful future.*
+
+
+## #2: {{% game 384213 %}}Fromage{{% /game %}}
+
+*1–4 players, 30–45 minutes, 14+ years, medium light (2.4), 97% {% kdj %}Kennerspiel{% /kdj %}*
+
+{{< img src="384213" size="x300" alt="Fromage" >}}
+
+*Cheesemakers compete to run the most prosperous creamery in France.*
+
+
+## #3: {{% game 436217 %}}The Lord of the Rings: Fate of the Fellowship{{% /game %}}
+
+*1–5 players, 60–150 minutes, 14+ years, medium (3.1), 100% {% kdj %}Kennerspiel{% /kdj %}*
+
+{{< img src="436217" size="x300" alt="The Lord of the Rings: Fate of the Fellowship" >}}
+
+*As members of The Fellowship, embark on a journey to save—or doom—Middle-earth.*
+
+
+## #4: {{% game 437337 %}}Abroad{{% /game %}}
+
+*1–5 players, 90 minutes, 12+ years, medium (2.7), 100% {% kdj %}Kennerspiel{% /kdj %}*
+
+{{< img src="437337" size="x300" alt="Abroad" >}}
+
+*Travel through Europe for 28 days to showcase your abilities.*
+
+
+## #5: {{% game 436126 %}}Finspan{{% /game %}}
+
+*1–5 players, 45–60 minutes, 10+ years, medium light (2.3), 98% {% kdj %}Kennerspiel{% /kdj %}*
+
+{{< img src="436126" size="x300" alt="Finspan" >}}
+
+*Dive into the watery depths to find and observe a vast array of aquatic life.*
+
+
+## #6: {{% game 400366 %}}Wondrous Creatures{{% /game %}}
+
+*1–4 players, 40–80 minutes, 14+ years, medium (3.0), 100% {% kdj %}Kennerspiel{% /kdj %}*
+
+{{< img src="400366" size="x300" alt="Wondrous Creatures" >}}
+
+*Build the best reserve in the world for 100+ fantastic creatures!*
+
+
+## #7: {{% game 422674 %}}Saltfjord{{% /game %}}
+
+*1–4 players, 45–90 minutes, 14+ years, medium (3.0), 100% {% kdj %}Kennerspiel{% /kdj %}*
+
+{{< img src="422674" size="x300" alt="Saltfjord" >}}
+
+*Lead your fishing village through the harsh Nordic winters.*
+
+
+## #8: {{% game 422042 %}}Tea Garden{{% /game %}}
+
+*2–4 players, 90–120 minutes, 12+ years, medium (3.0), 100% {% kdj %}Kennerspiel{% /kdj %}*
+
+{{< img src="422042" size="x300" alt="Tea Garden" >}}
+
+*Witness the birth of tea culture in ancient China.*
+
+
+## #9: {{% game 298231 %}}Skyrise{{% /game %}}
+
+*2–4 players, 30–90 minutes, 14+ years, medium light (2.2), 92% {% kdj %}Kennerspiel{% /kdj %}*
+
+{{< img src="298231" size="x300" alt="Skyrise" >}}
+
+*Visionary architects build a glorious new city in the sky.*
+
+
+## #10: {{% game 371932 %}}Explorers of Navoria{{% /game %}}
+
+*2–4 players, 40–80 minutes, 12+ years, medium light (2.3), 96% {% kdj %}Kennerspiel{% /kdj %}*
+
+{{< img src="371932" size="x300" alt="Explorers of Navoria" >}}
+
+*Explore new and strange continents that have emerged from the sea.*
 
 
 # My two cents
