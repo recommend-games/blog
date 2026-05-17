@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.17.1
+#       jupytext_version: 1.19.2
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -30,8 +30,8 @@ predictions = sdj_predictions(
     jury_member_weights={"rec_standard": 1.0},
     fetch_from_api=False,
     games_path="../../../board-game-data/scraped/bgg_GameItem.csv",
-    kennerspiel_model="kennerspiel.joblib",
-    recommender_model="../../../recommend-games-server/data/recommender_light.npz",
+    kennerspiel_model="artefacts/kennerspiel.joblib",
+    recommender_model="artefacts/recommender_light.npz",
 ).collect()
 predictions.shape
 
@@ -42,4 +42,4 @@ predictions.remove(pl.col("kennerspiel")).head(100)
 predictions.filter(pl.col("kennerspiel")).head(100)
 
 # %%
-predictions.write_csv("predictions.csv", float_precision=5)
+predictions.write_csv("predictions.csv", float_precision=3)
