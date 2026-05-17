@@ -1,0 +1,24 @@
+[project]
+name = "sdj-2026"
+version = "0.1.0"
+description = ""
+authors = [{name = "Markus Shepherd", email = "markus@recommend.games"}]
+requires-python = ">=3.13"
+dependencies = [
+    "spiel-des-jahres[kennerspiel,predictions] @ file:///Users/markus/Recommend.Games/recommend-games-blog/spiel-des-jahres",
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyter-black",
+    "jupyterlab",
+    "jupytext",
+    "mypy",
+    "ruff",
+]
+
+[tool.ruff]
+target-version = "py313"
+
+[tool.mypy]
+python_version = "3.13"
