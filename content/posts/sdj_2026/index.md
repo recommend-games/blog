@@ -4,7 +4,7 @@ slug: spiel-des-jahres-2026-predictions
 share_img: /posts/spiel-des-jahres-2026-predictions/sdj-all.webp
 author: Markus Shepherd
 type: post
-date: 2026-05-17T23:00:00+03:00
+date: 2026-05-17T23:27:41+03:00
 tags:
   - SdJ
   - SdJ 2026
