@@ -21,7 +21,7 @@ But *bias* also has a well defined [meaning in statistics](https://en.wikipedia.
 This is by no means a new idea: [Dinesh Vatvani](https://dvatvani.com/blog/bgg-analysis-part-2) [🗄️](https://web.archive.org/web/https://dvatvani.com/blog/bgg-analysis-part-2) published an often referenced article back in 2018 focussing on removing the complexity bias from the ratings. This article is an update to and an extension of his work.
 
 
-# Removing the age bias
+## Removing the age bias
 
 So, let's start with the bias readers of this blog will already be familar with: age bias, which really is just a slightly more neutral term for *cult of the new*. The first step is plotting the games' ages vs their average ratings:
 
@@ -55,7 +55,7 @@ Without further ado, those are the new top 10 rated games after removing the age
 As designed, older games are the big winners of this adjustment, with former BGG #1s {{% game 12333 %}}Twilight Struggle{{% /game %}} and {{% game 3076 %}}Puerto Rico{{% /game %}} making a comeback. Classic murder mystery game {{% game 2511 %}}Sherlock Holmes Consulting Detective{{% /game %}} makes a huge leap into the top 10 as one of the few games from the 80s that stood the test of time. You can download the full new ranking [here](ranking_debiased_age.csv).
 
 
-# Removing the complexity bias
+## Removing the complexity bias
 
 Obviously, we can apply the exact same idea to other features, e.g., a game's complexity (or weight) as Dinesh Vatvani did in his [original article](https://dvatvani.com/blog/bgg-analysis-part-2) [🗄️](https://web.archive.org/web/https://dvatvani.com/blog/bgg-analysis-part-2). Again, we start by looking at the spread of the data points, from the lightest games on the left to the heaviest on the right:
 
@@ -83,7 +83,7 @@ This is the new top 10 after adjusting for the complexity bias:
 I'm not going to lie: As a lover of small and interactive games, this top 10 looks much more apealing to me than the actual BGG top 10. One striking observation: six out of these ten games won {{% sdj %}}Spiel{{% /sdj %}} or {{% kdj / %}} (if we generously count the other {{% game 284083 %}}Crew{{% /game %}}'s title), with two more nominated and the other two recommended. The grognards on the internet can complain all they want about how the awards have become too shallow, but the jury really knows how to pick out the games that put the maximum amount of game play into minimal rules. You can download the full new ranking [here](ranking_debiased_complexity.csv).
 
 
-# Removing the playing time bias
+## Removing the playing time bias
 
 Next, we'll take a look at how a game's playing time (as measured by the minimum playing time printed on the box) affects its rating:
 
@@ -94,7 +94,7 @@ We see a similar trend line as with the complexity bias, which shouldn't come as
 Because publishers love to lie about playing time and claim most games can be played in about an hour, the adjusted ranking doesn't look all that different from the usual one, so I'll skip it for this article, but you can download it [here](ranking_debiased_min_time.csv) if you'd like to take a look anyways.
 
 
-# Removing the game type bias
+## Removing the game type bias
 
 So far, we've been looking at continuous values (also known as numerical features), but we can apply the same principal to categories. One particularly interesting feature in this context is a game's type: BGG maintains separate rankings for eight different game types, and users can vote which of those types a game belongs to (depending on the share of votes, a game might be classified as more than one type). Given everything we've seen so far, you can probably already guess that the lighter categories like children's and party games aren't as highly praised as war and strategy games. Here's all eight types sorted from lowest to highest average rating:
 
@@ -122,7 +122,7 @@ Just like before, we can calculate a new, debiased ranking:
 At first glance, it might seem curious that some games from the current BGG top 10 stay (more or less) put whilst others fall off. The reason for this is that both {{% game 161936 %}}Pandemic Legacy: Season 1{{% /game %}} and {{% game 174430 %}}Gloomhaven{{% /game %}} are considered to be both strategy and thematic games, two of the most popular categories, and so the model weighs them down twice. Instead, we see some of the top rated customisable, abstract and family games in this adjusted top 10. Again, you can download the full new ranking [here](ranking_debiased_game_type.csv).
 
 
-# Removing the bias towards cooperative games
+## Removing the bias towards cooperative games
 
 Let's take a look at one final categorical feature to debias: competitive vs cooperative games. Cooperative games have been on the rise for a number of years now, winning six out of ten {{% sdj %}}Spiel{{% /sdj %}} and {{% kdj / %}} awards since I started my predictions in [2020]({{<ref "posts/sdj_2020_4/index.md">}}). While less than 9% of all games in our dataset are cooperative, on average they have a significantly higher (by almost 0.48 points) rating compared to competitive games:
 
@@ -131,7 +131,7 @@ Let's take a look at one final categorical feature to debias: competitive vs coo
 We can go through the exercise of debiasing the ratings and calculating a new ranking here too, but the outcome would pretty much be just the standard BGG ranking with the cooperative games filter out (or rather weighed down). If you really want to take a look, you can download the new ranking [here](ranking_debiased_cooperative.csv).
 
 
-# Removing *all* the biases
+## Removing *all* the biases
 
 OK, so you might be wondering by now why I went through all that trouble, in particular since complexity, playing time and game types are all so strongly correlated. You've probably also been thinking *association isn't causation*. You'd be right: viewing those different features *individually*, this approach yields nothing but correlations. But take them all *together* and we get a shot at a bit of [causal inference](https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html) [🗄️](https://web.archive.org/web/https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html).
 
@@ -195,7 +195,7 @@ I will say: {{% game 2653 %}}Survive: Escape from Atlantis!{{% /game %}} is not 
 Some games made huge leaps into the top 100, including {{% game 811 %}}Rummikub{{% /game %}}, {{% game 327 %}}Loopin' Louie{{% /game %}} and {{% game 17329 %}}Animal Upon Animal{{% /game %}} which all jumped up over 1000 positions. The biggest losers of this method – games dropping out of the top 100 – are {{% game 184267 %}}On Mars{{% /game %}}, {{% game 237182 %}}Root{{% /game %}} and {{% game 96848 %}}Mage Knight{{% /game %}}, all of which lost 1000 positions and more. You can download the full debiased ranking [here](ranking_debiased_all.csv).
 
 
-# Some boring technical details
+## Some boring technical details
 
 In order to have good data and comparable values for all those corrections, I had to filter out games by certain criteria. We only considered games which:
 
@@ -212,7 +212,7 @@ This includes 23,325 of the 26,266 currently ranked games (88.8%), but does excl
 Those are the highest ranked exclusions. While it's definitely sad to miss out on those and some other games, they make up only 2% of the top 1000 games on BGG, so I feel it's a reasonable tradeoff.
 
 
-# Conclusion
+## Conclusion
 
 So that's a wrap on our quest for debiased rankings. It's important to remember that *bias* isn't a negative term in this context – we're simply interested in the tendencies that pertain to the BGG user ratings and try to imagine counterfactual rankings if those tendencies didn't exist. By considering not just a single feature like age or complexity, but throwing those two as well as playing time, game type and cooperative into one model, we hope to explain the way those features influence ratings beyond mere correlations. If you're interested in the mathematical background to this method, I highly recommend the [article](https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html) [🗄️](https://web.archive.org/web/https://matheusfacure.github.io/python-causality-handbook/05-The-Unreasonable-Effectiveness-of-Linear-Regression.html) I've already linked above.
 

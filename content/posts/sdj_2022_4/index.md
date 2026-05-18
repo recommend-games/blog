@@ -32,12 +32,12 @@ The cat's out of the bag and the winners [have been announced](https://www.spiel
 But without further ado, here are the winners of {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}!
 
 
-# {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}}
+## {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}}
 
 {{< img src="sdj-2022" size="x300" alt="Spiel des Jahres 2022" >}}
 
 
-## {{% game 295947 %}}Cascadia{{% /game %}}
+### {{% game 295947 %}}Cascadia{{% /game %}}
 
 *1–4 players, 30–45 minutes, 10+ years, medium light (1.9)*
 
@@ -46,12 +46,12 @@ But without further ado, here are the winners of {{% sdj / %}} and {{% kdj %}}Ke
 In the end, it was the favourite that won {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}}. It's the first award I called wrong in three years – still not a bad quota I guess. 🤷 Somewhat ironically, {{% game 295947 %}}Cascadia{{% /game %}} remains the only game of the six nominees I haven't played yet, but after playing {{% game 291453 %}}SCOUT{{% /game %}} and {{% game 300905 %}}Top Ten{{% /game %}}, I do see how those games might not be for everyone. On the other hand, the positivity towards {{% game 295947 %}}Cascadia{{% /game %}} was overwhelming – it's rare to see the 'geek crowd being so enthusiastic about the jury's decision. All in all, it appears {{% game 295947 %}}Cascadia{{% /game %}} will make a great ambassador for the hobby board gaming.
 
 
-# {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}
+## {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}
 
 {{< img src="ksdj-2022" size="x300" alt="Kennerspiel des Jahres 2022" >}}
 
 
-## {{% game 328479 %}}Living Forest{{% /game %}}
+### {{% game 328479 %}}Living Forest{{% /game %}}
 
 *1–4 players, 40 minutes, 10+ years, medium light (2.2)*
 
@@ -60,7 +60,7 @@ In the end, it was the favourite that won {{% sdj %}}Spiel des Jahres 2022{{% /s
 This award I got right, and as you could read from my [previous post]({{<ref "posts/sdj_2022_3/index.md">}}), I very much agree with this decision. Similar to the {{% sdj %}}red award{{% /sdj %}}, I could see good reasons why the other {{% kdj %}}Kennerspiel{{% /kdj %}} nominees {{% game 246784 %}}Cryptid{{% /game %}} and {{% game 316554 %}}Dune: Imperium{{% /game %}} have a bit narrower audiences, but I think {{% game 328479 %}}Living Forest{{% /game %}} hits the sweetspot of a games that's "one step up" from a {{% sdj %}}Spiel{{% /sdj %}} whilst still remaining fairly accessible. I'm certain many many people will enjoy planting those trees and extinguishing those forest fires as much as I do.
 
 
-# Conclusion
+## Conclusion
 
 I feel like I say this every year, but I think we've had another very strong year with six excellent nominees that also were very different from each other. I blame the uniform strength on my first wrong call since I started these predictions. 😉
 

@@ -41,11 +41,11 @@ Even more so than the previous year, I'll take an algorithmic approach. That is,
 You can find the [detailed analysis here](predictions.py) and [complete results here](predictions.csv). But without further ado, here are the favourite games to win {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}.
 
 
-# Candidates for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}
+## Candidates for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}
 
 {{< img src="sdj-2021" size="x300" alt="Spiel des Jahres 2021" >}}
 
-## #1: {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
+### #1: {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
 
 *1–4 players, 15–45 minutes, 10+ years, light (1.1), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -54,7 +54,7 @@ You can find the [detailed analysis here](predictions.py) and [complete results 
 Some games can be played without reading any rules. {{% game 318977 %}}MicroMacro{{% /game %}} goes one step further: You can start playing the game right on the box. This alone makes it a strong contender. I wonder though if the jury will consider a game full of murders and crimes a pleasant pastime for families.
 
 
-## #2: {{% game 266524 %}}PARKS{{% /game %}}
+### #2: {{% game 266524 %}}PARKS{{% /game %}}
 
 *1–5 players, 30–60 minutes, 10+ years, medium light (2.2), 88% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -72,7 +72,7 @@ Something of a latecomer to Germany, the looks and theme of {{% game 266524 %}}P
 While the algorithm ranks this highly, I still do not see a pure 2-player-game win the main award. A place on the recommendation list on the other hand is always possible. -->
 
 
-## #3: {{% game 256788 %}}Detective Club{{% /game %}}
+### #3: {{% game 256788 %}}Detective Club{{% /game %}}
 
 *4–8 players, 45 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -81,7 +81,7 @@ While the algorithm ranks this highly, I still do not see a pure 2-player-game w
 Light and social, just like the jury likes their {{% sdj %}}red games{{% /sdj %}}. {{% game 256788 %}}Detective Club{{% /game %}} requires at least four players though, and the jury generally wants three players as well.
 
 
-## #4: {{% game 223040 %}}Fantasy Realms{{% /game %}}
+### #4: {{% game 223040 %}}Fantasy Realms{{% /game %}}
 
 *3–6 players, 20 minutes, 14+ years, medium light (1.7), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -90,7 +90,7 @@ Light and social, just like the jury likes their {{% sdj %}}red games{{% /sdj %}
 Quite an old game by international standards, but it garnered its share of positive review. A breezy card game might just be what the jury is looking for!
 
 
-## #5: {{% game 300327 %}}The Castles of Tuscany{{% /game %}}
+### #5: {{% game 300327 %}}The Castles of Tuscany{{% /game %}}
 
 *2–4 players, 45–60 minutes, 10+ years, medium light (2.2), 89% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -99,7 +99,7 @@ Quite an old game by international standards, but it garnered its share of posit
 There's no doubt that the jury is a fan of [Stefan Feld](https://recommend.games/#/?designer=4958)'s work. {{% game 300327 %}}The Castles of Tuscany{{% /game %}} could earn him his first {{% sdj / %}} nomination.
 
 
-## #6: {{% game 274960 %}}Point Salad{{% /game %}}
+### #6: {{% game 274960 %}}Point Salad{{% /game %}}
 
 *2–6 players, 15–30 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -108,7 +108,7 @@ There's no doubt that the jury is a fan of [Stefan Feld](https://recommend.games
 By all accounts, this seems to be a light and fun card game that could well be in the jury's wheelhouse. I love the self-ironic title, but will the average gamer get the joke?
 
 
-## #7: {{% game 283864 %}}Trails of Tucana{{% /game %}}
+### #7: {{% game 283864 %}}Trails of Tucana{{% /game %}}
 
 *1–8 players, 15 minutes, 8+ years, light (1.3), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -117,7 +117,7 @@ By all accounts, this seems to be a light and fun card game that could well be i
 Yet another simple roll/flip'n'write. It reminds me a lot of last year's {{% game 270673 %}}Silver & Gold{{% /game %}} which I had high hopes for, but was completely ignored by the jury. Might not be the best omen for {{% game 283864 %}}Trails of Tucana{{% /game %}}.
 
 
-## #8: {{% game 299172 %}}The Key: Murder at the Oakdale Club{{% /game %}} & {{% game 299171 %}}Theft at Cliffrock Villa{{% /game %}}
+### #8: {{% game 299172 %}}The Key: Murder at the Oakdale Club{{% /game %}} & {{% game 299171 %}}Theft at Cliffrock Villa{{% /game %}}
 
 *1–4 players, 15–20 minutes, 8+ years, medium light (2.0), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -126,7 +126,7 @@ Yet another simple roll/flip'n'write. It reminds me a lot of last year's {{% gam
 One year after his smash hit {{% game 284083 %}}The Crew{{% /game %}}, [Thomas Sing](https://recommend.games/#/?designer=45563) might reach for {{% sdj / %}} this time. A real-time deduction game sure sounds like a winning combo!
 
 
-## #9: {{% game 300877 %}}New York Zoo{{% /game %}}
+### #9: {{% game 300877 %}}New York Zoo{{% /game %}}
 
 *1–5 players, 30–60 minutes, 10+ years, medium light (2.0), 96% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -135,7 +135,7 @@ One year after his smash hit {{% game 284083 %}}The Crew{{% /game %}}, [Thomas S
 Another puzzle game by [Uwe Rosenberg](https://recommend.games/#/?designer=10), this time filled to the brim with cute animals. Who could resist this proposition?
 
 
-## #10: {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
+### #10: {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
 
 *2–4 players, 60 minutes, 10+ years, medium light (1.7), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -153,7 +153,7 @@ As a very recent release, {{% game 326494 %}}Robin Hood{{% /game %}} doesn't hav
 {{% game 274841 %}}Cóatl{{% /game %}} -->
 
 
-## My two cents
+### My two cents
 
 Alright, that's what the algorithms say. But just like last year, I'd like to let my guts have some say as well. These are the three games I consider having the best shot at ending up on the jury's shortlist:
 
@@ -162,12 +162,12 @@ Alright, that's what the algorithms say. But just like last year, I'd like to le
 * **{{% game 299172 %}}The Key: Murder at the Oakdale Club{{% /game %}} & {{% game 299171 %}}Theft at Cliffrock Villa{{% /game %}}**
 
 
-# Candidates for {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}
+## Candidates for {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}
 
 {{< img src="ksdj-2021" size="x300" alt="Kennerspiel des Jahres 2021" >}}
 
 
-## #1: {{% game 281259 %}}The Isle of Cats{{% /game %}}
+### #1: {{% game 281259 %}}The Isle of Cats{{% /game %}}
 
 *1–4 players, 60–90 minutes, 8+ years, medium light (2.3), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -176,7 +176,7 @@ Alright, that's what the algorithms say. But just like last year, I'd like to le
 The Internet loves cats, and, apparently, so does the BGG crowd. Card drafting and tile laying combined with lots of cats – what's there not to like?
 
 
-## #2: {{% game 283155 %}}Calico{{% /game %}}
+### #2: {{% game 283155 %}}Calico{{% /game %}}
 
 *1–4 players, 30–45 minutes, 13+ years, medium light (2.2), 62% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -185,7 +185,7 @@ The Internet loves cats, and, apparently, so does the BGG crowd. Card drafting a
 More cats, more puzzling – I sense a theme here. {{% game 283155 %}}Calico{{% /game %}} is held in high regards as well, even for {{% sdj / %}} by some. It'll be exciting to see if the jury has it on their list, and, if so, on which.
 
 
-## #3: {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
+### #3: {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
 
 *1–4 players, 30–120 minutes, 12+ years, medium (2.8), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -194,7 +194,7 @@ More cats, more puzzling – I sense a theme here. {{% game 283155 %}}Calico{{% 
 This game seems to be on everybody's mind, and even though nobody seems excited by it, the consensus is that {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}} perfectly executes its combination of deckbuilding and worker placement.
 
 
-## #4: {{% game 224517 %}}Brass: Birmingham{{% /game %}}
+### #4: {{% game 224517 %}}Brass: Birmingham{{% /game %}}
 
 *2–4 players, 60–120 minutes, 14+ years, medium heavy (3.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -203,7 +203,7 @@ This game seems to be on everybody's mind, and even though nobody seems excited 
 Certainly a fan favourite, it climbed to #3 on BGG before it finally received a German release. It's definitely way too heavy to win {{% kdj %}}Kennerspiel{{% /kdj %}}, but that wouldn't stop the jury from recommending it.
 
 
-## #5: {{% game 283294 %}}Yukon Airways{{% /game %}}
+### #5: {{% game 283294 %}}Yukon Airways{{% /game %}}
 
 *1–4 players, 60–90 minutes, 14+ years, medium (2.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -212,7 +212,7 @@ Certainly a fan favourite, it climbed to #3 on BGG before it finally received a 
 The only thing on my mind about this game: Would the jury really award a game about flying after we've been collectively grounded for over a year?
 
 
-## #6: {{% game 317311 %}}Switch & Signal{{% /game %}}
+### #6: {{% game 317311 %}}Switch & Signal{{% /game %}}
 
 *2–4 players, 45 minutes, 10+ years, medium light (2.2), 83% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -221,7 +221,7 @@ The only thing on my mind about this game: Would the jury really award a game ab
 Train games have a long tradition in board gaming, but {{% game 317311 %}}Switch & Signal{{% /game %}} is the first one I know of to approach the topic co-operatively. Colour me intrigued.
 
 
-## #7: {{% game 300531 %}}Paleo{{% /game %}}
+### #7: {{% game 300531 %}}Paleo{{% /game %}}
 
 *1–4 players, 45–60 minutes, 10+ years, medium (2.6), 88% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -230,7 +230,7 @@ Train games have a long tradition in board gaming, but {{% game 317311 %}}Switch
 {{% game 300531 %}}Paleo{{% /game %}} already received so much love for the game, and so much criticism for the rule book. The jury is known to exclude games when they just put an undue burden on the players to learn, but in this case the qualities of the game probably win.
 
 
-## #8: {{% game 281075 %}}Welcome to New Las Vegas{{% /game %}}
+### #8: {{% game 281075 %}}Welcome to New Las Vegas{{% /game %}}
 
 *1–50 players, 35 minutes, 10+ years, medium (2.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -239,7 +239,7 @@ Train games have a long tradition in board gaming, but {{% game 317311 %}}Switch
 The jury ignored the original {{% game 233867 %}}Welcome To…{{% /game %}}, but will it notice this more complex version set in Nevada?
 
 
-## #9: {{% game 286096 %}}Tapestry{{% /game %}}
+### #9: {{% game 286096 %}}Tapestry{{% /game %}}
 
 *1–5 players, 90–120 minutes, 12+ years, medium (2.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -248,7 +248,7 @@ The jury ignored the original {{% game 233867 %}}Welcome To…{{% /game %}}, but
 Stonemaier Games sure knows how to put out beautful products, but I think in the case of {{% game 286096 %}}Tapestry{{% /game %}} the result is just too big and too expensive for a {{% kdj / %}}.
 
 
-## #10: {{% game 282954 %}}Paris{{% /game %}}
+### #10: {{% game 282954 %}}Paris{{% /game %}}
 
 *2–4 players, 90 minutes, 12+ years, medium (2.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -275,7 +275,7 @@ The K&K of board gaming show no signs of slowing down, and their latest brain ch
 {{% game 251247 %}}Barrage{{% /game %}} -->
 
 
-## My two cents
+### My two cents
 
 Finally, here are my three top candidates for a spot on the shortlist for {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}:
 
@@ -286,12 +286,12 @@ Finally, here are my three top candidates for a spot on the shortlist for {{% kd
 Again, I think this is another year of fantastic games, so competition for the awards will be fierce. I'm certainly looking forward to learning if the jury agrees with my (algorithm's) assessment!
 
 
-# Honourable mentions
+## Honourable mentions
 
 Last but not least I want to send you off with a couple of games that didn't make the algorithm's cut, but are still interesting in their own rights and might end up amongst the recommendations:
 
 
-## {{% sdj / %}}
+### {{% sdj / %}}
 
 * {{% game 276498 %}}Paris: La Cité de la Lumière{{% /game %}}: Highly rated by the algorithm, but no chance for the main award as a two-player-game.
 * {{% game 295948 %}}Aqualin{{% /game %}}: Ditto.
@@ -301,7 +301,7 @@ Last but not least I want to send you off with a couple of games that didn't mak
 * {{% game 288169 %}}The Fox in the Forest Duet{{% /game %}}: The competitive version has been recommended last year, so maybe the co-operative version has a chance this year.
 
 
-## {{% kdj / %}}
+### {{% kdj / %}}
 
 * {{% game 251247 %}}Barrage{{% /game %}}: A heavy-weight that might receive a recommendation.
 * {{% game 293014 %}}Nidavellir{{% /game %}}

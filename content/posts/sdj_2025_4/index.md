@@ -30,12 +30,12 @@ After [two]({{<ref "posts/sdj_2023_4/index.md">}}) [year]({{<ref "posts/sdj_2024
 Enough about the show though, let's look at the actual stars of the evening! 🤩
 
 
-# {{% sdj %}}Spiel des Jahres 2025{{% /sdj %}}
+## {{% sdj %}}Spiel des Jahres 2025{{% /sdj %}}
 
 {{< img src="sdj-2025" size="x300" alt="Spiel des Jahres 2025" >}}
 
 
-## {{% game 413246 %}}Bomb Busters{{% /game %}}
+### {{% game 413246 %}}Bomb Busters{{% /game %}}
 
 *2–5 players, 30 minutes, 10+ years, medium light (2.0)*
 
@@ -48,12 +48,12 @@ I think it's fair to say that {{% game 413246 %}}Bomb Busters{{% /game %}} has b
 Finally, it's worth noticing that before 2019, there were only two co-operative {{% sdj / %}} winners: {{% game 2511 %}}Sherlock Holmes: Consulting Detective{{% /game %}} (1985) and {{% game 98778 %}}Hanabi{{% /game %}} (2013). But since then five out of seven winners were co-operative: {{% game 254640 %}}Just One{{% /game %}} (2019), {{% game 318977 %}}MicroMacro{{% /game %}} (2021), {{% game 370591 %}}Dorfromantik{{% /game %}} (2023), {{% game 373106 %}}Sky Team{{% /game %}} (2024) and {{% game 413246 %}}Bomb Busters{{% /game %}} this year. Let's see if this trend continues in the next years – I'd be all for it. 🥰
 
 
-# {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}
+## {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}
 
 {{< img src="ksdj-2025" size="x300" alt="Kennerspiel des Jahres 2025" >}}
 
 
-## {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}}
+### {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}}
 
 *1–4 players, 60–120 minutes, 10+ years, medium (2.9)*
 
@@ -66,7 +66,7 @@ I clearly should've trusted my own courage and picked {{% game 367966 %}}Endeavo
 An interesting fact about this winner is that to my knowledge it's only the second time a re-implementation won one of the two "adult" awards, the first one being {{% game 6249 %}}Alhambra{{% /game %}} in 2003. (By my count there's three {{% kindersdj / %}} winners which re-implemented a grown up game, with plenty more of those having been nominated.)
 
 
-# Conclusion
+## Conclusion
 
 While I don't make predictions for the {{% kindersdj / %}} (simply because I have zero expertise), there's two things I'd like to mention here: First, my daughters watched the live stream with me and asked with every kids' game flashing on the screen what's the age limit and if they can play it (I think I'll solicit their advice next year to pick the winner from the nominees). Second, by winning {{% kindersdj / %}} with {{% game 423232 %}}Topp die Torte!{{% /game %}}, Wolfgang Warsch became the eighth designer to win two out the three different awards (tenth if you include the predecessor *Sonderpreis* winners). He already announced he's going to put his focus on being the first to complete the hat-trick now!
 

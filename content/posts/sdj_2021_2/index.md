@@ -38,12 +38,12 @@ tags:
 Let's dive straight into the nominations and recommendations, before we discuss how good (or bad) [my predictions]({{<ref "posts/sdj_2021/index.md">}}) were and if the [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}}) is any good.
 
 
-# Nominated for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}
+## Nominated for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}
 
 {{< img src="sdj-2021" size="x300" alt="Spiel des Jahres 2021" >}}
 
 
-## {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
+### {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
 
 *1–4 players, 15–45 minutes, 10+ years, light (1.1)*
 
@@ -54,7 +54,7 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 Kudos also to the publisher for timing the [announcement](https://twitter.com/spielwiese/status/1394285352660176898?s=20) of the sequel {{% game 338834 %}}MicroMacro: Full House{{% /game %}} perfectly! Interestingly, the next installment will include a form of content warning that should enable parents to decide if a particular case is suitable for their children. This system might remove the main obstacle for {{% game 318977 %}}MicroMacro{{% /game %}} to claim {{% sdj / %}}.
 
 
-## {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
+### {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
 
 *2–4 players, 60 minutes, 10+ years, medium light (1.7)*
 
@@ -63,7 +63,7 @@ Kudos also to the publisher for timing the [announcement](https://twitter.com/sp
 Another game that was on everybody's mind. It looks as though [Michael Menzel](https://recommend.games/#/?designer=11825) managed to capture the essence of {{% game 127398 %}}Andor{{% /game %}}'s narrative game experience with a system simple enough for the {{% sdj %}}red award{{% /sdj %}}.
 
 
-## {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}}
+### {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}}
 
 *2–4 players, 15–25 minutes, 8+ years, light (1.3)*
 
@@ -74,7 +74,7 @@ This game completely eluded me (as pretty much everybody else) – our algorithm
 Looking at the three nominations it's worth noticing that they are all co-operative. While it may seem plausible that people seek a bonding experience while they're locked inside due to a raging pandemic, these games have of course been in the development for years. Generally, co-operatives have been on the rise for years now, so those three nominations shouldn't come as a surprise, but the natural crescendo of a long term trend.
 
 
-## {{% sdj / %}} recommendations
+### {{% sdj / %}} recommendations
 
 * {{% game 318195 %}}Biss 20{{% /game %}}: This one was at least #30 on the predictions list. Another light co-operative game, very much in keeping with this year's theme!
 * {{% game 267378 %}}Chakra{{% /game %}}: Completely missed this one – BGG's release year is 2019, but the German edition just came out, so it slipped under my radar.
@@ -83,12 +83,12 @@ Looking at the three nominations it's worth noticing that they are all co-operat
 * {{% game 322039 %}}The Key: Sabotage at Lucky Llama Land{{% /game %}}: I had its two other cousins on my nominations list who have more ratings and hence are much more visible to the recommender. I'd like to learn the jury's reasoning for picking this game in particular out of a series of three. (And counting?) 🤷
 
 
-# Nominated for {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}
+## Nominated for {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}
 
 {{< img src="ksdj-2021" size="x300" alt="Kennerspiel des Jahres 2021" >}}
 
 
-## {{% game 223040 %}}Fantasy Realms{{% /game %}}
+### {{% game 223040 %}}Fantasy Realms{{% /game %}}
 
 *3–6 players, 20 minutes, 14+ years, medium light (1.7)*
 
@@ -97,7 +97,7 @@ Looking at the three nominations it's worth noticing that they are all co-operat
 Our algorithm was 100% sure {{% game 223040 %}}Fantasy Realms{{% /game %}} wasn't a {{% kdj %}}Kennerspiel{{% /kdj %}}. 😅 (More on that below.) After publishing my predictions, I read more praise by jury members, and realised how well it suits their criteria, so in the end it wasn't a surprise to see it nominated – just on this particular list.
 
 
-## {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
+### {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
 
 *1–4 players, 30–120 minutes, 12+ years, medium (2.8)*
 
@@ -106,7 +106,7 @@ Our algorithm was 100% sure {{% game 223040 %}}Fantasy Realms{{% /game %}} wasn'
 {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}} has already made its way into the BGG's top 100, and the jury clearly agrees with this assessment. While it's quite heavy for one of the awards, it's still lighter than some previous winners (though that hasn't happened since 2013's {{% game 127398 %}}Andor{{% /game %}}), so don't write if off just yet.
 
 
-## {{% game 300531 %}}Paleo{{% /game %}}
+### {{% game 300531 %}}Paleo{{% /game %}}
 
 *1–4 players, 45–60 minutes, 10+ years, medium (2.6)*
 
@@ -115,7 +115,7 @@ Our algorithm was 100% sure {{% game 223040 %}}Fantasy Realms{{% /game %}} wasn'
 Not to brag, but I called this one [months ago](https://twitter.com/recommend_games/status/1331118405810786311?s=20). 🧐 The jury did complain about many rule books this year not being properly tested, and while they didn't mention {{% game 300531 %}}Paleo{{% /game %}} specifically, after all the discussions before the announcements that one was clearly on their mind. In the end, the game's strengths clearly outweight those obstacles.
 
 
-## {{% kdj / %}} recommendations
+### {{% kdj / %}} recommendations
 
 * {{% game 191189 %}}Aeon's End{{% /game %}}: This game has been around for some time and earned itself a strong fan base, so a recommendation by the jury was a fairly safe bet.
 * {{% game 251247 %}}Barrage{{% /game %}}: Definitely on the *very* heavy side even for a {{% kdj %}}Kennerspiel{{% /kdj %}}, yet [Udo Bartsch's high praises](https://rezensionen-fuer-millionen.blogspot.com/2021/02/wasserkraft.html) [🗄️](https://web.archive.org/web/https://rezensionen-fuer-millionen.blogspot.com/2021/02/wasserkraft.html) left no doubt about a recommendation.
@@ -123,12 +123,12 @@ Not to brag, but I called this one [months ago](https://twitter.com/recommend_ga
 * {{% game 291859 %}}Riftforce{{% /game %}}: I completely missed this one, as did the algorithm, placing it at position 81. At least it classified it correctly as a {{% kdj %}}Kennerspiel{{% /kdj %}} – with 51% confidence. 😰 The only pure two-player-game on either list, this proves how hard it is for lower player counts, even during a pandemic induced shortage of playmates.
 
 
-# How good were the predictions?
+## How good were the predictions?
 
 This really is a drama in three acts: the decision of {{% kdj %}}Kennerspiel{{% /kdj %}} or not, the algorithm picking the longlist, and finally my guts picking the shortlist.
 
 
-## {{% kdj %}}Kennerspiel{{% /kdj %}} score
+### {{% kdj %}}Kennerspiel{{% /kdj %}} score
 
 When I introduced the [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}}) a couple of months ago, I didn't really have a good validation set to evaluate my model against. Now I do!
 
@@ -137,14 +137,14 @@ Out of the fifteen games on the longlist, the algorithm classified thirteen corr
 Anyways, *we live and we learn*, and the model has already been updated with the jury's latest decisions, so hopefully next year it'll work even better!
 
 
-## Longlist
+### Longlist
 
 I called eleven out of fifteen overall, with five out of eight for {{% sdj / %}} and six out of seven for {{% kdj / %}}. I reward myself a point for {{% game 322039 %}}The Key: Sabotage at Lucky Llama Land{{% /game %}} as I always treated them as a series. 🔑 Likewise I consider {{% game 191189 %}}Aeon's End{{% /game %}}, {{% game 251247 %}}Barrage{{% /game %}}, and {{% game 291457 %}}Gloomhaven{{% /game %}} as hits. Feel free to disagree.
 
 I'd say this really is a satifying result. [Last year]({{<ref "posts/sdj_2020_2/index.md">}}), I only called nine out of fifteen games on the longlists, so my approach is definitely moving into the right direction.
 
 
-## Shortlist
+### Shortlist
 
 Two out of three for both awards dead on, another game at least predicted for a recommendation – that's not too bad. 🧐 I will not deny that {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}} bothers me though since I hadn't even heard of that before.
 

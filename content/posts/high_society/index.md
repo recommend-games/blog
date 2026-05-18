@@ -31,7 +31,7 @@ This is where the maths comes in. While the strategy is way too deep to be easil
 Let's settle one important convention first though: In everything that follows, I'll only count the cards that are actually auctioned off. The last card is never auctioned off, so it doesn't count towards the game length. This means that the shortest possible game is 3 rounds long: this happens if all 4 dark cards are on top of the deck (very unlikely). The longest possible game on the other hand is 15 rounds long: this happens if the card at the bottom of the deck is dark and hence the 15 cards above it will be autioned off (actually pretty likely, as we shall see).
 
 
-## Simulation
+### Simulation
 
 It's really simple to simulate this situation. Just create a bunch of (virtual) decks of 16 cards each, colour 4 of them dark, then shuffle them. Now we just need to count where in each of the decks the 4th dark card is. If our sample was big enough, this gives us a really good approximation of the distribution of game lengths.
 
@@ -40,29 +40,29 @@ If you know a little bit of Python and the ubiquitous `numpy` library, you can d
 ```python
 import numpy as np
 
-# Set up the parameters
+## Set up the parameters
 num_cards = 16
 num_dark = 4
 num_games = 1_000_000
 rng = np.random.default_rng(seed=13)
 
-# Create the decks: num_games rows, num_cards columns
+## Create the decks: num_games rows, num_cards columns
 games = np.zeros((num_games, num_cards), dtype=bool)
-# Colour the last four columns in each row dark
+## Colour the last four columns in each row dark
 games[:, :num_dark] = True
-# Shuffle each row individually
+## Shuffle each row individually
 games = rng.permuted(games, axis=1, out=games)
 
-# Count the game lengths: in each row,
-# sum the number of dark cards revealed so far.
-# Every column where this cumulative sum is
-# less than the number of dark cards is a round of the game.
+## Count the game lengths: in each row,
+## sum the number of dark cards revealed so far.
+## Every column where this cumulative sum is
+## less than the number of dark cards is a round of the game.
 game_lengths = np.sum(np.cumsum(games, axis=1) < num_dark, axis=1)
 
-# Mean and standard deviation of the game lengths
+## Mean and standard deviation of the game lengths
 print(game_lengths.mean(), game_lengths.std())
 
-# Histogram the game lengths
+## Histogram the game lengths
 unique_lengths, length_counts = np.unique(game_lengths, return_counts=True)
 print(dict(zip(unique_lengths, length_counts / num_games)))
 ```
@@ -86,7 +86,7 @@ If you prefer the visual representation, here's a histogram of the game lengths:
 As promised, very short games are extremely rare, whilst long games are in fact the most common. This isn't necessarily what I would have expected when starting to think about this problem. I think there's a pretty good intuition for why this is the case, but it's instructive to examine the distribution from a more theoretic point of view first.
 
 
-## Hypergeometric distribution
+### Hypergeometric distribution
 
 If you've done your statistics 101, you've indubitably come across questions about poker hands. E.g., how likely is it to get a flush when drawing 5 cards out of a standard deck of 52? The answer to this question can be calculated using the hypergeometric distribution. If you find the name intimidating, wait till you see the formula:
 
@@ -107,7 +107,7 @@ where \\(n \ge 4\\) to make sure the binomial coefficients are defined (I'll lea
 This is a nice closed form, but it's *a)* tedious to calculate as those factorials really do blow up and *b)* not particularly insightful. Can we do better?
 
 
-## Pedestrian, but insightful formula
+### Pedestrian, but insightful formula
 
 Did you notice above how \\(P(X = 15) = 25\\%\\) is such a nice round number? Maybe it's worth calculating this value in yet another way. So, what does it mean for the game to go over the full length? It means that the very last card has to be a dark one. What's the probability of this happening? Well, 4 out of 16 cards are dark, so there's a 1 in 4 chance of the last card being dark.
 
@@ -130,7 +130,7 @@ Again, if you feel bored, you can express this product in terms of the same fact
 So, are we finally done? Not quite, there's still another way of arriving at the same result, which is a bit more elegant and general.
 
 
-## Negative hypergeometric distribution
+### Negative hypergeometric distribution
 
 When playing with the hypergeometric distribution above, you might've stumbled across an important question we've ignored: is this even a proper distribution, i.e., do all those values sum up to 1? Those \\(p_\text{HG}(N, K, n; k)\\) assume you fix some parameters \\(N\\) (the number of cards), \\(K\\) (the number of dark cards), and \\(n\\) (the number of draws) and then run through all permissible values of \\(k\\) (the number of dark cards drawn). Summing \\(p_\text{HG}(N, K, n; k)\\) over all \\(k\\) for fixed parameters is guaranteed to give 1, but we've instead kept \\(k\\) fixed at 4 (i.e., draw all dark cards) and ranged \\(n\\) over all possible number of draws. Hasn't someone already figured out the details of this distribution?
 
