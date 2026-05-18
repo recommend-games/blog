@@ -40,29 +40,29 @@ If you know a little bit of Python and the ubiquitous `numpy` library, you can d
 ```python
 import numpy as np
 
-## Set up the parameters
+# Set up the parameters
 num_cards = 16
 num_dark = 4
 num_games = 1_000_000
 rng = np.random.default_rng(seed=13)
 
-## Create the decks: num_games rows, num_cards columns
+# Create the decks: num_games rows, num_cards columns
 games = np.zeros((num_games, num_cards), dtype=bool)
-## Colour the last four columns in each row dark
+# Colour the last four columns in each row dark
 games[:, :num_dark] = True
-## Shuffle each row individually
+# Shuffle each row individually
 games = rng.permuted(games, axis=1, out=games)
 
-## Count the game lengths: in each row,
-## sum the number of dark cards revealed so far.
-## Every column where this cumulative sum is
-## less than the number of dark cards is a round of the game.
+# Count the game lengths: in each row,
+# sum the number of dark cards revealed so far.
+# Every column where this cumulative sum is
+# less than the number of dark cards is a round of the game.
 game_lengths = np.sum(np.cumsum(games, axis=1) < num_dark, axis=1)
 
-## Mean and standard deviation of the game lengths
+# Mean and standard deviation of the game lengths
 print(game_lengths.mean(), game_lengths.std())
 
-## Histogram the game lengths
+# Histogram the game lengths
 unique_lengths, length_counts = np.unique(game_lengths, return_counts=True)
 print(dict(zip(unique_lengths, length_counts / num_games)))
 ```
