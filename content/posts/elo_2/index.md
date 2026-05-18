@@ -11,21 +11,21 @@ tags:
   - Snooker
 ---
 
-# Welcome to the Crucible
+## Welcome to the Crucible
 
 This blog is usually all about board games, but let's stretch the definition just a little: snooker is, after all, one of the most widely followed tabletop games in the world. And with the World Championship kicking off at the Crucible Theatre in Sheffield, I couldn't resist the excuse to dive into something a bit different.
 
 In the [last article]({{<ref "posts/elo_1/index.md">}}), we looked at how Elo ratings can be used to measure player strength over time. This time, we'll take it a step further: using historical match data, a bit of Python, and a lot of simulated tournaments, we'll try to predict who's most likely to lift the trophy this year. We'll also compare our predictions to what the betting markets say – and see whether the wisdom of the crowd agrees with the cold logic of the model.
 
 
-# Building the model: Elo meets the baize
+## Building the model: Elo meets the baize
 
-## Decades of data
+### Decades of data
 
 So, let's break off and finally calculate some Elo ratings. For this, [snooker.org](https://www.snooker.org/index.asp) kindly provided data of 68,260 matches from 2,163 events contested by 4,212 players, ranging from 1975 till last Wednesday, via their [API](https://api.snooker.org/). I've included as many matches as I could find, regardless of tour, ranking status or eligible player group, as long as they weren't team matches nor had any kind of inconsistency. For Elo calculations, it's important to sequence matches correctly, and some matches in the database weren't correctly labelled, but I did my best to get as clear data as possible. Note that I did not take frame score into account, but only cared about win/loss: since the match is stopped after a player reached the winning score and dead frames aren't played out, the exact scoreline has little bearing on predictions.[^snooker-predictions]
 
 
-## How Elo predicts the winners
+### How Elo predicts the winners
 
 To recap the actual calculations: all players start at an Elo rating of 0. (As mentioned before, it really could be any value, but we'll stick with the simplest one.) Using the ratings \\(r_A\\) and \\(r_B\\) before the match, we can predict *A*'s win probability \\(p_A\\) like this:
 
@@ -38,7 +38,7 @@ As usual, we can calculate *B*'s chances via \\(p_B=1-p_A\\), so we won't need t
 where \\(K\\) is the update factor I've set to 42 for the purpose of this exercise since it's the value that yields the most accurate predictions.[^42] (*Much* more on this in the [next article]({{<ref "posts/elo_3/index.md">}}#the-problem-with-k).)
 
 
-## Match by match: how ratings shift
+### Match by match: how ratings shift
 
 Let's look at some examples. Before the very first match in the database, Ray Reardon vs John Spencer on 1975-01-17, we didn't know anything about any player, so they all had the initial rating of 0. If you plug a rating difference of 0 into the formula, you'll see that we predict even chances of winning for both players (which makes perfect sense). John Spencer won that match, so we updated
 
@@ -49,7 +49,7 @@ His opponent got his rating reduced by the same amount[^zero-sum]: \\(r_{\text{R
 Let's take a look at one more match: the final of the most recent tournament, the 2025 Tour Championship, played between snooker legends John Higgins and Mark Selby, both with four world titles to their name. They went into the match with Elo ratings of 718.3 and 714.5, respectively. This means we would've predicted Higgins' win probability to be 50.5%. The match was indeed won by John Higgins, who gained \\(42\cdot(1-0.505)=20.8\\) points, whilst Mark Selby lost the same amount, for a new (and current) rating of 739.0 and 693.7, respectively.
 
 
-## Who's on top? Elo's current kings
+### Who's on top? Elo's current kings
 
 As mentioned, my code diligently carried out the Elo predictions and updates for every single match from 1975 till the 2025 World Championship Qualifiers earlier this week. These are the ten currently highest rated player:
 
@@ -71,7 +71,7 @@ By winning the 2025 Tour Championship, John Higgins claimed back the top spot he
 <!-- TODO: Link to full results -->
 
 
-## Rising stars and fading legends
+### Rising stars and fading legends
 
 It's fun to look back in time and check how players' ratings evolved over time: Who was the highest rated player of his time? When did his ratings rise and fall? Let's take a look across the decades:
 
@@ -121,7 +121,7 @@ Obviously, it was much easier to remain highest rated for a long time when there
 One final comment on the historical view of Elo ratings: you might have noticed that the values have generally increased over time. There's a number of factors at play – mostly the fact that there are a lot more players and matches these days, which give the top players more opportunities to collect points from weaker opponents. Remember that we chose \\(K\\) such that it the Elo system would have the best predictive power. Since the vast majority of the matches in the dataset were played in the last two decades or so, the ratings are tuned with a strong recency bias. Interpret historical Elo ratings with caution and remember that Elo is most descriptive within an active community of players.
 
 
-# 10 Million Tournaments Later…
+## 10 Million Tournaments Later…
 
 I thought it would be a fun application to use those Elo ratings we calculated to predict who will win the current World Championship. For this, I've run a bunch of simulated tournaments. The idea is quite simple: for each of the first round pairings in the draw, I compare the current Elo ratings of those two players, convert them into a win probability as described above, and toss a virtual coin in order to determine who proceeds to the second round. We apply the same principle to that and all the following rounds, until the final coin for the final is tossed and the winner of that simulation run is determined. I've run a total of 10 million simulated tournaments and counted how often each player won a simulation. Here are the results:
 
@@ -165,7 +165,7 @@ Unsurprisingly, the order strongly correlated with the Elo ranking we've seen ab
 Let's make some money with this knowledge, shall we? 💸
 
 
-## How does the market compare? Bookies vs model
+### How does the market compare? Bookies vs model
 
 > **Disclaimer**: This section discusses betting odds for the purpose of statistical comparison and analysis. It is not intended to promote gambling or serve as betting advice. Please gamble responsibly and be aware of your local laws and age restrictions.
 
@@ -219,7 +219,7 @@ I wouldn't bet my money on him, but as I said: I'm not the gambling kind. 🤷
 <!-- TODO: Link to full results -->
 
 
-# Final frame 🎱
+## Final frame 🎱
 
 I hope I made up for the absence of concrete examples from the last article. I'm certainly more excited than ever for 17 days of world class snooker. We'll see on May 5th if my predictions were worth anything.
 

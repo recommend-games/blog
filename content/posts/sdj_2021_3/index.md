@@ -39,7 +39,7 @@ It's time! On Monday, July 19, we will finally know which games won {{% sdj / %}
 
 Let's check out the nominees!
 
-# Nominated for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}
+## Nominated for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}
 
 {{< img src="sdj-2021" size="x300" alt="Spiel des Jahres 2021" >}}
 
@@ -53,7 +53,7 @@ Before we dive into the individual games, let's look at some numbers to see some
 
 Overall, {{% game 318977 %}}MicroMacro{{% /game %}} seems to be favourite, but will it survive our own scrutiny?
 
-## {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
+### {{% game 318977 %}}MicroMacro: Crime City{{% /game %}}
 
 *1–4 players, 15–45 minutes, 10+ years, light (1.1)*
 
@@ -71,7 +71,7 @@ Still, I'd like to make the argument that this *is*, in fact, a game. The standa
 
 But then again, it *really* doesn't matter anyways…
 
-## {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
+### {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}}
 
 *2–4 players, 60 minutes, 10+ years, medium light (1.7)*
 
@@ -86,7 +86,7 @@ If there's one drawback, it might be the price point. It retails at around 50€
 Further, it appears the designer chose a pretty traditional set of characters. This might please fans of the original stories, but for my taste I'd appreciated the courage for a more diverse representation in 2021. The jury wants to award a game for *everyone*, so any player should be able to see themselves in the game.
 
 
-## {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}}
+### {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}}
 
 *2–4 players, 15–25 minutes, 8+ years, light (1.3)*
 
@@ -97,14 +97,14 @@ There's no way around it, this is the dark horse amongst the nominations. Neithe
 The numbers don't look very good for this game, but then again, it had just been released and it doesn't really seem to be targeted at BGG's core demographics. But there is a serious obstacle to winning the main award: both the cartoon artwork and the "teenz" in the title suggest that this is a family game. And while many people will refer to the {{% sdj %}}red award{{% /sdj %}} as the "family game of the year", the jury will go through great length to avoid this term since, again, the {{% sdj / %}} is meant to be for *everyone* and that includes groups without children. Pinning the award on what appears to be a game for a young audience might exclude some loyal fans.
 
 
-## Who will win?
+### Who will win?
 
 I've been going back and forth on this – as you can tell, there's pros and cons for each of the nominees. In the end though, my money is on **{{% game 318977 %}}MicroMacro: Crime City{{% /game %}}** to win {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}, ahead of {{% game 326494 %}}The Adventures of Robin Hood{{% /game %}} on close second, with {{% game 310448 %}}Zombie Teenz Evolution{{% /game %}} in a respectable, but slightly more distant third place. The immediate access of {{% game 318977 %}}MicroMacro{{% /game %}} and potential shift in the perception what a game can be is just too enticing to pass.
 
 Still, any of the potential outcomes on July 19 wouldn't surprise me. It'll be exciting!
 
 
-# Nominated for {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}
+## Nominated for {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}
 
 {{< img src="ksdj-2021" size="x300" alt="Kennerspiel des Jahres 2021" >}}
 
@@ -119,7 +119,7 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 This promises an even closer race – the numbers certainly don't yield any clear favourites. 🤷
 
 
-## {{% game 223040 %}}Fantasy Realms{{% /game %}}
+### {{% game 223040 %}}Fantasy Realms{{% /game %}}
 
 *3–6 players, 20 minutes, 14+ years, medium light (1.7)*
 
@@ -132,7 +132,7 @@ It certainly has a lot going for itself. A quick card game with lots of winning 
 There is the issue of its bland theme and artwork. It doesn't have to be a negative though, as a generic setting might just mean lots of people will be open to playing a particular game. In this particular case, the artwork does feel pretty old-fashioned, including some of the more problematic tropes of the genre. When drawing in new gamers, appealing artwork is very important, so I really think this game could be a winner with better artwork.
 
 
-## {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
+### {{% game 312484 %}}Lost Ruins of Arnak{{% /game %}}
 
 *1–4 players, 30–120 minutes, 12+ years, medium (2.8)*
 
@@ -147,7 +147,7 @@ It also seems to draw some lukewarm responses from critics. While the execution 
 On that note: I've heard there's another Indiana Jones movie in the making – I smell a branded version of {{% game 312484 %}}Arnak{{% /game %}} soon… 🤠
 
 
-## {{% game 300531 %}}Paleo{{% /game %}}
+### {{% game 300531 %}}Paleo{{% /game %}}
 
 *1–4 players, 45–60 minutes, 10+ years, medium (2.6)*
 
@@ -164,7 +164,7 @@ The game is also on the heavier side of what's usually consider for the award, b
 One last sticking point might be player count. It's well compatible with usual {{% kdj %}}Kennerspiel{{% /kdj %}} metrics *as printed on the box*, but the rules start by saying that under no circumstances should you try this game for the first time with four players. That first play is really critical for a game that's supposed to reach a wide audience, so this caveat could prove costly.
 
 
-## Who will win?
+### Who will win?
 
 I'll contradict the BGG crowd and say that {{% game 312484 %}}Arnak{{% /game %}} has the lowest chance of winning {{% kdj %}}Kennerspiel{{% /kdj %}} – despite all its quality there seems to be no "hook" that would draw new players in. On the other hand, judging by the jury's statements, {{% game 223040 %}}Fantasy Realms{{% /game %}} would make a fabulous winner – if it came with a fresher, more appealing look… So, after all my praises, it's no surprise **{{% game 300531 %}}Paleo{{% /game %}}** is my favourite to win {{% kdj %}}Kennerspiel des Jahres 2021{{% /kdj %}}. However, I really do believe that all three nominees are very strong and have a realistic chance of winning.
 

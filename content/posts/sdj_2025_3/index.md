@@ -38,7 +38,7 @@ The waiting is finally coming to an end! On Sunday, July 13, the jury will annou
 I've been doing [this]({{<ref "posts/sdj_2020_3/index.md">}}) [for]({{<ref "posts/sdj_2021_3/index.md">}}) [five]({{<ref "posts/sdj_2022_3/index.md">}}) [years]({{<ref "posts/sdj_2023_3/index.md">}}) [now]({{<ref "posts/sdj_2024_3/index.md">}}) and I've called eight out of the ten winners correctly, with the second fail happening last year because I just didn't want to believe the jury would award {{% sdj / %}} to the two player game {{% game 373106 %}}Sky Team{{% /game %}}. Let's hope I'll do better this year, but it's again a tough choice!
 
 
-# Nominated for {{% sdj %}}Spiel des Jahres 2025{{% /sdj %}}
+## Nominated for {{% sdj %}}Spiel des Jahres 2025{{% /sdj %}}
 
 {{< img src="sdj-2025" size="x300" alt="Spiel des Jahres 2025" >}}
 
@@ -53,7 +53,7 @@ Before we dive into the individual games, let's look at some numbers to see some
 The numbers tell a clear story: {{% game 413246 %}}Bomb Busters{{% /game %}} is considered the high favourite to win {{% sdj %}}Spiel des Jahres 2025{{% /sdj %}}. It's also top of list for most pundits. But is this position justified? Let's dive into the details!
 
 
-## {{% game 413246 %}}Bomb Busters{{% /game %}}
+### {{% game 413246 %}}Bomb Busters{{% /game %}}
 
 *2–5 players, 30 minutes, 10+ years, medium light (2.0), prediction #1*
 
@@ -68,7 +68,7 @@ In the end, what matters is the jury thought this game is approachable enough to
 Another aspect that the jury reportedly doesn't care about, but which would be an important milestone in the internationalisation of the board game hobby, is that [Hisashi Hayashi](https://recommend.games/#/?designer=39436) could be the first designer from Asia to win any of the three awards. (Someone correct me please if I overlooked any of the previous winners.)
 
 
-## {{% game 420087 %}}Flip 7{{% /game %}}
+### {{% game 420087 %}}Flip 7{{% /game %}}
 
 *3–99 players, 20 minutes, 8+ years, light (1.1), prediction #21*
 
@@ -79,7 +79,7 @@ Another aspect that the jury reportedly doesn't care about, but which would be a
 After the nomination, I've read through the rules, and didn't really get what would be interesting about this game. Then I've tried it on [Board Game Arena](https://boardgamearena.com/gamepanel?game=flipseven) (BGA) – and I still don't get it. I've been told it develops a whole different dynamic at the table, with people cheering for every card flip – but the same is true for {{% game 2223 %}}UNO{{% /game %}}. {{% sdj / %}} was always meant to be an ambassador for *Kulturgut Spiel* – games as cultural assets – and I can't help but think that {{% game 420087 %}}Flip 7{{% /game %}} would be a failure at that. {{% game 420087 %}}Flip 7{{% /game %}} might have been a great winner in the 80s, but if the jury does decide to award it on Sunday, it would feel like denying the progress in game design in the past decades.
 
 
-## {{% game 419639 %}}Krakel Orakel{{% /game %}}
+### {{% game 419639 %}}Krakel Orakel{{% /game %}}
 
 *2–8 players, 30 minutes, 10+ years, light (1.1), prediction #7*
 
@@ -90,12 +90,12 @@ After the nomination, I've read through the rules, and didn't really get what wo
 Something of a wildcard amongst the nominations, still without English edition announced. I've mentioned in the previous article that as a drawing game for people who can't draw it has strong competition from {{% game 252526 %}}Pictomania{{% /game %}}. What I overlooked was the fact that this one's co-operative, reducing the hurdle for people to engage even further. Overall, this sounds like an appealing package to win {{% sdj / %}}, somewhat following along the line of winners we've had a couple of years ago, e.g., {{% game 254640 %}}Just One{{% /game %}} and {{% game 284108 %}}Pictures{{% /game %}}.
 
 
-## Who will win?
+### Who will win?
 
 I'll have to go with the herd here and say that any winner other than {{% game 413246 %}}Bomb Busters{{% /game %}} would be a surprise. I know {{% game 420087 %}}Flip 7{{% /game %}} has its fans, though I don't see the appeal, and {{% game 419639 %}}Krakel Orakel{{% /game %}} sure sounds nice, but I think the jury will continue the streak of favourite wins.
 
 
-# Nominated for {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}
+## Nominated for {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}
 
 {{< img src="ksdj-2025" size="x300" alt="Kennerspiel des Jahres 2025" >}}
 
@@ -110,7 +110,7 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 Those numbers look much closer than they did for {{% sdj %}}Spiel{{% /sdj %}}. Overall, the critical and geek response to {{% game 367966 %}}Endeavor{{% /game %}} is stronger, but {{% game 385761 %}}Faraway{{% /game %}} might be more up the jury's alley. Let's take a closer look at each nominee!
 
 
-## {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}}
+### {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}}
 
 *1–4 players, 60–120 minutes, 10+ years, medium (2.9), prediction #8*
 
@@ -123,7 +123,7 @@ It's another game I haven't played yet, though its predecessor has been sitting 
 In the end, no matter how enthusiastic the critical response to this game is, this big box with its myriad of icons might just be a tad too intimidating for the target audience of {{% kdj %}}Kennerspiel{{% /kdj %}}.
 
 
-## {{% game 385761 %}}Faraway{{% /game %}}
+### {{% game 385761 %}}Faraway{{% /game %}}
 
 *2–6 players, 15–30 minutes, 10+ years, medium light (1.9), prediction #3*
 
@@ -140,7 +140,7 @@ That said, it does play quickly and has some interesting decisions to offer, so 
 Or I'm just a little grumpy at this title for giving me an *Ohrwurm* of the [best worst song of all times](https://youtu.be/kEq12L_EE1U?si=BEg5ltlVkgvb9zsw)… 🤷
 
 
-## {{% game 410991 %}}Looot{{% /game %}}
+### {{% game 410991 %}}Looot{{% /game %}}
 
 *2–4 players, 35 minutes, 10+ years, medium light (2.1), prediction #30*
 
@@ -153,7 +153,7 @@ Another game I've only played on BGA and another one which I think is just fine.
 I probably sound more negative towards the game than I actually am – the game really seems to be fine – but the nomination did come as a bit of a surprise given that even the jury members seemed to be rather lukewarm on it.
 
 
-## Who will win?
+### Who will win?
 
 This is a really tough one. From the overall reviews, it seems {{% game 367966 %}}Endeavor{{% /game %}} would have the edge, but it also appears to be just outside what a {{% kdj %}}Kennerspiel{{% /kdj %}} usually demands of the players, so I'll put my money on {{% game 385761 %}}Faraway{{% /game %}}. Seeing {{% game 410991 %}}Looot{{% /game %}} win would be a huge surprise.
 

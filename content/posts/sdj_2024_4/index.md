@@ -30,12 +30,12 @@ This year’s show was… even longer… 😅 After [last year]({{<ref "posts/sd
 Anyways, trying not to fall into the same trap, here are the winners of {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2024{{% /kdj %}}!
 
 
-# {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}}
+## {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}}
 
 {{< img src="sdj-2024" size="x300" alt="Spiel des Jahres 2024" >}}
 
 
-## {{% game 373106 %}}Sky Team{{% /game %}}
+### {{% game 373106 %}}Sky Team{{% /game %}}
 
 *2 players, 15 minutes, 12+ years, medium light (2.0)*
 
@@ -52,12 +52,12 @@ I guess I was wrong. 😅 It goes to show that any perceived patterns in the jur
 Still, this remains a remarkable choice, because the award's family friendliness was the guiding principle behind the decisions over the past 45 years. It remains to be seen if the market is willing to go along with this new direction.
 
 
-# {{% kdj %}}Kennerspiel des Jahres 2024{{% /kdj %}}
+## {{% kdj %}}Kennerspiel des Jahres 2024{{% /kdj %}}
 
 {{< img src="ksdj-2024" size="x300" alt="Kennerspiel des Jahres 2024" >}}
 
 
-## {{% game 334986 %}}Daybreak{{% /game %}}
+### {{% game 334986 %}}Daybreak{{% /game %}}
 
 *1–4 players, 60–120 minutes, 10+ years, medium (3.0)*
 
@@ -70,7 +70,7 @@ Still, this remains a remarkable choice, because the award's family friendliness
 This is a great choice on so many levels. A fun game with a serious, yet not imposing, message, which *en passant* proves that the jury doesn't always just go with the safe and shallow choices. I can only hope this game will be found underneath countless Christmas trees this year, encourage some honest conversations about the climate crisis (and importantly, the solutions), and encourage more designers to tackle serious topics in their games.
 
 
-# Conclusion
+## Conclusion
 
 Another year with two co-operative winners after [2021]({{<ref "posts/sdj_2021/index.md">}}), and two particularly complex ones by the last few years' standards. Maybe this saves us some of the annual "{{% sdj / %}} is only for kids and party games" discussions next year.
 

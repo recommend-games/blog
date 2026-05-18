@@ -32,12 +32,12 @@ tags:
 As every year, I'll let the algorithms speak. The predictions for the longlist come directly from the [recommendendations](https://recommend.games/#/?for=S_d_J&excludeRated=false&yearMin=2022&yearMax=2023) out of all eligible[^eligible] games. Our very own [Kennerspiel score]({{<ref "posts/kennerspiel/index.md">}}) is then used to sort those into their respective list of the top 10 contenders for either award. You can find the [detailed analysis here](predictions.py) and [complete results here](predictions.csv). But without further ado, here are the favourite games to win {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}.
 
 
-# Candidates for {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}
+## Candidates for {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}
 
 {{< img src="sdj-2023" size="x300" alt="Spiel des Jahres 2023" >}}
 
 
-## #1: {{% game 353545 %}}Next Station: London{{% /game %}}
+### #1: {{% game 353545 %}}Next Station: London{{% /game %}}
 
 *1–4 players, 25–30 minutes, 8+ years, light (1.4), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -46,7 +46,7 @@ As every year, I'll let the algorithms speak. The predictions for the longlist c
 Draw tube lines to cross the Thames and connect London.
 
 
-## #2: {{% game 364073 %}}Splendor Duel{{% /game %}}
+### #2: {{% game 364073 %}}Splendor Duel{{% /game %}}
 
 *2 players, 30 minutes, 10+ years, medium light (2.0), 70% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -55,7 +55,7 @@ Draw tube lines to cross the Thames and connect London.
 Renaissance merchants go head to head to please nobility.
 
 
-## #3: {{% game 354729 %}}Wonder Woods{{% /game %}}
+### #3: {{% game 354729 %}}Wonder Woods{{% /game %}}
 
 *2–5 players, 20–25 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -64,7 +64,7 @@ Renaissance merchants go head to head to please nobility.
 Use bluff and deduction in order to find the best mushroom spots.
 
 
-## #4: {{% game 297658 %}}[kosmopoli:t]{{% /game %}}
+### #4: {{% game 297658 %}}[kosmopoli:t]{{% /game %}}
 
 *4–8 players, 6 minutes, 10+ years, light (1.3), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -73,7 +73,7 @@ Use bluff and deduction in order to find the best mushroom spots.
 Cooperative Kitchen Work serving client from all over the world.
 
 
-## #5: {{% game 357563 %}}Akropolis{{% /game %}}
+### #5: {{% game 357563 %}}Akropolis{{% /game %}}
 
 *2–4 players, 20–30 minutes, 8+ years, medium light (1.8), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -82,7 +82,7 @@ Cooperative Kitchen Work serving client from all over the world.
 Build your Greek city on multiple levels to keep your districts perfectly placed.
 
 
-## #6: {{% game 356742 %}}KuZOOkA{{% /game %}}
+### #6: {{% game 356742 %}}KuZOOkA{{% /game %}}
 
 *2–6 players, 30–45 minutes, 8+ years, medium light (2.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -91,7 +91,7 @@ Build your Greek city on multiple levels to keep your districts perfectly placed
 Discover the most promising escape option and break out of the zoo.
 
 
-## #7: {{% game 367047 %}}Caldera Park{{% /game %}}
+### #7: {{% game 367047 %}}Caldera Park{{% /game %}}
 
 *1–4 players, 30–40 minutes, 10+ years, medium light (2.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -100,7 +100,7 @@ Discover the most promising escape option and break out of the zoo.
 Take care of animals in your park by forming big herds and avoiding bad weather.
 
 
-## #8: {{% game 324914 %}}Inside Job{{% /game %}}
+### #8: {{% game 324914 %}}Inside Job{{% /game %}}
 
 *2–5 players, 20–30 minutes, 10+ years, medium light (1.7), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -109,7 +109,7 @@ Take care of animals in your park by forming big herds and avoiding bad weather.
 Agents work together to complete missions and gather intel but who's "The Insider"?
 
 
-## #9: {{% game 266830 %}}QE{{% /game %}}
+### #9: {{% game 266830 %}}QE{{% /game %}}
 
 *3–5 players, 45 minutes, 8+ years, medium light (1.6), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -118,7 +118,7 @@ Agents work together to complete missions and gather intel but who's "The Inside
 Bid ANYTHING to bail out companies, but just don’t bid the MOST!
 
 
-## #10: {{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}
+### #10: {{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}
 
 *1–6 players, 30–60 minutes, 8+ years, medium light (1.7), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -127,12 +127,12 @@ Bid ANYTHING to bail out companies, but just don’t bid the MOST!
 Experience the peaceful and relaxed atmosphere of the video game on your table.
 
 
-# Candidates for {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
+## Candidates for {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
 
 {{< img src="ksdj-2023" size="x300" alt="Kennerspiel des Jahres 2023" >}}
 
 
-## #1: {{% game 364186 %}}Terra Nova{{% /game %}}
+### #1: {{% game 364186 %}}Terra Nova{{% /game %}}
 
 *2–4 players, 60–90 minutes, 12+ years, medium (2.8), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -141,7 +141,7 @@ Experience the peaceful and relaxed atmosphere of the video game on your table.
 Control one of ten asymmetric factions in a streamlined version of Terra Mystica.
 
 
-## #2: {{% game 177478 %}}IKI{{% /game %}}
+### #2: {{% game 177478 %}}IKI{{% /game %}}
 
 *2–4 players, 60–90 minutes, 14+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -150,7 +150,7 @@ Control one of ten asymmetric factions in a streamlined version of Terra Mystica
 Hire artisans, set them up in the market and acquire prestige in feudal Japan.
 
 
-## #3: {{% game 336986 %}}Flamecraft{{% /game %}}
+### #3: {{% game 336986 %}}Flamecraft{{% /game %}}
 
 *1–5 players, 60 minutes, 10+ years, medium light (2.2), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -159,7 +159,7 @@ Hire artisans, set them up in the market and acquire prestige in feudal Japan.
 In a magical realm a village awakes, and artisan dragons make coffee and cakes!
 
 
-## #4: {{% game 362452 %}}Atiwa{{% /game %}}
+### #4: {{% game 362452 %}}Atiwa{{% /game %}}
 
 *1–4 players, 30–120 minutes, 12+ years, medium (2.7), 99% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -168,7 +168,7 @@ In a magical realm a village awakes, and artisan dragons make coffee and cakes!
 Choose your actions carefully as you balance the needs of the community and nature.
 
 
-## #5: {{% game 351913 %}}Tiletum{{% /game %}}
+### #5: {{% game 351913 %}}Tiletum{{% /game %}}
 
 *1–4 players, 60–100 minutes, 14+ years, medium (3.4), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -177,7 +177,7 @@ Choose your actions carefully as you balance the needs of the community and natu
 Use dice for resources and actions to gain riches in the Renaissance.
 
 
-## #6: {{% game 369880 %}}Beer & Bread{{% /game %}}
+### #6: {{% game 369880 %}}Beer & Bread{{% /game %}}
 
 *2 players, 30–45 minutes, 10+ years, medium light (2.4), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -186,7 +186,7 @@ Use dice for resources and actions to gain riches in the Renaissance.
 Two villages face off in the traditions of brewing beer and baking bread.
 
 
-## #7: {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
+### #7: {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
 
 *1–4 players, 45 minutes, 14+ years, medium light (2.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -195,7 +195,7 @@ Two villages face off in the traditions of brewing beer and baking bread.
 Explore strange lands, establish trade routes, and search for treasure.
 
 
-## #8: {{% game 335275 %}}Whirling Witchcraft{{% /game %}}
+### #8: {{% game 335275 %}}Whirling Witchcraft{{% /game %}}
 
 *2–5 players, 15–30 minutes, 14+ years, medium light (1.8), 98% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -204,7 +204,7 @@ Explore strange lands, establish trade routes, and search for treasure.
 Use your recipes to generate ingredients and overflow your opponent's cauldron.
 
 
-## #9: {{% game 339906 %}}The Hunger{{% /game %}}
+### #9: {{% game 339906 %}}The Hunger{{% /game %}}
 
 *2–6 players, 60 minutes, 12+ years, medium light (2.3), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -213,7 +213,7 @@ Use your recipes to generate ingredients and overflow your opponent's cauldron.
 As a vampire, you want to hunt humans, but you must return home before sunrise…
 
 
-## #10: {{% game 293835 %}}Oltréé{{% /game %}}
+### #10: {{% game 293835 %}}Oltréé{{% /game %}}
 
 *2–4 players, 60–120 minutes, 8+ years, medium light (2.4), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -222,26 +222,26 @@ As a vampire, you want to hunt humans, but you must return home before sunrise�
 Rangers help local communities and defend their Kingdom in order to restore hope.
 
 
-# My two cents
+## My two cents
 
 This is where I usually take the algorithmic predictions for the longlists and pick three games each that I think the jury will nominate. But this year, I'll proceed a little different – because I don't agree with the algorithms all that much… 🙈 So I'll go pretty freestyle with my predictions for the nominees, both with picks from outside the algorithm's top 10 and contradicting the Kennerspiel score. 😅
 
 
-## My predictions for nominees for {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}
+### My predictions for nominees for {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}
 
 * {{% game 359970 %}}Challengers!{{% /game %}}
 * {{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}
 * {{% game 356742 %}}KuZOOkA{{% /game %}}
 
 
-## My predictions for nominees for {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
+### My predictions for nominees for {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
 
 * {{% game 368954 %}}Council of Shadows{{% /game %}}
 * {{% game 258779 %}}Planet Unknown{{% /game %}}
 * {{% game 266830 %}}QE{{% /game %}}
 
 
-# Honourable mentions
+## Honourable mentions
 
 Lastly, let me squeeze in a few more titles in order to increase my chance of covering the whole list. Since I've already turned my back on my own algorithms, let me just throw out a few more title I think it might have missed… 😉
 
@@ -250,7 +250,7 @@ Lastly, let me squeeze in a few more titles in order to increase my chance of co
 * {{% game 341530 %}}Super Mega Lucky Box{{% /game %}}
 
 
-# Conclusion
+## Conclusion
 
 As you can tell from the somewhat uncommon way I picked the predictions for the shortlist, I feel like there are much fewer "obvious" candidates than in previous year – in particular for {{% kdj %}}Kennerspiel{{% /kdj %}}, which is weird, since that's usually the award where us board game nerds are much more up-to-date.
 

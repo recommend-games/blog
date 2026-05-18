@@ -53,7 +53,7 @@ Let's start from the easier of the two, the value of the dummy ratings. It is co
 
 The other value, the *number* of dummy ratings, requires more work. Because some of the details and data are unknown, we cannot actually pin down the exact number that BGG is using. Instead, we'll try three different approaches, and compare their results.
 
-# Formula
+## Formula
 
 On the surface, this should be super easy to solve: in the formula above, we know every single value but the number of dummy ratings. BGG publishes the number of ratings, their arithmetic mean, and the "geek score" or Bayesian average for every game, and we know that the dummy value is 5.5. With a little high school algebra we solve the formula for *number of dummies*:
 
@@ -73,7 +73,7 @@ What's going on, why are the results so inconsistent? The problem is the ranking
 
 Still, clearly something is happening around the **1600 ratings** mark, so we are at least getting closer to an answer. If exact calculations won't work, maybe we can approximate the correct value instead?
 
-# Trial & error
+## Trial & error
 
 Let's take a step back here. What we're really trying to achieve here is not finding the exact formula for that mysterious "geek score", but rather recreate the BGG ranking. That is, we want to find the values in the above formula, such that the resulting ranking matches BGG's ranking as closely as possible. Luckily, statistics has all the tools we need. [Spearman correlation](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient) measures rank correlation – just what we need. This will be 1 if both rankings sort in exactly the same way, 0 if there's no relation, and -1 if they sort exactly the opposite way. Again, don't worry about the details, just trust the maths.
 
@@ -83,7 +83,7 @@ What we can do now is fairly simply and quickly compute the rankings for differe
 
 The best correlation of around 0.996 is achieved with **1488 dummy ratings**. However, it is worth noticing that the changes in the correlation are very, *very* small throughout the range we examined here (1000 to 2500), so let's dig still a little deeper.
 
-# Optimisation
+## Optimisation
 
 What we have here at hand is actually a classic optimisation task: a real valued function in one unknown (or two if we allow a variable dummy value as well) which we'd like to maximise. This is a well-studied field, with many fast and simple implementations that provide us the solution in no time. Unsuprisingly, we get the same result as above: the best possible correlation is 0.996 with around **1488 dummy ratings**.
 
@@ -96,7 +96,7 @@ Let's take one last swing and see what happens if we don't fix the dummy value a
 
 Either of those improvements in the performance metrics are hardly noticable (in fact insible after rounding), but they do confirm nicely a dummy value of 5.5.
 
-# Conclusion
+## Conclusion
 
 All things consider, we can be confident that BoardGameGeek calculates their rankings by adding around **1500 to 1600 dummy ratings of 5.5** to the regular users' ratings. What exactly constitutes a regular user, and what ratings might be discarded due to shilling, remains a well guarded secret though. Note that the number of dummies is pegged to the overall number of ratings, so this is a moving target, and the calculations would change as time passes.
 
@@ -104,11 +104,11 @@ Now I must applaud anybody who actually made it all the way through this pretty 
 
 In this particular case, I have the feeling that both the Cult of the New™ and connoisseurs of classic games are equally unhappy about the BGG top 100, which one should probably consider a compliment.
 
-# Alternative rankings
+## Alternative rankings
 
 I'll send you off with some rankings that were obtained by making different choices for the two values that we discussed throughout this article: the number of dummy ratings and their value.
 
-## Using the ratings average as dummy value
+### Using the ratings average as dummy value
 
 I've mentioned before that the average rating across all games is around 7 – a little[^min-votes] more precisely 7.08278. What if we chose that as the dummy rating, but left their number at 1600? The result should be a ranking that is a little friendlier to newer titles with fewer ratings as their score isn't dragged all the way down to 5.5 in the beginning.
 
@@ -125,7 +125,7 @@ I've mentioned before that the average rating across all games is around 7 – a
 
 Sure enough, the brand new {{% game 291457 %}}Jaws of the Lion{{% /game %}} with less than 3000 ratings already shows up in the top 10. The other game that sticks out here is {{% game 55690 %}}Kingdom Death: Monster{{% /game %}}. This Kickstarter success story clearly attracted a lot of enthusiasts, but not necessarily the mass.
 
-## Using the top 250 number of ratings
+### Using the top 250 number of ratings
 
 Just like IMDb publishes only their top 250 movies, we can consider the same and crank up the number of dummy ratings. A good number seems to be the 250th most rated game on BGG, which has been rated 12,014 times. Using BGG's standard dummy value of 5.5, we obtain a ranking that is much more skewed towards proven classics:
 
@@ -142,7 +142,7 @@ Just like IMDb publishes only their top 250 movies, we can consider the same and
 
 The most recent release on this list is {{% game 174430 %}}Gloomhaven{{% /game %}}, but we also meet again old BGG #1's: {{% game 3076 %}}Puerto Rico{{% /game %}} and {{% game 31260 %}}Agricola{{% /game %}}.
 
-## Combining both!
+### Combining both!
 
 Finally, let's do what IMDb does (or used to do), and add to each game's ratings 12,014 dummy ratings of 7.08278:
 

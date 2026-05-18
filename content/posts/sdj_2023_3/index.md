@@ -38,7 +38,7 @@ The waiting is finally coming to an end! On Sunday, July 16, the jury will annou
 After [two]({{<ref "posts/sdj_2020_3/index.md">}}) [years]({{<ref "posts/sdj_2021_3/index.md">}}) of calling both winners correctly, I've missed the {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}} winner {{% game 295947 %}}Cascadia{{% /game %}} [last year]({{<ref "posts/sdj_2022_3/index.md">}}), so I hope I'll do better this year. 😎
 
 
-# Nominated for {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}
+## Nominated for {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}
 
 {{< img src="sdj-2023" size="x300" alt="Spiel des Jahres 2023" >}}
 
@@ -53,7 +53,7 @@ Before we dive into the individual games, let's look at some numbers to see some
 This looks like a head-to-head between {{% game 370591 %}}Dorfromantik{{% /game %}} and {{% game 353545 %}}Next Station: London{{% /game %}}. Or could this be an underdog win for {{% game 370164 %}}Fun Facts{{% /game %}}? Let's take a closer look at the nominees.
 
 
-## {{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}
+### {{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}
 
 *1–6 players, 30–60 minutes, 8+ years, medium light (1.7)*
 
@@ -68,7 +68,7 @@ But hidden in there is also my biggest concern: for me, {{% game 370591 %}}Dorfr
 One final question remains: Will the jury award {{% sdj / %}} to another comforting hex-tile-laying game one year after {{% game 295947 %}}Cascadia{{% /game %}}? They always claim that they don't concern themselves with such considerations, and the two games do play out quite differently. Still, the award is meant as an ambassador for the board gaming hobby, so highlighting the breadth of what a game could be beyond plopping hexes on the table yet again can't be entirely dismissed.
 
 
-## {{% game 370164 %}}Fun Facts{{% /game %}}
+### {{% game 370164 %}}Fun Facts{{% /game %}}
 
 *4–8 players, 30 minutes, 8+ years, light (1.0)*
 
@@ -79,7 +79,7 @@ The pitch of a party game that allows you to get to know your group, but in a co
 Still, I was a little surprised by the nomination. Whilst the reviews were by and large very positive, the game seems to work best with players you already somewhat know. In a fairly random group, the game can fall flat since you have no reference points to go on about when comparing one player's answer to another one's. A {{% sdj / %}} should work for anybody, so that caveat seems significant to me and puts {{% game 370164 %}}Fun Facts{{% /game %}} at some disadvantage in the competition for the red meeple.
 
 
-## {{% game 353545 %}}Next Station: London{{% /game %}}
+### {{% game 353545 %}}Next Station: London{{% /game %}}
 
 *1–4 players, 25–30 minutes, 8+ years, light (1.4)*
 
@@ -96,7 +96,7 @@ Also, there's zero interaction between players. (Yeah, I lied, I wasn't done.) L
 Again, not a bad game by any stretch, I just don't see it as {{% sdj / %}} material.
 
 
-## Who will win?
+### Who will win?
 
 Alright, I guess it doesn't come as a surprise that I don't think {{% game 353545 %}}Next Station: London{{% /game %}} will (or rather: should) win. As I already said, {{% game 370164 %}}Fun Facts{{% /game %}} is in some respects the perfect {{% sdj / %}}, still my money is on {{% game 370591 %}}Dorfromantik{{% /game %}}. It has a couple of things going for itself:
 
@@ -105,7 +105,7 @@ Alright, I guess it doesn't come as a surprise that I don't think {{% game 35354
 3. From a social aspect, maybe the strongest draw could be the promise of bringing video gamers into the analogue tabletop world. As an ambassador for the hobby, this could be the most valuable asset of them all.
 
 
-# Nominated for {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
+## Nominated for {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
 
 {{< img src="ksdj-2023" size="x300" alt="Kennerspiel des Jahres 2023" >}}
 
@@ -120,7 +120,7 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 The numbers clearly favour {{% game 258779 %}}Planet Unknown{{% /game %}} to win {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}. Will the jury agree with the wisdom of the crowd?
 
 
-## {{% game 359970 %}}Challengers!{{% /game %}}
+### {{% game 359970 %}}Challengers!{{% /game %}}
 
 *1–8 players, 45 minutes, 8+ years, medium light (1.8)*
 
@@ -135,7 +135,7 @@ But once that barrier is cleared, I think this is quite an exceptional game, cer
 Of course, there's a lot of luck and randomness involved, which can lead to frustrating moments, but this is a game that plays out so quickly that it's not a bug but a feature. There really are a lot of clever little design decisions in there which make this game sing. I'm certainly already excited to see how {{% game 390340 %}}Challengers! 2{{% /game %}} will stir up the formula.
 
 
-## {{% game 177478 %}}IKI{{% /game %}}
+### {{% game 177478 %}}IKI{{% /game %}}
 
 *2–4 players, 60–90 minutes, 14+ years, medium (3.0)*
 
@@ -148,7 +148,7 @@ I haven't played {{% game 177478 %}}IKI{{% /game %}} yet, so don't have much to 
 The last thing I'll have to say is that the complexity seems on the upper end of what the jury would consider for a {{% kdj %}}Kennerspiel{{% /kdj %}}. Not out of the question, but it does make a win for {{% game 177478 %}}IKI{{% /game %}} less likely.
 
 
-## {{% game 258779 %}}Planet Unknown{{% /game %}}
+### {{% game 258779 %}}Planet Unknown{{% /game %}}
 
 *1–6 players, 60–80 minutes, 10+ years, medium light (2.2)*
 
@@ -159,7 +159,7 @@ Another game I haven't played, but the buzz is quite strong. The combination of 
 By all means, the reviews are strong and both weight and length seem to hit the sweet spot of a {{% kdj %}}Kennerspiel{{% /kdj %}}, so {{% game 258779 %}}Planet Unknown{{% /game %}} is definitely a strong contender.
 
 
-## Who will win?
+### Who will win?
 
 I think it's clear that all three nominees are very strong and have a realistic chance of winning – none of them would be a big surprise. But in the end I'll go with the title that had the strongest reviews and was the frontrunner right from the start: {{% game 359970 %}}Challengers!{{% /game %}} It's the most unusual game amongst the nominees (which isn't necessarily something the jury cares about, see the very safe picks from last year), but I think in many respects it can push the public's perception of what a board game can be and do, which *is* something the jury cares about deeply. (At least I interpret their choises this way… 😉)
 

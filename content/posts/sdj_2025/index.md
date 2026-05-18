@@ -36,12 +36,12 @@ We have another year with some strong contenders. I think there's one clear nomi
 But without further ado, here are the favourite games to win {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}.
 
 
-# Candidates for {{% sdj %}}Spiel des Jahres 2025{{% /sdj %}}
+## Candidates for {{% sdj %}}Spiel des Jahres 2025{{% /sdj %}}
 
 {{< img src="sdj-2025" size="x300" alt="Spiel des Jahres 2025" >}}
 
 
-## #1: {{% game 411567 %}}The Gang{{% /game %}}
+### #1: {{% game 411567 %}}The Gang{{% /game %}}
 
 *3–6 players, 20 minutes, 10+ years, medium light (1.7), 89% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -50,7 +50,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *Bet together the order of your hands in Texas Hold'em Poker to win together.*
 
 
-## #2: {{% game 425235 %}}Point of View: Lost Places{{% /game %}}
+### #2: {{% game 425235 %}}Point of View: Lost Places{{% /game %}}
 
 *2–8 players, 60 minutes, 10+ years, light (1.0), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -59,7 +59,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *A cooperative-communicative game series with different points of view for everyone.*
 
 
-## #3: {{% game 393307 %}}Tower Up{{% /game %}}
+### #3: {{% game 393307 %}}Tower Up{{% /game %}}
 
 *2–4 players, 30–45 minutes, 8+ years, medium light (1.9), 87% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -68,7 +68,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *Architects compete against one another to construct the best buildings in town.*
 
 
-## #4: {{% game 416851 %}}Castle Combo{{% /game %}}
+### #4: {{% game 416851 %}}Castle Combo{{% /game %}}
 
 *2–5 players, 10–25 minutes, 10+ years, medium light (1.7), 86% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -77,7 +77,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *Draft people from the lower and upper city to create a valuable house.*
 
 
-## #5: {{% game 394338 %}}Chocolates{{% /game %}}
+### #5: {{% game 394338 %}}Chocolates{{% /game %}}
 
 *2–4 players, 15–20 minutes, 10+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -86,7 +86,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *Figure out as much as you can about your box of chocolates BEFORE tasting them!*
 
 
-## #6: {{% game 415836 %}}Slide{{% /game %}}
+### #6: {{% game 415836 %}}Slide{{% /game %}}
 
 *2–6 players, 15 minutes, 7+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -95,7 +95,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *Group numbers in your grid to make them disappear.*
 
 
-## #7: {{% game 419639 %}}Krakel Orakel{{% /game %}}
+### #7: {{% game 419639 %}}Krakel Orakel{{% /game %}}
 
 *2–8 players, 30 minutes, 10+ years, light (1.1), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -104,7 +104,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *Can you spot and reveal pictures in a tangle of lines?*
 
 
-## #8: {{% game 422732 %}}Agent Avenue{{% /game %}}
+### #8: {{% game 422732 %}}Agent Avenue{{% /game %}}
 
 *2–4 players, 10–20 minutes, 8+ years, light (1.4), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -113,7 +113,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *A blend of strategic bluffing and set collection in a whimsical spy world.*
 
 
-## #9: {{% game 412927 %}}Quando{{% /game %}}
+### #9: {{% game 412927 %}}Quando{{% /game %}}
 
 *2–6 players, 15 minutes, 8+ years, light (1.0), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -122,7 +122,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *Ditch cards from your hand as you aim to have the lowest score.*
 
 
-## #10: {{% game 402283 %}}Courtisans{{% /game %}}
+### #10: {{% game 402283 %}}Courtisans{{% /game %}}
 
 *2–5 players, 20–30 minutes, 8+ years, light (1.4), 91% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -131,12 +131,12 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *When the Queen holds her banquet, skullduggery is on the menu!*
 
 
-# Candidates for {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}
+## Candidates for {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}
 
 {{< img src="ksdj-2025" size="x300" alt="Kennerspiel des Jahres 2025" >}}
 
 
-## #1: {{% game 413246 %}}Bomb Busters{{% /game %}}
+### #1: {{% game 413246 %}}Bomb Busters{{% /game %}}
 
 *2–5 players, 30 minutes, 10+ years, medium light (2.0), 54% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -145,7 +145,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *Players defuse bombs by deducing and cutting unseen wires of different values.*
 
 
-## #2: {{% game 421006 %}}The Lord of the Rings: Duel for Middle-earth{{% /game %}}
+### #2: {{% game 421006 %}}The Lord of the Rings: Duel for Middle-earth{{% /game %}}
 
 *2 players, 30–45 minutes, 10+ years, medium light (2.1), 94% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -154,7 +154,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *Play as the Fellowship or Sauron and attempt to determine the fate of Middle-earth.*
 
 
-## #3: {{% game 385761 %}}Faraway{{% /game %}}
+### #3: {{% game 385761 %}}Faraway{{% /game %}}
 
 *2–6 players, 15–30 minutes, 10+ years, medium light (1.9), 67% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -163,7 +163,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *Explore a mysterious land and fulfill quests on your way back.*
 
 
-## #4: {{% game 240980 %}}Blood on the Clocktower{{% /game %}}
+### #4: {{% game 240980 %}}Blood on the Clocktower{{% /game %}}
 
 *6–21 players, 30–120 minutes, 15+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -172,7 +172,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *Deduce who the Demon is through logic and bluffing. Dead players still play.*
 
 
-## #5: {{% game 400314 %}}Apiary{{% /game %}}
+### #5: {{% game 400314 %}}Apiary{{% /game %}}
 
 *1–5 players, 60–90 minutes, 14+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -181,7 +181,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *Hyper-intelligent bees take to outer space to build, explore, and grow.*
 
 
-## #6: {{% game 410201 %}}Wyrmspan{{% /game %}}
+### #6: {{% game 410201 %}}Wyrmspan{{% /game %}}
 
 *1–5 players, 90 minutes, 14+ years, medium (2.8), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -190,7 +190,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *Build a cavernous sanctuary for dragons of all shapes and sizes!*
 
 
-## #7: {{% game 227935 %}}Wonderland's War{{% /game %}}
+### #7: {{% game 227935 %}}Wonderland's War{{% /game %}}
 
 *2–5 players, 45–125 minutes, 13+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -199,7 +199,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *The looking glass has shattered and war has come to Wonderland!*
 
 
-## #8: {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}}
+### #8: {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}}
 
 *1–4 players, 60–120 minutes, 10+ years, medium (2.9), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -208,7 +208,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *Lead your research institute to explore ocean depths and publish your findings!*
 
 
-## #9: {{% game 418059 %}}SETI: Search for Extraterrestrial Intelligence{{% /game %}}
+### #9: {{% game 418059 %}}SETI: Search for Extraterrestrial Intelligence{{% /game %}}
 
 *1–4 players, 40–160 minutes, 14+ years, medium heavy (3.8), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -217,7 +217,7 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *Search for signs of alien life by launching probes and analyzing distant signals.*
 
 
-## #10: {{% game 429293 %}}The Fellowship of the Ring: Trick-Taking Game{{% /game %}}
+### #10: {{% game 429293 %}}The Fellowship of the Ring: Trick-Taking Game{{% /game %}}
 
 *1–4 players, 20 minutes, 10+ years, medium light (2.0), 75% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -226,12 +226,12 @@ But without further ado, here are the favourite games to win {{% sdj / %}} and {
 *Travel from the Shire and overcome every obstacle as a team.*
 
 
-# My two cents
+## My two cents
 
 It's time for my picks for the nominations. The algorithms determined the longlist predictions, but my gut feeling takes over from here on.
 
 
-## My predictions for nominees for {{% sdj %}}Spiel des Jahres 2025{{% /sdj %}}
+### My predictions for nominees for {{% sdj %}}Spiel des Jahres 2025{{% /sdj %}}
 
 * {{% game 422732 %}}Agent Avenue{{% /game %}}
 * {{% game 411567 %}}The Gang{{% /game %}}
@@ -240,7 +240,7 @@ It's time for my picks for the nominations. The algorithms determined the longli
 There's at least five or six games amongst the predictions for the longlist that I could see being nominated, but I had to pick just three of them… 🤞
 
 
-## My predictions for nominees for {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}
+### My predictions for nominees for {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}}
 
 * {{% game 400314 %}}Apiary{{% /game %}}
 * {{% game 413246 %}}Bomb Busters{{% /game %}}
@@ -249,7 +249,7 @@ There's at least five or six games amongst the predictions for the longlist that
 Again, many more strong contenders than I could fit on the predictions list. {{% game 413246 %}}Bomb Busters{{% /game %}} is the candidate everybody is talking about, and I too am fairly certain it'll be nominated. Its Kennerspiel score is 54%, so I left it on the {{% kdj %}}anthracite{{% /kdj %}} list, though personally I think it'll end up on the {{% sdj %}}red{{% /sdj %}} one.
 
 
-# Conclusion
+## Conclusion
 
 Another year full of wonderful games – let's enjoy being spoiled for choice until the trade wars dry up the supplies. 🙈
 
