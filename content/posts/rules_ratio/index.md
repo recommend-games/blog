@@ -113,7 +113,7 @@ Instead, I suggest RRR: Residual Rules Ratio. The idea is to estimate the *expec
 Let's take this step by step. First we need to find said expected RR for a given weight. As usual, regression is our friend: we fit a simple model to explain RR in relationship to complexity. Since RR is a fraction between 0 and 1, we'll use a logistic model. Feeding the data into your favourite statistical software yields the fitted curve for the expected RR:
 
 \\[
-  \widehat\text{RR} = \sigma(0.3381 \cdot \text{complexity} - 1.6104),
+  \widehat{\text{RR}} = \sigma(0.3381 \cdot \text{complexity} - 1.6104),
 \\]
 
 where \\(\sigma\\) is the [sigmoid function](https://en.wikipedia.org/wiki/Sigmoid_function) we most recently encountered in the context of the [Elo ratings]({{<ref "posts/elo_1/index.md">}}).
@@ -141,7 +141,7 @@ In other words: the model expects a light game to have roughly a fifth of its th
 Equipped with this baseline, we can define the **Residual Rules Ratio** (RRR):
 
 \\[
-  \text{RRR} = \text{RR} - \widehat\text{RR}.
+  \text{RRR} = \text{RR} - \widehat{\text{RR}}.
 \\]
 
 The intuition behind RRR is that it measures how much more (or less) rules-focused forum activity a game attracts than its peers in the same “weight class”. Since both RR and \\(\widehat{\text{RR}}\\) are proportions, their difference is naturally expressed in percentage points. In a time-honoured scientific tradition, I suggest naming this unit **wem**:
