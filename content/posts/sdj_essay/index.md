@@ -13,7 +13,7 @@ tags:
 Some of you might have notices that I'm a bit of a {{% sdj / %}} fanboy. 🙃 Every year when the award season rolls around, the discussion about the purpose and the influence of {{% sdj / %}} comes up again. So I thought it's a good idea to collect my thoughts on the subject in one handy place I can easily reference in the future. 🤓
 
 
-# What's the purpose of {{% sdj / %}}?
+## What's the purpose of {{% sdj / %}}?
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
@@ -40,7 +40,7 @@ Maybe this is also a good place to answer the question if {{% sdj / %}} is the "
 So in that respect, {{% sdj / %}} *is* awarded to the best game of the year – best for the intended audience and purpose, according to the jury members. It certainly isn't the "best" game in any absolute sense – if there was one – nor the "best" according to the (largely) American hardcore gamers' ratings on BoardGameGeek. And of course, the jury will get things wrong – classics emerge over time, and not every winner will stand the test of time. They often only have a few weeks to play and discuss the games, so it'll be impossible to predict the long term appeal of a game in all cases. I'd say they have a strong track record regardless and built a strong reputation over the decades. 🏆
 
 
-# Who are the jury members?
+## Who are the jury members?
 
 Another crucial aspect to understand about {{% sdj / %}} is the jury: who are they, who appoints them and who gives them the right to hand out this award? The short answer to the last question is: nobody. The jury decides who their members and what the purpose of the awards should be. There's no supervisory board, no government agency, no industry association that has any say in the matter. The {{% sdj / %}} was founded by a group of journalists and game critics in 1978 who thought it would be useful to have an award that highlights great games to the public. Over the decades, the public has learnt to trust the jury's recommendations, and this trust really is the only currency the jury possesses. That's why they are very protective of their brand and will be very careful about any changes they might implement.
 
@@ -51,7 +51,7 @@ A very valid criticism of the jury is it's a very small group of people – not 
 One last thing to emphasise about the jury: they all do this as an unpaid side gig. An important part of the jury's self-image is their independence, which necessitates that they don't take money from the industry or any other institution. So, when people "demand" the jury should be doing this and be better at that: remember that they're only humans with families and day jobs who do this in their precious spare time.
 
 
-# The good old days…
+## The good old days…
 
 You'll frequently hear the complaints that {{% sdj / %}} has become too shallow, in particular since the introduction of the {{% kdj %}}Kennerspiel{{% /kdj %}} in 2011 – an award which in turn has become too simple in many gamers' eyes. Just quickly to that point: the jury made up the term {{% kdj %}}Kennerspiel{{% /kdj %}}, so they kind of get to decide what it means. It's often translated as *connoisseur game*, but that doesn't really capture its meaning. The name comes from *kennen*, i.e., it's an award for people who already *know* some games, no more, no less. As mentioned, the jury plays with a wide variety of people and they really experience when a game presents some hurdles of entry for some people, which is the much more important criterion that a game's "complexity". So we should really take their word for it what they label {{% kdj %}}Kennerspiel{{% /kdj %}}. (And it's not like they are inconsistent about it – there clearly are [some patterns]({{<ref "posts/kennerspiel/index.md">}}) to it. 🤓)
 
@@ -62,7 +62,7 @@ I don't have any evidence for either interpretation – maybe people were excite
 Overall, those years between 1996 and 2001 were hardly a golden age to be nostalgic about, but rather something of a questionable period. Luckily, the jury today operates much more transparently, is very careful about any financial commitment they make and will emphasise their independence every chance they get.
 
 
-# Does it represent the hobby?
+## Does it represent the hobby?
 
 Another frequent comment under any {{% sdj / %}} post is that it's irrelevant for "real gamers". First off: If this is true, why bother posting? Where does all the hate about something irrelevant come from? I know social media has trained us to state our opinion on everything all the time, even (or especially) when we don't have anything to add to the discussion, but seriously: silence is always an option. 🤫
 
@@ -85,7 +85,7 @@ And then there's of course the {{% kindersdj / %}}. While I'm not the target aud
 Finally, let's address the question if there should be an "expert game" category. This is a reasonable idea – after all, the [As d'Or](https://en.wikipedia.org/wiki/As_d'Or), often called the French equivalent of {{% sdj / %}} and the second most important award in board gaming, does have an expert category. (In fact, they introduced *initié*, their {{% kdj %}}Kennerspiel{{% /kdj %}}, only in 2022, six years after the *expert* category.) I'd be really curious to learn if {{% game 316554 %}}Dune: Imperium{{% /game %}}, {{% game 342942 %}}Ark Nova{{% /game %}} and {{% game 367517 %}}La Famiglia{{% /game %}}, the three most recent winners of the expert game award, actually saw a notable increase of their sales in France. The jury {{% sdj / %}} has always denied the necessity of such a category, arguing that expert gamers don't need the guidance they offer. Attention is a very limited resource, so any additional award would water down the others. The jury is laser focused on their mission promoting games to the public and an expert category would be a distraction from that. I agree: it would be one of those inward facing industry awards – interesting, for sure, but not as relevant to the wider public.
 
 
-# Do they fulfill their mission?
+## Do they fulfill their mission?
 
 After more than two thousand words it's probably high time for some kind of conclusion. 😅 The jury set a lofty goal for themselves: promoting *Kulturgut Spiel*. It's only fair to ask: Do they succeed? Where could they improve?
 
@@ -100,7 +100,7 @@ Still, if one takes the *Kulturgut Spiel* concept seriously and regards board ga
 Are those the right projects? Are they enough? Hard to say, obviously. One problem the (German) board game industry has been facing for some time is the lack of political organisation. There's no central lobby group and hence very little political attention to board gaming. The jury is probably the group with the most resources and clout to make a difference, but an independent group of a dozen volunteers is certainly not the right entity to shoulder this task. In the absence of a better alternative, many people turn to the {{% sdj / %}} jury and somewhat expect to turn their influence and financial means into miracles. That's a lot to ask from an award that simply set out to find the best game amongst a handful of releases back in the 70s!
 
 
-# Further reading & listening
+## Further reading & listening
 
 Since you've made it this far, it's safe to assume you're a proper {{% sdj / %}} nerd 🤓 (or hater 😢). Do yourself a favour and get a copy of [Everybody Wins by James Wallis](https://aconytebooks.com/shop/everybody-wins-the-greatest-board-games-ever-made-by-james-wallis/) [🗄️](https://web.archive.org/web/https://aconytebooks.com/shop/everybody-wins-the-greatest-board-games-ever-made-by-james-wallis/), possibly the best resource on the history of the world's most prestigious board game award. For coverage of the current award season, I hightly recommend the excellent [Five Games For Doomsday](https://fivegamesfordoomsday.com/) podcast. Ben Maddox recently released an [interview with the designer](https://youtu.be/gLEq5l4RfWY?si=pHwe9qF5Hpg0eKda) of 2024 nominee {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}} and I'm sure more are to come. His [discussion with Uli Blennemann](https://fivegamesfordoomsday.com/2024/05/29/the-spielworxx-bulletin-the-spiel-des-jahres-episode/) [🗄️](https://web.archive.org/web/https://fivegamesfordoomsday.com/2024/05/29/the-spielworxx-bulletin-the-spiel-des-jahres-episode/) contains some really interesting takes and inspired me to write this article. So really, they are to blame for this wall of text! 😜
 

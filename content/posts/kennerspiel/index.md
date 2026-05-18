@@ -30,7 +30,7 @@ This question was particularly pertinent in 2020 when four out of the six nomine
 
 Challenge accepted! Who needs humans when we can just deal with data instead? 🤓
 
-# Let's look at the data
+## Let's look at the data
 
 Since the introduction of {{% kdj %}}Kennerspiel des Jahres{{% /kdj %}} in 2011 there were a total of **90** games on the longlist for {{% sdj %}}Spiel des Jahres{{% /sdj %}} and **64** games for {{% kdj %}}Kennerspiel{{% /kdj %}}[^kennerspiel]. It's not a large amount of data to make any inferences on, but we'll try anyways.
 
@@ -58,7 +58,7 @@ So by all means, 2020 *did* contain a lot of games just on the border of the two
 
 Generally, this works pretty well for such a simple model (a linear function in two variables is first semester kind of stuff). But some games seem to really push far into the other side, e.g., {{% game 244522 %}}That's Pretty Clever!{{% /game %}} and {{% game 223953 %}}Kitchen Rush{{% /game %}}. Are there some other characteristics of those games that explain the jury's classification?
 
-# Can we do better?
+## Can we do better?
 
 Complexity and minimum age make a pretty powerful pair, but the only reason I picked two features is because we can nicely visualise everything in 2D. I don't know about you, but my brain can only handle three dimensions – on a good day…
 
@@ -93,7 +93,7 @@ So, let's take a look back at our problem games from before and check how much c
 
 This picture certainly has improved, and we're even classifying games like {{% game 244522 %}}That's Pretty Clever!{{% /game %}} (just about) and {{% game 223953 %}}Kitchen Rush{{% /game %}} right that caused us a lot of headaches before. However, {{% game 284083 %}}The Crew{{% /game %}} still eludes correct classification, and {{% game 125618 %}}Libertalia{{% /game %}} is so far off that I'd argue the jury simply got that one wrong…
 
-# But how does the model work?
+## But how does the model work?
 
 Our model takes the different features of a game as described above as input, multiplies each with a certain weight it learned by looking at all the games from previous year, sums those values up, and then yields a prediction in the form of a confidence (0–100%) score.
 
@@ -123,7 +123,7 @@ In the end, our evidence is a little thin – even after a decade of {{% kdj %}}
 
 "Not so fast!", you might say. "Aren't you simply overfitting here?" Why, yes, you're right. The dataset is so small that there's a high risk of fine tuning the model too much for the data we're seeing. And of course, it's **bad bad bad** to assess your model's performance with items it was trained on – that's just cheating. So let's test the model on some games it hadn't seen yet!
 
-# What about old games?
+## What about old games?
 
 Pre-2011 {{% sdj / %}} winners and nominees make a marvellous test set for this model. A lot of those games would be considered a {{% kdj %}}Kennerspiel{{% /kdj %}} by today's standards, so let's find out which ones.
 
@@ -170,7 +170,7 @@ Overall, according to our model, **9 out of 32** {{% sdj / %}} winners between 1
 
 {{< img src="shap_6249" alt="Alhambra force plot" >}} -->
 
-# (Kenner-)Spiel des Jahres 2021
+## (Kenner-)Spiel des Jahres 2021
 
 I'll send you off with a teaser for {{% sdj %}}Spiel des Jahres 2021{{% /sdj %}}. I've taken some of the [hottest contenders for the 2021 awards](https://recommend.games/#/?for=S_d_J&yearMin=2020&yearMax=2021&excludeOwned=false&playerCount=4&playerCountType=box&playTime=120&playTimeType=max&playerAge=16&playerAgeType=box) (as of the time of writing), and sort them by their {{% kdj %}}Kennerspiel{{% /kdj %}} score for your convenience.
 

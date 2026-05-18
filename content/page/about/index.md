@@ -4,19 +4,19 @@ date: 2020-04-26T12:00:00+03:00
 comments: false
 ---
 
-# Recommend.Games
+## Recommend.Games
 
 [**Recommend.Games**](https://recommend.games/) strives to recommend the best board games for you. We take the user ratings from [BoardGameGeek](https://boardgamegeek.com/) (BGG), apply some black magic, and present recommendations that suit you. Check out its own [About page](https://recommend.games/#/about) to learn more about the details!
 
 If you enjoy our work, please check out the [Donations]({{<ref "page/donations/index.md">}}) page or tell your friends about us.
 
 
-# Analysis Paralysis
+## Analysis Paralysis
 
 This blog takes the data we collect for [Recommend.Games](https://recommend.games/) and tries to answer insteresting questions with them (at least we think they are interesting). Everything we do is open source including work in progress, so you can get a sneak peek at upcoming articles on [GitLab](https://gitlab.com/recommend.games/blog). Better yet, you can contribute by fixing typos, suggesting new topics or even performing some analyses yourself!
 
 
-# Markus Shepherd
+## Markus Shepherd
 
 {{< img src="markus" size="x300" alt="Markus Shepherd" style="border-radius: 50%;" >}}
 

@@ -11,14 +11,14 @@ tags:
   - Snooker
 ---
 
-# A year in the making
+## A year in the making
 
 The 2026 World Snooker Championship is under way at the Crucible in Sheffield — a natural point to rerun the forecast from [last April]({{<ref "posts/elo_2/index.md">}}), when we put Elo on five decades of results and ran ten million tournament simulations. John Higgins led our list at 13.14%; Zhao Xintong was fourth at 10.58% but took the 2025 title and has stayed at or near the top of the ratings since.
 
 The methodology is unchanged — same formula, same full-draw simulation — with the working still laid out in the piece linked above. With another year of data the optimiser now prefers \\(K = 44.6\\) instead of 42, a nudge that barely shifts the picture.[^k-update] What *has* moved is twelve more months of results and the shape of the field. Here is where things stand.
 
 
-# The updated rankings
+## The updated rankings
 
 Here are the ten highest-rated players heading into the 2026 World Championship:
 
@@ -46,7 +46,7 @@ Zhao's curve tells the story of the decade so far: a rapid climb in 2021–22, t
 Also worth noting: Wu Yize (4th, a mere 240 career matches to his name) and Zhou Yuelong (5th) are the next wave of Chinese talent following Zhao into the top five. Joe O'Connor, who was sixth last year, has dropped well outside the top ten.
 
 
-# 10 million simulations, again
+## 10 million simulations, again
 
 Same as last year: following the actual draw, for each match I compare the two players' Elo ratings, convert them into a win probability, and simulate who goes through; that repeats for every round of the 32-player knockout until the final produces a champion. I ran 10 million such full tournaments. Because the simulation follows the actual draw, bracket position matters: two players with similar Elo can end up with very different win probabilities depending on their path — which is why Hawkins (10th by Elo) simulates slightly ahead of Wilson (6th).
 
@@ -91,7 +91,7 @@ Here are the results. In the Difference column, a negative value means the marke
 | Matthew Stevens   | 406.9 |      0.07% |        1514.00 |        617.0 |    −897.00 |
 | Antoni Kowalski   | 399.7 |      0.06% |        1605.65 |        843.0 |    −762.65 |
 
-## Model and market
+### Model and market
 
 The headline this year is that **model and market agree** on the favourite. Zhao Xintong's simulation odds of 3.46 sit almost exactly on the best available betting price of 3.4. When serious maths and serious money converge on the same answer, it's worth paying attention — and it's a welcome change from last year's more fractious disagreements.
 
@@ -102,7 +102,7 @@ The reverse problem afflicts **Zhou Yuelong**: simulation odds of 21.78, betting
 Mark Selby (simulation 33.24, market 11.0), Kyren Wilson (26.02, 15.2), Shaun Murphy (42.17, 26.0), and Neil Robertson (47.99, 27.0) all attract considerably more money than the model suggests. This is a consistent pattern across both years: established Crucible performers carry a premium that pure Elo doesn't price in. The one-table arena, long match formats, and Sheffield's unique atmosphere tend to favour experience and composure over raw recent form.
 
 
-# Final frame 🎱
+## Final frame 🎱
 
 The draw is set, the baize is freshly ironed, and for once the maths and the money agree: Zhao Xintong is the man to beat. We'll know on May 4 whether the simulations hold up better in 2026 than they did in 2025 — or whether another name we've underrated is already plotting his way to the title.
 

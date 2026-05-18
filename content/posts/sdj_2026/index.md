@@ -36,12 +36,12 @@ This year might be the most open field since I started doing these predictions. 
 Anyway, without further ado, here are the favourite games to win {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}.
 
 
-# Candidates for {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}
+## Candidates for {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}
 
 {{< img src="sdj-2026" size="x300" alt="Spiel des Jahres 2026" >}}
 
 
-## #1: {{% game 447384 %}}Meister Makatsu{{% /game %}}
+### #1: {{% game 447384 %}}Meister Makatsu{{% /game %}}
 
 *2–6 players, 20–30 minutes, 8+ years, light (1.3), 97% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -50,7 +50,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Play your ninjas wisely so that they go unnoticed.*
 
 
-## #2: {{% game 434654 %}}Toy Battle{{% /game %}}
+### #2: {{% game 434654 %}}Toy Battle{{% /game %}}
 
 *2 players, 15 minutes, 8+ years, light (1.5), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -59,7 +59,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Send forth an army of toys to conquer territories.*
 
 
-## #3: {{% game 431280 %}}2 Win{{% /game %}}
+### #3: {{% game 431280 %}}2 Win{{% /game %}}
 
 *2–6 players, 15 minutes, 7+ years, light (1.2), 98% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -68,7 +68,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Play the right balance of cards to get more cards and keep playing.*
 
 
-## #4: {{% game 440540 %}}Take Time{{% /game %}}
+### #4: {{% game 440540 %}}Take Time{{% /game %}}
 
 *2–4 players, 30 minutes, 10+ years, medium light (1.8), 73% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -77,7 +77,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Time beckons you to discover a multitude of challenging universes.*
 
 
-## #5: {{% game 436507 %}}Under the Mango Tree{{% /game %}}
+### #5: {{% game 436507 %}}Under the Mango Tree{{% /game %}}
 
 *2–4 players, 15–20 minutes, 7+ years, medium light (1.5), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -86,7 +86,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Revive your own little patch of Australian wilderness by drafting two-part cards.*
 
 
-## #6: {{% game 424975 %}}Wilmot's Warehouse{{% /game %}}
+### #6: {{% game 424975 %}}Wilmot's Warehouse{{% /game %}}
 
 *2–6 players, 30 minutes, 8+ years, light (1.2), 100% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -95,7 +95,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Stack products in the warehouse, telling a story to remember where to find them.*
 
 
-## #7: {{% game 438195 %}}Volle Kanne!{{% /game %}}
+### #7: {{% game 438195 %}}Volle Kanne!{{% /game %}}
 
 *1–4 players, 20 minutes, 8+ years, light (1.3), 99% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -104,7 +104,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Manage your random water supply to satisfy your plants.*
 
 
-## #8: {{% game 434442 %}}13 Leaves{{% /game %}}
+### #8: {{% game 434442 %}}13 Leaves{{% /game %}}
 
 *3–6 players, 20 minutes, 8+ years, light (1.2), 98% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -113,7 +113,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Play into the row to empty your hand.*
 
 
-## #9: {{% game 423787 %}}Behind{{% /game %}}
+### #9: {{% game 423787 %}}Behind{{% /game %}}
 
 *1–99 players, 45–90 minutes, 10+ years, medium light (1.6), 93% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -122,7 +122,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Solve the three scenes In this puzzle/deduction/observation game.*
 
 
-## #10: {{% game 435652 %}}Easy Peasy{{% /game %}}
+### #10: {{% game 435652 %}}Easy Peasy{{% /game %}}
 
 *2–6 players, 15 minutes, 8+ years, medium light (1.7), 73% {{% sdj %}}Spiel{{% /sdj %}}*
 
@@ -132,12 +132,12 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 
 
 
-# Candidates for {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}
+## Candidates for {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}
 
 {{< img src="ksdj-2026" size="x300" alt="Kennerspiel des Jahres 2026" >}}
 
 
-## #1: {{% game 417197 %}}Rebirth{{% /game %}}
+### #1: {{% game 417197 %}}Rebirth{{% /game %}}
 
 *2–4 players, 45–60 minutes, 10+ years, medium light (2.0), 70% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -146,7 +146,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Rebuild old lands in a lush, hopeful future.*
 
 
-## #2: {{% game 384213 %}}Fromage{{% /game %}}
+### #2: {{% game 384213 %}}Fromage{{% /game %}}
 
 *1–4 players, 30–45 minutes, 14+ years, medium light (2.4), 97% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -155,7 +155,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Cheesemakers compete to run the most prosperous creamery in France.*
 
 
-## #3: {{% game 436217 %}}The Lord of the Rings: Fate of the Fellowship{{% /game %}}
+### #3: {{% game 436217 %}}The Lord of the Rings: Fate of the Fellowship{{% /game %}}
 
 *1–5 players, 60–150 minutes, 14+ years, medium (3.1), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -164,7 +164,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *As members of The Fellowship, embark on a journey to save—or doom—Middle-earth.*
 
 
-## #4: {{% game 437337 %}}Abroad{{% /game %}}
+### #4: {{% game 437337 %}}Abroad{{% /game %}}
 
 *1–5 players, 90 minutes, 12+ years, medium (2.7), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -173,7 +173,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Travel through Europe for 28 days to showcase your abilities.*
 
 
-## #5: {{% game 436126 %}}Finspan{{% /game %}}
+### #5: {{% game 436126 %}}Finspan{{% /game %}}
 
 *1–5 players, 45–60 minutes, 10+ years, medium light (2.3), 98% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -182,7 +182,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Dive into the watery depths to find and observe a vast array of aquatic life.*
 
 
-## #6: {{% game 400366 %}}Wondrous Creatures{{% /game %}}
+### #6: {{% game 400366 %}}Wondrous Creatures{{% /game %}}
 
 *1–4 players, 40–80 minutes, 14+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -191,7 +191,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Build the best reserve in the world for 100+ fantastic creatures!*
 
 
-## #7: {{% game 422674 %}}Saltfjord{{% /game %}}
+### #7: {{% game 422674 %}}Saltfjord{{% /game %}}
 
 *1–4 players, 45–90 minutes, 14+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -200,7 +200,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Lead your fishing village through the harsh Nordic winters.*
 
 
-## #8: {{% game 422042 %}}Tea Garden{{% /game %}}
+### #8: {{% game 422042 %}}Tea Garden{{% /game %}}
 
 *2–4 players, 90–120 minutes, 12+ years, medium (3.0), 100% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -209,7 +209,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Witness the birth of tea culture in ancient China.*
 
 
-## #9: {{% game 298231 %}}Skyrise{{% /game %}}
+### #9: {{% game 298231 %}}Skyrise{{% /game %}}
 
 *2–4 players, 30–90 minutes, 14+ years, medium light (2.2), 92% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -218,7 +218,7 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Visionary architects build a glorious new city in the sky.*
 
 
-## #10: {{% game 371932 %}}Explorers of Navoria{{% /game %}}
+### #10: {{% game 371932 %}}Explorers of Navoria{{% /game %}}
 
 *2–4 players, 40–80 minutes, 12+ years, medium light (2.3), 96% {{% kdj %}}Kennerspiel{{% /kdj %}}*
 
@@ -227,26 +227,26 @@ Anyway, without further ado, here are the favourite games to win {{% sdj / %}} a
 *Explore new and strange continents that have emerged from the sea.*
 
 
-# My two cents
+## My two cents
 
 It's time for my picks for the nominations. The algorithms determined the longlist predictions, but my gut feeling takes over from here on.
 
 
-## My predictions for nominees for {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}
+### My predictions for nominees for {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}
 
 * {{% game 447384 %}}Meister Makatsu{{% /game %}}
 * {{% game 440540 %}}Take Time{{% /game %}}
 * {{% game 434654 %}}Toy Battle{{% /game %}}
 
 
-## My predictions for nominees for {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}
+### My predictions for nominees for {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}
 
 * {{% game 436217 %}}The Lord of the Rings: Fate of the Fellowship{{% /game %}}
 * {{% game 417197 %}}Rebirth{{% /game %}}
 * {{% game 422674 %}}Saltfjord{{% /game %}}
 
 
-## Honourable mentions
+### Honourable mentions
 
 This year, there are quite a few games with strong buzz and good chances of a place on the longlist (or more), but which were missed by the algorithm, so I like to squeeze them into this section.
 
@@ -258,7 +258,7 @@ This year, there are quite a few games with strong buzz and good chances of a pl
 * {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}}
 
 
-# Conclusion
+## Conclusion
 
 Another year full of wonderful games – let's enjoy being spoiled for choice before the AI-generated slop drowns it all out. 🙈
 
