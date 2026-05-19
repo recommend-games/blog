@@ -23,8 +23,8 @@ tags:
   - Kennerspiel nominations
   - Kennerspiel des Jahres nominations
   - Kennerspiel des Jahres 2026 nominations
-  - Cozy Sticker Ville
-  - Dito!
+  - Cozy Stickerville
+  - JinxO
   - Morty Sorty Magic Shop
   - Boss Fighters QR
   - Moon Colony Bloodbath
@@ -33,9 +33,9 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-[Nominations are out](https://www.spiel-des-jahres.de/preistraeger/best-of-2026/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/preistraeger/best-of-2026/)! The jury selected a total of sixteen games for their longlist, nine for {{% sdj / %}} and seven for {{% kdj / %}}. Out of these games, three games each are nominated for the two awards and can hope to get the coveted meeple added to their covers on July 12.
+[Nominations are out](https://www.spiel-des-jahres.de/preistraeger/best-of-2026/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/preistraeger/best-of-2026/)! The jury selected a total of sixteen games for their longlists, nine for {{% sdj / %}} and seven for {{% kdj / %}}. Out of these games, three games each are nominated for the two awards and can hope to get the coveted meeple added to their covers on July 12.
 
-Let's dive straight into the nominations and recommendations, before we discuss how good (or bad) [my predictions]({{<ref "posts/sdj_2026/index.md">}}) were and if they agreed with our [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}}).
+Let's dive straight into the nominations and recommendations, before we discuss how good (or bad) [my predictions]({{<ref "posts/sdj_2026/index.md">}}) were and whether they agreed with our [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}}).
 
 
 ## Nominated for {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}
@@ -51,7 +51,7 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 
 *Build your village with over 800 stickers!*
 
-I've had this amongst my honourable mentions, but the algorithm placed in on #565 (out of 1339) – there are definitely some tweaks to the algorithm required…
+I've had this amongst my honourable mentions, but the algorithm placed it on #565 (out of 1339) – there are definitely some tweaks to the algorithm required…
 
 
 ### {{% game 400495 %}}JinxO{{% /game %}}
@@ -84,7 +84,7 @@ A game so hot off the press, it's not even in the R.G database yet. 🥵 Designe
 * {{% game 440540 %}}Take Time{{% /game %}} (#4)
 * {{% game 417403 %}}Toriki: The Castaway Island{{% /game %}} (#51 on the {{% kdj %}}Kennerspiel{{% /kdj %}} list)
 * {{% game 434654 %}}Toy Battle{{% /game %}} (#2): After winning the As d'Or and being second in the predictions, I had thought a nomination would be a slam dunk. The jury thought otherwise.
-* {{% game 424975 %}}Wilmot's Warehouse{{% /game %}} (#6): Apart from the previous game's digital implementation on BGA, this is the only game I've actually had the pleasure of playing – and I had a blast, with memorable stories and jokes I still remember.
+* {{% game 424975 %}}Wilmot's Warehouse{{% /game %}} (#6): Apart from {{% game 434654 %}}Toy Battle{{% /game %}}'s BGA implementation, this is the only game I've actually had the pleasure of playing – and I had a blast, with memorable stories and jokes I still remember.
 
 
 ## Nominated for {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}
@@ -111,7 +111,7 @@ Another one I had on my honourable mentions, I'd still consider this a near(ish)
 
 *Whatever can go wrong will go wrong. Players compete to keep their colonists alive.*
 
-The third of my honourable mentions to land on the shortlist. Both the theme and the mechanisms are fairly divisive, so a nomination wasn't necessarily expected. At #19 even more of a near miss.
+The third of my honourable mentions to land on the shortlist. Both the theme and the mechanisms are fairly divisive, so a nomination wasn't necessarily expected. At #19, even more of a near miss.
 
 
 ### {{% game 417197 %}}Rebirth{{% /game %}}
@@ -128,7 +128,7 @@ The one and only nomination both the algorithm and my guts got dead on right. Do
 ### {{% kdj / %}} recommendations
 
 * {{% game 441696 %}}Sanctuary{{% /game %}} (#26): Clearly the jury saw {{% game 441696 %}}Sanctuary{{% /game %}} as different enough from {{% game 342942 %}}Ark Nova{{% /game %}} to award it a spot on the longlist.
-* {{% game 449853 %}}Frosted Blooms{{% /game %}} (#139 on the {{% sdj %}}Spiel{{% /sdj %}} list): There's always the one game I've never even heard of. Neither did the algorithm, seeing how wrong it got this one…
+* {{% game 449853 %}}Frosted Blooms{{% /game %}} (#139 on the {{% sdj %}}Spiel{{% /sdj %}} list): There's always the one game I've never even heard of. The algorithm hadn't heard of it either, seeing how wrong it got this one…
 * {{% game 412865 %}}Foundations of Metropolis{{% /game %}} (#29): Originally a plastic monstrosity, the cardboard version now focuses on the strength of the mechanisms and earned a spot on the longlist this way.
 * {{% game 434906 %}}Tag Team{{% /game %}} (#111)
 
@@ -165,4 +165,4 @@ I predicted {{% game 447384 %}}Meister Makatsu{{% /game %}}, {{% game 440540 %}}
 
 The silver lining: my [honourable mentions]({{<ref "posts/sdj_2026/index.md#honourable-mentions">}}) section turned out to be the real prediction list. Three out of six games I flagged there – {{% game 454672 %}}Boss Fighters QR{{% /game %}}, {{% game 456440 %}}Cozy Stickerville{{% /game %}}, and {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}} – ended up nominated, plus {{% game 446497 %}}Hot Streak{{% /game %}} as a recommendation. Lesson learnt: next year, the algorithm needs to take the buzz more seriously.
 
-That's it for now, we'll be back soon with a little more in-depth analyses on the six nominees and their chances of winning an award. (And also my children's favourite for {{% kindersdj / %}}. 🥰)
+That's it for now, we'll be back soon with a little more in-depth analysis on the six nominees and their chances of winning an award. (And also my children's favourite for {{% kindersdj / %}}. 🥰)
