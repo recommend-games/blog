@@ -165,7 +165,7 @@ As always, I also calculate the [Normalized Discounted Cumulative Gain](https://
 * 2023: 0.669
 * 2024: 0.803
 * 2025: 0.718
-* 2026: 0.731 (TBC)
+* 2026: 0.731
 
 TODO
 
