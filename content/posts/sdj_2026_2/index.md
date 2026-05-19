@@ -51,9 +51,7 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 
 *Build your village with over 800 stickers!*
 
-TODO
-
-<!-- The first ever sticker game to make the jury's shortlist – I had it on my honourable mentions list, but the algorithm completely whiffed and parked it at rank 1798. The buzz around the BGG hotness was real after all. -->
+I've had this amongst my honourable mentions, but the algorithm placed in on #565 (out of 1339) – there are definitely some tweaks to the algorithm required…
 
 
 ### {{% game 400495 %}}JinxO{{% /game %}}
@@ -64,9 +62,8 @@ TODO
 
 *A party game of associations: try to match other players' answers without giving anything away.*
 
-TODO
+The designer [Martin Ang](https://recommend.games/#/?designer=121032) is the CEO of Tabletoys Indonesia. Last year we celebrated the first {{% sdj %}}SdJ{{% /sdj %}} award going to Japan – could Indonesia be next?
 
-<!-- Originally released as *JinxO* in 2024, this party game is the kind of light social fare the jury loves to put on the shortlist. Not on my radar at all – with only a couple of hundred ratings on BGG, the algorithm had little to work with. -->
 
 
 ### {{% game 462742 %}}Morty Sorty Magic Shop{{% /game %}}
@@ -77,9 +74,7 @@ TODO
 
 *Apprentices try to demonstrate their talent for stocking the shelves.*
 
-TODO
-
-<!-- Schmidt Spiele snagging a nomination with a brand new family game, designed by Markus Slawitscheck. With just 63 ratings on BGG at the time of the predictions, this was always going to slip through the algorithm's fingers. -->
+A game so hot off the press, it's not even in the R.G database yet. 🥵 Designer [Markus Slawitscheck](https://recommend.games/#/?designer=110904) already won {{% kdj %}}Kennerspiel{{% /kdj %}} in 2023 for {{% game 359970 %}}Challengers!{{% /game %}} and {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} in 2024 for {{% game 368899 %}}Magic Keys{{% /game %}}, so he now has the chance to be the first designer to complete the triple – in just three years!
 
 
 ### {{% sdj / %}} recommendations
