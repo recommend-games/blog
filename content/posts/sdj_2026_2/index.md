@@ -127,10 +127,10 @@ The one and only nomination both the algorithm and my guts got dead on right. Do
 
 ### {{% kdj / %}} recommendations
 
-* {{% game 441696 %}}Sanctuary{{% /game %}} (#26): TODO
-* {{% game 449853 %}}Frosted Blooms{{% /game %}} (#139 on the {{% sdj %}}Spiel{{% /sdj %}} list): TODO
-* {{% game 412865 %}}Grundstein von Metropolis{{% /game %}} (#29): TODO
-* {{% game 434906 %}}Tag Team{{% /game %}} (#111): TODO
+* {{% game 441696 %}}Sanctuary{{% /game %}} (#26): Clearly the jury saw {{% game 441696 %}}Sanctuary{{% /game %}} as different enough from {{% game 342942 %}}Ark Nova{{% /game %}} to award it a spot on the longlist.
+* {{% game 449853 %}}Frosted Blooms{{% /game %}} (#139 on the {{% sdj %}}Spiel{{% /sdj %}} list): There's always the one game I've never even heard of. Neither did the algorithm, seeing how wrong it got this one…
+* {{% game 412865 %}}Foundations of Metropolis{{% /game %}} (#29): Originally a plastic monstrosity, the cardboard version now focuses on the strength of the mechanisms and earned a spot on the longlist this way.
+* {{% game 434906 %}}Tag Team{{% /game %}} (#111)
 
 
 ## How good were the predictions?
