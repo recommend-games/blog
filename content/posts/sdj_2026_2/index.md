@@ -156,15 +156,13 @@ As always, I also calculate the [Normalized Discounted Cumulative Gain](https://
 * 2025: 0.718
 * 2026: 0.731
 
-TODO
-
-<!-- So by that metric, 2026 lands a touch above 2025 – pretty average overall. The headline misses on the {{% kdj %}}Kennerspiel{{% /kdj %}} side hurt a lot, but the strong showing at the top of the {{% sdj %}}Spiel{{% /sdj %}} list helps to drag the number back up. -->
+So by that metric, 2026 lands a touch above 2025, and overall third out of the six years so far. Given how bad some of the misses were, I take some comfort in this result.
 
 
 ### Shortlist
 
-I predicted {{% game 447384 %}}Meister Makatsu{{% /game %}}, {{% game 440540 %}}Take Time{{% /game %}}, and {{% game 434654 %}}Toy Battle{{% /game %}} for {{% sdj / %}}, and {{% game 436217 %}}The Lord of the Rings: Fate of the Fellowship{{% /game %}}, {{% game 417197 %}}Rebirth{{% /game %}}, and {{% game 422674 %}}Saltfjord{{% /game %}} for {{% kdj / %}}. Only {{% game 417197 %}}Rebirth{{% /game %}} actually made the cut – one out of six is just as bad as last year, even though my three SdJ picks all ended up as recommendations. Ouch.
+I predicted {{% game 447384 %}}Meister Makatsu{{% /game %}}, {{% game 440540 %}}Take Time{{% /game %}}, and {{% game 434654 %}}Toy Battle{{% /game %}} for {{% sdj / %}}, and {{% game 436217 %}}The Lord of the Rings: Fate of the Fellowship{{% /game %}}, {{% game 417197 %}}Rebirth{{% /game %}}, and {{% game 422674 %}}Saltfjord{{% /game %}} for {{% kdj / %}}. Only {{% game 417197 %}}Rebirth{{% /game %}} actually made the cut – one out of six is just as bad as last year, even though my three {{% sdj %}}SdJ{{% /sdj %}} picks all ended up as recommendations. Ouch.
 
-The silver lining: my [honourable mentions]({{<ref "posts/sdj_2026/index.md#honourable-mentions">}}) section turned out to be the real prediction list. Three out of six games I flagged there – {{% game 454672 %}}Boss Fighters QR{{% /game %}}, {{% game 456440 %}}Cozy Sticker Ville{{% /game %}}, and {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}} – ended up nominated, plus {{% game 446497 %}}Hot Streak{{% /game %}} as a recommendation. Lesson learnt: next year, the algorithm needs to take the buzz more seriously.
+The silver lining: my [honourable mentions]({{<ref "posts/sdj_2026/index.md#honourable-mentions">}}) section turned out to be the real prediction list. Three out of six games I flagged there – {{% game 454672 %}}Boss Fighters QR{{% /game %}}, {{% game 456440 %}}Cozy Stickerville{{% /game %}}, and {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}} – ended up nominated, plus {{% game 446497 %}}Hot Streak{{% /game %}} as a recommendation. Lesson learnt: next year, the algorithm needs to take the buzz more seriously.
 
 That's it for now, we'll be back soon with a little more in-depth analyses on the six nominees and their chances of winning an award. (And also my children's favourite for {{% kindersdj / %}}. 🥰)
