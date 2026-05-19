@@ -100,9 +100,7 @@ A game so hot off the press, it's not even in the R.G database yet. 🥵 Designe
 
 *Team up and use your wits and gear to crack the tactics of intelligent boss monsters.*
 
-TODO
-
-<!-- Another one I had on my honourable mentions, and the jury rewarded the inventive QR-code mechanism with a nomination. A great choice that I should have trusted more. -->
+Another one I had on my honourable mentions, I'd still consider this a near(ish) miss at #32. I'm actually quite impressed the {{% kdj %}}Kennerspiel{{% /kdj %}} score got it right because I got stronger {{% sdj %}}red{{% /sdj %}} vibes from this one.
 
 
 ### {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}}
@@ -113,9 +111,7 @@ TODO
 
 *Whatever can go wrong will go wrong. Players compete to keep their colonists alive.*
 
-TODO
-
-<!-- The third of my honourable mentions to land on the shortlist. The provocative title alone made me suspect the jury might be drawn to it, and so they were. -->
+The third of my honourable mentions to land on the shortlist. Both the theme and the mechanisms are fairly divisive, so a nomination wasn't necessarily expected. At #19 even more of a near miss.
 
 
 ### {{% game 417197 %}}Rebirth{{% /game %}}
@@ -126,9 +122,7 @@ TODO
 
 *Rebuild old lands in a lush, hopeful future.*
 
-TODO
-
-<!-- The one prediction the jury and the algorithm both agreed on. Reiner Knizia continuing his late-career renaissance with what was the algorithm's #1 {{% kdj %}}Kennerspiel{{% /kdj %}} pick – at least my single shortlist hit had to come from somewhere. 😅 -->
+The one and only nomination both the algorithm and my guts got dead on right. Does that make {{% game 417197 %}}Rebirth{{% /game %}} the favourite for {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}? Perhaps not, but it's [Reiner Knizia](https://recommend.games/#/?designer=2)'s chance to complete the triple after his double in 2008.
 
 
 ### {{% kdj / %}} recommendations
