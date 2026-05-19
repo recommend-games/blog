@@ -33,7 +33,7 @@ tags:
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
-[Nominations are out](https://www.spiel-des-jahres.de/aktuelle-preistraeger-2026/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/aktuelle-preistraeger-2026/)! The jury selected a total of sixteen games for their longlist, nine for {{% sdj / %}} and seven for {{% kdj / %}}. Out of these games, three games each are nominated for the two awards and can hope to get the coveted meeple added to their covers on July 12.
+[Nominations are out](https://www.spiel-des-jahres.de/preistraeger/best-of-2026/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/preistraeger/best-of-2026/)! The jury selected a total of sixteen games for their longlist, nine for {{% sdj / %}} and seven for {{% kdj / %}}. Out of these games, three games each are nominated for the two awards and can hope to get the coveted meeple added to their covers on July 12.
 
 Let's dive straight into the nominations and recommendations, before we discuss how good (or bad) [my predictions]({{<ref "posts/sdj_2026/index.md">}}) were and if they agreed with our [{{% kdj %}}Kennerspiel{{% /kdj %}} score]({{<ref "posts/kennerspiel/index.md">}}).
 
@@ -43,26 +43,30 @@ Let's dive straight into the nominations and recommendations, before we discuss 
 {{< img src="sdj-2026" size="x300" alt="Spiel des Jahres 2026" >}}
 
 
-### {{% game 456440 %}}Cozy Sticker Ville{{% /game %}}
+### {{% game 456440 %}}Cozy Stickerville{{% /game %}}
 
-*1–6 players, 30 minutes, 8+ years, light (1.2), 99% {{% sdj %}}Spiel{{% /sdj %}}, no prediction*
+*1–6 players, 30 minutes, 8+ years, light (1.2), 99% {{% sdj %}}Spiel{{% /sdj %}}, prediction #565*
 
-{{< img src="456440" size="x300" alt="Cozy Sticker Ville" >}}
+{{< img src="456440" size="x300" alt="Cozy Stickerville" >}}
 
-*Build a charming little town by placing stickers on your shared map.*
+*Build your village with over 800 stickers!*
 
-The first ever sticker game to make the jury's shortlist – I had it on my honourable mentions list, but the algorithm completely whiffed and parked it at rank 1798. The buzz around the BGG hotness was real after all.
+TODO
+
+<!-- The first ever sticker game to make the jury's shortlist – I had it on my honourable mentions list, but the algorithm completely whiffed and parked it at rank 1798. The buzz around the BGG hotness was real after all. -->
 
 
-### {{% game 400495 %}}Dito!{{% /game %}}
+### {{% game 400495 %}}JinxO{{% /game %}}
 
 *4–7 players, 30–45 minutes, 10+ years, light (1.0), 99% {{% sdj %}}Spiel{{% /sdj %}}, prediction #106*
 
-{{< img src="400495" size="x300" alt="Dito!" >}}
+{{< img src="400495" size="x300" alt="JinxO" >}}
 
 *A party game of associations: try to match other players' answers without giving anything away.*
 
-Originally released as *JinxO* in 2024, this party game is the kind of light social fare the jury loves to put on the shortlist. Not on my radar at all – with only a couple of hundred ratings on BGG, the algorithm had little to work with.
+TODO
+
+<!-- Originally released as *JinxO* in 2024, this party game is the kind of light social fare the jury loves to put on the shortlist. Not on my radar at all – with only a couple of hundred ratings on BGG, the algorithm had little to work with. -->
 
 
 ### {{% game 462742 %}}Morty Sorty Magic Shop{{% /game %}}
@@ -71,19 +75,21 @@ Originally released as *JinxO* in 2024, this party game is the kind of light soc
 
 {{< img src="462742" size="x300" alt="Morty Sorty Magic Shop" >}}
 
-*Sort magical wares onto the right shelves before they explode.*
+*Apprentices try to demonstrate their talent for stocking the shelves.*
 
-Schmidt Spiele snagging a nomination with a brand new family game, designed by Markus Slawitscheck. With just 63 ratings on BGG at the time of the predictions, this was always going to slip through the algorithm's fingers.
+TODO
+
+<!-- Schmidt Spiele snagging a nomination with a brand new family game, designed by Markus Slawitscheck. With just 63 ratings on BGG at the time of the predictions, this was always going to slip through the algorithm's fingers. -->
 
 
 ### {{% sdj / %}} recommendations
 
-* {{% game 446497 %}}Hot Streak{{% /game %}} (#132): One of my honourable mentions, finally getting some recognition from the jury.
-* {{% game 447384 %}}Meister Makatsu{{% /game %}} (#1): The algorithm's clear favourite for {{% sdj / %}} – the jury didn't quite agree, but a recommendation is still a nice consolation.
-* {{% game 440540 %}}Take Time{{% /game %}} (#4)
-* {{% game 417403 %}}Toriki: The Castaway Island{{% /game %}} (#51 on the {{% kdj %}}Kennerspiel{{% /kdj %}} list): A 96% {{% kdj %}}Kennerspiel{{% /kdj %}} score that the jury comfortably overruled – another reminder that the boundary is fuzzy.
-* {{% game 434654 %}}Toy Battle{{% /game %}} (#2)
-* {{% game 424975 %}}Wilmot's Warehouse{{% /game %}} (#6)
+* {{% game 446497 %}}Hot Streak{{% /game %}} (#132): TODO
+* {{% game 447384 %}}Meister Makatsu{{% /game %}} (#1): TODO
+* {{% game 440540 %}}Take Time{{% /game %}} (#4): TODO
+* {{% game 417403 %}}Toriki: The Castaway Island{{% /game %}} (#51 on the {{% kdj %}}Kennerspiel{{% /kdj %}} list): TODO
+* {{% game 434654 %}}Toy Battle{{% /game %}} (#2): TODO
+* {{% game 424975 %}}Wilmot's Warehouse{{% /game %}} (#6): TODO
 
 
 ## Nominated for {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}
@@ -97,9 +103,11 @@ Schmidt Spiele snagging a nomination with a brand new family game, designed by M
 
 {{< img src="454672" size="x300" alt="Boss Fighters QR" >}}
 
-*An asymmetric brawler where one player controls the boss and the others team up to take it down, all powered by QR codes.*
+*Team up and use your wits and gear to crack the tactics of intelligent boss monsters.*
 
-Another one I had on my honourable mentions, and the jury rewarded the inventive QR-code mechanism with a nomination. A great choice that I should have trusted more.
+TODO
+
+<!-- Another one I had on my honourable mentions, and the jury rewarded the inventive QR-code mechanism with a nomination. A great choice that I should have trusted more. -->
 
 
 ### {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}}
@@ -108,9 +116,11 @@ Another one I had on my honourable mentions, and the jury rewarded the inventive
 
 {{< img src="425549" size="x300" alt="Moon Colony Bloodbath" >}}
 
-*Donald X. Vaccarino's lunar resource-grabbing romp with a name that wouldn't look out of place on a heavy-metal album cover.*
+*Whatever can go wrong will go wrong. Players compete to keep their colonists alive.*
 
-The third of my honourable mentions to land on the shortlist. The provocative title alone made me suspect the jury might be drawn to it, and so they were.
+TODO
+
+<!-- The third of my honourable mentions to land on the shortlist. The provocative title alone made me suspect the jury might be drawn to it, and so they were. -->
 
 
 ### {{% game 417197 %}}Rebirth{{% /game %}}
@@ -121,15 +131,17 @@ The third of my honourable mentions to land on the shortlist. The provocative ti
 
 *Rebuild old lands in a lush, hopeful future.*
 
-The one prediction the jury and the algorithm both agreed on. Reiner Knizia continuing his late-career renaissance with what was the algorithm's #1 {{% kdj %}}Kennerspiel{{% /kdj %}} pick – at least my single shortlist hit had to come from somewhere. 😅
+TODO
+
+<!-- The one prediction the jury and the algorithm both agreed on. Reiner Knizia continuing his late-career renaissance with what was the algorithm's #1 {{% kdj %}}Kennerspiel{{% /kdj %}} pick – at least my single shortlist hit had to come from somewhere. 😅 -->
 
 
 ### {{% kdj / %}} recommendations
 
-* {{% game 441696 %}}Artengarten{{% /game %}} (#26)
-* {{% game 449853 %}}Frosted Blooms{{% /game %}} (#139 on the {{% sdj %}}Spiel{{% /sdj %}} list): Another classification miss – the algorithm gave it just an 11% {{% kdj %}}Kennerspiel{{% /kdj %}} score, but the jury saw it differently.
-* {{% game 412865 %}}Grundstein von Metropolis{{% /game %}} (#29)
-* {{% game 434906 %}}Tag Team{{% /game %}} (#111)
+* {{% game 441696 %}}Sanctuary{{% /game %}} (#26): TODO
+* {{% game 449853 %}}Frosted Blooms{{% /game %}} (#139 on the {{% sdj %}}Spiel{{% /sdj %}} list): TODO
+* {{% game 412865 %}}Grundstein von Metropolis{{% /game %}} (#29): TODO
+* {{% game 434906 %}}Tag Team{{% /game %}} (#111): TODO
 
 
 ## How good were the predictions?
@@ -139,12 +151,12 @@ This really is a drama in three acts: the decision of {{% kdj %}}Kennerspiel{{% 
 
 ### {{% kdj %}}Kennerspiel{{% /kdj %}} score
 
-The algorithm classified fourteen out of sixteen games on the longlists correctly, only mixing up {{% game 417403 %}}Toriki: The Castaway Island{{% /game %}} (96% {{% kdj %}}Kennerspiel{{% /kdj %}} according to the algorithm, but on the {{% sdj %}}Spiel{{% /sdj %}} list) and {{% game 449853 %}}Frosted Blooms{{% /game %}} (only 11% {{% kdj %}}Kennerspiel{{% /kdj %}}, yet on the {{% kdj %}}Kennerspiel{{% /kdj %}} list). 88% accurate is a slight improvement over last year, and once again confirms that the score does a decent job at a notoriously vague distinction.
+The algorithm classified fourteen out of sixteen games on the longlists correctly, only mixing up {{% game 417403 %}}Toriki{{% /game %}} (96% {{% kdj %}}Kennerspiel{{% /kdj %}} according to the algorithm, but on the {{% sdj %}}Spiel{{% /sdj %}} list) and {{% game 449853 %}}Frosted Blooms{{% /game %}} (only 11% {{% kdj %}}Kennerspiel{{% /kdj %}}, yet on the {{% kdj %}}Kennerspiel{{% /kdj %}} list). 88% accurate is a slight improvement over last year, and once again confirms that the score does a decent job at a notoriously vague distinction.
 
 
 ### Longlist
 
-The algorithm caught five of the nine games on the {{% sdj %}}Spiel{{% /sdj %}} longlist in its top 10 (four on the right list, plus {{% game 417403 %}}Toriki: The Castaway Island{{% /game %}} hiding way down at #51 on the {{% kdj %}}Kennerspiel{{% /kdj %}} side) and only one of the seven games on the {{% kdj %}}Kennerspiel{{% /kdj %}} longlist ({{% game 417197 %}}Rebirth{{% /game %}}). That's a measly five out of sixteen – or 31% – which matches last year's poor showing. The {{% kdj %}}Kennerspiel{{% /kdj %}} side in particular was a disaster, with several of the nominees sitting outside the top 30 (and {{% game 456440 %}}Cozy Sticker Ville{{% /game %}} even landing at rank 1798 in the overall ranking 😱).
+The algorithm caught four of the nine games on the {{% sdj %}}Spiel{{% /sdj %}} longlist in its top 10 and only one of the seven games on the {{% kdj %}}Kennerspiel{{% /kdj %}} longlist ({{% game 417197 %}}Rebirth{{% /game %}}). That's a measly five out of sixteen – or 31% – which matches last year's poor showing. The {{% sdj %}}Spiel{{% /sdj %}} nominations in particular were a disaster, with {{% game 400495 %}}JinxO{{% /game %}} being the highest ranked game at #106… 😱
 
 As always, I also calculate the [Normalized Discounted Cumulative Gain](https://en.wikipedia.org/wiki/Discounted_cumulative_gain#Normalized_DCG) (nDCG) to measure how well the ranking performed. Here are the results across all years:
 
@@ -153,9 +165,11 @@ As always, I also calculate the [Normalized Discounted Cumulative Gain](https://
 * 2023: 0.669
 * 2024: 0.803
 * 2025: 0.718
-* 2026: 0.731
+* 2026: 0.731 (TBC)
 
-So by that metric, 2026 lands a touch above 2025 – pretty average overall. The headline misses on the {{% kdj %}}Kennerspiel{{% /kdj %}} side hurt a lot, but the strong showing at the top of the {{% sdj %}}Spiel{{% /sdj %}} list helps to drag the number back up.
+TODO
+
+<!-- So by that metric, 2026 lands a touch above 2025 – pretty average overall. The headline misses on the {{% kdj %}}Kennerspiel{{% /kdj %}} side hurt a lot, but the strong showing at the top of the {{% sdj %}}Spiel{{% /sdj %}} list helps to drag the number back up. -->
 
 
 ### Shortlist
@@ -164,4 +178,4 @@ I predicted {{% game 447384 %}}Meister Makatsu{{% /game %}}, {{% game 440540 %}}
 
 The silver lining: my [honourable mentions]({{<ref "posts/sdj_2026/index.md#honourable-mentions">}}) section turned out to be the real prediction list. Three out of six games I flagged there – {{% game 454672 %}}Boss Fighters QR{{% /game %}}, {{% game 456440 %}}Cozy Sticker Ville{{% /game %}}, and {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}} – ended up nominated, plus {{% game 446497 %}}Hot Streak{{% /game %}} as a recommendation. Lesson learnt: next year, the algorithm needs to take the buzz more seriously.
 
-That's it for now, we'll be back soon with a little more in-depth analyses on the six nominees and their chances of winning an award.
+That's it for now, we'll be back soon with a little more in-depth analyses on the six nominees and their chances of winning an award. (And also my children's favourite for {{% kindersdj / %}}. 🥰)
