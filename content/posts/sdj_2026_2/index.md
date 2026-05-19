@@ -79,12 +79,12 @@ A game so hot off the press, it's not even in the R.G database yet. 🥵 Designe
 
 ### {{% sdj / %}} recommendations
 
-* {{% game 446497 %}}Hot Streak{{% /game %}} (#132): TODO
-* {{% game 447384 %}}Meister Makatsu{{% /game %}} (#1): TODO
-* {{% game 440540 %}}Take Time{{% /game %}} (#4): TODO
-* {{% game 417403 %}}Toriki: The Castaway Island{{% /game %}} (#51 on the {{% kdj %}}Kennerspiel{{% /kdj %}} list): TODO
-* {{% game 434654 %}}Toy Battle{{% /game %}} (#2): TODO
-* {{% game 424975 %}}Wilmot's Warehouse{{% /game %}} (#6): TODO
+* {{% game 446497 %}}Hot Streak{{% /game %}} (#132)
+* {{% game 447384 %}}Meister Makatsu{{% /game %}} (#1): The algorithm's favourite, the jury's recommendation. It's something!
+* {{% game 440540 %}}Take Time{{% /game %}} (#4)
+* {{% game 417403 %}}Toriki: The Castaway Island{{% /game %}} (#51 on the {{% kdj %}}Kennerspiel{{% /kdj %}} list)
+* {{% game 434654 %}}Toy Battle{{% /game %}} (#2): After winning the As d'Or and being second in the predictions, I had thought a nomination would be a slam dunk. The jury thought otherwise.
+* {{% game 424975 %}}Wilmot's Warehouse{{% /game %}} (#6): Apart from the previous game's digital implementation on BGA, this is the only game I've actually had the pleasure of playing – and I had a blast, with memorable stories and jokes I still remember.
 
 
 ## Nominated for {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}
