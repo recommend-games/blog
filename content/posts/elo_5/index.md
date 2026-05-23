@@ -20,12 +20,12 @@ tags:
 TODO: Intro + Hook
 
 
-# Method: what we're trying to measure (and what not)
+## Method: what we're trying to measure (and what not)
 
 First, we need to take a closer look into what exactly we're trying measure and how. I'll try to keep it fairly high level here, but if even a hint of theory is too much for you, feel free to skip straight to the results.
 
 
-## The story so far
+### The story so far
 
 This is part 5 of our series on Elo and measuring "skills" in games, so I'll lay out the overall methodology here in the form of a brief recap.
 
@@ -40,7 +40,7 @@ We then take one extra step: The raw \\(\sigma\\) is hard to interpret. This is 
 **That gives a single headline number per game: *skill sensitivity* \\(p\\) (higher \\(p\\) ≈ results behave more like “better player wins”; lower \\(p\\) ≈ results are more swingy).**
 
 
-## Some more details: assumptions, simplifications, known limitations
+### Some more details: assumptions, simplifications, known limitations
 
 TODO: What is skill in a game? Fundamental assumption going into Elo. What it measures and what it doesn't.
 
@@ -50,35 +50,35 @@ TODO: Source of data: BGA. Only consider competitive games with enough regulars 
 
 TODO: We only look at outcomes, the games themselves remain blackboxes (no action spaces or decision trees etc). Do people even care to win? Magic circle, Knizia quote etc.
 
-# Results
+## Results
 
-## Skill sensitivity vs complexity
+### Skill sensitivity vs complexity
 
 {{% bokeh "skill_vs_complexity.json" %}}
 
 TODO: Complexity has its own issues. Many 'geeks rate a game heavy based on its depth rather than rules overhead (cf go).
 
-## Most skill sensitive games
+### Most skill sensitive games
 
 TODO: Table
 
-### Games that punch above their weight
+#### Games that punch above their weight
 
 TODO: Most skill sensitive games within complexity band. (Quantiles?)
 
-## Least skill sensitive games
+### Least skill sensitive games
 
 TODO: Table
 
-# Notes
+## Notes
 
-## Criterion for games included in the analysis
+### Criterion for games included in the analysis
 
 - Enough regular players (100)
 - Corresponding BGG entry (drop BGA games which map to the same BGG entry — mostly traditional)
 - Competitive (let's remove: BGA rank locked AND coop on BGG)
 
-## Notes on the method and the "skill fraction" / "p-deterministic" metric
+### Notes on the method and the "skill fraction" / "p-deterministic" metric
 
 - Take it with tons of salt
 - Highly depends on player population
@@ -94,7 +94,7 @@ TODO: Table
 
 
 
-# Outline from Gippty
+## Outline from Gippty
 
 0. Title + framing
 

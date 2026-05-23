@@ -28,11 +28,11 @@ tags:
 After months of waiting, we finally [know what games won](https://www.spiel-des-jahres.de/die-gewinner-2020-stehen-fest/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/die-gewinner-2020-stehen-fest/) this year's {{% color "#E30613" %}}***Spiel des Jahres***{{% /color %}} and {{% color "#193F4A" %}}***Kennerspiel des Jahres***{{% /color %}}! Without further ado, I'll present the winners along with a comment on how the predictions went.
 
 
-# {{% color "#E30613" %}}*Spiel des Jahres 2020*{{% /color %}}
+## {{% color "#E30613" %}}*Spiel des Jahres 2020*{{% /color %}}
 
 {{< img src="sdj-2020" size="x300" alt="Spiel des Jahres 2020" >}}
 
-## {{% game 284108 %}}Pictures{{% /game %}}
+### {{% game 284108 %}}Pictures{{% /game %}}
 
 {{< img src="284108" size="x300" alt="Pictures" >}}
 
@@ -43,12 +43,12 @@ Inevitable, there are those who complain that one year after {{% game 254640 %}}
 By all accounts, {{% game 284108 %}}Pictures{{% /game %}} seems to fit that description perfectly, so I say congratulations to Daniela and Christian Stöhr for winning the most prestigious award in board gaming with their first (or second) design!
 
 
-# {{% color "#193F4A" %}}*Kennerspiel des Jahres 2020*{{% /color %}}
+## {{% color "#193F4A" %}}*Kennerspiel des Jahres 2020*{{% /color %}}
 
 {{< img src="ksdj-2020" size="x300" alt="Kennerspiel des Jahres 2020" >}}
 
 
-## {{% game 284083 %}}The Crew: The Quest for Planet Nine{{% /game %}}
+### {{% game 284083 %}}The Crew: The Quest for Planet Nine{{% /game %}}
 
 {{< img src="284083" size="x300" alt="The Crew: The Quest for Planet Nine" >}}
 
@@ -57,7 +57,7 @@ Unlike the winner of the red meeple, virtually everybody agreed that {{% game 28
 One last thing to mention is that {{% game 284083 %}}The Crew{{% /game %}}'s predictable win wasn't down to a lack of competition. By all accounts, both {{% game 263918 %}}Cartographers{{% /game %}} and {{% game 245655 %}}King's Dilemma{{% /game %}} are highly regarded and would have deserved the award. As gamers, we can be excited that it's not only the quantity of games being released that's rising, but also the quality, throughout the spectrum.
 
 
-# Conclusion
+## Conclusion
 
 The jury explicitly pointed out the quality of this year's games in all of this hobby's facets. When you look back through the different games discussed in this series, I'm sure you'll agree with them, and it'll get you excited for all the games yet to be published.
 

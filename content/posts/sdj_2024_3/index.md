@@ -38,7 +38,7 @@ The waiting is finally coming to an end! On Sunday, July 21, the jury will annou
 I've been doing this [for]({{<ref "posts/sdj_2020_3/index.md">}}) [four]({{<ref "posts/sdj_2021_3/index.md">}}) [years]({{<ref "posts/sdj_2022_3/index.md">}}) [now]({{<ref "posts/sdj_2023_3/index.md">}}) and I've called seven out of the eight winners correctly. No reason to rest on any laurels – there's another batch of awards coming up, and this year might be the closest race yet!
 
 
-# Nominated for {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}}
+## Nominated for {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}}
 
 {{< img src="sdj-2024" size="x300" alt="Spiel des Jahres 2024" >}}
 
@@ -53,7 +53,7 @@ Before we dive into the individual games, let's look at some numbers to see some
 Obviously, {{% game 373106 %}}Sky Team{{% /game %}} is the high favourite according to all metrics. But will the jury follow the numbers? Let's take a closer look at all the nominees and their pros and cons.
 
 
-## {{% game 393325 %}}Captain Flip{{% /game %}}
+### {{% game 393325 %}}Captain Flip{{% /game %}}
 
 *2–5 players, 20 minutes, 8+ years, light (1.1)*
 
@@ -66,7 +66,7 @@ The first release by [PlayPunk](https://boardgamewire.com/index.php/2023/06/20/7
 On the surface, there isn't all that much to this game of flipping tiles and filling your ship with a colourful set of characters. It's quite random and solitaire – yet this design somehow manages to pull the magic trick of keeping everyone around the table invested in every single draw and flip of a tile. It's fast, it's immediate, it's fun – in other words: it's perfect {{% sdj / %}} material.
 
 
-## {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}}
+### {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}}
 
 *2–5 players, 20–30 minutes, 8+ years, medium light (1.6)*
 
@@ -77,7 +77,7 @@ On the surface, there isn't all that much to this game of flipping tiles and fil
 I'll admit I have neither played nor heard all that much about this game until [Ben Maddox's interview](https://youtu.be/gLEq5l4RfWY?si=pHwe9qF5Hpg0eKda) which I've mentioned in the [previous article]({{<ref "posts/sdj_essay/index.md">}}). One very interesting outcome was that {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}} was designed from the onset very intentionally with winning awards in mind. So far this plan seems to (almost) work out: The game got nominated for both [As d'Or](https://en.wikipedia.org/wiki/As_d'Or) and {{% sdj / %}}, widely regarded as the most important awards in board gaming. It didn't win the former, but now has the chance to win the latter.
 
 
-## {{% game 373106 %}}Sky Team{{% /game %}}
+### {{% game 373106 %}}Sky Team{{% /game %}}
 
 *2 players, 15 minutes, 12+ years, medium light (2.0)*
 
@@ -92,12 +92,12 @@ Of course, the strongest argument for {{% game 373106 %}}Sky Team{{% /game %}} i
 One last thought about it being nominated on the {{% sdj %}}red list{{% /sdj %}} even though most pundits had it under {{% kdj %}}anthracite{{% /kdj %}}. First off, it should prove that {{% sdj / %}} isn't nearly as shallow as the grognards want us to believe. Second, it shows that the question of {{% sdj %}}Spiel{{% /sdj %}} or {{% kdj %}}Kennerspiel{{% /kdj %}} is much less about *complexity* and much more about *approachability*. The studio did a great job of providing a clear yet compelling first game experience, while literally hiding the extra material (and complexity) at first.
 
 
-## Who will win?
+### Who will win?
 
 It may be my ignorance, but {{% game 376683 %}}In the Footsteps of Darwin{{% /game %}} is for me the outsider amongst the nominees. I have a really hard time deciding between the other two games. {{% game 373106 %}}Sky Team{{% /game %}} appears to be quite an exceptional game, but maybe the whole two-player-curse is still too much of a burden. In the end, my (proverbial) money is on {{% game 393325 %}}Captain Flip{{% /game %}} – it'd be the winner most in keeping with the most recent choices.
 
 
-# Nominated for {{% kdj %}}Kennerspiel des Jahres 2024{{% /kdj %}}
+## Nominated for {{% kdj %}}Kennerspiel des Jahres 2024{{% /kdj %}}
 
 {{< img src="ksdj-2024" size="x300" alt="Kennerspiel des Jahres 2024" >}}
 
@@ -112,7 +112,7 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 {{% game 334986 %}}Daybreak{{% /game %}} hasn't been available in retail for very long (not at all yet in Europe outside Germany), which harms its rating related metrics. This way, {{% game 390092 %}}Ticket to Ride Legacy{{% /game %}} looks like the favourite by those numbers, but {{% game 334986 %}}Daybreak{{% /game %}} would be the frontrunner according to the jury and the poll. Again, let's take a look at the nominees in details to understand their chances of winning.
 
 
-## {{% game 334986 %}}Daybreak{{% /game %}}
+### {{% game 334986 %}}Daybreak{{% /game %}}
 
 *1–4 players, 60–120 minutes, 10+ years, medium (3.0)*
 
@@ -125,7 +125,7 @@ I had the good fortune of trying out {{% game 334986 %}}Daybreak{{% /game %}} at
 This doesn't mean it's perfect – game play can feel fairly solitaire and some thematic choices aren't to everybody's taste. Some called the game too easy, other too hard. Some find the heavy topic of the climate crisis disturbing their escapism, others find the game overly optimistic and relying too much on technical advances for its solutions. And pretty much every German seems to take offence with nuclear power being presented as a green source of energy. So should this game receive the award, I think it's safe to say it's going to generate some conversations, both in public and around the Christmas tree. In my opinion, this is the strongest argument for making {{% game 334986 %}}Daybreak{{% /game %}} the {{% kdj %}}Kennerspiel 2024{{% /kdj %}}.
 
 
-## {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
+### {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}
 
 *1–4 players, 45 minutes, 14+ years, medium light (2.0)*
 
@@ -138,7 +138,7 @@ This game is so old, not only did I already predict it to be on the longlist [la
 Despite its age, I still haven't played it, so I don't have much more to say about {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}. My impression is that it was received very warmly and the nomination certainly wasn't a surprise (other than it not being clear what year it belongs to), but I haven't heard of much enthusiasm either, so a win would come unexpectedly.
 
 
-## {{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}}
+### {{% game 390092 %}}Ticket to Ride Legacy: Legends of the West{{% /game %}}
 
 *2–5 players, 20–90 minutes, 10+ years, medium (2.5)*
 
@@ -157,7 +157,7 @@ And then there's the issue of the game's narrative: Unlike in classic {{% game 9
 The German edition made it somehow even worse by translating "light" as "shallow". I don't say that every game needs to address every possible problematic aspect of its setting nor that the jury shouldn't have nominated {{% game 390092 %}}TtR Legacy{{% /game %}} because of it, but a note like this just seems like a poor excuse. Harald Schrapers, the jury chairman, wrote an essay in [Spielbox](https://spielbox.de/) 2024/2 expressing his disappointment about the thematic embedding – and yet he still ranks {{% game 390092 %}}TtR Legacy{{% /game %}} amongst [his top games of 2024](https://gamesweplay.de/).
 
 
-## Who will win?
+### Who will win?
 
 I guess I made my position pretty clear: if the jury takes their own mission of promoting [*Kulturgut Spiel*]({{<ref "posts/sdj_essay/index.md">}}) seriously, they need to hand the award to {{% game 334986 %}}Daybreak{{% /game %}}, period. Even leaving the somewhat political considerations aside, there's too many aspects speaking *against* {{% game 390092 %}}Ticket to Ride Legacy{{% /game %}} and not enough *for* {{% game 350933 %}}The Guild of Merchant Explorers{{% /game %}}, so my clear favourite on all acounts is {{% game 334986 %}}Daybreak{{% /game %}}.
 

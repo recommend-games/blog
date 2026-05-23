@@ -31,12 +31,12 @@ This year's show was… long… On the one hand, it's nice to have all three awa
 But without further ado, here are the winners of {{% sdj / %}} and {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}!
 
 
-# {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}
+## {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}
 
 {{< img src="sdj-2023" size="x300" alt="Spiel des Jahres 2023" >}}
 
 
-## {{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}
+### {{% game 370591 %}}Dorfromantik: The Board Game{{% /game %}}
 
 *1–6 players, 30–60 minutes, 8+ years, medium light (1.7)*
 
@@ -47,12 +47,12 @@ In the end, the main award went to what most observers (myself included) conside
 Maybe we can continue the co-op vs solo game discussion some other time, but for now I really do think this is a very pleasing puzzle, whether on your own or with friends, and it'll make a great ambassador for the hobby, maybe even pull in a video gamer or two. I don't think it'll knock anybody off their socks or redefine their expectations of board gaming, but they'll have a good time, and that's what matters most.
 
 
-# {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
+## {{% kdj %}}Kennerspiel des Jahres 2023{{% /kdj %}}
 
 {{< img src="ksdj-2023" size="x300" alt="Kennerspiel des Jahres 2023" >}}
 
 
-## {{% game 359970 %}}Challengers!{{% /game %}}
+### {{% game 359970 %}}Challengers!{{% /game %}}
 
 *1–8 players, 45 minutes, 8+ years, medium light (1.8)*
 
@@ -65,12 +65,12 @@ It is worth noticing that this year's {{% sdj %}}Spiel{{% /sdj %}} and {{% kdj /
 In the end, we're left with a winner that's not quite like any other game out there and hence *could* push people's expectations of board games today. {{% game 359970 %}}Challengers!{{% /game %}} doesn't have the same strategic depth as the other nominees, but if there were no skills involved, how come I fail this consistently with my decks after dozens of games on [Board Game Arena](https://boardgamearena.com/gamepanel?game=challengers)? 😉
 
 
-# {{% kdj %}}Special Awards 2023{{% /kdj %}}
+## {{% kdj %}}Special Awards 2023{{% /kdj %}}
 
 {{< img src="sonderpreis-2023" size="x300" alt="Special Awards 2023" >}}
 
 
-## {{% game 350636 %}}Unlock!: Game Adventures{{% /game %}}
+### {{% game 350636 %}}Unlock!: Game Adventures{{% /game %}}
 
 *1–5 players, 30–60 minutes, 10+ years, medium light (2.4)*
 
@@ -79,7 +79,7 @@ In the end, we're left with a winner that's not quite like any other game out th
 Let's not forget the special award for {{% game 350636 %}}Unlock!: Game Adventures{{% /game %}} as well as {{% game 327056 %}}Unlock! Kids: Detective Stories{{% /game %}}, and to some extent the whole Unlock! line. I've personally been a big fan of their games for a long time and agree with the jury's sentiment that the entries have become even better over time. Let's hope that this rare honour will encourage them to keep it up – and maybe become a little faster in bringing new cases from France out into the rest of the world.
 
 
-# Conclusion
+## Conclusion
 
 If you had asked me in winter about my guess for {{% sdj %}}Spiel des Jahres 2023{{% /sdj %}}, I would've said it'll be a battle between {{% game 370591 %}}Dorfromantik{{% /game %}} and {{% game 359970 %}}Challengers!{{% /game %}} (with a slight advantage for the latter), but I wouldn't have a clue about {{% kdj %}}Kennerspiel{{% /kdj %}}. Because it didn't come head to head between the two favourites, I can now claim that I called both awards correctly again, bringing my total to seven out of eight over the past four years.
 

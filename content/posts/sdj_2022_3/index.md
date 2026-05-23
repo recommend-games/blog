@@ -38,7 +38,7 @@ The waiting is finally coming to an end! On Saturday, July 16, the jury will ann
 I'm proud to say that I've called both awards correctly for [two]({{<ref "posts/sdj_2020_3/index.md">}}) [years]({{<ref "posts/sdj_2021_3/index.md">}}) running, so there is a bit of pressure to keep up the streak. 😅 So without further ado, let's look at the nominees.
 
 
-# Nominated for {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}}
+## Nominated for {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}}
 
 {{< img src="sdj-2022" size="x300" alt="Spiel des Jahres 2022" >}}
 
@@ -53,7 +53,7 @@ Before we dive into the individual games, let's look at some numbers to see some
 No doubt, the numbers are in favour of {{% game 295947 %}}Cascadia{{% /game %}}. But will the jury agree? Let's look at the nominees in a little more detail.
 
 
-## {{% game 295947 %}}Cascadia{{% /game %}}
+### {{% game 295947 %}}Cascadia{{% /game %}}
 
 *1–4 players, 30–45 minutes, 10+ years, medium light (1.9)*
 
@@ -68,7 +68,7 @@ None of this matters if the gameplay was an overwhelming experience. But when re
 When you think of {{% sdj / %}} as an ambassador for the hobby board gaming, I don't think {{% game 295947 %}}Cascadia{{% /game %}} is the best game for this job. Overall, it might be a fun, clever puzzle, but it also has a slightly dry and geeky aura to it that might fail to pull in new players.
 
 
-## {{% game 291453 %}}SCOUT{{% /game %}}
+### {{% game 291453 %}}SCOUT{{% /game %}}
 
 *2–5 players, 15 minutes, 9+ years, light (1.4)*
 
@@ -81,7 +81,7 @@ Card games do have some advantages: they're cheap, portable and don't intimidate
 Still, I would consider this to be the dark horse in this year's race, though it would be a great service to the hobby if the jury showcased this gem from Japan to the Western markets.
 
 
-## {{% game 300905 %}}Top Ten{{% /game %}}
+### {{% game 300905 %}}Top Ten{{% /game %}}
 
 *4–9 players, 30 minutes, 14+ years, light (1.1)*
 
@@ -94,12 +94,12 @@ Of course, there are always caveats. Maybe most importantly, a game like this re
 The other, more formal, concern is that this would be the first {{% sdj / %}} that doesn't (claim to) work for three players. I've stipulated [years ago]({{<ref "posts/sdj_2020/index.md">}}) that a {{% sdj / %}} must work for three and four players, full stop. But the jury stated that {{% game 318977 %}}MicroMacro{{% /game %}} doesn't work for four players, and claiming games like {{% game 178900 %}}Codenames{{% /game %}} and {{% game 254640 %}}Just One{{% /game %}} can be played with three players is just a lie publishers habitually print on boxes. This didn't stop the jury then and it shouldn't stop them now.
 
 
-## Who will win?
+### Who will win?
 
 I guess you don't need to read between the lines above, my favourite for {{% sdj %}}Spiel des Jahres 2022{{% /sdj %}} is {{% game 300905 %}}Top Ten{{% /game %}}. It just fits best in line with past winners: approachable, quick, fun – the best games of the three to bring all kinds of people together around the table. By all means, {{% game 295947 %}}Cascadia{{% /game %}} and {{% game 291453 %}}SCOUT{{% /game %}} seem strong games that definitely have their fans, but my feeling tells me that {{% game 300905 %}}Top Ten{{% /game %}} is the kind of game the jury is after.
 
 
-# Nominated for {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}
+## Nominated for {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}
 
 {{< img src="ksdj-2022" size="x300" alt="Kennerspiel des Jahres 2022" >}}
 
@@ -114,7 +114,7 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 The recommendation algorithm picks {{% game 246784 %}}Cryptid{{% /game %}} as its favourite, whilst the geeks choose {{% game 316554 %}}Dune: Imperium{{% /game %}}. Or maybe {{% game 328479 %}}Living Forest{{% /game %}} will surprise everyone in the end? Let's take a look at the candidates!
 
 
-## {{% game 246784 %}}Cryptid{{% /game %}}
+### {{% game 246784 %}}Cryptid{{% /game %}}
 
 *3–5 players, 30–50 minutes, 10+ years, medium light (2.2)*
 
@@ -129,7 +129,7 @@ Finally, in the very same genre we've also had {{% game 279537 %}}The Search for
 Don't get me wrong, I actually quite like deduction games and {{% game 246784 %}}Cryptid{{% /game %}} in particular. Lots of people do – there's a lot of positive ratings of this relatively old game, so the strong performance for the recommendation algorithm is partially explained by that.
 
 
-## {{% game 316554 %}}Dune: Imperium{{% /game %}}
+### {{% game 316554 %}}Dune: Imperium{{% /game %}}
 
 *1–4 players, 60–120 minutes, 14+ years, medium (3.0)*
 
@@ -142,7 +142,7 @@ Does this make it the favourite to win {{% kdj %}}Kennerspiel des Jahres 2022{{%
 In the end what we have is a fairly complex game with lots of high praises that might be just out of reach for the main award.
 
 
-## {{% game 328479 %}}Living Forest{{% /game %}}
+### {{% game 328479 %}}Living Forest{{% /game %}}
 
 *1–4 players, 40 minutes, 10+ years, medium light (2.2)*
 
@@ -157,7 +157,7 @@ I've heard many experienced games being somewhat lukewarm on {{% game 328479 %}}
 I've played dozens of games on [Board Game Arena](https://boardgamearena.com/gamepanel?game=livingforest) and I'm still looking forward to many more!
 
 
-## Who will win?
+### Who will win?
 
 Again, I think it's pretty clear from the above that my money is on {{% game 328479 %}}Living Forest{{% /game %}} to win {{% kdj %}}Kennerspiel des Jahres 2022{{% /kdj %}}. It just hits the sweet spot of a fairly approachable game that offers enough challenges for those who are ready for a bit deeper experience. {{% game 246784 %}}Cryptid{{% /game %}} and {{% game 316554 %}}Dune: Imperium{{% /game %}} are clearly very strong games in their own right, but both the jury's and my own enthusiasm quite clearly point towards {{% game 328479 %}}Living Forest{{% /game %}}.
 
