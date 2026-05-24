@@ -196,7 +196,7 @@ label_games = (
     "Azul",
     "Backgammon",
     "CATAN",
-    "Can't Stop",
+    # "Can't Stop",
     "Carcassonne",
     "Caylus",
     "Challengers!",
@@ -212,7 +212,6 @@ label_games = (
     "Kingdomino",
     # "LLAMA",
     # "Living Forest",
-    "Mini Rogue",
     "No Thanks!",
     "Panic Lab",
     "Patchwork",
@@ -228,6 +227,8 @@ label_games = (
     # "The Werewolves of Miller's Hollow",
     # "Tichu",
     "Ubongo",
+    "Wingspan",
+    "Yahtzee",
 )
 
 bokeh_df = (
