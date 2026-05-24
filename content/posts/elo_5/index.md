@@ -95,6 +95,52 @@ TODO: Table
 
 
 
+## Narrative notes
+
+### The central question
+
+Not "how much luck is in this game?" — that framing is unwinnable and invites endless objections. Instead: **"When you get better at a game, do you start winning more?"** That's what BGA match data actually answers. Empirically grounded, hard to dispute as a question, sidesteps the design-intent fight entirely. We're reporting what happens when real people play, not reverse-engineering the designer's intentions.
+
+### The headline finding
+
+The scatter shows a positive but weak, noisy correlation between complexity and skill sensitivity. That *is* the story: BGG complexity doesn't predict competitive differentiation well. Some rule-heavy games produce surprisingly equal outcomes; some simple games produce brutal competitive hierarchies. The gap between "what BGG weight implies" and "what BGA outcomes show" is what the article is about.
+
+### The hook
+
+**Spot It.** A children's card game where the better player wins as reliably as in Terraforming Mars. Lead with that specific, counterintuitive claim. It does two things: grabs attention, and immediately demonstrates that the metric measures *competitive differentiation*, not strategic depth — which inoculates against the "luck vs skill" criticism before it can land.
+
+### Proposed structure
+
+1. **Hook** — Spot It vs Terraforming Mars. Create the tension before explaining anything.
+2. **The question** — two paragraphs reframing the measurement. Not luck vs skill (a property of the rules). Instead: does a competitive hierarchy form in practice? Front-load the key caveat *once*, with confidence: this reflects the BGA population, not abstract game truth. Then move on.
+3. **Compact method recap** — four or five sentences. Elo spread, calibrated K*, p-benchmark. Link-heavy for those who want the derivations.
+4. **The main plot** — skill sensitivity vs complexity. Describe the overall shape honestly: correlation exists but is loose. Three or four specific game callouts.
+5. **The two outlier stories** — the section that gets shared:
+   - *Simple but brutal*: Spot It, Panic Lab, Abalone — consistent winners emerge despite minimal rules overhead
+   - *Complex but swingy*: Skat, Pax Pamir — games celebrated for depth where the competitive hierarchy is surprisingly flat
+6. **Top/bottom tables** — compact, 5–8 games each. High reader value, low word count.
+7. **Caveats woven into outro** — not a separate section, not apologetics. Population-dependent, BGA-specific, "do players even care to win?" (magic circle), Tic-tac-toe paradox. Close with what the measure *does* tell you.
+
+### Specific narrative beats
+
+- **CATAN at ~35%** — most argued-about data point. Generates productive debate.
+- **Pax Pamir** — designer famous for systems mastery, yet swingy as hell on BGA. One of the best labels, generates discussion on its own.
+- **Skat** — high complexity (~3.2), low skill (~20%). Famously technical German card game that looks nearly random on BGA. Demands an explanation.
+- **Chess vs Gaia Project** — Chess sits alongside Caylus in skill sensitivity despite Gaia Project being "heavier" by BGG. Makes the BGG weight problem concrete and visual.
+- **Tic-tac-toe paradox** — use proactively to define what the metric measures. Among adults it looks random even though it's deterministic. Mirror: a field of grandmasters drawing chess games would look noisy. Inoculates against the "but chess is obviously skill" objection.
+- **Dot size** — mention in prose: "dot size scales with number of matches on BGA."
+
+### Scope decisions
+
+- **Cut**: upset rates analysis, player count curves, personal fingerprint, error bars plot — need new data or duplicate what's already there. Personal fingerprint could be a "part 5b."
+- **Keep**: scatter plot, top/bottom tables, two outlier narrative sections, compact caveats in outro.
+- **Target length**: roughly parts 3 and 4 (~150 lines of markdown), slightly longer as the payoff article.
+
+### Voice
+
+Rigorous but playful. Confident — this article has earned it after four parts of setup. Caveats as *interpretive insight*, not apologies.
+
+
 ## Outline from Gippty
 
 0. Title + framing
