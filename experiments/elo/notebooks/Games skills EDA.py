@@ -275,7 +275,7 @@ bokeh_df.shape, len(game_types), labels_df.shape
 p = figure(
     width=900,
     height=550,
-    x_axis_label="Effective skill level p (p-deterministic index)",
+    x_axis_label="Skill sensitivity p",
     y_axis_label="BGG complexity",
     tools="pan,wheel_zoom,box_zoom,reset,save",
     title="Skill vs complexity for BGA games",
@@ -375,7 +375,7 @@ p.add_layout(
 hover = HoverTool(
     tooltips=[
         ("Game", "@display_name_en (@year)"),
-        ("Effective skill level p", "@p_deterministic{0%}"),
+        ("Skill sensitivity p", "@p_deterministic{0%}"),
         ("Complexity", "@complexity{0.0}"),
         ("Game type", "@game_type"),
         ("BGG rank (rating)", "@rank (@bayes_rating{0.0})"),
