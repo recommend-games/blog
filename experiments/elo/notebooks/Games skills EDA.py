@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.18.1
+#       jupytext_version: 1.19.1
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -31,7 +31,6 @@ from bokeh.models import (
     LabelSet,
     NumeralTickFormatter,
 )
-from bokeh.palettes import Category10
 
 jupyter_black.load()
 
@@ -173,6 +172,23 @@ bokeh_columns = [
     "num_all_matches",
     "num_regular_players",
 ]
+
+# Collapsed game type categories and their display order / colours
+GAME_TYPE_COLORS = {
+    "Family Game": "#4e79a7",  # blue
+    "Strategy Game": "#f28e2b",  # orange
+    "Abstract Game": "#59a14f",  # green
+    "Party Game": "#e15759",  # red
+    "Children's Game": "#b07aa1",  # purple
+    "Other": "#bab0ac",  # grey — Thematic, War, Customizable, Uncategorized
+}
+TYPE_COLLAPSE = {
+    "Thematic": "Other",
+    "War Game": "Other",
+    "Customizable": "Other",
+    "Uncategorized": "Other",
+}
+
 label_games = (
     "7 Wonders Duel",
     "Abalone",
@@ -217,7 +233,10 @@ label_games = (
 bokeh_df = (
     plot_df.lazy()
     .drop_nulls(["p_deterministic", "complexity", "num_all_matches"])
-    .with_columns(log_matches=pl.col("num_all_matches").clip(1).log10())
+    .with_columns(
+        game_type=pl.col("game_type").replace(TYPE_COLLAPSE),
+        log_matches=pl.col("num_all_matches").clip(1).log10(),
+    )
     .with_columns(
         size=min_size
         + (pl.col("log_matches") - pl.col("log_matches").min())
@@ -228,13 +247,9 @@ bokeh_df = (
     .sort("num_all_matches")
 )
 
-game_types = (
-    bokeh_df.group_by("game_type")
-    .agg(pl.len())
-    .sort(pl.col("game_type") != "Uncategorized", "len", descending=True)
-    .collect()
-    .to_series()
-)
+# Fixed order: named types first, Other last — filter to only types actually present
+present_types = set(bokeh_df.select(pl.col("game_type").unique()).collect().to_series())
+game_types = [gt for gt in GAME_TYPE_COLORS if gt in present_types]
 
 label_cols = ["p_deterministic", "complexity", "display_name_en"]
 labels_df = (
@@ -253,7 +268,7 @@ bokeh_df = bokeh_df.with_columns(
 source = ColumnDataSource(bokeh_df)
 label_source = ColumnDataSource(labels_df)
 
-bokeh_df.shape, game_types.shape, labels_df.shape
+bokeh_df.shape, len(game_types), labels_df.shape
 
 # %%
 p = figure(
@@ -323,11 +338,8 @@ for x_q, y_q, text in quadrant_labels:
         )
     )
 
-# Use up to 10 distinct colours; if there are more types, colours will repeat
-palette = Category10[10]
-
 # One glyph per game_type with a CDSView so we can control legend order explicitly
-for i, gt in enumerate(game_types):
+for gt in game_types:
     view = CDSView(filter=GroupFilter(column_name="game_type", group=gt))
     p.scatter(
         x="p_deterministic",
@@ -338,7 +350,7 @@ for i, gt in enumerate(game_types):
         view=view,
         fill_alpha=0.75,
         line_color=None,
-        color=palette[i % len(palette)],
+        color=GAME_TYPE_COLORS[gt],
         legend_label=gt,
     )
 
@@ -368,7 +380,7 @@ hover = HoverTool(
         ("BGG rank (rating)", "@rank (@bayes_rating{0.0})"),
         ("Number of matches", "@num_all_matches"),
         ("Number of players", "@num_regular_players"),
-    ]
+    ],
 )
 p.add_tools(hover)
 
