@@ -75,6 +75,8 @@ links:
     dst: "content/posts/elo_4/p_deterministic_vs_sigma.png"
   - src: "experiments/elo/plots/skill_vs_complexity.json"
     dst: "content/posts/elo_5/skill_vs_complexity.json"
+  - src: "experiments/elo/plots/skill_vs_complexity.png"
+    dst: "content/posts/elo_5/skill_vs_complexity.png"
   - src: "experiments/gini/plots/games_per_year.svg"
     dst: "content/posts/gini/games_per_year.svg"
   - src: "experiments/gini/plots/gini_coefficient.svg"
