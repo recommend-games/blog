@@ -2,6 +2,7 @@
 title: TODO
 subtitle: "Elo, part 5: TODO"
 slug: elo-part-5-todo
+share_img: /posts/elo-part-5-todo/skill_vs_complexity.png
 author: Markus Shepherd
 type: post
 date: 2026-03-31T12:00:00+03:00
