@@ -118,6 +118,9 @@ def run_simulation(
 
     group_ctx = group_stage.build_group_contexts(teams, group_matches)
     ko_ctx = knockout.build_knockout_context(knockout_slots, teams)
+    third_place_dict, r32_specs = qualifiers.precompute_qualifier_data(
+        third_place_lookup, knockout_slots
+    )
     fifa_ranks = {
         row["group_slot"]: int(row["fifa_ranking"])
         for row in teams.iter_rows(named=True)
@@ -141,7 +144,7 @@ def run_simulation(
             group_ctx, all_goals_a[sim_idx], all_goals_b[sim_idx]
         )
         r32_resolution, qualified_slots = qualifiers.select_qualifiers(
-            group_results, third_place_lookup, knockout_slots, fifa_ranks
+            group_results, third_place_dict, r32_specs, fifa_ranks
         )
         winners = knockout.simulate_knockout(r32_resolution, ko_ctx, rng)
         acc.update(group_results, qualified_slots, winners)

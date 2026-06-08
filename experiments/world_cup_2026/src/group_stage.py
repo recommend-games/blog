@@ -133,10 +133,21 @@ def rank_group(ctx: GroupContext, goals_a, goals_b) -> GroupResult:
     stats = {s: TeamStats(s) for s in ctx.slots}
     matches: list[tuple[str, str, int, int]] = []
     for i, sa, sb in zip(ctx.match_indices, ctx.match_slot_a, ctx.match_slot_b):
-        ga = int(goals_a[i])
-        gb = int(goals_b[i])
-        stats[sa].record(ga, gb)
-        stats[sb].record(gb, ga)
+        ga = goals_a[i]
+        gb = goals_b[i]
+        sta = stats[sa]
+        stb = stats[sb]
+        sta.goals_for += ga
+        sta.goals_against += gb
+        stb.goals_for += gb
+        stb.goals_against += ga
+        if ga > gb:
+            sta.points += 3
+        elif ga == gb:
+            sta.points += 1
+            stb.points += 1
+        else:
+            stb.points += 3
         matches.append((sa, sb, ga, gb))
 
     slots = sorted(ctx.slots, key=lambda s: -stats[s].points)
@@ -157,4 +168,9 @@ def simulate_group_stage(
     goals_a,
     goals_b,
 ) -> dict[str, GroupResult]:
+    # Convert numpy arrays to native Python lists once so the inner loop
+    # avoids per-element int(np.int64) conversion.
+    if hasattr(goals_a, "tolist"):
+        goals_a = goals_a.tolist()
+        goals_b = goals_b.tolist()
     return {g: rank_group(ctx, goals_a, goals_b) for g, ctx in contexts.items()}
