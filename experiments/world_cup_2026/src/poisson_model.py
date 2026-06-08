@@ -11,13 +11,15 @@ results are cached by rounded Elo difference (~1200 unique keys in practice).
 
 from __future__ import annotations
 
-from functools import lru_cache
+from functools import cache, lru_cache
 
 import numpy as np
 from scipy.optimize import brentq
 from scipy.stats import poisson
 
 from . import config
+
+_EPS = 1e-9
 
 
 def elo_expected_score(elo_diff: float) -> float:
@@ -38,16 +40,27 @@ def poisson_expected_score(
     return p_a_wins + 0.5 * p_draw
 
 
+@cache
+def _saturation_bound(total_goals: float, max_goals: int) -> float:
+    # Highest s_A reachable when team A takes essentially all the goal budget.
+    return poisson_expected_score(total_goals - _EPS, _EPS, max_goals)
+
+
 def fit_lambdas(
     s_a: float,
     total_goals: float = config.TOTAL_GOALS,
     max_goals: int = config.MAX_GOALS,
 ) -> tuple[float, float]:
+    sat_hi = _saturation_bound(total_goals, max_goals)
+    if s_a >= sat_hi:
+        return total_goals - _EPS, _EPS
+    if s_a <= 1.0 - sat_hi:
+        return _EPS, total_goals - _EPS
+
     def objective(lam_a: float) -> float:
         return poisson_expected_score(lam_a, total_goals - lam_a, max_goals) - s_a
 
-    eps = 1e-9
-    lam_a = brentq(objective, eps, total_goals - eps, xtol=1e-7)
+    lam_a = brentq(objective, _EPS, total_goals - _EPS, xtol=1e-7)
     return float(lam_a), float(total_goals - lam_a)
 
 
