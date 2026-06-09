@@ -4,7 +4,13 @@ A reproducible Monte Carlo simulator for the 2026 FIFA World Cup, built
 around established World Football Elo ratings and a fixed-total Poisson
 goal model. The aim is a clear, testable, article-ready first version
 rather than an optimised forecasting system. The full design lives in
-[`../notes/World Cup 2026 Elo + Poisson Prediction Plan.md`](../notes/World%20Cup%202026%20Elo%20+%20Poisson%20Prediction%20Plan.md).
+[`notes/World Cup 2026 Elo + Poisson Prediction Plan.md`](notes/World%20Cup%202026%20Elo%20+%20Poisson%20Prediction%20Plan.md).
+
+This experiment is self-contained inside
+`experiments/world_cup_2026/` — all data snapshots, the simulator
+source, the runner scripts, the plan document and the published
+outputs live here, and `pyproject.toml` pins the only runtime
+dependencies (`numpy`, `polars`, `scipy`, `tqdm`).
 
 Outputs cover the full bracket (group stage through the final), per-team
 title probabilities, per-fixture score predictions, and a comparison
@@ -89,7 +95,11 @@ the pipeline runs offline against the frozen inputs.
 ## Repository layout
 
 ```
-world_cup_2026/
+experiments/world_cup_2026/
+  pyproject.toml                         # PEP 621 project + hatchling build
+  README.md                              # this file
+  notes/
+    World Cup 2026 Elo + Poisson Prediction Plan.md   # source-of-truth design doc
   data/
     raw/                                 # frozen external inputs
       eloratings_world.tsv               # all teams + current Elo
@@ -108,7 +118,7 @@ world_cup_2026/
       knockout_slots.csv                 # 31 rows
       third_place_lookup.csv             # 495 rows
       market_odds.csv                    # 48 rows, de-vigged Polymarket
-  src/
+  world_cup_2026/                        # installable Python package
     config.py                            # tunables + data paths
     load_data.py                         # csv loaders with shape checks
     poisson_model.py                     # Elo expected score + lambda fit
@@ -141,14 +151,26 @@ world_cup_2026/
 
 ## Requirements
 
-- Python 3.13 (matches the repo's top-level `pyproject.toml`).
-- The project's `uv` environment, with `numpy`, `scipy`, `polars`,
-  `tqdm`. From the repo root, `uv sync` once installs them. All later
-  commands assume `uv run` so they pick up the right venv.
+- Python 3.13 (pinned in this experiment's `pyproject.toml`).
+- `numpy`, `polars`, `scipy`, `tqdm` (the only runtime dependencies).
+
+From `experiments/world_cup_2026/`:
+
+```bash
+uv sync
+```
+
+`uv` reads the PEP 621 `[project]` section of the local
+`pyproject.toml` and provisions a virtual environment under `.venv/`.
+All command snippets below assume you are inside this directory and
+prefix Python invocations with `uv run` so they pick up the right
+interpreter. If you prefer pip, `pip install -e .` against the same
+`pyproject.toml` works too.
 
 ## Running each component
 
-All commands below are run from the repository root (`elo/`).
+All commands below are run from `experiments/world_cup_2026/`
+(the directory you `cd`'d into for `uv sync`).
 
 ### One-time data capture (snapshots already committed)
 
@@ -160,20 +182,20 @@ committed `data/raw/` files date from 2026-06-08.
 ```bash
 curl -sSL 'https://eloratings.net/World.tsv' \
   -H 'Referer: https://eloratings.net/' \
-  -o world_cup_2026/data/raw/eloratings_world.tsv
+  -o data/raw/eloratings_world.tsv
 
 curl -sSL 'https://eloratings.net/en.teams.tsv' \
   -H 'Referer: https://eloratings.net/' \
-  -o world_cup_2026/data/raw/eloratings_teams.tsv
+  -o data/raw/eloratings_teams.tsv
 
-date -u +"%Y-%m-%dT%H:%M:%SZ" > world_cup_2026/data/raw/elo_snapshot_date.txt
+date -u +"%Y-%m-%dT%H:%M:%SZ" > data/raw/elo_snapshot_date.txt
 ```
 
 #### Wikipedia HTML snapshots
 
 ```bash
 UA='Mozilla/5.0 (compatible; world-cup-2026-research/1.0; you@example.com)'
-cd world_cup_2026/data/raw
+cd data/raw
 
 curl -sSL -A "$UA" \
   'https://en.wikipedia.org/wiki/2026_FIFA_World_Cup' \
@@ -195,7 +217,7 @@ cd -
 #### Polymarket odds (live, ≈3% vig)
 
 ```bash
-uv run python world_cup_2026/scripts/fetch_market_odds.py
+uv run python scripts/fetch_market_odds.py
 ```
 
 ### Building the canonical input tables
@@ -204,34 +226,34 @@ These are deterministic transforms of `data/raw/` into
 `data/processed/`. Re-run after refreshing any snapshot.
 
 ```bash
-uv run python world_cup_2026/scripts/parse_groups.py
-uv run python world_cup_2026/scripts/parse_fixtures.py
-uv run python world_cup_2026/scripts/parse_knockout.py
-uv run python world_cup_2026/scripts/build_teams.py
-uv run python world_cup_2026/scripts/build_group_matches.py
-uv run python world_cup_2026/scripts/build_third_place_lookup.py
-uv run python world_cup_2026/scripts/build_market_odds.py
+uv run python scripts/parse_groups.py
+uv run python scripts/parse_fixtures.py
+uv run python scripts/parse_knockout.py
+uv run python scripts/build_teams.py
+uv run python scripts/build_group_matches.py
+uv run python scripts/build_third_place_lookup.py
+uv run python scripts/build_market_odds.py
 ```
 
-Shape-check invariants are baked into `src/load_data.py` (48 teams,
+Shape-check invariants are baked into `world_cup_2026/load_data.py` (48 teams,
 72 group matches, 31 knockout slots, 495 third-place rows); each builder
 also runs row-level sanity checks before writing its CSV.
 
 ### Running the simulation
 
-Defaults (`-n 1_000_000`, `--seed 20260611`) come from `src/config.py`.
+Defaults (`-n 1_000_000`, `--seed 20260611`) come from `world_cup_2026/config.py`.
 Use a smaller count during development; the simulator runs at ≈4,000
 sim/s on a modern laptop.
 
 ```bash
 # 10k for a quick debug pass
-uv run python world_cup_2026/scripts/run_simulation.py -n 10000 --quiet
+uv run python scripts/run_simulation.py -n 10000 --quiet
 
 # 100k for development checks (~30 seconds)
-uv run python world_cup_2026/scripts/run_simulation.py -n 100000 --quiet
+uv run python scripts/run_simulation.py -n 100000 --quiet
 
 # 1M for the published outputs (~4 minutes)
-uv run python world_cup_2026/scripts/run_simulation.py
+uv run python scripts/run_simulation.py
 ```
 
 Writes to `outputs/`:
@@ -249,8 +271,8 @@ These are analytical — no extra Monte Carlo. They read each match's
 λ pair off the cache and compute the joint Poisson grid directly.
 
 ```bash
-uv run python world_cup_2026/scripts/build_score_predictions.py
-uv run python world_cup_2026/scripts/build_knockout_score_predictions.py
+uv run python scripts/build_score_predictions.py
+uv run python scripts/build_knockout_score_predictions.py
 ```
 
 Outputs:
@@ -267,9 +289,9 @@ modal bracket plays out, what scoreline is most likely in each match?"
 Refresh the Polymarket snapshot then rebuild:
 
 ```bash
-uv run python world_cup_2026/scripts/fetch_market_odds.py
-uv run python world_cup_2026/scripts/build_market_odds.py
-uv run python world_cup_2026/scripts/build_market_comparison.py
+uv run python scripts/fetch_market_odds.py
+uv run python scripts/build_market_odds.py
+uv run python scripts/build_market_comparison.py
 ```
 
 `outputs/market_comparison.csv` joins model `p_winner` against the
@@ -283,25 +305,25 @@ vs model-rank diff. Sorted by `value_edge` descending so the article's
 ```bash
 # 1. capture data (see commands above) or use the committed snapshots
 # 2. build processed inputs
-uv run python world_cup_2026/scripts/parse_groups.py
-uv run python world_cup_2026/scripts/parse_fixtures.py
-uv run python world_cup_2026/scripts/parse_knockout.py
-uv run python world_cup_2026/scripts/build_teams.py
-uv run python world_cup_2026/scripts/build_group_matches.py
-uv run python world_cup_2026/scripts/build_third_place_lookup.py
-uv run python world_cup_2026/scripts/build_market_odds.py
+uv run python scripts/parse_groups.py
+uv run python scripts/parse_fixtures.py
+uv run python scripts/parse_knockout.py
+uv run python scripts/build_teams.py
+uv run python scripts/build_group_matches.py
+uv run python scripts/build_third_place_lookup.py
+uv run python scripts/build_market_odds.py
 # 3. simulate
-uv run python world_cup_2026/scripts/run_simulation.py
+uv run python scripts/run_simulation.py
 # 4. score predictions
-uv run python world_cup_2026/scripts/build_score_predictions.py
-uv run python world_cup_2026/scripts/build_knockout_score_predictions.py
+uv run python scripts/build_score_predictions.py
+uv run python scripts/build_knockout_score_predictions.py
 # 5. market comparison
-uv run python world_cup_2026/scripts/build_market_comparison.py
+uv run python scripts/build_market_comparison.py
 ```
 
 ## Configuration
 
-`src/config.py` exposes:
+`world_cup_2026/config.py` exposes:
 
 | Constant | Default | Meaning |
 |---|---|---|

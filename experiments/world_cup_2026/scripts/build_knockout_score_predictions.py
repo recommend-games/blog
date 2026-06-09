@@ -22,15 +22,11 @@ estimate.
 from __future__ import annotations
 
 import csv
-import sys
-from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+import polars as pl
 
-import polars as pl  # noqa: E402
-
-from src import config, load_data, score_predictions  # noqa: E402
-from src.poisson_model import elo_expected_score, lambdas_for_rounded_diff  # noqa: E402
+from world_cup_2026 import config, load_data, score_predictions
+from world_cup_2026.poisson_model import elo_expected_score, lambdas_for_rounded_diff
 
 OUTPUT = config.OUTPUTS / "knockout_score_predictions.csv"
 GROUP_PROBS = config.OUTPUTS / "group_probabilities.csv"

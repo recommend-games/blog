@@ -3,13 +3,9 @@
 from __future__ import annotations
 
 import argparse
-import sys
 import time
-from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-
-from src import config, simulate  # noqa: E402
+from world_cup_2026 import config, simulate
 
 
 def main() -> None:
