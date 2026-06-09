@@ -27,12 +27,10 @@ from __future__ import annotations
 import csv
 import html
 import re
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-RAW = ROOT / "data" / "raw"
-PROC = ROOT / "data" / "processed"
-OUTPUT = PROC / "third_place_lookup.csv"
+from world_cup_2026.config import DATA_PROCESSED, DATA_RAW
+
+OUTPUT = DATA_PROCESSED / "third_place_lookup.csv"
 
 # Wikipedia's column order, derivable from knockout_slots.csv but small
 # enough to keep explicit for clarity. Pairs (group winner letter, R32 match_id).
@@ -58,7 +56,7 @@ def clean(s: str) -> str:
 
 
 def main() -> None:
-    text = (RAW / "wikipedia_2026_world_cup_knockout_stage.html").read_text()
+    text = (DATA_RAW / "wikipedia_2026_world_cup_knockout_stage.html").read_text()
     section_m = re.search(
         r'<h3[^>]*id="Combinations_of_matches_in_the_round_of_32".*?(?=<h[12])',
         text,

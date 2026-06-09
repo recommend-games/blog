@@ -24,6 +24,9 @@ dev = [
     "types-tqdm",
 ]
 
+[project.scripts]
+wc26-simulate = "world_cup_2026.run_simulation:main"
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"

@@ -17,12 +17,12 @@ narrative reads top-to-bottom.
 from __future__ import annotations
 
 import csv
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-TEAM_PROBS = ROOT / "outputs" / "team_probabilities.csv"
-MARKET = ROOT / "data" / "processed" / "market_odds.csv"
-OUTPUT = ROOT / "outputs" / "market_comparison.csv"
+from world_cup_2026.config import DATA_PROCESSED, OUTPUTS
+
+TEAM_PROBS = OUTPUTS / "team_probabilities.csv"
+MARKET = DATA_PROCESSED / "market_odds.csv"
+OUTPUT = OUTPUTS / "market_comparison.csv"
 
 
 def main() -> None:

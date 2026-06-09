@@ -10,12 +10,11 @@ from __future__ import annotations
 import datetime as dt
 import json
 import urllib.request
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-RAW = ROOT / "data" / "raw"
-SNAPSHOT = RAW / "polymarket_world_cup_winner.json"
-SNAPSHOT_DATE = RAW / "market_odds_snapshot_date.txt"
+from world_cup_2026.config import DATA_RAW
+
+SNAPSHOT = DATA_RAW / "polymarket_world_cup_winner.json"
+SNAPSHOT_DATE = DATA_RAW / "market_odds_snapshot_date.txt"
 
 URL = "https://gamma-api.polymarket.com/events?slug=world-cup-winner"
 UA = "Mozilla/5.0 (world-cup-2026-research/1.0; mk.schepke@gmail.com)"

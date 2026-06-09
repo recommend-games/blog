@@ -20,12 +20,10 @@ from __future__ import annotations
 import csv
 import html
 import re
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-RAW = ROOT / "data" / "raw"
-PROC = ROOT / "data" / "processed"
-OUTPUT = PROC / "knockout_slots.csv"
+from world_cup_2026.config import DATA_PROCESSED, DATA_RAW
+
+OUTPUT = DATA_PROCESSED / "knockout_slots.csv"
 
 CITY_TO_COUNTRY: dict[str, str] = {
     "Arlington": "USA",
@@ -125,7 +123,7 @@ def parse_block(block: str) -> dict:
 
 
 def main() -> None:
-    text = (RAW / "wikipedia_2026_world_cup_knockout_stage.html").read_text()
+    text = (DATA_RAW / "wikipedia_2026_world_cup_knockout_stage.html").read_text()
     anchors = [m.start() for m in ANCHOR_RE.finditer(text)]
     if len(anchors) != 32:
         raise RuntimeError(f"Expected 32 knockout matches, found {len(anchors)}")

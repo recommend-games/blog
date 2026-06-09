@@ -17,12 +17,10 @@ from __future__ import annotations
 
 import csv
 import re
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-RAW = ROOT / "data" / "raw"
-PROC = ROOT / "data" / "processed"
-OUTPUT = PROC / "group_matches.csv"
+from world_cup_2026.config import DATA_PROCESSED, DATA_RAW
+
+OUTPUT = DATA_PROCESSED / "group_matches.csv"
 
 CITY_TO_COUNTRY: dict[str, str] = {
     "Arlington": "USA",
@@ -56,7 +54,7 @@ FIELDS = [
 
 def load_team_to_slot() -> dict[str, str]:
     mapping: dict[str, str] = {}
-    with (PROC / "teams.csv").open() as f:
+    with (DATA_PROCESSED / "teams.csv").open() as f:
         for row in csv.DictReader(f):
             mapping[row["team_name"]] = row["group_slot"]
     return mapping
@@ -65,7 +63,7 @@ def load_team_to_slot() -> dict[str, str]:
 def main() -> None:
     team_to_slot = load_team_to_slot()
     rows: list[dict] = []
-    with (RAW / "fifa_fixtures.csv").open() as f:
+    with (DATA_RAW / "fifa_fixtures.csv").open() as f:
         for fixture in csv.DictReader(f):
             label_m = re.search(r"\d+", fixture["match_label"])
             if not label_m:

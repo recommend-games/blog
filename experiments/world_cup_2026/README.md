@@ -127,14 +127,13 @@ experiments/world_cup_2026/
     knockout.py                          # R32 through FINAL sampling
     simulate.py                          # Monte Carlo loop + outputs
     score_predictions.py                 # analytical score-grid helpers
-  scripts/
     parse_groups.py                      # build fifa_teams_groups.csv
     parse_fixtures.py                    # build fifa_fixtures.csv
     parse_knockout.py                    # build processed knockout_slots.csv
     build_teams.py                       # join FIFA groups <-> Elo snapshot
     build_group_matches.py               # add slot refs + venue country
     build_third_place_lookup.py          # parse Wikipedia's 495-row table
-    run_simulation.py                    # main Monte Carlo runner
+    run_simulation.py                    # main Monte Carlo runner (wc26-simulate)
     build_score_predictions.py           # group-stage modal scorelines
     build_knockout_score_predictions.py  # knockout modal bracket scorelines
     fetch_market_odds.py                 # refresh Polymarket snapshot
@@ -217,7 +216,7 @@ cd -
 #### Polymarket odds (live, ≈3% vig)
 
 ```bash
-uv run python scripts/fetch_market_odds.py
+uv run python -m world_cup_2026.fetch_market_odds
 ```
 
 ### Building the canonical input tables
@@ -226,13 +225,13 @@ These are deterministic transforms of `data/raw/` into
 `data/processed/`. Re-run after refreshing any snapshot.
 
 ```bash
-uv run python scripts/parse_groups.py
-uv run python scripts/parse_fixtures.py
-uv run python scripts/parse_knockout.py
-uv run python scripts/build_teams.py
-uv run python scripts/build_group_matches.py
-uv run python scripts/build_third_place_lookup.py
-uv run python scripts/build_market_odds.py
+uv run python -m world_cup_2026.parse_groups
+uv run python -m world_cup_2026.parse_fixtures
+uv run python -m world_cup_2026.parse_knockout
+uv run python -m world_cup_2026.build_teams
+uv run python -m world_cup_2026.build_group_matches
+uv run python -m world_cup_2026.build_third_place_lookup
+uv run python -m world_cup_2026.build_market_odds
 ```
 
 Shape-check invariants are baked into `world_cup_2026/load_data.py` (48 teams,
@@ -247,14 +246,18 @@ sim/s on a modern laptop.
 
 ```bash
 # 10k for a quick debug pass
-uv run python scripts/run_simulation.py -n 10000 --quiet
+uv run wc26-simulate -n 10000 --quiet
 
 # 100k for development checks (~30 seconds)
-uv run python scripts/run_simulation.py -n 100000 --quiet
+uv run wc26-simulate -n 100000 --quiet
 
 # 1M for the published outputs (~4 minutes)
-uv run python scripts/run_simulation.py
+uv run wc26-simulate
 ```
+
+(`wc26-simulate` is the console-script entry point declared in
+`pyproject.toml`. `uv run python -m world_cup_2026.run_simulation` works
+identically.)
 
 Writes to `outputs/`:
 
@@ -271,8 +274,8 @@ These are analytical — no extra Monte Carlo. They read each match's
 λ pair off the cache and compute the joint Poisson grid directly.
 
 ```bash
-uv run python scripts/build_score_predictions.py
-uv run python scripts/build_knockout_score_predictions.py
+uv run python -m world_cup_2026.build_score_predictions
+uv run python -m world_cup_2026.build_knockout_score_predictions
 ```
 
 Outputs:
@@ -289,9 +292,9 @@ modal bracket plays out, what scoreline is most likely in each match?"
 Refresh the Polymarket snapshot then rebuild:
 
 ```bash
-uv run python scripts/fetch_market_odds.py
-uv run python scripts/build_market_odds.py
-uv run python scripts/build_market_comparison.py
+uv run python -m world_cup_2026.fetch_market_odds
+uv run python -m world_cup_2026.build_market_odds
+uv run python -m world_cup_2026.build_market_comparison
 ```
 
 `outputs/market_comparison.csv` joins model `p_winner` against the
@@ -305,20 +308,20 @@ vs model-rank diff. Sorted by `value_edge` descending so the article's
 ```bash
 # 1. capture data (see commands above) or use the committed snapshots
 # 2. build processed inputs
-uv run python scripts/parse_groups.py
-uv run python scripts/parse_fixtures.py
-uv run python scripts/parse_knockout.py
-uv run python scripts/build_teams.py
-uv run python scripts/build_group_matches.py
-uv run python scripts/build_third_place_lookup.py
-uv run python scripts/build_market_odds.py
+uv run python -m world_cup_2026.parse_groups
+uv run python -m world_cup_2026.parse_fixtures
+uv run python -m world_cup_2026.parse_knockout
+uv run python -m world_cup_2026.build_teams
+uv run python -m world_cup_2026.build_group_matches
+uv run python -m world_cup_2026.build_third_place_lookup
+uv run python -m world_cup_2026.build_market_odds
 # 3. simulate
-uv run python scripts/run_simulation.py
+uv run wc26-simulate
 # 4. score predictions
-uv run python scripts/build_score_predictions.py
-uv run python scripts/build_knockout_score_predictions.py
+uv run python -m world_cup_2026.build_score_predictions
+uv run python -m world_cup_2026.build_knockout_score_predictions
 # 5. market comparison
-uv run python scripts/build_market_comparison.py
+uv run python -m world_cup_2026.build_market_comparison
 ```
 
 ## Configuration

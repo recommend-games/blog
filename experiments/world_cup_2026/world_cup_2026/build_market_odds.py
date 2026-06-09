@@ -12,12 +12,10 @@ from __future__ import annotations
 import csv
 import json
 import re
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-RAW = ROOT / "data" / "raw"
-PROC = ROOT / "data" / "processed"
-OUTPUT = PROC / "market_odds.csv"
+from world_cup_2026.config import DATA_PROCESSED, DATA_RAW, TEAMS_CSV
+
+OUTPUT = DATA_PROCESSED / "market_odds.csv"
 
 NAME_OVERRIDES: dict[str, str] = {
     "Bosnia-Herzegovina": "Bosnia and Herzegovina",
@@ -31,12 +29,12 @@ QUESTION_RE = re.compile(r"Will (.+) win the 2026 FIFA World Cup\?")
 
 
 def load_team_lookup() -> dict[str, str]:
-    teams = list(csv.DictReader(open(ROOT / "data" / "processed" / "teams.csv")))
+    teams = list(csv.DictReader(open(TEAMS_CSV)))
     return {row["team_name"]: row["team_id"] for row in teams}
 
 
 def main() -> None:
-    payload = json.load(open(RAW / "polymarket_world_cup_winner.json"))[0]
+    payload = json.load(open(DATA_RAW / "polymarket_world_cup_winner.json"))[0]
     team_id_by_name = load_team_lookup()
 
     raw_prices: dict[str, float] = {}

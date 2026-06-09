@@ -16,11 +16,10 @@ and present in the source data, so we avoid maintaining a separate FIFA
 from __future__ import annotations
 
 import csv
-from pathlib import Path
 
-RAW = Path(__file__).resolve().parent.parent / "data" / "raw"
-PROC = Path(__file__).resolve().parent.parent / "data" / "processed"
-OUTPUT = PROC / "teams.csv"
+from world_cup_2026.config import DATA_PROCESSED, DATA_RAW
+
+OUTPUT = DATA_PROCESSED / "teams.csv"
 
 # Overrides: FIFA/Wikipedia team name -> eloratings.net name. Populate as
 # mismatches are discovered by running the script.
@@ -49,7 +48,7 @@ HOSTS = {
 
 def load_elo_name_to_code() -> dict[str, str]:
     mapping: dict[str, str] = {}
-    for line in (RAW / "eloratings_teams.tsv").read_text().splitlines():
+    for line in (DATA_RAW / "eloratings_teams.tsv").read_text().splitlines():
         if not line.strip():
             continue
         parts = line.split("\t")
@@ -63,7 +62,7 @@ def load_elo_name_to_code() -> dict[str, str]:
 
 def load_elo_ratings() -> dict[str, int]:
     ratings: dict[str, int] = {}
-    for line in (RAW / "eloratings_world.tsv").read_text().splitlines():
+    for line in (DATA_RAW / "eloratings_world.tsv").read_text().splitlines():
         if not line.strip():
             continue
         parts = line.split("\t")
@@ -79,7 +78,7 @@ def main() -> None:
 
     unmatched: list[str] = []
     rows: list[dict] = []
-    with (RAW / "fifa_teams_groups.csv").open() as f:
+    with (DATA_RAW / "fifa_teams_groups.csv").open() as f:
         for fifa_row in csv.DictReader(f):
             fifa_name = fifa_row["team"]
             elo_name = NAME_OVERRIDES.get(fifa_name, fifa_name)
@@ -110,7 +109,7 @@ def main() -> None:
         print(f"UNMATCHED ({len(unmatched)}): {unmatched}")
         raise SystemExit(1)
 
-    PROC.mkdir(parents=True, exist_ok=True)
+    DATA_PROCESSED.mkdir(parents=True, exist_ok=True)
     with OUTPUT.open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDS)
         writer.writeheader()

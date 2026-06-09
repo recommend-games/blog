@@ -13,8 +13,9 @@ import html
 import re
 from pathlib import Path
 
-RAW_DIR = Path(__file__).resolve().parent.parent / "data" / "raw"
-OUTPUT = RAW_DIR / "fifa_teams_groups.csv"
+from world_cup_2026.config import DATA_RAW
+
+OUTPUT = DATA_RAW / "fifa_teams_groups.csv"
 
 GROUP_LETTERS = "ABCDEFGHIJKL"
 
@@ -86,7 +87,7 @@ def parse_group(group: str, path: Path) -> list[dict]:
 def main() -> None:
     all_rows: list[dict] = []
     for g in GROUP_LETTERS:
-        path = RAW_DIR / f"wikipedia_2026_world_cup_group_{g}.html"
+        path = DATA_RAW / f"wikipedia_2026_world_cup_group_{g}.html"
         all_rows.extend(parse_group(g, path))
     with OUTPUT.open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDS)
