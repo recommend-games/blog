@@ -20,3 +20,10 @@ TOTAL_GOALS = 2.6
 HOST_ADVANTAGE = 100
 MAX_GOALS = 10
 ELO_DIFFERENCE_CACHE_ROUNDING = 1
+
+# Floor on the underdog's Poisson lambda. When the Elo gap is so large that
+# the requested expected score exceeds what the (lambda_a + lambda_b =
+# total_goals) regime can produce, we pin the weaker team at MIN_LAMBDA and
+# let the dominant team's lambda rise above total_goals - MIN_LAMBDA. This
+# keeps a small but realistic upset chance in lopsided matches.
+MIN_LAMBDA = 0.25

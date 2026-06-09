@@ -27,6 +27,8 @@ def score_grid(
     g = np.arange(max_goals + 1)
     p_a = poisson.pmf(g, lambda_a)
     p_b = poisson.pmf(g, lambda_b)
+    p_a /= p_a.sum()
+    p_b /= p_b.sum()
     return np.outer(p_a, p_b)
 
 
