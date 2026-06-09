@@ -1,0 +1,220 @@
+"""Generate the four figures for the blog article from the simulation outputs.
+
+Reads:
+  outputs/team_probabilities.csv
+  outputs/group_probabilities.csv
+  outputs/market_comparison.csv
+
+Writes (into plots/):
+  title_probabilities.svg + .png   horizontal bar of the top 15 by p_winner
+  group_qualification_heatmap.svg  12 groups x 4 teams, coloured by p_qualify
+  draw_luck.svg                    scatter of elo_rank vs title_probability_rank
+  market_vs_model.svg              log-log scatter of model vs Polymarket p_winner
+
+The PNG version of title_probabilities doubles as the post's share image.
+"""
+
+from __future__ import annotations
+
+import csv
+from pathlib import Path
+
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+from world_cup_2026.config import OUTPUTS, ROOT
+
+PLOTS = ROOT / "plots"
+
+TEAM_PROBS = OUTPUTS / "team_probabilities.csv"
+GROUP_PROBS = OUTPUTS / "group_probabilities.csv"
+MARKET_COMPARISON = OUTPUTS / "market_comparison.csv"
+
+
+def _read(path: Path) -> list[dict[str, str]]:
+    with path.open() as f:
+        return list(csv.DictReader(f))
+
+
+def _save(fig: plt.Figure, name: str, *, also_png: bool = False) -> None:
+    fig.tight_layout()
+    fig.savefig(PLOTS / f"{name}.svg")
+    if also_png:
+        fig.savefig(PLOTS / f"{name}.png", dpi=144)
+    plt.close(fig)
+
+
+def plot_title_probabilities(rows: list[dict[str, str]], top_n: int = 15) -> None:
+    ranked = sorted(rows, key=lambda r: -float(r["p_winner"]))[:top_n]
+    names = [r["team_name"] for r in ranked][::-1]
+    probs = np.array([float(r["p_winner"]) for r in ranked][::-1])
+
+    fig, ax = plt.subplots(figsize=(7.2, 5.4))
+    bars = ax.barh(names, probs * 100, color=sns.color_palette("crest", len(names)))
+    ax.set_xlabel("Title probability (%)")
+    ax.set_title(f"Top {top_n} teams by simulated title probability")
+    ax.grid(True, axis="x", alpha=0.4)
+    ax.set_axisbelow(True)
+    for bar, p in zip(bars, probs):
+        ax.text(
+            bar.get_width() + 0.4,
+            bar.get_y() + bar.get_height() / 2,
+            f"{p * 100:.1f}%",
+            va="center",
+            fontsize=9,
+        )
+    ax.set_xlim(0, max(probs) * 100 * 1.15)
+    _save(fig, "title_probabilities", also_png=True)
+
+
+def plot_group_qualification_heatmap(rows: list[dict[str, str]]) -> None:
+    groups = sorted({r["group"] for r in rows})
+    grid_p = np.zeros((len(groups), 4))
+    grid_labels = [["" for _ in range(4)] for _ in groups]
+    for gi, group in enumerate(groups):
+        team_rows = [r for r in rows if r["group"] == group]
+        team_rows.sort(key=lambda r: -float(r["p_qualify"]))
+        for slot, r in enumerate(team_rows):
+            p = float(r["p_qualify"])
+            grid_p[gi, slot] = p
+            grid_labels[gi][slot] = f"{r['team_name']}\n{p * 100:.0f}%"
+
+    fig, ax = plt.subplots(figsize=(8, 6.5))
+    sns.heatmap(
+        grid_p * 100,
+        annot=grid_labels,
+        fmt="",
+        cmap="crest",
+        vmin=0,
+        vmax=100,
+        cbar_kws={"label": "P(qualify) (%)"},
+        linewidths=0.5,
+        linecolor="white",
+        annot_kws={"fontsize": 9},
+        ax=ax,
+    )
+    ax.set_yticklabels([f"Group {g}" for g in groups], rotation=0)
+    ax.set_xticklabels(["1st", "2nd", "3rd", "4th"])
+    ax.set_xlabel("Within-group rank by P(qualify)")
+    ax.set_title("Group-stage qualification probability")
+    _save(fig, "group_qualification_heatmap")
+
+
+def plot_draw_luck(rows: list[dict[str, str]], top_n: int = 30) -> None:
+    ranked = sorted(rows, key=lambda r: int(r["elo_rank"]))[:top_n]
+    elo_ranks = np.array([int(r["elo_rank"]) for r in ranked])
+    title_ranks = np.array([int(r["title_probability_rank"]) for r in ranked])
+    names = [r["team_name"] for r in ranked]
+    diffs = np.array([int(r["rank_difference"]) for r in ranked])
+
+    fig, ax = plt.subplots(figsize=(7.5, 5.5))
+    lim = top_n + 1
+    ax.plot([0, lim], [0, lim], color="#999", linestyle="--", linewidth=1)
+    sc = ax.scatter(
+        elo_ranks,
+        title_ranks,
+        c=diffs,
+        cmap="coolwarm_r",
+        vmin=-max(abs(diffs.min()), abs(diffs.max())),
+        vmax=max(abs(diffs.min()), abs(diffs.max())),
+        s=70,
+        edgecolor="white",
+        linewidth=0.8,
+        zorder=3,
+    )
+    movers = sorted(range(len(diffs)), key=lambda i: -abs(diffs[i]))[:10]
+    for i in movers:
+        ax.annotate(
+            names[i],
+            (elo_ranks[i], title_ranks[i]),
+            xytext=(5, 5),
+            textcoords="offset points",
+            fontsize=8,
+        )
+
+    ax.set_xlim(0, lim)
+    ax.set_ylim(lim, 0)
+    ax.set_xlabel("Rank by Elo")
+    ax.set_ylabel("Rank by simulated title probability")
+    ax.set_title("Did the draw help? Elo rank vs simulation rank")
+    cbar = fig.colorbar(sc, ax=ax)
+    cbar.set_label("Rank difference\n(positive = helped by draw)")
+    ax.grid(True, alpha=0.4)
+    ax.set_axisbelow(True)
+    _save(fig, "draw_luck")
+
+
+def plot_market_vs_model(rows: list[dict[str, str]]) -> None:
+    model_p = np.array([float(r["model_p_winner"]) for r in rows])
+    market_p = np.array([float(r["market_p_winner"]) for r in rows])
+    names = [r["team_name"] for r in rows]
+    edges = model_p - market_p
+
+    keep = (model_p > 0) & (market_p > 0)
+    model_p_k = model_p[keep]
+    market_p_k = market_p[keep]
+    names_k = [n for n, k in zip(names, keep) if k]
+    edges_k = edges[keep]
+
+    fig, ax = plt.subplots(figsize=(7.5, 6))
+    lo = min(market_p_k.min(), model_p_k.min()) * 0.7
+    hi = max(market_p_k.max(), model_p_k.max()) * 1.3
+    ax.plot([lo, hi], [lo, hi], color="#999", linestyle="--", linewidth=1, label="Model = Market")
+
+    sc = ax.scatter(
+        market_p_k * 100,
+        model_p_k * 100,
+        c=edges_k * 100,
+        cmap="RdBu_r",
+        vmin=-max(abs(edges_k.min()), abs(edges_k.max())) * 100,
+        vmax=max(abs(edges_k.min()), abs(edges_k.max())) * 100,
+        s=70,
+        edgecolor="white",
+        linewidth=0.8,
+        zorder=3,
+    )
+
+    movers = sorted(range(len(edges_k)), key=lambda i: -abs(edges_k[i]))[:8]
+    for i in movers:
+        ax.annotate(
+            names_k[i],
+            (market_p_k[i] * 100, model_p_k[i] * 100),
+            xytext=(6, 4),
+            textcoords="offset points",
+            fontsize=9,
+        )
+
+    ax.set_xscale("log")
+    ax.set_yscale("log")
+    ax.set_xlim(lo * 100, hi * 100)
+    ax.set_ylim(lo * 100, hi * 100)
+    ax.set_xlabel("Polymarket implied probability (%, log scale)")
+    ax.set_ylabel("Model probability (%, log scale)")
+    ax.set_title("Where the model and the market disagree")
+    cbar = fig.colorbar(sc, ax=ax)
+    cbar.set_label("Edge (pp)\nmodel − market")
+    ax.grid(True, which="both", alpha=0.3)
+    ax.set_axisbelow(True)
+    ax.legend(loc="lower right")
+    _save(fig, "market_vs_model")
+
+
+def main() -> None:
+    PLOTS.mkdir(exist_ok=True)
+    sns.set_style("whitegrid")
+
+    team_probs = _read(TEAM_PROBS)
+    group_probs = _read(GROUP_PROBS)
+    market = _read(MARKET_COMPARISON)
+
+    plot_title_probabilities(team_probs)
+    plot_group_qualification_heatmap(group_probs)
+    plot_draw_luck(team_probs)
+    plot_market_vs_model(market)
+
+    print(f"Wrote charts to {PLOTS}")
+
+
+if __name__ == "__main__":
+    main()

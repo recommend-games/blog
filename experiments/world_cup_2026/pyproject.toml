@@ -7,9 +7,11 @@ authors = [
 ]
 requires-python = "==3.13.*"
 dependencies = [
+    "matplotlib",
     "numpy",
     "polars",
     "scipy",
+    "seaborn",
     "tqdm",
 ]
 
@@ -26,6 +28,7 @@ dev = [
 
 [project.scripts]
 wc26-simulate = "world_cup_2026.run_simulation:main"
+wc26-build-article-charts = "world_cup_2026.build_article_charts:main"
 
 [build-system]
 requires = ["hatchling"]
