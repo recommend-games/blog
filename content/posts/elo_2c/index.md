@@ -14,7 +14,7 @@ tags:
 
 ## From cue to cleats
 
-The last two entries in this little Elo series ([part 2]({{<ref "posts/elo_2/index.md">}}) and [part 2b]({{<ref "posts/elo_2b/index.md">}})) sent the same toolbox — Elo ratings, then a few million simulated tournaments — into the Crucible Theatre to predict the snooker World Championship. With the 2026 FIFA World Cup kicking off this week in Mexico City, it seemed a shame not to point the same machinery at a much bigger draw.
+The two snooker entries in this Elo series ([part 2]({{<ref "posts/elo_2/index.md">}}) and [part 2b]({{<ref "posts/elo_2b/index.md">}})) sent the same toolbox — Elo ratings, then a few million simulated tournaments — into the Crucible Theatre to predict the snooker World Championship. With the 2026 FIFA World Cup kicking off today at the Estadio Azteca in Mexico City, it seemed a shame not to point the same machinery at a much bigger draw.
 
 A bigger draw in every dimension, really. Snooker's World Championship is a clean 32-player bracket on a single table in Sheffield. The 2026 World Cup is the first 48-team edition, played across three host nations, with twelve groups, an entirely new Round of 32, and a third-place qualification rule that is genuinely fiddly to write down. The Elo ratings on their own won't be enough this time; we'll have to wrap them in a goal-scoring model and a fairly serious bit of bracket bookkeeping before any of it answers the actual question.
 
