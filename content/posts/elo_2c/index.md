@@ -1,8 +1,8 @@
 ---
 title: "From the baize to the pitch: predicting the 2026 World Cup with Elo"
 subtitle: "Elo, part 2c: one million simulations, 48 teams, three host nations"
-slug: world-cup-champion-2026
-share_img: /posts/world-cup-champion-2026/title_probabilities.png
+slug: world-cup-2026
+share_img: /posts/world-cup-2026/title_probabilities.png
 author: Markus Shepherd
 type: post
 date: 2026-06-11T13:00:00-06:00
