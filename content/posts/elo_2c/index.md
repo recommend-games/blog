@@ -20,7 +20,7 @@ So, to celebrate my love–hate relationship with the biggest sporting event on 
 
 This is going to be bigger in every dimension though. Snooker's World Championship is a clean 32-player bracket in a single venue in Sheffield. The 2026 World Cup is the first 48-team edition, played across three host nations 🇺🇸🇨🇦🇲🇽, with twelve groups, an entirely new Round of 32 and a third-place qualification rule that is genuinely fiddly to write down. The Elo ratings on their own won't be enough this time; we'll have to wrap them in a goal-scoring model and a fairly serious bit of bracket bookkeeping before any of it answers the actual question.
 
-The short version: the model thinks 🇪🇸 Spain are huge, the bookmakers think they are merely good and the gap between those two opinions is by some way the most interesting number in this article. The long version is what follows. 🤓
+The short version: the model thinks 🇪🇸 Spain are huge, the bookmakers think they are merely good and the gap between those two opinions is the most interesting number in this article. The long version is what follows. 🤓
 
 
 ## The new format in one minute: more matches, more money 💸
@@ -61,7 +61,7 @@ The fix is to pin 🇨🇻 Cape Verde's \\(\lambda\\) at a floor of 0.25, let �
 
 Inside each simulation, all 72 group fixtures are sampled in one vectorised numpy call, then the four teams in each group are ranked using FIFA's tie-break ladder, which is exactly as fiddly as you'd expect from the same people who wrote the 495-row lookup: points, overall goal difference, overall goals scored, then on the tied subset head-to-head points and goal difference and goals scored and finally a fallback on FIFA rank (the published November-2025 list).[^tiebreaks]
 
-Once every group is ranked, the simulator picks the 8 best third-placed teams across all 12 groups and slots them into the Round of 32 via the 495-row lookup table. This is one of the places where football carries more bookkeeping than snooker: a clean draw doesn't exist, just a deterministic rule with a lot of cases.
+Once every group is ranked, the simulator picks the 8 best third-placed teams across all 12 groups and slots them into the Round of 32 via the 495-row lookup table. This is one of the places where football carries more bookkeeping than snooker: there's no "pull names out of a hat" step, just a deterministic rule with a lot of cases.
 
 ### Knockouts and extra time
 
