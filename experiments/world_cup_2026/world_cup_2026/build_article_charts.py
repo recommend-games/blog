@@ -162,50 +162,59 @@ def plot_draw_luck(rows: list[dict[str, str]], min_wins: int = 100) -> None:
     _save(fig, "draw_luck")
 
 
-def plot_market_vs_model(rows: list[dict[str, str]]) -> None:
+def plot_market_vs_model(
+    rows: list[dict[str, str]], min_market_p: float = 0.01
+) -> None:
     model_p = np.array([float(r["model_p_winner"]) for r in rows])
     market_p = np.array([float(r["market_p_winner"]) for r in rows])
     names = [r["team_name"] for r in rows]
     edges = model_p - market_p
 
-    keep = (model_p > 0) & (market_p > 0)
-    model_p_k = model_p[keep]
-    market_p_k = market_p[keep]
+    # Keep teams the market actually prices as contenders; the long tail of
+    # near-zero teams clusters in the bottom-left and adds no signal.
+    keep = market_p >= min_market_p
+    model_p_k = model_p[keep] * 100
+    market_p_k = market_p[keep] * 100
     names_k = [n for n, k in zip(names, keep) if k]
-    edges_k = edges[keep]
+    edges_k = edges[keep] * 100
 
     fig, ax = plt.subplots(figsize=(7.5, 6))
     lo = min(market_p_k.min(), model_p_k.min()) * 0.7
     hi = max(market_p_k.max(), model_p_k.max()) * 1.3
-    ax.plot([lo, hi], [lo, hi], color="#999", linestyle="--", linewidth=1, label="Model = Market")
-
-    sc = ax.scatter(
-        market_p_k * 100,
-        model_p_k * 100,
-        c=edges_k * 100,
-        cmap="RdBu_r",
-        vmin=-max(abs(edges_k.min()), abs(edges_k.max())) * 100,
-        vmax=max(abs(edges_k.min()), abs(edges_k.max())) * 100,
-        s=70,
-        edgecolor="white",
-        linewidth=0.8,
-        zorder=3,
+    ax.plot(
+        [lo, hi], [lo, hi],
+        color="#999", linestyle="--", linewidth=1,
+        label="Model = Market", zorder=1,
     )
 
-    movers = sorted(range(len(edges_k)), key=lambda i: -abs(edges_k[i]))[:8]
-    for i in movers:
+    cmax = max(abs(edges_k.min()), abs(edges_k.max()))
+    sc = ax.scatter(
+        market_p_k, model_p_k,
+        c=edges_k, cmap="RdBu_r", vmin=-cmax, vmax=cmax,
+        s=80, zorder=3,
+    )
+
+    # Label every kept team; anchor labels off the diagonal so they extend
+    # into the dot's free quadrant.
+    for i in range(len(names_k)):
+        if edges_k[i] >= 0:
+            dx, dy, ha, va = -6, 6, "right", "bottom"
+        else:
+            dx, dy, ha, va = 6, -6, "left", "top"
         ax.annotate(
             names_k[i],
-            (market_p_k[i] * 100, model_p_k[i] * 100),
-            xytext=(6, 4),
+            (market_p_k[i], model_p_k[i]),
+            xytext=(dx, dy),
             textcoords="offset points",
-            fontsize=9,
+            fontsize=8,
+            ha=ha,
+            va=va,
         )
 
     ax.set_xscale("log")
     ax.set_yscale("log")
-    ax.set_xlim(lo * 100, hi * 100)
-    ax.set_ylim(lo * 100, hi * 100)
+    ax.set_xlim(lo, hi)
+    ax.set_ylim(lo, hi)
     ax.set_xlabel("Polymarket implied probability (%, log scale)")
     ax.set_ylabel("Model probability (%, log scale)")
     ax.set_title("Where the model and the market disagree")
