@@ -256,7 +256,8 @@ def write_outputs(
     team_rows = []
     for i, slot in enumerate(acc.slots):
         t = by_slot[slot]
-        p_winner = acc.winner[i] / n
+        n_wins = int(acc.winner[i])
+        p_winner = n_wins / n
         p_qualify = acc.reach_r32[i] / n
         team_rows.append(
             {
@@ -272,22 +273,39 @@ def write_outputs(
                 "p_reach_qf": acc.reach_qf[i] / n,
                 "p_reach_sf": acc.reach_sf[i] / n,
                 "p_reach_final": acc.reach_final[i] / n,
+                "n_wins": n_wins,
                 "p_winner": p_winner,
                 "implied_decimal_odds": (1.0 / p_winner) if p_winner > 0 else float("nan"),
             }
         )
     team_df = pl.DataFrame(team_rows)
+    prob_cols = [
+        "p_group_winner",
+        "p_qualify_group",
+        "p_reach_r32",
+        "p_reach_r16",
+        "p_reach_qf",
+        "p_reach_sf",
+        "p_reach_final",
+        "p_winner",
+    ]
     team_df = team_df.with_columns(
+        *[pl.col(c).round(5) for c in prob_cols],
+        pl.col("implied_decimal_odds").round(2),
         pl.col("elo").rank("ordinal", descending=True).cast(pl.Int64).alias("elo_rank"),
-        pl.col("p_winner").rank("ordinal", descending=True).cast(pl.Int64).alias(
-            "title_probability_rank"
-        ),
+    )
+    team_df = team_df.sort(
+        ["n_wins", "elo", "fifa_ranking"],
+        descending=[True, True, False],
     ).with_columns(
-        (pl.col("elo_rank") - pl.col("title_probability_rank")).alias("rank_difference")
+        pl.when(pl.col("n_wins") > 0)
+        .then(pl.int_range(1, pl.len() + 1, dtype=pl.Int64))
+        .otherwise(None)
+        .alias("title_probability_rank"),
+    ).with_columns(
+        (pl.col("elo_rank") - pl.col("title_probability_rank")).alias("rank_difference"),
     )
-    team_df.sort("p_winner", descending=True).write_csv(
-        output_dir / "team_probabilities.csv"
-    )
+    team_df.write_csv(output_dir / "team_probabilities.csv")
 
     group_rows = []
     for i, slot in enumerate(acc.slots):
@@ -306,9 +324,19 @@ def write_outputs(
                 "p_eliminated": 1.0 - p_qualify,
             }
         )
-    pl.DataFrame(group_rows).sort(["group", "p_qualify"], descending=[False, True]).write_csv(
-        output_dir / "group_probabilities.csv"
-    )
+    group_df = pl.DataFrame(group_rows)
+    group_prob_cols = [
+        "p_finish_1st",
+        "p_finish_2nd",
+        "p_finish_3rd",
+        "p_finish_4th",
+        "p_qualify",
+        "p_eliminated",
+    ]
+    group_df = group_df.with_columns(
+        *[pl.col(c).round(5) for c in group_prob_cols]
+    ).sort(["group", "p_qualify"], descending=[False, True])
+    group_df.write_csv(output_dir / "group_probabilities.csv")
 
     snapshot_date_path = config.DATA_RAW / "elo_snapshot_date.txt"
     elo_snapshot_date = (
