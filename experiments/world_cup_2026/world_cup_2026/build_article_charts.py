@@ -101,39 +101,57 @@ def plot_group_qualification_heatmap(rows: list[dict[str, str]]) -> None:
     _save(fig, "group_qualification_heatmap")
 
 
-def plot_draw_luck(rows: list[dict[str, str]], top_n: int = 30) -> None:
-    ranked = sorted(rows, key=lambda r: int(r["elo_rank"]))[:top_n]
-    elo_ranks = np.array([int(r["elo_rank"]) for r in ranked])
-    title_ranks = np.array([int(r["title_probability_rank"]) for r in ranked])
-    names = [r["team_name"] for r in ranked]
-    diffs = np.array([int(r["rank_difference"]) for r in ranked])
+def plot_draw_luck(rows: list[dict[str, str]], min_wins: int = 100) -> None:
+    # Drop teams the simulator essentially never crowned champion: below
+    # min_wins their title_probability_rank is shaped by MC noise.
+    kept = [
+        r
+        for r in rows
+        if r["title_probability_rank"] != "" and int(r["n_wins"]) >= min_wins
+    ]
+    kept.sort(key=lambda r: int(r["elo_rank"]))
+
+    elo_ranks = np.array([int(r["elo_rank"]) for r in kept])
+    title_ranks = np.array([int(r["title_probability_rank"]) for r in kept])
+    names = [r["team_name"] for r in kept]
+    diffs = np.array([int(r["rank_difference"]) for r in kept])
 
     fig, ax = plt.subplots(figsize=(7.5, 5.5))
-    lim = top_n + 1
-    ax.plot([0, lim], [0, lim], color="#999", linestyle="--", linewidth=1)
+    lim = max(elo_ranks.max(), title_ranks.max()) + 1
+    ax.plot([0, lim], [0, lim], color="#999", linestyle="--", linewidth=1, zorder=1)
+    cmax = max(abs(int(diffs.min())), abs(int(diffs.max())))
     sc = ax.scatter(
         elo_ranks,
         title_ranks,
         c=diffs,
         cmap="coolwarm_r",
-        vmin=-max(abs(diffs.min()), abs(diffs.max())),
-        vmax=max(abs(diffs.min()), abs(diffs.max())),
+        vmin=-cmax,
+        vmax=cmax,
         s=70,
         edgecolor="white",
         linewidth=0.8,
         zorder=3,
     )
-    movers = sorted(range(len(diffs)), key=lambda i: -abs(diffs[i]))[:10]
+    movers = [i for i in range(len(diffs)) if diffs[i] != 0]
     for i in movers:
+        # Helped teams sit above the diagonal in display; hurt teams below.
+        # Anchor each label by the corner pointing into its dot's free
+        # quadrant so the label always extends away from the diagonal.
+        if diffs[i] >= 0:
+            dx, dy, ha, va = -6, 6, "right", "bottom"
+        else:
+            dx, dy, ha, va = 6, -6, "left", "top"
         ax.annotate(
             names[i],
             (elo_ranks[i], title_ranks[i]),
-            xytext=(5, 5),
+            xytext=(dx, dy),
             textcoords="offset points",
             fontsize=8,
+            ha=ha,
+            va=va,
         )
 
-    ax.set_xlim(0, lim)
+    ax.set_xlim(lim, 0)
     ax.set_ylim(lim, 0)
     ax.set_xlabel("Rank by Elo")
     ax.set_ylabel("Rank by simulated title probability")
