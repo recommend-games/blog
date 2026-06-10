@@ -108,6 +108,8 @@ Now we let the bracket actually play. Here are the top fifteen teams by simulate
 
 {{< img src="title_probabilities" alt="Horizontal bar chart of the top 15 teams by simulated title probability, led by 🇪🇸 Spain at 35.3%" >}}
 
+And the same fifteen in numbers, with the implied decimal odds alongside:
+
 | Rank | Team        | Title probability | Implied odds |
 |-----:|:------------|------------------:|-------------:|
 |    1 | 🇪🇸 Spain       |             35.3% |         2.83 |
@@ -149,7 +151,7 @@ I'm still not the gambling kind. But betting markets are too useful as a sanity 
 
 For this one I've pulled prices from [Polymarket's "World Cup Winner" market](https://polymarket.com/event/world-cup-winner-2026): a crypto-prediction market that runs a separate yes/no contract per team and prices each one continuously. It has the considerable advantage over traditional bookmakers of being machine-readable and only carrying about a 3% overround (compared to 5–8% at a sportsbook), so the de-vigging is quick and clean. The numbers below are from the snapshot taken at 2026-06-10 20:34 UTC.[^market-snap]
 
-To turn a probability into decimal odds, take the reciprocal: a model probability of 35.3% becomes \\(1/0.353 \approx 2.83\\), i.e., a fair-value bet pays €2.83 per €1 staked. The same conversion applies the other way around: market odds of 6.25 imply a market probability of \\(1/6.25 \approx 16.0\%\\).[^vig-and-odds]
+To turn a probability into decimal odds, take the reciprocal: a model probability of 35.3% becomes \\(1/0.353 \approx 2.83\\), i.e., a fair-value bet pays €2.83 per €1 staked. The same conversion applies the other way around: market odds of 6.25 imply a market probability of \\(1/6.25 \approx 16.0\\%\\).[^vig-and-odds]
 
 Here is the comparison for the top twelve teams. "Edge (pp)" is `model − market` in percentage points; positive means the model thinks the team is undervalued.
 
@@ -178,9 +180,9 @@ Why might the model be right? Three factors stack up the same way. 🇪🇸 Spai
 
 Why might the market be right? A few real things the Elo rating doesn't see. 🇪🇸 Spain's stretch of major-tournament knockouts has been more disappointing than the rating suggests. 🇦🇷 Argentina's defence of the title comes after two quieter years of friendlies and a moderate Copa run, and the rating still reflects the 2022 peak. And — the pattern we [flagged for Ronnie O'Sullivan]({{<ref "posts/elo_2b/index.md">}}) in the snooker write-up — sometimes the market is paying for something the rating system *can't* quantify: the ineffable "knows how to win a tournament" premium that betting markets price into established names. 🇫🇷 France have it. 🇧🇷 Brazil have it. 🇪🇸 Spain, despite the trophies and the rating, somehow don't.
 
-Lower down the table the agreements and disagreements are easier reading. **🇵🇹 Portugal** at 3.5% model vs 10.3% market is the most overvalued top team by the market's lights — a Cristiano Ronaldo lifetime-achievement premium, perhaps. **🇩🇪 Germany** at 1.4% vs 5.1% reads similarly; the model isn't yet convinced the post-Nagelsmann rebuild has produced an Elo-class side. On the other side, **🇨🇴 Colombia** and **🇪🇨 Ecuador** are the only teams besides 🇪🇸 Spain and 🇦🇷 Argentina that the model fancies more than the market does, both modestly: 🇨🇴 Colombia at +1.5pp, 🇪🇨 Ecuador at +0.7pp. The market consistently prices Conmebol's mid-table sides shorter than the Elo says, and the model consistently looks for value there.
+Lower down the table the agreements and disagreements are easier reading. **🇵🇹 Portugal** at 3.5% model vs 10.3% market is the most overvalued top team by the market's lights — a Cristiano Ronaldo lifetime-achievement premium, perhaps. **🇩🇪 Germany** at 1.4% vs 5.1% reads similarly — a *serial-contender* premium that the rating has stopped paying out on after a moribund couple of years. On the other side, **🇨🇴 Colombia** and **🇪🇨 Ecuador** are the only teams besides 🇪🇸 Spain and 🇦🇷 Argentina that the model fancies more than the market does, both modestly: 🇨🇴 Colombia at +1.5pp, 🇪🇨 Ecuador at +0.7pp. The market consistently prices Conmebol's mid-table sides shorter than the Elo says, and the model consistently looks for value there.
 
-If you forced me to summarise the table in one sentence: the model and the market disagree most violently on the *favourites*, and almost not at all on the long shots. Where the two forecasters do disagree at the top, the resolution will arrive on July 19.
+If you forced me to summarise the table in one sentence: the model and the market disagree most violently on the *favourites*, almost not at all on the long shots — and the final on July 19 will tell us which forecaster was right.
 
 
 ## Final whistle ⚽
