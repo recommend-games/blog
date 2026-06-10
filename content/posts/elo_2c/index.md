@@ -41,7 +41,7 @@ Host advantage is the other format quirk worth flagging. There are three home co
 
 To recap [our usual setup]({{<ref "posts/elo_1/index.md">}}) in one paragraph: each team has an Elo rating \\(r\\), and the expected score for team *A* against team *B* is
 
-\\[ s_A = \frac{1}{1 + 10^{-(r_A - r_B) / 400}}. \\]
+\\[ p_A = \frac{1}{1 + 10^{-(r_A - r_B) / 400}}. \\]
 
 For the snooker articles, that number *is* the prediction — you toss a weighted coin and somebody advances. Football is messier: you need an actual scoreline, and a 90-minute draw is a real outcome (in the group stage) or a problem to resolve (in the knockouts).
 
@@ -49,7 +49,7 @@ For the snooker articles, that number *is* the prediction — you toss a weighte
 
 I've gone with a deliberately simple **fixed-total Poisson** model. The two teams' goals are independent Poisson random variables with rates \\(\lambda_A\\) and \\(\lambda_B\\), and those rates are chosen so that
 
-\\[ \lambda_A + \lambda_B = 2.6 \quad\text{and}\quad \Pr(A\text{ wins}) + \tfrac{1}{2}\Pr(\text{draw}) = s_A. \\]
+\\[ \lambda_A + \lambda_B = 2.6 \quad\text{and}\quad \Pr(A\text{ wins}) + \tfrac{1}{2}\Pr(\text{draw}) = p_A. \\]
 
 The first constraint pins the expected total goals to 2.6 — pretty close to the historical average for top-level international matches. The second says the lambdas have to be consistent with the Elo expected score. Each fixture turns into a small one-dimensional root-find for the right \\(\lambda_A\\), which `scipy.brentq` does in microseconds and the simulator caches by rounded Elo gap.[^poisson-choice]
 
@@ -65,7 +65,7 @@ Once every group is ranked, the simulator picks the 8 best third-placed teams ac
 
 ### Knockouts and extra time
 
-Knockout matches use the same Poisson scoreline model for 90 minutes. If they end level, the simulator advances a team by sampling from the same Elo expected score \\(s_A\\) — no separate extra-time goal process, no penalty shootout sub-model. It's a deliberately Elo-consistent choice: extra time and penalties are exactly the regime where the model would have to invent extra structure it doesn't have, so I let the rating do the talking.
+Knockout matches use the same Poisson scoreline model for 90 minutes. If they end level, the simulator advances a team by sampling from the same Elo expected score \\(p_A\\) — no separate extra-time goal process, no penalty shootout sub-model. It's a deliberately Elo-consistent choice: extra time and penalties are exactly the regime where the model would have to invent extra structure it doesn't have, so I let the rating do the talking.
 
 That, plus a host bonus of +100 Elo whenever a host plays in its own country, is the whole machinery. The Monte Carlo loop runs 1,000,000 tournaments with a fixed seed (`20260611`, which is the tournament's opening date, because I am like that) so every published number is exactly reproducible.[^seed] A single laptop chews through it in about four minutes.
 
