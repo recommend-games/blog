@@ -1,6 +1,6 @@
 ---
 title: "TODO From the baize to the pitch: predicting the 2026 World Cup with Elo"
-subtitle: "Elo, part 2c: TODO one million simulations, 48 teams, three host nations"
+subtitle: "Elo, part 2c: TODO ten million simulations, 48 teams, three host nations"
 slug: world-cup-2026
 share_img: /posts/world-cup-2026/title_probabilities.png
 author: Markus Shepherd
@@ -67,17 +67,17 @@ Once every group is ranked, the simulator picks the 8 best third-placed teams ac
 
 Knockout matches use the same Poisson scoreline model for 90 minutes. If they end level, the simulator advances a team by sampling from the same Elo expected score \\(p_A\\) — no separate extra-time goal process, no penalty shootout sub-model. It's a deliberately Elo-consistent choice: extra time and penalties are exactly the regime where the model would have to invent extra structure it doesn't have, so I let the rating do the talking.
 
-That, plus a host bonus of +100 Elo whenever a host plays in its own country, is the whole machinery. The Monte Carlo loop runs 1,000,000 tournaments with a fixed seed (`20260611`, which is the tournament's opening date, because I am like that) so every published number is exactly reproducible. A single laptop chews through it in about four minutes.
+That, plus a host bonus of +100 Elo whenever a host plays in its own country, is the whole machinery. The Monte Carlo loop runs 10,000,000 tournaments with a fixed seed (`20260611`, which is the tournament's opening date, because I am like that) so every published number is exactly reproducible. A single laptop chews through it in about ten minutes.
 
 
 ## Who's on top? Current Elo and the draw
 
-Here is the snapshot we're starting from. All Elo ratings are from [eloratings.net](https://eloratings.net/) on 2026-06-09 — two days before the opener.[^elo-source]
+Here is the snapshot we're starting from. All Elo ratings are from [eloratings.net](https://eloratings.net/) on 2026-06-10 — one day before the opener.[^elo-source]
 
 | Rank | Team        | Group |   Elo | FIFA rank |
 |-----:|:------------|:-----:|------:|----------:|
 |    1 | 🇪🇸 Spain       |   H   |  2157 |         1 |
-|    2 | 🇦🇷 Argentina   |   J   |  2114 |         2 |
+|    2 | 🇦🇷 Argentina   |   J   |  2115 |         2 |
 |    3 | 🇫🇷 France      |   I   |  2063 |         3 |
 |    4 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England     |   L   |  2021 |         4 |
 |    5 | 🇧🇷 Brazil      |   C   |  1991 |         5 |
@@ -89,56 +89,56 @@ Here is the snapshot we're starting from. All Elo ratings are from [eloratings.n
 
 A few things to notice before any tournament is simulated:
 
-- **🇪🇸 Spain and 🇦🇷 Argentina are tier-one**. The 51-point drop from 🇦🇷 Argentina to 🇫🇷 France is the biggest gap anywhere in the top seven, after which 🇫🇷 France, 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England, 🇧🇷 Brazil, 🇵🇹 Portugal and 🇨🇴 Colombia all sit within 80 points of each other. The model treats this as two world-class sides plus a tight chasing pack.
+- **🇪🇸 Spain and 🇦🇷 Argentina are tier-one**. The 52-point drop from 🇦🇷 Argentina to 🇫🇷 France is the biggest gap anywhere in the top seven, after which 🇫🇷 France, 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England, 🇧🇷 Brazil, 🇵🇹 Portugal and 🇨🇴 Colombia all sit within 80 points of each other. The model treats this as two world-class sides plus a tight chasing pack.
 - **Group K is brutal.** 🇵🇹 Portugal *and* 🇨🇴 Colombia, sixth and seventh by Elo, drew each other; the loser of their coin flip takes the harder R16 draw.
 - **Group E is also unfortunate**. 🇪🇨 Ecuador (9th by Elo) and 🇩🇪 Germany (10th) are sharing four-team housing with 🇨🇮 Ivory Coast and 🇨🇼 Curaçao. The model thinks 🇪🇨 Ecuador and 🇩🇪 Germany both qualify comfortably but won't run away with anything.
-- **Group H, by contrast, is a 🇪🇸 Spain coronation.** With 🇺🇾 Uruguay, 🇨🇻 Cape Verde and 🇸🇦 Saudi Arabia for company, 🇪🇸 Spain are 87.6% to win the group and 99.9% to qualify.
-- **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England** picked up arguably the kindest top-half group of the lot: Group L with 🇭🇷 Croatia, 🇵🇦 Panama and 🇬🇭 Ghana. 99.1% qualify, 66.7% to win the group.
+- **Group H, by contrast, is a 🇪🇸 Spain coronation.** With 🇺🇾 Uruguay, 🇨🇻 Cape Verde and 🇸🇦 Saudi Arabia for company, 🇪🇸 Spain are 88.0% to win the group and 99.9% to qualify.
+- **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England** picked up arguably the kindest top-half group of the lot: Group L with 🇭🇷 Croatia, 🇵🇦 Panama and 🇬🇭 Ghana. 99.2% qualify, 67.1% to win the group.
 
 The full picture of group qualification looks like this:
 
 {{< img src="group_qualification_heatmap" alt="Heatmap of group-qualification probabilities for all 48 teams, arranged by group" >}}
 
-Most groups have a familiar shape — two strong teams comfortably through, two weak ones mostly out. **Group B** stands out for being a coin-flip: 🇨🇭 Switzerland (98.4% to qualify) and 🇨🇦 Canada (98.3%) are essentially indistinguishable, with 🇨🇦 Canada's home boost wiping out a 100-point Elo deficit. **Group D** is the closest thing to chaos: 🇹🇷 Turkey, 🇵🇾 Paraguay, the 🇺🇸 United States and 🇦🇺 Australia are all between 53% and 86% to qualify, with 🇺🇸 USA's host bonus pulling them above where their raw Elo would put them.[^group-d]
+Most groups have a familiar shape — two strong teams comfortably through, two weak ones mostly out. **Group B** stands out for being a coin-flip: 🇨🇭 Switzerland (98.6% to qualify) and 🇨🇦 Canada (98.5%) are essentially indistinguishable, with 🇨🇦 Canada's home boost wiping out a 100-point Elo deficit. **Group D** is the closest thing to chaos: 🇹🇷 Turkey, 🇵🇾 Paraguay, the 🇺🇸 United States and 🇦🇺 Australia are all between 52% and 87% to qualify, with 🇺🇸 USA's host bonus pulling them above where their raw Elo would put them.[^group-d]
 
 
-## One million tournaments later
+## Ten million tournaments later
 
 Now we let the bracket actually play. Here are the top fifteen teams by simulated title probability — the headline answer to "who wins the World Cup?":
 
-{{< img src="title_probabilities" alt="Horizontal bar chart of the top 15 teams by simulated title probability, led by 🇪🇸 Spain at 35.4%" >}}
+{{< img src="title_probabilities" alt="Horizontal bar chart of the top 15 teams by simulated title probability, led by 🇪🇸 Spain at 35.3%" >}}
 
 | Rank | Team        | Title probability | Implied odds |
 |-----:|:------------|------------------:|-------------:|
-|    1 | 🇪🇸 Spain       |             35.4% |         2.83 |
-|    2 | 🇦🇷 Argentina   |             22.8% |         4.39 |
+|    1 | 🇪🇸 Spain       |             35.3% |         2.83 |
+|    2 | 🇦🇷 Argentina   |             23.1% |         4.33 |
 |    3 | 🇫🇷 France      |             12.7% |         7.88 |
-|    4 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England     |              6.1% |        16.52 |
-|    5 | 🇧🇷 Brazil      |              3.9% |        25.61 |
-|    6 | 🇵🇹 Portugal    |              3.6% |        28.07 |
-|    7 | 🇨🇴 Colombia    |              3.3% |        30.11 |
+|    4 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England     |              6.0% |        16.59 |
+|    5 | 🇧🇷 Brazil      |              3.8% |        26.00 |
+|    6 | 🇵🇹 Portugal    |              3.5% |        28.24 |
+|    7 | 🇨🇴 Colombia    |              3.3% |        30.35 |
 |    8 | 🇳🇱 Netherlands |              2.0% |        50.08 |
-|    9 | 🇪🇨 Ecuador     |              1.5% |        65.34 |
-|   10 | 🇩🇪 Germany     |              1.4% |        72.86 |
-|   11 | 🇹🇷 Turkey      |              1.0% |       102.36 |
-|   12 | 🇳🇴 Norway      |              0.9% |       108.25 |
-|   13 | 🇯🇵 Japan       |              0.8% |       119.90 |
-|   14 | 🇲🇽 Mexico      |              0.8% |       127.94 |
-|   15 | 🇭🇷 Croatia     |              0.8% |       128.60 |
+|    9 | 🇪🇨 Ecuador     |              1.5% |        65.75 |
+|   10 | 🇩🇪 Germany     |              1.4% |        73.58 |
+|   11 | 🇹🇷 Turkey      |              1.0% |       100.20 |
+|   12 | 🇳🇴 Norway      |              0.9% |       109.05 |
+|   13 | 🇯🇵 Japan       |              0.8% |       120.92 |
+|   14 | 🇭🇷 Croatia     |              0.8% |       127.23 |
+|   15 | 🇧🇪 Belgium     |              0.8% |       128.53 |
 
-🇪🇸 Spain at **35.4%** is a startling number on first read — more than a third of a million simulated tournaments end with the trophy in Madrid. That isn't only the Elo lead; it's the Elo lead *plus* the kindest group in the bracket *plus* a knockout path that doesn't run into 🇦🇷 Argentina until the final at the earliest. 🇦🇷 Argentina at 22.8% picks up the same compounding benefit one bracket-half away. Between them they account for **more than half** of all simulated outcomes.
+🇪🇸 Spain at **35.3%** is a startling number on first read — more than a third of ten million simulated tournaments end with the trophy in Madrid. That isn't only the Elo lead; it's the Elo lead *plus* the kindest group in the bracket *plus* a knockout path that doesn't run into 🇦🇷 Argentina until the final at the earliest. 🇦🇷 Argentina at 23.1% picks up the same compounding benefit one bracket-half away. Between them they account for **more than half** of all simulated outcomes.
 
 The same simulation produces some interesting near-misses lower down the table. Compare each team's Elo rank against its title-probability rank:
 
 {{< img src="draw_luck" alt="Scatter plot of Elo rank against simulated title probability rank, with off-diagonal teams labelled" >}}
 
-Most teams sit on the diagonal — the draw doesn't help or hurt them much. The visible movers, in roughly descending order of effect: **🇲🇽 Mexico** jumps four spots, from 18th by Elo to 14th by title probability, almost entirely on the back of the +100 host bonus and a friendly Group A. **🇹🇷 Turkey** and **🇯🇵 Japan** also climb a couple of places thanks to favourable bracket positions. On the other side, **🇭🇷 Croatia** drop three spots — they share Group L with 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England, so the favourite they'll likely meet in the knockouts is the strongest team in their half — and **🇧🇪 Belgium**, **🇦🇹 Austria** and **🇺🇾 Uruguay** all give back a place or two by sharing a group with one of the tier-one sides.
+Most teams sit on the diagonal — the draw doesn't help or hurt them much. The visible movers, in roughly descending order of effect: **🇲🇽 Mexico** jumps two spots, from 18th by Elo to 16th by title probability, on the back of the +100 host bonus and a friendly Group A. **🇹🇷 Turkey** and **🇯🇵 Japan** also climb thanks to favourable bracket positions. On the other side, **🇦🇹 Austria** and **🇩🇿 Algeria** drop three spots each by sharing a group with 🇦🇷 Argentina, and **🇭🇷 Croatia** and **🇺🇾 Uruguay** give back a couple of places by sharing groups with 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England and 🇪🇸 Spain respectively — the strongest teams in their halves of the bracket.
 
-A note on the long tail. Ten of the 48 teams won zero of the million simulated tournaments — among them 🇨🇻 Cape Verde, 🇸🇦 Saudi Arabia, 🇨🇼 Curaçao, 🇶🇦 Qatar, 🇿🇦 South Africa, 🇭🇹 Haiti and a handful of others. The model isn't *literally* saying their chances are zero; it's saying that with this Elo, this draw and a million-tournament resolution, no simulation happened to produce a title run. The true probability is genuinely tiny — somewhere between "lottery ticket" and "asteroid".
+A note on the long tail. Eight of the 48 teams won zero of the ten million simulated tournaments — 🇨🇻 Cape Verde, 🇸🇦 Saudi Arabia, 🇳🇿 New Zealand, 🇭🇹 Haiti, 🇿🇦 South Africa, 🇬🇭 Ghana, 🇨🇼 Curaçao and 🇶🇦 Qatar. The model isn't *literally* saying their chances are zero; it's saying that with this Elo, this draw and a ten-million-tournament resolution, no simulation happened to produce a title run. The true probability is genuinely tiny — somewhere between "lottery ticket" and "asteroid".
 
 ### Hosts, briefly
 
-What does the +100 host bonus actually buy you? Less than you might hope, for the 🇺🇸 United States and 🇨🇦 Canada. Both reach the knockouts comfortably (🇺🇸 USA 68.1%, 🇨🇦 Canada 98.3% to qualify), and both ride to a respectable group-winner share at home (🇺🇸 USA 21.2% in a genuinely tricky Group D, 🇨🇦 Canada a heady 47.6% in their coin-flip Group B). But their title probabilities are 0.12% and 0.10%: the boost is enough to get them into the bracket, not enough to navigate four knockout rounds against a who's-who of European Elo. 🇲🇽 Mexico fare best of the three at **0.78%**, top of Group A with 75.5% probability and a 38.2% chance of reaching the quarter-finals, but their road runs through 🇪🇸 Spain's half. The home crowds will make for excellent television; the trophy, almost certainly, will not.
+What does the +100 host bonus actually buy you? Less than you might hope, for the 🇺🇸 United States and 🇨🇦 Canada. Both reach the knockouts comfortably (🇺🇸 USA 68.1%, 🇨🇦 Canada 98.5% to qualify), and both ride to a respectable group-winner share at home (🇺🇸 USA 20.8% in a genuinely tricky Group D, 🇨🇦 Canada a heady 47.8% in their coin-flip Group B). But their title probabilities are 0.12% and 0.10%: the boost is enough to get them into the bracket, not enough to navigate four knockout rounds against a who's-who of European Elo. 🇲🇽 Mexico fare best of the three at **0.78%**, top of Group A with 76.4% probability and a 38.5% chance of reaching the quarter-finals, but their road runs through 🇪🇸 Spain's half. The home crowds will make for excellent television; the trophy, almost certainly, will not.
 
 
 ## Bookies vs model: where the market disagrees
@@ -147,47 +147,47 @@ What does the +100 host bonus actually buy you? Less than you might hope, for th
 
 I'm still not the gambling kind. But betting markets are too useful as a sanity check to ignore — when real money is on the line, the consensus probability is a serious forecast in its own right.
 
-For this one I've pulled prices from [Polymarket's "World Cup Winner" market](https://polymarket.com/event/world-cup-winner-2026): a crypto-prediction market that runs a separate yes/no contract per team and prices each one continuously. It has the considerable advantage over traditional bookmakers of being machine-readable and only carrying about a 3% overround (compared to 5–8% at a sportsbook), so the de-vigging is quick and clean. The numbers below are from the snapshot taken at 2026-06-09 18:37 UTC.[^market-snap]
+For this one I've pulled prices from [Polymarket's "World Cup Winner" market](https://polymarket.com/event/world-cup-winner-2026): a crypto-prediction market that runs a separate yes/no contract per team and prices each one continuously. It has the considerable advantage over traditional bookmakers of being machine-readable and only carrying about a 3% overround (compared to 5–8% at a sportsbook), so the de-vigging is quick and clean. The numbers below are from the snapshot taken at 2026-06-10 20:34 UTC.[^market-snap]
 
-To turn a probability into decimal odds, take the reciprocal: a model probability of 35.4% becomes \\(1/0.354 \approx 2.83\\), i.e., a fair-value bet pays €2.83 per €1 staked. The same conversion applies the other way around: market odds of 6.49 imply a market probability of \\(1/6.49 \approx 15.4\%\\).[^vig-and-odds]
+To turn a probability into decimal odds, take the reciprocal: a model probability of 35.3% becomes \\(1/0.353 \approx 2.83\\), i.e., a fair-value bet pays €2.83 per €1 staked. The same conversion applies the other way around: market odds of 6.25 imply a market probability of \\(1/6.25 \approx 16.0\%\\).[^vig-and-odds]
 
 Here is the comparison for the top twelve teams. "Edge (pp)" is `model − market` in percentage points; positive means the model thinks the team is undervalued.
 
 | Team        | Model | Market |    Edge | Model odds | Market odds |
 |:------------|------:|-------:|--------:|-----------:|------------:|
-| 🇪🇸 Spain       | 35.4% |  15.4% | +19.9pp |       2.83 |        6.49 |
-| 🇦🇷 Argentina   | 22.8% |   8.5% | +14.3pp |       4.39 |       11.82 |
+| 🇪🇸 Spain       | 35.3% |  16.0% | +19.3pp |       2.83 |        6.25 |
+| 🇦🇷 Argentina   | 23.1% |   8.3% | +14.8pp |       4.33 |       12.02 |
 | 🇫🇷 France      | 12.7% |  15.6% |  −2.9pp |       7.88 |        6.41 |
-| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England     |  6.1% |  10.6% |  −4.5pp |      16.52 |        9.45 |
-| 🇧🇷 Brazil      |  3.9% |   8.2% |  −4.3pp |      25.61 |       12.24 |
-| 🇵🇹 Portugal    |  3.6% |  10.3% |  −6.7pp |      28.07 |        9.71 |
-| 🇨🇴 Colombia    |  3.3% |   1.9% |  +1.4pp |      30.11 |       53.05 |
-| 🇳🇱 Netherlands |  2.0% |   3.8% |  −1.8pp |      50.08 |       26.19 |
-| 🇪🇨 Ecuador     |  1.5% |   0.8% |  +0.7pp |      65.34 |      121.71 |
-| 🇩🇪 Germany     |  1.4% |   5.2% |  −3.8pp |      72.86 |       19.34 |
-| 🇹🇷 Turkey      |  1.0% |   1.2% |  −0.2pp |     102.36 |       82.76 |
-| 🇳🇴 Norway      |  0.9% |   2.5% |  −1.5pp |     108.25 |       40.57 |
+| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England     |  6.0% |  10.6% |  −4.5pp |      16.59 |        9.47 |
+| 🇧🇷 Brazil      |  3.8% |   8.2% |  −4.4pp |      26.00 |       12.17 |
+| 🇵🇹 Portugal    |  3.5% |  10.3% |  −6.7pp |      28.24 |        9.74 |
+| 🇨🇴 Colombia    |  3.3% |   1.8% |  +1.5pp |      30.35 |       55.57 |
+| 🇳🇱 Netherlands |  2.0% |   3.9% |  −1.9pp |      50.08 |       25.38 |
+| 🇪🇨 Ecuador     |  1.5% |   0.8% |  +0.7pp |      65.75 |      120.94 |
+| 🇩🇪 Germany     |  1.4% |   5.1% |  −3.7pp |      73.58 |       19.58 |
+| 🇹🇷 Turkey      |  1.0% |   1.2% |  −0.2pp |     100.20 |       82.24 |
+| 🇳🇴 Norway      |  0.9% |   2.4% |  −1.5pp |     109.05 |       41.96 |
 
 And the picture, plotted log-log so the disagreements are easier to see:
 
 {{< img src="market_vs_model" alt="Log-log scatter of model versus Polymarket title probabilities, with the diagonal marked and the biggest disagreements labelled" >}}
 
-The headline disagreement is enormous. **The market has 🇫🇷 France as the favourite at 15.6%, 🇪🇸 Spain just behind at 15.4% and 🇦🇷 Argentina sixth at 8.5%.** The model has 🇪🇸 Spain at 35.4% and 🇦🇷 Argentina at 22.8% — both more than double what Polymarket is paying. If the model is right, those are by some distance the two best-value bets in the tournament. If the market is right, the model has badly overestimated two specific sides.
+The headline disagreement is enormous. **The market has 🇪🇸 Spain and 🇫🇷 France as near-co-favourites at 16.0% and 15.6%, with 🇦🇷 Argentina fifth at 8.3%.** The model has 🇪🇸 Spain at 35.3% and 🇦🇷 Argentina at 23.1% — both more than double what Polymarket is paying. If the model is right, those are by some distance the two best-value bets in the tournament. If the market is right, the model has badly overestimated two specific sides.
 
-Why might the model be right? Three factors stack up the same way. 🇪🇸 Spain's Elo is genuinely 43 points clear of 🇦🇷 Argentina and almost 100 clear of 🇫🇷 France — the rating system, integrated over years of competitive results, is not subtle about who it likes. Group H is the weakest of the twelve. And the bracket places 🇪🇸 Spain and 🇦🇷 Argentina in opposite halves, so the only way to lose to each other is in the final. Compounding advantages compound.
+Why might the model be right? Three factors stack up the same way. 🇪🇸 Spain's Elo is genuinely 42 points clear of 🇦🇷 Argentina and almost 100 clear of 🇫🇷 France — the rating system, integrated over years of competitive results, is not subtle about who it likes. Group H is the weakest of the twelve. And the bracket places 🇪🇸 Spain and 🇦🇷 Argentina in opposite halves, so the only way to lose to each other is in the final. Compounding advantages compound.
 
 Why might the market be right? A few real things the Elo rating doesn't see. 🇪🇸 Spain's stretch of major-tournament knockouts has been more disappointing than the rating suggests. 🇦🇷 Argentina's defence of the title comes after two quieter years of friendlies and a moderate Copa run, and the rating still reflects the 2022 peak. And — the pattern we [flagged for Ronnie O'Sullivan]({{<ref "posts/elo_2b/index.md">}}) in the snooker write-up — sometimes the market is paying for something the rating system *can't* quantify: the ineffable "knows how to win a tournament" premium that betting markets price into established names. 🇫🇷 France have it. 🇧🇷 Brazil have it. 🇪🇸 Spain, despite the trophies and the rating, somehow don't.
 
-Lower down the table the agreements and disagreements are easier reading. **🇵🇹 Portugal** at 3.6% model vs 10.3% market is the most overvalued top team by the market's lights — a Cristiano Ronaldo lifetime-achievement premium, perhaps. **🇩🇪 Germany** at 1.4% vs 5.2% reads similarly; the model isn't yet convinced the post-Nagelsmann rebuild has produced an Elo-class side. On the other side, **🇨🇴 Colombia** and **🇪🇨 Ecuador** are the only teams besides 🇪🇸 Spain and 🇦🇷 Argentina that the model fancies more than the market does, both modestly: 🇨🇴 Colombia at +1.4pp, 🇪🇨 Ecuador at +0.7pp. The market consistently prices Conmebol's mid-table sides shorter than the Elo says, and the model consistently looks for value there.
+Lower down the table the agreements and disagreements are easier reading. **🇵🇹 Portugal** at 3.5% model vs 10.3% market is the most overvalued top team by the market's lights — a Cristiano Ronaldo lifetime-achievement premium, perhaps. **🇩🇪 Germany** at 1.4% vs 5.1% reads similarly; the model isn't yet convinced the post-Nagelsmann rebuild has produced an Elo-class side. On the other side, **🇨🇴 Colombia** and **🇪🇨 Ecuador** are the only teams besides 🇪🇸 Spain and 🇦🇷 Argentina that the model fancies more than the market does, both modestly: 🇨🇴 Colombia at +1.5pp, 🇪🇨 Ecuador at +0.7pp. The market consistently prices Conmebol's mid-table sides shorter than the Elo says, and the model consistently looks for value there.
 
 If you forced me to summarise the table in one sentence: the model and the market disagree most violently on the *favourites*, and almost not at all on the long shots. Where the two forecasters do disagree at the top, the resolution will arrive on July 19.
 
 
 ## Final whistle ⚽
 
-We've got 🇪🇸 Spain at 35%, 🇦🇷 Argentina at 23% and a market that thinks both are dramatically overpriced. We've got a 48-team bracket with twelve groups, a brand-new Round of 32, a 495-row third-place lookup and a host advantage that helps 🇲🇽 Mexico more than it helps the other two. And we've got one number — 🇪🇸 Spain's +19.9pp edge over Polymarket — that is, by some margin, the strongest disagreement between a rating-driven model and a money-driven crowd I've ever published on this blog.
+We've got 🇪🇸 Spain at 35%, 🇦🇷 Argentina at 23% and a market that thinks both are dramatically overpriced. We've got a 48-team bracket with twelve groups, a brand-new Round of 32, a 495-row third-place lookup and a host advantage that helps 🇲🇽 Mexico more than it helps the other two. And we've got one number — 🇪🇸 Spain's +19.3pp edge over Polymarket — that is, by some margin, the strongest disagreement between a rating-driven model and a money-driven crowd I've ever published on this blog.
 
-The tournament starts on June 11 and the final is on July 19. We'll know then whether the model deserves its confidence — or whether one more season of football has done what a million simulated tournaments couldn't, and quietly told us the rating wasn't quite the answer after all.
+The tournament starts on June 11 and the final is on July 19. We'll know then whether the model deserves its confidence — or whether one more season of football has done what ten million simulated tournaments couldn't, and quietly told us the rating wasn't quite the answer after all.
 
 If the model holds up I'll come back in seven weeks for a *did we get it right?* follow-up, exactly like [last year's snooker rerun]({{<ref "posts/elo_2b/index.md">}}). If it falls flat on its face, I'll come back to admit it. Either way, I'll see you on the other side of the trophy ceremony.
 
@@ -197,7 +197,7 @@ If the model holds up I'll come back in seven weeks for a *did we get it right?*
 [^combinations]: This number comes from the number of possible combinations, calculated via the good old binomial coefficient: \\({12 \choose 8} = \frac{12!}{8! \cdot 4!} = 495\\). I'm glad you've asked.
 [^poisson-choice]: A more sophisticated model would let the two lambdas vary independently (a so-called bivariate Poisson, or a Dixon-Coles correction for the empirically thin draw shoulders). I've deliberately kept v1 honest about its limits — one tunable parameter, one Elo input and no team-specific attack/defence ratings.
 [^tiebreaks]: FIFA's full procedure also includes a fair-play / conduct score before falling back to FIFA rank, which the simulator deliberately doesn't model — yellow- and red-card counts aren't an Elo-derivable quantity.
-[^elo-source]: [eloratings.net](https://eloratings.net/) maintains the established World Football Elo Ratings, updated after every international match. The simulator freezes the snapshot at 2026-06-09 18:08 UTC so that results from inside the tournament can't quietly feed back into the forecast mid-run.
+[^elo-source]: [eloratings.net](https://eloratings.net/) maintains the established World Football Elo Ratings, updated after every international match. The simulator freezes the snapshot at 2026-06-10 20:33 UTC so that results from inside the tournament can't quietly feed back into the forecast mid-run.
 [^group-d]: Group D is also the group where the model's biggest *home* effect lives: without the +100 Elo bonus, the 🇺🇸 United States would be a long way behind 🇹🇷 Turkey and 🇵🇾 Paraguay for qualification rather than essentially tied. The bonus doesn't carry into the knockouts, though — so even a 🇺🇸 USA win in Group D leaves them up against 🇪🇸 Spain's half of the bracket with a vanilla 1726 Elo.
 [^market-snap]: Polymarket prices change minute by minute; the comparison is a single snapshot taken just before the tournament started. By the time you read this, the numbers will already have drifted — 🇪🇸 Spain in particular will be priced very differently after match one, regardless of what happens in it.
 [^vig-and-odds]: Decimal odds quote the total return per unit stake including the stake, so fair odds for probability \\(p\\) are exactly \\(1/p\\). If you sum the market-implied probabilities across all 48 contracts, you'll get slightly more than 100% — the overround is how the market makes a living. Polymarket's overround on this market is about 3%; a typical sportsbook is closer to 5–8%. Either way: the house always wins.
