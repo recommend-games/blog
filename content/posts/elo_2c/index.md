@@ -99,7 +99,7 @@ The full picture of group qualification looks like this:
 
 {{< img src="group_qualification_heatmap" alt="Heatmap of group-qualification probabilities for all 48 teams, arranged by group" >}}
 
-Most groups have a familiar shape — two strong teams comfortably through, two weak ones mostly out. **Group B** stands out for being a coin-flip: 🇨🇭 Switzerland (98.4% to qualify) and 🇨🇦 Canada (98.3%) are essentially indistinguishable, both helped along by 🇨🇦 Canada's home boost. **Group D** is the closest thing to chaos: 🇹🇷 Turkey, 🇵🇾 Paraguay, the 🇺🇸 United States and 🇦🇺 Australia are all between 53% and 86% to qualify, with 🇺🇸 USA's host bonus pulling them above where their raw Elo would put them.[^group-d]
+Most groups have a familiar shape — two strong teams comfortably through, two weak ones mostly out. **Group B** stands out for being a coin-flip: 🇨🇭 Switzerland (98.4% to qualify) and 🇨🇦 Canada (98.3%) are essentially indistinguishable, with 🇨🇦 Canada's home boost wiping out a 100-point Elo deficit. **Group D** is the closest thing to chaos: 🇹🇷 Turkey, 🇵🇾 Paraguay, the 🇺🇸 United States and 🇦🇺 Australia are all between 53% and 86% to qualify, with 🇺🇸 USA's host bonus pulling them above where their raw Elo would put them.[^group-d]
 
 
 ## One million tournaments later
