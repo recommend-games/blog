@@ -187,9 +187,9 @@ If you forced me to summarise the table in one sentence: the model and the marke
 
 We've got 🇪🇸 Spain at 35%, 🇦🇷 Argentina at 23% and a market that thinks both are dramatically overpriced. We've got a 48-team bracket with twelve groups, a brand-new Round of 32, a 495-row third-place lookup and a host advantage that helps 🇲🇽 Mexico more than it helps the other two. And we've got one number — 🇪🇸 Spain's +19.3pp edge over Polymarket — that is, by some margin, the strongest disagreement between a rating-driven model and a money-driven crowd I've ever published on this blog.
 
-The tournament starts on June 11 and the final is on July 19. We'll know then whether the model deserves its confidence — or whether one more season of football has done what ten million simulated tournaments couldn't, and quietly told us the rating wasn't quite the answer after all.
+Kickoff is in a few hours; the final is on July 19. We'll know then whether the model deserves its confidence — or whether one more season of football has done what ten million simulated tournaments couldn't, and quietly told us the rating wasn't quite the answer after all.
 
-If the model holds up I'll come back in seven weeks for a *did we get it right?* follow-up, exactly like [last year's snooker rerun]({{<ref "posts/elo_2b/index.md">}}). If it falls flat on its face, I'll come back to admit it. Either way, I'll see you on the other side of the trophy ceremony.
+If the model holds up I'll come back in seven weeks for a *did we get it right?* follow-up. If it falls flat on its face, I'll come back to admit it. Either way, I'll see you on the other side of the trophy ceremony.
 
 *All the code, data snapshots and figures for this article live in [`experiments/world_cup_2026/`](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/world_cup_2026) on GitLab.*
 
