@@ -1,6 +1,6 @@
 ---
-title: "TODO From the baize to the pitch: predicting the 2026 World Cup with Elo"
-subtitle: "Elo, part 2c: TODO ten million simulations, 48 teams, three host nations"
+title: "Who wins the 2026 World Cup? Probably Spain."
+subtitle: "Elo, part 2c: ten million simulations, 48 teams, three host nations"
 slug: world-cup-2026
 share_img: /posts/world-cup-2026/title_probabilities.png
 author: Markus Shepherd
@@ -12,7 +12,7 @@ tags:
   - World Cup
 ---
 
-## TODO From cue to cleats
+## FIFA is a mafia. Now let's watch football.
 
 Let's not beat about the bush: FIFA is a mafia, their Peace Prize a disgrace and a host country so hostile towards the expected guests from all over the world not worthy of that honour. But as soon as the whistle sounds later today and the first ball is kicked, none of this matters anymore and football (or *soccer* in freedom units) rules everything. ⚽️
 
@@ -37,7 +37,7 @@ The "8 best of 12 thirds" rule is the one that quietly bends the bracket. Which 
 Host advantage is the other format quirk worth flagging. There are three home countries, but they don't host the entire tournament evenly: each plays its own group-stage matches at home and then ventures into a neighbour's stadiums in the knockouts. The model applies a +100 Elo bonus only when a host plays *in* its own country, so 🇲🇽 Mexico's home boost vanishes the moment they step onto a 🇺🇸 US pitch.
 
 
-## Building the model: TODO Elo meets the pitch
+## Building the model: from ratings to extra time
 
 To recap [our usual setup]({{<ref "posts/elo_1/index.md">}}) in one paragraph: each team has an Elo rating \\(r\\), and the expected score for team *A* against team *B* is
 
