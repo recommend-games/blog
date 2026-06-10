@@ -2,7 +2,7 @@
 title: "Who wins the 2026 World Cup? Probably Spain."
 subtitle: "Elo, part 2c: ten million simulations, 48 teams, three host nations"
 slug: world-cup-2026
-share_img: /posts/world-cup-2026/title_probabilities.png
+share_img: /posts/world-cup-2026/title_probabilities_share.png
 author: Markus Shepherd
 type: post
 date: 2026-06-11T12:00:00+03:00

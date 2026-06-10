@@ -558,7 +558,7 @@ links:
   - src: "experiments/world_cup_2026/plots/title_probabilities.svg"
     dst: "content/posts/elo_2c/title_probabilities.svg"
   - src: "experiments/world_cup_2026/plots/title_probabilities.png"
-    dst: "content/posts/elo_2c/title_probabilities.png"
+    dst: "content/posts/elo_2c/title_probabilities_share.png"
   - src: "experiments/world_cup_2026/plots/group_qualification_heatmap.svg"
     dst: "content/posts/elo_2c/group_qualification_heatmap.svg"
   - src: "experiments/world_cup_2026/plots/draw_luck.svg"
