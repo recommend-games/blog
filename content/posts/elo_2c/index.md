@@ -37,7 +37,7 @@ The "8 best of 12 thirds" rule is the one that quietly bends the bracket. Which 
 Host advantage is the other format quirk worth flagging. There are three home countries, but they don't host the entire tournament evenly: each plays its own group-stage matches at home and then ventures into a neighbour's stadiums in the knockouts. The model applies a +100 Elo bonus only when a host plays *in* its own country, so 🇲🇽 Mexico's home boost vanishes the moment they step onto a 🇺🇸 US pitch.
 
 
-## Building the model: Elo meets the pitch
+## Building the model: TODO Elo meets the pitch
 
 To recap [our usual setup]({{<ref "posts/elo_1/index.md">}}) in one paragraph: each team has an Elo rating \\(r\\), and the expected score for team *A* against team *B* is
 
@@ -57,9 +57,9 @@ One sharp edge: if the Elo gap gets large enough, the system has no valid soluti
 
 The fix is to pin 🇨🇻 Cape Verde's \\(\lambda\\) at a floor of 0.25, let 🇪🇸 Spain's rise above the 2.35 the budget would otherwise allow, and renormalise the truncated joint Poisson grid afterwards. The 🇪🇸 Spain vs 🇨🇻 Cape Verde fixture ends up at \\(\lambda_{\text{ES}} = 3.50\\), \\(\lambda_{\text{CV}} = 0.25\\), and the model's most likely scorelines are 3–0 (16.8%), 4–0 (14.7%), 2–0 (14.4%), 5–0 (10.3%), and 1–0 (8.2%). 🇪🇸 Spain are 94.1% to win the match, 🇨🇻 Cape Verde 1.0%.
 
-### Group stage, tie-breaks, and the third-place puzzle
+### Group stage, tie-breaks and the third-place puzzle
 
-Inside each simulation, all 72 group fixtures are sampled in one vectorised numpy call, then the four teams in each group are ranked using FIFA's tie-break ladder: points, head-to-head points and goal difference and goals scored on the tied subset, then overall goal difference and goals scored, and finally a fallback on FIFA rank (the published November-2025 list).[^tiebreaks]
+Inside each simulation, all 72 group fixtures are sampled in one vectorised numpy call, then the four teams in each group are ranked using FIFA's tie-break ladder: points, overall goal difference, overall goals scored, then on the tied subset head-to-head points and goal difference and goals scored, and finally a fallback on FIFA rank (the published November-2025 list).[^tiebreaks]
 
 Once every group is ranked, the simulator picks the 8 best third-placed teams across all 12 groups and slots them into the Round of 32 via the 495-row lookup table. This is one of the places where football carries more bookkeeping than snooker: a clean draw doesn't exist, just a deterministic rule with a lot of cases.
 
