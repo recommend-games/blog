@@ -1,26 +1,26 @@
 ---
-title: "From the baize to the pitch: predicting the 2026 World Cup with Elo"
-subtitle: "Elo, part 2c: one million simulations, 48 teams, three host nations"
+title: "TODO From the baize to the pitch: predicting the 2026 World Cup with Elo"
+subtitle: "Elo, part 2c: TODO one million simulations, 48 teams, three host nations"
 slug: world-cup-2026
 share_img: /posts/world-cup-2026/title_probabilities.png
 author: Markus Shepherd
 type: post
-date: 2026-06-11T13:00:00-06:00
+date: 2026-06-11T12:00:00+03:00
 tags:
   - Elo rating
   - Football
   - World Cup
 ---
 
-## From cue to cleats
+## TODO From cue to cleats
 
-The two snooker entries in this Elo series ([part 2]({{<ref "posts/elo_2/index.md">}}) and [part 2b]({{<ref "posts/elo_2b/index.md">}})) sent the same toolbox — Elo ratings, then a few million simulated tournaments — into the Crucible Theatre to predict the snooker World Championship. With the 2026 FIFA World Cup kicking off today at the Estadio Azteca in 🇲🇽 Mexico City, it seemed a shame not to point the same machinery at a much bigger draw.
+Let's not beat about the bush: FIFA is a mafia, their Peace Prize a disgrace and a host country so hostile towards the expected guests from all over the world not worthy of that honour. But as soon as the whistle sounds later today and the first ball is kicked, none of this matters anymore and football (or *soccer* in freedom units) rules everything. ⚽️
 
-A bigger draw in every dimension, really. Snooker's World Championship is a clean 32-player bracket on a single table in Sheffield. The 2026 World Cup is the first 48-team edition, played across three host nations, with twelve groups, an entirely new Round of 32, and a third-place qualification rule that is genuinely fiddly to write down. The Elo ratings on their own won't be enough this time; we'll have to wrap them in a goal-scoring model and a fairly serious bit of bracket bookkeeping before any of it answers the actual question.
+So, to celebrate my love–hate relationship with the biggest sporting event on the globe, I thought I'd treat it to the same Elo magic I applied unsuccessfully to [Snooker]({{<ref "posts/elo_2/index.md">}}) ([twice]({{<ref "posts/elo_2b/index.md">}})) in an attempt to predict who will be 🇦🇷 Argentina's successor and lift the golden trophy on July 19. 🥇
 
-That question, again: who lifts the trophy on July 19? And — for a reality check — does the wisdom of the betting market agree?
+This is going to be bigger in every dimension though. Snooker's World Championship is a clean 32-player bracket in a single venue in Sheffield. The 2026 World Cup is the first 48-team edition, played across three host nations 🇺🇸🇨🇦🇲🇽, with twelve groups, an entirely new Round of 32 and a third-place qualification rule that is genuinely fiddly to write down. The Elo ratings on their own won't be enough this time; we'll have to wrap them in a goal-scoring model and a fairly serious bit of bracket bookkeeping before any of it answers the actual question.
 
-The short version: the model thinks 🇪🇸 Spain are huge, the bookmakers think 🇪🇸 Spain are merely good, and the gap between those two opinions is by some way the most interesting number in this article. The long version is what follows.
+The short version: the model thinks 🇪🇸 Spain are huge, the bookmakers think they are merely good and the gap between those two opinions is by some way the most interesting number in this article. The long version is what follows. 🤓
 
 
 ## The new format in one minute
