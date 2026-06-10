@@ -22,6 +22,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
+from matplotlib.colors import LinearSegmentedColormap
 
 from world_cup_2026.config import OUTPUTS, ROOT
 
@@ -30,6 +31,25 @@ PLOTS = ROOT / "plots"
 TEAM_PROBS = OUTPUTS / "team_probabilities.csv"
 GROUP_PROBS = OUTPUTS / "group_probabilities.csv"
 MARKET_COMPARISON = OUTPUTS / "market_comparison.csv"
+
+# Shared red <-> dark <-> purple diverging cmap for "signed" axes (rank diff,
+# model-vs-market edge). The sequential palette is the right (purple) half of
+# the same cmap, so all four charts share one colour family on the dark
+# seaborn background.
+DIV_CMAP = sns.diverging_palette(
+    h_neg=15, h_pos=290, s=95, l=60, sep=15, center="dark", as_cmap=True,
+)
+SEQ_CMAP = LinearSegmentedColormap.from_list(
+    # High values map to the deep purple end so the strongest teams glow
+    # darkest and the long tail fades into the background.
+    "seq_glow", DIV_CMAP(np.linspace(1.0, 0.5, 256)),
+)
+
+
+def _seq_palette(n: int):
+    # Skip the darkest end so the lowest-value bar/cell isn't lost in the
+    # background; samples run light -> dark to match the cmap direction.
+    return [SEQ_CMAP(x) for x in np.linspace(0.05, 0.75, n)]
 
 
 def _read(path: Path) -> list[dict[str, str]]:
@@ -50,7 +70,7 @@ def plot_title_probabilities(rows: list[dict[str, str]], top_n: int = 15) -> Non
     probs = np.array([float(r["p_winner"]) for r in ranked][::-1])
 
     fig, ax = plt.subplots(figsize=(7.2, 5.4))
-    bars = ax.barh(names, probs * 100, color=sns.color_palette("crest", len(names)))
+    bars = ax.barh(names, probs * 100, color=_seq_palette(len(names)))
     ax.set_xlabel("Title probability (%)")
     ax.set_title(f"Top {top_n} teams by simulated title probability")
     ax.grid(True, axis="x", alpha=0.4)
@@ -84,7 +104,7 @@ def plot_group_qualification_heatmap(rows: list[dict[str, str]]) -> None:
         grid_p * 100,
         annot=grid_labels,
         fmt="",
-        cmap="crest",
+        cmap=SEQ_CMAP,
         vmin=0,
         vmax=100,
         cbar_kws={"label": "P(qualify) (%)"},
@@ -123,7 +143,7 @@ def plot_draw_luck(rows: list[dict[str, str]], min_wins: int = 100) -> None:
         elo_ranks,
         title_ranks,
         c=diffs,
-        cmap="coolwarm_r",
+        cmap=DIV_CMAP,
         vmin=-cmax,
         vmax=cmax,
         s=70,
@@ -163,16 +183,17 @@ def plot_draw_luck(rows: list[dict[str, str]], min_wins: int = 100) -> None:
 
 
 def plot_market_vs_model(
-    rows: list[dict[str, str]], min_market_p: float = 0.01
+    rows: list[dict[str, str]], min_p: float = 0.01
 ) -> None:
     model_p = np.array([float(r["model_p_winner"]) for r in rows])
     market_p = np.array([float(r["market_p_winner"]) for r in rows])
     names = [r["team_name"] for r in rows]
     edges = model_p - market_p
 
-    # Keep teams the market actually prices as contenders; the long tail of
-    # near-zero teams clusters in the bottom-left and adds no signal.
-    keep = market_p >= min_market_p
+    # Require both sides to price the team as a >=1% contender; otherwise the
+    # mid-cluster (teams the market gives 1-2% but the model gives <1%) drowns
+    # out the real signal among the top contenders.
+    keep = (model_p >= min_p) & (market_p >= min_p)
     model_p_k = model_p[keep] * 100
     market_p_k = market_p[keep] * 100
     names_k = [n for n, k in zip(names, keep) if k]
@@ -190,7 +211,7 @@ def plot_market_vs_model(
     cmax = max(abs(edges_k.min()), abs(edges_k.max()))
     sc = ax.scatter(
         market_p_k, model_p_k,
-        c=edges_k, cmap="RdBu_r", vmin=-cmax, vmax=cmax,
+        c=edges_k, cmap=DIV_CMAP, vmin=-cmax, vmax=cmax,
         s=80, zorder=3,
     )
 
