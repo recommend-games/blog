@@ -59,7 +59,7 @@ The fix is to pin 🇨🇻 Cape Verde's \\(\lambda\\) at a floor of 0.25, let �
 
 ### Group stage, tie-breaks and the third-place puzzle
 
-Inside each simulation, all 72 group fixtures are sampled in one vectorised numpy call, then the four teams in each group are ranked using FIFA's tie-break ladder: points, overall goal difference, overall goals scored, then on the tied subset head-to-head points and goal difference and goals scored and finally a fallback on FIFA rank (the published November-2025 list).[^tiebreaks]
+Inside each simulation, all 72 group fixtures are sampled in one vectorised numpy call, then the four teams in each group are ranked using FIFA's tie-break ladder, which is exactly as fiddly as you'd expect from the same people who wrote the 495-row lookup: points, overall goal difference, overall goals scored, then on the tied subset head-to-head points and goal difference and goals scored and finally a fallback on FIFA rank (the published November-2025 list).[^tiebreaks]
 
 Once every group is ranked, the simulator picks the 8 best third-placed teams across all 12 groups and slots them into the Round of 32 via the 495-row lookup table. This is one of the places where football carries more bookkeeping than snooker: a clean draw doesn't exist, just a deterministic rule with a lot of cases.
 
