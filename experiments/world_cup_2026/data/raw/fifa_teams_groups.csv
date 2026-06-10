@@ -1,0 +1,49 @@
+group,group_slot,team,pot,confederation,method_of_qualification,date_of_qualification,finals_appearance,last_appearance,previous_best,fifa_ranking_nov_2025
+A,A1,Mexico,1,CONCACAF,Co-host,"February 14, 2023",18th,2022,"Quarter-finals (1970, 1986)",15
+A,A2,South Africa,3,CAF,CAF Group C winner,"October 14, 2025",4th,2010,"Group stage (1998, 2002, 2010)",61
+A,A3,South Korea,2,AFC,AFC third round Group B winner,"June 5, 2025",12th,2022,Fourth place (2002),22
+A,A4,Czech Republic,4,UEFA,UEFA second round Path D winner,"March 31, 2026",10th,2006,"Runner-up (1934, 1962)",44
+B,B1,Canada,1,CONCACAF,Co-host,"February 14, 2023",3rd,2022,"Group stage (1986, 2022)",27
+B,B2,Bosnia and Herzegovina,4,UEFA,UEFA second round Path A winner,"March 31, 2026",2nd,2014,Group stage (2014),71
+B,B3,Qatar,3,AFC,AFC fourth round Group A winner,"October 14, 2025",2nd,2022,Group stage (2022),51
+B,B4,Switzerland,2,UEFA,UEFA Group B winner,"November 18, 2025",13th,2022,"Quarterfinals (1934, 1938, 1954)",17
+C,C1,Brazil,1,CONMEBOL,CONMEBOL round robin fifth place,"June 10, 2025",23rd,2022,"Winner (1958, 1962, 1970, 1994, 2002)",5
+C,C2,Morocco,2,CAF,CAF Group E winner,"September 5, 2025",7th,2022,Fourth place (2022),11
+C,C3,Haiti,4,CONCACAF,CONCACAF Group C winner,"November 18, 2025",2nd,1974,Group stage (1974),84
+C,C4,Scotland,3,UEFA,UEFA Group C winner,"November 18, 2025",9th,1998,"Group stage (1954, 1958, 1974, 1978, 1982, 1986, 1990, 1998)",36
+D,D1,United States,1,CONCACAF,Co-host,"February 14, 2023",12th,2022,Third place (1930),14
+D,D2,Paraguay,3,CONMEBOL,CONMEBOL round robin sixth place,"September 4, 2025",9th,2010,Quarterfinals (2010),39
+D,D3,Australia,2,AFC,AFC third round Group C runner-up,"June 10, 2025",7th,2022,"Round of 16 (2006, 2022)",26
+D,D4,Turkey,4,UEFA,UEFA second round Path C winner,"March 31, 2026",3rd,2002,Third place (2002),25
+E,E1,Germany,1,UEFA,UEFA Group A winner,"November 17, 2025",21st,2022,"Winner (1954, 1974, 1990, 2014)",9
+E,E2,Curaçao,4,CONCACAF,CONCACAF Group B winner,"November 18, 2025",1st,—,—,82
+E,E3,Ivory Coast,3,CAF,CAF Group F winner,"October 14, 2025",4th,2014,"Group stage (2006, 2010, 2014)",42
+E,E4,Ecuador,2,CONMEBOL,CONMEBOL round robin runner-up,"June 10, 2025",5th,2022,Round of 16 (2006),23
+F,F1,Netherlands,1,UEFA,UEFA Group G winner,"November 17, 2025",12th,2022,"Runner-up (1974, 1978, 2010)",7
+F,F2,Japan,2,AFC,AFC third round Group C winner,"March 20, 2025",8th,2022,"Round of 16 (2002, 2010, 2018, 2022)",18
+F,F3,Sweden,4,UEFA,UEFA second round Path B winner,"March 31, 2026",13th,2018,Runner-up (1958),43
+F,F4,Tunisia,3,CAF,CAF Group H winner,"September 8, 2025",7th,2022,"Group stage (1978, 1998, 2002, 2006, 2018, 2022)",40
+G,G1,Belgium,1,UEFA,UEFA Group J winner,"November 18, 2025",15th,2022,Third place (2018),8
+G,G2,Egypt,3,CAF,CAF Group A winner,"October 8, 2025",4th,2018,"First round (1934), group stage (1990, 2018)",34
+G,G3,Iran,2,AFC,AFC third round Group A winner,"March 25, 2025",7th,2022,"Group stage (1978, 1998, 2006, 2014, 2018, 2022)",20
+G,G4,New Zealand,4,OFC,OFC third round winner,"March 24, 2025",3rd,2010,"Group stage (1982, 2010)",86
+H,H1,Spain,1,UEFA,UEFA Group E winner,"November 18, 2025",17th,2022,Winner (2010),1
+H,H2,Cape Verde,4,CAF,CAF Group D winner,"October 13, 2025",1st,—,—,68
+H,H3,Saudi Arabia,3,AFC,AFC fourth round Group B winner,"October 14, 2025",7th,2022,Round of 16 (1994),60
+H,H4,Uruguay,2,CONMEBOL,CONMEBOL round robin fourth place,"September 4, 2025",15th,2022,"Winner (1930, 1950)",16
+I,I1,France,1,UEFA,UEFA Group D winner,"November 13, 2025",17th,2022,"Winner (1998, 2018)",3
+I,I2,Senegal,2,CAF,CAF Group B winner,"October 14, 2025",4th,2022,Quarterfinals (2002),19
+I,I3,Iraq,4,AFC,Inter-confederation playoff Path 2 winner,"March 31, 2026",2nd,1986,Group stage (1986),58
+I,I4,Norway,3,UEFA,UEFA Group I winner,"November 16, 2025",4th,1998,Round of 16 (1998),29
+J,J1,Argentina,1,CONMEBOL,CONMEBOL round robin winner,"March 25, 2025",19th,2022,"Winner (1978, 1986, 2022)",2
+J,J2,Algeria,3,CAF,CAF Group G winner,"October 9, 2025",5th,2014,Round of 16 (2014),35
+J,J3,Austria,2,UEFA,UEFA Group H winner,"November 18, 2025",8th,1998,Third place (1954),24
+J,J4,Jordan,4,AFC,AFC third round Group B runner-up,"June 5, 2025",1st,—,—,66
+K,K1,Portugal,1,UEFA,UEFA Group F winner,"November 16, 2025",9th,2022,Third place (1966),6
+K,K2,DR Congo,4,CAF,Inter-confederation playoff Path 1 winner,"March 31, 2026",2nd,1974,Group stage (1974),56
+K,K3,Uzbekistan,3,AFC,AFC third round Group A runner-up,"June 5, 2025",1st,—,—,50
+K,K4,Colombia,2,CONMEBOL,CONMEBOL round robin third place,"September 4, 2025",7th,2018,Quarterfinals (2014),13
+L,L1,England,1,UEFA,UEFA Group K winner,"October 14, 2025",17th,2022,Winner (1966),4
+L,L2,Croatia,2,UEFA,UEFA Group L winner,"November 14, 2025",7th,2022,Runner-up (2018),10
+L,L3,Ghana,4,CAF,CAF Group I winner,"October 12, 2025",5th,2022,Quarterfinals (2010),72
+L,L4,Panama,3,CONCACAF,CONCACAF Group A winner,"November 18, 2025",2nd,2018,Group stage (2018),30

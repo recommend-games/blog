@@ -1,0 +1,73 @@
+group,round_number,match_label,date,time,home_team,away_team,venue,city
+A,1,Match 1,2026-06-11,1:00 p.m. UTC−6,Mexico,South Africa,Estadio Azteca,Mexico City
+A,1,Match 2,2026-06-11,8:00 p.m. UTC−6,South Korea,Czech Republic,Estadio Akron,Zapopan
+A,2,Match 25,2026-06-18,12:00 p.m. UTC−4,Czech Republic,South Africa,Mercedes-Benz Stadium,Atlanta
+A,2,Match 28,2026-06-18,7:00 p.m. UTC−6,Mexico,South Korea,Estadio Akron,Zapopan
+A,3,Match 53,2026-06-24,7:00 p.m. UTC−6,Czech Republic,Mexico,Estadio Azteca,Mexico City
+A,3,Match 54,2026-06-24,7:00 p.m. UTC−6,South Africa,South Korea,Estadio BBVA,Guadalupe
+B,1,Match 3,2026-06-12,3:00 p.m. UTC−4,Canada,Bosnia and Herzegovina,BMO Field,Toronto
+B,1,Match 8,2026-06-13,12:00 p.m. UTC−7,Qatar,Switzerland,Levi's Stadium,Santa Clara
+B,2,Match 26,2026-06-18,12:00 p.m. UTC−7,Switzerland,Bosnia and Herzegovina,SoFi Stadium,Inglewood
+B,2,Match 27,2026-06-18,3:00 p.m. UTC−7,Canada,Qatar,BC Place,Vancouver
+B,3,Match 51,2026-06-24,12:00 p.m. UTC−7,Switzerland,Canada,BC Place,Vancouver
+B,3,Match 52,2026-06-24,12:00 p.m. UTC−7,Bosnia and Herzegovina,Qatar,Lumen Field,Seattle
+C,1,Match 7,2026-06-13,6:00 p.m.,Brazil,Morocco,MetLife Stadium,East Rutherford
+C,1,Match 5,2026-06-13,9:00 p.m.,Haiti,Scotland,Gillette Stadium,Foxborough
+C,2,Match 30,2026-06-19,6:00 p.m.,Scotland,Morocco,Gillette Stadium,Foxborough
+C,2,Match 29,2026-06-19,8:30 p.m.,Brazil,Haiti,Lincoln Financial Field,Philadelphia
+C,3,Match 49,2026-06-24,6:00 p.m.,Scotland,Brazil,Hard Rock Stadium,Miami Gardens
+C,3,Match 50,2026-06-24,6:00 p.m.,Morocco,Haiti,Mercedes-Benz Stadium,Atlanta
+D,1,Match 4,2026-06-12,6:00 p.m.,United States,Paraguay,SoFi Stadium,Inglewood
+D,1,Match 6,2026-06-13,9:00 p.m.,Australia,Turkey,BC Place,Vancouver
+D,2,Match 32,2026-06-19,12:00 p.m.,United States,Australia,Lumen Field,Seattle
+D,2,Match 31,2026-06-19,8:00 p.m.,Turkey,Paraguay,Levi's Stadium,Santa Clara
+D,3,Match 59,2026-06-25,7:00 p.m.,Turkey,United States,SoFi Stadium,Inglewood
+D,3,Match 60,2026-06-25,7:00 p.m.,Paraguay,Australia,Levi's Stadium,Santa Clara
+E,1,Match 10,2026-06-14,12:00 p.m. UTC−5,Germany,Curaçao,NRG Stadium,Houston
+E,1,Match 9,2026-06-14,7:00 p.m. UTC−4,Ivory Coast,Ecuador,Lincoln Financial Field,Philadelphia
+E,2,Match 33,2026-06-20,4:00 p.m. UTC−4,Germany,Ivory Coast,BMO Field,Toronto
+E,2,Match 34,2026-06-20,7:00 p.m. UTC−5,Ecuador,Curaçao,Arrowhead Stadium,Kansas City
+E,3,Match 55,2026-06-25,4:00 p.m. UTC−4,Curaçao,Ivory Coast,Lincoln Financial Field,Philadelphia
+E,3,Match 56,2026-06-25,4:00 p.m. UTC−4,Ecuador,Germany,MetLife Stadium,East Rutherford
+F,1,Match 11,2026-06-14,3:00 p.m. UTC−5,Netherlands,Japan,AT&T Stadium,Arlington
+F,1,Match 12,2026-06-14,8:00 p.m. UTC−6,Sweden,Tunisia,Estadio BBVA,Guadalupe
+F,2,Match 36,2026-06-20,10:00 p.m. UTC−6,Tunisia,Japan,Estadio BBVA,Guadalupe
+F,2,Match 35,2026-06-20,12:00 p.m. UTC−5,Netherlands,Sweden,NRG Stadium,Houston
+F,3,Match 57,2026-06-25,6:00 p.m. UTC−5,Japan,Sweden,AT&T Stadium,Arlington
+F,3,Match 58,2026-06-25,6:00 p.m. UTC−5,Tunisia,Netherlands,Arrowhead Stadium,Kansas City
+G,1,Match 16,2026-06-15,12:00 p.m.,Belgium,Egypt,Lumen Field,Seattle
+G,1,Match 15,2026-06-15,6:00 p.m.,Iran,New Zealand,SoFi Stadium,Inglewood
+G,2,Match 39,2026-06-21,12:00 p.m.,Belgium,Iran,SoFi Stadium,Inglewood
+G,2,Match 40,2026-06-21,6:00 p.m.,New Zealand,Egypt,BC Place,Vancouver
+G,3,Match 63,2026-06-26,8:00 p.m.,Egypt,Iran,Lumen Field,Seattle
+G,3,Match 64,2026-06-26,8:00 p.m.,New Zealand,Belgium,BC Place,Vancouver
+H,1,Match 14,2026-06-15,12:00 p.m. UTC−4,Spain,Cape Verde,Mercedes-Benz Stadium,Atlanta
+H,1,Match 13,2026-06-15,6:00 p.m. UTC−4,Saudi Arabia,Uruguay,Hard Rock Stadium,Miami Gardens
+H,2,Match 38,2026-06-21,12:00 p.m. UTC−4,Spain,Saudi Arabia,Mercedes-Benz Stadium,Atlanta
+H,2,Match 37,2026-06-21,6:00 p.m. UTC−4,Uruguay,Cape Verde,Hard Rock Stadium,Miami Gardens
+H,3,Match 66,2026-06-26,6:00 p.m. UTC−6,Uruguay,Spain,Estadio Akron,Zapopan
+H,3,Match 65,2026-06-26,7:00 p.m. UTC−5,Cape Verde,Saudi Arabia,NRG Stadium,Houston
+I,1,Match 17,2026-06-16,3:00 p.m.,France,Senegal,MetLife Stadium,East Rutherford
+I,1,Match 18,2026-06-16,6:00 p.m.,Iraq,Norway,Gillette Stadium,Foxborough
+I,2,Match 42,2026-06-22,5:00 p.m.,France,Iraq,Lincoln Financial Field,Philadelphia
+I,2,Match 41,2026-06-22,8:00 p.m.,Norway,Senegal,MetLife Stadium,East Rutherford
+I,3,Match 61,2026-06-26,3:00 p.m.,Norway,France,Gillette Stadium,Foxborough
+I,3,Match 62,2026-06-26,3:00 p.m.,Senegal,Iraq,BMO Field,Toronto
+J,1,Match 19,2026-06-16,8:00 p.m. UTC−5,Argentina,Algeria,Arrowhead Stadium,Kansas City
+J,1,Match 20,2026-06-16,9:00 p.m. UTC−7,Austria,Jordan,Levi's Stadium,Santa Clara
+J,2,Match 43,2026-06-22,12:00 p.m. UTC−5,Argentina,Austria,AT&T Stadium,Arlington
+J,2,Match 44,2026-06-22,8:00 p.m. UTC−7,Jordan,Algeria,Levi's Stadium,Santa Clara
+J,3,Match 69,2026-06-27,9:00 p.m. UTC−5,Algeria,Austria,Arrowhead Stadium,Kansas City
+J,3,Match 70,2026-06-27,9:00 p.m. UTC−5,Jordan,Argentina,AT&T Stadium,Arlington
+K,1,Match 23,2026-06-17,12:00 p.m. UTC−5,Portugal,DR Congo,NRG Stadium,Houston
+K,1,Match 24,2026-06-17,8:00 p.m. UTC−6,Uzbekistan,Colombia,Estadio Azteca,Mexico City
+K,2,Match 47,2026-06-23,12:00 p.m. UTC−5,Portugal,Uzbekistan,NRG Stadium,Houston
+K,2,Match 48,2026-06-23,8:00 p.m. UTC−6,Colombia,DR Congo,Estadio Akron,Zapopan
+K,3,Match 71,2026-06-27,7:30 p.m. UTC−4,Colombia,Portugal,Hard Rock Stadium,Miami Gardens
+K,3,Match 72,2026-06-27,7:30 p.m. UTC−4,DR Congo,Uzbekistan,Mercedes-Benz Stadium,Atlanta
+L,1,Match 22,2026-06-17,3:00 p.m. UTC−5,England,Croatia,AT&T Stadium,Arlington
+L,1,Match 21,2026-06-17,7:00 p.m. UTC−4,Ghana,Panama,Toronto Stadium,Toronto
+L,2,Match 45,2026-06-23,4:00 p.m. UTC−4,England,Ghana,Gillette Stadium,Foxborough
+L,2,Match 46,2026-06-23,7:00 p.m. UTC−4,Panama,Croatia,Toronto Stadium,Toronto
+L,3,Match 67,2026-06-27,5:00 p.m. UTC−4,Panama,England,MetLife Stadium,East Rutherford
+L,3,Match 68,2026-06-27,5:00 p.m. UTC−4,Croatia,Ghana,Lincoln Financial Field,Philadelphia
