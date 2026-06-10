@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import time
 
 from world_cup_2026 import config, simulate
@@ -28,6 +29,13 @@ def main() -> None:
         action="store_true",
         help="Hide the progress bar",
     )
+    parser.add_argument(
+        "-w",
+        "--workers",
+        type=int,
+        default=None,
+        help="Number of worker processes (default: all available CPU cores)",
+    )
     args = parser.parse_args()
 
     started = time.perf_counter()
@@ -35,11 +43,14 @@ def main() -> None:
         n_simulations=args.n_simulations,
         seed=args.seed,
         show_progress=not args.quiet,
+        n_workers=args.workers,
     )
     elapsed = time.perf_counter() - started
+    workers = args.workers if args.workers is not None else (os.cpu_count() or 1)
     print(
         f"Simulated {args.n_simulations:,} tournaments in {elapsed:.1f}s "
-        f"({args.n_simulations / elapsed:,.0f}/s)"
+        f"({args.n_simulations / elapsed:,.0f}/s) "
+        f"using {workers} worker{'s' if workers != 1 else ''}"
     )
 
     simulate.write_outputs(acc, teams, args.n_simulations)

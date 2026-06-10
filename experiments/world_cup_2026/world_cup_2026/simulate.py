@@ -14,6 +14,9 @@ write_outputs() turns those counts into the three CSVs from the plan.
 
 from __future__ import annotations
 
+import multiprocessing as mp
+import os
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -106,10 +109,60 @@ def _precompute_group_lambdas(
     return lambdas_a, lambdas_b
 
 
+def _simulate_chunk(
+    chunk_size: int,
+    child_seed,
+    slots: list[str],
+    group_ctx: dict[str, group_stage.GroupContext],
+    ko_ctx: knockout.KnockoutContext,
+    third_place_dict: qualifiers.ThirdPlaceLookup,
+    r32_specs: qualifiers.R32Specs,
+    fifa_ranks: dict[str, int],
+    lambdas_a: np.ndarray,
+    lambdas_b: np.ndarray,
+    show_progress: bool = False,
+) -> Accumulator:
+    rng = np.random.default_rng(child_seed)
+    goals_a = rng.poisson(lambdas_a, size=(chunk_size, len(lambdas_a)))
+    goals_b = rng.poisson(lambdas_b, size=(chunk_size, len(lambdas_b)))
+
+    acc = Accumulator(slots=slots)
+    iterator = range(chunk_size)
+    if show_progress:
+        iterator = tqdm(iterator, desc=f"Simulating {chunk_size:,} tournaments")
+    for sim_idx in iterator:
+        group_results = group_stage.simulate_group_stage(
+            group_ctx, goals_a[sim_idx], goals_b[sim_idx]
+        )
+        r32_resolution, qualified_slots = qualifiers.select_qualifiers(
+            group_results, third_place_dict, r32_specs, fifa_ranks
+        )
+        winners = knockout.simulate_knockout(r32_resolution, ko_ctx, rng)
+        acc.update(group_results, qualified_slots, winners)
+    return acc
+
+
+def _merge_accumulators(parts: list[Accumulator], slots: list[str]) -> Accumulator:
+    merged = Accumulator(slots=slots)
+    for acc in parts:
+        merged.finish_1st += acc.finish_1st
+        merged.finish_2nd += acc.finish_2nd
+        merged.finish_3rd += acc.finish_3rd
+        merged.finish_4th += acc.finish_4th
+        merged.reach_r32 += acc.reach_r32
+        merged.reach_r16 += acc.reach_r16
+        merged.reach_qf += acc.reach_qf
+        merged.reach_sf += acc.reach_sf
+        merged.reach_final += acc.reach_final
+        merged.winner += acc.winner
+    return merged
+
+
 def run_simulation(
     n_simulations: int = config.N_SIMULATIONS,
     seed: int = config.SEED,
     show_progress: bool = True,
+    n_workers: int | None = None,
 ) -> tuple[Accumulator, pl.DataFrame]:
     teams = load_data.load_teams()
     group_matches = load_data.load_group_matches()
@@ -131,24 +184,63 @@ def run_simulation(
         teams, group_matches, config.HOST_ADVANTAGE
     )
 
-    rng = np.random.default_rng(seed)
-    all_goals_a = rng.poisson(lambdas_a, size=(n_simulations, len(lambdas_a)))
-    all_goals_b = rng.poisson(lambdas_b, size=(n_simulations, len(lambdas_b)))
+    if n_workers is None:
+        n_workers = os.cpu_count() or 1
+    n_workers = max(1, min(n_workers, n_simulations))
 
-    acc = Accumulator(slots=slots)
-    iterator = range(n_simulations)
-    if show_progress:
-        iterator = tqdm(iterator, desc=f"Simulating {n_simulations:,} tournaments")
-    for sim_idx in iterator:
-        group_results = group_stage.simulate_group_stage(
-            group_ctx, all_goals_a[sim_idx], all_goals_b[sim_idx]
+    base, rem = divmod(n_simulations, n_workers)
+    chunk_sizes = [base + (1 if i < rem else 0) for i in range(n_workers)]
+    child_seeds = np.random.SeedSequence(seed).spawn(n_workers)
+
+    if n_workers == 1:
+        acc = _simulate_chunk(
+            chunk_sizes[0],
+            child_seeds[0],
+            slots,
+            group_ctx,
+            ko_ctx,
+            third_place_dict,
+            r32_specs,
+            fifa_ranks,
+            lambdas_a,
+            lambdas_b,
+            show_progress=show_progress,
         )
-        r32_resolution, qualified_slots = qualifiers.select_qualifiers(
-            group_results, third_place_dict, r32_specs, fifa_ranks
-        )
-        winners = knockout.simulate_knockout(r32_resolution, ko_ctx, rng)
-        acc.update(group_results, qualified_slots, winners)
-    return acc, teams
+        return acc, teams
+
+    mp_ctx = mp.get_context("spawn")
+    parts: list[Accumulator] = []
+    with ProcessPoolExecutor(max_workers=n_workers, mp_context=mp_ctx) as ex:
+        futures = [
+            ex.submit(
+                _simulate_chunk,
+                chunk_sizes[i],
+                child_seeds[i],
+                slots,
+                group_ctx,
+                ko_ctx,
+                third_place_dict,
+                r32_specs,
+                fifa_ranks,
+                lambdas_a,
+                lambdas_b,
+                False,
+            )
+            for i in range(n_workers)
+        ]
+        iterator = as_completed(futures)
+        if show_progress:
+            iterator = tqdm(
+                iterator,
+                total=n_workers,
+                desc=(
+                    f"Simulating {n_simulations:,} tournaments across "
+                    f"{n_workers} workers"
+                ),
+            )
+        for fut in iterator:
+            parts.append(fut.result())
+    return _merge_accumulators(parts, slots), teams
 
 
 def write_outputs(
