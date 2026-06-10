@@ -37,11 +37,10 @@ def _read(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(f))
 
 
-def _save(fig: plt.Figure, name: str, *, also_png: bool = False) -> None:
+def _save(fig: plt.Figure, name: str) -> None:
     fig.tight_layout()
     fig.savefig(PLOTS / f"{name}.svg")
-    if also_png:
-        fig.savefig(PLOTS / f"{name}.png", dpi=144)
+    fig.savefig(PLOTS / f"{name}.png", dpi=144)
     plt.close(fig)
 
 
@@ -65,7 +64,7 @@ def plot_title_probabilities(rows: list[dict[str, str]], top_n: int = 15) -> Non
             fontsize=9,
         )
     ax.set_xlim(0, max(probs) * 100 * 1.15)
-    _save(fig, "title_probabilities", also_png=True)
+    _save(fig, "title_probabilities")
 
 
 def plot_group_qualification_heatmap(rows: list[dict[str, str]]) -> None:
@@ -220,7 +219,7 @@ def plot_market_vs_model(rows: list[dict[str, str]]) -> None:
 
 def main() -> None:
     PLOTS.mkdir(exist_ok=True)
-    sns.set_style("whitegrid")
+    sns.set_style("dark")
 
     team_probs = _read(TEAM_PROBS)
     group_probs = _read(GROUP_PROBS)
