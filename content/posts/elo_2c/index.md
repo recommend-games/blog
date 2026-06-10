@@ -55,11 +55,11 @@ The first constraint pins the expected total goals to 2.6 — pretty close to th
 
 One sharp edge: if the Elo gap gets large enough, the system has no valid solution with both lambdas above zero. **🇪🇸 Spain vs 🇨🇻 Cape Verde** is exactly that fixture — 🇪🇸 Spain's Elo is 579 points higher, which says 🇪🇸 Spain should expect roughly \\(2.6\\) goals while 🇨🇻 Cape Verde scores essentially none. The model would otherwise predict a literal "🇨🇻 Cape Verde cannot score" Poisson, which is both wrong (every team has *some* chance) and degenerate (the truncated grid stops being a proper distribution).
 
-The fix is to pin 🇨🇻 Cape Verde's \\(\lambda\\) at a floor of 0.25, let 🇪🇸 Spain's rise above the 2.35 the budget would otherwise allow, and renormalise the truncated joint Poisson grid afterwards. The 🇪🇸 Spain vs 🇨🇻 Cape Verde fixture ends up at \\(\lambda_{\text{ES}} = 3.50\\), \\(\lambda_{\text{CV}} = 0.25\\), and the model's most likely scorelines are 3–0 (16.8%), 4–0 (14.7%), 2–0 (14.4%), 5–0 (10.3%), and 1–0 (8.2%). 🇪🇸 Spain are 94.1% to win the match, 🇨🇻 Cape Verde 1.0%.
+The fix is to pin 🇨🇻 Cape Verde's \\(\lambda\\) at a floor of 0.25, let 🇪🇸 Spain's rise above the 2.35 the budget would otherwise allow and renormalise the truncated joint Poisson grid afterwards. The 🇪🇸 Spain vs 🇨🇻 Cape Verde fixture ends up at \\(\lambda_{\text{ES}} = 3.50\\), \\(\lambda_{\text{CV}} = 0.25\\) and the model's most likely scorelines are 3–0 (16.8%), 4–0 (14.7%), 2–0 (14.4%), 5–0 (10.3%) and 1–0 (8.2%). 🇪🇸 Spain are 94.1% to win the match, 🇨🇻 Cape Verde 1.0%.
 
 ### Group stage, tie-breaks and the third-place puzzle
 
-Inside each simulation, all 72 group fixtures are sampled in one vectorised numpy call, then the four teams in each group are ranked using FIFA's tie-break ladder: points, overall goal difference, overall goals scored, then on the tied subset head-to-head points and goal difference and goals scored, and finally a fallback on FIFA rank (the published November-2025 list).[^tiebreaks]
+Inside each simulation, all 72 group fixtures are sampled in one vectorised numpy call, then the four teams in each group are ranked using FIFA's tie-break ladder: points, overall goal difference, overall goals scored, then on the tied subset head-to-head points and goal difference and goals scored and finally a fallback on FIFA rank (the published November-2025 list).[^tiebreaks]
 
 Once every group is ranked, the simulator picks the 8 best third-placed teams across all 12 groups and slots them into the Round of 32 via the 495-row lookup table. This is one of the places where football carries more bookkeeping than snooker: a clean draw doesn't exist, just a deterministic rule with a lot of cases.
 
@@ -92,14 +92,14 @@ A few things to notice before any tournament is simulated:
 - **🇪🇸 Spain and 🇦🇷 Argentina are tier-one**. The 51-point drop from 🇦🇷 Argentina to 🇫🇷 France is the biggest gap anywhere in the top seven, after which 🇫🇷 France, 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England, 🇧🇷 Brazil, 🇵🇹 Portugal and 🇨🇴 Colombia all sit within 80 points of each other. The model treats this as two world-class sides plus a tight chasing pack.
 - **Group K is brutal.** 🇵🇹 Portugal *and* 🇨🇴 Colombia, sixth and seventh by Elo, drew each other; the loser of their coin flip takes the harder R16 draw.
 - **Group E is also unfortunate**. 🇪🇨 Ecuador (9th by Elo) and 🇩🇪 Germany (10th) are sharing four-team housing with 🇨🇮 Ivory Coast and 🇨🇼 Curaçao. The model thinks 🇪🇨 Ecuador and 🇩🇪 Germany both qualify comfortably but won't run away with anything.
-- **Group H, by contrast, is a 🇪🇸 Spain coronation.** With 🇺🇾 Uruguay, 🇨🇻 Cape Verde, and 🇸🇦 Saudi Arabia for company, 🇪🇸 Spain are 87.6% to win the group, and 99.9% to qualify.
-- **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England** picked up arguably the kindest top-half group of the lot: Group L with 🇭🇷 Croatia, 🇵🇦 Panama, and 🇬🇭 Ghana. 99.1% qualify, 66.7% to win the group.
+- **Group H, by contrast, is a 🇪🇸 Spain coronation.** With 🇺🇾 Uruguay, 🇨🇻 Cape Verde and 🇸🇦 Saudi Arabia for company, 🇪🇸 Spain are 87.6% to win the group and 99.9% to qualify.
+- **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England** picked up arguably the kindest top-half group of the lot: Group L with 🇭🇷 Croatia, 🇵🇦 Panama and 🇬🇭 Ghana. 99.1% qualify, 66.7% to win the group.
 
 The full picture of group qualification looks like this:
 
 {{< img src="group_qualification_heatmap" alt="Heatmap of group-qualification probabilities for all 48 teams, arranged by group" >}}
 
-Most groups have a familiar shape — two strong teams comfortably through, two weak ones mostly out. **Group B** stands out for being a coin-flip: 🇨🇭 Switzerland (98.4% to qualify) and 🇨🇦 Canada (98.3%) are essentially indistinguishable, both helped along by 🇨🇦 Canada's home boost. **Group D** is the closest thing to chaos: 🇹🇷 Turkey, 🇵🇾 Paraguay, the 🇺🇸 United States, and 🇦🇺 Australia are all between 53% and 86% to qualify, with 🇺🇸 USA's host bonus pulling them above where their raw Elo would put them.[^group-d]
+Most groups have a familiar shape — two strong teams comfortably through, two weak ones mostly out. **Group B** stands out for being a coin-flip: 🇨🇭 Switzerland (98.4% to qualify) and 🇨🇦 Canada (98.3%) are essentially indistinguishable, both helped along by 🇨🇦 Canada's home boost. **Group D** is the closest thing to chaos: 🇹🇷 Turkey, 🇵🇾 Paraguay, the 🇺🇸 United States and 🇦🇺 Australia are all between 53% and 86% to qualify, with 🇺🇸 USA's host bonus pulling them above where their raw Elo would put them.[^group-d]
 
 
 ## One million tournaments later
@@ -132,9 +132,9 @@ The same simulation produces some interesting near-misses lower down the table. 
 
 {{< img src="draw_luck" alt="Scatter plot of Elo rank against simulated title probability rank, with off-diagonal teams labelled" >}}
 
-Most teams sit on the diagonal — the draw doesn't help or hurt them much. The visible movers, in roughly descending order of effect: **🇲🇽 Mexico** jumps four spots, from 18th by Elo to 14th by title probability, almost entirely on the back of the +100 host bonus and a friendly Group A. **🇹🇷 Turkey** and **🇯🇵 Japan** also climb a couple of places thanks to favourable bracket positions. On the other side, **🇭🇷 Croatia** drop three spots — they share Group L with 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England, so the favourite they'll likely meet in the knockouts is the strongest team in their half — and **🇧🇪 Belgium**, **🇦🇹 Austria**, and **🇺🇾 Uruguay** all give back a place or two by sharing a group with one of the tier-one sides.
+Most teams sit on the diagonal — the draw doesn't help or hurt them much. The visible movers, in roughly descending order of effect: **🇲🇽 Mexico** jumps four spots, from 18th by Elo to 14th by title probability, almost entirely on the back of the +100 host bonus and a friendly Group A. **🇹🇷 Turkey** and **🇯🇵 Japan** also climb a couple of places thanks to favourable bracket positions. On the other side, **🇭🇷 Croatia** drop three spots — they share Group L with 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England, so the favourite they'll likely meet in the knockouts is the strongest team in their half — and **🇧🇪 Belgium**, **🇦🇹 Austria** and **🇺🇾 Uruguay** all give back a place or two by sharing a group with one of the tier-one sides.
 
-A note on the long tail. Ten of the 48 teams won zero of the million simulated tournaments — among them 🇨🇻 Cape Verde, 🇸🇦 Saudi Arabia, 🇨🇼 Curaçao, 🇶🇦 Qatar, 🇿🇦 South Africa, 🇭🇹 Haiti, and a handful of others. The model isn't *literally* saying their chances are zero; it's saying that with this Elo, this draw, and a million-tournament resolution, no simulation happened to produce a title run. The true probability is genuinely tiny — somewhere between "lottery ticket" and "asteroid".
+A note on the long tail. Ten of the 48 teams won zero of the million simulated tournaments — among them 🇨🇻 Cape Verde, 🇸🇦 Saudi Arabia, 🇨🇼 Curaçao, 🇶🇦 Qatar, 🇿🇦 South Africa, 🇭🇹 Haiti and a handful of others. The model isn't *literally* saying their chances are zero; it's saying that with this Elo, this draw and a million-tournament resolution, no simulation happened to produce a title run. The true probability is genuinely tiny — somewhere between "lottery ticket" and "asteroid".
 
 ### Hosts, briefly
 
@@ -172,7 +172,7 @@ And the picture, plotted log-log so the disagreements are easier to see:
 
 {{< img src="market_vs_model" alt="Log-log scatter of model versus Polymarket title probabilities, with the diagonal marked and the biggest disagreements labelled" >}}
 
-The headline disagreement is enormous. **The market has 🇫🇷 France as the favourite at 15.6%, 🇪🇸 Spain just behind at 15.4%, and 🇦🇷 Argentina sixth at 8.5%.** The model has 🇪🇸 Spain at 35.4% and 🇦🇷 Argentina at 22.8% — both more than double what Polymarket is paying. If the model is right, those are by some distance the two best-value bets in the tournament. If the market is right, the model has badly overestimated two specific sides.
+The headline disagreement is enormous. **The market has 🇫🇷 France as the favourite at 15.6%, 🇪🇸 Spain just behind at 15.4% and 🇦🇷 Argentina sixth at 8.5%.** The model has 🇪🇸 Spain at 35.4% and 🇦🇷 Argentina at 22.8% — both more than double what Polymarket is paying. If the model is right, those are by some distance the two best-value bets in the tournament. If the market is right, the model has badly overestimated two specific sides.
 
 Why might the model be right? Three factors stack up the same way. 🇪🇸 Spain's Elo is genuinely 43 points clear of 🇦🇷 Argentina and almost 100 clear of 🇫🇷 France — the rating system, integrated over years of competitive results, is not subtle about who it likes. Group H is the weakest of the twelve. And the bracket places 🇪🇸 Spain and 🇦🇷 Argentina in opposite halves, so the only way to lose to each other is in the final. Compounding advantages compound.
 
@@ -185,17 +185,17 @@ If you forced me to summarise the table in one sentence: the model and the marke
 
 ## Final whistle ⚽
 
-We've got 🇪🇸 Spain at 35%, 🇦🇷 Argentina at 23%, and a market that thinks both are dramatically overpriced. We've got a 48-team bracket with twelve groups, a brand-new Round of 32, a 495-row third-place lookup, and a host advantage that helps 🇲🇽 Mexico more than it helps the other two. And we've got one number — 🇪🇸 Spain's +19.9pp edge over Polymarket — that is, by some margin, the strongest disagreement between a rating-driven model and a money-driven crowd I've ever published on this blog.
+We've got 🇪🇸 Spain at 35%, 🇦🇷 Argentina at 23% and a market that thinks both are dramatically overpriced. We've got a 48-team bracket with twelve groups, a brand-new Round of 32, a 495-row third-place lookup and a host advantage that helps 🇲🇽 Mexico more than it helps the other two. And we've got one number — 🇪🇸 Spain's +19.9pp edge over Polymarket — that is, by some margin, the strongest disagreement between a rating-driven model and a money-driven crowd I've ever published on this blog.
 
 The tournament starts on June 11 and the final is on July 19. We'll know then whether the model deserves its confidence — or whether one more season of football has done what a million simulated tournaments couldn't, and quietly told us the rating wasn't quite the answer after all.
 
 If the model holds up I'll come back in seven weeks for a *did we get it right?* follow-up, exactly like [last year's snooker rerun]({{<ref "posts/elo_2b/index.md">}}). If it falls flat on its face, I'll come back to admit it. Either way, I'll see you on the other side of the trophy ceremony.
 
-*All the code, data snapshots, and figures for this article live in [`experiments/world_cup_2026/`](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/world_cup_2026) on GitLab.*
+*All the code, data snapshots and figures for this article live in [`experiments/world_cup_2026/`](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/world_cup_2026) on GitLab.*
 
 
 [^combinations]: This number comes from the number of possible combinations, calculated via the good old binomial coefficient: \\({12 \choose 8} = \frac{12!}{8! \cdot 4!} = 495\\). I'm glad you've asked.
-[^poisson-choice]: A more sophisticated model would let the two lambdas vary independently (a so-called bivariate Poisson, or a Dixon-Coles correction for the empirically thin draw shoulders). I've deliberately kept v1 honest about its limits — one tunable parameter, one Elo input, and no team-specific attack/defence ratings.
+[^poisson-choice]: A more sophisticated model would let the two lambdas vary independently (a so-called bivariate Poisson, or a Dixon-Coles correction for the empirically thin draw shoulders). I've deliberately kept v1 honest about its limits — one tunable parameter, one Elo input and no team-specific attack/defence ratings.
 [^tiebreaks]: FIFA's full procedure also includes a fair-play / conduct score before falling back to FIFA rank, which the simulator deliberately doesn't model — yellow- and red-card counts aren't an Elo-derivable quantity.
 [^elo-source]: [eloratings.net](https://eloratings.net/) maintains the established World Football Elo Ratings, updated after every international match. The simulator freezes the snapshot at 2026-06-09 18:08 UTC so that results from inside the tournament can't quietly feed back into the forecast mid-run.
 [^group-d]: Group D is also the group where the model's biggest *home* effect lives: without the +100 Elo bonus, the 🇺🇸 United States would be a long way behind 🇹🇷 Turkey and 🇵🇾 Paraguay for qualification rather than essentially tied. The bonus doesn't carry into the knockouts, though — so even a 🇺🇸 USA win in Group D leaves them up against 🇪🇸 Spain's half of the bracket with a vanilla 1726 Elo.
