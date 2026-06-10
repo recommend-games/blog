@@ -89,8 +89,8 @@ Here is the snapshot we're starting from. All Elo ratings are from [eloratings.n
 
 A few things to notice before any tournament is simulated:
 
-- **🇪🇸 Spain and 🇦🇷 Argentina are tier-one**. The gap from 🇦🇷 Argentina to 🇫🇷 France is roughly half the gap from 🇫🇷 France to 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England. The model treats this as two world-class sides plus the chasing pack.
-- **Group K is brutal.** 🇵🇹 Portugal *and* 🇨🇴 Colombia, sixth and seventh by Elo, drew the same group. One of them is going home as a third-placed gamble at best.
+- **🇪🇸 Spain and 🇦🇷 Argentina are tier-one**. The 51-point drop from 🇦🇷 Argentina to 🇫🇷 France is the biggest gap anywhere in the top seven, after which 🇫🇷 France, 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England, 🇧🇷 Brazil, 🇵🇹 Portugal and 🇨🇴 Colombia all sit within 80 points of each other. The model treats this as two world-class sides plus a tight chasing pack.
+- **Group K is brutal.** 🇵🇹 Portugal *and* 🇨🇴 Colombia, sixth and seventh by Elo, drew each other; the loser of their coin flip takes the harder R16 draw.
 - **Group E is also unfortunate**. 🇪🇨 Ecuador (9th by Elo) and 🇩🇪 Germany (10th) are sharing four-team housing with 🇨🇮 Ivory Coast and 🇨🇼 Curaçao. The model thinks 🇪🇨 Ecuador and 🇩🇪 Germany both qualify comfortably but won't run away with anything.
 - **Group H, by contrast, is a 🇪🇸 Spain coronation.** With 🇺🇾 Uruguay, 🇨🇻 Cape Verde, and 🇸🇦 Saudi Arabia for company, 🇪🇸 Spain are 87.6% to win the group, and 99.9% to qualify.
 - **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England** picked up arguably the kindest top-half group of the lot: Group L with 🇭🇷 Croatia, 🇵🇦 Panama, and 🇬🇭 Ghana. 99.1% qualify, 66.7% to win the group.
