@@ -23,16 +23,16 @@ This is going to be bigger in every dimension though. Snooker's World Championsh
 The short version: the model thinks 🇪🇸 Spain are huge, the bookmakers think they are merely good and the gap between those two opinions is by some way the most interesting number in this article. The long version is what follows. 🤓
 
 
-## The new format in one minute
+## The new format in one minute: more matches, more money 💸
 
-Some of this still feels like it shouldn't be allowed. The 2026 tournament is the first since 1998 to change in size — from 32 teams to 48 — and the first ever co-hosted by three nations: the 🇺🇸 United States, 🇨🇦 Canada, and 🇲🇽 Mexico. The new layout is:
+Some of this still feels like it shouldn't be allowed. The 2026 tournament is the first since 1998 to change in size — from 32 teams to 48 — and the first ever co-hosted by three nations: the 🇺🇸 United States, 🇨🇦 Canada and 🇲🇽 Mexico. The new layout is:
 
 - **12 groups of 4 teams**, named A through L, each playing 3 matches — 72 group fixtures in total.
 - **The top two from every group** automatically qualify for a brand-new **Round of 32**.
 - **The 8 best third-placed teams** (across the 12 groups) also advance.
-- From there it's a familiar single-elimination knockout: R32 → R16 → QF → SF → final. 31 knockout matches.
+- From there it's a familiar single-elimination knockout: R32 → R16 → QF → SF → final. 31 knockout matches (plus the bronze match 🥉).
 
-The "8 best of 12 thirds" rule is the one that quietly bends the bracket. Which third-placed teams qualify depends on the points totals from twelve different groups, and once they qualify, *where* they slot into the R32 depends on which set of group letters they came from. FIFA publishes a 495-row lookup table to nail this down — one row for every distinct subset of 8 groups out of 12 — and the simulator dutifully uses it. The upshot is that the knockout bracket isn't perfectly symmetric: two teams with similar Elo can end up with quite different draws depending on which third-placed peers turn up beside them.
+The "8 best of 12 thirds" rule is the one that quietly bends the bracket. Which third-placed teams qualify depends on the points totals from twelve different groups, and once they qualify, *where* they slot into the R32 depends on which set of group letters they came from. FIFA publishes a 495-row lookup table (yes, *four hundred and ninety-five rows*) to nail this down — one row for every distinct subset of 8 groups out of 12[^combinations] — and the simulator dutifully uses it. The upshot is that the knockout bracket isn't perfectly symmetric: two teams with similar Elo can end up with quite different draws depending on which third-placed peers turn up beside them.
 
 Host advantage is the other format quirk worth flagging. There are three home countries, but they don't host the entire tournament evenly: each plays its own group-stage matches at home and then ventures into a neighbour's stadiums in the knockouts. The model applies a +100 Elo bonus only when a host plays *in* its own country, so 🇲🇽 Mexico's home boost vanishes the moment they step onto a 🇺🇸 US pitch.
 
@@ -194,6 +194,7 @@ If the model holds up I'll come back in seven weeks for a *did we get it right?*
 *All the code, data snapshots, and figures for this article live in [`experiments/world_cup_2026/`](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/world_cup_2026) on GitLab.*
 
 
+[^combinations]: This number comes from the number of possible combinations, calculated via the good old binomial coefficient: \\({12 \choose 8} = \frac{12!}{8! \cdot 4!} = 495\\). I'm glad you've asked.
 [^poisson-choice]: A more sophisticated model would let the two lambdas vary independently (a so-called bivariate Poisson, or a Dixon-Coles correction for the empirically thin draw shoulders). I've deliberately kept v1 honest about its limits — one tunable parameter, one Elo input, and no team-specific attack/defence ratings.
 [^tiebreaks]: FIFA's full procedure also includes a fair-play / conduct score before falling back to FIFA rank, which the simulator deliberately doesn't model — yellow- and red-card counts aren't an Elo-derivable quantity.
 [^seed]: 20,260,611 — the 20-million-and-change reading of the tournament's opening date. Determinism is a wonderful thing.
