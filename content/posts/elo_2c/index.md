@@ -128,7 +128,7 @@ Now we let the bracket actually play. Here are the top fifteen teams by simulate
 
 🇪🇸 Spain at **35.3%** is a startling number on first read — more than a third of ten million simulated tournaments end with the trophy in Madrid. That isn't only the Elo lead; it's the Elo lead *plus* the kindest group in the bracket *plus* a knockout path that doesn't run into 🇦🇷 Argentina until the final at the earliest. 🇦🇷 Argentina at 23.1% picks up the same compounding benefit one bracket-half away. Between them they account for **more than half** of all simulated outcomes.
 
-The same simulation produces some interesting near-misses lower down the table. Compare each team's Elo rank against its title-probability rank:
+The same simulation also has things to say about who got lucky in the draw. Compare each team's Elo rank against its title-probability rank:
 
 {{< img src="draw_luck" alt="Scatter plot of Elo rank against simulated title probability rank, with off-diagonal teams labelled" >}}
 
