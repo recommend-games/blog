@@ -67,7 +67,7 @@ Once every group is ranked, the simulator picks the 8 best third-placed teams ac
 
 Knockout matches use the same Poisson scoreline model for 90 minutes. If they end level, the simulator advances a team by sampling from the same Elo expected score \\(p_A\\) — no separate extra-time goal process, no penalty shootout sub-model. It's a deliberately Elo-consistent choice: extra time and penalties are exactly the regime where the model would have to invent extra structure it doesn't have, so I let the rating do the talking.
 
-That, plus a host bonus of +100 Elo whenever a host plays in its own country, is the whole machinery. The Monte Carlo loop runs 1,000,000 tournaments with a fixed seed (`20260611`, which is the tournament's opening date, because I am like that) so every published number is exactly reproducible.[^seed] A single laptop chews through it in about four minutes.
+That, plus a host bonus of +100 Elo whenever a host plays in its own country, is the whole machinery. The Monte Carlo loop runs 1,000,000 tournaments with a fixed seed (`20260611`, which is the tournament's opening date, because I am like that) so every published number is exactly reproducible. A single laptop chews through it in about four minutes.
 
 
 ## Who's on top? Current Elo and the draw
@@ -197,7 +197,6 @@ If the model holds up I'll come back in seven weeks for a *did we get it right?*
 [^combinations]: This number comes from the number of possible combinations, calculated via the good old binomial coefficient: \\({12 \choose 8} = \frac{12!}{8! \cdot 4!} = 495\\). I'm glad you've asked.
 [^poisson-choice]: A more sophisticated model would let the two lambdas vary independently (a so-called bivariate Poisson, or a Dixon-Coles correction for the empirically thin draw shoulders). I've deliberately kept v1 honest about its limits — one tunable parameter, one Elo input, and no team-specific attack/defence ratings.
 [^tiebreaks]: FIFA's full procedure also includes a fair-play / conduct score before falling back to FIFA rank, which the simulator deliberately doesn't model — yellow- and red-card counts aren't an Elo-derivable quantity.
-[^seed]: 20,260,611 — the 20-million-and-change reading of the tournament's opening date. Determinism is a wonderful thing.
 [^elo-source]: [eloratings.net](https://eloratings.net/) maintains the established World Football Elo Ratings, updated after every international match. The simulator freezes the snapshot at 2026-06-09 18:08 UTC so that results from inside the tournament can't quietly feed back into the forecast mid-run.
 [^group-d]: Group D is also the group where the model's biggest *home* effect lives: without the +100 Elo bonus, the 🇺🇸 United States would be a long way behind 🇹🇷 Turkey and 🇵🇾 Paraguay for qualification rather than essentially tied. The bonus doesn't carry into the knockouts, though — so even a 🇺🇸 USA win in Group D leaves them up against 🇪🇸 Spain's half of the bracket with a vanilla 1726 Elo.
 [^market-snap]: Polymarket prices change minute by minute; the comparison is a single snapshot taken just before the tournament started. By the time you read this, the numbers will already have drifted — 🇪🇸 Spain in particular will be priced very differently after match one, regardless of what happens in it.
