@@ -60,8 +60,8 @@ reproducible.
   Python work is just ranking + bracket propagation. 1M tournaments run
   in ≈4 minutes on a laptop.
 - **FIFA tie-break ladder, simplified.** Plan §7's full recursive
-  resolution is replaced with a composite sort key (H2H points / GD / GF
-  on the tied subset, then overall GD / GF, then November-2025 FIFA
+  resolution is replaced with a composite sort key (overall GD / GF,
+  then H2H points / GD / GF on the tied subset, then November-2025 FIFA
   rank). Card/conduct score is intentionally not modelled.
 - **Knockout-tie tie-break by Elo expected score.** Plan §9 deliberately
   avoids modelling extra time and penalties. If 90-minute goals are

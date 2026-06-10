@@ -6,14 +6,16 @@ matches of a group, builds per-team stats, and applies the FIFA tie-break
 ladder via a composite sort key (the simplified form explicitly allowed by
 the plan for the first version).
 
-Tie-break order (smaller key = better rank):
+Tie-break order (smaller key = better rank), per FIFA Article 16 for the
+2026 World Cup:
   1. points
-  2. head-to-head points among the tied subset
-  3. head-to-head goal difference among the tied subset
-  4. head-to-head goals scored among the tied subset
-  5. overall goal difference
-  6. overall goals scored
-  7. FIFA ranking (November 2025 snapshot, deterministic fallback)
+  2. overall goal difference
+  3. overall goals scored
+  4. head-to-head points among the tied subset
+  5. head-to-head goal difference among the tied subset
+  6. head-to-head goals scored among the tied subset
+  7. FIFA ranking (November 2025 snapshot, deterministic fallback in place
+     of FIFA's fair-play score + drawing of lots)
 """
 
 from __future__ import annotations
@@ -120,11 +122,11 @@ def _tiebreak_key(
             elif ga == gb:
                 h2h_pts += 1
     return (
+        -stats[slot].goal_difference,
+        -stats[slot].goals_for,
         -h2h_pts,
         -(h2h_gf - h2h_ga),
         -h2h_gf,
-        -stats[slot].goal_difference,
-        -stats[slot].goals_for,
         fifa_ranks[slot],
     )
 
