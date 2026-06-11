@@ -1,4 +1,4 @@
-image: hugomods/hugo:git-0.161.1
+image: hugomods/hugo:git-0.163.0
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
