@@ -101,6 +101,8 @@ The full picture of group qualification looks like this:
 
 Most groups have a familiar shape — two strong teams comfortably through, two weak ones mostly out. **Group B** stands out for being a coin-flip: 🇨🇭 Switzerland (98.6% to qualify) and 🇨🇦 Canada (98.5%) are essentially indistinguishable, with 🇨🇦 Canada's home boost wiping out a 100-point Elo deficit. **Group D** is the closest thing to chaos: 🇹🇷 Turkey, 🇵🇾 Paraguay, the 🇺🇸 United States and 🇦🇺 Australia are all between 52% and 87% to qualify, with 🇺🇸 USA's host bonus pulling them above where their raw Elo would put them.[^group-d]
 
+*The full per-team finishing probabilities for every group are [here](group_probabilities.csv).*
+
 
 ## Ten million tournaments later
 
@@ -127,6 +129,8 @@ And the same fifteen in numbers, with the implied decimal odds alongside:
 |   13 | 🇯🇵 Japan       |              0.8% |       120.92 |
 |   14 | 🇭🇷 Croatia     |              0.8% |       127.23 |
 |   15 | 🇧🇪 Belgium     |              0.8% |       128.53 |
+
+*The full 48-team table — group-winner, qualify, R32, R16, QF, SF, final and title probabilities — is [here](team_probabilities.csv).*
 
 🇪🇸 Spain at **35.3%** is a startling number on first read — more than a third of ten million simulated tournaments end with the trophy in Madrid. That isn't only the Elo lead; it's the Elo lead *plus* the kindest group in the bracket *plus* a knockout path that doesn't run into 🇦🇷 Argentina until the final at the earliest. 🇦🇷 Argentina at 23.1% picks up the same compounding benefit one bracket-half away. Between them they account for **more than half** of all simulated outcomes.
 
@@ -170,6 +174,8 @@ Here is the comparison for the top twelve teams. "Edge (pp)" is `model − marke
 | 🇹🇷 Turkey      |  1.0% |   1.2% |  −0.2pp |     100.20 |       82.24 |
 | 🇳🇴 Norway      |  0.9% |   2.4% |  −1.5pp |     109.05 |       41.96 |
 
+*The full 48-team market-vs-model comparison is [here](market_comparison.csv).*
+
 And the picture, plotted log-log so the disagreements are easier to see:
 
 {{< img src="market_vs_model" alt="Log-log scatter of model versus Polymarket title probabilities, with the diagonal marked and the biggest disagreements labelled" >}}
@@ -193,7 +199,7 @@ Kickoff is in a few hours; the final is on July 19. We'll know then whether the 
 
 If the model holds up I'll come back in seven weeks for a *did we get it right?* follow-up. If it falls flat on its face, I'll come back to admit it. Either way, I'll see you on the other side of the trophy ceremony.
 
-*All the code, data snapshots and figures for this article live in [`experiments/world_cup_2026/`](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/world_cup_2026) on GitLab.*
+*All the code, data snapshots and figures for this article live on [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/world_cup_2026).*
 
 
 [^combinations]: This number comes from the number of possible combinations, calculated via the good old binomial coefficient: \\({12 \choose 8} = \frac{12!}{8! \cdot 4!} = 495\\). I'm glad you've asked.
