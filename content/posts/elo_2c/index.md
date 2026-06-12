@@ -193,7 +193,7 @@ Kickoff is in a few hours; the final is on July 19. We'll know then whether the 
 
 If the model holds up I'll come back in seven weeks for a *did we get it right?* follow-up. If it falls flat on its face, I'll come back to admit it. Either way, I'll see you on the other side of the trophy ceremony.
 
-*All the code, data snapshots and figures for this article live in [`experiments/world_cup_2026/`](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/world_cup_2026) on GitLab.*
+*All the code, data snapshots and figures for this article live on [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/world_cup_2026).*
 
 
 [^combinations]: This number comes from the number of possible combinations, calculated via the good old binomial coefficient: \\({12 \choose 8} = \frac{12!}{8! \cdot 4!} = 495\\). I'm glad you've asked.
