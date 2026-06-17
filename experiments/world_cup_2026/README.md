@@ -40,7 +40,9 @@ reproducible.
   eloratings.net already integrate decades of match data, are updated
   daily, and let the simulator avoid a custom rating model. Pre-tournament
   Elo is frozen on snapshot day so a result inside the tournament never
-  feeds back into the forecast.
+  feeds back into the baseline forecast. The `--conditional` re-run
+  (see "Conditional re-run on results so far") deliberately relaxes this:
+  it refreshes Elo and pins the played scorelines to re-forecast mid-tournament.
 - **Fixed-total Poisson, not bivariate.** A single tunable goal budget
   (default `TOTAL_GOALS = 2.6`) is enough to map Elo expected score onto a
   scoreline distribution. There is no Dixon-Coles correction, no separate
@@ -323,6 +325,64 @@ uv run python -m world_cup_2026.build_knockout_score_predictions
 # 5. market comparison
 uv run python -m world_cup_2026.build_market_comparison
 ```
+
+### Conditional re-run on results so far
+
+Once the tournament is under way the simulator can re-forecast from where
+things actually stand, in a way that never overwrites the frozen
+pre-tournament outputs. Two things change relative to the baseline:
+
+1. **Played matches are pinned** to their real scoreline in every
+   simulation, so the standings, FIFA tie-breaks and qualification that
+   flow from them are conditioned on what has happened.
+2. **Elo is refreshed** from a fresh eloratings.net snapshot, so the
+   *remaining* matches are priced off current ratings. A played match
+   therefore enters twice — locked to its real score here, and folded into
+   the updated Elo that prices the teams' future games. That is deliberate.
+
+The conditional scenario lives in parallel files so the baseline stays
+reproducible:
+
+| Conditional artefact | Baseline counterpart |
+|---|---|
+| `data/raw/conditional/eloratings_world.tsv` | `data/raw/eloratings_world.tsv` |
+| `data/raw/conditional/wikipedia_2026_world_cup_group_{A..L}.html` | `data/raw/wikipedia_2026_world_cup_group_{A..L}.html` |
+| `data/processed/teams_conditional.csv` | `data/processed/teams.csv` |
+| `data/processed/results.csv` | — (only exists post-kickoff) |
+| `outputs/conditional/` | `outputs/` |
+
+```bash
+# 1. refresh the conditional snapshots (fresh Elo + group pages with scores)
+mkdir -p data/raw/conditional
+curl -sSL 'https://eloratings.net/World.tsv' -H 'Referer: https://eloratings.net/' \
+  -o data/raw/conditional/eloratings_world.tsv
+date -u +"%Y-%m-%dT%H:%M:%SZ" > data/raw/conditional/elo_snapshot_date.txt
+
+UA='Mozilla/5.0 (compatible; world-cup-2026-research/1.0; you@example.com)'
+for g in A B C D E F G H I J K L; do
+  curl -sSL -A "$UA" "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_${g}" \
+    -o "data/raw/conditional/wikipedia_2026_world_cup_group_${g}.html"
+done
+date -u +"%Y-%m-%dT%H:%M:%SZ" > data/raw/conditional/results_snapshot_date.txt
+
+# 2. build the conditional inputs
+uv run python -m world_cup_2026.build_teams \
+  --world-tsv data/raw/conditional/eloratings_world.tsv \
+  --output data/processed/teams_conditional.csv
+uv run python -m world_cup_2026.parse_results   # -> data/processed/results.csv
+
+# 3. simulate, conditioned on results so far, into outputs/conditional/
+uv run wc26-simulate --conditional
+```
+
+`parse_results.py` reads the score out of each footballbox's
+`<th class="fscore">` (a played match shows e.g. `2–1`, an unplayed one
+still shows `Match N`) and maps home/away to the canonical `match_id` via
+`group_matches.csv`. `simulation_summary.csv` in the conditional output
+records `results_snapshot_date` and `n_results_fixed` so the run is
+self-describing. Only group matches are handled; extend `results.csv` to
+the knockout stage with the same `(match_id, home_goals, away_goals)`
+schema once those are played.
 
 ## Configuration
 

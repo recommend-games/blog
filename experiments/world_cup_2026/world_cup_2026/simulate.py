@@ -120,11 +120,25 @@ def _simulate_chunk(
     fifa_ranks: dict[str, int],
     lambdas_a: np.ndarray,
     lambdas_b: np.ndarray,
+    fixed_mask: np.ndarray | None = None,
+    fixed_a: np.ndarray | None = None,
+    fixed_b: np.ndarray | None = None,
     show_progress: bool = False,
 ) -> Accumulator:
     rng = np.random.default_rng(child_seed)
     goals_a = rng.poisson(lambdas_a, size=(chunk_size, len(lambdas_a)))
     goals_b = rng.poisson(lambdas_b, size=(chunk_size, len(lambdas_b)))
+
+    # Pin already-played matches to their actual scoreline in every simulation;
+    # the standings, tie-breaks and qualification then fall out as normal.
+    if (
+        fixed_mask is not None
+        and fixed_a is not None
+        and fixed_b is not None
+        and fixed_mask.any()
+    ):
+        goals_a[:, fixed_mask] = fixed_a
+        goals_b[:, fixed_mask] = fixed_b
 
     acc = Accumulator(slots=slots)
     iterator = range(chunk_size)
@@ -158,13 +172,40 @@ def _merge_accumulators(parts: list[Accumulator], slots: list[str]) -> Accumulat
     return merged
 
 
+def _build_fixed_results(
+    group_matches: pl.DataFrame,
+    results: pl.DataFrame | None,
+) -> tuple[np.ndarray | None, np.ndarray | None, np.ndarray | None]:
+    """Align played scorelines to the lambda/goal column order.
+
+    Column i corresponds to group_matches row i (the same order
+    _precompute_group_lambdas iterates), so the mask and value arrays are
+    built off that row order. home_goals -> team_a, away_goals -> team_b.
+    """
+    if results is None or results.height == 0:
+        return None, None, None
+    score = {
+        row["match_id"]: (row["home_goals"], row["away_goals"])
+        for row in results.iter_rows(named=True)
+    }
+    match_ids = group_matches["match_id"].to_list()
+    fixed_idx = [i for i, mid in enumerate(match_ids) if mid in score]
+    mask = np.zeros(len(match_ids), dtype=bool)
+    mask[fixed_idx] = True
+    fixed_a = np.array([score[match_ids[i]][0] for i in fixed_idx], dtype=np.int64)
+    fixed_b = np.array([score[match_ids[i]][1] for i in fixed_idx], dtype=np.int64)
+    return mask, fixed_a, fixed_b
+
+
 def run_simulation(
     n_simulations: int = config.N_SIMULATIONS,
     seed: int = config.SEED,
     show_progress: bool = True,
     n_workers: int | None = None,
+    teams_csv: Path = config.TEAMS_CSV,
+    results: pl.DataFrame | None = None,
 ) -> tuple[Accumulator, pl.DataFrame]:
-    teams = load_data.load_teams()
+    teams = load_data.load_teams(teams_csv)
     group_matches = load_data.load_group_matches()
     knockout_slots = load_data.load_knockout_slots()
     third_place_lookup = load_data.load_third_place_lookup()
@@ -183,6 +224,7 @@ def run_simulation(
     lambdas_a, lambdas_b = _precompute_group_lambdas(
         teams, group_matches, config.HOST_ADVANTAGE
     )
+    fixed_mask, fixed_a, fixed_b = _build_fixed_results(group_matches, results)
 
     if n_workers is None:
         n_workers = os.cpu_count() or 1
@@ -204,6 +246,9 @@ def run_simulation(
             fifa_ranks,
             lambdas_a,
             lambdas_b,
+            fixed_mask,
+            fixed_a,
+            fixed_b,
             show_progress=show_progress,
         )
         return acc, teams
@@ -224,6 +269,9 @@ def run_simulation(
                 fifa_ranks,
                 lambdas_a,
                 lambdas_b,
+                fixed_mask,
+                fixed_a,
+                fixed_b,
                 False,
             )
             for i in range(n_workers)
@@ -248,6 +296,9 @@ def write_outputs(
     teams: pl.DataFrame,
     n_simulations: int,
     output_dir: Path = config.OUTPUTS,
+    elo_snapshot_date: str | None = None,
+    results_snapshot_date: str = "",
+    n_results_fixed: int = 0,
 ) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     n = float(n_simulations)
@@ -338,16 +389,21 @@ def write_outputs(
     ).sort(["group", "p_qualify"], descending=[False, True])
     group_df.write_csv(output_dir / "group_probabilities.csv")
 
-    snapshot_date_path = config.DATA_RAW / "elo_snapshot_date.txt"
-    elo_snapshot_date = (
-        snapshot_date_path.read_text().strip() if snapshot_date_path.exists() else ""
-    )
+    if elo_snapshot_date is None:
+        snapshot_date_path = config.DATA_RAW / "elo_snapshot_date.txt"
+        elo_snapshot_date = (
+            snapshot_date_path.read_text().strip()
+            if snapshot_date_path.exists()
+            else ""
+        )
     pl.DataFrame(
         [
             {
                 "n_simulations": n_simulations,
                 "seed": config.SEED,
                 "elo_snapshot_date": elo_snapshot_date,
+                "results_snapshot_date": results_snapshot_date,
+                "n_results_fixed": n_results_fixed,
                 "total_goals": config.TOTAL_GOALS,
                 "host_advantage": config.HOST_ADVANTAGE,
                 "created_at": datetime.now(timezone.utc).isoformat(),

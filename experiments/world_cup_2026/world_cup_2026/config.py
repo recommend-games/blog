@@ -14,6 +14,15 @@ GROUP_MATCHES_CSV = DATA_PROCESSED / "group_matches.csv"
 KNOCKOUT_SLOTS_CSV = DATA_PROCESSED / "knockout_slots.csv"
 THIRD_PLACE_LOOKUP_CSV = DATA_PROCESSED / "third_place_lookup.csv"
 
+# Conditional ("results so far") scenario. Refreshed Elo and the played
+# scorelines live alongside the frozen pre-tournament snapshot so the
+# original published outputs stay reproducible. The conditional run reads
+# teams_conditional.csv + results.csv and writes into outputs/conditional/.
+DATA_RAW_CONDITIONAL = DATA_RAW / "conditional"
+TEAMS_CONDITIONAL_CSV = DATA_PROCESSED / "teams_conditional.csv"
+RESULTS_CSV = DATA_PROCESSED / "results.csv"
+OUTPUTS_CONDITIONAL = OUTPUTS / "conditional"
+
 N_SIMULATIONS = 1_000_000
 SEED = 20260611
 TOTAL_GOALS = 2.6
