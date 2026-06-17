@@ -16,18 +16,32 @@ narrative reads top-to-bottom.
 
 from __future__ import annotations
 
+import argparse
 import csv
 
-from world_cup_2026.config import DATA_PROCESSED, OUTPUTS
-
-TEAM_PROBS = OUTPUTS / "team_probabilities.csv"
-MARKET = DATA_PROCESSED / "market_odds.csv"
-OUTPUT = OUTPUTS / "market_comparison.csv"
+from world_cup_2026 import config
 
 
 def main() -> None:
-    model = {r["team_id"]: r for r in csv.DictReader(open(TEAM_PROBS))}
-    market = {r["team_id"]: r for r in csv.DictReader(open(MARKET))}
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--conditional",
+        action="store_true",
+        help="Join the conditional model probs against the conditional market odds",
+    )
+    args = parser.parse_args()
+
+    if args.conditional:
+        team_probs = config.OUTPUTS_CONDITIONAL / "team_probabilities.csv"
+        market_csv = config.MARKET_ODDS_CONDITIONAL_CSV
+        output = config.OUTPUTS_CONDITIONAL / "market_comparison.csv"
+    else:
+        team_probs = config.OUTPUTS / "team_probabilities.csv"
+        market_csv = config.MARKET_ODDS_CSV
+        output = config.OUTPUTS / "market_comparison.csv"
+
+    model = {r["team_id"]: r for r in csv.DictReader(open(team_probs))}
+    market = {r["team_id"]: r for r in csv.DictReader(open(market_csv))}
     if set(model) != set(market):
         raise RuntimeError(
             f"Team mismatch: only in model = {set(model) - set(market)}, "
@@ -80,7 +94,7 @@ def main() -> None:
         "market_rank",
         "rank_difference",
     ]
-    with OUTPUT.open("w", newline="") as f:
+    with output.open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fields)
         writer.writeheader()
         for r in rows:
@@ -89,7 +103,7 @@ def main() -> None:
             for col in ("value_ratio", "model_decimal_odds", "market_decimal_odds"):
                 r[col] = f"{r[col]:.4f}"
             writer.writerow(r)
-    print(f"Wrote {len(rows)} rows to {OUTPUT}")
+    print(f"Wrote {len(rows)} rows to {output}")
 
 
 if __name__ == "__main__":

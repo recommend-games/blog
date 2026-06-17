@@ -23,6 +23,21 @@ TEAMS_CONDITIONAL_CSV = DATA_PROCESSED / "teams_conditional.csv"
 RESULTS_CSV = DATA_PROCESSED / "results.csv"
 OUTPUTS_CONDITIONAL = OUTPUTS / "conditional"
 
+# Polymarket snapshot + de-vigged odds, baseline and conditional.
+POLYMARKET_SNAPSHOT = DATA_RAW / "polymarket_world_cup_winner.json"
+POLYMARKET_SNAPSHOT_CONDITIONAL = (
+    DATA_RAW_CONDITIONAL / "polymarket_world_cup_winner.json"
+)
+MARKET_ODDS_SNAPSHOT_DATE = DATA_RAW / "market_odds_snapshot_date.txt"
+MARKET_ODDS_SNAPSHOT_DATE_CONDITIONAL = (
+    DATA_RAW_CONDITIONAL / "market_odds_snapshot_date.txt"
+)
+MARKET_ODDS_CSV = DATA_PROCESSED / "market_odds.csv"
+MARKET_ODDS_CONDITIONAL_CSV = DATA_PROCESSED / "market_odds_conditional.csv"
+
+PLOTS = ROOT / "plots"
+PLOTS_CONDITIONAL = PLOTS / "conditional"
+
 N_SIMULATIONS = 1_000_000
 SEED = 20260611
 TOTAL_GOALS = 2.6

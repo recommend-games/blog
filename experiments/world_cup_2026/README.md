@@ -373,7 +373,21 @@ uv run python -m world_cup_2026.parse_results   # -> data/processed/results.csv
 
 # 3. simulate, conditioned on results so far, into outputs/conditional/
 uv run wc26-simulate --conditional
+
+# 4. refresh the market and rebuild the comparison against the new model
+uv run python -m world_cup_2026.fetch_market_odds --conditional
+uv run python -m world_cup_2026.build_market_odds --conditional
+uv run python -m world_cup_2026.build_market_comparison --conditional
+
+# 5. regenerate the article charts into plots/conditional/
+uv run wc26-build-article-charts --conditional
 ```
+
+The same `--conditional` flag runs through the whole chain. It keeps a
+parallel set of files so the frozen baseline stays reproducible:
+`data/raw/conditional/polymarket_world_cup_winner.json`,
+`data/processed/market_odds_conditional.csv`,
+`outputs/conditional/market_comparison.csv` and `plots/conditional/`.
 
 `parse_results.py` reads the score out of each footballbox's
 `<th class="fscore">` (a played match shows e.g. `2–1`, an unplayed one
