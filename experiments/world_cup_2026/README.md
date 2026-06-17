@@ -30,7 +30,7 @@ Established World Football Elo ratings
 ```
 
 A single tournament samples 72 group-stage scorelines plus 31 knockout
-matches; the Monte Carlo loop runs this end-to-end one million times
+matches; the Monte Carlo loop runs this end-to-end ten million times
 with a fixed seed (`20260611`) so the published outputs are exactly
 reproducible.
 
@@ -59,8 +59,8 @@ reproducible.
   couldn't score.
 - **Vectorised group-stage sampling.** All 72 × N_SIMULATIONS group
   goals are drawn in one numpy call before the loop, so the per-sim
-  Python work is just ranking + bracket propagation. 1M tournaments run
-  in ≈4 minutes on a laptop.
+  Python work is just ranking + bracket propagation, parallelised across
+  CPU cores. The full 10M run takes ≈8 minutes on a 16-core machine.
 - **FIFA tie-break ladder, simplified.** Plan §7's full recursive
   resolution is replaced with a composite sort key (overall GD / GF,
   then H2H points / GD / GF on the tied subset, then November-2025 FIFA
@@ -242,18 +242,18 @@ also runs row-level sanity checks before writing its CSV.
 
 ### Running the simulation
 
-Defaults (`-n 1_000_000`, `--seed 20260611`) come from `world_cup_2026/config.py`.
-Use a smaller count during development; the simulator runs at ≈4,000
-sim/s on a modern laptop.
+Defaults (`-n 10_000_000`, `--seed 20260611`) come from `world_cup_2026/config.py`.
+The loop parallelises across CPU cores (see `-w`); on a 16-core machine it
+runs at ≈22,000 tournaments/s, so use a smaller count during development.
 
 ```bash
-# 10k for a quick debug pass
+# 10k for a quick debug pass (well under a second)
 uv run wc26-simulate -n 10000 --quiet
 
-# 100k for development checks (~30 seconds)
+# 100k for development checks (~5 seconds)
 uv run wc26-simulate -n 100000 --quiet
 
-# 1M for the published outputs (~4 minutes)
+# 10M for the published outputs (~8 minutes on 16 cores)
 uv run wc26-simulate
 ```
 
@@ -268,7 +268,7 @@ Writes to `outputs/`:
 - `simulation_summary.csv` — run metadata (n, seed, Elo snapshot date, total goals, host advantage, created_at).
 
 The plan's bracket invariants (`sum p_winner = 1`, `sum p_reach_sf = 4`,
-…) are exact to six decimal places at 1M sims.
+…) are exact to six decimal places at 10M sims.
 
 ### Score predictions per fixture
 
@@ -410,7 +410,7 @@ schema once those are played.
 
 | Constant | Default | Meaning |
 |---|---|---|
-| `N_SIMULATIONS` | `1_000_000` | Number of Monte Carlo tournaments |
+| `N_SIMULATIONS` | `10_000_000` | Number of Monte Carlo tournaments |
 | `SEED` | `20260611` | RNG seed (tournament start date) |
 | `TOTAL_GOALS` | `2.6` | Goal budget per match |
 | `HOST_ADVANTAGE` | `100` | Elo bonus when a host plays at home |
