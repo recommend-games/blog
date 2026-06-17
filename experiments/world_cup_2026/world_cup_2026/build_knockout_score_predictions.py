@@ -21,6 +21,7 @@ estimate.
 
 from __future__ import annotations
 
+import argparse
 import csv
 
 import polars as pl
@@ -28,18 +29,34 @@ import polars as pl
 from world_cup_2026 import config, load_data, score_predictions
 from world_cup_2026.poisson_model import elo_expected_score, lambdas_for_rounded_diff
 
-OUTPUT = config.OUTPUTS / "knockout_score_predictions.csv"
-GROUP_PROBS = config.OUTPUTS / "group_probabilities.csv"
-
 
 def format_top(scores: list[tuple[int, int, float]]) -> str:
     return "; ".join(f"{i}-{j} ({p * 100:.1f}%)" for i, j, p in scores)
 
 
 def main() -> None:
-    teams = load_data.load_teams()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--conditional",
+        action="store_true",
+        help=(
+            "Walk the modal bracket off refreshed Elo (teams_conditional.csv) "
+            "and the conditional group_probabilities; write to outputs/conditional/"
+        ),
+    )
+    args = parser.parse_args()
+
+    if args.conditional:
+        teams = load_data.load_teams(config.TEAMS_CONDITIONAL_CSV)
+        group_probs_path = config.OUTPUTS_CONDITIONAL / "group_probabilities.csv"
+        output = config.OUTPUTS_CONDITIONAL / "knockout_score_predictions.csv"
+    else:
+        teams = load_data.load_teams()
+        group_probs_path = config.OUTPUTS / "group_probabilities.csv"
+        output = config.OUTPUTS / "knockout_score_predictions.csv"
+
     knockout = load_data.load_knockout_slots()
-    grp_probs = pl.read_csv(GROUP_PROBS)
+    grp_probs = pl.read_csv(group_probs_path)
 
     by_slot = {row["group_slot"]: row for row in teams.iter_rows(named=True)}
     name_to_slot = {row["team_name"]: row["group_slot"] for row in teams.iter_rows(named=True)}
@@ -119,8 +136,8 @@ def main() -> None:
         )
 
     df = pl.DataFrame(rows)
-    df.write_csv(OUTPUT)
-    print(f"Wrote {len(rows)} rows to {OUTPUT}")
+    df.write_csv(output)
+    print(f"Wrote {len(rows)} rows to {output}")
 
 
 if __name__ == "__main__":

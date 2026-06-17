@@ -374,6 +374,12 @@ uv run python -m world_cup_2026.parse_results   # -> data/processed/results.csv
 # 3. simulate, conditioned on results so far, into outputs/conditional/
 uv run wc26-simulate --conditional
 
+# 3b. per-fixture score predictions: played games carry their actual score
+#     (played/actual_score columns); the KO modal bracket walks the
+#     conditional group_probabilities off refreshed Elo
+uv run python -m world_cup_2026.build_score_predictions --conditional
+uv run python -m world_cup_2026.build_knockout_score_predictions --conditional
+
 # 4. refresh the market and rebuild the comparison against the new model
 uv run python -m world_cup_2026.fetch_market_odds --conditional
 uv run python -m world_cup_2026.build_market_odds --conditional
