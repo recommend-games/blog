@@ -417,9 +417,20 @@ self-describing.
 Pin knockout results **cumulatively** — every played knockout match up to
 the current point. Once the group stage is complete the bracket is
 deterministic across simulations, so each pinned winner is always a real
-participant; a pin whose team isn't in that match (an out-of-order or
-stale entry) is ignored rather than forced. The knockout score-prediction
-builder still walks the modal bracket and does not consume `results.csv`.
+participant; in the simulator a pin whose team isn't in that match (an
+out-of-order or stale entry) is ignored rather than forced.
+
+The knockout score-prediction builder also follows reality in
+`--conditional` mode: once the whole group stage is in `results.csv` it
+resolves the R32 fixtures from the *actual* final standings (reusing the
+simulator's group + qualifier code) and propagates each played knockout
+match's *actual* winner, reverting to the modal Elo favourite beyond the
+played front. Its conditional output gains `bracket_basis`
+(`actual`/`modal`), `played`, `actual_score` and `actual_winner` columns,
+with the model's `predicted_winner` reported alongside. A pinned knockout
+winner that isn't one of its bracket participants raises an error here
+(rather than being silently ignored), since this is a single concrete
+bracket and a stale entry would otherwise corrupt later rounds.
 
 ## Configuration
 
