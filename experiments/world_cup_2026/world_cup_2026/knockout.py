@@ -64,6 +64,7 @@ def simulate_knockout(
     ctx: KnockoutContext,
     rng,
     host_advantage: int = config.HOST_ADVANTAGE,
+    fixed_winners: dict[int, str] | None = None,
 ) -> dict[int, str]:
     winners: dict[int, str] = {}
     elo = ctx.elo
@@ -81,13 +82,25 @@ def simulate_knockout(
             hb = host_advantage if host_country[tb] == venue else 0
             d = elo[ta] - elo[tb] + ha - hb
             lam_a, lam_b = lambdas_for_rounded_diff(round(d))
+            # Draw first, then override: the pinned match consumes the RNG
+            # exactly as an unpinned one would. (Matches after it can still
+            # differ, since a pin changes later participants and hence their
+            # lambdas, and numpy's Poisson draw is lambda-dependent.)
             ga = int(poisson(lam_a))
             gb = int(poisson(lam_b))
             if ga > gb:
-                winners[mid] = ta
+                win = ta
             elif gb > ga:
-                winners[mid] = tb
+                win = tb
             else:
                 p_a = 1.0 / (1.0 + 10.0 ** (-d / 400.0))
-                winners[mid] = ta if rng.random() < p_a else tb
+                win = ta if rng.random() < p_a else tb
+            if fixed_winners is not None:
+                pinned = fixed_winners.get(mid)
+                # Honour the pin only when the actual winner is one of this
+                # simulation's participants (always true once the group stage
+                # is complete, so the bracket up to the pin is deterministic).
+                if pinned == ta or pinned == tb:
+                    win = pinned
+            winners[mid] = win
     return winners

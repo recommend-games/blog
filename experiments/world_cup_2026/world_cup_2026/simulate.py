@@ -123,6 +123,7 @@ def _simulate_chunk(
     fixed_mask: np.ndarray | None = None,
     fixed_a: np.ndarray | None = None,
     fixed_b: np.ndarray | None = None,
+    fixed_ko_winners: dict[int, str] | None = None,
     show_progress: bool = False,
 ) -> Accumulator:
     rng = np.random.default_rng(child_seed)
@@ -151,7 +152,9 @@ def _simulate_chunk(
         r32_resolution, qualified_slots = qualifiers.select_qualifiers(
             group_results, third_place_dict, r32_specs, fifa_ranks
         )
-        winners = knockout.simulate_knockout(r32_resolution, ko_ctx, rng)
+        winners = knockout.simulate_knockout(
+            r32_resolution, ko_ctx, rng, fixed_winners=fixed_ko_winners
+        )
         acc.update(group_results, qualified_slots, winners)
     return acc
 
@@ -197,6 +200,40 @@ def _build_fixed_results(
     return mask, fixed_a, fixed_b
 
 
+def _build_fixed_ko_winners(
+    teams: pl.DataFrame,
+    knockout_slots: pl.DataFrame,
+    results: pl.DataFrame | None,
+) -> dict[int, str] | None:
+    """Map played knockout matches (match_id >= 73) to the advancing group_slot.
+
+    results.winner is a team_id; the knockout engine works in group_slot space,
+    so translate it here. Knockout results should be pinned cumulatively (every
+    played match up to the current point) so the bracket feeding each pin is
+    deterministic.
+    """
+    if results is None or "winner" not in results.columns:
+        return None
+    slot_by_team_id = {
+        row["team_id"]: row["group_slot"] for row in teams.iter_rows(named=True)
+    }
+    ko_match_ids = set(knockout_slots["match_id"].to_list())
+    fixed: dict[int, str] = {}
+    for row in results.iter_rows(named=True):
+        mid = row["match_id"]
+        if mid <= 72:
+            continue
+        if mid not in ko_match_ids:
+            raise RuntimeError(f"results: match_id {mid} is not a knockout fixture")
+        slot = slot_by_team_id.get(row["winner"])
+        if slot is None:
+            raise RuntimeError(
+                f"results: unknown winner team_id {row['winner']!r} for match {mid}"
+            )
+        fixed[mid] = slot
+    return fixed or None
+
+
 def run_simulation(
     n_simulations: int = config.N_SIMULATIONS,
     seed: int = config.SEED,
@@ -225,6 +262,7 @@ def run_simulation(
         teams, group_matches, config.HOST_ADVANTAGE
     )
     fixed_mask, fixed_a, fixed_b = _build_fixed_results(group_matches, results)
+    fixed_ko_winners = _build_fixed_ko_winners(teams, knockout_slots, results)
 
     if n_workers is None:
         n_workers = os.cpu_count() or 1
@@ -249,6 +287,7 @@ def run_simulation(
             fixed_mask,
             fixed_a,
             fixed_b,
+            fixed_ko_winners,
             show_progress=show_progress,
         )
         return acc, teams
@@ -272,6 +311,7 @@ def run_simulation(
                 fixed_mask,
                 fixed_a,
                 fixed_b,
+                fixed_ko_winners,
                 False,
             )
             for i in range(n_workers)

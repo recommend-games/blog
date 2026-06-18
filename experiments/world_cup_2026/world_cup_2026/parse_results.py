@@ -30,7 +30,19 @@ OUTPUT = config.RESULTS_CSV
 # unplayed one still shows the "Match N" label.
 SCORE_RE = re.compile(r"^(\d+)\s*[–‒—-]\s*(\d+)$")
 
-FIELDS = ["match_id", "home_goals", "away_goals"]
+FIELDS = ["match_id", "home_goals", "away_goals", "winner"]
+
+
+def load_existing_knockout_rows() -> list[dict]:
+    """Hand-entered knockout rows (match_id >= 73) are preserved across reruns;
+    this parser only regenerates the group-stage rows from the HTML."""
+    if not OUTPUT.exists():
+        return []
+    rows = []
+    for r in csv.DictReader(OUTPUT.open()):
+        if int(r["match_id"]) > 72:
+            rows.append({k: r.get(k, "") for k in FIELDS})
+    return rows
 
 
 def load_team_to_slot() -> dict[str, str]:
@@ -75,19 +87,25 @@ def main() -> None:
                     "match_id": match_id,
                     "home_goals": int(score_m.group(1)),
                     "away_goals": int(score_m.group(2)),
+                    "winner": "",  # group rows never set a winner
                 }
             )
 
-    rows.sort(key=lambda r: r["match_id"])
+    rows.extend(load_existing_knockout_rows())
+    rows.sort(key=lambda r: int(r["match_id"]))
     if len({r["match_id"] for r in rows}) != len(rows):
-        raise RuntimeError("duplicate match_id among played results")
+        raise RuntimeError("duplicate match_id among results")
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT.open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDS)
         writer.writeheader()
         writer.writerows(rows)
-    print(f"Wrote {len(rows)} played results to {OUTPUT}")
+    n_ko = sum(1 for r in rows if int(r["match_id"]) > 72)
+    print(
+        f"Wrote {len(rows)} results to {OUTPUT} "
+        f"({len(rows) - n_ko} group, {n_ko} knockout preserved)"
+    )
 
 
 if __name__ == "__main__":

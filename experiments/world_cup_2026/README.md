@@ -400,9 +400,26 @@ parallel set of files so the frozen baseline stays reproducible:
 still shows `Match N`) and maps home/away to the canonical `match_id` via
 `group_matches.csv`. `simulation_summary.csv` in the conditional output
 records `results_snapshot_date` and `n_results_fixed` so the run is
-self-describing. Only group matches are handled; extend `results.csv` to
-the knockout stage with the same `(match_id, home_goals, away_goals)`
-schema once those are played.
+self-describing.
+
+`results.csv` schema is `match_id, home_goals, away_goals, winner`:
+
+- **Group rows** (`match_id` 1-72) pin the scoreline; `winner` is left
+  empty. These are written automatically by `parse_results.py`.
+- **Knockout rows** (`match_id` >= 73; 73-88 R32, 89-96 R16, 97-100 QF,
+  101-102 SF, 104 final) pin *which team advances* via `winner` (a
+  `team_id`). The goals are the regulation/extra-time score and are kept
+  for the record, but the simulator only reads `winner`, so a penalty
+  shootout is captured correctly (e.g. `1-1` with the shootout winner in
+  `winner`). `parse_results.py` does not scrape the knockout page — add
+  these rows by hand; a rerun of `parse_results.py` preserves them.
+
+Pin knockout results **cumulatively** — every played knockout match up to
+the current point. Once the group stage is complete the bracket is
+deterministic across simulations, so each pinned winner is always a real
+participant; a pin whose team isn't in that match (an out-of-order or
+stale entry) is ignored rather than forced. The knockout score-prediction
+builder still walks the modal bracket and does not consume `results.csv`.
 
 ## Configuration
 
