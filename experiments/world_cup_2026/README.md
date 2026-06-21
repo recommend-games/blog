@@ -62,9 +62,10 @@ reproducible.
   Python work is just ranking + bracket propagation, parallelised across
   CPU cores. The full 10M run takes ≈8 minutes on a 16-core machine.
 - **FIFA tie-break ladder, simplified.** Plan §7's full recursive
-  resolution is replaced with a composite sort key (overall GD / GF,
-  then H2H points / GD / GF on the tied subset, then November-2025 FIFA
-  rank). Card/conduct score is intentionally not modelled.
+  resolution is replaced with a composite sort key. The 2026 rules apply
+  head-to-head before overall (unlike previous tournaments), so the key is
+  H2H points / GD / GF on the tied subset, then overall GD / GF, then
+  November-2025 FIFA rank. Card/conduct score is intentionally not modelled.
 - **Knockout-tie tie-break by Elo expected score.** Plan §9 deliberately
   avoids modelling extra time and penalties. If 90-minute goals are
   level, the advancing team is drawn from `s_A`, the team-A Elo expected
