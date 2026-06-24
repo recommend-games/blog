@@ -20,8 +20,10 @@ for another Monte Carlo run:
 This is the static still that the planned convergence *animation* is a superset
 of: the same per-slot occupancy, accumulated frame by frame.
 
-TODO(flags): slots are labelled with two-letter team codes for now. Swap in flag
-PNG assets (e.g. flag-icons) blitted into each box once the layout is signed off.
+Flags are cached PNGs from flagcdn (assets/flags/<team_id>.png), blitted into
+each slot with the occupancy percentage; a missing asset falls back to the
+two-letter team code.
+
 TODO(layout): single-sided left-to-right cascade for now; a centred/mirrored
 bracket (two halves converging on the final) is the prettier "iconic" form.
 TODO(exact): occupancy is collected from its own modest run. To make the still
@@ -31,9 +33,11 @@ exact at the full 10M, thread a per-slot accumulator through simulate.py instead
 from __future__ import annotations
 
 import argparse
+import urllib.request
 from collections import defaultdict
 from pathlib import Path
 
+import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
 import numpy as np
 import polars as pl
@@ -203,6 +207,42 @@ def write_slot_probabilities(
 
 
 # --------------------------------------------------------------------------- #
+# flags: cached PNGs from flagcdn, keyed by the data's two-letter team_id
+# --------------------------------------------------------------------------- #
+FLAG_DIR = config.ROOT / "assets" / "flags"
+# team_id is ISO 3166-1 alpha-2 except the UK home nations, which flagcdn
+# serves as the gb-* subdivisions.
+FLAG_CODE_OVERRIDE = {"EN": "gb-eng", "SQ": "gb-sct"}
+
+
+def _flag_code(team_id: str) -> str:
+    return FLAG_CODE_OVERRIDE.get(team_id, team_id.lower())
+
+
+def ensure_flags(team_ids: list[str], size: str = "w160") -> None:
+    """Download any missing flag PNGs into assets/flags/ (cached; offline after)."""
+    FLAG_DIR.mkdir(parents=True, exist_ok=True)
+    for tid in team_ids:
+        path = FLAG_DIR / f"{tid}.png"
+        if path.exists():
+            continue
+        url = f"https://flagcdn.com/{size}/{_flag_code(tid)}.png"
+        req = urllib.request.Request(url, headers={"User-Agent": "wc26-bracket/1.0"})
+        with urllib.request.urlopen(req) as resp:
+            path.write_bytes(resp.read())
+        print(f"  fetched flag {tid} <- {url}")
+
+
+def load_flags(team_ids: list[str]) -> dict[str, np.ndarray]:
+    flags: dict[str, np.ndarray] = {}
+    for tid in team_ids:
+        path = FLAG_DIR / f"{tid}.png"
+        if path.exists():
+            flags[tid] = mpimg.imread(path)
+    return flags
+
+
+# --------------------------------------------------------------------------- #
 # render
 # --------------------------------------------------------------------------- #
 COL_W = 2.7   # horizontal spacing between bracket columns
@@ -235,8 +275,11 @@ def render_bracket(
     name: str,
     n_sims: int,
     subtitle: str,
+    flags: dict[str, np.ndarray] | None = None,
 ) -> None:
     top = _top_per_slot(slot_df)
+    flags = flags or {}
+    flag_jobs: list[tuple[str, float, float, bool]] = []  # team, cx, cy, hero
 
     fig, ax = plt.subplots(figsize=(15.5, 11))
     fig.patch.set_facecolor(BG)
@@ -265,7 +308,25 @@ def render_bracket(
             zorder=3,
         )
         ax.add_patch(box)
-        if prob > 0:
+        if prob <= 0:
+            return
+        txt_color = _text_color(face, 0.35 + 0.65 * prob)
+        if team in flags:
+            # Flag itself is placed in a second pass (after layout is final, so
+            # its pixel size can be matched to the box height).
+            flag_jobs.append((team, cx, cy, hero))
+            ax.text(
+                cx + BOX_W * 0.20,
+                cy,
+                f"{prob * 100:.0f}%",
+                ha="center",
+                va="center",
+                fontsize=11 if hero else 8.5,
+                color=txt_color,
+                fontweight="bold" if hero else "normal",
+                zorder=4,
+            )
+        else:  # fallback when a flag asset is missing
             ax.text(
                 cx,
                 cy,
@@ -273,7 +334,7 @@ def render_bracket(
                 ha="center",
                 va="center",
                 fontsize=10 if hero else 7.5,
-                color=_text_color(face, 0.35 + 0.65 * prob),
+                color=txt_color,
                 fontweight="bold" if hero else "normal",
                 zorder=4,
             )
@@ -330,7 +391,37 @@ def render_bracket(
         color="white",
         pad=18,
     )
+
+    # Flag pass: place each flag with imshow in data coordinates so its size is
+    # exact and dpi-independent (OffsetImage's dpi_cor rescales differently for
+    # the 144-dpi PNG and the SVG, which makes flags overflow their boxes). The
+    # axes are not equal-aspect (the bracket is far taller than wide in data
+    # units), so a flag's data width must be scaled by the x/y pixel-scale ratio
+    # or it stretches horizontally. That ratio is dpi-independent, so compute it
+    # once after the layout is final.
     fig.tight_layout()
+    fig.canvas.draw()
+    o = ax.transData.transform((0, 0))
+    sx = abs(ax.transData.transform((1, 0))[0] - o[0])  # px per x data-unit
+    sy = abs(ax.transData.transform((0, 1))[1] - o[1])  # px per y data-unit
+    xy_ratio = sy / sx
+    for team, cx, cy, hero in flag_jobs:
+        img = flags[team]
+        aspect = img.shape[1] / img.shape[0]  # true width/height in pixels
+        h = BOX_H * (0.74 if hero else 0.62)
+        w = h * aspect * xy_ratio  # data-x width that displays undistorted
+        if w > BOX_W * 0.44:  # cap wide flags, preserving aspect
+            w = BOX_W * 0.44
+            h = w / (aspect * xy_ratio)
+        fx = cx - BOX_W * 0.24
+        ax.imshow(
+            img,
+            extent=(fx - w / 2, fx + w / 2, cy - h / 2, cy + h / 2),
+            aspect="auto",
+            origin="lower",  # axis is inverted, so 'lower' renders flags upright
+            zorder=5,
+        )
+
     fig.savefig(out_dir / f"{name}.svg")
     fig.savefig(out_dir / f"{name}.png", dpi=144)
     plt.close(fig)
@@ -389,7 +480,12 @@ def main() -> None:
         else f"pre-tournament — most likely champion: "
         f"{champ['team_name']} ({champ['prob'] * 100:.0f}%)"
     )
-    render_bracket(slot_df, geom, plot_dir, "knockout_bracket", n_sims, subtitle)
+    team_ids = teams["team_id"].to_list()
+    ensure_flags(team_ids)
+    flags = load_flags(team_ids)
+    render_bracket(
+        slot_df, geom, plot_dir, "knockout_bracket", n_sims, subtitle, flags=flags
+    )
     print(f"Wrote bracket to {plot_dir}/knockout_bracket.svg")
 
 
