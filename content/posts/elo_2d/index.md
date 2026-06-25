@@ -1,14 +1,3 @@
-<!--
-TODO (before publish — fill in once the group stage concludes):
-  * The tables still hold PROVISIONAL conditional numbers, not the final
-    72-result run. Run a full update once the groups finish, then refresh every
-    table (each is flagged with an inline TODO) and delete this banner.
-  * §"The bracket, for real this time": the bracket image is wired and live, but
-    the bracket-shape paragraph must be written against the REAL draw (inline
-    TODO there).
-  * State the exact Elo snapshot timestamp in the elo-source footnote, and
-    confirm the publish `date`.
--->
 ---
 title: "Who wins the 2026 World Cup? Not Spain, apparently."
 subtitle: "Elo, part 2d: the group stage is done and the model has changed its mind"
@@ -22,6 +11,18 @@ tags:
   - Football
   - World Cup
 ---
+
+<!--
+TODO (before publish — fill in once the group stage concludes):
+  * The tables still hold PROVISIONAL conditional numbers, not the final
+    72-result run. Run a full update once the groups finish, then refresh every
+    table (each is flagged with an inline TODO) and delete this banner.
+  * §"The bracket, for real this time": the bracket image is wired and live, but
+    the bracket-shape paragraph must be written against the REAL draw (inline
+    TODO there).
+  * State the exact Elo snapshot timestamp in the elo-source footnote, and
+    confirm the publish `date`.
+-->
 
 ## Half-time team-talk
 
