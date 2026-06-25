@@ -1,8 +1,8 @@
 team_id,team_name,elo_name,group,group_slot,elo,fifa_ranking,is_host,host_country
-MX,Mexico,Mexico,A,A1,1896,15,true,Mexico
-ZA,South Africa,South Africa,A,A2,1527,61,false,
-KR,South Korea,South Korea,A,A3,1771,22,false,
-CZ,Czech Republic,Czechia,A,A4,1696,44,false,
+MX,Mexico,Mexico,A,A1,1912,15,true,Mexico
+ZA,South Africa,South Africa,A,A2,1575,61,false,
+KR,South Korea,South Korea,A,A3,1723,22,false,
+CZ,Czech Republic,Czechia,A,A4,1680,44,false,
 CA,Canada,Canada,B,B1,1748,27,true,Canada
 BA,Bosnia and Herzegovina,Bosnia and Herzegovina,B,B2,1622,71,false,
 QA,Qatar,Qatar,B,B3,1411,51,false,
