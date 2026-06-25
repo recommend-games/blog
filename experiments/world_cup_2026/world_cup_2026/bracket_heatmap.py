@@ -260,6 +260,21 @@ def _text_color(face, alpha: float) -> str:
     return "#111111" if lum > 0.55 else "#f5f5f5"
 
 
+def _fmt_pct(prob: float) -> str:
+    """Percent label that never rounds up to a misleading "100%".
+
+    A slot reads "100%" only when it is *exactly* locked (prob == 1.0). A
+    near-certain but still undecided slot — e.g. a third-place pairing that
+    lands here in 0.999 of sims because the qualifying-thirds combination
+    isn't settled yet — clamps to "99%" rather than rounding up to a 100%
+    that overstates the certainty.
+    """
+    pct = round(prob * 100)
+    if pct >= 100 and prob < 1.0:
+        pct = 99
+    return f"{pct}%"
+
+
 def _top_per_slot(slot_df: pl.DataFrame) -> dict[str, tuple[str, float]]:
     top: dict[str, tuple[str, float]] = {}
     for slot_id, sub in slot_df.group_by("slot_id"):
@@ -318,7 +333,7 @@ def render_bracket(
             ax.text(
                 cx + BOX_W * 0.20,
                 cy,
-                f"{prob * 100:.0f}%",
+                _fmt_pct(prob),
                 ha="center",
                 va="center",
                 fontsize=11 if hero else 8.5,
@@ -330,7 +345,7 @@ def render_bracket(
             ax.text(
                 cx,
                 cy,
-                f"{team}  {prob * 100:.0f}%",
+                f"{team}  {_fmt_pct(prob)}",
                 ha="center",
                 va="center",
                 fontsize=10 if hero else 7.5,
@@ -475,10 +490,10 @@ def main() -> None:
     )
     subtitle = (
         f"conditional on played results — most likely champion: "
-        f"{champ['team_name']} ({champ['prob'] * 100:.0f}%)"
+        f"{champ['team_name']} ({_fmt_pct(champ['prob'])})"
         if args.conditional
         else f"pre-tournament — most likely champion: "
-        f"{champ['team_name']} ({champ['prob'] * 100:.0f}%)"
+        f"{champ['team_name']} ({_fmt_pct(champ['prob'])})"
     )
     team_ids = teams["team_id"].to_list()
     ensure_flags(team_ids)
