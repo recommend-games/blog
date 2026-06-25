@@ -7,15 +7,16 @@ there. The result converges to the predicted average bracket -- a probability
 field over the tree, not a single filled-in bracket (the per-slot argmax need not
 be globally consistent, which is exactly the honest thing to draw).
 
-Two stages, deliberately decoupled so the drawing can be re-tuned without paying
-for another Monte Carlo run:
+The per-slot occupancy is produced by the canonical run: wc26-simulate
+accumulates it alongside everything else and writes bracket_slot_probabilities.csv,
+so the bracket is exact at the same N as the rest of the article. This module
+just renders that CSV. `--collect` runs a standalone Monte Carlo to (re)generate
+the CSV itself, as a fallback or when no full run exists yet.
 
-  collect_occupancy()  re-runs the real engine (group_stage -> qualifiers ->
-                       knockout, conditional on played results) and counts, per
-                       slot, how often each team occupies it. Writes
-                       bracket_slot_probabilities.csv.
-  render_bracket()     reads that CSV plus the static bracket geometry and draws
-                       knockout_bracket.svg/.png.
+  render_bracket()     reads bracket_slot_probabilities.csv plus the static
+                       bracket geometry and draws knockout_bracket.svg/.png.
+  collect_occupancy()  (fallback, via --collect) re-runs the engine to count
+                       per-slot occupancy and write the CSV.
 
 This is the static still that the planned convergence *animation* is a superset
 of: the same per-slot occupancy, accumulated frame by frame.
@@ -26,8 +27,6 @@ two-letter team code.
 
 TODO(layout): single-sided left-to-right cascade for now; a centred/mirrored
 bracket (two halves converging on the final) is the prettier "iconic" form.
-TODO(exact): occupancy is collected from its own modest run. To make the still
-exact at the full 10M, thread a per-slot accumulator through simulate.py instead.
 """
 
 from __future__ import annotations
@@ -452,16 +451,18 @@ def main() -> None:
         "write into outputs/conditional and plots/conditional.",
     )
     parser.add_argument(
+        "--collect",
+        action="store_true",
+        help="Run a standalone Monte Carlo to (re)generate the slot CSV instead "
+        "of reading the canonical one wc26-simulate writes. A fallback/dev path "
+        "(e.g. before a full run exists); the full run already writes exact "
+        "occupancy at its N.",
+    )
+    parser.add_argument(
         "--n-sims",
         type=int,
         default=200_000,
-        help="Simulations for the occupancy estimate (default 200k; enough for "
-        "a stable still without the cost of the full 10M run).",
-    )
-    parser.add_argument(
-        "--render-only",
-        action="store_true",
-        help="Skip the Monte Carlo and re-render from the existing slot CSV.",
+        help="Simulations for --collect (default 200k).",
     )
     args = parser.parse_args()
 
@@ -473,11 +474,17 @@ def main() -> None:
     teams_csv = config.TEAMS_CONDITIONAL_CSV if args.conditional else config.TEAMS_CSV
     teams = load_data.load_teams(teams_csv)
 
-    if not args.render_only:
+    if args.collect:
         results = load_data.load_results() if args.conditional else None
         counts = collect_occupancy(teams, results, args.n_sims, config.SEED)
         write_slot_probabilities(counts, teams, args.n_sims, slot_csv)
         print(f"Wrote {slot_csv}")
+    elif not slot_csv.exists():
+        cond = " --conditional" if args.conditional else ""
+        raise SystemExit(
+            f"{slot_csv} not found. Run `wc26-simulate{cond}` first (it now writes "
+            f"the slot occupancy), or pass --collect to generate it here."
+        )
 
     slot_df = pl.read_csv(slot_csv)
     n_sims = int(slot_df["n_sims"][0])  # from the data, so --render-only stays honest

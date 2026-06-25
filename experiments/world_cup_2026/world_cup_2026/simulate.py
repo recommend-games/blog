@@ -32,6 +32,10 @@ from .poisson_model import lambdas_for_rounded_diff
 @dataclass
 class Accumulator:
     slots: list[str]
+    # Knockout matches as (match_id, stage), in match_id order. Drives the
+    # per-slot bracket-occupancy counts so the heatmap bracket is exact at the
+    # same N as everything else, instead of needing its own separate run.
+    ko_matches: list[tuple[int, str]]
     idx: dict[str, int] = field(init=False)
     finish_1st: np.ndarray = field(init=False)
     finish_2nd: np.ndarray = field(init=False)
@@ -43,6 +47,14 @@ class Accumulator:
     reach_sf: np.ndarray = field(init=False)
     reach_final: np.ndarray = field(init=False)
     winner: np.ndarray = field(init=False)
+    # Bracket-slot occupancy: row per slot (32 R32 entrant slots + one winner
+    # slot per tie), column per team. slot_ids/row maps are derived from
+    # ko_matches so workers and the merged accumulator agree on the layout.
+    bracket_slot_ids: list[str] = field(init=False)
+    ent_a_row: dict[int, int] = field(init=False)
+    ent_b_row: dict[int, int] = field(init=False)
+    win_row: dict[int, int] = field(init=False)
+    slot_occ: np.ndarray = field(init=False)
 
     def __post_init__(self) -> None:
         self.idx = {s: i for i, s in enumerate(self.slots)}
@@ -59,11 +71,31 @@ class Accumulator:
         self.reach_final = zeros()
         self.winner = zeros()
 
+        self.bracket_slot_ids = []
+        self.ent_a_row = {}
+        self.ent_b_row = {}
+        self.win_row = {}
+        row = 0
+        for mid, stage in self.ko_matches:
+            if stage == "R32":
+                self.ent_a_row[mid] = row
+                self.bracket_slot_ids.append(f"E{mid}a")
+                row += 1
+                self.ent_b_row[mid] = row
+                self.bracket_slot_ids.append(f"E{mid}b")
+                row += 1
+        for mid, _ in self.ko_matches:
+            self.win_row[mid] = row
+            self.bracket_slot_ids.append(f"W{mid}")
+            row += 1
+        self.slot_occ = np.zeros((row, n), dtype=np.int64)
+
     def update(
         self,
         group_results: dict[str, group_stage.GroupResult],
         qualified_slots: set[str],
         winners: dict[int, str],
+        r32_resolution: dict[int, tuple[str, str]],
     ) -> None:
         bucket = [self.finish_1st, self.finish_2nd, self.finish_3rd, self.finish_4th]
         for res in group_results.values():
@@ -71,8 +103,12 @@ class Accumulator:
                 bucket[pos][self.idx[slot]] += 1
         for slot in qualified_slots:
             self.reach_r32[self.idx[slot]] += 1
+        for mid, (sa, sb) in r32_resolution.items():
+            self.slot_occ[self.ent_a_row[mid], self.idx[sa]] += 1
+            self.slot_occ[self.ent_b_row[mid], self.idx[sb]] += 1
         for mid, slot in winners.items():
             i = self.idx[slot]
+            self.slot_occ[self.win_row[mid], i] += 1
             if mid <= 88:
                 self.reach_r16[i] += 1
             elif mid <= 96:
@@ -113,6 +149,7 @@ def _simulate_chunk(
     chunk_size: int,
     child_seed,
     slots: list[str],
+    ko_matches: list[tuple[int, str]],
     group_ctx: dict[str, group_stage.GroupContext],
     ko_ctx: knockout.KnockoutContext,
     third_place_dict: qualifiers.ThirdPlaceLookup,
@@ -141,7 +178,7 @@ def _simulate_chunk(
         goals_a[:, fixed_mask] = fixed_a
         goals_b[:, fixed_mask] = fixed_b
 
-    acc = Accumulator(slots=slots)
+    acc = Accumulator(slots=slots, ko_matches=ko_matches)
     iterator = range(chunk_size)
     if show_progress:
         iterator = tqdm(iterator, desc=f"Simulating {chunk_size:,} tournaments")
@@ -155,12 +192,14 @@ def _simulate_chunk(
         winners = knockout.simulate_knockout(
             r32_resolution, ko_ctx, rng, fixed_winners=fixed_ko_winners
         )
-        acc.update(group_results, qualified_slots, winners)
+        acc.update(group_results, qualified_slots, winners, r32_resolution)
     return acc
 
 
-def _merge_accumulators(parts: list[Accumulator], slots: list[str]) -> Accumulator:
-    merged = Accumulator(slots=slots)
+def _merge_accumulators(
+    parts: list[Accumulator], slots: list[str], ko_matches: list[tuple[int, str]]
+) -> Accumulator:
+    merged = Accumulator(slots=slots, ko_matches=ko_matches)
     for acc in parts:
         merged.finish_1st += acc.finish_1st
         merged.finish_2nd += acc.finish_2nd
@@ -172,6 +211,7 @@ def _merge_accumulators(parts: list[Accumulator], slots: list[str]) -> Accumulat
         merged.reach_sf += acc.reach_sf
         merged.reach_final += acc.reach_final
         merged.winner += acc.winner
+        merged.slot_occ += acc.slot_occ
     return merged
 
 
@@ -257,6 +297,10 @@ def run_simulation(
         for row in teams.iter_rows(named=True)
     }
     slots = sorted(teams["group_slot"].to_list())
+    ko_matches = [
+        (row["match_id"], row["stage"])
+        for row in knockout_slots.sort("match_id").iter_rows(named=True)
+    ]
 
     lambdas_a, lambdas_b = _precompute_group_lambdas(
         teams, group_matches, config.HOST_ADVANTAGE
@@ -277,6 +321,7 @@ def run_simulation(
             chunk_sizes[0],
             child_seeds[0],
             slots,
+            ko_matches,
             group_ctx,
             ko_ctx,
             third_place_dict,
@@ -301,6 +346,7 @@ def run_simulation(
                 chunk_sizes[i],
                 child_seeds[i],
                 slots,
+                ko_matches,
                 group_ctx,
                 ko_ctx,
                 third_place_dict,
@@ -328,7 +374,7 @@ def run_simulation(
             )
         for fut in iterator:
             parts.append(fut.result())
-    return _merge_accumulators(parts, slots), teams
+    return _merge_accumulators(parts, slots, ko_matches), teams
 
 
 def write_outputs(
@@ -428,6 +474,37 @@ def write_outputs(
         *[pl.col(c).round(5) for c in group_prob_cols]
     ).sort(["group", "p_qualify"], descending=[False, True])
     group_df.write_csv(output_dir / "group_probabilities.csv")
+
+    # Per-slot bracket occupancy for the heatmap bracket: one row per
+    # (slot, team) with a non-zero count. Exact at this run's N, so the bracket
+    # renderer reads it directly with no separate Monte Carlo pass.
+    slot_rows = []
+    for r, sid in enumerate(acc.bracket_slot_ids):
+        if sid.startswith("W"):
+            kind, ab, mid = "winner", "", int(sid[1:])
+        else:
+            kind, ab, mid = "entrant", sid[-1], int(sid[1:-1])
+        occ = acc.slot_occ[r]
+        for ti, slot in enumerate(acc.slots):
+            c = int(occ[ti])
+            if c == 0:
+                continue
+            t = by_slot[slot]
+            slot_rows.append(
+                {
+                    "slot_id": sid,
+                    "kind": kind,
+                    "match_id": mid,
+                    "ab": ab,
+                    "team_id": t["team_id"],
+                    "team_name": t["team_name"],
+                    "prob": c / n,
+                    "n_sims": n_simulations,
+                }
+            )
+    pl.DataFrame(slot_rows).with_columns(pl.col("prob").round(5)).sort(
+        ["match_id", "kind", "ab", "prob"], descending=[False, False, False, True]
+    ).write_csv(output_dir / "bracket_slot_probabilities.csv")
 
     if elo_snapshot_date is None:
         snapshot_date_path = config.DATA_RAW / "elo_snapshot_date.txt"
