@@ -63,6 +63,10 @@ A reminder of just how badly the algorithm misjudged this category: not one of t
 
 The clear darling of the BGG crowd among the {{% sdj %}}Spiel{{% /sdj %}} nominees, topping both the average (8.3) and the Bayesian rating. A sticker-based legacy-lite game scratches exactly the cozy, low-stakes itch that has served recent winners like {{% game 370591 %}}Dorfromantik{{% /game %}} so well, and it's hard to argue with that broad, gentle appeal as an ambassador for *Kulturgut Spiel*.
 
+The good people at [Five Games For Doomsday](https://www.youtube.com/@FiveGamesForDoomsday) sat down with designer Corey Konieczka to talk it through:
+
+{{< youtube c7xuOtguInw >}}
+
 <!-- TODO Markus: personal take / play impression, and whether the "stickers as consumable" angle bothers you -->
 
 
@@ -77,6 +81,7 @@ The clear darling of the BGG crowd among the {{% sdj %}}Spiel{{% /sdj %}} nomine
 The party game of the bunch, and the one carrying the strongest "internationalisation of the hobby" storyline: designer [Martin Ang](https://recommend.games/#/?designer=121032) is the CEO of Tabletoys Indonesia, so after last year's first {{% sdj %}}SdJ{{% /sdj %}} win for Japan, Indonesia could be next. {{% sdj / %}} has rewarded clever, accessible association and communication games before – {{% game 254640 %}}Just One{{% /game %}} springs to mind – which makes this a natural fit for the award's profile.
 
 <!-- TODO Markus: personal take / BGA impression, and how it compares to Just One / other party winners -->
+<!-- TODO 5G4D: no JinxO designer interview published yet — embed {{</* youtube ID */>}} once it's up: https://www.youtube.com/@FiveGamesForDoomsday -->
 
 
 ### {{% game 462742 %}}Morty Sorty Magic Shop{{% /game %}}
@@ -88,6 +93,10 @@ The party game of the bunch, and the one carrying the strongest "internationalis
 *Apprentices try to demonstrate their talent for stocking the shelves.*
 
 The headline here is the designer: [Markus Slawitscheck](https://recommend.games/#/?designer=110904) already won {{% kdj %}}Kennerspiel{{% /kdj %}} in 2023 for {{% game 359970 %}}Challengers!{{% /game %}} and {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} in 2024 for {{% game 368899 %}}Magic Keys{{% /game %}}. A win here would make him the first designer ever to complete the triple – and in just three years. It's also the heaviest of the three {{% sdj %}}Spiel{{% /sdj %}} nominees at a medium-light 2.0, sitting right on the fuzzy border the jury loves to police.
+
+[Five Games For Doomsday](https://www.youtube.com/@FiveGamesForDoomsday) caught up with Markus Slawitscheck about the game and his shot at the triple:
+
+{{< youtube M7pW2dyy14o >}}
 
 <!-- TODO Markus: personal take; note it's barely in the R.G database -->
 
@@ -123,6 +132,7 @@ A much tidier picture than on the {{% sdj %}}Spiel{{% /sdj %}} side: {{% game 41
 The highest raw BGG average of any nominee across both awards (8.1), and a co-operative puzzle of cracking each boss's tactics that the 'geeks clearly love. I'll admit I got stronger {{% sdj %}}red{{% /sdj %}} vibes from this one, so its placement on the {{% kdj %}}Kennerspiel{{% /kdj %}} list was a mild surprise – but the QR-driven app integration and the layer of gear management do push it past the {{% sdj %}}Spiel{{% /sdj %}} threshold.
 
 <!-- TODO Markus: personal take; the app/QR gimmick — boon or red flag for a jury that prizes Kulturgut Spiel? -->
+<!-- TODO 5G4D: no Boss Fighters QR designer interview published yet — embed {{</* youtube ID */>}} once it's up: https://www.youtube.com/@FiveGamesForDoomsday -->
 
 
 ### {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}}
@@ -136,6 +146,7 @@ The highest raw BGG average of any nominee across both awards (8.1), and a co-op
 Both the theme and the mechanisms are fairly divisive, which makes this the wildcard of the {{% kdj %}}Kennerspiel{{% /kdj %}} field. The strong Bayesian rating (6.9) shows the dedicated fans rate it highly, but a 14+ age rating and a gleefully grim premise are an awkward fit for an award meant to broaden the hobby's appeal.
 
 <!-- TODO Markus: personal take; is the dark theme a dealbreaker for the jury, à la the usual Kulturgut argument? -->
+<!-- TODO 5G4D: no Moon Colony Bloodbath designer interview published yet — embed {{</* youtube ID */>}} once it's up: https://www.youtube.com/@FiveGamesForDoomsday -->
 
 
 ### {{% game 417197 %}}Rebirth{{% /game %}}
@@ -149,6 +160,7 @@ Both the theme and the mechanisms are fairly divisive, which makes this the wild
 The frontrunner by almost every measure, and the one nomination [my predictions]({{<ref "posts/sdj_2026/index.md">}}) and the algorithm agreed on completely. On top of the numbers, there's the storyline: this is [Reiner Knizia](https://recommend.games/#/?designer=2)'s chance to complete the triple after his {{% kdj %}}Kennerspiel{{% /kdj %}}/{{% sdj %}}Spiel{{% /sdj %}} double back in 2008. A hopeful, accessible tile-layer from the most decorated designer in the award's history is about as on-brand a {{% kdj %}}Kennerspiel{{% /kdj %}} winner as you could script.
 
 <!-- TODO Markus: personal take / play impression -->
+<!-- TODO 5G4D: no Rebirth/Knizia designer interview published yet — embed {{</* youtube ID */>}} once it's up: https://www.youtube.com/@FiveGamesForDoomsday -->
 
 
 ### Who will win?
