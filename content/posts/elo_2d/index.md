@@ -1,15 +1,13 @@
 <!--
-TODO (before publish):
-  * All numbers in this draft come from the PROVISIONAL 48-result conditional run
-    (matchday 2 complete). Refresh every figure off the 72-result run once the
-    group stage actually concludes, then delete this banner.
-  * §"The bracket, for real this time" needs the filled-bracket chart. That
-    generator does not exist yet — the conditional pipeline produces the title,
-    group, draw-luck and market charts but no bracket visual. Build it, wire a
-    plots/conditional/knockout_bracket.{svg,png}, add an asset-links.yaml entry,
-    then replace the placeholder shortcode.
-  * Set the real publish `date` and confirm `share_img` once the refreshed
-    title_probabilities PNG is regenerated.
+TODO (before publish — fill in once the group stage concludes):
+  * The tables still hold PROVISIONAL conditional numbers, not the final
+    72-result run. Run a full update once the groups finish, then refresh every
+    table (each is flagged with an inline TODO) and delete this banner.
+  * §"The bracket, for real this time": the bracket image is wired and live, but
+    the bracket-shape paragraph must be written against the REAL draw (inline
+    TODO there).
+  * State the exact Elo snapshot timestamp in the elo-source footnote, and
+    confirm the publish `date`.
 -->
 ---
 title: "Who wins the 2026 World Cup? Not Spain, apparently."
@@ -18,7 +16,7 @@ slug: world-cup-2026-knockouts
 share_img: /posts/world-cup-2026-knockouts/title_probabilities_share.png
 author: Markus Shepherd
 type: post
-date: 2026-07-01T12:00:00+03:00 # TODO: real date once groups conclude
+date: 2026-06-28T12:00:00+03:00 # provisional: set to the actual publish date
 tags:
   - Elo rating
   - Football
@@ -27,7 +25,7 @@ tags:
 
 ## Half-time team-talk
 
-The group stage is over, the Round of 32 is set and ninety-six matches have quietly rearranged everything I told you three weeks ago. ⚽️
+The group stage is over, the Round of 32 is set and seventy-two matches have quietly rearranged everything I told you three weeks ago. ⚽️
 
 When I [ran the numbers before kickoff]({{<ref "posts/elo_2c/index.md">}}) the model had a bold, market-contrarian opinion: 🇪🇸 Spain to win it at 35.3%, 🇦🇷 Argentina second at 23.1% and both *dramatically* underpriced by the bookies — Spain's +19.3pp edge over Polymarket was the strongest disagreement between maths and money I'd ever put on this blog. I promised I'd come back on the other side of the trophy ceremony to find out whether the model deserved its confidence.
 
@@ -63,9 +61,7 @@ There's no single lesson here beyond the obvious one the [snooker write-ups]({{<
 
 Before the tournament I could only show you a probability *cloud* — the modal path through a knockout draw that didn't exist yet. Now it does. All 32 survivors are known, the Round of 32 pairings are fixed and for the first time the bracket is a real object rather than an average over ten million imagined ones.
 
-<!-- TODO: replace with the real filled-bracket chart once the generator exists.
-     {{< img src="knockout_bracket" alt="The 2026 World Cup knockout bracket from the Round of 32 to the final, annotated with each team's model win probability for every tie" >}} -->
-> 🚧 **Bracket chart goes here.** *(Filled Round-of-32-to-final bracket with per-tie win probabilities — chart generator still to be built.)*
+{{< img src="knockout_bracket" alt="The 2026 World Cup knockout bracket from the Round of 32 to the final; each slot shows the team most likely to fill it and how often it does across ten million simulations" >}}
 
 The shape matters more than it did pre-tournament, because position is now destiny. <!-- TODO: write this paragraph against the REAL bracket once groups conclude. Cover: who drew the kind path, which half each of Argentina/Spain/France landed in, whether the two favourites can now meet before the final (pre-tournament they could only collide IN the final), and how the host nations' brackets resolved. --> The headline question is whether 🇦🇷 Argentina and 🇪🇸 Spain are still kept apart until a possible final, or whether the group results have thrown them into the same half — because that single fact moves the title numbers below as much as any change in form.
 
