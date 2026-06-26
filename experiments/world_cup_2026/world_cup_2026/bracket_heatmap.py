@@ -324,7 +324,7 @@ def render_bracket(
 ) -> None:
     top = _top_per_slot(slot_df)
     flags = flags or {}
-    flag_jobs: list[tuple[str, float, float, bool]] = []  # team, cx, cy, hero
+    slot_jobs: list[tuple[str, float, float, float, bool]] = []  # team, prob, cx, cy, hero
 
     fig, ax = plt.subplots(figsize=(15.5, 11))
     fig.patch.set_facecolor(BG)
@@ -340,49 +340,23 @@ def render_bracket(
     def draw_slot(slot_id: str, col: int, y: float, hero: bool = False) -> None:
         team, prob = top.get(slot_id, ("", 0.0))
         cx, cy = xy(col, y)
-        face = SEQ_CMAP(prob)
-        box = FancyBboxPatch(
-            (cx - BOX_W / 2, cy - BOX_H / 2),
-            BOX_W,
-            BOX_H,
-            boxstyle="round,pad=0.02,rounding_size=0.12",
-            linewidth=1.4 if hero else 0.6,
-            edgecolor="white" if hero else "#dddddd",
-            facecolor=face,
-            alpha=0.35 + 0.65 * prob,
-            zorder=3,
+        ax.add_patch(
+            FancyBboxPatch(
+                (cx - BOX_W / 2, cy - BOX_H / 2),
+                BOX_W,
+                BOX_H,
+                boxstyle="round,pad=0.02,rounding_size=0.12",
+                linewidth=1.4 if hero else 0.6,
+                edgecolor="white" if hero else "#dddddd",
+                facecolor=SEQ_CMAP(prob),
+                alpha=0.35 + 0.65 * prob,
+                zorder=3,
+            )
         )
-        ax.add_patch(box)
-        if prob <= 0:
-            return
-        txt_color = _text_color(face, 0.35 + 0.65 * prob)
-        if team in flags:
-            # Flag itself is placed in a second pass (after layout is final, so
-            # its pixel size can be matched to the box height).
-            flag_jobs.append((team, cx, cy, hero))
-            ax.text(
-                cx + BOX_W * 0.20,
-                cy,
-                _fmt_pct(prob),
-                ha="center",
-                va="center",
-                fontsize=11 if hero else 8.5,
-                color=txt_color,
-                fontweight="bold" if hero else "normal",
-                zorder=4,
-            )
-        else:  # fallback when a flag asset is missing
-            ax.text(
-                cx,
-                cy,
-                f"{team}  {_fmt_pct(prob)}",
-                ha="center",
-                va="center",
-                fontsize=10 if hero else 7.5,
-                color=txt_color,
-                fontweight="bold" if hero else "normal",
-                zorder=4,
-            )
+        # Flag + code + probability are placed in a second pass (after layout is
+        # final, so the flag's pixel size can be matched to the box height).
+        if prob > 0:
+            slot_jobs.append((team, prob, cx, cy, hero))
 
     def slot_xy(kind: str, mid: int, ab: str) -> tuple[float, float]:
         if kind == "entrant":
@@ -437,35 +411,28 @@ def render_bracket(
         pad=18,
     )
 
-    # Flag pass: place each flag with imshow in data coordinates so its size is
-    # exact and dpi-independent (OffsetImage's dpi_cor rescales differently for
-    # the 144-dpi PNG and the SVG, which makes flags overflow their boxes). The
-    # axes are not equal-aspect (the bracket is far taller than wide in data
-    # units), so a flag's data width must be scaled by the x/y pixel-scale ratio
-    # or it stretches horizontally. That ratio is dpi-independent, so compute it
-    # once after the layout is final.
+    # Flag + label pass: done after the layout is final so the flag's data width
+    # can be matched to the box height (the axes are not equal-aspect, so widths
+    # need the x/y pixel-scale ratio). Same arrangement as the animation: flag +
+    # country code paired on the left, probability on the right.
     fig.tight_layout()
     fig.canvas.draw()
-    o = ax.transData.transform((0, 0))
-    sx = abs(ax.transData.transform((1, 0))[0] - o[0])  # px per x data-unit
-    sy = abs(ax.transData.transform((0, 1))[1] - o[1])  # px per y data-unit
-    xy_ratio = sy / sx
-    for team, cx, cy, hero in flag_jobs:
-        img = flags[team]
-        aspect = img.shape[1] / img.shape[0]  # true width/height in pixels
-        h = BOX_H * (0.74 if hero else 0.62)
-        w = h * aspect * xy_ratio  # data-x width that displays undistorted
-        if w > BOX_W * 0.44:  # cap wide flags, preserving aspect
-            w = BOX_W * 0.44
-            h = w / (aspect * xy_ratio)
-        fx = cx - BOX_W * 0.24
-        ax.imshow(
-            img,
-            extent=(fx - w / 2, fx + w / 2, cy - h / 2, cy + h / 2),
-            aspect="auto",
-            origin="lower",  # axis is inverted, so 'lower' renders flags upright
-            zorder=5,
-        )
+    xy_ratio = axes_xy_ratio(ax)
+    for team, prob, cx, cy, hero in slot_jobs:
+        face = SEQ_CMAP(prob)
+        tcol = _text_color(face, 0.35 + 0.65 * prob)
+        fs, fw = (11 if hero else 8.5), ("bold" if hero else "normal")
+        flag_h = BOX_H * (0.66 if hero else 0.5)
+        img = flags.get(team)
+        if img is not None:
+            w = place_flag(ax, img, cx - BOX_W * 0.30, cy, flag_h, xy_ratio, BOX_W * 0.34)
+            ax.text(cx - BOX_W * 0.30 + w / 2 + BOX_W * 0.05, cy, team, ha="left",
+                    va="center", fontsize=fs, color=tcol, fontweight=fw, zorder=4)
+            ax.text(cx + BOX_W * 0.43, cy, _fmt_pct(prob), ha="right", va="center",
+                    fontsize=fs, color=tcol, fontweight=fw, zorder=4)
+        else:  # fallback when a flag asset is missing
+            ax.text(cx, cy, f"{team} {_fmt_pct(prob)}", ha="center", va="center",
+                    fontsize=fs, color=tcol, fontweight=fw, zorder=4)
 
     fig.savefig(out_dir / f"{name}.svg")
     fig.savefig(out_dir / f"{name}.png", dpi=144)
