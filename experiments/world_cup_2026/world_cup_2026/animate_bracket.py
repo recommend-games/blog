@@ -42,6 +42,10 @@ from .bracket_heatmap import (
     BracketGeometry,
     SEQ_CMAP,
     _text_color,
+    axes_xy_ratio,
+    ensure_flags,
+    load_flags,
+    place_flag,
 )
 
 HIGHLIGHT = "#ffd24a"          # gold edge on live (still-spinning) slots
@@ -117,6 +121,7 @@ def render_freeze_gif(
     modal: dict[str, str],
     pmodal: dict[str, float],
     id_by_slot: dict[str, str],
+    flags: dict,
     geom: BracketGeometry,
     out_path,
     fps: int,
@@ -147,6 +152,7 @@ def render_freeze_gif(
         ax.set_ylim(-1, geom.n_rows)
         ax.invert_yaxis()
         ax.axis("off")
+        xy_ratio = axes_xy_ratio(ax)
 
         for mid in geom.stage:
             wx, wy = xy(*geom.winner_pos(mid))
@@ -167,14 +173,14 @@ def render_freeze_gif(
             nonlocal live
             cx, cy = xy(col, y)
             p = pmodal.get(sid, 0.0)
-            if p >= threshold:  # frozen -> modal team, calm glow
+            frozen = p >= threshold
+            if frozen:  # modal team, calm glow
                 team, face, alpha = modal.get(sid, ""), SEQ_CMAP(p), 0.35 + 0.65 * p
-                edge = "white" if hero else "#cfcfcf"
-                lw, label, tcol = (1.6 if hero else 0.6), f"{team} {p * 100:.0f}%", _text_color(face, alpha)
-            else:  # live -> current sample's team, gold edge
+                edge, lw = ("white" if hero else "#cfcfcf"), (1.6 if hero else 0.6)
+            else:  # current sample's team, gold edge
                 live += 1
                 team, face, alpha = id_by_slot[sample[sid]], LIVE_FILL, 1.0
-                edge, lw, label, tcol = HIGHLIGHT, 1.8, team, "#f5f5f5"
+                edge, lw = HIGHLIGHT, 1.8
             ax.add_patch(
                 FancyBboxPatch(
                     (cx - BOX_W / 2, cy - BOX_H / 2),
@@ -188,11 +194,23 @@ def render_freeze_gif(
                     zorder=3,
                 )
             )
-            ax.text(
-                cx, cy, label, ha="center", va="center",
-                fontsize=8 if hero else 6.2, color=tcol,
-                fontweight="bold" if hero else "normal", zorder=4,
-            )
+            img = flags.get(team)
+            flag_h = BOX_H * (0.66 if hero else 0.5)
+            tcol = _text_color(face, alpha) if frozen else "#f5f5f5"
+            fs, fw = (8 if hero else 6.2), ("bold" if hero else "normal")
+            # Flag + code pair tightly on the left; the probability sits apart
+            # on the right (frozen only).
+            fcx = cx - BOX_W * (0.30 if frozen else 0.16)
+            if img is not None:
+                w = place_flag(ax, img, fcx, cy, flag_h, xy_ratio, BOX_W * 0.34)
+                ax.text(fcx + w / 2 + BOX_W * 0.05, cy, team, ha="left", va="center",
+                        fontsize=fs, color=tcol, fontweight=fw, zorder=4)
+            else:
+                ax.text(cx - BOX_W * (0.2 if frozen else 0.0), cy, team, ha="center",
+                        va="center", fontsize=fs, color=tcol, fontweight=fw, zorder=4)
+            if frozen:
+                ax.text(cx + BOX_W * 0.43, cy, f"{p * 100:.0f}%", ha="right",
+                        va="center", fontsize=fs, color=tcol, fontweight=fw, zorder=4)
 
         for mid in geom.leaf_order:
             for ab in ("a", "b"):
@@ -242,13 +260,16 @@ def main() -> None:
     id_by_slot = {r["group_slot"]: r["team_id"] for r in teams.iter_rows(named=True)}
 
     modal, pmodal = load_modal(slot_csv)
+    team_ids = teams["team_id"].to_list()
+    ensure_flags(team_ids)
+    flags = load_flags(team_ids)
     samples = collect_sample_brackets(teams, results, args.n_frames, config.SEED)
     geom = BracketGeometry(load_data.load_knockout_slots())
     sns.set_style("dark")
     subtitle = "conditional on played results" if args.conditional else "pre-tournament"
     out_path = plot_dir / "bracket_freeze.gif"
     render_freeze_gif(
-        samples, modal, pmodal, id_by_slot, geom, out_path, args.fps, subtitle
+        samples, modal, pmodal, id_by_slot, flags, geom, out_path, args.fps, subtitle
     )
     print(f"Wrote {out_path} ({args.n_frames} frames)")
 

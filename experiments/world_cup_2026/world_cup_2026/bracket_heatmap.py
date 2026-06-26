@@ -241,6 +241,37 @@ def load_flags(team_ids: list[str]) -> dict[str, np.ndarray]:
     return flags
 
 
+def axes_xy_ratio(ax) -> float:
+    """px-per-y-unit / px-per-x-unit, so flag widths can be aspect-corrected on
+    non-equal-aspect axes. Valid once the axes has a size and limits set."""
+    o = ax.transData.transform((0, 0))
+    sx = abs(ax.transData.transform((1, 0))[0] - o[0])
+    sy = abs(ax.transData.transform((0, 1))[1] - o[1])
+    return sy / sx
+
+
+def place_flag(ax, img, cx, cy, h, xy_ratio, max_w=None, zorder=5) -> float:
+    """Blit a flag centred at (cx, cy) with data-height h, undistorted. Returns
+    the flag's data-width (so callers can position a label after it).
+
+    origin follows the axis orientation so the flag is always upright: "lower"
+    for an inverted y-axis (the bracket), "upper" for a normal one (the counter).
+    """
+    aspect = img.shape[1] / img.shape[0]
+    w = h * aspect * xy_ratio
+    if max_w is not None and w > max_w:
+        w = max_w
+        h = w / (aspect * xy_ratio)
+    ax.imshow(
+        img,
+        extent=(cx - w / 2, cx + w / 2, cy - h / 2, cy + h / 2),
+        aspect="auto",
+        origin="lower" if ax.yaxis_inverted() else "upper",
+        zorder=zorder,
+    )
+    return w
+
+
 # --------------------------------------------------------------------------- #
 # render
 # --------------------------------------------------------------------------- #
