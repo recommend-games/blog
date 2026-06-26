@@ -50,9 +50,9 @@ PANEL = "#242128"  # counter panel, a touch lighter than the bracket canvas
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--conditional", action="store_true")
-    parser.add_argument("--n-frames", type=int, default=72)
+    parser.add_argument("--n-frames", type=int, default=110)
     parser.add_argument("--total", type=int, default=100_000)
-    parser.add_argument("--fps", type=int, default=6)
+    parser.add_argument("--fps", type=int, default=10)
     args = parser.parse_args()
 
     out_dir = config.OUTPUTS_CONDITIONAL if args.conditional else config.OUTPUTS
