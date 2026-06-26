@@ -89,9 +89,7 @@ def render_counter_gif(
         ax.set_axisbelow(True)
         xy_ratio = axes_xy_ratio(ax)
         for y, idx in zip(ypos, disp_order):
-            c = counts[idx]
-            if c <= 0:
-                continue
+            c = counts[idx]  # flags show from the start, at the bar's (possibly zero) tip
             # Flag rides the bar tip; the % sits just after it, so both grow right.
             xtext = c + gap
             img = flags.get(tids[idx])
