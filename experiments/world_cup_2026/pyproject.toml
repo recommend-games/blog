@@ -1,0 +1,50 @@
+[project]
+name = "world_cup_2026"
+version = "0.1.0"
+description = "Elo + Poisson Monte Carlo simulator for the 2026 FIFA World Cup"
+authors = [
+    { name = "Markus Shepherd", email = "markus@recommend.games" },
+]
+requires-python = "==3.13.*"
+dependencies = [
+    "matplotlib",
+    "numpy",
+    "polars",
+    "scipy",
+    "seaborn",
+    "tqdm",
+]
+
+[dependency-groups]
+dev = [
+    "jupyter-black",
+    "jupyterlab",
+    "jupytext",
+    "mypy",
+    "ruff",
+    "scipy-stubs",
+    "types-tqdm",
+]
+
+[project.scripts]
+wc26-simulate = "world_cup_2026.run_simulation:main"
+wc26-build-article-charts = "world_cup_2026.build_article_charts:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["world_cup_2026"]
+
+[tool.ruff]
+target-version = "py313"
+
+[tool.mypy]
+python_version = "3.13"
+
+[[tool.mypy.overrides]]
+module = [
+    "scipy.*",
+]
+ignore_missing_imports = true
