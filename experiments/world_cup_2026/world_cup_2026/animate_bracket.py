@@ -1,19 +1,22 @@
-"""Prototype: animate the bracket converging to the predicted average.
+"""Prototype: the freeze bracket — a single simulated bracket that crystallises
+into the predicted average.
 
-The static heatmap bracket is the *last frame* of this. Here we draw individual
-simulated brackets one after another over a running-mean heatmap base, so the
-picture starts as a noisy flicker and settles into the converged average bracket
-as the sample grows. Each frame also flashes the current sample's champion path,
-so you can see the "individual draws" texture on top of the accumulating field.
+Every frame shows a full concrete bracket. Each slot is either:
+  * LIVE  — the current sample's actual team for that slot (gold edge); it
+            flickers frame to frame, so the champion really does flash up as
+            Germany now and then.
+  * FROZEN — locked to that slot's modal team from the canonical 10M occupancy
+            (calm purple glow, labelled with its probability).
 
-Deliberately a prototype to judge the *motion*:
-  * team codes, not flags (per-frame flag blitting is the slow part);
-  * GIF via matplotlib's pillow writer (no ffmpeg dependency);
-  * a modest sample with a log-ish frame schedule, so early noise and the
-    settling are both visible in a short clip.
+A slot freezes once its true probability clears a threshold tau(t) that falls
+from 1.0 to just below the least-certain slot over the run. So the bracket
+freezes from the outside in — the near-certain R32 entrants first, the champion
+last — and the final frame is exactly the published static bracket. Motion is
+just the number of live slots, which only decreases, so it self-calms (no
+seizure-flicker by the end).
 
-The real version would use flags, WebM/MP4 (needs ffmpeg) and the exact 10M
-occupancy as its final frame. Run:
+Prototype: team codes not flags, GIF via pillow (no ffmpeg). Reads the canonical
+`bracket_slot_probabilities.csv` written by wc26-simulate. Run:
 
     uv run python -m world_cup_2026.animate_bracket --conditional
 """
@@ -21,7 +24,6 @@ occupancy as its final frame. Run:
 from __future__ import annotations
 
 import argparse
-from collections import defaultdict
 
 import matplotlib.animation as animation
 import matplotlib.pyplot as plt
@@ -42,7 +44,8 @@ from .bracket_heatmap import (
     _text_color,
 )
 
-HIGHLIGHT = "#ffd24a"  # gold edge on the current sample's champion path
+HIGHLIGHT = "#ffd24a"          # gold edge on live (still-spinning) slots
+LIVE_FILL = (0.32, 0.30, 0.36)  # neutral slate for live slots
 
 
 def collect_sample_brackets(
@@ -97,43 +100,30 @@ def collect_sample_brackets(
     return samples
 
 
-def _frame_schedule(n: int) -> list[int]:
-    """Sample counts to render: dense early (noisy), sparse late (settled)."""
-    cps = set(range(1, min(n, 30) + 1))
-    cps.update(range(30, min(n, 100) + 1, 5))
-    cps.update(range(100, n + 1, 20))
-    cps.add(n)
-    return sorted(cps)
+def load_modal(slot_csv) -> tuple[dict[str, str], dict[str, float]]:
+    """Per-slot modal team_id and its probability, from the canonical 10M CSV."""
+    df = pl.read_csv(slot_csv)
+    modal: dict[str, str] = {}
+    pmodal: dict[str, float] = {}
+    for sid, sub in df.group_by("slot_id"):
+        best = sub.sort("prob", descending=True).row(0, named=True)
+        modal[sid[0]] = best["team_id"]
+        pmodal[sid[0]] = best["prob"]
+    return modal, pmodal
 
 
-def build_frames(
-    samples: list[dict[str, str]], id_by_slot: dict[str, str]
-) -> list[tuple[int, dict[str, tuple[str, float]], dict[str, str]]]:
-    """Precompute (k, top-per-slot, current-sample-bracket) for each rendered frame."""
-    counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
-    schedule = set(_frame_schedule(len(samples)))
-    frames = []
-    for i, b in enumerate(samples, start=1):
-        for sid, team in b.items():
-            counts[sid][team] += 1
-        if i in schedule:
-            top = {}
-            for sid, c in counts.items():
-                team, cnt = max(c.items(), key=lambda kv: kv[1])
-                top[sid] = (id_by_slot[team], cnt / i)
-            frames.append((i, top, b))
-    return frames
-
-
-def render_gif(
-    frames,
-    geom: BracketGeometry,
+def render_freeze_gif(
+    samples: list[dict[str, str]],
+    modal: dict[str, str],
+    pmodal: dict[str, float],
     id_by_slot: dict[str, str],
+    geom: BracketGeometry,
     out_path,
-    n_total: int,
     fps: int,
     subtitle: str,
 ) -> None:
+    n_frames = len(samples)
+    floor = min(pmodal.values()) * 0.97  # so the least-certain slot freezes at the end
     fig, ax = plt.subplots(figsize=(11.5, 8))
     fig.patch.set_facecolor(BG)
 
@@ -146,10 +136,10 @@ def render_gif(
         )
         return xy(col, y)
 
-    def draw(frame_idx: int) -> None:
-        k, top, sample = frames[frame_idx]
-        champ = sample[f"W{FINAL_MID}"]
-        champ_path = {sid for sid, team in sample.items() if team == champ}
+    def draw(fi: int) -> None:
+        t = fi / (n_frames - 1) if n_frames > 1 else 1.0
+        threshold = 1.0 - t * (1.0 - floor)
+        sample = samples[fi]
 
         ax.clear()
         ax.set_facecolor(BG)
@@ -158,7 +148,6 @@ def render_gif(
         ax.invert_yaxis()
         ax.axis("off")
 
-        # connectors
         for mid in geom.stage:
             wx, wy = xy(*geom.winner_pos(mid))
             for kind, fmid, ab in geom.feeder_slots(mid):
@@ -172,36 +161,38 @@ def render_gif(
                     zorder=1,
                 )
 
+        live = 0
+
         def box(sid: str, col: int, y: float, hero: bool) -> None:
-            team, prob = top.get(sid, ("", 0.0))
+            nonlocal live
             cx, cy = xy(col, y)
-            face = SEQ_CMAP(prob)
-            on_path = sid in champ_path
+            p = pmodal.get(sid, 0.0)
+            if p >= threshold:  # frozen -> modal team, calm glow
+                team, face, alpha = modal.get(sid, ""), SEQ_CMAP(p), 0.35 + 0.65 * p
+                edge = "white" if hero else "#cfcfcf"
+                lw, label, tcol = (1.6 if hero else 0.6), f"{team} {p * 100:.0f}%", _text_color(face, alpha)
+            else:  # live -> current sample's team, gold edge
+                live += 1
+                team, face, alpha = id_by_slot[sample[sid]], LIVE_FILL, 1.0
+                edge, lw, label, tcol = HIGHLIGHT, 1.8, team, "#f5f5f5"
             ax.add_patch(
                 FancyBboxPatch(
                     (cx - BOX_W / 2, cy - BOX_H / 2),
                     BOX_W,
                     BOX_H,
                     boxstyle="round,pad=0.02,rounding_size=0.12",
-                    linewidth=2.2 if on_path else (1.4 if hero else 0.5),
-                    edgecolor=HIGHLIGHT if on_path else ("white" if hero else "#cfcfcf"),
+                    linewidth=lw,
+                    edgecolor=edge,
                     facecolor=face,
-                    alpha=0.35 + 0.65 * prob,
+                    alpha=alpha,
                     zorder=3,
                 )
             )
-            if prob > 0:
-                ax.text(
-                    cx,
-                    cy,
-                    f"{team} {prob * 100:.0f}%",
-                    ha="center",
-                    va="center",
-                    fontsize=9 if hero else 6.5,
-                    color=_text_color(face, 0.35 + 0.65 * prob),
-                    fontweight="bold" if hero else "normal",
-                    zorder=4,
-                )
+            ax.text(
+                cx, cy, label, ha="center", va="center",
+                fontsize=8 if hero else 6.2, color=tcol,
+                fontweight="bold" if hero else "normal", zorder=4,
+            )
 
         for mid in geom.leaf_order:
             for ab in ("a", "b"):
@@ -209,15 +200,22 @@ def render_gif(
         for mid in geom.stage:
             box(f"W{mid}", *geom.winner_pos(mid), hero=(mid == FINAL_MID))
 
+        champ_sid = f"W{FINAL_MID}"
+        champ = (
+            modal[champ_sid]
+            if pmodal.get(champ_sid, 0.0) >= threshold
+            else id_by_slot[sample[champ_sid]]
+        )
+        status = "settled" if live == 0 else f"{live} slots still live"
         ax.set_title(
-            f"{k:,} of {n_total:,} simulated tournaments\n{subtitle}",
+            f"Simulating the knockouts — {status}\n"
+            f"champion: {champ}   ·   {subtitle}",
             fontsize=12,
             color="white",
             pad=12,
         )
 
-    # Hold the converged final frame for a beat.
-    order = list(range(len(frames))) + [len(frames) - 1] * max(1, fps)
+    order = list(range(n_frames)) + [n_frames - 1] * max(1, 2 * fps)  # hold the result
     ani = animation.FuncAnimation(fig, draw, frames=order, interval=1000 // fps)
     ani.save(out_path, writer=animation.PillowWriter(fps=fps))
     plt.close(fig)
@@ -226,29 +224,33 @@ def render_gif(
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--conditional", action="store_true")
-    parser.add_argument("--n-samples", type=int, default=300)
-    parser.add_argument("--fps", type=int, default=7)
+    parser.add_argument("--n-frames", type=int, default=72)
+    parser.add_argument("--fps", type=int, default=6)
     args = parser.parse_args()
 
+    out_dir = config.OUTPUTS_CONDITIONAL if args.conditional else config.OUTPUTS
     plot_dir = config.PLOTS_CONDITIONAL if args.conditional else config.PLOTS
     plot_dir.mkdir(parents=True, exist_ok=True)
+    slot_csv = out_dir / "bracket_slot_probabilities.csv"
+    if not slot_csv.exists():
+        cond = " --conditional" if args.conditional else ""
+        raise SystemExit(f"{slot_csv} not found. Run `wc26-simulate{cond}` first.")
+
     teams_csv = config.TEAMS_CONDITIONAL_CSV if args.conditional else config.TEAMS_CSV
     teams = load_data.load_teams(teams_csv)
     results = load_data.load_results() if args.conditional else None
     id_by_slot = {r["group_slot"]: r["team_id"] for r in teams.iter_rows(named=True)}
 
-    samples = collect_sample_brackets(teams, results, args.n_samples, config.SEED)
-    frames = build_frames(samples, id_by_slot)
+    modal, pmodal = load_modal(slot_csv)
+    samples = collect_sample_brackets(teams, results, args.n_frames, config.SEED)
     geom = BracketGeometry(load_data.load_knockout_slots())
     sns.set_style("dark")
-    subtitle = (
-        "conditional on played results" if args.conditional else "pre-tournament"
+    subtitle = "conditional on played results" if args.conditional else "pre-tournament"
+    out_path = plot_dir / "bracket_freeze.gif"
+    render_freeze_gif(
+        samples, modal, pmodal, id_by_slot, geom, out_path, args.fps, subtitle
     )
-    out_path = plot_dir / "bracket_convergence.gif"
-    render_gif(
-        frames, geom, id_by_slot, out_path, args.n_samples, args.fps, subtitle
-    )
-    print(f"Wrote {out_path} ({len(frames)} frames)")
+    print(f"Wrote {out_path} ({args.n_frames} frames)")
 
 
 if __name__ == "__main__":
