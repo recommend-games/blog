@@ -90,9 +90,9 @@ def main() -> None:
     schedule = _batch_schedule(args.total, args.n_frames)
     counts_seq = [np.bincount(stream[:n], minlength=len(p))[disp].astype(float) for n in schedule]
     final_counts = counts_seq[-1]
-    xmax = final_counts.max() * 1.16
+    xmax = final_counts.max() * 1.22  # headroom so the leader's flag + % don't clip
     gap = xmax * 0.012
-    flag_h_c = 0.62
+    flag_h_c = 0.55
     disp_order = list(np.argsort(final_counts, kind="stable"))
     palette = [SEQ_CMAP(x) for x in np.linspace(0.78, 0.12, TOP_N)]
     bar_colour = [palette[r] for r in range(TOP_N)][::-1]
@@ -100,7 +100,10 @@ def main() -> None:
     sns.set_style("dark")
     subtitle = "conditional on played results" if args.conditional else "pre-tournament"
     fig = plt.figure(figsize=(16, 9), facecolor=BG)
-    gs = fig.add_gridspec(1, 2, width_ratios=[1.8, 1], wspace=0.04)
+    # Symmetric tight margins; wspace leaves room for the counter's team labels
+    # so they don't overlap the bracket's champion box.
+    gs = fig.add_gridspec(1, 2, width_ratios=[1.7, 1], wspace=0.10,
+                          left=0.010, right=0.988, top=0.90, bottom=0.025)
     axL = fig.add_subplot(gs[0])
     axR = fig.add_subplot(gs[1])
     fig.suptitle(
@@ -121,7 +124,7 @@ def main() -> None:
         sample = samples[fi]
         axL.clear()
         axL.set_facecolor(BG)
-        axL.set_xlim(-BOX_W, 5 * COL_W + BOX_W)
+        axL.set_xlim(-BOX_W * 0.52, 5 * COL_W + BOX_W * 0.7)  # near flush-left
         axL.set_ylim(-1, geom.n_rows)
         axL.invert_yaxis()
         axL.axis("off")
