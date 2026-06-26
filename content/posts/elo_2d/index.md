@@ -28,7 +28,7 @@ TODO (before publish — fill in once the group stage concludes):
 
 The group stage is over, the Round of 32 is set and seventy-two matches have quietly rearranged everything I told you three weeks ago. ⚽️
 
-When I [ran the numbers before kickoff]({{<ref "posts/elo_2c/index.md">}}) the model had a bold, market-contrarian opinion: 🇪🇸 Spain to win it at 35.3%, 🇦🇷 Argentina second at 23.1% and both *dramatically* underpriced by the bookies — Spain's +19.3pp edge over Polymarket was the strongest disagreement between maths and money I'd ever put on this blog. I promised I'd come back on the other side of the trophy ceremony to find out whether the model deserved its confidence.
+When I [ran the numbers before kickoff]({{<ref "posts/elo_2c/index.md">}}) the model had a bold, market-contrarian opinion: 🇪🇸 Spain to win it at 35.3%, 🇦🇷 Argentina second at 23.0% and both *dramatically* underpriced by the bookies — Spain's +19.3pp edge over Polymarket was the strongest disagreement between maths and money I'd ever put on this blog. I promised I'd come back on the other side of the trophy ceremony to find out whether the model deserved its confidence.
 
 This is not that piece. Consider it the half-time team-talk: an unscheduled check-in I hadn't planned to write, prompted by the fact that two weeks of actual football have done something the ten million pre-tournament simulations didn't — they've made the model change its own mind. 🇪🇸 Spain are no longer the favourite. 🇦🇷 Argentina are. Before we get to *why*, let's do the honest thing and grade the homework.
 
@@ -76,13 +76,13 @@ The effect on the title race is dramatic:
 
 | Team | Pre-tournament | Now |
 |:-----|---------------:|----:|
-| 🇦🇷 Argentina | 23.1% | **34.4%** |
+| 🇦🇷 Argentina | 23.0% | **34.4%** |
 | 🇪🇸 Spain | 35.3% | **24.8%** |
 | 🇫🇷 France | 12.7% | 16.0% |
 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | 6.0% | 5.3% |
 | 🇨🇴 Colombia | 3.3% | 3.9% |
 | 🇵🇹 Portugal | 3.5% | 3.0% |
-| 🇧🇷 Brazil | 3.8% | 2.3% |
+| 🇧🇷 Brazil | 3.9% | 2.3% |
 
 <!-- TODO: refresh this whole table off the 72-result run. -->
 
@@ -96,7 +96,7 @@ Both did. They're converging.
 
 | Team | Model now | Market now | Edge now | *(Edge pre-tournament)* |
 |:-----|----------:|-----------:|---------:|------------------------:|
-| 🇦🇷 Argentina | 34.4% | 14.1% | **+20.3pp** | *(+14.8pp)* |
+| 🇦🇷 Argentina | 34.4% | 14.1% | **+20.3pp** | *(+14.7pp)* |
 | 🇪🇸 Spain | 24.8% | 13.8% | **+11.0pp** | *(+19.3pp)* |
 | 🇫🇷 France | 16.0% | 18.7% | −2.7pp | *(−2.9pp)* |
 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | 5.3% | 10.7% | −5.4pp | *(−4.5pp)* |
