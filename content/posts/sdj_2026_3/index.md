@@ -67,6 +67,10 @@ The good people at [Five Games For Doomsday](https://www.youtube.com/@FiveGamesF
 
 {{< youtube c7xuOtguInw >}}
 
+And the jury's own clip:
+
+{{< youtube 1Et5f5sT3M0 >}}
+
 <!-- TODO Markus: personal take / play impression, and whether the "stickers as consumable" angle bothers you -->
 
 
@@ -79,6 +83,10 @@ The good people at [Five Games For Doomsday](https://www.youtube.com/@FiveGamesF
 *A party game of associations: try to match other players' answers without giving anything away.*
 
 The party game of the bunch, and the one carrying the strongest "internationalisation of the hobby" storyline: designer [Martin Ang](https://recommend.games/#/?designer=121032) is the CEO of Tabletoys Indonesia, so after last year's first {{% sdj %}}SdJ{{% /sdj %}} win for Japan, Indonesia could be next. {{% sdj / %}} has rewarded clever, accessible association and communication games before – {{% game 254640 %}}Just One{{% /game %}} springs to mind – which makes this a natural fit for the award's profile.
+
+The jury's own clip (under its German title *Dito!*):
+
+{{< youtube 3l2RbN5Bfcs >}}
 
 <!-- TODO Markus: personal take / BGA impression, and how it compares to Just One / other party winners -->
 <!-- TODO 5G4D: no JinxO designer interview published yet — embed {{</* youtube ID */>}} once it's up: https://www.youtube.com/@FiveGamesForDoomsday -->
@@ -99,6 +107,7 @@ The headline here is the designer: [Markus Slawitscheck](https://recommend.games
 {{< youtube M7pW2dyy14o >}}
 
 <!-- TODO Markus: personal take; note it's barely in the R.G database -->
+<!-- TODO clip: SdJ jury clip for Morty Sorty not posted yet — embed {{</* youtube ID */>}} once it lands: https://www.youtube.com/user/spieldesjahres/videos -->
 
 
 ### Who will win?
@@ -133,6 +142,7 @@ The highest raw BGG average of any nominee across both awards (8.1), and a co-op
 
 <!-- TODO Markus: personal take; the app/QR gimmick — boon or red flag for a jury that prizes Kulturgut Spiel? -->
 <!-- TODO 5G4D: no Boss Fighters QR designer interview published yet — embed {{</* youtube ID */>}} once it's up: https://www.youtube.com/@FiveGamesForDoomsday -->
+<!-- TODO clip: SdJ jury clip for Boss Fighters QR not posted yet — embed {{</* youtube ID */>}} once it lands: https://www.youtube.com/user/spieldesjahres/videos -->
 
 
 ### {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}}
@@ -144,6 +154,10 @@ The highest raw BGG average of any nominee across both awards (8.1), and a co-op
 *Whatever can go wrong will go wrong. Players compete to keep their colonists alive.*
 
 Both the theme and the mechanisms are fairly divisive, which makes this the wildcard of the {{% kdj %}}Kennerspiel{{% /kdj %}} field. The strong Bayesian rating (6.9) shows the dedicated fans rate it highly, but a 14+ age rating and a gleefully grim premise are an awkward fit for an award meant to broaden the hobby's appeal.
+
+The jury's own clip:
+
+{{< youtube uPaB4veAIyw >}}
 
 <!-- TODO Markus: personal take; is the dark theme a dealbreaker for the jury, à la the usual Kulturgut argument? -->
 <!-- TODO 5G4D: no Moon Colony Bloodbath designer interview published yet — embed {{</* youtube ID */>}} once it's up: https://www.youtube.com/@FiveGamesForDoomsday -->
@@ -158,6 +172,10 @@ Both the theme and the mechanisms are fairly divisive, which makes this the wild
 *Rebuild old lands in a lush, hopeful future.*
 
 The frontrunner by almost every measure, and the one nomination [my predictions]({{<ref "posts/sdj_2026/index.md">}}) and the algorithm agreed on completely. On top of the numbers, there's the storyline: this is [Reiner Knizia](https://recommend.games/#/?designer=2)'s chance to complete the triple after his {{% kdj %}}Kennerspiel{{% /kdj %}}/{{% sdj %}}Spiel{{% /sdj %}} double back in 2008. A hopeful, accessible tile-layer from the most decorated designer in the award's history is about as on-brand a {{% kdj %}}Kennerspiel{{% /kdj %}} winner as you could script.
+
+The jury's own clip:
+
+{{< youtube J_UpbAUFtx0 >}}
 
 <!-- TODO Markus: personal take / play impression -->
 <!-- TODO 5G4D: no Rebirth/Knizia designer interview published yet — embed {{</* youtube ID */>}} once it's up: https://www.youtube.com/@FiveGamesForDoomsday -->
