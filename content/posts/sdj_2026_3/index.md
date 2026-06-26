@@ -177,26 +177,41 @@ New this year: I'm finally throwing my hat into the {{% kindersdj %}}Kinderspiel
 
 ### {{% game 454722 %}}Boo Party{{% /game %}}
 
-*2–6 players, 10–15 minutes, 5+ years*
+*2–6 players, 10–15 minutes, 5+ years, light (1.0)*
 
-<!-- TODO image: drop the Boo Party box art in as 454722.jpg in this post dir, then add {{</* img src="454722" size="x300" alt="Boo Party" */>}}. BGG's XML API is now auth-walled, so I couldn't pull it automatically. -->
-<!-- TODO Markus: tagline + personal take -->
+{{< img src="454722" size="x300" alt="Boo Party" >}}
+
+*Monsters are hiding among the costumes – can you unmask them?*
+
+A hidden-roles party game for up to six little ones, co-designed by [Florian Sirieix](https://recommend.games/#/?designer=78797) and Benoit Turpin. It's the broadest, most boisterous of the three nominees and the only one that scales past two players, which makes it a natural crowd-pleaser at a kids' table.
+
+<!-- TODO Markus: personal take -->
 
 
 ### {{% game 435346 %}}Mooki Island{{% /game %}}
 
 *2 players, 10 minutes, 4+ years, light (1.0)*
 
-<!-- TODO image: drop the Mooki Island box art in as 435346.jpg in this post dir, then add {{</* img src="435346" size="x300" alt="Mooki Island" */>}}. -->
-<!-- TODO Markus: tagline + personal take -->
+{{< img src="435346" size="x300" alt="Mooki Island" >}}
+
+*Collect the most adorable Mookies to win trophies.*
+
+A quick, strictly two-player collecting game and the second nomination for [Florian Sirieix](https://recommend.games/#/?designer=78797) – making him the designer to watch in this category, with two of the three nominees to his name. At 4+ it's also the most accessible of the bunch, and the 'geeks rate it the most reliably (143 votes, 7.2 average).
+
+<!-- TODO Markus: personal take -->
 
 
 ### {{% game 420360 %}}Mimose & Sam{{% /game %}}
 
-<!-- TODO Markus: stat line — Mimose & Sam (et le voleur de fruits) isn't in predictions.csv (too new, no BGG data) and the BGG API is auth-walled, so I have no players/time/age/complexity figures. Fill these in from the box or spiel-des-jahres.de. -->
+*2–4 players, 15–20 minutes, 5+ years, light (1.0)*
 
-<!-- TODO image: drop the Mimose & Sam box art in as 420360.jpg in this post dir, then add {{</* img src="420360" size="x300" alt="Mimose & Sam" */>}}. -->
-<!-- TODO Markus: tagline + personal take -->
+{{< img src="420360" size="x300" alt="Mimose & Sam" >}}
+
+*Someone is stealing the fruit – a one-vs-all deduction game for kids.*
+
+A one-vs-all deduction game by [Thomas Dagenais-Lespérance](https://recommend.games/#/?designer=82239), originally a French release (*Mimose & Sam et le voleur de fruits*). It's the highest-rated of the three on BoardGameGeek (7.8 average), albeit on a thin 45 votes, and the asymmetric hunt for the fruit thief gives it a bit more structure than its rivals.
+
+<!-- TODO Markus: personal take -->
 
 
 ### Who will win?
