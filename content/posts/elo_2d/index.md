@@ -64,6 +64,8 @@ Before the tournament I could only show you a probability *cloud* — the modal 
 
 {{< img src="knockout_bracket" alt="The 2026 World Cup knockout bracket from the Round of 32 to the final; each slot shows the team most likely to fill it and how often it does across ten million simulations" >}}
 
+{{< video src="bracket_and_counter" alt="Animation of the simulated brackets freezing into the predicted average while the title-win counter fills in" >}}
+
 The shape matters more than it did pre-tournament, because position is now destiny. <!-- TODO: write this paragraph against the REAL bracket once groups conclude. Cover: who drew the kind path, which half each of Argentina/Spain/France landed in, whether the two favourites can now meet before the final (pre-tournament they could only collide IN the final), and how the host nations' brackets resolved. --> The headline question is whether 🇦🇷 Argentina and 🇪🇸 Spain are still kept apart until a possible final, or whether the group results have thrown them into the same half — because that single fact moves the title numbers below as much as any change in form.
 
 ## Ten million tournaments, conditioned this time
