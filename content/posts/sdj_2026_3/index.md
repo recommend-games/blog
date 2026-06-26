@@ -185,6 +185,10 @@ New this year: I'm finally throwing my hat into the {{% kindersdj %}}Kinderspiel
 
 A hidden-roles party game for up to six little ones, co-designed by [Florian Sirieix](https://recommend.games/#/?designer=78797) and Benoit Turpin. It's the broadest, most boisterous of the three nominees and the only one that scales past two players, which makes it a natural crowd-pleaser at a kids' table.
 
+The jury's own clip for the little ones:
+
+{{< youtube 1wM3uIEjslA >}}
+
 <!-- TODO Markus: personal take -->
 
 
@@ -197,6 +201,10 @@ A hidden-roles party game for up to six little ones, co-designed by [Florian Sir
 *Collect the most adorable Mookies to win trophies.*
 
 A quick, strictly two-player collecting game and the second nomination for [Florian Sirieix](https://recommend.games/#/?designer=78797) – making him the designer to watch in this category, with two of the three nominees to his name. At 4+ it's also the most accessible of the bunch, and the 'geeks rate it the most reliably (143 votes, 7.2 average).
+
+The jury's own clip:
+
+{{< youtube EzhJcgO4_-8 >}}
 
 <!-- TODO Markus: personal take -->
 
@@ -211,14 +219,16 @@ A quick, strictly two-player collecting game and the second nomination for [Flor
 
 A one-vs-all deduction game by [Thomas Dagenais-Lespérance](https://recommend.games/#/?designer=82239), originally a French release (*Mimose & Sam et le voleur de fruits*). It's the highest-rated of the three on BoardGameGeek (7.8 average), albeit on a thin 45 votes, and the asymmetric hunt for the fruit thief gives it a bit more structure than its rivals.
 
+<!-- TODO clip: the SdJ channel hasn't posted the Mimose & Sam clip yet (Boo Party and Mooki Island are already up). German edition is "Verflixt Verzaubert" — re-run the channel search under that title and embed {{</* youtube ID */>}} once it lands. -->
 <!-- TODO Markus: personal take -->
 
 
 ### Who will win?
 
-<!-- TODO Markus: both of these are yours to supply — I can't fabricate either:
-     1. The prediction "method/idea" you teased once the nominations were out — describe it here.
-     2. Your daughters' pick (you said you'd solicit their advice this year). 🥰 -->
+Which brings me to my secret weapon for this category. Forget the recommendation scores and the Bayesian ratings – the most predictive model I have access to are my own two daughters. The plan is wonderfully simple: I'll show them the clips above and let them pick the game they're most excited about. Honestly, I'd back their verdict over any of my algorithms any day of the week. 🥰
+
+<!-- TODO Markus: the verdict — once the girls have watched the clips, name their pick. -->
+
 
 
 ## Who will win?
