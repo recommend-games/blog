@@ -170,11 +170,40 @@ The frontrunner by almost every measure, and the one nomination [my predictions]
 
 ## And the little ones: {{% kindersdj %}}Kinderspiel des Jahres 2026{{% /kindersdj %}}
 
-<!-- TODO Markus: this is the new bit you teased in the predictions and nominations articles. Needs:
-     1. The three KinderSdJ nominees (with game shortcodes + stat lines + images via asset-links).
-     2. The prediction "idea" you mentioned having once the nominations were out — describe the method.
-     3. Your daughters' favourite (you said you'd solicit their advice this year). 🥰
-     Leaving this as a stub until those inputs are ready. -->
+{{< img src="kindersdj-2026" size="x300" alt="Kinderspiel des Jahres 2026" >}}
+
+New this year: I'm finally throwing my hat into the {{% kindersdj %}}Kinderspiel des Jahres{{% /kindersdj %}} ring as well. The jury nominated three games for the children's award: {{% game 454722 %}}Boo Party{{% /game %}}, {{% game 435346 %}}Mooki Island{{% /game %}} and {{% game 420360 %}}Mimose & Sam{{% /game %}}. The usual data is even thinner here than on the grown-up tables – children's games barely register on BoardGameGeek and the `S_d_J` recommendation model isn't trained for them – so this category comes down far more to gut feeling, with a second opinion this year from the household's resident experts. 🥰
+
+
+### {{% game 454722 %}}Boo Party{{% /game %}}
+
+*2–6 players, 10–15 minutes, 5+ years*
+
+<!-- TODO image: drop the Boo Party box art in as 454722.jpg in this post dir, then add {{</* img src="454722" size="x300" alt="Boo Party" */>}}. BGG's XML API is now auth-walled, so I couldn't pull it automatically. -->
+<!-- TODO Markus: tagline + personal take -->
+
+
+### {{% game 435346 %}}Mooki Island{{% /game %}}
+
+*2 players, 10 minutes, 4+ years, light (1.0)*
+
+<!-- TODO image: drop the Mooki Island box art in as 435346.jpg in this post dir, then add {{</* img src="435346" size="x300" alt="Mooki Island" */>}}. -->
+<!-- TODO Markus: tagline + personal take -->
+
+
+### {{% game 420360 %}}Mimose & Sam{{% /game %}}
+
+<!-- TODO Markus: stat line — Mimose & Sam (et le voleur de fruits) isn't in predictions.csv (too new, no BGG data) and the BGG API is auth-walled, so I have no players/time/age/complexity figures. Fill these in from the box or spiel-des-jahres.de. -->
+
+<!-- TODO image: drop the Mimose & Sam box art in as 420360.jpg in this post dir, then add {{</* img src="420360" size="x300" alt="Mimose & Sam" */>}}. -->
+<!-- TODO Markus: tagline + personal take -->
+
+
+### Who will win?
+
+<!-- TODO Markus: both of these are yours to supply — I can't fabricate either:
+     1. The prediction "method/idea" you teased once the nominations were out — describe it here.
+     2. Your daughters' pick (you said you'd solicit their advice this year). 🥰 -->
 
 
 ## Who will win?
