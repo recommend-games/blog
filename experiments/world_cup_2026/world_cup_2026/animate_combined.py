@@ -50,9 +50,10 @@ PANEL = "#242128"  # counter panel, a touch lighter than the bracket canvas
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--conditional", action="store_true")
-    parser.add_argument("--n-frames", type=int, default=110)
+    parser.add_argument("--n-frames", type=int, default=150)
     parser.add_argument("--total", type=int, default=100_000)
-    parser.add_argument("--fps", type=int, default=10)
+    parser.add_argument("--fps", type=int, default=15)
+    parser.add_argument("--format", choices=["webm", "gif"], default="webm")
     args = parser.parse_args()
 
     out_dir = config.OUTPUTS_CONDITIONAL if args.conditional else config.OUTPUTS
@@ -203,10 +204,20 @@ def main() -> None:
 
     order = list(range(args.n_frames)) + [args.n_frames - 1] * (2 * args.fps)
     ani = animation.FuncAnimation(fig, draw, frames=order, interval=1000 // args.fps)
-    out_path = plot_dir / "bracket_and_counter.gif"
-    ani.save(out_path, writer=animation.PillowWriter(fps=args.fps))
+    if args.format == "webm":
+        # VP9, constant-quality (crf, b:v 0); yuv420p for browser compatibility.
+        writer = animation.FFMpegWriter(
+            fps=args.fps, codec="libvpx-vp9",
+            extra_args=["-b:v", "0", "-crf", "30", "-pix_fmt", "yuv420p",
+                        "-row-mt", "1", "-deadline", "good", "-cpu-used", "2"],
+        )
+        out_path = plot_dir / "bracket_and_counter.webm"
+    else:
+        writer = animation.PillowWriter(fps=args.fps)
+        out_path = plot_dir / "bracket_and_counter.gif"
+    ani.save(out_path, writer=writer)
     plt.close(fig)
-    print(f"Wrote {out_path} ({args.n_frames} frames)")
+    print(f"Wrote {out_path} ({args.n_frames} frames @ {args.fps}fps)")
 
 
 def _slots(geom: BracketGeometry):
