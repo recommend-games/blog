@@ -67,9 +67,11 @@ There's no single lesson here beyond the obvious one the [snooker write-ups]({{<
 
 In [part 2c]({{<ref "posts/elo_2c/index.md">}}) you watched ten million *imagined* brackets blur into an average — a probability cloud hovering over a knockout draw that didn't exist yet. Now the draw is real: the group winners and runners-up are settled, the eight best third-placed teams slot in, and the same animation runs again — except this time the entrants are fact rather than forecast, and only the knockout rounds are still being simulated.
 
-{{< img src="knockout_bracket" alt="The 2026 World Cup knockout bracket from the Round of 32 to the final; each slot shows the team most likely to fill it and how often it does across ten million simulations" >}}
-
 {{< video src="bracket_and_counter" alt="Animation of the simulated brackets freezing into the predicted average while the title-win counter fills in" >}}
+
+Here is the left-hand panel of that animation, frozen for inspection:
+
+{{< img src="knockout_bracket" alt="The 2026 World Cup knockout bracket from the Round of 32 to the final; each slot shows the team most likely to fill it and how often it does across ten million simulations" >}}
 
 And the shape is unkind to 🇪🇸 Spain. 🇦🇷 Argentina and 🇪🇸 Spain are still in opposite halves — they cannot meet before the final — but 🇫🇷 France, the surprise package of the group stage, has landed in 🇪🇸 Spain's half. The top half is now a two-heavyweight pile-up: 🇪🇸 Spain reach the final from there about 40% of the time and 🇫🇷 France about 38%, which means one of them most likely knocks the other out in the semis. 🇦🇷 Argentina, by contrast, has the run of a far softer bottom half — 57% to reach the final, with 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England a distant next at 10%. That single asymmetry — France stacked on top of Spain, Argentina with daylight — is most of why the model now makes 🇦🇷 Argentina the favourite. <!-- TODO: re-confirm the halves and these reach-final percentages once Groups J/K/L finish -->
 
@@ -90,6 +92,10 @@ The effect on the title race is dramatic:
 | 🇵🇹 Portugal | 3.5% | 2.3% |
 
 <!-- TODO: refresh this whole table off the 72-result run. -->
+
+That counter piling up on the right of the animation settles, after all ten million runs, into the model's current pecking order:
+
+{{< img src="title_probabilities" alt="Horizontal bar chart of the top 15 teams by conditional title probability, led by Argentina with Spain and France close behind" >}}
 
 The favourite swap is only half the story now. 🇦🇷 Argentina overtaking 🇪🇸 Spain at the top was already the headline at the last check-in; what's new is 🇫🇷 France. Pre-tournament France were a distant third at 12.7%; they've since rocketed to **22.1%**, close enough to breathe on 🇪🇸 Spain's 24.6% for second place. So the podium has gone from "Spain, daylight, Argentina, daylight, the chasing pack" to a genuine three-horse race — 🇦🇷 Argentina out front around a third, then 🇪🇸 Spain and 🇫🇷 France all but level behind. Spain didn't so much collapse as get caught: the serene, group-of-death-free procession the rating projected in June has met both some real on-pitch resistance and, as the bracket just showed, 🇫🇷 France parked squarely in its half.
 
@@ -112,6 +118,10 @@ Both did. They're converging.
      columns used in parts 2b/2c (model_decimal_odds, market_decimal_odds). -->
 
 > **Disclaimer**: This section discusses betting odds for the purpose of statistical comparison and analysis. It is not intended to promote gambling or serve as betting advice. Please gamble responsibly and be aware of your local laws and age restrictions.
+
+And the same picture plotted log-log, so the disagreements stand out:
+
+{{< img src="market_vs_model" alt="Log-log scatter of conditional model versus Polymarket title probabilities, with the diagonal marked and the biggest disagreements labelled" >}}
 
 Look at 🇪🇸 Spain. The famous +19.3pp edge has shrunk to +12.4pp — and it shrank from *both ends*: the model cooled on Spain (35.3% → 24.6%) and so did the market (16.0% → 12.2%), meeting partway. That's the healthiest possible outcome for a disagreement: not one side capitulating, but two independent forecasters watching the same football and drifting toward each other.
 
