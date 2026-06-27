@@ -144,7 +144,7 @@ The same simulation also has things to say about who got lucky in the draw. Comp
 
 Most teams sit on the diagonal — the draw doesn't help or hurt them much. The visible movers, in roughly descending order of effect: **🇲🇽 Mexico** jumps two spots, from 18th by Elo to 16th by title probability, on the back of the +100 host bonus and a friendly Group A. **🇹🇷 Turkey** and **🇯🇵 Japan** also climb thanks to favourable bracket positions. On the other side, **🇦🇹 Austria** and **🇩🇿 Algeria** drop three spots each by sharing a group with 🇦🇷 Argentina, and **🇭🇷 Croatia** and **🇺🇾 Uruguay** give back a couple of places by sharing groups with 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England and 🇪🇸 Spain respectively — the strongest teams in their halves of the bracket.
 
-A note on the long tail. Eight of the 48 teams won zero of the ten million simulated tournaments — 🇨🇻 Cape Verde, 🇸🇦 Saudi Arabia, 🇳🇿 New Zealand, 🇭🇹 Haiti, 🇿🇦 South Africa, 🇬🇭 Ghana, 🇨🇼 Curaçao and 🇶🇦 Qatar. The model isn't *literally* saying their chances are zero; it's saying that with this Elo, this draw and a ten-million-tournament resolution, no simulation happened to produce a title run. The true probability is genuinely tiny — somewhere between "lottery ticket" and "asteroid".
+A note on the long tail. Eight of the 48 teams won zero of the ten million simulated tournaments — 🇮🇶 Iraq, 🇸🇦 Saudi Arabia, 🇳🇿 New Zealand, 🇭🇹 Haiti, 🇿🇦 South Africa, 🇬🇭 Ghana, 🇨🇼 Curaçao and 🇶🇦 Qatar. The model isn't *literally* saying their chances are zero; it's saying that with this Elo, this draw and a ten-million-tournament resolution, no simulation happened to produce a title run. The true probability is genuinely tiny — somewhere between "lottery ticket" and "asteroid".
 
 ### Hosts, briefly
 
