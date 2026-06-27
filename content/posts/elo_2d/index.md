@@ -75,6 +75,33 @@ Here is the left-hand panel of that animation, frozen for inspection:
 
 And the shape is unkind to 🇪🇸 Spain. 🇦🇷 Argentina and 🇪🇸 Spain are still in opposite halves — they cannot meet before the final — but 🇫🇷 France, the surprise package of the group stage, has landed in 🇪🇸 Spain's half. The top half is now a two-heavyweight pile-up: 🇪🇸 Spain reach the final from there about 40% of the time and 🇫🇷 France about 38%, which means one of them most likely knocks the other out in the semis. 🇦🇷 Argentina, by contrast, has the run of a far softer bottom half — 57% to reach the final, with 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England a distant next at 10%. That single asymmetry — France stacked on top of Spain, Argentina with daylight — is most of why the model now makes 🇦🇷 Argentina the favourite. <!-- TODO: re-confirm the halves and these reach-final percentages once Groups J/K/L finish -->
 
+## The format is a disgrace, and now I can prove it
+
+Allow me a paragraph of editorial — I think I've earned it. We just played **seventy-two** group matches to send **sixteen** teams home, and bar 🇨🇻 Cape Verde's opening-night ambush almost all of it went to script. Two genuine surprises in three weeks — 🇺🇾 Uruguay and 🇹🇷 Turkey, both odds-on to qualify, both out — and everyone else who was meant to advance, advanced. Three weeks of football to confirm what the ratings already knew in June.
+
+It was also *less competitive* than a World Cup should be, and for once I can put a number on the grumble. A **blow-out** — a win by three goals or more — landed in better than a quarter of this group stage's matches. Across the seven tournaments of the 32-team era, 1998 to 2022, that rate averaged **14.6%** and never once cleared 21%:
+
+| Edition | Group-stage blow-outs (≥3 GD) |
+|:--------|------------------------------:|
+| 1998 | 16.7% |
+| 2002 | 12.5% |
+| 2006 | 14.6% |
+| 2010 | 10.4% |
+| 2014 | 20.8% |
+| 2018 | 16.7% |
+| 2022 | 10.4% |
+| **2026** | **27.3%** |
+
+Nearly **double** the historical norm and clear of every previous edition by a street. Invite twelve more teams who have no business on the same pitch as the elite, and the scoreboards say exactly that.[^blowout-data] <!-- TODO: re-pull the 2026 figure off the final 72-match group stage -->
+
+The tie-break ladder did its own damage, turning a slab of the last round of group games into dead rubbers — or worse, into invitations to collude. As I write this, 🇩🇿 Algeria vs 🇦🇹 Austria is about to kick off in a situation where a tidy 0–1 sends *both* of them through at a third team's expense: a 2026 restaging of the [Disgrace of Gijón](https://en.wikipedia.org/wiki/Disgrace_of_Gij%C3%B3n), West Germany and Austria's infamous 1982 non-aggression pact. A delicious throwback, and deeply unfair on whoever finished their own group two days earlier without that arithmetic in hand.<!-- TODO at publish: Algeria-Austria will have been played by then — update to what actually happened (did they take the 0-1, or play it straight?) --> The [495-row third-place lookup]({{<ref "posts/elo_2c/index.md">}}) added the final indignity — some teams didn't learn *where* or *whom* they would play until 72 hours before kickoff.
+
+And the bracket it spat out — the one up above — is a lottery. A seeded draw exists to keep the best sides apart until the business end; this one does the reverse. **Five of the eight likely Round-of-16 ties pit two top-twelve Elo teams against each other** — 🇪🇸 Spain vs 🇵🇹 Portugal, 🇫🇷 France vs 🇩🇪 Germany, 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs 🇲🇽 Mexico, 🇧🇷 Brazil vs 🇳🇴 Norway, 🇨🇴 Colombia vs 🇨🇭 Switzerland — fixtures a sane bracket saves for the quarter-finals at the earliest. One round sooner still, 🇳🇱 Netherlands draw 🇲🇦 Morocco, a 2022 semi-finalist, in the Round of 32: a last-eight tie demoted to a first-knockout-round coin toss. Half the heavyweights are slated to knock each other out before the thing even feels like it has started. <!-- TODO: re-confirm these ties once Groups J/K/L finish -->
+
+So after three weeks and seventy-two matches, the tournament finally *starts in earnest* — with the strongest thirty-two teams, single elimination. Which is to say it starts exactly where snooker's World Championship and every other event I've ever pointed this model at *began*. We took the scenic route.
+
+For the record: I loathe FIFA's greed and I think 48 teams is a format only an accountant could love. But — and it costs me something to admit it — the bloat does make the *simulation* more fun: more teams, more bracket chaos, more for the model to get spectacularly wrong. A small mercy. I am already, grimly, looking forward to the inevitable 64-team edition.
+
 ## Ten million tournaments, conditioned this time
 
 The engine is the one from [part 2c]({{<ref "posts/elo_2c/index.md">}}): Elo into a fixed-total Poisson, a full group stage under FIFA's tie-break ladder, the 495-row third-place lookup, then the knockouts. Two things are different now. First, the simulation is *conditioned* on reality — every played scoreline is pinned to what actually happened, so the ten million tournaments only branch from the Round of 32 onward.[^conditional] Second, the Elo ratings have been refreshed to absorb three weeks of results, so the inputs themselves have shifted under the model.
@@ -142,3 +169,4 @@ I said in part 2c I'd be back on the other side of the trophy ceremony to find o
 [^conditional]: The simulator's `--conditional` mode pins every played group scoreline to its real result and refreshes the Elo snapshot, then simulates only the still-undecided matches. It writes to a parallel set of files so the frozen pre-tournament forecast from part 2c stays reproducible — the baseline never gets quietly overwritten by mid-tournament data.
 [^elo-source]: As before, ratings come from [eloratings.net](https://eloratings.net/), the established World Football Elo Ratings, refreshed after every international. <!-- TODO: state the exact refreshed snapshot timestamp used for the final run. -->
 [^vig-and-odds]: Decimal odds quote the total return per unit stake including the stake, so fair odds for probability \\(p\\) are exactly \\(1/p\\). Summed across all 48 contracts the market-implied probabilities exceed 100% — the overround is the house's cut. Polymarket's is about 3%; a typical sportsbook is closer to 5–8%. The house always wins.
+[^blowout-data]: Blow-out rates are computed from the [martj42 international-results dataset](https://github.com/martj42/international_results), taking each 32-team World Cup's group stage to be its first 48 matches (8 groups of 4). The 2026 figure is over the 66 group matches played at the time of writing, with the final six still to come in Groups J, K and L.
