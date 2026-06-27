@@ -92,7 +92,7 @@ It was also *less competitive* than a World Cup should be, and for once I can pu
 | 2022 | 10.4% |
 | **2026** | **27.3%** |
 
-Nearly **double** the historical norm and clear of every previous edition by a street. Invite twelve more teams who have no business on the same pitch as the elite, and the scoreboards say exactly that.[^blowout-data] <!-- TODO: re-pull the 2026 figure off the final 72-match group stage -->
+Nearly **double** the historical norm and clear of every previous edition by a street. Invite sixteen more teams who have no business on the same pitch as the elite, and the scoreboards say exactly that.[^blowout-data] <!-- TODO: re-pull the 2026 figure off the final 72-match group stage -->
 
 The tie-break ladder did its own damage, turning a slab of the last round of group games into dead rubbers — or worse, into invitations to collude. As I write this, 🇩🇿 Algeria vs 🇦🇹 Austria is about to kick off in a situation where a tidy 0–1 sends *both* of them through at a third team's expense: a 2026 restaging of the [Disgrace of Gijón](https://en.wikipedia.org/wiki/Disgrace_of_Gij%C3%B3n), West Germany and Austria's infamous 1982 non-aggression pact. A delicious throwback, and deeply unfair on whoever finished their own group two days earlier without that arithmetic in hand.<!-- TODO at publish: Algeria-Austria will have been played by then — update to what actually happened (did they take the 0-1, or play it straight?) --> The [495-row third-place lookup]({{<ref "posts/elo_2c/index.md">}}) added the final indignity — some teams didn't learn *where* or *whom* they would play until 72 hours before kickoff.
 
