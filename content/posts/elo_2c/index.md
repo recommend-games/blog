@@ -106,7 +106,11 @@ Most groups have a familiar shape — two strong teams comfortably through, two 
 
 ## Ten million tournaments later
 
-Now we let the bracket actually play. Here are the top fifteen teams by simulated title probability — the headline answer to "who wins the World Cup?":
+Now we let the bracket actually play — literally. Each frame below is a batch of simulated tournaments: the knockout bracket freezes into its most likely shape while the title-win counter piles up, and after ten million runs it settles on 🇪🇸 Spain.
+
+{{< video src="bracket_and_counter" alt="Animation of ten million simulated tournaments — the knockout bracket freezing into the predicted average while the title-win counter fills in, settling on Spain" >}}
+
+Here are the top fifteen teams by simulated title probability — the headline answer to "who wins the World Cup?":
 
 {{< img src="title_probabilities" alt="Horizontal bar chart of the top 15 teams by simulated title probability, led by 🇪🇸 Spain at 35.3%" >}}
 

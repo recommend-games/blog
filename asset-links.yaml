@@ -565,6 +565,8 @@ links:
     dst: "content/posts/elo_2c/draw_luck.svg"
   - src: "experiments/world_cup_2026/plots/market_vs_model.svg"
     dst: "content/posts/elo_2c/market_vs_model.svg"
+  - src: "experiments/world_cup_2026/plots/bracket_and_counter.webm"
+    dst: "content/posts/elo_2c/bracket_and_counter.webm"
   - src: "experiments/world_cup_2026/outputs/team_probabilities.csv"
     dst: "content/posts/elo_2c/team_probabilities.csv"
   - src: "experiments/world_cup_2026/outputs/group_probabilities.csv"
