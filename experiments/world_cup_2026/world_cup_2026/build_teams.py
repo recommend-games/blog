@@ -15,11 +15,14 @@ and present in the source data, so we avoid maintaining a separate FIFA
 
 from __future__ import annotations
 
+import argparse
 import csv
+from pathlib import Path
 
 from world_cup_2026.config import DATA_PROCESSED, DATA_RAW
 
 OUTPUT = DATA_PROCESSED / "teams.csv"
+WORLD_TSV = DATA_RAW / "eloratings_world.tsv"
 
 # Overrides: FIFA/Wikipedia team name -> eloratings.net name. Populate as
 # mismatches are discovered by running the script.
@@ -60,9 +63,9 @@ def load_elo_name_to_code() -> dict[str, str]:
     return mapping
 
 
-def load_elo_ratings() -> dict[str, int]:
+def load_elo_ratings(world_tsv: Path = WORLD_TSV) -> dict[str, int]:
     ratings: dict[str, int] = {}
-    for line in (DATA_RAW / "eloratings_world.tsv").read_text().splitlines():
+    for line in world_tsv.read_text().splitlines():
         if not line.strip():
             continue
         parts = line.split("\t")
@@ -73,8 +76,23 @@ def load_elo_ratings() -> dict[str, int]:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--world-tsv",
+        type=Path,
+        default=WORLD_TSV,
+        help=f"eloratings.net World.tsv ratings file (default {WORLD_TSV})",
+    )
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=OUTPUT,
+        help=f"Output teams CSV (default {OUTPUT})",
+    )
+    args = parser.parse_args()
+
     name_to_code = load_elo_name_to_code()
-    ratings = load_elo_ratings()
+    ratings = load_elo_ratings(args.world_tsv)
 
     unmatched: list[str] = []
     rows: list[dict] = []
@@ -109,12 +127,12 @@ def main() -> None:
         print(f"UNMATCHED ({len(unmatched)}): {unmatched}")
         raise SystemExit(1)
 
-    DATA_PROCESSED.mkdir(parents=True, exist_ok=True)
-    with OUTPUT.open("w", newline="") as f:
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    with args.output.open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDS)
         writer.writeheader()
         writer.writerows(rows)
-    print(f"Wrote {len(rows)} rows to {OUTPUT}")
+    print(f"Wrote {len(rows)} rows to {args.output}")
 
 
 if __name__ == "__main__":

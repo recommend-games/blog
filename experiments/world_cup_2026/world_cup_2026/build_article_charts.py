@@ -16,6 +16,7 @@ The PNG version of title_probabilities doubles as the post's share image.
 
 from __future__ import annotations
 
+import argparse
 import csv
 from pathlib import Path
 
@@ -24,13 +25,7 @@ import numpy as np
 import seaborn as sns
 from matplotlib.colors import LinearSegmentedColormap
 
-from world_cup_2026.config import OUTPUTS, ROOT
-
-PLOTS = ROOT / "plots"
-
-TEAM_PROBS = OUTPUTS / "team_probabilities.csv"
-GROUP_PROBS = OUTPUTS / "group_probabilities.csv"
-MARKET_COMPARISON = OUTPUTS / "market_comparison.csv"
+from world_cup_2026 import config
 
 # Shared red <-> dark <-> purple diverging cmap for "signed" axes (rank diff,
 # model-vs-market edge). The sequential palette is the right (purple) half of
@@ -57,14 +52,16 @@ def _read(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(f))
 
 
-def _save(fig: plt.Figure, name: str) -> None:
+def _save(fig: plt.Figure, name: str, out_dir: Path) -> None:
     fig.tight_layout()
-    fig.savefig(PLOTS / f"{name}.svg")
-    fig.savefig(PLOTS / f"{name}.png", dpi=144)
+    fig.savefig(out_dir / f"{name}.svg")
+    fig.savefig(out_dir / f"{name}.png", dpi=144)
     plt.close(fig)
 
 
-def plot_title_probabilities(rows: list[dict[str, str]], top_n: int = 15) -> None:
+def plot_title_probabilities(
+    rows: list[dict[str, str]], out_dir: Path, top_n: int = 15
+) -> None:
     ranked = sorted(rows, key=lambda r: -float(r["p_winner"]))[:top_n]
     names = [r["team_name"] for r in ranked][::-1]
     probs = np.array([float(r["p_winner"]) for r in ranked][::-1])
@@ -84,10 +81,12 @@ def plot_title_probabilities(rows: list[dict[str, str]], top_n: int = 15) -> Non
             fontsize=9,
         )
     ax.set_xlim(0, max(probs) * 100 * 1.15)
-    _save(fig, "title_probabilities")
+    _save(fig, "title_probabilities", out_dir)
 
 
-def plot_group_qualification_heatmap(rows: list[dict[str, str]]) -> None:
+def plot_group_qualification_heatmap(
+    rows: list[dict[str, str]], out_dir: Path
+) -> None:
     groups = sorted({r["group"] for r in rows})
     grid_p = np.zeros((len(groups), 4))
     grid_labels = [["" for _ in range(4)] for _ in groups]
@@ -117,10 +116,12 @@ def plot_group_qualification_heatmap(rows: list[dict[str, str]]) -> None:
     ax.set_xticklabels(["1st", "2nd", "3rd", "4th"])
     ax.set_xlabel("Within-group rank by P(qualify)")
     ax.set_title("Group-stage qualification probability")
-    _save(fig, "group_qualification_heatmap")
+    _save(fig, "group_qualification_heatmap", out_dir)
 
 
-def plot_draw_luck(rows: list[dict[str, str]], min_wins: int = 100) -> None:
+def plot_draw_luck(
+    rows: list[dict[str, str]], out_dir: Path, min_wins: int = 100
+) -> None:
     # Drop teams the simulator essentially never crowned champion: below
     # min_wins their title_probability_rank is shaped by MC noise.
     kept = [
@@ -179,11 +180,11 @@ def plot_draw_luck(rows: list[dict[str, str]], min_wins: int = 100) -> None:
     cbar.set_label("Rank difference\n(positive = helped by draw)")
     ax.grid(True, alpha=0.4)
     ax.set_axisbelow(True)
-    _save(fig, "draw_luck")
+    _save(fig, "draw_luck", out_dir)
 
 
 def plot_market_vs_model(
-    rows: list[dict[str, str]], min_p: float = 0.01
+    rows: list[dict[str, str]], out_dir: Path, min_p: float = 0.01
 ) -> None:
     model_p = np.array([float(r["model_p_winner"]) for r in rows])
     market_p = np.array([float(r["market_p_winner"]) for r in rows])
@@ -244,23 +245,33 @@ def plot_market_vs_model(
     ax.grid(True, which="both", alpha=0.3)
     ax.set_axisbelow(True)
     ax.legend(loc="lower right")
-    _save(fig, "market_vs_model")
+    _save(fig, "market_vs_model", out_dir)
 
 
 def main() -> None:
-    PLOTS.mkdir(exist_ok=True)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--conditional",
+        action="store_true",
+        help="Read outputs/conditional/ and write to plots/conditional/",
+    )
+    args = parser.parse_args()
+
+    in_dir = config.OUTPUTS_CONDITIONAL if args.conditional else config.OUTPUTS
+    out_dir = config.PLOTS_CONDITIONAL if args.conditional else config.PLOTS
+    out_dir.mkdir(parents=True, exist_ok=True)
     sns.set_style("dark")
 
-    team_probs = _read(TEAM_PROBS)
-    group_probs = _read(GROUP_PROBS)
-    market = _read(MARKET_COMPARISON)
+    team_probs = _read(in_dir / "team_probabilities.csv")
+    group_probs = _read(in_dir / "group_probabilities.csv")
+    market = _read(in_dir / "market_comparison.csv")
 
-    plot_title_probabilities(team_probs)
-    plot_group_qualification_heatmap(group_probs)
-    plot_draw_luck(team_probs)
-    plot_market_vs_model(market)
+    plot_title_probabilities(team_probs, out_dir)
+    plot_group_qualification_heatmap(group_probs, out_dir)
+    plot_draw_luck(team_probs, out_dir)
+    plot_market_vs_model(market, out_dir)
 
-    print(f"Wrote charts to {PLOTS}")
+    print(f"Wrote charts to {out_dir}")
 
 
 if __name__ == "__main__":

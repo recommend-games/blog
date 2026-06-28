@@ -1,0 +1,1006 @@
+slot_id,kind,match_id,ab,team_id,team_name,prob,n_sims
+E73a,entrant,73,a,KR,South Korea,0.40507,10000000
+E73a,entrant,73,a,CZ,Czech Republic,0.36058,10000000
+E73a,entrant,73,a,MX,Mexico,0.18568,10000000
+E73a,entrant,73,a,ZA,South Africa,0.04868,10000000
+E73b,entrant,73,b,CA,Canada,0.44135,10000000
+E73b,entrant,73,b,CH,Switzerland,0.42439,10000000
+E73b,entrant,73,b,BA,Bosnia and Herzegovina,0.11638,10000000
+E73b,entrant,73,b,QA,Qatar,0.01789,10000000
+W73,winner,73,"",CH,Switzerland,0.30135,10000000
+W73,winner,73,"",CA,Canada,0.2399,10000000
+W73,winner,73,"",KR,South Korea,0.16977,10000000
+W73,winner,73,"",CZ,Czech Republic,0.14068,10000000
+W73,winner,73,"",MX,Mexico,0.11324,10000000
+W73,winner,73,"",BA,Bosnia and Herzegovina,0.02755,10000000
+W73,winner,73,"",ZA,South Africa,0.00612,10000000
+W73,winner,73,"",QA,Qatar,0.00141,10000000
+E74a,entrant,74,a,EC,Ecuador,0.48322,10000000
+E74a,entrant,74,a,DE,Germany,0.4694,10000000
+E74a,entrant,74,a,CI,Ivory Coast,0.04634,10000000
+E74a,entrant,74,a,CW,Curaçao,0.00104,10000000
+E74b,entrant,74,b,SQ,Scotland,0.19244,10000000
+E74b,entrant,74,b,MA,Morocco,0.14949,10000000
+E74b,entrant,74,b,US,United States,0.13724,10000000
+E74b,entrant,74,b,PY,Paraguay,0.13706,10000000
+E74b,entrant,74,b,AU,Australia,0.13414,10000000
+E74b,entrant,74,b,TR,Turkey,0.09651,10000000
+E74b,entrant,74,b,HT,Haiti,0.045,10000000
+E74b,entrant,74,b,BR,Brazil,0.04068,10000000
+E74b,entrant,74,b,SE,Sweden,0.01817,10000000
+E74b,entrant,74,b,CZ,Czech Republic,0.01087,10000000
+E74b,entrant,74,b,TN,Tunisia,0.01012,10000000
+E74b,entrant,74,b,KR,South Korea,0.00992,10000000
+E74b,entrant,74,b,JP,Japan,0.00741,10000000
+E74b,entrant,74,b,NL,Netherlands,0.00519,10000000
+E74b,entrant,74,b,ZA,South Africa,0.0032,10000000
+E74b,entrant,74,b,MX,Mexico,0.00181,10000000
+E74b,entrant,74,b,BA,Bosnia and Herzegovina,0.00048,10000000
+E74b,entrant,74,b,QA,Qatar,0.00011,10000000
+E74b,entrant,74,b,CH,Switzerland,0.00008,10000000
+E74b,entrant,74,b,CA,Canada,0.00007,10000000
+W74,winner,74,"",EC,Ecuador,0.34124,10000000
+W74,winner,74,"",DE,Germany,0.32751,10000000
+W74,winner,74,"",SQ,Scotland,0.05098,10000000
+W74,winner,74,"",MA,Morocco,0.04976,10000000
+W74,winner,74,"",PY,Paraguay,0.04694,10000000
+W74,winner,74,"",TR,Turkey,0.04575,10000000
+W74,winner,74,"",US,United States,0.0452,10000000
+W74,winner,74,"",AU,Australia,0.03445,10000000
+W74,winner,74,"",BR,Brazil,0.02501,10000000
+W74,winner,74,"",CI,Ivory Coast,0.01447,10000000
+W74,winner,74,"",JP,Japan,0.00343,10000000
+W74,winner,74,"",SE,Sweden,0.00321,10000000
+W74,winner,74,"",NL,Netherlands,0.00282,10000000
+W74,winner,74,"",HT,Haiti,0.00248,10000000
+W74,winner,74,"",CZ,Czech Republic,0.00234,10000000
+W74,winner,74,"",KR,South Korea,0.00234,10000000
+W74,winner,74,"",TN,Tunisia,0.00102,10000000
+W74,winner,74,"",MX,Mexico,0.00075,10000000
+W74,winner,74,"",ZA,South Africa,0.00015,10000000
+W74,winner,74,"",CW,Curaçao,0.00007,10000000
+W74,winner,74,"",BA,Bosnia and Herzegovina,0.00004,10000000
+W74,winner,74,"",CH,Switzerland,0.00003,10000000
+W74,winner,74,"",CA,Canada,0.00002,10000000
+W74,winner,74,"",QA,Qatar,0.0,10000000
+E75a,entrant,75,a,NL,Netherlands,0.53816,10000000
+E75a,entrant,75,a,JP,Japan,0.38836,10000000
+E75a,entrant,75,a,SE,Sweden,0.05553,10000000
+E75a,entrant,75,a,TN,Tunisia,0.01795,10000000
+E75b,entrant,75,b,MA,Morocco,0.4142,10000000
+E75b,entrant,75,b,SQ,Scotland,0.32229,10000000
+E75b,entrant,75,b,BR,Brazil,0.22583,10000000
+E75b,entrant,75,b,HT,Haiti,0.03768,10000000
+W75,winner,75,"",NL,Netherlands,0.36255,10000000
+W75,winner,75,"",JP,Japan,0.2365,10000000
+W75,winner,75,"",MA,Morocco,0.1453,10000000
+W75,winner,75,"",BR,Brazil,0.14227,10000000
+W75,winner,75,"",SQ,Scotland,0.09095,10000000
+W75,winner,75,"",SE,Sweden,0.01662,10000000
+W75,winner,75,"",TN,Tunisia,0.00344,10000000
+W75,winner,75,"",HT,Haiti,0.00238,10000000
+E76a,entrant,76,a,BR,Brazil,0.68918,10000000
+E76a,entrant,76,a,MA,Morocco,0.18717,10000000
+E76a,entrant,76,a,SQ,Scotland,0.11849,10000000
+E76a,entrant,76,a,HT,Haiti,0.00515,10000000
+E76b,entrant,76,b,JP,Japan,0.42083,10000000
+E76b,entrant,76,b,NL,Netherlands,0.3368,10000000
+E76b,entrant,76,b,SE,Sweden,0.16618,10000000
+E76b,entrant,76,b,TN,Tunisia,0.07619,10000000
+W76,winner,76,"",BR,Brazil,0.47444,10000000
+W76,winner,76,"",JP,Japan,0.18938,10000000
+W76,winner,76,"",NL,Netherlands,0.17517,10000000
+W76,winner,76,"",MA,Morocco,0.08015,10000000
+W76,winner,76,"",SQ,Scotland,0.04247,10000000
+W76,winner,76,"",SE,Sweden,0.02982,10000000
+W76,winner,76,"",TN,Tunisia,0.00803,10000000
+W76,winner,76,"",HT,Haiti,0.00053,10000000
+E77a,entrant,77,a,FR,France,0.67076,10000000
+E77a,entrant,77,a,NO,Norway,0.20444,10000000
+E77a,entrant,77,a,SN,Senegal,0.1209,10000000
+E77a,entrant,77,a,IQ,Iraq,0.0039,10000000
+E77b,entrant,77,b,SE,Sweden,0.26382,10000000
+E77b,entrant,77,b,TN,Tunisia,0.14587,10000000
+E77b,entrant,77,b,JP,Japan,0.10748,10000000
+E77b,entrant,77,b,NL,Netherlands,0.07604,10000000
+E77b,entrant,77,b,PY,Paraguay,0.06301,10000000
+E77b,entrant,77,b,US,United States,0.063,10000000
+E77b,entrant,77,b,AU,Australia,0.06168,10000000
+E77b,entrant,77,b,EG,Egypt,0.0458,10000000
+E77b,entrant,77,b,TR,Turkey,0.04443,10000000
+E77b,entrant,77,b,IR,Iran,0.03238,10000000
+E77b,entrant,77,b,CV,Cape Verde,0.023,10000000
+E77b,entrant,77,b,SA,Saudi Arabia,0.02249,10000000
+E77b,entrant,77,b,NZ,New Zealand,0.022,10000000
+E77b,entrant,77,b,BE,Belgium,0.01315,10000000
+E77b,entrant,77,b,UY,Uruguay,0.0098,10000000
+E77b,entrant,77,b,SQ,Scotland,0.0024,10000000
+E77b,entrant,77,b,MA,Morocco,0.00188,10000000
+E77b,entrant,77,b,ES,Spain,0.00069,10000000
+E77b,entrant,77,b,HT,Haiti,0.00056,10000000
+E77b,entrant,77,b,BR,Brazil,0.00053,10000000
+W77,winner,77,"",FR,France,0.59107,10000000
+W77,winner,77,"",NO,Norway,0.14837,10000000
+W77,winner,77,"",SN,Senegal,0.07869,10000000
+W77,winner,77,"",JP,Japan,0.03587,10000000
+W77,winner,77,"",NL,Netherlands,0.0303,10000000
+W77,winner,77,"",SE,Sweden,0.02927,10000000
+W77,winner,77,"",TR,Turkey,0.01519,10000000
+W77,winner,77,"",PY,Paraguay,0.01479,10000000
+W77,winner,77,"",US,United States,0.01415,10000000
+W77,winner,77,"",AU,Australia,0.01051,10000000
+W77,winner,77,"",TN,Tunisia,0.00901,10000000
+W77,winner,77,"",IR,Iran,0.00536,10000000
+W77,winner,77,"",EG,Egypt,0.0046,10000000
+W77,winner,77,"",BE,Belgium,0.00419,10000000
+W77,winner,77,"",UY,Uruguay,0.00309,10000000
+W77,winner,77,"",IQ,Iraq,0.00105,10000000
+W77,winner,77,"",CV,Cape Verde,0.00101,10000000
+W77,winner,77,"",SA,Saudi Arabia,0.00097,10000000
+W77,winner,77,"",NZ,New Zealand,0.00087,10000000
+W77,winner,77,"",ES,Spain,0.00051,10000000
+W77,winner,77,"",SQ,Scotland,0.00044,10000000
+W77,winner,77,"",MA,Morocco,0.00043,10000000
+W77,winner,77,"",BR,Brazil,0.00026,10000000
+W77,winner,77,"",HT,Haiti,0.00002,10000000
+E78a,entrant,78,a,DE,Germany,0.4154,10000000
+E78a,entrant,78,a,EC,Ecuador,0.40826,10000000
+E78a,entrant,78,a,CI,Ivory Coast,0.16612,10000000
+E78a,entrant,78,a,CW,Curaçao,0.01022,10000000
+E78b,entrant,78,b,NO,Norway,0.4163,10000000
+E78b,entrant,78,b,SN,Senegal,0.31704,10000000
+E78b,entrant,78,b,FR,France,0.23718,10000000
+E78b,entrant,78,b,IQ,Iraq,0.02948,10000000
+W78,winner,78,"",NO,Norway,0.22026,10000000
+W78,winner,78,"",EC,Ecuador,0.21395,10000000
+W78,winner,78,"",DE,Germany,0.21354,10000000
+W78,winner,78,"",FR,France,0.18011,10000000
+W78,winner,78,"",SN,Senegal,0.13939,10000000
+W78,winner,78,"",CI,Ivory Coast,0.02875,10000000
+W78,winner,78,"",IQ,Iraq,0.00373,10000000
+W78,winner,78,"",CW,Curaçao,0.00028,10000000
+E79a,entrant,79,a,MX,Mexico,0.75487,10000000
+E79a,entrant,79,a,KR,South Korea,0.13115,10000000
+E79a,entrant,79,a,CZ,Czech Republic,0.10834,10000000
+E79a,entrant,79,a,ZA,South Africa,0.00565,10000000
+E79b,entrant,79,b,CI,Ivory Coast,0.25729,10000000
+E79b,entrant,79,b,SQ,Scotland,0.13298,10000000
+E79b,entrant,79,b,CV,Cape Verde,0.10807,10000000
+E79b,entrant,79,b,SA,Saudi Arabia,0.10599,10000000
+E79b,entrant,79,b,MA,Morocco,0.10367,10000000
+E79b,entrant,79,b,DE,Germany,0.05325,10000000
+E79b,entrant,79,b,EC,Ecuador,0.05042,10000000
+E79b,entrant,79,b,UY,Uruguay,0.04648,10000000
+E79b,entrant,79,b,HT,Haiti,0.03064,10000000
+E79b,entrant,79,b,BR,Brazil,0.02835,10000000
+E79b,entrant,79,b,CW,Curaçao,0.02404,10000000
+E79b,entrant,79,b,SN,Senegal,0.022,10000000
+E79b,entrant,79,b,NO,Norway,0.01638,10000000
+E79b,entrant,79,b,FR,France,0.0049,10000000
+E79b,entrant,79,b,IQ,Iraq,0.00419,10000000
+E79b,entrant,79,b,SE,Sweden,0.0036,10000000
+E79b,entrant,79,b,ES,Spain,0.00331,10000000
+E79b,entrant,79,b,TN,Tunisia,0.00199,10000000
+E79b,entrant,79,b,JP,Japan,0.00145,10000000
+E79b,entrant,79,b,NL,Netherlands,0.00101,10000000
+W79,winner,79,"",MX,Mexico,0.61444,10000000
+W79,winner,79,"",KR,South Korea,0.07001,10000000
+W79,winner,79,"",CZ,Czech Republic,0.0551,10000000
+W79,winner,79,"",CI,Ivory Coast,0.04649,10000000
+W79,winner,79,"",SQ,Scotland,0.03727,10000000
+W79,winner,79,"",MA,Morocco,0.0356,10000000
+W79,winner,79,"",DE,Germany,0.02739,10000000
+W79,winner,79,"",EC,Ecuador,0.0264,10000000
+W79,winner,79,"",UY,Uruguay,0.02118,10000000
+W79,winner,79,"",BR,Brazil,0.01723,10000000
+W79,winner,79,"",CV,Cape Verde,0.00967,10000000
+W79,winner,79,"",SA,Saudi Arabia,0.00929,10000000
+W79,winner,79,"",SN,Senegal,0.00885,10000000
+W79,winner,79,"",NO,Norway,0.00801,10000000
+W79,winner,79,"",FR,France,0.00353,10000000
+W79,winner,79,"",ES,Spain,0.00276,10000000
+W79,winner,79,"",HT,Haiti,0.00213,10000000
+W79,winner,79,"",ZA,South Africa,0.00117,10000000
+W79,winner,79,"",CW,Curaçao,0.00079,10000000
+W79,winner,79,"",SE,Sweden,0.00075,10000000
+W79,winner,79,"",JP,Japan,0.00069,10000000
+W79,winner,79,"",NL,Netherlands,0.00056,10000000
+W79,winner,79,"",IQ,Iraq,0.00045,10000000
+W79,winner,79,"",TN,Tunisia,0.00025,10000000
+E80a,entrant,80,a,EN,England,0.66462,10000000
+E80a,entrant,80,a,HR,Croatia,0.28835,10000000
+E80a,entrant,80,a,PA,Panama,0.04521,10000000
+E80a,entrant,80,a,GH,Ghana,0.00182,10000000
+E80b,entrant,80,b,UZ,Uzbekistan,0.28923,10000000
+E80b,entrant,80,b,CD,DR Congo,0.17727,10000000
+E80b,entrant,80,b,SN,Senegal,0.12928,10000000
+E80b,entrant,80,b,NO,Norway,0.09612,10000000
+E80b,entrant,80,b,CO,Colombia,0.08023,10000000
+E80b,entrant,80,b,PT,Portugal,0.07706,10000000
+E80b,entrant,80,b,CI,Ivory Coast,0.03274,10000000
+E80b,entrant,80,b,FR,France,0.0287,10000000
+E80b,entrant,80,b,IQ,Iraq,0.02466,10000000
+E80b,entrant,80,b,DZ,Algeria,0.01727,10000000
+E80b,entrant,80,b,AT,Austria,0.01427,10000000
+E80b,entrant,80,b,JO,Jordan,0.01103,10000000
+E80b,entrant,80,b,DE,Germany,0.00678,10000000
+E80b,entrant,80,b,EC,Ecuador,0.00641,10000000
+E80b,entrant,80,b,CW,Curaçao,0.00314,10000000
+E80b,entrant,80,b,CV,Cape Verde,0.0018,10000000
+E80b,entrant,80,b,SA,Saudi Arabia,0.00175,10000000
+E80b,entrant,80,b,AR,Argentina,0.00143,10000000
+E80b,entrant,80,b,UY,Uruguay,0.00079,10000000
+E80b,entrant,80,b,ES,Spain,0.00005,10000000
+W80,winner,80,"",EN,England,0.53545,10000000
+W80,winner,80,"",HR,Croatia,0.19482,10000000
+W80,winner,80,"",CO,Colombia,0.04055,10000000
+W80,winner,80,"",SN,Senegal,0.0399,10000000
+W80,winner,80,"",PT,Portugal,0.03952,10000000
+W80,winner,80,"",UZ,Uzbekistan,0.03885,10000000
+W80,winner,80,"",NO,Norway,0.0379,10000000
+W80,winner,80,"",FR,France,0.01851,10000000
+W80,winner,80,"",PA,Panama,0.01814,10000000
+W80,winner,80,"",CD,DR Congo,0.01552,10000000
+W80,winner,80,"",CI,Ivory Coast,0.00399,10000000
+W80,winner,80,"",AT,Austria,0.00368,10000000
+W80,winner,80,"",DZ,Algeria,0.00296,10000000
+W80,winner,80,"",DE,Germany,0.00288,10000000
+W80,winner,80,"",EC,Ecuador,0.00278,10000000
+W80,winner,80,"",IQ,Iraq,0.00157,10000000
+W80,winner,80,"",JO,Jordan,0.00112,10000000
+W80,winner,80,"",AR,Argentina,0.00103,10000000
+W80,winner,80,"",UY,Uruguay,0.00028,10000000
+W80,winner,80,"",GH,Ghana,0.00025,10000000
+W80,winner,80,"",SA,Saudi Arabia,0.0001,10000000
+W80,winner,80,"",CV,Cape Verde,0.0001,10000000
+W80,winner,80,"",CW,Curaçao,0.00007,10000000
+W80,winner,80,"",ES,Spain,0.00004,10000000
+E81a,entrant,81,a,TR,Turkey,0.44438,10000000
+E81a,entrant,81,a,PY,Paraguay,0.22261,10000000
+E81a,entrant,81,a,US,United States,0.20957,10000000
+E81a,entrant,81,a,AU,Australia,0.12344,10000000
+E81b,entrant,81,b,BA,Bosnia and Herzegovina,0.39958,10000000
+E81b,entrant,81,b,QA,Qatar,0.0814,10000000
+E81b,entrant,81,b,CI,Ivory Coast,0.07007,10000000
+E81b,entrant,81,b,CA,Canada,0.06553,10000000
+E81b,entrant,81,b,CH,Switzerland,0.0633,10000000
+E81b,entrant,81,b,DZ,Algeria,0.05678,10000000
+E81b,entrant,81,b,SN,Senegal,0.05521,10000000
+E81b,entrant,81,b,AT,Austria,0.04697,10000000
+E81b,entrant,81,b,NO,Norway,0.04101,10000000
+E81b,entrant,81,b,JO,Jordan,0.0362,10000000
+E81b,entrant,81,b,DE,Germany,0.01454,10000000
+E81b,entrant,81,b,EC,Ecuador,0.0138,10000000
+E81b,entrant,81,b,FR,France,0.01223,10000000
+E81b,entrant,81,b,IQ,Iraq,0.01055,10000000
+E81b,entrant,81,b,SE,Sweden,0.0097,10000000
+E81b,entrant,81,b,CW,Curaçao,0.00639,10000000
+E81b,entrant,81,b,TN,Tunisia,0.00539,10000000
+E81b,entrant,81,b,AR,Argentina,0.00461,10000000
+E81b,entrant,81,b,JP,Japan,0.00391,10000000
+E81b,entrant,81,b,NL,Netherlands,0.00282,10000000
+W81,winner,81,"",TR,Turkey,0.35161,10000000
+W81,winner,81,"",PY,Paraguay,0.15639,10000000
+W81,winner,81,"",US,United States,0.14517,10000000
+W81,winner,81,"",AU,Australia,0.07737,10000000
+W81,winner,81,"",BA,Bosnia and Herzegovina,0.0499,10000000
+W81,winner,81,"",CH,Switzerland,0.03512,10000000
+W81,winner,81,"",SN,Senegal,0.02757,10000000
+W81,winner,81,"",CA,Canada,0.02464,10000000
+W81,winner,81,"",NO,Norway,0.02437,10000000
+W81,winner,81,"",AT,Austria,0.02103,10000000
+W81,winner,81,"",DZ,Algeria,0.01876,10000000
+W81,winner,81,"",CI,Ivory Coast,0.0166,10000000
+W81,winner,81,"",FR,France,0.00996,10000000
+W81,winner,81,"",DE,Germany,0.00914,10000000
+W81,winner,81,"",EC,Ecuador,0.0088,10000000
+W81,winner,81,"",JO,Jordan,0.00775,10000000
+W81,winner,81,"",AR,Argentina,0.00399,10000000
+W81,winner,81,"",QA,Qatar,0.00267,10000000
+W81,winner,81,"",SE,Sweden,0.00253,10000000
+W81,winner,81,"",JP,Japan,0.00227,10000000
+W81,winner,81,"",NL,Netherlands,0.00185,10000000
+W81,winner,81,"",IQ,Iraq,0.00143,10000000
+W81,winner,81,"",TN,Tunisia,0.00083,10000000
+W81,winner,81,"",CW,Curaçao,0.00024,10000000
+E82a,entrant,82,a,BE,Belgium,0.63017,10000000
+E82a,entrant,82,a,IR,Iran,0.23864,10000000
+E82a,entrant,82,a,EG,Egypt,0.11102,10000000
+E82a,entrant,82,a,NZ,New Zealand,0.02017,10000000
+E82b,entrant,82,b,CZ,Czech Republic,0.28655,10000000
+E82b,entrant,82,b,KR,South Korea,0.26054,10000000
+E82b,entrant,82,b,ZA,South Africa,0.08257,10000000
+E82b,entrant,82,b,MX,Mexico,0.04721,10000000
+E82b,entrant,82,b,CV,Cape Verde,0.04678,10000000
+E82b,entrant,82,b,SA,Saudi Arabia,0.04605,10000000
+E82b,entrant,82,b,DZ,Algeria,0.04166,10000000
+E82b,entrant,82,b,SN,Senegal,0.03771,10000000
+E82b,entrant,82,b,AT,Austria,0.03443,10000000
+E82b,entrant,82,b,NO,Norway,0.02806,10000000
+E82b,entrant,82,b,JO,Jordan,0.02648,10000000
+E82b,entrant,82,b,UY,Uruguay,0.0201,10000000
+E82b,entrant,82,b,CI,Ivory Coast,0.0143,10000000
+E82b,entrant,82,b,FR,France,0.00832,10000000
+E82b,entrant,82,b,IQ,Iraq,0.00728,10000000
+E82b,entrant,82,b,AR,Argentina,0.00341,10000000
+E82b,entrant,82,b,DE,Germany,0.00299,10000000
+E82b,entrant,82,b,EC,Ecuador,0.00281,10000000
+E82b,entrant,82,b,ES,Spain,0.00145,10000000
+E82b,entrant,82,b,CW,Curaçao,0.00129,10000000
+W82,winner,82,"",BE,Belgium,0.46566,10000000
+W82,winner,82,"",IR,Iran,0.13274,10000000
+W82,winner,82,"",CZ,Czech Republic,0.09698,10000000
+W82,winner,82,"",KR,South Korea,0.0954,10000000
+W82,winner,82,"",EG,Egypt,0.04793,10000000
+W82,winner,82,"",MX,Mexico,0.02655,10000000
+W82,winner,82,"",SN,Senegal,0.0202,10000000
+W82,winner,82,"",NO,Norway,0.0175,10000000
+W82,winner,82,"",AT,Austria,0.01703,10000000
+W82,winner,82,"",DZ,Algeria,0.01576,10000000
+W82,winner,82,"",UY,Uruguay,0.01184,10000000
+W82,winner,82,"",ZA,South Africa,0.00764,10000000
+W82,winner,82,"",FR,France,0.00688,10000000
+W82,winner,82,"",JO,Jordan,0.00688,10000000
+W82,winner,82,"",CV,Cape Verde,0.00658,10000000
+W82,winner,82,"",SA,Saudi Arabia,0.00636,10000000
+W82,winner,82,"",NZ,New Zealand,0.00481,10000000
+W82,winner,82,"",CI,Ivory Coast,0.00386,10000000
+W82,winner,82,"",AR,Argentina,0.00301,10000000
+W82,winner,82,"",DE,Germany,0.00195,10000000
+W82,winner,82,"",EC,Ecuador,0.00187,10000000
+W82,winner,82,"",ES,Spain,0.00131,10000000
+W82,winner,82,"",IQ,Iraq,0.0012,10000000
+W82,winner,82,"",CW,Curaçao,0.00006,10000000
+E83a,entrant,83,a,CO,Colombia,0.41599,10000000
+E83a,entrant,83,a,PT,Portugal,0.39938,10000000
+E83a,entrant,83,a,UZ,Uzbekistan,0.12049,10000000
+E83a,entrant,83,a,CD,DR Congo,0.06414,10000000
+E83b,entrant,83,b,HR,Croatia,0.51941,10000000
+E83b,entrant,83,b,EN,England,0.27317,10000000
+E83b,entrant,83,b,PA,Panama,0.18897,10000000
+E83b,entrant,83,b,GH,Ghana,0.01844,10000000
+W83,winner,83,"",CO,Colombia,0.25975,10000000
+W83,winner,83,"",PT,Portugal,0.25186,10000000
+W83,winner,83,"",HR,Croatia,0.23727,10000000
+W83,winner,83,"",EN,England,0.17291,10000000
+W83,winner,83,"",PA,Panama,0.03961,10000000
+W83,winner,83,"",UZ,Uzbekistan,0.0272,10000000
+W83,winner,83,"",CD,DR Congo,0.01033,10000000
+W83,winner,83,"",GH,Ghana,0.00106,10000000
+E84a,entrant,84,a,ES,Spain,0.87633,10000000
+E84a,entrant,84,a,UY,Uruguay,0.11797,10000000
+E84a,entrant,84,a,CV,Cape Verde,0.00288,10000000
+E84a,entrant,84,a,SA,Saudi Arabia,0.00283,10000000
+E84b,entrant,84,b,AT,Austria,0.46526,10000000
+E84b,entrant,84,b,DZ,Algeria,0.28066,10000000
+E84b,entrant,84,b,JO,Jordan,0.13756,10000000
+E84b,entrant,84,b,AR,Argentina,0.11652,10000000
+W84,winner,84,"",ES,Spain,0.7897,10000000
+W84,winner,84,"",UY,Uruguay,0.07322,10000000
+W84,winner,84,"",AR,Argentina,0.05553,10000000
+W84,winner,84,"",AT,Austria,0.05421,10000000
+W84,winner,84,"",DZ,Algeria,0.02034,10000000
+W84,winner,84,"",JO,Jordan,0.00605,10000000
+W84,winner,84,"",CV,Cape Verde,0.00048,10000000
+W84,winner,84,"",SA,Saudi Arabia,0.00047,10000000
+E85a,entrant,85,a,CH,Switzerland,0.49672,10000000
+E85a,entrant,85,a,CA,Canada,0.47659,10000000
+E85a,entrant,85,a,BA,Bosnia and Herzegovina,0.02478,10000000
+E85a,entrant,85,a,QA,Qatar,0.00191,10000000
+E85b,entrant,85,b,EG,Egypt,0.2422,10000000
+E85b,entrant,85,b,IR,Iran,0.17132,10000000
+E85b,entrant,85,b,DZ,Algeria,0.12232,10000000
+E85b,entrant,85,b,NZ,New Zealand,0.11559,10000000
+E85b,entrant,85,b,AT,Austria,0.10116,10000000
+E85b,entrant,85,b,JO,Jordan,0.07837,10000000
+E85b,entrant,85,b,BE,Belgium,0.06967,10000000
+E85b,entrant,85,b,CI,Ivory Coast,0.037,10000000
+E85b,entrant,85,b,SN,Senegal,0.01202,10000000
+E85b,entrant,85,b,AR,Argentina,0.00999,10000000
+E85b,entrant,85,b,NO,Norway,0.00898,10000000
+E85b,entrant,85,b,DE,Germany,0.00766,10000000
+E85b,entrant,85,b,EC,Ecuador,0.00726,10000000
+E85b,entrant,85,b,SE,Sweden,0.00353,10000000
+E85b,entrant,85,b,CW,Curaçao,0.00349,10000000
+E85b,entrant,85,b,FR,France,0.00268,10000000
+E85b,entrant,85,b,IQ,Iraq,0.00233,10000000
+E85b,entrant,85,b,TN,Tunisia,0.00195,10000000
+E85b,entrant,85,b,JP,Japan,0.00146,10000000
+E85b,entrant,85,b,NL,Netherlands,0.00102,10000000
+W85,winner,85,"",CH,Switzerland,0.36442,10000000
+W85,winner,85,"",CA,Canada,0.34782,10000000
+W85,winner,85,"",IR,Iran,0.05302,10000000
+W85,winner,85,"",EG,Egypt,0.04955,10000000
+W85,winner,85,"",AT,Austria,0.04123,10000000
+W85,winner,85,"",BE,Belgium,0.03616,10000000
+W85,winner,85,"",DZ,Algeria,0.03593,10000000
+W85,winner,85,"",JO,Jordan,0.01477,10000000
+W85,winner,85,"",NZ,New Zealand,0.00969,10000000
+W85,winner,85,"",AR,Argentina,0.00846,10000000
+W85,winner,85,"",CI,Ivory Coast,0.00758,10000000
+W85,winner,85,"",BA,Bosnia and Herzegovina,0.0067,10000000
+W85,winner,85,"",SN,Senegal,0.00559,10000000
+W85,winner,85,"",NO,Norway,0.00507,10000000
+W85,winner,85,"",DE,Germany,0.00452,10000000
+W85,winner,85,"",EC,Ecuador,0.00431,10000000
+W85,winner,85,"",FR,France,0.00213,10000000
+W85,winner,85,"",JP,Japan,0.00079,10000000
+W85,winner,85,"",SE,Sweden,0.00079,10000000
+W85,winner,85,"",NL,Netherlands,0.00063,10000000
+W85,winner,85,"",IQ,Iraq,0.00028,10000000
+W85,winner,85,"",TN,Tunisia,0.00027,10000000
+W85,winner,85,"",QA,Qatar,0.00019,10000000
+W85,winner,85,"",CW,Curaçao,0.00011,10000000
+E86a,entrant,86,a,AR,Argentina,0.85863,10000000
+E86a,entrant,86,a,AT,Austria,0.08919,10000000
+E86a,entrant,86,a,DZ,Algeria,0.03882,10000000
+E86a,entrant,86,a,JO,Jordan,0.01336,10000000
+E86b,entrant,86,b,UY,Uruguay,0.75298,10000000
+E86b,entrant,86,b,ES,Spain,0.11741,10000000
+E86b,entrant,86,b,CV,Cape Verde,0.06545,10000000
+E86b,entrant,86,b,SA,Saudi Arabia,0.06416,10000000
+W86,winner,86,"",AR,Argentina,0.69572,10000000
+W86,winner,86,"",UY,Uruguay,0.17366,10000000
+W86,winner,86,"",ES,Spain,0.0737,10000000
+W86,winner,86,"",AT,Austria,0.03692,10000000
+W86,winner,86,"",DZ,Algeria,0.01225,10000000
+W86,winner,86,"",JO,Jordan,0.00293,10000000
+W86,winner,86,"",CV,Cape Verde,0.00244,10000000
+W86,winner,86,"",SA,Saudi Arabia,0.00238,10000000
+E87a,entrant,87,a,PT,Portugal,0.48911,10000000
+E87a,entrant,87,a,CO,Colombia,0.46728,10000000
+E87a,entrant,87,a,UZ,Uzbekistan,0.03095,10000000
+E87a,entrant,87,a,CD,DR Congo,0.01265,10000000
+E87b,entrant,87,b,PA,Panama,0.42033,10000000
+E87b,entrant,87,b,HR,Croatia,0.14436,10000000
+E87b,entrant,87,b,SN,Senegal,0.08818,10000000
+E87b,entrant,87,b,NO,Norway,0.06562,10000000
+E87b,entrant,87,b,GH,Ghana,0.06241,10000000
+E87b,entrant,87,b,CI,Ivory Coast,0.05796,10000000
+E87b,entrant,87,b,EN,England,0.05317,10000000
+E87b,entrant,87,b,FR,France,0.01961,10000000
+E87b,entrant,87,b,IQ,Iraq,0.017,10000000
+E87b,entrant,87,b,DE,Germany,0.01203,10000000
+E87b,entrant,87,b,EC,Ecuador,0.01131,10000000
+E87b,entrant,87,b,PY,Paraguay,0.00836,10000000
+E87b,entrant,87,b,US,United States,0.00831,10000000
+E87b,entrant,87,b,AU,Australia,0.00814,10000000
+E87b,entrant,87,b,TR,Turkey,0.00588,10000000
+E87b,entrant,87,b,CW,Curaçao,0.00548,10000000
+E87b,entrant,87,b,DZ,Algeria,0.00466,10000000
+E87b,entrant,87,b,AT,Austria,0.00385,10000000
+E87b,entrant,87,b,JO,Jordan,0.00297,10000000
+E87b,entrant,87,b,AR,Argentina,0.00038,10000000
+W87,winner,87,"",PT,Portugal,0.37883,10000000
+W87,winner,87,"",CO,Colombia,0.35974,10000000
+W87,winner,87,"",PA,Panama,0.06194,10000000
+W87,winner,87,"",HR,Croatia,0.05648,10000000
+W87,winner,87,"",EN,England,0.0309,10000000
+W87,winner,87,"",SN,Senegal,0.02772,10000000
+W87,winner,87,"",NO,Norway,0.02627,10000000
+W87,winner,87,"",FR,France,0.0129,10000000
+W87,winner,87,"",UZ,Uzbekistan,0.01146,10000000
+W87,winner,87,"",CI,Ivory Coast,0.00651,10000000
+W87,winner,87,"",DE,Germany,0.00505,10000000
+W87,winner,87,"",EC,Ecuador,0.00489,10000000
+W87,winner,87,"",CD,DR Congo,0.00357,10000000
+W87,winner,87,"",TR,Turkey,0.00225,10000000
+W87,winner,87,"",PY,Paraguay,0.00221,10000000
+W87,winner,87,"",US,United States,0.0021,10000000
+W87,winner,87,"",GH,Ghana,0.00192,10000000
+W87,winner,87,"",AU,Australia,0.00156,10000000
+W87,winner,87,"",IQ,Iraq,0.00111,10000000
+W87,winner,87,"",AT,Austria,0.00103,10000000
+W87,winner,87,"",DZ,Algeria,0.00087,10000000
+W87,winner,87,"",JO,Jordan,0.00033,10000000
+W87,winner,87,"",AR,Argentina,0.00028,10000000
+W87,winner,87,"",CW,Curaçao,0.0001,10000000
+E88a,entrant,88,a,TR,Turkey,0.27295,10000000
+E88a,entrant,88,a,PY,Paraguay,0.26814,10000000
+E88a,entrant,88,a,US,United States,0.261,10000000
+E88a,entrant,88,a,AU,Australia,0.19791,10000000
+E88b,entrant,88,b,IR,Iran,0.39699,10000000
+E88b,entrant,88,b,EG,Egypt,0.26516,10000000
+E88b,entrant,88,b,BE,Belgium,0.2532,10000000
+E88b,entrant,88,b,NZ,New Zealand,0.08465,10000000
+W88,winner,88,"",TR,Turkey,0.19819,10000000
+W88,winner,88,"",PY,Paraguay,0.16393,10000000
+W88,winner,88,"",US,United States,0.15619,10000000
+W88,winner,88,"",IR,Iran,0.15048,10000000
+W88,winner,88,"",BE,Belgium,0.14997,10000000
+W88,winner,88,"",AU,Australia,0.10256,10000000
+W88,winner,88,"",EG,Egypt,0.06917,10000000
+W88,winner,88,"",NZ,New Zealand,0.0095,10000000
+W89,winner,89,"",FR,France,0.44813,10000000
+W89,winner,89,"",EC,Ecuador,0.1435,10000000
+W89,winner,89,"",DE,Germany,0.13463,10000000
+W89,winner,89,"",NO,Norway,0.07725,10000000
+W89,winner,89,"",SN,Senegal,0.03359,10000000
+W89,winner,89,"",TR,Turkey,0.02494,10000000
+W89,winner,89,"",JP,Japan,0.01946,10000000
+W89,winner,89,"",NL,Netherlands,0.01886,10000000
+W89,winner,89,"",PY,Paraguay,0.01821,10000000
+W89,winner,89,"",US,United States,0.01684,10000000
+W89,winner,89,"",MA,Morocco,0.01334,10000000
+W89,winner,89,"",BR,Brazil,0.01293,10000000
+W89,winner,89,"",SQ,Scotland,0.01088,10000000
+W89,winner,89,"",AU,Australia,0.00998,10000000
+W89,winner,89,"",SE,Sweden,0.00652,10000000
+W89,winner,89,"",BE,Belgium,0.00203,10000000
+W89,winner,89,"",CI,Ivory Coast,0.00181,10000000
+W89,winner,89,"",IR,Iran,0.00154,10000000
+W89,winner,89,"",UY,Uruguay,0.00148,10000000
+W89,winner,89,"",TN,Tunisia,0.00118,10000000
+W89,winner,89,"",EG,Egypt,0.00086,10000000
+W89,winner,89,"",ES,Spain,0.00043,10000000
+W89,winner,89,"",KR,South Korea,0.00043,10000000
+W89,winner,89,"",CZ,Czech Republic,0.00039,10000000
+W89,winner,89,"",MX,Mexico,0.00025,10000000
+W89,winner,89,"",HT,Haiti,0.00012,10000000
+W89,winner,89,"",IQ,Iraq,0.00011,10000000
+W89,winner,89,"",CV,Cape Verde,0.00009,10000000
+W89,winner,89,"",SA,Saudi Arabia,0.00009,10000000
+W89,winner,89,"",NZ,New Zealand,0.00007,10000000
+W89,winner,89,"",CH,Switzerland,0.00001,10000000
+W89,winner,89,"",CA,Canada,0.00001,10000000
+W89,winner,89,"",ZA,South Africa,0.00001,10000000
+W89,winner,89,"",CW,Curaçao,0.0,10000000
+W89,winner,89,"",QA,Qatar,0.0,10000000
+W89,winner,89,"",BA,Bosnia and Herzegovina,0.0,10000000
+W90,winner,90,"",NL,Netherlands,0.26172,10000000
+W90,winner,90,"",JP,Japan,0.15571,10000000
+W90,winner,90,"",CH,Switzerland,0.14248,10000000
+W90,winner,90,"",BR,Brazil,0.11095,10000000
+W90,winner,90,"",MA,Morocco,0.07676,10000000
+W90,winner,90,"",CA,Canada,0.07316,10000000
+W90,winner,90,"",MX,Mexico,0.05035,10000000
+W90,winner,90,"",KR,South Korea,0.04461,10000000
+W90,winner,90,"",SQ,Scotland,0.041,10000000
+W90,winner,90,"",CZ,Czech Republic,0.03359,10000000
+W90,winner,90,"",SE,Sweden,0.00558,10000000
+W90,winner,90,"",BA,Bosnia and Herzegovina,0.00262,10000000
+W90,winner,90,"",TN,Tunisia,0.00076,10000000
+W90,winner,90,"",HT,Haiti,0.00033,10000000
+W90,winner,90,"",ZA,South Africa,0.00033,10000000
+W90,winner,90,"",QA,Qatar,0.00004,10000000
+W91,winner,91,"",BR,Brazil,0.2821,10000000
+W91,winner,91,"",FR,France,0.12742,10000000
+W91,winner,91,"",EC,Ecuador,0.10762,10000000
+W91,winner,91,"",DE,Germany,0.10516,10000000
+W91,winner,91,"",NO,Norway,0.10175,10000000
+W91,winner,91,"",NL,Netherlands,0.09144,10000000
+W91,winner,91,"",JP,Japan,0.08519,10000000
+W91,winner,91,"",SN,Senegal,0.05187,10000000
+W91,winner,91,"",MA,Morocco,0.02573,10000000
+W91,winner,91,"",SQ,Scotland,0.01089,10000000
+W91,winner,91,"",SE,Sweden,0.00517,10000000
+W91,winner,91,"",CI,Ivory Coast,0.00448,10000000
+W91,winner,91,"",TN,Tunisia,0.00081,10000000
+W91,winner,91,"",IQ,Iraq,0.00032,10000000
+W91,winner,91,"",HT,Haiti,0.00003,10000000
+W91,winner,91,"",CW,Curaçao,0.00001,10000000
+W92,winner,92,"",EN,England,0.35947,10000000
+W92,winner,92,"",MX,Mexico,0.31843,10000000
+W92,winner,92,"",HR,Croatia,0.09718,10000000
+W92,winner,92,"",CO,Colombia,0.02471,10000000
+W92,winner,92,"",PT,Portugal,0.02434,10000000
+W92,winner,92,"",NO,Norway,0.02248,10000000
+W92,winner,92,"",SN,Senegal,0.0197,10000000
+W92,winner,92,"",FR,France,0.01591,10000000
+W92,winner,92,"",KR,South Korea,0.01405,10000000
+W92,winner,92,"",DE,Germany,0.01379,10000000
+W92,winner,92,"",EC,Ecuador,0.01358,10000000
+W92,winner,92,"",MA,Morocco,0.01019,10000000
+W92,winner,92,"",CZ,Czech Republic,0.01,10000000
+W92,winner,92,"",BR,Brazil,0.00938,10000000
+W92,winner,92,"",SQ,Scotland,0.00852,10000000
+W92,winner,92,"",UZ,Uzbekistan,0.00835,10000000
+W92,winner,92,"",UY,Uruguay,0.00821,10000000
+W92,winner,92,"",CI,Ivory Coast,0.00733,10000000
+W92,winner,92,"",PA,Panama,0.00422,10000000
+W92,winner,92,"",CD,DR Congo,0.00238,10000000
+W92,winner,92,"",ES,Spain,0.00223,10000000
+W92,winner,92,"",AT,Austria,0.0014,10000000
+W92,winner,92,"",AR,Argentina,0.00082,10000000
+W92,winner,92,"",DZ,Algeria,0.00081,10000000
+W92,winner,92,"",CV,Cape Verde,0.00063,10000000
+W92,winner,92,"",SA,Saudi Arabia,0.00058,10000000
+W92,winner,92,"",JP,Japan,0.00028,10000000
+W92,winner,92,"",NL,Netherlands,0.00026,10000000
+W92,winner,92,"",IQ,Iraq,0.00023,10000000
+W92,winner,92,"",JO,Jordan,0.00021,10000000
+W92,winner,92,"",HT,Haiti,0.00012,10000000
+W92,winner,92,"",SE,Sweden,0.00011,10000000
+W92,winner,92,"",ZA,South Africa,0.00005,10000000
+W92,winner,92,"",TN,Tunisia,0.00002,10000000
+W92,winner,92,"",CW,Curaçao,0.00002,10000000
+W92,winner,92,"",GH,Ghana,0.00002,10000000
+W93,winner,93,"",ES,Spain,0.63752,10000000
+W93,winner,93,"",CO,Colombia,0.07724,10000000
+W93,winner,93,"",PT,Portugal,0.07631,10000000
+W93,winner,93,"",EN,England,0.0608,10000000
+W93,winner,93,"",HR,Croatia,0.0508,10000000
+W93,winner,93,"",AR,Argentina,0.04191,10000000
+W93,winner,93,"",UY,Uruguay,0.02883,10000000
+W93,winner,93,"",AT,Austria,0.01614,10000000
+W93,winner,93,"",DZ,Algeria,0.00421,10000000
+W93,winner,93,"",PA,Panama,0.00301,10000000
+W93,winner,93,"",UZ,Uzbekistan,0.00187,10000000
+W93,winner,93,"",JO,Jordan,0.00077,10000000
+W93,winner,93,"",CD,DR Congo,0.0005,10000000
+W93,winner,93,"",SA,Saudi Arabia,0.00003,10000000
+W93,winner,93,"",CV,Cape Verde,0.00003,10000000
+W93,winner,93,"",GH,Ghana,0.00002,10000000
+W94,winner,94,"",BE,Belgium,0.26827,10000000
+W94,winner,94,"",TR,Turkey,0.22322,10000000
+W94,winner,94,"",PY,Paraguay,0.07942,10000000
+W94,winner,94,"",US,United States,0.07175,10000000
+W94,winner,94,"",IR,Iran,0.04964,10000000
+W94,winner,94,"",KR,South Korea,0.0335,10000000
+W94,winner,94,"",AU,Australia,0.03196,10000000
+W94,winner,94,"",CZ,Czech Republic,0.03142,10000000
+W94,winner,94,"",NO,Norway,0.02654,10000000
+W94,winner,94,"",SN,Senegal,0.02612,10000000
+W94,winner,94,"",CH,Switzerland,0.02105,10000000
+W94,winner,94,"",AT,Austria,0.01882,10000000
+W94,winner,94,"",MX,Mexico,0.01446,10000000
+W94,winner,94,"",FR,France,0.01404,10000000
+W94,winner,94,"",DZ,Algeria,0.01304,10000000
+W94,winner,94,"",EG,Egypt,0.01257,10000000
+W94,winner,94,"",CA,Canada,0.01051,10000000
+W94,winner,94,"",BA,Bosnia and Herzegovina,0.00816,10000000
+W94,winner,94,"",DE,Germany,0.00737,10000000
+W94,winner,94,"",EC,Ecuador,0.00717,10000000
+W94,winner,94,"",UY,Uruguay,0.00674,10000000
+W94,winner,94,"",AR,Argentina,0.00616,10000000
+W94,winner,94,"",CI,Ivory Coast,0.0058,10000000
+W94,winner,94,"",JO,Jordan,0.00384,10000000
+W94,winner,94,"",JP,Japan,0.00145,10000000
+W94,winner,94,"",NL,Netherlands,0.0013,10000000
+W94,winner,94,"",ES,Spain,0.00118,10000000
+W94,winner,94,"",CV,Cape Verde,0.00086,10000000
+W94,winner,94,"",SA,Saudi Arabia,0.00082,10000000
+W94,winner,94,"",SE,Sweden,0.0008,10000000
+W94,winner,94,"",ZA,South Africa,0.00067,10000000
+W94,winner,94,"",NZ,New Zealand,0.00056,10000000
+W94,winner,94,"",IQ,Iraq,0.00047,10000000
+W94,winner,94,"",TN,Tunisia,0.00017,10000000
+W94,winner,94,"",QA,Qatar,0.00014,10000000
+W94,winner,94,"",CW,Curaçao,0.00002,10000000
+W95,winner,95,"",AR,Argentina,0.61757,10000000
+W95,winner,95,"",UY,Uruguay,0.10514,10000000
+W95,winner,95,"",ES,Spain,0.06758,10000000
+W95,winner,95,"",TR,Turkey,0.05313,10000000
+W95,winner,95,"",BE,Belgium,0.03709,10000000
+W95,winner,95,"",PY,Paraguay,0.0297,10000000
+W95,winner,95,"",US,United States,0.02712,10000000
+W95,winner,95,"",IR,Iran,0.01909,10000000
+W95,winner,95,"",AT,Austria,0.01839,10000000
+W95,winner,95,"",AU,Australia,0.01336,10000000
+W95,winner,95,"",EG,Egypt,0.00543,10000000
+W95,winner,95,"",DZ,Algeria,0.00467,10000000
+W95,winner,95,"",JO,Jordan,0.00075,10000000
+W95,winner,95,"",CV,Cape Verde,0.00034,10000000
+W95,winner,95,"",SA,Saudi Arabia,0.00033,10000000
+W95,winner,95,"",NZ,New Zealand,0.00031,10000000
+W96,winner,96,"",PT,Portugal,0.26711,10000000
+W96,winner,96,"",CO,Colombia,0.25136,10000000
+W96,winner,96,"",CH,Switzerland,0.14283,10000000
+W96,winner,96,"",CA,Canada,0.13453,10000000
+W96,winner,96,"",HR,Croatia,0.03307,10000000
+W96,winner,96,"",EN,England,0.0233,10000000
+W96,winner,96,"",NO,Norway,0.01781,10000000
+W96,winner,96,"",PA,Panama,0.01771,10000000
+W96,winner,96,"",SN,Senegal,0.01584,10000000
+W96,winner,96,"",BE,Belgium,0.01437,10000000
+W96,winner,96,"",AT,Austria,0.01281,10000000
+W96,winner,96,"",FR,France,0.01188,10000000
+W96,winner,96,"",IR,Iran,0.01172,10000000
+W96,winner,96,"",DZ,Algeria,0.00777,10000000
+W96,winner,96,"",EG,Egypt,0.00702,10000000
+W96,winner,96,"",AR,Argentina,0.00664,10000000
+W96,winner,96,"",DE,Germany,0.00523,10000000
+W96,winner,96,"",EC,Ecuador,0.00512,10000000
+W96,winner,96,"",UZ,Uzbekistan,0.00301,10000000
+W96,winner,96,"",CI,Ivory Coast,0.00266,10000000
+W96,winner,96,"",JO,Jordan,0.00195,10000000
+W96,winner,96,"",TR,Turkey,0.00132,10000000
+W96,winner,96,"",PY,Paraguay,0.00099,10000000
+W96,winner,96,"",CD,DR Congo,0.00067,10000000
+W96,winner,96,"",US,United States,0.0006,10000000
+W96,winner,96,"",AU,Australia,0.00056,10000000
+W96,winner,96,"",NZ,New Zealand,0.00055,10000000
+W96,winner,96,"",BA,Bosnia and Herzegovina,0.00048,10000000
+W96,winner,96,"",JP,Japan,0.00032,10000000
+W96,winner,96,"",NL,Netherlands,0.00031,10000000
+W96,winner,96,"",IQ,Iraq,0.00018,10000000
+W96,winner,96,"",GH,Ghana,0.00014,10000000
+W96,winner,96,"",SE,Sweden,0.00012,10000000
+W96,winner,96,"",TN,Tunisia,0.00002,10000000
+W96,winner,96,"",CW,Curaçao,0.00001,10000000
+W96,winner,96,"",QA,Qatar,0.0,10000000
+W97,winner,97,"",FR,France,0.34506,10000000
+W97,winner,97,"",NL,Netherlands,0.1297,10000000
+W97,winner,97,"",EC,Ecuador,0.08352,10000000
+W97,winner,97,"",DE,Germany,0.0769,10000000
+W97,winner,97,"",JP,Japan,0.06951,10000000
+W97,winner,97,"",BR,Brazil,0.06705,10000000
+W97,winner,97,"",CH,Switzerland,0.05103,10000000
+W97,winner,97,"",NO,Norway,0.04174,10000000
+W97,winner,97,"",MA,Morocco,0.02558,10000000
+W97,winner,97,"",MX,Mexico,0.0169,10000000
+W97,winner,97,"",CA,Canada,0.01577,10000000
+W97,winner,97,"",SN,Senegal,0.01502,10000000
+W97,winner,97,"",TR,Turkey,0.01339,10000000
+W97,winner,97,"",SQ,Scotland,0.012,10000000
+W97,winner,97,"",KR,South Korea,0.00825,10000000
+W97,winner,97,"",PY,Paraguay,0.00736,10000000
+W97,winner,97,"",US,United States,0.0066,10000000
+W97,winner,97,"",CZ,Czech Republic,0.0056,10000000
+W97,winner,97,"",AU,Australia,0.00316,10000000
+W97,winner,97,"",SE,Sweden,0.0022,10000000
+W97,winner,97,"",BE,Belgium,0.00102,10000000
+W97,winner,97,"",UY,Uruguay,0.00075,10000000
+W97,winner,97,"",IR,Iran,0.00048,10000000
+W97,winner,97,"",CI,Ivory Coast,0.00039,10000000
+W97,winner,97,"",ES,Spain,0.00038,10000000
+W97,winner,97,"",TN,Tunisia,0.00022,10000000
+W97,winner,97,"",EG,Egypt,0.00018,10000000
+W97,winner,97,"",BA,Bosnia and Herzegovina,0.00016,10000000
+W97,winner,97,"",HT,Haiti,0.00002,10000000
+W97,winner,97,"",ZA,South Africa,0.00001,10000000
+W97,winner,97,"",NZ,New Zealand,0.00001,10000000
+W97,winner,97,"",CV,Cape Verde,0.00001,10000000
+W97,winner,97,"",SA,Saudi Arabia,0.00001,10000000
+W97,winner,97,"",IQ,Iraq,0.00001,10000000
+W97,winner,97,"",QA,Qatar,0.0,10000000
+W98,winner,98,"",ES,Spain,0.57148,10000000
+W98,winner,98,"",BE,Belgium,0.05623,10000000
+W98,winner,98,"",CO,Colombia,0.05388,10000000
+W98,winner,98,"",PT,Portugal,0.05364,10000000
+W98,winner,98,"",TR,Turkey,0.05131,10000000
+W98,winner,98,"",EN,England,0.04572,10000000
+W98,winner,98,"",AR,Argentina,0.03938,10000000
+W98,winner,98,"",HR,Croatia,0.02977,10000000
+W98,winner,98,"",UY,Uruguay,0.01715,10000000
+W98,winner,98,"",PY,Paraguay,0.01187,10000000
+W98,winner,98,"",US,United States,0.01016,10000000
+W98,winner,98,"",AT,Austria,0.00985,10000000
+W98,winner,98,"",FR,France,0.00627,10000000
+W98,winner,98,"",NO,Norway,0.00616,10000000
+W98,winner,98,"",IR,Iran,0.00499,10000000
+W98,winner,98,"",SN,Senegal,0.00459,10000000
+W98,winner,98,"",CH,Switzerland,0.00437,10000000
+W98,winner,98,"",AU,Australia,0.00333,10000000
+W98,winner,98,"",KR,South Korea,0.00306,10000000
+W98,winner,98,"",MX,Mexico,0.00273,10000000
+W98,winner,98,"",DZ,Algeria,0.00258,10000000
+W98,winner,98,"",CZ,Czech Republic,0.00253,10000000
+W98,winner,98,"",DE,Germany,0.00189,10000000
+W98,winner,98,"",EC,Ecuador,0.00189,10000000
+W98,winner,98,"",CA,Canada,0.00117,10000000
+W98,winner,98,"",PA,Panama,0.00084,10000000
+W98,winner,98,"",EG,Egypt,0.00077,10000000
+W98,winner,98,"",UZ,Uzbekistan,0.00048,10000000
+W98,winner,98,"",JO,Jordan,0.00037,10000000
+W98,winner,98,"",NL,Netherlands,0.00036,10000000
+W98,winner,98,"",CI,Ivory Coast,0.00034,10000000
+W98,winner,98,"",JP,Japan,0.00034,10000000
+W98,winner,98,"",BA,Bosnia and Herzegovina,0.00025,10000000
+W98,winner,98,"",CD,DR Congo,0.00009,10000000
+W98,winner,98,"",SE,Sweden,0.00005,10000000
+W98,winner,98,"",CV,Cape Verde,0.00003,10000000
+W98,winner,98,"",SA,Saudi Arabia,0.00003,10000000
+W98,winner,98,"",IQ,Iraq,0.00002,10000000
+W98,winner,98,"",NZ,New Zealand,0.00001,10000000
+W98,winner,98,"",TN,Tunisia,0.00001,10000000
+W98,winner,98,"",ZA,South Africa,0.00001,10000000
+W98,winner,98,"",QA,Qatar,0.0,10000000
+W98,winner,98,"",GH,Ghana,0.0,10000000
+W98,winner,98,"",CW,Curaçao,0.0,10000000
+W99,winner,99,"",EN,England,0.22113,10000000
+W99,winner,99,"",BR,Brazil,0.17293,10000000
+W99,winner,99,"",MX,Mexico,0.11646,10000000
+W99,winner,99,"",FR,France,0.10156,10000000
+W99,winner,99,"",EC,Ecuador,0.06073,10000000
+W99,winner,99,"",DE,Germany,0.05838,10000000
+W99,winner,99,"",NO,Norway,0.05685,10000000
+W99,winner,99,"",NL,Netherlands,0.04756,10000000
+W99,winner,99,"",HR,Croatia,0.04162,10000000
+W99,winner,99,"",JP,Japan,0.0383,10000000
+W99,winner,99,"",SN,Senegal,0.02573,10000000
+W99,winner,99,"",CO,Colombia,0.01357,10000000
+W99,winner,99,"",PT,Portugal,0.01355,10000000
+W99,winner,99,"",MA,Morocco,0.01117,10000000
+W99,winner,99,"",SQ,Scotland,0.00468,10000000
+W99,winner,99,"",UY,Uruguay,0.00323,10000000
+W99,winner,99,"",KR,South Korea,0.00279,10000000
+W99,winner,99,"",ES,Spain,0.0018,10000000
+W99,winner,99,"",CZ,Czech Republic,0.00179,10000000
+W99,winner,99,"",CI,Ivory Coast,0.00164,10000000
+W99,winner,99,"",UZ,Uzbekistan,0.00127,10000000
+W99,winner,99,"",SE,Sweden,0.00091,10000000
+W99,winner,99,"",PA,Panama,0.0007,10000000
+W99,winner,99,"",AR,Argentina,0.00062,10000000
+W99,winner,99,"",AT,Austria,0.00042,10000000
+W99,winner,99,"",CD,DR Congo,0.00023,10000000
+W99,winner,99,"",DZ,Algeria,0.00016,10000000
+W99,winner,99,"",TN,Tunisia,0.00008,10000000
+W99,winner,99,"",IQ,Iraq,0.00004,10000000
+W99,winner,99,"",JO,Jordan,0.00003,10000000
+W99,winner,99,"",SA,Saudi Arabia,0.00003,10000000
+W99,winner,99,"",CV,Cape Verde,0.00003,10000000
+W99,winner,99,"",HT,Haiti,0.00001,10000000
+W99,winner,99,"",CW,Curaçao,0.0,10000000
+W99,winner,99,"",GH,Ghana,0.0,10000000
+W99,winner,99,"",ZA,South Africa,0.0,10000000
+W100,winner,100,"",AR,Argentina,0.4932,10000000
+W100,winner,100,"",PT,Portugal,0.10904,10000000
+W100,winner,100,"",CO,Colombia,0.10128,10000000
+W100,winner,100,"",ES,Spain,0.05638,10000000
+W100,winner,100,"",UY,Uruguay,0.0462,10000000
+W100,winner,100,"",CH,Switzerland,0.03968,10000000
+W100,winner,100,"",TR,Turkey,0.02552,10000000
+W100,winner,100,"",CA,Canada,0.02226,10000000
+W100,winner,100,"",BE,Belgium,0.02056,10000000
+W100,winner,100,"",EN,England,0.01078,10000000
+W100,winner,100,"",PY,Paraguay,0.01058,10000000
+W100,winner,100,"",HR,Croatia,0.01005,10000000
+W100,winner,100,"",US,United States,0.00922,10000000
+W100,winner,100,"",AT,Austria,0.00878,10000000
+W100,winner,100,"",IR,Iran,0.00672,10000000
+W100,winner,100,"",FR,France,0.00627,10000000
+W100,winner,100,"",NO,Norway,0.0055,10000000
+W100,winner,100,"",SN,Senegal,0.0038,10000000
+W100,winner,100,"",AU,Australia,0.00365,10000000
+W100,winner,100,"",DZ,Algeria,0.0022,10000000
+W100,winner,100,"",PA,Panama,0.00205,10000000
+W100,winner,100,"",DE,Germany,0.00173,10000000
+W100,winner,100,"",EC,Ecuador,0.00172,10000000
+W100,winner,100,"",EG,Egypt,0.00158,10000000
+W100,winner,100,"",UZ,Uzbekistan,0.00032,10000000
+W100,winner,100,"",JO,Jordan,0.00028,10000000
+W100,winner,100,"",CI,Ivory Coast,0.00026,10000000
+W100,winner,100,"",JP,Japan,0.0001,10000000
+W100,winner,100,"",NL,Netherlands,0.0001,10000000
+W100,winner,100,"",NZ,New Zealand,0.00005,10000000
+W100,winner,100,"",CD,DR Congo,0.00005,10000000
+W100,winner,100,"",CV,Cape Verde,0.00003,10000000
+W100,winner,100,"",SA,Saudi Arabia,0.00002,10000000
+W100,winner,100,"",BA,Bosnia and Herzegovina,0.00002,10000000
+W100,winner,100,"",SE,Sweden,0.00001,10000000
+W100,winner,100,"",IQ,Iraq,0.00001,10000000
+W100,winner,100,"",TN,Tunisia,0.0,10000000
+W100,winner,100,"",GH,Ghana,0.0,10000000
+W100,winner,100,"",CW,Curaçao,0.0,10000000
+W101,winner,101,"",ES,Spain,0.45128,10000000
+W101,winner,101,"",FR,France,0.17297,10000000
+W101,winner,101,"",NL,Netherlands,0.04114,10000000
+W101,winner,101,"",AR,Argentina,0.02892,10000000
+W101,winner,101,"",PT,Portugal,0.0287,10000000
+W101,winner,101,"",CO,Colombia,0.02843,10000000
+W101,winner,101,"",EN,England,0.027,10000000
+W101,winner,101,"",EC,Ecuador,0.02612,10000000
+W101,winner,101,"",BR,Brazil,0.02529,10000000
+W101,winner,101,"",TR,Turkey,0.02452,10000000
+W101,winner,101,"",DE,Germany,0.02351,10000000
+W101,winner,101,"",BE,Belgium,0.02168,10000000
+W101,winner,101,"",JP,Japan,0.01833,10000000
+W101,winner,101,"",CH,Switzerland,0.01402,10000000
+W101,winner,101,"",NO,Norway,0.0138,10000000
+W101,winner,101,"",HR,Croatia,0.0122,10000000
+W101,winner,101,"",UY,Uruguay,0.00664,10000000
+W101,winner,101,"",PY,Paraguay,0.0048,10000000
+W101,winner,101,"",MX,Mexico,0.00476,10000000
+W101,winner,101,"",SN,Senegal,0.0046,10000000
+W101,winner,101,"",MA,Morocco,0.00448,10000000
+W101,winner,101,"",US,United States,0.00398,10000000
+W101,winner,101,"",AT,Austria,0.00277,10000000
+W101,winner,101,"",CA,Canada,0.00246,10000000
+W101,winner,101,"",SQ,Scotland,0.00161,10000000
+W101,winner,101,"",KR,South Korea,0.00154,10000000
+W101,winner,101,"",AU,Australia,0.00112,10000000
+W101,winner,101,"",IR,Iran,0.0011,10000000
+W101,winner,101,"",CZ,Czech Republic,0.00103,10000000
+W101,winner,101,"",DZ,Algeria,0.0005,10000000
+W101,winner,101,"",SE,Sweden,0.0002,10000000
+W101,winner,101,"",PA,Panama,0.00014,10000000
+W101,winner,101,"",EG,Egypt,0.00012,10000000
+W101,winner,101,"",CI,Ivory Coast,0.00008,10000000
+W101,winner,101,"",UZ,Uzbekistan,0.00007,10000000
+W101,winner,101,"",JO,Jordan,0.00005,10000000
+W101,winner,101,"",BA,Bosnia and Herzegovina,0.00002,10000000
+W101,winner,101,"",TN,Tunisia,0.00001,10000000
+W101,winner,101,"",CD,DR Congo,0.00001,10000000
+W101,winner,101,"",NZ,New Zealand,0.0,10000000
+W101,winner,101,"",ZA,South Africa,0.0,10000000
+W101,winner,101,"",SA,Saudi Arabia,0.0,10000000
+W101,winner,101,"",CV,Cape Verde,0.0,10000000
+W101,winner,101,"",GH,Ghana,0.0,10000000
+W101,winner,101,"",IQ,Iraq,0.0,10000000
+W101,winner,101,"",HT,Haiti,0.0,10000000
+W102,winner,102,"",AR,Argentina,0.36708,10000000
+W102,winner,102,"",EN,England,0.11202,10000000
+W102,winner,102,"",BR,Brazil,0.07384,10000000
+W102,winner,102,"",PT,Portugal,0.06437,10000000
+W102,winner,102,"",FR,France,0.0595,10000000
+W102,winner,102,"",CO,Colombia,0.0594,10000000
+W102,winner,102,"",ES,Spain,0.04619,10000000
+W102,winner,102,"",MX,Mexico,0.03029,10000000
+W102,winner,102,"",EC,Ecuador,0.02181,10000000
+W102,winner,102,"",DE,Germany,0.02045,10000000
+W102,winner,102,"",NO,Norway,0.02003,10000000
+W102,winner,102,"",UY,Uruguay,0.01835,10000000
+W102,winner,102,"",NL,Netherlands,0.01722,10000000
+W102,winner,102,"",HR,Croatia,0.01679,10000000
+W102,winner,102,"",CH,Switzerland,0.01489,10000000
+W102,winner,102,"",JP,Japan,0.01161,10000000
+W102,winner,102,"",TR,Turkey,0.01042,10000000
+W102,winner,102,"",BE,Belgium,0.00784,10000000
+W102,winner,102,"",SN,Senegal,0.00742,10000000
+W102,winner,102,"",CA,Canada,0.005,10000000
+W102,winner,102,"",PY,Paraguay,0.00304,10000000
+W102,winner,102,"",US,United States,0.00256,10000000
+W102,winner,102,"",AT,Austria,0.00255,10000000
+W102,winner,102,"",MA,Morocco,0.00228,10000000
+W102,winner,102,"",IR,Iran,0.0014,10000000
+W102,winner,102,"",AU,Australia,0.00078,10000000
+W102,winner,102,"",SQ,Scotland,0.00073,10000000
+W102,winner,102,"",DZ,Algeria,0.00044,10000000
+W102,winner,102,"",PA,Panama,0.0004,10000000
+W102,winner,102,"",KR,South Korea,0.00036,10000000
+W102,winner,102,"",EG,Egypt,0.00021,10000000
+W102,winner,102,"",CZ,Czech Republic,0.00021,10000000
+W102,winner,102,"",CI,Ivory Coast,0.00018,10000000
+W102,winner,102,"",UZ,Uzbekistan,0.00017,10000000
+W102,winner,102,"",SE,Sweden,0.00009,10000000
+W102,winner,102,"",JO,Jordan,0.00004,10000000
+W102,winner,102,"",CD,DR Congo,0.00002,10000000
+W102,winner,102,"",TN,Tunisia,0.00001,10000000
+W102,winner,102,"",BA,Bosnia and Herzegovina,0.0,10000000
+W102,winner,102,"",NZ,New Zealand,0.0,10000000
+W102,winner,102,"",IQ,Iraq,0.0,10000000
+W102,winner,102,"",GH,Ghana,0.0,10000000
+W102,winner,102,"",SA,Saudi Arabia,0.0,10000000
+W102,winner,102,"",CV,Cape Verde,0.0,10000000
+W102,winner,102,"",HT,Haiti,0.0,10000000
+W104,winner,104,"",ES,Spain,0.35289,10000000
+W104,winner,104,"",AR,Argentina,0.22999,10000000
+W104,winner,104,"",FR,France,0.12675,10000000
+W104,winner,104,"",EN,England,0.06043,10000000
+W104,winner,104,"",BR,Brazil,0.03868,10000000
+W104,winner,104,"",PT,Portugal,0.03546,10000000
+W104,winner,104,"",CO,Colombia,0.03292,10000000
+W104,winner,104,"",NL,Netherlands,0.01999,10000000
+W104,winner,104,"",EC,Ecuador,0.01533,10000000
+W104,winner,104,"",DE,Germany,0.01365,10000000
+W104,winner,104,"",TR,Turkey,0.01003,10000000
+W104,winner,104,"",NO,Norway,0.00925,10000000
+W104,winner,104,"",JP,Japan,0.00829,10000000
+W104,winner,104,"",HR,Croatia,0.00795,10000000
+W104,winner,104,"",BE,Belgium,0.00779,10000000
+W104,winner,104,"",MX,Mexico,0.00773,10000000
+W104,winner,104,"",CH,Switzerland,0.00733,10000000
+W104,winner,104,"",UY,Uruguay,0.00571,10000000
+W104,winner,104,"",SN,Senegal,0.00248,10000000
+W104,winner,104,"",PY,Paraguay,0.00149,10000000
+W104,winner,104,"",MA,Morocco,0.00122,10000000
+W104,winner,104,"",US,United States,0.00118,10000000
+W104,winner,104,"",CA,Canada,0.00103,10000000
+W104,winner,104,"",AT,Austria,0.00093,10000000
+W104,winner,104,"",SQ,Scotland,0.00033,10000000
+W104,winner,104,"",IR,Iran,0.00031,10000000
+W104,winner,104,"",AU,Australia,0.00025,10000000
+W104,winner,104,"",KR,South Korea,0.00023,10000000
+W104,winner,104,"",CZ,Czech Republic,0.00013,10000000
+W104,winner,104,"",DZ,Algeria,0.00011,10000000
+W104,winner,104,"",PA,Panama,0.00005,10000000
+W104,winner,104,"",SE,Sweden,0.00003,10000000
+W104,winner,104,"",CI,Ivory Coast,0.00002,10000000
+W104,winner,104,"",EG,Egypt,0.00002,10000000
+W104,winner,104,"",UZ,Uzbekistan,0.00002,10000000
+W104,winner,104,"",JO,Jordan,0.00001,10000000
+W104,winner,104,"",CV,Cape Verde,0.0,10000000
+W104,winner,104,"",TN,Tunisia,0.0,10000000
+W104,winner,104,"",CD,DR Congo,0.0,10000000
+W104,winner,104,"",BA,Bosnia and Herzegovina,0.0,10000000

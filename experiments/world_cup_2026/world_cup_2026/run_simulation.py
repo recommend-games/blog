@@ -1,12 +1,24 @@
-"""Run the Monte Carlo simulator and write the three output CSVs."""
+"""Run the Monte Carlo simulator and write the three output CSVs.
+
+By default this runs the frozen pre-tournament scenario against
+data/processed/teams.csv and writes to outputs/. With --conditional it runs
+the "results so far" scenario instead: refreshed Elo from teams_conditional.csv,
+the played group scorelines pinned from results.csv, written to
+outputs/conditional/. The two scenarios never overwrite each other.
+"""
 
 from __future__ import annotations
 
 import argparse
 import os
 import time
+from pathlib import Path
 
-from world_cup_2026 import config, simulate
+from world_cup_2026 import config, load_data, simulate
+
+
+def _read_date(path: Path) -> str:
+    return path.read_text().strip() if path.exists() else ""
 
 
 def main() -> None:
@@ -36,7 +48,34 @@ def main() -> None:
         default=None,
         help="Number of worker processes (default: all available CPU cores)",
     )
+    parser.add_argument(
+        "--conditional",
+        action="store_true",
+        help=(
+            "Condition on results so far: refreshed Elo (teams_conditional.csv) "
+            "plus played scorelines (results.csv), written to outputs/conditional/"
+        ),
+    )
     args = parser.parse_args()
+
+    if args.conditional:
+        teams_csv = config.TEAMS_CONDITIONAL_CSV
+        results = load_data.load_results()
+        output_dir = config.OUTPUTS_CONDITIONAL
+        elo_snapshot_date = _read_date(
+            config.DATA_RAW_CONDITIONAL / "elo_snapshot_date.txt"
+        )
+        results_snapshot_date = _read_date(
+            config.DATA_RAW_CONDITIONAL / "results_snapshot_date.txt"
+        )
+        n_results_fixed = results.height
+    else:
+        teams_csv = config.TEAMS_CSV
+        results = None
+        output_dir = config.OUTPUTS
+        elo_snapshot_date = None
+        results_snapshot_date = ""
+        n_results_fixed = 0
 
     started = time.perf_counter()
     acc, teams = simulate.run_simulation(
@@ -44,17 +83,32 @@ def main() -> None:
         seed=args.seed,
         show_progress=not args.quiet,
         n_workers=args.workers,
+        teams_csv=teams_csv,
+        results=results,
     )
     elapsed = time.perf_counter() - started
     workers = args.workers if args.workers is not None else (os.cpu_count() or 1)
+    scenario = (
+        f"conditional on {n_results_fixed} played results"
+        if args.conditional
+        else "pre-tournament"
+    )
     print(
-        f"Simulated {args.n_simulations:,} tournaments in {elapsed:.1f}s "
+        f"Simulated {args.n_simulations:,} tournaments ({scenario}) in {elapsed:.1f}s "
         f"({args.n_simulations / elapsed:,.0f}/s) "
         f"using {workers} worker{'s' if workers != 1 else ''}"
     )
 
-    simulate.write_outputs(acc, teams, args.n_simulations)
-    print(f"Wrote outputs to {config.OUTPUTS}")
+    simulate.write_outputs(
+        acc,
+        teams,
+        args.n_simulations,
+        output_dir=output_dir,
+        elo_snapshot_date=elo_snapshot_date,
+        results_snapshot_date=results_snapshot_date,
+        n_results_fixed=n_results_fixed,
+    )
+    print(f"Wrote outputs to {output_dir}")
 
 
 if __name__ == "__main__":
