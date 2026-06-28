@@ -56,7 +56,7 @@ Here is the left-hand panel of that animation, frozen for inspection:
 
 And the shape is unkind to 🇪🇸 Spain. 🇦🇷 Argentina and 🇪🇸 Spain are still in opposite halves — they cannot meet before the final — but 🇫🇷 France, a market co-favourite all along whose form the group stage duly confirmed, have landed in 🇪🇸 Spain's half. The top half is now a two-heavyweight pile-up: 🇪🇸 Spain reach the final from there about 40% of the time and 🇫🇷 France about 38%, which means one of them most likely knocks the other out in the semis. 🇦🇷 Argentina, by contrast, has the run of a far softer bottom half — 55% to reach the final, with 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England next at 14%.
 
-🇪🇸 Spain's modal path to the final: 🇩🇿 Algeria (1780), 🇵🇹 Portugal (1990), 🇧🇪 Belgium (1884), 🇫🇷 France (2123). 🇦🇷 Argentina's: 🇨🇻 Cape Verde (1622), 🇦🇺 Australia (1800), 🇨🇴 Colombia (2004), 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England (2038). Both enter the knockouts at an identical Elo of 2144 — the bracket alone turns that into **31.8%** for 🇦🇷 Argentina and **24.7%** for 🇪🇸 Spain.
+🇪🇸 Spain's modal path to the final: 🇩🇿 Algeria (1780), 🇵🇹 Portugal (1990), 🇧🇪 Belgium (1884), 🇫🇷 France (2123). 🇦🇷 Argentina's: 🇨🇻 Cape Verde (1622), 🇦🇺 Australia (1800), 🇨🇴 Colombia (2004), 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England (2038). Both enter the knockouts at an identical Elo of 2144[^elo-source] — the bracket alone turns that into **31.8%** for 🇦🇷 Argentina and **24.7%** for 🇪🇸 Spain.
 
 The effect on the full title race:
 
@@ -79,7 +79,7 @@ The non-obvious move: 🇫🇷 France, a distant third at 12.7% before kickoff, 
 
 The spine of part 2c was a number: 🇪🇸 Spain's +19.3pp edge over Polymarket, the model screaming *value* where the market shrugged. The obvious question for a follow-up is whether that disagreement resolved — and if so, who blinked.
 
-Both did. They're converging.
+Both did. They're converging.[^vig-and-odds]
 
 | Team | Model now | Market now | Edge now | *(Edge pre-tournament)* |
 |:-----|----------:|-----------:|---------:|------------------------:|
@@ -135,7 +135,9 @@ For the record: I loathe FIFA's greed and I think 48 teams is a format only an a
 
 The model has eaten its own headline — and then some. 🇪🇸 Spain were *probably* going to win this thing; now it's 🇦🇷 Argentina out front, 🇫🇷 France gatecrashing the podium, and the market — for once — shuffled most of the way toward agreeing. The +19.3pp argument I picked with the bookies in June is half-settled, amicably, with both sides having moved toward the middle.
 
-I said in part 2c I'd be back on the other side of the trophy ceremony to find out whether the model deserved its confidence. That piece is still coming on July 19 — the penalty shootout, where the final result decides whether the model held its nerve. Extra time is up: the favourite has changed, 🇨🇻 Cape Verde have already made a mockery of my neatest prediction, the bracket is finally real and there are sixteen knockout ties between here and the only result that actually grades the homework.
+The bracket has a sense of humour. 🇨🇻 Cape Verde — the team I used in [part 2c]({{<ref "posts/elo_2c/index.md">}}) to illustrate the goal floor, so lightly rated the Poisson needed a minimum just to give them a credible expected-goal figure — held 🇪🇸 Spain to 0-0, qualified from Group H, and drew 🇦🇷 Argentina in the Round of 32. The model has done its sums. *Wichtig is' auf'm Platz*, 🇨🇻 Cape Verde.
+
+Extra time is up. I said in [part 2c]({{<ref "posts/elo_2c/index.md">}}) I'd be back on the other side of the trophy ceremony to find out whether the model deserved its confidence — that piece arrives on 19 July, the penalty shootout. Thirty-one matches stand between here and the only result that actually grades the homework.
 
 *All the code, data snapshots and figures for this article live on [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/world_cup_2026).*
 
