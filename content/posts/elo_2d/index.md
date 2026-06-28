@@ -63,6 +63,8 @@ Here is the left-hand panel of that animation, frozen for inspection:
 
 And the shape is unkind to 🇪🇸 Spain. 🇦🇷 Argentina and 🇪🇸 Spain are still in opposite halves — they cannot meet before the final — but 🇫🇷 France, a market co-favourite all along whose form the group stage duly confirmed, have landed in 🇪🇸 Spain's half. The top half is now a two-heavyweight pile-up: 🇪🇸 Spain reach the final from there about 40% of the time and 🇫🇷 France about 38%, which means one of them most likely knocks the other out in the semis. 🇦🇷 Argentina, by contrast, has the run of a far softer bottom half — 55% to reach the final, with 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England next at 14%. That single asymmetry — France stacked on top of Spain, Argentina with daylight — is most of why the model now makes 🇦🇷 Argentina the favourite.
 
+🇪🇸 Spain's modal path to the final: 🇩🇿 Algeria (1780), 🇵🇹 Portugal (1990), 🇧🇪 Belgium (1884), 🇫🇷 France (2123). 🇦🇷 Argentina's: 🇨🇻 Cape Verde (1622), 🇦🇺 Australia (1800), 🇨🇴 Colombia (2004), 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England (2038). Both sides enter with an Elo rating of 2144 — yet the model gives 🇦🇷 Argentina a 31.8% title chance and 🇪🇸 Spain 24.7%. The bracket is doing all of that.
+
 ## The format is a disgrace, and now I can prove it
 
 Allow me a paragraph of editorial — I think I've earned it. We just played **seventy-two** group matches to send **sixteen** teams home, and bar 🇨🇻 Cape Verde's opening-match ambush almost all of it went to script. Two genuine surprises in two weeks — 🇺🇾 Uruguay and 🇹🇷 Turkey, both odds-on to qualify, both out — and everyone else who was meant to advance, advanced. Two weeks of football to confirm what the ratings already knew in June.
