@@ -46,7 +46,7 @@ There's no single lesson here beyond the obvious one the [snooker write-ups]({{<
 
 ## The bracket, for real this time
 
-In [part 2c]({{<ref "posts/elo_2c/index.md">}}) you watched ten million *imagined* brackets blur into an average — a probability cloud hovering over a knockout draw that didn't exist yet. Now the draw is real: the group winners and runners-up are settled, the eight best third-placed teams slot in, and the same animation runs again — except this time the entrants are fact rather than forecast, and only the knockout rounds are still being simulated.
+The group stage is done, so instead of simulating 72 matches and then the knockouts, the engine only needs to simulate forward from the Round of 32 — much like the [snooker simulations]({{<ref "posts/elo_2b/index.md">}}) that always started from a fixed draw.
 
 {{< video src="bracket_and_counter" alt="Animation of the simulated brackets freezing into the predicted average while the title-win counter fills in" >}}
 
@@ -54,32 +54,24 @@ Here is the left-hand panel of that animation, frozen for inspection:
 
 {{< img src="knockout_bracket" alt="The 2026 World Cup knockout bracket from the Round of 32 to the final; each slot shows the team most likely to fill it and how often it does across ten million simulations" >}}
 
-And the shape is unkind to 🇪🇸 Spain. 🇦🇷 Argentina and 🇪🇸 Spain are still in opposite halves — they cannot meet before the final — but 🇫🇷 France, a market co-favourite all along whose form the group stage duly confirmed, have landed in 🇪🇸 Spain's half. The top half is now a two-heavyweight pile-up: 🇪🇸 Spain reach the final from there about 40% of the time and 🇫🇷 France about 38%, which means one of them most likely knocks the other out in the semis. 🇦🇷 Argentina, by contrast, has the run of a far softer bottom half — 55% to reach the final, with 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England next at 14%. That single asymmetry — France stacked on top of Spain, Argentina with daylight — is most of why the model now makes 🇦🇷 Argentina the favourite.
+And the shape is unkind to 🇪🇸 Spain. 🇦🇷 Argentina and 🇪🇸 Spain are still in opposite halves — they cannot meet before the final — but 🇫🇷 France, a market co-favourite all along whose form the group stage duly confirmed, have landed in 🇪🇸 Spain's half. The top half is now a two-heavyweight pile-up: 🇪🇸 Spain reach the final from there about 40% of the time and 🇫🇷 France about 38%, which means one of them most likely knocks the other out in the semis. 🇦🇷 Argentina, by contrast, has the run of a far softer bottom half — 55% to reach the final, with 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England next at 14%.
 
-🇪🇸 Spain's modal path to the final: 🇩🇿 Algeria (1780), 🇵🇹 Portugal (1990), 🇧🇪 Belgium (1884), 🇫🇷 France (2123). 🇦🇷 Argentina's: 🇨🇻 Cape Verde (1622), 🇦🇺 Australia (1800), 🇨🇴 Colombia (2004), 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England (2038). Both sides enter with an Elo rating of 2144 — yet the model gives 🇦🇷 Argentina a 31.8% title chance and 🇪🇸 Spain 24.7%. The bracket is doing all of that.
+🇪🇸 Spain's modal path to the final: 🇩🇿 Algeria (1780), 🇵🇹 Portugal (1990), 🇧🇪 Belgium (1884), 🇫🇷 France (2123). 🇦🇷 Argentina's: 🇨🇻 Cape Verde (1622), 🇦🇺 Australia (1800), 🇨🇴 Colombia (2004), 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England (2038). Both enter the knockouts at an identical Elo of 2144 — the bracket alone turns that into **31.8%** for 🇦🇷 Argentina and **24.7%** for 🇪🇸 Spain.
 
-## Ten million tournaments, conditioned this time
+The effect on the full title race:
 
-The engine is the one from [part 2c]({{<ref "posts/elo_2c/index.md">}}): Elo into a fixed-total Poisson, a full group stage under FIFA's tie-break ladder, the 495-row third-place lookup, then the knockouts. Two things are different now. First, the simulation is *conditioned* on reality — every played scoreline is pinned to what actually happened, so the ten million tournaments only branch from the Round of 32 onward.[^conditional] Second, the Elo ratings have been refreshed to absorb two weeks of results, so the inputs themselves have shifted under the model.
+| Team | Pre-tournament | Now | Δ |
+|:-----|---------------:|----:|--:|
+| 🇦🇷 Argentina | 23.0% | **31.8%** | +8.8pp |
+| 🇪🇸 Spain | 35.3% | **24.7%** | −10.6pp |
+| 🇫🇷 France | 12.7% | **22.2%** | +9.5pp |
+| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | 6.0% | 5.7% | −0.3pp |
+| 🇨🇴 Colombia | 3.3% | 3.9% | +0.6pp |
+| 🇧🇷 Brazil | 3.9% | 3.3% | −0.6pp |
+| 🇵🇹 Portugal | 3.5% | 1.8% | −1.7pp |
+| 🇳🇱 Netherlands | 2.0% | 2.5% | +0.5pp |
 
-The effect on the title race is dramatic:
-
-| Team | Pre-tournament | Now |
-|:-----|---------------:|----:|
-| 🇦🇷 Argentina | 23.0% | **31.8%** |
-| 🇪🇸 Spain | 35.3% | **24.7%** |
-| 🇫🇷 France | 12.7% | **22.2%** |
-| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | 6.0% | 5.7% |
-| 🇨🇴 Colombia | 3.3% | 3.9% |
-| 🇧🇷 Brazil | 3.9% | 3.3% |
-| 🇵🇹 Portugal | 3.5% | 1.8% |
-| 🇳🇱 Netherlands | 2.0% | 2.5% |
-
-That counter piling up on the right of the animation settles, after all ten million runs, into the model's current pecking order:
-
-{{< img src="title_probabilities" alt="Horizontal bar chart of the top 15 teams by conditional title probability, led by Argentina with Spain and France close behind" >}}
-
-The favourite swap is only half the story now. 🇦🇷 Argentina overtaking 🇪🇸 Spain at the top is the obvious headline on its own; what's new is 🇫🇷 France. Pre-tournament France were a distant third at 12.7%; they've since rocketed to **22.2%**, close enough to breathe on 🇪🇸 Spain's 24.7% for second place. So the podium has gone from "Spain, daylight, Argentina, daylight, the chasing pack" to a genuine three-horse race — 🇦🇷 Argentina out front around a third, then 🇪🇸 Spain and 🇫🇷 France all but level behind. Spain didn't so much collapse as get caught: the serene, group-of-death-free procession the rating projected in June has met both some real on-pitch resistance and, as the bracket just showed, 🇫🇷 France parked squarely in its half.
+The non-obvious move: 🇫🇷 France, a distant third at 12.7% before kickoff, have surged to **22.2%** — close enough to 🇪🇸 Spain's 24.7% that second place is a genuine coin flip.
 
 ## Model vs market, take two
 
@@ -154,7 +146,6 @@ I said in part 2c I'd be back on the other side of the trophy ceremony to find o
 
 *All the code, data snapshots and figures for this article live on [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/world_cup_2026).*
 
-[^conditional]: The simulator's `--conditional` mode pins every played group scoreline to its real result and refreshes the Elo snapshot, then simulates only the still-undecided matches. It writes to a parallel set of files so the frozen pre-tournament forecast from part 2c stays reproducible — the baseline never gets quietly overwritten by mid-tournament data.
 [^elo-source]: As before, ratings come from [eloratings.net](https://eloratings.net/), the established World Football Elo Ratings, refreshed after every international. The snapshot used for this article was taken at 2026-06-28T05:00:05Z.
 [^vig-and-odds]: Decimal odds quote the total return per unit stake including the stake, so fair odds for probability \\(p\\) are exactly \\(1/p\\). Summed across all 48 contracts the market-implied probabilities exceed 100% — the overround is the house's cut. Polymarket's is about 3%; a typical sportsbook is closer to 5–8%. The house always wins.
 [^blowout-data]: Blow-out rates are computed from the [martj42 international-results dataset](https://github.com/martj42/international_results), taking each 32-team World Cup's group stage to be its first 48 matches (8 groups of 4). The 2026 figure is over all 72 group matches.
