@@ -38,14 +38,22 @@ def main() -> None:
     parser.add_argument(
         "--conditional",
         action="store_true",
-        help="De-vig the conditional Polymarket snapshot into market_odds_conditional.csv",
+        help="De-vig the conditional Polymarket snapshot into market_odds_{tag}.csv",
+    )
+    parser.add_argument(
+        "--tag",
+        default="conditional",
+        metavar="TAG",
+        help="Output subdirectory tag for the conditional run (default: 'conditional'). "
+             "Use e.g. 'conditional_r32' to preserve earlier conditional outputs.",
     )
     args = parser.parse_args()
 
     if args.conditional:
-        snapshot = config.POLYMARKET_SNAPSHOT_CONDITIONAL
+        cpaths = config.conditional_paths(args.tag)
+        snapshot = cpaths.polymarket_snapshot
         teams_csv = config.TEAMS_CONDITIONAL_CSV
-        output = config.MARKET_ODDS_CONDITIONAL_CSV
+        output = cpaths.market_odds_csv
     else:
         snapshot = config.POLYMARKET_SNAPSHOT
         teams_csv = config.TEAMS_CSV

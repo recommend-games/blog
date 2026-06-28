@@ -79,15 +79,23 @@ def main() -> None:
         help=(
             "Follow the actual bracket where known (refreshed Elo, played "
             "group standings and knockout results) and the modal favourite "
-            "beyond it; write to outputs/conditional/"
+            "beyond it; write to outputs/{tag}/"
         ),
+    )
+    parser.add_argument(
+        "--tag",
+        default="conditional",
+        metavar="TAG",
+        help="Output subdirectory tag for the conditional run (default: 'conditional'). "
+             "Use e.g. 'conditional_r32' to preserve earlier conditional outputs.",
     )
     args = parser.parse_args()
 
     if args.conditional:
+        cpaths = config.conditional_paths(args.tag)
         teams = load_data.load_teams(config.TEAMS_CONDITIONAL_CSV)
-        group_probs_path = config.OUTPUTS_CONDITIONAL / "group_probabilities.csv"
-        output = config.OUTPUTS_CONDITIONAL / "knockout_score_predictions.csv"
+        group_probs_path = cpaths.outputs / "group_probabilities.csv"
+        output = cpaths.outputs / "knockout_score_predictions.csv"
     else:
         teams = load_data.load_teams()
         group_probs_path = config.OUTPUTS / "group_probabilities.csv"

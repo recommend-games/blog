@@ -28,14 +28,22 @@ def main() -> None:
         action="store_true",
         help=(
             "Use refreshed Elo (teams_conditional.csv) and flag already-played "
-            "matches with their actual score; write to outputs/conditional/"
+            "matches with their actual score; write to outputs/{tag}/"
         ),
+    )
+    parser.add_argument(
+        "--tag",
+        default="conditional",
+        metavar="TAG",
+        help="Output subdirectory tag for the conditional run (default: 'conditional'). "
+             "Use e.g. 'conditional_r32' to preserve earlier conditional outputs.",
     )
     args = parser.parse_args()
 
     if args.conditional:
+        cpaths = config.conditional_paths(args.tag)
         teams = load_data.load_teams(config.TEAMS_CONDITIONAL_CSV)
-        output = config.OUTPUTS_CONDITIONAL / "group_score_predictions.csv"
+        output = cpaths.outputs / "group_score_predictions.csv"
         actual = {
             r["match_id"]: (r["home_goals"], r["away_goals"])
             for r in load_data.load_results().iter_rows(named=True)

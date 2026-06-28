@@ -400,8 +400,19 @@ uv run wc26-bracket-heatmap --conditional
 uv run python -m world_cup_2026.animate_combined --conditional
 ```
 
-The same `--conditional` flag runs through the whole chain. It keeps a
-parallel set of files so the frozen baseline stays reproducible:
+The same `--conditional` flag runs through the whole chain. Every script
+also accepts `--tag TAG` (default: `conditional`) to write into a named
+subdirectory instead of the default `outputs/conditional/`. Use this to
+preserve earlier snapshots when re-running mid-tournament:
+
+```bash
+# Round-of-32 update — keeps the group-stage conditional outputs intact
+uv run wc26-simulate --conditional --tag conditional_r32
+uv run python -m world_cup_2026.build_score_predictions --conditional --tag conditional_r32
+# … and so on through the chain, all with --tag conditional_r32
+```
+
+The chain keeps a parallel set of files so the frozen baseline stays reproducible:
 `data/raw/conditional/polymarket_world_cup_winner.json`,
 `data/processed/market_odds_conditional.csv`,
 `outputs/conditional/market_comparison.csv` and `plots/conditional/`.
