@@ -12,17 +12,6 @@ tags:
   - World Cup
 ---
 
-<!--
-TODO (final pass before tomorrow's noon-Helsinki publish, after the 72-result run):
-  * Numbers below are the 66-result conditional run — Groups J, K and L still
-    have their last matchday. Once they finish, run the full conditional update
-    and refresh: the title table, the market table, the bracket image + animation
-    and any number quoted in prose (each table is flagged inline).
-  * Face-plant / hit tables: add the J/K/L outcomes; the rest are locked.
-  * Bracket-shape paragraph: re-confirm the halves once J/K/L resolve.
-  * State the exact Elo snapshot timestamp in the elo-source footnote.
--->
-
 ## Half-time team-talk
 
 The group stage is over, the Round of 32 is set and seventy-two matches have quietly rearranged everything I told you over two weeks ago. ⚽️
@@ -45,7 +34,6 @@ Some of the pre-tournament reads aged badly:
 | 🇹🇷 Turkey | 86.8% | Out |
 | 🇨🇿 Czech Republic | 76.8% | Out |
 | 🇵🇦 Panama | 65.3% | Out |
-<!-- TODO: add any J/K/L casualties once those groups finish -->
 
 Group H produced two of the tournament's headline inversions at once: 🇺🇾 Uruguay out and 🇨🇻 Cape Verde in — a near-perfect reversal of what the ratings expected from 🇪🇸 Spain's group.
 
@@ -55,11 +43,11 @@ And some aged rather well:
 |:-----|----------------------:|:--------|
 | 🇬🇭 Ghana | 7.9% | Through |
 | 🇨🇻 Cape Verde | 24.3% | Through |
+| 🇨🇩 DR Congo | 25.4% | Through |
 | 🇦🇺 Australia | 52.4% | Through |
 | 🇸🇪 Sweden | 52.1% | Through |
 | 🇪🇬 Egypt | 66.7% | Through |
 | 🇺🇸 USA | 68.1% | Through |
-<!-- TODO: add any J/K/L overperformers once those groups finish -->
 
 There's no single lesson here beyond the obvious one the [snooker write-ups]({{<ref "posts/elo_2b/index.md">}}) kept circling: a rating integrated over years of competitive results is a statement about the long run, and a 48-team knockout that turns on three matches per side will always hand you a fistful of upsets the rating never saw coming. 🇬🇭 Ghana going from a 7.9% no-hoper to a certainty is not the model being wrong — it's the model being a prior, and the football being the evidence.
 
@@ -73,13 +61,13 @@ Here is the left-hand panel of that animation, frozen for inspection:
 
 {{< img src="knockout_bracket" alt="The 2026 World Cup knockout bracket from the Round of 32 to the final; each slot shows the team most likely to fill it and how often it does across ten million simulations" >}}
 
-And the shape is unkind to 🇪🇸 Spain. 🇦🇷 Argentina and 🇪🇸 Spain are still in opposite halves — they cannot meet before the final — but 🇫🇷 France, a market co-favourite all along whose form the group stage duly confirmed, have landed in 🇪🇸 Spain's half. The top half is now a two-heavyweight pile-up: 🇪🇸 Spain reach the final from there about 40% of the time and 🇫🇷 France about 38%, which means one of them most likely knocks the other out in the semis. 🇦🇷 Argentina, by contrast, has the run of a far softer bottom half — 57% to reach the final, with 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England a distant next at 10%. That single asymmetry — France stacked on top of Spain, Argentina with daylight — is most of why the model now makes 🇦🇷 Argentina the favourite. <!-- TODO: re-confirm the halves and these reach-final percentages once Groups J/K/L finish -->
+And the shape is unkind to 🇪🇸 Spain. 🇦🇷 Argentina and 🇪🇸 Spain are still in opposite halves — they cannot meet before the final — but 🇫🇷 France, a market co-favourite all along whose form the group stage duly confirmed, have landed in 🇪🇸 Spain's half. The top half is now a two-heavyweight pile-up: 🇪🇸 Spain reach the final from there about 40% of the time and 🇫🇷 France about 38%, which means one of them most likely knocks the other out in the semis. 🇦🇷 Argentina, by contrast, has the run of a far softer bottom half — 55% to reach the final, with 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England next at 14%. That single asymmetry — France stacked on top of Spain, Argentina with daylight — is most of why the model now makes 🇦🇷 Argentina the favourite.
 
 ## The format is a disgrace, and now I can prove it
 
 Allow me a paragraph of editorial — I think I've earned it. We just played **seventy-two** group matches to send **sixteen** teams home, and bar 🇨🇻 Cape Verde's opening-match ambush almost all of it went to script. Two genuine surprises in two weeks — 🇺🇾 Uruguay and 🇹🇷 Turkey, both odds-on to qualify, both out — and everyone else who was meant to advance, advanced. Two weeks of football to confirm what the ratings already knew in June.
 
-It was also *less competitive* than a World Cup should be, and for once I can put a number on the grumble. A **blow-out** — a win by three goals or more — landed in better than a quarter of this group stage's matches. Across the seven tournaments of the 32-team era, 1998 to 2022, that rate averaged **14.6%** and never once cleared 21%:
+It was also *less competitive* than a World Cup should be, and for once I can put a number on the grumble. A **blow-out** — a win by three goals or more — landed in exactly a quarter of this group stage's matches. Across the seven tournaments of the 32-team era, 1998 to 2022, that rate averaged **14.6%** and never once cleared 21%:
 
 | Edition | Group-stage blow-outs (≥3 GD) |
 |:--------|------------------------------:|
@@ -90,22 +78,22 @@ It was also *less competitive* than a World Cup should be, and for once I can pu
 | 2014 | 20.8% |
 | 2018 | 16.7% |
 | 2022 | 10.4% |
-| **2026** | **27.3%** |
+| **2026** | **25.0%** |
 
-Nearly **double** the historical norm and clear of every previous edition by a street. Invite sixteen more teams who have no business on the same pitch as the elite, and the scoreboards say exactly that.[^blowout-data] <!-- TODO: re-pull the 2026 figure off the final 72-match group stage -->
+Nearly **double** the historical norm and clear of every previous edition by a street. Invite sixteen more teams who have no business on the same pitch as the elite, and the scoreboards say exactly that.[^blowout-data]
 
-The tie-break ladder did its own damage, turning a slab of the last round of group games into dead rubbers — or worse, into invitations to collude. As I write this, 🇩🇿 Algeria vs 🇦🇹 Austria is about to kick off in a situation that was arithmetically clear before a ball was kicked — because they play last, with perfect information on every other group. Any draw sends *both* of them through: with four points each, they are guaranteed to be among the eight best third-place teams regardless of how Groups K and L finish. A 2026 restaging of the [Disgrace of Gijón](https://en.wikipedia.org/wiki/Disgrace_of_Gij%C3%B3n), 🇩🇪 West Germany and 🇦🇹 Austria's infamous 1982 non-aggression pact — and deeply unfair on whoever finished their own group two days earlier without that arithmetic in hand.
+The tie-break ladder did its own damage, turning a slab of the last round of group games into dead rubbers — or worse, into invitations to collude. 🇩🇿 Algeria and 🇦🇹 Austria faced each other in a situation that was arithmetically clear before a ball was kicked — because they played last, with perfect information on every other group. Any draw would send *both* of them through: with four points each, they were guaranteed to be among the eight best third-place teams regardless of how Groups K and L finished. A 2026 restaging of the [Disgrace of Gijón](https://en.wikipedia.org/wiki/Disgrace_of_Gij%C3%B3n), 🇩🇪 West Germany and 🇦🇹 Austria's infamous 1982 non-aggression pact — and deeply unfair on whoever finished their own group two days earlier without that arithmetic in hand.
 
-But the bracket makes the incentives even more perverse than in 1982. The group runner-up in J draws 🇪🇸 Spain in the Round of 32 — tournament favourites, Elo 2144 — while a third-place finish routes you to 🇧🇪 Belgium or 🇨🇭 Switzerland. **Algeria has no incentive to win.** A win makes them runner-up and hands them Spain; a draw makes them third and sends them to a vastly easier R32 opponent, while still guaranteeing qualification. Austria faces Spain either way if they draw (they finish second on goal difference), but — and here is where the game design truly eats itself — depending on what happened in Groups K and L, Austria may be *guaranteed* through even as third after a narrow loss. Specifically, if Group K ended in a draw between 🇨🇩 Congo and 🇺🇿 Uzbekistan — leaving the third-place slot there with just two points — Austria with three points and a one-goal deficit is still mathematically locked into the top eight third-place teams regardless of how Group L finished. In that scenario Austria's rational play is to *lose* — offloading Spain onto Algeria, who would rather not have them. Both teams arrive knowing all of this. The 1982 Disgrace involved two teams quietly agreeing to a convenient win; the 2026 edition may involve two teams quietly agreeing on who gets to lose.<!-- TODO: update tomorrow — did they draw, did one side win, did Austria take the dive to avoid Spain? -->
+But the bracket makes the incentives even more perverse than in 1982. The group runner-up in J draws 🇪🇸 Spain in the Round of 32 — tournament favourites, Elo 2144 — while a third-place finish routes you to 🇧🇪 Belgium or 🇨🇭 Switzerland. **Algeria has no incentive to win.** A win makes them runner-up and hands them Spain; a draw makes them third and sends them to a vastly easier R32 opponent, while still guaranteeing qualification. Austria faces Spain either way if they draw (they finish second on goal difference), but — and here is where the game design truly eats itself — depending on what happened in Groups K and L, Austria may be *guaranteed* through even as third after a narrow loss. Specifically, if Group K ended in a draw between 🇨🇩 Congo and 🇺🇿 Uzbekistan — leaving the third-place slot there with just two points — Austria with three points and a one-goal deficit is still mathematically locked into the top eight third-place teams regardless of how Group L finished. In that scenario Austria's rational play is to *lose* — offloading Spain onto Algeria, who would rather not have them. Both teams arrive knowing all of this. The 1982 Disgrace involved two teams quietly agreeing to a convenient win; the 2026 edition set up the same script — and then finished 3–3. Both qualified as the arithmetic demanded: 🇦🇹 Austria as runners-up facing 🇪🇸 Spain in the Round of 32, 🇩🇿 Algeria as third placed facing 🇨🇭 Switzerland.
 
 <!-- TODO: this whole game-design paragraph is a rough first-draft placeholder — rewrite before publishing -->
 This blog is ostensibly about games and their design, so let me name what this is in that language: a **dominant strategy failure**. The rules have produced a situation where the rational play — the strategy that maximises a team's expected outcome — is to *not try to win*. That is the single most fundamental thing a competition can get wrong. It is the first thing you learn to check for when designing a game, the failure mode that any competent designer spots in playtesting before the thing ships, and FIFA managed to bake it into the biggest sporting event on the planet.
 
 I want to be clear: I place exactly zero blame on the players. If you hand rational competitors a set of incentives, they will follow them — that is not cynicism, it is arithmetic. The fault is FIFA's, entirely and obviously. This failure was not unforeseeable; it was *fully predictable* the moment the format was announced.
 
-And the mechanism at fault is not the match schedule — within each group, the final round is already played simultaneously, as it has been since the 1982 outrage. The culprit is that [495-row third-place lookup table]({{<ref "posts/elo_2c/index.md">}}). By routing third-place qualification and bracket placement through a cross-group ranking, FIFA created a system where the *order* in which groups finish determines how much information a third-place team has when it plays its decisive match. 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland and 🇰🇷 South Korea — sitting right on the cut-line as the most likely unlucky ninth — were both locked into third place three days before 🇩🇿 Algeria and 🇦🇹 Austria kicked off, with no idea how many points would be enough or which Round-of-32 match they were playing for. 🇩🇿 Algeria steps onto the pitch knowing every other group's outcome, the exact third-place standings across all sixteen groups, and precisely what a draw versus a loss means for their bracket path. That is not a level playing field. It is a structurally guaranteed information asymmetry that FIFA baked into the format and could trivially have avoided — and the perverse "agree who gets to lose to avoid Spain" incentive is its direct consequence. I do not know what you call a governing body that designs a system this broken forty-four years after showing the world what broken looks like, but I know it is not incompetence.
+And the mechanism at fault is not the match schedule — within each group, the final round is already played simultaneously, as it has been since the 1982 outrage. The culprit is that [495-row third-place lookup table]({{<ref "posts/elo_2c/index.md">}}). By routing third-place qualification and bracket placement through a cross-group ranking, FIFA created a system where the *order* in which groups finish determines how much information a third-place team has when it plays its decisive match. 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland and 🇰🇷 South Korea — both locked into third place three days before 🇩🇿 Algeria and 🇦🇹 Austria kicked off, with no idea how many points would be enough or which Round-of-32 match they were playing for — both missed the cut when 🇸🇳 Senegal's +2 goal difference edged 🇮🇷 Iran — also on three points — to the eighth and final qualifying spot. 🇩🇿 Algeria steps onto the pitch knowing every other group's outcome, the exact third-place standings across all sixteen groups, and precisely what a draw versus a loss means for their bracket path. That is not a level playing field. It is a structurally guaranteed information asymmetry that FIFA baked into the format and could trivially have avoided — and the perverse "agree who gets to lose to avoid Spain" incentive is its direct consequence. I do not know what you call a governing body that designs a system this broken forty-four years after showing the world what broken looks like, but I know it is not incompetence.
 
-And the bracket it spat out — the one up above — is a lottery. A seeded draw exists to keep the best sides apart until the business end; this one does the reverse. **Five of the eight likely Round-of-16 ties pit two top-twelve Elo teams against each other** — 🇪🇸 Spain vs 🇵🇹 Portugal, 🇫🇷 France vs 🇩🇪 Germany, 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs 🇲🇽 Mexico, 🇧🇷 Brazil vs 🇳🇴 Norway, 🇨🇴 Colombia vs 🇨🇭 Switzerland — fixtures a sane bracket saves for the quarter-finals at the earliest. One round sooner still, 🇳🇱 Netherlands draw 🇲🇦 Morocco, a 2022 semi-finalist, in the Round of 32: a last-eight tie demoted to a first-knockout-round coin toss. Half the heavyweights are slated to knock each other out before the thing even feels like it has started. <!-- TODO: re-confirm these ties once Groups J/K/L finish -->
+And the bracket it spat out — the one up above — is a lottery. A seeded draw exists to keep the best sides apart until the business end; this one does the reverse. **Five of the eight likely Round-of-16 ties pit two top-twelve Elo teams against each other** — 🇪🇸 Spain vs 🇵🇹 Portugal, 🇫🇷 France vs 🇩🇪 Germany, 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs 🇲🇽 Mexico, 🇧🇷 Brazil vs 🇳🇴 Norway, 🇨🇴 Colombia vs 🇨🇭 Switzerland — fixtures a sane bracket saves for the quarter-finals at the earliest. One round sooner still, 🇳🇱 Netherlands draw 🇲🇦 Morocco, a 2022 semi-finalist, in the Round of 32: a last-eight tie demoted to a first-knockout-round coin toss. Half the heavyweights are slated to knock each other out before the thing even feels like it has started.
 
 So after two weeks and seventy-two matches, the tournament finally *starts in earnest* — with the strongest thirty-two teams, single elimination. Which is to say it starts exactly where snooker's World Championship and every other event I've ever pointed this model at *began*. We took the scenic route.
 
@@ -119,21 +107,20 @@ The effect on the title race is dramatic:
 
 | Team | Pre-tournament | Now |
 |:-----|---------------:|----:|
-| 🇦🇷 Argentina | 23.0% | **33.0%** |
-| 🇪🇸 Spain | 35.3% | **24.6%** |
-| 🇫🇷 France | 12.7% | **22.1%** |
-| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | 6.0% | 4.3% |
-| 🇨🇴 Colombia | 3.3% | 3.5% |
-| 🇧🇷 Brazil | 3.9% | 3.5% |
-| 🇵🇹 Portugal | 3.5% | 2.3% |
-
-<!-- TODO: refresh this whole table off the 72-result run. -->
+| 🇦🇷 Argentina | 23.0% | **31.8%** |
+| 🇪🇸 Spain | 35.3% | **24.7%** |
+| 🇫🇷 France | 12.7% | **22.2%** |
+| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | 6.0% | 5.7% |
+| 🇨🇴 Colombia | 3.3% | 3.9% |
+| 🇧🇷 Brazil | 3.9% | 3.3% |
+| 🇵🇹 Portugal | 3.5% | 1.8% |
+| 🇳🇱 Netherlands | 2.0% | 2.5% |
 
 That counter piling up on the right of the animation settles, after all ten million runs, into the model's current pecking order:
 
 {{< img src="title_probabilities" alt="Horizontal bar chart of the top 15 teams by conditional title probability, led by Argentina with Spain and France close behind" >}}
 
-The favourite swap is only half the story now. 🇦🇷 Argentina overtaking 🇪🇸 Spain at the top is the obvious headline on its own; what's new is 🇫🇷 France. Pre-tournament France were a distant third at 12.7%; they've since rocketed to **22.1%**, close enough to breathe on 🇪🇸 Spain's 24.6% for second place. So the podium has gone from "Spain, daylight, Argentina, daylight, the chasing pack" to a genuine three-horse race — 🇦🇷 Argentina out front around a third, then 🇪🇸 Spain and 🇫🇷 France all but level behind. Spain didn't so much collapse as get caught: the serene, group-of-death-free procession the rating projected in June has met both some real on-pitch resistance and, as the bracket just showed, 🇫🇷 France parked squarely in its half.
+The favourite swap is only half the story now. 🇦🇷 Argentina overtaking 🇪🇸 Spain at the top is the obvious headline on its own; what's new is 🇫🇷 France. Pre-tournament France were a distant third at 12.7%; they've since rocketed to **22.2%**, close enough to breathe on 🇪🇸 Spain's 24.7% for second place. So the podium has gone from "Spain, daylight, Argentina, daylight, the chasing pack" to a genuine three-horse race — 🇦🇷 Argentina out front around a third, then 🇪🇸 Spain and 🇫🇷 France all but level behind. Spain didn't so much collapse as get caught: the serene, group-of-death-free procession the rating projected in June has met both some real on-pitch resistance and, as the bracket just showed, 🇫🇷 France parked squarely in its half.
 
 ## Model vs market, take two
 
@@ -143,15 +130,12 @@ Both did. They're converging.
 
 | Team | Model now | Market now | Edge now | *(Edge pre-tournament)* |
 |:-----|----------:|-----------:|---------:|------------------------:|
-| 🇦🇷 Argentina | 33.0% | 17.6% | **+15.4pp** | *(+14.7pp)* |
-| 🇪🇸 Spain | 24.6% | 12.2% | **+12.4pp** | *(+19.3pp)* |
-| 🇫🇷 France | 22.1% | 21.1% | +1.0pp | *(−2.9pp)* |
-| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | 4.3% | 10.0% | −5.7pp | *(−4.5pp)* |
-| 🇨🇴 Colombia | 3.5% | 1.4% | +2.0pp | *(+1.5pp)* |
-| 🇧🇷 Brazil | 3.5% | 5.5% | −2.0pp | *(−4.4pp)* |
-
-<!-- TODO: refresh off the 72-result run; consider restoring the decimal-odds
-     columns used in parts 2b/2c (model_decimal_odds, market_decimal_odds). -->
+| 🇦🇷 Argentina | 31.8% | 22.0% | **+9.8pp** | *(+14.7pp)* |
+| 🇪🇸 Spain | 24.7% | 10.5% | **+14.2pp** | *(+19.3pp)* |
+| 🇫🇷 France | 22.2% | 22.9% | −0.7pp | *(−2.9pp)* |
+| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | 5.7% | 10.4% | −4.7pp | *(−4.5pp)* |
+| 🇨🇴 Colombia | 3.9% | 2.4% | +1.5pp | *(+1.5pp)* |
+| 🇧🇷 Brazil | 3.3% | 5.6% | −2.4pp | *(−4.4pp)* |
 
 > **Disclaimer**: This section discusses betting odds for the purpose of statistical comparison and analysis. It is not intended to promote gambling or serve as betting advice. Please gamble responsibly and be aware of your local laws and age restrictions.
 
@@ -159,11 +143,11 @@ And the same picture plotted log-log, so the disagreements stand out:
 
 {{< img src="market_vs_model" alt="Log-log scatter of conditional model versus Polymarket title probabilities, with the diagonal marked and the biggest disagreements labelled" >}}
 
-Look at 🇪🇸 Spain. The famous +19.3pp edge has shrunk to +12.4pp — and it shrank from *both ends*: the model cooled on Spain (35.3% → 24.6%) and so did the market (16.0% → 12.2%), meeting partway. That's the healthiest possible outcome for a disagreement: not one side capitulating, but two independent forecasters watching the same football and drifting toward each other.
+Look at 🇪🇸 Spain. The famous +19.3pp edge has shrunk to +14.2pp — the model cooled on Spain (35.3% → 24.7%) and the market went even further (16.0% → 10.5%). Two independent forecasters watching the same football, drifting toward each other from opposite ends.
 
-🇦🇷 Argentina is the opposite kind of story — a disagreement that *held its ground*. The market more than doubled their implied chance, from 8.3% to 17.6%, almost keeping pace with the model's own climb from 23% to 33% — so Argentina's edge has barely moved, +14.7pp in June and +15.4pp now. Argentina is simply the value bet 🇪🇸 Spain was before kickoff, for the same structural reasons (a kind set of group results, a strong Elo and now the soft half of the bracket) the model liked Spain in the first place.
+🇦🇷 Argentina is a different kind of story — a disagreement that narrowed as the market caught up. The market nearly tripled their implied chance, from 8.3% to 22.0%, outpacing the model's own climb from 23% to 32% — so Argentina's edge has come down, +14.7pp in June and +9.8pp now. Argentina is still the value bet 🇪🇸 Spain was before kickoff, for the same structural reasons (a kind set of group results, a strong Elo and now the soft half of the bracket) the model liked Spain in the first place — just less dramatically so.
 
-And 🇫🇷 France are the cleanest convergence of the lot. Pre-tournament the model sat *below* the market on France (12.7% against 15.6%, a −2.9pp edge); both have since surged France into the low twenties — model 22.1%, market 21.1% — landing almost exactly on top of each other at +1.0pp. When two forecasters who began a tournament disagreeing end it agreeing, the football has usually spoken loudly enough for both.
+And 🇫🇷 France are the cleanest convergence of the lot. Pre-tournament the model sat *below* the market on France (12.7% against 15.6%, a −2.9pp edge); both have since surged France into the low twenties — model 22.2%, market 22.9% — landing almost exactly on top of each other at −0.7pp. When two forecasters who began a tournament disagreeing end it agreeing, the football has usually spoken loudly enough for both.
 
 Further down, the pattern from the snooker pieces survives intact: 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England, 🇧🇷 Brazil and 🇩🇪 Germany all still carry a market premium the rating won't pay — the established-name, *knows-how-to-win-a-tournament* tax that betting crowds price into famous shirts and Elo simply can't see. We [flagged exactly this for Ronnie O'Sullivan]({{<ref "posts/elo_2b/index.md">}}); it turns out international football has its Ronnies too.
 
@@ -176,6 +160,6 @@ I said in part 2c I'd be back on the other side of the trophy ceremony to find o
 *All the code, data snapshots and figures for this article live on [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/world_cup_2026).*
 
 [^conditional]: The simulator's `--conditional` mode pins every played group scoreline to its real result and refreshes the Elo snapshot, then simulates only the still-undecided matches. It writes to a parallel set of files so the frozen pre-tournament forecast from part 2c stays reproducible — the baseline never gets quietly overwritten by mid-tournament data.
-[^elo-source]: As before, ratings come from [eloratings.net](https://eloratings.net/), the established World Football Elo Ratings, refreshed after every international. <!-- TODO: state the exact refreshed snapshot timestamp used for the final run. -->
+[^elo-source]: As before, ratings come from [eloratings.net](https://eloratings.net/), the established World Football Elo Ratings, refreshed after every international. The snapshot used for this article was taken at 2026-06-28T05:00:05Z.
 [^vig-and-odds]: Decimal odds quote the total return per unit stake including the stake, so fair odds for probability \\(p\\) are exactly \\(1/p\\). Summed across all 48 contracts the market-implied probabilities exceed 100% — the overround is the house's cut. Polymarket's is about 3%; a typical sportsbook is closer to 5–8%. The house always wins.
-[^blowout-data]: Blow-out rates are computed from the [martj42 international-results dataset](https://github.com/martj42/international_results), taking each 32-team World Cup's group stage to be its first 48 matches (8 groups of 4). The 2026 figure is over the 66 group matches played at the time of writing, with the final six still to come in Groups J, K and L.
+[^blowout-data]: Blow-out rates are computed from the [martj42 international-results dataset](https://github.com/martj42/international_results), taking each 32-team World Cup's group stage to be its first 48 matches (8 groups of 4). The 2026 figure is over all 72 group matches.
