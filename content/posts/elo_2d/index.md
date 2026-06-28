@@ -28,21 +28,23 @@ Some of the pre-tournament reads aged badly:
 
 | Team | Pre-tournament qualify | Reality |
 |:-----|----------------------:|:--------|
-| 🇺🇾 Uruguay | 95.0% | Out |
-| 🇹🇷 Turkey | 86.8% | Out |
-| 🇨🇿 Czech Republic | 76.8% | Out |
+| 🇺🇾 Uruguay | 94.8% | Out |
+| 🇹🇷 Turkey | 86.4% | Out |
+| 🇮🇷 Iran | 83.9% | Out |
+| 🇰🇷 South Korea | 80.7% | Out |
 
-Group H produced two of the tournament's headline inversions at once: 🇺🇾 Uruguay out and 🇨🇻 Cape Verde in — a near-perfect reversal of what the ratings expected from 🇪🇸 Spain's group.
+Group H produced two of the tournament's headline inversions at once: 🇺🇾 Uruguay out and 🇨🇻 Cape Verde in — a near-perfect reversal of what the ratings expected from 🇪🇸 Spain's group. Group A pulled the same trick: 🇰🇷 South Korea out, 🇿🇦 South Africa through.
 
 And some aged rather well:
 
 | Team | Pre-tournament qualify | Reality |
 |:-----|----------------------:|:--------|
-| 🇬🇭 Ghana | 7.9% | Through |
-| 🇨🇻 Cape Verde | 24.3% | Through |
+| 🇬🇭 Ghana | 8.3% | Through |
+| 🇿🇦 South Africa | 14.0% | Through |
+| 🇨🇻 Cape Verde | 24.8% | Through |
 | 🇨🇩 DR Congo | 25.4% | Through |
 
-There's no single lesson here beyond the obvious one the [snooker write-ups]({{<ref "posts/elo_2b/index.md">}}) kept circling: a rating integrated over years of competitive results is a statement about the long run, and a 48-team knockout that turns on three matches per side will always hand you a fistful of upsets the rating never saw coming. 🇬🇭 Ghana going from a 7.9% no-hoper to a certainty is not the model being wrong — it's the model being a prior, and the football being the evidence.
+There's no single lesson here beyond the obvious one the [snooker write-ups]({{<ref "posts/elo_2b/index.md">}}) kept circling: a rating integrated over years of competitive results is a statement about the long run, and a 48-team knockout that turns on three matches per side will always hand you a fistful of upsets the rating never saw coming. 🇬🇭 Ghana going from an 8.3% no-hoper to a certainty is not the model being wrong — it's the model being a prior, and the football being the evidence.
 
 ## The bracket, for real this time
 
@@ -102,7 +104,7 @@ Further down, the pattern from the [snooker pieces]({{<ref "posts/elo_2b/index.m
 
 ## The format is a disgrace, and now I can prove it
 
-Allow me a paragraph of editorial — I think I've earned it. We just played **seventy-two** group matches to send **sixteen** teams home, and bar 🇨🇻 Cape Verde's opening-match ambush almost all of it went to script. Two genuine surprises in two weeks — 🇺🇾 Uruguay and 🇹🇷 Turkey, both odds-on to qualify, both out — and everyone else who was meant to advance, advanced. Two weeks of football to confirm what the ratings already knew in June.
+Allow me a paragraph of editorial — I think I've earned it. We just played **seventy-two** group matches to send **sixteen** teams home, and bar 🇨🇻 Cape Verde's opening-match ambush almost all of it went to script. Four teams the model rated above 80% to advance — 🇺🇾 Uruguay, 🇹🇷 Turkey, 🇮🇷 Iran and 🇰🇷 South Korea — all went home; everyone else who was meant to advance, advanced. Two weeks of football to confirm what the ratings already knew in June.
 
 It was also *less competitive* than a World Cup should be, and for once I can put a number on the grumble. A **blow-out** — a win by three goals or more — landed in exactly a quarter of this group stage's matches. Across the seven tournaments of the 32-team era, 1998 to 2022, that rate averaged **14.6%** and never once cleared 21%:
 
