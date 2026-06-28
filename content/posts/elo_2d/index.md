@@ -5,7 +5,7 @@ slug: world-cup-2026-knockouts
 share_img: /posts/world-cup-2026-knockouts/title_probabilities_share.png
 author: Markus Shepherd
 type: post
-date: 2026-06-28T12:00:00+03:00 # tomorrow, noon Helsinki
+date: 2026-06-28T15:30:00+03:00
 tags:
   - Elo rating
   - Football
