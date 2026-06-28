@@ -12,13 +12,11 @@ tags:
   - World Cup
 ---
 
-## Extra time
-
-The group stage is over, the Round of 32 is set and seventy-two matches have quietly rearranged everything I told you over two weeks ago. ⚽️
+The group stage is over, the Round of 32 is set — and the model has changed its mind. ⚽️
 
 When I [ran the numbers before kickoff]({{<ref "posts/elo_2c/index.md">}}) the model had a bold, market-contrarian opinion: 🇪🇸 Spain to win it at 35.3%, 🇦🇷 Argentina second at 23.0% and both *dramatically* underpriced by the bookies — Spain's +19.3pp edge over Polymarket was the strongest disagreement between maths and money I'd ever put on this blog. I promised I'd come back on the other side of the trophy ceremony to find out whether the model deserved its confidence.
 
-This is not that piece. Consider it extra time: an unscheduled period I hadn't planned to write, called because two weeks of actual football have done something the ten million pre-tournament simulations didn't — they've made the model change its own mind. 🇪🇸 Spain are no longer the favourite. 🇦🇷 Argentina are. Before we get to *why*, let's do the honest thing and grade the homework.
+This is not that piece. Consider it extra time: an unscheduled period I hadn't planned to write, called because seventy-two matches of actual football have done what ten million simulations couldn't. 🇪🇸 Spain are no longer the favourite. 🇦🇷 Argentina are. Before we get to *why*, let's do the honest thing and grade the homework.
 
 ## Where the model was right, and where it face-planted
 
