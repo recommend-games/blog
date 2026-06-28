@@ -75,6 +75,8 @@ The non-obvious move: 🇫🇷 France, a distant third at 12.7% before kickoff, 
 
 ## Model vs market, take two
 
+> **Disclaimer**: This section discusses betting odds for the purpose of statistical comparison and analysis. It is not intended to promote gambling or serve as betting advice. Please gamble responsibly and be aware of your local laws and age restrictions.
+
 The spine of part 2c was a number: 🇪🇸 Spain's +19.3pp edge over Polymarket, the model screaming *value* where the market shrugged. The obvious question for a follow-up is whether that disagreement resolved — and if so, who blinked.
 
 Both did. They're converging.
@@ -87,20 +89,16 @@ Both did. They're converging.
 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | 5.7% | 10.4% | −4.7pp | *(−4.5pp)* |
 | 🇨🇴 Colombia | 3.9% | 2.4% | +1.5pp | *(+1.5pp)* |
 | 🇧🇷 Brazil | 3.3% | 5.6% | −2.4pp | *(−4.4pp)* |
-
-> **Disclaimer**: This section discusses betting odds for the purpose of statistical comparison and analysis. It is not intended to promote gambling or serve as betting advice. Please gamble responsibly and be aware of your local laws and age restrictions.
+| 🇳🇱 Netherlands | 2.5% | 4.2% | −1.7pp | *(−1.9pp)* |
+| 🇵🇹 Portugal | 1.8% | 4.9% | −3.1pp | *(−6.7pp)* |
 
 And the same picture plotted log-log, so the disagreements stand out:
 
 {{< img src="market_vs_model" alt="Log-log scatter of conditional model versus Polymarket title probabilities, with the diagonal marked and the biggest disagreements labelled" >}}
 
-Look at 🇪🇸 Spain. The famous +19.3pp edge has shrunk to +14.2pp — the model cooled on Spain (35.3% → 24.7%) and the market went even further (16.0% → 10.5%). Two independent forecasters watching the same football, drifting toward each other from opposite ends.
+The most famous edge — 🇪🇸 Spain's +19.3pp — has shrunk to +14.2pp. Not because the model held firm while the market caught up: both moved. The model cooled on 🇪🇸 Spain (35.3% → 24.7%); the market went further still (16.0% → 10.5%). 🇦🇷 Argentina is the mirror: here the market did the catching up. Polymarket nearly tripled their implied chance from 8.3% to 22.0% while the model climbed more modestly (23.0% → 31.8%), narrowing the gap from +14.7pp to +9.8pp — but leaving 🇦🇷 Argentina as the clearest model-vs-market disagreement that remains.
 
-🇦🇷 Argentina is a different kind of story — a disagreement that narrowed as the market caught up. The market nearly tripled their implied chance, from 8.3% to 22.0%, outpacing the model's own climb from 23% to 32% — so Argentina's edge has come down, +14.7pp in June and +9.8pp now. Argentina is still the value bet 🇪🇸 Spain was before kickoff, for the same structural reasons (a kind set of group results, a strong Elo and now the soft half of the bracket) the model liked Spain in the first place — just less dramatically so.
-
-And 🇫🇷 France are the cleanest convergence of the lot. Pre-tournament the model sat *below* the market on France (12.7% against 15.6%, a −2.9pp edge); both have since surged France into the low twenties — model 22.2%, market 22.9% — landing almost exactly on top of each other at −0.7pp. When two forecasters who began a tournament disagreeing end it agreeing, the football has usually spoken loudly enough for both.
-
-Further down, the pattern from the snooker pieces survives intact: 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England, 🇧🇷 Brazil and 🇩🇪 Germany all still carry a market premium the rating won't pay — the established-name, *knows-how-to-win-a-tournament* tax that betting crowds price into famous shirts and Elo simply can't see. We [flagged exactly this for Ronnie O'Sullivan]({{<ref "posts/elo_2b/index.md">}}); it turns out international football has its Ronnies too.
+Further down, the pattern from the [snooker pieces]({{<ref "posts/elo_2b/index.md">}}) survives intact: 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England, 🇧🇷 Brazil and 🇵🇹 Portugal all carry a market premium the rating won't pay — the established-name, *knows-how-to-win-a-tournament* tax that betting crowds price into famous shirts and Elo simply can't see. International football has its Ronnies too.
 
 ## The format is a disgrace, and now I can prove it
 
