@@ -1,6 +1,6 @@
 ---
 title: "Who wins the 2026 World Cup? Not Spain, apparently."
-subtitle: "Elo, part 2d: the group stage is done and the model has changed its mind"
+subtitle: "Elo, part 2d — extra time: the group stage is done and the model has changed its mind"
 slug: world-cup-2026-knockouts
 share_img: /posts/world-cup-2026-knockouts/title_probabilities_share.png
 author: Markus Shepherd
@@ -12,13 +12,13 @@ tags:
   - World Cup
 ---
 
-## Half-time team-talk
+## Extra time
 
 The group stage is over, the Round of 32 is set and seventy-two matches have quietly rearranged everything I told you over two weeks ago. ⚽️
 
 When I [ran the numbers before kickoff]({{<ref "posts/elo_2c/index.md">}}) the model had a bold, market-contrarian opinion: 🇪🇸 Spain to win it at 35.3%, 🇦🇷 Argentina second at 23.0% and both *dramatically* underpriced by the bookies — Spain's +19.3pp edge over Polymarket was the strongest disagreement between maths and money I'd ever put on this blog. I promised I'd come back on the other side of the trophy ceremony to find out whether the model deserved its confidence.
 
-This is not that piece. Consider it the half-time team-talk: an unscheduled check-in I hadn't planned to write, prompted by the fact that two weeks of actual football have done something the ten million pre-tournament simulations didn't — they've made the model change its own mind. 🇪🇸 Spain are no longer the favourite. 🇦🇷 Argentina are. Before we get to *why*, let's do the honest thing and grade the homework.
+This is not that piece. Consider it extra time: an unscheduled period I hadn't planned to write, called because two weeks of actual football have done something the ten million pre-tournament simulations didn't — they've made the model change its own mind. 🇪🇸 Spain are no longer the favourite. 🇦🇷 Argentina are. Before we get to *why*, let's do the honest thing and grade the homework.
 
 ## Where the model was right, and where it face-planted
 
@@ -153,11 +153,11 @@ And 🇫🇷 France are the cleanest convergence of the lot. Pre-tournament the 
 
 Further down, the pattern from the snooker pieces survives intact: 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England, 🇧🇷 Brazil and 🇩🇪 Germany all still carry a market premium the rating won't pay — the established-name, *knows-how-to-win-a-tournament* tax that betting crowds price into famous shirts and Elo simply can't see. We [flagged exactly this for Ronnie O'Sullivan]({{<ref "posts/elo_2b/index.md">}}); it turns out international football has its Ronnies too.
 
-## Final whistle, reprise ⚽
+## Final whistle ⚽
 
 So the model has eaten its own headline — and then some. 🇪🇸 Spain were *probably* going to win this thing; now it's 🇦🇷 Argentina out front, 🇫🇷 France gatecrashing the podium, and the market — for once — shuffled most of the way toward agreeing. The +19.3pp argument I picked with the bookies in June is half-settled, amicably, with both sides having moved toward the middle.
 
-I said in part 2c I'd be back on the other side of the trophy ceremony to find out whether the model deserved its confidence. That piece is still coming on July 19. Treat this as the half-time talk: the favourite has changed, 🇨🇻 Cape Verde have already made a mockery of my neatest prediction, the bracket is finally real and there are sixteen knockout ties between here and the only result that actually grades the homework.
+I said in part 2c I'd be back on the other side of the trophy ceremony to find out whether the model deserved its confidence. That piece is still coming on July 19 — the penalty shootout, where the final result decides whether the model held its nerve. Extra time is up: the favourite has changed, 🇨🇻 Cape Verde have already made a mockery of my neatest prediction, the bracket is finally real and there are sixteen knockout ties between here and the only result that actually grades the homework.
 
 *All the code, data snapshots and figures for this article live on [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/world_cup_2026).*
 
