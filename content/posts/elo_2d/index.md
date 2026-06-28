@@ -2,10 +2,10 @@
 title: "Who wins the 2026 World Cup? Not Spain, apparently."
 subtitle: "Elo, part 2d — extra time: the group stage is done and the model has changed its mind"
 slug: world-cup-2026-knockouts
-share_img: /posts/world-cup-2026-knockouts/title_probabilities_share.png
+share_img: /posts/world-cup-2026-knockouts/knockout_bracket_share.png
 author: Markus Shepherd
 type: post
-date: 2026-06-28T15:30:00+03:00
+date: 2026-06-28T15:45:11+03:00
 tags:
   - Elo rating
   - Football
