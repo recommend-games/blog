@@ -117,7 +117,7 @@ It was also *less competitive* than a World Cup should be, and for once I can pu
 | 2022 | 10.4% |
 | **2026** | **25.0%** |
 
-Nearly **double** the historical norm and clear of every previous edition by a street. Invite sixteen more teams who have no business on the same pitch as the elite, and the scoreboards say exactly that.[^blowout-data]
+More than double the 2022 rate of 10.4%, and clear of every previous edition by a street. Invite sixteen more teams who have no business on the same pitch as the elite, and the scoreboards say exactly that.[^blowout-data]
 
 The tie-break ladder did its own damage, turning a slab of the last round of group games into dead rubbers — or worse, into invitations to collude. 🇩🇿 Algeria and 🇦🇹 Austria faced each other in a situation that was arithmetically clear before a ball was kicked — because they played last, with perfect information on every other group. Any draw would send *both* of them through: with four points each, they were guaranteed to be among the eight best third-place teams regardless of how Groups K and L finished. A 2026 restaging of the [Disgrace of Gijón](https://en.wikipedia.org/wiki/Disgrace_of_Gij%C3%B3n), 🇩🇪 West Germany and 🇦🇹 Austria's infamous 1982 non-aggression pact — and deeply unfair on whoever finished their own group two days earlier without that arithmetic in hand.
 
