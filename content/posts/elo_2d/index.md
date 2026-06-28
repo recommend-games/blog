@@ -22,7 +22,7 @@ This is not that piece. Consider it extra time: an unscheduled period I hadn't p
 
 Elo prices the long run. It does not price two good weeks or two bad ones, which is exactly what a World Cup group stage is — so the gap between what the model expected in June and what actually happened is where the story lives.
 
-And it lives loudest in the exact fixture I built the goal model around. Back in [part 2c]({{<ref "posts/elo_2c/index.md">}}) my worked example was 🇪🇸 Spain vs 🇨🇻 Cape Verde — a 579-point Elo gap so lopsided the Poisson had to be *floored* just to give 🇨🇻 Cape Verde a pulse. The model gave 🇪🇸 Spain **94.1%** to win, 🇨🇻 Cape Verde **1.0%**, and a most-likely scoreline of 3–0. The actual result, in Spain's own group: **0–0.** 🇨🇻 Cape Verde held the biggest paper favourite of the entire group stage to a goalless draw, qualified from Group H on their own merits, and turned my tidy little example into the biggest upset of the tournament so far. That floor of 0.25 expected goals I spent a whole paragraph justifying? It earned its keep.
+And it lives loudest in the exact fixture I built the goal model around. Back in [part 2c]({{<ref "posts/elo_2c/index.md">}}) my worked example was 🇪🇸 Spain vs 🇨🇻 Cape Verde — a 579-point Elo gap so lopsided the Poisson had to be *floored* just to give 🇨🇻 Cape Verde a pulse. The model gave 🇪🇸 Spain **94.1%** to win, 🇨🇻 Cape Verde **1.0%**, and a most-likely scoreline of 3–0. The actual result: **0–0.** 🇨🇻 Cape Verde held the biggest paper favourite of the entire group stage to a goalless draw, qualified from Group H anyway, and turned my tidy little example into the biggest upset of the tournament so far. That floor of 0.25 expected goals I spent a whole paragraph justifying? It earned its keep.
 
 Some of the pre-tournament reads aged badly:
 
@@ -31,7 +31,6 @@ Some of the pre-tournament reads aged badly:
 | 🇺🇾 Uruguay | 95.0% | Out |
 | 🇹🇷 Turkey | 86.8% | Out |
 | 🇨🇿 Czech Republic | 76.8% | Out |
-| 🇵🇦 Panama | 65.3% | Out |
 
 Group H produced two of the tournament's headline inversions at once: 🇺🇾 Uruguay out and 🇨🇻 Cape Verde in — a near-perfect reversal of what the ratings expected from 🇪🇸 Spain's group.
 
@@ -42,10 +41,6 @@ And some aged rather well:
 | 🇬🇭 Ghana | 7.9% | Through |
 | 🇨🇻 Cape Verde | 24.3% | Through |
 | 🇨🇩 DR Congo | 25.4% | Through |
-| 🇦🇺 Australia | 52.4% | Through |
-| 🇸🇪 Sweden | 52.1% | Through |
-| 🇪🇬 Egypt | 66.7% | Through |
-| 🇺🇸 USA | 68.1% | Through |
 
 There's no single lesson here beyond the obvious one the [snooker write-ups]({{<ref "posts/elo_2b/index.md">}}) kept circling: a rating integrated over years of competitive results is a statement about the long run, and a 48-team knockout that turns on three matches per side will always hand you a fistful of upsets the rating never saw coming. 🇬🇭 Ghana going from a 7.9% no-hoper to a certainty is not the model being wrong — it's the model being a prior, and the football being the evidence.
 
