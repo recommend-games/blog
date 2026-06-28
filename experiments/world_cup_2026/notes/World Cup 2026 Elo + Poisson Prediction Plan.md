@@ -347,15 +347,16 @@ head-to-head results against each group opponent
 
 ## 7. Group ranking rules
 
-Implement these tie-breaks in this order (per FIFA Article 16 for the
-2026 World Cup):
+Implement these tie-breaks in this order (per FIFA's published
+tie-breaking criteria for the 2026 World Cup, which apply head-to-head
+before overall, unlike previous tournaments):
 
 1. Points.
-2. Overall goal difference.
-3. Overall goals scored.
-4. Head-to-head points among tied teams.
-5. Head-to-head goal difference among tied teams.
-6. Head-to-head goals scored among tied teams.
+2. Head-to-head points among tied teams.
+3. Head-to-head goal difference among tied teams.
+4. Head-to-head goals scored among tied teams.
+5. Overall goal difference.
+6. Overall goals scored.
 7. FIFA ranking fallback (deterministic, no randomness).
 
 The official regulations include team conduct score before the FIFA-ranking fallback. Do not simulate cards. Go directly to FIFA ranking as the final deterministic fallback.

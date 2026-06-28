@@ -30,7 +30,7 @@ Established World Football Elo ratings
 ```
 
 A single tournament samples 72 group-stage scorelines plus 31 knockout
-matches; the Monte Carlo loop runs this end-to-end one million times
+matches; the Monte Carlo loop runs this end-to-end ten million times
 with a fixed seed (`20260611`) so the published outputs are exactly
 reproducible.
 
@@ -40,7 +40,9 @@ reproducible.
   eloratings.net already integrate decades of match data, are updated
   daily, and let the simulator avoid a custom rating model. Pre-tournament
   Elo is frozen on snapshot day so a result inside the tournament never
-  feeds back into the forecast.
+  feeds back into the baseline forecast. The `--conditional` re-run
+  (see "Conditional re-run on results so far") deliberately relaxes this:
+  it refreshes Elo and pins the played scorelines to re-forecast mid-tournament.
 - **Fixed-total Poisson, not bivariate.** A single tunable goal budget
   (default `TOTAL_GOALS = 2.6`) is enough to map Elo expected score onto a
   scoreline distribution. There is no Dixon-Coles correction, no separate
@@ -57,12 +59,13 @@ reproducible.
   couldn't score.
 - **Vectorised group-stage sampling.** All 72 × N_SIMULATIONS group
   goals are drawn in one numpy call before the loop, so the per-sim
-  Python work is just ranking + bracket propagation. 1M tournaments run
-  in ≈4 minutes on a laptop.
+  Python work is just ranking + bracket propagation, parallelised across
+  CPU cores. The full 10M run takes ≈8 minutes on a 16-core machine.
 - **FIFA tie-break ladder, simplified.** Plan §7's full recursive
-  resolution is replaced with a composite sort key (overall GD / GF,
-  then H2H points / GD / GF on the tied subset, then November-2025 FIFA
-  rank). Card/conduct score is intentionally not modelled.
+  resolution is replaced with a composite sort key. The 2026 rules apply
+  head-to-head before overall (unlike previous tournaments), so the key is
+  H2H points / GD / GF on the tied subset, then overall GD / GF, then
+  November-2025 FIFA rank. Card/conduct score is intentionally not modelled.
 - **Knockout-tie tie-break by Elo expected score.** Plan §9 deliberately
   avoids modelling extra time and penalties. If 90-minute goals are
   level, the advancing team is drawn from `s_A`, the team-A Elo expected
@@ -240,18 +243,18 @@ also runs row-level sanity checks before writing its CSV.
 
 ### Running the simulation
 
-Defaults (`-n 1_000_000`, `--seed 20260611`) come from `world_cup_2026/config.py`.
-Use a smaller count during development; the simulator runs at ≈4,000
-sim/s on a modern laptop.
+Defaults (`-n 10_000_000`, `--seed 20260611`) come from `world_cup_2026/config.py`.
+The loop parallelises across CPU cores (see `-w`); on a 16-core machine it
+runs at ≈22,000 tournaments/s, so use a smaller count during development.
 
 ```bash
-# 10k for a quick debug pass
+# 10k for a quick debug pass (well under a second)
 uv run wc26-simulate -n 10000 --quiet
 
-# 100k for development checks (~30 seconds)
+# 100k for development checks (~5 seconds)
 uv run wc26-simulate -n 100000 --quiet
 
-# 1M for the published outputs (~4 minutes)
+# 10M for the published outputs (~8 minutes on 16 cores)
 uv run wc26-simulate
 ```
 
@@ -266,7 +269,7 @@ Writes to `outputs/`:
 - `simulation_summary.csv` — run metadata (n, seed, Elo snapshot date, total goals, host advantage, created_at).
 
 The plan's bracket invariants (`sum p_winner = 1`, `sum p_reach_sf = 4`,
-…) are exact to six decimal places at 1M sims.
+…) are exact to six decimal places at 10M sims.
 
 ### Score predictions per fixture
 
@@ -324,13 +327,119 @@ uv run python -m world_cup_2026.build_knockout_score_predictions
 uv run python -m world_cup_2026.build_market_comparison
 ```
 
+### Conditional re-run on results so far
+
+Once the tournament is under way the simulator can re-forecast from where
+things actually stand, in a way that never overwrites the frozen
+pre-tournament outputs. Two things change relative to the baseline:
+
+1. **Played matches are pinned** to their real scoreline in every
+   simulation, so the standings, FIFA tie-breaks and qualification that
+   flow from them are conditioned on what has happened.
+2. **Elo is refreshed** from a fresh eloratings.net snapshot, so the
+   *remaining* matches are priced off current ratings. A played match
+   therefore enters twice — locked to its real score here, and folded into
+   the updated Elo that prices the teams' future games. That is deliberate.
+
+The conditional scenario lives in parallel files so the baseline stays
+reproducible:
+
+| Conditional artefact | Baseline counterpart |
+|---|---|
+| `data/raw/conditional/eloratings_world.tsv` | `data/raw/eloratings_world.tsv` |
+| `data/raw/conditional/wikipedia_2026_world_cup_group_{A..L}.html` | `data/raw/wikipedia_2026_world_cup_group_{A..L}.html` |
+| `data/processed/teams_conditional.csv` | `data/processed/teams.csv` |
+| `data/processed/results.csv` | — (only exists post-kickoff) |
+| `outputs/conditional/` | `outputs/` |
+
+```bash
+# 1. refresh the conditional snapshots (fresh Elo + group pages with scores)
+mkdir -p data/raw/conditional
+curl -sSL 'https://eloratings.net/World.tsv' -H 'Referer: https://eloratings.net/' \
+  -o data/raw/conditional/eloratings_world.tsv
+date -u +"%Y-%m-%dT%H:%M:%SZ" > data/raw/conditional/elo_snapshot_date.txt
+
+UA='Mozilla/5.0 (compatible; world-cup-2026-research/1.0; you@example.com)'
+for g in A B C D E F G H I J K L; do
+  curl -sSL -A "$UA" "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_${g}" \
+    -o "data/raw/conditional/wikipedia_2026_world_cup_group_${g}.html"
+done
+date -u +"%Y-%m-%dT%H:%M:%SZ" > data/raw/conditional/results_snapshot_date.txt
+
+# 2. build the conditional inputs
+uv run python -m world_cup_2026.build_teams \
+  --world-tsv data/raw/conditional/eloratings_world.tsv \
+  --output data/processed/teams_conditional.csv
+uv run python -m world_cup_2026.parse_results   # -> data/processed/results.csv
+
+# 3. simulate, conditioned on results so far, into outputs/conditional/
+uv run wc26-simulate --conditional
+
+# 3b. per-fixture score predictions: played games carry their actual score
+#     (played/actual_score columns); the KO modal bracket walks the
+#     conditional group_probabilities off refreshed Elo
+uv run python -m world_cup_2026.build_score_predictions --conditional
+uv run python -m world_cup_2026.build_knockout_score_predictions --conditional
+
+# 4. refresh the market and rebuild the comparison against the new model
+uv run python -m world_cup_2026.fetch_market_odds --conditional
+uv run python -m world_cup_2026.build_market_odds --conditional
+uv run python -m world_cup_2026.build_market_comparison --conditional
+
+# 5. regenerate the article charts into plots/conditional/
+uv run wc26-build-article-charts --conditional
+```
+
+The same `--conditional` flag runs through the whole chain. It keeps a
+parallel set of files so the frozen baseline stays reproducible:
+`data/raw/conditional/polymarket_world_cup_winner.json`,
+`data/processed/market_odds_conditional.csv`,
+`outputs/conditional/market_comparison.csv` and `plots/conditional/`.
+
+`parse_results.py` reads the score out of each footballbox's
+`<th class="fscore">` (a played match shows e.g. `2–1`, an unplayed one
+still shows `Match N`) and maps home/away to the canonical `match_id` via
+`group_matches.csv`. `simulation_summary.csv` in the conditional output
+records `results_snapshot_date` and `n_results_fixed` so the run is
+self-describing.
+
+`results.csv` schema is `match_id, home_goals, away_goals, winner`:
+
+- **Group rows** (`match_id` 1-72) pin the scoreline; `winner` is left
+  empty. These are written automatically by `parse_results.py`.
+- **Knockout rows** (`match_id` >= 73; 73-88 R32, 89-96 R16, 97-100 QF,
+  101-102 SF, 104 final) pin *which team advances* via `winner` (a
+  `team_id`). The goals are the regulation/extra-time score and are kept
+  for the record, but the simulator only reads `winner`, so a penalty
+  shootout is captured correctly (e.g. `1-1` with the shootout winner in
+  `winner`). `parse_results.py` does not scrape the knockout page — add
+  these rows by hand; a rerun of `parse_results.py` preserves them.
+
+Pin knockout results **cumulatively** — every played knockout match up to
+the current point. Once the group stage is complete the bracket is
+deterministic across simulations, so each pinned winner is always a real
+participant; in the simulator a pin whose team isn't in that match (an
+out-of-order or stale entry) is ignored rather than forced.
+
+The knockout score-prediction builder also follows reality in
+`--conditional` mode: once the whole group stage is in `results.csv` it
+resolves the R32 fixtures from the *actual* final standings (reusing the
+simulator's group + qualifier code) and propagates each played knockout
+match's *actual* winner, reverting to the modal Elo favourite beyond the
+played front. Its conditional output gains `bracket_basis`
+(`actual`/`modal`), `played`, `actual_score` and `actual_winner` columns,
+with the model's `predicted_winner` reported alongside. A pinned knockout
+winner that isn't one of its bracket participants raises an error here
+(rather than being silently ignored), since this is a single concrete
+bracket and a stale entry would otherwise corrupt later rounds.
+
 ## Configuration
 
 `world_cup_2026/config.py` exposes:
 
 | Constant | Default | Meaning |
 |---|---|---|
-| `N_SIMULATIONS` | `1_000_000` | Number of Monte Carlo tournaments |
+| `N_SIMULATIONS` | `10_000_000` | Number of Monte Carlo tournaments |
 | `SEED` | `20260611` | RNG seed (tournament start date) |
 | `TOTAL_GOALS` | `2.6` | Goal budget per match |
 | `HOST_ADVANTAGE` | `100` | Elo bonus when a host plays at home |

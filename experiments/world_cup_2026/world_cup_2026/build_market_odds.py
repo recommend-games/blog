@@ -9,13 +9,13 @@ does sum to 1 across the 48 qualifying teams.
 
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import re
+from pathlib import Path
 
-from world_cup_2026.config import DATA_PROCESSED, DATA_RAW, TEAMS_CSV
-
-OUTPUT = DATA_PROCESSED / "market_odds.csv"
+from world_cup_2026 import config
 
 NAME_OVERRIDES: dict[str, str] = {
     "Bosnia-Herzegovina": "Bosnia and Herzegovina",
@@ -28,14 +28,31 @@ NAME_OVERRIDES: dict[str, str] = {
 QUESTION_RE = re.compile(r"Will (.+) win the 2026 FIFA World Cup\?")
 
 
-def load_team_lookup() -> dict[str, str]:
-    teams = list(csv.DictReader(open(TEAMS_CSV)))
+def load_team_lookup(teams_csv: Path) -> dict[str, str]:
+    teams = list(csv.DictReader(open(teams_csv)))
     return {row["team_name"]: row["team_id"] for row in teams}
 
 
 def main() -> None:
-    payload = json.load(open(DATA_RAW / "polymarket_world_cup_winner.json"))[0]
-    team_id_by_name = load_team_lookup()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--conditional",
+        action="store_true",
+        help="De-vig the conditional Polymarket snapshot into market_odds_conditional.csv",
+    )
+    args = parser.parse_args()
+
+    if args.conditional:
+        snapshot = config.POLYMARKET_SNAPSHOT_CONDITIONAL
+        teams_csv = config.TEAMS_CONDITIONAL_CSV
+        output = config.MARKET_ODDS_CONDITIONAL_CSV
+    else:
+        snapshot = config.POLYMARKET_SNAPSHOT
+        teams_csv = config.TEAMS_CSV
+        output = config.MARKET_ODDS_CSV
+
+    payload = json.load(open(snapshot))[0]
+    team_id_by_name = load_team_lookup(teams_csv)
 
     raw_prices: dict[str, float] = {}
     skipped: list[str] = []
@@ -74,7 +91,7 @@ def main() -> None:
         )
     rows.sort(key=lambda r: -r["polymarket_p_winner"])
 
-    with OUTPUT.open("w", newline="") as f:
+    with output.open("w", newline="") as f:
         writer = csv.DictWriter(
             f,
             fieldnames=[
@@ -92,7 +109,7 @@ def main() -> None:
             r["polymarket_decimal_odds"] = f"{r['polymarket_decimal_odds']:.4f}"
             writer.writerow(r)
     print(
-        f"Wrote {len(rows)} rows to {OUTPUT} "
+        f"Wrote {len(rows)} rows to {output} "
         f"(raw vig = {(total - 1) * 100:.2f}%; skipped {skipped or 'none'})"
     )
 

@@ -1,0 +1,49 @@
+group,team_id,team_name,p_finish_1st,p_finish_2nd,p_finish_3rd,p_finish_4th,p_qualify,p_eliminated
+A,MX,Mexico,1.0,0.0,0.0,0.0,1.0,0.0
+A,ZA,South Africa,0.0,1.0,0.0,0.0,1.0,0.0
+A,KR,South Korea,0.0,0.0,1.0,0.0,0.0,1.0
+A,CZ,Czech Republic,0.0,0.0,0.0,1.0,0.0,1.0
+B,CA,Canada,0.0,1.0,0.0,0.0,1.0,0.0
+B,BA,Bosnia and Herzegovina,0.0,0.0,1.0,0.0,1.0,0.0
+B,CH,Switzerland,1.0,0.0,0.0,0.0,1.0,0.0
+B,QA,Qatar,0.0,0.0,0.0,1.0,0.0,1.0
+C,BR,Brazil,1.0,0.0,0.0,0.0,1.0,0.0
+C,MA,Morocco,0.0,1.0,0.0,0.0,1.0,0.0
+C,HT,Haiti,0.0,0.0,0.0,1.0,0.0,1.0
+C,SQ,Scotland,0.0,0.0,1.0,0.0,0.0,1.0
+D,US,United States,1.0,0.0,0.0,0.0,1.0,0.0
+D,PY,Paraguay,0.0,0.0,1.0,0.0,1.0,0.0
+D,AU,Australia,0.0,1.0,0.0,0.0,1.0,0.0
+D,TR,Turkey,0.0,0.0,0.0,1.0,0.0,1.0
+E,DE,Germany,1.0,0.0,0.0,0.0,1.0,0.0
+E,CI,Ivory Coast,0.0,1.0,0.0,0.0,1.0,0.0
+E,EC,Ecuador,0.0,0.0,1.0,0.0,1.0,0.0
+E,CW,Curaçao,0.0,0.0,0.0,1.0,0.0,1.0
+F,NL,Netherlands,1.0,0.0,0.0,0.0,1.0,0.0
+F,JP,Japan,0.0,1.0,0.0,0.0,1.0,0.0
+F,SE,Sweden,0.0,0.0,1.0,0.0,1.0,0.0
+F,TN,Tunisia,0.0,0.0,0.0,1.0,0.0,1.0
+G,BE,Belgium,1.0,0.0,0.0,0.0,1.0,0.0
+G,EG,Egypt,0.0,1.0,0.0,0.0,1.0,0.0
+G,IR,Iran,0.0,0.0,1.0,0.0,0.0,1.0
+G,NZ,New Zealand,0.0,0.0,0.0,1.0,0.0,1.0
+H,ES,Spain,1.0,0.0,0.0,0.0,1.0,0.0
+H,CV,Cape Verde,0.0,1.0,0.0,0.0,1.0,0.0
+H,SA,Saudi Arabia,0.0,0.0,0.0,1.0,0.0,1.0
+H,UY,Uruguay,0.0,0.0,1.0,0.0,0.0,1.0
+I,NO,Norway,0.0,1.0,0.0,0.0,1.0,0.0
+I,SN,Senegal,0.0,0.0,1.0,0.0,1.0,0.0
+I,FR,France,1.0,0.0,0.0,0.0,1.0,0.0
+I,IQ,Iraq,0.0,0.0,0.0,1.0,0.0,1.0
+J,AR,Argentina,1.0,0.0,0.0,0.0,1.0,0.0
+J,DZ,Algeria,0.0,0.0,1.0,0.0,1.0,0.0
+J,AT,Austria,0.0,1.0,0.0,0.0,1.0,0.0
+J,JO,Jordan,0.0,0.0,0.0,1.0,0.0,1.0
+K,PT,Portugal,0.0,1.0,0.0,0.0,1.0,0.0
+K,CD,DR Congo,0.0,0.0,1.0,0.0,1.0,0.0
+K,CO,Colombia,1.0,0.0,0.0,0.0,1.0,0.0
+K,UZ,Uzbekistan,0.0,0.0,0.0,1.0,0.0,1.0
+L,EN,England,1.0,0.0,0.0,0.0,1.0,0.0
+L,HR,Croatia,0.0,1.0,0.0,0.0,1.0,0.0
+L,GH,Ghana,0.0,0.0,1.0,0.0,1.0,0.0
+L,PA,Panama,0.0,0.0,0.0,1.0,0.0,1.0

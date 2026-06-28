@@ -1,0 +1,8 @@
+{{- $src := .Page.Resources.GetMatch (printf "%s*" (.Get "src")) -}}
+<video
+	autoplay loop muted playsinline preload="auto"
+	style="max-width: 100%; height: auto;{{ with .Get "style" }} {{ . | safeCSS }}{{ end }}"
+	{{- if eq (.Get "controls") "true" }} controls{{ end }}>
+	<source src="{{ $src.RelPermalink }}" type="{{ $src.MediaType.Type }}">
+	{{- with .Get "alt" }}{{ . }}{{ end -}}
+</video>
