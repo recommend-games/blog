@@ -407,10 +407,19 @@ preserve earlier snapshots when re-running mid-tournament:
 
 ```bash
 # Round-of-32 update — keeps the group-stage conditional outputs intact
-uv run wc26-simulate --conditional --tag conditional_r32
-uv run python -m world_cup_2026.build_score_predictions --conditional --tag conditional_r32
-# … and so on through the chain, all with --tag conditional_r32
+uv run wc26-simulate --conditional --tag conditional_knockout
+uv run python -m world_cup_2026.build_score_predictions --conditional --tag conditional_knockout
+# … and so on through the chain, all with --tag conditional_knockout
 ```
+
+Tags use underscores, not hyphens (e.g. `conditional_knockout`, not `conditional-knockout`).
+Each tag gets its own raw-data directory (`data/raw/{tag}/`) alongside the output and plot
+directories, so the exact inputs used for each snapshot are preserved independently:
+
+| Tag | Scope |
+|---|---|
+| `conditional` | Post-group-stage: all 72 group matches pinned, Elo refreshed after the group phase |
+| `conditional_knockout` | Post-R32: group results plus each played knockout match pinned as the round progresses |
 
 The chain keeps a parallel set of files so the frozen baseline stays reproducible:
 `data/raw/conditional/polymarket_world_cup_winner.json`,
