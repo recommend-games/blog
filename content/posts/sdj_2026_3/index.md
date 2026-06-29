@@ -237,7 +237,10 @@ The jury's own clip:
 
 A one-vs-all deduction game by [Thomas Dagenais-Lespérance](https://recommend.games/#/?designer=82239), originally a French release (*Mimose & Sam et le voleur de fruits*). It's the highest-rated of the three on BoardGameGeek (7.8 average), albeit on a thin 45 votes, and the asymmetric hunt for the fruit thief gives it a bit more structure than its rivals.
 
-<!-- TODO clip: the SdJ channel hasn't posted the Mimose & Sam clip yet (Boo Party and Mooki Island are already up). German edition is "Verflixt Verzaubert" — re-run the channel search under that title and embed {{</* youtube ID */>}} once it lands. -->
+The jury's own clip:
+
+{{< youtube 8PQWKHXRBX0 >}}
+
 <!-- TODO Markus: personal take -->
 
 
