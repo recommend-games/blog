@@ -141,6 +141,54 @@ The scatter shows a positive but weak, noisy correlation between complexity and 
 Rigorous but playful. Confident — this article has earned it after four parts of setup. Caveats as *interpretive insight*, not apologies.
 
 
+## Appendix: assumptions, caveats and considerations from DLO and the methodology
+
+### Core Elo assumptions
+
+- **Logistic win probability.** The probability that player A beats player B is a logistic function of their rating difference. This is a parametric choice — other functional forms (Gaussian, linear) would give different results.
+- **Zero-sum updates.** What one player gains, others lose exactly. Total rating mass is conserved.
+- **Skill is scalar and transitive.** Each player has a single number representing their strength. If A usually beats B and B usually beats C, A usually beats C. Games where matchup-specific strategies matter (rock-paper-scissors dynamics between playstyles) violate this.
+- **Skill is stationary within the rating run.** Elo doesn't structurally distinguish a player who was strong two years ago from one who is strong now. It adapts, but only through the same update mechanism.
+
+### Multiplayer extension (DLO / Plackett-Luce)
+
+- **The Plackett-Luce ranking model.** The probability of a full finishing order is computed as a product of softmax steps: "who wins among those remaining?" This assumes that conditioned on who finishes first, the remaining players' relative probabilities are unaffected. This is a strong independence assumption that real board games may violate (king-of-the-hill dynamics, catch-up mechanics, etc.).
+- **Only ordinal outcomes matter.** A narrow first place and a runaway victory are treated identically. Margin of victory, point totals and game-specific scores are discarded.
+- **Fixed linear payoff structure.** First place gets n−1, second gets n−2, ..., last gets 0. This is a specific choice; others are possible.
+
+### K\* calibration
+
+- **Brier loss as the optimization criterion.** K\* minimizes mean squared prediction error. Log-loss or other proper scoring rules would be defensible alternatives and might give different values.
+- **One K for all players in a game.** A single update factor applies regardless of a player's experience level or how long ago they started.
+- **K\* is constant across the entire match log.** As player pools grow or shift over time, the "optimal" K could drift; the model assumes it's stable.
+
+### The p-deterministic benchmark
+
+- **The benchmark game is a mixture of two extremes.** Real games are compared to a toy model where each match is either "pure skill" (fixed ranking decides) or "pure random" (uniform lottery). Real randomness in games — dice rolls, card draws — doesn't work like this at all.
+- **"Pure skill" means a fixed underlying ranking.** Players are ranked once at the start and never change rank. In reality skill evolves, declines and has variance game-to-game.
+- **p is treated as a property of the game.** But it's really a property of the game played by a specific population of players.
+- **The σ→p mapping is player-count-invariant.** Verified empirically in simulation for up to 15 players, but rests on the same Plackett-Luce model assumptions used throughout.
+- **This is the harder benchmark.** DLO offer two benchmarks: "50%-chess" (mixing real chess outcomes with coin flips, σ≈45) and "50%-deterministic" (the fully synthetic toy universe, σ≈123). The blog series uses p-deterministic, which is equivalent to DLO's more extreme second benchmark. A game that DLO would classify as "above 50%-chess" (skill-dominant) can still appear moderate in our framing. This choice should be stated explicitly when comparing to other work.
+
+### Data and scope
+
+- **BGA-only data.** The player population is self-selected: online, competitive-minded, predominantly tech-savvy, skewed toward certain regions. This population may differ substantially from the "typical" player group for a given game.
+- **Friendly/unranked games are included.** BGA allows matches to be played "for fun" with no official Elo update. These are included in the analysis anyway — players in such games may not be trying to win.
+- **Only outcomes are observed, not game states.** The model is a complete black box on the game. Strategies, hidden information structures, the nature of the randomness (one bad dice roll vs many) — none of this enters the calculation.
+- **Competitive games only (filter).** Games are filtered to ≥100 regular players, with a BGG entry, and excluding those that are locked BGA-rank or cooperative on BGG. This filter is a deliberate choice that affects which games appear and which don't.
+- **Players are assumed to be trying to win.** The entire machinery breaks down if players are learning, playing socially, or not engaged competitively. The model has no way to detect this.
+- **Minimum-games cutoff.** The standard deviation of the rating distribution rises substantially as the minimum-games threshold increases, because players with few games have ratings stuck near their initial value of 0, artificially compressing the distribution. DLO use 25 games as their "regulars" threshold and show σ continues to rise up to ~100 games before stabilising. Whatever cutoff is used in the BGA analysis, it is a methodological choice with material impact on the numbers.
+- **Dataset connectivity.** DLO remove "isolated players" — those not connected to the main player pool via any chain of shared opponents. Without at least occasional cross-group play, Elo's transitivity cannot propagate, and isolated clusters generate internally-consistent but mutually-incomparable ratings. If BGA's matchmaking keeps players in narrow Elo bands, this matters.
+- **Stratification.** If a platform's matchmaking produces very homogeneous groups (strong players only against strong, weak only against weak), the overall rating distribution compresses even in a highly skill-based game. Conversely, if strong players systematically seek out weak opponents (as in online poker), the method detects more skill than average. BGA's matchmaking rules are therefore directly relevant to the numbers.
+
+### Interpretation
+
+- **Competitive differentiation ≠ "fraction of luck in the rules".** p measures whether consistent winners emerge in practice, not how much randomness the game designer put in. A population of equally-skilled players will produce p≈0 even in chess (Tic-tac-toe paradox). The metric is population-relative by construction.
+- **Every game shows statistically significant skill.** DLO run a simple OLS regression (past average performance predicting current match outcome) across all games and find the coefficient is significant at p<0.001 for every game, including poker and Crazy 8s. "Predominantly chance" in their framework means the σ falls below the benchmark threshold, not that there is no skill. A game appearing in the "swingy" section still has measurable, real skill effects.
+- **The "repetitions" framing.** DLO compute for each game how many matches a player who is one standard deviation better than their opponent needs in order to be reliably ahead more than half the time (at 75% confidence). For chess it is 3 games; for poker ~100; for Crazy 8s 12,637. This gives a concrete, intuitive expression of the same information as p and may be a more relatable way to communicate it to readers than an abstract percentage.
+
+---
+
 ## Outline from Gippty
 
 0. Title + framing
