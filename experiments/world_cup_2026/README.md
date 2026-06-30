@@ -133,6 +133,8 @@ experiments/world_cup_2026/
     parse_groups.py                      # build fifa_teams_groups.csv
     parse_fixtures.py                    # build fifa_fixtures.csv
     parse_knockout.py                    # build processed knockout_slots.csv
+    parse_results.py                     # group-stage scorelines -> results.csv
+    parse_knockout_results.py            # knockout scorelines -> results.csv (wc26-parse-knockout-results)
     build_teams.py                       # join FIFA groups <-> Elo snapshot
     build_group_matches.py               # add slot refs + venue country
     build_third_place_lookup.py          # parse Wikipedia's 495-row table
@@ -406,10 +408,50 @@ subdirectory instead of the default `outputs/conditional/`. Use this to
 preserve earlier snapshots when re-running mid-tournament:
 
 ```bash
-# Round-of-32 update — keeps the group-stage conditional outputs intact
-uv run wc26-simulate --conditional --tag conditional_knockout
-uv run python -m world_cup_2026.build_score_predictions --conditional --tag conditional_knockout
-# … and so on through the chain, all with --tag conditional_knockout
+TAG=conditional_knockout
+
+# 0. fetch fresh inputs into data/raw/$TAG/
+mkdir -p data/raw/$TAG
+curl -sSL 'https://eloratings.net/World.tsv' -H 'Referer: https://eloratings.net/' \
+  -o data/raw/$TAG/eloratings_world.tsv
+date -u +"%Y-%m-%dT%H:%M:%SZ" > data/raw/$TAG/elo_snapshot_date.txt
+UA='Mozilla/5.0 (compatible; world-cup-2026-research/1.0; you@example.com)'
+for g in A B C D E F G H I J K L; do
+  curl -sSL -A "$UA" "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_${g}" \
+    -o "data/raw/$TAG/wikipedia_2026_world_cup_group_${g}.html"
+done
+curl -sSL -A "$UA" 'https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage' \
+  -o data/raw/$TAG/wikipedia_2026_world_cup_knockout_stage.html
+date -u +"%Y-%m-%dT%H:%M:%SZ" > data/raw/$TAG/results_snapshot_date.txt
+
+# 1. rebuild teams from the fresh Elo snapshot
+uv run python -m world_cup_2026.build_teams \
+  --world-tsv data/raw/$TAG/eloratings_world.tsv \
+  --output data/processed/teams_conditional.csv
+
+# 2. parse group results into results.csv (group rows only)
+uv run python -m world_cup_2026.parse_results
+
+# 3. first-pass simulate + build knockout score predictions
+#    (needed so parse_knockout_results can map team names to match IDs)
+uv run wc26-simulate --conditional --tag $TAG
+uv run python -m world_cup_2026.build_score_predictions --conditional --tag $TAG
+uv run python -m world_cup_2026.build_knockout_score_predictions --conditional --tag $TAG
+
+# 4. parse played knockout matches — reads outputs/$TAG/knockout_score_predictions.csv
+#    to resolve team names, then appends winner rows to results.csv
+uv run wc26-parse-knockout-results --tag $TAG
+
+# 5. second-pass simulate + rebuild everything with knockout results pinned
+uv run wc26-simulate --conditional --tag $TAG
+uv run python -m world_cup_2026.build_score_predictions --conditional --tag $TAG
+uv run python -m world_cup_2026.build_knockout_score_predictions --conditional --tag $TAG
+uv run python -m world_cup_2026.fetch_market_odds --conditional --tag $TAG
+uv run python -m world_cup_2026.build_market_odds --conditional --tag $TAG
+uv run python -m world_cup_2026.build_market_comparison --conditional --tag $TAG
+uv run wc26-build-article-charts --conditional --tag $TAG
+uv run wc26-bracket-heatmap --conditional --tag $TAG
+uv run python -m world_cup_2026.animate_combined --conditional --tag $TAG
 ```
 
 Tags use underscores, not hyphens (e.g. `conditional_knockout`, not `conditional-knockout`).
@@ -442,8 +484,10 @@ self-describing.
   `team_id`). The goals are the regulation/extra-time score and are kept
   for the record, but the simulator only reads `winner`, so a penalty
   shootout is captured correctly (e.g. `1-1` with the shootout winner in
-  `winner`). `parse_results.py` does not scrape the knockout page — add
-  these rows by hand; a rerun of `parse_results.py` preserves them.
+  `winner`). These rows are written by `wc26-parse-knockout-results`
+  (see above), which reads the Wikipedia knockout-stage HTML and appends
+  any played matches not yet in the file. A rerun of `parse_results.py`
+  or `wc26-parse-knockout-results` never overwrites already-recorded rows.
 
 Pin knockout results **cumulatively** — every played knockout match up to
 the current point. Once the group stage is complete the bracket is
