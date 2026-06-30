@@ -79,9 +79,9 @@ def _extract_pen_winner(block_text: str, home_id: str, away_id: str) -> str:
     return ""
 
 
-def _load_team_name_to_id() -> dict[str, str]:
+def _load_team_name_to_id(teams_csv: Path) -> dict[str, str]:
     mapping: dict[str, str] = {}
-    with config.TEAMS_CONDITIONAL_CSV.open() as f:
+    with teams_csv.open() as f:
         for row in csv.DictReader(f):
             mapping[row["team_name"]] = row["team_id"]
     return mapping
@@ -202,7 +202,7 @@ def main() -> None:
             "Run the simulation and wc26-build-knockout-score-predictions first."
         )
 
-    team_name_to_id = _load_team_name_to_id()
+    team_name_to_id = _load_team_name_to_id(cpaths.teams_csv)
     match_lookup = _load_match_lookup(ko_predictions_path)
     existing = _load_existing_rows()
 

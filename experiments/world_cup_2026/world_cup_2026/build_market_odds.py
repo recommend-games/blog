@@ -52,7 +52,7 @@ def main() -> None:
     if args.conditional:
         cpaths = config.conditional_paths(args.tag)
         snapshot = cpaths.polymarket_snapshot
-        teams_csv = config.TEAMS_CONDITIONAL_CSV
+        teams_csv = cpaths.teams_csv
         output = cpaths.market_odds_csv
     else:
         snapshot = config.POLYMARKET_SNAPSHOT

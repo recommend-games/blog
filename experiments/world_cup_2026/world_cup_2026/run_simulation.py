@@ -67,7 +67,7 @@ def main() -> None:
 
     if args.conditional:
         cpaths = config.conditional_paths(args.tag)
-        teams_csv = config.TEAMS_CONDITIONAL_CSV
+        teams_csv = cpaths.teams_csv
         results = load_data.load_results()
         output_dir = cpaths.outputs
         elo_snapshot_date = _read_date(

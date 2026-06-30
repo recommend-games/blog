@@ -427,7 +427,7 @@ date -u +"%Y-%m-%dT%H:%M:%SZ" > data/raw/$TAG/results_snapshot_date.txt
 # 1. rebuild teams from the fresh Elo snapshot
 uv run python -m world_cup_2026.build_teams \
   --world-tsv data/raw/$TAG/eloratings_world.tsv \
-  --output data/processed/teams_conditional.csv
+  --output data/processed/teams_$TAG.csv
 
 # 2. parse group results into results.csv (group rows only)
 uv run python -m world_cup_2026.parse_results

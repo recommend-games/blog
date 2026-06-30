@@ -51,6 +51,7 @@ def conditional_paths(tag: str = "conditional") -> SimpleNamespace:
         data_raw           data/raw/{tag}/
         polymarket_snapshot  data/raw/{tag}/polymarket_world_cup_winner.json
         market_odds_snapshot_date  data/raw/{tag}/market_odds_snapshot_date.txt
+        teams_csv          data/processed/teams_{tag}.csv
         market_odds_csv    data/processed/market_odds_{tag}.csv
         outputs            outputs/{tag}/
         plots              plots/{tag}/
@@ -60,6 +61,7 @@ def conditional_paths(tag: str = "conditional") -> SimpleNamespace:
         data_raw=raw,
         polymarket_snapshot=raw / "polymarket_world_cup_winner.json",
         market_odds_snapshot_date=raw / "market_odds_snapshot_date.txt",
+        teams_csv=DATA_PROCESSED / f"teams_{tag}.csv",
         market_odds_csv=DATA_PROCESSED / f"market_odds_{tag}.csv",
         outputs=OUTPUTS / tag,
         plots=PLOTS / tag,

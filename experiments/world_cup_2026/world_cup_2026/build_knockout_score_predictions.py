@@ -93,7 +93,7 @@ def main() -> None:
 
     if args.conditional:
         cpaths = config.conditional_paths(args.tag)
-        teams = load_data.load_teams(config.TEAMS_CONDITIONAL_CSV)
+        teams = load_data.load_teams(cpaths.teams_csv)
         group_probs_path = cpaths.outputs / "group_probabilities.csv"
         output = cpaths.outputs / "knockout_score_predictions.csv"
     else:

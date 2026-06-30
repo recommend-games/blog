@@ -481,7 +481,7 @@ def main() -> None:
     plot_dir.mkdir(parents=True, exist_ok=True)
     slot_csv = out_dir / "bracket_slot_probabilities.csv"
 
-    teams_csv = config.TEAMS_CONDITIONAL_CSV if args.conditional else config.TEAMS_CSV
+    teams_csv = cpaths.teams_csv if args.conditional else config.TEAMS_CSV
     teams = load_data.load_teams(teams_csv)
 
     if args.collect:
