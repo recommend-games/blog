@@ -20,4 +20,4 @@ dev = [
 ]
 
 [tool.uv.sources]
-elo = { git = "git@gitlab.com:recommend.games/elo.git", rev = "ac21f2907e919c8964b473fa4ee1de412119090e" }
+elo = { git = "https://gitlab.com/recommend.games/elo.git", rev = "ac21f2907e919c8964b473fa4ee1de412119090e" }
