@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.19.1
+#       jupytext_version: 1.19.4
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -52,7 +52,6 @@ columns = [
     "num_regular_players",
     "premium",
     "is_ranking_disabled",
-    "locked",
     "elo_k",
     "std_dev",
     "p_deterministic",
@@ -75,7 +74,7 @@ skills = (
     .with_columns(pl.col("game_id").str.to_integer(strict=False).alias("bga_id"))
     .drop_nulls("bga_id")
 )
-bgg = pl.scan_ndjson("~/Recommend.Games/board-game-data/scraped/v3/bgg_GameItem.jl")
+bgg = pl.scan_ndjson("~/Recommend.Games/board-game-data/scraped/bgg_GameItem.jl")
 bgg_types = (
     bgg.select("bgg_id", "add_rank")
     .explode("add_rank")
