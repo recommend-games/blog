@@ -407,15 +407,17 @@ also accepts `--tag TAG` (default: `conditional`) to write into a named
 subdirectory instead of the default `outputs/conditional/`. Use this to
 preserve earlier snapshots when re-running mid-tournament:
 
+**Initial setup (once per tag):**
+
 ```bash
 TAG=conditional_knockout
-
-# 0. fetch fresh inputs into data/raw/$TAG/
+UA='Mozilla/5.0 (compatible; world-cup-2026-research/1.0; you@example.com)'
 mkdir -p data/raw/$TAG
+
+# Fetch Elos and group-stage HTML
 curl -sSL 'https://eloratings.net/World.tsv' -H 'Referer: https://eloratings.net/' \
   -o data/raw/$TAG/eloratings_world.tsv
 date -u +"%Y-%m-%dT%H:%M:%SZ" > data/raw/$TAG/elo_snapshot_date.txt
-UA='Mozilla/5.0 (compatible; world-cup-2026-research/1.0; you@example.com)'
 for g in A B C D E F G H I J K L; do
   curl -sSL -A "$UA" "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_${g}" \
     -o "data/raw/$TAG/wikipedia_2026_world_cup_group_${g}.html"
@@ -424,35 +426,44 @@ curl -sSL -A "$UA" 'https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_s
   -o data/raw/$TAG/wikipedia_2026_world_cup_knockout_stage.html
 date -u +"%Y-%m-%dT%H:%M:%SZ" > data/raw/$TAG/results_snapshot_date.txt
 
-# 1. rebuild teams from the fresh Elo snapshot
+# Build teams and pin group results
 uv run python -m world_cup_2026.build_teams \
   --world-tsv data/raw/$TAG/eloratings_world.tsv \
   --output data/processed/teams_$TAG.csv
-
-# 2. parse group results into results.csv (group rows only)
 uv run python -m world_cup_2026.parse_results
 
-# 3. first-pass simulate + build knockout score predictions
-#    (needed so parse_knockout_results can map team names to match IDs)
-uv run wc26-simulate --conditional --tag $TAG
-uv run python -m world_cup_2026.build_score_predictions --conditional --tag $TAG
+# Bootstrap the knockout score predictions (no simulation needed: all group
+# results are pinned so the bracket resolves directly from results.csv)
 uv run python -m world_cup_2026.build_knockout_score_predictions --conditional --tag $TAG
+```
 
-# 4. parse played knockout matches — reads outputs/$TAG/knockout_score_predictions.csv
-#    to resolve team names, then appends winner rows to results.csv
+**Routine update (each time new knockout matches are played):**
+
+```bash
+# Refresh Elos and fetch latest knockout stage HTML
+curl -sSL 'https://eloratings.net/World.tsv' -H 'Referer: https://eloratings.net/' \
+  -o data/raw/$TAG/eloratings_world.tsv
+date -u +"%Y-%m-%dT%H:%M:%SZ" > data/raw/$TAG/elo_snapshot_date.txt
+curl -sSL -A "$UA" 'https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage' \
+  -o data/raw/$TAG/wikipedia_2026_world_cup_knockout_stage.html
+date -u +"%Y-%m-%dT%H:%M:%SZ" > data/raw/$TAG/results_snapshot_date.txt
+
+uv run python -m world_cup_2026.build_teams \
+  --world-tsv data/raw/$TAG/eloratings_world.tsv \
+  --output data/processed/teams_$TAG.csv
 uv run wc26-parse-knockout-results --tag $TAG
-
-# 5. second-pass simulate + rebuild everything with knockout results pinned
 uv run wc26-simulate --conditional --tag $TAG
 uv run python -m world_cup_2026.build_score_predictions --conditional --tag $TAG
 uv run python -m world_cup_2026.build_knockout_score_predictions --conditional --tag $TAG
-uv run python -m world_cup_2026.fetch_market_odds --conditional --tag $TAG
 uv run python -m world_cup_2026.build_market_odds --conditional --tag $TAG
 uv run python -m world_cup_2026.build_market_comparison --conditional --tag $TAG
-uv run wc26-build-article-charts --conditional --tag $TAG
 uv run wc26-bracket-heatmap --conditional --tag $TAG
 uv run python -m world_cup_2026.animate_combined --conditional --tag $TAG
 ```
+
+`parse_knockout_results` uses `knockout_score_predictions.csv` rebuilt at the end of
+the previous run to map team names to match IDs. Each rebuild refreshes it with the
+current bracket state, so it always has correct team pairs ready for the next round.
 
 Tags use underscores, not hyphens (e.g. `conditional_knockout`, not `conditional-knockout`).
 Each tag gets its own raw-data directory (`data/raw/{tag}/`) alongside the output and plot
