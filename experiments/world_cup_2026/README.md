@@ -440,6 +440,9 @@ uv run python -m world_cup_2026.build_knockout_score_predictions --conditional -
 **Routine update (each time new knockout matches are played):**
 
 ```bash
+TAG=conditional_knockout
+UA='Mozilla/5.0 (compatible; world-cup-2026-research/1.0; you@example.com)'
+
 # Refresh Elos and fetch latest knockout stage HTML
 curl -sSL 'https://eloratings.net/World.tsv' -H 'Referer: https://eloratings.net/' \
   -o data/raw/$TAG/eloratings_world.tsv
@@ -453,10 +456,11 @@ uv run python -m world_cup_2026.build_teams \
   --output data/processed/teams_$TAG.csv
 uv run wc26-parse-knockout-results --tag $TAG
 uv run wc26-simulate --conditional --tag $TAG
-uv run python -m world_cup_2026.build_score_predictions --conditional --tag $TAG
 uv run python -m world_cup_2026.build_knockout_score_predictions --conditional --tag $TAG
+uv run python -m world_cup_2026.fetch_market_odds --conditional --tag $TAG
 uv run python -m world_cup_2026.build_market_odds --conditional --tag $TAG
 uv run python -m world_cup_2026.build_market_comparison --conditional --tag $TAG
+uv run wc26-build-article-charts --conditional --tag $TAG
 uv run wc26-bracket-heatmap --conditional --tag $TAG
 uv run python -m world_cup_2026.animate_combined --conditional --tag $TAG
 ```
@@ -464,6 +468,10 @@ uv run python -m world_cup_2026.animate_combined --conditional --tag $TAG
 `parse_knockout_results` uses `knockout_score_predictions.csv` rebuilt at the end of
 the previous run to map team names to match IDs. Each rebuild refreshes it with the
 current bracket state, so it always has correct team pairs ready for the next round.
+
+Note: `build_score_predictions` (group-stage score predictions) is intentionally omitted
+from the routine update — all group matches are already played and pinned, so predicting
+their scores is meaningless.
 
 Tags use underscores, not hyphens (e.g. `conditional_knockout`, not `conditional-knockout`).
 Each tag gets its own raw-data directory (`data/raw/{tag}/`) alongside the output and plot
