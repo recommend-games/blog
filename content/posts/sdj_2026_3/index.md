@@ -106,8 +106,11 @@ The headline here is the designer: [Markus Slawitscheck](https://recommend.games
 
 {{< youtube M7pW2dyy14o >}}
 
+The jury's own clip:
+
+{{< youtube gCvofEc4a6c >}}
+
 <!-- TODO Markus: personal take; note it's barely in the R.G database -->
-<!-- TODO clip: SdJ jury clip for Morty Sorty not posted yet — embed {{</* youtube ID */>}} once it lands: https://www.youtube.com/user/spieldesjahres/videos -->
 
 
 ### Who will win?
@@ -154,6 +157,10 @@ The highest raw BGG average of any nominee across both awards (8.1), and a co-op
 *Whatever can go wrong will go wrong. Players compete to keep their colonists alive.*
 
 Both the theme and the mechanisms are fairly divisive, which makes this the wildcard of the {{% kdj %}}Kennerspiel{{% /kdj %}} field. The strong Bayesian rating (6.9) shows the dedicated fans rate it highly, but a 14+ age rating and a gleefully grim premise are an awkward fit for an award meant to broaden the hobby's appeal.
+
+Here's the 5G4D interview with Donald X:
+
+{{< youtube OYYEXheFKkA >}}
 
 The jury's own clip:
 
