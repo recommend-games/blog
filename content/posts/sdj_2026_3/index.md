@@ -143,9 +143,12 @@ A much tidier picture than on the {{% sdj %}}Spiel{{% /sdj %}} side: {{% game 41
 
 The highest raw BGG average of any nominee across both awards (8.1), and a co-operative puzzle of cracking each boss's tactics that the 'geeks clearly love. I'll admit I got stronger {{% sdj %}}red{{% /sdj %}} vibes from this one, so its placement on the {{% kdj %}}Kennerspiel{{% /kdj %}} list was a mild surprise – but the QR-driven app integration and the layer of gear management do push it past the {{% sdj %}}Spiel{{% /sdj %}} threshold.
 
+The jury's own clip:
+
+{{< youtube yOe658Nuwto >}}
+
 <!-- TODO Markus: personal take; the app/QR gimmick — boon or red flag for a jury that prizes Kulturgut Spiel? -->
 <!-- TODO 5G4D: no Boss Fighters QR designer interview published yet — embed {{</* youtube ID */>}} once it's up: https://www.youtube.com/@FiveGamesForDoomsday -->
-<!-- TODO clip: SdJ jury clip for Boss Fighters QR not posted yet — embed {{</* youtube ID */>}} once it lands: https://www.youtube.com/user/spieldesjahres/videos -->
 
 
 ### {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}}
@@ -167,7 +170,6 @@ The jury's own clip:
 {{< youtube uPaB4veAIyw >}}
 
 <!-- TODO Markus: personal take; is the dark theme a dealbreaker for the jury, à la the usual Kulturgut argument? -->
-<!-- TODO 5G4D: no Moon Colony Bloodbath designer interview published yet — embed {{</* youtube ID */>}} once it's up: https://www.youtube.com/@FiveGamesForDoomsday -->
 
 
 ### {{% game 417197 %}}Rebirth{{% /game %}}
@@ -180,12 +182,15 @@ The jury's own clip:
 
 The frontrunner by almost every measure, and the one nomination [my predictions]({{<ref "posts/sdj_2026/index.md">}}) and the algorithm agreed on completely. On top of the numbers, there's the storyline: this is [Reiner Knizia](https://recommend.games/#/?designer=2)'s chance to complete the triple after his {{% kdj %}}Kennerspiel{{% /kdj %}}/{{% sdj %}}Spiel{{% /sdj %}} double back in 2008. A hopeful, accessible tile-layer from the most decorated designer in the award's history is about as on-brand a {{% kdj %}}Kennerspiel{{% /kdj %}} winner as you could script.
 
-The jury's own clip:
+[Five Games For Doomsday](https://www.youtube.com/@FiveGamesForDoomsday) sat down with the legendary Reiner Knizia himself:
+
+{{< youtube kunA5SVz9L4 >}}
+
+And the jury's own clip:
 
 {{< youtube J_UpbAUFtx0 >}}
 
 <!-- TODO Markus: personal take / play impression -->
-<!-- TODO 5G4D: no Rebirth/Knizia designer interview published yet — embed {{</* youtube ID */>}} once it's up: https://www.youtube.com/@FiveGamesForDoomsday -->
 
 
 ### Who will win?
