@@ -31,7 +31,7 @@ tags:
   - Rebirth
 ---
 
-{{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
+{{< img src="sdj-all" size="x360" alt="Spiel des Jahres" >}}
 
 The waiting is finally coming to an end! On Sunday, July 12, the jury will announce the winners of {{% sdj %}}Spiel des Jahres{{% /sdj %}} and {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}. As always, there's six games hoping to win one of the two most important awards in gaming – and one hopeless geek trying to predict which will be the lucky ones. 🤓
 
@@ -40,7 +40,7 @@ I've been doing [this]({{<ref "posts/sdj_2020_3/index.md">}}) [for]({{<ref "post
 
 ## Nominated for {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}
 
-{{< img src="sdj-2026" size="x300" alt="Spiel des Jahres 2026" >}}
+{{< img src="sdj-2026" size="x360" alt="Spiel des Jahres 2026" >}}
 
 Before we dive into the individual games, let's look at some numbers to see some objective measures for them – as far as this is possible. What we've got at our disposal are the [jury's reviews](reviews.csv), [recommendations to the `S_d_J` bot](https://recommend.games/#/?for=S_d_J&yearMin=2026&yearMax=2025&include=456440,400495,462742&excludeRated=false), BoardGameGeek's average rating and the [Bayesian rating]({{<ref "posts/reverse_engineer_bgg/index.md">}}). Additionally, I've created a [poll on BGG](https://boardgamegeek.com/thread/3728142/poll-spiel-des-jahres-2026-and-kennerspiel-des-jah) where the geeks could have their say:
 
@@ -57,7 +57,7 @@ A reminder of just how badly the algorithm misjudged this category: not one of t
 
 *1–6 players, 30 minutes, 8+ years, light (1.2), prediction #565*
 
-{{< img src="456440" size="x300" alt="Cozy Stickerville" >}}
+{{< img src="456440" size="x360" alt="Cozy Stickerville" >}}
 
 *Build your village with over 800 stickers!*
 
@@ -65,11 +65,11 @@ The clear darling of the BGG crowd among the {{% sdj %}}Spiel{{% /sdj %}} nomine
 
 The good people at [Five Games For Doomsday](https://www.youtube.com/@FiveGamesForDoomsday) sat down with designer Corey Konieczka to talk it through:
 
-{{< youtube c7xuOtguInw >}}
+{{< youtube id=c7xuOtguInw max-width="640px" >}}
 
 And the jury's own clip:
 
-{{< youtube 1Et5f5sT3M0 >}}
+{{< youtube id=1Et5f5sT3M0 max-width="640px" >}}
 
 <!-- TODO Markus: personal take / play impression, and whether the "stickers as consumable" angle bothers you -->
 
@@ -78,7 +78,7 @@ And the jury's own clip:
 
 *4–7 players, 30–45 minutes, 10+ years, light (1.0), prediction #106*
 
-{{< img src="400495" size="x300" alt="JinxO" >}}
+{{< img src="400495" size="x360" alt="JinxO" >}}
 
 *A party game of associations: try to match other players' answers without giving anything away.*
 
@@ -86,7 +86,7 @@ The party game of the bunch, and the one carrying the strongest "internationalis
 
 The jury's own clip (under its German title *Dito!*):
 
-{{< youtube 3l2RbN5Bfcs >}}
+{{< youtube id=3l2RbN5Bfcs max-width="640px" >}}
 
 <!-- TODO Markus: personal take / BGA impression, and how it compares to Just One / other party winners -->
 <!-- TODO 5G4D: no JinxO designer interview published yet — embed {{</* youtube ID */>}} once it's up: https://www.youtube.com/@FiveGamesForDoomsday -->
@@ -96,7 +96,7 @@ The jury's own clip (under its German title *Dito!*):
 
 *2–4 players, 30 minutes, 8+ years, medium light (2.0), prediction #143*
 
-{{< img src="462742" size="x300" alt="Morty Sorty Magic Shop" >}}
+{{< img src="462742" size="x360" alt="Morty Sorty Magic Shop" >}}
 
 *Apprentices try to demonstrate their talent for stocking the shelves.*
 
@@ -104,11 +104,11 @@ The headline here is the designer: [Markus Slawitscheck](https://recommend.games
 
 [Five Games For Doomsday](https://www.youtube.com/@FiveGamesForDoomsday) caught up with Markus Slawitscheck about the game and his shot at the triple:
 
-{{< youtube M7pW2dyy14o >}}
+{{< youtube id=M7pW2dyy14o max-width="640px" >}}
 
 The jury's own clip:
 
-{{< youtube gCvofEc4a6c >}}
+{{< youtube id=gCvofEc4a6c max-width="640px" >}}
 
 <!-- TODO Markus: personal take; note it's barely in the R.G database -->
 
@@ -120,7 +120,7 @@ The jury's own clip:
 
 ## Nominated for {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}
 
-{{< img src="ksdj-2026" size="x300" alt="Kennerspiel des Jahres 2026" >}}
+{{< img src="ksdj-2026" size="x360" alt="Kennerspiel des Jahres 2026" >}}
 
 Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspiel{{% /kdj %}} nominees:
 
@@ -137,7 +137,7 @@ A much tidier picture than on the {{% sdj %}}Spiel{{% /sdj %}} side: {{% game 41
 
 *2–4 players, 40–60 minutes, 10+ years, medium light (2.1), prediction #32*
 
-{{< img src="454672" size="x300" alt="Boss Fighters QR" >}}
+{{< img src="454672" size="x360" alt="Boss Fighters QR" >}}
 
 *Team up and use your wits and gear to crack the tactics of intelligent boss monsters.*
 
@@ -145,7 +145,7 @@ The highest raw BGG average of any nominee across both awards (8.1), and a co-op
 
 The jury's own clip:
 
-{{< youtube yOe658Nuwto >}}
+{{< youtube id=yOe658Nuwto max-width="640px" >}}
 
 <!-- TODO Markus: personal take; the app/QR gimmick — boon or red flag for a jury that prizes Kulturgut Spiel? -->
 <!-- TODO 5G4D: no Boss Fighters QR designer interview published yet — embed {{</* youtube ID */>}} once it's up: https://www.youtube.com/@FiveGamesForDoomsday -->
@@ -155,7 +155,7 @@ The jury's own clip:
 
 *1–5 players, 45–90 minutes, 14+ years, medium light (2.1), prediction #19*
 
-{{< img src="425549" size="x300" alt="Moon Colony Bloodbath" >}}
+{{< img src="425549" size="x360" alt="Moon Colony Bloodbath" >}}
 
 *Whatever can go wrong will go wrong. Players compete to keep their colonists alive.*
 
@@ -163,11 +163,11 @@ Both the theme and the mechanisms are fairly divisive, which makes this the wild
 
 Here's the 5G4D interview with Donald X:
 
-{{< youtube OYYEXheFKkA >}}
+{{< youtube id=OYYEXheFKkA max-width="640px" >}}
 
 The jury's own clip:
 
-{{< youtube uPaB4veAIyw >}}
+{{< youtube id=uPaB4veAIyw max-width="640px" >}}
 
 <!-- TODO Markus: personal take; is the dark theme a dealbreaker for the jury, à la the usual Kulturgut argument? -->
 
@@ -176,7 +176,7 @@ The jury's own clip:
 
 *2–4 players, 45–60 minutes, 10+ years, medium light (2.0), prediction #1*
 
-{{< img src="417197" size="x300" alt="Rebirth" >}}
+{{< img src="417197" size="x360" alt="Rebirth" >}}
 
 *Rebuild old lands in a lush, hopeful future.*
 
@@ -184,11 +184,11 @@ The frontrunner by almost every measure, and the one nomination [my predictions]
 
 [Five Games For Doomsday](https://www.youtube.com/@FiveGamesForDoomsday) sat down with the legendary Reiner Knizia himself:
 
-{{< youtube kunA5SVz9L4 >}}
+{{< youtube id=kunA5SVz9L4 max-width="640px" >}}
 
 And the jury's own clip:
 
-{{< youtube J_UpbAUFtx0 >}}
+{{< youtube id=J_UpbAUFtx0 max-width="640px" >}}
 
 <!-- TODO Markus: personal take / play impression -->
 
@@ -200,7 +200,7 @@ And the jury's own clip:
 
 ## And the little ones: {{% kindersdj %}}Kinderspiel des Jahres 2026{{% /kindersdj %}}
 
-{{< img src="kindersdj-2026" size="x300" alt="Kinderspiel des Jahres 2026" >}}
+{{< img src="kindersdj-2026" size="x360" alt="Kinderspiel des Jahres 2026" >}}
 
 New this year: I'm finally throwing my hat into the {{% kindersdj %}}Kinderspiel des Jahres{{% /kindersdj %}} ring as well. The jury nominated three games for the children's award: {{% game 454722 %}}Boo Party{{% /game %}}, {{% game 435346 %}}Mooki Island{{% /game %}} and {{% game 420360 %}}Mimose & Sam{{% /game %}}. The usual data is even thinner here than on the grown-up tables – children's games barely register on BoardGameGeek and the `S_d_J` recommendation model isn't trained for them – so this category comes down far more to gut feeling, with a second opinion this year from the household's resident experts. 🥰
 
@@ -209,7 +209,7 @@ New this year: I'm finally throwing my hat into the {{% kindersdj %}}Kinderspiel
 
 *2–6 players, 10–15 minutes, 5+ years, light (1.0)*
 
-{{< img src="454722" size="x300" alt="Boo Party" >}}
+{{< img src="454722" size="x360" alt="Boo Party" >}}
 
 *Monsters are hiding among the costumes – can you unmask them?*
 
@@ -217,7 +217,7 @@ A hidden-roles party game for up to six little ones, co-designed by [Florian Sir
 
 The jury's own clip for the little ones:
 
-{{< youtube 1wM3uIEjslA >}}
+{{< youtube id=1wM3uIEjslA max-width="640px" >}}
 
 <!-- TODO Markus: personal take -->
 
@@ -226,7 +226,7 @@ The jury's own clip for the little ones:
 
 *2 players, 10 minutes, 4+ years, light (1.0)*
 
-{{< img src="435346" size="x300" alt="Mooki Island" >}}
+{{< img src="435346" size="x360" alt="Mooki Island" >}}
 
 *Collect the most adorable Mookies to win trophies.*
 
@@ -234,7 +234,7 @@ A quick, strictly two-player collecting game and the second nomination for [Flor
 
 The jury's own clip:
 
-{{< youtube EzhJcgO4_-8 >}}
+{{< youtube id=EzhJcgO4_-8 max-width="640px" >}}
 
 <!-- TODO Markus: personal take -->
 
@@ -243,7 +243,7 @@ The jury's own clip:
 
 *2–4 players, 15–20 minutes, 5+ years, light (1.0)*
 
-{{< img src="420360" size="x300" alt="Mimose & Sam" >}}
+{{< img src="420360" size="x360" alt="Mimose & Sam" >}}
 
 *Someone is stealing the fruit – a one-vs-all deduction game for kids.*
 
@@ -251,7 +251,7 @@ A one-vs-all deduction game by [Thomas Dagenais-Lespérance](https://recommend.g
 
 The jury's own clip:
 
-{{< youtube 8PQWKHXRBX0 >}}
+{{< youtube id=8PQWKHXRBX0 max-width="640px" >}}
 
 <!-- TODO Markus: personal take -->
 
