@@ -46,9 +46,9 @@ Before we dive into the individual games, let's look at some numbers to see some
 
 | Game | [Jury](reviews.csv) | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2026&yearMax=2025&include=456440,400495,462742&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3728142/poll-spiel-des-jahres-2026-and-kennerspiel-des-jah) |
 |:---|---:|---:|---:|---:|---:|
-| {{% game 456440 %}}Cozy Stickerville{{% /game %}} | 7.0 (2) | 2.4 | **8.3** | **6.6** | <!-- TODO poll % --> |
-| {{% game 400495 %}}JinxO{{% /game %}} | **8.0** (1) | 3.3 | 7.5 | 5.6 | <!-- TODO poll % --> |
-| {{% game 462742 %}}Morty Sorty Magic Shop{{% /game %}} | **8.0** (1) | **3.7** | 7.1 | 5.5 | <!-- TODO poll % --> |
+| {{% game 456440 %}}Cozy Stickerville{{% /game %}} | 7.0 (2) | 5.4 | **8.3** | **6.8** | **76%** |
+| {{% game 400495 %}}JinxO{{% /game %}} | **8.0** (1) | 5.7 | 7.3 | 5.7 | 8% |
+| {{% game 462742 %}}Morty Sorty Magic Shop{{% /game %}} | **8.0** (1) | **6.5** | 7.1 | 5.6 | 15% |
 
 A reminder of just how badly the algorithm misjudged this category: not one of the three {{% sdj %}}Spiel{{% /sdj %}} nominees cracked the top 100 of our recommendations, with {{% game 456440 %}}Cozy Stickerville{{% /game %}} languishing all the way down at #565. The jury reviews are thin too – two of the three games have only a single published rating so far – so this year the [BGG poll](https://boardgamegeek.com/thread/3728142/poll-spiel-des-jahres-2026-and-kennerspiel-des-jah) and the raw 'geek ratings are doing most of the talking. Let's dive into the details!
 
@@ -126,9 +126,9 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 
 | Game | [Jury](reviews.csv) | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2026&yearMax=2025&include=454672,425549,417197&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3728142/poll-spiel-des-jahres-2026-and-kennerspiel-des-jah) |
 |:---|---:|---:|---:|---:|---:|
-| {{% game 454672 %}}Boss Fighters QR{{% /game %}} | 7.2 (4) | 4.1 | **8.1** | 6.3 | <!-- TODO poll % --> |
-| {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}} | 7.0 (2) | 4.1 | 7.7 | 6.9 | <!-- TODO poll % --> |
-| {{% game 417197 %}}Rebirth{{% /game %}} | **7.5** (2) | **7.0** | 7.8 | **7.1** | <!-- TODO poll % --> |
+| {{% game 454672 %}}Boss Fighters QR{{% /game %}} | 7.2 (4) | 6.1 | **8.0** | 6.4 | 8% |
+| {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}} | 7.0 (2) | 5.8 | 7.6 | 7.0 | 37% |
+| {{% game 417197 %}}Rebirth{{% /game %}} | **7.5** (2) | **8.0** | 7.8 | **7.1** | **55%** |
 
 A much tidier picture than on the {{% sdj %}}Spiel{{% /sdj %}} side: {{% game 417197 %}}Rebirth{{% /game %}} tops the jury reviews, the recommendation score and the Bayesian rating, with only {{% game 454672 %}}Boss Fighters QR{{% /game %}} edging it out on the raw BGG average. After being [the algorithm's runaway #1]({{<ref "posts/sdj_2026/index.md">}}) and the one nomination both my guts and the model called correctly, it heads into the ceremony as the clear frontrunner. Let's look at all three in detail.
 
@@ -141,7 +141,7 @@ A much tidier picture than on the {{% sdj %}}Spiel{{% /sdj %}} side: {{% game 41
 
 *Team up and use your wits and gear to crack the tactics of intelligent boss monsters.*
 
-The highest raw BGG average of any nominee across both awards (8.1), and a co-operative puzzle of cracking each boss's tactics that the 'geeks clearly love. I'll admit I got stronger {{% sdj %}}red{{% /sdj %}} vibes from this one, so its placement on the {{% kdj %}}Kennerspiel{{% /kdj %}} list was a mild surprise – but the QR-driven app integration and the layer of gear management do push it past the {{% sdj %}}Spiel{{% /sdj %}} threshold.
+The highest raw BGG average of the three {{% kdj %}}Kennerspiel{{% /kdj %}} nominees (8.0), and a co-operative puzzle of cracking each boss's tactics that the 'geeks clearly love. I'll admit I got stronger {{% sdj %}}red{{% /sdj %}} vibes from this one, so its placement on the {{% kdj %}}Kennerspiel{{% /kdj %}} list was a mild surprise – but the QR-driven app integration and the layer of gear management do push it past the {{% sdj %}}Spiel{{% /sdj %}} threshold.
 
 The jury's own clip:
 
@@ -230,7 +230,7 @@ The jury's own clip for the little ones:
 
 *Collect the most adorable Mookies to win trophies.*
 
-A quick, strictly two-player collecting game and the second nomination for [Florian Sirieix](https://recommend.games/#/?designer=78797) – making him the designer to watch in this category, with two of the three nominees to his name. At 4+ it's also the most accessible of the bunch, and the 'geeks rate it the most reliably (143 votes, 7.2 average).
+A quick, strictly two-player collecting game and the second nomination for [Florian Sirieix](https://recommend.games/#/?designer=78797) – making him the designer to watch in this category, with two of the three nominees to his name. At 4+ it's also the most accessible of the bunch, and the 'geeks rate it the most reliably (149 votes, 7.3 average).
 
 The jury's own clip:
 
@@ -247,7 +247,7 @@ The jury's own clip:
 
 *Someone is stealing the fruit – a one-vs-all deduction game for kids.*
 
-A one-vs-all deduction game by [Thomas Dagenais-Lespérance](https://recommend.games/#/?designer=82239), originally a French release (*Mimose & Sam et le voleur de fruits*). It's the highest-rated of the three on BoardGameGeek (7.8 average), albeit on a thin 45 votes, and the asymmetric hunt for the fruit thief gives it a bit more structure than its rivals.
+A one-vs-all deduction game by [Thomas Dagenais-Lespérance](https://recommend.games/#/?designer=82239), originally a French release (*Mimose & Sam et le voleur de fruits*). It's the highest-rated of the three on BoardGameGeek (7.6 average), albeit on a thin 50 votes, and the asymmetric hunt for the fruit thief gives it a bit more structure than its rivals.
 
 The jury's own clip:
 
