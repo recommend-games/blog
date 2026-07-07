@@ -46,11 +46,11 @@ Before we dive into the individual games, let's look at some numbers to see some
 
 | Game | [Jury](reviews.csv) | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2026&yearMax=2025&include=456440,400495,462742&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3728142/poll-spiel-des-jahres-2026-and-kennerspiel-des-jah) |
 |:---|---:|---:|---:|---:|---:|
-| {{% game 456440 %}}Cozy Stickerville{{% /game %}} | 7.0 (2) | 5.4 | **8.3** | **6.8** | **76%** |
-| {{% game 400495 %}}JinxO{{% /game %}} | **8.0** (1) | 5.7 | 7.3 | 5.7 | 8% |
+| {{% game 456440 %}}Cozy Stickerville{{% /game %}} | 7.3 (6) | 5.4 | **8.3** | **6.8** | **76%** |
+| {{% game 400495 %}}JinxO{{% /game %}} | **8.0** (6) | 5.7 | 7.3 | 5.7 | 8% |
 | {{% game 462742 %}}Morty Sorty Magic Shop{{% /game %}} | **8.0** (1) | **6.5** | 7.1 | 5.6 | 15% |
 
-A reminder of just how badly the algorithm misjudged this category: not one of the three {{% sdj %}}Spiel{{% /sdj %}} nominees cracked the top 100 of our recommendations, with {{% game 456440 %}}Cozy Stickerville{{% /game %}} languishing all the way down at #565. The jury reviews are thin too – two of the three games have only a single published rating so far – so this year the [BGG poll](https://boardgamegeek.com/thread/3728142/poll-spiel-des-jahres-2026-and-kennerspiel-des-jah) and the raw 'geek ratings are doing most of the talking. Let's dive into the details!
+A reminder of just how badly the algorithm misjudged this category: not one of the three {{% sdj %}}Spiel{{% /sdj %}} nominees cracked the top 100 of our recommendations, with {{% game 456440 %}}Cozy Stickerville{{% /game %}} languishing all the way down at #565. The jury reviews are patchy too – {{% game 462742 %}}Morty Sorty Magic Shop{{% /game %}} still has only a single published rating so far – so this year the [BGG poll](https://boardgamegeek.com/thread/3728142/poll-spiel-des-jahres-2026-and-kennerspiel-des-jah) and the raw 'geek ratings are doing a lot of the talking. Let's dive into the details!
 
 
 ### {{% game 456440 %}}Cozy Stickerville{{% /game %}}
