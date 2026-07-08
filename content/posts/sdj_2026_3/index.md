@@ -88,8 +88,11 @@ The jury's own clip (under its German title *Dito!*):
 
 {{< youtube id=3l2RbN5Bfcs max-width="640px" >}}
 
+And [Five Games For Doomsday](https://www.youtube.com/@FiveGamesForDoomsday) sat down with Martin Ang to talk about the game and its Indonesian roots:
+
+{{< youtube id=T_XmSrmvv14 max-width="640px" >}}
+
 <!-- TODO Markus: personal take / BGA impression, and how it compares to Just One / other party winners -->
-<!-- TODO 5G4D: no JinxO designer interview published yet — embed {{</* youtube ID */>}} once it's up: https://www.youtube.com/@FiveGamesForDoomsday -->
 
 
 ### {{% game 462742 %}}Morty Sorty Magic Shop{{% /game %}}
