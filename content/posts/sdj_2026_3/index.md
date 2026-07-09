@@ -108,7 +108,7 @@ Watch the 5G4D interview with designer [Markus Slawitscheck](https://recommend.g
 
 ### Who will win?
 
-<!-- TODO Markus: confirm the pick. Data case: Cozy Stickerville leads the 'geek ratings and fits the cozy-winner mould, but JinxO carries the Indonesia narrative and Morty Sorty the triple storyline. This is the most open SdJ field in years – propose Cozy Stickerville as a tentative favourite, but it's a genuine coin-flip and the BGG poll should be the tie-breaker once the votes are in. -->
+The 'geeks seem to favour {{% game 456440 %}}Cozy Stickerville{{% /game %}}, and I do see its appeal as a {{% sdj / %}}. But the more I read the actual jury members' opinions, the clearer it has become to me: {{% game 400495 %}}JinxO{{% /game %}} will be {{% sdj %}}Spiel des Jahres{{% /sdj %}}. Once we strip away all the myths and stop reading tea leaves it is clear: {{% game 400495 %}}JinxO{{% /game %}} is the perfect {{% sdj / %}}.
 
 
 ## Nominated for {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}
