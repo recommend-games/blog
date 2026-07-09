@@ -130,7 +130,7 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 | Game | [Jury](reviews.csv) | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2026&yearMax=2025&include=454672,425549,417197&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3728142/poll-spiel-des-jahres-2026-and-kennerspiel-des-jah) |
 |:---|---:|---:|---:|---:|---:|
 | {{% game 454672 %}}Boss Fighters QR{{% /game %}} | 7.2 (4) | 6.4 | **8.0** | 6.4 | 9% |
-| {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}} | 7.0 (2) | 5.7 | 7.6 | 7.0 | 36% |
+| {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}} | 7.0 (4) | 5.7 | 7.6 | 7.0 | 36% |
 | {{% game 417197 %}}Rebirth{{% /game %}} | **7.5** (2) | **7.7** | 7.8 | **7.1** | **55%** |
 
 A much tidier picture than on the {{% sdj %}}Spiel{{% /sdj %}} side: {{% game 417197 %}}Rebirth{{% /game %}} tops the jury reviews, the recommendation score and the Bayesian rating, with only {{% game 454672 %}}Boss Fighters QR{{% /game %}} edging it out on the raw BGG average. After being [the algorithm's runaway #1]({{<ref "posts/sdj_2026/index.md">}}) and the one nomination both my guts and the model called correctly, it heads into the ceremony as the clear frontrunner. Let's look at all three in detail.
