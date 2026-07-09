@@ -61,17 +61,15 @@ A reminder of just how badly the algorithm misjudged this category: not one of t
 
 *Build your village with over 800 stickers!*
 
-The clear darling of the BGG crowd among the {{% sdj %}}Spiel{{% /sdj %}} nominees, topping both the average (8.3) and the Bayesian rating. A sticker-based legacy-lite game scratches exactly the cozy, low-stakes itch that has served recent winners like {{% game 370591 %}}Dorfromantik{{% /game %}} so well, and it's hard to argue with that broad, gentle appeal as an ambassador for *Kulturgut Spiel*.
-
-The good people at [Five Games For Doomsday](https://www.youtube.com/@FiveGamesForDoomsday) sat down with designer Corey Konieczka to talk it through:
-
-{{< youtube id=c7xuOtguInw max-width="640px" >}}
-
-And the jury's own clip:
-
 {{< youtube id=1Et5f5sT3M0 max-width="640px" >}}
 
-<!-- TODO Markus: personal take / play impression, and whether the "stickers as consumable" angle bothers you -->
+Following the footsteps of {{% game 370591 %}}Dorfromantik{{% /game %}}, this is another cozy game about building up a village together without competing to win – neither against the other players nor against the game. The shared story is the heart of the game and the dilemmas as the spice – both praised and simultaneously criticised for being too simplistic.
+
+The jury has nominated many legacy games over the years, but never actually given a main award to one (the special award for {{% game 221107 %}}Pandemic Legacy: Season 2{{% /game %}} being closest to an exception). I won't fall into the trap of claiming a pattern from a small sample – a lesson I've learned the hard way when I excluded {{% game 373106 %}}Sky Team{{% /game %}} from consideration two years ago because the jury had never chosen a two player game. {{% game 456440 %}}Cozy Stickerville{{% /game %}} feels more compact and hence somewhat even more disposable than other legacy games – but of course that didn't stop the Exit games from winning either.
+
+If you want to know more about the story behind the game, I highly recommend [Ben Maddox](https://5g4d.com/)' interview with designer Corey Konieczka:
+
+{{< youtube id=c7xuOtguInw max-width="640px" >}}
 
 
 ### {{% game 400495 %}}JinxO{{% /game %}}
