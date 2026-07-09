@@ -97,17 +97,13 @@ The designer [Martin Ang](https://recommend.games/#/?designer=121032) comes from
 
 *Apprentices try to demonstrate their talent for stocking the shelves.*
 
-The headline here is the designer: [Markus Slawitscheck](https://recommend.games/#/?designer=110904) already won {{% kdj %}}Kennerspiel{{% /kdj %}} in 2023 for {{% game 359970 %}}Challengers!{{% /game %}} and {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} in 2024 for {{% game 368899 %}}Magic Keys{{% /game %}}. A win here would make him the first designer ever to complete the triple – and in just three years. It's also the heaviest of the three {{% sdj %}}Spiel{{% /sdj %}} nominees at a medium-light 2.0, sitting right on the fuzzy border the jury loves to police.
-
-[Five Games For Doomsday](https://www.youtube.com/@FiveGamesForDoomsday) caught up with Markus Slawitscheck about the game and his shot at the triple:
-
-{{< youtube id=M7pW2dyy14o max-width="640px" >}}
-
-The jury's own clip:
-
 {{< youtube id=gCvofEc4a6c max-width="640px" >}}
 
-<!-- TODO Markus: personal take; note it's barely in the R.G database -->
+The real dark horse in the {{% sdj / %}} race. Few ratings, few reviews – few chances? I don't think that the recency of its release is the game's problem, but rather the lack of enthusiasm in its reception. So far, everything I've read had strong *sure, why not?* instead of *yes, let's go!* vibes.
+
+Watch the 5G4D interview with designer [Markus Slawitscheck](https://recommend.games/#/?designer=110904) who has the chance to be the first to complete the triple after winning {{% kdj %}}Kennerspiel{{% /kdj %}} in 2023 for {{% game 359970 %}}Challengers!{{% /game %}} and {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} in 2024 for {{% game 368899 %}}Magic Keys{{% /game %}}:
+
+{{< youtube id=M7pW2dyy14o max-width="640px" >}}
 
 
 ### Who will win?
