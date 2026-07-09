@@ -67,7 +67,7 @@ Following the footsteps of {{% game 370591 %}}Dorfromantik{{% /game %}}, this is
 
 The jury has nominated many legacy games over the years, but never actually given a main award to one (the special award for {{% game 221107 %}}Pandemic Legacy: Season 2{{% /game %}} being closest to an exception). I won't fall into the trap of claiming a pattern from a small sample – a lesson I've learned the hard way when I excluded {{% game 373106 %}}Sky Team{{% /game %}} from consideration two years ago because the jury had never chosen a two player game. {{% game 456440 %}}Cozy Stickerville{{% /game %}} feels more compact and hence somewhat even more disposable than other legacy games – but of course that didn't stop the Exit games from winning either.
 
-If you want to know more about the story behind the game, I highly recommend [Ben Maddox](https://5g4d.com/)' interview with designer Corey Konieczka:
+If you want to know more about the story behind the game, I highly recommend [Ben Maddox](https://5g4d.com/)' interview with designer [Corey Konieczka](https://recommend.games/#/?designer=6651):
 
 {{< youtube id=c7xuOtguInw max-width="640px" >}}
 
@@ -78,19 +78,15 @@ If you want to know more about the story behind the game, I highly recommend [Be
 
 {{< img src="400495" size="x360" alt="JinxO" >}}
 
-*A party game of associations: try to match other players' answers without giving anything away.*
-
-The party game of the bunch, and the one carrying the strongest "internationalisation of the hobby" storyline: designer [Martin Ang](https://recommend.games/#/?designer=121032) is the CEO of Tabletoys Indonesia, so after last year's first {{% sdj %}}SdJ{{% /sdj %}} win for Japan, Indonesia could be next. {{% sdj / %}} has rewarded clever, accessible association and communication games before – {{% game 254640 %}}Just One{{% /game %}} springs to mind – which makes this a natural fit for the award's profile.
-
-The jury's own clip (under its German title *Dito!*):
+*Jinx your friend to become victorious.*
 
 {{< youtube id=3l2RbN5Bfcs max-width="640px" >}}
 
-And [Five Games For Doomsday](https://www.youtube.com/@FiveGamesForDoomsday) sat down with Martin Ang to talk about the game and its Indonesian roots:
+The inevitable party, or shall we rather say: communication, game amongst the nominations. I don't think I can describe the game in a way that won't sound like the thousandth iteration on word association games. But simplicity and familiarity aren't bad qualities for a game targeted at the broadest possible audience, and the jury's reviews are uniformly strong. The game clearly hasn't landed with the 'geeks (yet), but that is obviously immaterial to the jury.
+
+The designer [Martin Ang](https://recommend.games/#/?designer=121032) comes from Indonesia and hence could continue the Asian success story started last year by {{% game 413246 %}}Bomb Buster{{% /game %}}'s [Hisashi Hayashi](https://recommend.games/#/?designer=39436). Learn more about {{% game 400495 %}}JinxO{{% /game %}} and its designer in the 5G4D interview:
 
 {{< youtube id=T_XmSrmvv14 max-width="640px" >}}
-
-<!-- TODO Markus: personal take / BGA impression, and how it compares to Just One / other party winners -->
 
 
 ### {{% game 462742 %}}Morty Sorty Magic Shop{{% /game %}}
