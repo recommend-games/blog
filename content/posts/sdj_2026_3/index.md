@@ -46,9 +46,9 @@ Before we dive into the individual games, let's look at some numbers to see some
 
 | Game | [Jury](reviews.csv) | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2026&yearMax=2025&include=456440,400495,462742&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3728142/poll-spiel-des-jahres-2026-and-kennerspiel-des-jah) |
 |:---|---:|---:|---:|---:|---:|
-| {{% game 456440 %}}Cozy Stickerville{{% /game %}} | 7.3 (6) | 5.4 | **8.3** | **6.8** | **76%** |
-| {{% game 400495 %}}JinxO{{% /game %}} | **8.0** (6) | 5.7 | 7.3 | 5.7 | 8% |
-| {{% game 462742 %}}Morty Sorty Magic Shop{{% /game %}} | **8.0** (1) | **6.5** | 7.1 | 5.6 | 15% |
+| {{% game 456440 %}}Cozy Stickerville{{% /game %}} | 7.3 (6) | 5.5 | **8.3** | **6.8** | **77%** |
+| {{% game 400495 %}}JinxO{{% /game %}} | **8.0** (6) | 5.9 | 7.3 | 5.7 | 8% |
+| {{% game 462742 %}}Morty Sorty Magic Shop{{% /game %}} | **8.0** (1) | **6.3** | 7.1 | 5.6 | 15% |
 
 A reminder of just how badly the algorithm misjudged this category: not one of the three {{% sdj %}}Spiel{{% /sdj %}} nominees cracked the top 100 of our recommendations, with {{% game 456440 %}}Cozy Stickerville{{% /game %}} languishing all the way down at #565. The jury reviews are patchy too – {{% game 462742 %}}Morty Sorty Magic Shop{{% /game %}} still has only a single published rating so far – so this year the [BGG poll](https://boardgamegeek.com/thread/3728142/poll-spiel-des-jahres-2026-and-kennerspiel-des-jah) and the raw 'geek ratings are doing a lot of the talking. Let's dive into the details!
 
@@ -129,9 +129,9 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 
 | Game | [Jury](reviews.csv) | [R.G](https://recommend.games/#/?for=S_d_J&yearMin=2026&yearMax=2025&include=454672,425549,417197&excludeRated=false) | Average | Bayes | [Poll](https://boardgamegeek.com/thread/3728142/poll-spiel-des-jahres-2026-and-kennerspiel-des-jah) |
 |:---|---:|---:|---:|---:|---:|
-| {{% game 454672 %}}Boss Fighters QR{{% /game %}} | 7.2 (4) | 6.1 | **8.0** | 6.4 | 8% |
-| {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}} | 7.0 (2) | 5.8 | 7.6 | 7.0 | 37% |
-| {{% game 417197 %}}Rebirth{{% /game %}} | **7.5** (2) | **8.0** | 7.8 | **7.1** | **55%** |
+| {{% game 454672 %}}Boss Fighters QR{{% /game %}} | 7.2 (4) | 6.4 | **8.0** | 6.4 | 9% |
+| {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}} | 7.0 (2) | 5.7 | 7.6 | 7.0 | 36% |
+| {{% game 417197 %}}Rebirth{{% /game %}} | **7.5** (2) | **7.7** | 7.8 | **7.1** | **55%** |
 
 A much tidier picture than on the {{% sdj %}}Spiel{{% /sdj %}} side: {{% game 417197 %}}Rebirth{{% /game %}} tops the jury reviews, the recommendation score and the Bayesian rating, with only {{% game 454672 %}}Boss Fighters QR{{% /game %}} edging it out on the raw BGG average. After being [the algorithm's runaway #1]({{<ref "posts/sdj_2026/index.md">}}) and the one nomination both my guts and the model called correctly, it heads into the ceremony as the clear frontrunner. Let's look at all three in detail.
 
@@ -233,7 +233,7 @@ The jury's own clip for the little ones:
 
 *Collect the most adorable Mookies to win trophies.*
 
-A quick, strictly two-player collecting game and the second nomination for [Florian Sirieix](https://recommend.games/#/?designer=78797) – making him the designer to watch in this category, with two of the three nominees to his name. At 4+ it's also the most accessible of the bunch, and the 'geeks rate it the most reliably (149 votes, 7.3 average).
+A quick, strictly two-player collecting game and the second nomination for [Florian Sirieix](https://recommend.games/#/?designer=78797) – making him the designer to watch in this category, with two of the three nominees to his name. At 4+ it's also the most accessible of the bunch, and the 'geeks rate it the most reliably (153 votes, 7.3 average).
 
 The jury's own clip:
 
