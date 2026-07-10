@@ -200,7 +200,7 @@ For this award, I'll have to go with the numbers and the majority of the 'geeks 
 
 {{< img src="kindersdj-2026" size="x360" alt="Kinderspiel des Jahres 2026" >}}
 
-New this year: I'm finally throwing my hat into the {{% kindersdj %}}Kinderspiel des Jahres{{% /kindersdj %}} ring as well. The jury nominated three games for the children's award: {{% game 454722 %}}Boo Party{{% /game %}}, {{% game 435346 %}}Mooki Island{{% /game %}} and {{% game 420360 %}}Mimose & Sam{{% /game %}}. The usual data is even thinner here than on the grown-up tables – children's games barely register on BoardGameGeek and the `S_d_J` recommendation model isn't trained for them – so this category comes down far more to gut feeling, with a second opinion this year from the household's resident experts. 🥰
+As promised, I'm going to try and predict the winner of {{% kindersdj / %}} for the first time this year. Let's first have a brief look at the nominees before I wow you with the sophisticated algorithm I have come up with. 🤓
 
 
 ### {{% game 454722 %}}Boo Party{{% /game %}}
@@ -209,15 +209,9 @@ New this year: I'm finally throwing my hat into the {{% kindersdj %}}Kinderspiel
 
 {{< img src="454722" size="x360" alt="Boo Party" >}}
 
-*Monsters are hiding among the costumes – can you unmask them?*
-
-A hidden-roles party game for up to six little ones, co-designed by [Florian Sirieix](https://recommend.games/#/?designer=78797) and Benoit Turpin. It's the broadest, most boisterous of the three nominees and the only one that scales past two players, which makes it a natural crowd-pleaser at a kids' table.
-
-The jury's own clip for the little ones:
+*Monsters hide in Halloween costumes to avoid being caught by the Seer.*
 
 {{< youtube id=1wM3uIEjslA max-width="640px" >}}
-
-<!-- TODO Markus: personal take -->
 
 
 ### {{% game 435346 %}}Mooki Island{{% /game %}}
@@ -226,15 +220,9 @@ The jury's own clip for the little ones:
 
 {{< img src="435346" size="x360" alt="Mooki Island" >}}
 
-*Collect the most adorable Mookies to win trophies.*
-
-A quick, strictly two-player collecting game and the second nomination for [Florian Sirieix](https://recommend.games/#/?designer=78797) – making him the designer to watch in this category, with two of the three nominees to his name. At 4+ it's also the most accessible of the bunch, and the 'geeks rate it the most reliably (153 votes, 7.3 average).
-
-The jury's own clip:
+*Befriend adorable Mookies, but watch out for the Spider!*
 
 {{< youtube id=EzhJcgO4_-8 max-width="640px" >}}
-
-<!-- TODO Markus: personal take -->
 
 
 ### {{% game 420360 %}}Mimose & Sam{{% /game %}}
@@ -243,27 +231,25 @@ The jury's own clip:
 
 {{< img src="420360" size="x360" alt="Mimose & Sam" >}}
 
-*Someone is stealing the fruit – a one-vs-all deduction game for kids.*
-
-A one-vs-all deduction game by [Thomas Dagenais-Lespérance](https://recommend.games/#/?designer=82239), originally a French release (*Mimose & Sam et le voleur de fruits*). It's the highest-rated of the three on BoardGameGeek (7.6 average), albeit on a thin 50 votes, and the asymmetric hunt for the fruit thief gives it a bit more structure than its rivals.
-
-The jury's own clip:
+*Play as Mimose, Sam or the fruit thief in a One-vs-All deduction game for families!*
 
 {{< youtube id=8PQWKHXRBX0 max-width="640px" >}}
-
-<!-- TODO Markus: personal take -->
 
 
 ### Who will win?
 
-Which brings me to my secret weapon for this category. Forget the recommendation scores and the Bayesian ratings – the most predictive model I have access to are my own two daughters. The plan is wonderfully simple: I'll show them the clips above and let them pick the game they're most excited about. Honestly, I'd back their verdict over any of my algorithms any day of the week. 🥰
+The data coverage is extremely thin when it comes to children's games, and my own expertise at the latest hotness is practically non-existing. So I had to come up with something really intricate. Ready?
 
-<!-- TODO Markus: the verdict — once the girls have watched the clips, name their pick. -->
+1. Show the clips to my daughters.
+2. Ask them what they found most interesting.
+3. That's it. 🥰
 
+OK, maybe not as sophisticated as I had claimed, but I'll trust the judgement of those little 5 and 6 year old rascals any day over some fancy Bayesian average – they are the target audience after all!
 
+Their verdict was pretty clear: they were most excited about {{% game 435346 %}}Mooki Island{{% /game %}}, so this will now be the Official Analysis Paralysis Prediction™️.
 
-## Who will win?
+After watching the three {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} clips they asked: "What about the {{% sdj %}}red{{% /sdj %}} and {{% kdj %}}black{{% /kdj %}} games?" I don't think I've ever been prouder of my parenting! 🤩
 
-<!-- TODO Markus: closing summary — restate the two (three?) picks, a line on the livestream, and tee up the winners recap. -->
+So here are their bonus picks: according to my daughters {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}} will be {{% game 456440 %}}Cozy Stickerville{{% /game %}} and {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}} will be {{% game 454672 %}}Boss Fighters QR{{% /game %}}. Mark their words!
 
-Alright, that's it for the predictions, we'll see each other again in a couple of days to discuss the results. I know I'll be glued to the livestream. 🤩
+Alright, that's it for the predictions. As I've already mentioned in [part 1]({{<ref "posts/sdj_2026_1/index.md">}}), this really is the hardest year yet with both awards being closer than ever and no clear frontrunner in sight. Truly, none of the six nominees will surprise me if we see their covers revealed on Sunday. We shall see if my predictions are any good this year – or if my daughters are already besting me… 😎
