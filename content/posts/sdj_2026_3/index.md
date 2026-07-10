@@ -193,7 +193,7 @@ If you want to know how [Reiner Knizia](https://recommend.games/#/?designer=2) f
 
 ### Who will win?
 
-<!-- TODO Markus: confirm the pick. Data case strongly favours Rebirth — leads jury, R.G and Bayes, plus the Knizia-triple narrative. Boss Fighters QR is the only real threat on the strength of its 'geek rating. Propose Rebirth as the pick, but say it with more conviction than last year (lesson learnt from Endeavor!). -->
+For this award, I'll have to go with the numbers and the majority of the 'geeks and say: {{% game 417197 %}}Rebirth{{% /game %}} is the favourite to win {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}. For me, this race looks super close, which is exactly the reason why the more polarising {{% game 454672 %}}Boss Fighters QR{{% /game %}} and {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}} might lose out to the "consensus candidate" {{% game 417197 %}}Rebirth{{% /game %}}. Knizia, the third!
 
 
 ## And the little ones: {{% kindersdj %}}Kinderspiel des Jahres 2026{{% /kindersdj %}}
