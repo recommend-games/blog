@@ -33,7 +33,7 @@ tags:
 
 {{< img src="sdj-all" size="x360" alt="Spiel des Jahres" >}}
 
-The waiting is finally coming to an end! On Sunday, July 12, the jury will announce the winners of {{% sdj %}}Spiel des Jahres{{% /sdj %}} and {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}. As always, there's six games hoping to win one of the two most important awards in gaming – and one hopeless geek trying to predict which will be the lucky ones. 🤓
+The waiting is finally coming to an end! On Sunday, July 12, the jury will announce the winners of {{% sdj %}}Spiel des Jahres{{% /sdj %}} and {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}. As always, there are six games hoping to win one of the two most important awards in gaming – and one hopeless geek trying to predict which will be the lucky ones. 🤓
 
 I've been doing [this]({{<ref "posts/sdj_2020_3/index.md">}}) [for]({{<ref "posts/sdj_2021_3/index.md">}}) [six]({{<ref "posts/sdj_2022_3/index.md">}}) [years]({{<ref "posts/sdj_2023_3/index.md">}}) [now]({{<ref "posts/sdj_2024_3/index.md">}}) [🤓]({{<ref "posts/sdj_2025_3/index.md">}}) and I've called nine out of the twelve winners correctly, the most recent miss being last year's {{% kdj %}}Kennerspiel{{% /kdj %}}, when I lost my nerve on {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}} despite my own instincts telling me otherwise. Let's hope I'll do better this year – and after [the longlist debacle]({{<ref "posts/sdj_2026_2/index.md">}}), I could really use a win. 😅
 
@@ -82,7 +82,7 @@ If you want to know more about the story behind the game, I highly recommend [Be
 
 {{< youtube id=3l2RbN5Bfcs max-width="640px" >}}
 
-The inevitable party, or shall we rather say: communication, game amongst the nominations. I don't think I can describe the game in a way that won't sound like the thousandth iteration on word association games. But simplicity and familiarity aren't bad qualities for a game targeted at the broadest possible audience, and the jury's reviews are uniformly strong. The game clearly hasn't landed with the 'geeks (yet), but that is obviously immaterial to the jury.
+The inevitable party – or shall we rather say communication – game amongst the nominations. I don't think I can describe the game in a way that won't sound like the thousandth iteration on word association games. But simplicity and familiarity aren't bad qualities for a game targeted at the broadest possible audience, and the jury's reviews are uniformly strong. The game clearly hasn't landed with the 'geeks (yet), but that is obviously immaterial to the jury.
 
 The designer [Martin Ang](https://recommend.games/#/?designer=121032) comes from Indonesia and hence could continue the Asian success story started last year by {{% game 413246 %}}Bomb Buster{{% /game %}}'s [Hisashi Hayashi](https://recommend.games/#/?designer=39436). Learn more about {{% game 400495 %}}JinxO{{% /game %}} and its designer in the 5G4D interview:
 
@@ -252,4 +252,4 @@ After watching the three {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} clips th
 
 So here are their bonus picks: according to my daughters, {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}} will be {{% game 456440 %}}Cozy Stickerville{{% /game %}} and {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}} will be {{% game 454672 %}}Boss Fighters QR{{% /game %}}. Mark their words!
 
-Alright, that's it for the predictions. As I've already mentioned in [part 1]({{<ref "posts/sdj_2026/index.md">}}), this really is the hardest year yet with both awards being closer than ever and no clear frontrunner in sight. Truly, none of the six nominees will surprise me if we see their covers revealed on Sunday. We shall see if my predictions are any good this year – or if my daughters are already besting me… 😎
+Alright, that's it for the predictions. As I've already mentioned in [part 1]({{<ref "posts/sdj_2026/index.md">}}), this really is the hardest year yet, with both awards closer than ever. Truly, none of the six nominees will surprise me if we see their covers revealed on Sunday. We shall see if my predictions are any good this year – or if my daughters are already besting me… 😎
