@@ -4,7 +4,7 @@ slug: spiel-des-jahres-2026-predictions-part-2
 share_img: /posts/spiel-des-jahres-2026-predictions-part-2/sdj-all.webp
 author: Markus Shepherd
 type: post
-date: 2026-07-10T21:30:00+03:00
+date: 2026-07-10T21:31:42+03:00
 tags:
   - SdJ
   - SdJ 2026
