@@ -123,7 +123,7 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 | {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}} | 7.0 (5) | 5.7 | 7.6 | 7.0 | 37% |
 | {{% game 417197 %}}Rebirth{{% /game %}} | **7.5** (4) | **7.7** | 7.8 | **7.1** | **54%** |
 
-A much tidier picture than on the {{% sdj %}}Spiel{{% /sdj %}} side: {{% game 417197 %}}Rebirth{{% /game %}} tops the jury reviews, the recommendation score and the Bayesian rating, with only {{% game 454672 %}}Boss Fighters QR{{% /game %}} edging it out on the raw BGG average. After being [the algorithm's runaway #1]({{<ref "posts/sdj_2026/index.md">}}) and the one nomination both my guts and the model called correctly, it heads into the ceremony as the clear frontrunner. Let's look at all three in detail.
+A much tidier picture than on the {{% sdj %}}Spiel{{% /sdj %}} side: {{% game 417197 %}}Rebirth{{% /game %}} tops the jury reviews, the recommendation score and the Bayesian rating, with only {{% game 454672 %}}Boss Fighters QR{{% /game %}} edging it out on the raw BGG average. After being [the algorithm's runaway #1]({{<ref "posts/sdj_2026/index.md">}}) and the one nomination both my guts and the model called correctly, Dr Knizia can confidently head into the ceremony as the clear frontrunner – or can he? Let's look at all three nominees in detail.
 
 
 ### {{% game 454672 %}}Boss Fighters QR{{% /game %}}
