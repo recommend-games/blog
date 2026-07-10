@@ -157,17 +157,17 @@ Learn more about the game and its development in the 5G4D interview with [Lukas 
 
 *Whatever can go wrong will go wrong. Players compete to keep their colonists alive.*
 
-Both the theme and the mechanisms are fairly divisive, which makes this the wildcard of the {{% kdj %}}Kennerspiel{{% /kdj %}} field. The strong Bayesian rating (6.9) shows the dedicated fans rate it highly, but a 14+ age rating and a gleefully grim premise are an awkward fit for an award meant to broaden the hobby's appeal.
-
-Here's the 5G4D interview with Donald X:
-
-{{< youtube id=OYYEXheFKkA max-width="640px" >}}
-
-The jury's own clip:
-
 {{< youtube id=uPaB4veAIyw max-width="640px" >}}
 
-<!-- TODO Markus: personal take; is the dark theme a dealbreaker for the jury, à la the usual Kulturgut argument? -->
+This is the only one of the six (or nine) nominees I've actually played, so I can offer more personal opinions than just vibes: I really like the theme incl the dark humour, though I will admit that the moral dimension the jury is so keen on didn't really hit me during play. As far as tableau builders go (a genre I'm not particularly fond of) it's really good – this is where the theme is the strongest when the game pivots and ends, as promised on the cover, in a bloodbath. What I like less is all the rest. 😅 The promise of a deck builder with a shared deck sounds super appealing, but in truth this game is at best deckbuilding flavoured, with the deck being just a randomiser of the events and the cards being added intentionally only ever affecting one player. This made if feel more like a rondel game, sans the usual planning it affords. In general, the interaction in this game is very low – at least in my one play I didn't care at all what the other players were doing.
+
+Don't get me wrong, I did enjoy my play and wouldn't mind having another go, but I'm also not rushing out to get my own copy. Of course, my personal taste is hardly relevant for such an award. I'll play {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}} any day over {{% game 266192 %}}Wingspan{{% /game %}}, which I don't get along with very well. Yet, I think the bird game was a fabulous choice for {{% kdj %}}Kennerspiel{{% /kdj %}} as an ambassador for *Kulturgut Spiel* which drew hosts of new gamers into the hobby.
+
+So, I don't want to discount {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}}'s chances of winning. It clearly has its fans, but the reception is undeniably polarised. Not a great quality for a game targeted at the broadest possible audience.
+
+If you want to understand why I'm wrong about claiming the game is not interactive, watch Ben Maddox chat to designer [Donald X. Vaccarino](https://recommend.games/#/?designer=10525):
+
+{{< youtube id=OYYEXheFKkA max-width="640px" >}}
 
 
 ### {{% game 417197 %}}Rebirth{{% /game %}}
