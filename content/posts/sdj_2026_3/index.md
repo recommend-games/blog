@@ -178,17 +178,17 @@ If you want to understand why I'm wrong about claiming the game is not interacti
 
 *Rebuild old lands in a lush, hopeful future.*
 
-The frontrunner by almost every measure, and the one nomination [my predictions]({{<ref "posts/sdj_2026/index.md">}}) and the algorithm agreed on completely. On top of the numbers, there's the storyline: this is [Reiner Knizia](https://recommend.games/#/?designer=2)'s chance to complete the triple after his {{% kdj %}}Kennerspiel{{% /kdj %}}/{{% sdj %}}Spiel{{% /sdj %}} double back in 2008. A hopeful, accessible tile-layer from the most decorated designer in the award's history is about as on-brand a {{% kdj %}}Kennerspiel{{% /kdj %}} winner as you could script.
-
-[Five Games For Doomsday](https://www.youtube.com/@FiveGamesForDoomsday) sat down with the legendary Reiner Knizia himself:
-
-{{< youtube id=kunA5SVz9L4 max-width="640px" >}}
-
-And the jury's own clip:
-
 {{< youtube id=J_UpbAUFtx0 max-width="640px" >}}
 
-<!-- TODO Markus: personal take / play impression -->
+Watched from a number of different angles, {{% game 417197 %}}Rebirth{{% /game %}} looks like the perfect {{% kdj %}}Kennerspiel{{% /kdj %}}: a clear step up from a {{% sdj %}}Spiel{{% /sdj %}}, but still elegant and approachable. A meaty puzzle to solve without being exhausting. An inoffensive task and an appealing presentation. The numbers (see above) certainly all point to Scotland (or Ireland) this year.
+
+I don't have much more to say about {{% game 417197 %}}Rebirth{{% /game %}}, so let's turn our attention towards the designer: [Dr Reiner Knizia](https://recommend.games/#/?designer=2) is one of a handful of designers to have won two different awards: {{% sdj / %}} for Keltis and {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} for {{% game 33643 %}}Whoowasit?{{% /game %}} (as mentioned above), both in 2008, before there even was a {{% kdj %}}Kennerspiel{{% /kdj %}}. No designer has had more games on the longlist (36 since my [last count]({{<ref "posts/designer_hall_of_fame/index.md">}}), and there's been more recommendations since), so there would hardly be a more deserving candidate to complete the triple.
+
+Obviously, the jury won't take this into consideration when deciding on the winner, but I believe all journalists hope for this to happen as the stories would just write themselves.
+
+If you want to know how [Reiner Knizia](https://recommend.games/#/?designer=2) feels about this prospect himself, watch his 5G4D interview:
+
+{{< youtube id=kunA5SVz9L4 max-width="640px" >}}
 
 
 ### Who will win?
