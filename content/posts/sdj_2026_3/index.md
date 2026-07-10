@@ -123,7 +123,7 @@ Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspi
 | {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}} | 7.0 (5) | 5.7 | 7.6 | 7.0 | 37% |
 | {{% game 417197 %}}Rebirth{{% /game %}} | **7.5** (4) | **7.7** | 7.8 | **7.1** | **54%** |
 
-A much tidier picture than on the {{% sdj %}}Spiel{{% /sdj %}} side: {{% game 417197 %}}Rebirth{{% /game %}} tops the jury reviews, the recommendation score and the Bayesian rating, with only {{% game 454672 %}}Boss Fighters QR{{% /game %}} edging it out on the raw BGG average. After being [the algorithm's runaway #1]({{<ref "posts/sdj_2026/index.md">}}) and the one nomination both my guts and the model called correctly, Dr Knizia can confidently head into the ceremony as the clear frontrunner – or can he? Let's look at all three nominees in detail.
+A much tidier picture than on the {{% sdj %}}Spiel{{% /sdj %}} side: {{% game 417197 %}}Rebirth{{% /game %}} tops the jury reviews, the recommendation score and the Bayesian rating, with only {{% game 454672 %}}Boss Fighters QR{{% /game %}} edging it out on the raw BGG average. After being [the algorithm's runaway #1]({{<ref "posts/sdj_2026/index.md">}}) and the one nomination both my guts and the model called correctly, Dr Knizia can confidently head into the ceremony as the clear frontrunner – but should he? Let's look at all three nominees in detail.
 
 
 ### {{% game 454672 %}}Boss Fighters QR{{% /game %}}
@@ -134,14 +134,19 @@ A much tidier picture than on the {{% sdj %}}Spiel{{% /sdj %}} side: {{% game 41
 
 *Team up and use your wits and gear to crack the tactics of intelligent boss monsters.*
 
-The highest raw BGG average of the three {{% kdj %}}Kennerspiel{{% /kdj %}} nominees (8.0), and a co-operative puzzle of cracking each boss's tactics that the 'geeks clearly love. I'll admit I got stronger {{% sdj %}}red{{% /sdj %}} vibes from this one, so its placement on the {{% kdj %}}Kennerspiel{{% /kdj %}} list was a mild surprise – but the QR-driven app integration and the layer of gear management do push it past the {{% sdj %}}Spiel{{% /sdj %}} threshold.
-
-The jury's own clip:
-
 {{< youtube id=yOe658Nuwto max-width="640px" >}}
 
-<!-- TODO Markus: personal take; the app/QR gimmick — boon or red flag for a jury that prizes Kulturgut Spiel? -->
-<!-- TODO 5G4D: no Boss Fighters QR designer interview published yet — embed {{</* youtube ID */>}} once it's up: https://www.youtube.com/@FiveGamesForDoomsday -->
+There's been quite a lot of buzz around the latest co-op by the two {{% game 370591 %}}Dorfromantik{{% /game %}} designers since its release in Essen, and the publisher Pegasus certainly went out of their way to fuel it.
+
+The concept of battling boss monsters together is certainly a tried and tested receipe, and by all accounts this particular implementation is a family friendly and engaging one. The fact that the bosses live inside an app offers unlimited expandability – new challenges are just one app update away. But this convenience cuts both ways: there have been "limited time promotion bosses" which disappeared from users' devices after the promotion window closed. From a marketing perspective this might be a standard practice, but many gamers treasure their unplugged, infinitely replayable, perennial entertainment – so this crowd will definitely bounce off {{% game 454672 %}}Boss Fighters QR{{% /game %}} hard.
+
+Which brings us to the elephant in the conference hall: will the jury "dare" to give the award to an app game? As before with legacy games, I'll resist the immediate instinct of claiming a pattern based on previous years. One certainly cannot deny that the jury doesn't hesitate to recognise modern trends, going back to their very first list in 1979 when they recommended no less than three electronic games: {{% game  %}}Simon{{% /game %}}, {{% game  %}}Merlin{{% /game %}} and Chess Challenger Voice. Looking at the more recent past, they nominated {{% game  %}}Werewords{{% /game %}} and {{% game  %}}Detective{{% /game %}} in 2019 and gave a special award to {{% game  %}}Unlock! Game Adventures{{% /game %}} in 2023. Those who do insist on the "nominations not winners" pattern should look at the {{% kindersdj %}}Kinderspiel{{% /kindersdj %}}: {{% game 33643 %}}Whoowasit?{{% /game %}} won the main award in 2008 (we'll get back to that one shortly) and {{% game 92644 %}}Schnappt Hubi!{{% /game %}} in 2012.
+
+To cut a long story short: I'm positive that the jury means it when they say that any one of the nominees does have a chance at winning and wouldn't mind giving the award to an app supported game. Heck, they didn't hesitate to give the award to the once-and-done Exit games – so why would they care about a game's app becoming unplayable some years down the line? But I do think that such "novelty" games have a higher bar to clear: their unusual and, yes, pattern breaking feature would need to enhance the game experience and provide an argument for playing the game, not a potential hindrance against it. As far as {{% game 454672 %}}Boss Fighters QR{{% /game %}} goes I'm not 100% convinced that this is the case: the reception was positive but not enthusiastic, and for many reviewers the impression dominated that this was a video game in cardboard disguise. I won't write its winning chances off by any means, but there definitely are some caveats.
+
+Learn more about the game and its development in the 5G4D interview with [Lukas Zach](https://recommend.games/#/?designer=7808) and [Michael Palm](https://recommend.games/#/?designer=461):
+
+{{< youtube id=AzDVZfD13xU max-width="640px" >}}
 
 
 ### {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}}
