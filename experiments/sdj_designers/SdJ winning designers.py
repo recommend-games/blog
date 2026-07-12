@@ -25,6 +25,9 @@ from pytility import arg_to_iter, clear_list, parse_int
 jupyter_black.load()
 
 SEED = 23
+# Set to e.g. "_2026" to write designers_2026.csv / games_2026.csv / table_2026.md
+# instead of overwriting the originals.
+OUTPUT_SUFFIX = "_2026"
 
 pd.options.display.max_columns = 100
 pd.options.display.max_rows = 100
@@ -136,7 +139,7 @@ data["year"] = data["year"].fillna(0).astype("int64")
 data.shape
 
 # %%
-data.to_csv("games.csv")
+data.to_csv(f"games{OUTPUT_SUFFIX}.csv")
 
 # %%
 best_rating = data.groupby("designer").agg({"bayes_rating": "max"})
@@ -251,7 +254,9 @@ counts.shape
 counts.head(10)
 
 # %%
-counts.reset_index(col_level=1, names="bgg_id").to_csv("designers.csv", index=False)
+counts.reset_index(col_level=1, names="bgg_id").to_csv(
+    f"designers{OUTPUT_SUFFIX}.csv", index=False
+)
 
 
 # %%
@@ -283,7 +288,7 @@ def designer_table(counts):
 
 
 # %%
-with open("table.md", "w") as f:
+with open(f"table{OUTPUT_SUFFIX}.md", "w") as f:
     f.write(designer_table(counts))
 
 # %% [markdown]
