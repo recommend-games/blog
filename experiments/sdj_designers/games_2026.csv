@@ -1119,7 +1119,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 393888,Match!,2023,spiel,False,False,True,,5.7846,153086
 396822,Le Clan des Souris,2023,kinder,False,True,True,,5.5201,97601
 399094,Lecker Lava,2023,kinder,False,False,True,,5.53756,102899
-400495,JinxO,2024,spiel,False,True,True,,5.73996,121032
+400495,JinxO,2024,spiel,True,True,True,,5.73996,121032
 401885,Schätz it if you can,2023,spiel,False,False,True,,5.72783,314
 402360,Fluffy Valley,2023,kinder,False,False,True,,5.57022,75577
 402360,Fluffy Valley,2023,kinder,False,False,True,,5.57022,72628
@@ -1141,7 +1141,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 415036,Medical Mysteries: NYC Emergency Room,2024,kenner,False,False,True,,6.04323,11567
 416851,Castle Combo,2024,spiel,False,False,True,,7.33923,119408
 416851,Castle Combo,2024,spiel,False,False,True,,7.33923,64917
-417197,Rebirth,2024,kenner,False,True,True,,7.10989,2
+417197,Rebirth,2024,kenner,True,True,True,,7.10989,2
 417403,Toriki: The Castaway Island,2024,spiel,False,False,True,,5.98617,107969
 419639,Mind the Lines,2024,spiel,False,True,True,,6.09514,157836
 420087,Flip 7,2024,spiel,False,True,True,,6.99364,14171
@@ -1164,7 +1164,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 434654,Toy Battle,2025,spiel,False,False,True,,7.16557,6008
 434906,Tag Team,2025,kenner,False,False,True,,6.79572,145444
 434906,Tag Team,2025,kenner,False,False,True,,6.79572,60151
-435346,Mooki Island,2025,kinder,False,True,True,,5.60122,78797
+435346,Mooki Island,2025,kinder,True,True,True,,5.60122,78797
 440540,Take Time,2025,spiel,False,False,True,,6.90332,167379
 440540,Take Time,2025,spiel,False,False,True,,6.90332,90882
 441696,Sanctuary,2025,kenner,False,False,True,,6.76524,138517

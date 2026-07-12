@@ -2,11 +2,11 @@
 |:---------|:-----:|:-----------:|:-----------:|:-----:|
 | [Wolfgang Kramer](https://recommend.games/#/?designer=7) | 5 / 4 / 12 | 0 / 1 / 0 | 1 / 2 / 3 | 28 |
 | [Klaus Teuber](https://recommend.games/#/?designer=11) | 4 / 0 / 3 | 0 / 0 / 0 | 0 / 1 / 1 | 9 |
+| [Reiner Knizia](https://recommend.games/#/?designer=2) | 1 (1) / 6 / 18 | 1 / 0 / 1 | 1 / 4 / 5 | 38 |
 | [Michael Kiesling](https://recommend.games/#/?designer=42) | 3 / 3 / 4 | 0 / 2 / 0 | 0 / 0 / 0 | 12 |
 | [Inka Brand](https://recommend.games/#/?designer=6940) | 0 / 0 / 2 | 2 / 0 / 0 | 1 / 2 / 0 | 7 |
 | [Markus Brand](https://recommend.games/#/?designer=6941) | 0 / 0 / 2 | 2 / 0 / 0 | 1 / 2 / 0 | 7 |
 | [Alex Randolph](https://recommend.games/#/?designer=24) | 1 / 0 / 13 | 0 / 0 / 0 | 2 / 1 / 0 | 17 |
-| [Reiner Knizia](https://recommend.games/#/?designer=2) | 1 (1) / 6 / 18 | 0 / 1 / 1 | 1 / 4 / 5 | 38 |
 | [Marie Fort](https://recommend.games/#/?designer=79463) | 0 / 0 / 0 | 0 / 0 / 0 | 2 (1) / 1 / 0 | 4 |
 | [Wilfried Fort](https://recommend.games/#/?designer=79462) | 0 / 0 / 0 | 0 / 0 / 0 | 2 (1) / 1 / 0 | 4 |
 | [Bruno Cathala](https://recommend.games/#/?designer=1727) | 1 (1) / 0 / 7 | 0 / 0 / 2 | 1 / 0 / 0 | 12 |
