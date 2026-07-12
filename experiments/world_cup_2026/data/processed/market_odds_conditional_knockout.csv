@@ -1,10 +1,8 @@
 team_id,team_name,polymarket_yes_price,polymarket_p_winner,polymarket_decimal_odds
-FR,France,0.373500,0.380346,2.6292
-ES,Spain,0.211500,0.215377,4.6430
-AR,Argentina,0.176500,0.179735,5.5637
-EN,England,0.144500,0.147149,6.7958
-NO,Norway,0.059500,0.060591,16.5042
-CH,Switzerland,0.016500,0.016802,59.5152
+FR,France,0.376500,0.384184,2.6029
+EN,England,0.211500,0.215816,4.6336
+ES,Spain,0.199500,0.203571,4.9123
+AR,Argentina,0.192500,0.196429,5.0909
 BR,Brazil,0.000000,0.000000,nan
 DE,Germany,0.000000,0.000000,nan
 PT,Portugal,0.000000,0.000000,nan
@@ -15,6 +13,7 @@ MX,Mexico,0.000000,0.000000,nan
 BE,Belgium,0.000000,0.000000,nan
 CO,Colombia,0.000000,0.000000,nan
 JP,Japan,0.000000,0.000000,nan
+NO,Norway,0.000000,0.000000,nan
 CA,Canada,0.000000,0.000000,nan
 TN,Tunisia,0.000000,0.000000,nan
 EC,Ecuador,0.000000,0.000000,nan
@@ -36,6 +35,7 @@ CV,Cape Verde,0.000000,0.000000,nan
 QA,Qatar,0.000000,0.000000,nan
 SA,Saudi Arabia,0.000000,0.000000,nan
 SQ,Scotland,0.000000,0.000000,nan
+CH,Switzerland,0.000000,0.000000,nan
 AT,Austria,0.000000,0.000000,nan
 HR,Croatia,0.000000,0.000000,nan
 HT,Haiti,0.000000,0.000000,nan
