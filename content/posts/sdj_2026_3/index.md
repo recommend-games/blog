@@ -31,7 +31,7 @@ tags:
   - Rebirth
 ---
 
-{{< img src="sdj-all" size="x360" alt="Spiel des Jahres" >}}
+{{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
 The waiting is finally coming to an end! On Sunday, July 12, the jury will announce the winners of {{% sdj %}}Spiel des Jahres{{% /sdj %}} and {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}. As always, there are six games hoping to win one of the two most important awards in gaming – and one hopeless geek trying to predict which will be the lucky ones. 🤓
 
@@ -40,7 +40,7 @@ I've been doing [this]({{<ref "posts/sdj_2020_3/index.md">}}) [for]({{<ref "post
 
 ## Nominated for {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}
 
-{{< img src="sdj-2026" size="x360" alt="Spiel des Jahres 2026" >}}
+{{< img src="sdj-2026" size="x300" alt="Spiel des Jahres 2026" >}}
 
 Before we dive into the individual games, let's look at some numbers to see some objective measures for them – as far as this is possible. What we've got at our disposal are the [jury's reviews](reviews.csv), [recommendations to the `S_d_J` bot](https://recommend.games/#/?for=S_d_J&yearMin=2026&yearMax=2025&include=456440,400495,462742&excludeRated=false), BoardGameGeek's average rating and the [Bayesian rating]({{<ref "posts/reverse_engineer_bgg/index.md">}}). Additionally, I've created a [poll on BGG](https://boardgamegeek.com/thread/3728142/poll-spiel-des-jahres-2026-and-kennerspiel-des-jah) where the geeks could have their say:
 
@@ -113,7 +113,7 @@ The 'geeks seem to favour {{% game 456440 %}}Cozy Stickerville{{% /game %}}, and
 
 ## Nominated for {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}
 
-{{< img src="ksdj-2026" size="x360" alt="Kennerspiel des Jahres 2026" >}}
+{{< img src="ksdj-2026" size="x300" alt="Kennerspiel des Jahres 2026" >}}
 
 Let's take a look at the same metrics as above, but for the {{% kdj %}}Kennerspiel{{% /kdj %}} nominees:
 
@@ -198,7 +198,7 @@ For this award, I'll have to go with the numbers and the majority of the 'geeks 
 
 ## And the little ones: {{% kindersdj %}}Kinderspiel des Jahres 2026{{% /kindersdj %}}
 
-{{< img src="kindersdj-2026" size="x360" alt="Kinderspiel des Jahres 2026" >}}
+{{< img src="kindersdj-2026" size="x300" alt="Kinderspiel des Jahres 2026" >}}
 
 As promised, I'm going to try and predict the winner of {{% kindersdj / %}} for the first time this year. Let's first have a brief look at the nominees before I wow you with the sophisticated algorithm I have come up with. 🤓
 
