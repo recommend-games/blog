@@ -81,11 +81,15 @@ Nonetheless, the thought of this design from Indonesia, half a world away, bring
 
 *2 players, 10 minutes, 4+ years, light (1.0)*
 
-{{< img src="435346" size="x300" alt="Mooki Island" >}}
+{{< img src="435346" size="x360" alt="Mooki Island" >}}
 
 *Befriend adorable Mookies, but watch out for the Spider!*
 
-My daughters called it! {{% game 435346 %}}Mooki Island{{% /game %}} was their clear favourite among the three clips, and I'm happy to have trusted the judgement of the target audience over any fancy Bayesian average, first time out. Designer [Florian Sirieix](https://recommend.games/#/?designer=78797) had a second horse in this race too – co-designing runner-up {{% game 454722 %}}Boo Party{{% /game %}} – but it was {{% game 435346 %}}Mooki Island{{% /game %}} that beat both {{% game 454722 %}}Boo Party{{% /game %}} and {{% game 420360 %}}Mimose & Sam{{% /game %}} to the meeple.
+{{< youtube id=EzhJcgO4_-8 max-width="640px" >}}
+
+My daughters were right – {{% game 435346 %}}Mooki Island{{% /game %}} is this year's most exciting children's game. 🤩 They were so happy about their favourite winning that they were jumping up and down the couch and asking when they get the game, so I had to order it still during the stream – before stocks run out… 😅
+
+Overall, our family foray into the {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} proved successful, so I'll try again next year. 🥰
 
 
 ## Conclusion
