@@ -1,1324 +1,1326 @@
-{"average_duration":15,"bgg_id":822,"display_name_en":"Carcassonne","games_played":15009012,"id":1,"name":"carcassonne","premium":true,"published_on":"2016-11-14","status":"public","weight":17420}
-{"average_duration":6,"bgg_id":5782,"display_name_en":"Coloretto","games_played":754951,"id":2,"name":"coloretto","published_on":"2010-06-24","status":"public","weight":47}
-{"average_duration":18,"bgg_id":394,"display_name_en":"Kahuna","games_played":151574,"id":5,"name":"kahuna","published_on":"2010-05-09","status":"public","weight":58}
-{"average_duration":27,"bgg_id":6249,"display_name_en":"Alhambra","games_played":772216,"id":7,"name":"alhambra","published_on":"2021-01-20","status":"public","weight":1290}
-{"average_duration":11,"bgg_id":50,"display_name_en":"Lost Cities","games_played":5192353,"id":9,"name":"lostcities","premium":true,"published_on":"2015-09-22","status":"public","weight":3071}
-{"average_duration":6,"bgg_id":28143,"display_name_en":"Race for the Galaxy","games_played":16698907,"id":10,"name":"raceforthegalaxy","published_on":"2010-11-30","status":"public","weight":2932}
-{"average_duration":6,"bgg_id":41,"display_name_en":"Can't Stop","games_played":19826147,"id":11,"name":"cantstop","premium":true,"published_on":"2011-01-05","status":"public","weight":5617}
-{"average_duration":20,"bgg_id":34635,"display_name_en":"Stone Age","games_played":5823945,"id":13,"name":"stoneage","published_on":"2011-03-09","status":"public","weight":2850}
-{"average_duration":26,"bgg_id":3076,"display_name_en":"Puerto Rico","games_played":2862682,"id":14,"name":"puertorico","published_on":"2011-05-11","status":"public","weight":1962}
-{"average_duration":73,"bgg_id":29934,"display_name_en":"Amyitis","games_played":14640,"id":15,"name":"amyitis","published_on":"2011-10-13","status":"public"}
-{"average_duration":17,"bgg_id":37628,"display_name_en":"Haggis","games_played":105266,"id":16,"name":"haggis","published_on":"2011-05-01","status":"public","weight":39}
-{"average_duration":35,"bgg_id":42215,"display_name_en":"Tobago","games_played":68548,"id":18,"name":"tobago","published_on":"2011-09-21","status":"public","weight":49}
-{"average_duration":30,"bgg_id":66643,"display_name_en":"Uncle Chestnut's Table Gype","games_played":16440,"id":19,"name":"unclechestnuttablegype","published_on":"2011-06-15","status":"public"}
-{"average_duration":50,"bgg_id":73439,"display_name_en":"Troyes","games_played":156546,"id":20,"name":"troyes","published_on":"2011-08-02","status":"public","weight":243}
-{"average_duration":23,"bgg_id":116975,"display_name_en":"Diam's","games_played":24872,"id":21,"name":"diams","published_on":"2012-05-26","status":"public"}
-{"average_duration":20,"bgg_id":106217,"display_name_en":"Hawaii","games_played":116172,"id":22,"name":"hawaii","published_on":"2011-12-21","status":"public","weight":10}
-{"average_duration":4,"bgg_id":66171,"display_name_en":"Dragonheart","games_played":945185,"id":23,"name":"dragonheart","published_on":"2011-12-14","status":"public","weight":47}
-{"average_duration":29,"bgg_id":9220,"display_name_en":"Saboteur","games_played":1213779,"id":24,"name":"saboteur","published_on":"2012-03-09","status":"public","weight":570}
-{"average_duration":14,"bgg_id":13928,"display_name_en":"China Gold","games_played":24537,"id":25,"name":"chinagold","published_on":"2012-01-04","status":"public","weight":8}
-{"average_duration":20,"bgg_id":214000,"display_name_en":"In The Year of the Dragon","games_played":67544,"id":26,"name":"intheyearofthedragon","published_on":"2012-01-24","status":"public","weight":17}
-{"average_duration":5,"bgg_id":125028,"display_name_en":"Color Pop","games_played":991102,"id":27,"name":"colorpop","published_on":"2012-09-08","status":"public","weight":86}
-{"average_duration":4,"bgg_id":11929,"display_name_en":"Gomoku","games_played":783132,"id":28,"is_ranking_disabled":true,"name":"gomoku","published_on":"2012-12-24","status":"public","weight":40}
-{"average_duration":39,"bgg_id":18602,"display_name_en":"Caylus","games_played":125469,"id":29,"name":"caylus","published_on":"2012-03-31","status":"public","weight":122}
-{"average_duration":18,"bgg_id":108745,"display_name_en":"Seasons","games_played":10357582,"id":30,"name":"seasons","published_on":"2012-07-24","status":"public","weight":1373}
-{"average_duration":6,"bgg_id":119316,"display_name_en":"United Square","games_played":36963,"id":31,"name":"unitedsquare","published_on":"2012-05-17","status":"public","weight":1}
-{"average_duration":7,"bgg_id":10527,"display_name_en":"Gyg\u00e8s","games_played":34811,"id":32,"name":"gyges","published_on":"2012-08-23","status":"public","weight":4}
-{"average_duration":12,"bgg_id":54043,"display_name_en":"Jaipur","games_played":2933907,"id":33,"name":"jaipur","premium":true,"published_on":"2013-02-01","status":"public","weight":1002}
-{"average_duration":28,"bgg_id":85005,"display_name_en":"The Boss","games_played":112689,"id":34,"name":"theboss","published_on":"2012-10-03","status":"public","weight":43}
-{"average_duration":9,"bgg_id":2389,"display_name_en":"Reversi","games_played":745646,"id":35,"name":"reversi","published_on":"2012-10-29","status":"public","weight":83}
-{"average_duration":14,"bgg_id":6887,"display_name_en":"Hearts","games_played":2667302,"id":36,"name":"hearts","published_on":"2012-11-06","status":"public","weight":3539}
-{"average_duration":17,"bgg_id":70919,"display_name_en":"Takenoko","games_played":2735378,"id":37,"name":"takenoko","premium":true,"published_on":"2012-12-07","status":"public","weight":1012}
-{"average_duration":34,"bgg_id":13308,"display_name_en":"Niagara","games_played":32780,"id":38,"name":"niagara","published_on":"2013-05-06","status":"public","weight":26}
-{"average_duration":4,"bgg_id":681,"display_name_en":"Quarto","games_played":849570,"id":39,"name":"quarto","published_on":"2013-01-16","status":"public","weight":68}
-{"average_duration":33,"bgg_id":73761,"display_name_en":"K2","games_played":60277,"id":40,"name":"k2","published_on":"2015-01-26","status":"public","weight":13}
-{"average_duration":44,"bgg_id":71074,"display_name_en":"Expedition: Northwest Passage","games_played":19649,"id":41,"name":"northwestpassage","published_on":"2013-06-01","status":"public"}
-{"average_duration":6,"bgg_id":624,"display_name_en":"Quoridor","games_played":1410027,"id":43,"name":"quoridor","published_on":"2013-02-18","status":"public","weight":46}
+{"average_duration":15,"bgg_id":822,"display_name_en":"Carcassonne","games_played":15053849,"id":1,"name":"carcassonne","premium":true,"published_on":"2016-11-14","status":"public","weight":17175}
+{"average_duration":6,"bgg_id":5782,"display_name_en":"Coloretto","games_played":755467,"id":2,"name":"coloretto","published_on":"2010-06-24","status":"public","weight":89}
+{"average_duration":18,"bgg_id":394,"display_name_en":"Kahuna","games_played":151711,"id":5,"name":"kahuna","published_on":"2010-05-09","status":"public","weight":32}
+{"average_duration":26,"bgg_id":6249,"display_name_en":"Alhambra","games_played":774131,"id":7,"name":"alhambra","published_on":"2021-01-20","status":"public","weight":1273}
+{"average_duration":11,"bgg_id":50,"display_name_en":"Lost Cities","games_played":5202609,"id":9,"name":"lostcities","premium":true,"published_on":"2015-09-22","status":"public","weight":3420}
+{"average_duration":6,"bgg_id":28143,"display_name_en":"Race for the Galaxy","games_played":16719511,"id":10,"name":"raceforthegalaxy","published_on":"2010-11-30","status":"public","weight":2835}
+{"average_duration":6,"bgg_id":41,"display_name_en":"Can't Stop","games_played":19855983,"id":11,"name":"cantstop","premium":true,"published_on":"2011-01-05","status":"public","weight":5420}
+{"average_duration":20,"bgg_id":34635,"display_name_en":"Stone Age","games_played":5833251,"id":13,"name":"stoneage","published_on":"2011-03-09","status":"public","weight":3262}
+{"average_duration":26,"bgg_id":3076,"display_name_en":"Puerto Rico","games_played":2866016,"id":14,"name":"puertorico","published_on":"2011-05-11","status":"public","weight":1703}
+{"average_duration":73,"bgg_id":29934,"display_name_en":"Amyitis","games_played":14649,"id":15,"name":"amyitis","published_on":"2011-10-13","status":"public"}
+{"average_duration":18,"bgg_id":37628,"display_name_en":"Haggis","games_played":105395,"id":16,"name":"haggis","published_on":"2011-05-01","status":"public","weight":118}
+{"average_duration":33,"bgg_id":42215,"display_name_en":"Tobago","games_played":68573,"id":18,"name":"tobago","published_on":"2011-09-21","status":"public","weight":40}
+{"average_duration":37,"bgg_id":66643,"display_name_en":"Uncle Chestnut's Table Gype","games_played":16446,"id":19,"name":"unclechestnuttablegype","published_on":"2011-06-15","status":"public"}
+{"average_duration":52,"bgg_id":73439,"display_name_en":"Troyes","games_played":156657,"id":20,"name":"troyes","published_on":"2011-08-02","status":"public","weight":115}
+{"average_duration":23,"bgg_id":116975,"display_name_en":"Diam's","games_played":24874,"id":21,"name":"diams","published_on":"2012-05-26","status":"public"}
+{"average_duration":20,"bgg_id":106217,"display_name_en":"Hawaii","games_played":116193,"id":22,"name":"hawaii","published_on":"2011-12-21","status":"public","weight":7}
+{"average_duration":4,"bgg_id":66171,"display_name_en":"Dragonheart","games_played":945829,"id":23,"name":"dragonheart","published_on":"2011-12-14","status":"public","weight":40}
+{"average_duration":29,"bgg_id":9220,"display_name_en":"Saboteur","games_played":1214634,"id":24,"name":"saboteur","published_on":"2012-03-09","status":"public","weight":784}
+{"average_duration":14,"bgg_id":13928,"display_name_en":"China Gold","games_played":24564,"id":25,"name":"chinagold","published_on":"2012-01-04","status":"public","weight":6}
+{"average_duration":21,"bgg_id":214000,"display_name_en":"In The Year of the Dragon","games_played":67588,"id":26,"name":"intheyearofthedragon","published_on":"2012-01-24","status":"public","weight":48}
+{"average_duration":5,"bgg_id":125028,"display_name_en":"Color Pop","games_played":992292,"id":27,"name":"colorpop","published_on":"2012-09-08","status":"public","weight":106}
+{"average_duration":4,"bgg_id":11929,"display_name_en":"Gomoku","games_played":783836,"id":28,"is_ranking_disabled":true,"name":"gomoku","published_on":"2012-12-24","status":"public","weight":42}
+{"average_duration":36,"bgg_id":18602,"display_name_en":"Caylus","games_played":125619,"id":29,"name":"caylus","published_on":"2012-03-31","status":"public","weight":125}
+{"average_duration":18,"bgg_id":108745,"display_name_en":"Seasons","games_played":10366293,"id":30,"name":"seasons","published_on":"2012-07-24","status":"public","weight":1488}
+{"average_duration":5,"bgg_id":119316,"display_name_en":"United Square","games_played":36973,"id":31,"name":"unitedsquare","published_on":"2012-05-17","status":"public","weight":4}
+{"average_duration":5,"bgg_id":10527,"display_name_en":"Gyg\u00e8s","games_played":34852,"id":32,"name":"gyges","published_on":"2012-08-23","status":"public","weight":19}
+{"average_duration":11,"bgg_id":54043,"display_name_en":"Jaipur","games_played":2937420,"id":33,"name":"jaipur","premium":true,"published_on":"2013-02-01","status":"public","weight":1133}
+{"average_duration":29,"bgg_id":85005,"display_name_en":"The Boss","games_played":112733,"id":34,"name":"theboss","published_on":"2012-10-03","status":"public","weight":51}
+{"average_duration":9,"bgg_id":2389,"display_name_en":"Reversi","games_played":746258,"id":35,"name":"reversi","published_on":"2012-10-29","status":"public","weight":73}
+{"average_duration":14,"bgg_id":6887,"display_name_en":"Hearts","games_played":2676487,"id":36,"name":"hearts","published_on":"2012-11-06","status":"public","weight":3668}
+{"average_duration":17,"bgg_id":70919,"display_name_en":"Takenoko","games_played":2737526,"id":37,"name":"takenoko","premium":true,"published_on":"2012-12-07","status":"public","weight":1075}
+{"average_duration":37,"bgg_id":13308,"display_name_en":"Niagara","games_played":32798,"id":38,"name":"niagara","published_on":"2013-05-06","status":"public","weight":26}
+{"average_duration":4,"bgg_id":681,"display_name_en":"Quarto","games_played":850566,"id":39,"name":"quarto","published_on":"2013-01-16","status":"public","weight":36}
+{"average_duration":31,"bgg_id":73761,"display_name_en":"K2","games_played":60310,"id":40,"name":"k2","published_on":"2015-01-26","status":"public","weight":29}
+{"average_duration":33,"bgg_id":71074,"display_name_en":"Expedition: Northwest Passage","games_played":19662,"id":41,"name":"northwestpassage","published_on":"2013-06-01","status":"public","weight":32}
+{"average_duration":7,"bgg_id":624,"display_name_en":"Quoridor","games_played":1411524,"id":43,"name":"quoridor","published_on":"2013-02-18","status":"public","weight":52}
 {"average_duration":72,"bgg_id":105037,"display_name_en":"Tournay","games_played":25702,"id":45,"name":"tournay","published_on":"2014-01-25","status":"public"}
-{"average_duration":10,"bgg_id":54137,"display_name_en":"Battle Sheep","games_played":431877,"id":47,"name":"splits","published_on":"2014-02-10","status":"public","weight":87}
-{"average_duration":8,"bgg_id":2243,"display_name_en":"Yahtzee","games_played":17466384,"id":49,"name":"yatzy","published_on":"2013-05-27","status":"public","weight":5023}
-{"average_duration":9,"bgg_id":87288,"display_name_en":"Cinco","games_played":99526,"id":51,"name":"cinco","published_on":"2013-07-09","status":"public","weight":19}
-{"average_duration":15,"bgg_id":2397,"display_name_en":"Backgammon","games_played":7310193,"id":53,"name":"backgammon","published_on":"2014-09-09","status":"public","weight":1879}
-{"average_duration":11,"bgg_id":2399,"display_name_en":"Senet","games_played":121897,"id":54,"name":"senet","published_on":"2013-03-30","status":"public","weight":55}
-{"average_duration":16,"bgg_id":152359,"display_name_en":"Machiavelli","games_played":439107,"id":55,"name":"machiavelli","published_on":"2013-10-20","status":"public","weight":88}
-{"average_duration":14,"bgg_id":125618,"display_name_en":"Libertalia","games_played":217057,"id":56,"name":"libertalia","premium":true,"published_on":"2013-03-04","status":"public","weight":17}
-{"average_duration":3,"bgg_id":3319,"display_name_en":"Neutreeko","games_played":107940,"id":57,"name":"neutreeko","published_on":"2013-03-30","status":"public"}
-{"average_duration":12,"bgg_id":45,"display_name_en":"Perudo","games_played":318750,"id":58,"name":"dudo","published_on":"2014-03-27","status":"public","weight":152}
-{"average_duration":33,"bgg_id":131616,"display_name_en":"Nautilus","games_played":28110,"id":60,"name":"nautilus","published_on":"2015-11-02","status":"public"}
-{"average_duration":10,"bgg_id":11865,"display_name_en":"Koi-Koi","games_played":2008602,"id":61,"name":"koikoi","published_on":"2016-02-01","status":"public","weight":283}
-{"average_duration":25,"bgg_id":129050,"display_name_en":"P.I.","games_played":246419,"id":62,"name":"pi","published_on":"2018-05-09","status":"public","weight":50}
-{"average_duration":5,"bgg_id":1419,"display_name_en":"Pylos","games_played":95736,"id":63,"name":"pylos","published_on":"2013-06-10","status":"public","weight":4}
-{"average_duration":18,"bgg_id":10,"display_name_en":"Elfenland","games_played":80247,"id":64,"name":"elfenland","published_on":"2013-06-16","status":"public","weight":66}
-{"average_duration":35,"bgg_id":17691,"display_name_en":"Djambi","games_played":2853,"id":65,"name":"djambi","published_on":"2017-06-05","status":"public"}
-{"average_duration":18,"bgg_id":140613,"display_name_en":"Gear & Piston","games_played":7418,"id":67,"name":"gearnpiston","published_on":"2013-04-19","status":"public"}
-{"average_duration":6,"bgg_id":94891,"display_name_en":"Kabaleo","games_played":43819,"id":68,"name":"kabaleo","published_on":"2018-01-13","status":"public","weight":2}
-{"average_duration":21,"bgg_id":118048,"display_name_en":"Targi","games_played":579429,"id":69,"name":"targi","published_on":"2013-12-09","status":"public","weight":330}
-{"average_duration":4,"bgg_id":141019,"display_name_en":"Thermopyles","games_played":416901,"id":71,"is_ranking_disabled":true,"name":"thermopyles","published_on":"2013-04-28","status":"public","weight":38}
-{"average_duration":4,"bgg_id":88113,"display_name_en":"Isaac","games_played":6342,"id":73,"name":"isaac","published_on":"2017-09-29","status":"public","weight":4}
-{"average_duration":13,"bgg_id":26952,"display_name_en":"Checkers","games_played":450331,"id":74,"name":"checkers","published_on":"2014-10-07","status":"public","weight":30}
-{"average_duration":16,"bgg_id":67185,"display_name_en":"Sobek","games_played":139601,"id":75,"name":"sobek","published_on":"2014-06-17","status":"public","weight":10}
-{"average_duration":13,"bgg_id":2655,"display_name_en":"Hive","games_played":1051023,"id":79,"name":"hive","published_on":"2013-11-24","status":"public","weight":241}
-{"average_duration":32,"bgg_id":126163,"display_name_en":"Tzolk'in","games_played":790752,"id":80,"name":"tzolkin","published_on":"2013-08-09","status":"public","weight":510}
-{"average_duration":13,"bgg_id":171,"display_name_en":"Chess","games_played":1403088,"id":81,"is_ranking_disabled":true,"name":"chess","published_on":"2015-03-28","status":"public","weight":296}
-{"average_duration":26,"bgg_id":137269,"display_name_en":"Spyrium","games_played":35194,"id":1002,"name":"spyrium","published_on":"2013-09-23","status":"public"}
-{"average_duration":19,"bgg_id":123540,"display_name_en":"Tokaido","games_played":985781,"id":1003,"name":"tokaido","premium":true,"published_on":"2013-10-05","status":"public","weight":508}
-{"average_duration":19,"bgg_id":148759,"display_name_en":"Time Masters","games_played":74285,"id":1004,"name":"timemasters","published_on":"2013-10-14","status":"public","weight":15}
-{"average_duration":11,"bgg_id":8229,"display_name_en":"Armad\u00f6ra","games_played":21057,"id":1005,"name":"armadora","published_on":"2013-11-12","status":"public"}
-{"average_duration":39,"bgg_id":142615,"display_name_en":"The Jelly Monster Lab","games_played":12234,"id":1006,"name":"thejellymonsterlab","published_on":"2013-12-08","status":"public"}
-{"average_duration":7,"bgg_id":4112,"display_name_en":"Hex","games_played":138458,"id":1007,"name":"hex","published_on":"2013-12-08","status":"public","weight":9}
-{"average_duration":13,"bgg_id":432,"display_name_en":"6 nimmt!","games_played":8604170,"id":1008,"name":"sechsnimmt","published_on":"2013-12-25","status":"public","weight":6807}
-{"average_duration":35,"bgg_id":126239,"display_name_en":"Twin Tin Bots","games_played":14332,"id":1009,"name":"twintinbots","published_on":"2014-03-17","status":"public","weight":13}
-{"average_duration":5,"bgg_id":2448,"display_name_en":"Kalah","games_played":376539,"id":1010,"name":"kalah","published_on":"2014-04-04","status":"public","weight":15}
-{"average_duration":56,"bgg_id":25613,"display_name_en":"Through the Ages","games_played":552968,"id":1011,"name":"throughtheages","published_on":"2014-05-19","status":"public","weight":45}
-{"average_duration":15,"bgg_id":54321,"display_name_en":"8 Masters' Revenge","games_played":44833,"id":1012,"name":"eightmastersrevenge","published_on":"2014-06-03","status":"public"}
-{"average_duration":9,"bgg_id":54321,"display_name_en":"Kory\u014f","games_played":156780,"id":1014,"name":"koryo","published_on":"2014-10-29","status":"public","weight":6}
-{"average_duration":10,"bgg_id":98778,"display_name_en":"Hanabi","games_played":10768919,"id":1015,"is_ranking_disabled":true,"name":"hanabi","premium":true,"published_on":"2014-11-18","status":"public","weight":6223}
-{"average_duration":52,"bgg_id":69779,"display_name_en":"Polis: Fight for Hegemony","games_played":20931,"id":1016,"name":"polis","published_on":"2014-12-11","status":"public"}
-{"average_duration":51,"bgg_id":146278,"display_name_en":"Tash-Kalar","games_played":192083,"id":1017,"name":"tashkalar","published_on":"2014-12-24","status":"public","weight":92}
-{"average_duration":47,"bgg_id":143519,"display_name_en":"Quantum","games_played":90738,"id":1018,"name":"quantum","published_on":"2015-02-26","status":"public","weight":151}
-{"average_duration":29,"bgg_id":43152,"display_name_en":"Assyria","games_played":10966,"id":1019,"name":"assyria","published_on":"2015-04-03","status":"public"}
-{"average_duration":41,"bgg_id":129948,"display_name_en":"The Palaces of Carrara","games_played":28562,"id":1020,"name":"carrara","published_on":"2015-04-16","status":"public","weight":21}
-{"average_duration":31,"bgg_id":143484,"display_name_en":"Florenza: The Card Game","games_played":9683,"id":1022,"name":"florenzacardgame","published_on":"2015-05-26","status":"public","weight":14}
-{"average_duration":56,"bgg_id":156566,"display_name_en":"Lords of Xidit","games_played":32340,"id":1023,"name":"lox","published_on":"2015-06-12","status":"public"}
-{"average_duration":4,"bgg_id":102148,"display_name_en":"Noir: Killer versus Inspector","games_played":417908,"id":1024,"name":"noirkvi","published_on":"2015-07-19","status":"public","weight":9}
-{"average_duration":17,"bgg_id":158899,"display_name_en":"Colt Express","games_played":457113,"id":1025,"name":"coltexpress","premium":true,"published_on":"2015-08-30","status":"public","weight":119}
-{"average_duration":10,"bgg_id":23908,"display_name_en":"Metromania","games_played":20909,"id":1026,"name":"metromaniab","published_on":"2015-10-20","status":"public","weight":3}
+{"average_duration":10,"bgg_id":54137,"display_name_en":"Battle Sheep","games_played":432141,"id":47,"name":"splits","published_on":"2014-02-10","status":"public","weight":65}
+{"average_duration":8,"bgg_id":2243,"display_name_en":"Yahtzee","games_played":17513701,"id":49,"name":"yatzy","published_on":"2013-05-27","status":"public","weight":5149}
+{"average_duration":10,"bgg_id":87288,"display_name_en":"Cinco","games_played":99617,"id":51,"name":"cinco","published_on":"2013-07-09","status":"public","weight":18}
+{"average_duration":15,"bgg_id":2397,"display_name_en":"Backgammon","games_played":7319877,"id":53,"name":"backgammon","published_on":"2014-09-09","status":"public","weight":1850}
+{"average_duration":12,"bgg_id":2399,"display_name_en":"Senet","games_played":122083,"id":54,"name":"senet","published_on":"2013-03-30","status":"public","weight":42}
+{"average_duration":16,"bgg_id":152359,"display_name_en":"Machiavelli","games_played":439886,"id":55,"name":"machiavelli","published_on":"2013-10-20","status":"public","weight":121}
+{"average_duration":14,"bgg_id":125618,"display_name_en":"Libertalia","games_played":217129,"id":56,"name":"libertalia","premium":true,"published_on":"2013-03-04","status":"public","weight":41}
+{"average_duration":3,"bgg_id":3319,"display_name_en":"Neutreeko","games_played":108048,"id":57,"name":"neutreeko","published_on":"2013-03-30","status":"public","weight":1}
+{"average_duration":12,"bgg_id":45,"display_name_en":"Perudo","games_played":318967,"id":58,"name":"dudo","published_on":"2014-03-27","status":"public","weight":62}
+{"average_duration":33,"bgg_id":131616,"display_name_en":"Nautilus","games_played":28113,"id":60,"name":"nautilus","published_on":"2015-11-02","status":"public"}
+{"average_duration":10,"bgg_id":11865,"display_name_en":"Koi-Koi","games_played":2011156,"id":61,"name":"koikoi","published_on":"2016-02-01","status":"public","weight":332}
+{"average_duration":24,"bgg_id":129050,"display_name_en":"P.I.","games_played":246621,"id":62,"name":"pi","published_on":"2018-05-09","status":"public","weight":124}
+{"average_duration":5,"bgg_id":1419,"display_name_en":"Pylos","games_played":95836,"id":63,"name":"pylos","published_on":"2013-06-10","status":"public","weight":6}
+{"average_duration":18,"bgg_id":10,"display_name_en":"Elfenland","games_played":80447,"id":64,"name":"elfenland","published_on":"2013-06-16","status":"public","weight":62}
+{"average_duration":35,"bgg_id":17691,"display_name_en":"Djambi","games_played":2854,"id":65,"name":"djambi","published_on":"2017-06-05","status":"public"}
+{"average_duration":16,"bgg_id":140613,"display_name_en":"Gear & Piston","games_played":7420,"id":67,"name":"gearnpiston","published_on":"2013-04-19","status":"public"}
+{"average_duration":6,"bgg_id":94891,"display_name_en":"Kabaleo","games_played":43839,"id":68,"name":"kabaleo","published_on":"2018-01-13","status":"public"}
+{"average_duration":21,"bgg_id":118048,"display_name_en":"Targi","games_played":580306,"id":69,"name":"targi","published_on":"2013-12-09","status":"public","weight":274}
+{"average_duration":4,"bgg_id":141019,"display_name_en":"Thermopyles","games_played":417013,"id":71,"is_ranking_disabled":true,"name":"thermopyles","published_on":"2013-04-28","status":"public"}
+{"average_duration":5,"bgg_id":88113,"display_name_en":"Isaac","games_played":6347,"id":73,"name":"isaac","published_on":"2017-09-29","status":"public"}
+{"average_duration":13,"bgg_id":26952,"display_name_en":"Checkers","games_played":450970,"id":74,"name":"checkers","published_on":"2014-10-07","status":"public","weight":20}
+{"average_duration":17,"bgg_id":67185,"display_name_en":"Sobek","games_played":139665,"id":75,"name":"sobek","published_on":"2014-06-17","status":"public","weight":16}
+{"average_duration":13,"bgg_id":2655,"display_name_en":"Hive","games_played":1051902,"id":79,"name":"hive","published_on":"2013-11-24","status":"public","weight":193}
+{"average_duration":31,"bgg_id":126163,"display_name_en":"Tzolk'in","games_played":791499,"id":80,"name":"tzolkin","published_on":"2013-08-09","status":"public","weight":605}
+{"average_duration":13,"bgg_id":171,"display_name_en":"Chess","games_played":1405194,"id":81,"is_ranking_disabled":true,"name":"chess","published_on":"2015-03-28","status":"public","weight":286}
+{"average_duration":28,"bgg_id":137269,"display_name_en":"Spyrium","games_played":35204,"id":1002,"name":"spyrium","published_on":"2013-09-23","status":"public","weight":30}
+{"average_duration":19,"bgg_id":123540,"display_name_en":"Tokaido","games_played":986375,"id":1003,"name":"tokaido","premium":true,"published_on":"2013-10-05","status":"public","weight":404}
+{"average_duration":19,"bgg_id":148759,"display_name_en":"Time Masters","games_played":74426,"id":1004,"name":"timemasters","published_on":"2013-10-14","status":"public","weight":71}
+{"average_duration":17,"bgg_id":8229,"display_name_en":"Armad\u00f6ra","games_played":21062,"id":1005,"name":"armadora","published_on":"2013-11-12","status":"public"}
+{"average_duration":49,"bgg_id":142615,"display_name_en":"The Jelly Monster Lab","games_played":12235,"id":1006,"name":"thejellymonsterlab","published_on":"2013-12-08","status":"public","weight":11}
+{"average_duration":8,"bgg_id":4112,"display_name_en":"Hex","games_played":138523,"id":1007,"name":"hex","published_on":"2013-12-08","status":"public","weight":14}
+{"average_duration":13,"bgg_id":432,"display_name_en":"6 nimmt!","games_played":8622604,"id":1008,"name":"sechsnimmt","published_on":"2013-12-25","status":"public","weight":6980}
+{"average_duration":35,"bgg_id":126239,"display_name_en":"Twin Tin Bots","games_played":14340,"id":1009,"name":"twintinbots","published_on":"2014-03-17","status":"public","weight":55}
+{"average_duration":5,"bgg_id":2448,"display_name_en":"Kalah","games_played":376898,"id":1010,"name":"kalah","published_on":"2014-04-04","status":"public","weight":21}
+{"average_duration":63,"bgg_id":25613,"display_name_en":"Through the Ages","games_played":553002,"id":1011,"name":"throughtheages","published_on":"2014-05-19","status":"public","weight":37}
+{"average_duration":15,"bgg_id":54321,"display_name_en":"8 Masters' Revenge","games_played":44876,"id":1012,"name":"eightmastersrevenge","published_on":"2014-06-03","status":"public","weight":12}
+{"average_duration":9,"bgg_id":54321,"display_name_en":"Kory\u014f","games_played":156824,"id":1014,"name":"koryo","published_on":"2014-10-29","status":"public","weight":12}
+{"average_duration":10,"bgg_id":98778,"display_name_en":"Hanabi","games_played":10790858,"id":1015,"is_ranking_disabled":true,"name":"hanabi","premium":true,"published_on":"2014-11-18","status":"public","weight":5729}
+{"average_duration":52,"bgg_id":69779,"display_name_en":"Polis: Fight for Hegemony","games_played":20939,"id":1016,"name":"polis","published_on":"2014-12-11","status":"public"}
+{"average_duration":44,"bgg_id":146278,"display_name_en":"Tash-Kalar","games_played":192265,"id":1017,"name":"tashkalar","published_on":"2014-12-24","status":"public","weight":143}
+{"average_duration":49,"bgg_id":143519,"display_name_en":"Quantum","games_played":90876,"id":1018,"name":"quantum","published_on":"2015-02-26","status":"public","weight":109}
+{"average_duration":31,"bgg_id":43152,"display_name_en":"Assyria","games_played":10970,"id":1019,"name":"assyria","published_on":"2015-04-03","status":"public"}
+{"average_duration":46,"bgg_id":129948,"display_name_en":"The Palaces of Carrara","games_played":28573,"id":1020,"name":"carrara","published_on":"2015-04-16","status":"public"}
+{"average_duration":31,"bgg_id":143484,"display_name_en":"Florenza: The Card Game","games_played":9687,"id":1022,"name":"florenzacardgame","published_on":"2015-05-26","status":"public","weight":4}
+{"average_duration":53,"bgg_id":156566,"display_name_en":"Lords of Xidit","games_played":32349,"id":1023,"name":"lox","published_on":"2015-06-12","status":"public","weight":8}
+{"average_duration":4,"bgg_id":102148,"display_name_en":"Noir: Killer versus Inspector","games_played":418045,"id":1024,"name":"noirkvi","published_on":"2015-07-19","status":"public","weight":2}
+{"average_duration":17,"bgg_id":158899,"display_name_en":"Colt Express","games_played":457382,"id":1025,"name":"coltexpress","premium":true,"published_on":"2015-08-30","status":"public","weight":112}
+{"average_duration":9,"bgg_id":23908,"display_name_en":"Metromania","games_played":20913,"id":1026,"name":"metromaniab","published_on":"2015-10-20","status":"public","weight":11}
 {"average_duration":24,"bgg_id":54321,"display_name_en":"Dark Agent","games_played":14641,"id":1027,"name":"darkagent","published_on":"2015-11-19","status":"public"}
 {"average_duration":31,"bgg_id":54321,"display_name_en":"Le Dernier Peuple","games_played":3646,"id":1028,"name":"ledernierpeuple","published_on":"2015-11-30","status":"public"}
-{"average_duration":7,"bgg_id":40214,"display_name_en":"Bombay","games_played":12114,"id":1029,"name":"bombay","published_on":"2015-12-11","status":"public"}
-{"average_duration":8,"bgg_id":105265,"display_name_en":"Battle of LITS","games_played":261423,"id":1030,"name":"battleoflits","published_on":"2015-12-23","status":"public","weight":21}
-{"average_duration":9,"bgg_id":2393,"display_name_en":"Xiangqi","games_played":64089,"id":1031,"name":"xiangqi","published_on":"2016-01-18","status":"public","weight":1}
-{"average_duration":52,"bgg_id":122515,"display_name_en":"Keyflower","games_played":82636,"id":1032,"name":"keyflower","published_on":"2016-02-11","status":"public","weight":42}
-{"average_duration":8,"bgg_id":36985,"display_name_en":"Logger","games_played":31795,"id":1033,"name":"logger","published_on":"2016-05-15","status":"public"}
-{"average_duration":47,"bgg_id":12995,"display_name_en":"Dungeon Twister","games_played":47867,"id":1034,"name":"dungeontwister","published_on":"2016-03-14","status":"public","weight":25}
-{"average_duration":19,"bgg_id":54321,"display_name_en":"Evo: The \u201cGame no Name\u201d","games_played":2789,"id":1035,"name":"evogamenoname","published_on":"2016-04-14","status":"public"}
-{"average_duration":11,"bgg_id":40213,"display_name_en":"Nile","games_played":48518,"id":1036,"name":"aknile","published_on":"2016-04-14","status":"public","weight":16}
-{"average_duration":6,"bgg_id":22501,"display_name_en":"Four Color Cards","games_played":43936,"id":1037,"name":"fourcolorcards","published_on":"2016-05-19","status":"public","weight":1}
-{"average_duration":105,"bgg_id":95527,"display_name_en":"Madeira","games_played":15016,"id":1042,"name":"madeira","published_on":"2016-08-04","status":"public","weight":31}
-{"average_duration":22,"bgg_id":277085,"display_name_en":"Love Letter","games_played":895952,"id":1044,"name":"loveletter","premium":true,"published_on":"2026-04-24","status":"public","weight":2161}
-{"average_duration":22,"bgg_id":302238,"display_name_en":"Crazy Farmers","games_played":44789,"id":1047,"name":"crazyfarmers","published_on":"2020-06-18","status":"public","weight":7}
-{"average_duration":11,"bgg_id":214910,"display_name_en":"Tiki","games_played":24260,"id":1059,"name":"tiki","published_on":"2026-06-16","status":"beta","weight":17}
+{"average_duration":8,"bgg_id":40214,"display_name_en":"Bombay","games_played":12122,"id":1029,"name":"bombay","published_on":"2015-12-11","status":"public"}
+{"average_duration":7,"bgg_id":105265,"display_name_en":"Battle of LITS","games_played":261632,"id":1030,"name":"battleoflits","published_on":"2015-12-23","status":"public","weight":23}
+{"average_duration":10,"bgg_id":2393,"display_name_en":"Xiangqi","games_played":64154,"id":1031,"name":"xiangqi","published_on":"2016-01-18","status":"public","weight":2}
+{"average_duration":54,"bgg_id":122515,"display_name_en":"Keyflower","games_played":82691,"id":1032,"name":"keyflower","published_on":"2016-02-11","status":"public","weight":42}
+{"average_duration":8,"bgg_id":36985,"display_name_en":"Logger","games_played":31811,"id":1033,"name":"logger","published_on":"2016-05-15","status":"public"}
+{"average_duration":47,"bgg_id":12995,"display_name_en":"Dungeon Twister","games_played":47917,"id":1034,"name":"dungeontwister","published_on":"2016-03-14","status":"public","weight":34}
+{"average_duration":6,"bgg_id":54321,"display_name_en":"Evo: The \u201cGame no Name\u201d","games_played":2793,"id":1035,"name":"evogamenoname","published_on":"2016-04-14","status":"public"}
+{"average_duration":11,"bgg_id":40213,"display_name_en":"Nile","games_played":48566,"id":1036,"name":"aknile","published_on":"2016-04-14","status":"public","weight":29}
+{"average_duration":5,"bgg_id":22501,"display_name_en":"Four Color Cards","games_played":43944,"id":1037,"name":"fourcolorcards","published_on":"2016-05-19","status":"public","weight":2}
+{"average_duration":101,"bgg_id":95527,"display_name_en":"Madeira","games_played":15024,"id":1042,"name":"madeira","published_on":"2016-08-04","status":"public"}
+{"average_duration":21,"bgg_id":277085,"display_name_en":"Love Letter","games_played":898810,"id":1044,"name":"loveletter","premium":true,"published_on":"2026-04-24","status":"public","weight":2075}
+{"average_duration":21,"bgg_id":302238,"display_name_en":"Crazy Farmers","games_played":44796,"id":1047,"name":"crazyfarmers","published_on":"2020-06-18","status":"public","weight":7}
+{"average_duration":11,"bgg_id":214910,"display_name_en":"Tiki","games_played":24288,"id":1059,"name":"tiki","published_on":"2026-06-16","status":"beta"}
 {"average_duration":24,"bgg_id":54321,"display_name_en":"Hack Trick","games_played":8422,"id":1065,"locked":true,"name":"hacktrick","published_on":"2017-01-12","status":"public"}
-{"average_duration":27,"bgg_id":62809,"display_name_en":"Jump Gate","games_played":4949,"id":1068,"name":"jumpgate","published_on":"2016-11-26","status":"public"}
-{"average_duration":19,"bgg_id":15722,"display_name_en":"Belote","games_played":1617359,"id":1069,"name":"belote","published_on":"2016-09-18","status":"public","weight":898}
-{"average_duration":26,"bgg_id":1116,"display_name_en":"Oh Hell!","games_played":467205,"id":1070,"name":"ohhell","published_on":"2016-09-18","status":"public","weight":423}
-{"average_duration":7,"bgg_id":156576,"display_name_en":"Dragon Line","games_played":7349,"id":1071,"name":"dragonline","published_on":"2016-10-15","status":"public"}
+{"average_duration":27,"bgg_id":62809,"display_name_en":"Jump Gate","games_played":4952,"id":1068,"name":"jumpgate","published_on":"2016-11-26","status":"public"}
+{"average_duration":19,"bgg_id":15722,"display_name_en":"Belote","games_played":1620665,"id":1069,"name":"belote","published_on":"2016-09-18","status":"public","weight":841}
+{"average_duration":26,"bgg_id":1116,"display_name_en":"Oh Hell!","games_played":467671,"id":1070,"name":"ohhell","published_on":"2016-09-18","status":"public","weight":370}
+{"average_duration":11,"bgg_id":156576,"display_name_en":"Dragon Line","games_played":7353,"id":1071,"name":"dragonline","published_on":"2016-10-15","status":"public"}
 {"average_duration":18,"bgg_id":54321,"display_name_en":"KQJ","games_played":428,"id":1074,"name":"kqj","published_on":"2016-11-26","status":"public"}
-{"average_duration":29,"bgg_id":200785,"display_name_en":"Legendary Inventors","games_played":85683,"id":1075,"name":"inventors","published_on":"2016-10-07","status":"public","weight":16}
-{"average_duration":46,"bgg_id":88594,"display_name_en":"Eruption","games_played":89188,"id":1076,"name":"akeruption","published_on":"2016-10-18","status":"public"}
-{"average_duration":24,"bgg_id":175117,"display_name_en":"Celestia","games_played":127540,"id":1078,"name":"celestia","published_on":"2017-03-16","status":"public","weight":44}
-{"average_duration":73,"bgg_id":154809,"display_name_en":"Nippon","games_played":35281,"id":1080,"name":"nippon","published_on":"2016-12-01","status":"public","weight":379}
-{"average_duration":24,"bgg_id":188,"display_name_en":"Go","games_played":89903,"id":1081,"name":"classicgo","published_on":"2017-01-02","status":"public","weight":66}
+{"average_duration":26,"bgg_id":200785,"display_name_en":"Legendary Inventors","games_played":85694,"id":1075,"name":"inventors","published_on":"2016-10-07","status":"public","weight":16}
+{"average_duration":61,"bgg_id":88594,"display_name_en":"Eruption","games_played":89194,"id":1076,"name":"akeruption","published_on":"2016-10-18","status":"public","weight":18}
+{"average_duration":24,"bgg_id":175117,"display_name_en":"Celestia","games_played":127631,"id":1078,"name":"celestia","published_on":"2017-03-16","status":"public","weight":38}
+{"average_duration":69,"bgg_id":154809,"display_name_en":"Nippon","games_played":35403,"id":1080,"name":"nippon","published_on":"2016-12-01","status":"public","weight":445}
+{"average_duration":25,"bgg_id":188,"display_name_en":"Go","games_played":90082,"id":1081,"name":"classicgo","published_on":"2017-01-02","status":"public","weight":53}
 {"average_duration":55,"bgg_id":185769,"display_name_en":"Remember When","games_played":2732,"id":1082,"name":"rememberwhen","published_on":"2017-01-12","status":"public"}
-{"average_duration":10,"bgg_id":192343,"display_name_en":"Bubblee Pop","games_played":2308245,"id":1083,"name":"bubbleepop","published_on":"2017-04-05","status":"public","weight":831}
+{"average_duration":10,"bgg_id":192343,"display_name_en":"Bubblee Pop","games_played":2312839,"id":1083,"name":"bubbleepop","published_on":"2017-04-05","status":"public","weight":822}
 {"average_duration":17,"bgg_id":10789,"display_name_en":"Caribbean All Fours","games_played":1116,"id":1084,"name":"caribbeanallfours","published_on":"2017-01-20","status":"public"}
-{"average_duration":26,"bgg_id":162660,"display_name_en":"Secret Moon","games_played":39074,"id":1085,"name":"secretmoon","published_on":"2017-01-24","status":"public","weight":26}
-{"average_duration":43,"bgg_id":144733,"display_name_en":"Russian Railroads","games_played":220464,"id":1086,"name":"russianrailroads","published_on":"2017-03-27","status":"public","weight":169}
-{"average_duration":8,"bgg_id":3886,"display_name_en":"Nine Men's Morris","games_played":216199,"id":1087,"name":"ninemensmorris","published_on":"2017-03-13","status":"public","weight":12}
-{"average_duration":6,"bgg_id":6121,"display_name_en":"Tablut","games_played":12993,"id":1088,"name":"tablut","published_on":"2017-03-13","status":"public"}
-{"average_duration":10,"bgg_id":3406,"display_name_en":"Lines of Action","games_played":13951,"id":1091,"name":"linesofaction","published_on":"2019-03-18","status":"public","weight":1}
-{"average_duration":6,"bgg_id":37759,"display_name_en":"Incan Gold","games_played":886613,"id":1096,"name":"incangold","premium":true,"published_on":"2017-04-20","status":"public","weight":207}
-{"average_duration":6,"display_name_en":"Alveole","games_played":29885,"id":1098,"name":"alveole","published_on":"2017-05-18","status":"public"}
-{"average_duration":20,"bgg_id":150599,"display_name_en":"Takara Island","games_played":18626,"id":1099,"name":"takaraisland","published_on":"2017-06-21","status":"public","weight":5}
-{"average_duration":35,"bgg_id":140620,"display_name_en":"Lewis & Clark","games_played":75810,"id":1100,"name":"lewisclark","published_on":"2017-06-29","status":"public","weight":72}
-{"average_duration":9,"bgg_id":193122,"display_name_en":"Stir Fry Eighteen","games_played":133959,"id":1102,"name":"stirfryeighteen","premium":true,"published_on":"2017-07-06","status":"public","weight":18}
-{"average_duration":14,"bgg_id":144553,"display_name_en":"The Builders: Middle Ages","games_played":362640,"id":1103,"name":"thebuilders","premium":true,"published_on":"2017-07-18","status":"public","weight":81}
-{"average_duration":17,"bgg_id":163920,"display_name_en":"Ga\u00efa","games_played":50818,"id":1104,"name":"gaia","published_on":"2017-09-14","status":"public","weight":6}
-{"average_duration":9,"bgg_id":211533,"display_name_en":"Veggie Garden","games_played":17800,"id":1105,"name":"veggiegarden","published_on":"2017-08-02","status":"public"}
-{"average_duration":16,"bgg_id":204504,"display_name_en":"Outlaws: Last Man Standing","games_played":21490,"id":1106,"name":"outlaws","published_on":"2017-08-21","status":"public"}
-{"average_duration":6,"bgg_id":131357,"display_name_en":"Coup","games_played":507485,"id":1109,"name":"coupcitystate","premium":true,"published_on":"2018-12-17","status":"public","weight":100}
-{"average_duration":12,"bgg_id":32484,"display_name_en":"The Battle for Hill 218","games_played":69350,"id":1110,"name":"battleforhill","published_on":"2017-11-03","status":"public","weight":3}
-{"average_duration":6,"bgg_id":2425,"display_name_en":"Battleships Pencil & Paper","games_played":704675,"id":1111,"name":"battleship","published_on":"2017-11-07","status":"public","weight":119}
-{"average_duration":49,"bgg_id":127095,"display_name_en":"Origin","games_played":23968,"id":1112,"name":"origin","published_on":"2017-11-08","status":"public","weight":12}
-{"average_duration":16,"bgg_id":63888,"display_name_en":"Innovation","games_played":2036813,"id":1113,"name":"innovation","published_on":"2017-12-20","status":"public","weight":1567}
-{"average_duration":14,"bgg_id":132531,"display_name_en":"Roll for the Galaxy","games_played":1064602,"id":1115,"name":"rollforthegalaxy","premium":true,"published_on":"2017-12-06","status":"public","weight":586}
-{"average_duration":32,"bgg_id":154732,"display_name_en":"Ice Cold Ice Hockey","games_played":54058,"id":1116,"name":"icecoldicehockey","published_on":"2018-05-04","status":"public","weight":42}
-{"average_duration":53,"bgg_id":25674,"display_name_en":"Khronos","games_played":5041,"id":1117,"name":"khronos","published_on":"2018-01-28","status":"public"}
-{"average_duration":64,"bgg_id":120677,"display_name_en":"Terra Mystica","games_played":888552,"id":1118,"name":"terramystica","premium":true,"published_on":"2018-02-28","status":"public","weight":3739}
-{"average_duration":10,"bgg_id":3347,"display_name_en":"Solo","games_played":4990790,"id":1119,"name":"solo","published_on":"2018-03-19","status":"public","weight":1189}
+{"average_duration":25,"bgg_id":162660,"display_name_en":"Secret Moon","games_played":39081,"id":1085,"name":"secretmoon","published_on":"2017-01-24","status":"public","weight":28}
+{"average_duration":42,"bgg_id":144733,"display_name_en":"Russian Railroads","games_played":220621,"id":1086,"name":"russianrailroads","published_on":"2017-03-27","status":"public","weight":222}
+{"average_duration":7,"bgg_id":3886,"display_name_en":"Nine Men's Morris","games_played":216355,"id":1087,"name":"ninemensmorris","published_on":"2017-03-13","status":"public","weight":8}
+{"average_duration":7,"bgg_id":6121,"display_name_en":"Tablut","games_played":13004,"id":1088,"name":"tablut","published_on":"2017-03-13","status":"public","weight":3}
+{"average_duration":7,"bgg_id":3406,"display_name_en":"Lines of Action","games_played":13969,"id":1091,"name":"linesofaction","published_on":"2019-03-18","status":"public"}
+{"average_duration":6,"bgg_id":37759,"display_name_en":"Incan Gold","games_played":887734,"id":1096,"name":"incangold","premium":true,"published_on":"2017-04-20","status":"public","weight":299}
+{"average_duration":7,"display_name_en":"Alveole","games_played":29895,"id":1098,"name":"alveole","published_on":"2017-05-18","status":"public"}
+{"average_duration":23,"bgg_id":150599,"display_name_en":"Takara Island","games_played":18631,"id":1099,"name":"takaraisland","published_on":"2017-06-21","status":"public"}
+{"average_duration":37,"bgg_id":140620,"display_name_en":"Lewis & Clark","games_played":75890,"id":1100,"name":"lewisclark","published_on":"2017-06-29","status":"public","weight":108}
+{"average_duration":9,"bgg_id":193122,"display_name_en":"Stir Fry Eighteen","games_played":134036,"id":1102,"name":"stirfryeighteen","premium":true,"published_on":"2017-07-06","status":"public","weight":2}
+{"average_duration":14,"bgg_id":144553,"display_name_en":"The Builders: Middle Ages","games_played":362859,"id":1103,"name":"thebuilders","premium":true,"published_on":"2017-07-18","status":"public","weight":64}
+{"average_duration":17,"bgg_id":163920,"display_name_en":"Ga\u00efa","games_played":50830,"id":1104,"name":"gaia","published_on":"2017-09-14","status":"public","weight":10}
+{"average_duration":8,"bgg_id":211533,"display_name_en":"Veggie Garden","games_played":17806,"id":1105,"name":"veggiegarden","published_on":"2017-08-02","status":"public"}
+{"average_duration":17,"bgg_id":204504,"display_name_en":"Outlaws: Last Man Standing","games_played":21494,"id":1106,"name":"outlaws","published_on":"2017-08-21","status":"public","weight":4}
+{"average_duration":6,"bgg_id":131357,"display_name_en":"Coup","games_played":508147,"id":1109,"name":"coupcitystate","premium":true,"published_on":"2018-12-17","status":"public","weight":88}
+{"average_duration":12,"bgg_id":32484,"display_name_en":"The Battle for Hill 218","games_played":69384,"id":1110,"name":"battleforhill","published_on":"2017-11-03","status":"public","weight":5}
+{"average_duration":6,"bgg_id":2425,"display_name_en":"Battleships Pencil & Paper","games_played":705876,"id":1111,"name":"battleship","published_on":"2017-11-07","status":"public","weight":112}
+{"average_duration":25,"bgg_id":127095,"display_name_en":"Origin","games_played":23978,"id":1112,"name":"origin","published_on":"2017-11-08","status":"public","weight":19}
+{"average_duration":16,"bgg_id":63888,"display_name_en":"Innovation","games_played":2041489,"id":1113,"name":"innovation","published_on":"2017-12-20","status":"public","weight":1576}
+{"average_duration":14,"bgg_id":132531,"display_name_en":"Roll for the Galaxy","games_played":1065742,"id":1115,"name":"rollforthegalaxy","premium":true,"published_on":"2017-12-06","status":"public","weight":629}
+{"average_duration":33,"bgg_id":154732,"display_name_en":"Ice Cold Ice Hockey","games_played":54137,"id":1116,"name":"icecoldicehockey","published_on":"2018-05-04","status":"public","weight":62}
+{"average_duration":53,"bgg_id":25674,"display_name_en":"Khronos","games_played":5044,"id":1117,"name":"khronos","published_on":"2018-01-28","status":"public"}
+{"average_duration":63,"bgg_id":120677,"display_name_en":"Terra Mystica","games_played":889678,"id":1118,"name":"terramystica","premium":true,"published_on":"2018-02-28","status":"public","weight":2688}
+{"average_duration":10,"bgg_id":3347,"display_name_en":"Solo","games_played":4997256,"id":1119,"name":"solo","published_on":"2018-03-19","status":"public","weight":1175}
 {"average_duration":18,"bgg_id":185344,"display_name_en":"Dragon Keeper: The Dungeon","games_played":8136,"id":1120,"name":"dragonkeeper","published_on":"2018-04-03","status":"public"}
-{"average_duration":49,"bgg_id":177678,"display_name_en":"Signorie","games_played":24227,"id":1121,"name":"signorie","published_on":"2018-04-09","status":"public","weight":11}
-{"average_duration":32,"bgg_id":112138,"display_name_en":"Krosmaster Arena","games_played":80068,"id":1122,"name":"krosmasterarena","published_on":"2018-05-18","status":"public","weight":74}
-{"average_duration":15,"bgg_id":24508,"display_name_en":"Taluva","games_played":68761,"id":1123,"name":"taluva","published_on":"2018-11-05","status":"public","weight":22}
-{"average_duration":7,"bgg_id":234834,"display_name_en":"Apocalypse at the Zoo of Carson City","games_played":74245,"id":1125,"name":"apocalypseazcc","published_on":"2026-06-16","status":"beta","weight":5}
-{"average_duration":17,"display_name_en":"Hypnosia","games_played":38445,"id":1126,"name":"hypnosia","published_on":"2018-05-02","status":"public","weight":4}
-{"average_duration":13,"bgg_id":194594,"display_name_en":"Dice Forge","games_played":2597073,"id":1127,"name":"diceforge","published_on":"2018-05-31","status":"public","weight":828}
-{"average_duration":24,"bgg_id":13337,"display_name_en":"French Tarot","games_played":1896075,"id":1128,"name":"frenchtarot","published_on":"2018-06-16","status":"public","weight":1846}
-{"average_duration":9,"bgg_id":220276,"display_name_en":"Guildes","games_played":14021,"id":1129,"name":"guildes","published_on":"2018-06-11","status":"public"}
-{"average_duration":26,"bgg_id":68425,"display_name_en":"Eminent Domain","games_played":132764,"id":1130,"name":"eminentdomain","published_on":"2018-09-12","status":"public","weight":48}
-{"average_duration":7,"bgg_id":68448,"display_name_en":"7 Wonders","games_played":12070009,"id":1131,"name":"sevenwonders","premium":true,"published_on":"2018-07-07","status":"public","weight":4613}
-{"average_duration":5,"bgg_id":181390,"display_name_en":"Buttons","games_played":351398,"id":1132,"name":"buttons","published_on":"2018-07-09","status":"public","weight":35}
-{"average_duration":10,"bgg_id":11733,"display_name_en":"Briscola","games_played":176047,"id":1133,"name":"briscola","published_on":"2018-10-23","status":"public","weight":29}
-{"average_duration":179,"bgg_id":130390,"display_name_en":"The Ruhr: A Story of Coal Trade","games_played":5058,"id":1134,"name":"ruhr","published_on":"2018-11-19","status":"public"}
-{"average_duration":19,"bgg_id":161226,"display_name_en":"The Builders: Antiquity","games_played":77323,"id":1135,"name":"thebuildersantiquity","premium":true,"published_on":"2019-01-28","status":"public","weight":20}
-{"average_duration":43,"bgg_id":148205,"display_name_en":"Penny Press","games_played":7625,"id":1136,"name":"pennypress","published_on":"2019-01-01","status":"public"}
-{"average_duration":9,"bgg_id":249095,"display_name_en":"Blooms","games_played":24017,"id":1137,"name":"blooms","published_on":"2019-02-18","status":"public","weight":2}
-{"average_duration":6,"bgg_id":29525,"display_name_en":"Ponte del Diavolo","games_played":26835,"id":1139,"name":"pontedeldiavolo","published_on":"2019-01-14","status":"public","weight":7}
-{"average_duration":16,"bgg_id":32346,"display_name_en":"Tock","games_played":1586677,"id":1140,"name":"toc","published_on":"2019-10-16","status":"public","weight":1061}
-{"average_duration":27,"bgg_id":194879,"display_name_en":"Not Alone","games_played":153364,"id":1141,"name":"notalone","published_on":"2019-04-08","status":"public","weight":137}
-{"average_duration":30,"bgg_id":216132,"display_name_en":"Clans of Caledonia","games_played":375489,"id":1143,"name":"clansofcaledonia","premium":true,"published_on":"2019-08-20","status":"public","weight":410}
-{"average_duration":33,"bgg_id":25613,"display_name_en":"Through the Ages: A new Story of Civilization","games_played":1179411,"id":1144,"name":"throughtheagesnewstory","published_on":"2019-05-10","status":"public","weight":1506}
-{"average_duration":11,"bgg_id":25821,"display_name_en":"The Werewolves of Miller's Hollow","games_played":160399,"id":1145,"name":"werewolves","premium":true,"published_on":"2019-05-24","status":"public","weight":95}
-{"average_duration":8,"bgg_id":172,"display_name_en":"For Sale","games_played":855135,"id":1146,"name":"forsale","premium":true,"published_on":"2019-09-24","status":"public","weight":692}
-{"average_duration":25,"bgg_id":206327,"display_name_en":"The King's Guild","games_played":119916,"id":1147,"name":"kingsguild","published_on":"2019-12-10","status":"public","weight":88}
-{"average_duration":11,"bgg_id":204583,"display_name_en":"Kingdomino","games_played":6961809,"id":1148,"name":"kingdomino","premium":true,"published_on":"2019-06-24","status":"public","weight":3719}
-{"average_duration":24,"bgg_id":184730,"display_name_en":"Circle of Life","games_played":24891,"id":1149,"name":"circleoflife","published_on":"2019-10-16","status":"public","weight":3}
-{"average_duration":7,"bgg_id":20782,"display_name_en":"Siam","games_played":77456,"id":1150,"name":"siam","published_on":"2025-02-03","status":"beta","weight":1}
-{"average_duration":44,"bgg_id":232219,"display_name_en":"Dragon Castle","games_played":42336,"id":1151,"name":"dragoncastle","published_on":"2019-11-27","status":"public","weight":82}
-{"average_duration":12,"bgg_id":251060,"display_name_en":"Saint Poker","games_played":44782,"id":1152,"name":"saintpoker","published_on":"2020-01-09","status":"public"}
-{"average_duration":6,"bgg_id":20528,"display_name_en":"Palace","games_played":72046,"id":1153,"name":"palace","published_on":"2020-01-08","status":"public","weight":4}
-{"average_duration":25,"bgg_id":6819,"display_name_en":"Skat","games_played":41329,"id":1154,"name":"skat","published_on":"2020-01-10","status":"public","weight":19}
-{"average_duration":41,"bgg_id":146886,"display_name_en":"La Granja","games_played":227097,"id":1155,"name":"lagranja","published_on":"2020-04-18","status":"public","weight":271}
-{"average_duration":6,"bgg_id":121011,"display_name_en":"GORami","games_played":10288,"id":1156,"name":"gorami","published_on":"2020-01-23","status":"public"}
-{"average_duration":59,"bgg_id":182274,"display_name_en":"NXS","games_played":6672,"id":1157,"name":"nxs","published_on":"2020-01-24","status":"public"}
-{"average_duration":23,"bgg_id":169649,"display_name_en":"Sapiens","games_played":73633,"id":1158,"name":"sapiens","published_on":"2020-05-08","status":"public","weight":18}
-{"average_duration":2,"bgg_id":281429,"display_name_en":"Mammalath","games_played":29007,"id":1159,"name":"mammalath","published_on":"2020-01-22","status":"public"}
-{"average_duration":28,"bgg_id":290506,"display_name_en":"Finity","games_played":2436,"id":1160,"name":"finity","published_on":"2020-08-05","status":"public"}
-{"average_duration":64,"bgg_id":196340,"display_name_en":"Yokohama","games_played":85338,"id":1161,"name":"yokohama","published_on":"2020-08-12","status":"public","weight":389}
-{"average_duration":17,"bgg_id":161417,"display_name_en":"Red7","games_played":282811,"id":1163,"name":"redsevengame","published_on":"2020-02-28","status":"public","weight":62}
-{"average_duration":16,"bgg_id":128271,"display_name_en":"Ginkgopolis","games_played":29180,"id":1166,"name":"ginkgopolis","published_on":"2024-04-17","status":"public","weight":30}
-{"average_duration":5,"bgg_id":133473,"display_name_en":"Sushi Go!","games_played":3835462,"id":1167,"name":"sushigo","premium":true,"published_on":"2020-03-20","status":"public","weight":746}
-{"average_duration":3,"bgg_id":299556,"display_name_en":"Exploration: Warzone","games_played":3706,"id":1170,"name":"explorationwarzone","published_on":"2021-08-24","status":"public"}
-{"average_duration":10,"bgg_id":151224,"display_name_en":"Veletas","games_played":9764,"id":1171,"name":"veletas","published_on":"2020-05-13","status":"public"}
-{"average_duration":28,"bgg_id":6688,"display_name_en":"99 (trick taking game)","games_played":10732,"id":1172,"name":"ninetynine","published_on":"2020-12-02","status":"public","weight":17}
-{"average_duration":39,"bgg_id":229853,"display_name_en":"Teotihuacan: City of Gods","games_played":132494,"id":1173,"name":"teotihuacan","published_on":"2020-07-01","status":"public","weight":250}
-{"average_duration":31,"bgg_id":287002,"display_name_en":"Marram","games_played":7615,"id":1174,"name":"marram","published_on":"2020-06-10","status":"public"}
-{"average_duration":17,"bgg_id":180974,"display_name_en":"Potion Explosion","games_played":3046675,"id":1175,"name":"potionexplosion","premium":true,"published_on":"2020-05-25","status":"public","weight":3136}
-{"average_duration":14,"bgg_id":73365,"display_name_en":"Papayoo","games_played":1121237,"id":1178,"name":"papayoo","premium":true,"published_on":"2020-08-19","status":"public","weight":1550}
-{"average_duration":22,"bgg_id":256589,"display_name_en":"Rallyman: GT","games_played":444833,"id":1179,"name":"rallymangt","published_on":"2020-05-20","status":"public","weight":43}
-{"average_duration":9,"bgg_id":269146,"display_name_en":"Yokai","games_played":102373,"id":1181,"is_ranking_disabled":true,"name":"yokai","published_on":"2020-12-17","status":"public","weight":4}
-{"average_duration":17,"bgg_id":308357,"display_name_en":"Con Sonar!","games_played":8644,"id":1183,"name":"consonar","premium":true,"published_on":"2020-12-27","status":"public"}
-{"average_duration":4,"bgg_id":310888,"display_name_en":"Bobail","games_played":93391,"id":1184,"name":"bobail","published_on":"2020-08-05","status":"public","weight":1}
-{"average_duration":43,"bgg_id":212436,"display_name_en":"Big Time Soccer","games_played":13106,"id":1185,"name":"bigtimesoccer","published_on":"2020-12-28","status":"public","weight":27}
-{"average_duration":1,"bgg_id":2719,"display_name_en":"Connect Four","games_played":4535602,"id":1186,"name":"connectfour","published_on":"2020-05-24","status":"public","weight":205}
-{"average_duration":19,"bgg_id":29223,"display_name_en":"Marrakech","games_played":431131,"id":1187,"name":"marrakech","premium":true,"published_on":"2020-11-04","status":"public","weight":233}
-{"average_duration":3,"bgg_id":258723,"display_name_en":"ToeShamBo","games_played":145042,"id":1188,"name":"toeshambo","published_on":"2020-07-22","status":"public","weight":2}
-{"average_duration":40,"bgg_id":101723,"display_name_en":"Hungarian Tarokk","games_played":8352,"id":1189,"name":"hungariantarokk","published_on":"2020-12-09","status":"public","weight":21}
-{"average_duration":25,"bgg_id":15722,"display_name_en":"Coinche","games_played":374924,"id":1190,"name":"coinche","published_on":"2020-07-08","status":"public","weight":724}
-{"average_duration":9,"bgg_id":75668,"display_name_en":"Whist 22","games_played":85582,"id":1191,"name":"whisttwentytwo","published_on":"2020-07-08","status":"public","weight":53}
-{"average_duration":7,"bgg_id":121015,"display_name_en":"Tea Time","games_played":50500,"id":1192,"name":"teatime","published_on":"2020-06-24","status":"public","weight":5}
-{"average_duration":93,"bgg_id":214880,"display_name_en":"City of the Big Shoulders","games_played":23739,"id":1193,"name":"cityofthebigshoulders","published_on":"2021-02-08","status":"public","weight":311}
-{"average_duration":24,"bgg_id":20533,"display_name_en":"President","games_played":113323,"id":1194,"name":"president","published_on":"2024-01-29","status":"public","weight":45}
-{"average_duration":21,"bgg_id":215311,"display_name_en":"Downforce","games_played":478165,"id":1195,"name":"downforce","premium":true,"published_on":"2020-07-29","status":"public","weight":420}
-{"average_duration":10,"bgg_id":194655,"display_name_en":"Santorini","games_played":812092,"id":1196,"name":"santorini","published_on":"2020-08-26","status":"public","weight":184}
-{"average_duration":20,"bgg_id":6974,"display_name_en":"Barbu","games_played":20005,"id":1197,"name":"barbu","published_on":"2020-07-08","status":"public","weight":3}
-{"average_duration":10,"bgg_id":108831,"display_name_en":"Kulami","games_played":19680,"id":1198,"name":"kulami","published_on":"2023-12-23","status":"public","weight":3}
-{"average_duration":6,"bgg_id":182116,"display_name_en":"Dingo's Dreams","games_played":78841,"id":1199,"name":"dingosdreams","published_on":"2021-03-01","status":"public","weight":7}
-{"average_duration":22,"bgg_id":171623,"display_name_en":"The Voyages of Marco Polo","games_played":420683,"id":1200,"name":"marcopolo","published_on":"2020-09-16","status":"public","weight":365}
-{"average_duration":4,"bgg_id":101420,"display_name_en":"99 (addition card game)","games_played":316013,"id":1203,"name":"ninetynineaddition","published_on":"2021-08-27","status":"public","weight":96}
-{"average_duration":5,"bgg_id":118247,"display_name_en":"Lucky Numbers","games_played":12086312,"id":1204,"name":"luckynumbers","premium":true,"published_on":"2020-09-02","status":"public","weight":3463}
-{"average_duration":34,"bgg_id":127024,"display_name_en":"Room 25","games_played":106958,"id":1206,"name":"roomtwentyfive","published_on":"2020-07-22","status":"beta","weight":58}
-{"average_duration":8,"bgg_id":191925,"display_name_en":"Bandido","games_played":2975965,"id":1207,"is_ranking_disabled":true,"name":"bandido","published_on":"2020-12-21","status":"public","weight":637}
-{"average_duration":6,"bgg_id":245476,"display_name_en":"CuBirds","games_played":7539807,"id":1210,"name":"cubirds","premium":true,"published_on":"2021-03-24","status":"public","weight":2094}
-{"average_duration":74,"bgg_id":236248,"display_name_en":"Small Islands","games_played":18284,"id":1212,"name":"smallislands","published_on":"2020-12-04","status":"public"}
-{"average_duration":12,"bgg_id":236639,"display_name_en":"Flaming Pyramids","games_played":283160,"id":1213,"name":"flamingpyramids","published_on":"2020-12-03","status":"public","weight":76}
-{"average_duration":10,"bgg_id":2398,"display_name_en":"Cribbage","games_played":1410121,"id":1214,"name":"cribbage","published_on":"2020-12-16","status":"public","weight":1138}
-{"bgg_id":131199,"display_name_en":"Soluna","games_played":241886,"id":1215,"name":"soluna","published_on":"2020-08-05","status":"public"}
-{"average_duration":19,"bgg_id":61487,"display_name_en":"Unconditional Surrender! World War 2 in Europe","games_played":36365,"id":1216,"name":"unconditionalsurrender","published_on":"2021-02-01","status":"public","weight":19}
-{"average_duration":5,"bgg_id":284229,"display_name_en":"Butterfly","games_played":363794,"id":1218,"name":"butterfly","published_on":"2020-10-07","status":"public","weight":45}
-{"average_duration":32,"bgg_id":26468,"display_name_en":"Klaverjassen","games_played":12315,"id":1219,"name":"klaverjassen","published_on":"2020-12-30","status":"public","weight":52}
-{"average_duration":7,"bgg_id":22847,"display_name_en":"Connect6","games_played":71302,"id":1220,"name":"connectsix","published_on":"2020-12-13","status":"public","weight":6}
-{"average_duration":17,"bgg_id":1403,"display_name_en":"Turn the tide","games_played":39830,"id":1221,"name":"turnthetide","premium":true,"published_on":"2020-10-21","status":"public","weight":32}
-{"average_duration":27,"bgg_id":300442,"display_name_en":"Trekking the World","games_played":60986,"id":1222,"name":"trekkingtheworld","published_on":"2020-11-11","status":"public","weight":40}
-{"average_duration":19,"bgg_id":210008,"display_name_en":"Off the Rails","games_played":50259,"id":1223,"name":"offtherails","published_on":"2020-12-12","status":"public","weight":50}
-{"average_duration":27,"bgg_id":65244,"display_name_en":"Forbidden Island","games_played":137840,"id":1224,"is_ranking_disabled":true,"name":"forbiddenisland","premium":true,"published_on":"2020-12-29","status":"public","weight":179}
-{"average_duration":14,"bgg_id":107529,"display_name_en":"Kingdom Builder","games_played":2913632,"id":1225,"name":"kingdombuilder","published_on":"2020-09-23","status":"public","weight":1807}
-{"average_duration":26,"bgg_id":5236,"display_name_en":"Yin Yang","games_played":7757,"id":1226,"name":"yinyang","published_on":"2021-07-29","status":"public","weight":2}
-{"average_duration":13,"bgg_id":9217,"display_name_en":"Saint Petersburg","games_played":935986,"id":1227,"name":"saintpetersburg","published_on":"2020-12-15","status":"public","weight":696}
-{"average_duration":7,"bgg_id":267378,"display_name_en":"Chakra","games_played":4150989,"id":1228,"name":"chakra","published_on":"2020-10-28","status":"public","weight":1291}
-{"average_duration":15,"bgg_id":280107,"display_name_en":"Kami","games_played":64729,"id":1229,"name":"kami","published_on":"2020-12-07","status":"public","weight":25}
+{"average_duration":49,"bgg_id":177678,"display_name_en":"Signorie","games_played":24242,"id":1121,"name":"signorie","published_on":"2018-04-09","status":"public"}
+{"average_duration":31,"bgg_id":112138,"display_name_en":"Krosmaster Arena","games_played":80153,"id":1122,"name":"krosmasterarena","published_on":"2018-05-18","status":"public","weight":51}
+{"average_duration":16,"bgg_id":24508,"display_name_en":"Taluva","games_played":68858,"id":1123,"name":"taluva","published_on":"2018-11-05","status":"public","weight":25}
+{"average_duration":7,"bgg_id":234834,"display_name_en":"Apocalypse at the Zoo of Carson City","games_played":74267,"id":1125,"name":"apocalypseazcc","published_on":"2026-06-16","status":"beta","weight":1}
+{"average_duration":16,"display_name_en":"Hypnosia","games_played":38473,"id":1126,"name":"hypnosia","published_on":"2018-05-02","status":"public","weight":21}
+{"average_duration":13,"bgg_id":194594,"display_name_en":"Dice Forge","games_played":2599916,"id":1127,"name":"diceforge","published_on":"2018-05-31","status":"public","weight":659}
+{"average_duration":24,"bgg_id":13337,"display_name_en":"French Tarot","games_played":1899909,"id":1128,"name":"frenchtarot","published_on":"2018-06-16","status":"public","weight":1702}
+{"average_duration":10,"bgg_id":220276,"display_name_en":"Guildes","games_played":14026,"id":1129,"name":"guildes","published_on":"2018-06-11","status":"public"}
+{"average_duration":26,"bgg_id":68425,"display_name_en":"Eminent Domain","games_played":132875,"id":1130,"name":"eminentdomain","published_on":"2018-09-12","status":"public","weight":58}
+{"average_duration":7,"bgg_id":68448,"display_name_en":"7 Wonders","games_played":12090563,"id":1131,"name":"sevenwonders","premium":true,"published_on":"2018-07-07","status":"public","weight":7563}
+{"average_duration":5,"bgg_id":181390,"display_name_en":"Buttons","games_played":351650,"id":1132,"name":"buttons","published_on":"2018-07-09","status":"public","weight":25}
+{"average_duration":10,"bgg_id":11733,"display_name_en":"Briscola","games_played":176388,"id":1133,"name":"briscola","published_on":"2018-10-23","status":"public","weight":19}
+{"average_duration":179,"bgg_id":130390,"display_name_en":"The Ruhr: A Story of Coal Trade","games_played":5059,"id":1134,"name":"ruhr","published_on":"2018-11-19","status":"public","weight":13}
+{"average_duration":19,"bgg_id":161226,"display_name_en":"The Builders: Antiquity","games_played":77384,"id":1135,"name":"thebuildersantiquity","premium":true,"published_on":"2019-01-28","status":"public","weight":52}
+{"average_duration":43,"bgg_id":148205,"display_name_en":"Penny Press","games_played":7626,"id":1136,"name":"pennypress","published_on":"2019-01-01","status":"public"}
+{"average_duration":11,"bgg_id":249095,"display_name_en":"Blooms","games_played":24024,"id":1137,"name":"blooms","published_on":"2019-02-18","status":"public"}
+{"average_duration":7,"bgg_id":29525,"display_name_en":"Ponte del Diavolo","games_played":26858,"id":1139,"name":"pontedeldiavolo","published_on":"2019-01-14","status":"public","weight":8}
+{"average_duration":15,"bgg_id":32346,"display_name_en":"Tock","games_played":1589707,"id":1140,"name":"toc","published_on":"2019-10-16","status":"public","weight":867}
+{"average_duration":28,"bgg_id":194879,"display_name_en":"Not Alone","games_played":153550,"id":1141,"name":"notalone","published_on":"2019-04-08","status":"public","weight":25}
+{"average_duration":30,"bgg_id":216132,"display_name_en":"Clans of Caledonia","games_played":376189,"id":1143,"name":"clansofcaledonia","premium":true,"published_on":"2019-08-20","status":"public","weight":574}
+{"average_duration":32,"bgg_id":25613,"display_name_en":"Through the Ages: A new Story of Civilization","games_played":1181961,"id":1144,"name":"throughtheagesnewstory","published_on":"2019-05-10","status":"public","weight":1324}
+{"average_duration":11,"bgg_id":25821,"display_name_en":"The Werewolves of Miller's Hollow","games_played":160516,"id":1145,"name":"werewolves","premium":true,"published_on":"2019-05-24","status":"public","weight":158}
+{"average_duration":8,"bgg_id":172,"display_name_en":"For Sale","games_played":856499,"id":1146,"name":"forsale","premium":true,"published_on":"2019-09-24","status":"public","weight":643}
+{"average_duration":26,"bgg_id":206327,"display_name_en":"The King's Guild","games_played":120024,"id":1147,"name":"kingsguild","published_on":"2019-12-10","status":"public","weight":91}
+{"average_duration":11,"bgg_id":204583,"display_name_en":"Kingdomino","games_played":6974277,"id":1148,"name":"kingdomino","premium":true,"published_on":"2019-06-24","status":"public","weight":3935}
+{"average_duration":24,"bgg_id":184730,"display_name_en":"Circle of Life","games_played":24908,"id":1149,"name":"circleoflife","published_on":"2019-10-16","status":"public","weight":3}
+{"average_duration":8,"bgg_id":20782,"display_name_en":"Siam","games_played":77469,"id":1150,"name":"siam","published_on":"2025-02-03","status":"beta","weight":2}
+{"average_duration":39,"bgg_id":232219,"display_name_en":"Dragon Castle","games_played":42371,"id":1151,"name":"dragoncastle","published_on":"2019-11-27","status":"public","weight":13}
+{"average_duration":14,"bgg_id":251060,"display_name_en":"Saint Poker","games_played":44788,"id":1152,"name":"saintpoker","published_on":"2020-01-09","status":"public"}
+{"average_duration":6,"bgg_id":20528,"display_name_en":"Palace","games_played":72132,"id":1153,"name":"palace","published_on":"2020-01-08","status":"public","weight":13}
+{"average_duration":25,"bgg_id":6819,"display_name_en":"Skat","games_played":41393,"id":1154,"name":"skat","published_on":"2020-01-10","status":"public","weight":25}
+{"average_duration":35,"bgg_id":146886,"display_name_en":"La Granja","games_played":227406,"id":1155,"name":"lagranja","published_on":"2020-04-18","status":"public","weight":306}
+{"average_duration":3,"bgg_id":121011,"display_name_en":"GORami","games_played":10292,"id":1156,"name":"gorami","published_on":"2020-01-23","status":"public"}
+{"average_duration":59,"bgg_id":182274,"display_name_en":"NXS","games_played":6676,"id":1157,"name":"nxs","published_on":"2020-01-24","status":"public"}
+{"average_duration":23,"bgg_id":169649,"display_name_en":"Sapiens","games_played":73669,"id":1158,"name":"sapiens","published_on":"2020-05-08","status":"public","weight":50}
+{"average_duration":2,"bgg_id":281429,"display_name_en":"Mammalath","games_played":29018,"id":1159,"name":"mammalath","published_on":"2020-01-22","status":"public"}
+{"average_duration":28,"bgg_id":290506,"display_name_en":"Finity","games_played":2437,"id":1160,"name":"finity","published_on":"2020-08-05","status":"public"}
+{"average_duration":62,"bgg_id":196340,"display_name_en":"Yokohama","games_played":85489,"id":1161,"name":"yokohama","published_on":"2020-08-12","status":"public","weight":308}
+{"average_duration":18,"bgg_id":161417,"display_name_en":"Red7","games_played":283008,"id":1163,"name":"redsevengame","published_on":"2020-02-28","status":"public","weight":59}
+{"average_duration":16,"bgg_id":128271,"display_name_en":"Ginkgopolis","games_played":29266,"id":1166,"name":"ginkgopolis","published_on":"2024-04-17","status":"public","weight":47}
+{"average_duration":4,"bgg_id":133473,"display_name_en":"Sushi Go!","games_played":3841682,"id":1167,"name":"sushigo","premium":true,"published_on":"2020-03-20","status":"public","weight":1027}
+{"average_duration":3,"bgg_id":299556,"display_name_en":"Exploration: Warzone","games_played":3707,"id":1170,"name":"explorationwarzone","published_on":"2021-08-24","status":"public"}
+{"average_duration":2,"bgg_id":151224,"display_name_en":"Veletas","games_played":9769,"id":1171,"name":"veletas","published_on":"2020-05-13","status":"public","weight":5}
+{"average_duration":27,"bgg_id":6688,"display_name_en":"99 (trick taking game)","games_played":10749,"id":1172,"name":"ninetynine","published_on":"2020-12-02","status":"public","weight":12}
+{"average_duration":37,"bgg_id":229853,"display_name_en":"Teotihuacan: City of Gods","games_played":132688,"id":1173,"name":"teotihuacan","published_on":"2020-07-01","status":"public","weight":273}
+{"average_duration":31,"bgg_id":287002,"display_name_en":"Marram","games_played":7616,"id":1174,"name":"marram","published_on":"2020-06-10","status":"public"}
+{"average_duration":17,"bgg_id":180974,"display_name_en":"Potion Explosion","games_played":3053199,"id":1175,"name":"potionexplosion","premium":true,"published_on":"2020-05-25","status":"public","weight":3395}
+{"average_duration":13,"bgg_id":73365,"display_name_en":"Papayoo","games_played":1123983,"id":1178,"name":"papayoo","premium":true,"published_on":"2020-08-19","status":"public","weight":1538}
+{"average_duration":20,"bgg_id":256589,"display_name_en":"Rallyman: GT","games_played":445058,"id":1179,"name":"rallymangt","published_on":"2020-05-20","status":"public","weight":191}
+{"average_duration":9,"bgg_id":269146,"display_name_en":"Yokai","games_played":102423,"id":1181,"is_ranking_disabled":true,"name":"yokai","published_on":"2020-12-17","status":"public"}
+{"average_duration":17,"bgg_id":308357,"display_name_en":"Con Sonar!","games_played":8646,"id":1183,"name":"consonar","premium":true,"published_on":"2020-12-27","status":"public","weight":5}
+{"average_duration":4,"bgg_id":310888,"display_name_en":"Bobail","games_played":93428,"id":1184,"name":"bobail","published_on":"2020-08-05","status":"public","weight":1}
+{"average_duration":33,"bgg_id":212436,"display_name_en":"Big Time Soccer","games_played":13141,"id":1185,"name":"bigtimesoccer","published_on":"2020-12-28","status":"public"}
+{"average_duration":1,"bgg_id":2719,"display_name_en":"Connect Four","games_played":4544748,"id":1186,"name":"connectfour","published_on":"2020-05-24","status":"public","weight":156}
+{"average_duration":19,"bgg_id":29223,"display_name_en":"Marrakech","games_played":431471,"id":1187,"name":"marrakech","premium":true,"published_on":"2020-11-04","status":"public","weight":170}
+{"average_duration":3,"bgg_id":258723,"display_name_en":"ToeShamBo","games_played":145168,"id":1188,"name":"toeshambo","published_on":"2020-07-22","status":"public","weight":5}
+{"average_duration":38,"bgg_id":101723,"display_name_en":"Hungarian Tarokk","games_played":8375,"id":1189,"name":"hungariantarokk","published_on":"2020-12-09","status":"public","weight":41}
+{"average_duration":25,"bgg_id":15722,"display_name_en":"Coinche","games_played":376043,"id":1190,"name":"coinche","published_on":"2020-07-08","status":"public","weight":570}
+{"average_duration":8,"bgg_id":75668,"display_name_en":"Whist 22","games_played":85899,"id":1191,"name":"whisttwentytwo","published_on":"2020-07-08","status":"public","weight":35}
+{"average_duration":8,"bgg_id":121015,"display_name_en":"Tea Time","games_played":50529,"id":1192,"name":"teatime","published_on":"2020-06-24","status":"public","weight":6}
+{"average_duration":84,"bgg_id":214880,"display_name_en":"City of the Big Shoulders","games_played":23780,"id":1193,"name":"cityofthebigshoulders","published_on":"2021-02-08","status":"public","weight":239}
+{"average_duration":24,"bgg_id":20533,"display_name_en":"President","games_played":113548,"id":1194,"name":"president","published_on":"2024-01-29","status":"public","weight":69}
+{"average_duration":21,"bgg_id":215311,"display_name_en":"Downforce","games_played":478566,"id":1195,"name":"downforce","premium":true,"published_on":"2020-07-29","status":"public","weight":375}
+{"average_duration":9,"bgg_id":194655,"display_name_en":"Santorini","games_played":813429,"id":1196,"name":"santorini","published_on":"2020-08-26","status":"public","weight":187}
+{"average_duration":23,"bgg_id":6974,"display_name_en":"Barbu","games_played":20017,"id":1197,"name":"barbu","published_on":"2020-07-08","status":"public","weight":5}
+{"average_duration":10,"bgg_id":108831,"display_name_en":"Kulami","games_played":19727,"id":1198,"name":"kulami","published_on":"2023-12-23","status":"public","weight":8}
+{"average_duration":6,"bgg_id":182116,"display_name_en":"Dingo's Dreams","games_played":78882,"id":1199,"name":"dingosdreams","published_on":"2021-03-01","status":"public","weight":3}
+{"average_duration":21,"bgg_id":171623,"display_name_en":"The Voyages of Marco Polo","games_played":421674,"id":1200,"name":"marcopolo","published_on":"2020-09-16","status":"public","weight":304}
+{"average_duration":4,"bgg_id":101420,"display_name_en":"99 (addition card game)","games_played":316806,"id":1203,"name":"ninetynineaddition","published_on":"2021-08-27","status":"public","weight":53}
+{"average_duration":5,"bgg_id":118247,"display_name_en":"Lucky Numbers","games_played":12112460,"id":1204,"name":"luckynumbers","premium":true,"published_on":"2020-09-02","status":"public","weight":4088}
+{"average_duration":31,"bgg_id":127024,"display_name_en":"Room 25","games_played":107103,"id":1206,"name":"roomtwentyfive","published_on":"2020-07-22","status":"beta"}
+{"average_duration":9,"bgg_id":191925,"display_name_en":"Bandido","games_played":2983283,"id":1207,"is_ranking_disabled":true,"name":"bandido","published_on":"2020-12-21","status":"public","weight":779}
+{"average_duration":6,"bgg_id":245476,"display_name_en":"CuBirds","games_played":7551613,"id":1210,"name":"cubirds","premium":true,"published_on":"2021-03-24","status":"public","weight":2343}
+{"average_duration":60,"bgg_id":236248,"display_name_en":"Small Islands","games_played":18289,"id":1212,"name":"smallislands","published_on":"2020-12-04","status":"public"}
+{"average_duration":12,"bgg_id":236639,"display_name_en":"Flaming Pyramids","games_played":283512,"id":1213,"name":"flamingpyramids","published_on":"2020-12-03","status":"public","weight":114}
+{"average_duration":10,"bgg_id":2398,"display_name_en":"Cribbage","games_played":1414500,"id":1214,"name":"cribbage","published_on":"2020-12-16","status":"public","weight":1436}
+{"bgg_id":131199,"display_name_en":"Soluna","games_played":245612,"id":1215,"name":"soluna","published_on":"2020-08-05","status":"public","weight":1}
+{"average_duration":13,"bgg_id":61487,"display_name_en":"Unconditional Surrender! World War 2 in Europe","games_played":36417,"id":1216,"name":"unconditionalsurrender","published_on":"2021-02-01","status":"public","weight":13}
+{"average_duration":5,"bgg_id":284229,"display_name_en":"Butterfly","games_played":364175,"id":1218,"name":"butterfly","published_on":"2020-10-07","status":"public","weight":45}
+{"average_duration":31,"bgg_id":26468,"display_name_en":"Klaverjassen","games_played":12348,"id":1219,"name":"klaverjassen","published_on":"2020-12-30","status":"public","weight":48}
+{"average_duration":7,"bgg_id":22847,"display_name_en":"Connect6","games_played":71375,"id":1220,"name":"connectsix","published_on":"2020-12-13","status":"public","weight":9}
+{"average_duration":17,"bgg_id":1403,"display_name_en":"Turn the tide","games_played":39860,"id":1221,"name":"turnthetide","premium":true,"published_on":"2020-10-21","status":"public","weight":15}
+{"average_duration":27,"bgg_id":300442,"display_name_en":"Trekking the World","games_played":61050,"id":1222,"name":"trekkingtheworld","published_on":"2020-11-11","status":"public","weight":60}
+{"average_duration":21,"bgg_id":210008,"display_name_en":"Off the Rails","games_played":50297,"id":1223,"name":"offtherails","published_on":"2020-12-12","status":"public","weight":15}
+{"average_duration":26,"bgg_id":65244,"display_name_en":"Forbidden Island","games_played":138042,"id":1224,"is_ranking_disabled":true,"name":"forbiddenisland","premium":true,"published_on":"2020-12-29","status":"public","weight":119}
+{"average_duration":14,"bgg_id":107529,"display_name_en":"Kingdom Builder","games_played":2919980,"id":1225,"name":"kingdombuilder","published_on":"2020-09-23","status":"public","weight":1719}
+{"average_duration":12,"bgg_id":5236,"display_name_en":"Yin Yang","games_played":7779,"id":1226,"name":"yinyang","published_on":"2021-07-29","status":"public"}
+{"average_duration":13,"bgg_id":9217,"display_name_en":"Saint Petersburg","games_played":938875,"id":1227,"name":"saintpetersburg","published_on":"2020-12-15","status":"public","weight":718}
+{"average_duration":7,"bgg_id":267378,"display_name_en":"Chakra","games_played":4162604,"id":1228,"name":"chakra","published_on":"2020-10-28","status":"public","weight":1516}
+{"average_duration":16,"bgg_id":280107,"display_name_en":"Kami","games_played":64818,"id":1229,"name":"kami","published_on":"2020-12-07","status":"public","weight":59}
 {"average_duration":4,"bgg_id":305980,"display_name_en":"A Fistful of Gold","games_played":11267,"id":1232,"name":"fistfulofgold","published_on":"2021-07-15","status":"public"}
-{"average_duration":28,"bgg_id":256940,"display_name_en":"Krosmaster Blast","games_played":7756,"id":1233,"name":"krosmasterblast","published_on":"2021-08-23","status":"public"}
-{"average_duration":118,"bgg_id":143176,"display_name_en":"Steam Works","games_played":5243,"id":1234,"name":"steamworks","published_on":"2021-08-16","status":"public","weight":48}
-{"average_duration":3,"bgg_id":286295,"display_name_en":"Quantik","games_played":81840,"id":1235,"name":"quantik","published_on":"2020-12-18","status":"public","weight":1}
-{"average_duration":14,"bgg_id":21763,"display_name_en":"Mr. Jack","games_played":148073,"id":1236,"name":"mrjack","premium":true,"published_on":"2020-10-14","status":"public","weight":32}
-{"average_duration":30,"bgg_id":215,"display_name_en":"Tichu","games_played":301185,"id":1237,"name":"tichu","published_on":"2021-06-09","status":"public","weight":1284}
-{"average_duration":13,"bgg_id":21790,"display_name_en":"Thurn and Taxis","games_played":322899,"id":1238,"name":"thurnandtaxis","published_on":"2020-11-30","status":"public","weight":386}
-{"average_duration":5,"bgg_id":99875,"display_name_en":"Martian Dice","games_played":1362229,"id":1239,"name":"martiandice","published_on":"2020-12-25","status":"public","weight":321}
-{"average_duration":18,"bgg_id":171499,"display_name_en":"Cacao","games_played":156725,"id":1240,"name":"cacao","published_on":"2020-12-10","status":"public","weight":78}
-{"average_duration":33,"bgg_id":592,"display_name_en":"Spades","games_played":220897,"id":1241,"name":"spades","published_on":"2020-12-14","status":"public","weight":1418}
-{"average_duration":15,"bgg_id":225569,"display_name_en":"Geek Out! Masters","games_played":23418,"id":1242,"name":"geekoutmasters","published_on":"2024-10-03","status":"beta","weight":18}
-{"average_duration":19,"bgg_id":4583,"display_name_en":"Pinochle","games_played":3860,"id":1243,"name":"pinochle","priority":-999,"published_on":"2025-02-21","status":"public"}
-{"average_duration":25,"bgg_id":274037,"display_name_en":"Solar Storm","games_played":26967,"id":1244,"is_ranking_disabled":true,"name":"solarstorm","published_on":"2021-07-09","status":"public","weight":7}
-{"average_duration":20,"bgg_id":121297,"display_name_en":"Fleet","games_played":35364,"id":1245,"name":"fleet","premium":true,"published_on":"2021-03-22","status":"public","weight":26}
-{"average_duration":31,"bgg_id":308532,"display_name_en":"Illustori","games_played":59767,"id":1246,"name":"illustori","published_on":"2021-08-07","status":"public","weight":65}
-{"average_duration":61,"bgg_id":300700,"display_name_en":"Quetzal","games_played":18559,"id":1247,"name":"quetzal","published_on":"2021-02-15","status":"public"}
-{"average_duration":32,"bgg_id":284083,"display_name_en":"The Crew","games_played":549912,"id":1248,"is_ranking_disabled":true,"name":"thecrew","published_on":"2020-10-22","status":"public","weight":1190}
-{"average_duration":55,"bgg_id":383179,"display_name_en":"Age of Innovation: a Terra Mystica game","games_played":219880,"id":1249,"name":"ageofinnovation","premium":true,"published_on":"2024-11-20","status":"public","weight":2568}
+{"average_duration":22,"bgg_id":256940,"display_name_en":"Krosmaster Blast","games_played":7764,"id":1233,"name":"krosmasterblast","published_on":"2021-08-23","status":"public"}
+{"average_duration":110,"bgg_id":143176,"display_name_en":"Steam Works","games_played":5248,"id":1234,"name":"steamworks","published_on":"2021-08-16","status":"public","weight":71}
+{"average_duration":3,"bgg_id":286295,"display_name_en":"Quantik","games_played":81945,"id":1235,"name":"quantik","published_on":"2020-12-18","status":"public","weight":1}
+{"average_duration":14,"bgg_id":21763,"display_name_en":"Mr. Jack","games_played":148170,"id":1236,"name":"mrjack","premium":true,"published_on":"2020-10-14","status":"public","weight":38}
+{"average_duration":30,"bgg_id":215,"display_name_en":"Tichu","games_played":302757,"id":1237,"name":"tichu","published_on":"2021-06-09","status":"public","weight":1112}
+{"average_duration":13,"bgg_id":21790,"display_name_en":"Thurn and Taxis","games_played":323656,"id":1238,"name":"thurnandtaxis","published_on":"2020-11-30","status":"public","weight":293}
+{"average_duration":5,"bgg_id":99875,"display_name_en":"Martian Dice","games_played":1364704,"id":1239,"name":"martiandice","published_on":"2020-12-25","status":"public","weight":363}
+{"average_duration":19,"bgg_id":171499,"display_name_en":"Cacao","games_played":156867,"id":1240,"name":"cacao","published_on":"2020-12-10","status":"public","weight":60}
+{"average_duration":33,"bgg_id":592,"display_name_en":"Spades","games_played":221883,"id":1241,"name":"spades","published_on":"2020-12-14","status":"public","weight":1477}
+{"average_duration":14,"bgg_id":225569,"display_name_en":"Geek Out! Masters","games_played":23440,"id":1242,"name":"geekoutmasters","published_on":"2024-10-03","status":"beta"}
+{"average_duration":20,"bgg_id":4583,"display_name_en":"Pinochle","games_played":3895,"id":1243,"name":"pinochle","priority":-999,"published_on":"2025-02-21","status":"public","weight":15}
+{"average_duration":26,"bgg_id":274037,"display_name_en":"Solar Storm","games_played":26994,"id":1244,"is_ranking_disabled":true,"name":"solarstorm","published_on":"2021-07-09","status":"public","weight":11}
+{"average_duration":20,"bgg_id":121297,"display_name_en":"Fleet","games_played":35391,"id":1245,"name":"fleet","premium":true,"published_on":"2021-03-22","status":"public","weight":22}
+{"average_duration":31,"bgg_id":308532,"display_name_en":"Illustori","games_played":59871,"id":1246,"name":"illustori","published_on":"2021-08-07","status":"public","weight":29}
+{"average_duration":43,"bgg_id":300700,"display_name_en":"Quetzal","games_played":18570,"id":1247,"name":"quetzal","published_on":"2021-02-15","status":"public"}
+{"average_duration":32,"bgg_id":284083,"display_name_en":"The Crew","games_played":550777,"id":1248,"is_ranking_disabled":true,"name":"thecrew","published_on":"2020-10-22","status":"public","weight":971}
+{"average_duration":54,"bgg_id":383179,"display_name_en":"Age of Innovation: a Terra Mystica game","games_played":221632,"id":1249,"name":"ageofinnovation","premium":true,"published_on":"2024-11-20","status":"public","weight":2605}
 {"average_duration":16,"bgg_id":316581,"display_name_en":"Biyi","games_played":1740,"id":1250,"name":"biyi","published_on":"2021-07-25","status":"public"}
-{"average_duration":38,"bgg_id":283948,"display_name_en":"Marco Polo II: In the Service of the Khan","games_played":129461,"id":1252,"name":"marcopolotwo","premium":true,"published_on":"2020-11-18","status":"public","weight":225}
-{"average_duration":10,"bgg_id":138788,"display_name_en":"Dungeon Roll","games_played":443866,"id":1253,"name":"dungeonroll","published_on":"2020-12-26","status":"public","weight":89}
-{"average_duration":13,"display_name_en":"Oh-Seven","games_played":23092,"id":1254,"name":"ohseven","published_on":"2020-12-20","status":"public","weight":9}
-{"average_duration":10,"bgg_id":296167,"display_name_en":"Boomerang: Australia","games_played":59662,"id":1255,"name":"boomerangaustralia","published_on":"2020-11-25","status":"public","weight":10}
-{"average_duration":18,"bgg_id":252544,"display_name_en":"Dice Summoners","games_played":9281,"id":1256,"name":"dicesummoners","published_on":"2021-07-22","status":"public","weight":6}
-{"average_duration":9,"bgg_id":245643,"display_name_en":"Luxor","games_played":419104,"id":1257,"name":"luxor","published_on":"2020-12-08","status":"public","weight":159}
-{"average_duration":6,"bgg_id":117663,"display_name_en":"Piraten kapern","games_played":2107884,"id":1258,"name":"piratenkapern","published_on":"2020-12-11","status":"public","weight":741}
-{"average_duration":29,"bgg_id":6912,"display_name_en":"Pedro","games_played":1218,"id":1259,"name":"pedro","published_on":"2021-08-08","status":"public","weight":8}
-{"average_duration":37,"bgg_id":7475,"display_name_en":"Hand and Foot","games_played":568846,"id":1260,"name":"handandfoot","published_on":"2021-07-01","status":"public","weight":2755}
-{"average_duration":16,"display_name_en":"Medo","games_played":3187,"id":1261,"name":"meadow","published_on":"2021-07-11","status":"public"}
-{"average_duration":7,"bgg_id":300936,"display_name_en":"Via Magica","games_played":429563,"id":1262,"name":"viamagica","premium":true,"published_on":"2020-12-24","status":"public","weight":102}
+{"average_duration":38,"bgg_id":283948,"display_name_en":"Marco Polo II: In the Service of the Khan","games_played":129657,"id":1252,"name":"marcopolotwo","premium":true,"published_on":"2020-11-18","status":"public","weight":347}
+{"average_duration":10,"bgg_id":138788,"display_name_en":"Dungeon Roll","games_played":444425,"id":1253,"name":"dungeonroll","published_on":"2020-12-26","status":"public","weight":47}
+{"average_duration":14,"display_name_en":"Oh-Seven","games_played":23113,"id":1254,"name":"ohseven","published_on":"2020-12-20","status":"public","weight":7}
+{"average_duration":10,"bgg_id":296167,"display_name_en":"Boomerang: Australia","games_played":59705,"id":1255,"name":"boomerangaustralia","published_on":"2020-11-25","status":"public","weight":28}
+{"average_duration":16,"bgg_id":252544,"display_name_en":"Dice Summoners","games_played":9290,"id":1256,"name":"dicesummoners","published_on":"2021-07-22","status":"public"}
+{"average_duration":9,"bgg_id":245643,"display_name_en":"Luxor","games_played":420170,"id":1257,"name":"luxor","published_on":"2020-12-08","status":"public","weight":205}
+{"average_duration":6,"bgg_id":117663,"display_name_en":"Piraten kapern","games_played":2113041,"id":1258,"name":"piratenkapern","published_on":"2020-12-11","status":"public","weight":540}
+{"average_duration":28,"bgg_id":6912,"display_name_en":"Pedro","games_played":1219,"id":1259,"name":"pedro","published_on":"2021-08-08","status":"public"}
+{"average_duration":37,"bgg_id":7475,"display_name_en":"Hand and Foot","games_played":571547,"id":1260,"name":"handandfoot","published_on":"2021-07-01","status":"public","weight":2532}
+{"average_duration":16,"display_name_en":"Medo","games_played":3192,"id":1261,"name":"meadow","published_on":"2021-07-11","status":"public","weight":3}
+{"average_duration":7,"bgg_id":300936,"display_name_en":"Via Magica","games_played":429963,"id":1262,"name":"viamagica","premium":true,"published_on":"2020-12-24","status":"public","weight":82}
 {"average_duration":56,"bgg_id":4505,"display_name_en":"Grosstarock","games_played":861,"id":1263,"name":"grosstarock","published_on":"2021-08-06","status":"public"}
-{"average_duration":5,"bgg_id":40446,"display_name_en":"Indian Chief","games_played":3154,"id":1265,"name":"indianchief","priority":-999,"published_on":"2025-03-06","status":"public"}
-{"average_duration":10,"bgg_id":173346,"display_name_en":"7 Wonders Duel","games_played":13659751,"id":1266,"name":"sevenwondersduel","premium":true,"published_on":"2020-09-30","status":"public","weight":10919}
-{"average_duration":16,"bgg_id":281075,"display_name_en":"Welcome To New Las Vegas","games_played":82385,"id":1267,"name":"welcometonewlasvegas","published_on":"2020-12-01","status":"public","weight":24}
-{"average_duration":42,"bgg_id":180680,"display_name_en":"Automobiles","games_played":53077,"id":1268,"name":"automobiles","published_on":"2021-07-21","status":"public","weight":92}
-{"average_duration":24,"bgg_id":300305,"display_name_en":"Nanga Parbat","games_played":16967,"id":1269,"name":"nangaparbat","published_on":"2020-12-19","status":"public"}
-{"average_duration":24,"bgg_id":163640,"display_name_en":"Eminent Domain: Microcosm","games_played":5022,"id":1270,"name":"emdomicrocosm","published_on":"2021-07-13","status":"public"}
-{"average_duration":39,"bgg_id":13337,"display_name_en":"Solo Whist","games_played":5529,"id":1271,"name":"solowhist","published_on":"2020-12-06","status":"public"}
-{"average_duration":32,"bgg_id":294235,"display_name_en":"Crime Zoom: A Dirty Objective","games_played":36725,"id":1272,"is_ranking_disabled":true,"name":"crimezoom","published_on":"2022-05-31","status":"public","weight":1}
-{"average_duration":27,"bgg_id":169147,"display_name_en":"Letter Tycoon","games_played":225094,"id":1273,"is_ranking_disabled":true,"name":"lettertycoon","published_on":"2021-01-13","status":"public","weight":373}
-{"average_duration":11,"bgg_id":252997,"display_name_en":"Mapmaker: The Gerrymandering Game","games_played":39151,"id":1274,"name":"mapmaker","published_on":"2020-12-05","status":"public","weight":28}
-{"average_duration":41,"bgg_id":147151,"display_name_en":"Concept","games_played":161878,"id":1275,"is_ranking_disabled":true,"name":"concept","published_on":"2020-12-22","status":"public","weight":86}
-{"average_duration":24,"bgg_id":4390,"display_name_en":"Carcassonne: Hunters & Gatherers","games_played":383851,"id":1276,"name":"carcassonnehuntersandgatherers","premium":true,"published_on":"2021-01-06","status":"public","weight":436}
-{"average_duration":19,"bgg_id":286062,"display_name_en":"Haiclue","games_played":123775,"id":1278,"name":"haiclue","published_on":"2020-12-23","status":"public","weight":231}
-{"average_duration":17,"bgg_id":250725,"display_name_en":"Thrive","games_played":4112,"id":1280,"name":"thrive","published_on":"2022-07-11","status":"public"}
-{"average_duration":9,"bgg_id":18946,"display_name_en":"Just Desserts","games_played":687616,"id":1282,"name":"justdesserts","published_on":"2021-01-27","status":"public","weight":282}
-{"average_duration":4,"bgg_id":72667,"display_name_en":"Mijnlieff","games_played":40772,"id":1283,"name":"mijnlieff","published_on":"2021-08-10","status":"public","weight":4}
-{"average_duration":58,"bgg_id":97207,"display_name_en":"Dungeon Petz","games_played":20537,"id":1284,"name":"dungeonpetz","published_on":"2021-05-05","status":"public","weight":96}
+{"average_duration":5,"bgg_id":40446,"display_name_en":"Indian Chief","games_played":3164,"id":1265,"name":"indianchief","priority":-999,"published_on":"2025-03-06","status":"public"}
+{"average_duration":9,"bgg_id":173346,"display_name_en":"7 Wonders Duel","games_played":13703874,"id":1266,"name":"sevenwondersduel","premium":true,"published_on":"2020-09-30","status":"public","weight":11274}
+{"average_duration":19,"bgg_id":281075,"display_name_en":"Welcome To New Las Vegas","games_played":82444,"id":1267,"name":"welcometonewlasvegas","published_on":"2020-12-01","status":"public","weight":35}
+{"average_duration":43,"bgg_id":180680,"display_name_en":"Automobiles","games_played":53137,"id":1268,"name":"automobiles","published_on":"2021-07-21","status":"public","weight":84}
+{"average_duration":23,"bgg_id":300305,"display_name_en":"Nanga Parbat","games_played":16982,"id":1269,"name":"nangaparbat","published_on":"2020-12-19","status":"public","weight":9}
+{"average_duration":22,"bgg_id":163640,"display_name_en":"Eminent Domain: Microcosm","games_played":5024,"id":1270,"name":"emdomicrocosm","published_on":"2021-07-13","status":"public"}
+{"average_duration":35,"bgg_id":13337,"display_name_en":"Solo Whist","games_played":5533,"id":1271,"name":"solowhist","published_on":"2020-12-06","status":"public","weight":5}
+{"average_duration":35,"bgg_id":294235,"display_name_en":"Crime Zoom: A Dirty Objective","games_played":36789,"id":1272,"is_ranking_disabled":true,"name":"crimezoom","published_on":"2022-05-31","status":"public","weight":4}
+{"average_duration":27,"bgg_id":169147,"display_name_en":"Letter Tycoon","games_played":225480,"id":1273,"is_ranking_disabled":true,"name":"lettertycoon","published_on":"2021-01-13","status":"public","weight":232}
+{"average_duration":10,"bgg_id":252997,"display_name_en":"Mapmaker: The Gerrymandering Game","games_played":39215,"id":1274,"name":"mapmaker","published_on":"2020-12-05","status":"public","weight":9}
+{"average_duration":42,"bgg_id":147151,"display_name_en":"Concept","games_played":162029,"id":1275,"is_ranking_disabled":true,"name":"concept","published_on":"2020-12-22","status":"public","weight":66}
+{"average_duration":24,"bgg_id":4390,"display_name_en":"Carcassonne: Hunters & Gatherers","games_played":384627,"id":1276,"name":"carcassonnehuntersandgatherers","premium":true,"published_on":"2021-01-06","status":"public","weight":641}
+{"average_duration":18,"bgg_id":286062,"display_name_en":"Haiclue","games_played":124049,"id":1278,"name":"haiclue","published_on":"2020-12-23","status":"public","weight":221}
+{"average_duration":17,"bgg_id":250725,"display_name_en":"Thrive","games_played":4114,"id":1280,"name":"thrive","published_on":"2022-07-11","status":"public"}
+{"average_duration":9,"bgg_id":18946,"display_name_en":"Just Desserts","games_played":689485,"id":1282,"name":"justdesserts","published_on":"2021-01-27","status":"public","weight":209}
+{"average_duration":4,"bgg_id":72667,"display_name_en":"Mijnlieff","games_played":40844,"id":1283,"name":"mijnlieff","published_on":"2021-08-10","status":"public","weight":4}
+{"average_duration":61,"bgg_id":97207,"display_name_en":"Dungeon Petz","games_played":20556,"id":1284,"name":"dungeonpetz","published_on":"2021-05-05","status":"public","weight":101}
 {"average_duration":33,"display_name_en":"Phat","games_played":1146,"id":1285,"name":"phat","published_on":"2021-08-12","status":"public"}
-{"average_duration":33,"bgg_id":310873,"display_name_en":"Carnegie","games_played":138374,"id":1287,"name":"carnegie","premium":true,"published_on":"2021-06-21","status":"public","weight":332}
-{"average_duration":16,"bgg_id":247160,"display_name_en":"Dinosaur Tea Party","games_played":29331,"id":1289,"name":"dinosaurteaparty","published_on":"2021-07-30","status":"public","weight":27}
-{"average_duration":39,"bgg_id":269789,"display_name_en":"Caravan","games_played":21262,"id":1291,"name":"caravan","published_on":"2021-07-18","status":"public","weight":34}
-{"average_duration":61,"bgg_id":93,"display_name_en":"El Grande","games_played":30563,"id":1292,"name":"elgrande","published_on":"2022-04-06","status":"public","weight":457}
-{"average_duration":19,"bgg_id":568,"display_name_en":"Rage","games_played":56605,"id":1294,"name":"rage","published_on":"2021-08-21","status":"public","weight":33}
-{"average_duration":6,"bgg_id":212027,"display_name_en":"Balloon Pop!","games_played":32464,"id":1295,"name":"balloonpop","published_on":"2021-08-13","status":"public","weight":1}
-{"average_duration":8,"bgg_id":172235,"display_name_en":"Schr\u00f6dinger's Cats","games_played":266461,"id":1296,"name":"schroedingerscats","published_on":"2021-04-12","status":"public","weight":91}
+{"average_duration":34,"bgg_id":310873,"display_name_en":"Carnegie","games_played":138629,"id":1287,"name":"carnegie","premium":true,"published_on":"2021-06-21","status":"public","weight":183}
+{"average_duration":16,"bgg_id":247160,"display_name_en":"Dinosaur Tea Party","games_played":29363,"id":1289,"name":"dinosaurteaparty","published_on":"2021-07-30","status":"public","weight":12}
+{"average_duration":33,"bgg_id":269789,"display_name_en":"Caravan","games_played":21286,"id":1291,"name":"caravan","published_on":"2021-07-18","status":"public","weight":20}
+{"average_duration":67,"bgg_id":93,"display_name_en":"El Grande","games_played":30629,"id":1292,"name":"elgrande","published_on":"2022-04-06","status":"public","weight":500}
+{"average_duration":19,"bgg_id":568,"display_name_en":"Rage","games_played":56728,"id":1294,"name":"rage","published_on":"2021-08-21","status":"public","weight":75}
+{"average_duration":5,"bgg_id":212027,"display_name_en":"Balloon Pop!","games_played":32488,"id":1295,"name":"balloonpop","published_on":"2021-08-13","status":"public"}
+{"average_duration":8,"bgg_id":172235,"display_name_en":"Schr\u00f6dinger's Cats","games_played":266721,"id":1296,"name":"schroedingerscats","published_on":"2021-04-12","status":"public","weight":48}
 {"average_duration":11,"bgg_id":127304,"display_name_en":"Herooj","games_played":2101,"id":1297,"name":"herooj","published_on":"2021-08-14","status":"public"}
-{"average_duration":18,"bgg_id":325413,"display_name_en":"ONE","games_played":7202,"id":1298,"name":"one","published_on":"2021-08-19","status":"public","weight":8}
-{"average_duration":4,"bgg_id":12942,"display_name_en":"No Thanks!","games_played":423264,"id":1299,"name":"nothanks","published_on":"2021-03-29","status":"public","weight":136}
-{"average_duration":11,"bgg_id":233867,"display_name_en":"Welcome To","games_played":2940762,"id":1300,"name":"welcometo","premium":true,"published_on":"2020-12-02","status":"public","weight":3120}
-{"average_duration":59,"bgg_id":189489,"display_name_en":"Grand Bazaar","games_played":4663,"id":1304,"name":"grandbazaar","published_on":"2021-07-08","status":"public"}
-{"average_duration":38,"bgg_id":15878,"display_name_en":"Liverpool (Cozy Oaks) Rummy","games_played":42176,"id":1305,"name":"liverpoolrummy","published_on":"2023-08-03","status":"public","weight":365}
-{"average_duration":7,"bgg_id":245222,"display_name_en":"Squadro","games_played":80359,"id":1306,"name":"squadro","published_on":"2021-08-26","status":"public","weight":7}
-{"average_duration":6,"bgg_id":267314,"display_name_en":"My First Castle Panic","games_played":52633,"id":1307,"is_ranking_disabled":true,"name":"myfirstcastlepanic","published_on":"2022-12-18","status":"public","weight":29}
-{"average_duration":25,"bgg_id":309000,"display_name_en":"Blue Skies","games_played":10782,"id":1308,"name":"blueskies","published_on":"2021-02-22","status":"public","weight":37}
-{"average_duration":21,"bgg_id":262712,"display_name_en":"Res Arcana","games_played":1294672,"id":1309,"name":"resarcana","premium":true,"published_on":"2021-02-03","status":"public","weight":1466}
-{"average_duration":5,"bgg_id":264055,"display_name_en":"Draftosaurus","games_played":952358,"id":1310,"name":"draftosaurus","premium":true,"published_on":"2021-03-03","status":"public","weight":179}
-{"average_duration":20,"bgg_id":296420,"display_name_en":"Bids","games_played":5084,"id":1312,"name":"bids","published_on":"2021-08-15","status":"public"}
-{"average_duration":29,"bgg_id":172933,"display_name_en":"Dragonwood","games_played":62316,"id":1313,"name":"dragonwood","premium":true,"published_on":"2021-04-26","status":"public","weight":54}
-{"average_duration":10,"bgg_id":208766,"display_name_en":"13 Clues","games_played":298553,"id":1314,"name":"thirteenclues","published_on":"2021-07-10","status":"public","weight":103}
-{"average_duration":17,"bgg_id":26566,"display_name_en":"Homesteaders","games_played":10294,"id":1315,"name":"homesteaders","published_on":"2021-08-09","status":"public","weight":10}
-{"average_duration":11,"bgg_id":297129,"display_name_en":"Jekyll vs. Hyde","games_played":128948,"id":1316,"name":"jekyllvshide","premium":true,"published_on":"2021-04-07","status":"public","weight":47}
-{"average_duration":10,"bgg_id":280041,"display_name_en":"Rolled West","games_played":8627,"id":1317,"name":"rolledwest","published_on":"2021-07-16","status":"public"}
-{"average_duration":15,"bgg_id":55131,"display_name_en":"Murus Gallicus","games_played":5584,"id":1318,"name":"murusgallicus","published_on":"2021-07-27","status":"public"}
+{"average_duration":18,"bgg_id":325413,"display_name_en":"ONE","games_played":7205,"id":1298,"name":"one","published_on":"2021-08-19","status":"public"}
+{"average_duration":4,"bgg_id":12942,"display_name_en":"No Thanks!","games_played":423991,"id":1299,"name":"nothanks","published_on":"2021-03-29","status":"public","weight":88}
+{"average_duration":11,"bgg_id":233867,"display_name_en":"Welcome To","games_played":2949063,"id":1300,"name":"welcometo","premium":true,"published_on":"2020-12-02","status":"public","weight":2965}
+{"average_duration":59,"bgg_id":189489,"display_name_en":"Grand Bazaar","games_played":4666,"id":1304,"name":"grandbazaar","published_on":"2021-07-08","status":"public"}
+{"average_duration":38,"bgg_id":15878,"display_name_en":"Liverpool (Cozy Oaks) Rummy","games_played":42350,"id":1305,"name":"liverpoolrummy","published_on":"2023-08-03","status":"public","weight":372}
+{"average_duration":6,"bgg_id":245222,"display_name_en":"Squadro","games_played":80444,"id":1306,"name":"squadro","published_on":"2021-08-26","status":"public","weight":20}
+{"average_duration":6,"bgg_id":267314,"display_name_en":"My First Castle Panic","games_played":52832,"id":1307,"is_ranking_disabled":true,"name":"myfirstcastlepanic","published_on":"2022-12-18","status":"public","weight":23}
+{"average_duration":23,"bgg_id":309000,"display_name_en":"Blue Skies","games_played":10786,"id":1308,"name":"blueskies","published_on":"2021-02-22","status":"public","weight":18}
+{"average_duration":21,"bgg_id":262712,"display_name_en":"Res Arcana","games_played":1297192,"id":1309,"name":"resarcana","premium":true,"published_on":"2021-02-03","status":"public","weight":1431}
+{"average_duration":5,"bgg_id":264055,"display_name_en":"Draftosaurus","games_played":953303,"id":1310,"name":"draftosaurus","premium":true,"published_on":"2021-03-03","status":"public","weight":200}
+{"average_duration":20,"bgg_id":296420,"display_name_en":"Bids","games_played":5087,"id":1312,"name":"bids","published_on":"2021-08-15","status":"public","weight":9}
+{"average_duration":27,"bgg_id":172933,"display_name_en":"Dragonwood","games_played":62402,"id":1313,"name":"dragonwood","premium":true,"published_on":"2021-04-26","status":"public","weight":81}
+{"average_duration":9,"bgg_id":208766,"display_name_en":"13 Clues","games_played":299218,"id":1314,"name":"thirteenclues","published_on":"2021-07-10","status":"public","weight":187}
+{"average_duration":114,"bgg_id":26566,"display_name_en":"Homesteaders","games_played":10297,"id":1315,"name":"homesteaders","published_on":"2021-08-09","status":"public"}
+{"average_duration":11,"bgg_id":297129,"display_name_en":"Jekyll vs. Hyde","games_played":129049,"id":1316,"name":"jekyllvshide","premium":true,"published_on":"2021-04-07","status":"public","weight":24}
+{"average_duration":10,"bgg_id":280041,"display_name_en":"Rolled West","games_played":8632,"id":1317,"name":"rolledwest","published_on":"2021-07-16","status":"public"}
+{"average_duration":17,"bgg_id":55131,"display_name_en":"Murus Gallicus","games_played":5592,"id":1318,"name":"murusgallicus","published_on":"2021-07-27","status":"public","weight":1}
 {"average_duration":13,"bgg_id":319680,"display_name_en":"Rest In Peace","games_played":20885,"id":1319,"name":"restinpeace","premium":true,"published_on":"2021-04-07","status":"public"}
-{"average_duration":16,"bgg_id":3955,"display_name_en":"BANG!","games_played":2623744,"id":1320,"name":"bang","published_on":"2022-02-23","status":"public","weight":2313}
-{"average_duration":26,"bgg_id":218121,"display_name_en":"Dice Hospital","games_played":232727,"id":1321,"name":"dicehospital","premium":true,"published_on":"2021-08-18","status":"public","weight":422}
-{"average_duration":4,"bgg_id":248430,"display_name_en":"Zener","games_played":5885,"id":1323,"name":"zener","published_on":"2021-08-29","status":"public"}
-{"average_duration":19,"bgg_id":1465,"display_name_en":"Wizard","games_played":1308066,"id":1324,"name":"wizard","published_on":"2021-03-31","status":"public","weight":1489}
-{"average_duration":1,"display_name_en":"The Nine Domains","games_played":1195,"id":1325,"name":"theninedomains","published_on":"2022-03-10","status":"beta"}
-{"average_duration":16,"bgg_id":255029,"display_name_en":"Verona Twist","games_played":8682,"id":1327,"name":"veronatwist","published_on":"2021-08-03","status":"public"}
-{"average_duration":9,"bgg_id":287084,"display_name_en":"Oriflamme","games_played":295525,"id":1328,"name":"oriflamme","published_on":"2021-03-17","status":"public","weight":41}
-{"average_duration":20,"bgg_id":118497,"display_name_en":"Trick of the Rails","games_played":3688,"id":1330,"name":"trickoftherails","published_on":"2021-07-23","status":"public"}
-{"average_duration":18,"bgg_id":1115,"display_name_en":"Poker Texas Hold'em","games_played":385214,"id":1331,"name":"texasholdem","published_on":"2026-01-02","status":"public","weight":2522}
+{"average_duration":16,"bgg_id":3955,"display_name_en":"BANG!","games_played":2633637,"id":1320,"name":"bang","published_on":"2022-02-23","status":"public","weight":2535}
+{"average_duration":26,"bgg_id":218121,"display_name_en":"Dice Hospital","games_played":233142,"id":1321,"name":"dicehospital","premium":true,"published_on":"2021-08-18","status":"public","weight":377}
+{"average_duration":4,"bgg_id":248430,"display_name_en":"Zener","games_played":5893,"id":1323,"name":"zener","published_on":"2021-08-29","status":"public","weight":1}
+{"average_duration":19,"bgg_id":1465,"display_name_en":"Wizard","games_played":1313661,"id":1324,"name":"wizard","published_on":"2021-03-31","status":"public","weight":1568}
+{"average_duration":1,"display_name_en":"The Nine Domains","games_played":1198,"id":1325,"name":"theninedomains","published_on":"2022-03-10","status":"beta"}
+{"average_duration":14,"bgg_id":255029,"display_name_en":"Verona Twist","games_played":8689,"id":1327,"name":"veronatwist","published_on":"2021-08-03","status":"public","weight":1}
+{"average_duration":10,"bgg_id":287084,"display_name_en":"Oriflamme","games_played":295783,"id":1328,"name":"oriflamme","published_on":"2021-03-17","status":"public","weight":40}
+{"average_duration":20,"bgg_id":118497,"display_name_en":"Trick of the Rails","games_played":3691,"id":1330,"name":"trickoftherails","published_on":"2021-07-23","status":"public"}
+{"average_duration":17,"bgg_id":1115,"display_name_en":"Poker Texas Hold'em","games_played":390424,"id":1331,"name":"texasholdem","published_on":"2026-01-02","status":"public","weight":2145}
 {"average_duration":23,"display_name_en":"Lineae","games_played":1122,"id":1332,"name":"lineae","published_on":"2021-03-18","status":"beta"}
-{"average_duration":39,"bgg_id":286081,"display_name_en":"Herrlof","games_played":7533,"id":1333,"name":"herrlof","published_on":"2021-07-03","status":"public"}
-{"average_duration":22,"bgg_id":155987,"display_name_en":"Abyss","games_played":210483,"id":1335,"name":"abyss","premium":true,"published_on":"2021-02-17","status":"public","weight":237}
-{"average_duration":6,"bgg_id":258,"display_name_en":"Fluxx","games_played":642116,"id":1336,"name":"fluxx","published_on":"2021-07-07","status":"public","weight":258}
-{"average_duration":31,"bgg_id":255027,"display_name_en":"Quinque","games_played":6118,"id":1338,"name":"quinque","published_on":"2021-07-20","status":"public"}
-{"average_duration":36,"bgg_id":167270,"display_name_en":"Medina","games_played":12750,"id":1339,"name":"medina","premium":true,"published_on":"2021-06-07","status":"public","weight":44}
-{"average_duration":11,"bgg_id":288513,"display_name_en":"Tranquility","games_played":579002,"id":1340,"is_ranking_disabled":true,"name":"tranquility","published_on":"2021-05-10","status":"public","weight":320}
-{"average_duration":27,"bgg_id":274364,"display_name_en":"Watergate","games_played":21754,"id":1341,"name":"watergate","premium":true,"published_on":"2026-03-18","status":"public","weight":308}
-{"average_duration":4,"bgg_id":175,"display_name_en":"Vulture Culture","games_played":179824,"id":1342,"name":"vultureculture","published_on":"2021-07-04","status":"public","weight":48}
-{"average_duration":26,"bgg_id":75358,"display_name_en":"Paris Connection","games_played":14380,"id":1343,"name":"parisconnection","published_on":"2021-08-17","status":"public","weight":3}
-{"average_duration":41,"bgg_id":31730,"display_name_en":"Chicago Express","games_played":7294,"id":1345,"name":"chicagoexpress","published_on":"2022-12-07","status":"public","weight":35}
-{"average_duration":8,"bgg_id":281417,"display_name_en":"Hoarders","games_played":31358,"id":1347,"name":"hoarders","published_on":"2021-07-05","status":"public","weight":8}
-{"average_duration":20,"bgg_id":151467,"display_name_en":"Once Upon A Forest","games_played":9113,"id":1349,"name":"onceuponaforest","published_on":"2021-07-31","status":"public"}
-{"average_duration":5,"bgg_id":241245,"display_name_en":"Get the MacGuffin","games_played":13349,"id":1350,"name":"getthemacguffin","published_on":"2022-07-23","status":"public","weight":4}
-{"average_duration":14,"bgg_id":259310,"display_name_en":"Sheep Boom Bah","games_played":17893,"id":1351,"name":"sheepboombah","published_on":"2021-05-04","status":"beta","weight":1}
-{"average_duration":21,"bgg_id":247143,"display_name_en":"Senshi","games_played":2601,"id":1352,"name":"senshi","published_on":"2022-07-10","status":"public","weight":4}
+{"average_duration":29,"bgg_id":286081,"display_name_en":"Herrlof","games_played":7534,"id":1333,"name":"herrlof","published_on":"2021-07-03","status":"public"}
+{"average_duration":21,"bgg_id":155987,"display_name_en":"Abyss","games_played":210744,"id":1335,"name":"abyss","premium":true,"published_on":"2021-02-17","status":"public","weight":120}
+{"average_duration":6,"bgg_id":258,"display_name_en":"Fluxx","games_played":643944,"id":1336,"name":"fluxx","published_on":"2021-07-07","status":"public","weight":200}
+{"average_duration":31,"bgg_id":255027,"display_name_en":"Quinque","games_played":6120,"id":1338,"name":"quinque","published_on":"2021-07-20","status":"public"}
+{"average_duration":43,"bgg_id":167270,"display_name_en":"Medina","games_played":12776,"id":1339,"name":"medina","premium":true,"published_on":"2021-06-07","status":"public"}
+{"average_duration":10,"bgg_id":288513,"display_name_en":"Tranquility","games_played":580597,"id":1340,"is_ranking_disabled":true,"name":"tranquility","published_on":"2021-05-10","status":"public","weight":208}
+{"average_duration":27,"bgg_id":274364,"display_name_en":"Watergate","games_played":22134,"id":1341,"name":"watergate","premium":true,"published_on":"2026-03-18","status":"public","weight":321}
+{"average_duration":4,"bgg_id":175,"display_name_en":"Vulture Culture","games_played":180072,"id":1342,"name":"vultureculture","published_on":"2021-07-04","status":"public","weight":16}
+{"average_duration":29,"bgg_id":75358,"display_name_en":"Paris Connection","games_played":14384,"id":1343,"name":"parisconnection","published_on":"2021-08-17","status":"public"}
+{"average_duration":43,"bgg_id":31730,"display_name_en":"Chicago Express","games_played":7310,"id":1345,"name":"chicagoexpress","published_on":"2022-12-07","status":"public","weight":42}
+{"average_duration":9,"bgg_id":281417,"display_name_en":"Hoarders","games_played":31367,"id":1347,"name":"hoarders","published_on":"2021-07-05","status":"public"}
+{"average_duration":22,"bgg_id":151467,"display_name_en":"Once Upon A Forest","games_played":9118,"id":1349,"name":"onceuponaforest","published_on":"2021-07-31","status":"public"}
+{"average_duration":4,"bgg_id":241245,"display_name_en":"Get the MacGuffin","games_played":13360,"id":1350,"name":"getthemacguffin","published_on":"2022-07-23","status":"public","weight":3}
+{"average_duration":16,"bgg_id":259310,"display_name_en":"Sheep Boom Bah","games_played":17929,"id":1351,"name":"sheepboombah","published_on":"2021-05-04","status":"beta","weight":15}
+{"average_duration":21,"bgg_id":247143,"display_name_en":"Senshi","games_played":2602,"id":1352,"name":"senshi","published_on":"2022-07-10","status":"public"}
 {"average_duration":31,"bgg_id":329640,"display_name_en":"Detective Poker","games_played":3408,"id":1353,"name":"detectivepoker","published_on":"2021-08-01","status":"public"}
-{"average_duration":28,"bgg_id":223750,"display_name_en":"Hardback","games_played":199951,"id":1354,"is_ranking_disabled":true,"name":"hardback","published_on":"2021-06-16","status":"public","weight":152}
-{"average_duration":31,"display_name_en":"Sparts","games_played":3210,"id":1357,"name":"sparts","published_on":"2021-04-13","status":"public"}
-{"average_duration":12,"bgg_id":14186,"display_name_en":"Bao la Kiswahili","games_played":14464,"id":1358,"name":"baolakiswahili","published_on":"2022-03-21","status":"public","weight":19}
-{"average_duration":18,"bgg_id":526,"display_name_en":"Abalone","games_played":80396,"id":1359,"name":"abalone","published_on":"2021-08-22","status":"public","weight":8}
-{"average_duration":25,"bgg_id":194517,"display_name_en":"Super Fantasy Brawl","games_played":168411,"id":1360,"name":"superfantasybrawl","published_on":"2021-03-10","status":"public","weight":89}
+{"average_duration":27,"bgg_id":223750,"display_name_en":"Hardback","games_played":200359,"id":1354,"is_ranking_disabled":true,"name":"hardback","published_on":"2021-06-16","status":"public","weight":243}
+{"average_duration":33,"display_name_en":"Sparts","games_played":3212,"id":1357,"name":"sparts","published_on":"2021-04-13","status":"public"}
+{"average_duration":11,"bgg_id":14186,"display_name_en":"Bao la Kiswahili","games_played":14538,"id":1358,"name":"baolakiswahili","published_on":"2022-03-21","status":"public","weight":20}
+{"average_duration":18,"bgg_id":526,"display_name_en":"Abalone","games_played":80541,"id":1359,"name":"abalone","published_on":"2021-08-22","status":"public","weight":16}
+{"average_duration":25,"bgg_id":194517,"display_name_en":"Super Fantasy Brawl","games_played":168544,"id":1360,"name":"superfantasybrawl","published_on":"2021-03-10","status":"public","weight":70}
 {"average_duration":50,"bgg_id":332317,"display_name_en":"Blaze","games_played":622,"id":1363,"name":"blaze","published_on":"2021-08-02","status":"public"}
 {"average_duration":32,"bgg_id":279769,"display_name_en":"Queens & Kings... A Checkers Game","games_played":816,"id":1364,"name":"queenskings","published_on":"2022-07-16","status":"public"}
 {"average_duration":51,"bgg_id":17103,"display_name_en":"Calypso","games_played":216,"id":1366,"name":"calypso","published_on":"2023-07-14","status":"beta"}
-{"average_duration":14,"bgg_id":444,"display_name_en":"Hugo","games_played":175939,"id":1368,"name":"escapefromthehiddencastle","published_on":"2021-08-25","status":"public","weight":97}
-{"average_duration":10,"bgg_id":160477,"display_name_en":"Onitama","games_played":127649,"id":1369,"name":"onitama","premium":true,"published_on":"2021-09-15","status":"public","weight":100}
-{"average_duration":20,"bgg_id":293014,"display_name_en":"Nidavellir","games_played":311990,"id":1370,"name":"nidavellir","premium":true,"published_on":"2021-04-21","status":"public","weight":469}
-{"average_duration":8,"bgg_id":92415,"display_name_en":"Skull","games_played":647143,"id":1371,"name":"skull","published_on":"2021-04-14","status":"public","weight":114}
-{"average_duration":7,"bgg_id":245654,"display_name_en":"Railroad Ink","games_played":2725346,"id":1372,"name":"railroadink","premium":true,"published_on":"2021-06-02","status":"public","weight":1675}
-{"average_duration":10,"bgg_id":13350,"display_name_en":"Nain Jaune","games_played":13347,"id":1373,"name":"nainjaune","priority":-999,"published_on":"2024-11-22","status":"public","weight":17}
-{"average_duration":17,"bgg_id":29073,"display_name_en":"Uptown","games_played":20607,"id":1375,"name":"uptown","published_on":"2022-07-12","status":"public","weight":13}
-{"average_duration":10,"bgg_id":184346,"display_name_en":"Go Nuts for Donuts","games_played":265345,"id":1376,"name":"gonutsfordonuts","published_on":"2021-07-26","status":"public","weight":84}
-{"average_duration":6,"bgg_id":321928,"display_name_en":"Penalty Challenge","games_played":15624,"id":1377,"name":"penaltychallenge","published_on":"2021-05-20","status":"public","weight":4}
-{"average_duration":41,"bgg_id":317985,"display_name_en":"Beyond the Sun","games_played":237305,"id":1378,"name":"beyondthesun","premium":true,"published_on":"2021-05-12","status":"public","weight":579}
-{"average_duration":22,"display_name_en":"Pingimus","games_played":32359,"id":1380,"name":"pingimus","premium":true,"published_on":"2021-07-06","status":"public","weight":158}
-{"average_duration":28,"bgg_id":312484,"display_name_en":"Lost Ruins of Arnak","games_played":3105518,"id":1382,"name":"arnak","published_on":"2021-05-26","status":"public","weight":9185}
-{"average_duration":15,"bgg_id":30549,"display_name_en":"Pandemic","games_played":1479231,"id":1383,"is_ranking_disabled":true,"name":"pandemic","premium":true,"published_on":"2021-06-30","status":"public","weight":2379}
-{"average_duration":43,"bgg_id":128621,"display_name_en":"Viticulture","games_played":477425,"id":1384,"name":"viticulture","premium":true,"published_on":"2021-07-28","status":"public","weight":1923}
-{"average_duration":13,"bgg_id":314503,"display_name_en":"Codex Naturalis","games_played":265457,"id":1385,"name":"codexnaturalis","premium":true,"published_on":"2021-07-14","status":"public","weight":222}
-{"average_duration":6,"bgg_id":276042,"display_name_en":"Conspiracy","games_played":474864,"id":1386,"name":"conspiracy","premium":true,"published_on":"2021-05-24","status":"public","weight":111}
-{"average_duration":5,"bgg_id":121073,"display_name_en":"Panic Lab","games_played":28527,"id":1388,"name":"paniclab","published_on":"2023-08-22","status":"public","weight":14}
-{"average_duration":5,"bgg_id":320505,"display_name_en":"Mattock","games_played":5830,"id":1389,"name":"mattock","published_on":"2021-07-19","status":"public","weight":1}
-{"average_duration":33,"bgg_id":84876,"display_name_en":"The Castles of Burgundy","games_played":4202377,"id":1390,"name":"castlesofburgundy","published_on":"2021-09-08","status":"public","weight":15634}
-{"average_duration":41,"bgg_id":227605,"display_name_en":"For-Ex","games_played":2704,"id":1391,"name":"forex","published_on":"2022-07-22","status":"public"}
-{"average_duration":12,"bgg_id":112598,"display_name_en":"Monster Factory","games_played":65965,"id":1392,"name":"monsterfactory","published_on":"2021-08-04","status":"public","weight":27}
-{"average_duration":14,"bgg_id":17240,"display_name_en":"That's Life!","games_played":67741,"id":1393,"name":"thatslife","published_on":"2021-07-24","status":"public","weight":49}
-{"average_duration":14,"bgg_id":148228,"display_name_en":"Splendor","games_played":10465426,"id":1394,"name":"splendor","premium":true,"published_on":"2021-04-28","status":"public","weight":14001}
-{"average_duration":30,"bgg_id":4607619,"display_name_en":"Iwari","games_played":20151,"id":1395,"name":"iwari","premium":true,"published_on":"2021-07-12","status":"public","weight":32}
-{"average_duration":13,"bgg_id":2386,"display_name_en":"Chinese checkers","games_played":160021,"id":1396,"name":"chinesecheckers","published_on":"2021-07-02","status":"public","weight":96}
-{"average_duration":4,"bgg_id":18399,"display_name_en":"Sevens","games_played":51034,"id":1397,"name":"sevens","priority":-999,"published_on":"2025-02-21","status":"public","weight":19}
-{"average_duration":7,"bgg_id":19803,"display_name_en":"Martian Chess","games_played":1144,"id":1398,"name":"martianchess","published_on":"2026-03-23","status":"beta","weight":3}
-{"average_duration":7,"bgg_id":319793,"display_name_en":"Happy City","games_played":523989,"id":1402,"name":"happycity","published_on":"2021-05-19","status":"public","weight":83}
-{"average_duration":4,"display_name_en":"Gopher","games_played":13954,"id":1403,"name":"gopher","published_on":"2021-05-12","status":"public"}
-{"average_duration":3,"bgg_id":240835,"display_name_en":"Bug","games_played":21233,"id":1404,"name":"bug","published_on":"2021-07-17","status":"public"}
-{"average_duration":7,"bgg_id":266083,"display_name_en":"LLAMA","games_played":777860,"id":1405,"name":"lama","premium":true,"published_on":"2021-09-01","status":"public","weight":410}
-{"average_duration":10,"bgg_id":332944,"display_name_en":"Sobek: 2 Players","games_played":212227,"id":1406,"name":"sobektwoplayers","premium":true,"published_on":"2021-06-25","status":"public","weight":79}
-{"average_duration":4,"bgg_id":11017,"display_name_en":"Crazy Eights","games_played":14064,"id":1407,"name":"crazyeights","published_on":"2023-05-03","status":"beta","weight":4}
-{"average_duration":15,"bgg_id":313963,"display_name_en":"Cloud City","games_played":37133,"id":1408,"name":"cloudcity","published_on":"2021-12-27","status":"public"}
-{"average_duration":6,"bgg_id":303672,"display_name_en":"Trek 12","games_played":478485,"id":1409,"name":"trektwelve","premium":true,"published_on":"2021-06-23","status":"public","weight":130}
-{"average_duration":34,"bgg_id":154086,"display_name_en":"Gold West","games_played":10004,"id":1410,"name":"goldwest","published_on":"2021-08-05","status":"public","weight":23}
-{"average_duration":26,"bgg_id":298619,"display_name_en":"15 Days","games_played":4647,"id":1411,"name":"fifteendays","published_on":"2023-12-25","status":"public"}
-{"average_duration":25,"bgg_id":172081,"display_name_en":"Burgle Bros.","games_played":595734,"id":1412,"is_ranking_disabled":true,"name":"burglebros","published_on":"2022-08-24","status":"public","weight":809}
-{"average_duration":17,"bgg_id":300226,"display_name_en":"Egocentric World","games_played":5171,"id":1413,"name":"egocentricworld","published_on":"2022-07-29","status":"public"}
-{"average_duration":5,"bgg_id":29351,"display_name_en":"Durak","games_played":50699,"id":1415,"name":"durak","priority":-999,"published_on":"2025-02-24","status":"public","weight":10}
-{"average_duration":33,"bgg_id":255692,"display_name_en":"New Frontiers","games_played":56748,"id":1416,"name":"newfrontiers","premium":true,"published_on":"2021-09-29","status":"public","weight":159}
-{"average_duration":33,"display_name_en":"EpiZodiak","games_played":4316,"id":1417,"name":"epizodiak","published_on":"2022-07-15","status":"public"}
-{"average_duration":4,"bgg_id":41149,"display_name_en":"Linkage","games_played":21967,"id":1418,"name":"linkage","published_on":"2022-07-17","status":"public","weight":4}
-{"average_duration":7,"bgg_id":284584,"display_name_en":"Troyes Dice","games_played":205915,"id":1419,"name":"troyesdice","published_on":"2021-12-08","status":"public","weight":40}
-{"average_duration":13,"bgg_id":163412,"display_name_en":"Patchwork","games_played":3139419,"id":1420,"name":"patchwork","premium":true,"published_on":"2021-08-11","status":"public","weight":3732}
-{"average_duration":11,"bgg_id":300367,"display_name_en":"Boomerang: Europe","games_played":26842,"id":1421,"name":"boomerangeurope","published_on":"2022-04-13","status":"public"}
-{"average_duration":14,"bgg_id":300369,"display_name_en":"Boomerang: USA","games_played":14806,"id":1422,"name":"boomerangusa","premium":true,"published_on":"2022-04-13","status":"public","weight":12}
-{"average_duration":11,"bgg_id":235375,"display_name_en":"Spirits of the Forest","games_played":12729,"id":1423,"name":"spiritsoftheforest","published_on":"2023-12-26","status":"public","weight":8}
-{"average_duration":7,"bgg_id":146130,"display_name_en":"Coin Age","games_played":3120,"id":1424,"name":"coinage","published_on":"2023-09-01","status":"beta"}
-{"average_duration":2,"bgg_id":337503,"display_name_en":"Cardiceo","games_played":189609,"id":1425,"name":"cardiceo","published_on":"2021-08-20","status":"public","weight":37}
-{"average_duration":3,"bgg_id":302260,"display_name_en":"Abandon All Artichokes","games_played":1160623,"id":1426,"name":"abandonallartichokes","published_on":"2021-08-30","status":"public","weight":146}
-{"average_duration":41,"bgg_id":240567,"display_name_en":"Chocolate Factory","games_played":41530,"id":1427,"name":"chocolatefactory","published_on":"2021-11-10","status":"public","weight":125}
-{"average_duration":14,"bgg_id":242302,"display_name_en":"Space Base","games_played":3830494,"id":1428,"name":"spacebase","premium":true,"published_on":"2022-03-23","status":"public","weight":10686}
-{"average_duration":20,"bgg_id":329641,"display_name_en":"King of the Pitch","games_played":3197,"id":1429,"name":"kingofthepitch","published_on":"2021-08-28","status":"public"}
-{"average_duration":49,"bgg_id":200680,"display_name_en":"Agricola","games_played":1791431,"id":1430,"name":"agricola","premium":true,"published_on":"2021-09-22","status":"public","weight":12426}
-{"average_duration":18,"bgg_id":353921,"display_name_en":"Legends of Hellas","games_played":22427,"id":1431,"is_ranking_disabled":true,"name":"heroesofhellas","premium":true,"published_on":"2023-04-10","status":"public","weight":16}
-{"average_duration":55,"bgg_id":341169,"display_name_en":"Great Western Trail","games_played":403475,"id":1432,"name":"greatwesterntrail","premium":true,"published_on":"2022-05-04","status":"public","weight":2692}
-{"average_duration":19,"bgg_id":288648,"display_name_en":"Canosa","games_played":4593,"id":1434,"name":"canosa","published_on":"2022-07-09","status":"public"}
-{"average_duration":18,"bgg_id":288920,"display_name_en":"Fai-fo","games_played":2895,"id":1435,"name":"faifo","published_on":"2022-07-04","status":"public","weight":5}
+{"average_duration":14,"bgg_id":444,"display_name_en":"Hugo","games_played":176182,"id":1368,"name":"escapefromthehiddencastle","published_on":"2021-08-25","status":"public","weight":67}
+{"average_duration":11,"bgg_id":160477,"display_name_en":"Onitama","games_played":127960,"id":1369,"name":"onitama","premium":true,"published_on":"2021-09-15","status":"public","weight":90}
+{"average_duration":20,"bgg_id":293014,"display_name_en":"Nidavellir","games_played":312533,"id":1370,"name":"nidavellir","premium":true,"published_on":"2021-04-21","status":"public","weight":424}
+{"average_duration":8,"bgg_id":92415,"display_name_en":"Skull","games_played":648399,"id":1371,"name":"skull","published_on":"2021-04-14","status":"public","weight":84}
+{"average_duration":7,"bgg_id":245654,"display_name_en":"Railroad Ink","games_played":2733397,"id":1372,"name":"railroadink","premium":true,"published_on":"2021-06-02","status":"public","weight":1450}
+{"average_duration":10,"bgg_id":13350,"display_name_en":"Nain Jaune","games_played":13426,"id":1373,"name":"nainjaune","priority":-999,"published_on":"2024-11-22","status":"public","weight":10}
+{"average_duration":16,"bgg_id":29073,"display_name_en":"Uptown","games_played":20649,"id":1375,"name":"uptown","published_on":"2022-07-12","status":"public","weight":17}
+{"average_duration":10,"bgg_id":184346,"display_name_en":"Go Nuts for Donuts","games_played":265748,"id":1376,"name":"gonutsfordonuts","published_on":"2021-07-26","status":"public","weight":142}
+{"average_duration":6,"bgg_id":321928,"display_name_en":"Penalty Challenge","games_played":15639,"id":1377,"name":"penaltychallenge","published_on":"2021-05-20","status":"public"}
+{"average_duration":41,"bgg_id":317985,"display_name_en":"Beyond the Sun","games_played":237757,"id":1378,"name":"beyondthesun","premium":true,"published_on":"2021-05-12","status":"public","weight":506}
+{"average_duration":22,"display_name_en":"Pingimus","games_played":32430,"id":1380,"name":"pingimus","premium":true,"published_on":"2021-07-06","status":"public","weight":70}
+{"average_duration":27,"bgg_id":312484,"display_name_en":"Lost Ruins of Arnak","games_played":3125110,"id":1382,"name":"arnak","published_on":"2021-05-26","status":"public","weight":9761}
+{"average_duration":15,"bgg_id":30549,"display_name_en":"Pandemic","games_played":1484785,"id":1383,"is_ranking_disabled":true,"name":"pandemic","premium":true,"published_on":"2021-06-30","status":"public","weight":2598}
+{"average_duration":42,"bgg_id":128621,"display_name_en":"Viticulture","games_played":478582,"id":1384,"name":"viticulture","premium":true,"published_on":"2021-07-28","status":"public","weight":1688}
+{"average_duration":12,"bgg_id":314503,"display_name_en":"Codex Naturalis","games_played":266203,"id":1385,"name":"codexnaturalis","premium":true,"published_on":"2021-07-14","status":"public","weight":232}
+{"average_duration":5,"bgg_id":276042,"display_name_en":"Conspiracy","games_played":475568,"id":1386,"name":"conspiracy","premium":true,"published_on":"2021-05-24","status":"public","weight":94}
+{"average_duration":5,"bgg_id":121073,"display_name_en":"Panic Lab","games_played":28566,"id":1388,"name":"paniclab","published_on":"2023-08-22","status":"public","weight":3}
+{"average_duration":5,"bgg_id":320505,"display_name_en":"Mattock","games_played":5830,"id":1389,"name":"mattock","published_on":"2021-07-19","status":"public"}
+{"average_duration":32,"bgg_id":84876,"display_name_en":"The Castles of Burgundy","games_played":4224897,"id":1390,"name":"castlesofburgundy","published_on":"2021-09-08","status":"public","weight":14658}
+{"average_duration":41,"bgg_id":227605,"display_name_en":"For-Ex","games_played":2705,"id":1391,"name":"forex","published_on":"2022-07-22","status":"public"}
+{"average_duration":12,"bgg_id":112598,"display_name_en":"Monster Factory","games_played":66035,"id":1392,"name":"monsterfactory","published_on":"2021-08-04","status":"public","weight":33}
+{"average_duration":13,"bgg_id":17240,"display_name_en":"That's Life!","games_played":67867,"id":1393,"name":"thatslife","published_on":"2021-07-24","status":"public","weight":44}
+{"average_duration":14,"bgg_id":148228,"display_name_en":"Splendor","games_played":10507705,"id":1394,"name":"splendor","premium":true,"published_on":"2021-04-28","status":"public","weight":14384}
+{"average_duration":30,"bgg_id":4607619,"display_name_en":"Iwari","games_played":20170,"id":1395,"name":"iwari","premium":true,"published_on":"2021-07-12","status":"public","weight":16}
+{"average_duration":13,"bgg_id":2386,"display_name_en":"Chinese checkers","games_played":160560,"id":1396,"name":"chinesecheckers","published_on":"2021-07-02","status":"public","weight":86}
+{"average_duration":4,"bgg_id":18399,"display_name_en":"Sevens","games_played":51256,"id":1397,"name":"sevens","priority":-999,"published_on":"2025-02-21","status":"public","weight":13}
+{"average_duration":8,"bgg_id":19803,"display_name_en":"Martian Chess","games_played":1165,"id":1398,"name":"martianchess","published_on":"2026-03-23","status":"beta","weight":8}
+{"average_duration":7,"bgg_id":319793,"display_name_en":"Happy City","games_played":524332,"id":1402,"name":"happycity","published_on":"2021-05-19","status":"public","weight":75}
+{"average_duration":4,"display_name_en":"Gopher","games_played":13965,"id":1403,"name":"gopher","published_on":"2021-05-12","status":"public"}
+{"average_duration":3,"bgg_id":240835,"display_name_en":"Bug","games_played":21252,"id":1404,"name":"bug","published_on":"2021-07-17","status":"public"}
+{"average_duration":7,"bgg_id":266083,"display_name_en":"LLAMA","games_played":779497,"id":1405,"name":"lama","premium":true,"published_on":"2021-09-01","status":"public","weight":413}
+{"average_duration":9,"bgg_id":332944,"display_name_en":"Sobek: 2 Players","games_played":212547,"id":1406,"name":"sobektwoplayers","premium":true,"published_on":"2021-06-25","status":"public","weight":121}
+{"average_duration":3,"bgg_id":11017,"display_name_en":"Crazy Eights","games_played":14122,"id":1407,"name":"crazyeights","published_on":"2023-05-03","status":"beta"}
+{"average_duration":14,"bgg_id":313963,"display_name_en":"Cloud City","games_played":37154,"id":1408,"name":"cloudcity","published_on":"2021-12-27","status":"public","weight":5}
+{"average_duration":5,"bgg_id":303672,"display_name_en":"Trek 12","games_played":479097,"id":1409,"name":"trektwelve","premium":true,"published_on":"2021-06-23","status":"public","weight":68}
+{"average_duration":32,"bgg_id":154086,"display_name_en":"Gold West","games_played":10018,"id":1410,"name":"goldwest","published_on":"2021-08-05","status":"public","weight":17}
+{"average_duration":24,"bgg_id":298619,"display_name_en":"15 Days","games_played":4649,"id":1411,"name":"fifteendays","published_on":"2023-12-25","status":"public"}
+{"average_duration":26,"bgg_id":172081,"display_name_en":"Burgle Bros.","games_played":598512,"id":1412,"is_ranking_disabled":true,"name":"burglebros","published_on":"2022-08-24","status":"public","weight":940}
+{"average_duration":23,"bgg_id":300226,"display_name_en":"Egocentric World","games_played":5177,"id":1413,"name":"egocentricworld","published_on":"2022-07-29","status":"public"}
+{"average_duration":5,"bgg_id":29351,"display_name_en":"Durak","games_played":51330,"id":1415,"name":"durak","priority":-999,"published_on":"2025-02-24","status":"public","weight":17}
+{"average_duration":33,"bgg_id":255692,"display_name_en":"New Frontiers","games_played":56879,"id":1416,"name":"newfrontiers","premium":true,"published_on":"2021-09-29","status":"public","weight":312}
+{"average_duration":33,"display_name_en":"EpiZodiak","games_played":4321,"id":1417,"name":"epizodiak","published_on":"2022-07-15","status":"public"}
+{"average_duration":4,"bgg_id":41149,"display_name_en":"Linkage","games_played":22015,"id":1418,"name":"linkage","published_on":"2022-07-17","status":"public","weight":3}
+{"average_duration":7,"bgg_id":284584,"display_name_en":"Troyes Dice","games_played":206236,"id":1419,"name":"troyesdice","published_on":"2021-12-08","status":"public","weight":58}
+{"average_duration":13,"bgg_id":163412,"display_name_en":"Patchwork","games_played":3150026,"id":1420,"name":"patchwork","premium":true,"published_on":"2021-08-11","status":"public","weight":3610}
+{"average_duration":11,"bgg_id":300367,"display_name_en":"Boomerang: Europe","games_played":26876,"id":1421,"name":"boomerangeurope","published_on":"2022-04-13","status":"public","weight":14}
+{"average_duration":15,"bgg_id":300369,"display_name_en":"Boomerang: USA","games_played":14833,"id":1422,"name":"boomerangusa","premium":true,"published_on":"2022-04-13","status":"public","weight":11}
+{"average_duration":11,"bgg_id":235375,"display_name_en":"Spirits of the Forest","games_played":12744,"id":1423,"name":"spiritsoftheforest","published_on":"2023-12-26","status":"public","weight":9}
+{"average_duration":7,"bgg_id":146130,"display_name_en":"Coin Age","games_played":3131,"id":1424,"name":"coinage","published_on":"2023-09-01","status":"beta"}
+{"average_duration":2,"bgg_id":337503,"display_name_en":"Cardiceo","games_played":190242,"id":1425,"name":"cardiceo","published_on":"2021-08-20","status":"public","weight":33}
+{"average_duration":3,"bgg_id":302260,"display_name_en":"Abandon All Artichokes","games_played":1162506,"id":1426,"name":"abandonallartichokes","published_on":"2021-08-30","status":"public","weight":175}
+{"average_duration":32,"bgg_id":240567,"display_name_en":"Chocolate Factory","games_played":41612,"id":1427,"name":"chocolatefactory","published_on":"2021-11-10","status":"public","weight":65}
+{"average_duration":14,"bgg_id":242302,"display_name_en":"Space Base","games_played":3848797,"id":1428,"name":"spacebase","premium":true,"published_on":"2022-03-23","status":"public","weight":10957}
+{"average_duration":22,"bgg_id":329641,"display_name_en":"King of the Pitch","games_played":3199,"id":1429,"name":"kingofthepitch","published_on":"2021-08-28","status":"public"}
+{"average_duration":50,"bgg_id":200680,"display_name_en":"Agricola","games_played":1799133,"id":1430,"name":"agricola","premium":true,"published_on":"2021-09-22","status":"public","weight":12907}
+{"average_duration":16,"bgg_id":353921,"display_name_en":"Legends of Hellas","games_played":22441,"id":1431,"is_ranking_disabled":true,"name":"heroesofhellas","premium":true,"published_on":"2023-04-10","status":"public"}
+{"average_duration":55,"bgg_id":341169,"display_name_en":"Great Western Trail","games_played":404795,"id":1432,"name":"greatwesterntrail","premium":true,"published_on":"2022-05-04","status":"public","weight":3020}
+{"average_duration":19,"bgg_id":288648,"display_name_en":"Canosa","games_played":4595,"id":1434,"name":"canosa","published_on":"2022-07-09","status":"public","weight":1}
+{"average_duration":18,"bgg_id":288920,"display_name_en":"Fai-fo","games_played":2896,"id":1435,"name":"faifo","published_on":"2022-07-04","status":"public"}
 {"average_duration":29,"display_name_en":"Troggu","games_played":233,"id":1436,"name":"troggu","published_on":"2022-12-21","status":"beta"}
-{"average_duration":65,"bgg_id":145976,"display_name_en":"Talon","games_played":5436,"id":1437,"name":"talon","published_on":"2023-08-20","status":"public","weight":8}
-{"average_duration":12,"bgg_id":102104,"display_name_en":"Star Fluxx","games_played":94437,"id":1438,"name":"starfluxx","published_on":"2022-02-02","status":"public","weight":67}
-{"average_duration":14,"bgg_id":70323,"display_name_en":"King of Tokyo","games_played":2896721,"id":1439,"name":"kingoftokyo","premium":true,"published_on":"2021-10-06","status":"public","weight":3702}
-{"average_duration":27,"bgg_id":291859,"display_name_en":"Riftforce","games_played":37599,"id":1440,"name":"riftforce","premium":true,"published_on":"2024-12-16","status":"public","weight":74}
-{"average_duration":11,"bgg_id":138091,"display_name_en":"Guile","games_played":1560,"id":1441,"name":"guile","published_on":"2022-07-14","status":"public"}
-{"average_duration":57,"bgg_id":337178,"display_name_en":"Factum","games_played":1250,"id":1443,"name":"factum","published_on":"2022-07-19","status":"public"}
-{"average_duration":37,"bgg_id":311918,"display_name_en":"Lost Explorers","games_played":5924,"id":1444,"name":"lostexplorers","published_on":"2021-10-27","status":"public"}
-{"average_duration":79,"bgg_id":17133,"display_name_en":"Railways of the World","games_played":36304,"id":1445,"name":"railwaysoftheworld","premium":true,"published_on":"2021-12-22","status":"public","weight":414}
-{"average_duration":33,"bgg_id":286096,"display_name_en":"Tapestry","games_played":571054,"id":1446,"name":"tapestry","premium":true,"published_on":"2022-01-12","status":"public","weight":1788}
-{"average_duration":20,"display_name_en":"Mascarade","games_played":14808,"id":1448,"name":"mascarade","published_on":"2022-02-21","status":"public"}
-{"average_duration":5,"display_name_en":"Dodo","games_played":20766,"id":1449,"name":"dodo","published_on":"2021-08-17","status":"public"}
-{"average_duration":12,"bgg_id":213953,"display_name_en":"Pyramid Poker","games_played":12093,"id":1451,"name":"pyramidpoker","premium":true,"published_on":"2022-07-21","status":"public","weight":9}
-{"average_duration":5,"bgg_id":216497,"display_name_en":"District Noir","games_played":174672,"id":1452,"name":"throneandthegrail","published_on":"2022-11-07","status":"public","weight":10}
-{"average_duration":12,"bgg_id":254088,"display_name_en":"Gravity Superstar","games_played":2201,"id":1454,"name":"gravitysuperstar","published_on":"2026-01-13","status":"beta","weight":6}
-{"average_duration":12,"bgg_id":259708,"display_name_en":"Diced Tomatoes","games_played":45611,"id":1456,"name":"dicedtomatoes","published_on":"2022-05-11","status":"public","weight":28}
+{"average_duration":21,"bgg_id":145976,"display_name_en":"Talon","games_played":5441,"id":1437,"name":"talon","published_on":"2023-08-20","status":"public"}
+{"average_duration":11,"bgg_id":102104,"display_name_en":"Star Fluxx","games_played":94653,"id":1438,"name":"starfluxx","published_on":"2022-02-02","status":"public","weight":81}
+{"average_duration":14,"bgg_id":70323,"display_name_en":"King of Tokyo","games_played":2903561,"id":1439,"name":"kingoftokyo","premium":true,"published_on":"2021-10-06","status":"public","weight":3717}
+{"average_duration":26,"bgg_id":291859,"display_name_en":"Riftforce","games_played":37675,"id":1440,"name":"riftforce","premium":true,"published_on":"2024-12-16","status":"public","weight":48}
+{"average_duration":11,"bgg_id":138091,"display_name_en":"Guile","games_played":1561,"id":1441,"name":"guile","published_on":"2022-07-14","status":"public"}
+{"average_duration":57,"bgg_id":337178,"display_name_en":"Factum","games_played":1253,"id":1443,"name":"factum","published_on":"2022-07-19","status":"public"}
+{"average_duration":36,"bgg_id":311918,"display_name_en":"Lost Explorers","games_played":5929,"id":1444,"name":"lostexplorers","published_on":"2021-10-27","status":"public"}
+{"average_duration":76,"bgg_id":17133,"display_name_en":"Railways of the World","games_played":36401,"id":1445,"name":"railwaysoftheworld","premium":true,"published_on":"2021-12-22","status":"public","weight":583}
+{"average_duration":33,"bgg_id":286096,"display_name_en":"Tapestry","games_played":573071,"id":1446,"name":"tapestry","premium":true,"published_on":"2022-01-12","status":"public","weight":1973}
+{"average_duration":17,"display_name_en":"Mascarade","games_played":14850,"id":1448,"name":"mascarade","published_on":"2022-02-21","status":"public","weight":7}
+{"average_duration":4,"display_name_en":"Dodo","games_played":20789,"id":1449,"name":"dodo","published_on":"2021-08-17","status":"public"}
+{"average_duration":13,"bgg_id":213953,"display_name_en":"Pyramid Poker","games_played":12102,"id":1451,"name":"pyramidpoker","premium":true,"published_on":"2022-07-21","status":"public","weight":5}
+{"average_duration":4,"bgg_id":216497,"display_name_en":"District Noir","games_played":175094,"id":1452,"name":"throneandthegrail","published_on":"2022-11-07","status":"public","weight":23}
+{"average_duration":11,"bgg_id":254088,"display_name_en":"Gravity Superstar","games_played":2218,"id":1454,"name":"gravitysuperstar","published_on":"2026-01-13","status":"beta","weight":11}
+{"average_duration":14,"bgg_id":259708,"display_name_en":"Diced Tomatoes","games_played":45682,"id":1456,"name":"dicedtomatoes","published_on":"2022-05-11","status":"public","weight":6}
 {"average_duration":17,"bgg_id":154537,"display_name_en":"Minnesota Whist","games_played":248,"id":1457,"name":"minnesotawhist","published_on":"2023-10-13","status":"beta"}
-{"average_duration":8,"bgg_id":340377,"display_name_en":"EVL","games_played":2702,"id":1458,"name":"evl","published_on":"2022-07-26","status":"public"}
-{"average_duration":10,"bgg_id":285892,"display_name_en":"Boss Quest","games_played":20630,"id":1463,"name":"bossquest","published_on":"2022-07-25","status":"public","weight":11}
-{"average_duration":35,"bgg_id":334644,"display_name_en":"Nicodemus","games_played":24389,"id":1464,"name":"nicodemus","premium":true,"published_on":"2021-10-04","status":"public","weight":7}
-{"average_duration":4,"bgg_id":187959,"display_name_en":"Sensei","games_played":12589,"id":1465,"name":"sensei","published_on":"2022-12-31","status":"public","weight":3}
-{"average_duration":11,"bgg_id":230802,"display_name_en":"Azul","games_played":27286319,"id":1467,"name":"azul","premium":true,"published_on":"2021-12-01","status":"public","weight":35117}
-{"average_duration":3,"bgg_id":63268,"display_name_en":"Spot it","games_played":910999,"id":1468,"name":"dobble","published_on":"2021-12-29","status":"public","weight":103}
-{"average_duration":38,"bgg_id":260316,"display_name_en":"Art Decko","games_played":18114,"id":1469,"name":"artdecko","published_on":"2022-01-05","status":"public"}
-{"average_duration":8,"bgg_id":236905,"display_name_en":"Castles of Caleira","games_played":8961,"id":1470,"name":"castlesofcaleira","published_on":"2023-08-18","status":"public","weight":1}
-{"average_duration":18,"bgg_id":329845,"display_name_en":"Stella \u2013 Dixit Universe","games_played":198993,"id":1471,"name":"stella","published_on":"2022-03-09","status":"public","weight":201}
-{"average_duration":42,"bgg_id":108018,"display_name_en":"Japanese (Riichi) Mahjong","games_played":3896,"id":1472,"name":"riichimahjong","published_on":"2022-02-21","status":"beta","weight":52}
-{"average_duration":12,"bgg_id":288254,"display_name_en":"Simplicity","games_played":13600,"id":1473,"name":"simplicity","published_on":"2022-07-05","status":"public","weight":13}
-{"average_duration":15,"bgg_id":308500,"display_name_en":"Clash of Decks","games_played":236003,"id":1474,"name":"clashofdecks","published_on":"2021-11-15","status":"public","weight":27}
-{"average_duration":18,"bgg_id":262477,"display_name_en":"Mercado de Lisboa","games_played":10476,"id":1475,"name":"mercadodelisboaste","premium":true,"published_on":"2023-01-01","status":"public","weight":7}
-{"average_duration":5,"bgg_id":268620,"display_name_en":"Similo","games_played":508160,"id":1476,"is_ranking_disabled":true,"name":"similo","premium":true,"published_on":"2021-11-03","status":"public","weight":177}
-{"average_duration":14,"bgg_id":337784,"display_name_en":"Number Drop","games_played":99471,"id":1477,"name":"numberdrop","published_on":"2021-11-29","status":"public","weight":139}
-{"average_duration":36,"bgg_id":266524,"display_name_en":"Parks","games_played":148875,"id":1479,"name":"parks","premium":true,"published_on":"2025-04-16","status":"public","weight":1007}
-{"average_duration":15,"bgg_id":232832,"display_name_en":"Century: Spice Road","games_played":755889,"id":1480,"locked":true,"name":"century","premium":true,"published_on":"2022-06-01","status":"public"}
-{"average_duration":27,"bgg_id":162082,"display_name_en":"Deus","games_played":46153,"id":1481,"name":"deus","published_on":"2021-11-24","status":"public","weight":62}
-{"average_duration":64,"bgg_id":177736,"display_name_en":"A Feast for Odin","games_played":483222,"id":1482,"name":"feastforodin","premium":true,"published_on":"2022-02-09","status":"public","weight":3169}
-{"average_duration":34,"bgg_id":324856,"display_name_en":"The Crew: Mission Deep Sea","games_played":327957,"id":1483,"is_ranking_disabled":true,"name":"thecrewdeepsea","published_on":"2021-10-20","status":"public","weight":1225}
-{"average_duration":32,"bgg_id":341233,"display_name_en":"Almadi","games_played":23374,"id":1484,"name":"almadi","published_on":"2021-12-13","status":"public","weight":21}
-{"average_duration":4,"bgg_id":217547,"display_name_en":"Can't Stop Express","games_played":882010,"id":1485,"name":"cantstopexpress","premium":true,"published_on":"2022-01-19","status":"public","weight":287}
-{"average_duration":36,"bgg_id":329591,"display_name_en":"Ultimate Railroads","games_played":81172,"id":1486,"name":"ultimaterailroads","published_on":"2022-02-07","status":"public","weight":205}
-{"average_duration":17,"bgg_id":8920,"display_name_en":"BuyWord","games_played":20981,"id":1487,"is_ranking_disabled":true,"name":"buyword","premium":true,"published_on":"2023-08-27","status":"public","weight":15}
-{"average_duration":76,"bgg_id":84419,"display_name_en":"Space Empires: 4X","games_played":26553,"id":1488,"name":"spaceempires","published_on":"2022-12-30","status":"public","weight":124}
-{"average_duration":15,"bgg_id":15889,"display_name_en":"Scopa","games_played":223353,"id":1489,"name":"scopa","published_on":"2022-03-07","status":"public","weight":115}
-{"average_duration":8,"bgg_id":222643,"display_name_en":"The Lady and the Tiger (Doors)","games_played":9756,"id":1490,"name":"ladyandthetiger","published_on":"2022-07-08","status":"public","weight":1}
-{"average_duration":33,"bgg_id":281259,"display_name_en":"The Isle of Cats","games_played":329981,"id":1492,"name":"theisleofcats","premium":true,"published_on":"2022-03-30","status":"public","weight":1370}
-{"average_duration":15,"bgg_id":191862,"display_name_en":"Imhotep","games_played":63843,"id":1493,"name":"imhotep","published_on":"2021-11-17","status":"public","weight":42}
-{"average_duration":55,"bgg_id":220308,"display_name_en":"Gaia Project","games_played":456451,"id":1495,"name":"gaiaproject","premium":true,"published_on":"2021-12-15","status":"public","weight":2860}
-{"average_duration":9,"bgg_id":182704,"display_name_en":"SteamRollers","games_played":18876,"id":1496,"name":"steamrollers","published_on":"2022-07-30","status":"public","weight":2}
-{"average_duration":16,"bgg_id":275044,"display_name_en":"Glow","games_played":81282,"id":1497,"name":"glow","premium":true,"published_on":"2022-04-04","status":"public","weight":58}
-{"average_duration":64,"bgg_id":152,"display_name_en":"M\u00fc","games_played":1000,"id":1498,"name":"mue","published_on":"2023-05-16","status":"beta","weight":22}
+{"average_duration":8,"bgg_id":340377,"display_name_en":"EVL","games_played":2708,"id":1458,"name":"evl","published_on":"2022-07-26","status":"public","weight":4}
+{"average_duration":9,"bgg_id":285892,"display_name_en":"Boss Quest","games_played":20656,"id":1463,"name":"bossquest","published_on":"2022-07-25","status":"public","weight":2}
+{"average_duration":30,"bgg_id":334644,"display_name_en":"Nicodemus","games_played":24403,"id":1464,"name":"nicodemus","premium":true,"published_on":"2021-10-04","status":"public","weight":7}
+{"average_duration":3,"bgg_id":187959,"display_name_en":"Sensei","games_played":12612,"id":1465,"name":"sensei","published_on":"2022-12-31","status":"public","weight":7}
+{"average_duration":11,"bgg_id":230802,"display_name_en":"Azul","games_played":27406550,"id":1467,"name":"azul","premium":true,"published_on":"2021-12-01","status":"public","weight":36374}
+{"average_duration":3,"bgg_id":63268,"display_name_en":"Spot it","games_played":912944,"id":1468,"name":"dobble","published_on":"2021-12-29","status":"public","weight":90}
+{"average_duration":35,"bgg_id":260316,"display_name_en":"Art Decko","games_played":18129,"id":1469,"name":"artdecko","published_on":"2022-01-05","status":"public","weight":6}
+{"average_duration":10,"bgg_id":236905,"display_name_en":"Castles of Caleira","games_played":8969,"id":1470,"name":"castlesofcaleira","published_on":"2023-08-18","status":"public","weight":1}
+{"average_duration":18,"bgg_id":329845,"display_name_en":"Stella \u2013 Dixit Universe","games_played":199293,"id":1471,"name":"stella","published_on":"2022-03-09","status":"public","weight":173}
+{"average_duration":49,"bgg_id":108018,"display_name_en":"Japanese (Riichi) Mahjong","games_played":3931,"id":1472,"name":"riichimahjong","published_on":"2022-02-21","status":"beta","weight":83}
+{"average_duration":13,"bgg_id":288254,"display_name_en":"Simplicity","games_played":13611,"id":1473,"name":"simplicity","published_on":"2022-07-05","status":"public","weight":2}
+{"average_duration":14,"bgg_id":308500,"display_name_en":"Clash of Decks","games_played":236119,"id":1474,"name":"clashofdecks","published_on":"2021-11-15","status":"public","weight":16}
+{"average_duration":16,"bgg_id":262477,"display_name_en":"Mercado de Lisboa","games_played":10485,"id":1475,"name":"mercadodelisboaste","premium":true,"published_on":"2023-01-01","status":"public"}
+{"average_duration":5,"bgg_id":268620,"display_name_en":"Similo","games_played":509162,"id":1476,"is_ranking_disabled":true,"name":"similo","premium":true,"published_on":"2021-11-03","status":"public","weight":151}
+{"average_duration":13,"bgg_id":337784,"display_name_en":"Number Drop","games_played":99727,"id":1477,"name":"numberdrop","published_on":"2021-11-29","status":"public","weight":141}
+{"average_duration":36,"bgg_id":266524,"display_name_en":"Parks","games_played":149620,"id":1479,"name":"parks","premium":true,"published_on":"2025-04-16","status":"public","weight":965}
+{"average_duration":15,"bgg_id":232832,"display_name_en":"Century: Spice Road","games_played":756116,"id":1480,"locked":true,"name":"century","premium":true,"published_on":"2022-06-01","status":"public"}
+{"average_duration":26,"bgg_id":162082,"display_name_en":"Deus","games_played":46226,"id":1481,"name":"deus","published_on":"2021-11-24","status":"public","weight":84}
+{"average_duration":65,"bgg_id":177736,"display_name_en":"A Feast for Odin","games_played":485570,"id":1482,"name":"feastforodin","premium":true,"published_on":"2022-02-09","status":"public","weight":2853}
+{"average_duration":33,"bgg_id":324856,"display_name_en":"The Crew: Mission Deep Sea","games_played":328968,"id":1483,"is_ranking_disabled":true,"name":"thecrewdeepsea","published_on":"2021-10-20","status":"public","weight":1133}
+{"average_duration":37,"bgg_id":341233,"display_name_en":"Almadi","games_played":23384,"id":1484,"name":"almadi","published_on":"2021-12-13","status":"public"}
+{"average_duration":4,"bgg_id":217547,"display_name_en":"Can't Stop Express","games_played":883855,"id":1485,"name":"cantstopexpress","premium":true,"published_on":"2022-01-19","status":"public","weight":314}
+{"average_duration":36,"bgg_id":329591,"display_name_en":"Ultimate Railroads","games_played":81431,"id":1486,"name":"ultimaterailroads","published_on":"2022-02-07","status":"public","weight":387}
+{"average_duration":17,"bgg_id":8920,"display_name_en":"BuyWord","games_played":21015,"id":1487,"is_ranking_disabled":true,"name":"buyword","premium":true,"published_on":"2023-08-27","status":"public","weight":3}
+{"average_duration":83,"bgg_id":84419,"display_name_en":"Space Empires: 4X","games_played":26654,"id":1488,"name":"spaceempires","published_on":"2022-12-30","status":"public","weight":182}
+{"average_duration":15,"bgg_id":15889,"display_name_en":"Scopa","games_played":224189,"id":1489,"name":"scopa","published_on":"2022-03-07","status":"public","weight":128}
+{"average_duration":8,"bgg_id":222643,"display_name_en":"The Lady and the Tiger (Doors)","games_played":9773,"id":1490,"name":"ladyandthetiger","published_on":"2022-07-08","status":"public","weight":4}
+{"average_duration":32,"bgg_id":281259,"display_name_en":"The Isle of Cats","games_played":331172,"id":1492,"name":"theisleofcats","premium":true,"published_on":"2022-03-30","status":"public","weight":1259}
+{"average_duration":16,"bgg_id":191862,"display_name_en":"Imhotep","games_played":63930,"id":1493,"name":"imhotep","published_on":"2021-11-17","status":"public","weight":38}
+{"average_duration":54,"bgg_id":220308,"display_name_en":"Gaia Project","games_played":458502,"id":1495,"name":"gaiaproject","premium":true,"published_on":"2021-12-15","status":"public","weight":2902}
+{"average_duration":9,"bgg_id":182704,"display_name_en":"SteamRollers","games_played":18912,"id":1496,"name":"steamrollers","published_on":"2022-07-30","status":"public","weight":7}
+{"average_duration":15,"bgg_id":275044,"display_name_en":"Glow","games_played":81391,"id":1497,"name":"glow","premium":true,"published_on":"2022-04-04","status":"public","weight":78}
+{"average_duration":64,"bgg_id":152,"display_name_en":"M\u00fc","games_played":1001,"id":1498,"name":"mue","published_on":"2023-05-16","status":"beta"}
 {"average_duration":10,"bgg_id":347086,"display_name_en":"Lady's Choice","games_played":6670,"id":1499,"name":"ladyschoice","published_on":"2021-10-17","status":"beta","weight":1}
-{"average_duration":4,"bgg_id":1295,"display_name_en":"Pente","games_played":58112,"id":1500,"name":"pente","published_on":"2022-01-25","status":"public","weight":5}
-{"average_duration":5,"display_name_en":"Silo","games_played":6748,"id":1501,"name":"silo","published_on":"2021-11-16","status":"public"}
+{"average_duration":4,"bgg_id":1295,"display_name_en":"Pente","games_played":58185,"id":1500,"name":"pente","published_on":"2022-01-25","status":"public","weight":5}
+{"average_duration":4,"display_name_en":"Silo","games_played":6753,"id":1501,"name":"silo","published_on":"2021-11-16","status":"public","weight":1}
 {"average_duration":25,"bgg_id":205398,"display_name_en":"Citadels","games_played":99214,"id":1503,"name":"citadels","published_on":"2024-04-23","status":"beta","weight":365}
-{"average_duration":6,"bgg_id":331666,"display_name_en":"Zola","games_played":3951,"id":1504,"name":"zola","published_on":"2021-11-16","status":"public"}
-{"average_duration":16,"bgg_id":13328,"display_name_en":"Chromino","games_played":353414,"id":1505,"name":"chromino","published_on":"2022-07-27","status":"public","weight":310}
-{"average_duration":11,"bgg_id":339107,"display_name_en":"Kmakici Family's greatest teatime","games_played":9378,"id":1506,"name":"kmakici","published_on":"2023-12-27","status":"public","weight":4}
-{"average_duration":21,"bgg_id":246567,"display_name_en":"Big Monster","games_played":13323,"id":1507,"name":"bigmonster","premium":true,"published_on":"2022-07-18","status":"public","weight":5}
-{"average_duration":25,"bgg_id":364,"display_name_en":"Samarkand","games_played":3366,"id":1508,"name":"samarkand","premium":true,"published_on":"2021-11-22","status":"beta","weight":10}
-{"average_duration":17,"bgg_id":328479,"display_name_en":"Living Forest","games_played":716615,"id":1509,"name":"livingforest","premium":true,"published_on":"2022-03-02","status":"public","weight":1217}
-{"average_duration":38,"bgg_id":115,"display_name_en":"I'm The Boss","games_played":4288,"id":1510,"name":"imtheboss","premium":true,"published_on":"2021-11-22","status":"beta"}
-{"average_duration":24,"bgg_id":318702,"display_name_en":"Tumbleweed","games_played":8047,"id":1512,"name":"tumbleweed","published_on":"2022-03-22","status":"public","weight":8}
-{"average_duration":22,"bgg_id":27588,"display_name_en":"Zooloretto","games_played":24336,"id":1513,"name":"zooloretto","published_on":"2021-12-03","status":"beta","weight":38}
-{"average_duration":9,"bgg_id":302280,"display_name_en":"Shifting Stones","games_played":677889,"id":1514,"name":"shiftingstones","published_on":"2022-03-16","status":"public","weight":374}
-{"average_duration":60,"bgg_id":14634,"display_name_en":"Homeworlds","games_played":13904,"id":1515,"name":"homeworlds","published_on":"2022-07-07","status":"public","weight":5}
-{"average_duration":15,"bgg_id":174337,"display_name_en":"Bahama Taxi","games_played":3853,"id":1516,"name":"bahamataxi","published_on":"2022-07-28","status":"public"}
-{"average_duration":7,"bgg_id":305723,"display_name_en":"Pyrga","games_played":14131,"id":1517,"name":"pyrgos","published_on":"2022-04-07","status":"public","weight":2}
-{"average_duration":15,"bgg_id":347702,"display_name_en":"Las Vegan","games_played":7884,"id":1518,"name":"lasvegan","published_on":"2022-03-21","status":"public"}
-{"average_duration":6,"bgg_id":346703,"display_name_en":"7 Wonders Architects","games_played":4285184,"id":1520,"name":"sevenwondersarchitects","premium":true,"published_on":"2022-01-26","status":"public","weight":2246}
-{"average_duration":52,"bgg_id":170216,"display_name_en":"Blood Rage","games_played":101882,"id":1521,"name":"bloodrage","premium":true,"published_on":"2022-04-20","status":"public","weight":464}
-{"average_duration":35,"bgg_id":163642,"display_name_en":"Chimera Station","games_played":3803,"id":1522,"name":"chimerastation","published_on":"2022-08-19","status":"beta"}
-{"average_duration":8,"bgg_id":317299,"display_name_en":"Loco Momo","games_played":1015440,"id":1523,"name":"locomomo","published_on":"2022-02-16","status":"public","weight":295}
-{"average_duration":1,"bgg_id":325121,"display_name_en":"Trusis","games_played":15453,"id":1524,"name":"trusis","published_on":"2022-12-17","status":"public"}
-{"average_duration":15,"bgg_id":344268,"display_name_en":"The Mother Road: Route 66","games_played":6916,"id":1525,"name":"themotherroad","premium":true,"published_on":"2021-12-22","status":"beta","weight":9}
-{"average_duration":12,"bgg_id":341510,"display_name_en":"Rainbow","games_played":35585,"id":1526,"name":"rainbow","published_on":"2022-04-19","status":"public"}
-{"average_duration":64,"bgg_id":183150,"display_name_en":"Morocco","games_played":633,"id":1527,"name":"morocco","premium":true,"published_on":"2021-12-22","status":"beta"}
-{"average_duration":19,"bgg_id":305841,"display_name_en":"Tiny Farms","games_played":8956,"id":1528,"name":"tinyfarms","published_on":"2022-12-09","status":"public","weight":2}
-{"average_duration":4,"display_name_en":"Icebreaker","games_played":9707,"id":1529,"name":"icebreaker","published_on":"2022-01-10","status":"public"}
-{"average_duration":6,"bgg_id":296044,"display_name_en":"Fruit Picking","games_played":166527,"id":1530,"name":"fruitpicking","published_on":"2022-05-25","status":"public","weight":41}
-{"average_duration":41,"bgg_id":42,"display_name_en":"Tigris & Euphrates","games_played":46881,"id":1531,"name":"tigriseuphrates","premium":true,"published_on":"2022-07-06","status":"public","weight":164}
-{"average_duration":9,"bgg_id":88900,"display_name_en":"Yaniv","games_played":20597,"id":1532,"name":"yaniv","priority":-999,"published_on":"2025-02-21","status":"public","weight":28}
-{"average_duration":26,"bgg_id":254640,"display_name_en":"Just One","games_played":272758,"id":1533,"is_ranking_disabled":true,"name":"justone","published_on":"2022-10-26","status":"public","weight":907}
-{"average_duration":26,"bgg_id":306300,"display_name_en":"Little Factory","games_played":55525,"id":1535,"name":"littlefactory","premium":true,"published_on":"2022-05-02","status":"public","weight":67}
-{"average_duration":29,"bgg_id":309886,"display_name_en":"Worldwide Tennis","games_played":14128,"id":1536,"name":"worldwidetennis","published_on":"2022-12-19","status":"public","weight":12}
-{"average_duration":35,"bgg_id":13,"display_name_en":"CATAN","games_played":8118006,"id":1539,"name":"catan","premium":true,"published_on":"2022-06-22","status":"public","weight":48635}
-{"average_duration":23,"bgg_id":352818,"display_name_en":"Twin Palms","games_played":5085,"id":1541,"name":"twinpalms","published_on":"2022-07-03","status":"public"}
-{"average_duration":10,"bgg_id":9209,"display_name_en":"Ticket to Ride","games_played":16901556,"id":1542,"name":"tickettoride","premium":true,"published_on":"2022-09-28","status":"public","weight":19132}
+{"average_duration":5,"bgg_id":331666,"display_name_en":"Zola","games_played":3954,"id":1504,"name":"zola","published_on":"2021-11-16","status":"public"}
+{"average_duration":16,"bgg_id":13328,"display_name_en":"Chromino","games_played":354622,"id":1505,"name":"chromino","published_on":"2022-07-27","status":"public","weight":326}
+{"average_duration":12,"bgg_id":339107,"display_name_en":"Kmakici Family's greatest teatime","games_played":9380,"id":1506,"name":"kmakici","published_on":"2023-12-27","status":"public"}
+{"average_duration":21,"bgg_id":246567,"display_name_en":"Big Monster","games_played":13332,"id":1507,"name":"bigmonster","premium":true,"published_on":"2022-07-18","status":"public","weight":2}
+{"average_duration":28,"bgg_id":364,"display_name_en":"Samarkand","games_played":3374,"id":1508,"name":"samarkand","premium":true,"published_on":"2021-11-22","status":"beta","weight":10}
+{"average_duration":17,"bgg_id":328479,"display_name_en":"Living Forest","games_played":718866,"id":1509,"name":"livingforest","premium":true,"published_on":"2022-03-02","status":"public","weight":1100}
+{"average_duration":38,"bgg_id":115,"display_name_en":"I'm The Boss","games_played":4290,"id":1510,"name":"imtheboss","premium":true,"published_on":"2021-11-22","status":"beta","weight":4}
+{"average_duration":24,"bgg_id":318702,"display_name_en":"Tumbleweed","games_played":8049,"id":1512,"name":"tumbleweed","published_on":"2022-03-22","status":"public"}
+{"average_duration":23,"bgg_id":27588,"display_name_en":"Zooloretto","games_played":24402,"id":1513,"name":"zooloretto","published_on":"2021-12-03","status":"beta","weight":34}
+{"average_duration":9,"bgg_id":302280,"display_name_en":"Shifting Stones","games_played":680127,"id":1514,"name":"shiftingstones","published_on":"2022-03-16","status":"public","weight":366}
+{"average_duration":70,"bgg_id":14634,"display_name_en":"Homeworlds","games_played":13927,"id":1515,"name":"homeworlds","published_on":"2022-07-07","status":"public","weight":10}
+{"average_duration":15,"bgg_id":174337,"display_name_en":"Bahama Taxi","games_played":3859,"id":1516,"name":"bahamataxi","published_on":"2022-07-28","status":"public"}
+{"average_duration":7,"bgg_id":305723,"display_name_en":"Pyrga","games_played":14155,"id":1517,"name":"pyrgos","published_on":"2022-04-07","status":"public","weight":9}
+{"average_duration":15,"bgg_id":347702,"display_name_en":"Las Vegan","games_played":7889,"id":1518,"name":"lasvegan","published_on":"2022-03-21","status":"public"}
+{"average_duration":5,"bgg_id":346703,"display_name_en":"7 Wonders Architects","games_played":4299486,"id":1520,"name":"sevenwondersarchitects","premium":true,"published_on":"2022-01-26","status":"public","weight":2562}
+{"average_duration":50,"bgg_id":170216,"display_name_en":"Blood Rage","games_played":102162,"id":1521,"name":"bloodrage","premium":true,"published_on":"2022-04-20","status":"public","weight":570}
+{"average_duration":35,"bgg_id":163642,"display_name_en":"Chimera Station","games_played":3806,"id":1522,"name":"chimerastation","published_on":"2022-08-19","status":"beta","weight":41}
+{"average_duration":8,"bgg_id":317299,"display_name_en":"Loco Momo","games_played":1017760,"id":1523,"name":"locomomo","published_on":"2022-02-16","status":"public","weight":350}
+{"average_duration":1,"bgg_id":325121,"display_name_en":"Trusis","games_played":16161,"id":1524,"name":"trusis","published_on":"2022-12-17","status":"public","weight":2}
+{"average_duration":16,"bgg_id":344268,"display_name_en":"The Mother Road: Route 66","games_played":6931,"id":1525,"name":"themotherroad","premium":true,"published_on":"2021-12-22","status":"beta","weight":12}
+{"average_duration":11,"bgg_id":341510,"display_name_en":"Rainbow","games_played":35625,"id":1526,"name":"rainbow","published_on":"2022-04-19","status":"public","weight":2}
+{"average_duration":64,"bgg_id":183150,"display_name_en":"Morocco","games_played":635,"id":1527,"name":"morocco","premium":true,"published_on":"2021-12-22","status":"beta"}
+{"average_duration":20,"bgg_id":305841,"display_name_en":"Tiny Farms","games_played":8965,"id":1528,"name":"tinyfarms","published_on":"2022-12-09","status":"public"}
+{"average_duration":4,"display_name_en":"Icebreaker","games_played":9717,"id":1529,"name":"icebreaker","published_on":"2022-01-10","status":"public","weight":1}
+{"average_duration":11,"bgg_id":296044,"display_name_en":"Fruit Picking","games_played":166779,"id":1530,"name":"fruitpicking","published_on":"2022-05-25","status":"public","weight":187}
+{"average_duration":42,"bgg_id":42,"display_name_en":"Tigris & Euphrates","games_played":46998,"id":1531,"name":"tigriseuphrates","premium":true,"published_on":"2022-07-06","status":"public","weight":235}
+{"average_duration":9,"bgg_id":88900,"display_name_en":"Yaniv","games_played":20657,"id":1532,"name":"yaniv","priority":-999,"published_on":"2025-02-21","status":"public","weight":8}
+{"average_duration":26,"bgg_id":254640,"display_name_en":"Just One","games_played":273693,"id":1533,"is_ranking_disabled":true,"name":"justone","published_on":"2022-10-26","status":"public","weight":981}
+{"average_duration":25,"bgg_id":306300,"display_name_en":"Little Factory","games_played":55584,"id":1535,"name":"littlefactory","premium":true,"published_on":"2022-05-02","status":"public","weight":61}
+{"average_duration":27,"bgg_id":309886,"display_name_en":"Worldwide Tennis","games_played":14146,"id":1536,"name":"worldwidetennis","published_on":"2022-12-19","status":"public","weight":12}
+{"average_duration":35,"bgg_id":13,"display_name_en":"CATAN","games_played":8166615,"id":1539,"name":"catan","premium":true,"published_on":"2022-06-22","status":"public","weight":48365}
+{"average_duration":13,"bgg_id":352818,"display_name_en":"Twin Palms","games_played":5089,"id":1541,"name":"twinpalms","published_on":"2022-07-03","status":"public","weight":8}
+{"average_duration":10,"bgg_id":9209,"display_name_en":"Ticket to Ride","games_played":16972007,"id":1542,"name":"tickettoride","premium":true,"published_on":"2022-09-28","status":"public","weight":19290}
 {"average_duration":59,"bgg_id":305211,"display_name_en":"Scriptoria","games_played":629,"id":1543,"name":"scriptoria","published_on":"2023-07-27","status":"beta"}
-{"average_duration":12,"bgg_id":257836,"display_name_en":"Narabi","games_played":13679,"id":1544,"is_ranking_disabled":true,"name":"narabi","published_on":"2022-06-13","status":"public"}
-{"average_duration":6,"bgg_id":318556,"display_name_en":"Tucano","games_played":64730,"id":1545,"name":"tucano","premium":true,"published_on":"2023-03-22","status":"public","weight":10}
-{"average_duration":43,"bgg_id":256839,"display_name_en":"VektoRace","games_played":16291,"id":1546,"name":"vektorace","published_on":"2022-04-27","status":"public","weight":6}
-{"average_duration":64,"bgg_id":170624,"display_name_en":"Crusaders: Thy Will Be Done","games_played":23894,"id":1547,"name":"crusadersthywillbedone","published_on":"2022-08-15","status":"public","weight":25}
-{"average_duration":11,"bgg_id":269595,"display_name_en":"Copenhagen","games_played":325261,"id":1548,"name":"copenhagen","published_on":"2022-05-18","status":"public","weight":157}
-{"average_duration":10,"bgg_id":191203,"display_name_en":"Commander Chess","games_played":15176,"id":1549,"name":"commanderchess","published_on":"2023-08-24","status":"public"}
-{"average_duration":10,"bgg_id":346747,"display_name_en":"Pier 18","games_played":5530,"id":1550,"name":"piereighteen","published_on":"2022-12-26","status":"public"}
-{"average_duration":30,"bgg_id":41933,"display_name_en":"Arctic Scavengers","games_played":19365,"id":1552,"name":"arcticscavengers","published_on":"2022-07-13","status":"public"}
-{"average_duration":18,"bgg_id":128072,"display_name_en":"VEGEtables","games_played":3918,"id":1553,"name":"vegetables","published_on":"2022-08-16","status":"public"}
-{"average_duration":12,"bgg_id":116858,"display_name_en":"Noah","games_played":74043,"id":1555,"name":"noah","published_on":"2022-08-10","status":"public","weight":11}
-{"average_duration":10,"bgg_id":5451,"display_name_en":"Minhwatu","games_played":40348,"id":1556,"name":"minhwatu","published_on":"2022-12-24","status":"public","weight":3}
-{"average_duration":8,"bgg_id":344425,"display_name_en":"Hydroracers","games_played":6903,"id":1557,"name":"hydroracers","published_on":"2022-12-03","status":"public","weight":1}
-{"average_duration":8,"bgg_id":202582,"display_name_en":"Trellis","games_played":33214,"id":1558,"name":"trellis","published_on":"2024-08-31","status":"public","weight":29}
-{"average_duration":7,"bgg_id":5451,"display_name_en":"Roppyakken","games_played":62827,"id":1559,"name":"roppyakken","published_on":"2022-07-02","status":"public","weight":5}
-{"average_duration":36,"bgg_id":10630,"display_name_en":"Memoir '44","games_played":729646,"id":1560,"name":"memoir","published_on":"2022-11-23","status":"public","weight":2430}
-{"average_duration":9,"bgg_id":192291,"display_name_en":"Sushi Go Party!","games_played":370738,"id":1561,"name":"sushigoparty","premium":true,"published_on":"2022-05-16","status":"public","weight":374}
-{"average_duration":7,"bgg_id":299544,"display_name_en":"Exhibition: 20th Century","games_played":211396,"id":1562,"name":"exhibitiontwentiethcentury","premium":true,"published_on":"2025-09-03","status":"public","weight":354}
-{"average_duration":9,"bgg_id":358790,"display_name_en":"Farm Club","games_played":49668,"id":1563,"name":"farmclub","published_on":"2022-10-12","status":"public","weight":7}
-{"average_duration":14,"bgg_id":180938,"display_name_en":"Ice and the Sky","games_played":10628,"id":1564,"is_ranking_disabled":true,"name":"iceandthesky","published_on":"2022-07-01","status":"public"}
-{"average_duration":7,"bgg_id":335090,"display_name_en":"Kraken Up","games_played":3681,"id":1565,"name":"krakenup","published_on":"2022-12-11","status":"public"}
-{"average_duration":16,"bgg_id":288775,"display_name_en":"Fairy Trails","games_played":54858,"id":1567,"name":"fairytrails","published_on":"2022-11-02","status":"public","weight":25}
-{"average_duration":12,"bgg_id":332173,"display_name_en":"Robots Ate Our Pizza","games_played":8425,"id":1568,"is_ranking_disabled":true,"name":"robotsateourpizza","published_on":"2023-08-11","status":"public"}
-{"average_duration":17,"bgg_id":340813,"display_name_en":"Heckin Hounds","games_played":1889,"id":1569,"name":"heckinhounds","published_on":"2022-07-24","status":"public","weight":5}
-{"average_duration":14,"bgg_id":359878,"display_name_en":"Splito","games_played":25059,"id":1570,"name":"splito","premium":true,"published_on":"2022-06-29","status":"public"}
-{"average_duration":55,"bgg_id":321277,"display_name_en":"Tinners' Trail","games_played":3886,"id":1571,"name":"tinnerstrail","premium":true,"published_on":"2022-12-23","status":"public","weight":20}
-{"average_duration":8,"bgg_id":353545,"display_name_en":"Next Station: London","games_played":1177995,"id":1572,"name":"nextstation","premium":true,"published_on":"2022-06-15","status":"public","weight":820}
-{"average_duration":6,"bgg_id":274960,"display_name_en":"Point Salad","games_played":326194,"id":1573,"name":"pointsalad","premium":true,"published_on":"2022-11-09","status":"public","weight":455}
-{"average_duration":10,"bgg_id":359061,"display_name_en":"Rive","games_played":2902,"id":1574,"name":"rive","published_on":"2022-04-11","status":"public"}
-{"average_duration":13,"bgg_id":366915,"display_name_en":"Hoola","games_played":10609,"id":1575,"name":"hoola","priority":-999,"published_on":"2025-02-21","status":"public","weight":2}
-{"average_duration":9,"bgg_id":347013,"display_name_en":"Get on Board: New York & London","games_played":91707,"id":1576,"name":"getonboard","premium":true,"published_on":"2022-08-03","status":"public","weight":32}
-{"average_duration":6,"bgg_id":30936,"display_name_en":"Oust","games_played":7527,"id":1578,"name":"oust","published_on":"2022-04-26","status":"public"}
-{"average_duration":52,"bgg_id":329227,"display_name_en":"Betta","games_played":37388,"id":1579,"name":"betta","published_on":"2022-06-08","status":"public","weight":3}
-{"average_duration":14,"bgg_id":22790,"display_name_en":"Cephalopod","games_played":4427,"id":1581,"name":"cephalopod","published_on":"2022-05-05","status":"public","weight":2}
-{"average_duration":24,"bgg_id":233395,"display_name_en":"Coupell","games_played":5686,"id":1582,"is_ranking_disabled":true,"name":"coupell","published_on":"2022-05-02","status":"beta"}
-{"average_duration":13,"bgg_id":353799,"display_name_en":"Rolling Pins","games_played":26321,"id":1583,"name":"rollingpins","published_on":"2023-08-25","status":"public","weight":4}
-{"average_duration":51,"bgg_id":272821,"display_name_en":"Kingdoms","games_played":915,"id":1584,"name":"kingdoms","published_on":"2022-12-21","status":"public"}
-{"average_duration":19,"bgg_id":219513,"display_name_en":"B\u00e4renpark","games_played":252828,"id":1585,"name":"barenpark","premium":true,"published_on":"2022-07-20","status":"public","weight":493}
-{"average_duration":11,"bgg_id":227466,"display_name_en":"Break the Code","games_played":729779,"id":1586,"name":"breakthecode","premium":true,"published_on":"2022-09-12","status":"public","weight":946}
-{"average_duration":8,"bgg_id":216428,"display_name_en":"Seikatsu","games_played":73898,"id":1587,"name":"seikatsu","published_on":"2022-12-12","status":"public","weight":16}
-{"average_duration":10,"bgg_id":120533,"display_name_en":"Redstone","games_played":1348,"id":1588,"name":"redstone","published_on":"2022-05-24","status":"public"}
-{"average_duration":5,"bgg_id":352375,"display_name_en":"Baby Dinosaur Rescue","games_played":105230,"id":1590,"is_ranking_disabled":true,"name":"babydinosaurrescue","published_on":"2022-07-31","status":"public","weight":15}
-{"average_duration":10,"bgg_id":286031,"display_name_en":"Dragon Bridge","games_played":3864,"id":1591,"name":"dragonbridge","published_on":"2023-08-05","status":"public"}
-{"average_duration":6,"bgg_id":205597,"display_name_en":"Jump Drive","games_played":447097,"id":1592,"name":"jumpdrive","published_on":"2022-08-01","status":"public","weight":211}
-{"average_duration":8,"bgg_id":269766,"display_name_en":"Soulaween","games_played":18133,"id":1593,"name":"soulaween","published_on":"2022-12-28","status":"public","weight":1}
-{"average_duration":13,"bgg_id":271324,"display_name_en":"It's a Wonderful World","games_played":4015719,"id":1594,"name":"itsawonderfulworld","premium":true,"published_on":"2023-01-04","status":"public","weight":7592}
-{"average_duration":15,"bgg_id":360266,"display_name_en":"Draft Cider","games_played":8377,"id":1595,"name":"draftcider","published_on":"2022-12-13","status":"public","weight":3}
-{"average_duration":3,"bgg_id":74129,"display_name_en":"Fractal","games_played":9727,"id":1596,"name":"fractal","published_on":"2022-06-08","status":"public"}
-{"average_duration":24,"bgg_id":251433,"display_name_en":"Yokai Septet","games_played":11259,"id":1597,"name":"yokaiseptet","published_on":"2023-12-06","status":"public"}
-{"average_duration":73,"bgg_id":311725,"display_name_en":"Dice Theme Park","games_played":5344,"id":1598,"name":"dicethemepark","premium":true,"published_on":"2022-11-21","status":"public","weight":12}
-{"average_duration":10,"bgg_id":363307,"display_name_en":"Evergreen","games_played":60434,"id":1599,"name":"evergreen","premium":true,"published_on":"2023-08-02","status":"public","weight":40}
-{"average_duration":11,"bgg_id":364343,"display_name_en":"Strands","games_played":39233,"id":1600,"name":"strands","published_on":"2023-08-15","status":"public","weight":19}
-{"average_duration":29,"bgg_id":282475,"display_name_en":"Gangsta!","games_played":15683,"id":1601,"name":"gangsta","published_on":"2023-08-07","status":"public","weight":27}
-{"average_duration":38,"bgg_id":341245,"display_name_en":"Garden Nation","games_played":7824,"id":1602,"name":"gardennation","published_on":"2022-11-30","status":"public"}
-{"average_duration":48,"bgg_id":251247,"display_name_en":"Barrage","games_played":297318,"id":1603,"name":"barrage","premium":true,"published_on":"2022-08-17","status":"public","weight":2123}
-{"average_duration":24,"bgg_id":313442,"display_name_en":"Pugs in Mugs","games_played":26026,"id":1604,"name":"pugsinmugs","published_on":"2023-08-04","status":"public","weight":13}
-{"average_duration":55,"bgg_id":356414,"display_name_en":"Space Station Phoenix","games_played":13434,"id":1605,"name":"spacestationphoenix","premium":true,"published_on":"2022-08-29","status":"public","weight":47}
-{"average_duration":12,"bgg_id":307002,"display_name_en":"Regicide","games_played":1030742,"id":1606,"is_ranking_disabled":true,"name":"regicide","published_on":"2022-09-07","status":"public","weight":665}
-{"average_duration":23,"bgg_id":350604,"display_name_en":"Regidice","games_played":15412,"id":1607,"is_ranking_disabled":true,"name":"regidice","published_on":"2022-09-07","status":"public"}
-{"average_duration":3,"bgg_id":358196,"display_name_en":"Lifeline","games_played":7077,"id":1608,"name":"lifeline","published_on":"2022-12-05","status":"public"}
-{"average_duration":20,"bgg_id":38984,"display_name_en":"MOW","games_played":14888,"id":1611,"name":"mow","premium":true,"published_on":"2022-10-24","status":"public","weight":10}
-{"average_duration":31,"bgg_id":320819,"display_name_en":"Dinner In Paris","games_played":14988,"id":1612,"name":"dinnerinparis","published_on":"2022-12-20","status":"public","weight":24}
-{"average_duration":83,"bgg_id":345520,"display_name_en":"EKONOS","games_played":1865,"id":1614,"name":"ekonos","published_on":"2022-12-14","status":"public"}
-{"average_duration":6,"bgg_id":361084,"display_name_en":"Yoxii","games_played":18696,"id":1615,"name":"yoxii","premium":true,"published_on":"2022-12-25","status":"public","weight":1}
-{"average_duration":5,"bgg_id":313822,"display_name_en":"Tic-Tac Match","games_played":99817,"id":1616,"name":"tictacmatch","published_on":"2022-12-10","status":"public","weight":16}
-{"average_duration":6,"bgg_id":17106,"display_name_en":"Dots and Boxes","games_played":27221,"id":1618,"name":"dotsandboxes","published_on":"2022-08-18","status":"beta","weight":4}
-{"average_duration":15,"bgg_id":249259,"display_name_en":"War Chest","games_played":527526,"id":1619,"name":"warchest","published_on":"2022-12-29","status":"public","weight":281}
-{"average_duration":23,"bgg_id":316632,"display_name_en":"La Marche du Crabe","games_played":11840,"id":1620,"is_ranking_disabled":true,"name":"lamarcheducrabe","premium":true,"published_on":"2022-12-01","status":"public","weight":22}
-{"average_duration":11,"bgg_id":110260,"display_name_en":"Roll'n Bump","games_played":261750,"id":1621,"name":"rollandbump","published_on":"2022-10-05","status":"public","weight":146}
-{"average_duration":8,"bgg_id":8122,"display_name_en":"Konane","games_played":2978,"id":1623,"name":"konane","published_on":"2023-07-03","status":"public"}
+{"average_duration":12,"bgg_id":257836,"display_name_en":"Narabi","games_played":13697,"id":1544,"is_ranking_disabled":true,"name":"narabi","published_on":"2022-06-13","status":"public"}
+{"average_duration":6,"bgg_id":318556,"display_name_en":"Tucano","games_played":64810,"id":1545,"name":"tucano","premium":true,"published_on":"2023-03-22","status":"public","weight":13}
+{"average_duration":43,"bgg_id":256839,"display_name_en":"VektoRace","games_played":16299,"id":1546,"name":"vektorace","published_on":"2022-04-27","status":"public","weight":34}
+{"average_duration":57,"bgg_id":170624,"display_name_en":"Crusaders: Thy Will Be Done","games_played":23933,"id":1547,"name":"crusadersthywillbedone","published_on":"2022-08-15","status":"public","weight":122}
+{"average_duration":11,"bgg_id":269595,"display_name_en":"Copenhagen","games_played":325739,"id":1548,"name":"copenhagen","published_on":"2022-05-18","status":"public","weight":142}
+{"average_duration":13,"bgg_id":191203,"display_name_en":"Commander Chess","games_played":15199,"id":1549,"name":"commanderchess","published_on":"2023-08-24","status":"public"}
+{"average_duration":10,"bgg_id":346747,"display_name_en":"Pier 18","games_played":5546,"id":1550,"name":"piereighteen","published_on":"2022-12-26","status":"public","weight":1}
+{"average_duration":28,"bgg_id":41933,"display_name_en":"Arctic Scavengers","games_played":19393,"id":1552,"name":"arcticscavengers","published_on":"2022-07-13","status":"public","weight":6}
+{"average_duration":17,"bgg_id":128072,"display_name_en":"VEGEtables","games_played":3920,"id":1553,"name":"vegetables","published_on":"2022-08-16","status":"public"}
+{"average_duration":13,"bgg_id":116858,"display_name_en":"Noah","games_played":74118,"id":1555,"name":"noah","published_on":"2022-08-10","status":"public","weight":22}
+{"average_duration":10,"bgg_id":5451,"display_name_en":"Minhwatu","games_played":40433,"id":1556,"name":"minhwatu","published_on":"2022-12-24","status":"public","weight":3}
+{"average_duration":8,"bgg_id":344425,"display_name_en":"Hydroracers","games_played":6917,"id":1557,"name":"hydroracers","published_on":"2022-12-03","status":"public"}
+{"average_duration":8,"bgg_id":202582,"display_name_en":"Trellis","games_played":33305,"id":1558,"name":"trellis","published_on":"2024-08-31","status":"public","weight":20}
+{"average_duration":6,"bgg_id":5451,"display_name_en":"Roppyakken","games_played":62937,"id":1559,"name":"roppyakken","published_on":"2022-07-02","status":"public","weight":7}
+{"average_duration":36,"bgg_id":10630,"display_name_en":"Memoir '44","games_played":732774,"id":1560,"name":"memoir","published_on":"2022-11-23","status":"public","weight":3308}
+{"average_duration":9,"bgg_id":192291,"display_name_en":"Sushi Go Party!","games_played":371730,"id":1561,"name":"sushigoparty","premium":true,"published_on":"2022-05-16","status":"public","weight":373}
+{"average_duration":7,"bgg_id":299544,"display_name_en":"Exhibition: 20th Century","games_played":213239,"id":1562,"name":"exhibitiontwentiethcentury","premium":true,"published_on":"2025-09-03","status":"public","weight":317}
+{"average_duration":9,"bgg_id":358790,"display_name_en":"Farm Club","games_played":49708,"id":1563,"name":"farmclub","published_on":"2022-10-12","status":"public","weight":3}
+{"average_duration":13,"bgg_id":180938,"display_name_en":"Ice and the Sky","games_played":10631,"id":1564,"is_ranking_disabled":true,"name":"iceandthesky","published_on":"2022-07-01","status":"public"}
+{"average_duration":5,"bgg_id":335090,"display_name_en":"Kraken Up","games_played":3688,"id":1565,"name":"krakenup","published_on":"2022-12-11","status":"public"}
+{"average_duration":18,"bgg_id":288775,"display_name_en":"Fairy Trails","games_played":54961,"id":1567,"name":"fairytrails","published_on":"2022-11-02","status":"public","weight":23}
+{"average_duration":12,"bgg_id":332173,"display_name_en":"Robots Ate Our Pizza","games_played":8439,"id":1568,"is_ranking_disabled":true,"name":"robotsateourpizza","published_on":"2023-08-11","status":"public"}
+{"average_duration":17,"bgg_id":340813,"display_name_en":"Heckin Hounds","games_played":1890,"id":1569,"name":"heckinhounds","published_on":"2022-07-24","status":"public"}
+{"average_duration":14,"bgg_id":359878,"display_name_en":"Splito","games_played":25086,"id":1570,"name":"splito","premium":true,"published_on":"2022-06-29","status":"public","weight":16}
+{"average_duration":68,"bgg_id":321277,"display_name_en":"Tinners' Trail","games_played":3893,"id":1571,"name":"tinnerstrail","premium":true,"published_on":"2022-12-23","status":"public","weight":20}
+{"average_duration":8,"bgg_id":353545,"display_name_en":"Next Station: London","games_played":1182287,"id":1572,"name":"nextstation","premium":true,"published_on":"2022-06-15","status":"public","weight":984}
+{"average_duration":6,"bgg_id":274960,"display_name_en":"Point Salad","games_played":328786,"id":1573,"name":"pointsalad","premium":true,"published_on":"2022-11-09","status":"public","weight":428}
+{"average_duration":10,"bgg_id":359061,"display_name_en":"Rive","games_played":2908,"id":1574,"name":"rive","published_on":"2022-04-11","status":"public"}
+{"average_duration":13,"bgg_id":366915,"display_name_en":"Hoola","games_played":10684,"id":1575,"name":"hoola","priority":-999,"published_on":"2025-02-21","status":"public","weight":19}
+{"average_duration":9,"bgg_id":347013,"display_name_en":"Get on Board: New York & London","games_played":91849,"id":1576,"name":"getonboard","premium":true,"published_on":"2022-08-03","status":"public","weight":35}
+{"average_duration":6,"bgg_id":30936,"display_name_en":"Oust","games_played":7537,"id":1578,"name":"oust","published_on":"2022-04-26","status":"public"}
+{"average_duration":50,"bgg_id":329227,"display_name_en":"Betta","games_played":37438,"id":1579,"name":"betta","published_on":"2022-06-08","status":"public","weight":12}
+{"average_duration":14,"bgg_id":22790,"display_name_en":"Cephalopod","games_played":4429,"id":1581,"name":"cephalopod","published_on":"2022-05-05","status":"public","weight":5}
+{"average_duration":22,"bgg_id":233395,"display_name_en":"Coupell","games_played":5703,"id":1582,"is_ranking_disabled":true,"name":"coupell","published_on":"2022-05-02","status":"beta"}
+{"average_duration":11,"bgg_id":353799,"display_name_en":"Rolling Pins","games_played":26371,"id":1583,"name":"rollingpins","published_on":"2023-08-25","status":"public","weight":30}
+{"average_duration":51,"bgg_id":272821,"display_name_en":"Kingdoms","games_played":916,"id":1584,"name":"kingdoms","published_on":"2022-12-21","status":"public"}
+{"average_duration":19,"bgg_id":219513,"display_name_en":"B\u00e4renpark","games_played":253560,"id":1585,"name":"barenpark","premium":true,"published_on":"2022-07-20","status":"public","weight":542}
+{"average_duration":11,"bgg_id":227466,"display_name_en":"Break the Code","games_played":731998,"id":1586,"name":"breakthecode","premium":true,"published_on":"2022-09-12","status":"public","weight":731}
+{"average_duration":8,"bgg_id":216428,"display_name_en":"Seikatsu","games_played":74070,"id":1587,"name":"seikatsu","published_on":"2022-12-12","status":"public","weight":57}
+{"average_duration":10,"bgg_id":120533,"display_name_en":"Redstone","games_played":1351,"id":1588,"name":"redstone","published_on":"2022-05-24","status":"public"}
+{"average_duration":4,"bgg_id":352375,"display_name_en":"Baby Dinosaur Rescue","games_played":105387,"id":1590,"is_ranking_disabled":true,"name":"babydinosaurrescue","published_on":"2022-07-31","status":"public","weight":19}
+{"average_duration":10,"bgg_id":286031,"display_name_en":"Dragon Bridge","games_played":3868,"id":1591,"name":"dragonbridge","published_on":"2023-08-05","status":"public"}
+{"average_duration":6,"bgg_id":205597,"display_name_en":"Jump Drive","games_played":450256,"id":1592,"name":"jumpdrive","published_on":"2022-08-01","status":"public","weight":300}
+{"average_duration":8,"bgg_id":269766,"display_name_en":"Soulaween","games_played":18150,"id":1593,"name":"soulaween","published_on":"2022-12-28","status":"public"}
+{"average_duration":13,"bgg_id":271324,"display_name_en":"It's a Wonderful World","games_played":4036394,"id":1594,"name":"itsawonderfulworld","premium":true,"published_on":"2023-01-04","status":"public","weight":8014}
+{"average_duration":11,"bgg_id":360266,"display_name_en":"Draft Cider","games_played":8384,"id":1595,"name":"draftcider","published_on":"2022-12-13","status":"public"}
+{"average_duration":4,"bgg_id":74129,"display_name_en":"Fractal","games_played":9753,"id":1596,"name":"fractal","published_on":"2022-06-08","status":"public"}
+{"average_duration":20,"bgg_id":251433,"display_name_en":"Yokai Septet","games_played":11286,"id":1597,"name":"yokaiseptet","published_on":"2023-12-06","status":"public","weight":13}
+{"average_duration":73,"bgg_id":311725,"display_name_en":"Dice Theme Park","games_played":5352,"id":1598,"name":"dicethemepark","premium":true,"published_on":"2022-11-21","status":"public"}
+{"average_duration":9,"bgg_id":363307,"display_name_en":"Evergreen","games_played":60620,"id":1599,"name":"evergreen","premium":true,"published_on":"2023-08-02","status":"public","weight":102}
+{"average_duration":10,"bgg_id":364343,"display_name_en":"Strands","games_played":39315,"id":1600,"name":"strands","published_on":"2023-08-15","status":"public","weight":12}
+{"average_duration":29,"bgg_id":282475,"display_name_en":"Gangsta!","games_played":15711,"id":1601,"name":"gangsta","published_on":"2023-08-07","status":"public","weight":9}
+{"average_duration":38,"bgg_id":341245,"display_name_en":"Garden Nation","games_played":7835,"id":1602,"name":"gardennation","published_on":"2022-11-30","status":"public","weight":5}
+{"average_duration":48,"bgg_id":251247,"display_name_en":"Barrage","games_played":298602,"id":1603,"name":"barrage","premium":true,"published_on":"2022-08-17","status":"public","weight":1928}
+{"average_duration":23,"bgg_id":313442,"display_name_en":"Pugs in Mugs","games_played":26067,"id":1604,"name":"pugsinmugs","published_on":"2023-08-04","status":"public","weight":19}
+{"average_duration":51,"bgg_id":356414,"display_name_en":"Space Station Phoenix","games_played":13448,"id":1605,"name":"spacestationphoenix","premium":true,"published_on":"2022-08-29","status":"public","weight":35}
+{"average_duration":12,"bgg_id":307002,"display_name_en":"Regicide","games_played":1036693,"id":1606,"is_ranking_disabled":true,"name":"regicide","published_on":"2022-09-07","status":"public","weight":1012}
+{"average_duration":27,"bgg_id":350604,"display_name_en":"Regidice","games_played":15448,"id":1607,"is_ranking_disabled":true,"name":"regidice","published_on":"2022-09-07","status":"public","weight":21}
+{"average_duration":4,"bgg_id":358196,"display_name_en":"Lifeline","games_played":7082,"id":1608,"name":"lifeline","published_on":"2022-12-05","status":"public"}
+{"average_duration":20,"bgg_id":38984,"display_name_en":"MOW","games_played":14906,"id":1611,"name":"mow","premium":true,"published_on":"2022-10-24","status":"public","weight":30}
+{"average_duration":32,"bgg_id":320819,"display_name_en":"Dinner In Paris","games_played":15015,"id":1612,"name":"dinnerinparis","published_on":"2022-12-20","status":"public","weight":6}
+{"average_duration":83,"bgg_id":345520,"display_name_en":"EKONOS","games_played":1866,"id":1614,"name":"ekonos","published_on":"2022-12-14","status":"public"}
+{"average_duration":5,"bgg_id":361084,"display_name_en":"Yoxii","games_played":18712,"id":1615,"name":"yoxii","premium":true,"published_on":"2022-12-25","status":"public","weight":2}
+{"average_duration":5,"bgg_id":313822,"display_name_en":"Tic-Tac Match","games_played":100000,"id":1616,"name":"tictacmatch","published_on":"2022-12-10","status":"public","weight":9}
+{"average_duration":5,"bgg_id":17106,"display_name_en":"Dots and Boxes","games_played":27318,"id":1618,"name":"dotsandboxes","published_on":"2022-08-18","status":"beta","weight":6}
+{"average_duration":15,"bgg_id":249259,"display_name_en":"War Chest","games_played":529577,"id":1619,"name":"warchest","published_on":"2022-12-29","status":"public","weight":224}
+{"average_duration":19,"bgg_id":316632,"display_name_en":"La Marche du Crabe","games_played":11865,"id":1620,"is_ranking_disabled":true,"name":"lamarcheducrabe","premium":true,"published_on":"2022-12-01","status":"public"}
+{"average_duration":11,"bgg_id":110260,"display_name_en":"Roll'n Bump","games_played":262330,"id":1621,"name":"rollandbump","published_on":"2022-10-05","status":"public","weight":124}
+{"average_duration":7,"bgg_id":8122,"display_name_en":"Konane","games_played":2983,"id":1623,"name":"konane","published_on":"2023-07-03","status":"public","weight":1}
 {"average_duration":50,"bgg_id":363050,"display_name_en":"Raubbau","games_played":190,"id":1624,"name":"raubbau","published_on":"2022-11-15","status":"beta"}
-{"average_duration":12,"bgg_id":287821,"display_name_en":"Good Cop Bad Cop","games_played":14995,"id":1625,"name":"goodcopbadcop","published_on":"2023-08-01","status":"public","weight":8}
-{"average_duration":32,"bgg_id":238656,"display_name_en":"Tiny Epic Defenders (Second Edition)","games_played":16333,"id":1626,"is_ranking_disabled":true,"name":"tinyepicdefenders","published_on":"2023-12-15","status":"public","weight":27}
-{"average_duration":13,"bgg_id":284435,"display_name_en":"Nova Luna","games_played":594403,"id":1628,"name":"novaluna","premium":true,"published_on":"2023-02-01","status":"public","weight":689}
-{"average_duration":22,"display_name_en":"Reflection","games_played":292160,"id":1630,"name":"laserreflection","published_on":"2022-12-04","status":"public","weight":332}
-{"average_duration":12,"bgg_id":367220,"display_name_en":"Sea Salt & Paper","games_played":4045920,"id":1631,"name":"seasaltpaper","premium":true,"published_on":"2022-09-21","status":"public","weight":7012}
-{"average_duration":5,"bgg_id":7682,"display_name_en":"Go Fish","games_played":34542,"id":1633,"name":"gofish","priority":-999,"published_on":"2025-02-21","status":"public","weight":16}
-{"average_duration":7,"bgg_id":320275,"display_name_en":"Ghost At Home","games_played":58029,"id":1634,"name":"ghostathome","published_on":"2023-08-17","status":"public","weight":46}
-{"average_duration":26,"bgg_id":266192,"display_name_en":"Wingspan","games_played":9553583,"id":1635,"name":"wingspan","premium":true,"published_on":"2022-09-14","status":"public","weight":46034}
-{"average_duration":1,"bgg_id":368118,"display_name_en":"Hadron","games_played":7387,"id":1636,"name":"hadron","published_on":"2022-09-09","status":"public"}
-{"average_duration":18,"bgg_id":6493,"display_name_en":"Impasse","games_played":1446,"id":1637,"name":"impasse","published_on":"2022-09-09","status":"public"}
-{"average_duration":24,"bgg_id":366752,"display_name_en":"The Great Split","games_played":10164,"id":1638,"name":"greatsplit","premium":true,"published_on":"2024-02-12","status":"public","weight":20}
-{"average_duration":18,"bgg_id":18103,"display_name_en":"Ti\u1ebfn L\u00ean","games_played":3437,"id":1639,"name":"tienlen","published_on":"2023-06-27","status":"public"}
-{"average_duration":35,"bgg_id":231733,"display_name_en":"Obsession","games_played":308381,"id":1640,"name":"obsession","published_on":"2022-12-08","status":"public","weight":985}
+{"average_duration":12,"bgg_id":287821,"display_name_en":"Good Cop Bad Cop","games_played":15027,"id":1625,"name":"goodcopbadcop","published_on":"2023-08-01","status":"public","weight":15}
+{"average_duration":34,"bgg_id":238656,"display_name_en":"Tiny Epic Defenders (Second Edition)","games_played":16363,"id":1626,"is_ranking_disabled":true,"name":"tinyepicdefenders","published_on":"2023-12-15","status":"public","weight":68}
+{"average_duration":13,"bgg_id":284435,"display_name_en":"Nova Luna","games_played":596308,"id":1628,"name":"novaluna","premium":true,"published_on":"2023-02-01","status":"public","weight":694}
+{"average_duration":24,"display_name_en":"Reflection","games_played":293568,"id":1630,"name":"laserreflection","published_on":"2022-12-04","status":"public","weight":299}
+{"average_duration":12,"bgg_id":367220,"display_name_en":"Sea Salt & Paper","games_played":4070019,"id":1631,"name":"seasaltpaper","premium":true,"published_on":"2022-09-21","status":"public","weight":7523}
+{"average_duration":5,"bgg_id":7682,"display_name_en":"Go Fish","games_played":34695,"id":1633,"name":"gofish","priority":-999,"published_on":"2025-02-21","status":"public","weight":6}
+{"average_duration":7,"bgg_id":320275,"display_name_en":"Ghost At Home","games_played":58171,"id":1634,"name":"ghostathome","published_on":"2023-08-17","status":"public","weight":16}
+{"average_duration":26,"bgg_id":266192,"display_name_en":"Wingspan","games_played":9619630,"id":1635,"name":"wingspan","premium":true,"published_on":"2022-09-14","status":"public","weight":47747}
+{"average_duration":1,"bgg_id":368118,"display_name_en":"Hadron","games_played":7395,"id":1636,"name":"hadron","published_on":"2022-09-09","status":"public"}
+{"average_duration":19,"bgg_id":6493,"display_name_en":"Impasse","games_played":1450,"id":1637,"name":"impasse","published_on":"2022-09-09","status":"public","weight":2}
+{"average_duration":19,"bgg_id":366752,"display_name_en":"The Great Split","games_played":10180,"id":1638,"name":"greatsplit","premium":true,"published_on":"2024-02-12","status":"public","weight":8}
+{"average_duration":17,"bgg_id":18103,"display_name_en":"Ti\u1ebfn L\u00ean","games_played":3455,"id":1639,"name":"tienlen","published_on":"2023-06-27","status":"public","weight":11}
+{"average_duration":35,"bgg_id":231733,"display_name_en":"Obsession","games_played":309754,"id":1640,"name":"obsession","published_on":"2022-12-08","status":"public","weight":1315}
 {"average_duration":19,"bgg_id":366707,"display_name_en":"Quintus","games_played":76,"id":1642,"name":"quintus","published_on":"2023-09-01","status":"beta"}
-{"average_duration":14,"bgg_id":354720,"display_name_en":"Art Thief","games_played":17545,"id":1644,"is_ranking_disabled":true,"name":"artthief","published_on":"2022-12-16","status":"public","weight":5}
-{"average_duration":11,"bgg_id":329862,"display_name_en":"Tiny Turbo Cars","games_played":4522,"id":1645,"name":"tinyturbocars","published_on":"2024-08-09","status":"public"}
-{"average_duration":40,"bgg_id":356231,"display_name_en":"Megalomania","games_played":660,"id":1646,"name":"megalomania","published_on":"2023-12-31","status":"public","weight":7}
-{"average_duration":15,"bgg_id":369336,"display_name_en":"Herd","games_played":12471,"id":1647,"name":"herd","published_on":"2022-09-22","status":"public","weight":14}
-{"average_duration":12,"bgg_id":366456,"display_name_en":"My Shelfie","games_played":295469,"id":1648,"name":"myshelfie","premium":true,"published_on":"2022-09-26","status":"public","weight":348}
-{"average_duration":12,"bgg_id":365453,"display_name_en":"Look at the Stars","games_played":55765,"id":1649,"name":"lookatthestars","published_on":"2022-12-06","status":"public","weight":88}
-{"average_duration":25,"bgg_id":354842,"display_name_en":"Drones vs Seagulls","games_played":5917,"id":1650,"name":"dronesvsseagulls","published_on":"2022-12-09","status":"beta"}
-{"average_duration":11,"bgg_id":333775,"display_name_en":"Meridians","games_played":7767,"id":1651,"name":"meridians","published_on":"2023-08-13","status":"public","weight":2}
-{"average_duration":23,"bgg_id":279720,"display_name_en":"Streets","games_played":12687,"id":1653,"name":"streets","published_on":"2023-05-08","status":"public"}
-{"average_duration":18,"bgg_id":241724,"display_name_en":"Villagers","games_played":56234,"id":1654,"name":"villagers","premium":true,"published_on":"2023-05-08","status":"public","weight":146}
-{"average_duration":14,"bgg_id":328565,"display_name_en":"Caper: Europe","games_played":45614,"id":1656,"name":"capereurope","published_on":"2023-01-02","status":"public","weight":15}
+{"average_duration":14,"bgg_id":354720,"display_name_en":"Art Thief","games_played":17566,"id":1644,"is_ranking_disabled":true,"name":"artthief","published_on":"2022-12-16","status":"public","weight":2}
+{"average_duration":9,"bgg_id":329862,"display_name_en":"Tiny Turbo Cars","games_played":4537,"id":1645,"name":"tinyturbocars","published_on":"2024-08-09","status":"public"}
+{"average_duration":40,"bgg_id":356231,"display_name_en":"Megalomania","games_played":661,"id":1646,"name":"megalomania","published_on":"2023-12-31","status":"public"}
+{"average_duration":13,"bgg_id":369336,"display_name_en":"Herd","games_played":12504,"id":1647,"name":"herd","published_on":"2022-09-22","status":"public","weight":2}
+{"average_duration":12,"bgg_id":366456,"display_name_en":"My Shelfie","games_played":296302,"id":1648,"name":"myshelfie","premium":true,"published_on":"2022-09-26","status":"public","weight":289}
+{"average_duration":12,"bgg_id":365453,"display_name_en":"Look at the Stars","games_played":55893,"id":1649,"name":"lookatthestars","published_on":"2022-12-06","status":"public","weight":48}
+{"average_duration":27,"bgg_id":354842,"display_name_en":"Drones vs Seagulls","games_played":5933,"id":1650,"name":"dronesvsseagulls","published_on":"2022-12-09","status":"beta","weight":11}
+{"average_duration":11,"bgg_id":333775,"display_name_en":"Meridians","games_played":7774,"id":1651,"name":"meridians","published_on":"2023-08-13","status":"public"}
+{"average_duration":22,"bgg_id":279720,"display_name_en":"Streets","games_played":12705,"id":1653,"name":"streets","published_on":"2023-05-08","status":"public","weight":7}
+{"average_duration":17,"bgg_id":241724,"display_name_en":"Villagers","games_played":56411,"id":1654,"name":"villagers","premium":true,"published_on":"2023-05-08","status":"public","weight":98}
+{"average_duration":13,"bgg_id":328565,"display_name_en":"Caper: Europe","games_played":45758,"id":1656,"name":"capereurope","published_on":"2023-01-02","status":"public","weight":25}
 {"average_duration":18,"bgg_id":366129,"display_name_en":"Gang of Dice","games_played":42887,"id":1657,"locked":true,"name":"gangofdice","published_on":"2023-07-17","status":"public"}
-{"average_duration":48,"bgg_id":295486,"display_name_en":"My City","games_played":66144,"id":1659,"name":"mycity","premium":true,"published_on":"2022-11-16","status":"public","weight":203}
-{"average_duration":1,"bgg_id":10816,"display_name_en":"Blackjack","games_played":247374,"id":1662,"name":"blackjack","priority":-999,"published_on":"2025-02-21","status":"public","weight":20}
-{"average_duration":18,"bgg_id":370756,"display_name_en":"Diablo","games_played":4096,"id":1663,"name":"diablo","published_on":"2022-10-03","status":"public"}
-{"average_duration":60,"bgg_id":102794,"display_name_en":"Caverna","games_played":114913,"id":1664,"name":"caverna","premium":true,"published_on":"2022-12-22","status":"public","weight":787}
-{"average_duration":12,"bgg_id":334717,"display_name_en":"Tranquility: The Ascent","games_played":162630,"id":1665,"is_ranking_disabled":true,"name":"tranquilitytheascent","published_on":"2023-02-13","status":"public","weight":148}
-{"average_duration":23,"bgg_id":346057,"display_name_en":"Don't Go In There","games_played":12963,"id":1667,"name":"dontgointhere","published_on":"2023-10-23","status":"public","weight":3}
-{"average_duration":19,"bgg_id":559,"display_name_en":"Metro","games_played":44892,"id":1668,"name":"metro","published_on":"2024-08-01","status":"public","weight":58}
-{"average_duration":9,"bgg_id":341530,"display_name_en":"Super Mega Lucky Box","games_played":1709351,"id":1669,"name":"supermegaluckybox","premium":true,"published_on":"2024-05-15","status":"public","weight":2902}
-{"average_duration":11,"bgg_id":246192,"display_name_en":"Gizmos","games_played":2369643,"id":1670,"name":"gizmos","premium":true,"published_on":"2023-01-18","status":"public","weight":3726}
-{"average_duration":10,"bgg_id":319592,"display_name_en":"Micro Dojo","games_played":9388,"id":1671,"name":"microdojo","published_on":"2023-08-10","status":"public"}
-{"average_duration":58,"bgg_id":103184,"display_name_en":"The Gnomes of Zavandor","games_played":3889,"id":1672,"name":"thegnomesofzavandor","premium":true,"published_on":"2023-08-12","status":"public","weight":68}
-{"average_duration":17,"bgg_id":267979,"display_name_en":"Tiwanaku","games_played":16873,"id":1674,"is_ranking_disabled":true,"name":"tiwanaku","premium":true,"published_on":"2023-06-19","status":"public","weight":18}
-{"average_duration":16,"bgg_id":279135,"display_name_en":"Cat Caf\u00e9","games_played":31115,"id":1675,"name":"catcafe","published_on":"2022-12-15","status":"public","weight":24}
+{"average_duration":50,"bgg_id":295486,"display_name_en":"My City","games_played":66282,"id":1659,"name":"mycity","premium":true,"published_on":"2022-11-16","status":"public","weight":224}
+{"average_duration":1,"bgg_id":10816,"display_name_en":"Blackjack","games_played":249083,"id":1662,"name":"blackjack","priority":-999,"published_on":"2025-02-21","status":"public","weight":19}
+{"average_duration":19,"bgg_id":370756,"display_name_en":"Diablo","games_played":4098,"id":1663,"name":"diablo","published_on":"2022-10-03","status":"public"}
+{"average_duration":57,"bgg_id":102794,"display_name_en":"Caverna","games_played":115217,"id":1664,"name":"caverna","premium":true,"published_on":"2022-12-22","status":"public","weight":224}
+{"average_duration":13,"bgg_id":334717,"display_name_en":"Tranquility: The Ascent","games_played":163339,"id":1665,"is_ranking_disabled":true,"name":"tranquilitytheascent","published_on":"2023-02-13","status":"public","weight":269}
+{"average_duration":25,"bgg_id":346057,"display_name_en":"Don't Go In There","games_played":12981,"id":1667,"name":"dontgointhere","published_on":"2023-10-23","status":"public"}
+{"average_duration":19,"bgg_id":559,"display_name_en":"Metro","games_played":45117,"id":1668,"name":"metro","published_on":"2024-08-01","status":"public","weight":110}
+{"average_duration":9,"bgg_id":341530,"display_name_en":"Super Mega Lucky Box","games_played":1721965,"id":1669,"name":"supermegaluckybox","premium":true,"published_on":"2024-05-15","status":"public","weight":3387}
+{"average_duration":11,"bgg_id":246192,"display_name_en":"Gizmos","games_played":2382068,"id":1670,"name":"gizmos","premium":true,"published_on":"2023-01-18","status":"public","weight":4085}
+{"average_duration":11,"bgg_id":319592,"display_name_en":"Micro Dojo","games_played":9406,"id":1671,"name":"microdojo","published_on":"2023-08-10","status":"public","weight":2}
+{"average_duration":58,"bgg_id":103184,"display_name_en":"The Gnomes of Zavandor","games_played":3895,"id":1672,"name":"thegnomesofzavandor","premium":true,"published_on":"2023-08-12","status":"public"}
+{"average_duration":17,"bgg_id":267979,"display_name_en":"Tiwanaku","games_played":16905,"id":1674,"is_ranking_disabled":true,"name":"tiwanaku","premium":true,"published_on":"2023-06-19","status":"public","weight":11}
+{"average_duration":16,"bgg_id":279135,"display_name_en":"Cat Caf\u00e9","games_played":31150,"id":1675,"name":"catcafe","published_on":"2022-12-15","status":"public","weight":28}
 {"average_duration":174,"bgg_id":21954,"display_name_en":"Perikles","games_played":275,"id":1676,"name":"perikles","published_on":"2023-09-21","status":"beta"}
-{"average_duration":19,"bgg_id":334646,"display_name_en":"Dice Hospital: ER \u2013 Emergency Roll","games_played":40382,"id":1678,"name":"dicehospitaler","published_on":"2023-01-25","status":"public","weight":89}
-{"average_duration":19,"bgg_id":351666,"display_name_en":"Vidrasso","games_played":4907,"id":1679,"name":"vidrasso","published_on":"2023-06-27","status":"public","weight":9}
-{"average_duration":14,"bgg_id":312959,"display_name_en":"Rallyman: DIRT","games_played":24358,"id":1680,"name":"rallymandirt","published_on":"2024-12-02","status":"public","weight":30}
-{"average_duration":18,"bgg_id":359970,"display_name_en":"Challengers!","games_played":1145272,"id":1681,"name":"challengers","premium":true,"published_on":"2023-06-21","status":"public","weight":2143}
-{"average_duration":7,"display_name_en":"Seotda","games_played":10177,"id":1682,"name":"seotda","priority":-999,"published_on":"2025-02-21","status":"public"}
-{"average_duration":5,"bgg_id":67080,"display_name_en":"Flume","games_played":4066,"id":1683,"name":"flume","published_on":"2023-07-03","status":"public"}
-{"average_duration":2,"bgg_id":306182,"display_name_en":"Bandada","games_played":17408,"id":1684,"name":"bandada","published_on":"2022-12-27","status":"public","weight":2}
-{"average_duration":26,"bgg_id":369434,"display_name_en":"None Shall Pass!","games_played":36635,"id":1685,"is_ranking_disabled":true,"name":"noneshallpass","published_on":"2023-03-08","status":"public","weight":50}
-{"average_duration":10,"bgg_id":114562,"display_name_en":"Hokito","games_played":17849,"id":1686,"name":"hokito","premium":true,"published_on":"2023-02-22","status":"public","weight":1}
-{"average_duration":18,"bgg_id":365211,"display_name_en":"Cosmos: Empires","games_played":12793,"id":1687,"name":"cosmosempires","published_on":"2024-01-01","status":"public"}
-{"average_duration":38,"bgg_id":344101,"display_name_en":"Sasaki","games_played":428,"id":1688,"name":"sasaki","priority":-999,"published_on":"2025-02-21","status":"public"}
-{"average_duration":9,"bgg_id":361241,"display_name_en":"Vaalbara","games_played":83413,"id":1689,"name":"vaalbara","published_on":"2023-01-11","status":"public","weight":17}
-{"average_duration":19,"bgg_id":355881,"display_name_en":"Cubosaurs","games_played":45626,"id":1690,"name":"cubosaurs","published_on":"2023-01-16","status":"public","weight":37}
+{"average_duration":18,"bgg_id":334646,"display_name_en":"Dice Hospital: ER \u2013 Emergency Roll","games_played":40468,"id":1678,"name":"dicehospitaler","published_on":"2023-01-25","status":"public","weight":43}
+{"average_duration":16,"bgg_id":351666,"display_name_en":"Vidrasso","games_played":4922,"id":1679,"name":"vidrasso","published_on":"2023-06-27","status":"public","weight":3}
+{"average_duration":15,"bgg_id":312959,"display_name_en":"Rallyman: DIRT","games_played":24407,"id":1680,"name":"rallymandirt","published_on":"2024-12-02","status":"public","weight":15}
+{"average_duration":18,"bgg_id":359970,"display_name_en":"Challengers!","games_played":1148380,"id":1681,"name":"challengers","premium":true,"published_on":"2023-06-21","status":"public","weight":2372}
+{"average_duration":7,"display_name_en":"Seotda","games_played":10335,"id":1682,"name":"seotda","priority":-999,"published_on":"2025-02-21","status":"public"}
+{"average_duration":7,"bgg_id":67080,"display_name_en":"Flume","games_played":4071,"id":1683,"name":"flume","published_on":"2023-07-03","status":"public","weight":1}
+{"average_duration":2,"bgg_id":306182,"display_name_en":"Bandada","games_played":17437,"id":1684,"name":"bandada","published_on":"2022-12-27","status":"public","weight":1}
+{"average_duration":26,"bgg_id":369434,"display_name_en":"None Shall Pass!","games_played":36723,"id":1685,"is_ranking_disabled":true,"name":"noneshallpass","published_on":"2023-03-08","status":"public","weight":51}
+{"average_duration":10,"bgg_id":114562,"display_name_en":"Hokito","games_played":17865,"id":1686,"name":"hokito","premium":true,"published_on":"2023-02-22","status":"public","weight":5}
+{"average_duration":18,"bgg_id":365211,"display_name_en":"Cosmos: Empires","games_played":12805,"id":1687,"name":"cosmosempires","published_on":"2024-01-01","status":"public"}
+{"average_duration":38,"bgg_id":344101,"display_name_en":"Sasaki","games_played":431,"id":1688,"name":"sasaki","priority":-999,"published_on":"2025-02-21","status":"public"}
+{"average_duration":8,"bgg_id":361241,"display_name_en":"Vaalbara","games_played":83557,"id":1689,"name":"vaalbara","published_on":"2023-01-11","status":"public","weight":23}
+{"average_duration":17,"bgg_id":355881,"display_name_en":"Cubosaurs","games_played":45684,"id":1690,"name":"cubosaurs","published_on":"2023-01-16","status":"public","weight":32}
 {"average_duration":32,"bgg_id":373385,"display_name_en":"Coins","games_played":380,"id":1691,"name":"coins","published_on":"2022-12-20","status":"public"}
-{"average_duration":34,"bgg_id":253759,"display_name_en":"Paint the Roses","games_played":73267,"id":1692,"is_ranking_disabled":true,"name":"painttheroses","published_on":"2023-02-14","status":"public","weight":120}
-{"average_duration":31,"bgg_id":365647,"display_name_en":"Mech A Dream","games_played":10413,"id":1693,"name":"mechadream","premium":true,"published_on":"2023-03-03","status":"public","weight":8}
-{"average_duration":20,"bgg_id":341286,"display_name_en":"Eriantys","games_played":7567,"id":1695,"name":"eriantys","published_on":"2023-04-19","status":"public","weight":9}
+{"average_duration":34,"bgg_id":253759,"display_name_en":"Paint the Roses","games_played":73390,"id":1692,"is_ranking_disabled":true,"name":"painttheroses","published_on":"2023-02-14","status":"public","weight":149}
+{"average_duration":78,"bgg_id":365647,"display_name_en":"Mech A Dream","games_played":10436,"id":1693,"name":"mechadream","premium":true,"published_on":"2023-03-03","status":"public"}
+{"average_duration":25,"bgg_id":341286,"display_name_en":"Eriantys","games_played":7579,"id":1695,"name":"eriantys","published_on":"2023-04-19","status":"public","weight":14}
 {"average_duration":26,"bgg_id":357973,"display_name_en":"Rift Valley Reserve","games_played":2380,"id":1696,"name":"riftvalleyreserve","published_on":"2023-08-26","status":"public"}
-{"average_duration":19,"bgg_id":353543,"display_name_en":"Lost Seas","games_played":92082,"id":1697,"name":"lostseas","premium":true,"published_on":"2023-02-08","status":"public","weight":249}
-{"average_duration":18,"bgg_id":32288,"display_name_en":"Dou Dizhu","games_played":10669,"id":1698,"name":"fightthelandlord","published_on":"2023-06-27","status":"public","weight":3}
-{"average_duration":37,"bgg_id":377947,"display_name_en":"Lumen: The Lost World","games_played":7241,"id":1699,"name":"lumen","premium":true,"published_on":"2023-05-03","status":"public"}
-{"average_duration":2,"bgg_id":349408,"display_name_en":"Lielow","games_played":10976,"id":1702,"name":"lielow","published_on":"2023-08-03","status":"public"}
-{"average_duration":17,"bgg_id":371922,"display_name_en":"Rauha","games_played":74389,"id":1704,"name":"rauha","published_on":"2023-03-01","status":"public","weight":129}
-{"average_duration":17,"bgg_id":264647,"display_name_en":"Age of Civilization","games_played":51900,"id":1705,"name":"ageofcivilization","premium":true,"published_on":"2023-01-30","status":"public","weight":98}
-{"average_duration":4,"display_name_en":"Mod Ten","games_played":6591,"id":1706,"name":"modten","published_on":"2023-01-05","status":"public"}
-{"average_duration":9,"bgg_id":379110,"display_name_en":"SETUP","games_played":182873,"id":1707,"name":"setup","published_on":"2023-07-31","status":"public","weight":73}
-{"average_duration":34,"bgg_id":350184,"display_name_en":"Earth","games_played":406673,"id":1708,"name":"earth","premium":true,"published_on":"2023-03-29","status":"public","weight":1987}
-{"average_duration":13,"bgg_id":341402,"display_name_en":"Zefiria","games_played":23936,"id":1709,"is_ranking_disabled":true,"name":"zefiria","published_on":"2023-12-20","status":"public","weight":15}
-{"average_duration":9,"bgg_id":352238,"display_name_en":"Turncoats","games_played":5691,"id":1711,"name":"turncoats","published_on":"2023-08-06","status":"public"}
-{"average_duration":5,"bgg_id":375440,"display_name_en":"61 Autumn leaves","games_played":96482,"id":1712,"name":"sixtyone","published_on":"2023-08-21","status":"public","weight":38}
-{"average_duration":10,"display_name_en":"Nylon-ppong","games_played":2637,"id":1713,"name":"nylonppong","priority":-999,"published_on":"2025-02-21","status":"public","weight":1}
-{"average_duration":17,"bgg_id":376574,"display_name_en":"Splash Down","games_played":3348,"id":1714,"name":"splashdown","published_on":"2023-08-08","status":"public"}
-{"average_duration":34,"bgg_id":218603,"display_name_en":"Photosynthesis","games_played":57405,"id":1715,"name":"photosynthesis","premium":true,"published_on":"2023-03-15","status":"public","weight":41}
-{"average_duration":10,"bgg_id":375553,"display_name_en":"Diceathlon","games_played":46039,"id":1716,"name":"diceathlon","published_on":"2023-12-09","status":"public","weight":5}
-{"average_duration":64,"bgg_id":185343,"display_name_en":"Anachrony","games_played":50291,"id":1717,"name":"anachrony","published_on":"2023-06-14","status":"public","weight":468}
+{"average_duration":19,"bgg_id":353543,"display_name_en":"Lost Seas","games_played":92454,"id":1697,"name":"lostseas","premium":true,"published_on":"2023-02-08","status":"public","weight":220}
+{"average_duration":19,"bgg_id":32288,"display_name_en":"Dou Dizhu","games_played":10727,"id":1698,"name":"fightthelandlord","published_on":"2023-06-27","status":"public","weight":12}
+{"average_duration":37,"bgg_id":377947,"display_name_en":"Lumen: The Lost World","games_played":7244,"id":1699,"name":"lumen","premium":true,"published_on":"2023-05-03","status":"public"}
+{"average_duration":2,"bgg_id":349408,"display_name_en":"Lielow","games_played":10980,"id":1702,"name":"lielow","published_on":"2023-08-03","status":"public","weight":1}
+{"average_duration":17,"bgg_id":371922,"display_name_en":"Rauha","games_played":74756,"id":1704,"name":"rauha","published_on":"2023-03-01","status":"public","weight":208}
+{"average_duration":21,"bgg_id":264647,"display_name_en":"Age of Civilization","games_played":52074,"id":1705,"name":"ageofcivilization","premium":true,"published_on":"2023-01-30","status":"public","weight":196}
+{"average_duration":3,"display_name_en":"Mod Ten","games_played":6594,"id":1706,"name":"modten","published_on":"2023-01-05","status":"public"}
+{"average_duration":9,"bgg_id":379110,"display_name_en":"SETUP","games_played":183459,"id":1707,"name":"setup","published_on":"2023-07-31","status":"public","weight":118}
+{"average_duration":33,"bgg_id":350184,"display_name_en":"Earth","games_played":408580,"id":1708,"name":"earth","premium":true,"published_on":"2023-03-29","status":"public","weight":1642}
+{"average_duration":13,"bgg_id":341402,"display_name_en":"Zefiria","games_played":24009,"id":1709,"is_ranking_disabled":true,"name":"zefiria","published_on":"2023-12-20","status":"public","weight":14}
+{"average_duration":13,"bgg_id":352238,"display_name_en":"Turncoats","games_played":5693,"id":1711,"name":"turncoats","published_on":"2023-08-06","status":"public"}
+{"average_duration":5,"bgg_id":375440,"display_name_en":"61 Autumn leaves","games_played":96766,"id":1712,"name":"sixtyone","published_on":"2023-08-21","status":"public","weight":91}
+{"average_duration":11,"display_name_en":"Nylon-ppong","games_played":2656,"id":1713,"name":"nylonppong","priority":-999,"published_on":"2025-02-21","status":"public","weight":1}
+{"average_duration":17,"bgg_id":376574,"display_name_en":"Splash Down","games_played":3359,"id":1714,"name":"splashdown","published_on":"2023-08-08","status":"public","weight":2}
+{"average_duration":33,"bgg_id":218603,"display_name_en":"Photosynthesis","games_played":57507,"id":1715,"name":"photosynthesis","premium":true,"published_on":"2023-03-15","status":"public","weight":129}
+{"average_duration":10,"bgg_id":375553,"display_name_en":"Diceathlon","games_played":46150,"id":1716,"name":"diceathlon","published_on":"2023-12-09","status":"public","weight":27}
+{"average_duration":60,"bgg_id":185343,"display_name_en":"Anachrony","games_played":50446,"id":1717,"name":"anachrony","published_on":"2023-06-14","status":"public","weight":463}
 {"average_duration":48,"bgg_id":373190,"display_name_en":"Maps of Misterra","games_played":3981,"id":1718,"name":"mapsofmisterra","premium":true,"published_on":"2023-10-04","status":"public"}
-{"average_duration":15,"bgg_id":25182,"display_name_en":"24/7: The Game","games_played":25674,"id":1720,"name":"twentyfourseven","published_on":"2023-12-08","status":"public","weight":15}
-{"average_duration":16,"bgg_id":344685,"display_name_en":"Go Goa","games_played":30664,"id":1721,"name":"gogoa","published_on":"2023-03-13","status":"public","weight":13}
-{"average_duration":13,"bgg_id":221965,"display_name_en":"The Fox in the Forest","games_played":31138,"id":1722,"name":"thefoxintheforest","premium":true,"published_on":"2024-08-26","status":"public","weight":71}
-{"average_duration":7,"bgg_id":351494,"display_name_en":"TriATri","games_played":634,"id":1723,"name":"triatri","published_on":"2023-02-08","status":"beta"}
-{"average_duration":12,"bgg_id":42336,"display_name_en":"Ultimate Tic-Tac-Toe","games_played":19067,"id":1724,"name":"ultimatetictactoe","published_on":"2023-03-16","status":"beta","weight":13}
-{"average_duration":130,"bgg_id":20551,"display_name_en":"Shogun","games_played":4815,"id":1725,"name":"shogun","published_on":"2024-08-11","status":"public","weight":59}
-{"average_duration":12,"bgg_id":286788,"display_name_en":"Gift of Tulips","games_played":8663,"id":1726,"name":"giftoftulips","published_on":"2023-12-03","status":"public","weight":5}
-{"average_duration":39,"bgg_id":369270,"display_name_en":"Astra","games_played":9266,"id":1727,"name":"astra","published_on":"2023-05-22","status":"public","weight":10}
-{"average_duration":3,"bgg_id":328211,"display_name_en":"Vegetable Stock","games_played":7455,"id":1728,"name":"vegetablestock","published_on":"2025-07-23","status":"beta","weight":6}
-{"average_duration":2,"bgg_id":354201,"display_name_en":"Tuned","games_played":4608,"id":1729,"name":"tuned","published_on":"2023-07-14","status":"beta"}
-{"average_duration":5,"bgg_id":378010,"display_name_en":"Color Flush","games_played":18016,"id":1730,"name":"colorflush","premium":true,"published_on":"2023-08-14","status":"public","weight":7}
-{"average_duration":35,"bgg_id":368733,"display_name_en":"Roll Into Town","games_played":10148,"id":1731,"name":"rollintotown","published_on":"2023-12-13","status":"public","weight":18}
-{"average_duration":7,"bgg_id":355739,"display_name_en":"Tang Hu Lu","games_played":17877,"id":1734,"name":"tanghulu","published_on":"2024-04-23","status":"public","weight":8}
-{"average_duration":16,"bgg_id":365698,"display_name_en":"Rainforest","games_played":84144,"id":1735,"name":"rainforest","premium":true,"published_on":"2023-08-23","status":"public","weight":166}
-{"average_duration":11,"bgg_id":355433,"display_name_en":"boop.","games_played":262984,"id":1736,"name":"boop","published_on":"2023-03-27","status":"public","weight":179}
-{"average_duration":16,"bgg_id":367662,"display_name_en":"Applejack","games_played":190556,"id":1738,"name":"applejack","premium":true,"published_on":"2023-05-10","status":"public","weight":275}
-{"average_duration":6,"bgg_id":224122,"display_name_en":"AVES","games_played":1981,"id":1739,"name":"aves","published_on":"2023-09-21","status":"beta","weight":1}
-{"average_duration":47,"bgg_id":342942,"display_name_en":"Ark Nova","games_played":12232339,"id":1741,"name":"arknova","premium":true,"published_on":"2023-05-24","status":"public","weight":100000}
-{"average_duration":10,"bgg_id":372559,"display_name_en":"Spots","games_played":579539,"id":1742,"name":"spots","published_on":"2023-04-24","status":"public","weight":519}
-{"average_duration":41,"bgg_id":161614,"display_name_en":"Stockpile","games_played":11399,"id":1743,"name":"stockpile","premium":true,"published_on":"2023-12-30","status":"public","weight":36}
-{"average_duration":15,"bgg_id":377943,"display_name_en":"Reflections in the Looking Glass","games_played":1533,"id":1744,"name":"reflectionsinthelookingglass","published_on":"2023-03-15","status":"beta"}
-{"average_duration":8,"bgg_id":380165,"display_name_en":"Next Station: Tokyo","games_played":265239,"id":1745,"name":"nextstationtokyo","premium":true,"published_on":"2023-05-31","status":"public","weight":186}
-{"average_duration":30,"bgg_id":236457,"display_name_en":"Architects of the West Kingdom","games_played":83776,"id":1746,"name":"architectsofthewestkingdom","premium":true,"published_on":"2023-04-12","status":"public","weight":421}
-{"average_duration":19,"bgg_id":184921,"display_name_en":"Bunny Kingdom","games_played":388502,"id":1747,"name":"bunnykingdom","premium":true,"published_on":"2023-07-05","status":"public","weight":1588}
-{"average_duration":8,"bgg_id":370193,"display_name_en":"Roll to the Top: Journeys","games_played":222449,"id":1749,"name":"rolltothetopjourneys","published_on":"2023-11-20","status":"public","weight":157}
-{"average_duration":3,"bgg_id":352515,"display_name_en":"Trio","games_played":182940,"id":1751,"name":"trio","premium":true,"published_on":"2023-04-05","status":"public","weight":94}
-{"average_duration":15,"bgg_id":344839,"display_name_en":"Dog Lover","games_played":89489,"id":1752,"name":"doglover","published_on":"2023-08-09","status":"public","weight":142}
-{"average_duration":24,"bgg_id":262157,"display_name_en":"Block Arena","games_played":1703,"id":1754,"name":"blockarena","published_on":"2023-05-10","status":"beta"}
-{"average_duration":11,"bgg_id":269144,"display_name_en":"Hadara","games_played":101268,"id":1755,"name":"hadara","published_on":"2023-05-17","status":"public","weight":96}
-{"average_duration":12,"bgg_id":265118,"display_name_en":"Legend Raiders","games_played":8391,"id":1756,"name":"legendraiders","published_on":"2023-08-19","status":"public","weight":5}
-{"average_duration":14,"bgg_id":380178,"display_name_en":"OASIS New Hope","games_played":10382,"id":1757,"name":"oasis","published_on":"2023-12-02","status":"public","weight":11}
-{"average_duration":9,"bgg_id":368465,"display_name_en":"Qawale","games_played":42805,"id":1758,"name":"qawale","published_on":"2023-07-26","status":"public","weight":7}
-{"average_duration":26,"bgg_id":53330,"display_name_en":"Ticket Gagnant","games_played":9772,"id":1759,"name":"ticketgagnant","published_on":"2023-12-18","status":"public","weight":22}
-{"average_duration":33,"bgg_id":230089,"display_name_en":"Okanagan: Valley of the Lakes","games_played":2451,"id":1760,"name":"okanagan","published_on":"2024-08-23","status":"public","weight":25}
-{"average_duration":10,"bgg_id":380728,"display_name_en":"Exit Strategy","games_played":16892,"id":1761,"name":"exitstrategy","published_on":"2023-12-24","status":"public","weight":3}
-{"average_duration":6,"bgg_id":382194,"display_name_en":"The Great American Fox Hunt","games_played":3408,"id":1762,"name":"thegreatamericanfoxhunt","published_on":"2023-07-07","status":"beta"}
-{"average_duration":15,"bgg_id":1269,"display_name_en":"Spite and Malice","games_played":461406,"id":1763,"name":"spiteandmalice","published_on":"2025-01-06","status":"public","weight":2047}
-{"average_duration":13,"bgg_id":382960,"display_name_en":"Line It","games_played":70609,"id":1764,"name":"lineit","premium":true,"published_on":"2023-06-07","status":"public","weight":48}
-{"average_duration":22,"bgg_id":13597,"display_name_en":"Big Two","games_played":17702,"id":1765,"name":"bigtwo","published_on":"2023-06-27","status":"public","weight":2}
-{"average_duration":3,"bgg_id":6941248,"display_name_en":"Volto","games_played":24236,"id":1767,"name":"volto","premium":true,"published_on":"2024-01-05","status":"public","weight":3}
-{"average_duration":16,"bgg_id":357563,"display_name_en":"Akropolis","games_played":655532,"id":1768,"name":"akropolis","premium":true,"published_on":"2023-04-26","status":"public","weight":945}
-{"average_duration":8,"bgg_id":158600,"display_name_en":"Hanamikoji","games_played":206476,"id":1769,"name":"hanamikoji","published_on":"2023-12-05","status":"public","weight":112}
-{"average_duration":16,"bgg_id":375567,"display_name_en":"All In","games_played":958,"id":1770,"name":"allin","published_on":"2023-11-03","status":"beta"}
-{"average_duration":38,"bgg_id":225694,"display_name_en":"Decrypto","games_played":62116,"id":1771,"is_ranking_disabled":true,"name":"decrypto","premium":true,"published_on":"2023-07-19","status":"public","weight":461}
-{"average_duration":6,"bgg_id":402126,"display_name_en":"Pocket Cats","games_played":166921,"id":1772,"name":"pocketcats","published_on":"2024-03-20","status":"public","weight":63}
-{"average_duration":40,"bgg_id":155703,"display_name_en":"Evolution","games_played":45390,"id":1773,"name":"evolution","published_on":"2024-04-24","status":"public","weight":178}
-{"average_duration":14,"bgg_id":380105,"display_name_en":"Get on Board: Paris & Roma","games_played":13418,"id":1774,"name":"getonboardparisrome","premium":true,"published_on":"2023-10-02","status":"public","weight":3}
-{"average_duration":9,"bgg_id":221053,"display_name_en":"Hawaiian Hanafuda","games_played":7999,"id":1775,"name":"sakura","priority":-999,"published_on":"2025-02-21","status":"public","weight":6}
-{"average_duration":9,"bgg_id":377515,"display_name_en":"Mind Up!","games_played":47626,"id":1776,"name":"mindup","premium":true,"published_on":"2023-06-07","status":"public","weight":21}
-{"average_duration":22,"bgg_id":281676,"display_name_en":"Galactic Era","games_played":1558,"id":1777,"name":"galacticera","published_on":"2025-05-16","status":"beta","weight":2}
-{"average_duration":7,"bgg_id":19957,"display_name_en":"31","games_played":36485,"id":1778,"name":"thirtyone","priority":-999,"published_on":"2025-02-24","status":"public","weight":33}
-{"average_duration":9,"bgg_id":17521,"display_name_en":"Golf","games_played":336044,"id":1779,"name":"golf","published_on":"2024-01-29","status":"public","weight":329}
-{"average_duration":3,"bgg_id":41247,"display_name_en":"Mia","games_played":15348,"id":1780,"name":"mia","priority":-999,"published_on":"2025-02-21","status":"public","weight":2}
-{"average_duration":3,"bgg_id":10502,"display_name_en":"Poker Dice","games_played":42275,"id":1781,"name":"pokerdice","priority":-999,"published_on":"2025-02-21","status":"public","weight":30}
+{"average_duration":14,"bgg_id":25182,"display_name_en":"24/7: The Game","games_played":25742,"id":1720,"name":"twentyfourseven","published_on":"2023-12-08","status":"public","weight":28}
+{"average_duration":15,"bgg_id":344685,"display_name_en":"Go Goa","games_played":30725,"id":1721,"name":"gogoa","published_on":"2023-03-13","status":"public","weight":22}
+{"average_duration":13,"bgg_id":221965,"display_name_en":"The Fox in the Forest","games_played":31264,"id":1722,"name":"thefoxintheforest","premium":true,"published_on":"2024-08-26","status":"public","weight":76}
+{"average_duration":7,"bgg_id":351494,"display_name_en":"TriATri","games_played":635,"id":1723,"name":"triatri","published_on":"2023-02-08","status":"beta"}
+{"average_duration":13,"bgg_id":42336,"display_name_en":"Ultimate Tic-Tac-Toe","games_played":19126,"id":1724,"name":"ultimatetictactoe","published_on":"2023-03-16","status":"beta","weight":9}
+{"average_duration":111,"bgg_id":20551,"display_name_en":"Shogun","games_played":4842,"id":1725,"name":"shogun","published_on":"2024-08-11","status":"public","weight":118}
+{"average_duration":11,"bgg_id":286788,"display_name_en":"Gift of Tulips","games_played":8676,"id":1726,"name":"giftoftulips","published_on":"2023-12-03","status":"public","weight":3}
+{"average_duration":37,"bgg_id":369270,"display_name_en":"Astra","games_played":9272,"id":1727,"name":"astra","published_on":"2023-05-22","status":"public","weight":32}
+{"average_duration":3,"bgg_id":328211,"display_name_en":"Vegetable Stock","games_played":7494,"id":1728,"name":"vegetablestock","published_on":"2025-07-23","status":"beta","weight":5}
+{"average_duration":1,"bgg_id":354201,"display_name_en":"Tuned","games_played":4612,"id":1729,"name":"tuned","published_on":"2023-07-14","status":"beta"}
+{"average_duration":5,"bgg_id":378010,"display_name_en":"Color Flush","games_played":18034,"id":1730,"name":"colorflush","premium":true,"published_on":"2023-08-14","status":"public","weight":4}
+{"average_duration":28,"bgg_id":368733,"display_name_en":"Roll Into Town","games_played":10162,"id":1731,"name":"rollintotown","published_on":"2023-12-13","status":"public","weight":14}
+{"average_duration":8,"bgg_id":355739,"display_name_en":"Tang Hu Lu","games_played":17919,"id":1734,"name":"tanghulu","published_on":"2024-04-23","status":"public","weight":7}
+{"average_duration":16,"bgg_id":365698,"display_name_en":"Rainforest","games_played":84358,"id":1735,"name":"rainforest","premium":true,"published_on":"2023-08-23","status":"public","weight":82}
+{"average_duration":10,"bgg_id":355433,"display_name_en":"boop.","games_played":263790,"id":1736,"name":"boop","published_on":"2023-03-27","status":"public","weight":100}
+{"average_duration":15,"bgg_id":367662,"display_name_en":"Applejack","games_played":191143,"id":1738,"name":"applejack","premium":true,"published_on":"2023-05-10","status":"public","weight":230}
+{"average_duration":5,"bgg_id":224122,"display_name_en":"AVES","games_played":1988,"id":1739,"name":"aves","published_on":"2023-09-21","status":"beta"}
+{"average_duration":47,"bgg_id":342942,"display_name_en":"Ark Nova","games_played":12324392,"id":1741,"name":"arknova","premium":true,"published_on":"2023-05-24","status":"public","weight":100000}
+{"average_duration":10,"bgg_id":372559,"display_name_en":"Spots","games_played":582058,"id":1742,"name":"spots","published_on":"2023-04-24","status":"public","weight":705}
+{"average_duration":42,"bgg_id":161614,"display_name_en":"Stockpile","games_played":11438,"id":1743,"name":"stockpile","premium":true,"published_on":"2023-12-30","status":"public","weight":59}
+{"average_duration":15,"bgg_id":377943,"display_name_en":"Reflections in the Looking Glass","games_played":1536,"id":1744,"name":"reflectionsinthelookingglass","published_on":"2023-03-15","status":"beta"}
+{"average_duration":8,"bgg_id":380165,"display_name_en":"Next Station: Tokyo","games_played":266246,"id":1745,"name":"nextstationtokyo","premium":true,"published_on":"2023-05-31","status":"public","weight":260}
+{"average_duration":31,"bgg_id":236457,"display_name_en":"Architects of the West Kingdom","games_played":84024,"id":1746,"name":"architectsofthewestkingdom","premium":true,"published_on":"2023-04-12","status":"public","weight":284}
+{"average_duration":19,"bgg_id":184921,"display_name_en":"Bunny Kingdom","games_played":390685,"id":1747,"name":"bunnykingdom","premium":true,"published_on":"2023-07-05","status":"public","weight":1375}
+{"average_duration":8,"bgg_id":370193,"display_name_en":"Roll to the Top: Journeys","games_played":223264,"id":1749,"name":"rolltothetopjourneys","published_on":"2023-11-20","status":"public","weight":215}
+{"average_duration":3,"bgg_id":352515,"display_name_en":"Trio","games_played":183907,"id":1751,"name":"trio","premium":true,"published_on":"2023-04-05","status":"public","weight":148}
+{"average_duration":15,"bgg_id":344839,"display_name_en":"Dog Lover","games_played":90041,"id":1752,"name":"doglover","published_on":"2023-08-09","status":"public","weight":97}
+{"average_duration":25,"bgg_id":262157,"display_name_en":"Block Arena","games_played":1704,"id":1754,"name":"blockarena","published_on":"2023-05-10","status":"beta"}
+{"average_duration":11,"bgg_id":269144,"display_name_en":"Hadara","games_played":101714,"id":1755,"name":"hadara","published_on":"2023-05-17","status":"public","weight":107}
+{"average_duration":12,"bgg_id":265118,"display_name_en":"Legend Raiders","games_played":8398,"id":1756,"name":"legendraiders","published_on":"2023-08-19","status":"public"}
+{"average_duration":14,"bgg_id":380178,"display_name_en":"OASIS New Hope","games_played":10392,"id":1757,"name":"oasis","published_on":"2023-12-02","status":"public","weight":11}
+{"average_duration":9,"bgg_id":368465,"display_name_en":"Qawale","games_played":42912,"id":1758,"name":"qawale","published_on":"2023-07-26","status":"public","weight":13}
+{"average_duration":27,"bgg_id":53330,"display_name_en":"Ticket Gagnant","games_played":9790,"id":1759,"name":"ticketgagnant","published_on":"2023-12-18","status":"public"}
+{"average_duration":24,"bgg_id":230089,"display_name_en":"Okanagan: Valley of the Lakes","games_played":2459,"id":1760,"name":"okanagan","published_on":"2024-08-23","status":"public"}
+{"average_duration":12,"bgg_id":380728,"display_name_en":"Exit Strategy","games_played":16938,"id":1761,"name":"exitstrategy","published_on":"2023-12-24","status":"public","weight":14}
+{"average_duration":4,"bgg_id":382194,"display_name_en":"The Great American Fox Hunt","games_played":3416,"id":1762,"name":"thegreatamericanfoxhunt","published_on":"2023-07-07","status":"beta"}
+{"average_duration":15,"bgg_id":1269,"display_name_en":"Spite and Malice","games_played":467095,"id":1763,"name":"spiteandmalice","published_on":"2025-01-06","status":"public","weight":2250}
+{"average_duration":12,"bgg_id":382960,"display_name_en":"Line It","games_played":70730,"id":1764,"name":"lineit","premium":true,"published_on":"2023-06-07","status":"public","weight":66}
+{"average_duration":22,"bgg_id":13597,"display_name_en":"Big Two","games_played":17812,"id":1765,"name":"bigtwo","published_on":"2023-06-27","status":"public","weight":18}
+{"average_duration":3,"bgg_id":6941248,"display_name_en":"Volto","games_played":24255,"id":1767,"name":"volto","premium":true,"published_on":"2024-01-05","status":"public"}
+{"average_duration":16,"bgg_id":357563,"display_name_en":"Akropolis","games_played":657932,"id":1768,"name":"akropolis","premium":true,"published_on":"2023-04-26","status":"public","weight":987}
+{"average_duration":8,"bgg_id":158600,"display_name_en":"Hanamikoji","games_played":207492,"id":1769,"name":"hanamikoji","published_on":"2023-12-05","status":"public","weight":185}
+{"average_duration":16,"bgg_id":375567,"display_name_en":"All In","games_played":959,"id":1770,"name":"allin","published_on":"2023-11-03","status":"beta"}
+{"average_duration":39,"bgg_id":225694,"display_name_en":"Decrypto","games_played":62424,"id":1771,"is_ranking_disabled":true,"name":"decrypto","premium":true,"published_on":"2023-07-19","status":"public","weight":476}
+{"average_duration":6,"bgg_id":402126,"display_name_en":"Pocket Cats","games_played":167301,"id":1772,"name":"pocketcats","published_on":"2024-03-20","status":"public","weight":31}
+{"average_duration":40,"bgg_id":155703,"display_name_en":"Evolution","games_played":45567,"id":1773,"name":"evolution","published_on":"2024-04-24","status":"public","weight":252}
+{"average_duration":14,"bgg_id":380105,"display_name_en":"Get on Board: Paris & Roma","games_played":13439,"id":1774,"name":"getonboardparisrome","premium":true,"published_on":"2023-10-02","status":"public","weight":21}
+{"average_duration":9,"bgg_id":221053,"display_name_en":"Hawaiian Hanafuda","games_played":8052,"id":1775,"name":"sakura","priority":-999,"published_on":"2025-02-21","status":"public","weight":6}
+{"average_duration":8,"bgg_id":377515,"display_name_en":"Mind Up!","games_played":47710,"id":1776,"name":"mindup","premium":true,"published_on":"2023-06-07","status":"public","weight":14}
+{"average_duration":24,"bgg_id":281676,"display_name_en":"Galactic Era","games_played":1569,"id":1777,"name":"galacticera","published_on":"2025-05-16","status":"beta"}
+{"average_duration":7,"bgg_id":19957,"display_name_en":"31","games_played":36831,"id":1778,"name":"thirtyone","priority":-999,"published_on":"2025-02-24","status":"public","weight":63}
+{"average_duration":9,"bgg_id":17521,"display_name_en":"Golf","games_played":337535,"id":1779,"name":"golf","published_on":"2024-01-29","status":"public","weight":329}
+{"average_duration":4,"bgg_id":41247,"display_name_en":"Mia","games_played":15425,"id":1780,"name":"mia","priority":-999,"published_on":"2025-02-21","status":"public","weight":3}
+{"average_duration":3,"bgg_id":10502,"display_name_en":"Poker Dice","games_played":42617,"id":1781,"name":"pokerdice","priority":-999,"published_on":"2025-02-21","status":"public","weight":32}
 {"average_duration":10,"bgg_id":307450,"display_name_en":"The Number","games_played":17678,"id":1782,"locked":true,"name":"thenumber","published_on":"2023-09-18","status":"public"}
-{"average_duration":21,"bgg_id":309105,"display_name_en":"Sagani","games_played":212335,"id":1783,"name":"sagani","premium":true,"published_on":"2023-06-28","status":"public","weight":684}
-{"average_duration":5,"bgg_id":238510,"display_name_en":"Farkle","games_played":217520,"id":1785,"name":"farkle","published_on":"2025-01-06","status":"public","weight":208}
-{"average_duration":14,"bgg_id":325735,"display_name_en":"Empire Plateau","games_played":2294,"id":1786,"name":"empireplateau","published_on":"2023-08-29","status":"public"}
-{"average_duration":12,"bgg_id":296960,"display_name_en":"Divercit\u00e9","games_played":1057,"id":1787,"name":"divercite","published_on":"2023-10-06","status":"beta"}
-{"average_duration":10,"bgg_id":16110,"display_name_en":"Cucco","games_played":4374,"id":1789,"name":"cucco","published_on":"2024-01-11","status":"public","weight":4}
-{"average_duration":11,"bgg_id":370139,"display_name_en":"DIG UP Adventure","games_played":58342,"id":1790,"name":"digupadventure","published_on":"2023-09-06","status":"public","weight":25}
-{"average_duration":10,"bgg_id":379625,"display_name_en":"Elawa","games_played":63407,"id":1791,"name":"elawa","published_on":"2023-06-05","status":"public","weight":38}
-{"average_duration":22,"bgg_id":369548,"display_name_en":"After Us","games_played":75553,"id":1792,"name":"afterus","published_on":"2023-09-13","status":"public","weight":127}
-{"average_duration":4,"bgg_id":20525,"display_name_en":"Knockout Whist","games_played":5941,"id":1793,"name":"knockoutwhist","priority":-999,"published_on":"2025-02-21","status":"public","weight":1}
-{"average_duration":28,"bgg_id":7388989,"display_name_en":"Expeditions: Around the World","games_played":32545,"id":1794,"name":"expeditions","published_on":"2023-07-03","status":"public","weight":77}
-{"average_duration":7,"bgg_id":101425,"display_name_en":"Cucumber","games_played":11844,"id":1795,"name":"cucumber","priority":-999,"published_on":"2025-02-21","status":"public","weight":8}
-{"average_duration":28,"bgg_id":180593,"display_name_en":"The Bloody Inn","games_played":17231,"id":1796,"name":"bloodyinn","published_on":"2025-02-13","status":"beta","weight":103}
-{"average_duration":12,"bgg_id":360747,"display_name_en":"Skate Legend","games_played":11381,"id":1797,"name":"skatelegend","premium":true,"published_on":"2023-12-22","status":"public","weight":9}
-{"average_duration":34,"bgg_id":292914,"display_name_en":"Fika","games_played":5156,"id":1798,"name":"fika","published_on":"2023-11-06","status":"public","weight":8}
-{"average_duration":22,"bgg_id":334986,"display_name_en":"Daybreak","games_played":690544,"id":1799,"is_ranking_disabled":true,"name":"daybreak","published_on":"2023-12-10","status":"public","weight":1298}
-{"average_duration":15,"bgg_id":251412,"display_name_en":"On Tour","games_played":29676,"id":1800,"name":"ontour","published_on":"2023-11-20","status":"public","weight":52}
-{"average_duration":24,"bgg_id":250442,"display_name_en":"Crypt","games_played":4610,"id":1801,"name":"crypt","published_on":"2023-10-23","status":"public"}
-{"average_duration":9,"bgg_id":379629,"display_name_en":"Knarr","games_played":293433,"id":1802,"name":"knarr","premium":true,"published_on":"2023-08-28","status":"public","weight":358}
-{"average_duration":78,"bgg_id":355224,"display_name_en":"Isle of Trains: All Aboard","games_played":6188,"id":1803,"name":"isleoftrainsallaboard","premium":true,"published_on":"2024-03-25","status":"public","weight":52}
-{"average_duration":8,"bgg_id":356123,"display_name_en":"Turing Machine","games_played":792034,"id":1804,"is_ranking_disabled":true,"name":"turingmachine","premium":true,"published_on":"2024-01-01","status":"public","weight":525}
-{"average_duration":2,"bgg_id":307379,"display_name_en":"Trike","games_played":16092,"id":1806,"name":"trike","published_on":"2023-12-04","status":"public"}
-{"average_duration":27,"bgg_id":25462,"display_name_en":"German Whist","games_played":1742,"id":1807,"name":"germanwhist","priority":-999,"published_on":"2025-02-21","status":"public","weight":4}
-{"average_duration":15,"bgg_id":154252,"display_name_en":"Sergeant Major","games_played":486,"id":1808,"name":"sergeantmajor","priority":-999,"published_on":"2025-02-21","status":"public"}
-{"average_duration":77,"bgg_id":114912,"display_name_en":"Starship Merchants","games_played":622,"id":1809,"name":"starshipmerchants","published_on":"2024-01-12","status":"beta","weight":20}
-{"average_duration":4,"bgg_id":19971,"display_name_en":"Toepen","games_played":2203,"id":1810,"name":"toepen","priority":-999,"published_on":"2025-02-21","status":"public"}
-{"average_duration":23,"bgg_id":356485,"display_name_en":"AOC: Age of Champagne","games_played":9776,"id":1811,"name":"ageofchampagne","published_on":"2023-09-20","status":"public"}
-{"average_duration":21,"bgg_id":373383,"display_name_en":"Pook","games_played":3723,"id":1812,"name":"pook","published_on":"2023-12-29","status":"public"}
-{"average_duration":33,"bgg_id":172998,"display_name_en":"Mighty","games_played":3176,"id":1813,"name":"mighty","priority":-999,"published_on":"2025-02-21","status":"public","weight":19}
-{"average_duration":51,"bgg_id":355467,"display_name_en":"Envelopes of Cash","games_played":4264,"id":1814,"name":"envelopesofcash","published_on":"2023-12-18","status":"public"}
+{"average_duration":21,"bgg_id":309105,"display_name_en":"Sagani","games_played":213388,"id":1783,"name":"sagani","premium":true,"published_on":"2023-06-28","status":"public","weight":720}
+{"average_duration":5,"bgg_id":238510,"display_name_en":"Farkle","games_played":218905,"id":1785,"name":"farkle","published_on":"2025-01-06","status":"public","weight":153}
+{"average_duration":14,"bgg_id":325735,"display_name_en":"Empire Plateau","games_played":2296,"id":1786,"name":"empireplateau","published_on":"2023-08-29","status":"public"}
+{"average_duration":10,"bgg_id":296960,"display_name_en":"Divercit\u00e9","games_played":1059,"id":1787,"name":"divercite","published_on":"2023-10-06","status":"beta"}
+{"average_duration":9,"bgg_id":16110,"display_name_en":"Cucco","games_played":4395,"id":1789,"name":"cucco","published_on":"2024-01-11","status":"public"}
+{"average_duration":10,"bgg_id":370139,"display_name_en":"DIG UP Adventure","games_played":58512,"id":1790,"name":"digupadventure","published_on":"2023-09-06","status":"public","weight":31}
+{"average_duration":9,"bgg_id":379625,"display_name_en":"Elawa","games_played":63597,"id":1791,"name":"elawa","published_on":"2023-06-05","status":"public","weight":55}
+{"average_duration":21,"bgg_id":369548,"display_name_en":"After Us","games_played":75784,"id":1792,"name":"afterus","published_on":"2023-09-13","status":"public","weight":136}
+{"average_duration":4,"bgg_id":20525,"display_name_en":"Knockout Whist","games_played":5964,"id":1793,"name":"knockoutwhist","priority":-999,"published_on":"2025-02-21","status":"public","weight":2}
+{"average_duration":27,"bgg_id":7388989,"display_name_en":"Expeditions: Around the World","games_played":32617,"id":1794,"name":"expeditions","published_on":"2023-07-03","status":"public","weight":53}
+{"average_duration":7,"bgg_id":101425,"display_name_en":"Cucumber","games_played":11883,"id":1795,"name":"cucumber","priority":-999,"published_on":"2025-02-21","status":"public","weight":9}
+{"average_duration":31,"bgg_id":180593,"display_name_en":"The Bloody Inn","games_played":17361,"id":1796,"name":"bloodyinn","published_on":"2025-02-13","status":"beta","weight":64}
+{"average_duration":11,"bgg_id":360747,"display_name_en":"Skate Legend","games_played":11415,"id":1797,"name":"skatelegend","premium":true,"published_on":"2023-12-22","status":"public","weight":9}
+{"average_duration":37,"bgg_id":292914,"display_name_en":"Fika","games_played":5162,"id":1798,"name":"fika","published_on":"2023-11-06","status":"public"}
+{"average_duration":19,"bgg_id":334986,"display_name_en":"Daybreak","games_played":696223,"id":1799,"is_ranking_disabled":true,"name":"daybreak","published_on":"2023-12-10","status":"public","weight":1308}
+{"average_duration":15,"bgg_id":251412,"display_name_en":"On Tour","games_played":29778,"id":1800,"name":"ontour","published_on":"2023-11-20","status":"public","weight":61}
+{"average_duration":14,"bgg_id":250442,"display_name_en":"Crypt","games_played":4623,"id":1801,"name":"crypt","published_on":"2023-10-23","status":"public"}
+{"average_duration":9,"bgg_id":379629,"display_name_en":"Knarr","games_played":295031,"id":1802,"name":"knarr","premium":true,"published_on":"2023-08-28","status":"public","weight":552}
+{"average_duration":78,"bgg_id":355224,"display_name_en":"Isle of Trains: All Aboard","games_played":6197,"id":1803,"name":"isleoftrainsallaboard","premium":true,"published_on":"2024-03-25","status":"public","weight":10}
+{"average_duration":8,"bgg_id":356123,"display_name_en":"Turing Machine","games_played":797150,"id":1804,"is_ranking_disabled":true,"name":"turingmachine","premium":true,"published_on":"2024-01-01","status":"public","weight":1394}
+{"average_duration":2,"bgg_id":307379,"display_name_en":"Trike","games_played":16102,"id":1806,"name":"trike","published_on":"2023-12-04","status":"public"}
+{"average_duration":29,"bgg_id":25462,"display_name_en":"German Whist","games_played":1748,"id":1807,"name":"germanwhist","priority":-999,"published_on":"2025-02-21","status":"public"}
+{"average_duration":23,"bgg_id":154252,"display_name_en":"Sergeant Major","games_played":488,"id":1808,"name":"sergeantmajor","priority":-999,"published_on":"2025-02-21","status":"public"}
+{"average_duration":77,"bgg_id":114912,"display_name_en":"Starship Merchants","games_played":624,"id":1809,"name":"starshipmerchants","published_on":"2024-01-12","status":"beta","weight":10}
+{"average_duration":4,"bgg_id":19971,"display_name_en":"Toepen","games_played":2208,"id":1810,"name":"toepen","priority":-999,"published_on":"2025-02-21","status":"public"}
+{"average_duration":20,"bgg_id":356485,"display_name_en":"AOC: Age of Champagne","games_played":9792,"id":1811,"name":"ageofchampagne","published_on":"2023-09-20","status":"public","weight":5}
+{"average_duration":21,"bgg_id":373383,"display_name_en":"Pook","games_played":3724,"id":1812,"name":"pook","published_on":"2023-12-29","status":"public"}
+{"average_duration":30,"bgg_id":172998,"display_name_en":"Mighty","games_played":3208,"id":1813,"name":"mighty","priority":-999,"published_on":"2025-02-21","status":"public"}
+{"average_duration":62,"bgg_id":355467,"display_name_en":"Envelopes of Cash","games_played":4273,"id":1814,"name":"envelopesofcash","published_on":"2023-12-18","status":"public","weight":23}
 {"average_duration":41,"bgg_id":381635,"display_name_en":"Sahwari","games_played":1613,"id":1815,"name":"sahwari","published_on":"2023-10-04","status":"public"}
-{"average_duration":31,"bgg_id":218530,"display_name_en":"Tortuga 1667","games_played":2767,"id":1816,"name":"tortugasixteensixtyseven","published_on":"2024-08-25","status":"public"}
-{"average_duration":19,"bgg_id":285040,"display_name_en":"Open Face Chinese Poker","games_played":105500,"id":1817,"name":"openfacechinesepoker","published_on":"2025-01-06","status":"public","weight":65}
-{"average_duration":197,"bgg_id":286158,"display_name_en":"D.E.I.: Divide et Impera","games_played":3034,"id":1818,"name":"divideetimpera","premium":true,"published_on":"2023-12-16","status":"public"}
-{"average_duration":18,"bgg_id":366397,"display_name_en":"Colorado","games_played":12057,"id":1819,"name":"colorado","premium":true,"published_on":"2023-10-04","status":"public","weight":28}
-{"average_duration":23,"bgg_id":304783,"display_name_en":"Hadrian's Wall","games_played":157662,"id":1820,"name":"hadrianswall","premium":true,"published_on":"2023-10-25","status":"public","weight":381}
-{"average_duration":10,"bgg_id":379290,"display_name_en":"Timeline Twist","games_played":53723,"id":1821,"is_ranking_disabled":true,"name":"timelinetwist","published_on":"2023-07-12","status":"public","weight":29}
-{"average_duration":8,"bgg_id":381429,"display_name_en":"Dobble Connect","games_played":29412,"id":1822,"name":"dobbleconnect","published_on":"2023-07-12","status":"public","weight":15}
-{"average_duration":39,"bgg_id":357071,"display_name_en":"GOLDblivion","games_played":32929,"id":1823,"name":"goldblivion","premium":true,"published_on":"2023-12-11","status":"public","weight":205}
-{"average_duration":16,"bgg_id":15878,"display_name_en":"Rummy","games_played":1711578,"id":1824,"name":"rummy","published_on":"2024-01-29","status":"public","weight":3118}
-{"average_duration":39,"bgg_id":368294,"display_name_en":"Wastelandia","games_played":2003,"id":1825,"is_ranking_disabled":true,"name":"wastelandia","published_on":"2023-09-30","status":"beta"}
-{"average_duration":13,"bgg_id":388539,"display_name_en":"Quibbles","games_played":57397,"id":1826,"name":"quibbles","published_on":"2023-10-04","status":"public","weight":144}
-{"average_duration":6,"bgg_id":73073,"display_name_en":"Nap","games_played":1036,"id":1827,"name":"nap","priority":-999,"published_on":"2025-02-21","status":"public"}
-{"average_duration":24,"display_name_en":"Two-Ten-Jack","games_played":349,"id":1828,"name":"twotenjack","priority":-999,"published_on":"2025-02-21","status":"public"}
-{"average_duration":9,"bgg_id":350759,"display_name_en":"Vault: A Solitaire Dice Game","games_played":130347,"id":1829,"name":"vault","published_on":"2023-12-17","status":"public","weight":29}
-{"average_duration":21,"bgg_id":393352,"display_name_en":"Perfect Words","games_played":60541,"id":1830,"is_ranking_disabled":true,"name":"perfectwords","published_on":"2023-10-04","status":"public","weight":149}
-{"average_duration":22,"bgg_id":358669,"display_name_en":"12 Chip Trick","games_played":7707,"id":1831,"name":"twelvechips","premium":true,"published_on":"2023-10-09","status":"public","weight":7}
-{"average_duration":20,"bgg_id":290236,"display_name_en":"Canvas","games_played":82890,"id":1833,"name":"canvas","premium":true,"published_on":"2023-08-16","status":"public","weight":113}
-{"average_duration":6,"bgg_id":20240,"display_name_en":"\u00c9cart\u00e9","games_played":3571,"id":1834,"name":"ecarte","priority":-999,"published_on":"2025-02-21","status":"public","weight":1}
-{"average_duration":8,"bgg_id":11582,"display_name_en":"Schnapsen","games_played":11601,"id":1835,"name":"schnapsen","priority":-999,"published_on":"2025-02-21","status":"public","weight":3}
-{"average_duration":13,"bgg_id":4376,"display_name_en":"Kings in the Corner","games_played":128546,"id":1836,"name":"kingsinthecorner","published_on":"2025-01-06","status":"public","weight":295}
-{"average_duration":24,"bgg_id":275916,"display_name_en":"Ca\u00efrn","games_played":7390,"id":1837,"name":"cairn","published_on":"2024-02-05","status":"public"}
-{"average_duration":13,"bgg_id":6901,"display_name_en":"Euchre","games_played":78197,"id":1838,"name":"euchre","published_on":"2025-01-06","status":"public","weight":367}
-{"average_duration":31,"bgg_id":340541,"display_name_en":"Wizards of the Grimoire","games_played":61843,"id":1839,"name":"wizardsgrimoire","published_on":"2023-09-25","status":"public","weight":77}
-{"average_duration":18,"bgg_id":246663,"display_name_en":"Neom","games_played":16613,"id":1840,"name":"neom","premium":true,"published_on":"2024-08-22","status":"public","weight":23}
-{"average_duration":17,"bgg_id":391163,"display_name_en":"Forest Shuffle","games_played":4764868,"id":1841,"name":"forestshuffle","premium":true,"published_on":"2023-08-30","status":"public","weight":21175}
-{"average_duration":18,"bgg_id":231567,"display_name_en":"Now Boarding","games_played":116825,"id":1842,"is_ranking_disabled":true,"name":"nowboarding","published_on":"2023-11-01","status":"public","weight":267}
-{"average_duration":38,"bgg_id":364186,"display_name_en":"Terra Nova","games_played":38732,"id":1844,"name":"terranova","premium":true,"published_on":"2023-11-29","status":"public","weight":117}
-{"average_duration":35,"bgg_id":37904,"display_name_en":"Formula D","games_played":129985,"id":1845,"name":"formulad","published_on":"2025-12-31","status":"public","weight":1689}
-{"average_duration":57,"bgg_id":392492,"display_name_en":"Stupor Mundi","games_played":18313,"id":1846,"name":"stupormundi","premium":true,"published_on":"2024-07-10","status":"public","weight":217}
-{"average_duration":5,"bgg_id":338467,"display_name_en":"Zuuli","games_played":32504,"id":1847,"name":"zuuli","published_on":"2023-09-11","status":"public","weight":9}
-{"average_duration":16,"bgg_id":381278,"display_name_en":"Dracula vs Van Helsing","games_played":121679,"id":1848,"name":"draculahelsing","premium":true,"published_on":"2023-10-09","status":"public","weight":174}
-{"average_duration":53,"bgg_id":379633,"display_name_en":"Humanity","games_played":2826,"id":1849,"name":"humanity","published_on":"2023-10-04","status":"public"}
-{"average_duration":6,"bgg_id":344114,"display_name_en":"Bag of Chips","games_played":90963,"id":1850,"name":"bagofchips","premium":true,"published_on":"2023-12-28","status":"public","weight":40}
-{"average_duration":39,"bgg_id":308765,"display_name_en":"Praga Caput Regni","games_played":46360,"id":1851,"name":"praga","published_on":"2024-06-12","status":"public","weight":275}
-{"average_duration":38,"bgg_id":338093,"display_name_en":"Ancient Knowledge","games_played":30720,"id":1852,"name":"ancientknowledge","premium":true,"published_on":"2024-01-17","status":"public","weight":39}
-{"average_duration":47,"bgg_id":298130,"display_name_en":"Amalfi - Renaissance","games_played":21409,"id":1853,"name":"amalfi","premium":true,"published_on":"2024-01-24","status":"public","weight":75}
-{"average_duration":68,"bgg_id":256960,"display_name_en":"Pax Pamir: Second Edition","games_played":87634,"id":1854,"name":"paxpamir","published_on":"2023-11-22","status":"public","weight":243}
-{"average_duration":10,"bgg_id":25574,"display_name_en":"Gin Rummy","games_played":241986,"id":1855,"name":"ginrummy","published_on":"2024-01-29","status":"public","weight":383}
-{"average_duration":1,"bgg_id":389734,"display_name_en":"Xxung","games_played":1997,"id":1856,"name":"xxung","published_on":"2024-04-03","status":"beta"}
-{"average_duration":24,"bgg_id":271529,"display_name_en":"Botanik","games_played":30920,"id":1858,"name":"botanik","premium":true,"published_on":"2024-02-09","status":"beta","weight":95}
-{"average_duration":17,"bgg_id":344258,"display_name_en":"That Time You Killed Me","games_played":34299,"id":1859,"name":"thattimeyoukilledme","published_on":"2024-06-24","status":"public","weight":20}
-{"average_duration":17,"bgg_id":396042,"display_name_en":"Quirky Quarks","games_played":2052,"id":1860,"name":"quirkyquarks","published_on":"2023-10-04","status":"public","weight":12}
-{"average_duration":9,"bgg_id":340816,"display_name_en":"101: the match","games_played":25600,"id":1861,"name":"oneohone","published_on":"2023-12-12","status":"public","weight":10}
-{"average_duration":20,"bgg_id":246200,"display_name_en":"Piepmatz: Little Songbirds","games_played":6038,"id":1863,"name":"piepmatz","premium":true,"published_on":"2024-08-24","status":"public","weight":30}
-{"average_duration":35,"bgg_id":351476,"display_name_en":"My City: Roll & Build","games_played":104585,"id":1865,"name":"mycityrb","premium":true,"published_on":"2023-11-15","status":"public","weight":389}
-{"average_duration":53,"bgg_id":378001,"display_name_en":"Moon River","games_played":13334,"id":1866,"name":"moonriver","premium":true,"published_on":"2023-10-18","status":"public"}
-{"average_duration":35,"bgg_id":300877,"display_name_en":"New York Zoo","games_played":77453,"id":1867,"name":"newyorkzoo","premium":true,"published_on":"2024-05-06","status":"public","weight":336}
-{"average_duration":5,"bgg_id":385761,"display_name_en":"Faraway","games_played":2875737,"id":1868,"name":"faraway","premium":true,"published_on":"2023-10-04","status":"public","weight":3272}
+{"average_duration":30,"bgg_id":218530,"display_name_en":"Tortuga 1667","games_played":2775,"id":1816,"name":"tortugasixteensixtyseven","published_on":"2024-08-25","status":"public","weight":5}
+{"average_duration":20,"bgg_id":285040,"display_name_en":"Open Face Chinese Poker","games_played":106252,"id":1817,"name":"openfacechinesepoker","published_on":"2025-01-06","status":"public","weight":109}
+{"average_duration":197,"bgg_id":286158,"display_name_en":"D.E.I.: Divide et Impera","games_played":3044,"id":1818,"name":"divideetimpera","premium":true,"published_on":"2023-12-16","status":"public"}
+{"average_duration":19,"bgg_id":366397,"display_name_en":"Colorado","games_played":12094,"id":1819,"name":"colorado","premium":true,"published_on":"2023-10-04","status":"public","weight":31}
+{"average_duration":23,"bgg_id":304783,"display_name_en":"Hadrian's Wall","games_played":158345,"id":1820,"name":"hadrianswall","premium":true,"published_on":"2023-10-25","status":"public","weight":445}
+{"average_duration":10,"bgg_id":379290,"display_name_en":"Timeline Twist","games_played":53868,"id":1821,"is_ranking_disabled":true,"name":"timelinetwist","published_on":"2023-07-12","status":"public","weight":43}
+{"average_duration":8,"bgg_id":381429,"display_name_en":"Dobble Connect","games_played":29508,"id":1822,"name":"dobbleconnect","published_on":"2023-07-12","status":"public","weight":4}
+{"average_duration":36,"bgg_id":357071,"display_name_en":"GOLDblivion","games_played":33067,"id":1823,"name":"goldblivion","premium":true,"published_on":"2023-12-11","status":"public","weight":142}
+{"average_duration":16,"bgg_id":15878,"display_name_en":"Rummy","games_played":1725084,"id":1824,"name":"rummy","published_on":"2024-01-29","status":"public","weight":3459}
+{"average_duration":36,"bgg_id":368294,"display_name_en":"Wastelandia","games_played":2004,"id":1825,"is_ranking_disabled":true,"name":"wastelandia","published_on":"2023-09-30","status":"beta"}
+{"average_duration":14,"bgg_id":388539,"display_name_en":"Quibbles","games_played":57631,"id":1826,"name":"quibbles","published_on":"2023-10-04","status":"public","weight":103}
+{"average_duration":8,"bgg_id":73073,"display_name_en":"Nap","games_played":1038,"id":1827,"name":"nap","priority":-999,"published_on":"2025-02-21","status":"public"}
+{"average_duration":26,"display_name_en":"Two-Ten-Jack","games_played":349,"id":1828,"name":"twotenjack","priority":-999,"published_on":"2025-02-21","status":"public"}
+{"average_duration":8,"bgg_id":350759,"display_name_en":"Vault: A Solitaire Dice Game","games_played":131234,"id":1829,"name":"vault","published_on":"2023-12-17","status":"public","weight":49}
+{"average_duration":21,"bgg_id":393352,"display_name_en":"Perfect Words","games_played":60759,"id":1830,"is_ranking_disabled":true,"name":"perfectwords","published_on":"2023-10-04","status":"public","weight":130}
+{"average_duration":21,"bgg_id":358669,"display_name_en":"12 Chip Trick","games_played":7719,"id":1831,"name":"twelvechips","premium":true,"published_on":"2023-10-09","status":"public","weight":7}
+{"average_duration":19,"bgg_id":290236,"display_name_en":"Canvas","games_played":83029,"id":1833,"name":"canvas","premium":true,"published_on":"2023-08-16","status":"public","weight":105}
+{"average_duration":6,"bgg_id":20240,"display_name_en":"\u00c9cart\u00e9","games_played":3607,"id":1834,"name":"ecarte","priority":-999,"published_on":"2025-02-21","status":"public","weight":2}
+{"average_duration":7,"bgg_id":11582,"display_name_en":"Schnapsen","games_played":11664,"id":1835,"name":"schnapsen","priority":-999,"published_on":"2025-02-21","status":"public","weight":2}
+{"average_duration":13,"bgg_id":4376,"display_name_en":"Kings in the Corner","games_played":130062,"id":1836,"name":"kingsinthecorner","published_on":"2025-01-06","status":"public","weight":373}
+{"average_duration":22,"bgg_id":275916,"display_name_en":"Ca\u00efrn","games_played":7417,"id":1837,"name":"cairn","published_on":"2024-02-05","status":"public","weight":25}
+{"average_duration":13,"bgg_id":6901,"display_name_en":"Euchre","games_played":78785,"id":1838,"name":"euchre","published_on":"2025-01-06","status":"public","weight":421}
+{"average_duration":32,"bgg_id":340541,"display_name_en":"Wizards of the Grimoire","games_played":62034,"id":1839,"name":"wizardsgrimoire","published_on":"2023-09-25","status":"public","weight":73}
+{"average_duration":19,"bgg_id":246663,"display_name_en":"Neom","games_played":16667,"id":1840,"name":"neom","premium":true,"published_on":"2024-08-22","status":"public","weight":19}
+{"average_duration":17,"bgg_id":391163,"display_name_en":"Forest Shuffle","games_played":4813527,"id":1841,"name":"forestshuffle","premium":true,"published_on":"2023-08-30","status":"public","weight":20334}
+{"average_duration":18,"bgg_id":231567,"display_name_en":"Now Boarding","games_played":117360,"id":1842,"is_ranking_disabled":true,"name":"nowboarding","published_on":"2023-11-01","status":"public","weight":251}
+{"average_duration":35,"bgg_id":364186,"display_name_en":"Terra Nova","games_played":38780,"id":1844,"name":"terranova","premium":true,"published_on":"2023-11-29","status":"public","weight":38}
+{"average_duration":34,"bgg_id":37904,"display_name_en":"Formula D","games_played":131562,"id":1845,"name":"formulad","published_on":"2025-12-31","status":"public","weight":1437}
+{"average_duration":50,"bgg_id":392492,"display_name_en":"Stupor Mundi","games_played":18372,"id":1846,"name":"stupormundi","premium":true,"published_on":"2024-07-10","status":"public","weight":123}
+{"average_duration":6,"bgg_id":338467,"display_name_en":"Zuuli","games_played":32580,"id":1847,"name":"zuuli","published_on":"2023-09-11","status":"public","weight":12}
+{"average_duration":16,"bgg_id":381278,"display_name_en":"Dracula vs Van Helsing","games_played":122149,"id":1848,"name":"draculahelsing","premium":true,"published_on":"2023-10-09","status":"public","weight":213}
+{"average_duration":66,"bgg_id":379633,"display_name_en":"Humanity","games_played":2835,"id":1849,"name":"humanity","published_on":"2023-10-04","status":"public","weight":20}
+{"average_duration":6,"bgg_id":344114,"display_name_en":"Bag of Chips","games_played":91283,"id":1850,"name":"bagofchips","premium":true,"published_on":"2023-12-28","status":"public","weight":32}
+{"average_duration":38,"bgg_id":308765,"display_name_en":"Praga Caput Regni","games_played":46552,"id":1851,"name":"praga","published_on":"2024-06-12","status":"public","weight":249}
+{"average_duration":36,"bgg_id":338093,"display_name_en":"Ancient Knowledge","games_played":30835,"id":1852,"name":"ancientknowledge","premium":true,"published_on":"2024-01-17","status":"public","weight":82}
+{"average_duration":43,"bgg_id":298130,"display_name_en":"Amalfi - Renaissance","games_played":21502,"id":1853,"name":"amalfi","premium":true,"published_on":"2024-01-24","status":"public","weight":111}
+{"average_duration":32,"bgg_id":256960,"display_name_en":"Pax Pamir: Second Edition","games_played":87983,"id":1854,"name":"paxpamir","published_on":"2023-11-22","status":"public","weight":229}
+{"average_duration":10,"bgg_id":25574,"display_name_en":"Gin Rummy","games_played":243848,"id":1855,"name":"ginrummy","published_on":"2024-01-29","status":"public","weight":468}
+{"average_duration":1,"bgg_id":389734,"display_name_en":"Xxung","games_played":2003,"id":1856,"name":"xxung","published_on":"2024-04-03","status":"beta"}
+{"average_duration":25,"bgg_id":271529,"display_name_en":"Botanik","games_played":31052,"id":1858,"name":"botanik","premium":true,"published_on":"2024-02-09","status":"beta","weight":113}
+{"average_duration":17,"bgg_id":344258,"display_name_en":"That Time You Killed Me","games_played":34383,"id":1859,"name":"thattimeyoukilledme","published_on":"2024-06-24","status":"public","weight":22}
+{"average_duration":17,"bgg_id":396042,"display_name_en":"Quirky Quarks","games_played":2052,"id":1860,"name":"quirkyquarks","published_on":"2023-10-04","status":"public"}
+{"average_duration":10,"bgg_id":340816,"display_name_en":"101: the match","games_played":25646,"id":1861,"name":"oneohone","published_on":"2023-12-12","status":"public","weight":10}
+{"average_duration":20,"bgg_id":246200,"display_name_en":"Piepmatz: Little Songbirds","games_played":6056,"id":1863,"name":"piepmatz","premium":true,"published_on":"2024-08-24","status":"public","weight":8}
+{"average_duration":33,"bgg_id":351476,"display_name_en":"My City: Roll & Build","games_played":105053,"id":1865,"name":"mycityrb","premium":true,"published_on":"2023-11-15","status":"public","weight":601}
+{"average_duration":54,"bgg_id":378001,"display_name_en":"Moon River","games_played":13351,"id":1866,"name":"moonriver","premium":true,"published_on":"2023-10-18","status":"public","weight":9}
+{"average_duration":35,"bgg_id":300877,"display_name_en":"New York Zoo","games_played":77739,"id":1867,"name":"newyorkzoo","premium":true,"published_on":"2024-05-06","status":"public","weight":296}
+{"average_duration":5,"bgg_id":385761,"display_name_en":"Faraway","games_played":2898015,"id":1868,"name":"faraway","premium":true,"published_on":"2023-10-04","status":"public","weight":3344}
 {"average_duration":48,"bgg_id":357172,"display_name_en":"Ynaros Fallin","games_played":216,"id":1869,"name":"ynarosfallin","published_on":"2024-03-08","status":"beta"}
-{"average_duration":11,"bgg_id":2346,"display_name_en":"DVONN","games_played":30854,"id":1870,"name":"dvonn","published_on":"2024-09-09","status":"public","weight":26}
-{"average_duration":2,"bgg_id":56796,"display_name_en":"Let's Catch the Lion!","games_played":130022,"id":1871,"is_ranking_disabled":true,"name":"letscatchthelion","published_on":"2023-11-27","status":"public"}
-{"average_duration":24,"bgg_id":12131,"display_name_en":"42","games_played":589,"id":1872,"name":"fortytwo","priority":-999,"published_on":"2025-02-24","status":"public"}
-{"average_duration":41,"bgg_id":366013,"display_name_en":"Heat: Pedal to the Metal","games_played":854859,"id":1873,"name":"heat","premium":true,"published_on":"2023-09-27","status":"public","weight":6905}
-{"average_duration":27,"bgg_id":367525,"display_name_en":"3000 Scoundrels","games_played":4643,"id":1874,"name":"threethousandscoundrels","published_on":"2024-03-06","status":"public"}
-{"average_duration":11,"bgg_id":380134,"display_name_en":"Orion Duel","games_played":42329,"id":1876,"name":"orionduel","published_on":"2023-10-16","status":"public","weight":6}
-{"average_duration":27,"bgg_id":331401,"display_name_en":"Dog Park","games_played":21418,"id":1878,"name":"dogpark","premium":true,"published_on":"2023-12-14","status":"public","weight":16}
-{"average_duration":15,"bgg_id":373106,"display_name_en":"Sky Team","games_played":921238,"id":1879,"is_ranking_disabled":true,"name":"skyteam","premium":true,"published_on":"2023-10-11","status":"public","weight":2505}
-{"average_duration":20,"bgg_id":341753,"display_name_en":"Tholos","games_played":1043,"id":1880,"name":"tholos","published_on":"2023-11-03","status":"beta"}
-{"average_duration":3,"bgg_id":398388,"display_name_en":"Oxono","games_played":74331,"id":1881,"name":"oxono","premium":true,"published_on":"2024-03-13","status":"public","weight":13}
-{"average_duration":38,"bgg_id":280453,"display_name_en":"Masters of Renaissance: Lorenzo il Magnifico \u2013 The Card Game","games_played":5632,"id":1882,"name":"mastersofrenaissance","published_on":"2024-05-17","status":"beta"}
-{"average_duration":13,"bgg_id":399757,"display_name_en":"Linx","games_played":32856,"id":1885,"name":"linx","published_on":"2024-06-10","status":"public"}
-{"average_duration":12,"bgg_id":193551,"display_name_en":"Mutant Crops","games_played":5957,"id":1886,"name":"mutantcrops","published_on":"2024-10-30","status":"public"}
-{"average_duration":13,"bgg_id":353152,"display_name_en":"Framework","games_played":252992,"id":1889,"name":"framework","published_on":"2024-08-02","status":"public","weight":465}
-{"average_duration":31,"bgg_id":258779,"display_name_en":"Planet Unknown","games_played":371296,"id":1891,"name":"planetunknown","published_on":"2023-11-08","status":"public","weight":1100}
-{"average_duration":6,"bgg_id":400859,"display_name_en":"The way to Juliet","games_played":17134,"id":1892,"is_ranking_disabled":true,"name":"thewaytojuliet","published_on":"2023-11-03","status":"beta","weight":2}
-{"average_duration":231,"bgg_id":233078,"display_name_en":"Twilight Imperium: Fourth Edition","games_played":2098,"id":1893,"name":"twilightimperium","published_on":"2026-06-22","status":"beta","weight":548}
-{"average_duration":7,"bgg_id":362700,"display_name_en":"Biomos","games_played":80582,"id":1895,"name":"biomos","published_on":"2023-12-07","status":"public","weight":22}
-{"average_duration":27,"bgg_id":2065,"display_name_en":"Shogi","games_played":13283,"id":1896,"name":"shogi","published_on":"2025-08-30","status":"public","weight":24}
-{"average_duration":3,"bgg_id":341358,"display_name_en":"Donuts","games_played":153759,"id":1897,"name":"donuts","premium":true,"published_on":"2024-02-05","status":"public","weight":41}
-{"average_duration":1,"bgg_id":148180,"display_name_en":"Wolf and Sheep","games_played":3088,"id":1898,"name":"wolfandsheeps","published_on":"2025-02-17","status":"beta"}
-{"average_duration":12,"bgg_id":8089419,"display_name_en":"Bloxo","games_played":21838,"id":1899,"name":"caboodle","published_on":"2023-11-14","status":"beta","weight":19}
-{"average_duration":12,"bgg_id":14996,"display_name_en":"Ticket to Ride: Europe","games_played":3006599,"id":1900,"name":"tickettorideeurope","premium":true,"published_on":"2023-12-21","status":"public","weight":5840}
-{"average_duration":55,"bgg_id":368058,"display_name_en":"The Wolves","games_played":32412,"id":1901,"name":"thewolves","published_on":"2024-01-10","status":"public","weight":133}
-{"average_duration":21,"bgg_id":383790,"display_name_en":"Romi Rami","games_played":48637,"id":1902,"name":"romirami","premium":true,"published_on":"2024-02-07","status":"public","weight":78}
-{"average_duration":21,"bgg_id":364073,"display_name_en":"Splendor Duel","games_played":988160,"id":1903,"name":"splendorduel","premium":true,"published_on":"2024-02-14","status":"public","weight":3568}
-{"average_duration":61,"bgg_id":276025,"display_name_en":"Maracaibo","games_played":91789,"id":1904,"name":"maracaibo","premium":true,"published_on":"2024-02-21","status":"public","weight":567}
-{"average_duration":30,"bgg_id":57536,"display_name_en":"Hachihachi","games_played":905,"id":1905,"name":"eightyeight","published_on":"2025-08-09","status":"public"}
-{"average_duration":7,"bgg_id":2394,"display_name_en":"Dominoes","games_played":304787,"id":1906,"name":"dominoes","published_on":"2024-01-29","status":"public","weight":201}
-{"average_duration":7,"bgg_id":190950,"display_name_en":"Inverted Dice","games_played":7653,"id":1907,"name":"inverteddice","published_on":"2024-01-11","status":"beta","weight":2}
-{"average_duration":19,"bgg_id":402803,"display_name_en":"Vault: A Den of Thieves","games_played":4153,"id":1908,"name":"vaultdenofthieves","published_on":"2024-04-23","status":"public","weight":15}
-{"average_duration":20,"bgg_id":397393,"display_name_en":"Altered","games_played":2033071,"id":1909,"name":"altered","published_on":"2024-09-25","status":"public","weight":430}
-{"average_duration":32,"bgg_id":308119,"display_name_en":"Pax Renaissance","games_played":72012,"id":1910,"name":"paxrenaissance","published_on":"2024-05-08","status":"public","weight":201}
-{"average_duration":23,"bgg_id":287954,"display_name_en":"Azul: Summer Pavilion","games_played":536241,"id":1911,"name":"azulsummerpavilion","premium":true,"published_on":"2024-07-03","status":"public","weight":1991}
-{"average_duration":35,"bgg_id":327711,"display_name_en":"It's a Wonderful Kingdom","games_played":17575,"id":1913,"name":"wonderfulkingdom","premium":true,"published_on":"2024-12-04","status":"public","weight":70}
-{"average_duration":12,"bgg_id":398331,"display_name_en":"Pond","games_played":14238,"id":1914,"name":"pond","published_on":"2024-08-10","status":"public","weight":5}
-{"average_duration":137,"bgg_id":206509,"display_name_en":"Bayonets & Tomahawks","games_played":1880,"id":1915,"name":"bayonetsandtomahawks","published_on":"2025-01-28","status":"beta"}
-{"average_duration":35,"bgg_id":368119,"display_name_en":"Gosu X","games_played":22906,"id":1917,"name":"gosux","premium":true,"published_on":"2024-03-11","status":"public","weight":57}
-{"average_duration":4,"bgg_id":393325,"display_name_en":"Captain Flip","games_played":2435503,"id":1918,"name":"captainflip","premium":true,"published_on":"2024-01-15","status":"public","weight":1547}
-{"average_duration":10,"bgg_id":356554,"display_name_en":"Flip Freighters","games_played":25419,"id":1920,"name":"flipfreighters","published_on":"2024-03-08","status":"public","weight":29}
-{"average_duration":14,"bgg_id":348447,"display_name_en":"Hens","games_played":35536,"id":1921,"name":"hens","published_on":"2024-08-16","status":"public","weight":20}
-{"average_duration":54,"bgg_id":167791,"display_name_en":"Terraforming Mars","games_played":4827881,"id":1924,"name":"terraformingmars","premium":true,"published_on":"2024-03-27","status":"public","weight":67018}
-{"average_duration":19,"bgg_id":387248,"display_name_en":"Unrest","games_played":4035,"id":1925,"name":"unrest","published_on":"2024-08-13","status":"public"}
-{"average_duration":69,"bgg_id":345868,"display_name_en":"Federation","games_played":17383,"id":1926,"name":"federation","premium":true,"published_on":"2024-01-31","status":"public","weight":111}
-{"average_duration":39,"bgg_id":392197,"display_name_en":"GrumbleStone","games_played":20559,"id":1928,"name":"grumblestone","published_on":"2024-06-03","status":"public","weight":20}
-{"average_duration":18,"bgg_id":385999,"display_name_en":"Forever Home","games_played":25442,"id":1929,"name":"foreverhome","premium":true,"published_on":"2024-07-01","status":"public","weight":22}
-{"average_duration":36,"bgg_id":391255,"display_name_en":"Open Season","games_played":4899,"id":1930,"name":"openseason","premium":true,"published_on":"2024-08-05","status":"public"}
-{"average_duration":73,"bgg_id":376740,"display_name_en":"Undergrove","games_played":6490,"id":1931,"name":"undergrove","premium":true,"published_on":"2025-06-25","status":"public","weight":30}
-{"average_duration":4,"bgg_id":394306,"display_name_en":"Le Roy des Ribauds","games_played":19369,"id":1932,"name":"leroydesribauds","published_on":"2024-02-05","status":"public"}
-{"average_duration":22,"bgg_id":385529,"display_name_en":"The Vale of Eternity","games_played":292181,"id":1933,"name":"valeofeternity","premium":true,"published_on":"2024-02-28","status":"public","weight":1050}
-{"average_duration":7,"bgg_id":404041,"display_name_en":"Flowers","games_played":1262680,"id":1934,"name":"flowers","premium":true,"published_on":"2024-04-22","status":"public","weight":1513}
-{"average_duration":18,"bgg_id":400266,"display_name_en":"Boreal","games_played":26382,"id":1936,"name":"boreal","published_on":"2024-05-13","status":"public","weight":7}
-{"average_duration":23,"bgg_id":400508,"display_name_en":"Word Traveler","games_played":10019,"id":1937,"is_ranking_disabled":true,"name":"wordtraveler","premium":true,"published_on":"2024-04-08","status":"public","weight":13}
-{"average_duration":20,"bgg_id":220517,"display_name_en":"The Shipwreck Arcana","games_played":33208,"id":1938,"is_ranking_disabled":true,"name":"theshipwreckarcana","published_on":"2024-08-03","status":"public","weight":109}
-{"average_duration":5,"bgg_id":172225,"display_name_en":"Exploding Kittens","games_played":445246,"id":1939,"name":"explodingkittens","premium":true,"published_on":"2025-01-01","status":"public","weight":332}
-{"average_duration":9,"bgg_id":264241,"display_name_en":"Mandala","games_played":70093,"id":1940,"name":"mandala","premium":true,"published_on":"2024-04-03","status":"public","weight":65}
-{"average_duration":36,"bgg_id":420443,"display_name_en":"Treos","games_played":5382,"id":1942,"name":"treos","premium":true,"published_on":"2024-09-11","status":"public","weight":31}
-{"average_duration":11,"bgg_id":376707,"display_name_en":"Cannonades","games_played":1285,"id":1944,"name":"cannonades","published_on":"2024-07-18","status":"beta"}
-{"average_duration":8,"bgg_id":411875,"display_name_en":"Pixies","games_played":703228,"id":1945,"name":"pixies","premium":true,"published_on":"2024-02-19","status":"public","weight":926}
-{"average_duration":22,"bgg_id":320718,"display_name_en":"Hidden Leaders","games_played":20387,"id":1947,"name":"hiddenleaders","published_on":"2024-07-22","status":"public","weight":23}
-{"average_duration":7,"bgg_id":395846,"display_name_en":"Mojo","games_played":671721,"id":1949,"name":"mojo","premium":true,"published_on":"2024-05-01","status":"public","weight":445}
-{"average_duration":15,"bgg_id":361850,"display_name_en":"Nimalia","games_played":29096,"id":1951,"name":"nimalia","premium":true,"published_on":"2024-11-18","status":"public","weight":39}
-{"average_duration":6,"bgg_id":411255,"display_name_en":"Solstis","games_played":1340570,"id":1952,"name":"solstis","premium":true,"published_on":"2024-05-13","status":"public","weight":1960}
-{"average_duration":57,"bgg_id":331398,"display_name_en":"Mythic Battles: Ragnar\u00f6k","games_played":8908,"id":1953,"name":"mythicbattlesragnarok","published_on":"2024-06-17","status":"public","weight":64}
-{"average_duration":27,"bgg_id":387378,"display_name_en":"MLEM: Space Agency","games_played":40753,"id":1954,"name":"mlem","premium":true,"published_on":"2024-02-26","status":"public","weight":170}
-{"average_duration":8,"bgg_id":344958,"display_name_en":"Alakablast","games_played":760,"id":1955,"name":"alakablast","published_on":"2024-06-20","status":"beta"}
-{"average_duration":14,"bgg_id":352454,"display_name_en":"Trailblazers","games_played":89870,"id":1956,"name":"trailblazers","published_on":"2024-02-21","status":"public","weight":116}
-{"average_duration":26,"bgg_id":410991,"display_name_en":"Looot","games_played":76094,"id":1957,"name":"looot","premium":true,"published_on":"2024-04-10","status":"public","weight":327}
-{"average_duration":18,"bgg_id":407627,"display_name_en":"Cheez-Tricks","games_played":2799,"id":1958,"name":"cheeztricks","priority":-999,"published_on":"2025-03-06","status":"public"}
-{"average_duration":6,"bgg_id":411050,"display_name_en":"Goblin Hood","games_played":2155,"id":1959,"name":"goblinhood","published_on":"2024-08-04","status":"public","weight":2}
-{"average_duration":7,"bgg_id":406518,"display_name_en":"Quattuor Reges","games_played":2352,"id":1960,"name":"quattuorreges","published_on":"2025-12-09","status":"public","weight":2}
-{"average_duration":41,"bgg_id":143693,"display_name_en":"Glass Road","games_played":16988,"id":1961,"name":"glassroad","premium":true,"published_on":"2024-08-21","status":"public","weight":52}
-{"average_duration":13,"bgg_id":411934,"display_name_en":"Battle Spirits Saga","games_played":60985,"id":1962,"name":"battlespiritssaga","published_on":"2024-06-05","status":"public","weight":16}
-{"average_duration":19,"bgg_id":391834,"display_name_en":"SpellBook","games_played":109913,"id":1963,"name":"spellbook","premium":true,"published_on":"2024-07-08","status":"public","weight":221}
-{"average_duration":27,"bgg_id":311715,"display_name_en":"Mini Rogue","games_played":294390,"id":1966,"is_ranking_disabled":true,"name":"minirogue","published_on":"2024-05-29","status":"public","weight":309}
-{"average_duration":60,"bgg_id":296043,"display_name_en":"Four Gardens","games_played":7793,"id":1967,"name":"fourgardens","published_on":"2025-05-12","status":"public"}
-{"average_duration":11,"bgg_id":19253,"display_name_en":"Mate","games_played":1077,"id":1968,"name":"mate","priority":-999,"published_on":"2025-02-21","status":"public"}
-{"average_duration":16,"bgg_id":320097,"display_name_en":"ECK","games_played":10584,"id":1969,"name":"eck","priority":-999,"published_on":"2025-02-24","status":"public","weight":4}
-{"average_duration":11,"bgg_id":407297,"display_name_en":"River Valley Glassworks","games_played":130010,"id":1970,"name":"rivervalleyglassworks","published_on":"2024-08-08","status":"public","weight":280}
-{"average_duration":21,"bgg_id":411881,"display_name_en":"Gold\u2019n\u2019Crash","games_played":3483,"id":1971,"name":"goldncrash","published_on":"2025-01-20","status":"public"}
-{"average_duration":11,"bgg_id":2136,"display_name_en":"Ludo","games_played":90750,"id":1972,"name":"ludo","published_on":"2025-01-06","status":"public","weight":410}
-{"average_duration":37,"bgg_id":379706,"display_name_en":"Quartermaster General: East Front","games_played":17273,"id":1973,"name":"quartermastergeneraleastfront","published_on":"2025-04-07","status":"public","weight":116}
-{"average_duration":16,"bgg_id":325038,"display_name_en":"The Brambles","games_played":15479,"id":1975,"name":"thebrambles","priority":-999,"published_on":"2025-02-24","status":"public","weight":2}
-{"average_duration":29,"bgg_id":383459,"display_name_en":"Aurum","games_played":613,"id":1976,"name":"aurum","published_on":"2024-11-04","status":"beta","weight":11}
-{"average_duration":12,"bgg_id":412563,"display_name_en":"Flowers: A Mandala Game","games_played":9459,"id":1978,"name":"flowersmandalagame","premium":true,"published_on":"2024-05-22","status":"public","weight":2}
-{"average_duration":22,"bgg_id":143882,"display_name_en":"HUND","games_played":1143,"id":1979,"name":"hund","published_on":"2024-03-20","status":"beta"}
-{"average_duration":56,"bgg_id":404798,"display_name_en":"Auntie Mildred's list of random tasks","games_played":808,"id":1980,"name":"auntiemildred","priority":-999,"published_on":"2025-01-28","status":"public"}
-{"average_duration":64,"bgg_id":143515,"display_name_en":"Coal Baron","games_played":9611,"id":1981,"name":"coalbaron","premium":true,"published_on":"2024-08-12","status":"public","weight":41}
-{"average_duration":14,"bgg_id":414639,"display_name_en":"Qu4to","games_played":2499,"id":1982,"name":"quato","priority":-999,"published_on":"2025-03-06","status":"public"}
-{"average_duration":18,"bgg_id":381860,"display_name_en":"Stigm\u00e9ria","games_played":889,"id":1983,"name":"stigmeria","published_on":"2025-09-02","status":"beta"}
-{"average_duration":21,"bgg_id":350185,"display_name_en":"Draft & Write Records","games_played":294202,"id":1984,"name":"draftandwriterecords","premium":true,"published_on":"2024-07-15","status":"public","weight":942}
-{"average_duration":15,"bgg_id":366327,"display_name_en":"Nacho Pile","games_played":5873,"id":1985,"name":"nachopile","published_on":"2024-08-20","status":"public","weight":9}
+{"average_duration":10,"bgg_id":2346,"display_name_en":"DVONN","games_played":30929,"id":1870,"name":"dvonn","published_on":"2024-09-09","status":"public","weight":24}
+{"average_duration":2,"bgg_id":56796,"display_name_en":"Let's Catch the Lion!","games_played":130377,"id":1871,"is_ranking_disabled":true,"name":"letscatchthelion","published_on":"2023-11-27","status":"public","weight":7}
+{"average_duration":21,"bgg_id":12131,"display_name_en":"42","games_played":593,"id":1872,"name":"fortytwo","priority":-999,"published_on":"2025-02-24","status":"public","weight":11}
+{"average_duration":41,"bgg_id":366013,"display_name_en":"Heat: Pedal to the Metal","games_played":859711,"id":1873,"name":"heat","premium":true,"published_on":"2023-09-27","status":"public","weight":7752}
+{"average_duration":76,"bgg_id":367525,"display_name_en":"3000 Scoundrels","games_played":4653,"id":1874,"name":"threethousandscoundrels","published_on":"2024-03-06","status":"public","weight":8}
+{"average_duration":8,"bgg_id":380134,"display_name_en":"Orion Duel","games_played":42407,"id":1876,"name":"orionduel","published_on":"2023-10-16","status":"public","weight":5}
+{"average_duration":27,"bgg_id":331401,"display_name_en":"Dog Park","games_played":21451,"id":1878,"name":"dogpark","premium":true,"published_on":"2023-12-14","status":"public","weight":16}
+{"average_duration":15,"bgg_id":373106,"display_name_en":"Sky Team","games_played":927252,"id":1879,"is_ranking_disabled":true,"name":"skyteam","premium":true,"published_on":"2023-10-11","status":"public","weight":2486}
+{"average_duration":20,"bgg_id":341753,"display_name_en":"Tholos","games_played":1044,"id":1880,"name":"tholos","published_on":"2023-11-03","status":"beta"}
+{"average_duration":3,"bgg_id":398388,"display_name_en":"Oxono","games_played":74413,"id":1881,"name":"oxono","premium":true,"published_on":"2024-03-13","status":"public","weight":1}
+{"average_duration":39,"bgg_id":280453,"display_name_en":"Masters of Renaissance: Lorenzo il Magnifico \u2013 The Card Game","games_played":5648,"id":1882,"name":"mastersofrenaissance","published_on":"2024-05-17","status":"beta","weight":34}
+{"average_duration":10,"bgg_id":399757,"display_name_en":"Linx","games_played":32883,"id":1885,"name":"linx","published_on":"2024-06-10","status":"public","weight":2}
+{"average_duration":13,"bgg_id":193551,"display_name_en":"Mutant Crops","games_played":5965,"id":1886,"name":"mutantcrops","published_on":"2024-10-30","status":"public","weight":3}
+{"average_duration":12,"bgg_id":353152,"display_name_en":"Framework","games_played":254840,"id":1889,"name":"framework","published_on":"2024-08-02","status":"public","weight":474}
+{"average_duration":31,"bgg_id":258779,"display_name_en":"Planet Unknown","games_played":372702,"id":1891,"name":"planetunknown","published_on":"2023-11-08","status":"public","weight":1247}
+{"average_duration":6,"bgg_id":400859,"display_name_en":"The way to Juliet","games_played":17224,"id":1892,"is_ranking_disabled":true,"name":"thewaytojuliet","published_on":"2023-11-03","status":"beta","weight":10}
+{"average_duration":217,"bgg_id":233078,"display_name_en":"Twilight Imperium: Fourth Edition","games_played":2151,"id":1893,"name":"twilightimperium","published_on":"2026-06-22","status":"beta","weight":703}
+{"average_duration":7,"bgg_id":362700,"display_name_en":"Biomos","games_played":80709,"id":1895,"name":"biomos","published_on":"2023-12-07","status":"public","weight":12}
+{"average_duration":27,"bgg_id":2065,"display_name_en":"Shogi","games_played":13342,"id":1896,"name":"shogi","published_on":"2025-08-30","status":"public","weight":13}
+{"average_duration":3,"bgg_id":341358,"display_name_en":"Donuts","games_played":154254,"id":1897,"name":"donuts","premium":true,"published_on":"2024-02-05","status":"public","weight":28}
+{"average_duration":2,"bgg_id":148180,"display_name_en":"Wolf and Sheep","games_played":3121,"id":1898,"name":"wolfandsheeps","published_on":"2025-02-17","status":"beta"}
+{"average_duration":13,"bgg_id":8089419,"display_name_en":"Bloxo","games_played":21892,"id":1899,"name":"caboodle","published_on":"2023-11-14","status":"beta","weight":22}
+{"average_duration":12,"bgg_id":14996,"display_name_en":"Ticket to Ride: Europe","games_played":3027348,"id":1900,"name":"tickettorideeurope","premium":true,"published_on":"2023-12-21","status":"public","weight":5979}
+{"average_duration":53,"bgg_id":368058,"display_name_en":"The Wolves","games_played":32511,"id":1901,"name":"thewolves","published_on":"2024-01-10","status":"public","weight":110}
+{"average_duration":20,"bgg_id":383790,"display_name_en":"Romi Rami","games_played":48754,"id":1902,"name":"romirami","premium":true,"published_on":"2024-02-07","status":"public","weight":76}
+{"average_duration":21,"bgg_id":364073,"display_name_en":"Splendor Duel","games_played":994408,"id":1903,"name":"splendorduel","premium":true,"published_on":"2024-02-14","status":"public","weight":3325}
+{"average_duration":60,"bgg_id":276025,"display_name_en":"Maracaibo","games_played":92072,"id":1904,"name":"maracaibo","premium":true,"published_on":"2024-02-21","status":"public","weight":638}
+{"average_duration":30,"bgg_id":57536,"display_name_en":"Hachihachi","games_played":907,"id":1905,"name":"eightyeight","published_on":"2025-08-09","status":"public"}
+{"average_duration":7,"bgg_id":2394,"display_name_en":"Dominoes","games_played":307643,"id":1906,"name":"dominoes","published_on":"2024-01-29","status":"public","weight":216}
+{"average_duration":8,"bgg_id":190950,"display_name_en":"Inverted Dice","games_played":7686,"id":1907,"name":"inverteddice","published_on":"2024-01-11","status":"beta","weight":4}
+{"average_duration":19,"bgg_id":402803,"display_name_en":"Vault: A Den of Thieves","games_played":4161,"id":1908,"name":"vaultdenofthieves","published_on":"2024-04-23","status":"public"}
+{"average_duration":20,"bgg_id":397393,"display_name_en":"Altered","games_played":2034082,"id":1909,"name":"altered","published_on":"2024-09-25","status":"public","weight":271}
+{"average_duration":32,"bgg_id":308119,"display_name_en":"Pax Renaissance","games_played":72288,"id":1910,"name":"paxrenaissance","published_on":"2024-05-08","status":"public","weight":188}
+{"average_duration":23,"bgg_id":287954,"display_name_en":"Azul: Summer Pavilion","games_played":539471,"id":1911,"name":"azulsummerpavilion","premium":true,"published_on":"2024-07-03","status":"public","weight":2377}
+{"average_duration":36,"bgg_id":327711,"display_name_en":"It's a Wonderful Kingdom","games_played":17613,"id":1913,"name":"wonderfulkingdom","premium":true,"published_on":"2024-12-04","status":"public","weight":45}
+{"average_duration":9,"bgg_id":398331,"display_name_en":"Pond","games_played":14255,"id":1914,"name":"pond","published_on":"2024-08-10","status":"public"}
+{"average_duration":163,"bgg_id":206509,"display_name_en":"Bayonets & Tomahawks","games_played":1886,"id":1915,"name":"bayonetsandtomahawks","published_on":"2025-01-28","status":"beta"}
+{"average_duration":33,"bgg_id":368119,"display_name_en":"Gosu X","games_played":22952,"id":1917,"name":"gosux","premium":true,"published_on":"2024-03-11","status":"public","weight":17}
+{"average_duration":4,"bgg_id":393325,"display_name_en":"Captain Flip","games_played":2449649,"id":1918,"name":"captainflip","premium":true,"published_on":"2024-01-15","status":"public","weight":1701}
+{"average_duration":11,"bgg_id":356554,"display_name_en":"Flip Freighters","games_played":25484,"id":1920,"name":"flipfreighters","published_on":"2024-03-08","status":"public","weight":20}
+{"average_duration":13,"bgg_id":348447,"display_name_en":"Hens","games_played":35672,"id":1921,"name":"hens","published_on":"2024-08-16","status":"public","weight":35}
+{"average_duration":54,"bgg_id":167791,"display_name_en":"Terraforming Mars","games_played":4878210,"id":1924,"name":"terraformingmars","premium":true,"published_on":"2024-03-27","status":"public","weight":68178}
+{"average_duration":10,"bgg_id":387248,"display_name_en":"Unrest","games_played":4052,"id":1925,"name":"unrest","published_on":"2024-08-13","status":"public","weight":4}
+{"average_duration":61,"bgg_id":345868,"display_name_en":"Federation","games_played":17421,"id":1926,"name":"federation","premium":true,"published_on":"2024-01-31","status":"public","weight":56}
+{"average_duration":31,"bgg_id":392197,"display_name_en":"GrumbleStone","games_played":20595,"id":1928,"name":"grumblestone","published_on":"2024-06-03","status":"public","weight":8}
+{"average_duration":20,"bgg_id":385999,"display_name_en":"Forever Home","games_played":25470,"id":1929,"name":"foreverhome","premium":true,"published_on":"2024-07-01","status":"public","weight":22}
+{"average_duration":36,"bgg_id":391255,"display_name_en":"Open Season","games_played":4900,"id":1930,"name":"openseason","premium":true,"published_on":"2024-08-05","status":"public"}
+{"average_duration":77,"bgg_id":376740,"display_name_en":"Undergrove","games_played":6525,"id":1931,"name":"undergrove","premium":true,"published_on":"2025-06-25","status":"public","weight":176}
+{"average_duration":3,"bgg_id":394306,"display_name_en":"Le Roy des Ribauds","games_played":19381,"id":1932,"name":"leroydesribauds","published_on":"2024-02-05","status":"public","weight":1}
+{"average_duration":22,"bgg_id":385529,"display_name_en":"The Vale of Eternity","games_played":293789,"id":1933,"name":"valeofeternity","premium":true,"published_on":"2024-02-28","status":"public","weight":1188}
+{"average_duration":7,"bgg_id":404041,"display_name_en":"Flowers","games_played":1270492,"id":1934,"name":"flowers","premium":true,"published_on":"2024-04-22","status":"public","weight":1750}
+{"average_duration":16,"bgg_id":400266,"display_name_en":"Boreal","games_played":26461,"id":1936,"name":"boreal","published_on":"2024-05-13","status":"public","weight":12}
+{"average_duration":25,"bgg_id":400508,"display_name_en":"Word Traveler","games_played":10030,"id":1937,"is_ranking_disabled":true,"name":"wordtraveler","premium":true,"published_on":"2024-04-08","status":"public"}
+{"average_duration":18,"bgg_id":220517,"display_name_en":"The Shipwreck Arcana","games_played":33356,"id":1938,"is_ranking_disabled":true,"name":"theshipwreckarcana","published_on":"2024-08-03","status":"public","weight":106}
+{"average_duration":5,"bgg_id":172225,"display_name_en":"Exploding Kittens","games_played":447704,"id":1939,"name":"explodingkittens","premium":true,"published_on":"2025-01-01","status":"public","weight":364}
+{"average_duration":9,"bgg_id":264241,"display_name_en":"Mandala","games_played":70266,"id":1940,"name":"mandala","premium":true,"published_on":"2024-04-03","status":"public","weight":41}
+{"average_duration":31,"bgg_id":420443,"display_name_en":"Treos","games_played":5403,"id":1942,"name":"treos","premium":true,"published_on":"2024-09-11","status":"public","weight":31}
+{"average_duration":8,"bgg_id":376707,"display_name_en":"Cannonades","games_played":1288,"id":1944,"name":"cannonades","published_on":"2024-07-18","status":"beta"}
+{"average_duration":8,"bgg_id":411875,"display_name_en":"Pixies","games_played":706701,"id":1945,"name":"pixies","premium":true,"published_on":"2024-02-19","status":"public","weight":764}
+{"average_duration":22,"bgg_id":320718,"display_name_en":"Hidden Leaders","games_played":20426,"id":1947,"name":"hiddenleaders","published_on":"2024-07-22","status":"public","weight":26}
+{"average_duration":7,"bgg_id":395846,"display_name_en":"Mojo","games_played":674247,"id":1949,"name":"mojo","premium":true,"published_on":"2024-05-01","status":"public","weight":555}
+{"average_duration":14,"bgg_id":361850,"display_name_en":"Nimalia","games_played":29158,"id":1951,"name":"nimalia","premium":true,"published_on":"2024-11-18","status":"public","weight":29}
+{"average_duration":6,"bgg_id":411255,"display_name_en":"Solstis","games_played":1351997,"id":1952,"name":"solstis","premium":true,"published_on":"2024-05-13","status":"public","weight":2237}
+{"average_duration":54,"bgg_id":331398,"display_name_en":"Mythic Battles: Ragnar\u00f6k","games_played":8925,"id":1953,"name":"mythicbattlesragnarok","published_on":"2024-06-17","status":"public","weight":43}
+{"average_duration":27,"bgg_id":387378,"display_name_en":"MLEM: Space Agency","games_played":40888,"id":1954,"name":"mlem","premium":true,"published_on":"2024-02-26","status":"public","weight":188}
+{"average_duration":6,"bgg_id":344958,"display_name_en":"Alakablast","games_played":764,"id":1955,"name":"alakablast","published_on":"2024-06-20","status":"beta"}
+{"average_duration":14,"bgg_id":352454,"display_name_en":"Trailblazers","games_played":90316,"id":1956,"name":"trailblazers","published_on":"2024-02-21","status":"public","weight":128}
+{"average_duration":26,"bgg_id":410991,"display_name_en":"Looot","games_played":76555,"id":1957,"name":"looot","premium":true,"published_on":"2024-04-10","status":"public","weight":485}
+{"average_duration":18,"bgg_id":407627,"display_name_en":"Cheez-Tricks","games_played":2801,"id":1958,"name":"cheeztricks","priority":-999,"published_on":"2025-03-06","status":"public"}
+{"average_duration":9,"bgg_id":411050,"display_name_en":"Goblin Hood","games_played":2168,"id":1959,"name":"goblinhood","published_on":"2024-08-04","status":"public","weight":2}
+{"average_duration":11,"bgg_id":406518,"display_name_en":"Quattuor Reges","games_played":2364,"id":1960,"name":"quattuorreges","published_on":"2025-12-09","status":"public","weight":12}
+{"average_duration":40,"bgg_id":143693,"display_name_en":"Glass Road","games_played":17053,"id":1961,"name":"glassroad","premium":true,"published_on":"2024-08-21","status":"public","weight":129}
+{"average_duration":13,"bgg_id":411934,"display_name_en":"Battle Spirits Saga","games_played":61108,"id":1962,"name":"battlespiritssaga","published_on":"2024-06-05","status":"public","weight":3}
+{"average_duration":18,"bgg_id":391834,"display_name_en":"SpellBook","games_played":110332,"id":1963,"name":"spellbook","premium":true,"published_on":"2024-07-08","status":"public","weight":170}
+{"average_duration":28,"bgg_id":311715,"display_name_en":"Mini Rogue","games_played":295858,"id":1966,"is_ranking_disabled":true,"name":"minirogue","published_on":"2024-05-29","status":"public","weight":288}
+{"average_duration":41,"bgg_id":296043,"display_name_en":"Four Gardens","games_played":7812,"id":1967,"name":"fourgardens","published_on":"2025-05-12","status":"public","weight":14}
+{"average_duration":11,"bgg_id":19253,"display_name_en":"Mate","games_played":1079,"id":1968,"name":"mate","priority":-999,"published_on":"2025-02-21","status":"public"}
+{"average_duration":12,"bgg_id":320097,"display_name_en":"ECK","games_played":10629,"id":1969,"name":"eck","priority":-999,"published_on":"2025-02-24","status":"public"}
+{"average_duration":11,"bgg_id":407297,"display_name_en":"River Valley Glassworks","games_played":130960,"id":1970,"name":"rivervalleyglassworks","published_on":"2024-08-08","status":"public","weight":426}
+{"average_duration":29,"bgg_id":411881,"display_name_en":"Gold\u2019n\u2019Crash","games_played":3489,"id":1971,"name":"goldncrash","published_on":"2025-01-20","status":"public"}
+{"average_duration":11,"bgg_id":2136,"display_name_en":"Ludo","games_played":92149,"id":1972,"name":"ludo","published_on":"2025-01-06","status":"public","weight":273}
+{"average_duration":77,"bgg_id":379706,"display_name_en":"Quartermaster General: East Front","games_played":17337,"id":1973,"name":"quartermastergeneraleastfront","published_on":"2025-04-07","status":"public","weight":85}
+{"average_duration":14,"bgg_id":325038,"display_name_en":"The Brambles","games_played":15504,"id":1975,"name":"thebrambles","priority":-999,"published_on":"2025-02-24","status":"public"}
+{"average_duration":30,"bgg_id":383459,"display_name_en":"Aurum","games_played":615,"id":1976,"name":"aurum","published_on":"2024-11-04","status":"beta"}
+{"average_duration":12,"bgg_id":412563,"display_name_en":"Flowers: A Mandala Game","games_played":9470,"id":1978,"name":"flowersmandalagame","premium":true,"published_on":"2024-05-22","status":"public"}
+{"average_duration":20,"bgg_id":143882,"display_name_en":"HUND","games_played":1146,"id":1979,"name":"hund","published_on":"2024-03-20","status":"beta"}
+{"average_duration":56,"bgg_id":404798,"display_name_en":"Auntie Mildred's list of random tasks","games_played":812,"id":1980,"name":"auntiemildred","priority":-999,"published_on":"2025-01-28","status":"public","weight":5}
+{"average_duration":68,"bgg_id":143515,"display_name_en":"Coal Baron","games_played":9636,"id":1981,"name":"coalbaron","premium":true,"published_on":"2024-08-12","status":"public","weight":131}
+{"average_duration":13,"bgg_id":414639,"display_name_en":"Qu4to","games_played":2499,"id":1982,"name":"quato","priority":-999,"published_on":"2025-03-06","status":"public"}
+{"average_duration":18,"bgg_id":381860,"display_name_en":"Stigm\u00e9ria","games_played":890,"id":1983,"name":"stigmeria","published_on":"2025-09-02","status":"beta"}
+{"average_duration":21,"bgg_id":350185,"display_name_en":"Draft & Write Records","games_played":296062,"id":1984,"name":"draftandwriterecords","premium":true,"published_on":"2024-07-15","status":"public","weight":1333}
+{"average_duration":16,"bgg_id":366327,"display_name_en":"Nacho Pile","games_played":5888,"id":1985,"name":"nachopile","published_on":"2024-08-20","status":"public"}
 {"average_duration":66,"bgg_id":287895,"display_name_en":"Grund","games_played":274,"id":1986,"name":"grund","priority":-5,"published_on":"2024-08-28","status":"public"}
-{"average_duration":33,"bgg_id":355788,"display_name_en":"Chemical Overload","games_played":13621,"id":1987,"name":"chemicaloverload","published_on":"2025-08-29","status":"public","weight":157}
-{"average_duration":35,"bgg_id":393869,"display_name_en":"Maatatahay","games_played":1841,"id":1988,"name":"maatatahay","published_on":"2024-08-29","status":"public"}
+{"average_duration":33,"bgg_id":355788,"display_name_en":"Chemical Overload","games_played":13754,"id":1987,"name":"chemicaloverload","published_on":"2025-08-29","status":"public","weight":132}
+{"average_duration":35,"bgg_id":393869,"display_name_en":"Maatatahay","games_played":1842,"id":1988,"name":"maatatahay","published_on":"2024-08-29","status":"public"}
 {"average_duration":43,"bgg_id":405530,"display_name_en":"Seven Knights Bewitched","games_played":791,"id":1989,"name":"sevenknightsbewitched","published_on":"2024-04-30","status":"beta"}
-{"average_duration":12,"bgg_id":357991,"display_name_en":"Dobro","games_played":17806,"id":1990,"name":"dobro","published_on":"2024-08-30","status":"public","weight":8}
-{"average_duration":15,"bgg_id":371787,"display_name_en":"Cradle to Grave","games_played":4034,"id":1991,"name":"cradletograve","published_on":"2024-03-08","status":"beta"}
-{"average_duration":12,"bgg_id":17530,"display_name_en":"Go-Stop","games_played":50986,"id":1992,"name":"gostop","published_on":"2025-01-06","status":"public","weight":46}
-{"average_duration":16,"bgg_id":15157,"display_name_en":"Amazonas","games_played":1440,"id":1995,"name":"amazonas","premium":true,"published_on":"2024-08-15","status":"public"}
-{"average_duration":17,"bgg_id":364277,"display_name_en":"Stonks","games_played":1392,"id":1996,"name":"stonks","priority":-999,"published_on":"2025-03-06","status":"public"}
-{"average_duration":20,"bgg_id":384213,"display_name_en":"Fromage","games_played":124405,"id":1997,"name":"fromage","premium":true,"published_on":"2024-12-30","status":"public","weight":748}
-{"average_duration":3,"bgg_id":414816,"display_name_en":"Road to 300","games_played":21176,"id":1998,"name":"roadtothreehoundred","published_on":"2023-07-09","status":"public","weight":3}
+{"average_duration":12,"bgg_id":357991,"display_name_en":"Dobro","games_played":17860,"id":1990,"name":"dobro","published_on":"2024-08-30","status":"public","weight":4}
+{"average_duration":15,"bgg_id":371787,"display_name_en":"Cradle to Grave","games_played":4045,"id":1991,"name":"cradletograve","published_on":"2024-03-08","status":"beta"}
+{"average_duration":11,"bgg_id":17530,"display_name_en":"Go-Stop","games_played":51404,"id":1992,"name":"gostop","published_on":"2025-01-06","status":"public","weight":19}
+{"average_duration":13,"bgg_id":15157,"display_name_en":"Amazonas","games_played":1448,"id":1995,"name":"amazonas","premium":true,"published_on":"2024-08-15","status":"public"}
+{"average_duration":17,"bgg_id":364277,"display_name_en":"Stonks","games_played":1396,"id":1996,"name":"stonks","priority":-999,"published_on":"2025-03-06","status":"public","weight":10}
+{"average_duration":21,"bgg_id":384213,"display_name_en":"Fromage","games_played":125539,"id":1997,"name":"fromage","premium":true,"published_on":"2024-12-30","status":"public","weight":750}
+{"average_duration":2,"bgg_id":414816,"display_name_en":"Road to 300","games_played":21306,"id":1998,"name":"roadtothreehoundred","published_on":"2023-07-09","status":"public","weight":8}
 {"average_duration":45,"bgg_id":389185,"display_name_en":"Micro Midgard","games_played":566,"id":1999,"name":"micromidgard","published_on":"2024-04-19","status":"beta"}
-{"average_duration":5,"bgg_id":149869,"display_name_en":"Sherlock 13","games_played":32834,"id":2000,"name":"sherlockthirteen","published_on":"2024-08-18","status":"public","weight":30}
-{"average_duration":42,"bgg_id":244711,"display_name_en":"Newton","games_played":29745,"id":2001,"name":"newton","premium":true,"published_on":"2024-08-14","status":"public","weight":111}
-{"average_duration":13,"bgg_id":415108,"display_name_en":"Crisps!","games_played":7732,"id":2002,"name":"crisps","published_on":"2024-03-14","status":"public","weight":14}
-{"average_duration":24,"bgg_id":288169,"display_name_en":"The Fox in the Forest: Duet","games_played":8770,"id":2003,"is_ranking_disabled":true,"name":"thefoxintheforestduet","premium":true,"published_on":"2024-08-26","status":"public","weight":27}
-{"average_duration":15,"bgg_id":311031,"display_name_en":"Five Three Five","games_played":4740,"id":2004,"name":"fivethreefive","published_on":"2024-04-03","status":"beta","weight":16}
-{"average_duration":105,"bgg_id":54,"display_name_en":"Tikal","games_played":14782,"id":2005,"name":"tikal","published_on":"2024-10-09","status":"public","weight":95}
-{"average_duration":31,"bgg_id":295895,"display_name_en":"Distilled","games_played":185425,"id":2008,"name":"distilled","premium":true,"priority":18,"published_on":"2024-08-07","status":"public","weight":1195}
-{"average_duration":18,"bgg_id":398898,"display_name_en":"High Season","games_played":23955,"id":2009,"name":"highseason","premium":true,"published_on":"2024-07-29","status":"public","weight":2}
-{"average_duration":33,"bgg_id":288558,"display_name_en":"Chu Han","games_played":1888,"id":2010,"name":"chuhan","premium":true,"published_on":"2025-12-18","status":"beta","weight":25}
-{"average_duration":48,"bgg_id":365742,"display_name_en":"Bacon","games_played":1834,"id":2011,"name":"bacon","published_on":"2024-08-17","status":"public","weight":27}
-{"average_duration":16,"bgg_id":345972,"display_name_en":"Cat in the Box: Deluxe Edition","games_played":70965,"id":2012,"name":"catinthebox","premium":true,"published_on":"2024-07-24","status":"public","weight":225}
-{"average_duration":16,"bgg_id":416832,"display_name_en":"Khiva","games_played":9137,"id":2013,"name":"khiva","published_on":"2025-02-10","status":"public","weight":6}
-{"average_duration":6,"bgg_id":417487,"display_name_en":"Tapas","games_played":2382,"id":2014,"name":"tapas","published_on":"2024-04-19","status":"beta","weight":2}
-{"average_duration":16,"bgg_id":303734,"display_name_en":"Golems","games_played":863,"id":2015,"name":"golems","published_on":"2024-11-20","status":"beta"}
-{"average_duration":29,"bgg_id":40692,"display_name_en":"Small World","games_played":136913,"id":2016,"name":"smallworld","premium":true,"published_on":"2024-12-25","status":"public","weight":637}
-{"average_duration":3,"bgg_id":404233,"display_name_en":"Forks: 2nd Edition","games_played":5166,"id":2017,"name":"forks","published_on":"2024-04-19","status":"beta","weight":3}
-{"average_duration":49,"display_name_en":"Nirds","games_played":839,"id":2018,"name":"nirds","published_on":"2025-02-25","status":"beta"}
-{"average_duration":53,"bgg_id":386188,"display_name_en":"Greasy Spoon","games_played":3389,"id":2019,"name":"greasyspoon","priority":-999,"published_on":"2025-03-06","status":"public","weight":19}
-{"average_duration":17,"bgg_id":347218,"display_name_en":"Dickory","games_played":1915,"id":2020,"name":"dickory","priority":-999,"published_on":"2025-03-06","status":"public"}
-{"average_duration":36,"bgg_id":360214,"display_name_en":"Metz","games_played":1072,"id":2024,"name":"metz","published_on":"2024-06-20","status":"beta"}
-{"average_duration":19,"bgg_id":403133,"display_name_en":"Festi\u2019vibes","games_played":1973,"id":2025,"name":"festivibes","published_on":"2024-08-06","status":"public"}
-{"average_duration":8,"bgg_id":403116,"display_name_en":"Next Station: Paris","games_played":282161,"id":2026,"name":"nextstationparis","premium":true,"published_on":"2024-04-29","status":"public","weight":275}
-{"average_duration":44,"bgg_id":399941,"display_name_en":"River of Gold","games_played":42765,"id":2028,"name":"riverofgold","premium":true,"published_on":"2024-07-17","status":"public","weight":427}
-{"average_duration":8,"bgg_id":272595,"display_name_en":"Dance of Muses","games_played":698,"id":2029,"name":"danceofmuses","published_on":"2024-10-11","status":"beta"}
-{"average_duration":11,"bgg_id":263918,"display_name_en":"Cartographers","games_played":1587168,"id":2030,"name":"cartographers","premium":true,"published_on":"2024-06-19","status":"public","weight":3591}
-{"average_duration":7,"bgg_id":373636,"display_name_en":"Takenokolor","games_played":139577,"id":2031,"name":"takenokolor","published_on":"2024-09-02","status":"public","weight":54}
-{"average_duration":48,"bgg_id":169786,"display_name_en":"Scythe","games_played":116132,"id":2032,"name":"scythe","premium":true,"published_on":"2026-03-31","status":"public","weight":3300}
-{"average_duration":24,"bgg_id":416557,"display_name_en":"Circle Of Life: on the Savannah","games_played":674,"id":2033,"name":"circleoflifesavannah","published_on":"2024-07-03","status":"beta"}
-{"average_duration":12,"bgg_id":419262,"display_name_en":"Mega Jackpot","games_played":26245,"id":2034,"name":"megajackpot","published_on":"2024-06-26","status":"public","weight":10}
-{"average_duration":17,"bgg_id":414317,"display_name_en":"Harmonies","games_played":2883867,"id":2035,"name":"harmonies","premium":true,"priority":3,"published_on":"2024-08-28","status":"public","weight":13153}
-{"average_duration":8,"bgg_id":415836,"display_name_en":"Slide","games_played":93176,"id":2036,"name":"slide","premium":true,"published_on":"2024-05-27","status":"public","weight":74}
-{"average_duration":28,"bgg_id":391985,"display_name_en":"Enemy Anemone","games_played":740,"id":2037,"name":"enemyanemone","priority":-999,"published_on":"2025-03-06","status":"public"}
-{"average_duration":11,"bgg_id":375659,"display_name_en":"Fibonachos","games_played":1240,"id":2039,"name":"fibonachos","priority":-999,"published_on":"2025-02-24","status":"public"}
-{"average_duration":21,"bgg_id":387015,"display_name_en":"Spring Cleaning","games_played":2568,"id":2040,"name":"springcleaning","published_on":"2024-05-23","status":"beta","weight":31}
+{"average_duration":5,"bgg_id":149869,"display_name_en":"Sherlock 13","games_played":33031,"id":2000,"name":"sherlockthirteen","published_on":"2024-08-18","status":"public","weight":22}
+{"average_duration":40,"bgg_id":244711,"display_name_en":"Newton","games_played":29833,"id":2001,"name":"newton","premium":true,"published_on":"2024-08-14","status":"public","weight":157}
+{"average_duration":14,"bgg_id":415108,"display_name_en":"Crisps!","games_played":7767,"id":2002,"name":"crisps","published_on":"2024-03-14","status":"public","weight":17}
+{"average_duration":22,"bgg_id":288169,"display_name_en":"The Fox in the Forest: Duet","games_played":8812,"id":2003,"is_ranking_disabled":true,"name":"thefoxintheforestduet","premium":true,"published_on":"2024-08-26","status":"public","weight":44}
+{"average_duration":15,"bgg_id":311031,"display_name_en":"Five Three Five","games_played":4764,"id":2004,"name":"fivethreefive","published_on":"2024-04-03","status":"beta","weight":17}
+{"average_duration":104,"bgg_id":54,"display_name_en":"Tikal","games_played":14831,"id":2005,"name":"tikal","published_on":"2024-10-09","status":"public","weight":138}
+{"average_duration":31,"bgg_id":295895,"display_name_en":"Distilled","games_played":186598,"id":2008,"name":"distilled","premium":true,"priority":18,"published_on":"2024-08-07","status":"public","weight":1455}
+{"average_duration":14,"bgg_id":398898,"display_name_en":"High Season","games_played":23999,"id":2009,"name":"highseason","premium":true,"published_on":"2024-07-29","status":"public","weight":31}
+{"average_duration":38,"bgg_id":288558,"display_name_en":"Chu Han","games_played":1900,"id":2010,"name":"chuhan","premium":true,"published_on":"2025-12-18","status":"beta","weight":29}
+{"average_duration":49,"bgg_id":365742,"display_name_en":"Bacon","games_played":1844,"id":2011,"name":"bacon","published_on":"2024-08-17","status":"public","weight":53}
+{"average_duration":15,"bgg_id":345972,"display_name_en":"Cat in the Box: Deluxe Edition","games_played":71197,"id":2012,"name":"catinthebox","premium":true,"published_on":"2024-07-24","status":"public","weight":147}
+{"average_duration":15,"bgg_id":416832,"display_name_en":"Khiva","games_played":9151,"id":2013,"name":"khiva","published_on":"2025-02-10","status":"public"}
+{"average_duration":6,"bgg_id":417487,"display_name_en":"Tapas","games_played":2392,"id":2014,"name":"tapas","published_on":"2024-04-19","status":"beta","weight":2}
+{"average_duration":20,"bgg_id":303734,"display_name_en":"Golems","games_played":865,"id":2015,"name":"golems","published_on":"2024-11-20","status":"beta"}
+{"average_duration":29,"bgg_id":40692,"display_name_en":"Small World","games_played":137496,"id":2016,"name":"smallworld","premium":true,"published_on":"2024-12-25","status":"public","weight":511}
+{"average_duration":3,"bgg_id":404233,"display_name_en":"Forks: 2nd Edition","games_played":5173,"id":2017,"name":"forks","published_on":"2024-04-19","status":"beta","weight":1}
+{"average_duration":65,"display_name_en":"Nirds","games_played":845,"id":2018,"name":"nirds","published_on":"2025-02-25","status":"beta"}
+{"average_duration":50,"bgg_id":386188,"display_name_en":"Greasy Spoon","games_played":3406,"id":2019,"name":"greasyspoon","priority":-999,"published_on":"2025-03-06","status":"public"}
+{"average_duration":21,"bgg_id":347218,"display_name_en":"Dickory","games_played":1923,"id":2020,"name":"dickory","priority":-999,"published_on":"2025-03-06","status":"public"}
+{"average_duration":8,"bgg_id":360214,"display_name_en":"Metz","games_played":1079,"id":2024,"name":"metz","published_on":"2024-06-20","status":"beta"}
+{"average_duration":20,"bgg_id":403133,"display_name_en":"Festi\u2019vibes","games_played":1973,"id":2025,"name":"festivibes","published_on":"2024-08-06","status":"public"}
+{"average_duration":8,"bgg_id":403116,"display_name_en":"Next Station: Paris","games_played":283885,"id":2026,"name":"nextstationparis","premium":true,"published_on":"2024-04-29","status":"public","weight":371}
+{"average_duration":45,"bgg_id":399941,"display_name_en":"River of Gold","games_played":42982,"id":2028,"name":"riverofgold","premium":true,"published_on":"2024-07-17","status":"public","weight":419}
+{"average_duration":7,"bgg_id":272595,"display_name_en":"Dance of Muses","games_played":702,"id":2029,"name":"danceofmuses","published_on":"2024-10-11","status":"beta"}
+{"average_duration":11,"bgg_id":263918,"display_name_en":"Cartographers","games_played":1597646,"id":2030,"name":"cartographers","premium":true,"published_on":"2024-06-19","status":"public","weight":3504}
+{"average_duration":7,"bgg_id":373636,"display_name_en":"Takenokolor","games_played":139969,"id":2031,"name":"takenokolor","published_on":"2024-09-02","status":"public","weight":31}
+{"average_duration":48,"bgg_id":169786,"display_name_en":"Scythe","games_played":117857,"id":2032,"name":"scythe","premium":true,"published_on":"2026-03-31","status":"public","weight":3135}
+{"average_duration":25,"bgg_id":416557,"display_name_en":"Circle Of Life: on the Savannah","games_played":674,"id":2033,"name":"circleoflifesavannah","published_on":"2024-07-03","status":"beta"}
+{"average_duration":12,"bgg_id":419262,"display_name_en":"Mega Jackpot","games_played":26290,"id":2034,"name":"megajackpot","published_on":"2024-06-26","status":"public","weight":10}
+{"average_duration":17,"bgg_id":414317,"display_name_en":"Harmonies","games_played":2914713,"id":2035,"name":"harmonies","premium":true,"priority":3,"published_on":"2024-08-28","status":"public","weight":13750}
+{"average_duration":8,"bgg_id":415836,"display_name_en":"Slide","games_played":93668,"id":2036,"name":"slide","premium":true,"published_on":"2024-05-27","status":"public","weight":106}
+{"average_duration":23,"bgg_id":391985,"display_name_en":"Enemy Anemone","games_played":741,"id":2037,"name":"enemyanemone","priority":-999,"published_on":"2025-03-06","status":"public"}
+{"average_duration":11,"bgg_id":375659,"display_name_en":"Fibonachos","games_played":1241,"id":2039,"name":"fibonachos","priority":-999,"published_on":"2025-02-24","status":"public"}
+{"average_duration":22,"bgg_id":387015,"display_name_en":"Spring Cleaning","games_played":2584,"id":2040,"name":"springcleaning","published_on":"2024-05-23","status":"beta","weight":35}
 {"average_duration":22,"bgg_id":383452,"display_name_en":"Lunar","games_played":711,"id":2041,"name":"lunar","published_on":"2024-06-18","status":"beta"}
-{"average_duration":8,"bgg_id":419705,"display_name_en":"Golfie","games_played":33668,"id":2042,"name":"golfie","premium":true,"published_on":"2025-08-25","status":"public","weight":30}
-{"average_duration":9,"bgg_id":415780,"display_name_en":"Lure","games_played":32130,"id":2043,"name":"lure","published_on":"2024-08-27","status":"public","weight":24}
-{"average_duration":14,"bgg_id":283482,"display_name_en":"Zookeepers","games_played":3417,"id":2045,"name":"zookeepers","published_on":"2025-08-13","status":"public"}
-{"average_duration":10,"bgg_id":420793,"display_name_en":"Dicy Cards","games_played":53729,"id":2046,"name":"dicycards","published_on":"2024-10-01","status":"public","weight":18}
-{"average_duration":13,"bgg_id":359499,"display_name_en":"Pescado Novo","games_played":2964,"id":2047,"name":"pescadonovo","priority":-999,"published_on":"2025-02-24","status":"public","weight":5}
-{"average_duration":8,"bgg_id":233961,"display_name_en":"Claim","games_played":10901,"id":2049,"name":"claim","published_on":"2024-06-05","status":"beta","weight":9}
-{"average_duration":6,"display_name_en":"The Last","games_played":2123,"id":2050,"name":"thelast","published_on":"2024-05-23","status":"beta","weight":1}
-{"average_duration":17,"bgg_id":385680,"display_name_en":"Path of Civilization","games_played":69072,"id":2052,"name":"pathofcivilization","premium":true,"published_on":"2024-07-31","status":"public","weight":103}
-{"average_duration":8,"bgg_id":416851,"display_name_en":"Castle Combo","games_played":2189650,"id":2053,"name":"castlecombo","premium":true,"published_on":"2024-09-04","status":"public","weight":4783}
-{"average_duration":18,"bgg_id":416952,"display_name_en":"Onda","games_played":1451,"id":2054,"name":"onda","priority":-999,"published_on":"2025-03-06","status":"public","weight":3}
-{"average_duration":10,"bgg_id":314106,"display_name_en":"Resolve","games_played":4288,"id":2055,"name":"resolve","published_on":"2025-08-08","status":"public"}
-{"average_duration":12,"bgg_id":403754,"display_name_en":"Middle Ages","games_played":124436,"id":2057,"name":"middleages","published_on":"2024-10-07","status":"public","weight":146}
-{"average_duration":9,"bgg_id":413948,"display_name_en":"Festival","games_played":67688,"id":2058,"name":"festival","published_on":"2024-09-18","status":"public","weight":77}
-{"average_duration":31,"bgg_id":261720,"display_name_en":"Finca","games_played":20146,"id":2062,"name":"finca","published_on":"2024-12-11","status":"public","weight":91}
-{"average_duration":1,"bgg_id":200632,"display_name_en":"Qango","games_played":10046,"id":2064,"name":"qango","published_on":"2024-07-03","status":"beta"}
-{"average_duration":16,"bgg_id":414107,"display_name_en":"Ratjack","games_played":20299,"id":2066,"name":"ratjack","published_on":"2024-11-11","status":"public","weight":27}
-{"average_duration":24,"bgg_id":403209,"display_name_en":"Belladone Bluff","games_played":3090,"id":2067,"name":"belladonebluff","published_on":"2025-12-04","status":"public"}
-{"average_duration":8,"bgg_id":414944,"display_name_en":"Park Life","games_played":2487,"id":2068,"name":"parklife","priority":-999,"published_on":"2025-03-06","status":"public"}
-{"average_duration":10,"bgg_id":306032,"display_name_en":"Cookie Addict!","games_played":10465,"id":2069,"name":"cookieaddict","published_on":"2025-12-13","status":"public","weight":1}
-{"average_duration":38,"bgg_id":210296,"display_name_en":"DinoGenics","games_played":26763,"id":2071,"name":"dinogenics","published_on":"2025-08-24","status":"public","weight":380}
-{"average_duration":33,"bgg_id":17104,"display_name_en":"Canasta","games_played":86317,"id":2073,"name":"canasta","published_on":"2025-01-06","status":"public","weight":568}
-{"average_duration":13,"bgg_id":402337,"display_name_en":"Expressions","games_played":4413,"id":2074,"is_ranking_disabled":true,"name":"expressions","published_on":"2024-07-09","status":"beta"}
-{"average_duration":75,"bgg_id":408753,"display_name_en":"Aniversus","games_played":191,"id":2075,"name":"aniversus","published_on":"2024-07-11","status":"beta"}
-{"average_duration":19,"bgg_id":402106,"display_name_en":"Power Vacuum","games_played":3230,"id":2077,"name":"powervacuum","priority":-999,"published_on":"2025-06-03","status":"public","weight":7}
-{"average_duration":16,"bgg_id":152162,"display_name_en":"Diamonds","games_played":1730,"id":2078,"name":"diamonds","published_on":"2024-10-25","status":"beta","weight":1}
-{"average_duration":23,"bgg_id":421255,"display_name_en":"Batalla de Coronas","games_played":625,"id":2079,"name":"batalladecoronas","published_on":"2024-07-18","status":"beta"}
-{"average_duration":10,"bgg_id":315021,"display_name_en":"Strawberry Sunset","games_played":1457,"id":2080,"name":"strawberrysunset","premium":true,"priority":-999,"published_on":"2025-05-06","status":"public","weight":8}
-{"average_duration":29,"bgg_id":402711,"display_name_en":"Blot","games_played":390,"id":2081,"name":"blot","published_on":"2024-07-09","status":"beta","weight":9}
-{"average_duration":21,"bgg_id":424219,"display_name_en":"Zenith","games_played":288299,"id":2082,"name":"zenith","premium":true,"published_on":"2025-01-13","status":"public","weight":2327}
-{"average_duration":12,"bgg_id":63975,"display_name_en":"Mountain Goats","games_played":288241,"id":2083,"name":"mountaingoats","published_on":"2024-08-19","status":"public","weight":681}
-{"average_duration":70,"bgg_id":338376,"display_name_en":"A Gest of Robin Hood","games_played":21666,"id":2084,"name":"agestofrobinhood","published_on":"2025-02-19","status":"public","weight":182}
-{"average_duration":14,"bgg_id":324914,"display_name_en":"Inside Job","games_played":19191,"id":2087,"name":"insidejob","premium":true,"published_on":"2025-06-02","status":"public","weight":69}
-{"average_duration":23,"bgg_id":395623,"display_name_en":"Harvest","games_played":23565,"id":2088,"name":"harvest","premium":true,"published_on":"2024-12-09","status":"public","weight":179}
-{"average_duration":76,"bgg_id":419643,"display_name_en":"Norsemen","games_played":514,"id":2090,"name":"norsemen","published_on":"2024-08-09","status":"beta"}
-{"average_duration":20,"bgg_id":362020,"display_name_en":"Cosmoctopus","games_played":108640,"id":2091,"name":"cosmoctopus","published_on":"2024-10-30","status":"public","weight":570}
-{"average_duration":33,"bgg_id":377470,"display_name_en":"Sail","games_played":19131,"id":2092,"is_ranking_disabled":true,"name":"sail","published_on":"2025-08-21","status":"public","weight":24}
-{"average_duration":12,"bgg_id":315747,"display_name_en":"Persona Non Grata","games_played":354,"id":2093,"name":"personanongrata","published_on":"2024-09-05","status":"beta"}
-{"average_duration":48,"bgg_id":332885,"display_name_en":"Gnome Hollow","games_played":19949,"id":2094,"name":"gnomehollow","published_on":"2024-11-13","status":"public","weight":107}
-{"average_duration":46,"bgg_id":328378,"display_name_en":"Tulip & Rose","games_played":508,"id":2095,"name":"tulipandrose","published_on":"2025-05-26","status":"public"}
-{"average_duration":16,"bgg_id":366994,"display_name_en":"Bonsai","games_played":185891,"id":2096,"name":"bonsai","premium":true,"published_on":"2024-10-16","status":"public","weight":1273}
-{"average_duration":23,"bgg_id":351515,"display_name_en":"Capybara'n'Capybara","games_played":4511,"id":2097,"name":"capybarancapybara","published_on":"2024-11-04","status":"public","weight":4}
-{"average_duration":9,"bgg_id":438594,"display_name_en":"Odicey","games_played":2878,"id":2098,"name":"odicey","priority":-999,"published_on":"2025-02-21","status":"public"}
-{"average_duration":42,"bgg_id":413260,"display_name_en":"Botanicus","games_played":37912,"id":2100,"name":"botanicus","published_on":"2024-10-02","status":"public","weight":127}
-{"average_duration":6,"bgg_id":329873,"display_name_en":"Grove","games_played":98552,"id":2102,"name":"grovesolitaire","published_on":"2024-07-09","status":"beta","weight":116}
-{"average_duration":5,"bgg_id":373577,"display_name_en":"Forage","games_played":45651,"id":2103,"name":"forage","published_on":"2024-07-09","status":"beta","weight":22}
-{"average_duration":9,"bgg_id":387388,"display_name_en":"Nanatoridori","games_played":272814,"id":2104,"name":"nanatoridori","published_on":"2024-09-23","status":"public","weight":228}
-{"average_duration":6,"bgg_id":245487,"display_name_en":"Orchard","games_played":113950,"id":2106,"name":"orchard","published_on":"2024-07-11","status":"beta","weight":28}
-{"average_duration":4,"bgg_id":137173,"display_name_en":"Cairo Corridor","games_played":12249,"id":2107,"name":"cairocorridor","published_on":"2025-08-02","status":"public","weight":5}
-{"average_duration":17,"bgg_id":382444,"display_name_en":"Fled","games_played":1360,"id":2108,"name":"fled","published_on":"2025-05-20","status":"beta","weight":3}
-{"average_duration":11,"bgg_id":406854,"display_name_en":"Odin","games_played":546596,"id":2109,"name":"odin","published_on":"2024-11-06","status":"public","weight":880}
-{"average_duration":30,"bgg_id":415938,"display_name_en":"Inori","games_played":7358,"id":2110,"name":"inori","premium":true,"published_on":"2024-09-16","status":"public","weight":30}
-{"average_duration":5,"bgg_id":23953,"display_name_en":"Gamme Logic","games_played":618319,"id":2112,"name":"gammelogic","premium":true,"published_on":"2025-03-03","status":"public","weight":236}
-{"average_duration":11,"bgg_id":422368,"display_name_en":"Lepidoptery","games_played":3626,"id":2115,"name":"lepidoptery","priority":-999,"published_on":"2025-03-06","status":"public","weight":7}
-{"average_duration":20,"bgg_id":334590,"display_name_en":"For Northwood!","games_played":113662,"id":2116,"name":"fornorthwood","published_on":"2025-08-22","status":"public","weight":58}
-{"average_duration":12,"bgg_id":452404,"display_name_en":"Naishi","games_played":48552,"id":2117,"name":"naishi","premium":true,"published_on":"2024-10-28","status":"public","weight":36}
-{"average_duration":4,"bgg_id":406852,"display_name_en":"Bauer","games_played":1365,"id":2119,"name":"bauer","published_on":"2024-09-27","status":"beta"}
-{"average_duration":75,"bgg_id":164928,"display_name_en":"Orl\u00e9ans","games_played":81231,"id":2120,"name":"orleans","premium":true,"published_on":"2024-12-23","status":"public","weight":807}
-{"average_duration":40,"bgg_id":157354,"display_name_en":"Five Tribes","games_played":66245,"id":2121,"name":"fivetribes","premium":true,"published_on":"2025-01-27","status":"public","weight":366}
-{"average_duration":56,"bgg_id":346812,"display_name_en":"Crash & Grab","games_played":350,"id":2122,"name":"crashandgrab","published_on":"2025-12-15","status":"beta"}
-{"average_duration":18,"bgg_id":420214,"display_name_en":"Arctic","games_played":9399,"id":2123,"name":"arctic","premium":true,"published_on":"2024-10-14","status":"public","weight":14}
-{"average_duration":46,"bgg_id":322289,"display_name_en":"Darwin's Journey","games_played":181566,"id":2125,"name":"darwinsjourney","premium":true,"published_on":"2024-10-23","status":"public","weight":1296}
-{"average_duration":77,"bgg_id":273814,"display_name_en":"Deliverance","games_played":8455,"id":2129,"is_ranking_disabled":true,"name":"deliverance","published_on":"2025-03-10","status":"beta","weight":46}
-{"average_duration":35,"bgg_id":419094,"display_name_en":"Dungeon Rummy","games_played":8877,"id":2131,"is_ranking_disabled":true,"name":"dungeonrummy","priority":-999,"published_on":"2025-03-06","status":"public","weight":66}
-{"average_duration":5,"bgg_id":387769,"display_name_en":"Kiri-ai: The Duel","games_played":8412,"id":2132,"name":"kiriaitheduel","published_on":"2024-09-16","status":"beta","weight":6}
-{"average_duration":10,"bgg_id":402324,"display_name_en":"Eternitium","games_played":47383,"id":2134,"name":"eternitium","published_on":"2024-10-21","status":"public","weight":69}
-{"average_duration":14,"bgg_id":420385,"display_name_en":"The Yellow House","games_played":6427,"id":2135,"name":"theyellowhouse","published_on":"2024-11-04","status":"public","weight":2}
-{"average_duration":9,"bgg_id":361186,"display_name_en":"Giraffe Raffe","games_played":8273,"id":2137,"name":"girafferaffe","published_on":"2024-11-04","status":"public","weight":8}
-{"average_duration":6,"bgg_id":28738,"display_name_en":"Kamon","games_played":79683,"id":2138,"name":"kamon","premium":true,"published_on":"2025-03-31","status":"public","weight":57}
-{"average_duration":9,"bgg_id":425685,"display_name_en":"Dice Mission","games_played":32101,"id":2140,"name":"dicemission","published_on":"2026-02-16","status":"public","weight":43}
-{"average_duration":88,"bgg_id":399806,"display_name_en":"Karvi","games_played":7619,"id":2141,"name":"karvi","premium":true,"published_on":"2025-01-08","status":"public","weight":61}
-{"average_duration":16,"bgg_id":402125,"display_name_en":"Umbrella","games_played":31446,"id":2145,"name":"umbrella","published_on":"2024-11-25","status":"public","weight":28}
-{"average_duration":15,"bgg_id":368173,"display_name_en":"Let's Go! To Japan","games_played":213883,"id":2146,"name":"letsgotojapan","premium":true,"published_on":"2025-01-22","status":"public","weight":678}
-{"average_duration":14,"bgg_id":422484,"display_name_en":"King of Tokyo Duel","games_played":274886,"id":2147,"name":"kingoftokyoduel","premium":true,"published_on":"2025-02-21","status":"public","weight":782}
-{"average_duration":23,"bgg_id":420794,"display_name_en":"Safari Witness","games_played":427,"id":2148,"name":"safariwitness","published_on":"2024-08-30","status":"beta","weight":2}
-{"average_duration":10,"bgg_id":392471,"display_name_en":"Classified Information","games_played":1949,"id":2153,"name":"classifiedinformation","published_on":"2025-04-04","status":"beta"}
-{"average_duration":59,"bgg_id":332772,"display_name_en":"Revive","games_played":76595,"id":2154,"name":"revive","premium":true,"published_on":"2025-07-30","status":"public","weight":1079}
-{"average_duration":10,"bgg_id":427063,"display_name_en":"Ekko","games_played":13925,"id":2157,"name":"ekko","published_on":"2025-02-10","status":"public","weight":8}
-{"average_duration":36,"bgg_id":396375,"display_name_en":"Gems of Iridescia","games_played":2532,"id":2159,"name":"gemsofiridescia","published_on":"2025-01-14","status":"beta","weight":9}
-{"average_duration":36,"bgg_id":203993,"display_name_en":"Lorenzo il Magnifico","games_played":29695,"id":2160,"name":"lorenzo","published_on":"2026-04-29","status":"public","weight":454}
-{"average_duration":3,"bgg_id":94746,"display_name_en":"Coffee","games_played":3091,"id":2161,"name":"coffee","published_on":"2025-01-29","status":"beta","weight":1}
-{"average_duration":46,"bgg_id":425428,"display_name_en":"Survive The Island","games_played":71356,"id":2162,"name":"survive","published_on":"2024-12-18","status":"public","weight":616}
-{"average_duration":54,"bgg_id":372831,"display_name_en":"Potions of Azerland","games_played":4214,"id":2163,"name":"potionsofazerland","premium":true,"published_on":"2025-02-28","status":"public"}
-{"average_duration":57,"bgg_id":431305,"display_name_en":"Great Western Trail: El Paso","games_played":25456,"id":2164,"name":"elpasogwt","premium":true,"published_on":"2025-03-12","status":"public","weight":153}
-{"average_duration":7,"bgg_id":434906,"display_name_en":"Tag Team","games_played":145427,"id":2165,"name":"tagteam","premium":true,"published_on":"2025-11-05","status":"public","weight":433}
-{"average_duration":7,"bgg_id":428317,"display_name_en":"Kado","games_played":70482,"id":2168,"name":"kado","published_on":"2025-02-17","status":"public","weight":73}
-{"average_duration":38,"bgg_id":192458,"display_name_en":"51st State","games_played":17855,"id":2170,"name":"fiftyfirststate","published_on":"2025-05-05","status":"public","weight":36}
+{"average_duration":8,"bgg_id":419705,"display_name_en":"Golfie","games_played":33891,"id":2042,"name":"golfie","premium":true,"published_on":"2025-08-25","status":"public","weight":75}
+{"average_duration":9,"bgg_id":415780,"display_name_en":"Lure","games_played":32346,"id":2043,"name":"lure","published_on":"2024-08-27","status":"public","weight":21}
+{"average_duration":18,"bgg_id":283482,"display_name_en":"Zookeepers","games_played":3424,"id":2045,"name":"zookeepers","published_on":"2025-08-13","status":"public"}
+{"average_duration":9,"bgg_id":420793,"display_name_en":"Dicy Cards","games_played":53826,"id":2046,"name":"dicycards","published_on":"2024-10-01","status":"public","weight":15}
+{"average_duration":14,"bgg_id":359499,"display_name_en":"Pescado Novo","games_played":2983,"id":2047,"name":"pescadonovo","priority":-999,"published_on":"2025-02-24","status":"public","weight":8}
+{"average_duration":9,"bgg_id":233961,"display_name_en":"Claim","games_played":10992,"id":2049,"name":"claim","published_on":"2024-06-05","status":"beta","weight":15}
+{"average_duration":8,"display_name_en":"The Last","games_played":2126,"id":2050,"name":"thelast","published_on":"2024-05-23","status":"beta"}
+{"average_duration":16,"bgg_id":385680,"display_name_en":"Path of Civilization","games_played":69240,"id":2052,"name":"pathofcivilization","premium":true,"published_on":"2024-07-31","status":"public","weight":104}
+{"average_duration":8,"bgg_id":416851,"display_name_en":"Castle Combo","games_played":2211541,"id":2053,"name":"castlecombo","premium":true,"published_on":"2024-09-04","status":"public","weight":5286}
+{"average_duration":16,"bgg_id":416952,"display_name_en":"Onda","games_played":1458,"id":2054,"name":"onda","priority":-999,"published_on":"2025-03-06","status":"public"}
+{"average_duration":10,"bgg_id":314106,"display_name_en":"Resolve","games_played":4298,"id":2055,"name":"resolve","published_on":"2025-08-08","status":"public","weight":2}
+{"average_duration":12,"bgg_id":403754,"display_name_en":"Middle Ages","games_played":124936,"id":2057,"name":"middleages","published_on":"2024-10-07","status":"public","weight":123}
+{"average_duration":9,"bgg_id":413948,"display_name_en":"Festival","games_played":67931,"id":2058,"name":"festival","published_on":"2024-09-18","status":"public","weight":53}
+{"average_duration":31,"bgg_id":261720,"display_name_en":"Finca","games_played":20244,"id":2062,"name":"finca","published_on":"2024-12-11","status":"public","weight":76}
+{"average_duration":1,"bgg_id":200632,"display_name_en":"Qango","games_played":10099,"id":2064,"name":"qango","published_on":"2024-07-03","status":"beta","weight":1}
+{"average_duration":17,"bgg_id":414107,"display_name_en":"Ratjack","games_played":20331,"id":2066,"name":"ratjack","published_on":"2024-11-11","status":"public","weight":22}
+{"average_duration":27,"bgg_id":403209,"display_name_en":"Belladone Bluff","games_played":3092,"id":2067,"name":"belladonebluff","published_on":"2025-12-04","status":"public"}
+{"average_duration":9,"bgg_id":414944,"display_name_en":"Park Life","games_played":2500,"id":2068,"name":"parklife","priority":-999,"published_on":"2025-03-06","status":"public"}
+{"average_duration":10,"bgg_id":306032,"display_name_en":"Cookie Addict!","games_played":10526,"id":2069,"name":"cookieaddict","published_on":"2025-12-13","status":"public","weight":5}
+{"average_duration":41,"bgg_id":210296,"display_name_en":"DinoGenics","games_played":27083,"id":2071,"name":"dinogenics","published_on":"2025-08-24","status":"public","weight":274}
+{"average_duration":34,"bgg_id":17104,"display_name_en":"Canasta","games_played":87312,"id":2073,"name":"canasta","published_on":"2025-01-06","status":"public","weight":755}
+{"average_duration":12,"bgg_id":402337,"display_name_en":"Expressions","games_played":4443,"id":2074,"is_ranking_disabled":true,"name":"expressions","published_on":"2024-07-09","status":"beta","weight":14}
+{"average_duration":75,"bgg_id":408753,"display_name_en":"Aniversus","games_played":192,"id":2075,"name":"aniversus","published_on":"2024-07-11","status":"beta"}
+{"average_duration":18,"bgg_id":402106,"display_name_en":"Power Vacuum","games_played":3237,"id":2077,"name":"powervacuum","priority":-999,"published_on":"2025-06-03","status":"public"}
+{"average_duration":16,"bgg_id":152162,"display_name_en":"Diamonds","games_played":1742,"id":2078,"name":"diamonds","published_on":"2024-10-25","status":"beta","weight":2}
+{"average_duration":22,"bgg_id":421255,"display_name_en":"Batalla de Coronas","games_played":625,"id":2079,"name":"batalladecoronas","published_on":"2024-07-18","status":"beta"}
+{"average_duration":15,"bgg_id":315021,"display_name_en":"Strawberry Sunset","games_played":1476,"id":2080,"name":"strawberrysunset","premium":true,"priority":-999,"published_on":"2025-05-06","status":"public","weight":2}
+{"average_duration":29,"bgg_id":402711,"display_name_en":"Blot","games_played":391,"id":2081,"name":"blot","published_on":"2024-07-09","status":"beta"}
+{"average_duration":21,"bgg_id":424219,"display_name_en":"Zenith","games_played":292383,"id":2082,"name":"zenith","premium":true,"published_on":"2025-01-13","status":"public","weight":2766}
+{"average_duration":12,"bgg_id":63975,"display_name_en":"Mountain Goats","games_played":290058,"id":2083,"name":"mountaingoats","published_on":"2024-08-19","status":"public","weight":715}
+{"average_duration":70,"bgg_id":338376,"display_name_en":"A Gest of Robin Hood","games_played":21783,"id":2084,"name":"agestofrobinhood","published_on":"2025-02-19","status":"public","weight":118}
+{"average_duration":14,"bgg_id":324914,"display_name_en":"Inside Job","games_played":19238,"id":2087,"name":"insidejob","premium":true,"published_on":"2025-06-02","status":"public","weight":32}
+{"average_duration":24,"bgg_id":395623,"display_name_en":"Harvest","games_played":23761,"id":2088,"name":"harvest","premium":true,"published_on":"2024-12-09","status":"public","weight":84}
+{"average_duration":76,"bgg_id":419643,"display_name_en":"Norsemen","games_played":518,"id":2090,"name":"norsemen","published_on":"2024-08-09","status":"beta"}
+{"average_duration":19,"bgg_id":362020,"display_name_en":"Cosmoctopus","games_played":109718,"id":2091,"name":"cosmoctopus","published_on":"2024-10-30","status":"public","weight":352}
+{"average_duration":31,"bgg_id":377470,"display_name_en":"Sail","games_played":19224,"id":2092,"is_ranking_disabled":true,"name":"sail","published_on":"2025-08-21","status":"public","weight":2}
+{"average_duration":12,"bgg_id":315747,"display_name_en":"Persona Non Grata","games_played":355,"id":2093,"name":"personanongrata","published_on":"2024-09-05","status":"beta"}
+{"average_duration":45,"bgg_id":332885,"display_name_en":"Gnome Hollow","games_played":19998,"id":2094,"name":"gnomehollow","published_on":"2024-11-13","status":"public","weight":104}
+{"average_duration":46,"bgg_id":328378,"display_name_en":"Tulip & Rose","games_played":509,"id":2095,"name":"tulipandrose","published_on":"2025-05-26","status":"public"}
+{"average_duration":17,"bgg_id":366994,"display_name_en":"Bonsai","games_played":188033,"id":2096,"name":"bonsai","premium":true,"published_on":"2024-10-16","status":"public","weight":962}
+{"average_duration":25,"bgg_id":351515,"display_name_en":"Capybara'n'Capybara","games_played":4514,"id":2097,"name":"capybarancapybara","published_on":"2024-11-04","status":"public"}
+{"average_duration":9,"bgg_id":438594,"display_name_en":"Odicey","games_played":2882,"id":2098,"name":"odicey","priority":-999,"published_on":"2025-02-21","status":"public","weight":6}
+{"average_duration":37,"bgg_id":413260,"display_name_en":"Botanicus","games_played":38118,"id":2100,"name":"botanicus","published_on":"2024-10-02","status":"public","weight":200}
+{"average_duration":6,"bgg_id":329873,"display_name_en":"Grove","games_played":99392,"id":2102,"name":"grovesolitaire","published_on":"2024-07-09","status":"beta","weight":120}
+{"average_duration":5,"bgg_id":373577,"display_name_en":"Forage","games_played":45807,"id":2103,"name":"forage","published_on":"2024-07-09","status":"beta","weight":8}
+{"average_duration":9,"bgg_id":387388,"display_name_en":"Nanatoridori","games_played":274504,"id":2104,"name":"nanatoridori","published_on":"2024-09-23","status":"public","weight":327}
+{"average_duration":6,"bgg_id":245487,"display_name_en":"Orchard","games_played":114692,"id":2106,"name":"orchard","published_on":"2024-07-11","status":"beta","weight":44}
+{"average_duration":4,"bgg_id":137173,"display_name_en":"Cairo Corridor","games_played":12290,"id":2107,"name":"cairocorridor","published_on":"2025-08-02","status":"public","weight":2}
+{"average_duration":24,"bgg_id":382444,"display_name_en":"Fled","games_played":1363,"id":2108,"name":"fled","published_on":"2025-05-20","status":"beta"}
+{"average_duration":11,"bgg_id":406854,"display_name_en":"Odin","games_played":551178,"id":2109,"name":"odin","published_on":"2024-11-06","status":"public","weight":872}
+{"average_duration":29,"bgg_id":415938,"display_name_en":"Inori","games_played":7383,"id":2110,"name":"inori","premium":true,"published_on":"2024-09-16","status":"public","weight":20}
+{"average_duration":5,"bgg_id":23953,"display_name_en":"Gamme Logic","games_played":620643,"id":2112,"name":"gammelogic","premium":true,"published_on":"2025-03-03","status":"public","weight":242}
+{"average_duration":12,"bgg_id":422368,"display_name_en":"Lepidoptery","games_played":3692,"id":2115,"name":"lepidoptery","priority":-999,"published_on":"2025-03-06","status":"public","weight":31}
+{"average_duration":19,"bgg_id":334590,"display_name_en":"For Northwood!","games_played":114148,"id":2116,"name":"fornorthwood","published_on":"2025-08-22","status":"public","weight":114}
+{"average_duration":12,"bgg_id":452404,"display_name_en":"Naishi","games_played":48698,"id":2117,"name":"naishi","premium":true,"published_on":"2024-10-28","status":"public","weight":34}
+{"average_duration":5,"bgg_id":406852,"display_name_en":"Bauer","games_played":1375,"id":2119,"name":"bauer","published_on":"2024-09-27","status":"beta","weight":1}
+{"average_duration":74,"bgg_id":164928,"display_name_en":"Orl\u00e9ans","games_played":81704,"id":2120,"name":"orleans","premium":true,"published_on":"2024-12-23","status":"public","weight":1068}
+{"average_duration":40,"bgg_id":157354,"display_name_en":"Five Tribes","games_played":66614,"id":2121,"name":"fivetribes","premium":true,"published_on":"2025-01-27","status":"public","weight":418}
+{"average_duration":56,"bgg_id":346812,"display_name_en":"Crash & Grab","games_played":352,"id":2122,"name":"crashandgrab","published_on":"2025-12-15","status":"beta"}
+{"average_duration":21,"bgg_id":420214,"display_name_en":"Arctic","games_played":9422,"id":2123,"name":"arctic","premium":true,"published_on":"2024-10-14","status":"public","weight":9}
+{"average_duration":46,"bgg_id":322289,"display_name_en":"Darwin's Journey","games_played":182575,"id":2125,"name":"darwinsjourney","premium":true,"published_on":"2024-10-23","status":"public","weight":1689}
+{"average_duration":74,"bgg_id":273814,"display_name_en":"Deliverance","games_played":8501,"id":2129,"is_ranking_disabled":true,"name":"deliverance","published_on":"2025-03-10","status":"beta","weight":44}
+{"average_duration":34,"bgg_id":419094,"display_name_en":"Dungeon Rummy","games_played":8980,"id":2131,"is_ranking_disabled":true,"name":"dungeonrummy","priority":-999,"published_on":"2025-03-06","status":"public","weight":82}
+{"average_duration":5,"bgg_id":387769,"display_name_en":"Kiri-ai: The Duel","games_played":8439,"id":2132,"name":"kiriaitheduel","published_on":"2024-09-16","status":"beta","weight":1}
+{"average_duration":10,"bgg_id":402324,"display_name_en":"Eternitium","games_played":47557,"id":2134,"name":"eternitium","published_on":"2024-10-21","status":"public","weight":81}
+{"average_duration":17,"bgg_id":420385,"display_name_en":"The Yellow House","games_played":6438,"id":2135,"name":"theyellowhouse","published_on":"2024-11-04","status":"public"}
+{"average_duration":8,"bgg_id":361186,"display_name_en":"Giraffe Raffe","games_played":8291,"id":2137,"name":"girafferaffe","published_on":"2024-11-04","status":"public","weight":1}
+{"average_duration":6,"bgg_id":28738,"display_name_en":"Kamon","games_played":79996,"id":2138,"name":"kamon","premium":true,"published_on":"2025-03-31","status":"public","weight":42}
+{"average_duration":9,"bgg_id":425685,"display_name_en":"Dice Mission","games_played":32521,"id":2140,"name":"dicemission","published_on":"2026-02-16","status":"public","weight":48}
+{"average_duration":102,"bgg_id":399806,"display_name_en":"Karvi","games_played":7642,"id":2141,"name":"karvi","premium":true,"published_on":"2025-01-08","status":"public","weight":92}
+{"average_duration":16,"bgg_id":402125,"display_name_en":"Umbrella","games_played":31513,"id":2145,"name":"umbrella","published_on":"2024-11-25","status":"public","weight":19}
+{"average_duration":15,"bgg_id":368173,"display_name_en":"Let's Go! To Japan","games_played":215282,"id":2146,"name":"letsgotojapan","premium":true,"published_on":"2025-01-22","status":"public","weight":564}
+{"average_duration":14,"bgg_id":422484,"display_name_en":"King of Tokyo Duel","games_played":276763,"id":2147,"name":"kingoftokyoduel","premium":true,"published_on":"2025-02-21","status":"public","weight":767}
+{"average_duration":23,"bgg_id":420794,"display_name_en":"Safari Witness","games_played":430,"id":2148,"name":"safariwitness","published_on":"2024-08-30","status":"beta"}
+{"average_duration":12,"bgg_id":392471,"display_name_en":"Classified Information","games_played":1951,"id":2153,"name":"classifiedinformation","published_on":"2025-04-04","status":"beta"}
+{"average_duration":59,"bgg_id":332772,"display_name_en":"Revive","games_played":77147,"id":2154,"name":"revive","premium":true,"published_on":"2025-07-30","status":"public","weight":1191}
+{"average_duration":10,"bgg_id":427063,"display_name_en":"Ekko","games_played":13961,"id":2157,"name":"ekko","published_on":"2025-02-10","status":"public","weight":23}
+{"average_duration":36,"bgg_id":396375,"display_name_en":"Gems of Iridescia","games_played":2539,"id":2159,"name":"gemsofiridescia","published_on":"2025-01-14","status":"beta","weight":4}
+{"average_duration":35,"bgg_id":203993,"display_name_en":"Lorenzo il Magnifico","games_played":30327,"id":2160,"name":"lorenzo","published_on":"2026-04-29","status":"public","weight":523}
+{"average_duration":3,"bgg_id":94746,"display_name_en":"Coffee","games_played":3102,"id":2161,"name":"coffee","published_on":"2025-01-29","status":"beta"}
+{"average_duration":45,"bgg_id":425428,"display_name_en":"Survive The Island","games_played":71900,"id":2162,"name":"survive","published_on":"2024-12-18","status":"public","weight":472}
+{"average_duration":58,"bgg_id":372831,"display_name_en":"Potions of Azerland","games_played":4221,"id":2163,"name":"potionsofazerland","premium":true,"published_on":"2025-02-28","status":"public"}
+{"average_duration":60,"bgg_id":431305,"display_name_en":"Great Western Trail: El Paso","games_played":25518,"id":2164,"name":"elpasogwt","premium":true,"published_on":"2025-03-12","status":"public","weight":59}
+{"average_duration":7,"bgg_id":434906,"display_name_en":"Tag Team","games_played":146917,"id":2165,"name":"tagteam","premium":true,"published_on":"2025-11-05","status":"public","weight":282}
+{"average_duration":7,"bgg_id":428317,"display_name_en":"Kado","games_played":70890,"id":2168,"name":"kado","published_on":"2025-02-17","status":"public","weight":52}
+{"average_duration":37,"bgg_id":192458,"display_name_en":"51st State","games_played":17929,"id":2170,"name":"fiftyfirststate","published_on":"2025-05-05","status":"public","weight":70}
 {"average_duration":56,"bgg_id":322685,"display_name_en":"Rumble Planet","games_played":531,"id":2171,"name":"rumbleplanet","published_on":"2024-12-03","status":"beta"}
-{"average_duration":28,"bgg_id":411545,"display_name_en":"Sunrise Sunset","games_played":504,"id":2172,"name":"sunrisesunset","published_on":"2025-04-10","status":"beta"}
-{"average_duration":55,"bgg_id":2955,"display_name_en":"Mexica","games_played":1483,"id":2173,"name":"mexica","published_on":"2024-11-13","status":"beta","weight":37}
-{"average_duration":5,"bgg_id":29355,"display_name_en":"Knister","games_played":86775,"id":2174,"name":"knister","published_on":"2025-02-03","status":"public","weight":43}
-{"average_duration":16,"bgg_id":416552,"display_name_en":"Stalk Exchange","games_played":14877,"id":2175,"name":"stalkexchange","published_on":"2025-03-10","status":"public","weight":7}
-{"average_duration":17,"bgg_id":428847,"display_name_en":"Mango","games_played":873,"id":2176,"name":"mango","published_on":"2026-02-04","status":"beta","weight":4}
-{"average_duration":31,"bgg_id":426509,"display_name_en":"the itty bitty card game","games_played":1464,"id":2177,"name":"theittybittycardgame","published_on":"2024-12-03","status":"beta"}
-{"average_duration":8,"bgg_id":311702,"display_name_en":"Piratas!","games_played":1314,"id":2180,"name":"piratas","published_on":"2025-03-17","status":"beta"}
-{"average_duration":69,"bgg_id":334537,"display_name_en":"Altay: Dawn of Civilization","games_played":6750,"id":2181,"name":"altay","published_on":"2025-12-27","status":"public","weight":122}
-{"average_duration":24,"bgg_id":427084,"display_name_en":"Superstore 3000","games_played":15447,"id":2183,"name":"superstore","premium":true,"published_on":"2025-01-15","status":"public","weight":42}
-{"average_duration":9,"bgg_id":428457,"display_name_en":"Refuge","games_played":37352,"id":2184,"name":"refuge","published_on":"2024-11-27","status":"public","weight":15}
-{"average_duration":13,"bgg_id":359961,"display_name_en":"Pentaquest","games_played":87464,"id":2185,"name":"pentaquest","published_on":"2025-08-20","status":"public","weight":397}
-{"average_duration":17,"bgg_id":395512,"display_name_en":"Bunny Boom","games_played":3756,"id":2186,"name":"bunnyboom","published_on":"2025-05-19","status":"public"}
-{"average_duration":36,"bgg_id":369880,"display_name_en":"Beer & Bread","games_played":21305,"id":2187,"name":"beerbread","premium":true,"published_on":"2025-07-31","status":"public","weight":146}
-{"average_duration":26,"bgg_id":352697,"display_name_en":"Resist!","games_played":32472,"id":2190,"name":"resist","premium":true,"published_on":"2024-11-18","status":"beta","weight":7}
-{"average_duration":26,"bgg_id":419793,"display_name_en":"Pyramido: Forgotten Treasures","games_played":14977,"id":2191,"name":"pyramidoft","published_on":"2025-02-24","status":"public","weight":9}
-{"average_duration":10,"bgg_id":349131,"display_name_en":"Splitter","games_played":40901,"id":2192,"name":"splitter","published_on":"2025-02-03","status":"public","weight":29}
-{"average_duration":12,"bgg_id":379153,"display_name_en":"Pacifica","games_played":2584,"id":2194,"name":"pacifica","premium":true,"published_on":"2025-01-21","status":"beta","weight":4}
-{"average_duration":16,"bgg_id":387514,"display_name_en":"Stonespine Architects","games_played":75809,"id":2196,"name":"stonespinearchitects","premium":true,"published_on":"2025-04-02","status":"public","weight":379}
-{"average_duration":15,"bgg_id":418954,"display_name_en":"D\u00e9dale","games_played":44067,"id":2197,"is_ranking_disabled":true,"name":"dedale","published_on":"2025-05-09","status":"public","weight":18}
-{"average_duration":15,"bgg_id":415910,"display_name_en":"Architects of Amytis","games_played":35336,"id":2198,"name":"architectsofamytis","published_on":"2025-02-05","status":"public","weight":60}
-{"average_duration":27,"bgg_id":417323,"display_name_en":"Panda Spin","games_played":18977,"id":2199,"name":"pandaspin","published_on":"2025-03-24","status":"public","weight":92}
-{"average_duration":70,"bgg_id":387780,"display_name_en":"Rats of Wistar","games_played":27457,"id":2200,"name":"ratsofwistar","premium":true,"published_on":"2025-04-23","status":"public","weight":469}
-{"average_duration":22,"bgg_id":357989,"display_name_en":"Quartz: The Dice Game","games_played":3226,"id":2201,"name":"quartzdice","published_on":"2024-12-13","status":"beta"}
-{"average_duration":35,"bgg_id":283393,"display_name_en":"Aquatica","games_played":27991,"id":2202,"name":"aquatica","premium":true,"published_on":"2025-11-17","status":"public","weight":272}
-{"average_duration":30,"bgg_id":380135,"display_name_en":"Dead Cells","games_played":240015,"id":2203,"is_ranking_disabled":true,"name":"deadcells","premium":true,"published_on":"2025-01-29","status":"public","weight":938}
-{"average_duration":4,"bgg_id":425254,"display_name_en":"Ninjan","games_played":41690,"id":2204,"name":"ninjan","published_on":"2025-06-23","status":"public","weight":12}
-{"average_duration":15,"bgg_id":437478,"display_name_en":"iye","games_played":2123,"id":2206,"name":"iye","published_on":"2025-12-23","status":"public","weight":2}
-{"average_duration":11,"bgg_id":432716,"display_name_en":"Leaders","games_played":121330,"id":2207,"name":"leaders","published_on":"2025-04-16","status":"public","weight":410}
-{"average_duration":4,"bgg_id":417334,"display_name_en":"Choconnect","games_played":21998,"id":2212,"name":"choconnect","published_on":"2025-12-25","status":"public","weight":3}
-{"average_duration":28,"bgg_id":327082,"display_name_en":"Garden Rush","games_played":12547,"id":2213,"name":"gardenrush","premium":true,"published_on":"2025-04-21","status":"public","weight":12}
-{"average_duration":22,"bgg_id":416184,"display_name_en":"Quadrata Canada","games_played":865,"id":2215,"name":"quadratacanada","published_on":"2025-01-02","status":"beta"}
-{"average_duration":15,"bgg_id":350933,"display_name_en":"The Guild of Merchant Explorers","games_played":263692,"id":2216,"name":"theguildofmerchantexplorers","premium":true,"published_on":"2025-02-26","status":"public","weight":923}
-{"average_duration":12,"bgg_id":419109,"display_name_en":"Battlegammon","games_played":1069,"id":2218,"name":"battlegammon","published_on":"2025-02-12","status":"beta"}
-{"average_duration":10,"bgg_id":325421,"display_name_en":"Nibble","games_played":4286,"id":2219,"name":"nibble","priority":-999,"published_on":"2026-06-18","status":"public","weight":10}
-{"average_duration":28,"bgg_id":431038,"display_name_en":"Azul Duel","games_played":129771,"id":2220,"name":"azulduel","premium":true,"published_on":"2025-02-14","status":"public","weight":669}
-{"average_duration":16,"bgg_id":401303,"display_name_en":"Mind Cycling","games_played":4642,"id":2221,"name":"mindcycling","published_on":"2025-08-23","status":"public"}
-{"average_duration":17,"bgg_id":420862,"display_name_en":"LUZ","games_played":20604,"id":2222,"name":"luz","premium":true,"published_on":"2025-08-28","status":"public","weight":42}
-{"average_duration":22,"bgg_id":140934,"display_name_en":"Arboretum","games_played":23642,"id":2223,"name":"arboretum","premium":true,"published_on":"2025-05-26","status":"public","weight":65}
-{"average_duration":23,"bgg_id":393880,"display_name_en":"Biomes of Nilgiris","games_played":1821,"id":2224,"name":"biomesofnilgiris","published_on":"2025-05-06","status":"beta"}
-{"average_duration":23,"bgg_id":381356,"display_name_en":"Diced Veggies","games_played":28925,"id":2226,"name":"dicedveggies","published_on":"2025-12-21","status":"public","weight":70}
-{"average_duration":27,"bgg_id":400943,"display_name_en":"Sneferu: Builders of the Pyramids","games_played":654,"id":2227,"name":"sneferu","published_on":"2025-03-17","status":"beta","weight":17}
-{"average_duration":29,"bgg_id":397385,"display_name_en":"Pirates of Maracaibo","games_played":73635,"id":2228,"name":"piratesofmaracaibo","premium":true,"published_on":"2025-03-26","status":"public","weight":718}
-{"average_duration":10,"bgg_id":423667,"display_name_en":"Monster Hex","games_played":1717,"id":2229,"name":"monsterhex","published_on":"2025-01-28","status":"beta"}
-{"average_duration":21,"bgg_id":411872,"display_name_en":"Bower","games_played":2639,"id":2232,"name":"bower","published_on":"2025-01-28","status":"beta","weight":22}
-{"average_duration":18,"bgg_id":408280,"display_name_en":"Twinkle Twinkle","games_played":16439,"id":2233,"name":"twinkletwinkle","published_on":"2025-08-01","status":"public","weight":59}
-{"average_duration":16,"bgg_id":429020,"display_name_en":"Paper World","games_played":18996,"id":2236,"name":"paperworld","published_on":"2025-04-28","status":"public","weight":19}
-{"average_duration":13,"bgg_id":40444,"display_name_en":"Livingstone","games_played":1094,"id":2237,"name":"livingstone","published_on":"2025-07-24","status":"beta"}
-{"average_duration":29,"bgg_id":336934,"display_name_en":"Love Links","games_played":526,"id":2238,"name":"lovelinks","published_on":"2025-03-07","status":"beta"}
-{"average_duration":6,"bgg_id":338920,"display_name_en":"Hamsters vs Hippos","games_played":1236,"id":2239,"name":"hamstersvshippos","published_on":"2025-07-21","status":"beta","weight":4}
-{"average_duration":34,"bgg_id":349082,"display_name_en":"Kingscraft","games_played":8759,"id":2240,"name":"kingscraft","published_on":"2025-08-16","status":"public"}
-{"average_duration":22,"bgg_id":306500,"display_name_en":"Queen of Scots","games_played":3529,"id":2241,"name":"queenofscots","published_on":"2025-03-27","status":"beta","weight":13}
-{"average_duration":32,"bgg_id":371942,"display_name_en":"The White Castle","games_played":554740,"id":2242,"name":"thewhitecastle","premium":true,"published_on":"2025-04-30","status":"public","weight":5095}
-{"average_duration":22,"bgg_id":265736,"display_name_en":"Tiny Towns","games_played":61465,"id":2243,"name":"tinytowns","premium":true,"published_on":"2025-08-05","status":"public","weight":186}
-{"average_duration":4,"bgg_id":434654,"display_name_en":"Toy Battle","games_played":1127940,"id":2244,"name":"toybattle","premium":true,"published_on":"2025-03-17","status":"public","weight":2547}
-{"average_duration":38,"bgg_id":200057,"display_name_en":"Pioneer Days","games_played":8101,"id":2245,"name":"pioneerdaysproject","premium":true,"published_on":"2025-08-17","status":"public"}
-{"average_duration":13,"bgg_id":400265,"display_name_en":"Cake Master","games_played":7947,"id":2246,"name":"cakemaster","published_on":"2025-03-12","status":"beta","weight":21}
-{"average_duration":10,"bgg_id":420087,"display_name_en":"Flip 7","games_played":1487627,"id":2247,"name":"flipseven","published_on":"2025-05-07","status":"public","weight":4080}
-{"average_duration":6,"bgg_id":437052,"display_name_en":"Churn","games_played":1938,"id":2248,"name":"churn","priority":-999,"published_on":"2025-05-15","status":"public"}
-{"average_duration":41,"bgg_id":322626,"display_name_en":"\u00c0iy\u00e9","games_played":769,"id":2249,"name":"aiye","published_on":"2025-04-10","status":"beta"}
-{"average_duration":29,"bgg_id":421232,"display_name_en":"Captain Tsubasa: The card game","games_played":30046,"id":2250,"name":"campeones","published_on":"2025-07-14","status":"public","weight":130}
-{"average_duration":17,"bgg_id":119782,"display_name_en":"Paik\u014d","games_played":302,"id":2251,"name":"paiko","published_on":"2025-04-23","status":"beta"}
-{"average_duration":38,"bgg_id":424785,"display_name_en":"Crafting the Cosmos","games_played":8663,"id":2252,"name":"craftingthecosmos","premium":true,"published_on":"2025-03-19","status":"public","weight":18}
-{"average_duration":11,"bgg_id":435652,"display_name_en":"Easy Peasy","games_played":279036,"id":2254,"name":"easypeasy","premium":true,"published_on":"2025-04-14","status":"public","weight":401}
-{"average_duration":4,"bgg_id":115370,"display_name_en":"Cuttle","games_played":1416,"id":2256,"name":"cuttle","published_on":"2025-02-21","status":"beta"}
-{"average_duration":2,"bgg_id":9851,"display_name_en":"Shut the Box","games_played":57371,"id":2258,"name":"shutthebox","priority":-999,"published_on":"2025-03-06","status":"public","weight":25}
-{"average_duration":10,"bgg_id":434293,"display_name_en":"Blast Radius","games_played":1729,"id":2259,"name":"blastradius","priority":-999,"published_on":"2025-06-03","status":"public"}
-{"average_duration":17,"bgg_id":284936,"display_name_en":"Caf\u00e9","games_played":36386,"id":2260,"name":"cafe","premium":true,"published_on":"2025-07-23","status":"public","weight":100}
-{"average_duration":63,"bgg_id":319910,"display_name_en":"Pagan: Fate of Roanoke","games_played":15948,"id":2263,"name":"paganfateofroanoke","premium":true,"published_on":"2025-08-19","status":"public","weight":92}
-{"average_duration":12,"bgg_id":399368,"display_name_en":"Bunny Drops","games_played":1707,"id":2264,"name":"bunnydrops","published_on":"2025-03-10","status":"beta","weight":2}
-{"average_duration":18,"bgg_id":427260,"display_name_en":"Living Forest Duel","games_played":25771,"id":2266,"name":"livingforestduel","premium":true,"published_on":"2025-03-05","status":"public","weight":61}
-{"average_duration":10,"bgg_id":400756,"display_name_en":"Wizards Cup","games_played":11588,"id":2267,"name":"wizardscup","published_on":"2025-06-09","status":"public"}
-{"average_duration":16,"bgg_id":424573,"display_name_en":"Pergola","games_played":53245,"id":2269,"name":"pergola","premium":true,"published_on":"2025-09-24","status":"public","weight":330}
-{"average_duration":8,"bgg_id":431304,"display_name_en":"Mythicals the boardgame","games_played":39696,"id":2270,"name":"mythicalstheboardgame","published_on":"2025-02-12","status":"public","weight":28}
-{"average_duration":7,"bgg_id":408769,"display_name_en":"Propuh","games_played":5240,"id":2271,"name":"propuh","published_on":"2025-08-04","status":"public","weight":2}
-{"average_duration":6,"bgg_id":432451,"display_name_en":"Symbiose","games_played":195927,"id":2272,"name":"symbiose","premium":true,"published_on":"2025-04-09","status":"public","weight":159}
-{"average_duration":28,"bgg_id":400297,"display_name_en":"Sfynx","games_played":2755,"id":2273,"is_ranking_disabled":true,"name":"sfynx","published_on":"2025-03-10","status":"beta"}
-{"average_duration":33,"bgg_id":437821,"display_name_en":"Sir Ocelot's cave","games_played":5968,"id":2274,"name":"sirocelotscave","premium":true,"published_on":"2025-06-16","status":"public"}
-{"average_duration":25,"bgg_id":284653,"display_name_en":"Mind MGMT","games_played":12301,"id":2276,"name":"mindmgmt","published_on":"2025-08-07","status":"public","weight":4}
-{"average_duration":10,"bgg_id":436045,"display_name_en":"Savanna Ten","games_played":1135,"id":2277,"name":"savannaten","published_on":"2025-07-31","status":"beta","weight":3}
-{"average_duration":6,"bgg_id":436073,"display_name_en":"Kani Nari Ebi","games_played":2232,"id":2278,"name":"kaninariebi","published_on":"2025-07-30","status":"beta","weight":1}
-{"average_duration":2,"bgg_id":381501,"display_name_en":"Falconry","games_played":1022,"id":2280,"name":"falconry","published_on":"2025-04-03","status":"beta"}
-{"average_duration":6,"bgg_id":384152,"display_name_en":"Dice Pyramid","games_played":21554,"id":2281,"name":"dicepyramid","published_on":"2025-02-11","status":"beta","weight":12}
-{"average_duration":32,"bgg_id":287217,"display_name_en":"Pirates Under Fire","games_played":652,"id":2283,"name":"piratesunderfire","premium":true,"published_on":"2026-02-02","status":"beta"}
+{"average_duration":29,"bgg_id":411545,"display_name_en":"Sunrise Sunset","games_played":506,"id":2172,"name":"sunrisesunset","published_on":"2025-04-10","status":"beta"}
+{"average_duration":64,"bgg_id":2955,"display_name_en":"Mexica","games_played":1497,"id":2173,"name":"mexica","published_on":"2024-11-13","status":"beta","weight":50}
+{"average_duration":5,"bgg_id":29355,"display_name_en":"Knister","games_played":87114,"id":2174,"name":"knister","published_on":"2025-02-03","status":"public","weight":51}
+{"average_duration":16,"bgg_id":416552,"display_name_en":"Stalk Exchange","games_played":14900,"id":2175,"name":"stalkexchange","published_on":"2025-03-10","status":"public","weight":13}
+{"average_duration":22,"bgg_id":428847,"display_name_en":"Mango","games_played":884,"id":2176,"name":"mango","published_on":"2026-02-04","status":"beta","weight":8}
+{"average_duration":35,"bgg_id":426509,"display_name_en":"the itty bitty card game","games_played":1468,"id":2177,"name":"theittybittycardgame","published_on":"2024-12-03","status":"beta"}
+{"average_duration":10,"bgg_id":311702,"display_name_en":"Piratas!","games_played":1317,"id":2180,"name":"piratas","published_on":"2025-03-17","status":"beta"}
+{"average_duration":66,"bgg_id":334537,"display_name_en":"Altay: Dawn of Civilization","games_played":6820,"id":2181,"name":"altay","published_on":"2025-12-27","status":"public","weight":61}
+{"average_duration":24,"bgg_id":427084,"display_name_en":"Superstore 3000","games_played":15490,"id":2183,"name":"superstore","premium":true,"published_on":"2025-01-15","status":"public","weight":20}
+{"average_duration":9,"bgg_id":428457,"display_name_en":"Refuge","games_played":37433,"id":2184,"name":"refuge","published_on":"2024-11-27","status":"public","weight":8}
+{"average_duration":13,"bgg_id":359961,"display_name_en":"Pentaquest","games_played":90115,"id":2185,"name":"pentaquest","published_on":"2025-08-20","status":"public","weight":162}
+{"average_duration":21,"bgg_id":395512,"display_name_en":"Bunny Boom","games_played":3757,"id":2186,"name":"bunnyboom","published_on":"2025-05-19","status":"public"}
+{"average_duration":36,"bgg_id":369880,"display_name_en":"Beer & Bread","games_played":21439,"id":2187,"name":"beerbread","premium":true,"published_on":"2025-07-31","status":"public","weight":164}
+{"average_duration":24,"bgg_id":352697,"display_name_en":"Resist!","games_played":32726,"id":2190,"name":"resist","premium":true,"published_on":"2024-11-18","status":"beta","weight":16}
+{"average_duration":21,"bgg_id":419793,"display_name_en":"Pyramido: Forgotten Treasures","games_played":15015,"id":2191,"name":"pyramidoft","published_on":"2025-02-24","status":"public","weight":27}
+{"average_duration":8,"bgg_id":349131,"display_name_en":"Splitter","games_played":41152,"id":2192,"name":"splitter","published_on":"2025-02-03","status":"public","weight":80}
+{"average_duration":12,"bgg_id":379153,"display_name_en":"Pacifica","games_played":2605,"id":2194,"name":"pacifica","premium":true,"published_on":"2025-01-21","status":"beta","weight":6}
+{"average_duration":16,"bgg_id":387514,"display_name_en":"Stonespine Architects","games_played":76430,"id":2196,"name":"stonespinearchitects","premium":true,"published_on":"2025-04-02","status":"public","weight":260}
+{"average_duration":16,"bgg_id":418954,"display_name_en":"D\u00e9dale","games_played":44148,"id":2197,"is_ranking_disabled":true,"name":"dedale","published_on":"2025-05-09","status":"public","weight":8}
+{"average_duration":15,"bgg_id":415910,"display_name_en":"Architects of Amytis","games_played":35480,"id":2198,"name":"architectsofamytis","published_on":"2025-02-05","status":"public","weight":70}
+{"average_duration":25,"bgg_id":417323,"display_name_en":"Panda Spin","games_played":19128,"id":2199,"name":"pandaspin","published_on":"2025-03-24","status":"public","weight":110}
+{"average_duration":68,"bgg_id":387780,"display_name_en":"Rats of Wistar","games_played":27663,"id":2200,"name":"ratsofwistar","premium":true,"published_on":"2025-04-23","status":"public","weight":448}
+{"average_duration":20,"bgg_id":357989,"display_name_en":"Quartz: The Dice Game","games_played":3245,"id":2201,"name":"quartzdice","published_on":"2024-12-13","status":"beta"}
+{"average_duration":35,"bgg_id":283393,"display_name_en":"Aquatica","games_played":28231,"id":2202,"name":"aquatica","premium":true,"published_on":"2025-11-17","status":"public","weight":259}
+{"average_duration":30,"bgg_id":380135,"display_name_en":"Dead Cells","games_played":241159,"id":2203,"is_ranking_disabled":true,"name":"deadcells","premium":true,"published_on":"2025-01-29","status":"public","weight":1013}
+{"average_duration":4,"bgg_id":425254,"display_name_en":"Ninjan","games_played":41781,"id":2204,"name":"ninjan","published_on":"2025-06-23","status":"public","weight":11}
+{"average_duration":14,"bgg_id":437478,"display_name_en":"iye","games_played":2135,"id":2206,"name":"iye","published_on":"2025-12-23","status":"public","weight":2}
+{"average_duration":11,"bgg_id":432716,"display_name_en":"Leaders","games_played":123617,"id":2207,"name":"leaders","published_on":"2025-04-16","status":"public","weight":279}
+{"average_duration":4,"bgg_id":417334,"display_name_en":"Choconnect","games_played":22104,"id":2212,"name":"choconnect","published_on":"2025-12-25","status":"public","weight":6}
+{"average_duration":26,"bgg_id":327082,"display_name_en":"Garden Rush","games_played":12582,"id":2213,"name":"gardenrush","premium":true,"published_on":"2025-04-21","status":"public","weight":8}
+{"average_duration":23,"bgg_id":416184,"display_name_en":"Quadrata Canada","games_played":872,"id":2215,"name":"quadratacanada","published_on":"2025-01-02","status":"beta","weight":11}
+{"average_duration":15,"bgg_id":350933,"display_name_en":"The Guild of Merchant Explorers","games_played":265474,"id":2216,"name":"theguildofmerchantexplorers","premium":true,"published_on":"2025-02-26","status":"public","weight":953}
+{"average_duration":12,"bgg_id":419109,"display_name_en":"Battlegammon","games_played":1076,"id":2218,"name":"battlegammon","published_on":"2025-02-12","status":"beta"}
+{"average_duration":10,"bgg_id":325421,"display_name_en":"Nibble","games_played":4314,"id":2219,"name":"nibble","priority":-999,"published_on":"2026-06-18","status":"public","weight":8}
+{"average_duration":28,"bgg_id":431038,"display_name_en":"Azul Duel","games_played":130514,"id":2220,"name":"azulduel","premium":true,"published_on":"2025-02-14","status":"public","weight":595}
+{"average_duration":12,"bgg_id":401303,"display_name_en":"Mind Cycling","games_played":4664,"id":2221,"name":"mindcycling","published_on":"2025-08-23","status":"public","weight":5}
+{"average_duration":17,"bgg_id":420862,"display_name_en":"LUZ","games_played":20679,"id":2222,"name":"luz","premium":true,"published_on":"2025-08-28","status":"public","weight":77}
+{"average_duration":21,"bgg_id":140934,"display_name_en":"Arboretum","games_played":23769,"id":2223,"name":"arboretum","premium":true,"published_on":"2025-05-26","status":"public","weight":61}
+{"average_duration":50,"bgg_id":393880,"display_name_en":"Biomes of Nilgiris","games_played":1840,"id":2224,"name":"biomesofnilgiris","published_on":"2025-05-06","status":"beta","weight":38}
+{"average_duration":23,"bgg_id":381356,"display_name_en":"Diced Veggies","games_played":29221,"id":2226,"name":"dicedveggies","published_on":"2025-12-21","status":"public","weight":251}
+{"average_duration":27,"bgg_id":400943,"display_name_en":"Sneferu: Builders of the Pyramids","games_played":656,"id":2227,"name":"sneferu","published_on":"2025-03-17","status":"beta","weight":3}
+{"average_duration":29,"bgg_id":397385,"display_name_en":"Pirates of Maracaibo","games_played":74199,"id":2228,"name":"piratesofmaracaibo","premium":true,"published_on":"2025-03-26","status":"public","weight":570}
+{"average_duration":10,"bgg_id":423667,"display_name_en":"Monster Hex","games_played":1726,"id":2229,"name":"monsterhex","published_on":"2025-01-28","status":"beta","weight":2}
+{"average_duration":19,"bgg_id":411872,"display_name_en":"Bower","games_played":2647,"id":2232,"name":"bower","published_on":"2025-01-28","status":"beta"}
+{"average_duration":18,"bgg_id":408280,"display_name_en":"Twinkle Twinkle","games_played":16510,"id":2233,"name":"twinkletwinkle","published_on":"2025-08-01","status":"public","weight":43}
+{"average_duration":16,"bgg_id":429020,"display_name_en":"Paper World","games_played":19055,"id":2236,"name":"paperworld","published_on":"2025-04-28","status":"public","weight":2}
+{"average_duration":9,"bgg_id":40444,"display_name_en":"Livingstone","games_played":1102,"id":2237,"name":"livingstone","published_on":"2025-07-24","status":"beta"}
+{"average_duration":29,"bgg_id":336934,"display_name_en":"Love Links","games_played":536,"id":2238,"name":"lovelinks","published_on":"2025-03-07","status":"beta"}
+{"average_duration":6,"bgg_id":338920,"display_name_en":"Hamsters vs Hippos","games_played":1248,"id":2239,"name":"hamstersvshippos","published_on":"2025-07-21","status":"beta","weight":3}
+{"average_duration":34,"bgg_id":349082,"display_name_en":"Kingscraft","games_played":8805,"id":2240,"name":"kingscraft","published_on":"2025-08-16","status":"public","weight":41}
+{"average_duration":18,"bgg_id":306500,"display_name_en":"Queen of Scots","games_played":3566,"id":2241,"name":"queenofscots","published_on":"2025-03-27","status":"beta","weight":23}
+{"average_duration":32,"bgg_id":371942,"display_name_en":"The White Castle","games_played":560146,"id":2242,"name":"thewhitecastle","premium":true,"published_on":"2025-04-30","status":"public","weight":5304}
+{"average_duration":21,"bgg_id":265736,"display_name_en":"Tiny Towns","games_played":61808,"id":2243,"name":"tinytowns","premium":true,"published_on":"2025-08-05","status":"public","weight":397}
+{"average_duration":4,"bgg_id":434654,"display_name_en":"Toy Battle","games_played":1147378,"id":2244,"name":"toybattle","premium":true,"published_on":"2025-03-17","status":"public","weight":2354}
+{"average_duration":40,"bgg_id":200057,"display_name_en":"Pioneer Days","games_played":8110,"id":2245,"name":"pioneerdaysproject","premium":true,"published_on":"2025-08-17","status":"public","weight":17}
+{"average_duration":13,"bgg_id":400265,"display_name_en":"Cake Master","games_played":8064,"id":2246,"name":"cakemaster","published_on":"2025-03-12","status":"beta","weight":9}
+{"average_duration":10,"bgg_id":420087,"display_name_en":"Flip 7","games_played":1503603,"id":2247,"name":"flipseven","published_on":"2025-05-07","status":"public","weight":4139}
+{"average_duration":5,"bgg_id":437052,"display_name_en":"Churn","games_played":1939,"id":2248,"name":"churn","priority":-999,"published_on":"2025-05-15","status":"public","weight":1}
+{"average_duration":40,"bgg_id":322626,"display_name_en":"\u00c0iy\u00e9","games_played":773,"id":2249,"name":"aiye","published_on":"2025-04-10","status":"beta","weight":19}
+{"average_duration":28,"bgg_id":421232,"display_name_en":"Captain Tsubasa: The card game","games_played":30338,"id":2250,"name":"campeones","published_on":"2025-07-14","status":"public","weight":130}
+{"average_duration":17,"bgg_id":119782,"display_name_en":"Paik\u014d","games_played":303,"id":2251,"name":"paiko","published_on":"2025-04-23","status":"beta"}
+{"average_duration":32,"bgg_id":424785,"display_name_en":"Crafting the Cosmos","games_played":8697,"id":2252,"name":"craftingthecosmos","premium":true,"published_on":"2025-03-19","status":"public","weight":74}
+{"average_duration":10,"bgg_id":435652,"display_name_en":"Easy Peasy","games_played":280580,"id":2254,"name":"easypeasy","premium":true,"published_on":"2025-04-14","status":"public","weight":499}
+{"average_duration":5,"bgg_id":115370,"display_name_en":"Cuttle","games_played":1425,"id":2256,"name":"cuttle","published_on":"2025-02-21","status":"beta","weight":3}
+{"average_duration":2,"bgg_id":9851,"display_name_en":"Shut the Box","games_played":57909,"id":2258,"name":"shutthebox","priority":-999,"published_on":"2025-03-06","status":"public","weight":21}
+{"average_duration":10,"bgg_id":434293,"display_name_en":"Blast Radius","games_played":1738,"id":2259,"name":"blastradius","priority":-999,"published_on":"2025-06-03","status":"public"}
+{"average_duration":18,"bgg_id":284936,"display_name_en":"Caf\u00e9","games_played":36583,"id":2260,"name":"cafe","premium":true,"published_on":"2025-07-23","status":"public","weight":59}
+{"average_duration":63,"bgg_id":319910,"display_name_en":"Pagan: Fate of Roanoke","games_played":16048,"id":2263,"name":"paganfateofroanoke","premium":true,"published_on":"2025-08-19","status":"public","weight":195}
+{"average_duration":14,"bgg_id":399368,"display_name_en":"Bunny Drops","games_played":1719,"id":2264,"name":"bunnydrops","published_on":"2025-03-10","status":"beta","weight":5}
+{"average_duration":19,"bgg_id":427260,"display_name_en":"Living Forest Duel","games_played":25846,"id":2266,"name":"livingforestduel","premium":true,"published_on":"2025-03-05","status":"public","weight":28}
+{"average_duration":9,"bgg_id":400756,"display_name_en":"Wizards Cup","games_played":11604,"id":2267,"name":"wizardscup","published_on":"2025-06-09","status":"public","weight":1}
+{"average_duration":17,"bgg_id":424573,"display_name_en":"Pergola","games_played":53706,"id":2269,"name":"pergola","premium":true,"published_on":"2025-09-24","status":"public","weight":203}
+{"average_duration":8,"bgg_id":431304,"display_name_en":"Mythicals the boardgame","games_played":39813,"id":2270,"name":"mythicalstheboardgame","published_on":"2025-02-12","status":"public","weight":19}
+{"average_duration":5,"bgg_id":408769,"display_name_en":"Propuh","games_played":5252,"id":2271,"name":"propuh","published_on":"2025-08-04","status":"public"}
+{"average_duration":6,"bgg_id":432451,"display_name_en":"Symbiose","games_played":196899,"id":2272,"name":"symbiose","premium":true,"published_on":"2025-04-09","status":"public","weight":173}
+{"average_duration":27,"bgg_id":400297,"display_name_en":"Sfynx","games_played":2767,"id":2273,"is_ranking_disabled":true,"name":"sfynx","published_on":"2025-03-10","status":"beta"}
+{"average_duration":33,"bgg_id":437821,"display_name_en":"Sir Ocelot's cave","games_played":5980,"id":2274,"name":"sirocelotscave","premium":true,"published_on":"2025-06-16","status":"public"}
+{"average_duration":25,"bgg_id":284653,"display_name_en":"Mind MGMT","games_played":12362,"id":2276,"name":"mindmgmt","published_on":"2025-08-07","status":"public","weight":28}
+{"average_duration":14,"bgg_id":436045,"display_name_en":"Savanna Ten","games_played":1148,"id":2277,"name":"savannaten","published_on":"2025-07-31","status":"beta","weight":3}
+{"average_duration":5,"bgg_id":436073,"display_name_en":"Kani Nari Ebi","games_played":2275,"id":2278,"name":"kaninariebi","published_on":"2025-07-30","status":"beta","weight":3}
+{"average_duration":2,"bgg_id":381501,"display_name_en":"Falconry","games_played":1028,"id":2280,"name":"falconry","published_on":"2025-04-03","status":"beta"}
+{"average_duration":6,"bgg_id":384152,"display_name_en":"Dice Pyramid","games_played":21906,"id":2281,"name":"dicepyramid","published_on":"2025-02-11","status":"beta","weight":8}
+{"average_duration":30,"bgg_id":287217,"display_name_en":"Pirates Under Fire","games_played":662,"id":2283,"name":"piratesunderfire","premium":true,"published_on":"2026-02-02","status":"beta","weight":11}
 {"average_duration":65,"bgg_id":436217,"display_name_en":"The Fate of the Fellowship","games_played":63981,"id":2284,"is_ranking_disabled":true,"locked":true,"name":"fateoffellowship","published_on":"2025-05-29","status":"public"}
-{"average_duration":14,"bgg_id":33964,"display_name_en":"Shokoba","games_played":781,"id":2286,"name":"shokoba","published_on":"2025-05-02","status":"beta"}
-{"average_duration":20,"bgg_id":393307,"display_name_en":"Tower Up","games_played":28102,"id":2288,"name":"towerup","premium":true,"published_on":"2025-06-04","status":"public","weight":79}
-{"average_duration":17,"bgg_id":339789,"display_name_en":"Welcome To The Moon","games_played":269417,"id":2289,"name":"welcometothemoon","premium":true,"published_on":"2025-05-21","status":"public","weight":1061}
-{"average_duration":56,"bgg_id":17779,"display_name_en":"Kaiser","games_played":213,"id":2290,"name":"kaiser","priority":-999,"published_on":"2025-04-07","status":"public"}
-{"average_duration":6,"bgg_id":241164,"display_name_en":"Jurassic Snack","games_played":32848,"id":2292,"name":"jurassicsnack","published_on":"2025-08-06","status":"public","weight":17}
-{"average_duration":19,"bgg_id":435810,"display_name_en":"Legions","games_played":11721,"id":2293,"name":"legions","published_on":"2025-10-15","status":"public","weight":11}
-{"average_duration":14,"bgg_id":419669,"display_name_en":"Panda Rei","games_played":3113,"id":2294,"name":"pandaarei","published_on":"2025-08-27","status":"public"}
-{"average_duration":41,"bgg_id":13123,"display_name_en":"500","games_played":1270,"id":2295,"name":"fivehundred","priority":-999,"published_on":"2025-04-07","status":"public","weight":17}
-{"average_duration":8,"bgg_id":425009,"display_name_en":"Monster Smash","games_played":978,"id":2297,"name":"monstersmash","published_on":"2025-10-20","status":"beta"}
-{"average_duration":24,"bgg_id":13337,"display_name_en":"Whist","games_played":943,"id":2298,"name":"whist","priority":-999,"published_on":"2025-04-07","status":"public","weight":15}
-{"average_duration":14,"bgg_id":266722,"display_name_en":"Rumble Nation","games_played":50217,"id":2300,"name":"rumblenation","published_on":"2025-06-30","status":"public","weight":123}
-{"average_duration":19,"bgg_id":414685,"display_name_en":"Mesos","games_played":12413,"id":2301,"name":"mesos","premium":true,"published_on":"2025-05-28","status":"public","weight":41}
-{"average_duration":31,"bgg_id":430345,"display_name_en":"Cookie Battle","games_played":284,"id":2302,"name":"cookiebattle","published_on":"2025-06-24","status":"beta"}
-{"average_duration":8,"bgg_id":424152,"display_name_en":"Orapa Mine","games_played":211039,"id":2303,"name":"orapamine","published_on":"2025-08-11","status":"public","weight":959}
+{"average_duration":14,"bgg_id":33964,"display_name_en":"Shokoba","games_played":788,"id":2286,"name":"shokoba","published_on":"2025-05-02","status":"beta"}
+{"average_duration":18,"bgg_id":393307,"display_name_en":"Tower Up","games_played":28198,"id":2288,"name":"towerup","premium":true,"published_on":"2025-06-04","status":"public","weight":31}
+{"average_duration":17,"bgg_id":339789,"display_name_en":"Welcome To The Moon","games_played":271688,"id":2289,"name":"welcometothemoon","premium":true,"published_on":"2025-05-21","status":"public","weight":1059}
+{"average_duration":58,"bgg_id":17779,"display_name_en":"Kaiser","games_played":214,"id":2290,"name":"kaiser","priority":-999,"published_on":"2025-04-07","status":"public"}
+{"average_duration":7,"bgg_id":241164,"display_name_en":"Jurassic Snack","games_played":33093,"id":2292,"name":"jurassicsnack","published_on":"2025-08-06","status":"public","weight":57}
+{"average_duration":19,"bgg_id":435810,"display_name_en":"Legions","games_played":11743,"id":2293,"name":"legions","published_on":"2025-10-15","status":"public","weight":6}
+{"average_duration":12,"bgg_id":419669,"display_name_en":"Panda Rei","games_played":3122,"id":2294,"name":"pandaarei","published_on":"2025-08-27","status":"public","weight":12}
+{"average_duration":52,"bgg_id":13123,"display_name_en":"500","games_played":1319,"id":2295,"name":"fivehundred","priority":-999,"published_on":"2025-04-07","status":"public","weight":104}
+{"average_duration":9,"bgg_id":425009,"display_name_en":"Monster Smash","games_played":983,"id":2297,"name":"monstersmash","published_on":"2025-10-20","status":"beta"}
+{"average_duration":13,"bgg_id":13337,"display_name_en":"Whist","games_played":960,"id":2298,"name":"whist","priority":-999,"published_on":"2025-04-07","status":"public"}
+{"average_duration":14,"bgg_id":266722,"display_name_en":"Rumble Nation","games_played":50518,"id":2300,"name":"rumblenation","published_on":"2025-06-30","status":"public","weight":148}
+{"average_duration":18,"bgg_id":414685,"display_name_en":"Mesos","games_played":12479,"id":2301,"name":"mesos","premium":true,"published_on":"2025-05-28","status":"public","weight":16}
+{"average_duration":31,"bgg_id":430345,"display_name_en":"Cookie Battle","games_played":287,"id":2302,"name":"cookiebattle","published_on":"2025-06-24","status":"beta"}
+{"average_duration":8,"bgg_id":424152,"display_name_en":"Orapa Mine","games_played":217892,"id":2303,"name":"orapamine","published_on":"2025-08-11","status":"public","weight":972}
 {"average_duration":7,"bgg_id":438649,"display_name_en":"Deck EXPRESS: Tennessee Central","games_played":481,"id":2304,"name":"deckexpresstennesseecentral","published_on":"2025-07-30","status":"beta"}
-{"average_duration":9,"bgg_id":270443,"display_name_en":"Misty","games_played":1509,"id":2305,"name":"misty","published_on":"2025-06-03","status":"beta","weight":4}
-{"average_duration":17,"bgg_id":18121,"display_name_en":"Cassino","games_played":1833,"id":2306,"name":"cassino","priority":-999,"published_on":"2025-04-07","status":"public","weight":2}
-{"average_duration":7,"bgg_id":63371,"display_name_en":"Crash","games_played":1968,"id":2308,"name":"crash","priority":-999,"published_on":"2025-04-07","status":"public","weight":36}
-{"average_duration":36,"bgg_id":42499,"display_name_en":"1000","games_played":2708,"id":2309,"name":"thousand","priority":-999,"published_on":"2025-04-07","status":"public","weight":15}
-{"average_duration":30,"bgg_id":377061,"display_name_en":"Coffee Rush","games_played":132396,"id":2314,"name":"coffeerush","premium":true,"published_on":"2025-08-10","status":"public","weight":1027}
-{"average_duration":18,"bgg_id":415808,"display_name_en":"TacTile","games_played":17517,"id":2319,"name":"tactile","published_on":"2025-07-28","status":"public","weight":36}
-{"average_duration":17,"bgg_id":433826,"display_name_en":"Spellcrafter","games_played":592,"id":2320,"name":"spellcrafter","published_on":"2026-04-07","status":"beta","weight":9}
-{"average_duration":14,"bgg_id":6817,"display_name_en":"Schafkopf","games_played":330,"id":2322,"name":"schafkopf","priority":-999,"published_on":"2025-04-07","status":"public"}
-{"average_duration":4,"bgg_id":441764,"display_name_en":"Scratch and Catch","games_played":128988,"id":2323,"name":"scratchandcatch","published_on":"2025-07-07","status":"public","weight":90}
-{"average_duration":12,"bgg_id":437334,"display_name_en":"The Hanging Gardens","games_played":32999,"id":2325,"name":"thehanginggardens","premium":true,"published_on":"2025-05-14","status":"public","weight":69}
-{"average_duration":23,"bgg_id":177352,"display_name_en":"Carson City","games_played":6016,"id":2326,"name":"carsoncity","premium":true,"published_on":"2025-12-05","status":"public","weight":61}
-{"average_duration":11,"bgg_id":302385,"display_name_en":"Natural Chaos","games_played":503,"id":2327,"name":"naturalchaos","published_on":"2025-05-16","status":"beta"}
-{"average_duration":27,"bgg_id":172309,"display_name_en":"Monster Trick","games_played":857,"id":2328,"name":"monstertrick","published_on":"2025-06-10","status":"beta"}
-{"average_duration":19,"bgg_id":1597,"display_name_en":"Streetcar","games_played":35073,"id":2329,"name":"streetcar","premium":true,"published_on":"2026-03-02","status":"public","weight":349}
-{"average_duration":35,"bgg_id":274841,"display_name_en":"C\u00f3atl","games_played":9950,"id":2330,"name":"coatl","published_on":"2025-12-12","status":"public","weight":10}
-{"average_duration":19,"bgg_id":418036,"display_name_en":"SUPER","games_played":10638,"id":2331,"name":"super","published_on":"2025-05-26","status":"public","weight":8}
-{"average_duration":15,"bgg_id":94363,"display_name_en":"Vizia","games_played":723,"id":2332,"name":"vizia","published_on":"2026-01-13","status":"beta","weight":10}
-{"average_duration":10,"bgg_id":8203,"display_name_en":"Hey, That's My Fish!","games_played":63079,"id":2333,"name":"heythatsmyfish","premium":true,"published_on":"2026-03-16","status":"public","weight":233}
-{"average_duration":15,"bgg_id":334065,"display_name_en":"Verdant","games_played":129236,"id":2339,"name":"verdant","premium":true,"published_on":"2025-06-11","status":"public","weight":341}
-{"average_duration":20,"bgg_id":437301,"display_name_en":"Ink","games_played":79457,"id":2340,"name":"ink","published_on":"2025-07-02","status":"public","weight":326}
-{"average_duration":8,"bgg_id":437781,"display_name_en":"Digit Code","games_played":413157,"id":2342,"name":"digitcode","published_on":"2025-08-03","status":"public","weight":490}
-{"average_duration":9,"bgg_id":458230,"display_name_en":"Ghosts Galore","games_played":73022,"id":2344,"name":"ghostsgalore","premium":true,"published_on":"2026-02-09","status":"public","weight":287}
-{"average_duration":36,"bgg_id":304949,"display_name_en":"Shock! Knights & Poisons","games_played":654,"id":2345,"name":"shock","published_on":"2025-09-25","status":"beta","weight":27}
-{"average_duration":8,"bgg_id":411543,"display_name_en":"My Shelfie: The Dice Game","games_played":216347,"id":2346,"name":"myshelfiedice","premium":true,"published_on":"2025-08-14","status":"public","weight":336}
-{"average_duration":16,"bgg_id":428058,"display_name_en":"Up or Down?","games_played":78052,"id":2347,"name":"upordown","premium":true,"published_on":"2025-12-17","status":"public","weight":364}
-{"average_duration":8,"bgg_id":118215,"display_name_en":"A.E.R.O.","games_played":70984,"id":2348,"name":"aero","published_on":"2025-10-13","status":"public","weight":80}
-{"average_duration":11,"bgg_id":442328,"display_name_en":"The Nine sons of dragon","games_played":420,"id":2349,"name":"theninesonsofthedragon","published_on":"2025-07-28","status":"beta"}
-{"average_duration":5,"bgg_id":436400,"display_name_en":"Abra Chadabra","games_played":88377,"id":2350,"name":"abrachadabra","published_on":"2025-06-13","status":"public","weight":50}
-{"average_duration":59,"bgg_id":400314,"display_name_en":"Apiary","games_played":53963,"id":2352,"name":"apiary","premium":true,"published_on":"2025-07-16","status":"public","weight":991}
-{"average_duration":80,"bgg_id":359402,"display_name_en":"Ahoy","games_played":7213,"id":2353,"name":"ahoy","published_on":"2025-10-08","status":"public","weight":287}
-{"average_duration":24,"bgg_id":2181,"display_name_en":"Contract Bridge","games_played":2411,"id":2354,"name":"contractbridge","priority":-999,"published_on":"2025-05-26","status":"public","weight":15}
-{"average_duration":10,"bgg_id":419130,"display_name_en":"HUTAN: Life in the Rainforest","games_played":149494,"id":2356,"name":"hutan","premium":true,"published_on":"2025-06-18","status":"public","weight":327}
-{"average_duration":20,"bgg_id":436257,"display_name_en":"Catatac","games_played":681,"id":2358,"name":"catatac","premium":true,"published_on":"2026-02-02","status":"beta"}
-{"average_duration":28,"bgg_id":415507,"display_name_en":"Kokeshi","games_played":9690,"id":2360,"name":"kokeshi","published_on":"2025-08-18","status":"public","weight":103}
-{"average_duration":12,"bgg_id":433285,"display_name_en":"Crazy Corgi","games_played":5140,"id":2362,"name":"crazycorgi","published_on":"2025-07-18","status":"beta","weight":12}
-{"average_duration":46,"bgg_id":406231,"display_name_en":"Kikai - Bricolage Heads","games_played":4294,"id":2363,"name":"kikaibricolageheads","premium":true,"published_on":"2025-08-26","status":"public","weight":6}
-{"average_duration":20,"bgg_id":359970,"display_name_en":"Challengers! Beach Cup","games_played":121275,"id":2364,"name":"challengersbeachcup","premium":true,"published_on":"2025-11-21","status":"public","weight":1071}
-{"average_duration":15,"bgg_id":429477,"display_name_en":"The King of the Woods","games_played":9020,"id":2365,"name":"thekingofthewoods","premium":true,"published_on":"2025-11-03","status":"public","weight":8}
-{"average_duration":4,"bgg_id":434683,"display_name_en":"Verso","games_played":80100,"id":2367,"name":"verso","premium":true,"published_on":"2025-07-21","status":"public","weight":34}
-{"average_duration":24,"bgg_id":355483,"display_name_en":"Wandering Towers","games_played":14152,"id":2368,"name":"wanderingtowers","premium":true,"published_on":"2025-12-14","status":"public","weight":49}
-{"average_duration":34,"bgg_id":155426,"display_name_en":"Castles of Mad King Ludwig","games_played":73504,"id":2369,"name":"castleofmadkingludwig","premium":true,"published_on":"2025-08-12","status":"public","weight":1193}
-{"average_duration":13,"bgg_id":427393,"display_name_en":"Custodian Dice","games_played":405,"id":2370,"name":"custodiandice","published_on":"2026-05-20","status":"beta","weight":5}
-{"average_duration":6,"bgg_id":420061,"display_name_en":"Yaxha","games_played":29074,"id":2371,"name":"yaxha","published_on":"2025-10-29","status":"public","weight":21}
-{"average_duration":8,"bgg_id":413737,"display_name_en":"Beyond","games_played":8122,"id":2372,"name":"beyond","premium":true,"published_on":"2025-11-10","status":"public"}
-{"average_duration":14,"bgg_id":440843,"display_name_en":"Moonshine","games_played":68651,"id":2373,"name":"moonshine","premium":true,"published_on":"2025-09-22","status":"public","weight":234}
-{"average_duration":11,"bgg_id":447243,"display_name_en":"Cardia","games_played":139587,"id":2374,"name":"cardia","premium":true,"published_on":"2025-09-17","status":"public","weight":411}
-{"average_duration":55,"bgg_id":124361,"display_name_en":"Concordia","games_played":48030,"id":2375,"name":"concordia","premium":true,"published_on":"2025-12-24","status":"public","weight":1626}
-{"average_duration":27,"bgg_id":418388,"display_name_en":"Stem & Branch","games_played":7631,"id":2376,"name":"stemandbranch","premium":true,"published_on":"2026-02-18","status":"public","weight":28}
-{"average_duration":13,"bgg_id":435323,"display_name_en":"15 Jours en France","games_played":3213,"id":2378,"name":"quinzejoursenfrance","published_on":"2025-07-31","status":"beta","weight":2}
-{"average_duration":21,"bgg_id":350468,"display_name_en":"H\u1ed9i Ph\u1ed1 (Second Edition)","games_played":660,"id":2379,"name":"hoipho","published_on":"2025-08-15","status":"public"}
-{"average_duration":25,"bgg_id":443348,"display_name_en":"Arigat\u014d","games_played":21834,"id":2382,"name":"arigato","premium":true,"published_on":"2025-09-08","status":"public","weight":80}
-{"average_duration":11,"bgg_id":449185,"display_name_en":"FlipToons","games_played":165070,"id":2384,"name":"fliptoons","premium":true,"published_on":"2025-10-01","status":"public","weight":1219}
-{"average_duration":18,"bgg_id":150145,"display_name_en":"Skull King","games_played":330419,"id":2386,"name":"skullking","premium":true,"published_on":"2025-09-01","status":"public","weight":3692}
-{"average_duration":17,"bgg_id":433908,"display_name_en":"Gatsby","games_played":21005,"id":2387,"name":"gatsby","published_on":"2025-07-09","status":"public","weight":30}
-{"average_duration":22,"bgg_id":424198,"display_name_en":"Jewel Box","games_played":976,"id":2388,"name":"jewelbox","published_on":"2025-07-11","status":"beta","weight":9}
-{"average_duration":22,"bgg_id":330152,"display_name_en":"Nature","games_played":4807,"id":2389,"name":"nature","published_on":"2025-12-06","status":"public","weight":7}
-{"average_duration":4,"bgg_id":446226,"display_name_en":"Carpniches","games_played":1790,"id":2390,"name":"carpniches","published_on":"2025-06-04","status":"beta","weight":1}
-{"average_duration":7,"bgg_id":362366,"display_name_en":"Junk Drawer","games_played":35489,"id":2391,"name":"junkdrawer","published_on":"2025-12-30","status":"public","weight":54}
-{"average_duration":32,"bgg_id":441788,"display_name_en":"TEKKEN \u2013 the Board Game","games_played":3579,"id":2393,"name":"tekken","published_on":"2025-08-11","status":"beta","weight":24}
-{"average_duration":33,"bgg_id":161882,"display_name_en":"Irish Gauge","games_played":2472,"id":2394,"name":"irishgauge","published_on":"2025-12-07","status":"public","weight":30}
-{"average_duration":8,"bgg_id":814,"display_name_en":"Aquarius","games_played":2315,"id":2397,"name":"aquarius","published_on":"2026-02-06","status":"beta","weight":10}
-{"average_duration":22,"bgg_id":414349,"display_name_en":"Bebop","games_played":711,"id":2398,"name":"bebop","published_on":"2025-08-11","status":"beta"}
-{"average_duration":44,"bgg_id":248072,"display_name_en":"Don't Let It Die","games_played":17598,"id":2399,"is_ranking_disabled":true,"name":"dontletitdie","published_on":"2025-12-15","status":"public","weight":86}
-{"average_duration":34,"bgg_id":438523,"display_name_en":"Tsukuru Ten Ten","games_played":7401,"id":2400,"name":"tsukurutenten","published_on":"2025-12-18","status":"public","weight":26}
-{"average_duration":42,"bgg_id":408727,"display_name_en":"CATAN New Energies","games_played":15586,"id":2401,"name":"catannewenergies","premium":true,"published_on":"2025-11-26","status":"public","weight":154}
-{"average_duration":64,"bgg_id":391137,"display_name_en":"Galactic Cruise","games_played":84087,"id":2402,"name":"galacticcruise","premium":true,"published_on":"2025-11-12","status":"public","weight":2366}
-{"average_duration":7,"bgg_id":396706,"display_name_en":"Massive-Verse: Fighting Card Game","games_played":14325,"id":2403,"name":"massiveverse","premium":true,"published_on":"2026-04-08","status":"public","weight":23}
-{"average_duration":19,"bgg_id":446426,"display_name_en":"Mystling Academy","games_played":7257,"id":2404,"name":"mystlingacademy","published_on":"2025-12-01","status":"public","weight":8}
-{"average_duration":14,"bgg_id":447583,"display_name_en":"Viva Catrina","games_played":80556,"id":2405,"name":"vivacatrina","published_on":"2025-09-15","status":"public","weight":269}
+{"average_duration":9,"bgg_id":270443,"display_name_en":"Misty","games_played":1520,"id":2305,"name":"misty","published_on":"2025-06-03","status":"beta","weight":4}
+{"average_duration":19,"bgg_id":18121,"display_name_en":"Cassino","games_played":1874,"id":2306,"name":"cassino","priority":-999,"published_on":"2025-04-07","status":"public","weight":3}
+{"average_duration":8,"bgg_id":63371,"display_name_en":"Crash","games_played":2016,"id":2308,"name":"crash","priority":-999,"published_on":"2025-04-07","status":"public","weight":18}
+{"average_duration":38,"bgg_id":42499,"display_name_en":"1000","games_played":2722,"id":2309,"name":"thousand","priority":-999,"published_on":"2025-04-07","status":"public","weight":22}
+{"average_duration":29,"bgg_id":377061,"display_name_en":"Coffee Rush","games_played":133663,"id":2314,"name":"coffeerush","premium":true,"published_on":"2025-08-10","status":"public","weight":1013}
+{"average_duration":20,"bgg_id":415808,"display_name_en":"TacTile","games_played":17560,"id":2319,"name":"tactile","published_on":"2025-07-28","status":"public","weight":3}
+{"average_duration":16,"bgg_id":433826,"display_name_en":"Spellcrafter","games_played":599,"id":2320,"name":"spellcrafter","published_on":"2026-04-07","status":"beta"}
+{"average_duration":12,"bgg_id":6817,"display_name_en":"Schafkopf","games_played":336,"id":2322,"name":"schafkopf","priority":-999,"published_on":"2025-04-07","status":"public","weight":3}
+{"average_duration":4,"bgg_id":441764,"display_name_en":"Scratch and Catch","games_played":129693,"id":2323,"name":"scratchandcatch","published_on":"2025-07-07","status":"public","weight":56}
+{"average_duration":12,"bgg_id":437334,"display_name_en":"The Hanging Gardens","games_played":33171,"id":2325,"name":"thehanginggardens","premium":true,"published_on":"2025-05-14","status":"public","weight":51}
+{"average_duration":21,"bgg_id":177352,"display_name_en":"Carson City","games_played":6082,"id":2326,"name":"carsoncity","premium":true,"published_on":"2025-12-05","status":"public","weight":77}
+{"average_duration":14,"bgg_id":302385,"display_name_en":"Natural Chaos","games_played":507,"id":2327,"name":"naturalchaos","published_on":"2025-05-16","status":"beta"}
+{"average_duration":26,"bgg_id":172309,"display_name_en":"Monster Trick","games_played":861,"id":2328,"name":"monstertrick","published_on":"2025-06-10","status":"beta"}
+{"average_duration":19,"bgg_id":1597,"display_name_en":"Streetcar","games_played":35673,"id":2329,"name":"streetcar","premium":true,"published_on":"2026-03-02","status":"public","weight":353}
+{"average_duration":32,"bgg_id":274841,"display_name_en":"C\u00f3atl","games_played":10019,"id":2330,"name":"coatl","published_on":"2025-12-12","status":"public","weight":37}
+{"average_duration":19,"bgg_id":418036,"display_name_en":"SUPER","games_played":10672,"id":2331,"name":"super","published_on":"2025-05-26","status":"public"}
+{"average_duration":15,"bgg_id":94363,"display_name_en":"Vizia","games_played":742,"id":2332,"name":"vizia","published_on":"2026-01-13","status":"beta"}
+{"average_duration":10,"bgg_id":8203,"display_name_en":"Hey, That's My Fish!","games_played":63669,"id":2333,"name":"heythatsmyfish","premium":true,"published_on":"2026-03-16","status":"public","weight":168}
+{"average_duration":15,"bgg_id":334065,"display_name_en":"Verdant","games_played":130120,"id":2339,"name":"verdant","premium":true,"published_on":"2025-06-11","status":"public","weight":452}
+{"average_duration":20,"bgg_id":437301,"display_name_en":"Ink","games_played":80279,"id":2340,"name":"ink","published_on":"2025-07-02","status":"public","weight":285}
+{"average_duration":8,"bgg_id":437781,"display_name_en":"Digit Code","games_played":416602,"id":2342,"name":"digitcode","published_on":"2025-08-03","status":"public","weight":472}
+{"average_duration":9,"bgg_id":458230,"display_name_en":"Ghosts Galore","games_played":74356,"id":2344,"name":"ghostsgalore","premium":true,"published_on":"2026-02-09","status":"public","weight":517}
+{"average_duration":20,"bgg_id":304949,"display_name_en":"Shock! Knights & Poisons","games_played":665,"id":2345,"name":"shock","published_on":"2025-09-25","status":"beta","weight":7}
+{"average_duration":8,"bgg_id":411543,"display_name_en":"My Shelfie: The Dice Game","games_played":217509,"id":2346,"name":"myshelfiedice","premium":true,"published_on":"2025-08-14","status":"public","weight":350}
+{"average_duration":16,"bgg_id":428058,"display_name_en":"Up or Down?","games_played":78590,"id":2347,"name":"upordown","premium":true,"published_on":"2025-12-17","status":"public","weight":269}
+{"average_duration":7,"bgg_id":118215,"display_name_en":"A.E.R.O.","games_played":71555,"id":2348,"name":"aero","published_on":"2025-10-13","status":"public","weight":110}
+{"average_duration":14,"bgg_id":442328,"display_name_en":"The Nine sons of dragon","games_played":421,"id":2349,"name":"theninesonsofthedragon","published_on":"2025-07-28","status":"beta"}
+{"average_duration":6,"bgg_id":436400,"display_name_en":"Abra Chadabra","games_played":88693,"id":2350,"name":"abrachadabra","published_on":"2025-06-13","status":"public","weight":35}
+{"average_duration":62,"bgg_id":400314,"display_name_en":"Apiary","games_played":54380,"id":2352,"name":"apiary","premium":true,"published_on":"2025-07-16","status":"public","weight":591}
+{"average_duration":82,"bgg_id":359402,"display_name_en":"Ahoy","games_played":7267,"id":2353,"name":"ahoy","published_on":"2025-10-08","status":"public","weight":305}
+{"average_duration":26,"bgg_id":2181,"display_name_en":"Contract Bridge","games_played":2452,"id":2354,"name":"contractbridge","priority":-999,"published_on":"2025-05-26","status":"public","weight":59}
+{"average_duration":9,"bgg_id":419130,"display_name_en":"HUTAN: Life in the Rainforest","games_played":150562,"id":2356,"name":"hutan","premium":true,"published_on":"2025-06-18","status":"public","weight":293}
+{"average_duration":20,"bgg_id":436257,"display_name_en":"Catatac","games_played":693,"id":2358,"name":"catatac","premium":true,"published_on":"2026-02-02","status":"beta","weight":3}
+{"average_duration":28,"bgg_id":415507,"display_name_en":"Kokeshi","games_played":9809,"id":2360,"name":"kokeshi","published_on":"2025-08-18","status":"public","weight":51}
+{"average_duration":11,"bgg_id":433285,"display_name_en":"Crazy Corgi","games_played":5199,"id":2362,"name":"crazycorgi","published_on":"2025-07-18","status":"beta","weight":27}
+{"average_duration":47,"bgg_id":406231,"display_name_en":"Kikai - Bricolage Heads","games_played":4327,"id":2363,"name":"kikaibricolageheads","premium":true,"published_on":"2025-08-26","status":"public","weight":13}
+{"average_duration":20,"bgg_id":359970,"display_name_en":"Challengers! Beach Cup","games_played":123140,"id":2364,"name":"challengersbeachcup","premium":true,"published_on":"2025-11-21","status":"public","weight":1245}
+{"average_duration":15,"bgg_id":429477,"display_name_en":"The King of the Woods","games_played":9037,"id":2365,"name":"thekingofthewoods","premium":true,"published_on":"2025-11-03","status":"public","weight":2}
+{"average_duration":4,"bgg_id":434683,"display_name_en":"Verso","games_played":80296,"id":2367,"name":"verso","premium":true,"published_on":"2025-07-21","status":"public","weight":30}
+{"average_duration":23,"bgg_id":355483,"display_name_en":"Wandering Towers","games_played":14273,"id":2368,"name":"wanderingtowers","premium":true,"published_on":"2025-12-14","status":"public","weight":113}
+{"average_duration":34,"bgg_id":155426,"display_name_en":"Castles of Mad King Ludwig","games_played":74119,"id":2369,"name":"castleofmadkingludwig","premium":true,"published_on":"2025-08-12","status":"public","weight":975}
+{"average_duration":12,"bgg_id":427393,"display_name_en":"Custodian Dice","games_played":415,"id":2370,"name":"custodiandice","published_on":"2026-05-20","status":"beta","weight":2}
+{"average_duration":6,"bgg_id":420061,"display_name_en":"Yaxha","games_played":29218,"id":2371,"name":"yaxha","published_on":"2025-10-29","status":"public","weight":17}
+{"average_duration":8,"bgg_id":413737,"display_name_en":"Beyond","games_played":8137,"id":2372,"name":"beyond","premium":true,"published_on":"2025-11-10","status":"public"}
+{"average_duration":14,"bgg_id":440843,"display_name_en":"Moonshine","games_played":69214,"id":2373,"name":"moonshine","premium":true,"published_on":"2025-09-22","status":"public","weight":248}
+{"average_duration":11,"bgg_id":447243,"display_name_en":"Cardia","games_played":141095,"id":2374,"name":"cardia","premium":true,"published_on":"2025-09-17","status":"public","weight":465}
+{"average_duration":55,"bgg_id":124361,"display_name_en":"Concordia","games_played":48638,"id":2375,"name":"concordia","premium":true,"published_on":"2025-12-24","status":"public","weight":1580}
+{"average_duration":29,"bgg_id":418388,"display_name_en":"Stem & Branch","games_played":7674,"id":2376,"name":"stemandbranch","premium":true,"published_on":"2026-02-18","status":"public","weight":21}
+{"average_duration":15,"bgg_id":435323,"display_name_en":"15 Jours en France","games_played":3256,"id":2378,"name":"quinzejoursenfrance","published_on":"2025-07-31","status":"beta","weight":2}
+{"average_duration":21,"bgg_id":350468,"display_name_en":"H\u1ed9i Ph\u1ed1 (Second Edition)","games_played":664,"id":2379,"name":"hoipho","published_on":"2025-08-15","status":"public"}
+{"average_duration":24,"bgg_id":443348,"display_name_en":"Arigat\u014d","games_played":21998,"id":2382,"name":"arigato","premium":true,"published_on":"2025-09-08","status":"public","weight":83}
+{"average_duration":10,"bgg_id":449185,"display_name_en":"FlipToons","games_played":168540,"id":2384,"name":"fliptoons","premium":true,"published_on":"2025-10-01","status":"public","weight":1018}
+{"average_duration":18,"bgg_id":150145,"display_name_en":"Skull King","games_played":336077,"id":2386,"name":"skullking","premium":true,"published_on":"2025-09-01","status":"public","weight":3497}
+{"average_duration":17,"bgg_id":433908,"display_name_en":"Gatsby","games_played":21072,"id":2387,"name":"gatsby","published_on":"2025-07-09","status":"public","weight":51}
+{"average_duration":22,"bgg_id":424198,"display_name_en":"Jewel Box","games_played":978,"id":2388,"name":"jewelbox","published_on":"2025-07-11","status":"beta"}
+{"average_duration":25,"bgg_id":330152,"display_name_en":"Nature","games_played":4831,"id":2389,"name":"nature","published_on":"2025-12-06","status":"public","weight":27}
+{"average_duration":3,"bgg_id":446226,"display_name_en":"Carpniches","games_played":1801,"id":2390,"name":"carpniches","published_on":"2025-06-04","status":"beta"}
+{"average_duration":6,"bgg_id":362366,"display_name_en":"Junk Drawer","games_played":35744,"id":2391,"name":"junkdrawer","published_on":"2025-12-30","status":"public","weight":50}
+{"average_duration":30,"bgg_id":441788,"display_name_en":"TEKKEN \u2013 the Board Game","games_played":3594,"id":2393,"name":"tekken","published_on":"2025-08-11","status":"beta"}
+{"average_duration":31,"bgg_id":161882,"display_name_en":"Irish Gauge","games_played":2491,"id":2394,"name":"irishgauge","published_on":"2025-12-07","status":"public","weight":12}
+{"average_duration":8,"bgg_id":814,"display_name_en":"Aquarius","games_played":2349,"id":2397,"name":"aquarius","published_on":"2026-02-06","status":"beta","weight":13}
+{"average_duration":30,"bgg_id":414349,"display_name_en":"Bebop","games_played":715,"id":2398,"name":"bebop","published_on":"2025-08-11","status":"beta"}
+{"average_duration":44,"bgg_id":248072,"display_name_en":"Don't Let It Die","games_played":17678,"id":2399,"is_ranking_disabled":true,"name":"dontletitdie","published_on":"2025-12-15","status":"public","weight":12}
+{"average_duration":33,"bgg_id":438523,"display_name_en":"Tsukuru Ten Ten","games_played":7453,"id":2400,"name":"tsukurutenten","published_on":"2025-12-18","status":"public","weight":36}
+{"average_duration":41,"bgg_id":408727,"display_name_en":"CATAN New Energies","games_played":15745,"id":2401,"name":"catannewenergies","premium":true,"published_on":"2025-11-26","status":"public","weight":346}
+{"average_duration":63,"bgg_id":391137,"display_name_en":"Galactic Cruise","games_played":85088,"id":2402,"name":"galacticcruise","premium":true,"published_on":"2025-11-12","status":"public","weight":2208}
+{"average_duration":7,"bgg_id":396706,"display_name_en":"Massive-Verse: Fighting Card Game","games_played":14403,"id":2403,"name":"massiveverse","premium":true,"published_on":"2026-04-08","status":"public","weight":17}
+{"average_duration":19,"bgg_id":446426,"display_name_en":"Mystling Academy","games_played":7310,"id":2404,"name":"mystlingacademy","published_on":"2025-12-01","status":"public","weight":18}
+{"average_duration":14,"bgg_id":447583,"display_name_en":"Viva Catrina","games_played":81331,"id":2405,"name":"vivacatrina","published_on":"2025-09-15","status":"public","weight":273}
 {"average_duration":14,"bgg_id":419593,"display_name_en":"Pisanki","games_played":456,"id":2406,"name":"pisanki","published_on":"2025-09-22","status":"beta"}
-{"average_duration":7,"bgg_id":183006,"display_name_en":"Qwinto","games_played":385812,"id":2407,"name":"qwinto","published_on":"2025-10-27","status":"public","weight":663}
-{"average_duration":9,"bgg_id":434442,"display_name_en":"13 Leaves","games_played":2809,"id":2409,"name":"thirteenleaves","published_on":"2026-01-16","status":"beta","weight":10}
-{"average_duration":25,"bgg_id":438402,"display_name_en":"Forest Shuffle : Dartmoor","games_played":273881,"id":2410,"name":"forestshuffledartmoor","premium":true,"published_on":"2025-09-10","status":"public","weight":3719}
-{"average_duration":12,"bgg_id":441731,"display_name_en":"Moonlight: The Land of the Wolves","games_played":8267,"id":2411,"name":"moonlight","published_on":"2025-12-08","status":"public"}
-{"average_duration":8,"bgg_id":446231,"display_name_en":"7 Wonders Dice","games_played":206446,"id":2412,"name":"sevenwondersdice","premium":true,"published_on":"2026-01-28","status":"public","weight":735}
-{"average_duration":39,"bgg_id":154203,"display_name_en":"Imperial Settlers","games_played":18094,"id":2415,"name":"imperialsettlers","premium":true,"published_on":"2025-10-20","status":"public","weight":254}
-{"average_duration":42,"bgg_id":437384,"display_name_en":"Bohemians","games_played":2659,"id":2416,"name":"bohemians","premium":true,"published_on":"2025-11-14","status":"beta","weight":57}
-{"average_duration":21,"bgg_id":102881,"display_name_en":"Trench","games_played":1986,"id":2417,"name":"trench","published_on":"2025-12-16","status":"public"}
-{"average_duration":3,"bgg_id":449437,"display_name_en":"Medu","games_played":4071,"id":2419,"name":"medu","published_on":"2025-12-11","status":"public","weight":1}
-{"average_duration":32,"bgg_id":428024,"display_name_en":"River Rats","games_played":1795,"id":2420,"is_ranking_disabled":true,"name":"riverrats","published_on":"2025-08-11","status":"beta"}
-{"average_duration":22,"bgg_id":402676,"display_name_en":"Cities","games_played":50236,"id":2421,"name":"cities","premium":true,"published_on":"2025-12-03","status":"public","weight":383}
-{"average_duration":9,"bgg_id":255613,"display_name_en":"Congkak","games_played":1501,"id":2422,"name":"congkak","published_on":"2025-12-15","status":"beta","weight":40}
-{"average_duration":16,"bgg_id":7854,"display_name_en":"YINSH","games_played":29920,"id":2423,"name":"yinsh","published_on":"2026-03-11","status":"public","weight":62}
-{"average_duration":9,"bgg_id":429580,"display_name_en":"Skirmish: Battle for Draconia","games_played":1148,"id":2427,"name":"skirmishbattlefordraconia","published_on":"2025-10-09","status":"beta"}
-{"average_duration":22,"bgg_id":439742,"display_name_en":"Dewan","games_played":35807,"id":2428,"name":"dewan","premium":true,"published_on":"2026-01-14","status":"public","weight":443}
-{"average_duration":15,"bgg_id":432487,"display_name_en":"Trickarus","games_played":864,"id":2429,"name":"trickarus","published_on":"2025-11-06","status":"beta","weight":11}
-{"average_duration":30,"bgg_id":141423,"display_name_en":"Dead Men Tell No Tales","games_played":1345,"id":2430,"is_ranking_disabled":true,"name":"deadmentellnotales","published_on":"2026-05-06","status":"beta","weight":27}
-{"average_duration":17,"bgg_id":448620,"display_name_en":"Snorkeling","games_played":433,"id":2431,"name":"snorkeling","published_on":"2026-01-27","status":"beta"}
-{"average_duration":8,"bgg_id":372,"display_name_en":"Schotten Totten","games_played":390865,"id":2433,"name":"schottentotten","premium":true,"published_on":"2025-09-29","status":"public","weight":987}
+{"average_duration":7,"bgg_id":183006,"display_name_en":"Qwinto","games_played":389982,"id":2407,"name":"qwinto","published_on":"2025-10-27","status":"public","weight":685}
+{"average_duration":9,"bgg_id":434442,"display_name_en":"13 Leaves","games_played":2899,"id":2409,"name":"thirteenleaves","published_on":"2026-01-16","status":"beta","weight":42}
+{"average_duration":25,"bgg_id":438402,"display_name_en":"Forest Shuffle : Dartmoor","games_played":279199,"id":2410,"name":"forestshuffledartmoor","premium":true,"published_on":"2025-09-10","status":"public","weight":3786}
+{"average_duration":13,"bgg_id":441731,"display_name_en":"Moonlight: The Land of the Wolves","games_played":8339,"id":2411,"name":"moonlight","published_on":"2025-12-08","status":"public","weight":25}
+{"average_duration":8,"bgg_id":446231,"display_name_en":"7 Wonders Dice","games_played":208877,"id":2412,"name":"sevenwondersdice","premium":true,"published_on":"2026-01-28","status":"public","weight":780}
+{"average_duration":37,"bgg_id":154203,"display_name_en":"Imperial Settlers","games_played":18215,"id":2415,"name":"imperialsettlers","premium":true,"published_on":"2025-10-20","status":"public","weight":165}
+{"average_duration":44,"bgg_id":437384,"display_name_en":"Bohemians","games_played":2716,"id":2416,"name":"bohemians","premium":true,"published_on":"2025-11-14","status":"beta","weight":20}
+{"average_duration":23,"bgg_id":102881,"display_name_en":"Trench","games_played":1996,"id":2417,"name":"trench","published_on":"2025-12-16","status":"public","weight":7}
+{"average_duration":3,"bgg_id":449437,"display_name_en":"Medu","games_played":4089,"id":2419,"name":"medu","published_on":"2025-12-11","status":"public","weight":3}
+{"average_duration":26,"bgg_id":428024,"display_name_en":"River Rats","games_played":1820,"id":2420,"is_ranking_disabled":true,"name":"riverrats","published_on":"2025-08-11","status":"beta","weight":40}
+{"average_duration":22,"bgg_id":402676,"display_name_en":"Cities","games_played":50738,"id":2421,"name":"cities","premium":true,"published_on":"2025-12-03","status":"public","weight":442}
+{"average_duration":9,"bgg_id":255613,"display_name_en":"Congkak","games_played":1612,"id":2422,"name":"congkak","published_on":"2025-12-15","status":"beta","weight":15}
+{"average_duration":16,"bgg_id":7854,"display_name_en":"YINSH","games_played":30321,"id":2423,"name":"yinsh","published_on":"2026-03-11","status":"public","weight":182}
+{"average_duration":10,"bgg_id":429580,"display_name_en":"Skirmish: Battle for Draconia","games_played":1156,"id":2427,"name":"skirmishbattlefordraconia","published_on":"2025-10-09","status":"beta","weight":1}
+{"average_duration":21,"bgg_id":439742,"display_name_en":"Dewan","games_played":36264,"id":2428,"name":"dewan","premium":true,"published_on":"2026-01-14","status":"public","weight":328}
+{"average_duration":17,"bgg_id":432487,"display_name_en":"Trickarus","games_played":870,"id":2429,"name":"trickarus","published_on":"2025-11-06","status":"beta","weight":18}
+{"average_duration":30,"bgg_id":141423,"display_name_en":"Dead Men Tell No Tales","games_played":1383,"id":2430,"is_ranking_disabled":true,"name":"deadmentellnotales","published_on":"2026-05-06","status":"beta","weight":27}
+{"average_duration":21,"bgg_id":448620,"display_name_en":"Snorkeling","games_played":438,"id":2431,"name":"snorkeling","published_on":"2026-01-27","status":"beta"}
+{"average_duration":8,"bgg_id":372,"display_name_en":"Schotten Totten","games_played":394721,"id":2433,"name":"schottentotten","premium":true,"published_on":"2025-09-29","status":"public","weight":950}
 {"average_duration":16,"bgg_id":436794,"display_name_en":"Malabares","games_played":397,"id":2434,"name":"malabares","published_on":"2025-10-22","status":"beta"}
-{"average_duration":26,"bgg_id":374134,"display_name_en":"Chandigarh","games_played":635,"id":2435,"name":"chandigarh","published_on":"2026-02-04","status":"beta"}
-{"average_duration":16,"bgg_id":15818,"display_name_en":"Pickomino","games_played":64011,"id":2437,"name":"pickomino","published_on":"2026-04-20","status":"public","weight":672}
-{"average_duration":7,"bgg_id":447254,"display_name_en":"Azure","games_played":7174,"id":2438,"name":"azure","published_on":"2025-12-28","status":"public","weight":20}
-{"average_duration":28,"bgg_id":448482,"display_name_en":"Jokerball","games_played":953,"id":2439,"name":"jokerball","priority":-999,"published_on":"2025-09-08","status":"public"}
-{"average_duration":18,"bgg_id":527,"display_name_en":"GIPF","games_played":1517,"id":2440,"name":"gipf","published_on":"2026-02-18","status":"beta","weight":15}
-{"average_duration":9,"bgg_id":449294,"display_name_en":"Dozito","games_played":216841,"id":2443,"name":"dozito","published_on":"2026-03-09","status":"public","weight":1094}
-{"average_duration":4,"bgg_id":364012,"display_name_en":"Wana","games_played":957,"id":2444,"name":"wana","published_on":"2026-03-23","status":"beta"}
-{"average_duration":64,"bgg_id":349750,"display_name_en":"Molly House","games_played":1352,"id":2445,"name":"mollyhouse","published_on":"2025-11-21","status":"beta","weight":11}
-{"average_duration":18,"bgg_id":438417,"display_name_en":"The Last Droids","games_played":15558,"id":2448,"name":"lesderniersdroides","premium":true,"published_on":"2025-11-19","status":"public","weight":20}
-{"average_duration":15,"bgg_id":315766,"display_name_en":"Call of Katulhu","games_played":649,"id":2449,"name":"callofkatulhu","published_on":"2026-04-28","status":"beta"}
-{"average_duration":28,"bgg_id":387276,"display_name_en":"Reforest","games_played":21793,"id":2450,"name":"reforest","premium":true,"published_on":"2025-12-29","status":"public","weight":224}
-{"average_duration":5,"bgg_id":415054,"display_name_en":"Pi\u00f1a Coladice","games_played":355682,"id":2452,"name":"pinacoladice","premium":true,"published_on":"2025-10-06","status":"public","weight":506}
-{"average_duration":4,"bgg_id":7688,"display_name_en":"Memory","games_played":9012,"id":2453,"name":"memory","priority":-999,"published_on":"2026-01-27","status":"public","weight":5}
-{"average_duration":11,"bgg_id":446637,"display_name_en":"Matchstick Tycoon","games_played":13585,"id":2454,"name":"matchsticktycoon","published_on":"2025-12-02","status":"public","weight":69}
-{"average_duration":14,"bgg_id":438119,"display_name_en":"Please Don't Burn My Village","games_played":10981,"id":2455,"name":"pleasedontburnmyvillage","published_on":"2026-04-13","status":"public","weight":59}
-{"average_duration":22,"bgg_id":416005,"display_name_en":"Time Splicers","games_played":225,"id":2456,"name":"timesplicers","published_on":"2026-05-20","status":"beta"}
-{"average_duration":69,"bgg_id":447776,"display_name_en":"The Game Makers","games_played":6987,"id":2458,"name":"thegamemakers","premium":true,"priority":-999,"published_on":"2026-02-10","status":"public","weight":168}
-{"average_duration":29,"bgg_id":392461,"display_name_en":"Asteria","games_played":2489,"id":2459,"name":"asteria","published_on":"2025-12-10","status":"public","weight":8}
-{"average_duration":14,"bgg_id":449974,"display_name_en":"Space Lab","games_played":17606,"id":2462,"name":"spacelab","published_on":"2026-02-04","status":"public","weight":47}
-{"average_duration":62,"bgg_id":426868,"display_name_en":"Quartermaster General: South Front","games_played":306,"id":2464,"name":"quartermastergeneralsouthfront","published_on":"2026-06-29","status":"beta","weight":102}
-{"average_duration":76,"bgg_id":367584,"display_name_en":"7th Sea: City of Five Sails","games_played":268,"id":2465,"name":"seventhseacityoffivesails","published_on":"2026-04-21","status":"beta","weight":22}
-{"average_duration":7,"bgg_id":450043,"display_name_en":"Olenon","games_played":288,"id":2467,"name":"olenon","published_on":"2025-11-14","status":"beta","weight":2}
-{"average_duration":16,"bgg_id":218025,"display_name_en":"The Little Flower Shop","games_played":406,"id":2468,"name":"thelittleflowershop","published_on":"2026-05-20","status":"beta","weight":8}
-{"average_duration":30,"bgg_id":442146,"display_name_en":"Fox on the Tree","games_played":554,"id":2469,"name":"foxonthetree","published_on":"2025-12-15","status":"beta"}
-{"average_duration":83,"bgg_id":396790,"display_name_en":"Nucleum","games_played":8869,"id":2471,"name":"nucleum","premium":true,"published_on":"2026-06-22","status":"beta","weight":2081}
-{"average_duration":6,"bgg_id":16986,"display_name_en":"Ubongo","games_played":84780,"id":2472,"name":"ubongo","premium":true,"published_on":"2025-10-22","status":"public","weight":33}
-{"average_duration":54,"bgg_id":439306,"display_name_en":"Limit","games_played":5732,"id":2473,"name":"limit","premium":true,"published_on":"2026-02-25","status":"public","weight":105}
-{"average_duration":22,"bgg_id":430563,"display_name_en":"Popcorn","games_played":35650,"id":2474,"name":"popcorn","premium":true,"published_on":"2026-01-05","status":"public","weight":201}
-{"average_duration":34,"bgg_id":383117,"display_name_en":"Cathood","games_played":7589,"id":2477,"name":"cathood","published_on":"2025-12-20","status":"public","weight":75}
-{"average_duration":15,"bgg_id":457436,"display_name_en":"All In: Predictions","games_played":13859,"id":2478,"name":"allinpredictions","premium":true,"published_on":"2026-06-10","status":"public","weight":962}
-{"average_duration":13,"bgg_id":417106,"display_name_en":"Neon Reign","games_played":1180,"id":2480,"name":"neonreign","published_on":"2026-03-23","status":"beta","weight":11}
-{"average_duration":7,"bgg_id":8766280,"display_name_en":"Booty Dice","games_played":86777,"id":2482,"name":"bootydice","published_on":"2026-01-12","status":"public","weight":188}
-{"average_duration":44,"bgg_id":336933,"display_name_en":"Elongo","games_played":2730,"id":2484,"name":"elongo","published_on":"2025-11-24","status":"public","weight":13}
-{"average_duration":20,"bgg_id":448488,"display_name_en":"Fight 5","games_played":462,"id":2490,"name":"fightfive","published_on":"2026-03-23","status":"beta","weight":4}
-{"average_duration":2,"bgg_id":453906,"display_name_en":"Strategic Reserve","games_played":686,"id":2497,"name":"strategicreserve","priority":-999,"published_on":"2025-11-07","status":"public"}
-{"average_duration":6,"bgg_id":429439,"display_name_en":"Amoriax","games_played":1103,"id":2498,"name":"amoriax","published_on":"2025-11-06","status":"beta","weight":7}
-{"average_duration":22,"bgg_id":448416,"display_name_en":"Beasts","games_played":2479,"id":2499,"is_ranking_disabled":true,"name":"beasts","published_on":"2026-03-23","status":"beta","weight":39}
-{"average_duration":22,"bgg_id":14781,"display_name_en":"Dr\u00f4les de Z\u00e8bres","games_played":780,"id":2500,"name":"drolesdezebres","premium":true,"published_on":"2026-01-14","status":"beta","weight":16}
-{"average_duration":4,"bgg_id":422732,"display_name_en":"Agent Avenue","games_played":292842,"id":2501,"name":"agentavenue","premium":true,"published_on":"2026-01-07","status":"public","weight":435}
-{"average_duration":52,"bgg_id":450337,"display_name_en":"Rowdy Partners","games_played":542,"id":2505,"name":"rowdypartners","published_on":"2026-01-23","status":"beta"}
-{"average_duration":9,"bgg_id":446519,"display_name_en":"Miams","games_played":203724,"id":2506,"name":"miams","premium":true,"published_on":"2025-12-22","status":"public","weight":776}
-{"average_duration":34,"bgg_id":448096,"display_name_en":"Suspei\u00e7\u00e3o","games_played":98,"id":2507,"name":"suspeicao","published_on":"2026-04-28","status":"beta","weight":12}
-{"average_duration":15,"bgg_id":453781,"display_name_en":"Cry Baby","games_played":9414,"id":2508,"name":"crybaby","premium":true,"published_on":"2026-04-27","status":"public","weight":138}
-{"average_duration":13,"display_name_en":"Carnuta","games_played":55432,"id":2509,"name":"carnuta","premium":true,"published_on":"2026-01-19","status":"public","weight":234}
-{"average_duration":53,"bgg_id":450708,"display_name_en":"Reef Gardens","games_played":996,"id":2511,"name":"reefgardens","premium":true,"published_on":"2026-01-13","status":"beta","weight":8}
-{"average_duration":41,"bgg_id":457476,"display_name_en":"Spirited","games_played":4312,"id":2512,"name":"spirited","premium":true,"published_on":"2026-01-21","status":"public","weight":51}
-{"average_duration":1,"bgg_id":455209,"display_name_en":"420","games_played":6591,"id":2513,"name":"fourtwenty","priority":-999,"published_on":"2025-11-07","status":"public","weight":3}
-{"average_duration":12,"bgg_id":447378,"display_name_en":"Tricky Kids","games_played":423,"id":2515,"name":"trickykids","published_on":"2026-05-20","status":"beta","weight":2}
-{"average_duration":17,"bgg_id":401636,"display_name_en":"Tacta","games_played":88864,"id":2516,"name":"tacta","published_on":"2026-02-23","status":"public","weight":710}
-{"average_duration":26,"bgg_id":454696,"display_name_en":"Spy World","games_played":2897,"id":2523,"name":"spyworld","published_on":"2026-04-22","status":"public","weight":8}
-{"average_duration":2,"bgg_id":456430,"display_name_en":"Run Buster","games_played":4323,"id":2524,"name":"runbuster","priority":-999,"published_on":"2025-11-21","status":"public","weight":3}
-{"average_duration":54,"bgg_id":452211,"display_name_en":"Movers & Shakers","games_played":7279,"id":2525,"name":"moversandshakers","published_on":"2026-02-11","status":"public","weight":130}
-{"average_duration":17,"bgg_id":188866,"display_name_en":"Awkward Guests: The Walton Case","games_played":5363,"id":2526,"name":"awkwardgueststhewaltoncase","published_on":"2026-04-22","status":"beta","weight":39}
-{"average_duration":14,"bgg_id":37380,"display_name_en":"Roll Through the Ages: The Bronze Age","games_played":6898,"id":2529,"name":"rollthroughtheagesthebronzeage","published_on":"2025-10-29","status":"beta","weight":39}
-{"average_duration":42,"bgg_id":408236,"display_name_en":"APEX","games_played":206,"id":2531,"name":"apex","published_on":"2026-05-06","status":"beta","weight":13}
-{"average_duration":9,"bgg_id":378983,"display_name_en":"Tipperary","games_played":128658,"id":2533,"name":"tipperary","premium":true,"published_on":"2026-03-23","status":"public","weight":1584}
-{"average_duration":11,"bgg_id":432456,"display_name_en":"dnup","games_played":64480,"id":2534,"name":"dnup","published_on":"2026-05-06","status":"public","weight":1439}
-{"average_duration":26,"bgg_id":85250,"display_name_en":"The Dwarf King","games_played":5248,"id":2535,"name":"thedwarfking","premium":true,"published_on":"2026-05-22","status":"public","weight":249}
-{"average_duration":115,"bgg_id":367517,"display_name_en":"La Famiglia: The Great Mafia War","games_played":1758,"id":2536,"name":"lafamiglia","published_on":"2026-04-15","status":"public","weight":315}
-{"average_duration":16,"bgg_id":453584,"display_name_en":"Pili Pili","games_played":171336,"id":2537,"name":"pilipili","published_on":"2026-01-26","status":"public","weight":1645}
-{"average_duration":60,"bgg_id":392465,"display_name_en":"Quest Inc.","games_played":276,"id":2538,"name":"questinc","published_on":"2026-04-23","status":"beta"}
-{"average_duration":20,"bgg_id":441646,"display_name_en":"Pyrotechnics","games_played":523,"id":2539,"name":"pyrotechnics","published_on":"2026-01-13","status":"beta"}
-{"average_duration":12,"display_name_en":"Ticket to Ride Maps","games_played":342046,"id":2542,"name":"tickettoridemaps","premium":true,"priority":-999,"published_on":"2025-11-12","status":"public","weight":2698}
-{"average_duration":10,"bgg_id":459170,"display_name_en":"Good Fortune","games_played":2740,"id":2543,"name":"goodfortune","published_on":"2026-01-13","status":"beta","weight":6}
-{"average_duration":18,"bgg_id":446530,"display_name_en":"Charuma","games_played":7455,"id":2544,"name":"charuma","published_on":"2026-04-06","status":"public","weight":27}
-{"average_duration":48,"bgg_id":387560,"display_name_en":"Perch","games_played":1606,"id":2549,"name":"perch","premium":true,"published_on":"2026-06-24","status":"public","weight":1084}
-{"average_duration":22,"bgg_id":442655,"display_name_en":"TEMBO: Survival on the Savanna","games_played":8404,"id":2550,"is_ranking_disabled":true,"name":"tembo","published_on":"2026-02-02","status":"public","weight":29}
-{"average_duration":7,"bgg_id":418825,"display_name_en":"Scream Park","games_played":1477,"id":2552,"name":"screampark","published_on":"2026-02-02","status":"beta","weight":2}
-{"average_duration":11,"bgg_id":411567,"display_name_en":"The Gang","games_played":117971,"id":2553,"is_ranking_disabled":true,"name":"thegang","premium":true,"published_on":"2026-05-20","status":"public","weight":3917}
-{"average_duration":33,"bgg_id":368126,"display_name_en":"Arabella","games_played":354,"id":2554,"name":"arabella","published_on":"2026-03-09","status":"beta"}
+{"average_duration":26,"bgg_id":374134,"display_name_en":"Chandigarh","games_played":640,"id":2435,"name":"chandigarh","published_on":"2026-02-04","status":"beta"}
+{"average_duration":17,"bgg_id":15818,"display_name_en":"Pickomino","games_played":65455,"id":2437,"name":"pickomino","published_on":"2026-04-20","status":"public","weight":588}
+{"average_duration":7,"bgg_id":447254,"display_name_en":"Azure","games_played":7262,"id":2438,"name":"azure","published_on":"2025-12-28","status":"public","weight":7}
+{"average_duration":28,"bgg_id":448482,"display_name_en":"Jokerball","games_played":954,"id":2439,"name":"jokerball","priority":-999,"published_on":"2025-09-08","status":"public"}
+{"average_duration":17,"bgg_id":527,"display_name_en":"GIPF","games_played":1542,"id":2440,"name":"gipf","published_on":"2026-02-18","status":"beta","weight":2}
+{"average_duration":9,"bgg_id":449294,"display_name_en":"Dozito","games_played":222503,"id":2443,"name":"dozito","published_on":"2026-03-09","status":"public","weight":1042}
+{"average_duration":4,"bgg_id":364012,"display_name_en":"Wana","games_played":989,"id":2444,"name":"wana","published_on":"2026-03-23","status":"beta","weight":1}
+{"average_duration":74,"bgg_id":349750,"display_name_en":"Molly House","games_played":1363,"id":2445,"name":"mollyhouse","published_on":"2025-11-21","status":"beta"}
+{"average_duration":17,"bgg_id":438417,"display_name_en":"The Last Droids","games_played":15613,"id":2448,"name":"lesderniersdroides","premium":true,"published_on":"2025-11-19","status":"public","weight":16}
+{"average_duration":13,"bgg_id":315766,"display_name_en":"Call of Katulhu","games_played":659,"id":2449,"name":"callofkatulhu","published_on":"2026-04-28","status":"beta","weight":7}
+{"average_duration":28,"bgg_id":387276,"display_name_en":"Reforest","games_played":22206,"id":2450,"name":"reforest","premium":true,"published_on":"2025-12-29","status":"public","weight":284}
+{"average_duration":5,"bgg_id":415054,"display_name_en":"Pi\u00f1a Coladice","games_played":358986,"id":2452,"name":"pinacoladice","premium":true,"published_on":"2025-10-06","status":"public","weight":468}
+{"average_duration":3,"bgg_id":7688,"display_name_en":"Memory","games_played":9184,"id":2453,"name":"memory","priority":-999,"published_on":"2026-01-27","status":"public","weight":8}
+{"average_duration":11,"bgg_id":446637,"display_name_en":"Matchstick Tycoon","games_played":13711,"id":2454,"name":"matchsticktycoon","published_on":"2025-12-02","status":"public","weight":11}
+{"average_duration":14,"bgg_id":438119,"display_name_en":"Please Don't Burn My Village","games_played":11088,"id":2455,"name":"pleasedontburnmyvillage","published_on":"2026-04-13","status":"public","weight":38}
+{"average_duration":32,"bgg_id":416005,"display_name_en":"Time Splicers","games_played":233,"id":2456,"name":"timesplicers","published_on":"2026-05-20","status":"beta"}
+{"average_duration":67,"bgg_id":447776,"display_name_en":"The Game Makers","games_played":7075,"id":2458,"name":"thegamemakers","premium":true,"priority":-999,"published_on":"2026-02-10","status":"public","weight":209}
+{"average_duration":29,"bgg_id":392461,"display_name_en":"Asteria","games_played":2498,"id":2459,"name":"asteria","published_on":"2025-12-10","status":"public","weight":13}
+{"average_duration":14,"bgg_id":449974,"display_name_en":"Space Lab","games_played":17803,"id":2462,"name":"spacelab","published_on":"2026-02-04","status":"public","weight":74}
+{"average_duration":68,"bgg_id":426868,"display_name_en":"Quartermaster General: South Front","games_played":443,"id":2464,"name":"quartermastergeneralsouthfront","published_on":"2026-06-29","status":"beta","weight":128}
+{"average_duration":69,"bgg_id":367584,"display_name_en":"7th Sea: City of Five Sails","games_played":278,"id":2465,"name":"seventhseacityoffivesails","published_on":"2026-04-21","status":"beta","weight":22}
+{"average_duration":7,"bgg_id":450043,"display_name_en":"Olenon","games_played":288,"id":2467,"name":"olenon","published_on":"2025-11-14","status":"beta"}
+{"average_duration":15,"bgg_id":218025,"display_name_en":"The Little Flower Shop","games_played":420,"id":2468,"name":"thelittleflowershop","published_on":"2026-05-20","status":"beta","weight":9}
+{"average_duration":30,"bgg_id":442146,"display_name_en":"Fox on the Tree","games_played":558,"id":2469,"name":"foxonthetree","published_on":"2025-12-15","status":"beta"}
+{"average_duration":81,"bgg_id":396790,"display_name_en":"Nucleum","games_played":9600,"id":2471,"name":"nucleum","premium":true,"published_on":"2026-06-22","status":"beta","weight":2253}
+{"average_duration":6,"bgg_id":16986,"display_name_en":"Ubongo","games_played":85051,"id":2472,"name":"ubongo","premium":true,"published_on":"2025-10-22","status":"public","weight":37}
+{"average_duration":55,"bgg_id":439306,"display_name_en":"Limit","games_played":5752,"id":2473,"name":"limit","premium":true,"published_on":"2026-02-25","status":"public","weight":1}
+{"average_duration":21,"bgg_id":430563,"display_name_en":"Popcorn","games_played":36033,"id":2474,"name":"popcorn","premium":true,"published_on":"2026-01-05","status":"public","weight":268}
+{"average_duration":31,"bgg_id":383117,"display_name_en":"Cathood","games_played":7643,"id":2477,"name":"cathood","published_on":"2025-12-20","status":"public","weight":81}
+{"average_duration":15,"bgg_id":457436,"display_name_en":"All In: Predictions","games_played":15586,"id":2478,"name":"allinpredictions","premium":true,"published_on":"2026-06-10","status":"public","weight":694}
+{"average_duration":10,"bgg_id":417106,"display_name_en":"Neon Reign","games_played":1223,"id":2480,"name":"neonreign","published_on":"2026-03-23","status":"beta","weight":6}
+{"average_duration":7,"bgg_id":8766280,"display_name_en":"Booty Dice","games_played":87573,"id":2482,"name":"bootydice","published_on":"2026-01-12","status":"public","weight":192}
+{"average_duration":44,"bgg_id":336933,"display_name_en":"Elongo","games_played":2746,"id":2484,"name":"elongo","published_on":"2025-11-24","status":"public","weight":40}
+{"average_duration":28,"bgg_id":448488,"display_name_en":"Fight 5","games_played":465,"id":2490,"name":"fightfive","published_on":"2026-03-23","status":"beta","weight":9}
+{"average_duration":2,"bgg_id":453906,"display_name_en":"Strategic Reserve","games_played":692,"id":2497,"name":"strategicreserve","priority":-999,"published_on":"2025-11-07","status":"public"}
+{"average_duration":6,"bgg_id":429439,"display_name_en":"Amoriax","games_played":1112,"id":2498,"name":"amoriax","published_on":"2025-11-06","status":"beta","weight":1}
+{"average_duration":21,"bgg_id":448416,"display_name_en":"Beasts","games_played":2553,"id":2499,"is_ranking_disabled":true,"name":"beasts","published_on":"2026-03-23","status":"beta","weight":62}
+{"average_duration":20,"bgg_id":14781,"display_name_en":"Dr\u00f4les de Z\u00e8bres","games_played":788,"id":2500,"name":"drolesdezebres","premium":true,"published_on":"2026-01-14","status":"beta"}
+{"average_duration":4,"bgg_id":422732,"display_name_en":"Agent Avenue","games_played":296794,"id":2501,"name":"agentavenue","premium":true,"published_on":"2026-01-07","status":"public","weight":457}
+{"average_duration":51,"bgg_id":450337,"display_name_en":"Rowdy Partners","games_played":550,"id":2505,"name":"rowdypartners","published_on":"2026-01-23","status":"beta","weight":9}
+{"average_duration":9,"bgg_id":446519,"display_name_en":"Miams","games_played":206884,"id":2506,"name":"miams","premium":true,"published_on":"2025-12-22","status":"public","weight":826}
+{"average_duration":33,"bgg_id":448096,"display_name_en":"Suspei\u00e7\u00e3o","games_played":98,"id":2507,"name":"suspeicao","published_on":"2026-04-28","status":"beta"}
+{"average_duration":15,"bgg_id":453781,"display_name_en":"Cry Baby","games_played":9680,"id":2508,"name":"crybaby","premium":true,"published_on":"2026-04-27","status":"public","weight":170}
+{"average_duration":13,"display_name_en":"Carnuta","games_played":56169,"id":2509,"name":"carnuta","premium":true,"published_on":"2026-01-19","status":"public","weight":326}
+{"average_duration":53,"bgg_id":450708,"display_name_en":"Reef Gardens","games_played":1007,"id":2511,"name":"reefgardens","premium":true,"published_on":"2026-01-13","status":"beta"}
+{"average_duration":38,"bgg_id":457476,"display_name_en":"Spirited","games_played":4351,"id":2512,"name":"spirited","premium":true,"published_on":"2026-01-21","status":"public","weight":39}
+{"average_duration":1,"bgg_id":455209,"display_name_en":"420","games_played":6813,"id":2513,"name":"fourtwenty","priority":-999,"published_on":"2025-11-07","status":"public","weight":13}
+{"average_duration":10,"bgg_id":447378,"display_name_en":"Tricky Kids","games_played":442,"id":2515,"name":"trickykids","published_on":"2026-05-20","status":"beta"}
+{"average_duration":17,"bgg_id":401636,"display_name_en":"Tacta","games_played":90506,"id":2516,"name":"tacta","published_on":"2026-02-23","status":"public","weight":609}
+{"average_duration":27,"bgg_id":454696,"display_name_en":"Spy World","games_played":2934,"id":2523,"name":"spyworld","published_on":"2026-04-22","status":"public","weight":45}
+{"average_duration":2,"bgg_id":456430,"display_name_en":"Run Buster","games_played":4410,"id":2524,"name":"runbuster","priority":-999,"published_on":"2025-11-21","status":"public","weight":5}
+{"average_duration":51,"bgg_id":452211,"display_name_en":"Movers & Shakers","games_played":7325,"id":2525,"name":"moversandshakers","published_on":"2026-02-11","status":"public","weight":89}
+{"average_duration":18,"bgg_id":188866,"display_name_en":"Awkward Guests: The Walton Case","games_played":5563,"id":2526,"name":"awkwardgueststhewaltoncase","published_on":"2026-04-22","status":"beta","weight":152}
+{"average_duration":15,"bgg_id":37380,"display_name_en":"Roll Through the Ages: The Bronze Age","games_played":7013,"id":2529,"name":"rollthroughtheagesthebronzeage","published_on":"2025-10-29","status":"beta","weight":27}
+{"average_duration":42,"bgg_id":408236,"display_name_en":"APEX","games_played":207,"id":2531,"name":"apex","published_on":"2026-05-06","status":"beta"}
+{"average_duration":9,"bgg_id":378983,"display_name_en":"Tipperary","games_played":133349,"id":2533,"name":"tipperary","premium":true,"published_on":"2026-03-23","status":"public","weight":1461}
+{"average_duration":11,"bgg_id":432456,"display_name_en":"dnup","games_played":70496,"id":2534,"name":"dnup","published_on":"2026-05-06","status":"public","weight":1930}
+{"average_duration":26,"bgg_id":85250,"display_name_en":"The Dwarf King","games_played":5557,"id":2535,"name":"thedwarfking","premium":true,"published_on":"2026-05-22","status":"public","weight":315}
+{"average_duration":116,"bgg_id":367517,"display_name_en":"La Famiglia: The Great Mafia War","games_played":1802,"id":2536,"name":"lafamiglia","published_on":"2026-04-15","status":"public","weight":263}
+{"average_duration":16,"bgg_id":453584,"display_name_en":"Pili Pili","games_played":175103,"id":2537,"name":"pilipili","published_on":"2026-01-26","status":"public","weight":1528}
+{"average_duration":64,"bgg_id":392465,"display_name_en":"Quest Inc.","games_played":282,"id":2538,"name":"questinc","published_on":"2026-04-23","status":"beta","weight":36}
+{"average_duration":19,"bgg_id":441646,"display_name_en":"Pyrotechnics","games_played":526,"id":2539,"name":"pyrotechnics","published_on":"2026-01-13","status":"beta"}
+{"average_duration":12,"display_name_en":"Ticket to Ride Maps","games_played":349729,"id":2542,"name":"tickettoridemaps","premium":true,"priority":-999,"published_on":"2025-11-12","status":"public","weight":2550}
+{"average_duration":9,"bgg_id":459170,"display_name_en":"Good Fortune","games_played":2786,"id":2543,"name":"goodfortune","published_on":"2026-01-13","status":"beta","weight":4}
+{"average_duration":17,"bgg_id":446530,"display_name_en":"Charuma","games_played":7513,"id":2544,"name":"charuma","published_on":"2026-04-06","status":"public","weight":23}
+{"average_duration":48,"bgg_id":387560,"display_name_en":"Perch","games_played":2040,"id":2549,"name":"perch","premium":true,"published_on":"2026-06-24","status":"public","weight":737}
+{"average_duration":21,"bgg_id":442655,"display_name_en":"TEMBO: Survival on the Savanna","games_played":8502,"id":2550,"is_ranking_disabled":true,"name":"tembo","published_on":"2026-02-02","status":"public","weight":64}
+{"average_duration":11,"bgg_id":418825,"display_name_en":"Scream Park","games_played":1513,"id":2552,"name":"screampark","published_on":"2026-02-02","status":"beta","weight":5}
+{"average_duration":11,"bgg_id":411567,"display_name_en":"The Gang","games_played":125197,"id":2553,"is_ranking_disabled":true,"name":"thegang","premium":true,"published_on":"2026-05-20","status":"public","weight":3376}
+{"average_duration":48,"bgg_id":368126,"display_name_en":"Arabella","games_played":360,"id":2554,"name":"arabella","published_on":"2026-03-09","status":"beta","weight":11}
 {"average_duration":6,"bgg_id":10527,"display_name_en":"Gyges","games_played":1115,"id":2555,"name":"gygesdeluxe","published_on":"2026-02-23","status":"beta","weight":6}
-{"average_duration":21,"bgg_id":439520,"display_name_en":"Dragonarium","games_played":1210,"id":2556,"name":"dragonarium","published_on":"2026-02-25","status":"beta","weight":14}
-{"average_duration":31,"bgg_id":343433,"display_name_en":"T\u00edr na n\u00d3g","games_played":1447,"id":2559,"name":"tirnanog","published_on":"2026-03-24","status":"beta","weight":11}
-{"average_duration":35,"bgg_id":346965,"display_name_en":"Azul: Queen's Garden","games_played":15505,"id":2560,"name":"azulqueensgarden","premium":true,"published_on":"2026-07-01","status":"public","weight":12700}
-{"average_duration":110,"bgg_id":321608,"display_name_en":"Hegemony: Lead Your Class to Victory","games_played":6539,"id":2561,"name":"hegemony","published_on":"2026-05-28","status":"beta","weight":4182}
-{"average_duration":44,"bgg_id":161970,"display_name_en":"Alchemists","games_played":5481,"id":2563,"name":"alchemists","published_on":"2026-04-22","status":"beta","weight":252}
-{"average_duration":19,"bgg_id":373167,"display_name_en":"20 Strong: Solar Sentinels","games_played":14439,"id":2564,"name":"solarsentinels","published_on":"2026-06-29","status":"public","weight":966}
-{"average_duration":17,"bgg_id":200853,"display_name_en":"Habitats","games_played":73322,"id":2565,"name":"habitats","premium":true,"published_on":"2026-05-11","status":"public","weight":2028}
-{"average_duration":8,"bgg_id":446669,"display_name_en":"Flockers","games_played":1590,"id":2566,"name":"flockers","published_on":"2026-03-30","status":"beta","weight":7}
-{"average_duration":31,"bgg_id":429423,"display_name_en":"Postcards","games_played":22695,"id":2567,"name":"postcards","published_on":"2026-03-25","status":"public","weight":539}
-{"average_duration":91,"bgg_id":423848,"display_name_en":"Quiltable","games_played":664,"id":2572,"name":"quiltable","published_on":"2026-03-23","status":"beta","weight":4}
-{"average_duration":20,"bgg_id":424848,"display_name_en":"20 Strong: Tanglewoods Red","games_played":10786,"id":2573,"name":"tanglewoodsred","published_on":"2026-06-29","status":"public","weight":555}
-{"average_duration":19,"bgg_id":450288,"display_name_en":"Stable Times","games_played":614,"id":2575,"name":"stabletimes","published_on":"2026-03-23","status":"beta","weight":5}
-{"average_duration":11,"bgg_id":451034,"display_name_en":"Bordeaux","games_played":2260,"id":2578,"name":"bordeaux","premium":true,"published_on":"2026-04-24","status":"beta","weight":12}
-{"average_duration":23,"bgg_id":408636,"display_name_en":"Skara Brae","games_played":28868,"id":2579,"name":"skarabrae","premium":true,"published_on":"2026-03-04","status":"public","weight":184}
-{"average_duration":48,"bgg_id":316412,"display_name_en":"The LOOP","games_played":677,"id":2580,"is_ranking_disabled":true,"name":"theloop","published_on":"2026-06-29","status":"beta","weight":652}
-{"average_duration":8,"bgg_id":463446,"display_name_en":"Visions","games_played":30853,"id":2581,"name":"visions","published_on":"2026-05-18","status":"public","weight":253}
-{"average_duration":5,"bgg_id":402207,"display_name_en":"YRO","games_played":15296,"id":2583,"name":"yro","published_on":"2026-05-20","status":"beta","weight":247}
-{"average_duration":21,"bgg_id":441114,"display_name_en":"Soothsayers","games_played":3932,"id":2584,"name":"soothsayers","published_on":"2026-03-09","status":"beta","weight":65}
-{"average_duration":12,"bgg_id":460372,"display_name_en":"Tally Up","games_played":3360,"id":2585,"name":"tallyup","published_on":"2026-03-09","status":"beta","weight":32}
-{"average_duration":54,"bgg_id":431718,"display_name_en":"The Isle of Cats Duel","games_played":1426,"id":2586,"name":"theisleofcatsduel","premium":true,"published_on":"2026-03-23","status":"beta","weight":117}
-{"average_duration":25,"bgg_id":452300,"display_name_en":"Lodge","games_played":4071,"id":2587,"name":"lodge","published_on":"2026-02-11","status":"beta","weight":74}
-{"average_duration":25,"bgg_id":445044,"display_name_en":"Wispwood","games_played":6469,"id":2588,"name":"wispwood","published_on":"2026-03-09","status":"beta","weight":209}
-{"average_duration":49,"bgg_id":381248,"display_name_en":"Nemesis: Retaliation","games_played":5371,"id":2593,"name":"nemesisretaliation","premium":true,"published_on":"2026-06-22","status":"beta","weight":2745}
-{"average_duration":9,"bgg_id":435330,"display_name_en":"Pondscape","games_played":6389,"id":2594,"name":"pondscape","published_on":"2026-04-22","status":"beta","weight":65}
-{"average_duration":9,"bgg_id":467495,"display_name_en":"Dragon Overload","games_played":424,"id":2597,"name":"dragonoverload","premium":true,"published_on":"2026-06-22","status":"beta","weight":22}
-{"average_duration":69,"bgg_id":426513,"display_name_en":"Emberleaf","games_played":11555,"id":2601,"name":"emberleaf","premium":true,"published_on":"2026-05-13","status":"public","weight":1667}
-{"average_duration":6,"display_name_en":"Group","games_played":339,"id":2603,"name":"group","priority":-999,"published_on":"2026-03-30","status":"public"}
-{"average_duration":21,"bgg_id":462464,"display_name_en":"First Giants","games_played":13918,"id":2604,"name":"firstgiants","premium":true,"published_on":"2026-05-15","status":"public","weight":397}
-{"average_duration":9,"bgg_id":437939,"display_name_en":"Double Seven","games_played":60204,"id":2607,"name":"doubleseven","published_on":"2026-06-22","status":"public","weight":5709}
-{"average_duration":24,"bgg_id":461819,"display_name_en":"Tr\u00f6k","games_played":8694,"id":2612,"name":"trok","premium":true,"published_on":"2026-03-30","status":"public","weight":139}
-{"average_duration":64,"bgg_id":400366,"display_name_en":"Wondrous Creatures","games_played":36463,"id":2614,"name":"wondrouscreatures","premium":true,"published_on":"2026-05-27","status":"public","weight":6422}
-{"average_duration":34,"bgg_id":457724,"display_name_en":"Red Notice","games_played":6765,"id":2616,"name":"rednotice","published_on":"2026-06-15","status":"public","weight":517}
-{"average_duration":4,"bgg_id":464056,"display_name_en":"Spooky Tower","games_played":75283,"id":2618,"name":"spookytower","published_on":"2026-05-04","status":"public","weight":381}
-{"average_duration":9,"bgg_id":394127,"display_name_en":"Yokai Pagoda","games_played":2908,"id":2622,"name":"yokaipagoda","published_on":"2026-03-10","status":"beta","weight":12}
-{"average_duration":17,"bgg_id":449853,"display_name_en":"Frosted Blooms","games_played":8584,"id":2625,"name":"frostedblooms","published_on":"2026-06-10","status":"beta","weight":573}
-{"average_duration":8,"bgg_id":383190,"display_name_en":"Positano","games_played":774,"id":2626,"name":"positano","published_on":"2026-05-28","status":"beta","weight":17}
-{"average_duration":13,"bgg_id":458956,"display_name_en":"Kumata","games_played":10211,"id":2628,"name":"kumata","published_on":"2026-06-08","status":"public","weight":229}
-{"average_duration":55,"bgg_id":9216,"display_name_en":"Goa","games_played":3932,"id":2629,"name":"goa","published_on":"2026-06-03","status":"public","weight":612}
-{"average_duration":30,"bgg_id":439685,"display_name_en":"Pacts","games_played":845,"id":2631,"name":"pacts","published_on":"2026-04-22","status":"beta","weight":41}
-{"average_duration":17,"bgg_id":453737,"display_name_en":"Sea Shells","games_played":1586,"id":2632,"name":"seashells","published_on":"2026-04-07","status":"beta","weight":5}
-{"average_duration":14,"bgg_id":414633,"display_name_en":"Digging For Dinos","games_played":3259,"id":2634,"name":"diggingfordinos","published_on":"2026-04-07","status":"beta","weight":20}
-{"average_duration":10,"bgg_id":453893,"display_name_en":"Collect","games_played":48505,"id":2635,"name":"collect","published_on":"2026-06-01","status":"public","weight":844}
-{"average_duration":10,"bgg_id":465983,"display_name_en":"Bluff King","games_played":1865,"id":2639,"name":"bluffking","published_on":"2026-03-24","status":"beta","weight":3}
-{"average_duration":34,"bgg_id":436907,"display_name_en":"Crits & Tricks","games_played":268,"id":2641,"name":"critsandtricks","premium":true,"published_on":"2026-06-15","status":"beta","weight":25}
-{"average_duration":9,"bgg_id":370597,"display_name_en":"Fugitive","games_played":4832,"id":2642,"name":"fugitive","published_on":"2026-05-06","status":"beta","weight":43}
-{"average_duration":10,"bgg_id":459295,"display_name_en":"62 Soleils d'Et\u00e9","games_played":1444,"id":2646,"name":"soixantedeuxsoleilsdete","published_on":"2026-05-26","status":"beta","weight":19}
-{"average_duration":26,"bgg_id":22950,"display_name_en":"Play Nine","games_played":1475,"id":2647,"name":"playnine","published_on":"2026-05-06","status":"beta","weight":68}
-{"average_duration":31,"bgg_id":382549,"display_name_en":"Biome","games_played":474,"id":2654,"name":"biome","published_on":"2026-06-22","status":"beta","weight":70}
-{"average_duration":5,"display_name_en":"Quatrix","games_played":697,"id":2655,"name":"quatrix","published_on":"2026-05-28","status":"beta","weight":3}
-{"average_duration":20,"bgg_id":405460,"display_name_en":"CATsle Builders","games_played":453,"id":2657,"name":"catslebuilders","published_on":"2026-05-06","status":"beta","weight":9}
-{"average_duration":46,"bgg_id":350316,"display_name_en":"Wayfarers of the South Tigris","games_played":5184,"id":2662,"name":"wayfarers","premium":true,"published_on":"2026-06-16","status":"beta","weight":1660}
-{"average_duration":14,"bgg_id":436751,"display_name_en":"Under the Leaves","games_played":6169,"id":2663,"name":"undertheleaves","published_on":"2026-04-22","status":"beta","weight":161}
-{"average_duration":46,"bgg_id":296108,"display_name_en":"Terraforming Mars: The Dice Game","games_played":4177,"id":2665,"name":"terraformingmarsthedicegame","premium":true,"published_on":"2026-06-24","status":"beta","weight":1900}
-{"average_duration":6,"bgg_id":460461,"display_name_en":"Pyramis","games_played":9446,"id":2667,"name":"pyramis","published_on":"2026-05-08","status":"public","weight":22}
-{"average_duration":49,"bgg_id":286751,"display_name_en":"Zombicide 2nd Edition","games_played":38940,"id":2670,"is_ranking_disabled":true,"name":"zombicidesecondedition","published_on":"2026-05-20","status":"beta","weight":4183}
-{"average_duration":6,"bgg_id":180602,"display_name_en":"Game of Trains","games_played":1726,"id":2673,"name":"gameoftrains","published_on":"2026-05-28","status":"beta","weight":24}
-{"average_duration":4,"bgg_id":460955,"display_name_en":"IPSO","games_played":144221,"id":2679,"name":"ipso","premium":true,"published_on":"2026-05-25","status":"public","weight":1580}
-{"average_duration":5,"bgg_id":435357,"display_name_en":"Slambo","games_played":1977,"id":2682,"name":"slambo","published_on":"2026-05-06","status":"beta","weight":3}
-{"average_duration":14,"bgg_id":452321,"display_name_en":"TomaToss","games_played":1331,"id":2688,"name":"tomatoss","published_on":"2026-05-06","status":"beta","weight":7}
-{"average_duration":9,"bgg_id":455344,"display_name_en":"Drako: Aetherya Pocket","games_played":578,"id":2691,"name":"drako","published_on":"2026-06-10","status":"beta","weight":12}
-{"average_duration":8,"bgg_id":472126,"display_name_en":"\u016anane","games_played":228,"id":2693,"name":"unane","priority":-999,"published_on":"2026-06-22","status":"public","weight":2}
-{"average_duration":8,"bgg_id":420797,"display_name_en":"Minefield","games_played":256,"id":2696,"name":"minefield","priority":-999,"published_on":"2026-06-22","status":"public"}
-{"average_duration":16,"bgg_id":362503,"display_name_en":"Bug Off","games_played":177,"id":2702,"name":"bugoff","published_on":"2026-06-22","status":"beta","weight":18}
-{"average_duration":20,"bgg_id":422219,"display_name_en":"Verdant Arizona","games_played":158,"id":2704,"name":"verdantarizona","published_on":"2026-07-03","status":"beta","weight":36}
-{"average_duration":16,"bgg_id":457283,"display_name_en":"Bunny Kingdom Town","games_played":16869,"id":2709,"name":"bunnykingdomtown","premium":true,"published_on":"2026-06-17","status":"public","weight":1770}
-{"average_duration":4,"bgg_id":432085,"display_name_en":"Palourde","games_played":945,"id":2714,"name":"palourde","published_on":"2026-05-28","status":"beta","weight":1}
-{"average_duration":7,"bgg_id":442507,"display_name_en":"\u201cRelative\u201d Space","games_played":341,"id":2717,"name":"relativespace","published_on":"2026-06-22","status":"beta","weight":9}
-{"average_duration":15,"bgg_id":463441,"display_name_en":"Flip 7: With A Vengeance","games_played":5936,"id":2718,"name":"flipsevenwithavengeance","published_on":"2026-06-24","status":"beta","weight":1861}
-{"average_duration":26,"bgg_id":447589,"display_name_en":"Jackpot: Set the Reel","games_played":1162,"id":2719,"name":"jackpotsetthereel","premium":true,"published_on":"2026-05-28","status":"beta","weight":52}
-{"average_duration":12,"bgg_id":456453,"display_name_en":"5Pairs","games_played":377,"id":2720,"name":"fivepairs","premium":true,"published_on":"2026-07-01","status":"beta","weight":211}
-{"average_duration":9,"bgg_id":435360,"display_name_en":"Waddle","games_played":799,"id":2723,"name":"waddle","published_on":"2026-06-16","status":"beta","weight":54}
-{"average_duration":3,"bgg_id":400752,"display_name_en":"Piles!","games_played":2915,"id":2736,"name":"piles","published_on":"2026-06-23","status":"beta","weight":68}
-{"average_duration":4,"bgg_id":464695,"display_name_en":"Texas Bingo","games_played":2390,"id":2742,"name":"texasbingo","published_on":"2026-06-24","status":"beta","weight":85}
+{"average_duration":22,"bgg_id":439520,"display_name_en":"Dragonarium","games_played":1235,"id":2556,"name":"dragonarium","published_on":"2026-02-25","status":"beta","weight":3}
+{"average_duration":31,"bgg_id":343433,"display_name_en":"T\u00edr na n\u00d3g","games_played":2408,"id":2559,"name":"tirnanog","published_on":"2026-07-08","status":"public","weight":1324}
+{"average_duration":35,"bgg_id":346965,"display_name_en":"Azul: Queen's Garden","games_played":27645,"id":2560,"name":"azulqueensgarden","premium":true,"published_on":"2026-07-01","status":"public","weight":11726}
+{"average_duration":109,"bgg_id":321608,"display_name_en":"Hegemony: Lead Your Class to Victory","games_played":7492,"id":2561,"name":"hegemony","published_on":"2026-05-28","status":"beta","weight":2590}
+{"average_duration":44,"bgg_id":161970,"display_name_en":"Alchemists","games_played":5840,"id":2563,"name":"alchemists","published_on":"2026-04-22","status":"beta","weight":341}
+{"average_duration":20,"bgg_id":373167,"display_name_en":"20 Strong: Solar Sentinels","games_played":16631,"id":2564,"name":"solarsentinels","published_on":"2026-06-29","status":"public","weight":283}
+{"average_duration":17,"bgg_id":200853,"display_name_en":"Habitats","games_played":77251,"id":2565,"name":"habitats","premium":true,"published_on":"2026-05-11","status":"public","weight":1738}
+{"average_duration":8,"bgg_id":446669,"display_name_en":"Flockers","games_played":1616,"id":2566,"name":"flockers","published_on":"2026-03-30","status":"beta","weight":2}
+{"average_duration":31,"bgg_id":429423,"display_name_en":"Postcards","games_played":23193,"id":2567,"name":"postcards","published_on":"2026-03-25","status":"public","weight":408}
+{"average_duration":14,"bgg_id":423848,"display_name_en":"Quiltable","games_played":669,"id":2572,"name":"quiltable","published_on":"2026-03-23","status":"beta"}
+{"average_duration":20,"bgg_id":424848,"display_name_en":"20 Strong: Tanglewoods Red","games_played":12509,"id":2573,"name":"tanglewoodsred","published_on":"2026-06-29","status":"public","weight":369}
+{"average_duration":19,"bgg_id":450288,"display_name_en":"Stable Times","games_played":621,"id":2575,"name":"stabletimes","published_on":"2026-03-23","status":"beta","weight":20}
+{"average_duration":12,"bgg_id":451034,"display_name_en":"Bordeaux","games_played":2369,"id":2578,"name":"bordeaux","premium":true,"published_on":"2026-04-24","status":"beta","weight":37}
+{"average_duration":25,"bgg_id":408636,"display_name_en":"Skara Brae","games_played":29325,"id":2579,"name":"skarabrae","premium":true,"published_on":"2026-03-04","status":"public","weight":262}
+{"average_duration":50,"bgg_id":316412,"display_name_en":"The LOOP","games_played":1028,"id":2580,"is_ranking_disabled":true,"name":"theloop","published_on":"2026-06-29","status":"beta","weight":494}
+{"average_duration":8,"bgg_id":463446,"display_name_en":"Visions","games_played":32737,"id":2581,"name":"visions","published_on":"2026-05-18","status":"public","weight":200}
+{"average_duration":5,"bgg_id":402207,"display_name_en":"YRO","games_played":17513,"id":2583,"name":"yro","published_on":"2026-05-20","status":"beta","weight":255}
+{"average_duration":22,"bgg_id":441114,"display_name_en":"Soothsayers","games_played":4031,"id":2584,"name":"soothsayers","published_on":"2026-03-09","status":"beta","weight":52}
+{"average_duration":12,"bgg_id":460372,"display_name_en":"Tally Up","games_played":3464,"id":2585,"name":"tallyup","published_on":"2026-03-09","status":"beta","weight":25}
+{"average_duration":55,"bgg_id":431718,"display_name_en":"The Isle of Cats Duel","games_played":1487,"id":2586,"name":"theisleofcatsduel","premium":true,"published_on":"2026-03-23","status":"beta","weight":95}
+{"average_duration":24,"bgg_id":452300,"display_name_en":"Lodge","games_played":4128,"id":2587,"name":"lodge","published_on":"2026-02-11","status":"beta","weight":75}
+{"average_duration":24,"bgg_id":445044,"display_name_en":"Wispwood","games_played":6646,"id":2588,"name":"wispwood","published_on":"2026-03-09","status":"beta","weight":141}
+{"average_duration":50,"bgg_id":381248,"display_name_en":"Nemesis: Retaliation","games_played":6820,"id":2593,"name":"nemesisretaliation","premium":true,"published_on":"2026-06-22","status":"beta","weight":1982}
+{"average_duration":9,"bgg_id":435330,"display_name_en":"Pondscape","games_played":6611,"id":2594,"name":"pondscape","published_on":"2026-04-22","status":"beta","weight":42}
+{"average_duration":9,"bgg_id":467495,"display_name_en":"Dragon Overload","games_played":497,"id":2597,"name":"dragonoverload","premium":true,"published_on":"2026-06-22","status":"beta","weight":11}
+{"average_duration":67,"bgg_id":426513,"display_name_en":"Emberleaf","games_played":12173,"id":2601,"name":"emberleaf","premium":true,"published_on":"2026-05-13","status":"public","weight":1310}
+{"average_duration":7,"display_name_en":"Group","games_played":342,"id":2603,"name":"group","priority":-999,"published_on":"2026-03-30","status":"public"}
+{"average_duration":20,"bgg_id":462464,"display_name_en":"First Giants","games_played":14476,"id":2604,"name":"firstgiants","premium":true,"published_on":"2026-05-15","status":"public","weight":367}
+{"average_duration":9,"bgg_id":437939,"display_name_en":"Double Seven","games_played":84506,"id":2607,"name":"doubleseven","published_on":"2026-06-22","status":"public","weight":4518}
+{"average_duration":24,"bgg_id":461819,"display_name_en":"Tr\u00f6k","games_played":8810,"id":2612,"name":"trok","premium":true,"published_on":"2026-03-30","status":"public","weight":94}
+{"average_duration":12,"bgg_id":382958,"display_name_en":"Les toits de Paris","games_played":448,"id":2613,"name":"lestoitsdeparis","published_on":"2026-07-07","status":"beta","weight":96}
+{"average_duration":62,"bgg_id":400366,"display_name_en":"Wondrous Creatures","games_played":40037,"id":2614,"name":"wondrouscreatures","premium":true,"published_on":"2026-05-27","status":"public","weight":6425}
+{"average_duration":34,"bgg_id":457724,"display_name_en":"Red Notice","games_played":7504,"id":2616,"name":"rednotice","published_on":"2026-06-15","status":"public","weight":420}
+{"average_duration":4,"bgg_id":464056,"display_name_en":"Spooky Tower","games_played":77802,"id":2618,"name":"spookytower","published_on":"2026-05-04","status":"public","weight":262}
+{"average_duration":8,"bgg_id":394127,"display_name_en":"Yokai Pagoda","games_played":3096,"id":2622,"name":"yokaipagoda","published_on":"2026-03-10","status":"beta","weight":49}
+{"average_duration":17,"bgg_id":449853,"display_name_en":"Frosted Blooms","games_played":9945,"id":2625,"name":"frostedblooms","published_on":"2026-06-10","status":"beta","weight":665}
+{"average_duration":10,"bgg_id":383190,"display_name_en":"Positano","games_played":802,"id":2626,"name":"positano","published_on":"2026-05-28","status":"beta","weight":1}
+{"average_duration":13,"bgg_id":458956,"display_name_en":"Kumata","games_played":10922,"id":2628,"name":"kumata","published_on":"2026-06-08","status":"public","weight":135}
+{"average_duration":54,"bgg_id":9216,"display_name_en":"Goa","games_played":4184,"id":2629,"name":"goa","published_on":"2026-06-03","status":"public","weight":414}
+{"average_duration":29,"bgg_id":439685,"display_name_en":"Pacts","games_played":882,"id":2631,"name":"pacts","published_on":"2026-04-22","status":"beta","weight":12}
+{"average_duration":17,"bgg_id":453737,"display_name_en":"Sea Shells","games_played":1616,"id":2632,"name":"seashells","published_on":"2026-04-07","status":"beta","weight":18}
+{"average_duration":14,"bgg_id":414633,"display_name_en":"Digging For Dinos","games_played":3405,"id":2634,"name":"diggingfordinos","published_on":"2026-04-07","status":"beta","weight":46}
+{"average_duration":9,"bgg_id":453893,"display_name_en":"Collect","games_played":52112,"id":2635,"name":"collect","published_on":"2026-06-01","status":"public","weight":775}
+{"average_duration":10,"bgg_id":465983,"display_name_en":"Bluff King","games_played":2041,"id":2639,"name":"bluffking","published_on":"2026-03-24","status":"beta","weight":14}
+{"average_duration":33,"bgg_id":436907,"display_name_en":"Crits & Tricks","games_played":314,"id":2641,"name":"critsandtricks","premium":true,"published_on":"2026-06-15","status":"beta","weight":54}
+{"average_duration":7,"bgg_id":370597,"display_name_en":"Fugitive","games_played":23590,"id":2642,"name":"fugitive","published_on":"2026-07-06","status":"public","weight":3751}
+{"average_duration":10,"bgg_id":459295,"display_name_en":"62 Soleils d'Et\u00e9","games_played":1500,"id":2646,"name":"soixantedeuxsoleilsdete","published_on":"2026-05-26","status":"beta","weight":20}
+{"average_duration":26,"bgg_id":22950,"display_name_en":"Play Nine","games_played":1621,"id":2647,"name":"playnine","published_on":"2026-05-06","status":"beta","weight":119}
+{"average_duration":30,"bgg_id":382549,"display_name_en":"Biome","games_played":624,"id":2654,"name":"biome","published_on":"2026-06-22","status":"beta","weight":53}
+{"average_duration":5,"display_name_en":"Quatrix","games_played":726,"id":2655,"name":"quatrix","published_on":"2026-05-28","status":"beta"}
+{"average_duration":22,"bgg_id":405460,"display_name_en":"CATsle Builders","games_played":463,"id":2657,"name":"catslebuilders","published_on":"2026-05-06","status":"beta"}
+{"average_duration":46,"bgg_id":350316,"display_name_en":"Wayfarers of the South Tigris","games_played":6218,"id":2662,"name":"wayfarers","premium":true,"published_on":"2026-06-16","status":"beta","weight":1241}
+{"average_duration":14,"bgg_id":436751,"display_name_en":"Under the Leaves","games_played":6586,"id":2663,"name":"undertheleaves","published_on":"2026-04-22","status":"beta","weight":99}
+{"average_duration":46,"bgg_id":296108,"display_name_en":"Terraforming Mars: The Dice Game","games_played":5962,"id":2665,"name":"terraformingmarsthedicegame","premium":true,"published_on":"2026-06-24","status":"beta","weight":1798}
+{"average_duration":6,"bgg_id":460461,"display_name_en":"Pyramis","games_played":9705,"id":2667,"name":"pyramis","published_on":"2026-05-08","status":"public","weight":16}
+{"average_duration":50,"bgg_id":286751,"display_name_en":"Zombicide 2nd Edition","games_played":43627,"id":2670,"is_ranking_disabled":true,"name":"zombicidesecondedition","published_on":"2026-05-20","status":"beta","weight":3745}
+{"average_duration":6,"bgg_id":180602,"display_name_en":"Game of Trains","games_played":1829,"id":2673,"name":"gameoftrains","published_on":"2026-05-28","status":"beta","weight":16}
+{"average_duration":4,"bgg_id":460955,"display_name_en":"IPSO","games_played":156707,"id":2679,"name":"ipso","premium":true,"published_on":"2026-05-25","status":"public","weight":1547}
+{"average_duration":6,"bgg_id":435357,"display_name_en":"Slambo","games_played":2060,"id":2682,"name":"slambo","published_on":"2026-05-06","status":"beta","weight":13}
+{"average_duration":14,"bgg_id":452321,"display_name_en":"TomaToss","games_played":1371,"id":2688,"name":"tomatoss","published_on":"2026-05-06","status":"beta","weight":10}
+{"average_duration":9,"bgg_id":455344,"display_name_en":"Drako: Aetherya Pocket","games_played":695,"id":2691,"name":"drako","published_on":"2026-06-10","status":"beta","weight":12}
+{"average_duration":9,"bgg_id":472126,"display_name_en":"\u016anane","games_played":245,"id":2693,"name":"unane","priority":-999,"published_on":"2026-06-22","status":"public","weight":1}
+{"average_duration":9,"bgg_id":420797,"display_name_en":"Minefield","games_played":278,"id":2696,"name":"minefield","priority":-999,"published_on":"2026-06-22","status":"public","weight":2}
+{"average_duration":16,"bgg_id":362503,"display_name_en":"Bug Off","games_played":224,"id":2702,"name":"bugoff","published_on":"2026-06-22","status":"beta","weight":21}
+{"average_duration":20,"bgg_id":422219,"display_name_en":"Verdant Arizona","games_played":350,"id":2704,"name":"verdantarizona","published_on":"2026-07-03","status":"beta","weight":59}
+{"average_duration":16,"bgg_id":457283,"display_name_en":"Bunny Kingdom Town","games_played":20410,"id":2709,"name":"bunnykingdomtown","premium":true,"published_on":"2026-06-17","status":"public","weight":1465}
+{"average_duration":4,"bgg_id":432085,"display_name_en":"Palourde","games_played":956,"id":2714,"name":"palourde","published_on":"2026-05-28","status":"beta"}
+{"average_duration":7,"bgg_id":442507,"display_name_en":"\u201cRelative\u201d Space","games_played":417,"id":2717,"name":"relativespace","published_on":"2026-06-22","status":"beta","weight":9}
+{"average_duration":15,"bgg_id":463441,"display_name_en":"Flip 7: With A Vengeance","games_played":9500,"id":2718,"name":"flipsevenwithavengeance","published_on":"2026-06-24","status":"beta","weight":1724}
+{"average_duration":25,"bgg_id":447589,"display_name_en":"Jackpot: Set the Reel","games_played":1218,"id":2719,"name":"jackpotsetthereel","premium":true,"published_on":"2026-05-28","status":"beta","weight":43}
+{"average_duration":12,"bgg_id":456453,"display_name_en":"5Pairs","games_played":784,"id":2720,"name":"fivepairs","premium":true,"published_on":"2026-07-01","status":"beta","weight":139}
+{"average_duration":8,"bgg_id":435360,"display_name_en":"Waddle","games_played":949,"id":2723,"name":"waddle","published_on":"2026-06-16","status":"beta","weight":27}
+{"average_duration":3,"bgg_id":400752,"display_name_en":"Piles!","games_played":4949,"id":2736,"name":"piles","published_on":"2026-06-23","status":"beta","weight":99}
+{"average_duration":4,"bgg_id":464695,"display_name_en":"Texas Bingo","games_played":3070,"id":2742,"name":"texasbingo","published_on":"2026-06-24","status":"beta","weight":76}
+{"average_duration":40,"bgg_id":451298,"display_name_en":"Ringyo","games_played":710,"id":2756,"name":"ringyo","published_on":"2026-07-06","status":"beta","weight":304}
