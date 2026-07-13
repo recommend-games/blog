@@ -4,7 +4,7 @@ slug: spiel-des-jahres-2026-winners
 share_img: /posts/spiel-des-jahres-2026-winners/400495.jpg
 author: Markus Shepherd
 type: post
-date: 2026-07-13T21:00:00+03:00
+date: 2026-07-12T21:00:00+03:00
 tags:
   - SdJ
   - SdJ 2026
@@ -27,7 +27,9 @@ tags:
 
 The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/preistraeger2026/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/preistraeger2026/)!
 
-[The tightest race in years]({{<ref "posts/sdj_2026_3/index.md">}}) is finally decided, and for once the numbers and the jury's own words led me in the right direction rather than the crowd. This was also the first year I put my neck on the line for {{% kindersdj / %}}, courtesy of my daughters' rigorous three-trailer methodology – so let's see how everyone did.
+Did the ceremony get snappier again? No lengthy flashbacks to previous winners (only an epitaph for [Reinhold Wittig](https://www.spiel-des-jahres.de/trauer-um-spieleautor-reinhold-wittig/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/trauer-um-spieleautor-reinhold-wittig/)), no detailed lectures on the jury's work, no dragging out the announcements. The show definitely had its entertaining moments, like when [Donald X. Vaccarino](https://recommend.games/#/?designer=10525) subverted the jury's narrative about his game's critical commentary ("just a bit of fun"), or when chairman Harald Schrapers forgot what year it is ("The {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}} is…").
+
+But enough of that, let's look at the winners!
 
 
 ## {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}
@@ -35,15 +37,21 @@ The cat's out of the bag and the winners [have been announced](https://www.spiel
 {{< img src="sdj-2026" size="x300" alt="Spiel des Jahres 2026" >}}
 
 
-### {{% game 400495 %}}Dito!{{% /game %}}
+### {{% game 400495 %}}JinxO{{% /game %}}
 
-*3–7 players, 30–45 minutes, 10+ years, light (1.0)*
+*4–7 players, 30–45 minutes, 10+ years, light (1.0)*
 
-{{< img src="400495" size="x300" alt="Dito!" >}}
+{{< img src="400495" size="x360" alt="JinxO" >}}
 
 *Jinx your friend to become victorious.*
 
-I called it! Once I stripped away the myths and the tea-leaf reading, {{% game 400495 %}}Dito!{{% /game %}} – known outside Germany as JinxO – always felt like the safer bet on jury sentiment alone, even though the 'geeks never really warmed to it: a mere 8% in [our poll](https://boardgamegeek.com/thread/3728142/poll-spiel-des-jahres-2026-and-kennerspiel-des-jah), against 78% for {{% game 456440 %}}Cozy Stickerville{{% /game %}} and 14% for {{% game 462742 %}}Morty Sorty Magic Shop{{% /game %}}. Designer [Martin Ang](https://recommend.games/#/?designer=121032) becomes the first Indonesian to win {{% sdj / %}}, continuing the internationalisation kicked off by [Hisashi Hayashi](https://recommend.games/#/?designer=39436) and {{% game 413246 %}}Bomb Busters{{% /game %}} just last year.
+{{< youtube id=3l2RbN5Bfcs max-width="640px" >}}
+
+I'm proud to say that I called this one correctly. 💪 In the end this clearly was the game that convinced the jury most uniformly and hence the logical winner of {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}. After [Hisashi Hayashi](https://recommend.games/#/?designer=39436)'s win last year with {{% game 413246 %}}Bomb Busters{{% /game %}}, we have the second winner from Asia in a row – a great testamony to the internationalisation of the hobby.
+
+I wish Harald Schrapers would have skipped his remark about [Martin Ang](https://recommend.games/#/?designer=121032) being the first nominee from the "Global South" – at least to me this leave the entirely unnecessary connotation that {{% game 400495 %}}JinxO{{% /game %}} won to fulfill some kind of quota and not on its own merits. Plus, [Jordy Adan](https://recommend.games/#/?designer=109218) from Brazil was nominated in [2020]({{<ref "posts/sdj_2020_2/index.md">}}) for {{% game 263918 %}}Cartographers{{% /game %}}. That nomination was for {{% kdj %}}Kennerspiel{{% /kdj %}}, not {{% sdj %}}Spiel{{% /sdj %}}, but it contributes to Harald Schrapers' remark feeling awkward and out of place.
+
+Nonetheless, the thought of this design from Indonesia, half a world away, bringing joy to many German households this Christmas is a cause for celebration. Games connect people, both around the table and the globe.
 
 
 ## {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}
