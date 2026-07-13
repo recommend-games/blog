@@ -94,6 +94,8 @@ Overall, our family foray into the {{% kindersdj %}}Kinderspiel{{% /kindersdj %}
 
 ## Conclusion
 
-A clean scorecard for me this year: {{% game 400495 %}}Dito!{{% /game %}} for {{% sdj / %}} and {{% game 417197 %}}Rebirth{{% /game %}} for {{% kdj %}}Kennerspiel{{% /kdj %}}, both called correctly. That brings my running tally to eleven out of fourteen since [I started]({{<ref "posts/sdj_2020_3/index.md">}}), up from nine out of twelve [going into this year]({{<ref "posts/sdj_2026_3/index.md">}}). My daughters did even better on their {{% kindersdj / %}} debut, picking {{% game 435346 %}}Mooki Island{{% /game %}} correctly – a perfect 1-for-1 – though their cheeky bonus guesses for the other two awards ({{% game 456440 %}}Cozy Stickerville{{% /game %}} for {{% sdj / %}}, {{% game 454672 %}}Boss Fighters QR{{% /game %}} for {{% kdj / %}}) didn't pan out. Still, 3 out of 5 correct calls between the three of us isn't bad going for what turned out to be one of the tightest races in years, decided by the jury's convictions rather than the crowd's.
+After calling only five out of eight winners correctly in the past four year, going two for two (or three for three if I may be so bold to take credit for my daughters' pick) certainly feels good, in particular after call 2026 the tightest race in years.
 
-Roll on next year – and maybe I'll finally let my daughters have a say on the grown-ups' games too. 😉
+Both {{% sdj %}}Spiel{{% /sdj %}} and {{% kdj %}}Kennerspiel{{% /kdj %}} winning designers wrote their own personal and very different headlines — one cannot help but be charmed by them. Dr Knizia's triple is a welcome opportunity to update my [designer hall of fame]({{<ref "posts/designer_hall_of_fame/index.md">}}), so look out for the article in the next few weeks. 🤓
+
+Roll on next year — and maybe I'll finally let my daughters have a say on the grown-ups' games too. 😉
