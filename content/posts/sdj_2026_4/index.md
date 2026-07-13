@@ -63,11 +63,13 @@ Nonetheless, the thought of this design from Indonesia, half a world away, bring
 
 *2–4 players, 45–60 minutes, 10+ years, medium light (2.0)*
 
-{{< img src="417197" size="x300" alt="Rebirth" >}}
+{{< img src="417197" size="x360" alt="Rebirth" >}}
 
 *Rebuild old lands in a lush, hopeful future.*
 
-The consensus candidate delivered. {{% game 417197 %}}Rebirth{{% /game %}} topped the jury reviews, the R.G recommendation score and the Bayesian rating, and the 'geeks agreed with 54% of [our poll](https://boardgamegeek.com/thread/3728142/poll-spiel-des-jahres-2026-and-kennerspiel-des-jah) – there was really no other likely outcome once all the numbers pointed the same way, leaving the more polarising {{% game 454672 %}}Boss Fighters QR{{% /game %}} (9%) and {{% game 425549 %}}Moon Colony Bloodbath{{% /game %}} (37%) to share the runner-up spots. [Dr Reiner Knizia](https://recommend.games/#/?designer=2) completes the triple after his double in 2008 ({{% sdj / %}} for Keltis, {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} for {{% game 33643 %}}Whoowasit?{{% /game %}}), a fitting capstone to a design career that's put more games on {{% sdj / %}} longlists than anyone else.
+{{< youtube id=J_UpbAUFtx0 max-width="640px" >}}
+
+[Reiner Knizia](https://recommend.games/#/?designer=2), a bona fide legend of the hobby, completed the triple after winning the double in 2008: {{% sdj / %}} for Keltis and {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} for {{% game 33643 %}}Whoowasit?{{% /game %}}. I thought that his acceptance speech displayed his own brand of mixing confidence with humility when he first broke out into a lengthy lecture on game design, but then concluded with honest kindness towards his fellow nominees and appreciation for the jury's work.
 
 
 ## {{% kindersdj %}}Kinderspiel des Jahres 2026{{% /kindersdj %}}
