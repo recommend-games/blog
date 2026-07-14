@@ -29,7 +29,7 @@ The cat's out of the bag and the winners [have been announced](https://www.spiel
 
 Did the ceremony get snappier again? No lengthy flashbacks to previous winners (only an epitaph for [Reinhold Wittig](https://www.spiel-des-jahres.de/trauer-um-spieleautor-reinhold-wittig/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/trauer-um-spieleautor-reinhold-wittig/)), no detailed lectures on the jury's work, no dragging out the announcements. The show definitely had its entertaining moments, like when [Donald X. Vaccarino](https://recommend.games/#/?designer=10525) subverted the jury's narrative about his game's critical commentary ("just a bit of fun"), or when chairman Harald Schrapers forgot what year it is ("The {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}} is…").
 
-If you want more behind the scenes feeling, I highly recommend listening to [5G4D's coverage](https://5g4d.com/podcasts/spiel-des-jahres-2026) [🗄️](https://web.archive.org/web/https://5g4d.com/podcasts/spiel-des-jahres-2026)!
+If you want more behind-the-scenes feeling, I highly recommend listening to [5G4D's coverage](https://5g4d.com/podcasts/spiel-des-jahres-2026) [🗄️](https://web.archive.org/web/https://5g4d.com/podcasts/spiel-des-jahres-2026)!
 
 But enough of that, let's look at the winners!
 
@@ -51,7 +51,7 @@ But enough of that, let's look at the winners!
 
 I'm proud to say that I called this one correctly. 💪 In the end this clearly was the game that convinced the jury most uniformly and hence the logical winner of {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}. After [Hisashi Hayashi](https://recommend.games/#/?designer=39436)'s win last year with {{% game 413246 %}}Bomb Busters{{% /game %}}, we have the second winner from Asia in a row – a great testament to the internationalisation of the hobby.
 
-I wish Harald Schrapers would have skipped his remark about [Martin Ang](https://recommend.games/#/?designer=121032) being the first nominee from the "Global South" – at least to me this insinuates, entirely unnecessarily, that {{% game 400495 %}}JinxO{{% /game %}} won to fulfill some kind of quota and not on its own merits. Plus, [Jordy Adan](https://recommend.games/#/?designer=109218) from Brazil was nominated in [2020]({{<ref "posts/sdj_2020_2/index.md">}}) for {{% game 263918 %}}Cartographers{{% /game %}}. That nomination was for {{% kdj %}}Kennerspiel{{% /kdj %}}, not {{% sdj %}}Spiel{{% /sdj %}}, but it contributes to Harald Schrapers' remark feeling awkward and out of place.
+I wish Harald Schrapers would have skipped his remark about [Martin Ang](https://recommend.games/#/?designer=121032) being the first nominee from the "Global South" – at least to me this insinuates, entirely unnecessarily, that {{% game 400495 %}}JinxO{{% /game %}} won to fulfil some kind of quota and not on its own merits. Plus, [Jordy Adan](https://recommend.games/#/?designer=109218) from Brazil was nominated in [2020]({{<ref "posts/sdj_2020_2/index.md">}}) for {{% game 263918 %}}Cartographers{{% /game %}}. That nomination was for {{% kdj %}}Kennerspiel{{% /kdj %}}, not {{% sdj %}}Spiel{{% /sdj %}}, but it contributes to Harald Schrapers' remark feeling awkward and out of place.
 
 Nonetheless, the thought of this design from Indonesia, half a world away, bringing joy to many German households this Christmas is a cause for celebration. Games connect people, both around the table and the globe.
 
@@ -71,7 +71,7 @@ Nonetheless, the thought of this design from Indonesia, half a world away, bring
 
 {{< youtube id=J_UpbAUFtx0 max-width="640px" >}}
 
-[Reiner Knizia](https://recommend.games/#/?designer=2), a bona fide legend of the hobby, completed the triple after winning the double in 2008: {{% sdj / %}} for Keltis and {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} for {{% game 33643 %}}Whoowasit?{{% /game %}}. I thought that his acceptance speech displayed his own brand of mixing confidence with humility when he first broke out into a lengthy lecture on game design, but then concluded with honest kindness towards his fellow nominees and appreciation for the jury's work.
+[Reiner Knizia](https://recommend.games/#/?designer=2), a bona fide legend of the hobby, completed the triple after winning the double in 2008: {{% sdj / %}} for Keltis and {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} for {{% game 33643 %}}Whoowasit?{{% /game %}}. I thought that his acceptance speech displayed his own brand of mixing confidence with humility when he first launched into a lengthy lecture on game design, but then concluded with honest kindness towards his fellow nominees and appreciation for the jury's work.
 
 
 ## {{% kindersdj %}}Kinderspiel des Jahres 2026{{% /kindersdj %}}
@@ -89,7 +89,7 @@ Nonetheless, the thought of this design from Indonesia, half a world away, bring
 
 {{< youtube id=EzhJcgO4_-8 max-width="640px" >}}
 
-My daughters were right – {{% game 435346 %}}Mooki Island{{% /game %}} is this year's most exciting children's game. 🤩 They were so happy about their favourite winning that they were jumping up and down on the couch and asking when they'd get the game, so I had to order it still during the stream – before stocks run out… 😅
+My daughters were right – {{% game 435346 %}}Mooki Island{{% /game %}} is this year's most exciting children's game. 🤩 They were so happy about their favourite winning that they were jumping up and down on the couch and asking when they'd get the game, so I still had to order it during the stream – before stocks run out… 😅
 
 Overall, our family foray into the {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} proved successful, so I'll try again next year. 🥰
 
