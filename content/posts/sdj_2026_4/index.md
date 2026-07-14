@@ -89,7 +89,7 @@ Nonetheless, the thought of this design from Indonesia, half a world away, bring
 
 {{< youtube id=EzhJcgO4_-8 max-width="640px" >}}
 
-My daughters were right – {{% game 435346 %}}Mooki Island{{% /game %}} is this year's most exciting children's game. 🤩 They were so happy about their favourite winning that they were jumping up and down the couch and asking when they get the game, so I had to order it still during the stream – before stocks run out… 😅
+My daughters were right – {{% game 435346 %}}Mooki Island{{% /game %}} is this year's most exciting children's game. 🤩 They were so happy about their favourite winning that they were jumping up and down on the couch and asking when they'd get the game, so I had to order it still during the stream – before stocks run out… 😅
 
 Overall, our family foray into the {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} proved successful, so I'll try again next year. 🥰
 
@@ -98,6 +98,6 @@ Overall, our family foray into the {{% kindersdj %}}Kinderspiel{{% /kindersdj %}
 
 After calling only five out of eight winners correctly in the past four years, going two for two (or three for three if I may be so bold to take credit for my daughters' pick) certainly feels good, in particular after calling 2026 the tightest race in years.
 
-Both {{% sdj %}}Spiel{{% /sdj %}} and {{% kdj %}}Kennerspiel{{% /kdj %}} winning designers wrote their own personal and very different headlines — one cannot help but be charmed by them. Dr Knizia's triple is a welcome opportunity to update my [designer hall of fame]({{<ref "posts/designer_hall_of_fame/index.md">}}), so look out for the article in the next few weeks. 🤓
+Both {{% sdj %}}Spiel{{% /sdj %}} and {{% kdj %}}Kennerspiel{{% /kdj %}} winning designers wrote their own personal and very different headlines – one cannot help but be charmed by them. Dr Knizia's triple is a welcome opportunity to update my [designer hall of fame]({{<ref "posts/designer_hall_of_fame/index.md">}}), so look out for the article in the next few weeks. 🤓
 
-Roll on next year — and maybe I'll finally let my daughters have a say on the grown-ups' games too. 😉
+Roll on next year – and maybe I'll finally let my daughters have a say on the grown-ups' games too. 😉
