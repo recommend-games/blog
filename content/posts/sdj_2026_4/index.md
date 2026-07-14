@@ -29,6 +29,8 @@ The cat's out of the bag and the winners [have been announced](https://www.spiel
 
 Did the ceremony get snappier again? No lengthy flashbacks to previous winners (only an epitaph for [Reinhold Wittig](https://www.spiel-des-jahres.de/trauer-um-spieleautor-reinhold-wittig/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/trauer-um-spieleautor-reinhold-wittig/)), no detailed lectures on the jury's work, no dragging out the announcements. The show definitely had its entertaining moments, like when [Donald X. Vaccarino](https://recommend.games/#/?designer=10525) subverted the jury's narrative about his game's critical commentary ("just a bit of fun"), or when chairman Harald Schrapers forgot what year it is ("The {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}} is…").
 
+If you want more behind the scenes feeling, I highly recommend listening to [5G4D's coverage](https://5g4d.com/podcasts/spiel-des-jahres-2026) [🗄️](https://web.archive.org/web/https://5g4d.com/podcasts/spiel-des-jahres-2026)!
+
 But enough of that, let's look at the winners!
 
 
