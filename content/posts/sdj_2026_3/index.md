@@ -25,6 +25,7 @@ tags:
   - Kennerspiel des Jahres 2026 nominations
   - Cozy Stickerville
   - JinxO
+  - 'Dito!'
   - Morty Sorty Magic Shop
   - Boss Fighters QR
   - Moon Colony Bloodbath
