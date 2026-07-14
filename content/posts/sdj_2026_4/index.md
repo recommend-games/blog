@@ -49,9 +49,9 @@ But enough of that, let's look at the winners!
 
 {{< youtube id=3l2RbN5Bfcs max-width="640px" >}}
 
-I'm proud to say that I called this one correctly. 💪 In the end this clearly was the game that convinced the jury most uniformly and hence the logical winner of {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}. After [Hisashi Hayashi](https://recommend.games/#/?designer=39436)'s win last year with {{% game 413246 %}}Bomb Busters{{% /game %}}, we have the second winner from Asia in a row – a great testamony to the internationalisation of the hobby.
+I'm proud to say that I called this one correctly. 💪 In the end this clearly was the game that convinced the jury most uniformly and hence the logical winner of {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}. After [Hisashi Hayashi](https://recommend.games/#/?designer=39436)'s win last year with {{% game 413246 %}}Bomb Busters{{% /game %}}, we have the second winner from Asia in a row – a great testament to the internationalisation of the hobby.
 
-I wish Harald Schrapers would have skipped his remark about [Martin Ang](https://recommend.games/#/?designer=121032) being the first nominee from the "Global South" – at least to me this leave the entirely unnecessary connotation that {{% game 400495 %}}JinxO{{% /game %}} won to fulfill some kind of quota and not on its own merits. Plus, [Jordy Adan](https://recommend.games/#/?designer=109218) from Brazil was nominated in [2020]({{<ref "posts/sdj_2020_2/index.md">}}) for {{% game 263918 %}}Cartographers{{% /game %}}. That nomination was for {{% kdj %}}Kennerspiel{{% /kdj %}}, not {{% sdj %}}Spiel{{% /sdj %}}, but it contributes to Harald Schrapers' remark feeling awkward and out of place.
+I wish Harald Schrapers would have skipped his remark about [Martin Ang](https://recommend.games/#/?designer=121032) being the first nominee from the "Global South" – at least to me this leaves the entirely unnecessary connotation that {{% game 400495 %}}JinxO{{% /game %}} won to fulfill some kind of quota and not on its own merits. Plus, [Jordy Adan](https://recommend.games/#/?designer=109218) from Brazil was nominated in [2020]({{<ref "posts/sdj_2020_2/index.md">}}) for {{% game 263918 %}}Cartographers{{% /game %}}. That nomination was for {{% kdj %}}Kennerspiel{{% /kdj %}}, not {{% sdj %}}Spiel{{% /sdj %}}, but it contributes to Harald Schrapers' remark feeling awkward and out of place.
 
 Nonetheless, the thought of this design from Indonesia, half a world away, bringing joy to many German households this Christmas is a cause for celebration. Games connect people, both around the table and the globe.
 
@@ -96,7 +96,7 @@ Overall, our family foray into the {{% kindersdj %}}Kinderspiel{{% /kindersdj %}
 
 ## Conclusion
 
-After calling only five out of eight winners correctly in the past four year, going two for two (or three for three if I may be so bold to take credit for my daughters' pick) certainly feels good, in particular after call 2026 the tightest race in years.
+After calling only five out of eight winners correctly in the past four years, going two for two (or three for three if I may be so bold to take credit for my daughters' pick) certainly feels good, in particular after calling 2026 the tightest race in years.
 
 Both {{% sdj %}}Spiel{{% /sdj %}} and {{% kdj %}}Kennerspiel{{% /kdj %}} winning designers wrote their own personal and very different headlines — one cannot help but be charmed by them. Dr Knizia's triple is a welcome opportunity to update my [designer hall of fame]({{<ref "posts/designer_hall_of_fame/index.md">}}), so look out for the article in the next few weeks. 🤓
 
