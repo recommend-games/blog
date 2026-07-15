@@ -445,7 +445,7 @@
 {"average_duration":9,"bgg_id":182704,"display_name_en":"SteamRollers","games_played":18912,"id":1496,"name":"steamrollers","published_on":"2022-07-30","status":"public","weight":7}
 {"average_duration":15,"bgg_id":275044,"display_name_en":"Glow","games_played":81391,"id":1497,"name":"glow","premium":true,"published_on":"2022-04-04","status":"public","weight":78}
 {"average_duration":64,"bgg_id":152,"display_name_en":"M\u00fc","games_played":1001,"id":1498,"name":"mue","published_on":"2023-05-16","status":"beta"}
-{"average_duration":10,"bgg_id":347086,"display_name_en":"Lady's Choice","games_played":6670,"id":1499,"name":"ladyschoice","published_on":"2021-10-17","status":"beta","weight":1}
+{"average_duration":11,"bgg_id":347086,"display_name_en":"Lady's Choice","games_played":6660,"id":1499,"name":"ladyschoice","published_on":"2021-10-17","status":"beta"}
 {"average_duration":4,"bgg_id":1295,"display_name_en":"Pente","games_played":58185,"id":1500,"name":"pente","published_on":"2022-01-25","status":"public","weight":5}
 {"average_duration":4,"display_name_en":"Silo","games_played":6753,"id":1501,"name":"silo","published_on":"2021-11-16","status":"public","weight":1}
 {"average_duration":25,"bgg_id":205398,"display_name_en":"Citadels","games_played":99214,"id":1503,"name":"citadels","published_on":"2024-04-23","status":"beta","weight":365}
@@ -1248,7 +1248,7 @@
 {"average_duration":11,"bgg_id":418825,"display_name_en":"Scream Park","games_played":1513,"id":2552,"name":"screampark","published_on":"2026-02-02","status":"beta","weight":5}
 {"average_duration":11,"bgg_id":411567,"display_name_en":"The Gang","games_played":125197,"id":2553,"is_ranking_disabled":true,"name":"thegang","premium":true,"published_on":"2026-05-20","status":"public","weight":3376}
 {"average_duration":48,"bgg_id":368126,"display_name_en":"Arabella","games_played":360,"id":2554,"name":"arabella","published_on":"2026-03-09","status":"beta","weight":11}
-{"average_duration":6,"bgg_id":10527,"display_name_en":"Gyges","games_played":1115,"id":2555,"name":"gygesdeluxe","published_on":"2026-02-23","status":"beta","weight":6}
+{"average_duration":5,"bgg_id":10527,"display_name_en":"Gyges","games_played":543,"id":2555,"name":"gygesdeluxe","published_on":"2026-02-23","status":"beta","weight":14}
 {"average_duration":22,"bgg_id":439520,"display_name_en":"Dragonarium","games_played":1235,"id":2556,"name":"dragonarium","published_on":"2026-02-25","status":"beta","weight":3}
 {"average_duration":31,"bgg_id":343433,"display_name_en":"T\u00edr na n\u00d3g","games_played":2408,"id":2559,"name":"tirnanog","published_on":"2026-07-08","status":"public","weight":1324}
 {"average_duration":35,"bgg_id":346965,"display_name_en":"Azul: Queen's Garden","games_played":27645,"id":2560,"name":"azulqueensgarden","premium":true,"published_on":"2026-07-01","status":"public","weight":11726}
