@@ -1,8 +1,8 @@
 team_id,team_name,polymarket_yes_price,polymarket_p_winner,polymarket_decimal_odds
-FR,France,0.376500,0.384184,2.6029
-EN,England,0.211500,0.215816,4.6336
-ES,Spain,0.199500,0.203571,4.9123
-AR,Argentina,0.192500,0.196429,5.0909
+ES,Spain,0.581500,0.577171,1.7326
+EN,England,0.227500,0.225806,4.4286
+AR,Argentina,0.198500,0.197022,5.0756
+FR,France,0.000000,0.000000,nan
 BR,Brazil,0.000000,0.000000,nan
 DE,Germany,0.000000,0.000000,nan
 PT,Portugal,0.000000,0.000000,nan
