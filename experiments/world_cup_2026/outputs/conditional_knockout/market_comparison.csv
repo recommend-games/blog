@@ -1,7 +1,7 @@
 team_id,team_name,group,elo,model_p_winner,market_p_winner,value_edge,value_ratio,model_decimal_odds,market_decimal_odds,model_rank,market_rank,rank_difference
-ES,Spain,H,2232,0.645570,0.577171,0.068399,1.1185,1.5490,1.7326,1,1,0
-AR,Argentina,J,2177,0.257400,0.197022,0.060378,1.3065,3.8850,5.0756,2,3,1
-FR,France,I,2121,0.000000,0.000000,0.000000,nan,nan,nan,4,4,0
+AR,Argentina,J,2200,0.442030,0.417588,0.024442,1.0585,2.2623,2.3947,2,2,0
+FR,France,I,2121,0.000000,0.000000,0.000000,nan,nan,nan,3,3,0
+EN,England,L,2074,0.000000,0.000000,0.000000,nan,nan,nan,4,4,0
 CO,Colombia,K,2003,0.000000,0.000000,0.000000,nan,nan,nan,5,5,0
 PT,Portugal,K,1995,0.000000,0.000000,0.000000,nan,nan,nan,6,6,0
 BR,Brazil,C,1993,0.000000,0.000000,0.000000,nan,nan,nan,7,7,0
@@ -46,4 +46,4 @@ NZ,New Zealand,G,1534,0.000000,0.000000,0.000000,nan,nan,nan,45,45,0
 HT,Haiti,C,1517,0.000000,0.000000,0.000000,nan,nan,nan,46,46,0
 CW,Curaçao,E,1438,0.000000,0.000000,0.000000,nan,nan,nan,47,47,0
 QA,Qatar,B,1411,0.000000,0.000000,0.000000,nan,nan,nan,48,48,0
-EN,England,L,2097,0.097020,0.225806,-0.128786,0.4297,10.3072,4.4286,3,2,-1
+ES,Spain,H,2232,0.557970,0.582412,-0.024442,0.9580,1.7922,1.7170,1,1,0

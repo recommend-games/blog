@@ -60,8 +60,6 @@ W98,winner,98,"",ES,Spain,1.0,10000000
 W99,winner,99,"",EN,England,1.0,10000000
 W100,winner,100,"",AR,Argentina,1.0,10000000
 W101,winner,101,"",ES,Spain,1.0,10000000
-W102,winner,102,"",AR,Argentina,0.64176,10000000
-W102,winner,102,"",EN,England,0.35824,10000000
-W104,winner,104,"",ES,Spain,0.64557,10000000
-W104,winner,104,"",AR,Argentina,0.2574,10000000
-W104,winner,104,"",EN,England,0.09702,10000000
+W102,winner,102,"",AR,Argentina,1.0,10000000
+W104,winner,104,"",ES,Spain,0.55797,10000000
+W104,winner,104,"",AR,Argentina,0.44203,10000000

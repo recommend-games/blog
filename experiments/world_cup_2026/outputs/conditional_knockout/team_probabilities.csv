@@ -1,8 +1,8 @@
 team_id,team_name,group,elo,fifa_ranking,p_group_winner,p_qualify_group,p_reach_r32,p_reach_r16,p_reach_qf,p_reach_sf,p_reach_final,n_wins,p_winner,implied_decimal_odds,elo_rank,title_probability_rank,rank_difference
-ES,Spain,H,2232,1,1.0,1.0,1.0,1.0,1.0,1.0,1.0,6455743,0.64557,1.55,1,1,0
-AR,Argentina,J,2177,2,1.0,1.0,1.0,1.0,1.0,1.0,0.64176,2574032,0.2574,3.88,2,2,0
-EN,England,L,2097,4,1.0,1.0,1.0,1.0,1.0,1.0,0.35824,970225,0.09702,10.31,4,3,1
+ES,Spain,H,2232,1,1.0,1.0,1.0,1.0,1.0,1.0,1.0,5579737,0.55797,1.79,1,1,0
+AR,Argentina,J,2200,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,4420263,0.44203,2.26,2,2,0
 FR,France,I,2121,3,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0,0.0,NaN,3,,
+EN,England,L,2074,4,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0,0.0,NaN,4,,
 CO,Colombia,K,2003,13,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0,0.0,NaN,5,,
 PT,Portugal,K,1995,6,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0,0.0,NaN,6,,
 BR,Brazil,C,1993,5,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0,0.0,NaN,7,,
