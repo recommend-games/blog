@@ -1,7 +1,8 @@
 team_id,team_name,group,elo,model_p_winner,market_p_winner,value_edge,value_ratio,model_decimal_odds,market_decimal_odds,model_rank,market_rank,rank_difference
-AR,Argentina,J,2200,0.442030,0.417588,0.024442,1.0585,2.2623,2.3947,2,2,0
-FR,France,I,2121,0.000000,0.000000,0.000000,nan,nan,nan,3,3,0
-EN,England,L,2074,0.000000,0.000000,0.000000,nan,nan,nan,4,4,0
+ES,Spain,H,2259,1.000000,1.000000,0.000000,1.0000,1.0000,1.0000,1,1,0
+AR,Argentina,J,2173,0.000000,0.000000,0.000000,nan,nan,nan,2,2,0
+EN,England,L,2125,0.000000,0.000000,0.000000,nan,nan,nan,3,3,0
+FR,France,I,2070,0.000000,0.000000,0.000000,nan,nan,nan,4,4,0
 CO,Colombia,K,2003,0.000000,0.000000,0.000000,nan,nan,nan,5,5,0
 PT,Portugal,K,1995,0.000000,0.000000,0.000000,nan,nan,nan,6,6,0
 BR,Brazil,C,1993,0.000000,0.000000,0.000000,nan,nan,nan,7,7,0
@@ -41,9 +42,8 @@ SA,Saudi Arabia,H,1596,0.000000,0.000000,0.000000,nan,nan,nan,40,40,0
 GH,Ghana,L,1570,0.000000,0.000000,0.000000,nan,nan,nan,41,41,0
 TN,Tunisia,F,1562,0.000000,0.000000,0.000000,nan,nan,nan,42,42,0
 IQ,Iraq,I,1561,0.000000,0.000000,0.000000,nan,nan,nan,43,43,0
-ZA,South Africa,A,1560,0.000000,0.000000,0.000000,nan,nan,nan,44,44,0
+ZA,South Africa,A,1559,0.000000,0.000000,0.000000,nan,nan,nan,44,44,0
 NZ,New Zealand,G,1534,0.000000,0.000000,0.000000,nan,nan,nan,45,45,0
 HT,Haiti,C,1517,0.000000,0.000000,0.000000,nan,nan,nan,46,46,0
 CW,Curaçao,E,1438,0.000000,0.000000,0.000000,nan,nan,nan,47,47,0
 QA,Qatar,B,1411,0.000000,0.000000,0.000000,nan,nan,nan,48,48,0
-ES,Spain,H,2232,0.557970,0.582412,-0.024442,0.9580,1.7922,1.7170,1,1,0
