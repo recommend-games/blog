@@ -28,11 +28,12 @@ PHASE_LABELS = {
     "group_stage": "Group stage",
     "knockout": "Knockout",
 }
-DEFAULT_TEAMS = ["ES", "AR", "FR"]
+DEFAULT_TEAMS = ["ES", "AR", "FR", "EN"]
 TEAM_COLORS = {
     "ES": "#e63946",  # Spain
     "AR": "#457b9d",  # Argentina
     "FR": "#8d99ae",  # France — secondary storyline, muted
+    "EN": "#2a9d8f",  # England — pre-tournament #4, semifinalist
 }
 
 
@@ -65,11 +66,26 @@ def _snapshot_order(rows: list[dict[str, str]]) -> list[tuple[str, str]]:
     return seen
 
 
+def _drop_resolved(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    """Drop snapshots where the tournament is already fully decided (some
+    team's model probability has collapsed to 1.0). Those points are
+    confirmations, not forecasts, and their trivial 0%/100% values would
+    otherwise flatten the rest of the trajectory against the axis.
+    """
+    resolved = {
+        (r["phase"], r["commit"])
+        for r in rows
+        if float(r["model_p_winner"]) >= 0.999
+    }
+    return [r for r in rows if (r["phase"], r["commit"]) not in resolved]
+
+
 def plot_probability_trajectory(
     rows: list[dict[str, str]],
     out_dir: Path,
     team_ids: list[str],
 ) -> None:
+    rows = _drop_resolved(rows)
     snapshots = _snapshot_order(rows)
     index = {key: i for i, key in enumerate(snapshots)}
 
@@ -97,6 +113,13 @@ def plot_probability_trajectory(
         xs, model_ys, market_ys = zip(
             *sorted(zip(data["x"], data["model"], data["market"]))
         )
+        # Stop the line once the team is mathematically eliminated (model
+        # probability collapses to 0) instead of trailing a flat zero tail.
+        if 0.0 in model_ys:
+            cut = model_ys.index(0.0)
+            xs, model_ys, market_ys = xs[:cut], model_ys[:cut], market_ys[:cut]
+        if not xs:
+            continue
         peak = max(peak, max(model_ys), max(market_ys))
         color = TEAM_COLORS.get(tid, "#cccccc")
         label = team_names.get(tid, tid)
