@@ -72,7 +72,7 @@ The spine of [part 2c]({{<ref "posts/elo_2c/index.md">}}) was a single number: �
 
 {{< img src="probability_edge" alt="Line chart of model minus market title probability, in percentage points, for Spain, Argentina, France and England across the whole tournament, with a zero line marking agreement" >}}
 
-🇪🇸 Spain and 🇦🇷 Argentina sit above the zero line for almost the entire tournament — the model liked both of them more than the market did, throughout. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England and 🇫🇷 France sit below it almost as consistently — the market was the more optimistic side on both of them, and stayed that way as 🇫🇷 France's own run to the semi-final pulled its market price up faster than the model's. The numbers at the three moments this series called out:
+🇪🇸 Spain and 🇦🇷 Argentina sit above the zero line for almost the entire tournament — the model liked both more than the market did, from the very first snapshot to deep into the knockout stage. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England and 🇫🇷 France sit below it almost as consistently — the market was the more optimistic side on both of them, and stayed that way as 🇫🇷 France's own run to the semi-final pulled its market price up faster than the model's. The numbers at the three moments this series called out:
 
 | Snapshot | Model | Market | Edge |
 |:---------|------:|-------:|-----:|
