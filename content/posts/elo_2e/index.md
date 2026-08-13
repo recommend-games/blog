@@ -18,9 +18,9 @@ I called it in [part 2c]({{<ref "posts/elo_2c/index.md">}}), back in June, at **
 
 ## The whole tournament, one chart
 
-Every market_comparison.csv this project ever wrote is sitting in git history, so instead of describing the arc from memory I went and reconstructed it — 42 forecast snapshots, pre-tournament through the final whistle, model and market side by side for the teams that mattered most.
+Every market_comparison.csv this project ever wrote is sitting in git history, so instead of describing the arc from memory I went and reconstructed it — 42 forecast snapshots, pre-tournament through the final whistle, tracking the model's own title probability for the teams that mattered most.
 
-{{< img src="probability_trajectory" alt="Line chart of model versus market title probability for Spain, Argentina, France and England across the whole tournament, from pre-tournament through the knockout stage" >}}
+{{< img src="probability_trajectory" alt="Line chart of the model's title probability for Spain, Argentina, France and England across the whole tournament, from pre-tournament through the knockout stage" >}}
 
 The numbers, at the three moments that count:
 
@@ -68,7 +68,11 @@ Four for four. The simulator, as documented back in [part 2c]({{<ref "posts/elo_
 
 > **Disclaimer**: This section discusses betting odds for the purpose of statistical comparison and analysis. It is not intended to promote gambling or serve as betting advice. Please gamble responsibly and be aware of your local laws and age restrictions.
 
-The spine of [part 2c]({{<ref "posts/elo_2c/index.md">}}) was a single number: 🇪🇸 Spain's **+19.3pp** edge over Polymarket, the strongest model-vs-market disagreement this blog had ever published. [Part 2d]({{<ref "posts/elo_2d/index.md">}}) found it had shrunk to +14.2pp as both sides moved toward each other. Here's the full arc:
+The spine of [part 2c]({{<ref "posts/elo_2c/index.md">}}) was a single number: 🇪🇸 Spain's **+19.3pp** edge over Polymarket, the strongest model-vs-market disagreement this blog had ever published. [Part 2d]({{<ref "posts/elo_2d/index.md">}}) found it had shrunk to +14.2pp as both sides moved toward each other. Here's the full arc — model's title probability minus the market's, for the same four teams, over the same 42 snapshots:
+
+{{< img src="probability_edge" alt="Line chart of model minus market title probability, in percentage points, for Spain, Argentina, France and England across the whole tournament, with a zero line marking agreement" >}}
+
+🇪🇸 Spain and 🇦🇷 Argentina sit above the zero line for almost the entire tournament — the model liked both of them more than the market did, throughout. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England and 🇫🇷 France sit below it almost as consistently — the market was the more optimistic side on both of them, and stayed that way as 🇫🇷 France's own run to the semi-final pulled its market price up faster than the model's. The numbers at the three moments this series called out:
 
 | Snapshot | Model | Market | Edge |
 |:---------|------:|-------:|-----:|
