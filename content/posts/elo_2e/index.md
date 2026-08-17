@@ -5,7 +5,7 @@ slug: world-cup-2026-final
 share_img: /posts/world-cup-2026-final/probability_trajectory_share.png
 author: Markus Shepherd
 type: post
-date: 2026-07-24T11:00:00+03:00
+date: 2026-07-19T18:00:00-04:00
 tags:
   - Elo rating
   - Football
@@ -53,7 +53,7 @@ None of the five is a blowout misprediction — every losing favourite sat somew
 
 ## The literal penalty shootout
 
-This series has been promising to call its finale "the penalty shootout" since [part 2d]({{<ref "posts/elo_2d/index.md">}}), and the actual final — 1–0, settled in normal time — never needed one. But four knockout matches elsewhere in the bracket did, and the pattern is too clean to leave out: **every single shootout of the tournament was won by the side Elo rated the underdog.**[^shootout-note]
+This series has been promising to call its finale "the penalty shootout" since [part 2d]({{<ref "posts/elo_2d/index.md">}}), and the actual final — 1–0, settled in extra time — never needed one. But four knockout matches elsewhere in the bracket did, and the pattern is too clean to leave out: **every single shootout of the tournament was won by the side Elo rated the underdog.**[^shootout-note]
 
 | Match | 90-minute score | Model favoured | Shootout winner |
 |:------|:---------------:|:---------------|:-----------------|
