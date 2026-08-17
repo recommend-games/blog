@@ -79,22 +79,29 @@ def main() -> None:
         help=(
             "Follow the actual bracket where known (refreshed Elo, played "
             "group standings and knockout results) and the modal favourite "
-            "beyond it; write to outputs/conditional/"
+            "beyond it; write to outputs/{tag}/"
         ),
+    )
+    parser.add_argument(
+        "--tag",
+        default="conditional",
+        metavar="TAG",
+        help="Output subdirectory tag for the conditional run (default: 'conditional'). "
+             "Use e.g. 'conditional_r32' to preserve earlier conditional outputs.",
     )
     args = parser.parse_args()
 
     if args.conditional:
-        teams = load_data.load_teams(config.TEAMS_CONDITIONAL_CSV)
-        group_probs_path = config.OUTPUTS_CONDITIONAL / "group_probabilities.csv"
-        output = config.OUTPUTS_CONDITIONAL / "knockout_score_predictions.csv"
+        cpaths = config.conditional_paths(args.tag)
+        teams = load_data.load_teams(cpaths.teams_csv)
+        group_probs_path = cpaths.outputs / "group_probabilities.csv"
+        output = cpaths.outputs / "knockout_score_predictions.csv"
     else:
         teams = load_data.load_teams()
         group_probs_path = config.OUTPUTS / "group_probabilities.csv"
         output = config.OUTPUTS / "knockout_score_predictions.csv"
 
     knockout = load_data.load_knockout_slots()
-    grp_probs = pl.read_csv(group_probs_path)
 
     by_slot = {row["group_slot"]: row for row in teams.iter_rows(named=True)}
     slot_by_team_id = {
@@ -114,21 +121,30 @@ def main() -> None:
             actual_ko_winner[row["match_id"]] = slot_by_team_id[row["winner"]]
             actual_ko_score[row["match_id"]] = (row["home_goals"], row["away_goals"])
 
-    # Modal resolution (used wholesale before the group stage completes, and for
-    # every slot beyond the played front).
+    # Modal resolution — only needed before the group stage is fully pinned.
+    # When r32_actual is set, all bracket slots are resolved from actual standings
+    # and group_probabilities.csv is never consulted.
     most_likely_slot: dict[str, str] = {}
     best_third_p: dict[str, float] = {}
-    for group in "ABCDEFGHIJKL":
-        grp_rows = grp_probs.filter(pl.col("group") == group).rows(named=True)
-        most_likely_slot[f"1{group}"] = slot_by_team_id[
-            max(grp_rows, key=lambda r: r["p_finish_1st"])["team_id"]
-        ]
-        most_likely_slot[f"2{group}"] = slot_by_team_id[
-            max(grp_rows, key=lambda r: r["p_finish_2nd"])["team_id"]
-        ]
-        third_best = max(grp_rows, key=lambda r: r["p_finish_3rd"])
-        most_likely_slot[f"3{group}"] = slot_by_team_id[third_best["team_id"]]
-        best_third_p[group] = third_best["p_finish_3rd"]
+    if r32_actual is None:
+        if not group_probs_path.exists():
+            raise SystemExit(
+                f"{group_probs_path} not found.\n"
+                "Run wc26-simulate first, or pin all 72 group results so the bracket "
+                "can be resolved directly from results.csv without simulation output."
+            )
+        grp_probs = pl.read_csv(group_probs_path)
+        for group in "ABCDEFGHIJKL":
+            grp_rows = grp_probs.filter(pl.col("group") == group).rows(named=True)
+            most_likely_slot[f"1{group}"] = slot_by_team_id[
+                max(grp_rows, key=lambda r: r["p_finish_1st"])["team_id"]
+            ]
+            most_likely_slot[f"2{group}"] = slot_by_team_id[
+                max(grp_rows, key=lambda r: r["p_finish_2nd"])["team_id"]
+            ]
+            third_best = max(grp_rows, key=lambda r: r["p_finish_3rd"])
+            most_likely_slot[f"3{group}"] = slot_by_team_id[third_best["team_id"]]
+            best_third_p[group] = third_best["p_finish_3rd"]
 
     advancing: dict[int, str] = {}  # match_id -> slot that goes through
 

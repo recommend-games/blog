@@ -1,0 +1,49 @@
+team_id,team_name,group,elo,model_p_winner,market_p_winner,value_edge,value_ratio,model_decimal_odds,market_decimal_odds,model_rank,market_rank,rank_difference
+ES,Spain,H,2259,1.000000,1.000000,0.000000,1.0000,1.0000,1.0000,1,1,0
+AR,Argentina,J,2173,0.000000,0.000000,0.000000,nan,nan,nan,2,2,0
+EN,England,L,2125,0.000000,0.000000,0.000000,nan,nan,nan,3,3,0
+FR,France,I,2070,0.000000,0.000000,0.000000,nan,nan,nan,4,4,0
+CO,Colombia,K,2003,0.000000,0.000000,0.000000,nan,nan,nan,5,5,0
+PT,Portugal,K,1995,0.000000,0.000000,0.000000,nan,nan,nan,6,6,0
+BR,Brazil,C,1993,0.000000,0.000000,0.000000,nan,nan,nan,7,7,0
+NL,Netherlands,F,1971,0.000000,0.000000,0.000000,nan,nan,nan,8,8,0
+NO,Norway,I,1951,0.000000,0.000000,0.000000,nan,nan,nan,9,9,0
+BE,Belgium,G,1948,0.000000,0.000000,0.000000,nan,nan,nan,10,10,0
+CH,Switzerland,B,1928,0.000000,0.000000,0.000000,nan,nan,nan,11,11,0
+MX,Mexico,A,1913,0.000000,0.000000,0.000000,nan,nan,nan,12,12,0
+DE,Germany,E,1908,0.000000,0.000000,0.000000,nan,nan,nan,13,13,0
+MA,Morocco,C,1901,0.000000,0.000000,0.000000,nan,nan,nan,14,14,0
+JP,Japan,F,1888,0.000000,0.000000,0.000000,nan,nan,nan,15,15,0
+HR,Croatia,L,1882,0.000000,0.000000,0.000000,nan,nan,nan,16,16,0
+EC,Ecuador,E,1871,0.000000,0.000000,0.000000,nan,nan,nan,17,17,0
+TR,Turkey,D,1852,0.000000,0.000000,0.000000,nan,nan,nan,18,18,0
+UY,Uruguay,H,1841,0.000000,0.000000,0.000000,nan,nan,nan,19,19,0
+AT,Austria,J,1821,0.000000,0.000000,0.000000,nan,nan,nan,20,20,0
+SN,Senegal,I,1816,0.000000,0.000000,0.000000,nan,nan,nan,21,21,0
+PY,Paraguay,D,1814,0.000000,0.000000,0.000000,nan,nan,nan,22,22,0
+AU,Australia,D,1795,0.000000,0.000000,0.000000,nan,nan,nan,23,23,0
+IR,Iran,G,1764,0.000000,0.000000,0.000000,nan,nan,nan,24,24,0
+DZ,Algeria,J,1756,0.000000,0.000000,0.000000,nan,nan,nan,25,25,0
+US,United States,D,1747,0.000000,0.000000,0.000000,nan,nan,nan,26,26,0
+SQ,Scotland,C,1745,0.000000,0.000000,0.000000,nan,nan,nan,27,27,0
+EG,Egypt,G,1742,0.000000,0.000000,0.000000,nan,nan,nan,28,28,0
+SE,Sweden,F,1731,0.000000,0.000000,0.000000,nan,nan,nan,29,29,0
+CA,Canada,B,1729,0.000000,0.000000,0.000000,nan,nan,nan,30,30,0
+CI,Ivory Coast,E,1727,0.000000,0.000000,0.000000,nan,nan,nan,31,31,0
+KR,South Korea,A,1723,0.000000,0.000000,0.000000,nan,nan,nan,32,32,0
+CD,DR Congo,K,1704,0.000000,0.000000,0.000000,nan,nan,nan,33,33,0
+CZ,Czech Republic,A,1680,0.000000,0.000000,0.000000,nan,nan,nan,34,34,0
+PA,Panama,L,1658,0.000000,0.000000,0.000000,nan,nan,nan,35,35,0
+UZ,Uzbekistan,K,1631,0.000000,0.000000,0.000000,nan,nan,nan,36,36,0
+JO,Jordan,J,1628,0.000000,0.000000,0.000000,nan,nan,nan,37,37,0
+CV,Cape Verde,H,1619,0.000000,0.000000,0.000000,nan,nan,nan,38,38,0
+BA,Bosnia and Herzegovina,B,1605,0.000000,0.000000,0.000000,nan,nan,nan,39,39,0
+SA,Saudi Arabia,H,1596,0.000000,0.000000,0.000000,nan,nan,nan,40,40,0
+GH,Ghana,L,1570,0.000000,0.000000,0.000000,nan,nan,nan,41,41,0
+TN,Tunisia,F,1562,0.000000,0.000000,0.000000,nan,nan,nan,42,42,0
+IQ,Iraq,I,1561,0.000000,0.000000,0.000000,nan,nan,nan,43,43,0
+ZA,South Africa,A,1559,0.000000,0.000000,0.000000,nan,nan,nan,44,44,0
+NZ,New Zealand,G,1534,0.000000,0.000000,0.000000,nan,nan,nan,45,45,0
+HT,Haiti,C,1517,0.000000,0.000000,0.000000,nan,nan,nan,46,46,0
+CW,Curaçao,E,1438,0.000000,0.000000,0.000000,nan,nan,nan,47,47,0
+QA,Qatar,B,1411,0.000000,0.000000,0.000000,nan,nan,nan,48,48,0

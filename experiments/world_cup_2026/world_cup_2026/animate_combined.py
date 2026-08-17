@@ -50,21 +50,34 @@ PANEL = "#242128"  # counter panel, a touch lighter than the bracket canvas
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--conditional", action="store_true")
+    parser.add_argument(
+        "--tag",
+        default="conditional",
+        metavar="TAG",
+        help="Output subdirectory tag for the conditional run (default: 'conditional'). "
+             "Use e.g. 'conditional_r32' to preserve earlier conditional outputs.",
+    )
     parser.add_argument("--n-frames", type=int, default=150)
     parser.add_argument("--total", type=int, default=100_000)
     parser.add_argument("--fps", type=int, default=15)
     parser.add_argument("--format", choices=["webm", "gif"], default="webm")
     args = parser.parse_args()
 
-    out_dir = config.OUTPUTS_CONDITIONAL if args.conditional else config.OUTPUTS
-    plot_dir = config.PLOTS_CONDITIONAL if args.conditional else config.PLOTS
+    if args.conditional:
+        cpaths = config.conditional_paths(args.tag)
+        out_dir = cpaths.outputs
+        plot_dir = cpaths.plots
+    else:
+        out_dir = config.OUTPUTS
+        plot_dir = config.PLOTS
     plot_dir.mkdir(parents=True, exist_ok=True)
     slot_csv = out_dir / "bracket_slot_probabilities.csv"
     if not slot_csv.exists():
-        cond = " --conditional" if args.conditional else ""
+        tag_arg = f" --tag {args.tag}" if args.tag != "conditional" else ""
+        cond = f" --conditional{tag_arg}" if args.conditional else ""
         raise SystemExit(f"{slot_csv} not found. Run `wc26-simulate{cond}` first.")
 
-    teams_csv = config.TEAMS_CONDITIONAL_CSV if args.conditional else config.TEAMS_CSV
+    teams_csv = cpaths.teams_csv if args.conditional else config.TEAMS_CSV
     teams = load_data.load_teams(teams_csv)
     results = load_data.load_results() if args.conditional else None
     id_by_slot = {r["group_slot"]: r["team_id"] for r in teams.iter_rows(named=True)}

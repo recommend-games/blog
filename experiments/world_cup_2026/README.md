@@ -133,6 +133,8 @@ experiments/world_cup_2026/
     parse_groups.py                      # build fifa_teams_groups.csv
     parse_fixtures.py                    # build fifa_fixtures.csv
     parse_knockout.py                    # build processed knockout_slots.csv
+    parse_results.py                     # group-stage scorelines -> results.csv
+    parse_knockout_results.py            # knockout scorelines -> results.csv (wc26-parse-knockout-results)
     build_teams.py                       # join FIFA groups <-> Elo snapshot
     build_group_matches.py               # add slot refs + venue country
     build_third_place_lookup.py          # parse Wikipedia's 495-row table
@@ -400,8 +402,87 @@ uv run wc26-bracket-heatmap --conditional
 uv run python -m world_cup_2026.animate_combined --conditional
 ```
 
-The same `--conditional` flag runs through the whole chain. It keeps a
-parallel set of files so the frozen baseline stays reproducible:
+The same `--conditional` flag runs through the whole chain. Every script
+also accepts `--tag TAG` (default: `conditional`) to write into a named
+subdirectory instead of the default `outputs/conditional/`. Use this to
+preserve earlier snapshots when re-running mid-tournament:
+
+**Initial setup (once per tag):**
+
+```bash
+TAG=conditional_knockout
+UA='Mozilla/5.0 (compatible; world-cup-2026-research/1.0; you@example.com)'
+mkdir -p data/raw/$TAG
+
+# Fetch Elos and group-stage HTML
+curl -sSL 'https://eloratings.net/World.tsv' -H 'Referer: https://eloratings.net/' \
+  -o data/raw/$TAG/eloratings_world.tsv
+date -u +"%Y-%m-%dT%H:%M:%SZ" > data/raw/$TAG/elo_snapshot_date.txt
+for g in A B C D E F G H I J K L; do
+  curl -sSL -A "$UA" "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_${g}" \
+    -o "data/raw/$TAG/wikipedia_2026_world_cup_group_${g}.html"
+done
+curl -sSL -A "$UA" 'https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage' \
+  -o data/raw/$TAG/wikipedia_2026_world_cup_knockout_stage.html
+date -u +"%Y-%m-%dT%H:%M:%SZ" > data/raw/$TAG/results_snapshot_date.txt
+
+# Build teams and pin group results
+uv run python -m world_cup_2026.build_teams \
+  --world-tsv data/raw/$TAG/eloratings_world.tsv \
+  --output data/processed/teams_$TAG.csv
+uv run python -m world_cup_2026.parse_results
+
+# Bootstrap the knockout score predictions (no simulation needed: all group
+# results are pinned so the bracket resolves directly from results.csv)
+uv run python -m world_cup_2026.build_knockout_score_predictions --conditional --tag $TAG
+```
+
+**Routine update (each time new knockout matches are played):**
+
+```bash
+TAG=conditional_knockout
+UA='Mozilla/5.0 (compatible; world-cup-2026-research/1.0; you@example.com)'
+
+# Refresh Elos and fetch latest knockout stage HTML
+curl -sSL 'https://eloratings.net/World.tsv' -H 'Referer: https://eloratings.net/' \
+  -o data/raw/$TAG/eloratings_world.tsv
+date -u +"%Y-%m-%dT%H:%M:%SZ" > data/raw/$TAG/elo_snapshot_date.txt
+curl -sSL -A "$UA" 'https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage' \
+  -o data/raw/$TAG/wikipedia_2026_world_cup_knockout_stage.html
+date -u +"%Y-%m-%dT%H:%M:%SZ" > data/raw/$TAG/results_snapshot_date.txt
+
+uv run python -m world_cup_2026.build_teams \
+  --world-tsv data/raw/$TAG/eloratings_world.tsv \
+  --output data/processed/teams_$TAG.csv
+uv run wc26-parse-knockout-results --tag $TAG
+uv run wc26-simulate --conditional --tag $TAG
+uv run python -m world_cup_2026.build_knockout_score_predictions --conditional --tag $TAG
+uv run python -m world_cup_2026.fetch_market_odds --conditional --tag $TAG
+uv run python -m world_cup_2026.build_market_odds --conditional --tag $TAG
+uv run python -m world_cup_2026.build_market_comparison --conditional --tag $TAG
+uv run wc26-build-article-charts --conditional --tag $TAG
+uv run wc26-bracket-heatmap --conditional --tag $TAG
+uv run python -m world_cup_2026.animate_combined --conditional --tag $TAG
+```
+
+`parse_knockout_results` uses `knockout_score_predictions.csv` rebuilt at the end of
+the previous run to map team names to match IDs. Each rebuild refreshes it with the
+current bracket state, so it always has correct team pairs ready for the next round.
+
+Note: `build_score_predictions` (group-stage score predictions) is intentionally omitted
+from the routine update — all group matches are already played and pinned, so predicting
+their scores is meaningless.
+
+Tags use underscores, not hyphens (e.g. `conditional_knockout`, not `conditional-knockout`).
+Each tag gets its own raw-data directory (`data/raw/{tag}/`) alongside the output and plot
+directories, so the exact inputs used for each snapshot are preserved independently:
+
+| Tag | Scope |
+|---|---|
+| `conditional` | Post-group-stage: all 72 group matches pinned, Elo refreshed after the group phase |
+| `conditional_knockout` | Post-R32: group results plus each played knockout match pinned as the round progresses |
+
+The chain keeps a parallel set of files so the frozen baseline stays reproducible:
 `data/raw/conditional/polymarket_world_cup_winner.json`,
 `data/processed/market_odds_conditional.csv`,
 `outputs/conditional/market_comparison.csv` and `plots/conditional/`.
@@ -422,8 +503,10 @@ self-describing.
   `team_id`). The goals are the regulation/extra-time score and are kept
   for the record, but the simulator only reads `winner`, so a penalty
   shootout is captured correctly (e.g. `1-1` with the shootout winner in
-  `winner`). `parse_results.py` does not scrape the knockout page — add
-  these rows by hand; a rerun of `parse_results.py` preserves them.
+  `winner`). These rows are written by `wc26-parse-knockout-results`
+  (see above), which reads the Wikipedia knockout-stage HTML and appends
+  any played matches not yet in the file. A rerun of `parse_results.py`
+  or `wc26-parse-knockout-results` never overwrites already-recorded rows.
 
 Pin knockout results **cumulatively** — every played knockout match up to
 the current point. Once the group stage is complete the bracket is

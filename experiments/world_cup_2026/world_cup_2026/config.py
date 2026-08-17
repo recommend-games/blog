@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from types import SimpleNamespace
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_RAW = ROOT / "data" / "raw"
@@ -37,6 +38,34 @@ MARKET_ODDS_CONDITIONAL_CSV = DATA_PROCESSED / "market_odds_conditional.csv"
 
 PLOTS = ROOT / "plots"
 PLOTS_CONDITIONAL = PLOTS / "conditional"
+
+
+def conditional_paths(tag: str = "conditional") -> SimpleNamespace:
+    """Return all file paths for a tagged conditional run.
+
+    The tag replaces 'conditional' in every output path so multiple
+    mid-tournament snapshots can coexist without overwriting each other.
+    The default tag 'conditional' reproduces the existing layout exactly.
+
+    Fields:
+        data_raw           data/raw/{tag}/
+        polymarket_snapshot  data/raw/{tag}/polymarket_world_cup_winner.json
+        market_odds_snapshot_date  data/raw/{tag}/market_odds_snapshot_date.txt
+        teams_csv          data/processed/teams_{tag}.csv
+        market_odds_csv    data/processed/market_odds_{tag}.csv
+        outputs            outputs/{tag}/
+        plots              plots/{tag}/
+    """
+    raw = DATA_RAW / tag
+    return SimpleNamespace(
+        data_raw=raw,
+        polymarket_snapshot=raw / "polymarket_world_cup_winner.json",
+        market_odds_snapshot_date=raw / "market_odds_snapshot_date.txt",
+        teams_csv=DATA_PROCESSED / f"teams_{tag}.csv",
+        market_odds_csv=DATA_PROCESSED / f"market_odds_{tag}.csv",
+        outputs=OUTPUTS / tag,
+        plots=PLOTS / tag,
+    )
 
 N_SIMULATIONS = 10_000_000
 SEED = 20260611
