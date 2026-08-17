@@ -53,20 +53,28 @@ def main() -> None:
         action="store_true",
         help=(
             "Condition on results so far: refreshed Elo (teams_conditional.csv) "
-            "plus played scorelines (results.csv), written to outputs/conditional/"
+            "plus played scorelines (results.csv), written to outputs/{tag}/"
         ),
+    )
+    parser.add_argument(
+        "--tag",
+        default="conditional",
+        metavar="TAG",
+        help="Output subdirectory tag for the conditional run (default: 'conditional'). "
+             "Use e.g. 'conditional_r32' to preserve earlier conditional outputs.",
     )
     args = parser.parse_args()
 
     if args.conditional:
-        teams_csv = config.TEAMS_CONDITIONAL_CSV
+        cpaths = config.conditional_paths(args.tag)
+        teams_csv = cpaths.teams_csv
         results = load_data.load_results()
-        output_dir = config.OUTPUTS_CONDITIONAL
+        output_dir = cpaths.outputs
         elo_snapshot_date = _read_date(
-            config.DATA_RAW_CONDITIONAL / "elo_snapshot_date.txt"
+            cpaths.data_raw / "elo_snapshot_date.txt"
         )
         results_snapshot_date = _read_date(
-            config.DATA_RAW_CONDITIONAL / "results_snapshot_date.txt"
+            cpaths.data_raw / "results_snapshot_date.txt"
         )
         n_results_fixed = results.height
     else:

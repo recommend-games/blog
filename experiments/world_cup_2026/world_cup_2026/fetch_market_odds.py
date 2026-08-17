@@ -23,13 +23,21 @@ def main() -> None:
     parser.add_argument(
         "--conditional",
         action="store_true",
-        help="Write the snapshot into data/raw/conditional/ instead of the frozen baseline",
+        help="Write the snapshot into data/raw/{tag}/ instead of the frozen baseline",
+    )
+    parser.add_argument(
+        "--tag",
+        default="conditional",
+        metavar="TAG",
+        help="Output subdirectory tag for the conditional run (default: 'conditional'). "
+             "Use e.g. 'conditional_r32' to preserve earlier conditional outputs.",
     )
     args = parser.parse_args()
 
     if args.conditional:
-        snapshot = config.POLYMARKET_SNAPSHOT_CONDITIONAL
-        snapshot_date = config.MARKET_ODDS_SNAPSHOT_DATE_CONDITIONAL
+        cpaths = config.conditional_paths(args.tag)
+        snapshot = cpaths.polymarket_snapshot
+        snapshot_date = cpaths.market_odds_snapshot_date
     else:
         snapshot = config.POLYMARKET_SNAPSHOT
         snapshot_date = config.MARKET_ODDS_SNAPSHOT_DATE

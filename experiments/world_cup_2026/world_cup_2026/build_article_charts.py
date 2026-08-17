@@ -253,12 +253,24 @@ def main() -> None:
     parser.add_argument(
         "--conditional",
         action="store_true",
-        help="Read outputs/conditional/ and write to plots/conditional/",
+        help="Read outputs/{tag}/ and write to plots/{tag}/",
+    )
+    parser.add_argument(
+        "--tag",
+        default="conditional",
+        metavar="TAG",
+        help="Output subdirectory tag for the conditional run (default: 'conditional'). "
+             "Use e.g. 'conditional_r32' to preserve earlier conditional outputs.",
     )
     args = parser.parse_args()
 
-    in_dir = config.OUTPUTS_CONDITIONAL if args.conditional else config.OUTPUTS
-    out_dir = config.PLOTS_CONDITIONAL if args.conditional else config.PLOTS
+    if args.conditional:
+        cpaths = config.conditional_paths(args.tag)
+        in_dir = cpaths.outputs
+        out_dir = cpaths.plots
+    else:
+        in_dir = config.OUTPUTS
+        out_dir = config.PLOTS
     out_dir.mkdir(parents=True, exist_ok=True)
     sns.set_style("dark")
 

@@ -446,7 +446,14 @@ def main() -> None:
         "--conditional",
         action="store_true",
         help="Condition on played results; read teams_conditional + results, "
-        "write into outputs/conditional and plots/conditional.",
+        "write into outputs/{tag} and plots/{tag}.",
+    )
+    parser.add_argument(
+        "--tag",
+        default="conditional",
+        metavar="TAG",
+        help="Output subdirectory tag for the conditional run (default: 'conditional'). "
+             "Use e.g. 'conditional_r32' to preserve earlier conditional outputs.",
     )
     parser.add_argument(
         "--collect",
@@ -464,12 +471,17 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    out_dir = config.OUTPUTS_CONDITIONAL if args.conditional else config.OUTPUTS
-    plot_dir = config.PLOTS_CONDITIONAL if args.conditional else config.PLOTS
+    if args.conditional:
+        cpaths = config.conditional_paths(args.tag)
+        out_dir = cpaths.outputs
+        plot_dir = cpaths.plots
+    else:
+        out_dir = config.OUTPUTS
+        plot_dir = config.PLOTS
     plot_dir.mkdir(parents=True, exist_ok=True)
     slot_csv = out_dir / "bracket_slot_probabilities.csv"
 
-    teams_csv = config.TEAMS_CONDITIONAL_CSV if args.conditional else config.TEAMS_CSV
+    teams_csv = cpaths.teams_csv if args.conditional else config.TEAMS_CSV
     teams = load_data.load_teams(teams_csv)
 
     if args.collect:
@@ -478,7 +490,8 @@ def main() -> None:
         write_slot_probabilities(counts, teams, args.n_sims, slot_csv)
         print(f"Wrote {slot_csv}")
     elif not slot_csv.exists():
-        cond = " --conditional" if args.conditional else ""
+        tag_arg = f" --tag {args.tag}" if args.tag != "conditional" else ""
+        cond = f" --conditional{tag_arg}" if args.conditional else ""
         raise SystemExit(
             f"{slot_csv} not found. Run `wc26-simulate{cond}` first (it now writes "
             f"the slot occupancy), or pass --collect to generate it here."
