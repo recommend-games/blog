@@ -18,7 +18,7 @@ I called it in [part 2c]({{<ref "posts/elo_2c/index.md">}}), back in June, at **
 
 ## The whole tournament, one chart
 
-Every market_comparison.csv this project ever wrote is sitting in git history, so instead of describing the arc from memory I went and reconstructed it — 42 forecast snapshots, pre-tournament through the final whistle, tracking the model's own title probability for the teams that mattered most.
+Every market_comparison.csv this project ever wrote is sitting in Git history, so instead of describing the arc from memory I went and reconstructed it — 42 forecast snapshots, pre-tournament through the final whistle, tracking the model's own title probability for the teams that mattered most.
 
 {{< img src="probability_trajectory" alt="Line chart of the model's title probability for Spain, Argentina, France and England across the whole tournament, from pre-tournament through the knockout stage" >}}
 
