@@ -37,10 +37,10 @@ PHASE_LABELS = {
 }
 DEFAULT_TEAMS = ["ES", "AR", "FR", "EN"]
 TEAM_COLORS = {
-    "ES": "#e63946",  # Spain
-    "AR": "#457b9d",  # Argentina
-    "FR": "#8d99ae",  # France — secondary storyline, muted
-    "EN": "#2a9d8f",  # England — pre-tournament #4, semifinalist
+    "ES": "#C1121F",  # Spain — deep red (la Roja)
+    "AR": "#1B8FD4",  # Argentina — light blue (albiceleste)
+    "FR": "#2E5C9E",  # France — deep blue (les Bleus)
+    "EN": "#B8860B",  # England — gold (Three Lions crest; white kit doesn't render)
 }
 
 
