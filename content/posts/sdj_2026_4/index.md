@@ -1,0 +1,103 @@
+---
+title: Spiel des Jahres 2026 winners
+slug: spiel-des-jahres-2026-winners
+share_img: /posts/spiel-des-jahres-2026-winners/400495.jpg
+author: Markus Shepherd
+type: post
+date: 2026-07-12T21:00:00+03:00
+tags:
+  - SdJ
+  - SdJ 2026
+  - Spiel des Jahres
+  - Spiel des Jahres 2026
+  - KSdJ
+  - Kennerspiel
+  - Kennerspiel des Jahres
+  - Kennerspiel des Jahres 2026
+  - Winners
+  - Game of the Year
+  - Germany
+  - 'Dito!'
+  - JinxO
+  - Rebirth
+  - Mooki Island
+---
+
+{{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
+
+The cat's out of the bag and the winners [have been announced](https://www.spiel-des-jahres.de/preistraeger2026/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/preistraeger2026/)!
+
+Did the ceremony get snappier again? No lengthy flashbacks to previous winners (only an epitaph for [Reinhold Wittig](https://www.spiel-des-jahres.de/trauer-um-spieleautor-reinhold-wittig/) [🗄️](https://web.archive.org/web/https://www.spiel-des-jahres.de/trauer-um-spieleautor-reinhold-wittig/)), no detailed lectures on the jury's work, no dragging out the announcements. The show definitely had its entertaining moments, like when [Donald X. Vaccarino](https://recommend.games/#/?designer=10525) subverted the jury's narrative about his game's critical commentary ("just a bit of fun"), or when chairman Harald Schrapers forgot what year it is ("The {{% sdj %}}Spiel des Jahres 2024{{% /sdj %}} is…").
+
+If you want more behind-the-scenes feeling, I highly recommend listening to [5G4D's coverage](https://5g4d.com/podcasts/spiel-des-jahres-2026) [🗄️](https://web.archive.org/web/https://5g4d.com/podcasts/spiel-des-jahres-2026)!
+
+But enough of that, let's look at the winners!
+
+
+## {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}
+
+{{< img src="sdj-2026" size="x300" alt="Spiel des Jahres 2026" >}}
+
+
+### {{% game 400495 %}}JinxO{{% /game %}}
+
+*4–7 players, 30–45 minutes, 10+ years, light (1.0)*
+
+{{< img src="400495" size="x360" alt="JinxO" >}}
+
+*Jinx your friend to become victorious.*
+
+{{< youtube id=3l2RbN5Bfcs max-width="640px" >}}
+
+I'm proud to say that I called this one correctly. 💪 In the end this clearly was the game that convinced the jury most uniformly and hence the logical winner of {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}. After [Hisashi Hayashi](https://recommend.games/#/?designer=39436)'s win last year with {{% game 413246 %}}Bomb Busters{{% /game %}}, we have the second winner from Asia in a row – a great testament to the internationalisation of the hobby.
+
+I wish Harald Schrapers would have skipped his remark about [Martin Ang](https://recommend.games/#/?designer=121032) being the first nominee from the "Global South" – at least to me this insinuates, entirely unnecessarily, that {{% game 400495 %}}JinxO{{% /game %}} won to fulfil some kind of quota and not on its own merits. Plus, [Jordy Adan](https://recommend.games/#/?designer=109218) from Brazil was nominated in [2020]({{<ref "posts/sdj_2020_2/index.md">}}) for {{% game 263918 %}}Cartographers{{% /game %}}. That nomination was for {{% kdj %}}Kennerspiel{{% /kdj %}}, not {{% sdj %}}Spiel{{% /sdj %}}, but it contributes to Harald Schrapers' remark feeling awkward and out of place.
+
+Nonetheless, the thought of this design from Indonesia, half a world away, bringing joy to many German households this Christmas is a cause for celebration. Games connect people, both around the table and the globe.
+
+
+## {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}}
+
+{{< img src="ksdj-2026" size="x300" alt="Kennerspiel des Jahres 2026" >}}
+
+
+### {{% game 417197 %}}Rebirth{{% /game %}}
+
+*2–4 players, 45–60 minutes, 10+ years, medium light (2.0)*
+
+{{< img src="417197" size="x360" alt="Rebirth" >}}
+
+*Rebuild old lands in a lush, hopeful future.*
+
+{{< youtube id=J_UpbAUFtx0 max-width="640px" >}}
+
+[Reiner Knizia](https://recommend.games/#/?designer=2), a bona fide legend of the hobby, completed the triple after winning the double in 2008: {{% sdj / %}} for Keltis and {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} for {{% game 33643 %}}Whoowasit?{{% /game %}}. I thought that his acceptance speech displayed his own brand of mixing confidence with humility when he first launched into a lengthy lecture on game design, but then concluded with honest kindness towards his fellow nominees and appreciation for the jury's work.
+
+
+## {{% kindersdj %}}Kinderspiel des Jahres 2026{{% /kindersdj %}}
+
+{{< img src="kindersdj-2026" size="x300" alt="Kinderspiel des Jahres 2026" >}}
+
+
+### {{% game 435346 %}}Mooki Island{{% /game %}}
+
+*2 players, 10 minutes, 4+ years, light (1.0)*
+
+{{< img src="435346" size="x360" alt="Mooki Island" >}}
+
+*Befriend adorable Mookies, but watch out for the Spider!*
+
+{{< youtube id=EzhJcgO4_-8 max-width="640px" >}}
+
+My daughters were right – {{% game 435346 %}}Mooki Island{{% /game %}} is this year's most exciting children's game. 🤩 They were so happy about their favourite winning that they were jumping up and down on the couch and asking when they'd get the game, so I still had to order it during the stream – before stocks run out… 😅
+
+Overall, our family foray into the {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} proved successful, so I'll try again next year. 🥰
+
+
+## Conclusion
+
+After calling only five out of eight winners correctly in the past four years, going two for two (or three for three if I may be so bold to take credit for my daughters' pick) certainly feels good, in particular after calling 2026 the tightest race in years.
+
+Both {{% sdj %}}Spiel{{% /sdj %}} and {{% kdj %}}Kennerspiel{{% /kdj %}} winning designers wrote their own personal and very different headlines – one cannot help but be charmed by them. Dr Knizia's triple is a welcome opportunity to update my [designer hall of fame]({{<ref "posts/designer_hall_of_fame/index.md">}}), so look out for the article in the next few weeks. 🤓
+
+Roll on next year – and maybe I'll finally let my daughters have a say on the grown-ups' games too. 😉

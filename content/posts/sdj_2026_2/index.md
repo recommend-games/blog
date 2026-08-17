@@ -25,6 +25,7 @@ tags:
   - Kennerspiel des Jahres 2026 nominations
   - Cozy Stickerville
   - JinxO
+  - 'Dito!'
   - Morty Sorty Magic Shop
   - Boss Fighters QR
   - Moon Colony Bloodbath
@@ -60,7 +61,7 @@ I've had this amongst my honourable mentions, but the algorithm placed it on #56
 
 {{< img src="400495" size="x300" alt="JinxO" >}}
 
-*A party game of associations: try to match other players' answers without giving anything away.*
+*Jinx your friend to become victorious.*
 
 The designer [Martin Ang](https://recommend.games/#/?designer=121032) is the CEO of Tabletoys Indonesia. Last year we celebrated the first {{% sdj %}}SdJ{{% /sdj %}} award going to Japan – could Indonesia be next?
 

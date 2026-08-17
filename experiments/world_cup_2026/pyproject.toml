@@ -7,6 +7,7 @@ authors = [
 ]
 requires-python = "==3.13.*"
 dependencies = [
+    "gitpython",
     "matplotlib",
     "numpy",
     "polars",
@@ -30,6 +31,8 @@ dev = [
 wc26-simulate = "world_cup_2026.run_simulation:main"
 wc26-build-article-charts = "world_cup_2026.build_article_charts:main"
 wc26-bracket-heatmap = "world_cup_2026.bracket_heatmap:main"
+wc26-blowout-analysis = "world_cup_2026.blowout_analysis:main"
+wc26-parse-knockout-results = "world_cup_2026.parse_knockout_results:main"
 
 [build-system]
 requires = ["hatchling"]

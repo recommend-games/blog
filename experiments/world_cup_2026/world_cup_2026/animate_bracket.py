@@ -23,7 +23,7 @@ Prototype: team codes not flags, GIF via pillow (no ffmpeg). Reads the canonical
 
 from __future__ import annotations
 
-import argparse
+
 
 import matplotlib.animation as animation
 import matplotlib.pyplot as plt
@@ -238,41 +238,3 @@ def render_freeze_gif(
     ani.save(out_path, writer=animation.PillowWriter(fps=fps))
     plt.close(fig)
 
-
-def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--conditional", action="store_true")
-    parser.add_argument("--n-frames", type=int, default=72)
-    parser.add_argument("--fps", type=int, default=6)
-    args = parser.parse_args()
-
-    out_dir = config.OUTPUTS_CONDITIONAL if args.conditional else config.OUTPUTS
-    plot_dir = config.PLOTS_CONDITIONAL if args.conditional else config.PLOTS
-    plot_dir.mkdir(parents=True, exist_ok=True)
-    slot_csv = out_dir / "bracket_slot_probabilities.csv"
-    if not slot_csv.exists():
-        cond = " --conditional" if args.conditional else ""
-        raise SystemExit(f"{slot_csv} not found. Run `wc26-simulate{cond}` first.")
-
-    teams_csv = config.TEAMS_CONDITIONAL_CSV if args.conditional else config.TEAMS_CSV
-    teams = load_data.load_teams(teams_csv)
-    results = load_data.load_results() if args.conditional else None
-    id_by_slot = {r["group_slot"]: r["team_id"] for r in teams.iter_rows(named=True)}
-
-    modal, pmodal = load_modal(slot_csv)
-    team_ids = teams["team_id"].to_list()
-    ensure_flags(team_ids)
-    flags = load_flags(team_ids)
-    samples = collect_sample_brackets(teams, results, args.n_frames, config.SEED)
-    geom = BracketGeometry(load_data.load_knockout_slots())
-    sns.set_style("dark")
-    subtitle = "conditional on played results" if args.conditional else "pre-tournament"
-    out_path = plot_dir / "bracket_freeze.gif"
-    render_freeze_gif(
-        samples, modal, pmodal, id_by_slot, flags, geom, out_path, args.fps, subtitle
-    )
-    print(f"Wrote {out_path} ({args.n_frames} frames)")
-
-
-if __name__ == "__main__":
-    main()

@@ -18,6 +18,7 @@ import multiprocessing as mp
 import os
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from dataclasses import dataclass, field
+from typing import Any
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -310,16 +311,21 @@ def run_simulation(
 
     if n_workers is None:
         n_workers = os.cpu_count() or 1
-    n_workers = max(1, min(n_workers, n_simulations))
+    # _N_FIXED_STREAMS is independent of n_workers so that seed derivation —
+    # and therefore every simulation's random draws — are the same regardless
+    # of the machine's CPU count.  Workers pull from a shared queue of tasks.
+    _N_FIXED_STREAMS = 128
+    n_streams = min(_N_FIXED_STREAMS, n_simulations)
+    n_workers = max(1, min(n_workers, n_streams))
 
-    base, rem = divmod(n_simulations, n_workers)
-    chunk_sizes = [base + (1 if i < rem else 0) for i in range(n_workers)]
-    child_seeds = np.random.SeedSequence(seed).spawn(n_workers)
+    base, rem = divmod(n_simulations, n_streams)
+    chunk_sizes = [base + (1 if i < rem else 0) for i in range(n_streams)]
+    child_seeds = np.random.SeedSequence(seed).spawn(n_streams)
 
-    if n_workers == 1:
-        acc = _simulate_chunk(
-            chunk_sizes[0],
-            child_seeds[0],
+    chunk_args = [
+        (
+            chunk_sizes[i],
+            child_seeds[i],
             slots,
             ko_matches,
             group_ctx,
@@ -333,47 +339,38 @@ def run_simulation(
             fixed_a,
             fixed_b,
             fixed_ko_winners,
-            show_progress=show_progress,
+            False,
         )
-        return acc, teams
+        for i in range(n_streams)
+    ]
 
-    mp_ctx = mp.get_context("spawn")
     parts: list[Accumulator] = []
-    with ProcessPoolExecutor(max_workers=n_workers, mp_context=mp_ctx) as ex:
-        futures = [
-            ex.submit(
-                _simulate_chunk,
-                chunk_sizes[i],
-                child_seeds[i],
-                slots,
-                ko_matches,
-                group_ctx,
-                ko_ctx,
-                third_place_dict,
-                r32_specs,
-                fifa_ranks,
-                lambdas_a,
-                lambdas_b,
-                fixed_mask,
-                fixed_a,
-                fixed_b,
-                fixed_ko_winners,
-                False,
-            )
-            for i in range(n_workers)
-        ]
-        iterator = as_completed(futures)
+    if n_workers == 1:
+        iterator: Any = enumerate(chunk_args)
         if show_progress:
             iterator = tqdm(
-                iterator,
-                total=n_workers,
-                desc=(
-                    f"Simulating {n_simulations:,} tournaments across "
-                    f"{n_workers} workers"
-                ),
+                enumerate(chunk_args),
+                total=n_streams,
+                desc=f"Simulating {n_simulations:,} tournaments",
             )
-        for fut in iterator:
-            parts.append(fut.result())
+        for _, args in iterator:
+            parts.append(_simulate_chunk(*args))
+    else:
+        mp_ctx = mp.get_context("spawn")
+        with ProcessPoolExecutor(max_workers=n_workers, mp_context=mp_ctx) as ex:
+            futures = [ex.submit(_simulate_chunk, *args) for args in chunk_args]
+            iterator = as_completed(futures)
+            if show_progress:
+                iterator = tqdm(
+                    iterator,
+                    total=n_streams,
+                    desc=(
+                        f"Simulating {n_simulations:,} tournaments across "
+                        f"{n_workers} workers"
+                    ),
+                )
+            for fut in iterator:
+                parts.append(fut.result())
     return _merge_accumulators(parts, slots, ko_matches), teams
 
 

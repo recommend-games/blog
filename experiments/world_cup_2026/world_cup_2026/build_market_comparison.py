@@ -29,12 +29,20 @@ def main() -> None:
         action="store_true",
         help="Join the conditional model probs against the conditional market odds",
     )
+    parser.add_argument(
+        "--tag",
+        default="conditional",
+        metavar="TAG",
+        help="Output subdirectory tag for the conditional run (default: 'conditional'). "
+             "Use e.g. 'conditional_r32' to preserve earlier conditional outputs.",
+    )
     args = parser.parse_args()
 
     if args.conditional:
-        team_probs = config.OUTPUTS_CONDITIONAL / "team_probabilities.csv"
-        market_csv = config.MARKET_ODDS_CONDITIONAL_CSV
-        output = config.OUTPUTS_CONDITIONAL / "market_comparison.csv"
+        cpaths = config.conditional_paths(args.tag)
+        team_probs = cpaths.outputs / "team_probabilities.csv"
+        market_csv = cpaths.market_odds_csv
+        output = cpaths.outputs / "market_comparison.csv"
     else:
         team_probs = config.OUTPUTS / "team_probabilities.csv"
         market_csv = config.MARKET_ODDS_CSV
