@@ -1,4 +1,4 @@
-[b][i]This post was originally published on the [url=https://blog.recommend.games/posts/reverse-engineering-boardgamegeek-ranking/]Recommend.Games blog[/url]. Check it out for more board game analyses![/i][/b]
+[b][i]This post was originally published on the [url=https://analysisparalysis.games/posts/reverse-engineering-boardgamegeek-ranking/]Recommend.Games blog[/url]. Check it out for more board game analyses![/i][/b]
 
 [b][i]TL;DR[/i][/b]: [i]BoardGameGeek calculates its ranking by adding around [b]1500-1600 dummy ratings of 5.5[/b] to the regular users' ratings. They called it their geek score, statisticians call it a Bayesian average. We use this knowledge to calculate some alternative rankings.[/i]
 
@@ -46,7 +46,7 @@ number of dummies = 10936 * (7.562 - 7.266) / (7.266 - 5.5) ≈ 1830.
 
 So, there's about 1830 dummy ratings, end of story. Right? Unfortunately, not quite. When computing this formula for different games, the results vary [i]wildly[/i], as you can see from this histogram over the results for the same calculation with other games:
 
-[IMG]https://blog.recommend.games/posts/reverse-engineering-boardgamegeek-ranking/num_dummies_hist.svg[/IMG]
+[IMG]https://analysisparalysis.games/posts/reverse-engineering-boardgamegeek-ranking/num_dummies_hist.svg[/IMG]
 
 And this plot is even cropped, the results vary from -1.4 million to +810 thousand, though some 90% lie within the above range, with a mean of around 1604 and a median of around 1590.
 
@@ -60,7 +60,7 @@ Let's take a step back here. What we're really trying to achieve here is not fin
 
 What we can do now is fairly simply and quickly compute the rankings for different number of dummy ratings, and pick the value with the highest Spearman correlation. Without further ado, here are the results:
 
-[IMG]https://blog.recommend.games/posts/reverse-engineering-boardgamegeek-ranking/num_dummies_corr.svg[/IMG]
+[IMG]https://analysisparalysis.games/posts/reverse-engineering-boardgamegeek-ranking/num_dummies_corr.svg[/IMG]
 
 The best correlation of around 0.996 is achieved with [b]1488 dummy ratings[/b]. However, it is worth noticing that the changes in the correlation are very, [i]very[/i] small throughout the range we examined here (1000 to 2500), so let's dig still a little deeper.
 
