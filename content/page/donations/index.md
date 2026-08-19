@@ -4,7 +4,7 @@ date: 2020-04-26T12:00:00+03:00
 comments: false
 ---
 
-[Recommend.Games](https://recommend.games/#/) and [Analysis Paralysis](https://blog.recommend.games/) always have been and always will be 100% open source and free from paywalls, ads or tracking. If you find some value in what we're doing and your finances allow you to support us with server costs etc, you can do so by donating through any of the links below (Wise and PayPal allow us to keep most of your donation):
+[Recommend.Games](https://recommend.games/#/) and [Analysis Paralysis](https://analysisparalysis.games/) always have been and always will be 100% open source and free from paywalls, ads or tracking. If you find some value in what we're doing and your finances allow you to support us with server costs etc, you can do so by donating through any of the links below (Wise and PayPal allow us to keep most of your donation):
 
 - [Wise](https://wise.com/pay/me/markuss1)
 - [PayPal](https://paypal.me/mschepke)
