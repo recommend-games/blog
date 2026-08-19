@@ -4,7 +4,7 @@ subtitle: 'Same blog, new domain: analysisparalysis.games'
 slug: analysis-paralysis-new-domain
 author: Markus Shepherd
 type: post
-date: 2026-08-19T22:18:02+03:00
+date: 2026-08-19T22:20:22+03:00
 tags:
   - Announcement
   - Internal
