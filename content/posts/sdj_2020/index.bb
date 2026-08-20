@@ -1,4 +1,4 @@
-[b][i]This post was originally published on the [url=https://blog.recommend.games/posts/and-the-spiel-des-jahres-2020-goes-to/]Recommend.Games blog[/url]. Check it out for more board game analyses![/i][/b]
+[b][i]This post was originally published on the [url=https://analysisparalysis.games/posts/and-the-spiel-des-jahres-2020-goes-to/]Recommend.Games blog[/url]. Check it out for more board game analyses![/i][/b]
 
 It's that time of year again when the whole board game scene takes a deep look into their crystal balls: On Monday, May 18, the jury [url=https://www.spiel-des-jahres.com/][color=#E30613][b][i]Spiel des Jahres[/i][/b][/color][/url] will announce the nominees for the game of the year award in Germany. There's a myriad of awards in tabletop gaming, but the [i]red meeple[/i] is the one everbody is really after. Consequently, there are [url=https://brettspielpoesie.de/spiel-des-jahres-2020-prognose-13298/]many[/url] [url=https://www.abenteuer-brettspiele.de/brettspiel-empfehlungen/spiel-des-jahres-2020-kennerspiel-des-jahres-2020]lists[/url] [url=https://spiele.tips/alle-spiel-des-jahres-2020-brettspiele-im-vergleich]floating[/url] [url=https://www.reddit.com/r/boardgames/comments/fyc7xu/what_are_your_predictions_for_spiel_kennerspiel/]all[/url] [url=https://www.brettspielbar.de/bsb049-einstimmung-spiel-des-jahres-2020/]around[/url] [url=https://boardgamegeek.com/geeklist/269444/spiel-des-jahres-2020-speculation]the[/url] [url=https://www.boardgameatlas.com/forum/j89cRJl518/what-are-your-spielkennerspiel-des-jahres-2020-predictions]Internet[/url] trying to predict this year's nominees. And this is one of them! Most lists are based on the author's experience and taste, but here we try to take a data driven approach: We'll look at the previous winners, try to derive the jury's (implicit or explicit) criteria, and check what current games that meet those criteria have been rated highly.
 
@@ -14,7 +14,7 @@ It's worth recalling what the mission statement of [color=#E30613][b][i]Spiel de
 
 First, there's the question if the community at BoardGameGeek and the jury [color=#E30613][b][i]Spiel des Jahres[/i][/b][/color] are aligned at all. After all, the former is full of mostly US-centric hardcore gamers, while the latter is exclusively concerned with casual gamers in Germany. Still, when we look at how the BGG crowd has rated the award winners over the last years, the jury seems to have done a good job:
 
-[IMG]https://blog.recommend.games/posts/and-the-spiel-des-jahres-2020-goes-to/bayes_rating.svg[/IMG]
+[IMG]https://analysisparalysis.games/posts/and-the-spiel-des-jahres-2020-goes-to/bayes_rating.svg[/IMG]
 
 While not every single game was a hit with the geeks, many [color=#E30613][b][i]Spiel des Jahres[/i][/b][/color] winners score highly, and particularly there's a clear upwards trend visible over the past decade or so. Granted, this is also the case with recent releases in general, but the point remains that German families and American geeks might agree on some games after all.
 
@@ -24,7 +24,7 @@ With that out of the way, let's examine some of our candidates' particular featu
 
 BoardGameGeek quantifies a game's weight or complexity on a scale from 1 ([i]light[/i]) to 5 ([i]heavy[/i]). Naturally, the accessibility of a [color=#E30613][b][i]Spiel des Jahres[/i][/b][/color] pushes them towards the lighter side, though over the years, the jury selected some more complex games as well:
 
-[IMG]https://blog.recommend.games/posts/and-the-spiel-des-jahres-2020-goes-to/complexity.svg[/IMG]
+[IMG]https://analysisparalysis.games/posts/and-the-spiel-des-jahres-2020-goes-to/complexity.svg[/IMG]
 
 However, recent years have seen a strong trend towards the [i]very[/i] light games. In fact, since the introduction of [color=#193F4A][b][i]Kennerspiel des Jahres[/i][/b][/color] in 2011, only 2012's winner [thing=107529][/thing] exceeded a complexity rating of 2 ([i]medium light[/i]) – by 0.07 points. Even said [color=#193F4A][b][i]Kennerspiel[/i][/b][/color], whose first few winners hovered around a weight of 3 ([i]medium[/i]), is drawn more and more towards the 2 mark.
 
@@ -34,7 +34,7 @@ From this we can conclude that the [color=#E30613][b][i]Spiel des Jahres 2020[/i
 
 In addition to short rules (start quickly), a [color=#E30613][b][i]Spiel des Jahres[/i][/b][/color] should also have a short playing time (play quickly). Again, the data confirm this perception:
 
-[IMG]https://blog.recommend.games/posts/and-the-spiel-des-jahres-2020-goes-to/time.svg[/IMG]
+[IMG]https://analysisparalysis.games/posts/and-the-spiel-des-jahres-2020-goes-to/time.svg[/IMG]
 
 Here, the bands indicate the span of the playing time indicated on the games' boxes, while the dashed lines denotes the mean. Playing times are tricky because publishers [i]always[/i] lie about them. I suppose they simply don't want to scare away people whose attention spans become ever shorter (thanks for still being with me by the way) with the prospect of sitting through an hour of some ultra nerdy activity. But since everybody lies the same way, we can at least compare games with each other. And again, it becomes obvious how import immediate accessibility is to the jury: The last winner that admitted to having a playing time of more than 45 minutes was 2006's [thing=21790][/thing], and none has exceeded the hour mark since 1999's [thing=54][/thing].
 
@@ -46,7 +46,7 @@ In conclusion, the [color=#E30613][b][i]Spiel des Jahres 2020[/i][/b][/color] wi
 
 The [color=#E30613][b][i]Spiel[/i][/b][/color]'s character as a family or rather group activity becomes obvious when looking at the supported player counts:
 
-[IMG]https://blog.recommend.games/posts/and-the-spiel-des-jahres-2020-goes-to/players.svg[/IMG]
+[IMG]https://analysisparalysis.games/posts/and-the-spiel-des-jahres-2020-goes-to/players.svg[/IMG]
 
 [i]Every single winner of either award was playable with 3 and 4 players.[/i] It's just what a typical German family looks like, so there's no way the jury will deviate from this pattern. In fact, there's only two games that were even nominated with a different player count, both pure 2-player-games: [thing=118048][/thing] in 2012 and [thing=12002][/thing] in 2005.
 
@@ -56,7 +56,7 @@ Therefore, without a doubt, both [color=#E30613][b][i]Spiel des Jahres 2020[/i][
 
 As I mentioned above, a [color=#E30613][b][i]Spiel des Jahres[/i][/b][/color] should bring together children with their grandparents, yet, somewhat surprisingly, publishers don't always seem to trust their games with the younger audience:
 
-[IMG]https://blog.recommend.games/posts/and-the-spiel-des-jahres-2020-goes-to/age.svg[/IMG]
+[IMG]https://analysisparalysis.games/posts/and-the-spiel-des-jahres-2020-goes-to/age.svg[/IMG]
 
 Here the solid line is what's printed on the box, whilst the dotted line is what the community thinks. Similar to playing time, age recommendations are tricky and publishers often have a different opinion on it than players, but usually [i]in the other direction[/i]. (It's worth noticing though that often there aren't all that many players that "vote" on the age recommendations, so take them with a pinch of salt.)
 
@@ -86,7 +86,7 @@ Without further ado, let's find some games that meet all those criteria!
 
 [size=24][b]Candidates for [color=#E30613][i]Spiel des Jahres[/i][/color][/b][/size]
 
-[IMG]https://blog.recommend.games/posts/and-the-spiel-des-jahres-2020-goes-to/sdj-2020.png[/IMG]
+[IMG]https://analysisparalysis.games/posts/and-the-spiel-des-jahres-2020-goes-to/sdj-2020.png[/IMG]
 
 [size=18][b]Gamers' choices[/b][/size]
 
@@ -150,7 +150,7 @@ So, those were the ten (plus three) games that, according to the data, should be
 
 [size=24][b]Candidates for [color=#193F4A][i]Kennerspiel des Jahres[/i][/color][/b][/size]
 
-[IMG]https://blog.recommend.games/posts/and-the-spiel-des-jahres-2020-goes-to/ksdj-2020.png[/IMG]
+[IMG]https://analysisparalysis.games/posts/and-the-spiel-des-jahres-2020-goes-to/ksdj-2020.png[/IMG]
 
 [size=18][b]Gamers' choices[/b][/size]
 
