@@ -5,7 +5,8 @@ Append Internet Archive (Wayback) links next to external markdown links.
 Preserves originals and adds:  [🗄️](https://web.archive.org/web/<encoded-url>)
 which redirects to the latest snapshot (see IA redirect behaviour).
 
-Skips: fenced code blocks, image links, web.archive.org, *.recommend.games.
+Skips: fenced code blocks, image links, web.archive.org, *.recommend.games,
+analysisparalysis.games.
 Idempotent: does not add a second 🗄️ if already present after the link.
 """
 
@@ -26,6 +27,8 @@ SKIP_HOSTS = frozenset(
         "www.boardgamegeek.com",
         "recommend.games",
         "www.recommend.games",
+        "analysisparalysis.games",
+        "www.analysisparalysis.games",
         "github.com",
         "www.github.com",
         "gitlab.com",
