@@ -1,31 +1,32 @@
-[tool.poetry]
+[project]
 name = "sdj-designers"
 version = "0.1.0"
 description = "Overview of Spiel des Jahres winning designers"
-authors = ["Markus Shepherd <markus@recommend.games>"]
+authors = [{ name = "Markus Shepherd", email = "markus@recommend.games" }]
+requires-python = "==3.14.*"
+dependencies = [
+    "more-itertools",
+    "pandas",
+    "pytility",
+    "tabulate",
+]
 
-[tool.poetry.dependencies]
-python = "3.12.*"
-
-more-itertools = "*"
-pandas = "*"
-pytility = "*"
-tabulate = "*"
-
-[tool.poetry.group.dev.dependencies]
-jupyter-black = "*"
-jupyterlab = "*"
-jupytext = "*"
-mypy = "*"
-ruff = "*"
-types-tqdm = "*"
+[dependency-groups]
+dev = [
+    "jupyter-black",
+    "jupyterlab",
+    "jupytext",
+    "mypy",
+    "ruff",
+    "types-tqdm",
+]
 
 [tool.ruff]
-target-version = "py312"
+target-version = "py314"
 
 [tool.mypy]
-python_version = "3.12"
+python_version = "3.14"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
