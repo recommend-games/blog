@@ -20,6 +20,7 @@
 import jupyter_black
 import polars as pl
 from more_itertools import powerset
+from pathlib import Path
 from pytility import arg_to_iter, clear_list, parse_int
 from tabulate import tabulate
 
@@ -38,18 +39,24 @@ STEPS = ("winner", "sonderpreis", "nominated", "recommended")
 COLUMN_STEPS = ("winner", "nominated", "recommended", "sonderpreis")
 AWARDS = ("kenner", "kinder", "spiel")
 
+DATA_DIR = Path.home() / "Recommend.Games" / "board-game-data" / "scraped"
+
 # %% [markdown]
 # ## Basic data
 
 # %%
-game_data = pl.scan_csv(
-    "../../../board-game-data/scraped/bgg_GameItem.csv",
-    infer_schema_length=None,
-).select("bgg_id", "name", "year", "bayes_rating", "designer")
-designers = pl.scan_csv(
-    "../../../board-game-data/scraped/bgg_Person.csv",
-    infer_schema_length=None,
-).select("bgg_id", "name")
+game_data = pl.scan_csv(DATA_DIR / "bgg_GameItem.csv", infer_schema_length=None).select(
+    "bgg_id",
+    "name",
+    "year",
+    "bayes_rating",
+    "designer",
+)
+designers = pl.scan_csv(DATA_DIR / "bgg_Person.csv", infer_schema_length=None).select(
+    "bgg_id",
+    "name",
+)
+game_data.collect_schema(), designers.collect_schema()
 
 
 # %%
