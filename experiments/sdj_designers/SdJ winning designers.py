@@ -115,6 +115,7 @@ games_summary = (
         pl.col("recommended").sum(),
         pl.col("sonderpreis").sum(),
     )
+    .sort("award")
     .collect()
 )
 print(tabulate(games_summary.rows(), headers=games_summary.columns, tablefmt="pipe"))
@@ -184,6 +185,9 @@ data.with_columns(
         "bayes_rating",
         "designer",
     ]
+).sort(
+    "bgg_id",
+    "designer",
 ).sink_csv(
     f"games{OUTPUT_SUFFIX}.csv"
 )
