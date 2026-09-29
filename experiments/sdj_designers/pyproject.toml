@@ -6,7 +6,7 @@ authors = [{ name = "Markus Shepherd", email = "markus@recommend.games" }]
 requires-python = "==3.14.*"
 dependencies = [
     "more-itertools",
-    "pandas",
+    "polars>=1.44.2",
     "pytility",
     "tabulate",
 ]

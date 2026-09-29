@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.16.1
+#       jupytext_version: 1.19.5
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -18,9 +18,10 @@
 
 # %%
 import jupyter_black
-import pandas as pd
+import polars as pl
 from more_itertools import powerset
 from pytility import arg_to_iter, clear_list, parse_int
+from tabulate import tabulate
 
 jupyter_black.load()
 
@@ -29,83 +30,103 @@ SEED = 23
 # instead of overwriting the originals.
 OUTPUT_SUFFIX = "_2026"
 
-pd.options.display.max_columns = 100
-pd.options.display.max_rows = 100
-pd.options.display.float_format = "{:.6g}".format
+pl.Config.set_tbl_cols(100)
+pl.Config.set_tbl_rows(100)
+pl.Config.set_float_precision(6)
+
+STEPS = ("winner", "sonderpreis", "nominated", "recommended")
+COLUMN_STEPS = ("winner", "nominated", "recommended", "sonderpreis")
+AWARDS = ("kenner", "kinder", "spiel")
 
 # %% [markdown]
 # ## Basic data
 
 # %%
-game_data = pd.read_csv(
-    "../../../board-game-data/scraped/bgg_GameItem.csv",
-    index_col="bgg_id",
-    low_memory=False,
+game_data = (
+    pl.scan_csv(
+        "../../../board-game-data/scraped/bgg_GameItem.csv",
+        infer_schema_length=None,
+    )
+    .select(["bgg_id", "name", "year", "bayes_rating", "designer"])
+    .collect()
 )
 game_data.shape
 
 # %%
-designers = pd.read_csv(
-    "../../../board-game-data/scraped/bgg_Person.csv",
-    index_col="bgg_id",
-    low_memory=False,
-)["name"]
+designers = (
+    pl.scan_csv(
+        "../../../board-game-data/scraped/bgg_Person.csv",
+        infer_schema_length=None,
+    )
+    .select(["bgg_id", "name"])
+    .collect()
+)
 designers.shape
 
+
 # %%
-sdj = pd.read_csv(
-    "sdj.csv",
-    dtype={"winner": bool, "nominated": bool, "recommended": bool, "sonderpreis": str},
-)
-sdj["award"] = "spiel"
+def read_award(path, award):
+    return (
+        pl.read_csv(
+            path,
+            schema_overrides={
+                "winner": pl.Int8,
+                "nominated": pl.Int8,
+                "recommended": pl.Int8,
+                "sonderpreis": pl.String,
+            },
+        )
+        .with_columns(pl.col(["winner", "nominated", "recommended"]).cast(pl.Boolean))
+        .with_columns(pl.lit(award).alias("award"))
+    )
 
-kennersdj = pd.read_csv(
-    "ksdj.csv",
-    dtype={"winner": bool, "nominated": bool, "recommended": bool, "sonderpreis": str},
-)
-kennersdj["award"] = "kenner"
 
-kindersdj = pd.read_csv(
-    "kindersdj.csv",
-    dtype={"winner": bool, "nominated": bool, "recommended": bool, "sonderpreis": str},
-)
-kindersdj["award"] = "kinder"
+sdj = read_award("sdj.csv", "spiel")
+kennersdj = read_award("ksdj.csv", "kenner")
+kindersdj = read_award("kindersdj.csv", "kinder")
 
-awards = pd.concat((sdj, kennersdj, kindersdj))
-awards = awards.groupby("bgg_id").agg(
-    {
-        "jahrgang": "max",
-        "winner": "max",
-        "nominated": "max",
-        "recommended": "max",
-        "sonderpreis": lambda group: ", ".join(
-            sorted(set(s for s in group if isinstance(s, str)))
-        ),
-        "award": lambda group: ", ".join(sorted(set(group))),
-    }
+awards = pl.concat([sdj, kennersdj, kindersdj], how="diagonal_relaxed")
+awards = (
+    awards.group_by("bgg_id")
+    .agg(
+        pl.col("jahrgang").max(),
+        pl.col("winner").max(),
+        pl.col("nominated").max(),
+        pl.col("recommended").max(),
+        pl.col("sonderpreis").drop_nulls().unique().sort().str.join(", "),
+        pl.col("award").unique().sort().str.join(", "),
+    )
+    # Just one Exit and Sherlock game
+    .filter(~pl.col("bgg_id").is_in([203416, 203417, 247436, 250779]))
+    # The early "Beautiful Game" special awards clutter the results
+    .with_columns(
+        pl.when(pl.col("sonderpreis") == "Beautiful Game")
+        .then(True)
+        .otherwise(pl.col("recommended"))
+        .alias("recommended"),
+        pl.when(pl.col("sonderpreis") == "Beautiful Game")
+        .then(pl.lit(""))
+        .otherwise(pl.col("sonderpreis"))
+        .alias("sonderpreis"),
+    )
 )
-# Just one Exit and Sherlock game
-awards.drop(
-    index=[203416, 203417, 247436, 250779],
-    inplace=True,
-)
-# The early "Beautiful Game" special awards clutter the results
-awards.loc[
-    awards["sonderpreis"] == "Beautiful Game",
-    ["recommended", "sonderpreis"],
-] = (True, "")
 awards.shape
 
 # %%
 games_summary = (
-    awards.assign(sonderpreis=awards["sonderpreis"].str.len() > 0)
-    .groupby("award")[["winner", "nominated", "recommended", "sonderpreis"]]
-    .sum()
+    awards.with_columns((pl.col("sonderpreis").str.len_chars() > 0).alias("sonderpreis"))
+    .group_by("award")
+    .agg(
+        pl.col("winner").sum(),
+        pl.col("nominated").sum(),
+        pl.col("recommended").sum(),
+        pl.col("sonderpreis").sum(),
+    )
 )
-print(games_summary.to_markdown())
+print(tabulate(games_summary.rows(), headers=games_summary.columns, tablefmt="pipe"))
 
 # %%
-games = game_data.join(awards, how="inner")
+games = game_data.join(awards, on="bgg_id", how="inner")
 games.shape
 
 
@@ -119,11 +140,20 @@ def parse_ids(value):
     return clear_list(map(parse_int, arg_to_iter(value)))
 
 
-designer_awards = games["designer"].apply(parse_ids).explode().dropna().astype("int64")
+designer_awards = (
+    games.select(["bgg_id", "designer"])
+    .with_columns(
+        pl.col("designer")
+        .map_elements(parse_ids, return_dtype=pl.List(pl.Int64))
+        .alias("designer")
+    )
+    .explode("designer")
+)
 designer_awards.shape
 
 # %%
 columns = [
+    "bgg_id",
     "name",
     "year",
     "award",
@@ -133,39 +163,74 @@ columns = [
     "sonderpreis",
     "bayes_rating",
 ]
-data = games[columns].dropna(subset=["award"]).join(designer_awards).copy()
-data["designer"] = data["designer"].fillna(3).astype("int64")
-data["year"] = data["year"].fillna(0).astype("int64")
+data = (
+    games.select(columns)
+    .filter(pl.col("award").is_not_null())
+    .join(designer_awards, on="bgg_id", how="left")
+    .with_columns(
+        pl.col("designer").fill_null(3),
+        pl.col("year").fill_null(0),
+    )
+)
 data.shape
 
 # %%
-data.to_csv(f"games{OUTPUT_SUFFIX}.csv")
+data.with_columns(
+    pl.col(["winner", "nominated", "recommended"]).map_elements(
+        lambda value: "True" if value else "False", return_dtype=pl.String
+    )
+).select(
+    [
+        "bgg_id",
+        "name",
+        "year",
+        "award",
+        "winner",
+        "nominated",
+        "recommended",
+        "sonderpreis",
+        "bayes_rating",
+        "designer",
+    ]
+).write_csv(f"games{OUTPUT_SUFFIX}.csv")
 
 # %%
-best_rating = data.groupby("designer").agg({"bayes_rating": "max"})
-best_rating.columns = pd.MultiIndex.from_arrays([["all"], ["best_rating"]])
+best_rating = data.group_by("designer").agg(pl.col("bayes_rating").max().alias("best_rating"))
 best_rating.shape
 
 # %%
-winner_mask = data["winner"]
-sonderpreis_mask = ~winner_mask & (data["sonderpreis"].str.len() > 0)
-nominated_mask = ~winner_mask & ~sonderpreis_mask & data["nominated"]
-recommended_mask = (
-    ~winner_mask & ~sonderpreis_mask & ~nominated_mask & data["recommended"]
+winner = data.filter(pl.col("winner"))
+sonderpreis = data.filter(~pl.col("winner") & (pl.col("sonderpreis").str.len_chars() > 0))
+nominated = data.filter(
+    ~pl.col("winner")
+    & ~(pl.col("sonderpreis").str.len_chars() > 0)
+    & pl.col("nominated")
 )
-winner = data[winner_mask]
-sonderpreis = data[sonderpreis_mask]
-nominated = data[nominated_mask]
-recommended = data[recommended_mask]
+recommended = data.filter(
+    ~pl.col("winner")
+    & ~(pl.col("sonderpreis").str.len_chars() > 0)
+    & ~pl.col("nominated")
+    & pl.col("recommended")
+)
 winner.shape, sonderpreis.shape, nominated.shape, recommended.shape
 
 
 # %%
 def count_awards(data, label):
-    count = data.groupby(["designer", "award"]).size().unstack(fill_value=0)
-    count["total"] = count.sum(axis=1)
-    count.columns = pd.MultiIndex.from_product([[label], count.columns])
-    return count
+    count = data.pivot(
+        on="award",
+        index="designer",
+        values="award",
+        aggregate_function="len",
+    ).fill_null(0)
+    for award in AWARDS:
+        if award not in count.columns:
+            count = count.with_columns(pl.lit(0).alias(award))
+    count = count.with_columns(pl.sum_horizontal(list(AWARDS)).alias("total"))
+    count = count.select(
+        ["designer"] + [pl.col(award).cast(pl.Int64) for award in (*AWARDS, "total")]
+    )
+    return count.rename({award: f"{label}_{award}" for award in (*AWARDS, "total")})
 
 
 # %%
@@ -177,71 +242,66 @@ sonderpreis_count = count_awards(sonderpreis, "sonderpreis")
 
 # Join the counts
 counts = (
-    winner_count.join(nominated_count, how="outer")
-    .join(recommended_count, how="outer")
-    .join(sonderpreis_count, how="outer")
-    .join(best_rating, how="left")
-    .fillna(0)
+    winner_count.join(nominated_count, on="designer", how="full", coalesce=True)
+    .join(recommended_count, on="designer", how="full", coalesce=True)
+    .join(sonderpreis_count, on="designer", how="full", coalesce=True)
+    .join(best_rating, on="designer", how="left")
+    .fill_null(0)
 )
 
 # "Uncredited" designs don't really make sense in our analysis
-counts.drop(index=3, inplace=True)
+counts = counts.filter(pl.col("designer") != 3)
 
-# Bring index and dtypes in correct format
-counts.index = counts.index.astype("int64")
-counts.index.name = None
-count_columns = pd.MultiIndex.from_product(
-    [
-        ["winner", "sonderpreis", "nominated", "recommended"],
-        ["spiel", "kenner", "kinder", "total"],
-    ]
-)
-counts[count_columns] = counts[count_columns].astype("int64")
+# Bring dtypes in correct format
+count_columns = [
+    f"{step}_{award}" for step in STEPS for award in (*AWARDS, "total")
+]
+counts = counts.with_columns([pl.col(c).cast(pl.Int64) for c in count_columns])
 
 # Add some more data
-counts.insert(0, ("designer", "name"), designers)
-counts["all", "total"] = (
-    counts[("winner", "total")]
-    + counts[("nominated", "total")]
-    + counts[("recommended", "total")]
-    + counts[("sonderpreis", "total")]
+counts = counts.join(
+    designers.rename({"bgg_id": "designer", "name": "designer_name"}),
+    on="designer",
+    how="left",
+).rename({"designer": "bgg_id", "designer_name": "name"})
+counts = counts.with_columns(
+    (
+        pl.col("winner_total")
+        + pl.col("nominated_total")
+        + pl.col("recommended_total")
+        + pl.col("sonderpreis_total")
+    ).alias("total")
 )
 
 # Rank and sort
-counts["all", "rank"] = (
-    counts[
-        [
-            ("winner", "total"),
-            ("sonderpreis", "total"),
-            ("nominated", "total"),
-            ("recommended", "total"),
-            ("winner", "spiel"),
-            ("winner", "kenner"),
-            ("winner", "kinder"),
-            ("sonderpreis", "spiel"),
-            ("sonderpreis", "kenner"),
-            ("sonderpreis", "kinder"),
-            ("nominated", "spiel"),
-            ("nominated", "kenner"),
-            ("nominated", "kinder"),
-            ("recommended", "spiel"),
-            ("recommended", "kenner"),
-            ("recommended", "kinder"),
-            ("all", "total"),
-            ("all", "best_rating"),
-        ]
-    ]
-    .apply(tuple, axis=1)
-    .rank(method="min", ascending=False)
-    .astype("int64")
-)
-counts.sort_values(
-    [
-        ("all", "rank"),
-        ("designer", "name"),
-    ],
-    ascending=True,
-    inplace=True,
+RANK_COLUMNS = [
+    "winner_total",
+    "sonderpreis_total",
+    "nominated_total",
+    "recommended_total",
+    "winner_spiel",
+    "winner_kenner",
+    "winner_kinder",
+    "sonderpreis_spiel",
+    "sonderpreis_kenner",
+    "sonderpreis_kinder",
+    "nominated_spiel",
+    "nominated_kenner",
+    "nominated_kinder",
+    "recommended_spiel",
+    "recommended_kenner",
+    "recommended_kinder",
+    "total",
+    "best_rating",
+]
+counts = (
+    counts.sort(
+        RANK_COLUMNS, descending=[True] * len(RANK_COLUMNS), nulls_last=True
+    )
+    .with_row_index("_rn", offset=1)
+    .with_columns(pl.col("_rn").min().over(RANK_COLUMNS).alias("rank"))
+    .drop("_rn")
+    .sort(["rank", "name"], nulls_last=True)
 )
 
 # Done.
@@ -254,33 +314,37 @@ counts.shape
 counts.head(10)
 
 # %%
-counts.reset_index(col_level=1, names="bgg_id").to_csv(
-    f"designers{OUTPUT_SUFFIX}.csv", index=False
+column_order = (
+    ["bgg_id", "name"]
+    + [f"{step}_{award}" for step in COLUMN_STEPS for award in (*AWARDS, "total")]
+    + ["best_rating", "total", "rank"]
 )
+counts.select(column_order).write_csv(f"designers{OUTPUT_SUFFIX}.csv")
 
 
 # %%
 def designer_table(counts):
-    criterion = (counts["all", "total"] >= 5) | (
-        (counts["winner", "total"] + counts["sonderpreis", "total"]) >= 2
+    criterion = (pl.col("total") >= 5) | (
+        (pl.col("winner_total") + pl.col("sonderpreis_total")) >= 2
     )
     result = "| Designer | Spiel | Kennerspiel | Kinderspiel | Total |\n"
     result += "|:---------|:-----:|:-----------:|:-----------:|:-----:|\n"
-    for bgg_id, row in counts[criterion].iterrows():
+    for row in counts.filter(criterion).iter_rows(named=True):
+        bgg_id = row["bgg_id"]
         cells = [
             "",
-            f" [{row['designer', 'name']}](https://recommend.games/#/?designer={bgg_id:.0f}) ",
+            f" [{row['name']}](https://recommend.games/#/?designer={bgg_id:.0f}) ",
         ]
         for award in ("spiel", "kenner", "kinder"):
-            winner = row["winner", award]
-            sonderpreis = row["sonderpreis", award]
+            winner = row[f"winner_{award}"]
+            sonderpreis = row[f"sonderpreis_{award}"]
             sonderpreis_str = f" ({sonderpreis:.0f})" if sonderpreis > 0 else ""
-            nominated = row["nominated", award]
-            recommended = row["recommended", award]
+            nominated = row[f"nominated_{award}"]
+            recommended = row[f"recommended_{award}"]
             cells.append(
                 f" {winner:.0f}{sonderpreis_str} / {nominated:.0f} / {recommended:.0f} "
             )
-        cells.append(f" {row['all', 'total']} ")
+        cells.append(f" {row['total']} ")
         cells.append("")
         result += "|".join(cells)
         result += "\n"
@@ -294,43 +358,32 @@ with open(f"table{OUTPUT_SUFFIX}.md", "w") as f:
 # %% [markdown]
 # ## More statistics
 
+
 # %%
-awards = ("spiel", "kenner", "kinder")
+def has_any(award, steps):
+    return pl.any_horizontal([pl.col(f"{step}_{award}") > 0 for step in steps])
+
+
+def all_awards(award_set, steps):
+    return pl.all_horizontal([has_any(award, steps) for award in award_set])
+
+
 awards_full_names = dict(
     zip(
-        awards,
-        ("Spiel des Jahres", "Kennerspiel des Jahres", "Kinderspiel des Jahres"),
+        AWARDS,
+        ("Kennerspiel des Jahres", "Kinderspiel des Jahres", "Spiel des Jahres"),
     )
 )
 
-for award_set in powerset(awards):
+for award_set in powerset(("spiel", "kenner", "kinder")):
     award_set = list(award_set)
     if not award_set:
         # skip empty set
         continue
-    award_data = counts.swaplevel(axis=1)[award_set]
-    num_longlist = award_data.T.groupby(level=0).any().all().sum()
-    num_shortlist = (
-        award_data.drop(columns=["recommended"], level=1)
-        .T.groupby(level=0)
-        .any()
-        .all()
-        .sum()
-    )
-    num_winner_any = (
-        award_data.drop(columns=["recommended", "nominated"], level=1)
-        .T.groupby(level=0)
-        .any()
-        .all()
-        .sum()
-    )
-    num_winner = (
-        award_data.drop(columns=["recommended", "nominated", "sonderpreis"], level=1)
-        .T.groupby(level=0)
-        .any()
-        .all()
-        .sum()
-    )
+    num_longlist = counts.select(all_awards(award_set, STEPS)).to_series().sum()
+    num_shortlist = counts.select(all_awards(award_set, STEPS[:3])).to_series().sum()
+    num_winner_any = counts.select(all_awards(award_set, STEPS[:2])).to_series().sum()
+    num_winner = counts.select(all_awards(award_set, STEPS[:1])).to_series().sum()
     headline = " & ".join(awards_full_names[award] for award in award_set)
     print(f"### {headline}")
     print()
@@ -344,20 +397,18 @@ for award_set in powerset(awards):
     print()
     print()
 
+
 # %%
-steps = ["winner", "sonderpreis", "nominated", "recommended"]
-cat_count_longlist = (
-    counts.drop(columns="total", level=1)[steps].T.groupby(level=1).any().sum()
-)
-cat_count_shortlist = (
-    counts.drop(columns="total", level=1)[steps[:3]].T.groupby(level=1).any().sum()
-)
-cat_count_winner_any = (
-    counts.drop(columns="total", level=1)[steps[:2]].T.groupby(level=1).any().sum()
-)
-cat_count_winner = (
-    counts.drop(columns="total", level=1)[steps[:1]].T.groupby(level=1).any().sum()
-)
+def cat_count(steps):
+    return pl.sum_horizontal(
+        [has_any(award, steps).cast(pl.Int64) for award in ("spiel", "kenner", "kinder")]
+    )
+
+
+cat_count_longlist = counts.select(cat_count(STEPS).alias("n")).to_series()
+cat_count_shortlist = counts.select(cat_count(STEPS[:3]).alias("n")).to_series()
+cat_count_winner_any = counts.select(cat_count(STEPS[:2]).alias("n")).to_series()
+cat_count_winner = counts.select(cat_count(STEPS[:1]).alias("n")).to_series()
 (
     cat_count_longlist.shape,
     cat_count_shortlist.shape,
@@ -376,9 +427,12 @@ count_lists = {
 for title, count_list in count_lists.items():
     print(f"### {title}")
     print()
-    for num, count in (
-        count_list.value_counts().sort_index(ascending=False).cumsum().items()
-    ):
+    value_counts = (
+        count_list.value_counts()
+        .sort("n", descending=True)
+        .with_columns(pl.col("count").cum_sum().alias("cum"))
+    )
+    for num, count in zip(value_counts["n"], value_counts["cum"]):
         if num > 0:
             print(
                 f"- {count} designer{'' if count == 1 else 's'} appear in {'all' if num == 3 else 'at least'} {num} categor{'y' if num == 1 else 'ies'}"
@@ -387,19 +441,13 @@ for title, count_list in count_lists.items():
     print()
 
 # %%
-awards = (
-    "total",
-    "spiel",
-    "kenner",
-    "kinder",
-)
+report_awards = ("total", "spiel", "kenner", "kinder")
 award_titles = (
     "Overall",
     "Spiel des Jahres",
     "Kennerspiel des Jahres",
     "Kinderspiel des Jahres",
 )
-steps = ("winner", "sonderpreis", "nominated", "recommended")
 step_titles = (
     "Most wins (main award)",
     "Most wins (incl special award)",
@@ -407,25 +455,29 @@ step_titles = (
     "Most games on the longlist",
 )
 print("## Designer records")
-for award, award_title in zip(awards, award_titles):
+for award, award_title in zip(report_awards, award_titles):
     print(f"\n\n### {award_title}\n")
 
-    for i in range(len(steps), 0, -1):
-        num_games = counts[pd.MultiIndex.from_product([steps[:i], [award]])].sum(axis=1)
-        most = num_games.max()
-        print(f"- {step_titles[i-1]}: {most}")
-        for bgg_id, name in counts.reindex(num_games[num_games == most].index)[
-            "designer", "name"
-        ].items():
+    for i in range(len(STEPS), 0, -1):
+        num_games_expr = pl.sum_horizontal(
+            [pl.col(f"{step}_{award}") for step in STEPS[:i]]
+        )
+        tmp = counts.with_columns(num_games_expr.alias("_num_games"))
+        most = tmp["_num_games"].max()
+        print(f"- {step_titles[i - 1]}: {most}")
+        for bgg_id, name in tmp.filter(pl.col("_num_games") == most)[
+            ["bgg_id", "name"]
+        ].iter_rows():
             print(f"  - [{name}](https://recommend.games/#/?designer={bgg_id:.0f})")
 
-    nominated = counts[counts["winner", award] == 0].sort_values(
-        ("nominated", award),
-        ascending=False,
+    nominated = counts.filter(pl.col(f"winner_{award}") == 0).sort(
+        f"nominated_{award}",
+        descending=True,
+        maintain_order=True,
     )
-    nominated_num = nominated["nominated", award].max()
+    nominated_num = nominated[f"nominated_{award}"].max()
     print(f"- Most games on the shortlist without win: {nominated_num}")
-    for bgg_id, name in nominated[nominated["nominated", award] == nominated_num][
-        "designer", "name"
-    ].items():
+    for bgg_id, name in nominated.filter(pl.col(f"nominated_{award}") == nominated_num)[
+        ["bgg_id", "name"]
+    ].iter_rows():
         print(f"  - [{name}](https://recommend.games/#/?designer={bgg_id:.0f})")
