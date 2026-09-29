@@ -42,26 +42,14 @@ AWARDS = ("kenner", "kinder", "spiel")
 # ## Basic data
 
 # %%
-game_data = (
-    pl.scan_csv(
-        "../../../board-game-data/scraped/bgg_GameItem.csv",
-        infer_schema_length=None,
-    )
-    .select("bgg_id", "name", "year", "bayes_rating", "designer")
-    .collect()
-)
-game_data.shape
-
-# %%
-designers = (
-    pl.scan_csv(
-        "../../../board-game-data/scraped/bgg_Person.csv",
-        infer_schema_length=None,
-    )
-    .select("bgg_id", "name")
-    .collect()
-)
-designers.shape
+game_data = pl.scan_csv(
+    "../../../board-game-data/scraped/bgg_GameItem.csv",
+    infer_schema_length=None,
+).select("bgg_id", "name", "year", "bayes_rating", "designer")
+designers = pl.scan_csv(
+    "../../../board-game-data/scraped/bgg_Person.csv",
+    infer_schema_length=None,
+).select("bgg_id", "name")
 
 
 # %%
@@ -113,9 +101,9 @@ awards = (
         .then(None)
         .otherwise(pl.col("sonderpreis")),
     )
-    .collect()
+    .cache()
 )
-awards.shape
+awards.collect_schema()
 
 # %%
 games_summary = (
@@ -127,12 +115,13 @@ games_summary = (
         pl.col("recommended").sum(),
         pl.col("sonderpreis").sum(),
     )
+    .collect()
 )
 print(tabulate(games_summary.rows(), headers=games_summary.columns, tablefmt="pipe"))
 
 # %%
-games = game_data.join(awards, on="bgg_id", how="inner")
-games.shape
+games = game_data.join(awards, on="bgg_id", how="inner").cache()
+games.collect_schema()
 
 
 # %% [markdown]
@@ -150,9 +139,8 @@ designer_awards = (
     .with_columns(
         pl.col("designer").map_elements(parse_ids, return_dtype=pl.List(pl.Int64))
     )
-    .explode("designer")
+    .explode("designer", empty_as_null=False)
 )
-designer_awards.shape
 
 # %%
 columns = [
@@ -174,12 +162,13 @@ data = (
         pl.col("designer").fill_null(3),
         pl.col("year").fill_null(0),
     )
+    .cache()
 )
-data.shape
+data.collect_schema()
 
 # %%
 data.with_columns(
-    pl.col(["winner", "nominated", "recommended"]).map_elements(
+    pl.col("winner", "nominated", "recommended").map_elements(
         lambda value: "True" if value else "False", return_dtype=pl.String
     )
 ).select(
@@ -195,11 +184,12 @@ data.with_columns(
         "bayes_rating",
         "designer",
     ]
-).write_csv(f"games{OUTPUT_SUFFIX}.csv")
+).sink_csv(
+    f"games{OUTPUT_SUFFIX}.csv"
+)
 
 # %%
 best_rating = data.group_by("designer").agg(best_rating=pl.col("bayes_rating").max())
-best_rating.shape
 
 # %%
 winner = data.filter(pl.col("winner"))
@@ -213,25 +203,27 @@ recommended = data.filter(
     & ~pl.col("nominated")
     & pl.col("recommended")
 )
-winner.shape, sonderpreis.shape, nominated.shape, recommended.shape
 
 
 # %%
 def count_awards(data, label):
-    count = data.pivot(
-        on="award",
-        index="designer",
-        values="award",
-        aggregate_function="len",
-    ).fill_null(0)
-    for award in AWARDS:
-        if award not in count.columns:
-            count = count.with_columns(pl.lit(0).alias(award))
-    count = count.with_columns(total=pl.sum_horizontal(list(AWARDS)))
-    count = count.select(
-        ["designer"] + [pl.col(award).cast(pl.Int64) for award in (*AWARDS, "total")]
+    count = (
+        data.pivot(
+            on="award",
+            on_columns=list(AWARDS),
+            index="designer",
+            values="award",
+            aggregate_function="len",
+        )
+        .fill_null(0)
+        .with_columns(total=pl.sum_horizontal(list(AWARDS)))
+        .select(
+            ["designer"]
+            + [pl.col(award).cast(pl.Int64) for award in (*AWARDS, "total")]
+        )
+        .rename({award: f"{label}_{award}" for award in (*AWARDS, "total")})
     )
-    return count.rename({award: f"{label}_{award}" for award in (*AWARDS, "total")})
+    return count
 
 
 # %%
@@ -254,9 +246,7 @@ counts = (
 counts = counts.filter(pl.col("designer") != 3)
 
 # Bring dtypes in correct format
-count_columns = [
-    f"{step}_{award}" for step in STEPS for award in (*AWARDS, "total")
-]
+count_columns = [f"{step}_{award}" for step in STEPS for award in (*AWARDS, "total")]
 counts = counts.with_columns([pl.col(c).cast(pl.Int64) for c in count_columns])
 
 # Add some more data
@@ -294,13 +284,12 @@ RANK_COLUMNS = [
     "best_rating",
 ]
 counts = (
-    counts.sort(
-        RANK_COLUMNS, descending=[True] * len(RANK_COLUMNS), nulls_last=True
-    )
+    counts.sort(RANK_COLUMNS, descending=[True] * len(RANK_COLUMNS), nulls_last=True)
     .with_row_index("_rn", offset=1)
     .with_columns(rank=pl.col("_rn").min().over(RANK_COLUMNS))
     .drop("_rn")
     .sort(["rank", "name"], nulls_last=True)
+    .collect()
 )
 
 # Done.
@@ -400,7 +389,10 @@ for award_set in powerset(("spiel", "kenner", "kinder")):
 # %%
 def cat_count(steps):
     return pl.sum_horizontal(
-        [has_any(award, steps).cast(pl.Int64) for award in ("spiel", "kenner", "kinder")]
+        [
+            has_any(award, steps).cast(pl.Int64)
+            for award in ("spiel", "kenner", "kinder")
+        ]
     )
 
 
