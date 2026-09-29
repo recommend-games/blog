@@ -77,7 +77,7 @@ def read_award(path, award):
             },
         )
         .with_columns(pl.col(["winner", "nominated", "recommended"]).cast(pl.Boolean))
-        .with_columns(pl.lit(award).alias("award"))
+        .with_columns(award=pl.lit(award))
     )
 
 
@@ -98,16 +98,20 @@ awards = (
     )
     # Just one Exit and Sherlock game
     .filter(~pl.col("bgg_id").is_in([203416, 203417, 247436, 250779]))
+    # Games with no Sonderpreis end up with an empty string, not null
+    .with_columns(
+        sonderpreis=pl.when(pl.col("sonderpreis") == "")
+        .then(None)
+        .otherwise(pl.col("sonderpreis"))
+    )
     # The early "Beautiful Game" special awards clutter the results
     .with_columns(
-        pl.when(pl.col("sonderpreis") == "Beautiful Game")
+        recommended=pl.when(pl.col("sonderpreis") == "Beautiful Game")
         .then(True)
-        .otherwise(pl.col("recommended"))
-        .alias("recommended"),
-        pl.when(pl.col("sonderpreis") == "Beautiful Game")
-        .then(pl.lit(""))
-        .otherwise(pl.col("sonderpreis"))
-        .alias("sonderpreis"),
+        .otherwise(pl.col("recommended")),
+        sonderpreis=pl.when(pl.col("sonderpreis") == "Beautiful Game")
+        .then(None)
+        .otherwise(pl.col("sonderpreis")),
     )
     .collect()
 )
@@ -115,9 +119,7 @@ awards.shape
 
 # %%
 games_summary = (
-    awards.with_columns(
-        (pl.col("sonderpreis").str.len_chars() > 0).alias("sonderpreis")
-    )
+    awards.with_columns(pl.col("sonderpreis").is_not_null())
     .group_by("award")
     .agg(
         pl.col("winner").sum(),
@@ -146,9 +148,7 @@ def parse_ids(value):
 designer_awards = (
     games.select(["bgg_id", "designer"])
     .with_columns(
-        pl.col("designer")
-        .map_elements(parse_ids, return_dtype=pl.List(pl.Int64))
-        .alias("designer")
+        pl.col("designer").map_elements(parse_ids, return_dtype=pl.List(pl.Int64))
     )
     .explode("designer")
 )
@@ -198,20 +198,18 @@ data.with_columns(
 ).write_csv(f"games{OUTPUT_SUFFIX}.csv")
 
 # %%
-best_rating = data.group_by("designer").agg(pl.col("bayes_rating").max().alias("best_rating"))
+best_rating = data.group_by("designer").agg(best_rating=pl.col("bayes_rating").max())
 best_rating.shape
 
 # %%
 winner = data.filter(pl.col("winner"))
-sonderpreis = data.filter(~pl.col("winner") & (pl.col("sonderpreis").str.len_chars() > 0))
+sonderpreis = data.filter(~pl.col("winner") & pl.col("sonderpreis").is_not_null())
 nominated = data.filter(
-    ~pl.col("winner")
-    & ~(pl.col("sonderpreis").str.len_chars() > 0)
-    & pl.col("nominated")
+    ~pl.col("winner") & pl.col("sonderpreis").is_null() & pl.col("nominated")
 )
 recommended = data.filter(
     ~pl.col("winner")
-    & ~(pl.col("sonderpreis").str.len_chars() > 0)
+    & pl.col("sonderpreis").is_null()
     & ~pl.col("nominated")
     & pl.col("recommended")
 )
@@ -229,7 +227,7 @@ def count_awards(data, label):
     for award in AWARDS:
         if award not in count.columns:
             count = count.with_columns(pl.lit(0).alias(award))
-    count = count.with_columns(pl.sum_horizontal(list(AWARDS)).alias("total"))
+    count = count.with_columns(total=pl.sum_horizontal(list(AWARDS)))
     count = count.select(
         ["designer"] + [pl.col(award).cast(pl.Int64) for award in (*AWARDS, "total")]
     )
@@ -268,12 +266,10 @@ counts = counts.join(
     how="left",
 ).rename({"designer": "bgg_id", "designer_name": "name"})
 counts = counts.with_columns(
-    (
-        pl.col("winner_total")
-        + pl.col("nominated_total")
-        + pl.col("recommended_total")
-        + pl.col("sonderpreis_total")
-    ).alias("total")
+    total=pl.col("winner_total")
+    + pl.col("nominated_total")
+    + pl.col("recommended_total")
+    + pl.col("sonderpreis_total")
 )
 
 # Rank and sort
@@ -302,7 +298,7 @@ counts = (
         RANK_COLUMNS, descending=[True] * len(RANK_COLUMNS), nulls_last=True
     )
     .with_row_index("_rn", offset=1)
-    .with_columns(pl.col("_rn").min().over(RANK_COLUMNS).alias("rank"))
+    .with_columns(rank=pl.col("_rn").min().over(RANK_COLUMNS))
     .drop("_rn")
     .sort(["rank", "name"], nulls_last=True)
 )
@@ -408,10 +404,10 @@ def cat_count(steps):
     )
 
 
-cat_count_longlist = counts.select(cat_count(STEPS).alias("n")).to_series()
-cat_count_shortlist = counts.select(cat_count(STEPS[:3]).alias("n")).to_series()
-cat_count_winner_any = counts.select(cat_count(STEPS[:2]).alias("n")).to_series()
-cat_count_winner = counts.select(cat_count(STEPS[:1]).alias("n")).to_series()
+cat_count_longlist = counts.select(n=cat_count(STEPS)).to_series()
+cat_count_shortlist = counts.select(n=cat_count(STEPS[:3])).to_series()
+cat_count_winner_any = counts.select(n=cat_count(STEPS[:2])).to_series()
+cat_count_winner = counts.select(n=cat_count(STEPS[:1])).to_series()
 (
     cat_count_longlist.shape,
     cat_count_shortlist.shape,
@@ -433,7 +429,7 @@ for title, count_list in count_lists.items():
     value_counts = (
         count_list.value_counts()
         .sort("n", descending=True)
-        .with_columns(pl.col("count").cum_sum().alias("cum"))
+        .with_columns(cum=pl.col("count").cum_sum())
     )
     for num, count in zip(value_counts["n"], value_counts["cum"]):
         if num > 0:
@@ -462,10 +458,11 @@ for award, award_title in zip(report_awards, award_titles):
     print(f"\n\n### {award_title}\n")
 
     for i in range(len(STEPS), 0, -1):
-        num_games_expr = pl.sum_horizontal(
-            [pl.col(f"{step}_{award}") for step in STEPS[:i]]
+        tmp = counts.with_columns(
+            _num_games=pl.sum_horizontal(
+                [pl.col(f"{step}_{award}") for step in STEPS[:i]]
+            )
         )
-        tmp = counts.with_columns(num_games_expr.alias("_num_games"))
         most = tmp["_num_games"].max()
         print(f"- {step_titles[i - 1]}: {most}")
         for bgg_id, name in tmp.filter(pl.col("_num_games") == most)[
