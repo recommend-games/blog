@@ -5,8 +5,7 @@ slug: game-designer-hall-of-fame-2
 share_img: /posts/game-designer-hall-of-fame-2/sdj-all.webp
 author: Markus Shepherd
 type: post
-date: 2026-07-27T12:00:00+03:00
-draft: true
+date: 2026-10-02T12:00:00+03:00
 tags:
   - Spiel des Jahres
   - Kennerspiel des Jahres
