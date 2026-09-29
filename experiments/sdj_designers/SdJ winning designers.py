@@ -47,7 +47,7 @@ game_data = (
         "../../../board-game-data/scraped/bgg_GameItem.csv",
         infer_schema_length=None,
     )
-    .select(["bgg_id", "name", "year", "bayes_rating", "designer"])
+    .select("bgg_id", "name", "year", "bayes_rating", "designer")
     .collect()
 )
 game_data.shape
@@ -58,7 +58,7 @@ designers = (
         "../../../board-game-data/scraped/bgg_Person.csv",
         infer_schema_length=None,
     )
-    .select(["bgg_id", "name"])
+    .select("bgg_id", "name")
     .collect()
 )
 designers.shape
@@ -67,7 +67,7 @@ designers.shape
 # %%
 def read_award(path, award):
     return (
-        pl.read_csv(
+        pl.scan_csv(
             path,
             schema_overrides={
                 "winner": pl.Int8,
@@ -85,9 +85,9 @@ sdj = read_award("sdj.csv", "spiel")
 kennersdj = read_award("ksdj.csv", "kenner")
 kindersdj = read_award("kindersdj.csv", "kinder")
 
-awards = pl.concat([sdj, kennersdj, kindersdj], how="diagonal_relaxed")
 awards = (
-    awards.group_by("bgg_id")
+    pl.concat([sdj, kennersdj, kindersdj], how="diagonal_relaxed")
+    .group_by("bgg_id")
     .agg(
         pl.col("jahrgang").max(),
         pl.col("winner").max(),
@@ -109,12 +109,15 @@ awards = (
         .otherwise(pl.col("sonderpreis"))
         .alias("sonderpreis"),
     )
+    .collect()
 )
 awards.shape
 
 # %%
 games_summary = (
-    awards.with_columns((pl.col("sonderpreis").str.len_chars() > 0).alias("sonderpreis"))
+    awards.with_columns(
+        (pl.col("sonderpreis").str.len_chars() > 0).alias("sonderpreis")
+    )
     .group_by("award")
     .agg(
         pl.col("winner").sum(),
