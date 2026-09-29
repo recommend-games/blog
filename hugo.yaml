@@ -51,6 +51,19 @@ markup:
       unsafe: true
 
 
+related:
+  includeNewer: true
+  threshold: 80
+  toLower: false
+  indices:
+    - name: tags
+      weight: 100
+    - name: keywords
+      weight: 80
+    - name: date
+      weight: 10
+
+
 menu:
   main:
     - name: Recommend.Games
