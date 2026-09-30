@@ -1,6 +1,6 @@
 ---
 title: "The Triple Crown: Reiner Knizia Rewrites the Designer Hall of Fame"
-subtitle: "Game Designer Hall of Fame, part 2: two more award seasons, one historic first"
+subtitle: "Game Designer Hall of Fame, part 2: three more award seasons, one historic first"
 slug: game-designer-hall-of-fame-2
 share_img: /posts/game-designer-hall-of-fame-2/sdj-all.webp
 author: Markus Shepherd
@@ -19,7 +19,7 @@ tags:
   - Reiner Knizia
 ---
 
-Two award seasons ago I built a [Designer Hall of Fame]({{<ref "posts/designer_hall_of_fame/index.md">}}), digging through 45 years of {{% sdj %}}Spiel{{% /sdj %}}, {{% kdj %}}Kennerspiel{{% /kdj %}} and {{% kindersdj / %}} history to see which designers had been most successful at the awards. Back then, the piece ended on a small cliffhanger: no designer had ever won in all three categories.
+Three award seasons ago I built a [Designer Hall of Fame]({{<ref "posts/designer_hall_of_fame/index.md">}}), digging through 45 years of {{% sdj %}}Spiel{{% /sdj %}}, {{% kdj %}}Kennerspiel{{% /kdj %}} and {{% kindersdj / %}} history to see which designers had been most successful at the awards. Back then, the piece ended on a small cliffhanger: no designer had ever won in all three categories.
 
 {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}} has just crowned its [winners]({{<ref "posts/sdj_2026_4/index.md">}}) (see also our [predictions]({{<ref "posts/sdj_2026_3/index.md">}}) if you missed them), and [Reiner Knizia](https://recommend.games/#/?designer=2)'s {{% kdj / %}} win for {{% game 417197 %}}Rebirth{{% /game %}} ended that cliffhanger for good: he's now the first designer ever to win all three Spiel des Jahres awards. That felt like the perfect excuse to rerun the whole analysis rather than just patch a footnote, so here's the updated picture, methodology unchanged from the original piece.
 
@@ -36,6 +36,12 @@ Overall, the jury included 896 games on its various longlist across the three ca
 | {{% kdj %}}Kennerspiel{{% /kdj %}} | 16 | 48 | 97 | 2 |
 | {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} | 38 | 104 | 278 | 1 |
 
+<!-- TODO: dataset needs updating. The raw award data has 897 games and 278 Kinderspiel
+recommendations, but bgg_id 464279 (a 2026 Kinderspiel recommendation) is missing from the
+BGG scrape, so the join drops it: games.csv/designers.csv and every designer statistic in
+this article are based on 896 games and 277 Kinderspiel recommendations. Once BGG has the
+game, re-run the analysis and the table and the 896 above will agree. -->
+
 A quick word about the data: As usual, I rely on BoardGameGeek (BGG) for data about the games and their designers. If a game is not in the database or if the designer entry is wrong, the statistics here will necessarily be wrong too. I've collected data about the different {{% sdj / %}} awards manually over the years, so that's another potential source of errors. If you're reading this from the future, I should point out that the statistics here should be complete up to and including {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}.
 
 The current format of having a longlist (which become the recommendations), out of which three games are selected for the shortlist (which are the nominated games), out of which one game will be given the award, has been in place since 2011 with the introduction of the {{% kdj / %}}. Formats have varied throughout the decades and I've tried to map them to the current situation as much as possible.
@@ -47,7 +53,7 @@ So without further ado, let's take a look at the designers.
 
 ## Designers
 
-Over the course of 48 sessions, the jury has mentioned games by 615 different designers. By far the most successful designer is [Wolfgang Kramer](https://recommend.games/#/?designer=7) who has won {{% sdj / %}} five times (four of those were co-designs) and {{% kindersdj / %}} once between 1986 and 2000. During that time period, [Klaus Teuber](https://recommend.games/#/?designer=11) won {{% sdj / %}} four times, so during those 15 years Wolfgang & Klaus shared 11 awards between them. The record for most games on the longlists is held by [Reiner Knizia](https://recommend.games/#/?designer=2) with 38 games – and in 2026 he finally turned that incredible output into something unprecedented. Already the owner of one {{% sdj / %}} win (2008, Keltis) and one {{% kindersdj / %}} win (2008, Whoowasit?), Knizia added a {{% kdj / %}} win for {{% game 417197 %}}Rebirth{{% /game %}} in 2026, making him the first designer ever to win all three {{% sdj / %}} categories.
+Over the course of 48 sessions, the jury has mentioned games by 615 different designers. By far the most successful designer is [Wolfgang Kramer](https://recommend.games/#/?designer=7) who has won {{% sdj / %}} five times (three of those were co-designs) and {{% kindersdj / %}} once between 1986 and 2000. During that time period, [Klaus Teuber](https://recommend.games/#/?designer=11) won {{% sdj / %}} four times, so during those 15 years Wolfgang & Klaus shared nine awards between them. The record for most games on the longlists is held by [Reiner Knizia](https://recommend.games/#/?designer=2) with 38 games – and in 2026 he finally turned that incredible output into something unprecedented. Already the owner of one {{% sdj / %}} win (2008, Keltis) and one {{% kindersdj / %}} win (2008, Whoowasit?), Knizia added a {{% kdj / %}} win for {{% game 417197 %}}Rebirth{{% /game %}} in 2026, making him the first designer ever to win all three {{% sdj / %}} categories.
 
 Overall, 103 designers have won at least one award (118 if we include special awards), with 23 of them winning more than one (25 including special awards). 10 of those have won their awards in more than one category: [Wolfgang Kramer](https://recommend.games/#/?designer=7), [Reiner Knizia](https://recommend.games/#/?designer=2), [Inka](https://recommend.games/#/?designer=6940) & [Markus Brand](https://recommend.games/#/?designer=6941), [Alex Randolph](https://recommend.games/#/?designer=24), [Bruno Cathala](https://recommend.games/#/?designer=1727), [Wolfgang Warsch](https://recommend.games/#/?designer=80162), [Antoine Bauza](https://recommend.games/#/?designer=9714), [Markus Slawitscheck](https://recommend.games/#/?designer=110904) and [Steffen Bogen](https://recommend.games/#/?designer=10067). As mentioned above, Reiner Knizia is now the first (and so far only) designer to have won in all three categories.
 
