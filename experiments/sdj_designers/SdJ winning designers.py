@@ -530,39 +530,6 @@ timeline = (
 timeline.shape
 
 # %% [markdown]
-# ### Largest shortlists
-
-# %%
-shortlist_sizes = (
-    games.filter(SHORTLIST)
-    .with_columns(
-        label=pl.when(pl.col("winner"))
-        .then(pl.format("{} (winner)", pl.col("name")))
-        .when(pl.col("sonderpreis").is_not_null())
-        .then(pl.format("{} ({})", pl.col("name"), pl.col("sonderpreis")))
-        .otherwise(pl.col("name"))
-    )
-    .sort(
-        "winner",
-        pl.col("sonderpreis").is_not_null(),
-        "name",
-        descending=[True, True, False],
-    )
-    .group_by("award", "jahrgang")
-    .agg(num_games=pl.len(), games=pl.col("label"))
-    .sort("num_games", "jahrgang", descending=[True, False])
-    .collect()
-)
-max_shortlist = shortlist_sizes["num_games"].max()
-for row in shortlist_sizes.filter(pl.col("num_games") == max_shortlist).iter_rows(
-    named=True
-):
-    print(
-        f"- {awards_full_names[row['award']]} {row['jahrgang']} "
-        f"({row['num_games']} games): {', '.join(row['games'])}"
-    )
-
-# %% [markdown]
 # ### Gaps between wins
 
 # %%
@@ -755,25 +722,17 @@ winning_careers.with_columns(wait=pl.col("first_win") - pl.col("first")).filter(
 # %% [markdown]
 # ## Honourable mentions
 #
-# Award winners who just miss the Hall of Fame cutoff.
+# The best designers who never won the main award, ranked by games on the shortlist
+# (incl special awards), then by listed games.
 
 # %%
 honourable_mentions = (
-    counts.filter(~HALL_OF_FAME)
+    counts.filter(pl.col("winner_total") == 0)
     .with_columns(
-        shortlist_total=pl.col("winner_total")
-        + pl.col("sonderpreis_total")
-        + pl.col("nominated_total")
+        shortlist_total=pl.col("sonderpreis_total") + pl.col("nominated_total")
     )
-    .filter((pl.col("winner_total") + pl.col("sonderpreis_total")) >= 1)
     .sort(
-        [
-            "winner_total",
-            "sonderpreis_total",
-            "shortlist_total",
-            "total",
-            "best_rating",
-        ],
+        ["shortlist_total", "total", "best_rating"],
         descending=True,
         nulls_last=True,
     )
@@ -781,10 +740,10 @@ honourable_mentions = (
 honourable_mentions.select(
     "bgg_id",
     "name",
-    "winner_spiel",
-    "winner_kenner",
-    "winner_kinder",
     "sonderpreis_total",
+    "nominated_spiel",
+    "nominated_kenner",
+    "nominated_kinder",
     "shortlist_total",
     "total",
     "best_rating",
