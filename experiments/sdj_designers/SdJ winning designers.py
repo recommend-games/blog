@@ -85,6 +85,7 @@ awards = (
     .group_by("bgg_id")
     .agg(
         pl.col("jahrgang").max(),
+        pl.col("jahrgang").min().alias("first_jahrgang"),
         pl.col("winner").max(),
         pl.col("nominated").max(),
         pl.col("recommended").max(),
@@ -161,6 +162,8 @@ columns = [
     "recommended",
     "sonderpreis",
     "bayes_rating",
+    "jahrgang",
+    "first_jahrgang",
 ]
 data = (
     games.select(columns)
@@ -322,10 +325,14 @@ counts.select(column_order).write_csv(f"designers{OUTPUT_SUFFIX}.csv")
 
 
 # %%
+# At least 2 wins (incl special awards) or at least 5 listed games
+HALL_OF_FAME = (pl.col("total") >= 5) | (
+    (pl.col("winner_total") + pl.col("sonderpreis_total")) >= 2
+)
+
+
 def designer_table(counts):
-    criterion = (pl.col("total") >= 5) | (
-        (pl.col("winner_total") + pl.col("sonderpreis_total")) >= 2
-    )
+    criterion = HALL_OF_FAME
     result = "| Designer | Spiel | Kennerspiel | Kinderspiel | Total |\n"
     result += "|:---------|:-----:|:-----------:|:-----------:|:-----:|\n"
     for row in counts.filter(criterion).iter_rows(named=True):
@@ -484,3 +491,301 @@ for award, award_title in zip(report_awards, award_titles):
         ["bgg_id", "name"]
     ].iter_rows():
         print(f"  - [{name}](https://recommend.games/#/?designer={bgg_id:.0f})")
+
+# %% [markdown]
+# ## Timelines
+
+# %%
+# Special award winners count as shortlisted
+SHORTLIST = pl.col("winner") | pl.col("sonderpreis").is_not_null() | pl.col("nominated")
+AWARD_SHORT_NAMES = {"spiel": "Spiel", "kenner": "Kennerspiel", "kinder": "Kinderspiel"}
+
+
+def designer_link(bgg_id, name):
+    return f"[{name}](https://recommend.games/#/?designer={bgg_id:.0f})"
+
+
+timeline = (
+    data.filter(pl.col("designer") != 3)
+    .join(
+        designers.rename({"bgg_id": "designer", "name": "designer_name"}),
+        on="designer",
+        how="left",
+    )
+    .with_columns(shortlist=SHORTLIST)
+    .select(
+        "designer",
+        "designer_name",
+        "bgg_id",
+        "name",
+        "award",
+        "jahrgang",
+        "first_jahrgang",
+        "winner",
+        "shortlist",
+    )
+    .sort("jahrgang", "award", "name", "designer")
+    .collect()
+)
+timeline.shape
+
+# %% [markdown]
+# ### Largest shortlists
+
+# %%
+shortlist_sizes = (
+    games.filter(SHORTLIST)
+    .with_columns(
+        label=pl.when(pl.col("winner"))
+        .then(pl.format("{} (winner)", pl.col("name")))
+        .when(pl.col("sonderpreis").is_not_null())
+        .then(pl.format("{} ({})", pl.col("name"), pl.col("sonderpreis")))
+        .otherwise(pl.col("name"))
+    )
+    .sort(
+        "winner",
+        pl.col("sonderpreis").is_not_null(),
+        "name",
+        descending=[True, True, False],
+    )
+    .group_by("award", "jahrgang")
+    .agg(num_games=pl.len(), games=pl.col("label"))
+    .sort("num_games", "jahrgang", descending=[True, False])
+    .collect()
+)
+max_shortlist = shortlist_sizes["num_games"].max()
+for row in shortlist_sizes.filter(pl.col("num_games") == max_shortlist).iter_rows(
+    named=True
+):
+    print(
+        f"- {awards_full_names[row['award']]} {row['jahrgang']} "
+        f"({row['num_games']} games): {', '.join(row['games'])}"
+    )
+
+# %% [markdown]
+# ### Gaps between wins
+
+# %%
+wins = (
+    timeline.filter(pl.col("winner"))
+    .sort("designer", "jahrgang", "award")
+    .with_columns(
+        prev_jahrgang=pl.col("jahrgang").shift().over("designer"),
+        prev_name=pl.col("name").shift().over("designer"),
+        prev_award=pl.col("award").shift().over("designer"),
+    )
+    .filter(pl.col("prev_jahrgang").is_not_null())
+    .with_columns(gap=pl.col("jahrgang") - pl.col("prev_jahrgang"))
+)
+
+
+def print_wins(wins):
+    for row in wins.iter_rows(named=True):
+        print(
+            f"- {designer_link(row['designer'], row['designer_name'])}: "
+            f"{row['prev_name']} ({AWARD_SHORT_NAMES[row['prev_award']]} {row['prev_jahrgang']}) → "
+            f"{row['name']} ({AWARD_SHORT_NAMES[row['award']]} {row['jahrgang']})"
+        )
+
+
+print("### Longest gaps between two wins\n")
+print_wins(
+    wins.filter(pl.col("gap") >= 10).sort("gap", "jahrgang", descending=[True, False])
+)
+print("\n\n### Wins in the same or consecutive years\n")
+print_wins(wins.filter(pl.col("gap") <= 1).sort("jahrgang", "designer_name"))
+
+# %% [markdown]
+# ### Several games on the shortlist in the same year
+
+# %%
+multi_shortlist = (
+    timeline.filter(pl.col("shortlist"))
+    .with_columns(
+        label=pl.format(
+            "{} ({}{})",
+            pl.col("name"),
+            pl.col("award").replace_strict(AWARD_SHORT_NAMES),
+            pl.when(pl.col("winner")).then(pl.lit(", winner")).otherwise(pl.lit("")),
+        )
+    )
+    .group_by("designer", "designer_name", "jahrgang")
+    .agg(num_games=pl.len(), games=pl.col("label"))
+    .filter(pl.col("num_games") >= 2)
+    .sort("jahrgang", "designer_name")
+)
+for row in multi_shortlist.iter_rows(named=True):
+    print(
+        f"- {row['jahrgang']}: {designer_link(row['designer'], row['designer_name'])} "
+        f"– {', '.join(row['games'])}"
+    )
+
+# %% [markdown]
+# ### Shots at the triple
+#
+# Shortlisted in one category while already holding wins in the other two.
+
+# %%
+first_wins = (
+    timeline.filter(pl.col("winner"))
+    .group_by("designer", "designer_name")
+    .agg(
+        [
+            pl.col("jahrgang")
+            .filter(pl.col("award") == award)
+            .min()
+            .alias(f"first_win_{award}")
+            for award in AWARDS
+        ]
+    )
+)
+
+shots = []
+for award in AWARDS:
+    others = [other for other in AWARDS if other != award]
+    shots.append(
+        timeline.filter(pl.col("shortlist") & (pl.col("award") == award))
+        .join(first_wins.drop("designer_name"), on="designer")
+        .filter(
+            pl.all_horizontal(
+                [pl.col(f"first_win_{other}") <= pl.col("jahrgang") for other in others]
+            )
+            & (
+                pl.col(f"first_win_{award}").is_null()
+                | (pl.col(f"first_win_{award}") >= pl.col("jahrgang"))
+            )
+        )
+    )
+shots = pl.concat(shots).sort("jahrgang", "designer_name")
+
+for row in shots.iter_rows(named=True):
+    held = ", ".join(
+        f"{AWARD_SHORT_NAMES[other]} {row[f'first_win_{other}']}"
+        for other in AWARDS
+        if other != row["award"]
+    )
+    result = "won" if row["winner"] else "missed"
+    print(
+        f"- {row['jahrgang']}: {designer_link(row['designer'], row['designer_name'])} "
+        f"– {row['name']} ({AWARD_SHORT_NAMES[row['award']]}), "
+        f"holding {held}: {result}"
+    )
+
+# %%
+print("### Wins in exactly two categories: record in the third\n")
+two_categories = first_wins.filter(
+    pl.sum_horizontal([pl.col(f"first_win_{award}").is_not_null() for award in AWARDS])
+    == 2
+).sort("designer_name")
+for row in two_categories.iter_rows(named=True):
+    missing = next(award for award in AWARDS if row[f"first_win_{award}"] is None)
+    won = ", ".join(
+        f"{AWARD_SHORT_NAMES[award]} {row[f'first_win_{award}']}"
+        for award in AWARDS
+        if award != missing
+    )
+    third = timeline.filter(
+        (pl.col("designer") == row["designer"]) & (pl.col("award") == missing)
+    )
+    listings = (
+        ", ".join(
+            f"{game['name']} ({'shortlist' if game['shortlist'] else 'longlist'} {game['jahrgang']})"
+            for game in third.iter_rows(named=True)
+        )
+        or "never listed"
+    )
+    print(
+        f"- {designer_link(row['designer'], row['designer_name'])} "
+        f"(first wins: {won}) – {AWARD_SHORT_NAMES[missing]}: {listings}"
+    )
+
+# %% [markdown]
+# ### Careers
+
+# %%
+first_win = pl.col("jahrgang").filter(pl.col("winner")).min()
+careers = (
+    timeline.group_by("designer", "designer_name")
+    .agg(
+        first=pl.col("first_jahrgang").min(),
+        last=pl.col("jahrgang").max(),
+        seasons=pl.col("jahrgang").append(pl.col("first_jahrgang")).n_unique(),
+        num_games=pl.col("bgg_id").n_unique(),
+        num_shortlist=pl.col("shortlist").sum(),
+        num_wins=pl.col("winner").sum(),
+        first_win=first_win,
+        games_before_first_win=(pl.col("first_jahrgang") < first_win).sum(),
+        first_win_debut=(
+            pl.col("first_jahrgang").filter(pl.col("winner")).min()
+            == pl.col("first_jahrgang").min()
+        ),
+    )
+    .with_columns(span=pl.col("last") - pl.col("first"))
+    .sort("seasons", "num_games", descending=True)
+)
+careers.head(15)
+
+# %%
+careers.sort("span", "num_games", descending=True).head(15)
+
+# %% [markdown]
+# ### Newcomers among the winners
+
+# %%
+winning_careers = careers.filter(pl.col("first_win").is_not_null())
+num_winners = winning_careers.height
+num_debut_wins = winning_careers["first_win_debut"].sum()
+num_one_and_done = winning_careers.filter(pl.col("num_games") == 1).height
+print(
+    f"- {num_debut_wins} of {num_winners} winning designers won with a game "
+    "first listed in their debut year on the lists"
+)
+print(
+    f"- {num_one_and_done} of {num_winners} winning designers never had another game listed"
+)
+
+# %%
+# Longest waits from first listing to first win
+winning_careers.with_columns(wait=pl.col("first_win") - pl.col("first")).filter(
+    pl.col("wait") >= 10
+).sort("wait", "first_win", descending=[True, False]).select(
+    "designer_name", "first", "first_win", "wait", "games_before_first_win", "num_games"
+)
+
+# %% [markdown]
+# ## Honourable mentions
+#
+# Award winners who just miss the Hall of Fame cutoff.
+
+# %%
+honourable_mentions = (
+    counts.filter(~HALL_OF_FAME)
+    .with_columns(
+        shortlist_total=pl.col("winner_total")
+        + pl.col("sonderpreis_total")
+        + pl.col("nominated_total")
+    )
+    .filter((pl.col("winner_total") + pl.col("sonderpreis_total")) >= 1)
+    .sort(
+        [
+            "winner_total",
+            "sonderpreis_total",
+            "shortlist_total",
+            "total",
+            "best_rating",
+        ],
+        descending=True,
+        nulls_last=True,
+    )
+)
+honourable_mentions.select(
+    "bgg_id",
+    "name",
+    "winner_spiel",
+    "winner_kenner",
+    "winner_kinder",
+    "sonderpreis_total",
+    "shortlist_total",
+    "total",
+    "best_rating",
+).head(20)
