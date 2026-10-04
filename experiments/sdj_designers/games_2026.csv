@@ -1,56 +1,56 @@
 bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,designer
-1,Die Macher,1986,spiel,False,False,True,,6.97647,1
-5,Acquire,1963,spiel,False,False,True,,7.12806,4
+1,Die Macher,1986,spiel,False,False,True,,6.97635,1
+5,Acquire,1963,spiel,False,False,True,,7.12809,4
 9,El Caballero,1998,spiel,False,False,True,,5.84603,7
 9,El Caballero,1998,spiel,False,False,True,,5.84603,8
-10,Elfenland,1998,spiel,True,True,True,,6.41527,9
-11,Bohnanza,1997,spiel,False,False,True,,6.96399,10
-13,Catan,1995,spiel,True,True,True,,6.90147,11
-14,Basari,1998,spiel,False,False,True,,6.03153,12
-19,Wacky Wacky West,1991,spiel,True,True,True,,5.85228,11
+10,Elfenland,1998,spiel,True,True,True,,6.41547,9
+11,Bohnanza,1997,spiel,False,False,True,,6.96434,10
+13,Catan,1995,spiel,True,True,True,,6.90132,11
+14,Basari,1998,spiel,False,False,True,,6.03177,12
+19,Wacky Wacky West,1991,spiel,True,True,True,,5.85259,11
 38,Runes,1981,spiel,False,False,True,,5.52696,34
 38,Runes,1981,spiel,False,False,True,,5.52696,35
 38,Runes,1981,spiel,False,False,True,,5.52696,36
-41,Can't Stop,1980,spiel,False,False,True,,6.79429,4
-42,Tigris & Euphrates,1997,spiel,False,False,True,,7.50503,2
+41,Can't Stop,1980,spiel,False,False,True,,6.79473,4
+42,Tigris & Euphrates,1997,spiel,False,False,True,,7.50548,2
 44,David & Goliath,1997,spiel,False,False,True,,5.93024,12
-45,Perudo,1800,spiel,True,True,True,,6.72679,25
-46,Medici,1995,spiel,False,False,True,,6.82896,2
-47,Chinatown,1999,spiel,False,False,True,,7.10763,37
-49,Mamma Mia!,1998,spiel,False,False,True,,6.21099,10
-54,Tikal,1999,spiel,True,True,True,,7.10572,7
-54,Tikal,1999,spiel,True,True,True,,7.10572,42
-57,Schoko & Co.,1987,spiel,False,False,True,,5.67682,44
-57,Schoko & Co.,1987,spiel,False,False,True,,5.67682,45
-59,Giganten,1999,spiel,False,True,True,,5.95546,48
-60,Vinci,1999,spiel,False,False,True,,6.4676,49
-66,Löwenherz,1997,spiel,False,False,True,,6.33237,11
-72,Verräter,1998,spiel,False,False,True,,6.03879,59
-73,Show Manager,1996,spiel,False,False,True,,6.13614,60
-88,Torres,1999,spiel,True,True,True,,6.74008,7
-88,Torres,1999,spiel,True,True,True,,6.74008,42
-93,El Grande,1995,spiel,True,True,True,,7.59396,7
-93,El Grande,1995,spiel,True,True,True,,7.59396,8
-94,Union Pacific,1999,spiel,False,True,True,,6.59133,9
-110,Auf Achse,1987,spiel,True,True,True,,5.82743,7
-112,Condottiere,1995,spiel,False,False,True,,6.62198,79
-112,Condottiere,1995,spiel,False,False,True,,6.62198,80
-112,Condottiere,1995,spiel,False,False,True,,6.62198,72460
-115,I'm the Boss!,1994,spiel,False,False,True,,6.28269,4
+45,Perudo,1800,spiel,True,True,True,,6.72726,25
+46,Medici,1995,spiel,False,False,True,,6.82898,2
+47,Chinatown,1999,spiel,False,False,True,,7.10841,37
+49,Mamma Mia!,1998,spiel,False,False,True,,6.2113,10
+54,Tikal,1999,spiel,True,True,True,,7.10565,7
+54,Tikal,1999,spiel,True,True,True,,7.10565,42
+57,Schoko & Co.,1987,spiel,False,False,True,,5.67707,44
+57,Schoko & Co.,1987,spiel,False,False,True,,5.67707,45
+59,Giganten,1999,spiel,False,True,True,,5.95543,48
+60,Vinci,1999,spiel,False,False,True,,6.468,49
+66,Löwenherz,1997,spiel,False,False,True,,6.33311,11
+72,Verräter,1998,spiel,False,False,True,,6.03853,59
+73,Show Manager,1996,spiel,False,False,True,,6.13689,60
+88,Torres,1999,spiel,True,True,True,,6.74031,7
+88,Torres,1999,spiel,True,True,True,,6.74031,42
+93,El Grande,1995,spiel,True,True,True,,7.59454,7
+93,El Grande,1995,spiel,True,True,True,,7.59454,8
+94,Union Pacific,1999,spiel,False,True,True,,6.59209,9
+110,Auf Achse,1987,spiel,True,True,True,,5.82833,7
+112,Condottiere,1995,spiel,False,False,True,,6.62245,79
+112,Condottiere,1995,spiel,False,False,True,,6.62245,80
+112,Condottiere,1995,spiel,False,False,True,,6.62245,72460
+115,I'm the Boss!,1994,spiel,False,False,True,,6.2822,4
 117,Ta Yü,1999,spiel,False,False,True,,6.06874,83
-118,Modern Art,1992,spiel,False,False,True,,7.33167,2
+118,Modern Art,1992,spiel,False,False,True,,7.33255,2
 120,Hoity Toity,1990,spiel,True,True,True,,6.19495,11
 122,Quo Vadis?,1992,spiel,False,False,True,,5.98809,2
-125,Money!,1999,spiel,False,False,True,,6.16518,2
-128,Take it Easy!,1983,spiel,False,False,True,,6.13092,84
-132,Caesar & Cleopatra,1997,spiel,False,False,True,,6.08549,87
-135,Kontor,1999,spiel,False,False,True,,5.616,86
+125,Money!,1999,spiel,False,False,True,,6.16689,2
+128,Take it Easy!,1983,spiel,False,False,True,,6.13094,84
+132,Caesar & Cleopatra,1997,spiel,False,False,True,,6.08606,87
+135,Kontor,1999,spiel,False,False,True,,5.61581,86
 145,Metropolis,1984,spiel,False,False,True,,5.61944,4
-150,PitchCar,1995,spiel,False,False,False,Dexterity Game,6.97802,5
-152,Mü & More,1995,spiel,False,False,True,,6.2722,74
-152,Mü & More,1995,spiel,False,False,True,,6.2722,75
+150,PitchCar,1995,spiel,False,False,False,Dexterity Game,6.97786,5
+152,Mü & More,1995,spiel,False,False,True,,6.27237,74
+152,Mü & More,1995,spiel,False,False,True,,6.27237,75
 155,Was sticht?,1993,spiel,False,False,True,,5.83563,1
-175,What the Heck?,1988,spiel,False,False,True,,6.02488,24
+175,What the Heck?,1988,spiel,False,False,True,,6.0248,24
 196,Kremlin,1986,spiel,False,False,True,,6.29139,172
 199,Manhattan,1994,spiel,True,True,True,,6.37281,117
 202,Targui,1988,spiel,False,False,True,,5.71068,199
@@ -140,7 +140,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 766,Regatta,1967,spiel,False,False,True,,5.66867,8384
 787,Palermo,1992,spiel,False,False,True,,5.51492,387
 789,Focus,1963,spiel,True,True,True,,5.75592,4
-811,Rummikub,1950,spiel,True,True,True,,6.34108,634
+811,Rummikub,1950,spiel,True,True,True,,6.34235,634
 821,La Trel,1994,spiel,False,False,True,,5.4997,397
 822,Carcassonne,2000,spiel,True,True,True,,7.29901,398
 823,The Lord of the Rings,2000,spiel,False,False,False,Literary Game,6.53355,2
@@ -149,11 +149,11 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 877,Troia,2000,spiel,False,False,False,Historical Game,5.50636,176
 906,Abilene,1983,spiel,False,False,True,,5.52761,365
 923,Breakaway Rider,1963,spiel,False,False,True,,5.66702,1214
-932,Top Race,1996,spiel,False,False,True,,5.9415,7
+932,Top Race,1996,spiel,False,False,True,,5.94097,7
 933,New Orleans Big Band,1990,spiel,False,False,True,,5.52,430
 938,Enchanted Forest,1981,spiel,True,True,True,,5.61166,24
 938,Enchanted Forest,1981,spiel,True,True,True,,5.61166,432
-949,Twixt,1962,spiel,False,False,True,,6.05197,24
+949,Twixt,1962,spiel,False,False,True,,6.05224,24
 963,The Gardens of the Alhambra,1993,spiel,False,False,True,,5.73383,60
 986,Babel,2000,spiel,False,False,True,,6.2132,10
 986,Babel,2000,spiel,False,False,True,,6.2132,455
@@ -172,7 +172,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 1101,Flying Carpet,1987,spiel,False,False,True,,5.53617,511
 1101,Flying Carpet,1987,spiel,False,False,True,,5.53617,513
 1111,Taboo,1989,spiel,False,False,True,,6.14298,3233
-1117,You're Bluffing!,1985,spiel,False,False,True,,6.18358,7101
+1117,You're Bluffing!,1985,spiel,False,False,True,,6.18434,7101
 1132,Top Secret,1985,spiel,False,False,True,,5.51282,24
 1155,Capitol,2001,spiel,False,False,True,,5.999,9
 1155,Capitol,2001,spiel,False,False,True,,5.999,235
@@ -233,7 +233,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 2694,Donnerwetter,1991,spiel,False,False,True,,5.5139,523
 2759,Havannah,1980,spiel,False,False,True,,5.63315,1126
 2840,Heuchel und Meuchel,1990,spiel,False,False,True,,5.48591,154
-2842,TransAmerica,2001,spiel,False,True,True,,6.40868,57
+2842,TransAmerica,2001,spiel,False,True,True,,6.40853,57
 2938,Zatre,1990,spiel,False,False,True,,5.59685,1205
 3015,Claim,1983,spiel,False,False,True,,5.56537,24
 3076,Puerto Rico,2002,spiel,False,True,True,,7.74959,117
@@ -362,7 +362,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 12002,Jambo,2004,spiel,False,True,True,,6.64137,381
 12005,Around the World in 80 Days,2004,spiel,False,True,True,,6.09636,142
 12305,Scalino,1970,spiel,False,False,True,,,1480
-12318,Typo,2004,spiel,False,False,True,,5.6099,124
+12318,Typo,2004,spiel,False,False,True,,5.61114,124
 12346,Spooky Stairs,2003,kinder,True,True,True,,5.90719,3882
 12359,Schieberbande,1986,spiel,False,False,True,,,2141
 12942,No Thanks!,2004,spiel,False,False,True,,6.95422,85
@@ -477,7 +477,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 25568,Metropolys,2008,spiel,False,False,True,,6.51656,6736
 25593,Der Prestel Kunstmarkt,2006,spiel,False,False,True,,5.52421,57
 25643,Arkadia,2006,spiel,False,True,True,,6.41366,381
-25669,Qwirkle,2006,spiel,True,True,True,,6.61176,7708
+25669,Qwirkle,2006,spiel,True,True,True,,6.61098,7708
 25721,Turbulento,2006,kinder,False,False,True,,,256
 25760,Zoff im Hühnerhof,2006,kinder,False,False,True,,5.53515,4884
 25821,The Werewolves of Miller's Hollow,2001,spiel,False,False,True,,6.41473,219
@@ -613,7 +613,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 66188,Fresco,2010,spiel,False,True,True,,6.96289,34866
 66214,Samarkand: Routes to Riches,2010,spiel,False,False,True,,6.082,366
 66825,Kraken-Alarm,2010,kinder,False,True,True,,5.52038,961
-66849,Safranito,2010,spiel,False,False,True,,6.05619,4884
+66849,Safranito,2010,spiel,False,False,True,,6.05576,4884
 68448,7 Wonders,2010,kenner,True,True,True,,7.54587,9714
 68561,Inspector Rabbit,2010,kinder,False,False,True,,,256
 70149,Ora et Labora,2011,kenner,False,False,True,,7.28525,10
@@ -690,7 +690,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 116981,Star Wars: Battle of Hoth,2012,kinder,False,False,True,,5.55816,35250
 117555,CLACK!,2012,kinder,False,False,True,,5.52475,1210
 117959,Las Vegas,2012,spiel,False,True,True,,6.89522,381
-118048,Targi,2012,kenner,False,True,True,,7.3986,57305
+118048,Targi,2012,kenner,False,True,True,,7.39883,57305
 118051,Spinnengift und Krötenschleim,2012,kinder,False,True,True,,5.51886,11
 118410,Dirty Pig,2012,spiel,False,False,True,,5.77022,57468
 118418,Divinare,2012,spiel,False,False,True,,6.00903,56058
@@ -859,8 +859,8 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 201808,Clank!: A Deck-Building Adventure,2016,kenner,False,False,True,,7.59146,92370
 202296,Wizardry to the Power of Three,2016,kinder,False,False,True,,5.64356,461
 202296,Wizardry to the Power of Three,2016,kinder,False,False,True,,5.64356,7808
-203411,Word Slam,2016,spiel,False,False,True,,5.95856,6940
-203411,Word Slam,2016,spiel,False,False,True,,5.95856,6941
+203411,Word Slam,2016,spiel,False,False,True,,5.95794,6940
+203411,Word Slam,2016,spiel,False,False,True,,5.95794,6941
 203420,EXIT: The Game – The Abandoned Cabin,2016,kenner,True,True,True,,7.07003,6940
 203420,EXIT: The Game – The Abandoned Cabin,2016,kenner,True,True,True,,7.07003,6941
 203427,Fabled Fruit,2016,spiel,False,False,True,,6.56739,141
@@ -918,7 +918,7 @@ bgg_id,name,year,award,winner,nominated,recommended,sonderpreis,bayes_rating,des
 244320,SOS Dino,2018,kinder,False,False,True,,5.83844,4337
 244320,SOS Dino,2018,kinder,False,False,True,,5.83844,72628
 244521,Quacks,2018,kenner,True,True,True,,7.66498,80162
-244522,That's Pretty Clever!,2018,kenner,False,True,True,,7.35856,80162
+244522,That's Pretty Clever!,2018,kenner,False,True,True,,7.35836,80162
 244711,Newton,2018,kenner,False,False,True,,7.0228,35418
 244711,Newton,2018,kenner,False,False,True,,7.0228,52377
 244992,The Mind,2018,spiel,False,True,True,,6.58813,80162
