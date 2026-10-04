@@ -562,6 +562,33 @@ print_wins(
 print("\n\n### Wins in the same or consecutive years\n")
 print_wins(wins.filter(pl.col("gap") <= 1).sort("jahrgang", "designer_name"))
 
+# %%
+win_spans = (
+    timeline.filter(pl.col("winner"))
+    .sort("jahrgang", "award")
+    .group_by("designer", "designer_name")
+    .agg(
+        num_wins=pl.len(),
+        first_win=pl.col("jahrgang").first(),
+        first_game=pl.col("name").first(),
+        first_award=pl.col("award").first(),
+        last_win=pl.col("jahrgang").last(),
+        last_game=pl.col("name").last(),
+        last_award=pl.col("award").last(),
+    )
+    .with_columns(span=pl.col("last_win") - pl.col("first_win"))
+    .filter(pl.col("span") >= 10)
+    .sort("span", "first_win", descending=[True, False])
+)
+print("### Longest spans from first to most recent win\n")
+for row in win_spans.iter_rows(named=True):
+    print(
+        f"- {designer_link(row['designer'], row['designer_name'])}: "
+        f"{row['first_game']} ({AWARD_SHORT_NAMES[row['first_award']]} {row['first_win']}) → "
+        f"{row['last_game']} ({AWARD_SHORT_NAMES[row['last_award']]} {row['last_win']}), "
+        f"{row['span']} years, {row['num_wins']} wins"
+    )
+
 # %% [markdown]
 # ### Several games on the shortlist in the same year
 
