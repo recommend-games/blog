@@ -7,7 +7,7 @@ Working notes for rewriting `index.md`. Not for publication.
 - `index.md` is a first draft, written by copying large parts of part 1 (`../designer_hall_of_fame/index.md`) word for word. **That draft is rejected.** The article needs to be written fresh, not patched. Don't reuse sentences from part 1.
 - The numbers in the draft were checked independently and are correct, with the exceptions listed under "Fixes" below.
 - All the stats below are produced by `experiments/sdj_designers/SdJ winning designers.py` (jupytext; the paired `.ipynb` is gitignored). Run it from that directory with `uv run jupytext --sync "SdJ winning designers.py"`, then `uv run jupyter nbconvert --to notebook --execute --inplace "SdJ winning designers.ipynb"`. (`jupytext --update --execute` has kept stale cell outputs.) Outputs: `designers_2026.csv`, `games_2026.csv`, `table_2026.md`.
-- Data covers the awards up to and including 2026. BGG game 464279 (a 2026 Kinderspiel recommendation) is still missing from the BGG scrape, so the designer stats are based on 896 of the 897 listed games (see the TODO in `index.md`). Re-run once the scrape has it.
+- Data covers the awards up to and including 2026. BGG game 464279 (*Paleolino*, a 2026 Kinderspiel recommendation by Marco Teubner) is now in the scrape, so all 897 listed games are included. The only change it made was to Teubner's row (now 12 listed games).
 
 ## The hook
 

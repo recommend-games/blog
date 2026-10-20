@@ -19,16 +19,114 @@ tags:
   - Reiner Knizia
 ---
 
-Three award seasons ago I built a [Designer Hall of Fame]({{<ref "posts/designer_hall_of_fame/index.md">}}), digging through 45 years of {{% sdj %}}Spiel{{% /sdj %}}, {{% kdj %}}Kennerspiel{{% /kdj %}} and {{% kindersdj / %}} history to see which designers had been most successful at the awards. Back then, the piece ended on a small cliffhanger: no designer had ever won in all three categories.
-
-{{% sdj %}}Spiel des Jahres 2026{{% /sdj %}} has just crowned its [winners]({{<ref "posts/sdj_2026_4/index.md">}}) (see also our [predictions]({{<ref "posts/sdj_2026_3/index.md">}}) if you missed them), and [Reiner Knizia](https://recommend.games/#/?designer=2)'s {{% kdj / %}} win for {{% game 417197 %}}Rebirth{{% /game %}} ended that cliffhanger for good: he's now the first designer ever to win all three Spiel des Jahres awards. That felt like the perfect excuse to rerun the whole analysis rather than just patch a footnote, so here's the updated picture, methodology unchanged from the original piece.
+When I first put together a [Designer Hall of Fame]({{<ref "posts/designer_hall_of_fame/index.md">}}) in 2024, one entry in the record books was still blank: no designer had ever won the {{% sdj %}}red{{% /sdj %}}, the {{% kdj %}}anthracite{{% /kdj %}} and the {{% kindersdj %}}blue meeple{{% /kindersdj %}}. This July, the blank got filled. [Reiner Knizia](https://recommend.games/#/?designer=2) took the {{% kdj %}}Kennerspiel des Jahres 2026{{% /kdj %}} with {{% game 417197 %}}Rebirth{{% /game %}} (more on all of this year's [winners]({{<ref "posts/sdj_2026_4/index.md">}}) and how our [predictions]({{<ref "posts/sdj_2026_3/index.md">}}) fared) and is now the first designer to have won all three awards.
 
 {{< img src="sdj-all" size="x300" alt="Spiel des Jahres" >}}
 
+A milestone like that is a good reason to bring the numbers up to date: three more award seasons, 2024 to 2026, and a closer look at the timelines behind the wins. Let's start with the man of the hour.
 
-## Games
 
-Overall, the jury included 896 games on its various longlist across the three categories over its 48 year history, with (naturally) 48 {{% sdj %}}Spiel{{% /sdj %}}, 38 {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} and 16 {{% kdj / %}} winners.[^exit] This is the overall number of games:
+## The first triple
+
+Knizia's relationship with the jury is a long one. His first game made the lists in 1992, and since then he has been listed in 26 different seasons, the most recent being 2026. In total, the jury has listed 38 of his games, more than for any other designer, and 14 of those made the shortlist, also a record. Yet for the longest time the big prize eluded him: 20 of his games had already been listed before he won anything at all.
+
+When the breakthrough finally came, it came twice. In 2008, {{% game 34585 %}}Keltis{{% /game %}} won the {{% sdj / %}} and {{% game 33643 %}}Whoowasit?{{% /game %}} won the {{% kindersdj / %}}. No other designer has ever won two categories in the same year.
+
+Then he had to wait 18 years for {{% game 417197 %}}Rebirth{{% /game %}}. That ties the longest gap between two wins: [Michael Kiesling](https://recommend.games/#/?designer=42) also waited 18 years, from {{% game 88 %}}Torres{{% /game %}} ({{% sdj %}}Spiel{{% /sdj %}} 2000) to {{% game 230802 %}}Azul{{% /game %}} ({{% sdj %}}Spiel{{% /sdj %}} 2018). In third place, [Andreas Seyfarth](https://recommend.games/#/?designer=117) needed 12 years to follow up {{% game 199 %}}Manhattan{{% /game %}} (1994) with {{% game 21790 %}}Thurn and Taxis{{% /game %}} (2006).
+
+Since Knizia's first two wins fell into the same year, the gap is also the span of his winning career, from first to latest win. Here, Kiesling edges him out by a single year, having won with {{% game 54 %}}Tikal{{% /game %}} in 1999 and with {{% game 230802 %}}Azul{{% /game %}} in 2018. The rest of the top five:
+
+1. [Michael Kiesling](https://recommend.games/#/?designer=42): 19 years (1999–2018)
+2. [Reiner Knizia](https://recommend.games/#/?designer=2): 18 years (2008–2026)
+3. [Alex Randolph](https://recommend.games/#/?designer=24): 15 years, from {{% game 938 %}}Enchanted Forest{{% /game %}} ({{% sdj %}}Spiel{{% /sdj %}} 1982) to {{% game 10508 %}}Leinen los!{{% /game %}} ({{% kindersdj %}}Kinderspiel{{% /kindersdj %}} 1997)
+4. [Wolfgang Kramer](https://recommend.games/#/?designer=7): 14 years, from {{% game 382 %}}Heimlich & Co.{{% /game %}} (1986) to {{% game 88 %}}Torres{{% /game %}} (2000)
+5. [Andreas Seyfarth](https://recommend.games/#/?designer=117): 12 years (1994–2006)
+
+Knizia also regularly competed against himself. Three times he had two games on the shortlists of the same year, which nobody else has managed more than twice:
+
+- 2004: {{% game 9674 %}}Ingenious{{% /game %}} ({{% sdj %}}Spiel{{% /sdj %}}) and {{% game 7483 %}}Treasure of the Dragons{{% /game %}} ({{% kindersdj %}}Kinderspiel{{% /kindersdj %}})
+- 2005: {{% game 17235 %}}Mago Magino{{% /game %}} and {{% game 9441 %}}Ribbit{{% /game %}} (both {{% kindersdj %}}Kinderspiel{{% /kindersdj %}})
+- 2008: {{% game 34585 %}}Keltis{{% /game %}} and {{% game 33643 %}}Whoowasit?{{% /game %}}, both of which went on to win
+
+And when he finally got a shot at the triple, he took it at the first attempt.
+
+
+## Shots at the triple
+
+What exactly counts as a shot at the triple? I'll define it as having a game on the shortlist of the one category you're missing while already holding regular wins in the other two. The {{% kdj / %}} only started in 2011, so nobody could have had a shot before then. There have been four so far:
+
+| Year | Designer | Shortlisted for | Wins already held | Result |
+|:----:|:---------|:----------------|:------------------|:------:|
+| 2013 | [Wolfgang Kramer](https://recommend.games/#/?designer=7) | {{% kdj %}}Kennerspiel{{% /kdj %}}: {{% game 129948 %}}The Palaces of Carrara{{% /game %}} | {{% sdj %}}Spiel{{% /sdj %}} 1986 (and four more), {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} 1991 | missed |
+| 2021 | [Antoine Bauza](https://recommend.games/#/?designer=9714) | {{% kindersdj %}}Kinderspiel{{% /kindersdj %}}: {{% game 302417 %}}Mia London{{% /game %}} | {{% kdj %}}Kennerspiel{{% /kdj %}} 2011, {{% sdj %}}Spiel{{% /sdj %}} 2013 | missed |
+| 2026 | [Markus Slawitscheck](https://recommend.games/#/?designer=110904) | {{% sdj %}}Spiel{{% /sdj %}}: {{% game 462742 %}}Morty Sorty Magic Shop{{% /game %}} | {{% kdj %}}Kennerspiel{{% /kdj %}} 2023, {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} 2024 | missed |
+| 2026 | [Reiner Knizia](https://recommend.games/#/?designer=2) | {{% kdj %}}Kennerspiel{{% /kdj %}}: {{% game 417197 %}}Rebirth{{% /game %}} | {{% sdj %}}Spiel{{% /sdj %}} 2008, {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} 2008 | **won** |
+
+[Wolfgang Kramer](https://recommend.games/#/?designer=7) was the first to get the chance, just two years into the {{% kdj / %}} era, and [Antoine Bauza](https://recommend.games/#/?designer=9714) followed in 2021. Both came away empty-handed. Then, in 2026, two designers went for the triple in the very same year. [Markus Slawitscheck](https://recommend.games/#/?designer=110904) had only completed his double two years earlier and missed out on the {{% sdj / %}}, but Knizia's {{% game 417197 %}}Rebirth{{% /game %}} came through.
+
+Several other designers have won in two categories, but none of them has had a shot at the third yet:
+
+- [Wolfgang Warsch](https://recommend.games/#/?designer=80162) ({{% kdj %}}Kennerspiel{{% /kdj %}} 2018, {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} 2025) was nominated for the {{% sdj / %}} with {{% game 244992 %}}The Mind{{% /game %}} in 2018, but at that point he didn't have his {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} win yet.
+- [Bruno Cathala](https://recommend.games/#/?designer=1727) ({{% sdj %}}Spiel{{% /sdj %}} 2017, {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} 2021) has only reached the {{% kdj %}}Kennerspiel{{% /kdj %}} longlist, with {{% game 173346 %}}7 Wonders Duel{{% /game %}} in 2016 and {{% game 449853 %}}Frosted Blooms{{% /game %}} in 2026.
+- [Inka](https://recommend.games/#/?designer=6940) and [Markus Brand](https://recommend.games/#/?designer=6941) ({{% kdj %}}Kennerspiel{{% /kdj %}} 2012 and 2017, {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} 2013) have been on the {{% sdj %}}Spiel{{% /sdj %}} longlist twice, with {{% game 136280 %}}La Boca{{% /game %}} (2013) and {{% game 203411 %}}Word Slam{{% /game %}} (2017).
+- [Alex Randolph](https://recommend.games/#/?designer=24) ({{% sdj %}}Spiel{{% /sdj %}} 1982, {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} 1989) and [Steffen Bogen](https://recommend.games/#/?designer=10067) ({{% kindersdj %}}Kinderspiel{{% /kindersdj %}} 2012, {{% sdj %}}Spiel{{% /sdj %}} 2014) never had a game listed for the {{% kdj %}}Kennerspiel{{% /kdj %}}.
+
+
+## Back-to-back
+
+Knizia's 2008 double is the only time a designer won twice in the same year, but a few others won in consecutive years:
+
+- [Wolfgang Kramer](https://recommend.games/#/?designer=7): {{% game 382 %}}Heimlich & Co.{{% /game %}} ({{% sdj %}}Spiel{{% /sdj %}} 1986) and {{% game 110 %}}Auf Achse{{% /game %}} ({{% sdj %}}Spiel{{% /sdj %}} 1987)
+- [Klaus Teuber](https://recommend.games/#/?designer=11): {{% game 120 %}}Hoity Toity{{% /game %}} ({{% sdj %}}Spiel{{% /sdj %}} 1990) and {{% game 19 %}}Wacky Wacky West{{% /game %}} ({{% sdj %}}Spiel{{% /sdj %}} 1991)
+- [Wolfgang Kramer](https://recommend.games/#/?designer=7) and [Michael Kiesling](https://recommend.games/#/?designer=42): {{% game 54 %}}Tikal{{% /game %}} ({{% sdj %}}Spiel{{% /sdj %}} 1999) and {{% game 88 %}}Torres{{% /game %}} ({{% sdj %}}Spiel{{% /sdj %}} 2000)
+- [Reiner Knizia](https://recommend.games/#/?designer=2): {{% game 33643 %}}Whoowasit?{{% /game %}} ({{% kindersdj %}}Kinderspiel{{% /kindersdj %}} 2008) and {{% game 34585 %}}Keltis{{% /game %}} ({{% sdj %}}Spiel{{% /sdj %}} 2008)
+- [Inka](https://recommend.games/#/?designer=6940) and [Markus Brand](https://recommend.games/#/?designer=6941): {{% game 104006 %}}Village{{% /game %}} ({{% kdj %}}Kennerspiel{{% /kdj %}} 2012) and {{% game 130792 %}}The Enchanted Tower{{% /game %}} ({{% kindersdj %}}Kinderspiel{{% /kindersdj %}} 2013)
+- [Alexander Pfister](https://recommend.games/#/?designer=11767) and [Andreas Pelikan](https://recommend.games/#/?designer=8397): {{% game 172308 %}}Broom Service{{% /game %}} ({{% kdj %}}Kennerspiel{{% /kdj %}} 2015) and {{% game 176494 %}}Isle of Skye{{% /game %}} ({{% kdj %}}Kennerspiel{{% /kdj %}} 2016)
+- [Markus Slawitscheck](https://recommend.games/#/?designer=110904): {{% game 359970 %}}Challengers!{{% /game %}} ({{% kdj %}}Kennerspiel{{% /kdj %}} 2023) and {{% game 368899 %}}Magic Keys{{% /game %}} ({{% kindersdj %}}Kinderspiel{{% /kindersdj %}} 2024)
+
+Having two games on the shortlists in the same year is a little more common. Besides Knizia's three times, [Wolfgang Warsch](https://recommend.games/#/?designer=80162) did it twice, and in 2018 he even had three games on the shortlists at once – something no one else has achieved:
+
+- 2004: [Wolfgang Kramer](https://recommend.games/#/?designer=7) with {{% game 9440 %}}Maharaja{{% /game %}} ({{% sdj %}}Spiel{{% /sdj %}}) and {{% game 20544 %}}Macius{{% /game %}} ({{% kindersdj %}}Kinderspiel{{% /kindersdj %}})
+- 2006: [Jürgen P. Grunau](https://recommend.games/#/?designer=272) with {{% game 17534 %}}Just4Fun{{% /game %}} ({{% sdj %}}Spiel{{% /sdj %}}) and {{% game 21985 %}}Giro Galoppo{{% /game %}} ({{% kindersdj %}}Kinderspiel{{% /kindersdj %}})
+- 2018: [Michael Kiesling](https://recommend.games/#/?designer=42) with {{% game 230802 %}}Azul{{% /game %}} ({{% sdj %}}Spiel{{% /sdj %}}, winner) and {{% game 227789 %}}Heaven & Ale{{% /game %}} ({{% kdj %}}Kennerspiel{{% /kdj %}})
+- 2018: [Wolfgang Warsch](https://recommend.games/#/?designer=80162) with {{% game 244992 %}}The Mind{{% /game %}} ({{% sdj %}}Spiel{{% /sdj %}}), {{% game 244522 %}}That's Pretty Clever!{{% /game %}} and {{% game 244521 %}}Quacks{{% /game %}} (both {{% kdj %}}Kennerspiel{{% /kdj %}}, {{% game 244521 %}}Quacks{{% /game %}} won)
+- 2021: [Marie](https://recommend.games/#/?designer=79463) and [Wilfried Fort](https://recommend.games/#/?designer=79462) with {{% game 300010 %}}Dragomino{{% /game %}} (winner) and {{% game 287591 %}}Storytailors{{% /game %}} (both {{% kindersdj %}}Kinderspiel{{% /kindersdj %}})
+- 2022: [Wolfgang Warsch](https://recommend.games/#/?designer=80162) with {{% game 354892 %}}That's Pretty Clever! Kids{{% /game %}} and {{% game 354886 %}}Quacks & Co.{{% /game %}} (both {{% kindersdj %}}Kinderspiel{{% /kindersdj %}})
+- 2024: [Matt Leacock](https://recommend.games/#/?designer=378) with {{% game 334986 %}}Daybreak{{% /game %}} (winner) and {{% game 390092 %}}Ticket to Ride Legacy{{% /game %}} (both {{% kdj %}}Kennerspiel{{% /kdj %}})
+- 2026: [Florian Sirieix](https://recommend.games/#/?designer=78797) with {{% game 435346 %}}Mooki Island{{% /game %}} (winner) and {{% game 454722 %}}Boo Party{{% /game %}} (both {{% kindersdj %}}Kinderspiel{{% /kindersdj %}})
+
+
+## Patience pays off
+
+Knizia needed 16 years from his first listing to his first win. That's a long time, but not the longest. The most patient of all is [Yves Hirschfeld](https://recommend.games/#/?designer=44): {{% game 57 %}}Schoko & Co.{{% /game %}} made the longlist in 1988, and 35 years later, in 2023, {{% game 367206 %}}Mysterium Kids: Captain Echo's Treasure{{% /game %}} won him the {{% kindersdj / %}}.
+
+My favourite story in this category belongs to [Carl de Visser](https://recommend.games/#/?designer=3526) and [Jarratt Gray](https://recommend.games/#/?designer=9733). Their {{% game 33160 %}}Endeavor{{% /game %}} was recommended in 2010, and 15 years later the jury gave the {{% kdj %}}Kennerspiel des Jahres 2025{{% /kdj %}} to its successor {{% game 367966 %}}Endeavor: Deep Sea{{% /game %}}.
+
+Some other long waits from first listing to first win:
+
+- [Günter Burkhardt](https://recommend.games/#/?designer=173): 1997 to 2018
+- [Manfred Ludwig](https://recommend.games/#/?designer=500): 1983 to 2003
+- [Jens-Peter Schliemann](https://recommend.games/#/?designer=1288): 2005 to 2022
+- [Matt Leacock](https://recommend.games/#/?designer=378): 2009 to 2024
+
+
+## Honourable mentions
+
+Some designers have had plenty of success with the jury without ever winning one of the three main awards. Ranked by the number of games on the shortlist (with special awards counted as shortlisted), then by the number of listed games, these are the best of them:
+
+- [Jürgen P. Grunau](https://recommend.games/#/?designer=272): Every one of his five listed games made the shortlist, two for the {{% sdj %}}Spiel{{% /sdj %}} and three for the {{% kindersdj %}}Kinderspiel{{% /kindersdj %}}. None of them won.
+- [Stefan Dorra](https://recommend.games/#/?designer=13): three shortlisted games (two {{% sdj %}}Spiel{{% /sdj %}}, one {{% kindersdj %}}Kinderspiel{{% /kindersdj %}}) out of ten on the lists.
+- [Stefan Feld](https://recommend.games/#/?designer=4958): three {{% kdj %}}Kennerspiel{{% /kdj %}} nominations out of nine listed games.
+- [Leo Colovini](https://recommend.games/#/?designer=138): three shortlisted games (two {{% sdj %}}Spiel{{% /sdj %}}, one {{% kindersdj %}}Kinderspiel{{% /kindersdj %}}) out of eight, in a career on the lists stretching from 1988 to 2023.
+- [Matthew Dunstan](https://recommend.games/#/?designer=69007): three of his four listed games made the shortlist (one {{% sdj %}}Spiel{{% /sdj %}}, two {{% kdj %}}Kennerspiel{{% /kdj %}}).
+- [Rob Daviau](https://recommend.games/#/?designer=442): two {{% kdj %}}Kennerspiel{{% /kdj %}} nominations plus a special award for {{% game 221107 %}}Pandemic Legacy: Season 2{{% /game %}} in 2018 – a perfect three out of three.
+- [Hans Raggan](https://recommend.games/#/?designer=2268): also three out of three on the shortlist (one {{% sdj %}}Spiel{{% /sdj %}}, two {{% kindersdj %}}Kinderspiel{{% /kindersdj %}}).
+- [Uwe Rosenberg](https://recommend.games/#/?designer=10): eight games on the lists, among them {{% game 11 %}}Bohnanza{{% /game %}} and {{% game 163412 %}}Patchwork{{% /game %}} (both recommended) and {{% game 284435 %}}Nova Luna{{% /game %}} (nominated). His only award is the 2008 special award for {{% game 31260 %}}Agricola{{% /game %}}.
+
+
+## About the data
+
+The jury has put 897 games on its lists in the 48 years since 1979. Naturally, that includes 48 {{% sdj %}}Spiel{{% /sdj %}}, 38 {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} and 16 {{% kdj %}}Kennerspiel{{% /kdj %}} winners.[^series] The table below is cumulative: the "Nominated" column includes the winners, and "Recommended" counts the entire longlist, nominees and winners included.
 
 | Award | Winner | Nominated | Recommended | Special award |
 |:-----:|:------:|:---------:|:-----------:|:-------------:|
@@ -36,32 +134,22 @@ Overall, the jury included 896 games on its various longlist across the three ca
 | {{% kdj %}}Kennerspiel{{% /kdj %}} | 16 | 48 | 97 | 2 |
 | {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} | 38 | 104 | 278 | 1 |
 
-<!-- TODO: dataset needs updating. The raw award data has 897 games and 278 Kinderspiel
-recommendations, but bgg_id 464279 (a 2026 Kinderspiel recommendation) is missing from the
-BGG scrape, so the join drops it: games.csv/designers.csv and every designer statistic in
-this article are based on 896 games and 277 Kinderspiel recommendations. Once BGG has the
-game, re-run the analysis and the table and the 896 above will agree. -->
+The awards haven't always looked the way they do today. The {{% kindersdj / %}} started out in 1989 as a special award that was handed out every year, and only became an award in its own right in 2001. Here, I count those early years as regular {{% kindersdj %}}Kinderspiel{{% /kindersdj %}} wins. The {{% kdj / %}} was introduced in 2011, and with it the structure we know today: a longlist of recommended games, a shortlist of three nominees, and one winner. Earlier years used other formats, which I've mapped onto those three steps as best I could. For the designer statistics, special awards count as being on the shortlist. The one exception is the "beautiful game" special awards of the early years, which honoured looks rather than design, so I count those games as recommended instead.
 
-A quick word about the data: As usual, I rely on BoardGameGeek (BGG) for data about the games and their designers. If a game is not in the database or if the designer entry is wrong, the statistics here will necessarily be wrong too. I've collected data about the different {{% sdj / %}} awards manually over the years, so that's another potential source of errors. If you're reading this from the future, I should point out that the statistics here should be complete up to and including {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}.
-
-The current format of having a longlist (which become the recommendations), out of which three games are selected for the shortlist (which are the nominated games), out of which one game will be given the award, has been in place since 2011 with the introduction of the {{% kdj / %}}. Formats have varied throughout the decades and I've tried to map them to the current situation as much as possible.
-
-I've already mentioned that the first 12 {{% kindersdj / %}} winners were really special awards. There was another special award given during the first 18 years between 1979 and 1997 for "beautiful games". Since this article is meant to focus on designers, not artists, it felt like those games clutter the statistics somewhat, so I treated them as recommendations rather than special award winners.
-
-So without further ado, let's take a look at the designers.
+All information about games and their designers comes from BoardGameGeek (BGG), so any missing or wrong credits there end up in these statistics as well. The award data itself I've compiled by hand over the years, which is another place where mistakes could creep in. Everything here is up to date as of the {{% sdj %}}Spiel des Jahres 2026{{% /sdj %}}.
 
 
-## Designers
+## Designers by the numbers
 
-Over the course of 48 sessions, the jury has mentioned games by 615 different designers. By far the most successful designer is [Wolfgang Kramer](https://recommend.games/#/?designer=7) who has won {{% sdj / %}} five times (three of those were co-designs) and {{% kindersdj / %}} once between 1986 and 2000. During that time period, [Klaus Teuber](https://recommend.games/#/?designer=11) won {{% sdj / %}} four times, so during those 15 years Wolfgang & Klaus shared nine awards between them. The record for most games on the longlists is held by [Reiner Knizia](https://recommend.games/#/?designer=2) with 38 games – and in 2026 he finally turned that incredible output into something unprecedented. Already the owner of one {{% sdj / %}} win (2008, Keltis) and one {{% kindersdj / %}} win (2008, Whoowasit?), Knizia added a {{% kdj / %}} win for {{% game 417197 %}}Rebirth{{% /game %}} in 2026, making him the first designer ever to win all three {{% sdj / %}} categories.
+Over 48 seasons, the jury has listed games by 615 different designers. The most decorated of them all is still [Wolfgang Kramer](https://recommend.games/#/?designer=7) with six wins between 1986 and 2000: five {{% sdj %}}Spiel{{% /sdj %}} and one {{% kindersdj %}}Kinderspiel{{% /kindersdj %}}. In the same years, [Klaus Teuber](https://recommend.games/#/?designer=11) won four {{% sdj %}}Spiel{{% /sdj %}} awards, so between 1986 and 2000 the two of them collected nine {{% sdj %}}Spiel des Jahres{{% /sdj %}} awards between them.
 
-Overall, 103 designers have won at least one award (118 if we include special awards), with 23 of them winning more than one (25 including special awards). 10 of those have won their awards in more than one category: [Wolfgang Kramer](https://recommend.games/#/?designer=7), [Reiner Knizia](https://recommend.games/#/?designer=2), [Inka](https://recommend.games/#/?designer=6940) & [Markus Brand](https://recommend.games/#/?designer=6941), [Alex Randolph](https://recommend.games/#/?designer=24), [Bruno Cathala](https://recommend.games/#/?designer=1727), [Wolfgang Warsch](https://recommend.games/#/?designer=80162), [Antoine Bauza](https://recommend.games/#/?designer=9714), [Markus Slawitscheck](https://recommend.games/#/?designer=110904) and [Steffen Bogen](https://recommend.games/#/?designer=10067). As mentioned above, Reiner Knizia is now the first (and so far only) designer to have won in all three categories.
+103 designers have won at least one of the three main awards, or 118 if we add the special awards. 23 of them have won more than once (25 with special awards), and 10 have won in at least two different categories: [Wolfgang Kramer](https://recommend.games/#/?designer=7), [Reiner Knizia](https://recommend.games/#/?designer=2), [Inka](https://recommend.games/#/?designer=6940) and [Markus Brand](https://recommend.games/#/?designer=6941), [Alex Randolph](https://recommend.games/#/?designer=24), [Bruno Cathala](https://recommend.games/#/?designer=1727), [Wolfgang Warsch](https://recommend.games/#/?designer=80162), [Antoine Bauza](https://recommend.games/#/?designer=9714), [Markus Slawitscheck](https://recommend.games/#/?designer=110904) and [Steffen Bogen](https://recommend.games/#/?designer=10067). Only Knizia has won all three.
 
-Looking at the shortlists (including winners), the jury nominated 239 different designers over the years. Of those, 29 have been nominated in more than one category and 6 designers can claim the distinction of being nominated in all three categories: [Wolfgang Kramer](https://recommend.games/#/?designer=7), [Reiner Knizia](https://recommend.games/#/?designer=2), [Wolfgang Warsch](https://recommend.games/#/?designer=80162), [Antoine Bauza](https://recommend.games/#/?designer=9714), [Markus Slawitscheck](https://recommend.games/#/?designer=110904) and [Rüdiger Dorn](https://recommend.games/#/?designer=381).
+The shortlists (winners included) feature 239 different designers. 29 of them have been shortlisted in at least two categories, and six in all three: [Wolfgang Kramer](https://recommend.games/#/?designer=7), [Reiner Knizia](https://recommend.games/#/?designer=2), [Wolfgang Warsch](https://recommend.games/#/?designer=80162), [Antoine Bauza](https://recommend.games/#/?designer=9714), [Markus Slawitscheck](https://recommend.games/#/?designer=110904) and [Rüdiger Dorn](https://recommend.games/#/?designer=381).
 
-As mentioned earlier, the jury has recommended games by 615 different designers, with 81 of them appearing in more than one category and 15 in all three. In addition to the 6 mentioned above, those are [Inka](https://recommend.games/#/?designer=6940) & [Markus Brand](https://recommend.games/#/?designer=6941), [Bruno Cathala](https://recommend.games/#/?designer=1727), [Roberto Fraga](https://recommend.games/#/?designer=285), [Michael Palm](https://recommend.games/#/?designer=461), [Lukas Zach](https://recommend.games/#/?designer=7808), [Corentin Lebrat](https://recommend.games/#/?designer=60151), [Laurent Escoffier](https://recommend.games/#/?designer=3327) and [Ludovic Maublanc](https://recommend.games/#/?designer=4337).
+On the longlists, 81 of the 615 designers show up in at least two categories, and 15 in all three. Besides the six above, these are [Inka](https://recommend.games/#/?designer=6940) and [Markus Brand](https://recommend.games/#/?designer=6941), [Bruno Cathala](https://recommend.games/#/?designer=1727), [Roberto Fraga](https://recommend.games/#/?designer=285), [Michael Palm](https://recommend.games/#/?designer=461), [Lukas Zach](https://recommend.games/#/?designer=7808), [Corentin Lebrat](https://recommend.games/#/?designer=60151), [Laurent Escoffier](https://recommend.games/#/?designer=3327) and [Ludovic Maublanc](https://recommend.games/#/?designer=4337).
 
-I'll leave you with some more detailed statistics below. I hope you enjoy those, and I'll see you again for {{% sdj %}}Spiel des Jahres 2027{{% /sdj %}}! 🤩
+The full details follow below. See you again for the {{% sdj %}}Spiel des Jahres 2027{{% /sdj %}}, when we'll find out who's next to make history! 🏆
 
 
 ## Designer records
@@ -73,7 +161,9 @@ I'll leave you with some more detailed statistics below. I hope you enjoy those,
   - [Reiner Knizia](https://recommend.games/#/?designer=2)
 - Most games on the shortlist: 14
   - [Reiner Knizia](https://recommend.games/#/?designer=2)
-- Most wins: 6
+- Most wins (incl special award): 6
+  - [Wolfgang Kramer](https://recommend.games/#/?designer=7)
+- Most wins (main award): 6
   - [Wolfgang Kramer](https://recommend.games/#/?designer=7)
 - Most games on the shortlist without win: 5
   - [Jürgen P. Grunau](https://recommend.games/#/?designer=272)
@@ -85,7 +175,9 @@ I'll leave you with some more detailed statistics below. I hope you enjoy those,
   - [Reiner Knizia](https://recommend.games/#/?designer=2)
 - Most games on the shortlist: 9
   - [Wolfgang Kramer](https://recommend.games/#/?designer=7)
-- Most wins: 5
+- Most wins (incl special award): 5
+  - [Wolfgang Kramer](https://recommend.games/#/?designer=7)
+- Most wins (main award): 5
   - [Wolfgang Kramer](https://recommend.games/#/?designer=7)
 - Most games on the shortlist without win: 5
   - [Rüdiger Dorn](https://recommend.games/#/?designer=381)
@@ -218,7 +310,7 @@ I'll leave you with some more detailed statistics below. I hope you enjoy those,
 
 ## Designer Hall of Fame
 
-This table includes designers with at least 2 wins or 5 nominations across all categories. Each entry shows the number of wins / nominations / recommendations for that designer in each category. Special awards are added in parentheses.
+Who makes it into the Hall of Fame? Every designer with at least 2 wins (special awards included) or at least 5 listed games. Unlike the games table above, this table is exclusive: each cell reads wins / nominations / recommendations, and every game is counted only once, at the highest step it reached. A winning game doesn't also count as a nomination, and a nominated game doesn't also count as a recommendation. Special awards appear in parentheses next to the wins. The total is the number of listed games. Designers are ranked by wins first, then special awards, then nominations, then recommendations.
 
 | Designer | Spiel | Kennerspiel | Kinderspiel | Total |
 |:---------|:-----:|:-----------:|:-----------:|:-----:|
@@ -249,7 +341,7 @@ This table includes designers with at least 2 wins or 5 nominations across all c
 | [Vlaada Chvátil](https://recommend.games/#/?designer=789) | 1 (1) / 0 / 2 | 0 / 0 / 0 | 0 / 0 / 0 | 4 |
 | [Rüdiger Dorn](https://recommend.games/#/?designer=381) | 0 / 5 / 3 | 1 / 0 / 0 | 0 / 1 / 0 | 10 |
 | [Kai Haferkamp](https://recommend.games/#/?designer=645) | 0 / 0 / 0 | 0 / 0 / 0 | 1 / 3 / 9 | 13 |
-| [Marco Teubner](https://recommend.games/#/?designer=4884) | 0 / 0 / 1 | 0 / 0 / 0 | 1 / 3 / 6 | 11 |
+| [Marco Teubner](https://recommend.games/#/?designer=4884) | 0 / 0 / 1 | 0 / 0 / 0 | 1 / 3 / 7 | 12 |
 | [Jens-Peter Schliemann](https://recommend.games/#/?designer=1288) | 0 / 0 / 2 | 0 / 0 / 0 | 1 / 2 / 3 | 8 |
 | [Roberto Fraga](https://recommend.games/#/?designer=285) | 0 / 0 / 1 | 0 / 0 / 1 | 1 / 2 / 1 | 6 |
 | [Bernhard Weber](https://recommend.games/#/?designer=129) | 0 / 0 / 1 | 0 / 0 / 0 | 1 / 1 / 2 | 5 |
@@ -274,6 +366,6 @@ This table includes designers with at least 2 wins or 5 nominations across all c
 | [Haim Shafir](https://recommend.games/#/?designer=1210) | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 6 | 6 |
 | [Jacques Zeimet](https://recommend.games/#/?designer=144) | 0 / 0 / 5 | 0 / 0 / 0 | 0 / 0 / 0 | 5 |
 
-Download the full results here: [designers](designers.csv) and [games](games.csv). As always, you can find the code for this analysis from [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/sdj_designers).
+If you'd like to dig through the numbers yourself, here are the complete results for all [designers](designers.csv) and [games](games.csv). The analysis code is on [GitLab](https://gitlab.com/recommend.games/blog/-/tree/master/experiments/sdj_designers).
 
-[^exit]: Arguably, there's 18 {{% kdj / %}} winners: In 2017, the jury gave the award to the first three games in the Exit series. In all statistics, I only count them as a single entry. Similarly, in 2019, the first three entries of the Sherlock series got recommended, which I also count as just a single game.
+[^series]: Strictly speaking, the jury handed out 18 {{% kdj %}}Kennerspiel{{% /kdj %}} awards, because the 2017 award went to three Exit games at once. I count them as one game, and the same goes for the three Sherlock cases that were recommended together in 2019.
