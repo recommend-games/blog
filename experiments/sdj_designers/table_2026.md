@@ -27,7 +27,7 @@
 | [Vlaada Chvátil](https://recommend.games/#/?designer=789) | 1 (1) / 0 / 2 | 0 / 0 / 0 | 0 / 0 / 0 | 4 |
 | [Rüdiger Dorn](https://recommend.games/#/?designer=381) | 0 / 5 / 3 | 1 / 0 / 0 | 0 / 1 / 0 | 10 |
 | [Kai Haferkamp](https://recommend.games/#/?designer=645) | 0 / 0 / 0 | 0 / 0 / 0 | 1 / 3 / 9 | 13 |
-| [Marco Teubner](https://recommend.games/#/?designer=4884) | 0 / 0 / 1 | 0 / 0 / 0 | 1 / 3 / 6 | 11 |
+| [Marco Teubner](https://recommend.games/#/?designer=4884) | 0 / 0 / 1 | 0 / 0 / 0 | 1 / 3 / 7 | 12 |
 | [Jens-Peter Schliemann](https://recommend.games/#/?designer=1288) | 0 / 0 / 2 | 0 / 0 / 0 | 1 / 2 / 3 | 8 |
 | [Roberto Fraga](https://recommend.games/#/?designer=285) | 0 / 0 / 1 | 0 / 0 / 1 | 1 / 2 / 1 | 6 |
 | [Bernhard Weber](https://recommend.games/#/?designer=129) | 0 / 0 / 1 | 0 / 0 / 0 | 1 / 1 / 2 | 5 |
