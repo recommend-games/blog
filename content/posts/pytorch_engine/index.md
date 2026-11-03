@@ -2,6 +2,7 @@
 title: The recommendation engine has a new heart
 subtitle: "Turi Create is out, PyTorch is in – and the site should feel a lot steadier"
 slug: pytorch-recommendation-engine
+share_img: /posts/pytorch-recommendation-engine/heroku_memory.png
 author: Markus Shepherd
 type: post
 date: 2026-09-21T20:00:00+03:00
