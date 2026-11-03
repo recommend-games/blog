@@ -134,7 +134,10 @@ sitepackages/
 .stignore
 
 # Claude
-**/.claude/settings.local.json
+.claude/
+
+# Worktrees
+.worktrees/
 
 # others
 .~*
