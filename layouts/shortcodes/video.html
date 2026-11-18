@@ -1,4 +1,5 @@
 {{- $src := .Page.Resources.GetMatch (printf "%s*" (.Get "src")) -}}
+{{- if not $src }}{{ errorf "video: no page resource matches %q at %s" (.Get "src") .Position }}{{ end -}}
 <video
 	autoplay loop muted playsinline preload="auto"
 	style="max-width: 100%; height: auto;{{ with .Get "style" }} {{ . | safeCSS }}{{ end }}"
