@@ -1,5 +1,6 @@
 {{/* get file that matches the filename as specified as src="" in shortcode */}}
 {{ $src := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
+{{ if not $src }}{{ errorf "imgs: no page resource matches %q at %s" (.Get "src") .Position }}{{ end }}
 
 {{/* set image sizes, these are hardcoded for now, x dictates that images are resized to this width */}}
 
